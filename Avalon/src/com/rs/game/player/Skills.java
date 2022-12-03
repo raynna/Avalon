@@ -611,21 +611,6 @@ public final class Skills implements Serializable {
         boolean maxed = true;
         int milestoneLevel = -1;
         int index = 0;
-        int[] xpMilestones = {5000000, 7500000, 10000000, 20000000, 30000000, 40000000, 50000000, 60000000, 70000000,
-                80000000, 90000000, 100000000, 150000000, 200000000};
-        for (int i : xpMilestones) {
-            if (oldExp < i && xp[skill] >= i) {
-                player.getPackets()
-                        .sendGameMessage(HexColours.Colours.WHITE.getHex() + "You've reached a total xp of " + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".");
-                World.sendWorldMessage(HexColours.Colours.BLUE.getHex() + "<img=5>News: " + player.getDisplayName() + " has achieved "
-                        + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".", false);
-                if (Settings.discordEnabled) {
-                    Launcher.getDiscordBot().getChannelByName("public-chat")
-                            .sendMessage(":trophy: " + player.getDisplayName() + " has achieved "
-                                    + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".");
-                }
-            }
-        }
         int[] levelMilestones = {10, 20, 30, 40, 50, 60, 70, 80, 90};
         for (int a : levelMilestones) {
             if (getLevelForXp(Skills.ATTACK) >= a && getLevelForXp(Skills.DEFENCE) >= a && getLevelForXp(Skills.STRENGTH) >= a
@@ -842,6 +827,24 @@ public final class Skills implements Serializable {
         return skillName;
     }
 
+    public void checkXpMilestones(Player player, int skill, double oldExp) {
+        int[] xpMilestones = {5000000, 7500000, 10000000, 20000000, 30000000, 40000000, 50000000, 60000000, 70000000,
+                80000000, 90000000, 100000000, 150000000, 200000000};
+        for (int i : xpMilestones) {
+            if (oldExp < i && xp[skill] >= i) {
+                player.getPackets()
+                        .sendGameMessage(HexColours.Colours.WHITE.getHex() + "You've reached a total xp of " + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".");
+                World.sendWorldMessage(HexColours.Colours.BLUE.getHex() + "<img=5>News: " + player.getDisplayName() + " has achieved "
+                        + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".", false);
+                if (Settings.discordEnabled) {
+                    Launcher.getDiscordBot().getChannelByName("public-chat")
+                            .sendMessage(":trophy: " + player.getDisplayName() + " has achieved "
+                                    + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".");
+                }
+            }
+        }
+    }
+
     public double addLampXP(int skill, double exp) {
         int oldTotal = getTotalLevel(player);
         double oldExp = xp[skill];
@@ -872,6 +875,7 @@ public final class Skills implements Serializable {
         }
         int newLevel = getLevelForXp(skill);
         int levelDifference = newLevel - oldLevel;
+        checkXpMilestones(player, skill, oldExp);
         if (newLevel > oldLevel) {
             level[skill] += levelDifference;
             player.getDialogueManager().startDialogue("LevelUp", skill);
@@ -919,6 +923,7 @@ public final class Skills implements Serializable {
         }
         int newLevel = getLevelForXp(skill);
         int levelDiff = newLevel - oldLevel;
+        checkXpMilestones(player, skill, oldExp);
         if (newLevel > oldLevel) {
             level[skill] += levelDiff;
             player.getDialogueManager().startDialogue("LevelUp", skill);
@@ -983,6 +988,7 @@ public final class Skills implements Serializable {
         }
         int newLevel = getLevelForXp(skill);
         int levelDiff = newLevel - oldLevel;
+        checkXpMilestones(player, skill, oldExp);
         if (newLevel > oldLevel) {
             level[skill] += levelDiff;
             player.getDialogueManager().startDialogue("LevelUp", skill);
@@ -1065,6 +1071,7 @@ public final class Skills implements Serializable {
         }
         int newLevel = getLevelForXp(skill);
         int levelDiff = newLevel - oldLevel;
+        checkXpMilestones(player, skill, oldExp);
         if (newLevel > oldLevel) {
             level[skill] += levelDiff;
             player.getDialogueManager().startDialogue("LevelUp", skill);
