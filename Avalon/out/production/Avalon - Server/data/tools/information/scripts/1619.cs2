@@ -1,0 +1,13 @@
+void script_1619(int arg0, int arg1, Item item2) {
+	DataMap datamap3;
+	Widget widget4;
+	if (arg0 < 0 || arg0 >= 5 || arg1 < 0 || arg1 >= 5) {
+		msg("Nothing happens, as if something has gone wrong.");
+		return;
+	}
+	datamap3 = datamap('i', 'g', (DataMap)800, arg1);
+	widget4 = datamap('i', 'I', datamap3, arg0);
+	widget4.setModel(datamap('o', 'm', (DataMap)797, item2));
+	widget4.set3DRotation(0, 0, 520, 0, 0, 2180);
+	return;
+}

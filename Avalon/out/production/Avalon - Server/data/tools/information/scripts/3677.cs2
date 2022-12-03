@@ -1,0 +1,61 @@
+void script_3677(Widget widget0, int arg1) {
+	int int2;
+	string str0;
+	int2 = 0;
+	switch (widget0) {
+		case widget(1006, 14):
+			int2 = VARC[1336];
+			break;
+		case widget(1006, 15):
+			int2 = VARC[1337];
+			break;
+		case widget(1006, 16):
+			int2 = VARC[1338];
+			break;
+		case widget(1006, 17):
+			int2 = VARC[1339];
+			break;
+		case widget(1006, 18):
+			int2 = VARC[1340];
+			break;
+		case widget(1006, 19):
+			int2 = VARC[1341];
+			break;
+		case widget(1006, 20):
+			int2 = VARC[1342];
+			break;
+		case widget(1006, 21):
+			int2 = VARC[1343];
+			break;
+		case widget(1006, 22):
+			int2 = VARC[1344];
+			break;
+		case widget(1006, 23):
+			int2 = VARC[1345];
+			break;
+		case widget(1006, 24):
+			int2 = VARC[1346];
+			break;
+		case widget(1006, 25):
+			int2 = VARC[1347];
+			break;
+		case widget(1006, 26):
+			int2 = VARC[1348];
+			break;
+		case widget(1006, 27):
+			int2 = VARC[1349];
+			break;
+		case widget(1006, 28):
+			int2 = VARC[1350];
+			break;
+		case widget(1006, 29):
+			int2 = VARC[1605];
+			break;
+		case widget(1006, 30):
+			int2 = VARC[1351];
+			break;
+	}
+	str0 = "Current price: " + script_940(int2) + " gp";
+	script_569(widget0, arg1, widget(1006, 49), str0, 25, widget(1006, 49).getLayer().getWidth());
+	return;
+}

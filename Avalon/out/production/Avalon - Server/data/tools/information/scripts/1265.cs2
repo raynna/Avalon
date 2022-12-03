@@ -1,0 +1,16 @@
+void script_1265() {
+	string str0;
+	str0 = "null";
+	if (VARP[171] == 1) {
+		widget(261, 4).setSprite(761);
+		str0 = "Chat effects" + "<br>" + "(currently off)";
+		widget(261, 4).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(261, 22), str0, 25, 180, "IIsii");
+		VARC[2] = 0;
+	} else if (VARP[171] == 0) {
+		widget(261, 4).setSprite(762);
+		str0 = "Chat effects" + "<br>" + "(currently on)";
+		widget(261, 4).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(261, 22), str0, 25, 180, "IIsii");
+		VARC[2] = 0;
+	}
+	return;
+}

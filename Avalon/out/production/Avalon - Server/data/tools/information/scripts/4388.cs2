@@ -1,0 +1,14 @@
+void script_4388(Widget widget0, Widget widget1) {
+	Sprite sprite2;
+	Sprite sprite3;
+	sprite2 = null;
+	sprite3 = null;
+	if (cs2method3701()) {
+		sprite2, sprite3 = script_4384(VARPBIT[9086], VARPBIT[9087], 0);
+		widget0.setSprite(sprite2);
+		widget1.setSprite(sprite3);
+		widget0.setRGB(getColorRelatedMethod4020(VARP[2094]));
+		widget1.setRGB(getColorRelatedMethod4020(VARP[2095]));
+	}
+	return;
+}

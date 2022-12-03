@@ -1,0 +1,261 @@
+int script_4770(Widget widget0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+	int int6;
+	int int7;
+	Sprite sprite8;
+	Sprite sprite9;
+	Sprite sprite10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	int6 = arg1 / 8;
+	int7 = 38;
+	sprite8 = 7438;
+	sprite9 = 5465;
+	sprite10 = null;
+	str0 = "";
+	int11 = 0;
+	int12 = 0;
+	int13 = CLANBIT[2580] - CLANBIT[2633];
+	int14 = 0;
+	str1 = "";
+	int15 = 0;
+	int16 = 0;
+	int17 = 0;
+	if (arg2 < 1 || arg2 > 900) {
+		return 0;
+	}
+	sprite10, str0, int11, int12, int14, int15, int16, int17 = script_4791(arg2);
+	ACTIVE.createChild(widget0, 3, arg1);
+	ACTIVE.setPosition(2, int7 * int6, 0, 0);
+	ACTIVE.setSize(4, int7, 1, 0);
+	if (int6 % 2 == 0) {
+		ACTIVE.setRGB(0x181715);
+	} else {
+		ACTIVE.setRGB(0x211F1C);
+	}
+	ACTIVE.setFilled(true);
+	ACTIVE.setContextMenuOption(1, "Details for");
+	ACTIVE.setScriptCallOnClickContextMenu(4776, arg2, int6, arg5, "iii");
+	ACTIVE.setScriptCallOnGlobalConfigChange(4773, arg2, int6, arg5, 1560, "iiiY");
+	int18 = arg1 + 1;
+	ACTIVE.setScriptCallOnMouseEntered(4779, widget0, int18, 1, "Iii");
+	ACTIVE.setScriptCallOnMouseExit(4779, widget0, int18, 0, "Iii");
+	ACTIVE.setDraggable(widget0, -1);
+	ACTIVE.setDragRenderBehaviour(3);
+	ACTIVE.setDragDeadZone(8);
+	ACTIVE.setDragDeadTime(30);
+	ACTIVE.setOptionBase(str0);
+	arg1 = arg1 + 1;
+	ACTIVE.createChild(widget0, 5, arg1);
+	ACTIVE.setSprite(sprite9);
+	ACTIVE.setSize(4, int7, 1, 0);
+	ACTIVE.setPosition(2, int7 * int6, 0, 0);
+	ACTIVE.setHidden(true);
+	arg1 = arg1 + 1;
+	ACTIVE.createChild(widget0, 5, arg1);
+	ACTIVE.setPosition(8, 3 + int7 * int6, 0, 0);
+	ACTIVE.setSize(32, 32, 0, 0);
+	ACTIVE.setSprite(sprite8);
+	arg1 = arg1 + 1;
+	ACTIVE.createChild(widget0, 5, arg1);
+	ACTIVE.setPosition(9, 4 + int7 * int6, 0, 0);
+	ACTIVE.setSprite(sprite10);
+	if (arg2 == 16 || arg2 == 17 || arg2 == 18) {
+		ACTIVE.set2DAngle(49149);
+	}
+	ACTIVE.setSize(30, 30, 0, 0);
+	arg1 = arg1 + 1;
+	ACTIVE.createChild(widget0, 4, arg1);
+	ACTIVE.setPosition(48, int7 * int6, 0, 0);
+	ACTIVE.setSize(92, int7, 1, 0);
+	ACTIVE.setFont(3793);
+	ACTIVE.setTextAlignment(0, 1, 16);
+	ACTIVE.setRGB(0xD0C0A8);
+	int19 = int11;
+	if (arg2 > 300 && arg2 < 600) {
+		int19 = int19 - int12;
+	}
+	str2 = "";
+	if (int15 == 5) {
+		if (int19 == 1) {
+			str2 = "(Basic)";
+		} else if (int19 == 2) {
+			str2 = "(Medium)";
+		} else if (int19 == 3) {
+			str2 = "(Grand)";
+		}
+	} else {
+		str2 = "(Tier " + str(int19) + ")";
+	}
+	ACTIVE.setText(str0 + "<br>" + str2);
+	arg1 = arg1 + 1;
+	ACTIVE.createChild(widget0, 4, arg1);
+	ACTIVE.setText(str(arg3) + "%");
+	ACTIVE.setFont(3793);
+	ACTIVE.setTextAlignment(0, 1, 16);
+	ACTIVE.setSize(34, int7, 0, 0);
+	ACTIVE.setPosition(21, int7 * int6, 2, 0);
+	if (arg2 < 300) {
+		ACTIVE.setHidden(true);
+	} else {
+		ACTIVE.setHidden(false);
+	}
+	if (arg3 < 100) {
+		ACTIVE.setRGB(0x863E2C);
+	} else if (arg4 == 1) {
+		ACTIVE.setRGB(0x43636F);
+	} else if (arg4 == 2) {
+		ACTIVE.setRGB(0x2B4A2C);
+	} else if (arg4 == 3) {
+		ACTIVE.setRGB(0x977847);
+	} else if (arg4 == 0) {
+		ACTIVE.setRGB(0xD0C0A8);
+		ACTIVE.setText("N/A");
+	}
+	arg1 = arg1 + 1;
+	ACTIVE.createChild(widget0, 5, arg1);
+	if (arg2 > 300 && arg2 < 600) {
+		if (arg3 < 100) {
+			ACTIVE.setHidden(false);
+			ACTIVE.setPosition(5, 12 + int7 * int6, 2, 0);
+			ACTIVE.setSize(15, 15, 0, 0);
+			ACTIVE.setSprite(7542);
+			if (int15 == 1) {
+				if (int14 == 0) {
+					str1 = "Your citadel will become dilapidated this tick!";
+				} else if (int14 == 1 && int11 > 1) {
+					str1 = "Your citadel will lose a tier this tick. You may lose tiers on other buildings!";
+				} else if (int14 == 1) {
+					str1 = "Your citadel will accrue double upkeep this tick.";
+				} else if (int14 > 1) {
+					str1 = "Your citadel owes double upkeep this tick.";
+				}
+			} else if (int14 == 0) {
+				str1 = "This building will become dilapidated this tick.";
+			} else if (int14 == 1 && int11 > 1) {
+				str1 = "This building will lose a tier this tick!";
+			} else if (int14 == 1) {
+				str1 = "This building will accrue double upkeep this tick.";
+			} else if (int14 > 1) {
+				str1 = "This building owes double upkeep this tick.";
+			}
+			ACTIVE.setScriptCallOnMouseEntered(4781, widget0, CTX_WIDGET_CHILD, 1, "Iii");
+			ACTIVE.setScriptCallOnMouseOver(4783, str1, widget0, CTX_WIDGET_CHILD, "sIi");
+			ACTIVE.setScriptCallOnMouseExit(4781, widget0, CTX_WIDGET_CHILD, 0, "Iii");
+		} else if (script_4787(CLANBIT[2580]) == 0) {
+			ACTIVE.setHidden(false);
+			ACTIVE.setPosition(5, 12 + int7 * int6, 2, 0);
+			ACTIVE.setSize(15, 15, 0, 0);
+			ACTIVE.setSprite(7542);
+			str1 = "You need more members to visit your citadel this week to avoid this building degrading.";
+			ACTIVE.setScriptCallOnMouseEntered(4781, widget0, CTX_WIDGET_CHILD, 1, "Iii");
+			ACTIVE.setScriptCallOnMouseOver(4783, str1, widget0, CTX_WIDGET_CHILD, "sIi");
+			ACTIVE.setScriptCallOnMouseExit(4781, widget0, CTX_WIDGET_CHILD, 0, "Iii");
+		} else if (int14 > 1) {
+			str1 = "This building owes double upkeep this tick.";
+			ACTIVE.setScriptCallOnMouseEntered(4781, widget0, CTX_WIDGET_CHILD, 1, "Iii");
+			ACTIVE.setScriptCallOnMouseOver(4783, str1, widget0, CTX_WIDGET_CHILD, "sIi");
+			ACTIVE.setScriptCallOnMouseExit(4781, widget0, CTX_WIDGET_CHILD, 0, "Iii");
+		}
+	} else if (arg2 == 601) {
+		if (script_4785() == 0) {
+			ACTIVE.setHidden(false);
+			ACTIVE.setPosition(60, 12 + int7 * int6, 2, 0);
+			ACTIVE.setSize(15, 15, 0, 0);
+			ACTIVE.setSprite(7542);
+			str1 = "You lack some skill plot prerequisites to build this upgrade.";
+			ACTIVE.setScriptCallOnMouseEntered(4781, widget0, CTX_WIDGET_CHILD, 1, "Iii");
+			ACTIVE.setScriptCallOnMouseOver(4783, str1, widget0, CTX_WIDGET_CHILD, "sIi");
+			ACTIVE.setScriptCallOnMouseExit(4781, widget0, CTX_WIDGET_CHILD, 0, "Iii");
+		} else if (script_4786(CLANBIT[2580]) == 0) {
+			ACTIVE.setHidden(false);
+			ACTIVE.setPosition(60, 12 + int7 * int6, 2, 0);
+			ACTIVE.setSize(15, 15, 0, 0);
+			ACTIVE.setSprite(7542);
+			str1 = "You need more members to visit your citadel this week to build this upgrade.";
+			ACTIVE.setScriptCallOnMouseEntered(4781, widget0, CTX_WIDGET_CHILD, 1, "Iii");
+			ACTIVE.setScriptCallOnMouseOver(4783, str1, widget0, CTX_WIDGET_CHILD, "sIi");
+			ACTIVE.setScriptCallOnMouseExit(4781, widget0, CTX_WIDGET_CHILD, 0, "Iii");
+		} else {
+			ACTIVE.setHidden(true);
+		}
+	} else if (arg2 > 600) {
+		if (script_4787(CLANBIT[2580]) == 0) {
+			ACTIVE.setHidden(false);
+			ACTIVE.setPosition(60, 12 + int7 * int6, 2, 0);
+			ACTIVE.setSize(15, 15, 0, 0);
+			ACTIVE.setSprite(7542);
+			str1 = "Cannot upgrade: not enough full members have visited to perform upkeep.";
+			ACTIVE.setScriptCallOnMouseEntered(4781, widget0, CTX_WIDGET_CHILD, 1, "Iii");
+			ACTIVE.setScriptCallOnMouseOver(4783, str1, widget0, CTX_WIDGET_CHILD, "sIi");
+			ACTIVE.setScriptCallOnMouseExit(4781, widget0, CTX_WIDGET_CHILD, 0, "Iii");
+		} else if (int13 < int11) {
+			ACTIVE.setHidden(false);
+			ACTIVE.setPosition(60, 12 + int7 * int6, 2, 0);
+			ACTIVE.setSize(15, 15, 0, 0);
+			ACTIVE.setSprite(7542);
+			str1 = "Cannot upgrade: citadel walls will be too low tier. You will still be charged!";
+			ACTIVE.setScriptCallOnMouseEntered(4781, widget0, CTX_WIDGET_CHILD, 1, "Iii");
+			ACTIVE.setScriptCallOnMouseOver(4783, str1, widget0, CTX_WIDGET_CHILD, "sIi");
+			ACTIVE.setScriptCallOnMouseExit(4781, widget0, CTX_WIDGET_CHILD, 0, "Iii");
+		} else if (arg2 == 603 || arg2 == 602) {
+			if (VARC[1561] == 0) {
+				VARC[1561] = 1;
+			} else {
+				ACTIVE.setHidden(false);
+				ACTIVE.setPosition(60, 12 + int7 * int6, 2, 0);
+				ACTIVE.setSize(15, 15, 0, 0);
+				ACTIVE.setSprite(7542);
+				str1 = "Cannot upgrade: You may upgrade only one of storehouse or battlefield per week.";
+				ACTIVE.setScriptCallOnMouseEntered(4781, widget0, CTX_WIDGET_CHILD, 1, "Iii");
+				ACTIVE.setScriptCallOnMouseOver(4783, str1, widget0, CTX_WIDGET_CHILD, "sIi");
+				ACTIVE.setScriptCallOnMouseExit(4781, widget0, CTX_WIDGET_CHILD, 0, "Iii");
+			}
+		} else if (arg2 >= 604 && arg2 <= 615) {
+			if (VARC[1562] < 2) {
+				VARC[1562] = VARC[1562] + 1;
+			} else {
+				ACTIVE.setHidden(false);
+				ACTIVE.setPosition(60, 12 + int7 * int6, 2, 0);
+				ACTIVE.setSize(15, 15, 0, 0);
+				ACTIVE.setSprite(7542);
+				str1 = "Cannot upgrade: You may upgrade only two skilling plots per week.";
+				ACTIVE.setScriptCallOnMouseEntered(4781, widget0, CTX_WIDGET_CHILD, 1, "Iii");
+				ACTIVE.setScriptCallOnMouseOver(4783, str1, widget0, CTX_WIDGET_CHILD, "sIi");
+				ACTIVE.setScriptCallOnMouseExit(4781, widget0, CTX_WIDGET_CHILD, 0, "Iii");
+			}
+		} else {
+			ACTIVE.setHidden(true);
+		}
+	} else {
+		ACTIVE.setHidden(true);
+	}
+	arg1 = arg1 + 1;
+	ACTIVE.createChild(widget0, 5, arg1);
+	str3 = "Cancel this job.";
+	if (arg2 > 600 || arg2 < 300) {
+		ACTIVE.setHidden(false);
+		ACTIVE.setPosition(5, 12 + int7 * int6, 2, 0);
+		ACTIVE.setSize(15, 15, 0, 0);
+		ACTIVE.setSprite(7545);
+		ACTIVE.setScriptCallOnMouseEntered(4780, widget0, CTX_WIDGET_CHILD, 1, "Iii");
+		ACTIVE.setScriptCallOnMouseOver(4783, str3, widget0, CTX_WIDGET_CHILD, "sIi");
+		ACTIVE.setScriptCallOnMouseExit(4780, widget0, CTX_WIDGET_CHILD, 0, "Iii");
+		ACTIVE.setContextMenuOption(1, "Cancel");
+		ACTIVE.setScriptCallOnClickContextMenu(40, widget(1115, 186), "I");
+	} else {
+		ACTIVE.setHidden(true);
+	}
+	arg1 = arg1 + 1;
+	return arg1;
+}

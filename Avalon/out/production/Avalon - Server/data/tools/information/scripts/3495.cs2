@@ -1,0 +1,70 @@
+void script_3495(Widget widget0, int arg1) {
+	Widget widget2;
+	string str0;
+	string str1;
+	string str2;
+	str0 = "";
+	str1 = "";
+	widget2 = widget(993, 302);
+	switch (VARC[1184]) {
+		case 1:
+			if (widget0 == widget(993, 134)) {
+				str0 = datamap('i', 's', (DataMap)3089, VARPBIT[8053]);
+				str1 = datamap('i', 's', (DataMap)3089, VARPBIT[8053] + 1);
+			} else if (widget0 == widget(993, 41)) {
+				str0 = datamap('i', 's', (DataMap)3090, VARPBIT[8054]);
+				str1 = datamap('i', 's', (DataMap)3090, VARPBIT[8054] + 1);
+				widget2 = widget(993, 301);
+			} else if (widget0 == widget(993, 83)) {
+				str0 = datamap('i', 's', (DataMap)3091, VARPBIT[8055]);
+				str1 = datamap('i', 's', (DataMap)3091, VARPBIT[8055] + 1);
+				widget2 = widget(993, 300);
+			}
+			break;
+		case 2:
+			if (widget0 == widget(993, 134)) {
+				str0 = datamap('i', 's', (DataMap)3092, VARPBIT[8056]);
+				str1 = datamap('i', 's', (DataMap)3092, VARPBIT[8056] + 1);
+			} else if (widget0 == widget(993, 41)) {
+				str0 = datamap('i', 's', (DataMap)3093, VARPBIT[8057]);
+				str1 = datamap('i', 's', (DataMap)3093, VARPBIT[8057] + 1);
+				widget2 = widget(993, 301);
+			} else if (widget0 == widget(993, 83)) {
+				str0 = datamap('i', 's', (DataMap)3094, VARPBIT[8058]);
+				str1 = datamap('i', 's', (DataMap)3094, VARPBIT[8058] + 1);
+				widget2 = widget(993, 300);
+			}
+			break;
+		case 3:
+			if (widget0 == widget(993, 134)) {
+				str0 = datamap('i', 's', (DataMap)3095, VARPBIT[8059]);
+				str1 = datamap('i', 's', (DataMap)3095, VARPBIT[8059] + 1);
+			} else if (widget0 == widget(993, 41)) {
+				str0 = datamap('i', 's', (DataMap)3096, VARPBIT[8060]);
+				str1 = datamap('i', 's', (DataMap)3096, VARPBIT[8060] + 1);
+				widget2 = widget(993, 301);
+			} else if (widget0 == widget(993, 83)) {
+				str0 = datamap('i', 's', (DataMap)3097, VARPBIT[8061]);
+				str1 = datamap('i', 's', (DataMap)3097, VARPBIT[8061] + 1);
+				widget2 = widget(993, 300);
+			}
+			break;
+		case 4:
+			if (widget0 == widget(993, 134)) {
+				str0 = datamap('i', 's', (DataMap)3098, VARPBIT[8062]);
+				str1 = datamap('i', 's', (DataMap)3098, VARPBIT[8062] + 1);
+			} else if (widget0 == widget(993, 41)) {
+				str0 = datamap('i', 's', (DataMap)3099, VARPBIT[8063]);
+				str1 = datamap('i', 's', (DataMap)3099, VARPBIT[8063] + 1);
+				widget2 = widget(993, 301);
+			} else if (widget0 == widget(993, 83)) {
+				str0 = datamap('i', 's', (DataMap)3100, VARPBIT[8064]);
+				str1 = datamap('i', 's', (DataMap)3100, VARPBIT[8064] + 1);
+				widget2 = widget(993, 300);
+			}
+			break;
+	}
+	str2 = "Current - " + str0 + "<br>" + "Next - " + str1;
+	script_569(widget0, arg1, widget2, str2, 25, widget2.getLayer().getWidth());
+	return;
+}

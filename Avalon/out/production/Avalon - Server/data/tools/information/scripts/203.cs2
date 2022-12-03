@@ -1,0 +1,8 @@
+void script_203(int arg0) {
+	if (cs2method5428(widget(1109, 5), -1)) {
+		widget(1109, 5).setScriptCallOnGameloop(204, "");
+		return;
+	}
+	script_518();
+	return;
+}

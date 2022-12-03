@@ -1,0 +1,31 @@
+void script_5268(boolean boolean0, string string1, string string2) {
+	int int1;
+	int int2;
+	int1 = widget(1137, 109).nextChild();
+	int2 = int1 / 2 * 20;
+	ACTIVE.createChild(widget(1137, 109), 4, int1);
+	ACTIVE.setText(string1);
+	string2 = concat(string2, "<col=800000>" + chooseString(boolean0, " Teams: Yes.", " Teams: No."));
+	ACTIVE.setScriptCallOnMouseOver(1160, CTX_WIDGET, -1, widget(1137, 6), string2, 25, 519, "IiIsii");
+	ACTIVE.setSize(8100, 20, 2, 0);
+	ACTIVE.setScriptCallOnClickContextMenu(5267, "");
+	if (int1 % 2 == 0) {
+		ACTIVE.setPosition(2, int2, 0, 0);
+	} else {
+		ACTIVE.setPosition(2, int2, 2, 0);
+	}
+	ACTIVE.setFont(494);
+	ACTIVE.setRGB(0x00FF00);
+	ACTIVE.setTextAntiMacro(true);
+	ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+	ACTIVE.setScriptCallOnMouseExit(1949, CTX_WIDGET, CTX_WIDGET_CHILD, 65280, widget(1137, 6), "IiiI");
+	ACTIVE.setContextMenuOption(1, "Select");
+	if (int1 >= 10 && int1 % 2 == 0) {
+		widget(1137, 110).setIsHidden(false);
+		widget(1137, 109).setSize(18, 2, 1, 1);
+		widget(1137, 109).setScrollMax(0, int2 + 20);
+		script_31(widget(1137, 110), widget(1137, 109), 792, 789, 790, 791, 773, 788);
+		script_72(widget(1137, 110), widget(1137, 109), (VARPBIT[9822] - 1) / 2 * 20);
+	}
+	return;
+}

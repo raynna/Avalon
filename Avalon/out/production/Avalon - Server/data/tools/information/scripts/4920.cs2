@@ -1,0 +1,47 @@
+void script_4920() {
+	string str0;
+	string str1;
+	str0 = "";
+	if (VARC[1557] == 0 && VARC[1558] < 6 && VARC[1558] == 0 && VARC[1559] < 20) {
+		
+	}
+	if (VARC[1557] == 0 && VARC[1558] == 0 && VARC[1559] == 0) {
+		widget(1092, 1831).setText("Due!");
+		return;
+	}
+	if (VARC[1557] > 0) {
+		str0 = concat(str0, str(VARC[1557]) + "d ");
+	}
+	if (VARC[1558] > 0) {
+		str0 = concat(str0, str(VARC[1558]) + "h ");
+	}
+	if (VARC[1559] > 0) {
+		str0 = concat(str0, str(VARC[1559]) + "m");
+	}
+	widget(1092, 1831).setText(str0);
+	str1 = "";
+	if (citadelConfigsInitialized()) {
+		widget(1092, 1837).setText(str(CLAN[2136]));
+		if (script_4786(CLANBIT[2580] - CLANBIT[2633]) == 1) {
+			widget(1092, 1837).setRGB(0x28C851);
+			str1 = "Sufficient full members have visited to allow all upkeep and upgrades.";
+		} else if (script_4787(CLANBIT[2580] - CLANBIT[2633]) == 1) {
+			if (CLANBIT[2580] == 7) {
+				widget(1092, 1837).setRGB(0x28C851);
+				str1 = "Sufficient full members have visited to allow all upkeep and upgrades.";
+			} else {
+				widget(1092, 1837).setRGB(0xD0C420);
+				str1 = "Sufficient full members have visited to allow all upkeep, but not to upgrade your citadel.";
+			}
+		} else if (CLAN[2136] > 4) {
+			widget(1092, 1837).setRGB(0xC4312D);
+			str1 = "More full members must visit your citadel to allow you to perform upkeep on it.";
+		} else {
+			widget(1092, 1837).setRGB(0xC4312D);
+			str1 = "More full members must visit your citadel to avoid losing access to it next build tick.";
+		}
+		widget(1092, 315).setScriptCallOnMouseOver(4538, widget(1092, 327), CTX_WIDGET, -1, str1, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 315).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	}
+	return;
+}

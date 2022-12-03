@@ -1,0 +1,9 @@
+void script_3143(int arg0, string string1) {
+	if (arg0 == 0) {
+		widget(910, 8).setRGB(0xEBE0BC);
+	} else if (arg0 == 1) {
+		widget(910, 8).setRGB(0xFF0000);
+	}
+	widget(910, 8).setText(string1);
+	return;
+}

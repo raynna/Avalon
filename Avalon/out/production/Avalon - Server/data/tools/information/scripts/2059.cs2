@@ -1,0 +1,140 @@
+void script_2059(int arg0) {
+	AttrMap attrmap1;
+	int int2;
+	int int3;
+	DataMap datamap4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	DataMap datamap10;
+	int int11;
+	int int12;
+	int int13;
+	Widget widget14;
+	int int15;
+	Spell spell16;
+	DataMap datamap17;
+	int int18;
+	attrmap1 = null;
+	int2 = 0;
+	if (script_1119() == 1) {
+		attrmap1 = datamap('i', 'J', (DataMap)728, VARPBIT[357]);
+		int2 = 1;
+	} else {
+		attrmap1 = datamap('i', 'J', (DataMap)2162, VARPBIT[357]);
+	}
+	int3 = 0;
+	ARRAY0 = new int[4];
+	switch (VARPBIT[357]) {
+		case 0:
+			int3 = VARPBIT[5822];
+			ARRAY0[0] = VARPBIT[6459];
+			ARRAY0[1] = VARPBIT[6460];
+			ARRAY0[2] = VARPBIT[6461];
+			ARRAY0[3] = VARPBIT[6462];
+			break;
+		case 1:
+			int3 = VARPBIT[5823];
+			ARRAY0[0] = VARPBIT[6466];
+			ARRAY0[1] = 0;
+			ARRAY0[2] = 0;
+			ARRAY0[3] = VARPBIT[6467];
+			break;
+		case 2:
+			int3 = VARPBIT[5824];
+			ARRAY0[0] = VARPBIT[6463];
+			ARRAY0[1] = 0;
+			ARRAY0[2] = VARPBIT[6464];
+			ARRAY0[3] = VARPBIT[6465];
+			break;
+		case 3:
+			int3 = VARPBIT[7347];
+			ARRAY0[0] = VARPBIT[7348];
+			ARRAY0[1] = VARPBIT[7349];
+			ARRAY0[2] = VARPBIT[7350];
+			ARRAY0[3] = VARPBIT[7351];
+			break;
+	}
+	if (arg0 != -1) {
+		if (int3 != arg0) {
+			playSoundEffect(5845, 1, 0);
+		}
+		int3 = arg0;
+	}
+	VARC[631] = int3;
+	datamap4 = datamap('i', 'g', getAttributeMapValue(attrmap1, 662), int3);
+	int5 = getAttributeMapValue(attrmap1, 654);
+	int6 = getAttributeMapValue(attrmap1, 655);
+	int7 = datamapSize(datamap4);
+	int8 = 0;
+	int9 = 0;
+	datamap10 = null;
+	int11 = 0;
+	int12 = 0;
+	int13 = 0;
+	widget14 = null;
+	int15 = -1;
+	spell16 = null;
+	while (int9 < int7) {
+		datamap10 = datamap('i', 'g', datamap4, int9);
+		if (datamap10 != null) {
+			int8 = datamapSize(datamap10);
+			int11 = 0;
+			int13 = 0;
+			while (int11 < int8) {
+				widget14 = datamap('i', 'I', datamap10, int13);
+				if (widget14 != null) {
+					int11 = int11 + 1;
+					int15 = datamap('I', 'i', (DataMap)727, widget14);
+					if ((int15 == -1 || ARRAY0[int15] == 0) && (isMember() || datamap('I', 'i', (DataMap)743, widget14) == 0)) {
+						int12 = int12 + 1;
+						widget14.setPosition(int6, int5, 0, 0);
+						widget14.setIsHidden(false);
+						int6 = int6 + (getAttributeMapValue(attrmap1, 657) + getAttributeMapValue(attrmap1, 658));
+						if (int12 % getAttributeMapValue(attrmap1, 660) == 0) {
+							int5 = int5 + (getAttributeMapValue(attrmap1, 656) + getAttributeMapValue(attrmap1, 659));
+							int6 = getAttributeMapValue(attrmap1, 655);
+						}
+						spell16 = datamap('I', '@', (DataMap)209, widget14);
+						if (spell16 != null) {
+							widget14.setTargetCursor(spell16, 36);
+						}
+					} else {
+						widget14.setIsHidden(true);
+					}
+				}
+				int13 = int13 + 1;
+				if (int13 > 997) {
+					return;
+				}
+			}
+		}
+		int9 = int9 + 1;
+	}
+	if (int2 == 1) {
+		getAttributeMapValue(attrmap1, 316).setScrollMax(getAttributeMapValue(attrmap1, 316).getWidth(), int5 + getAttributeMapValue(attrmap1, 656) + getAttributeMapValue(attrmap1, 654));
+		script_31(getAttributeMapValue(attrmap1, 684), getAttributeMapValue(attrmap1, 316), 792, 789, 790, 791, 773, 788);
+	} else if (ACTIVE.setChild(getAttributeMapValue(attrmap1, 316))) {
+		ACTIVE.setScrollPos(0, 0);
+		getAttributeMapValue(attrmap1, 684).clearChildren();
+	}
+	datamap17 = getAttributeMapValue(attrmap1, 663);
+	int18 = 0;
+	if (datamap17 != null) {
+		int18 = datamapSize(datamap17);
+		int13 = 0;
+		while (int13 < int18) {
+			if (int13 == int3) {
+				datamap('i', 'I', datamap17, int13).setSprite(1703);
+			} else {
+				datamap('i', 'I', datamap17, int13).setSprite(1701);
+			}
+			int13 = int13 + 1;
+		}
+	}
+	script_1121();
+	getAttributeMapValue(attrmap1, 688).clearChildren();
+	return;
+}

@@ -1,0 +1,29 @@
+void script_1875(Widget widget0, Widget widget1, string string2) {
+	Widget widget2;
+	int int3;
+	int int4;
+	int int5;
+	string str1;
+	widget2 = widget(906, 150);
+	widget1.setPosition(script_1551(VARC[1097], string2, 494, widget2.getX() - 15), widget1.getY(), 0, 0);
+	int3 = widget2.getWidth() - 0;
+	int4 = length(string2);
+	str1 = "";
+	if (VARC[1097] > 0) {
+		str1 = substr(string2, 0, min(VARC[1097], int4));
+	}
+	int5 = getTextWidth(str1, 494) - int3;
+	widget0.setPosition(0, 0, 0, 1);
+	widget0.setSize(max(getTextWidth(string2, 494), int3), widget0.getHeight(), 0, 0);
+	if (int5 > 0) {
+		widget0.setPosition(widget0.getX() - int5, widget0.getY(), 0, 0);
+		widget1.setPosition(min(widget1.getX() - int5, int3 - 1), widget1.getY(), 0, 0);
+	}
+	if (hasWindowFocus()) {
+		widget1.setIsHidden(false);
+	} else {
+		widget1.setIsHidden(true);
+	}
+	widget0.setScriptCallOnGameloop(1876, getClientCycle(), widget1, "iI");
+	return;
+}

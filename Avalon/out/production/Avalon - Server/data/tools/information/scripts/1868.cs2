@@ -1,0 +1,8 @@
+void script_1868(Widget widget0) {
+	if (getClientCycle() % 50 == 0 && getSystemUpdateTimer() > 0) {
+		widget(906, 27).setPosition(0, -8, 1, 1);
+		script_1870(widget(906, 34));
+		widget0.setScriptCallOnGameloop(1869, widget(906, 34), "I");
+	}
+	return;
+}

@@ -1,0 +1,31 @@
+int script_4946(int arg0) {
+	if (citadelConfigsInitialized()) {
+		switch (arg0) {
+			case 1:
+				return CLANBIT[2553];
+			case 2:
+				return CLANBIT[2554];
+			case 3:
+				return CLANBIT[2555];
+			case 4:
+				return CLANBIT[2556];
+			case 5:
+				return CLANBIT[2557];
+			case 6:
+				return CLANBIT[2558];
+			case 7:
+				return CLANBIT[2560];
+			case 8:
+				return CLANBIT[2561];
+			case 9:
+				return CLANBIT[2562];
+			case 10:
+				return CLANBIT[2563];
+			case 11:
+				return CLANBIT[2564];
+			case 12:
+				return CLANBIT[2565];
+		}
+	}
+	return -1;
+}

@@ -1,0 +1,45 @@
+void script_964() {
+	switch (VARPBIT[2341]) {
+		case 1:
+			VARC[122] = 1536;
+			break;
+		case 2:
+			VARC[122] = 1024;
+			break;
+		case 3:
+			VARC[122] = 512;
+			break;
+		default:
+			VARC[122] = 0;
+			break;
+	}
+	switch (VARPBIT[2342]) {
+		case 1:
+			VARC[123] = 1536;
+			break;
+		case 2:
+			VARC[123] = 1024;
+			break;
+		case 3:
+			VARC[123] = 512;
+			break;
+		default:
+			VARC[123] = 0;
+			break;
+	}
+	switch (VARPBIT[2343]) {
+		case 1:
+			VARC[124] = 1536;
+			break;
+		case 2:
+			VARC[124] = 1024;
+			break;
+		case 3:
+			VARC[124] = 512;
+			break;
+		default:
+			VARC[124] = 0;
+			break;
+	}
+	return;
+}

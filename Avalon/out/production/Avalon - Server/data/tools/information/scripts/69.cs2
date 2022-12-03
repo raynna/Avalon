@@ -1,0 +1,4 @@
+void script_69(boolean boolean0, Widget widget1) {
+	widget1.setIsHidden(boolean0);
+	return;
+}

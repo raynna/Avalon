@@ -1,0 +1,76 @@
+void script_531(Widget widget0, int arg1, Sprite arg2, Widget widget3) {
+	Sprite sprite4;
+	int int5;
+	int int6;
+	Widget widget7;
+	Widget widget8;
+	boolean boolean9;
+	sprite4 = null;
+	int5 = 0;
+	int6 = -1;
+	widget7 = null;
+	widget8 = null;
+	boolean9 = false;
+	if (widget0 == null || arg1 == -1 || arg2 == null) {
+		return;
+	}
+	if (widget0 == widget(301, 63)) {
+		int5 = script_543(VARPBIT[4090]);
+		widget7 = widget(301, 45);
+		widget8 = widget(301, 46);
+	}
+	if (widget0 == widget(301, 64)) {
+		int5 = script_543(VARPBIT[4091]);
+		widget7 = widget(301, 47);
+		widget8 = widget(301, 48);
+	}
+	if (widget0 == widget(301, 65)) {
+		int5 = script_543(VARPBIT[4093]);
+		widget7 = widget(301, 49);
+		widget8 = widget(301, 50);
+	}
+	if (widget0 == widget(301, 66)) {
+		int5 = script_543(VARPBIT[4095]);
+		widget7 = widget(301, 51);
+		widget8 = widget(301, 52);
+	}
+	if (widget0 == widget(301, 67)) {
+		int5 = script_543(VARPBIT[4096]);
+		widget7 = widget(301, 53);
+		widget8 = widget(301, 54);
+	}
+	if (widget0 == widget(301, 68)) {
+		int5 = script_543(VARPBIT[4098]);
+		widget7 = widget(301, 55);
+		widget8 = widget(301, 56);
+	}
+	if (widget0 == widget(301, 69)) {
+		int5 = script_543(VARPBIT[4100]);
+		widget7 = widget(301, 57);
+		widget8 = widget(301, 58);
+	}
+	if (widget0 == widget(301, 70)) {
+		int5 = script_543(VARPBIT[4101]);
+		widget7 = widget(301, 59);
+		widget8 = widget(301, 60);
+	}
+	if (widget0 == widget(301, 71)) {
+		int5 = script_543(VARPBIT[4102]);
+		widget7 = widget(301, 61);
+		widget8 = widget(301, 62);
+	}
+	if (int5 == 1) {
+		sprite4 = (Sprite)arg1;
+		boolean9 = false;
+		widget7.setRGB(0xFAB432);
+		widget8.setRGB(0xFAB432);
+	} else {
+		sprite4 = arg2;
+		boolean9 = true;
+		widget7.setRGB(0x606060);
+		widget8.setRGB(0x606060);
+	}
+	widget0.setSprite(sprite4);
+	widget3.setIsHidden(boolean9);
+	return;
+}

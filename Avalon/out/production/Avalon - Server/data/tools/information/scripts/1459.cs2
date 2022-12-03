@@ -1,0 +1,47 @@
+void script_1459() {
+	int int0;
+	int int1;
+	int int2;
+	int0 = 2;
+	int1 = 0;
+	int2 = 0;
+	while (int0 <= 9) {
+		switch (int0) {
+			case 2:
+				int1 = VARPBIT[4885];
+				break;
+			case 3:
+				int1 = VARPBIT[4886];
+				break;
+			case 4:
+				int1 = VARPBIT[4887];
+				break;
+			case 5:
+				int1 = VARPBIT[4888];
+				break;
+			case 6:
+				int1 = VARPBIT[4889];
+				break;
+			case 7:
+				int1 = VARPBIT[4890];
+				break;
+			case 8:
+				int1 = VARPBIT[4891];
+				break;
+			case 9:
+				int1 = VARPBIT[4892];
+				break;
+		}
+		if (int1 > 0) {
+			script_1460(int0, script_1470(int0));
+		} else if (int2 == 0) {
+			script_1461(int0);
+			int2 = 1;
+		} else {
+			script_1462(int0);
+		}
+		int0 = int0 + 1;
+	}
+	script_1463(VARPBIT[4893]);
+	return;
+}

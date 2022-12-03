@@ -1,0 +1,18 @@
+void script_4223() {
+	widget(944, 79).cs2method2310("Make 100");
+	widget(944, 80).cs2method2310("Make 50");
+	widget(944, 81).cs2method2310("Make 10");
+	widget(944, 26).cs2method2310("Make 100");
+	widget(944, 27).cs2method2310("Make 50");
+	widget(944, 28).cs2method2310("Make 10");
+	widget(944, 32).cs2method2310("Make 100");
+	widget(944, 33).cs2method2310("Make 50");
+	widget(944, 34).cs2method2310("Make 10");
+	widget(944, 38).cs2method2310("Make 100");
+	widget(944, 39).cs2method2310("Make 50");
+	widget(944, 40).cs2method2310("Make 10");
+	widget(944, 44).cs2method2310("Make 100");
+	widget(944, 45).cs2method2310("Make 50");
+	widget(944, 46).cs2method2310("Make 10");
+	return;
+}

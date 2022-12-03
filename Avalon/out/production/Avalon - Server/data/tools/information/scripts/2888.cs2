@@ -1,0 +1,10 @@
+void script_2888() {
+	if (getDisplayMode() >= 2) {
+		widget(476, 56).setPosition(0, 287, 0, 0);
+		widget(476, 55).setPosition(0, 254, 0, 0);
+	} else {
+		widget(476, 56).setPosition(18, 40, 2, 0);
+		widget(476, 55).setPosition(18, 7, 2, 0);
+	}
+	return;
+}

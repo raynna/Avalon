@@ -1,0 +1,8 @@
+void script_1675(int arg0) {
+	if (arg0 == 0) {
+		widget(84, 19).setModel(datamap('i', 'm', (DataMap)839, VARPBIT[6764]));
+	} else {
+		widget(84, 19).setModel(datamap('i', 'm', (DataMap)838, arg0));
+	}
+	return;
+}

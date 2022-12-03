@@ -1,0 +1,10 @@
+void script_3141(int arg0, string string1) {
+	if (setWorldHost(arg0, string1)) {
+		VARC[547] = 0;
+		script_3143(0, "Switched to game world " + str(arg0));
+	} else {
+		script_3143(1, "Sorry, we couldn't contact world " + str(arg0) + "." + "<br>" + "Please choose a different world.");
+	}
+	script_3116();
+	return;
+}

@@ -1,0 +1,18 @@
+void script_4989(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int1 = -1;
+	int2 = -1;
+	int3 = -1;
+	int4 = -1;
+	int5 = -1;
+	int1, int2, int4, int5, int3 = script_4958(arg0);
+	script_4988(VARPBIT[9550]);
+	script_4937();
+	VARPBIT[9550] = int1;
+	VARPBIT[9551] = script_4945(int1);
+	return;
+}

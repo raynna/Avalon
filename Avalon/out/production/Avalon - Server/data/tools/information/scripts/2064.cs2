@@ -1,0 +1,86 @@
+void script_2064(int arg0) {
+	boolean boolean1;
+	widget(138, 28).setIsHidden(true);
+	widget(138, 37).setIsHidden(true);
+	widget(138, 36).setIsHidden(true);
+	widget(138, 31).setIsHidden(true);
+	widget(138, 39).setIsHidden(true);
+	widget(138, 38).setIsHidden(true);
+	widget(138, 35).setIsHidden(true);
+	widget(138, 34).setIsHidden(true);
+	widget(138, 33).setIsHidden(true);
+	widget(138, 32).setIsHidden(true);
+	widget(138, 29).setIsHidden(true);
+	widget(138, 30).setIsHidden(true);
+	widget(138, 41).setIsHidden(true);
+	widget(138, 40).setIsHidden(true);
+	boolean1 = false;
+	if (VARPBIT[5332] < 120) {
+		boolean1 = true;
+	}
+	widget(138, 6).setIsHidden(boolean1);
+	widget(138, 7).setIsHidden(boolean1);
+	widget(138, 8).setIsHidden(boolean1);
+	widget(138, 19).setIsHidden(boolean1);
+	widget(138, 20).setIsHidden(boolean1);
+	widget(138, 21).setIsHidden(boolean1);
+	widget(138, 12).setIsHidden(boolean1);
+	switch (arg0) {
+		case 0:
+			widget(138, 28).setIsHidden(false);
+			break;
+		case 1:
+			widget(138, 37).setIsHidden(false);
+			widget(138, 37).setAnimation(786);
+			break;
+		case 2:
+			widget(138, 36).setIsHidden(false);
+			widget(138, 36).setAnimation(786);
+			break;
+		case 3:
+			widget(138, 31).setIsHidden(false);
+			widget(138, 31).setAnimation(785);
+			break;
+		case 4:
+			widget(138, 39).setIsHidden(false);
+			widget(138, 39).setAnimation(785);
+			break;
+		case 5:
+			widget(138, 38).setIsHidden(false);
+			widget(138, 38).setAnimation(785);
+			break;
+		case 6:
+			widget(138, 35).setIsHidden(false);
+			widget(138, 35).setAnimation(785);
+			break;
+		case 7:
+			widget(138, 34).setIsHidden(false);
+			widget(138, 34).setAnimation(785);
+			break;
+		case 8:
+			widget(138, 32).setIsHidden(false);
+			widget(138, 32).setAnimation(785);
+			break;
+		case 9:
+			widget(138, 33).setIsHidden(false);
+			widget(138, 33).setAnimation(785);
+			break;
+		case 10:
+			widget(138, 29).setIsHidden(false);
+			widget(138, 29).setAnimation(785);
+			break;
+		case 11:
+			widget(138, 30).setIsHidden(false);
+			widget(138, 30).setAnimation(785);
+			break;
+		case 12:
+			widget(138, 41).setIsHidden(false);
+			widget(138, 41).setAnimation(786);
+			break;
+		case 13:
+			widget(138, 40).setIsHidden(false);
+			widget(138, 40).setAnimation(786);
+			break;
+	}
+	return;
+}

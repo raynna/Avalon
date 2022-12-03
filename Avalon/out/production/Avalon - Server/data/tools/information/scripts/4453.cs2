@@ -1,0 +1,4 @@
+void script_4453() {
+	widget(1110, 52).setScriptCallOnGameloop(4454, widget(1110, 5), getClientCycle(), "Ii");
+	return;
+}

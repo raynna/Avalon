@@ -1,0 +1,8 @@
+void script_4557() {
+	if (clanGetChatCount() > 0) {
+		sendUnknownVarByteEmptyFriendPacketMethod3620();
+	} else {
+		script_3015("Join Chat Channel", "", 5, "", "");
+	}
+	return;
+}

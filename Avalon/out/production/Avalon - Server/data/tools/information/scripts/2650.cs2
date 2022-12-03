@@ -1,0 +1,9 @@
+void script_2650() {
+	DataMap datamap0;
+	datamap0 = (DataMap)1093;
+	if (IsFemale()) {
+		datamap0 = (DataMap)3872;
+	}
+	widget(137, 54).setSize(getTextWidth(datamap('i', 's', datamap0, VARP[1442]) + cs2method5015() + "<img=3>" + ":", 495), widget(137, 54).getHeight(), 0, 0);
+	return;
+}

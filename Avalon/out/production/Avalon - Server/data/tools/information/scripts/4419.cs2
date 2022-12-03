@@ -1,0 +1,14 @@
+void script_4419(Widget widget0) {
+	if (widget0.getLayer().getHeight() > 69) {
+		script_4544(widget0, null, null, null, 14, 70, 3, 1);
+		widget(1107, 58).setSprite(6169);
+		widget(1107, 59).setSprite(6169);
+		widget(1107, 40).setNoClickThrough(0);
+	} else if (widget0.getLayer().getHeight() == 14) {
+		script_4544(widget0, null, null, null, 14, 70, 3, 1);
+		widget(1107, 58).setSprite(6168);
+		widget(1107, 59).setSprite(6168);
+		widget(1107, 40).setNoClickThrough(1);
+	}
+	return;
+}

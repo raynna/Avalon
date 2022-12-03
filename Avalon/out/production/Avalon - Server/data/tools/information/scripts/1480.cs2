@@ -1,0 +1,8 @@
+void script_1480(Widget widget0, int arg1) {
+	if (VARC[188] == 0) {
+		script_41(widget(762, 97));
+		return;
+	}
+	script_569(widget0, arg1, widget(762, 97), "Item is in tab " + str(script_1468(arg1)), 25, 150);
+	return;
+}

@@ -1,0 +1,11 @@
+void script_4681() {
+	int int0;
+	int0 = 0;
+	int0 = VARPBIT[9436] + VARPBIT[9437] + VARPBIT[9438] + VARPBIT[9439] + VARPBIT[9440] + VARPBIT[9441] + VARPBIT[9442] + VARPBIT[9443] + VARPBIT[9444] + VARPBIT[9445] + VARPBIT[9446] + VARPBIT[9447] + VARPBIT[9448] + VARPBIT[9449] + VARPBIT[9450] + VARPBIT[9451] + VARPBIT[9452] + VARPBIT[9453] + VARPBIT[9454] + VARPBIT[9455] + VARPBIT[9456] + VARPBIT[9457] + VARPBIT[9458] + VARPBIT[9459] + VARPBIT[9460] + VARPBIT[9461] + VARPBIT[9462];
+	if (int0 == 26) {
+		widget(314, 13).setText("Final wreck to loot!");
+	} else {
+		widget(314, 13).setText("Wrecks looted: " + str(int0) + "/27");
+	}
+	return;
+}

@@ -1,0 +1,17 @@
+void script_1790(Widget widget0) {
+	int int1;
+	int int2;
+	int1 = 3 * 5 / VARC[265];
+	if (int1 <= 3) {
+		widget0.setText("<col=ff0000>" + "GET READY!" + "</col>");
+		return;
+	}
+	int2 = int1 / 60;
+	int1 = int1 % 60;
+	if (int1 >= 10) {
+		widget0.setText(str(int2) + "m " + str(int1) + "s");
+	} else {
+		widget0.setText(str(int2) + "m 0" + str(int1) + "s");
+	}
+	return;
+}

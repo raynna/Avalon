@@ -1,0 +1,33 @@
+void script_2326(int arg0) {
+	int int1;
+	int1 = getClientCycle();
+	switch (arg0) {
+		case 32828:
+		case 32820:
+		case 32826:
+			VARC[767] = 0;
+			widget(306, 25).setIsHidden(false);
+			widget(306, 26).setText("Incorrect");
+			playSoundEffect(6424, 1, 0);
+			widget(306, 26).setRGB(0xFF0000);
+			widget(306, 25).setScriptCallOnGameloop(2327, int1, "i");
+			break;
+		default:
+			VARC[767] = VARC[767] + 1;
+			if (VARC[767] == 10) {
+				widget(306, 27).setIsHidden(false);
+				widget(306, 29).setContextMenuOption(1, "Train");
+				widget(306, 23).setScriptCallOnMousePressed(-1, "");
+			} else {
+				widget(306, 25).setIsHidden(false);
+				widget(306, 26).setText("Correct");
+				playSoundEffect(6423, 1, 0);
+				widget(306, 26).setRGB(0x00FF00);
+				widget(306, 25).setScriptCallOnGameloop(2327, int1, "i");
+			}
+			break;
+	}
+	widget(306, 3).setText("Correct: " + str(VARC[767]) + "/" + str(10));
+	playSoundEffect(6423, 1, 0);
+	return;
+}

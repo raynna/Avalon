@@ -1,0 +1,20 @@
+void script_2172(int arg0) {
+	int int1;
+	int int2;
+	int1 = VARC[692];
+	int2 = VARC[1103];
+	script_41(widget(190, 20));
+	if (arg0 == 0) {
+		if (VARC[692] == 1) {
+			int1 = 0;
+		} else {
+			int1 = 1;
+		}
+	} else if (VARC[1103] == 1) {
+		int2 = 0;
+	} else {
+		int2 = 1;
+	}
+	script_2162(1, VARC[693], VARC[694], int1, int2);
+	return;
+}

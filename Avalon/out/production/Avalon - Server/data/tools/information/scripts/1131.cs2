@@ -1,0 +1,8 @@
+void script_1131(Widget widget0) {
+	if (VARC[1000] > getMyCombat()) {
+		widget0.setText("Combat Lvl: " + str(getMyCombat()) + "+" + str(VARC[1000] - getMyCombat()));
+	} else {
+		widget0.setText("Combat Lvl: " + str(getMyCombat()));
+	}
+	return;
+}

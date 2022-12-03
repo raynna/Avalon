@@ -1,0 +1,4 @@
+void script_5045(Widget widget0, int arg1, int arg2) {
+	widget0.setScriptCallOnGameloop(5046, widget0, VARC[1396], 0, arg1, arg2, "Iiiii");
+	return;
+}

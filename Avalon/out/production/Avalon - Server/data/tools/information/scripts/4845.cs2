@@ -1,0 +1,18 @@
+void script_4845(int arg0) {
+	if (script_4828(VARPBIT[9558]) == 1) {
+		return;
+	}
+	switch (VARPBIT[9558]) {
+		case 1:
+			VARPBIT[9563] = arg0;
+			break;
+		case 2:
+			VARPBIT[9572] = arg0;
+			break;
+		case 3:
+			VARPBIT[9581] = arg0;
+			break;
+	}
+	script_4846(arg0);
+	return;
+}

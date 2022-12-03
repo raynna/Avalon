@@ -1,0 +1,20 @@
+void script_2464(int arg0, Widget widget1) {
+	if (arg0 > getClientCycle() - 5) {
+		return;
+	}
+	widget1.setScriptCallOnGameloop(-1, "");
+	if (script_2465(script_1305()) == 0) {
+		if (getDisplayMode() >= 2) {
+			script_71(-1);
+			return;
+		}
+		if (script_2465(4) == 1) {
+			script_71(4);
+		} else if (script_2465(9) == 1) {
+			script_71(9);
+		} else if (script_2465(12) == 1 && VARP[281] > 3) {
+			script_71(12);
+		}
+	}
+	return;
+}

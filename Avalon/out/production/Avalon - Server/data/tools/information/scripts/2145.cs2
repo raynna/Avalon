@@ -1,0 +1,105 @@
+string, int, int script_2145(Skill skill0, int arg1, int arg2) {
+	AttrMap attrmap3;
+	AttrMap attrmap4;
+	int int5;
+	int int6;
+	int int7;
+	string str0;
+	attrmap3 = datamap('i', 'J', (DataMap)169, arg1);
+	attrmap4 = datamap('i', 'J', getAttributeMapValue(attrmap3, 61), arg2);
+	int5 = getSkillActualLvl(skill0);
+	str0 = "null";
+	int6 = -1;
+	int7 = 0;
+	if (attrmap4 == null) {
+		return str0, int6, 0;
+	}
+	if (arg1 == 1 && script_2193(arg2) == 2) {
+		return str0, int6, 0;
+	}
+	if (getAttributeMapValue(attrmap4, 871) == null) {
+		return str0, int6, 0;
+	}
+	if (getAttributeMapValue(attrmap4, 871) == skill0 && int5 == getAttributeMapValue(attrmap4, 872)) {
+		str0, int6, int7 = script_2146(skill0, arg1, int5, arg2, getAttributeMapValue(attrmap4, 845));
+		return str0, int6, int7;
+	}
+	if (getAttributeMapValue(attrmap4, 873) == null) {
+		return str0, int6, 0;
+	}
+	if (getAttributeMapValue(attrmap4, 873) == skill0 && int5 == getAttributeMapValue(attrmap4, 874)) {
+		str0, int6, int7 = script_2146(skill0, arg1, int5, arg2, getAttributeMapValue(attrmap4, 845));
+		return str0, int6, int7;
+	}
+	if (getAttributeMapValue(attrmap4, 875) == null) {
+		return str0, int6, 0;
+	}
+	if (getAttributeMapValue(attrmap4, 875) == skill0 && int5 == getAttributeMapValue(attrmap4, 876)) {
+		str0, int6, int7 = script_2146(skill0, arg1, int5, arg2, getAttributeMapValue(attrmap4, 845));
+		return str0, int6, int7;
+	}
+	if (getAttributeMapValue(attrmap4, 877) == null) {
+		return str0, int6, 0;
+	}
+	if (getAttributeMapValue(attrmap4, 877) == skill0 && int5 == getAttributeMapValue(attrmap4, 878)) {
+		str0, int6, int7 = script_2146(skill0, arg1, int5, arg2, getAttributeMapValue(attrmap4, 845));
+		return str0, int6, int7;
+	}
+	if (getAttributeMapValue(attrmap4, 879) == null) {
+		return str0, int6, 0;
+	}
+	if (getAttributeMapValue(attrmap4, 879) == skill0 && int5 == getAttributeMapValue(attrmap4, 880)) {
+		str0, int6, int7 = script_2146(skill0, arg1, int5, arg2, getAttributeMapValue(attrmap4, 845));
+		return str0, int6, int7;
+	}
+	if (getAttributeMapValue(attrmap4, 881) == null) {
+		return str0, int6, 0;
+	}
+	if (getAttributeMapValue(attrmap4, 881) == skill0 && int5 == getAttributeMapValue(attrmap4, 882)) {
+		str0, int6, int7 = script_2146(skill0, arg1, int5, arg2, getAttributeMapValue(attrmap4, 845));
+		return str0, int6, int7;
+	}
+	if (getAttributeMapValue(attrmap4, 883) == null) {
+		return str0, int6, 0;
+	}
+	if (getAttributeMapValue(attrmap4, 883) == skill0 && int5 == getAttributeMapValue(attrmap4, 884)) {
+		str0, int6, int7 = script_2146(skill0, arg1, int5, arg2, getAttributeMapValue(attrmap4, 845));
+		return str0, int6, int7;
+	}
+	if (getAttributeMapValue(attrmap4, 885) == null) {
+		return str0, int6, 0;
+	}
+	if (getAttributeMapValue(attrmap4, 885) == skill0 && int5 == getAttributeMapValue(attrmap4, 886)) {
+		str0, int6, int7 = script_2146(skill0, arg1, int5, arg2, getAttributeMapValue(attrmap4, 845));
+		return str0, int6, int7;
+	}
+	if (getAttributeMapValue(attrmap4, 887) == null) {
+		return str0, int6, 0;
+	}
+	if (getAttributeMapValue(attrmap4, 887) == skill0 && int5 == getAttributeMapValue(attrmap4, 888)) {
+		str0, int6, int7 = script_2146(skill0, arg1, int5, arg2, getAttributeMapValue(attrmap4, 845));
+		return str0, int6, int7;
+	}
+	if (getAttributeMapValue(attrmap4, 889) == null) {
+		return str0, int6, 0;
+	}
+	if (getAttributeMapValue(attrmap4, 889) == skill0 && int5 == getAttributeMapValue(attrmap4, 890)) {
+		str0, int6, int7 = script_2146(skill0, arg1, int5, arg2, getAttributeMapValue(attrmap4, 845));
+		return str0, int6, int7;
+	}
+	if (getAttributeMapValue(attrmap4, 891) == null) {
+		return str0, int6, 0;
+	}
+	if (getAttributeMapValue(attrmap4, 891) == skill0 && int5 == getAttributeMapValue(attrmap4, 892)) {
+		str0, int6, int7 = script_2146(skill0, arg1, int5, arg2, getAttributeMapValue(attrmap4, 845));
+		return str0, int6, int7;
+	}
+	if (getAttributeMapValue(attrmap4, 893) == null) {
+		return str0, int6, 0;
+	}
+	if (getAttributeMapValue(attrmap4, 893) == skill0 && int5 == getAttributeMapValue(attrmap4, 894)) {
+		str0, int6, int7 = script_2146(skill0, arg1, int5, arg2, getAttributeMapValue(attrmap4, 845));
+		return str0, int6, int7;
+	}
+	return "", -1, 0;
+}

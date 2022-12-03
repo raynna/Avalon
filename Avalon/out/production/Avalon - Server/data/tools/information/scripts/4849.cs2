@@ -1,0 +1,52 @@
+void script_4849() {
+	Widget widget0;
+	Widget widget1;
+	Widget widget2;
+	Widget widget3;
+	Widget widget4;
+	Widget widget5;
+	widget0 = widget(1092, 936);
+	widget1 = widget(1092, 935);
+	widget2 = widget(1092, 948);
+	widget3 = widget(1092, 949);
+	widget4 = widget(1092, 937);
+	widget5 = widget(1092, 938);
+	widget(1092, 973).setIsHidden(true);
+	widget(1092, 964).setIsHidden(true);
+	widget(1092, 955).setIsHidden(true);
+	switch (VARPBIT[9558]) {
+		case 1:
+			widget(1092, 973).setIsHidden(false);
+			if (VARPBIT[9570] == 0) {
+				script_4940();
+				script_4850(widget0, widget1, widget2, widget3, widget4, widget5);
+			} else {
+				script_4942();
+				script_4851(widget0, widget1, widget2, widget3, widget4, widget5);
+			}
+			break;
+		case 2:
+			widget(1092, 964).setIsHidden(false);
+			if (VARPBIT[9579] == 0) {
+				script_4940();
+				script_4850(widget0, widget1, widget2, widget3, widget4, widget5);
+			} else {
+				script_4942();
+				script_4851(widget0, widget1, widget2, widget3, widget4, widget5);
+			}
+			break;
+		case 3:
+			widget(1092, 955).setIsHidden(false);
+			if (VARPBIT[9588] == 0) {
+				script_4940();
+				script_4850(widget0, widget1, widget2, widget3, widget4, widget5);
+			} else {
+				script_4942();
+				script_4851(widget0, widget1, widget2, widget3, widget4, widget5);
+			}
+			break;
+	}
+	script_4804();
+	script_4852();
+	return;
+}

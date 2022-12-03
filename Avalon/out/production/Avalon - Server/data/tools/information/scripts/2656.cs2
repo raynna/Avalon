@@ -1,0 +1,31 @@
+int script_2656() {
+	int int0;
+	int int1;
+	int0 = 0;
+	int1 = 0;
+	int0 = int0 + VARPBIT[6113];
+	int1 = (1 + VARPBIT[6114]) / 2;
+	int0 = int0 + int1;
+	int1 = VARPBIT[6115] / 2;
+	int0 = int0 + int1;
+	int1 = VARPBIT[6116] / 2;
+	int0 = int0 + int1;
+	int1 = VARPBIT[6117] + VARPBIT[6118] + (VARPBIT[6119] + VARPBIT[6120]);
+	int0 = int0 + int1;
+	int0 = VARPBIT[6121] + int0;
+	int1 = VARPBIT[6122] / 2;
+	int0 = int0 + int1;
+	int1 = VARPBIT[6123] / 2;
+	int0 = int0 + int1;
+	int1 = VARPBIT[6124] / 2;
+	int0 = int0 + int1;
+	int1 = VARPBIT[6125] / 2;
+	int0 = int0 + int1;
+	int1 = VARPBIT[6151] + VARPBIT[6152] + (VARPBIT[6153] + VARPBIT[6154]) + VARPBIT[6155];
+	int0 = int0 + int1;
+	int0 = int0 * 4;
+	if (VARPBIT[6112] == 20 && int0 > 75) {
+		VARPBIT[6112] = 50;
+	}
+	return int0;
+}

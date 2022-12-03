@@ -1,0 +1,34 @@
+void script_3968() {
+	AttrMap attrmap0;
+	int int1;
+	if (VARC[1429] == 1 || VARC[1425] == VARC[1426]) {
+		return;
+	}
+	VARC[1427] = 0;
+	attrmap0 = datamap('i', 'J', (DataMap)3483, VARC[1425]);
+	int1 = 1;
+	if (getDisplayMode() >= 2) {
+		if (widget(746, 26).isHidden() || widget(746, 26).getSpriteId() == null) {
+			int1 = 0;
+		}
+	} else if (widget(548, 141).isHidden() || widget(548, 141).getSpriteId() == null) {
+		int1 = 0;
+	}
+	if (VARP[281] == 1000) {
+		widget(1055, 2).setScriptCallOnClickContextMenu(3976, VARC[1425], 1, int1, "iii");
+	} else {
+		widget(1055, 2).setScriptCallOnClickContextMenu(-1, "");
+	}
+	if (widget(1055, 12).isHidden() && widget(1055, 1).isHidden()) {
+		if (attrmap0 != null) {
+			widget(1055, 13).setTrans(255);
+			widget(1055, 12).setScriptCallOnGameloop(3969, "");
+			widget(1055, 12).setIsHidden(false);
+		} else {
+			widget(1055, 1).setIsHidden(true);
+			widget(1055, 12).setIsHidden(true);
+		}
+	}
+	VARC[1426] = VARC[1425];
+	return;
+}

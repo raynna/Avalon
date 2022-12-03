@@ -1,0 +1,108 @@
+int, int, int, int, int, int script_4792(int arg0, int arg1) {
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	AttrMap attrmap14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	Sprite sprite21;
+	AttrMap attrmap22;
+	string str0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int10 = 0;
+	int11 = 0;
+	int12 = 0;
+	int13 = 0;
+	attrmap14 = datamap('i', 'J', (DataMap)4008, arg0);
+	int15 = 0;
+	int16 = 0;
+	int17 = 0;
+	int18 = 0;
+	int19 = 0;
+	int20 = 0;
+	sprite21 = null;
+	str0 = "";
+	if (arg0 < 1 || arg0 > 900) {
+		msg("Clan Build Tick : Attempting to look up build cost for invalid job " + str(arg0) + ".");
+		return 0, 0, 0, 0, 0, 0;
+	}
+	sprite21, str0, int11, int12, int13, int8, int9, int10 = script_4791(arg0);
+	attrmap22 = null;
+	if (arg0 < 600) {
+		switch (int8) {
+			case 1:
+				attrmap22 = (AttrMap)2021;
+				break;
+			case 2:
+				attrmap22 = (AttrMap)2022;
+				break;
+			case 3:
+				attrmap22 = (AttrMap)2023;
+				break;
+			case 4:
+				attrmap22 = datamap('i', 'J', (DataMap)4010, int10);
+				break;
+			case 5:
+				attrmap22 = attrmap14;
+				break;
+		}
+	} else {
+		switch (int8) {
+			case 1:
+				attrmap22 = (AttrMap)2031;
+				break;
+			case 2:
+				attrmap22 = (AttrMap)2032;
+				break;
+			case 3:
+				attrmap22 = (AttrMap)2033;
+				break;
+			case 4:
+				attrmap22 = datamap('i', 'J', (DataMap)4009, int10);
+				break;
+			case 5:
+				attrmap22 = attrmap14;
+				break;
+		}
+	}
+	if (arg1 == 0) {
+		return 0, 0, 0, 0, 0, 0;
+	}
+	switch (arg1) {
+		case 1:
+			return getAttributeMapValue(attrmap22, 1483), getAttributeMapValue(attrmap22, 1490), getAttributeMapValue(attrmap22, 1497), getAttributeMapValue(attrmap22, 1504), getAttributeMapValue(attrmap22, 1511), getAttributeMapValue(attrmap22, 1518);
+		case 2:
+			return getAttributeMapValue(attrmap22, 1484), getAttributeMapValue(attrmap22, 1491), getAttributeMapValue(attrmap22, 1498), getAttributeMapValue(attrmap22, 1505), getAttributeMapValue(attrmap22, 1512), getAttributeMapValue(attrmap22, 1519);
+		case 3:
+			return getAttributeMapValue(attrmap22, 1485), getAttributeMapValue(attrmap22, 1492), getAttributeMapValue(attrmap22, 1499), getAttributeMapValue(attrmap22, 1506), getAttributeMapValue(attrmap22, 1513), getAttributeMapValue(attrmap22, 1520);
+		case 4:
+			return getAttributeMapValue(attrmap22, 1486), getAttributeMapValue(attrmap22, 1493), getAttributeMapValue(attrmap22, 1500), getAttributeMapValue(attrmap22, 1507), getAttributeMapValue(attrmap22, 1514), getAttributeMapValue(attrmap22, 1521);
+		case 5:
+			return getAttributeMapValue(attrmap22, 1487), getAttributeMapValue(attrmap22, 1494), getAttributeMapValue(attrmap22, 1501), getAttributeMapValue(attrmap22, 1508), getAttributeMapValue(attrmap22, 1515), getAttributeMapValue(attrmap22, 1522);
+		case 6:
+			return getAttributeMapValue(attrmap22, 1488), getAttributeMapValue(attrmap22, 1495), getAttributeMapValue(attrmap22, 1502), getAttributeMapValue(attrmap22, 1509), getAttributeMapValue(attrmap22, 1516), getAttributeMapValue(attrmap22, 1523);
+		case 7:
+			return getAttributeMapValue(attrmap22, 1489), getAttributeMapValue(attrmap22, 1496), getAttributeMapValue(attrmap22, 1503), getAttributeMapValue(attrmap22, 1510), getAttributeMapValue(attrmap22, 1517), getAttributeMapValue(attrmap22, 1524);
+	}
+	return 0, 0, 0, 0, 0, 0;
+}

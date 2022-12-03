@@ -1,0 +1,8 @@
+void script_1094() {
+	if (VARP[1241] == 1) {
+		script_1095();
+	} else {
+		script_1096();
+	}
+	return;
+}

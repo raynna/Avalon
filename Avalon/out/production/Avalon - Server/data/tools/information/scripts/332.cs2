@@ -1,0 +1,9 @@
+void script_332(int arg0) {
+	DataMap datamap1;
+	datamap1 = (DataMap)2359;
+	if (VARC[783] == 1) {
+		datamap1 = (DataMap)2360;
+	}
+	widget(725, 83).setModel(datamap('i', 'm', datamap1, arg0));
+	return;
+}

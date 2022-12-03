@@ -1,0 +1,66 @@
+void script_4839(Widget widget0, int arg1) {
+	int int2;
+	Widget widget3;
+	int2 = 0;
+	widget3 = null;
+	switch (widget0) {
+		case widget(1092, 1180):
+			widget3 = widget(1092, 1183);
+			int2 = widget(1092, 1188).nextChild();
+			break;
+		case widget(1092, 1104):
+			widget3 = widget(1092, 1107);
+			int2 = widget(1092, 1112).nextChild();
+			break;
+		case widget(1092, 1022):
+			widget3 = widget(1092, 1025);
+			int2 = widget(1092, 1030).nextChild();
+			break;
+		case widget(1092, 1168):
+			widget3 = widget(1092, 1171);
+			int2 = widget(1092, 1176).nextChild();
+			break;
+		case widget(1092, 1090):
+			widget3 = widget(1092, 1093);
+			int2 = widget(1092, 1098).nextChild();
+			break;
+		case widget(1092, 1006):
+			widget3 = widget(1092, 1009);
+			int2 = widget(1092, 1014).nextChild();
+			break;
+		case widget(1092, 1156):
+			widget3 = widget(1092, 1159);
+			int2 = widget(1092, 1164).nextChild();
+			break;
+		case widget(1092, 1076):
+			widget3 = widget(1092, 1079);
+			int2 = widget(1092, 1084).nextChild();
+			break;
+		case widget(1092, 990):
+			widget3 = widget(1092, 993);
+			int2 = widget(1092, 998).nextChild();
+			break;
+	}
+	if (ACTIVE.setChild(widget0)) {
+		ACTIVE.setScrollMax(0, ACTIVE.getAttribute(1564));
+		if (arg1 >= 0) {
+			ACTIVE.setSize(0, 27, 1, 0);
+			ACTIVE.setScrollPos(0, arg1);
+			if (widget3 != null) {
+				widget3.setPosition(widget3.getX(), arg1, 0, 0);
+				if (int2 > 1) {
+					widget3.setIsHidden(false);
+				} else {
+					widget3.setIsHidden(true);
+				}
+			}
+		} else {
+			ACTIVE.setSize(0, ACTIVE.getAttribute(1564), 1, 0);
+			ACTIVE.setScrollPos(0, 0);
+			if (widget3 != null) {
+				widget3.setIsHidden(true);
+			}
+		}
+	}
+	return;
+}

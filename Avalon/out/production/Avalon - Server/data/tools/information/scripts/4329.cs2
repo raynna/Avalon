@@ -1,0 +1,13 @@
+void script_4329(Widget widget0) {
+	if (CLANDEF_LONG114[2] != -1L) {
+		widget0.setText(toBase36(CLANDEF_LONG114[2]));
+		widget0.setScriptCallOnMouseEntered(45, widget0, 255, "Ii");
+		widget0.setScriptCallOnMouseExit(45, widget0, 15393218, "Ii");
+		widget0.cs2method2314(175);
+		widget0.setScriptCallOnMousePressed(4330, CLANDEF_LONG114[2], "§");
+		widget0.setOptionBase("Visit Clan Forum");
+	} else {
+		widget0.setText("");
+	}
+	return;
+}

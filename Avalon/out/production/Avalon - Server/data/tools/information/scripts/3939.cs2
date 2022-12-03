@@ -1,0 +1,18 @@
+void script_3939(int arg0) {
+	if (arg0 == 1) {
+		widget(673, 42).setRGB(0xFAFAFA);
+		if (VARC[1411] == 1) {
+			widget(673, 41).setSprite(4087);
+		} else {
+			widget(673, 41).setSprite(4085);
+		}
+	} else {
+		widget(673, 42).setRGB(0xEBE0BC);
+		if (VARC[1411] == 1) {
+			widget(673, 41).setSprite(4086);
+		} else {
+			widget(673, 41).setSprite(4084);
+		}
+	}
+	return;
+}

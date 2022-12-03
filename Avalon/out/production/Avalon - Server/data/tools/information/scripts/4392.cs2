@@ -1,0 +1,15 @@
+void script_4392(Widget widget0) {
+	if (VARP[2094] > 0) {
+		widget0.replaceColors(0, 31690, VARP[2094]);
+	}
+	if (VARP[2095] > 0) {
+		widget0.replaceColors(1, 60362, VARP[2095]);
+	}
+	if (VARP[2096] > 0) {
+		widget0.replaceColors(3, 55246, VARP[2096]);
+	}
+	if (VARP[2097] > 0) {
+		widget0.replaceColors(4, 17358, VARP[2097]);
+	}
+	return;
+}

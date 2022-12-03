@@ -1,0 +1,102 @@
+void script_2971(int arg0, int arg1) {
+	Model model2;
+	Widget widget3;
+	string str0;
+	string str1;
+	string str2;
+	str0 = "";
+	str1 = "";
+	str2 = "";
+	model2 = null;
+	widget3 = null;
+	switch (arg0) {
+		case 0:
+			str0 = "Nothing.";
+			str1 = "There are no requirements for building this feature.";
+			str2 = "This feature is an abscence of anything. Oddly, some creatures prefer the minimalist approach.";
+			model2 = 62129;
+			widget3 = widget(459, 69);
+			break;
+		case 1:
+			str0 = "Pond";
+			str1 = "You need a Construction level of 65 to build a pond.";
+			str2 = "Ponds attract creatures with an affinity for water. They are essentially very small, man-made lakes...or glorified puddles, depending on your view.";
+			widget3 = widget(459, 68);
+			model2 = 62128;
+			break;
+		case 2:
+			str0 = "Tall grass";
+			str1 = "You need a Construction level of 62 to build tall grass.";
+			str2 = "Tall grass is favoured by creatures who sneak and hide. It's also a favourite with people too lazy to trim their lawn. Essentially, it's a patch of land allowed to grow wild.";
+			widget3 = widget(459, 70);
+			model2 = 62134;
+			break;
+		case 3:
+			str0 = "Abandoned house";
+			str1 = "You need a Construction level of 57 to build an abandoned house.";
+			str2 = "Something approximating an abandoned house: popular amongst creatures that think they're domesticated.";
+			widget3 = widget(459, 71);
+			model2 = 62132;
+			break;
+		case 4:
+			str0 = "Thermal vent";
+			str1 = "You need a Construction level of 59 to build a thermal vent.";
+			str2 = "A home-made volcano, or, at least, something that looks like one. These are popular among earthy creatures.";
+			widget3 = widget(459, 72);
+			model2 = 62133;
+			break;
+		case 5:
+			str0 = "Standing stones";
+			str1 = "You need a Construction level of 70 to build standing stones.";
+			str2 = "A circle of home-made mystical stones, popular among creatures that are more magically inclined.";
+			widget3 = widget(459, 73);
+			model2 = 62136;
+			break;
+		case 6:
+			str0 = "Dark pit";
+			str1 = "You need a Construction level of 80 to build a dark pit.";
+			str2 = "A deep, dark, endless pit, popular among the more sinister creatures. Don't look too closely: you might fall in.";
+			widget3 = widget(459, 74);
+			model2 = 62131;
+			break;
+		case 7:
+			str0 = "Boneyard";
+			str1 = "You need a Construction level of 56 to build a boneyard.";
+			str2 = "An animal graveyard, or a collection of well-made bone mockeries. Popular among scavengers and sinister creatures.";
+			widget3 = widget(459, 75);
+			model2 = 62135;
+			break;
+		default:
+			str0 = "Unknown";
+			str1 = "This should not get here.";
+			str2 = "This should never get here.";
+			model2 = 62129;
+			widget3 = widget(459, 69);
+			break;
+	}
+	script_2973();
+	if (getSkillCurrentLvl(22) < arg1) {
+		widget(459, 37).setRGB(0xCCCC00);
+		str2 = concat(str2, "<br>" + "<br>" + "You can pay Papa Mambo to build this for you.");
+	} else {
+		widget(459, 37).setRGB(0x00CC00);
+	}
+	widget(459, 37).setText(str0);
+	widget(459, 38).setText(str1);
+	widget(459, 36).setText(str2);
+	widget(459, 35).setModel(model2);
+	widget(459, 69).setIsHidden(true);
+	widget(459, 68).setIsHidden(true);
+	widget(459, 70).setIsHidden(true);
+	widget(459, 71).setIsHidden(true);
+	widget(459, 72).setIsHidden(true);
+	widget(459, 73).setIsHidden(true);
+	widget(459, 74).setIsHidden(true);
+	widget(459, 75).setIsHidden(true);
+	if (widget3 != null) {
+		widget3.setIsHidden(false);
+	} else {
+		widget(459, 69).setIsHidden(false);
+	}
+	return;
+}

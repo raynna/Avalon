@@ -1,0 +1,9 @@
+void script_1281(Container container0, int arg1, int arg2, Widget widget3) {
+	if (arg2 == -1) {
+		script_1280(container0, arg1, widget3, arg1);
+		return;
+	}
+	script_1280(container0, arg1, widget3, arg2);
+	script_1280(container0, arg2, widget3, arg1);
+	return;
+}

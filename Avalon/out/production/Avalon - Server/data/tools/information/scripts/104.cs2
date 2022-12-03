@@ -1,0 +1,22 @@
+void script_104() {
+	if (VARC[1413] == 0) {
+		return;
+	}
+	if (VARC[11] == 1) {
+		script_675();
+	}
+	if (getDisplayMode() >= 2) {
+		widget(746, 73).setIsHidden(false);
+	}
+	widget(752, 3).setIsHidden(false);
+	widget(752, 7).setIsHidden(true);
+	widget(752, 8).setIsHidden(true);
+	widget(752, 4).setText("Enter name of friend to delete from list");
+	VARC[5] = 3;
+	script_1564("");
+	widget(752, 3).setScriptCallOnMousePressed(-1, "");
+	script_2026();
+	widget(752, 5).setScriptCallOnKeyPress(112, KEY_TYPED, (char)KEY_PRESSED, "iz");
+	script_1188();
+	return;
+}

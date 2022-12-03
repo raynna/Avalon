@@ -1,0 +1,5 @@
+void script_1999(Widget widget0) {
+	script_2001(widget0, (Container)VARP[118]);
+	widget0.setScriptCallOnConfigChange(2000, widget0, (Container)VARP[118], 1081, "IvY");
+	return;
+}

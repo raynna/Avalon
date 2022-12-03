@@ -1,0 +1,8 @@
+string script_74(string string0, int arg1, int arg2, char char3) {
+	int int3;
+	string str1;
+	str1 = "";
+	int3 = -1;
+	str1, int3 = script_802(int3, string0, arg1, arg2, char3);
+	return str1;
+}

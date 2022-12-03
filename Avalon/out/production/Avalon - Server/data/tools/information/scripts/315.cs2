@@ -1,0 +1,21 @@
+void script_315() {
+	boolean boolean0;
+	boolean0 = null;
+	if (VARPBIT[8093] != VARC[196] || VARC[197] != VARPBIT[8089]) {
+		boolean0 = script_734(VARPBIT[8093]);
+		VARC[196] = VARPBIT[8093];
+		VARC[197] = VARPBIT[8089];
+		script_387(boolean0);
+		VARC[86] = VARPBIT[8090];
+		script_390(boolean0);
+	} else if (VARC[86] != VARPBIT[8090]) {
+		VARC[86] = VARPBIT[8090];
+		script_390(script_734(VARC[196]));
+	}
+	if (VARC[1020] != VARPBIT[6501]) {
+		VARC[1020] = VARPBIT[6501];
+		script_391();
+	}
+	script_2741();
+	return;
+}

@@ -1,0 +1,24 @@
+void script_4636() {
+	Widget widget0;
+	Widget widget1;
+	Widget widget2;
+	widget0 = widget(596, 60);
+	widget1 = widget(596, 45);
+	widget2 = widget(596, 59);
+	if (hasSSKey()) {
+		widget0 = widget(975, 49);
+		widget1 = widget(975, 44);
+	}
+	widget0.setText("Log In");
+	widget2.setText("Log In");
+	widget1.setScriptCallOnMousePressed(2944, "");
+	widget1.setScriptCallOnGameloop(-1, "");
+	widget(596, 7).setScriptCallOnGameloop(-1, "");
+	if (isLoggingIn()) {
+		cancelLogin();
+	}
+	resetRCs();
+	script_2954();
+	script_2940(13);
+	return;
+}

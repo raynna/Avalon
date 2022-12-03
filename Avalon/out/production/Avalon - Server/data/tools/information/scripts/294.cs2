@@ -1,0 +1,18 @@
+void script_294(Map map0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5) {
+	playSoundEffect(2266, 1, 0);
+	map0 = script_2785(map0);
+	if (map0 == cs2method5235()) {
+		script_291(0, widget1, widget2, widget3, widget4, widget5);
+		return;
+	}
+	STRING[31] = "";
+	script_308(widget4);
+	script_2046(widget5);
+	script_41(widget(755, 57));
+	loadDungeonmap(map0);
+	VARC[172] = getMapDefaultZoom(map0);
+	script_1372();
+	script_307();
+	script_291(0, widget1, widget2, widget3, widget4, widget5);
+	return;
+}

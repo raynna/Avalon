@@ -1,0 +1,8 @@
+void script_3478(Widget widget0, int arg1, int arg2, Color color3) {
+	ACTIVE.createChild(widget0, 3, widget0.nextChild());
+	ACTIVE.setSize(6, 6, 0, 0);
+	ACTIVE.setRGB(color3);
+	ACTIVE.setFilled(true);
+	ACTIVE.setPosition(arg1 * 16, arg2 * 16, 1, 1);
+	return;
+}

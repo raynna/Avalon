@@ -1,0 +1,10 @@
+void script_4257(Widget widget0) {
+	if (ACTIVE.setChild(widget0)) {
+		ACTIVE.setPosition(0, 0, 1, 1);
+		ACTIVE.setSize(16, 15, 0, 0);
+		ACTIVE.setSprite(5450);
+		ACTIVE.setScriptCallOnClickContextMenu(29, "");
+		ACTIVE.setContextMenuOption(1, "Close");
+	}
+	return;
+}

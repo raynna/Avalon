@@ -1,0 +1,32 @@
+void script_661(Widget widget0, Widget arg1, Sprite sprite2, Sprite sprite3, int arg4, string string5, string string6, Item item7, int arg8, Item item9, int arg10, Item item11, int arg12, Item item13, int arg14) {
+	if (ACTIVE.setChild(widget0, 0)) {
+		switch (item7) {
+			case 18027:
+				arg4, string5, item7 = script_3357();
+				break;
+			case 18037:
+				arg4, string5, item7 = script_3358();
+				break;
+			case 18047:
+				arg4, string5, item7 = script_3359();
+				break;
+			case 18057:
+				arg4, string5, item7 = script_3360();
+				break;
+			case 18067:
+				arg4, string5, item7 = script_3361();
+				break;
+			case 18077:
+				arg4, string5, item7 = script_3362();
+				break;
+			case 12461:
+				arg4, string5, item7 = script_775();
+				break;
+		}
+		string5 = concat(string5, " (" + str(VARPBIT[4288]) + " Special Move points)");
+		script_664(widget(662, 74), sprite2, sprite3, arg4, item7, arg8, item9, arg10, item11, arg12, item13, arg14);
+		ACTIVE.setScriptCallOnMouseOver(10, CTX_WIDGET, widget(662, 73), arg4, string5, string6, item7, arg8, item9, arg10, item11, arg12, item13, arg14, "IIissoioioioi");
+		ACTIVE.setScriptCallOnMouseExit(778, widget(662, 73), "I");
+	}
+	return;
+}

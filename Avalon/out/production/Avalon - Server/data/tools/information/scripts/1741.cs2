@@ -1,0 +1,29 @@
+void script_1741(Widget widget0) {
+	if (VARC[119] == 1) {
+		widget(750, 6).setSprite(781);
+		widget(750, 3).setSprite(783);
+		widget0.setContextMenuOption(1, "Turn run mode off");
+	} else if (VARC[119] == 0) {
+		widget(750, 6).setSprite(1199);
+		widget(750, 3).setSprite(1210);
+		widget0.setContextMenuOption(1, "Turn run mode on");
+	} else if (VARC[119] == 3) {
+		widget(750, 6).setSprite(1794);
+	} else if (VARC[119] == 4) {
+		widget(750, 6).setSprite(1795);
+	}
+	if (getDisplayMode() >= 2) {
+		widget0.setSprite(1207);
+		widget(750, 3).setPosition(25, 1, 0, 0);
+		widget(750, 4).setPosition(25, 1, 0, 0);
+		widget(750, 5).setPosition(3, 15, 0, 0);
+		widget(750, 6).setPosition(31, 7, 0, 0);
+	} else {
+		widget0.setSprite(1206);
+		widget(750, 3).setPosition(1, 1, 0, 0);
+		widget(750, 4).setPosition(1, 1, 0, 0);
+		widget(750, 5).setPosition(29, 15, 0, 0);
+		widget(750, 6).setPosition(7, 7, 0, 0);
+	}
+	return;
+}

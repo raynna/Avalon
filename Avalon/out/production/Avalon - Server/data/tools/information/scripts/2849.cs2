@@ -1,0 +1,23 @@
+int script_2849(int arg0) {
+	switch (arg0) {
+		case 0:
+			return VARPBIT[7060];
+		case 1:
+			return VARPBIT[7061];
+		case 2:
+			return VARPBIT[7062];
+		case 3:
+			return VARPBIT[7063];
+		case 4:
+			return VARPBIT[7064];
+		case 5:
+			return VARPBIT[7065];
+		case 6:
+			return VARPBIT[7066];
+		case 7:
+			return VARPBIT[7067];
+		case 8:
+			return VARPBIT[7068];
+	}
+	return 0;
+}

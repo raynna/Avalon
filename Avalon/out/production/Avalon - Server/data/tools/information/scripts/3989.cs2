@@ -1,0 +1,128 @@
+int script_3989(int arg0, int arg1, int arg2) {
+	AttrMap attrmap3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	Sprite sprite8;
+	Sprite sprite9;
+	int int10;
+	int int11;
+	Sprite sprite12;
+	Sprite sprite13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	string str0;
+	string str1;
+	attrmap3 = null;
+	int4 = 0;
+	int5 = 0;
+	str0 = "";
+	str1 = "";
+	int6 = 0;
+	int7 = 0;
+	sprite8 = null;
+	sprite9 = null;
+	int10 = 0;
+	int11 = 0;
+	sprite12 = null;
+	sprite13 = null;
+	int14 = 0;
+	int15 = 23;
+	int16 = 0;
+	int17 = 23;
+	int18 = 0;
+	while (arg0 != 450 && arg0 != 4094) {
+		attrmap3 = datamap('i', 'J', (DataMap)3483, arg0);
+		if (attrmap3 != null) {
+			int4 = script_3227(arg0);
+			int5 = getAttributeMapValue(attrmap3, 1293);
+			if ((int4 != 2 || arg1 == 0) && (int5 != 63 || arg2 == 0)) {
+				str0 = getAttributeMapValue(attrmap3, 1266);
+				int6 = getAttributeMapValue(attrmap3, 1267);
+				int7 = getAttributeMapValue(attrmap3, 1272);
+				if (getAttributeMapValue(attrmap3, 1270) != 4094) {
+					sprite8 = getAttributeMapValue(datamap('i', 'J', (DataMap)2252, getAttributeMapValue(attrmap3, 1270)), 952);
+				} else {
+					sprite8 = getAttributeMapValue(attrmap3, 1271);
+				}
+				ACTIVE.createChild(widget(917, 98), 5, int10);
+				if (int4 == 2) {
+					sprite13 = 4043;
+					sprite12 = 4043;
+				} else {
+					sprite13 = 4041;
+					sprite12 = 4042;
+				}
+				ACTIVE.setSprite(sprite13);
+				ACTIVE.setScriptCallOnMouseEntered(4013, CTX_WIDGET_CHILD, sprite12, "id");
+				ACTIVE.setScriptCallOnMouseExit(4013, CTX_WIDGET_CHILD, sprite13, "id");
+				ACTIVE.setSize(70 + 2, 56 + 1, 0, 0);
+				ACTIVE.setPosition(int15 - 1, int17 - 1, 0, 0);
+				ACTIVE.setContextMenuOption(1, "Summary for");
+				if (VARPBIT[8576] == arg0) {
+					ACTIVE.setContextMenuOption(2, "Unpin");
+				} else if (script_3227(arg0) != 2) {
+					ACTIVE.setContextMenuOption(2, "Pin");
+				}
+				ACTIVE.setOptionBase(str0);
+				ACTIVE.setScriptCallOnClickContextMenu(3990, arg0, CTX_WIDGET_CHILD, CTX_MENU_OPTION, "iii");
+				if (script_3999(arg0) == 0) {
+					str1 = " -" + "<br>";
+					str1 = concat(getAttributeMapValue(attrmap3, 1266), str1);
+					str1 = concat(str1, getAttributeMapValue(attrmap3, 1273));
+					ACTIVE.setScriptCallOnMouseOver(3998, int10, str1, "is");
+				}
+				if (script_3994(arg0) == 1 && arg0 != 4094) {
+					VARC[1422] = int10;
+				}
+				ACTIVE.createChild(widget(917, 98), 5, int10 + 1);
+				ACTIVE.setSize(50, 50, 0, 0);
+				ACTIVE.setSprite(sprite8);
+				ACTIVE.setPosition(int15 + 2, int17 + 2, 0, 0);
+				ACTIVE.setTrans(int18);
+				ACTIVE.createChild(widget(917, 98), 5, int10 + 2);
+				if (int5 != 0 && int5 != 63) {
+					sprite9 = 4272;
+					ACTIVE.setSize(13, 13, 0, 0);
+					ACTIVE.setSprite(sprite9);
+					ACTIVE.setPosition(int15 + 70 - 17, int17 + 4, 0, 0);
+				}
+				ACTIVE.createChild(widget(917, 98), 5, int10 + 3);
+				if (script_3994(arg0) == 1) {
+					sprite9 = 4296;
+					ACTIVE.setSize(11, 11, 0, 0);
+					int16 = 17;
+				} else if (script_3996(arg0) == 0) {
+					sprite9 = 4346;
+					ACTIVE.setSize(11, 11, 0, 0);
+					int16 = 16;
+				} else {
+					sprite9 = datamap('i', 'd', (DataMap)3492, int7);
+					ACTIVE.setSize(9, 11, 0, 0);
+					int16 = 15;
+				}
+				ACTIVE.setSprite(sprite9);
+				ACTIVE.setPosition(int15 + 70 - int16, int17 + 39, 0, 0);
+				int11 = int11 + 1;
+				int10 = int11 * 4;
+				int15 = int15 + 70 + 23;
+				int14 = (int14 + 1) % 5;
+				if (int14 == 0) {
+					int17 = int17 + 56 + 23;
+					int15 = 23;
+				}
+			}
+		}
+		arg0 = getAttributeMapValue(attrmap3, 1269);
+	}
+	if (int14 != 0) {
+		int17 = int17 + 56;
+	} else {
+		int17 = int17 - 23;
+	}
+	return int17;
+}

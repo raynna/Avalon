@@ -1,0 +1,52 @@
+void script_2047() {
+	string str0;
+	if (script_1103() == 1 && VARPBIT[8095] >= VARPBIT[8094]) {
+		widget(916, 17).setText("All");
+	} else {
+		widget(916, 17).setText(str(VARPBIT[8095]));
+	}
+	str0 = script_1111();
+	if (!widget(905, 14).isHidden()) {
+		widget(905, 14).cs2method2310(str0);
+	}
+	if (!widget(905, 15).isHidden()) {
+		widget(905, 15).cs2method2310(str0);
+	}
+	if (!widget(905, 16).isHidden()) {
+		widget(905, 16).cs2method2310(str0);
+	}
+	if (!widget(905, 17).isHidden()) {
+		widget(905, 17).cs2method2310(str0);
+	}
+	if (!widget(905, 18).isHidden()) {
+		widget(905, 18).cs2method2310(str0);
+	}
+	if (!widget(905, 19).isHidden()) {
+		widget(905, 19).cs2method2310(str0);
+	}
+	if (!widget(905, 20).isHidden()) {
+		widget(905, 20).cs2method2310(str0);
+	}
+	if (!widget(905, 21).isHidden()) {
+		widget(905, 21).cs2method2310(str0);
+	}
+	if (!widget(905, 22).isHidden()) {
+		widget(905, 22).cs2method2310(str0);
+	}
+	if (!widget(905, 23).isHidden()) {
+		widget(905, 23).cs2method2310(str0);
+	}
+	if (!widget(905, 24).isHidden()) {
+		widget(905, 24).cs2method2310(str0);
+	}
+	if (!widget(905, 25).isHidden()) {
+		widget(905, 25).cs2method2310(str0);
+	}
+	if (!widget(905, 26).isHidden()) {
+		widget(905, 26).cs2method2310(str0);
+	}
+	if (!widget(905, 27).isHidden()) {
+		widget(905, 27).cs2method2310(str0);
+	}
+	return;
+}

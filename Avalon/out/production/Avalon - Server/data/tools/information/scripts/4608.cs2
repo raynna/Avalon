@@ -1,0 +1,4 @@
+void script_4608() {
+	sendColorPickerPacket(VARC[1497]);
+	return;
+}

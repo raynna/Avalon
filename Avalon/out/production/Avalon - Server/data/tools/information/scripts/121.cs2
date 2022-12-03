@@ -1,0 +1,44 @@
+Widget script_121(int arg0) {
+	if (getDisplayMode() >= 2) {
+		return script_1742(arg0);
+	}
+	switch (arg0) {
+		case 0:
+			return widget(548, 138);
+		case 1:
+			return widget(548, 139);
+		case 2:
+			return widget(548, 140);
+		case 3:
+			return widget(548, 141);
+		case 4:
+			return widget(548, 142);
+		case 5:
+			return widget(548, 143);
+		case 6:
+			return widget(548, 144);
+		case 7:
+			return widget(548, 145);
+		case 8:
+			return widget(548, 107);
+		case 9:
+			return widget(548, 108);
+		case 10:
+			return widget(548, 109);
+		case 11:
+			return widget(548, 110);
+		case 12:
+			return widget(548, 111);
+		case 13:
+			return widget(548, 112);
+		case 14:
+			return widget(548, 113);
+		case 15:
+			return widget(548, 114);
+		case 95:
+			return widget(747, 8);
+		case 99:
+			return widget(548, 182);
+	}
+	return null;
+}

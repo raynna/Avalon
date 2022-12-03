@@ -1,0 +1,5 @@
+void script_1316(Widget widget0) {
+	VARC[119] = VARP[173];
+	script_1741(widget0);
+	return;
+}

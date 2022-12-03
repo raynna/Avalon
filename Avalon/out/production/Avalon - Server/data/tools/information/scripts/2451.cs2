@@ -1,0 +1,10 @@
+void script_2451(int arg0) {
+	widget(34, 10).setIsHidden(true);
+	widget(34, 8).setSprite(1845);
+	VARC[821] = 0;
+	script_2449(0);
+	if (arg0 != -1) {
+		widget(34, 44).setIsHidden(false);
+	}
+	return;
+}

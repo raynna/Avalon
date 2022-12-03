@@ -1,0 +1,103 @@
+Model, string, int, int, Animation script_2791(int arg0) {
+	Model model1;
+	Animation animation2;
+	int int3;
+	int int4;
+	int int5;
+	string str0;
+	model1 = getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 938);
+	str0 = getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 935);
+	animation2 = getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 939);
+	int3 = getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 937);
+	int4 = 1;
+	int5 = 0;
+	if (getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 940) == 1) {
+		switch (arg0) {
+			case 0:
+				if (getSkillActualLvl(7) < 40) {
+					model1 = getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 936);
+					int4 = 0;
+				}
+				break;
+			case 1:
+				if (VARPBIT[1527] < 160) {
+					model1 = getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 936);
+					int4 = 0;
+				}
+				break;
+			case 2:
+				if (VARP[359] < 100) {
+					model1 = getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 936);
+					int4 = 0;
+				}
+				break;
+			case 3:
+				if (VARPBIT[5491] > 370) {
+					int5 = 1;
+				}
+				break;
+			case 5:
+				if (VARPBIT[418] < 26) {
+					model1 = getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 936);
+					int4 = 0;
+				}
+				break;
+			case 6:
+				if (VARPBIT[5525] == 1) {
+					int5 = 1;
+				}
+				break;
+			case 7:
+				if (VARPBIT[5491] > 370) {
+					int5 = 1;
+				}
+				break;
+			case 9:
+				if (getSkillActualLvl(10) < 15) {
+					model1 = getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 936);
+					int4 = 0;
+				}
+				break;
+			case 11:
+				if (VARPBIT[3618] < 16 || VARPBIT[5550] == 1) {
+					model1 = getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 936);
+					int4 = 0;
+				}
+				break;
+			case 12:
+				if (VARPBIT[3293] < 135) {
+					model1 = getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 936);
+					int4 = 0;
+				} else if (VARPBIT[6180] == 140) {
+					int5 = 1;
+				}
+				break;
+			case 17:
+				if (VARPBIT[3618] < 28) {
+					model1 = getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 936);
+					int4 = 0;
+				}
+				break;
+			case 14:
+				if (VARP[492] < 4) {
+					model1 = getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 936);
+					int4 = 0;
+				}
+				break;
+			case 16:
+				if (VARPBIT[9067] < 8) {
+					model1 = getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 936);
+					int4 = 0;
+				}
+				break;
+		}
+		if (int5 == 1) {
+			model1 = getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 942);
+			int4 = 1;
+			str0 = getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 941);
+			int3 = getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 943);
+			animation2 = getAttributeMapValue(datamap('i', 'J', (DataMap)869, arg0), 944);
+		}
+	}
+	return model1, str0, int4, int3, animation2;
+}

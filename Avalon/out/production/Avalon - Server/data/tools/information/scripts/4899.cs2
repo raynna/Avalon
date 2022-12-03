@@ -1,0 +1,67 @@
+void script_4899(int arg0) {
+	VARPBIT[9552] = arg0;
+	script_4935();
+	script_4940();
+	switch (arg0) {
+		case 0:
+			widget(1092, 212).setIsHidden(true);
+			widget(1092, 217).setIsHidden(true);
+			widget(1092, 216).setIsHidden(true);
+			widget(1092, 859).setText("");
+			widget(1092, 847).setIsHidden(true);
+			script_4913();
+			break;
+		case 1:
+			widget(1092, 212).setIsHidden(false);
+			widget(1092, 217).setIsHidden(true);
+			widget(1092, 216).setIsHidden(true);
+			widget(1092, 859).setText("");
+			widget(1092, 847).setIsHidden(true);
+			widget(1092, 197).setIsHidden(true);
+			script_5009();
+			script_5011();
+			break;
+		case 2:
+			script_4860();
+			script_4863();
+			script_4859();
+			widget(1092, 212).setIsHidden(true);
+			widget(1092, 217).setIsHidden(false);
+			widget(1092, 216).setIsHidden(false);
+			widget(1092, 859).setText("");
+			widget(1092, 847).setIsHidden(true);
+			widget(1092, 197).setIsHidden(true);
+			script_5009();
+			break;
+		case 4:
+			widget(1092, 212).setIsHidden(false);
+			widget(1092, 217).setIsHidden(true);
+			widget(1092, 216).setIsHidden(true);
+			widget(1092, 859).setText("Please select an available spot from the map.");
+			widget(1092, 847).setIsHidden(false);
+			widget(1092, 197).setIsHidden(true);
+			script_5010();
+			script_4935();
+			break;
+		case 3:
+			widget(1092, 212).setIsHidden(false);
+			widget(1092, 217).setIsHidden(true);
+			widget(1092, 216).setIsHidden(true);
+			widget(1092, 859).setText("Please select a spot from the map.");
+			widget(1092, 847).setIsHidden(false);
+			widget(1092, 197).setIsHidden(true);
+			script_5010();
+			break;
+		case 5:
+			widget(1092, 212).setIsHidden(true);
+			widget(1092, 217).setIsHidden(false);
+			widget(1092, 216).setIsHidden(false);
+			widget(1092, 859).setText("Please select an available spot from the map.");
+			widget(1092, 847).setIsHidden(false);
+			widget(1092, 197).setIsHidden(true);
+			script_5009();
+			break;
+	}
+	script_4853();
+	return;
+}

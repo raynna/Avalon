@@ -1,0 +1,33 @@
+void script_71(int arg0) {
+	int int1;
+	int1 = script_1305();
+	if (arg0 == -1 && VARPBIT[9030] == 1) {
+		arg0 = 1;
+	}
+	VARC[168] = arg0;
+	if (arg0 == -1) {
+		if (!(getDisplayMode() >= 2)) {
+			return;
+		}
+		script_1306();
+	}
+	if (script_2709() == 0 && (arg0 == 9 || arg0 == 11 || arg0 == 10)) {
+		return;
+	}
+	if (int1 > -1) {
+		if (int1 == arg0) {
+			if (!(getDisplayMode() >= 2)) {
+				return;
+			}
+			script_1306();
+			script_1387(arg0);
+		} else {
+			script_1306();
+			script_1387(arg0);
+		}
+	} else {
+		script_1306();
+		script_1387(arg0);
+	}
+	return;
+}

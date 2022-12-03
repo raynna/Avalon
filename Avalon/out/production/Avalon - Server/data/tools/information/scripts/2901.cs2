@@ -1,0 +1,5 @@
+void script_2901(Widget widget0, Widget widget1, string string2) {
+	widget0.setIsHidden(false);
+	widget1.setText(string2);
+	return;
+}

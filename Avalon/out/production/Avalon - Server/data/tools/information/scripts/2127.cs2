@@ -1,0 +1,11 @@
+void script_2127(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, Widget widget7) {
+	script_2128(widget0, VARPBIT[5893]);
+	script_2128(widget1, VARPBIT[5894]);
+	script_2128(widget2, VARPBIT[5895]);
+	script_2128(widget3, VARPBIT[5896]);
+	script_2128(widget4, VARPBIT[5897]);
+	script_2128(widget5, VARPBIT[5898]);
+	script_2128(widget6, VARPBIT[5899]);
+	script_2128(widget7, VARPBIT[5900]);
+	return;
+}

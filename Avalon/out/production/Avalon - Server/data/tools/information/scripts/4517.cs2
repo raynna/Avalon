@@ -1,0 +1,4 @@
+void script_4517(Widget widget0, string string1) {
+	script_4212(widget0, string1, 4040, 0x000010, 0x797B7C);
+	return;
+}

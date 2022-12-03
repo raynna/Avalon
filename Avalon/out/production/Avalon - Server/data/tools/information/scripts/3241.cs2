@@ -1,0 +1,4 @@
+void script_3241() {
+	script_2276(VARC[1200], VARC[1215], widget(933, 278));
+	return;
+}

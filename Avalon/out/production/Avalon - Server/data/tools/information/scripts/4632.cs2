@@ -1,0 +1,105 @@
+void script_4632(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	string str4;
+	string str5;
+	int1 = -1;
+	int2 = -1;
+	str0 = "";
+	str1 = "";
+	str2 = "";
+	str3 = "";
+	str4 = "";
+	str5 = "";
+	if (VARC[1520] > 2000000) {
+		str1 = "over " + formatNumber(2000000, 1);
+	} else {
+		str1 = formatNumber(VARC[1520], 1);
+	}
+	int1 = min(2147483647, 1000 * VARC[1520] / max(1, VARC[1521]) / 1000);
+	int2 = 1000 * VARC[1520] / max(1, VARC[1521]) % 1000;
+	if (int2 == 0) {
+		str0 = str(int1);
+	} else {
+		str0 = concat(str(int1), ".");
+		if (int2 < 100) {
+			str0 = concat(str0, "0");
+		}
+		if (int2 < 10) {
+			str0 = concat(str0, "0");
+		}
+		str0 = concat(str0, str(int2));
+		if (int2 % 10 == 0) {
+			str0 = substr(str0, 0, length(str0) - 2);
+		}
+		if (int2 % 100 == 0) {
+			str0 = substr(str0, 0, length(str0) - 2);
+		}
+	}
+	str3 = formatNumber(VARC[1522], 1);
+	if (arg0 == 0) {
+		if (VARC[1520] > 2000) {
+			str5 = "Behold " + STRING[127] + ", champion of " + str1 + " bouts in the Duel Arena!";
+		} else if (VARC[1520] == 1) {
+			str5 = "Here stands " + STRING[127] + ", once victor of a duel.";
+		} else {
+			str5 = "Here stands " + STRING[127] + ", victor of " + str1 + " duels.";
+		}
+		str2 = STRING[127] + " defeats " + str0 + " opponents for every loss!";
+		if (VARC[1522] > 250) {
+			str3 = "over " + formatNumber(250, 1);
+		}
+		str4 = STRING[127] + " has vanquished " + formatNumber(VARC[1522], 1) + " opponents in a row.";
+	} else if (arg0 == 1) {
+		if (VARC[1520] > 2000) {
+			str5 = "Behold " + STRING[127] + ", taker of " + str1 + " heads in the Wilderness!";
+		} else {
+			str5 = "Here stands " + STRING[127] + ", who has killed " + str1 + " opponents in the Wilderness.";
+		}
+		str2 = "Vanquisher of " + str0 + " foes for every fall!";
+		if (VARC[1522] > 250) {
+			str3 = "Over " + formatNumber(250, 1);
+		}
+		str4 = str3 + " victims in succession have rendered their souls to " + STRING[127] + ".";
+	}
+	widget(21, 1).setText(str5);
+	widget(21, 3).setText(str4);
+	widget(21, 2).setText(str2);
+	widget(21, 4).setText("Highest value Wilderness kill:" + "<br>" + formatNumber(VARP[2185], 1) + " coins.");
+	widget(21, 18).setIsHidden(false);
+	widget(21, 49).setIsHidden(false);
+	widget(21, 2).setIsHidden(true);
+	widget(21, 3).setIsHidden(true);
+	if (VARC[1524] == 1) {
+		widget(21, 2).setIsHidden(false);
+		if (VARC[1522] > 1) {
+			widget(21, 3).setIsHidden(false);
+		}
+	}
+	widget(21, 4).setIsHidden(true);
+	if (arg0 == 1 && VARP[2185] > 0) {
+		widget(21, 4).setIsHidden(false);
+	}
+	int3 = widget(21, 17).getHeight();
+	widget(21, 18).setPosition(widget(21, 18).getX(), widget(21, 4).getY(), 0, 0);
+	if (widget(21, 4).isHidden()) {
+		widget(21, 18).setIsHidden(true);
+		widget(21, 3).setPosition(widget(21, 3).getX(), 0, 0, 2);
+		widget(21, 2).setPosition(widget(21, 2).getX(), widget(21, 3).getHeight(), 0, 2);
+	} else {
+		int3 = int3 - widget(21, 4).getHeight();
+	}
+	widget(21, 49).setPosition(widget(21, 18).getX(), widget(21, 2).getY(), 0, 0);
+	if (!widget(21, 3).isHidden()) {
+		int3 = int3 - (widget(21, 3).getHeight() + widget(21, 2).getHeight());
+	} else {
+		widget(21, 49).setIsHidden(true);
+	}
+	widget(21, 1).setSize(widget(21, 1).getWidth(), int3, 0, 0);
+	return;
+}

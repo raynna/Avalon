@@ -1,0 +1,12 @@
+void script_752() {
+	if (VARPBIT[4534] == 0 && VARPBIT[4290] == 0) {
+		widget(662, 43).setText("---");
+		return;
+	}
+	if (VARPBIT[4290] == 0) {
+		widget(662, 43).setText(str(VARPBIT[4534]) + ".00");
+	} else {
+		widget(662, 43).setText(str(VARPBIT[4534]) + ".30");
+	}
+	return;
+}

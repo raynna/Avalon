@@ -1,0 +1,103 @@
+void script_1437() {
+	if (VARP[406] > 1) {
+		widget(371, 5).setRGB(0x8080FF);
+	} else {
+		widget(371, 5).setRGB(0x000000);
+	}
+	if (VARP[406] > 2) {
+		widget(371, 6).setRGB(0x8080FF);
+	} else {
+		widget(371, 6).setRGB(0x000000);
+	}
+	if (VARP[406] > 3) {
+		widget(371, 7).setRGB(0x8080FF);
+	} else {
+		widget(371, 7).setRGB(0x000000);
+	}
+	if (VARP[406] > 4) {
+		widget(371, 8).setRGB(0x8080FF);
+	} else {
+		widget(371, 8).setRGB(0x000000);
+	}
+	if (VARP[406] > 5) {
+		widget(371, 9).setRGB(0x8080FF);
+	} else {
+		widget(371, 9).setRGB(0x000000);
+	}
+	if (VARP[406] > 6) {
+		widget(371, 10).setRGB(0x8080FF);
+	} else {
+		widget(371, 10).setRGB(0x000000);
+	}
+	if (VARP[406] > 7) {
+		widget(371, 11).setRGB(0x8080FF);
+	} else {
+		widget(371, 11).setRGB(0x000000);
+	}
+	if (VARP[406] > 8) {
+		widget(371, 12).setRGB(0x8080FF);
+	} else {
+		widget(371, 12).setRGB(0x000000);
+	}
+	if (VARP[406] > 9) {
+		widget(371, 13).setRGB(0x8080FF);
+	} else {
+		widget(371, 13).setRGB(0x000000);
+	}
+	if (VARP[406] > 10) {
+		widget(371, 14).setRGB(0x8080FF);
+	} else {
+		widget(371, 14).setRGB(0x000000);
+	}
+	if (VARP[406] > 11) {
+		widget(371, 15).setRGB(0x8080FF);
+	} else {
+		widget(371, 15).setRGB(0x000000);
+	}
+	if (VARP[406] > 12) {
+		widget(371, 16).setRGB(0x8080FF);
+	} else {
+		widget(371, 16).setRGB(0x000000);
+	}
+	if (VARP[406] > 13) {
+		widget(371, 17).setRGB(0x8080FF);
+	} else {
+		widget(371, 17).setRGB(0x000000);
+	}
+	if (VARP[406] > 14) {
+		widget(371, 18).setRGB(0x8080FF);
+	} else {
+		widget(371, 18).setRGB(0x000000);
+	}
+	if (VARP[406] > 15) {
+		widget(371, 19).setRGB(0x8080FF);
+	} else {
+		widget(371, 19).setRGB(0x000000);
+	}
+	if (VARP[406] > 16) {
+		widget(371, 20).setRGB(0x8080FF);
+	} else {
+		widget(371, 20).setRGB(0x000000);
+	}
+	if (VARP[406] > 17) {
+		widget(371, 21).setRGB(0x8080FF);
+	} else {
+		widget(371, 21).setRGB(0x000000);
+	}
+	if (VARP[406] > 18) {
+		widget(371, 22).setRGB(0x8080FF);
+	} else {
+		widget(371, 22).setRGB(0x000000);
+	}
+	if (VARP[406] > 19) {
+		widget(371, 23).setRGB(0x8080FF);
+	} else {
+		widget(371, 23).setRGB(0x000000);
+	}
+	if (VARP[406] > 20) {
+		widget(371, 24).setRGB(0x8080FF);
+	} else {
+		widget(371, 24).setRGB(0x000000);
+	}
+	return;
+}

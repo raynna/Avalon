@@ -1,0 +1,50 @@
+void script_5328() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int0 = 0;
+	int1 = 1;
+	int2 = (widget(951, 24).getWidth() - (8 - 1) * int1) / 8;
+	int3 = (int2 + int1) * 8 - int1;
+	widget(951, 2).setSize(int3 + 12, widget(951, 2).getHeight(), 0, 0);
+	widget(951, 24).clearChildren();
+	int4 = 0;
+	while (int0 < 8) {
+		ACTIVE.createChild(widget(951, 24), 5, int0 * 6);
+		ACTIVE.setSprite(5610);
+		ACTIVE.setSize(6, 0, 0, 1);
+		ACTIVE.setPosition(int4, 0, 0, 0);
+		ACTIVE.setRGB(0x535353);
+		ACTIVE.createChild(widget(951, 24), 5, int0 * 6 + 1);
+		ACTIVE.setSprite(5611);
+		ACTIVE.setSize(int2 - 12, 0, 0, 1);
+		ACTIVE.setPosition(int4 + 6, 0, 0, 0);
+		ACTIVE.setHidden(false);
+		ACTIVE.setRGB(0x535353);
+		ACTIVE.createChild(widget(951, 24), 5, int0 * 6 + 2);
+		ACTIVE.setSprite(5612);
+		ACTIVE.setSize(6, 0, 0, 1);
+		ACTIVE.setPosition(int4 + int2 - 6, 0, 0, 0);
+		ACTIVE.setRGB(0x535353);
+		ACTIVE.createChild(widget(951, 24), 5, int0 * 6 + 3);
+		ACTIVE.setSprite(5610);
+		ACTIVE.setSize(6, 0, 0, 1);
+		ACTIVE.setPosition(int4, 0, 0, 0);
+		ACTIVE.createChild(widget(951, 24), 5, int0 * 6 + 4);
+		ACTIVE.setSprite(5611);
+		ACTIVE.setSize(int2 - 12, 0, 0, 1);
+		ACTIVE.setPosition(int4 + 6, 0, 0, 0);
+		ACTIVE.setHidden(false);
+		ACTIVE.createChild(widget(951, 24), 5, int0 * 6 + 5);
+		ACTIVE.setSprite(5612);
+		ACTIVE.setSize(6, 0, 0, 1);
+		ACTIVE.setPosition(int4 + int2 - 6, 0, 0, 0);
+		int4 = int4 + int1 + int2;
+		int0 = int0 + 1;
+	}
+	VARC[1657] = -1;
+	VARC[1658] = 0;
+	return;
+}

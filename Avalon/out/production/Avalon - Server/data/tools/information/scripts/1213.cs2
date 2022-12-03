@@ -1,0 +1,12 @@
+void script_1213() {
+	if (script_1305() == 7) {
+		widget(894, 7).setText("To cast Wind Strike, click on the flashing spell icon, then click on a chicken. You can hover over spell icons to read a brief description of the spell and the runes required to cast it.");
+		widget(894, 6).setText("");
+		widget(894, 4).setSprite(15);
+	} else {
+		widget(894, 7).setText("Click on the Magic icon to open your magic spellbook.");
+		widget(894, 6).setText("");
+		widget(894, 4).setSprite(1824);
+	}
+	return;
+}

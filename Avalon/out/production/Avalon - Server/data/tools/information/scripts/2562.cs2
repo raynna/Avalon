@@ -1,0 +1,8 @@
+void script_2562() {
+	if (VARC[846] < 10) {
+		VARC[846] = VARC[846] + 1;
+	}
+	widget(863, 30).setText(str(VARC[846]));
+	script_2565();
+	return;
+}

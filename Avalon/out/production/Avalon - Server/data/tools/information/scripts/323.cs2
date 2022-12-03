@@ -1,0 +1,5 @@
+void script_323(Widget widget0, Widget widget1) {
+	widget0.setText("Room:" + "<br>" + str(VARPBIT[2377]) + " / 8");
+	widget1.setText("Level:" + "<br>" + str(VARPBIT[2376]));
+	return;
+}

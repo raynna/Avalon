@@ -1,0 +1,62 @@
+void script_4354(Widget widget0) {
+	switch (VARP[2128]) {
+		case 1:
+			if (VARPBIT[9141] == 0) {
+				VARPBIT[9141] = 1;
+			} else {
+				VARPBIT[9141] = 0;
+			}
+			break;
+		case 2:
+			if (VARPBIT[9142] == 0) {
+				VARPBIT[9142] = 1;
+			} else {
+				VARPBIT[9142] = 0;
+			}
+			break;
+		case 3:
+			if (VARPBIT[9143] == 0) {
+				VARPBIT[9143] = 1;
+			} else {
+				VARPBIT[9143] = 0;
+			}
+			break;
+		case 4:
+			if (VARPBIT[9144] == 0) {
+				VARPBIT[9144] = 1;
+			} else {
+				VARPBIT[9144] = 0;
+			}
+			break;
+		case 5:
+			if (VARPBIT[9145] == 0) {
+				VARPBIT[9145] = 1;
+			} else {
+				VARPBIT[9145] = 0;
+			}
+			break;
+		case 6:
+			if (VARPBIT[9146] == 0) {
+				VARPBIT[9146] = 1;
+			} else {
+				VARPBIT[9146] = 0;
+			}
+			break;
+		case 7:
+			if (VARPBIT[9147] == 0) {
+				VARPBIT[9147] = 1;
+			} else {
+				VARPBIT[9147] = 0;
+			}
+			break;
+		case 8:
+			if (VARPBIT[9148] == 0) {
+				VARPBIT[9148] = 1;
+			} else {
+				VARPBIT[9148] = 0;
+			}
+			break;
+	}
+	script_4356(widget0);
+	return;
+}

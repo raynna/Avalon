@@ -1,0 +1,11 @@
+void script_122(Widget widget0) {
+	int int1;
+	int1 = 0;
+	int1 = getClientCycle() % 100;
+	if (int1 > 50) {
+		int1 = 100 - int1;
+	}
+	int1 = 255 - int1;
+	widget0.setTrans(int1);
+	return;
+}

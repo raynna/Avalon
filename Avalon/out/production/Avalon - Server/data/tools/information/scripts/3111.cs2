@@ -1,0 +1,4 @@
+void script_3111(Widget widget0) {
+	widget0.setRGB(0x0E0B09);
+	return;
+}

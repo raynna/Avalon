@@ -1,0 +1,12 @@
+void script_1812(string string0, Widget widget1) {
+	if (length(string0) == 0) {
+		widget1.setText("");
+		STRING[39] = "";
+		widget1.setScriptCallOnGameloop(-1, "");
+		return;
+	}
+	widget1.setText(string0);
+	STRING[39] = string0;
+	widget1.setScriptCallOnGameloop(1813, getClientCycle() + 1000, widget1, "iI");
+	return;
+}

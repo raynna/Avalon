@@ -1,0 +1,136 @@
+void script_5275(int arg0) {
+	int int1;
+	Widget widget2;
+	Item item3;
+	int int4;
+	Model model5;
+	Animation animation6;
+	DataMap datamap7;
+	DataMap datamap8;
+	string str0;
+	int1 = 0;
+	widget2 = null;
+	item3 = null;
+	int4 = 1;
+	str0 = "";
+	model5 = null;
+	animation6 = null;
+	datamap7 = null;
+	datamap8 = null;
+	switch (VARPBIT[9828]) {
+		case 0:
+			return;
+		case 1:
+			model5 = 52948;
+			animation6 = 808;
+			datamap7 = (DataMap)5138;
+			datamap8 = (DataMap)5139;
+			break;
+		case 2:
+			model5 = 52954;
+			animation6 = 808;
+			datamap7 = (DataMap)5134;
+			datamap8 = (DataMap)5135;
+			break;
+		case 3:
+			model5 = 52984;
+			animation6 = 808;
+			datamap7 = (DataMap)5136;
+			datamap8 = (DataMap)5137;
+			break;
+	}
+	widget(1138, 5).clearChildren();
+	ACTIVE.createChild(widget(1138, 5), 6, widget(1138, 5).nextChild());
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setModel(model5);
+	ACTIVE.set3DRotation(0, 125, 0, 0, 0, 375);
+	ACTIVE.setAnimation(animation6);
+	script_2647(widget(1138, 5));
+	widget(1138, 7).clearChildren();
+	while (int1 < getItemContainerLength(94)) {
+		int4 = 1;
+		switch (int1) {
+			case 0:
+				widget2 = widget(1138, 13);
+				break;
+			case 1:
+				widget2 = widget(1138, 15);
+				break;
+			case 2:
+				widget2 = widget(1138, 16);
+				break;
+			case 3:
+				widget2 = widget(1138, 18);
+				break;
+			case 4:
+				widget2 = widget(1138, 19);
+				break;
+			case 5:
+				widget2 = widget(1138, 20);
+				break;
+			case 7:
+				widget2 = widget(1138, 21);
+				break;
+			case 9:
+				widget2 = widget(1138, 23);
+				break;
+			case 10:
+				widget2 = widget(1138, 22);
+				break;
+			case 12:
+				widget2 = widget(1138, 24);
+				break;
+			case 13:
+				widget2 = widget(1138, 17);
+				int4 = 900;
+				break;
+			case 14:
+				widget2 = widget(1138, 14);
+				break;
+			default:
+				widget2 = null;
+				break;
+		}
+		ACTIVE.createChild(widget(1138, 7), 5, int1);
+		if (widget2 != null) {
+			item3 = datamap('i', 'o', datamap8, int1);
+			if (item3 != null) {
+				ACTIVE.setSize(36, 32, 0, 0);
+				ACTIVE.setPosition((int, int)script_788(widget2, 2, 2), 0, 0);
+				ACTIVE.setItem(item3, int4);
+				ACTIVE.setOptionBase(concat("<col=ff9040>", getItemName(item3)));
+				ACTIVE.setContextMenuOption(1, "Information");
+				ACTIVE.setShadowColor(0x302020);
+				ACTIVE.setOutlineThickness(1);
+				ACTIVE.setScriptCallOnClickContextMenu(1620, CTX_WIDGET, CTX_WIDGET_CHILD, 100, 0, 8, "Iiiii");
+			} else {
+				ACTIVE.setSize(32, 32, 0, 0);
+				ACTIVE.setPosition((int, int)script_788(widget2, 2, 2), 0, 0);
+				ACTIVE.setSprite(datamap('i', 'd', (DataMap)796, int1));
+			}
+		} else {
+			ACTIVE.setHidden(true);
+		}
+		int1 = int1 + 1;
+	}
+	widget(1138, 29).setText(concatSignedInt("Stab: ", datamap('i', 'i', datamap7, 0)));
+	widget(1138, 30).setText(concatSignedInt("Slash: ", datamap('i', 'i', datamap7, 1)));
+	widget(1138, 31).setText(concatSignedInt("Crush: ", datamap('i', 'i', datamap7, 2)));
+	widget(1138, 32).setText(concatSignedInt("Magic: ", datamap('i', 'i', datamap7, 3)));
+	widget(1138, 33).setText(concatSignedInt("Ranged: ", datamap('i', 'i', datamap7, 4)));
+	widget(1138, 34).setText(concatSignedInt("Stab: ", datamap('i', 'i', datamap7, 5)));
+	widget(1138, 35).setText(concatSignedInt("Slash: ", datamap('i', 'i', datamap7, 6)));
+	widget(1138, 36).setText(concatSignedInt("Crush: ", datamap('i', 'i', datamap7, 7)));
+	widget(1138, 38).setText(concatSignedInt("Ranged: ", datamap('i', 'i', datamap7, 9)));
+	widget(1138, 39).setText(concatSignedInt("Summoning: ", datamap('i', 'i', datamap7, 10)));
+	widget(1138, 37).setText(concatSignedInt("Magic: ", datamap('i', 'i', datamap7, 8)));
+	widget(1138, 40).setText(concat(concatSignedInt("Absorb Melee: ", datamap('i', 'i', datamap7, 11)), "%"));
+	widget(1138, 41).setText(concat(concatSignedInt("Absorb Magic: ", datamap('i', 'i', datamap7, 12)), "%"));
+	widget(1138, 42).setText(concat(concatSignedInt("Absorb Ranged: ", datamap('i', 'i', datamap7, 13)), "%"));
+	widget(1138, 43).setText(concatSignedInt("Strength: ", datamap('i', 'i', datamap7, 14)));
+	widget(1138, 44).setText(concatSignedInt("Ranged Strength: ", datamap('i', 'i', datamap7, 15)));
+	widget(1138, 45).setText(concatSignedInt("Prayer: ", datamap('i', 'i', datamap7, 16)));
+	widget(1138, 46).setText(concat(concatSignedInt("Magic Damage: ", datamap('i', 'i', datamap7, 17)), "%"));
+	return;
+}

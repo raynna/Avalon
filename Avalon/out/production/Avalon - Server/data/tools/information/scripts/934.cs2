@@ -1,0 +1,28 @@
+string script_934(Item item0) {
+	int int1;
+	string str0;
+	str0 = "";
+	int1 = itemAttribute(item0, 742);
+	switch (itemAttribute(item0, 741)) {
+		case 1:
+			if (int1 == 1) {
+				str0 = "Rescued 1 dignitary in Recipe for Disaster";
+			} else {
+				str0 = "Rescued " + str(int1) + " dignitaries in Recipe for Disaster";
+			}
+			return script_913(VARPBIT[1852], itemAttribute(item0, 742), str0);
+		case 2:
+			return script_913(VARPBIT[3763], 2, "Barbarian spearmaking");
+		case 3:
+			return script_913(VARPBIT[4310], 10, "Complete: Chaos Tunnels");
+		case 4:
+			return script_913(VARPBIT[1990], 280, "Part of quest: In Aid of the Myreque");
+		case 5:
+			return script_913(VARPBIT[1850], 4, "Part of quest: Recipe for Disaster");
+		case 6:
+			return script_913(VARPBIT[3550], 8, "Part of quest: Another Slice of H.A.M.");
+		case 7:
+			return script_913(VARPBIT[998], 7, "You need to complete the first puzzle in the Elemental Workshop IV Quest.");
+	}
+	return "";
+}

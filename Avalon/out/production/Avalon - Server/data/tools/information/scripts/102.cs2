@@ -1,0 +1,31 @@
+void script_102(string string0) {
+	if (VARC[5] > 1) {
+		return;
+	}
+	if (getDisplayMode() >= 2) {
+		widget(746, 73).setIsHidden(false);
+	}
+	widget(752, 4).setFont(497);
+	widget(752, 5).setFont(497);
+	widget(752, 4).setSize(0, 20, 1, 1);
+	widget(752, 5).setSize(0, 20, 1, 0);
+	widget(752, 4).setPosition(0, 0, 1, 0);
+	widget(752, 5).setPosition(0, 0, 1, 2);
+	widget(752, 3).setIsHidden(false);
+	widget(752, 7).setIsHidden(true);
+	widget(752, 8).setIsHidden(true);
+	widget(752, 4).setText(string0);
+	widget(752, 5).setText("Click here to continue");
+	VARC[5] = 1;
+	widget(752, 3).setScriptCallOnMousePressed(101, "");
+	widget(752, 5).setScriptCallOnKeyPress(-1, "");
+	widget(752, 5).setRGB(0x000080);
+	widget(752, 5).setScriptCallOnMouseOver(45, CTX_WIDGET, 16777215, "Ii");
+	widget(752, 5).setScriptCallOnMouseExit(45, CTX_WIDGET, 128, "Ii");
+	script_1188();
+	widget(752, 6).setIsHidden(true);
+	widget(752, 5).setScriptCallOnGameloop(-1, "");
+	widget(752, 5).setScriptCallOnMousePressed(-1, "");
+	widget(752, 5).setScriptCallOnAnyWidgetOpenAndClose(3450, 1, "i");
+	return;
+}

@@ -1,0 +1,9 @@
+void script_2750(int arg0) {
+	widget(204, 62).setText(str(2009 - arg0));
+	widget(204, 110).setIsHidden(true);
+	widget(204, 111).setIsHidden(true);
+	widget(204, 101).setIsHidden(true);
+	widget(204, 28).setIsHidden(true);
+	widget(204, 61).setIsHidden(false);
+	return;
+}

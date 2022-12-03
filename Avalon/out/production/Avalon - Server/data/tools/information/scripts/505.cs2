@@ -1,0 +1,13 @@
+void script_505() {
+	widget(1017, 156).setText(script_483(VARPBIT[7520]));
+	widget(1017, 157).setText(script_483(VARPBIT[7521]));
+	widget(1017, 158).setText(script_483(VARPBIT[7526]));
+	widget(1017, 159).setText(script_483(VARPBIT[7527]));
+	widget(1017, 160).setText(script_483(VARPBIT[7530]));
+	widget(1017, 161).setText(script_483(VARPBIT[7531]));
+	widget(1017, 162).setText(script_483(VARPBIT[7532]));
+	widget(1017, 163).setText(script_483(VARPBIT[7533]));
+	widget(1017, 164).setText(script_483(VARPBIT[7534]));
+	widget(1017, 165).setText(script_483(VARPBIT[7535]));
+	return;
+}

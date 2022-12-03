@@ -1,0 +1,49 @@
+AttrMap script_361(Identikit arg0, int arg1) {
+	boolean boolean2;
+	int int3;
+	AttrMap attrmap4;
+	int int5;
+	AttrMap attrmap6;
+	boolean2 = script_734(IsFemale());
+	int3 = datamapSize((DataMap)3278) - 1;
+	attrmap4 = null;
+	int5 = 0;
+	attrmap6 = null;
+	while (int3 >= 0) {
+		attrmap4 = datamap('i', 'J', (DataMap)3278, int3);
+		if (attrmap4 != null) {
+			int5 = 0;
+			attrmap6 = script_384(0, attrmap4, boolean2);
+			while (attrmap6 != null) {
+				switch (arg1) {
+					case 3:
+						if (getAttributeMapValue(attrmap6, 1182) == arg0) {
+							return attrmap6;
+						}
+						break;
+					case 4:
+						if (getAttributeMapValue(attrmap6, 1183) == arg0) {
+							return attrmap6;
+						}
+						break;
+					case 5:
+						if (getAttributeMapValue(attrmap6, 1184) == arg0) {
+							return attrmap6;
+						}
+						break;
+					case 6:
+						if (getAttributeMapValue(attrmap6, 1185) == arg0) {
+							return attrmap6;
+						}
+						break;
+					default:
+						return null;
+				}
+				int5 = int5 + 1;
+				attrmap6 = script_384(int5, attrmap4, boolean2);
+			}
+		}
+		int3 = int3 - 1;
+	}
+	return -1;
+}

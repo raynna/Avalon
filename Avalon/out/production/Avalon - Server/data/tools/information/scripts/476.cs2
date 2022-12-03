@@ -1,0 +1,5 @@
+void script_476() {
+	widget(1011, 386).setSize(widget(1011, 386).getWidth(), getLineCount(widget(1011, 387).getText(), widget(1011, 386).getWidth() - 10, 494) * 10 + 10, 0, 0);
+	widget(1011, 386).setIsHidden(true);
+	return;
+}

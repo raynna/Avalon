@@ -1,0 +1,14 @@
+void script_3395() {
+	int int0;
+	int0 = 0;
+	while (int0 < widget(979, 25).nextChild()) {
+		if (ACTIVE.setChild(widget(979, 25), int0)) {
+			ACTIVE.setTrans(255);
+		}
+		int0 = int0 + 1;
+	}
+	if (ACTIVE.setChild(widget(979, 25), VARC[792])) {
+		ACTIVE.setTrans(0);
+	}
+	return;
+}

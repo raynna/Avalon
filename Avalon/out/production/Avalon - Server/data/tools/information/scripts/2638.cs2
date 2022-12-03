@@ -1,0 +1,10 @@
+void script_2638() {
+	if (VARC[903] == 0) {
+		widget(859, 26).setSprite(2023);
+		widget(859, 10).setText("Light");
+	} else if (VARC[903] == 1) {
+		widget(859, 26).setSprite(2022);
+		widget(859, 10).setText("Heavy");
+	}
+	return;
+}

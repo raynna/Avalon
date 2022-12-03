@@ -1,0 +1,9 @@
+void script_1488() {
+	if (VARP[304] == 0) {
+		VARP[304] = 1;
+	} else {
+		VARP[304] = 0;
+	}
+	script_1490();
+	return;
+}

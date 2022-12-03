@@ -1,0 +1,6 @@
+void script_2993(int arg0, Widget widget1, int arg2, int arg3, int arg4, int arg5, int arg6) {
+	ACTIVE.createChild(widget1, arg0, arg2);
+	ACTIVE.setSize(arg3, arg4, 0, 0);
+	ACTIVE.setPosition(arg5, arg6, 0, 0);
+	return;
+}

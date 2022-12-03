@@ -1,0 +1,16 @@
+void script_3453() {
+	if (VARC[1281] == 8) {
+		return;
+	}
+	if (VARC[1074] == 0) {
+		script_3454(VARC[1281] + 1, VARC[1070], VARC[1069], script_2865(location(VARC[1070]), VARC[1071]), VARC[1073]);
+	} else {
+		if (!(VARC[1074] == 1)) {
+			return;
+		}
+		script_3454(VARC[1281] + 1, VARC[1070], VARC[1069], location(VARC[1072]), 50);
+	}
+	VARC[1281] = VARC[1281] + 1;
+	widget(475, 78).setText(str(VARC[1281]));
+	return;
+}

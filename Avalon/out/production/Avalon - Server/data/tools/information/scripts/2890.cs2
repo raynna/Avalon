@@ -1,0 +1,90 @@
+void script_2890() {
+	NpcDef npcdef0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	Widget widget10;
+	int int11;
+	npcdef0 = null;
+	int1 = 0;
+	int2 = -1;
+	int3 = -1;
+	int4 = -1;
+	int5 = -1;
+	int6 = -1;
+	int7 = -1;
+	int8 = 1;
+	int9 = 0;
+	widget10 = widget(476, 0);
+	while (int8 <= datamapSize((DataMap)929)) {
+		if (int8 != VARC[1080] && int8 != VARC[1081] && int8 != VARC[1082] && int8 != VARC[1083] && int8 != VARC[1084] && int8 != VARC[1085] && isBitFlagged(VARP[1632], int8)) {
+			npcdef0 = datamap('i', 'n', (DataMap)929, int8);
+			if (npcdef0 != null && int1 < 6) {
+				int1 = int1 + 1;
+				if (VARC[1080] == -1) {
+					VARC[1080] = int8;
+				} else if (VARC[1081] == -1) {
+					VARC[1081] = int8;
+				} else if (VARC[1082] == -1) {
+					VARC[1082] = int8;
+				} else if (VARC[1083] == -1) {
+					VARC[1083] = int8;
+				} else if (VARC[1084] == -1) {
+					VARC[1084] = int8;
+				} else if (VARC[1085] == -1) {
+					VARC[1085] = int8;
+				}
+				npcdef0 = null;
+			}
+		}
+		int8 = int8 + 1;
+	}
+	int8 = 1;
+	int11 = 0;
+	while (int8 <= 6) {
+		widget10 = datamap('i', 'I', (DataMap)925, int8);
+		if (widget10 != widget(476, 0) && widget10.getSpriteId() == null) {
+			switch (int8) {
+				case 1:
+					npcdef0 = datamap('i', 'n', (DataMap)929, VARC[1080]);
+					break;
+				case 2:
+					npcdef0 = datamap('i', 'n', (DataMap)929, VARC[1081]);
+					break;
+				case 3:
+					npcdef0 = datamap('i', 'n', (DataMap)929, VARC[1082]);
+					break;
+				case 4:
+					npcdef0 = datamap('i', 'n', (DataMap)929, VARC[1083]);
+					break;
+				case 5:
+					npcdef0 = datamap('i', 'n', (DataMap)929, VARC[1084]);
+					break;
+				case 6:
+					npcdef0 = datamap('i', 'n', (DataMap)929, VARC[1085]);
+					break;
+			}
+			if (npcdef0 != null) {
+				widget10.setSprite(datamap('n', 'd', (DataMap)932, npcdef0));
+				datamap('I', 'I', (DataMap)926, widget10).setText(datamap('n', 's', (DataMap)930, npcdef0));
+				widget10.setScriptCallOnMouseOver(1160, widget10, -1, widget(476, 59), datamap('n', 's', (DataMap)930, npcdef0), 25, 200, "IiIsii");
+				widget10.setScriptCallOnMouseExit(40, widget(476, 59), "I");
+				if (widget10 != widget(476, 13) && widget10 != widget(476, 14)) {
+					widget(476, 17).setIsHidden(false);
+					widget(476, 17).setPosition(widget10.getX(), widget10.getY(), 0, 0);
+					script_1725(widget(476, 17));
+					int11 = getClientCycle() + 150;
+					widget10.setScriptCallOnGameloop(2891, int11, widget10, "iI");
+				}
+			}
+		}
+		int8 = int8 + 1;
+	}
+	return;
+}

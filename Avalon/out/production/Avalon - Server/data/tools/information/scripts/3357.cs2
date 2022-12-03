@@ -1,0 +1,25 @@
+int, string, int script_3357() {
+	switch (VARP[448]) {
+		case 17935:
+			return 1, "Sundering Strike (Tier 1)", 18027;
+		case 17936:
+			return 11, "Sundering Strike (Tier 2)", 18028;
+		case 17937:
+			return 21, "Sundering Strike (Tier 3)", 18029;
+		case 17938:
+			return 31, "Sundering Strike (Tier 4)", 18030;
+		case 17939:
+			return 41, "Sundering Strike (Tier 5)", 18031;
+		case 17940:
+			return 51, "Sundering Strike (Tier 6)", 18032;
+		case 17941:
+			return 61, "Sundering Strike (Tier 7)", 18033;
+		case 17942:
+			return 71, "Sundering Strike (Tier 8)", 18034;
+		case 17943:
+			return 81, "Sundering Strike (Tier 9)", 18035;
+		case 17944:
+			return 91, "Sundering Strike (Tier 10)", 18036;
+	}
+	return 1, "Sundering Strike (Tier 1)", 18027;
+}

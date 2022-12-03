@@ -1,0 +1,7 @@
+void script_5316(Widget widget0, int arg1, int arg2) {
+	if (arg1 >= 0 && arg1 < 40 && arg2 >= 0 && arg2 < 40 && ACTIVE.setChild(widget0, arg1) && _ACTIVE.setChild(widget0, arg2)) {
+		ACTIVE.setPosition(0, _ACTIVE.getY(), 0, 0);
+		_ACTIVE.setPosition(0, ACTIVE.getY(), 0, 0);
+	}
+	return;
+}

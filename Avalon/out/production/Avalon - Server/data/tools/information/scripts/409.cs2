@@ -1,0 +1,14 @@
+void script_409() {
+	VARC[1364] = VARC[1364] + 1;
+	if (VARC[1364] == 50) {
+		widget(1010, 41).setText("Opponent's Turn");
+	} else if (VARC[1364] == 100) {
+		widget(1010, 41).setText("Opponent's Turn.");
+	} else if (VARC[1364] == 150) {
+		widget(1010, 41).setText("Opponent's Turn..");
+	} else if (VARC[1364] >= 200) {
+		widget(1010, 41).setText("Opponent's Turn...");
+		VARC[1364] = 0;
+	}
+	return;
+}

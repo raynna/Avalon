@@ -1,0 +1,12 @@
+void script_2963(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, int arg6) {
+	if (getClientCycle() >= arg6) {
+		widget0.setScriptCallOnGameloop(-1, "");
+		widget0.setIsHidden(true);
+		widget3.setScriptCallOnMousePressed(2713, widget0, widget1, widget2, widget3, widget4, widget5, "IIIIII");
+		widget3.setScriptCallOnMouseOver(2961, widget4, widget5, true, "II1");
+		widget3.setScriptCallOnMouseExit(2961, widget4, widget5, false, "II1");
+		widget4.setSprite(2700);
+		VARC[986] = 1;
+	}
+	return;
+}

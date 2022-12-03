@@ -1,0 +1,18 @@
+void script_1921() {
+	if (VARC[551] > 0) {
+		widget(812, 5).setText(concat(concat(concat(STRING[40], " ("), VARC[551]), ")"));
+	} else {
+		widget(812, 5).setText(STRING[40]);
+	}
+	if (VARC[552] > 0) {
+		widget(812, 6).setText(concat(concat(concat(STRING[41], " ("), VARC[552]), ")"));
+	} else {
+		widget(812, 6).setText(STRING[41]);
+	}
+	if (VARC[553] > 0) {
+		widget(812, 7).setText(concat(concat(concat(STRING[42], " ("), VARC[553]), ")"));
+	} else {
+		widget(812, 7).setText(STRING[42]);
+	}
+	return;
+}

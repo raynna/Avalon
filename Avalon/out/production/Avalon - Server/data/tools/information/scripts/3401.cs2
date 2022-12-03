@@ -1,0 +1,11 @@
+void script_3401() {
+	if (VARC[1274] < 0 || VARC[1274] > widget(909, 61).getHeight() - widget(909, 62).getHeight()) {
+		script_3404();
+	} else {
+		script_3403(VARC[1274], 1);
+	}
+	widget(909, 62).setDraggable(widget(909, 61), -1);
+	widget(909, 62).setScriptCallOnMouseDragged(3402, MOUSE_Y, false, "i1");
+	widget(909, 62).setScriptCallOnMouseDragReleased(3402, MOUSE_Y, true, "i1");
+	return;
+}

@@ -1,0 +1,87 @@
+void script_1044(QcPhrase qcphrase0) {
+	DataMap datamap1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	string str0;
+	VARC[128] = -1;
+	str0 = cs2method5055(qcphrase0);
+	if (VARC[126] == 1) {
+		str0 = "To " + STRING[27] + ": " + "<col=800000>" + str0;
+	} else if (VARC[126] == 2) {
+		str0 = "[" + "<col=0000ff>" + clanChatDisplayName() + "<col=000000>" + "]: " + "<col=800000>" + str0;
+	} else if (VARC[126] == 8) {
+		if (cs2method3751()) {
+			str0 = "[" + "<col=0000ff>" + cs2method3752() + "<col=000000>" + "]: " + "<col=800000>" + str0;
+		}
+	} else if (VARC[126] == 10) {
+		if (cs2method3750()) {
+			str0 = "[" + "<col=0000ff>" + cs2method3752() + "<col=000000>" + "]: " + "<col=800000>" + str0;
+		}
+	} else {
+		str0 = "<col=0000ff>" + str0;
+	}
+	widget(137, 50).setIsHidden(true);
+	widget(137, 56).setScriptCallOnKeyPress(-1, "");
+	widget(137, 0).setIsHidden(false);
+	widget(137, 7).setIsHidden(true);
+	widget(137, 9).setIsHidden(false);
+	widget(137, 13).setIsHidden(true);
+	widget(137, 17).setIsHidden(true);
+	widget(137, 1).setIsHidden(true);
+	widget(137, 3).setIsHidden(false);
+	widget(137, 3).setRGB(0x000000);
+	widget(137, 3).setFont(495);
+	widget(137, 3).setTextAlignment(0, 1, 0);
+	widget(137, 3).setText(str0);
+	widget(137, 3).setTextAntiMacro(false);
+	widget(137, 12).clearChildren();
+	datamap1 = (DataMap)cs2method5070(qcphrase0, VARC[134], 0);
+	ACTIVE.createChild(widget(137, 12), 3, 0);
+	int2 = widget(137, 12).getWidth();
+	int3 = int2 - 8;
+	int4 = 1;
+	int5 = 0;
+	ARRAY0 = new int[250];
+	int6 = 0;
+	str0 = datamap('i', 's', datamap1, 0);
+	while (compare("", str0) != 0 && int4 < 250) {
+		ACTIVE.createChild(widget(137, 12), 4, int4);
+		ACTIVE.setPosition(4, 14 * int5, 0, 0);
+		ACTIVE.setSize(int3, 14, 0, 0);
+		ACTIVE.setRGB(0x000000);
+		ACTIVE.setText(str0);
+		ACTIVE.setFont(495);
+		ACTIVE.setTextAntiMacro(false);
+		ACTIVE.setScriptCallOnMouseEntered(1045, int4, widget(137, 12), int5, "iIi");
+		ACTIVE.setScriptCallOnMousePressed(1073, widget(137, 1), qcphrase0, int4 - 1, "Iei");
+		ARRAY0[int5] = int5;
+		str0 = datamap('i', 's', datamap1, int4);
+		int4 = int4 + 1;
+		int5 = int5 + 1;
+	}
+	int6 = int5 - 1;
+	if (compare(datamap('i', 's', datamap1, 1000), "non-alpha") != 0) {
+		script_520(0, 0, int6, datamap1);
+		int5 = 0;
+		while (int5 <= int6) {
+			if (ACTIVE.setChild(widget(137, 12), ARRAY0[int5] + 1)) {
+				ACTIVE.setPosition(4, 14 * int5, 0, 0);
+				ACTIVE.setScriptCallOnMouseEntered(1045, ARRAY0[int5] + 1, widget(137, 12), int5, "iIi");
+			}
+			int5 = int5 + 1;
+		}
+	}
+	int5 = 0;
+	while (int5 < 250) {
+		script_1384(int5, ARRAY0[int5]);
+		int5 = int5 + 1;
+	}
+	widget(137, 12).setScriptCallOnKeyPress(1046, KEY_TYPED, (char)KEY_PRESSED, widget(137, 1), widget(137, 12), widget(137, 11), qcphrase0, int4 - 1, "izIIIei");
+	widget(137, 12).setScrollMax(0, 14 * (int4 - 1));
+	script_31(widget(137, 11), widget(137, 12), 792, 789, 790, 791, 773, 788);
+	script_72(widget(137, 11), widget(137, 12), 0);
+	return;
+}

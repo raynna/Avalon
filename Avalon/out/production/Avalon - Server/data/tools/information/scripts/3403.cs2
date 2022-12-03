@@ -1,0 +1,24 @@
+void script_3403(int arg0, int arg1) {
+	int int2;
+	int int3;
+	int2 = widget(909, 13).getHeight() - widget(909, 61).getY() - 35 - arg0 - 7;
+	if (arg1 == 1) {
+		int2 = int2 - int2 % 15;
+	}
+	if (int2 < 113) {
+		int2 = 113;
+	}
+	widget(909, 49).setSize(20, int2, 1, 0);
+	VARC[1274] = arg0;
+	widget(909, 62).setPosition(0, widget(909, 49).getY() - widget(909, 61).getY() - 7, 0, 0);
+	int3 = int2 - 8;
+	int3 = int3 - int3 % 15;
+	widget(909, 52).setSize(widget(909, 52).getWidth(), int3, 0, 0);
+	VARC[1122] = VARC[1122] - (int3 - int3);
+	script_3054(widget(909, 49));
+	widget(909, 16).setSize(widget(909, 16).getWidth(), int2 + 86, 0, 1);
+	widget(909, 48).setSize(widget(909, 48).getWidth(), int2 + 86, 0, 1);
+	script_3029(widget(909, 45), widget(909, 44), widget(909, 46), widget(909, 42), widget(909, 41), widget(909, 47));
+	script_3041(widget(909, 87), widget(909, 86), widget(909, 84), widget(909, 78), widget(909, 79));
+	return;
+}

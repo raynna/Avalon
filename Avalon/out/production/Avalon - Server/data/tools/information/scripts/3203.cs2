@@ -1,0 +1,9 @@
+void script_3203() {
+	open(widget(906, 64), 913);
+	widget(906, 56).setIsHidden(false);
+	if (!datamap('i', 'I', (DataMap)941, 5).isHidden()) {
+		script_3161(0);
+	}
+	widget(913, 0).setScriptCallOnKeyPress(3206, KEY_TYPED, "i");
+	return;
+}

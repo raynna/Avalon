@@ -1,0 +1,27 @@
+int script_1469() {
+	if (VARPBIT[4885] == 0) {
+		return 2;
+	}
+	if (VARPBIT[4886] == 0) {
+		return 3;
+	}
+	if (VARPBIT[4887] == 0) {
+		return 4;
+	}
+	if (VARPBIT[4888] == 0) {
+		return 5;
+	}
+	if (VARPBIT[4889] == 0) {
+		return 6;
+	}
+	if (VARPBIT[4890] == 0) {
+		return 7;
+	}
+	if (VARPBIT[4891] == 0) {
+		return 8;
+	}
+	if (VARPBIT[4892] == 0) {
+		return 9;
+	}
+	return -1;
+}

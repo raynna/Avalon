@@ -1,0 +1,6 @@
+void script_229() {
+	script_231();
+	script_232();
+	widget(594, 165).setIsHidden(false);
+	return;
+}

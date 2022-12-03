@@ -1,0 +1,111 @@
+string script_824(int arg0, string string1) {
+	if (arg0 == 0) {
+		string1 = concat(string1, " ");
+		return string1;
+	}
+	if (arg0 == 1) {
+		string1 = concat(string1, "a");
+		return string1;
+	}
+	if (arg0 == 2) {
+		string1 = concat(string1, "b");
+		return string1;
+	}
+	if (arg0 == 3) {
+		string1 = concat(string1, "c");
+		return string1;
+	}
+	if (arg0 == 4) {
+		string1 = concat(string1, "d");
+		return string1;
+	}
+	if (arg0 == 5) {
+		string1 = concat(string1, "e");
+		return string1;
+	}
+	if (arg0 == 6) {
+		string1 = concat(string1, "f");
+		return string1;
+	}
+	if (arg0 == 7) {
+		string1 = concat(string1, "g");
+		return string1;
+	}
+	if (arg0 == 8) {
+		string1 = concat(string1, "h");
+		return string1;
+	}
+	if (arg0 == 9) {
+		string1 = concat(string1, "i");
+		return string1;
+	}
+	if (arg0 == 10) {
+		string1 = concat(string1, "j");
+		return string1;
+	}
+	if (arg0 == 11) {
+		string1 = concat(string1, "k");
+		return string1;
+	}
+	if (arg0 == 12) {
+		string1 = concat(string1, "l");
+		return string1;
+	}
+	if (arg0 == 13) {
+		string1 = concat(string1, "m");
+		return string1;
+	}
+	if (arg0 == 14) {
+		string1 = concat(string1, "n");
+		return string1;
+	}
+	if (arg0 == 15) {
+		string1 = concat(string1, "o");
+		return string1;
+	}
+	if (arg0 == 16) {
+		string1 = concat(string1, "p");
+		return string1;
+	}
+	if (arg0 == 17) {
+		string1 = concat(string1, "q");
+		return string1;
+	}
+	if (arg0 == 18) {
+		string1 = concat(string1, "r");
+		return string1;
+	}
+	if (arg0 == 19) {
+		string1 = concat(string1, "s");
+		return string1;
+	}
+	if (arg0 == 20) {
+		string1 = concat(string1, "t");
+		return string1;
+	}
+	if (arg0 == 21) {
+		string1 = concat(string1, "u");
+		return string1;
+	}
+	if (arg0 == 22) {
+		string1 = concat(string1, "v");
+		return string1;
+	}
+	if (arg0 == 23) {
+		string1 = concat(string1, "w");
+		return string1;
+	}
+	if (arg0 == 24) {
+		string1 = concat(string1, "x");
+		return string1;
+	}
+	if (arg0 == 25) {
+		string1 = concat(string1, "y");
+		return string1;
+	}
+	if (arg0 == 26) {
+		string1 = concat(string1, "z");
+		return string1;
+	}
+	return "";
+}

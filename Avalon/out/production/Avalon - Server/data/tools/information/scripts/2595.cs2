@@ -1,0 +1,6 @@
+void script_2595(int arg0) {
+	int int1;
+	int1 = cs2method6131();
+	script_2596(int1, getDisplayMode(), (int, int)script_2692(int1), arg0);
+	return;
+}

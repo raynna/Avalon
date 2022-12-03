@@ -1,0 +1,5 @@
+void script_2989() {
+	widget(72, 58).setIsHidden(true);
+	widget(72, 56).setIsHidden(false);
+	return;
+}

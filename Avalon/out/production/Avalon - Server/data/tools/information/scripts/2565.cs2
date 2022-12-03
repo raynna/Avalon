@@ -1,0 +1,9 @@
+void script_2565() {
+	int int0;
+	int0 = 0;
+	VARC[846] = VARPBIT[6380];
+	widget(863, 30).setText(str(VARPBIT[6380]));
+	int0 = VARC[839] - 100 * VARC[846];
+	widget(863, 14).setText(script_46(int0, ","));
+	return;
+}

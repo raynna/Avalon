@@ -1,0 +1,23 @@
+void script_3208(int arg0) {
+	Sprite sprite1;
+	Sprite sprite2;
+	sprite1 = 4055;
+	sprite2 = 4053;
+	if (arg0 == 1) {
+		script_3209();
+		widget(673, 64).setScriptCallOnMousePressed(-1, "");
+		widget(673, 64).setScriptCallOnMouseEntered(-1, "");
+		widget(673, 70).setText("Please wait...");
+		widget(673, 69).setText("Please wait...");
+		widget(673, 26).setScriptCallOnMousePressed(-1, "");
+		widget(673, 26).setScriptCallOnMouseEntered(-1, "");
+	} else {
+		widget(673, 64).setScriptCallOnMousePressed(2205, "");
+		widget(673, 64).setScriptCallOnMouseEntered(45, CTX_WIDGET, 16448250, "Ii");
+		widget(673, 70).setText("Continue");
+		widget(673, 69).setText("Continue");
+		widget(673, 26).setScriptCallOnMousePressed(2252, "");
+		widget(673, 26).setScriptCallOnMouseEntered(3937, widget(673, 65), sprite1, widget(673, 66), sprite2, widget(673, 67), sprite2, widget(673, 68), sprite1, "IdIdIdId");
+	}
+	return;
+}

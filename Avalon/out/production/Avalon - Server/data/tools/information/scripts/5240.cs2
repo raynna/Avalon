@@ -1,0 +1,10 @@
+void script_5240(Widget widget0) {
+	if (VARC[1184] == 0) {
+		if (widget0 == widget(1126, 192)) {
+			widget0.setRGB(0xEBE0BC);
+		}
+	} else if (widget0 == widget(1126, 187)) {
+		widget0.setRGB(0xEBE0BC);
+	}
+	return;
+}

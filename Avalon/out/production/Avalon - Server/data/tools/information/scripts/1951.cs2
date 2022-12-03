@@ -1,0 +1,10 @@
+void script_1951() {
+	if (VARC[616] == 1) {
+		widget(745, 1).setIsHidden(false);
+	} else {
+		VARC[616] = 0;
+		widget(745, 1).setIsHidden(true);
+		script_1952();
+	}
+	return;
+}

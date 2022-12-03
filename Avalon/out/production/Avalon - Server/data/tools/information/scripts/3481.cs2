@@ -1,0 +1,6 @@
+void script_3481(int arg0) {
+	if (arg0 == 1) {
+		msg("Drag the tiles into the grid.");
+	}
+	return;
+}

@@ -1,0 +1,151 @@
+void script_5078(Widget widget0) {
+	int int1;
+	int int2;
+	DataMap datamap3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	script_4762(widget(1114, 30), (AttrMap)1788);
+	widget(1114, 5).clearChildren();
+	int1 = 0;
+	int2 = datamapSize((DataMap)3921);
+	datamap3 = null;
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	ARRAY0 = new int[int2 + 1];
+	int7 = 1;
+	while (int1 < int2) {
+		datamap3 = datamap('i', 'g', (DataMap)3921, int1);
+		if (datamap3 != null) {
+			int4, int5 = 0, datamapSize(datamap3);
+			while (int4 < int5) {
+				int6 = max(int6, getTextWidth(datamap('i', 's', datamap3, int4), 494));
+				int4 = int4 + 1;
+			}
+			ARRAY0[int7] = ARRAY0[int7 - 1] + int5;
+			int7 = int7 + 1;
+		}
+		int1 = int1 + 1;
+	}
+	int8 = int6 + 28;
+	int1 = 0;
+	int9 = 0;
+	int10 = 0;
+	while (int1 < int2) {
+		datamap3 = datamap('i', 'g', (DataMap)3921, int1);
+		if (datamap3 != null) {
+			ACTIVE.createChild(widget(1114, 5), 3, widget(1114, 5).nextChild());
+			ACTIVE.setSize(0, 33, 1, 0);
+			ACTIVE.setPosition(0, int9, 0, 0);
+			ACTIVE.setFilled(true);
+			if (int1 % 2 == 0) {
+				ACTIVE.setRGB(0x211F1C);
+			} else {
+				ACTIVE.setRGB(0x181715);
+			}
+			ACTIVE.createChild(widget(1114, 5), 4, widget(1114, 5).nextChild());
+			ACTIVE.setSize(int8 + 15, 33, 1, 0);
+			ACTIVE.setPosition(5, int9, 0, 0);
+			ACTIVE.setFont(494);
+			ACTIVE.setTextAlignment(0, 1, 0);
+			ACTIVE.setRGB(0xE9E2B4);
+			ACTIVE.setTextAntiMacro(true);
+			ACTIVE.setText(datamap('i', 's', datamap3, -1));
+			ACTIVE.createChild(widget(1114, 5), 3, widget(1114, 5).nextChild());
+			ACTIVE.setSize(int8, 21, 0, 0);
+			ACTIVE.setPosition(6, int9 + 6, 2, 0);
+			ACTIVE.setTrans(255);
+			_ACTIVE.createChild(widget(1114, 5), 5, widget(1114, 5).nextChild());
+			_ACTIVE.setSize(ACTIVE.getWidth() - 40, ACTIVE.getHeight(), 0, 0);
+			_ACTIVE.setPosition(26, ACTIVE.getY(), 2, 0);
+			if (VARC[1095] == 1) {
+				_ACTIVE.setSprite(6132);
+			} else {
+				_ACTIVE.setSprite(6141);
+			}
+			_ACTIVE.createChild(widget(1114, 5), 5, widget(1114, 5).nextChild());
+			_ACTIVE.setSize(ACTIVE.getWidth() - 40, ACTIVE.getHeight(), 0, 0);
+			_ACTIVE.setPosition(26, ACTIVE.getY(), 2, 0);
+			if (VARC[1095] == 1) {
+				_ACTIVE.setSprite(6135);
+				_ACTIVE.setTrans(255);
+			} else {
+				_ACTIVE.setHidden(true);
+			}
+			_ACTIVE.createChild(widget(1114, 5), 5, widget(1114, 5).nextChild());
+			_ACTIVE.setSize(20, ACTIVE.getHeight(), 0, 0);
+			_ACTIVE.setPosition(ACTIVE.getX(), ACTIVE.getY(), 0, 0);
+			if (VARC[1095] == 1) {
+				_ACTIVE.setSprite(6131);
+			} else {
+				_ACTIVE.setSprite(6140);
+			}
+			_ACTIVE.createChild(widget(1114, 5), 5, widget(1114, 5).nextChild());
+			_ACTIVE.setSize(20, ACTIVE.getHeight(), 0, 0);
+			_ACTIVE.setPosition(ACTIVE.getX(), ACTIVE.getY(), 0, 0);
+			if (VARC[1095] == 1) {
+				_ACTIVE.setSprite(6134);
+				_ACTIVE.setTrans(255);
+			} else {
+				_ACTIVE.setHidden(true);
+			}
+			_ACTIVE.createChild(widget(1114, 5), 5, widget(1114, 5).nextChild());
+			_ACTIVE.setSize(20, ACTIVE.getHeight(), 0, 0);
+			_ACTIVE.setPosition(6, ACTIVE.getY(), 2, 0);
+			if (VARC[1095] == 1) {
+				_ACTIVE.setSprite(6133);
+			} else {
+				_ACTIVE.setSprite(6142);
+			}
+			_ACTIVE.createChild(widget(1114, 5), 5, widget(1114, 5).nextChild());
+			_ACTIVE.setSize(20, ACTIVE.getHeight(), 0, 0);
+			_ACTIVE.setPosition(6, ACTIVE.getY(), 2, 0);
+			if (VARC[1095] == 1) {
+				_ACTIVE.setSprite(6136);
+				_ACTIVE.setTrans(255);
+			} else {
+				_ACTIVE.setHidden(true);
+			}
+			_ACTIVE.createChild(widget(1114, 5), 4, widget(1114, 5).nextChild());
+			_ACTIVE.setSize(int6, 21, 0, 0);
+			_ACTIVE.setPosition(30, ACTIVE.getY(), 2, 0);
+			_ACTIVE.setFont(494);
+			_ACTIVE.setTextAlignment(1, 1, 0);
+			_ACTIVE.setRGB(0x251E14);
+			_ACTIVE.setTextAntiMacro(false);
+			_ACTIVE.setText("");
+			int9 = int9 + 33;
+			if (VARC[1095] == 1) {
+				ACTIVE.setScriptCallOnMouseEntered(5086, CTX_WIDGET, int1, 0, "Iii");
+				ACTIVE.setScriptCallOnMouseExit(5086, CTX_WIDGET, int1, 1, "Iii");
+				ACTIVE.setScriptCallOnMouseReleased(5086, CTX_WIDGET, int1, 255, "Iii");
+				if (datamap3 == (DataMap)3922) {
+					ACTIVE.setScriptCallOnMousePressed(5081, CTX_WIDGET, int1, datamap3, ARRAY0[int1], min(ARRAY0[int1 + 1] - ARRAY0[int1], VARPBIT[9544]), int10, int8, "Iigiiii");
+				} else {
+					ACTIVE.setScriptCallOnMousePressed(5081, CTX_WIDGET, int1, datamap3, ARRAY0[int1], ARRAY0[int1 + 1] - ARRAY0[int1], int10, int8, "Iigiiii");
+				}
+			}
+		}
+		int1 = int1 + 1;
+	}
+	if (int9 > widget(1114, 5).getHeight()) {
+		widget(1114, 5).setScrollMax(0, int9);
+		widget(1114, 5).setScrollPos(0, widget(1114, 5).getScrollY());
+	} else {
+		widget(1114, 5).setScrollMax(0, 0);
+		widget(1114, 5).setScrollPos(0, 0);
+	}
+	script_31(widget(1114, 6), widget(1114, 5), 6507, 6504, 6505, 6506, 6499, 6498);
+	script_5080(widget(1114, 5));
+	widget(1114, 28).setScriptCallOnMousePressed(5084, widget(1114, 5), "I");
+	widget0.setScriptCallOnGlobalConfigChange(5078, CTX_WIDGET, 1095, "IY");
+	widget0.setScriptCallOnConfigChange(5078, CTX_WIDGET, 1734, "IY");
+	widget(1114, 5).setScriptCallOnConfigChange(5079, CTX_WIDGET, 1736, "IY");
+	widget(1114, 5).setScriptCallOnGlobalStringChange(5079, CTX_WIDGET, 129, "IY");
+	return;
+}

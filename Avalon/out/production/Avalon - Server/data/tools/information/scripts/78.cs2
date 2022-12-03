@@ -1,0 +1,50 @@
+void script_78(int arg0, string arg1) {
+	if (arg0 < 10) {
+		if (arg0 < 5) {
+			if (arg0 == 0) {
+				STRING[2] = arg1;
+			} else if (arg0 == 1) {
+				STRING[3] = arg1;
+			} else if (arg0 == 2) {
+				STRING[4] = arg1;
+			} else if (arg0 == 3) {
+				STRING[5] = arg1;
+			} else if (arg0 == 4) {
+				STRING[6] = arg1;
+			}
+		} else if (arg0 == 5) {
+			STRING[7] = arg1;
+		} else if (arg0 == 6) {
+			STRING[8] = arg1;
+		} else if (arg0 == 7) {
+			STRING[9] = arg1;
+		} else if (arg0 == 8) {
+			STRING[10] = arg1;
+		} else if (arg0 == 9) {
+			STRING[11] = arg1;
+		}
+	} else if (arg0 < 15) {
+		if (arg0 == 10) {
+			STRING[12] = arg1;
+		} else if (arg0 == 11) {
+			STRING[13] = arg1;
+		} else if (arg0 == 12) {
+			STRING[14] = arg1;
+		} else if (arg0 == 13) {
+			STRING[15] = arg1;
+		} else if (arg0 == 14) {
+			STRING[16] = arg1;
+		}
+	} else if (arg0 == 15) {
+		STRING[17] = arg1;
+	} else if (arg0 == 16) {
+		STRING[18] = arg1;
+	} else if (arg0 == 17) {
+		STRING[19] = arg1;
+	} else if (arg0 == 18) {
+		STRING[20] = arg1;
+	} else if (arg0 == 19) {
+		STRING[21] = arg1;
+	}
+	return;
+}

@@ -1,0 +1,277 @@
+void script_2851(Widget widget0, int arg1, int arg2) {
+	if (!widget(475, 55).isHidden()) {
+		if (arg1 == 2) {
+			script_835(true);
+		}
+		return;
+	}
+	if (getClientCycle() > arg2 + 5 || VARC[1074] == 2) {
+		switch (getLanguage()) {
+			case 2:
+				switch (arg1) {
+					case 2:
+						script_835(false);
+						break;
+					case 6:
+						script_3455();
+						break;
+					case 7:
+						script_3453();
+						break;
+					case 8:
+						script_3456();
+						break;
+					case 34:
+						script_2858();
+						break;
+					case 35:
+						script_2854();
+						break;
+					case 36:
+						script_2859();
+						break;
+					case 50:
+						script_2857();
+						break;
+					case 51:
+						script_2855();
+						break;
+					case 52:
+						script_2856();
+						break;
+					case 98:
+						script_2860();
+						break;
+					case 99:
+						script_2861();
+						break;
+					case 96:
+						script_2863();
+						break;
+					case 97:
+						script_2862();
+						break;
+					case 13:
+						script_675();
+						break;
+					case 1:
+						script_3455();
+						if (VARC[1074] == 0) {
+							VARC[1074] = 1;
+							widget(475, 28).setSprite(1233);
+							widget(475, 29).setText("You are now in Focus Mode");
+							if (!widget(475, 54).isHidden()) {
+								widget(475, 54).setIsHidden(true);
+								widget(475, 33).setIsHidden(false);
+								widget(475, 100).setIsHidden(true);
+								widget(475, 58).setIsHidden(false);
+							}
+						} else if (VARC[1074] == 2) {
+							VARC[1074] = 0;
+							widget(475, 28).setSprite(1232);
+							widget(475, 29).setText("You are now in Aim Mode");
+							if (!widget(475, 100).isHidden()) {
+								widget(475, 33).setIsHidden(true);
+								widget(475, 54).setIsHidden(false);
+								widget(475, 100).setIsHidden(true);
+								widget(475, 58).setIsHidden(false);
+							}
+						} else {
+							VARC[1074] = 2;
+							widget(475, 28).setSprite(1231);
+							widget(475, 29).setText("You are now in Fine Control Mode");
+							if (!widget(475, 33).isHidden()) {
+								widget(475, 33).setIsHidden(true);
+								widget(475, 54).setIsHidden(true);
+								widget(475, 100).setIsHidden(false);
+								widget(475, 58).setIsHidden(true);
+							}
+						}
+						widget0.setScriptCallOnGameloop(2853, widget0, getClientCycle(), "Ii");
+						break;
+					case 83:
+						if (VARC[1074] == 0) {
+							if (widget(475, 54).isHidden()) {
+								widget(475, 54).setIsHidden(false);
+								widget(475, 33).setIsHidden(true);
+								widget(475, 100).setIsHidden(true);
+								widget(475, 7).setIsHidden(false);
+								widget(475, 58).setIsHidden(false);
+							} else {
+								widget(475, 54).setIsHidden(true);
+								widget(475, 33).setIsHidden(true);
+								widget(475, 100).setIsHidden(true);
+								widget(475, 7).setIsHidden(true);
+								widget(475, 58).setIsHidden(true);
+							}
+						} else if (VARC[1074] == 1) {
+							if (widget(475, 33).isHidden()) {
+								widget(475, 54).setIsHidden(true);
+								widget(475, 33).setIsHidden(false);
+								widget(475, 100).setIsHidden(true);
+								widget(475, 7).setIsHidden(false);
+								widget(475, 58).setIsHidden(false);
+							} else {
+								widget(475, 54).setIsHidden(true);
+								widget(475, 33).setIsHidden(true);
+								widget(475, 100).setIsHidden(true);
+								widget(475, 7).setIsHidden(true);
+								widget(475, 58).setIsHidden(true);
+							}
+						} else if (VARC[1074] == 2) {
+							if (widget(475, 100).isHidden()) {
+								widget(475, 54).setIsHidden(true);
+								widget(475, 33).setIsHidden(true);
+								widget(475, 100).setIsHidden(false);
+								widget(475, 7).setIsHidden(false);
+								widget(475, 58).setIsHidden(true);
+							} else {
+								widget(475, 54).setIsHidden(true);
+								widget(475, 33).setIsHidden(true);
+								widget(475, 100).setIsHidden(true);
+								widget(475, 7).setIsHidden(true);
+								widget(475, 58).setIsHidden(true);
+							}
+						}
+						break;
+					default:
+						return;
+				}
+				break;
+			default:
+				switch (arg1) {
+					case 2:
+						script_835(false);
+						break;
+					case 6:
+						script_3455();
+						break;
+					case 7:
+						script_3453();
+						break;
+					case 8:
+						script_3456();
+						break;
+					case 32:
+						script_2858();
+						break;
+					case 33:
+						script_2854();
+						break;
+					case 34:
+						script_2859();
+						break;
+					case 48:
+						script_2857();
+						break;
+					case 49:
+						script_2855();
+						break;
+					case 50:
+						script_2856();
+						break;
+					case 98:
+						script_2860();
+						break;
+					case 99:
+						script_2861();
+						break;
+					case 96:
+						script_2863();
+						break;
+					case 97:
+						script_2862();
+						break;
+					case 13:
+						script_675();
+						break;
+					case 1:
+						script_3455();
+						if (VARC[1074] == 0) {
+							VARC[1074] = 1;
+							widget(475, 28).setSprite(1233);
+							widget(475, 29).setText("You are now in Focus Mode");
+							if (!widget(475, 54).isHidden()) {
+								widget(475, 54).setIsHidden(true);
+								widget(475, 33).setIsHidden(false);
+								widget(475, 100).setIsHidden(true);
+								widget(475, 58).setIsHidden(false);
+							}
+						} else if (VARC[1074] == 2) {
+							VARC[1074] = 0;
+							widget(475, 28).setSprite(1232);
+							widget(475, 29).setText("You are now in Aim Mode");
+							if (!widget(475, 100).isHidden()) {
+								widget(475, 33).setIsHidden(true);
+								widget(475, 54).setIsHidden(false);
+								widget(475, 100).setIsHidden(true);
+								widget(475, 58).setIsHidden(false);
+							}
+						} else {
+							VARC[1074] = 2;
+							widget(475, 28).setSprite(1231);
+							widget(475, 29).setText("You are now in Fine Control Mode");
+							if (!widget(475, 33).isHidden()) {
+								widget(475, 33).setIsHidden(true);
+								widget(475, 54).setIsHidden(true);
+								widget(475, 100).setIsHidden(false);
+								widget(475, 58).setIsHidden(true);
+							}
+						}
+						widget0.setScriptCallOnGameloop(2853, widget0, getClientCycle(), "Ii");
+						break;
+					case 83:
+						if (VARC[1074] == 0) {
+							if (widget(475, 54).isHidden()) {
+								widget(475, 54).setIsHidden(false);
+								widget(475, 33).setIsHidden(true);
+								widget(475, 100).setIsHidden(true);
+								widget(475, 7).setIsHidden(false);
+								widget(475, 58).setIsHidden(false);
+							} else {
+								widget(475, 54).setIsHidden(true);
+								widget(475, 33).setIsHidden(true);
+								widget(475, 100).setIsHidden(true);
+								widget(475, 7).setIsHidden(true);
+								widget(475, 58).setIsHidden(true);
+							}
+						} else if (VARC[1074] == 1) {
+							if (widget(475, 33).isHidden()) {
+								widget(475, 54).setIsHidden(true);
+								widget(475, 33).setIsHidden(false);
+								widget(475, 100).setIsHidden(true);
+								widget(475, 7).setIsHidden(false);
+								widget(475, 58).setIsHidden(false);
+							} else {
+								widget(475, 54).setIsHidden(true);
+								widget(475, 33).setIsHidden(true);
+								widget(475, 100).setIsHidden(true);
+								widget(475, 7).setIsHidden(true);
+								widget(475, 58).setIsHidden(true);
+							}
+						} else if (VARC[1074] == 2) {
+							if (widget(475, 100).isHidden()) {
+								widget(475, 54).setIsHidden(true);
+								widget(475, 33).setIsHidden(true);
+								widget(475, 100).setIsHidden(false);
+								widget(475, 7).setIsHidden(false);
+								widget(475, 58).setIsHidden(true);
+							} else {
+								widget(475, 54).setIsHidden(true);
+								widget(475, 33).setIsHidden(true);
+								widget(475, 100).setIsHidden(true);
+								widget(475, 7).setIsHidden(true);
+								widget(475, 58).setIsHidden(true);
+							}
+						}
+						break;
+					default:
+						return;
+				}
+				break;
+		}
+		script_2864();
+		widget0.setScriptCallOnKeyPress(2851, widget0, KEY_TYPED, getClientCycle(), "Iii");
+	}
+	return;
+}

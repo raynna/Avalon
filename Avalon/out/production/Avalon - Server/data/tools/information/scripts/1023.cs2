@@ -1,0 +1,1840 @@
+string, int, int script_1023(Skill skill0, int arg1) {
+	int int2;
+	int int3;
+	int int4;
+	string str0;
+	int2 = getSkillActualLvl(skill0);
+	str0 = "null";
+	int3 = -1;
+	int4 = 0;
+	switch (arg1) {
+		case 0:
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 10) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[122] == 7) {
+				int4 = 0;
+			}
+			break;
+		case 1:
+			if (skill0 == 0 && getSkillActualLvl(skill0) == 15) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 5 && getSkillActualLvl(skill0) == 25) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[3550] == 11) {
+				int4 = 0;
+			}
+			break;
+		case 2:
+			if (skill0 == 1 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[299] > 109) {
+				int4 = 0;
+			}
+			break;
+		case 3:
+			if (skill0 == 7 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 9 && getSkillActualLvl(skill0) == 5) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 4 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[293] == 65) {
+				int4 = 0;
+			}
+			break;
+		case 4:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 42) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 45) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 4 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[655] > 130) {
+				int4 = 0;
+			}
+			break;
+		case 5:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 25) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[399] > 6) {
+				int4 = 0;
+			}
+			break;
+		case 6:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 26) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 5) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 32) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 33) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 2 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 22) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[2573] == 320) {
+				int4 = 0;
+			}
+			break;
+		case 7:
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 18 && getSkillActualLvl(skill0) == 10) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 53) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[358] == 15) {
+				int4 = 0;
+			}
+			break;
+		case 8:
+			if (skill0 == 9 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 20 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 65) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[1465] == 80) {
+				int4 = 0;
+			}
+			break;
+		case 9:
+			if (skill0 == 15 && getSkillActualLvl(skill0) == 10) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 10) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 25) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[131] == 9) {
+				int4 = 0;
+			}
+			break;
+		case 10:
+			if (skill0 == 15 && getSkillActualLvl(skill0) == 31) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[335] == 110) {
+				int4 = 0;
+			}
+			break;
+		case 11:
+			if (skill0 == 21 && getSkillActualLvl(skill0) == 27) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[2780] == 40) {
+				int4 = 0;
+			}
+			break;
+		case 12:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (isBitFlagged(VARP[299], 20)) {
+				int4 = 0;
+			}
+			break;
+		case 13:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 45) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 39) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 5 && getSkillActualLvl(skill0) == 43) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[1560] > 69) {
+				int4 = 0;
+			}
+			break;
+		case 14:
+			if (skill0 == 19 && getSkillActualLvl(skill0) == 49) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 15 && getSkillActualLvl(skill0) == 57) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[2326] > 80) {
+				int4 = 0;
+			}
+			break;
+		case 15:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 59) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[148] == 11) {
+				int4 = 0;
+			}
+			break;
+		case 16:
+			if (skill0 == 10 && getSkillActualLvl(skill0) == 10) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[11] == 5) {
+				int4 = 0;
+			}
+			break;
+		case 17:
+			if (skill0 == 7 && getSkillActualLvl(skill0) == 22) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 19 && getSkillActualLvl(skill0) == 17) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[822] >= 140) {
+				int4 = 0;
+			}
+			break;
+		case 18:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 9 && getSkillActualLvl(skill0) == 25) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 8 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[347] > 9) {
+				int4 = 0;
+			}
+			break;
+		case 19:
+			if (skill0 == 19 && getSkillActualLvl(skill0) == 25) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[961] == 60) {
+				int4 = 0;
+			}
+			break;
+		case 20:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 25) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 7 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[217] > 7) {
+				int4 = 0;
+			}
+			break;
+		case 21:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 12) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 16) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 33) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 14) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[571] > 49) {
+				int4 = 0;
+			}
+			break;
+		case 22:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 25) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[346] > 9) {
+				int4 = 0;
+			}
+			break;
+		case 23:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 25) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[150] >= 160) {
+				int4 = 0;
+			}
+			break;
+		case 24:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 49) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 17) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[1527] > 159) {
+				int4 = 0;
+			}
+			break;
+		case 25:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 15) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 35) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[382] == 11) {
+				int4 = 0;
+			}
+			break;
+		case 26:
+			if (skill0 == 7 && getSkillActualLvl(skill0) == 53) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 10 && getSkillActualLvl(skill0) == 53) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 15 && getSkillActualLvl(skill0) == 25) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[188] == 15) {
+				int4 = 0;
+			}
+			break;
+		case 27:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 35) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[34] > 9) {
+				int4 = 0;
+			}
+			break;
+		case 28:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 25) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 7) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 15) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[1990] > 420) {
+				int4 = 0;
+			}
+			break;
+		case 29:
+			if (skill0 == 15 && getSkillActualLvl(skill0) == 3) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[175] > 11) {
+				int4 = 0;
+			}
+			break;
+		case 30:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 15 && getSkillActualLvl(skill0) == 45) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 56) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 52) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 5 && getSkillActualLvl(skill0) == 42) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 2 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 8 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[139] == 75) {
+				int4 = 0;
+			}
+			break;
+		case 31:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 31) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 8 && getSkillActualLvl(skill0) == 36) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[147] == 6) {
+				int4 = 0;
+			}
+			break;
+		case 32:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 13) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 17) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 13) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[532] > 10) {
+				int4 = 0;
+			}
+			break;
+		case 33:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 61) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 1 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 49) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 15 && getSkillActualLvl(skill0) == 5) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 65) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 60) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 8 && getSkillActualLvl(skill0) == 55) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[2448] == 190) {
+				int4 = 0;
+			}
+			break;
+		case 34:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 7) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[1383] > 3) {
+				int4 = 0;
+			}
+			break;
+		case 35:
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[334] > 27) {
+				int4 = 0;
+			}
+			break;
+		case 36:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[260] > 69) {
+				int4 = 0;
+			}
+			break;
+		case 37:
+			if (skill0 == 4 && getSkillActualLvl(skill0) == 60) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[517] > 7) {
+				int4 = 0;
+			}
+			break;
+		case 38:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 25) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[387] > 100) {
+				int4 = 0;
+			}
+			break;
+		case 39:
+			if (skill0 == 19 && getSkillActualLvl(skill0) == 29) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 8 && getSkillActualLvl(skill0) == 10) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[2790] > 310) {
+				int4 = 0;
+			}
+			break;
+		case 40:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 18) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[307] == 110) {
+				int4 = 0;
+			}
+			break;
+		case 41:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 36) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 25) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 15 && getSkillActualLvl(skill0) == 18) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[416] > 275) {
+				int4 = 0;
+			}
+			break;
+		case 42:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 56) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[328] > 14) {
+				int4 = 0;
+			}
+			break;
+		case 43:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 18 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[2140] > 20) {
+				int4 = 0;
+			}
+			break;
+		case 44:
+			if (skill0 == 5 && getSkillActualLvl(skill0) == 31) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[76] == 6) {
+				int4 = 0;
+			}
+			break;
+		case 45:
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[159] >= 12) {
+				int4 = 0;
+			}
+			break;
+		case 46:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 15 && getSkillActualLvl(skill0) == 15) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[339] == 85) {
+				int4 = 0;
+			}
+			break;
+		case 47:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[1372] > 124) {
+				int4 = 0;
+			}
+			break;
+		case 48:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 32) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[116] > 14) {
+				int4 = 0;
+			}
+			break;
+		case 49:
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 33) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 37) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 4 && getSkillActualLvl(skill0) == 37) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 37) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[1444] > 59) {
+				int4 = 0;
+			}
+			break;
+		case 50:
+			if (skill0 == 7 && getSkillActualLvl(skill0) == 62) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 42) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 10 && getSkillActualLvl(skill0) == 62) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 66) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 45) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[2098] >= 200) {
+				int4 = 0;
+			}
+			break;
+		case 51:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 15) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 7 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 10 && getSkillActualLvl(skill0) == 5) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[320] == 6) {
+				int4 = 0;
+			}
+			break;
+		case 52:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 49) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[451] > 1) {
+				int4 = 0;
+			}
+			break;
+		case 53:
+			if (skill0 == 4 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 42) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[26] == 80 || VARP[26] == 90) {
+				int4 = 0;
+			}
+			break;
+		case 54:
+			if (skill0 == 9 && getSkillActualLvl(skill0) == 10) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[197] == 30) {
+				int4 = 0;
+			}
+			break;
+		case 55:
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 21) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[200] == 5) {
+				int4 = 0;
+			}
+			break;
+		case 56:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 28) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[385] > 44) {
+				int4 = 0;
+			}
+			break;
+		case 57:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 15) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[317] == 50) {
+				int4 = 0;
+			}
+			break;
+		case 58:
+			if (skill0 == 4 && getSkillActualLvl(skill0) == 25) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[161] == 10) {
+				int4 = 0;
+			}
+			break;
+		case 59:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 25) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 15 && getSkillActualLvl(skill0) == 14) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 14) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 15) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[212] > 12) {
+				int4 = 0;
+			}
+			break;
+		case 60:
+			if (skill0 == 0 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[5] == 10) {
+				int4 = 0;
+			}
+			break;
+		case 61:
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 5) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 46) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[2497] == 60) {
+				int4 = 0;
+			}
+			break;
+		case 62:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 23) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 23) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[2258] == 13) {
+				int4 = 0;
+			}
+			break;
+		case 63:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 19) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 4 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 18 && getSkillActualLvl(skill0) == 18) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 8 && getSkillActualLvl(skill0) == 35) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[3185] == 240) {
+				int4 = 0;
+			}
+			break;
+		case 64:
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[2639] == 11) {
+				int4 = 0;
+			}
+			break;
+		case 65:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 36) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 19 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[2866] == 200) {
+				int4 = 0;
+			}
+			break;
+		case 66:
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 16) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 5 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[980] > 129) {
+				int4 = 0;
+			}
+			break;
+		case 67:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 20 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 18 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[2610] >= 14) {
+				int4 = 0;
+			}
+			break;
+		case 68:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 34) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 21 && getSkillActualLvl(skill0) == 10) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[3293] == 135) {
+				int4 = 0;
+			}
+			break;
+		case 69:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 46) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 8 && getSkillActualLvl(skill0) == 56) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[3311] == 340) {
+				int4 = 0;
+			}
+			break;
+		case 70:
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 10) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[3337] == 18) {
+				int4 = 0;
+			}
+			break;
+		case 71:
+			if (skill0 == 20 && getSkillActualLvl(skill0) == 35) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[3523] > 149) {
+				int4 = 0;
+			}
+			break;
+		case 72:
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 40) {
+				_, _, _ = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 8 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[3534] == 80) {
+				int4 = 0;
+			}
+			break;
+		case 73:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 59) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 19 && getSkillActualLvl(skill0) == 45) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 15 && getSkillActualLvl(skill0) == 52) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 58) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 8 && getSkillActualLvl(skill0) == 71) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[2783] == 60) {
+				int4 = 0;
+			}
+			break;
+		case 74:
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 45) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 1 && getSkillActualLvl(skill0) == 65) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[3888] == 90) {
+				int4 = 0;
+			}
+			break;
+		case 75:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 45) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 4 && getSkillActualLvl(skill0) == 47) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 18 && getSkillActualLvl(skill0) == 56) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 56) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 2 && getSkillActualLvl(skill0) == 60) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[3954] == 200) {
+				int4 = 0;
+			}
+			break;
+		case 76:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 55) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 19 && getSkillActualLvl(skill0) == 53) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 18 && getSkillActualLvl(skill0) == 59) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 8 && getSkillActualLvl(skill0) == 72) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[4055] == 65) {
+				int4 = 0;
+			}
+			break;
+		case 77:
+			if (skill0 == 5 && getSkillActualLvl(skill0) == 30) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 36) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 36) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 10 && getSkillActualLvl(skill0) == 36) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 15 && getSkillActualLvl(skill0) == 37) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[4105] == 18) {
+				int4 = 0;
+			}
+			break;
+		case 78:
+			if (skill0 == 7 && getSkillActualLvl(skill0) == 10) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[1850] == 1) {
+				int4 = 0;
+			}
+			break;
+		case 79:
+			if (skill0 == 7 && getSkillActualLvl(skill0) == 31) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[1895] == 110) {
+				int4 = 0;
+			}
+			break;
+		case 80:
+			if (skill0 == 7 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[1896] == 5) {
+				int4 = 0;
+			}
+			break;
+		case 81:
+			if (skill0 == 7 && getSkillActualLvl(skill0) == 25) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[1878] == 5) {
+				int4 = 0;
+			}
+			break;
+		case 82:
+			if (skill0 == 7 && getSkillActualLvl(skill0) == 41) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[1904] == 170) {
+				int4 = 0;
+			}
+			break;
+		case 83:
+			if (skill0 == 7 && getSkillActualLvl(skill0) == 70) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 48) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[1914] == 50) {
+				int4 = 0;
+			}
+			break;
+		case 84:
+			if (skill0 == 21 && getSkillActualLvl(skill0) == 48) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 51) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 8 && getSkillActualLvl(skill0) == 58) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[4321] == 200) {
+				int4 = 0;
+			}
+			break;
+		case 85:
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 46) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[4505] == 100) {
+				int4 = 0;
+			}
+			break;
+		case 86:
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 44) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 9 && getSkillActualLvl(skill0) == 42) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[4396] == 60) {
+				int4 = 0;
+			}
+			break;
+		case 87:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 21) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 60) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 2 && getSkillActualLvl(skill0) == 60) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[4230] == 700) {
+				int4 = 0;
+			}
+			break;
+		case 88:
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 42) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 19 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 10 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 5 && getSkillActualLvl(skill0) == 47) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 18 && getSkillActualLvl(skill0) == 42) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARP[600] > 18) {
+				int4 = 0;
+			}
+			break;
+		case 89:
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 29) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 47) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 49) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 35) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 18 && getSkillActualLvl(skill0) == 31) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[4569] == 500) {
+				int4 = 0;
+			}
+			break;
+		case 90:
+			if (skill0 == 0 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 41) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 43) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 2 && getSkillActualLvl(skill0) == 45) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[4700] == 63) {
+				int4 = 0;
+			}
+			break;
+		case 91:
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 10) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 19 && getSkillActualLvl(skill0) == 10) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 21 && getSkillActualLvl(skill0) == 10) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 11) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[4684] == 150) {
+				int4 = 0;
+			}
+			break;
+		case 92:
+			if (skill0 == 18 && getSkillActualLvl(skill0) == 35) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 25) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[4764] == 250) {
+				int4 = 0;
+			}
+			break;
+		case 93:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 60) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 63) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 66) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 69) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[4797] == 100) {
+				int4 = 0;
+			}
+			break;
+		case 94:
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 19 && getSkillActualLvl(skill0) == 26) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 5 && getSkillActualLvl(skill0) == 35) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 23 && getSkillActualLvl(skill0) == 19) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[5032] == 80) {
+				int4 = 0;
+			}
+			break;
+		case 95:
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 43) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[5133] >= 90) {
+				int4 = 0;
+			}
+			break;
+		case 96:
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 47) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 21 && getSkillActualLvl(skill0) == 35) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 45) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 5 && getSkillActualLvl(skill0) == 55) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 23 && getSkillActualLvl(skill0) == 23) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 8 && getSkillActualLvl(skill0) == 37) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[5331] == 35) {
+				int4 = 0;
+			}
+			break;
+		case 97:
+			if (skill0 == 21 && getSkillActualLvl(skill0) == 51) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 51) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 54) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 59) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[5387] >= 250) {
+				int4 = 0;
+			}
+			break;
+		case 98:
+			if (skill0 == 1 && getSkillActualLvl(skill0) == 65) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 75) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 15 && getSkillActualLvl(skill0) == 65) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 60) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 21 && getSkillActualLvl(skill0) == 55) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 19 && getSkillActualLvl(skill0) == 65) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 23 && getSkillActualLvl(skill0) == 23) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (script_395() == 1 && (skill0 == 2 || skill0 == 0)) {
+				str0, int3, int4 = script_2042(skill0, int2, arg1);
+			}
+			if (VARPBIT[5491] >= 910) {
+				int4 = 0;
+			}
+			break;
+		case 99:
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 55) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 52) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 9 && getSkillActualLvl(skill0) == 53) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[5761] == 30) {
+				int4 = 0;
+			}
+			break;
+		case 100:
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 46) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 46) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 2 && getSkillActualLvl(skill0) == 46) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[1938] >= 110) {
+				int4 = 0;
+			}
+			break;
+		case 101:
+			if (skill0 == 21 && getSkillActualLvl(skill0) == 41) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 57) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 15 && getSkillActualLvl(skill0) == 43) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[6001] >= 45) {
+				int4 = 0;
+			}
+			break;
+		case 102:
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 8) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 10) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 6) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 8 && getSkillActualLvl(skill0) == 10) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[6048] == 250) {
+				int4 = 0;
+			}
+			break;
+		case 103:
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 35) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 7 && getSkillActualLvl(skill0) == 35) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 35) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 5 && getSkillActualLvl(skill0) == 35) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 35) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[6112] == 60) {
+				int4 = 0;
+			}
+			break;
+		case 104:
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 38) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 45) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 21 && getSkillActualLvl(skill0) == 45) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[6180] == 140) {
+				int4 = 0;
+			}
+			break;
+		case 105:
+			if (skill0 == 23 && getSkillActualLvl(skill0) == 41) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 64) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 18 && getSkillActualLvl(skill0) == 37) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 61) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 2 && getSkillActualLvl(skill0) == 64) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 4 && getSkillActualLvl(skill0) == 64) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 66) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			break;
+		case 106:
+			if (skill0 == 21 && getSkillActualLvl(skill0) == 61) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 61) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 2 && getSkillActualLvl(skill0) == 69) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[6471] == 90) {
+				int4 = 0;
+			}
+			break;
+		case 107:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 69) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 9 && getSkillActualLvl(skill0) == 70) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 4 && getSkillActualLvl(skill0) == 75) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 8 && getSkillActualLvl(skill0) == 75) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[6553] == 46) {
+				int4 = 0;
+			}
+			break;
+		case 108:
+			if (skill0 == 5 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[6775] == 90) {
+				int4 = 0;
+			}
+			break;
+		case 109:
+			if (skill0 == 0 && getSkillActualLvl(skill0) == 75) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 2 && getSkillActualLvl(skill0) == 75) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 18 && getSkillActualLvl(skill0) == 65) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[6883] >= 147) {
+				int4 = 0;
+			}
+			break;
+		case 110:
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 75) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 5 && getSkillActualLvl(skill0) == 70) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 66) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 21 && getSkillActualLvl(skill0) == 65) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 60) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[6962] == 12) {
+				int4 = 0;
+			}
+			break;
+		case 111:
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 27) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 20 && getSkillActualLvl(skill0) == 20) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 25) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[7050] == 35) {
+				int4 = 0;
+			}
+			break;
+		case 112:
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 24) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[7794] == 15) {
+				int4 = 0;
+			}
+			break;
+		case 113:
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 41) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[7795] == 2) {
+				int4 = 0;
+			}
+			break;
+		case 114:
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 62) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 15 && getSkillActualLvl(skill0) == 46) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[7796] == 30) {
+				int4 = 0;
+			}
+			break;
+		case 115:
+			if (skill0 == 19 && getSkillActualLvl(skill0) == 54) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 51) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 59) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 23 && getSkillActualLvl(skill0) == 37) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 36) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[7826] > 170) {
+				int4 = 0;
+			}
+			break;
+		case 116:
+			if (skill0 == 1 && getSkillActualLvl(skill0) == 33) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 33) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[7871] == 11) {
+				int4 = 0;
+			}
+			break;
+		case 117:
+			if (skill0 == 2 && getSkillActualLvl(skill0) == 42) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 0 && getSkillActualLvl(skill0) == 35) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[7958] == 90) {
+				int4 = 0;
+			}
+			break;
+		case 118:
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 77) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 68) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 68) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 67) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[8045] >= 150) {
+				int4 = 0;
+			}
+			break;
+		case 119:
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 47) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 15 && getSkillActualLvl(skill0) == 49) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 21 && getSkillActualLvl(skill0) == 46) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 47) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 23 && getSkillActualLvl(skill0) == 48) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 54) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 8 && getSkillActualLvl(skill0) == 52) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[7451] == 63) {
+				int4 = 0;
+			}
+			break;
+		case 120:
+			if (skill0 == 0 && getSkillActualLvl(skill0) == 78) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 70) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 70) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 11 && getSkillActualLvl(skill0) == 71) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 80) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 70) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 2 && getSkillActualLvl(skill0) == 78) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 23 && getSkillActualLvl(skill0) == 55) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 1 && getSkillActualLvl(skill0) == 10) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[8248] == 40) {
+				int4 = 0;
+			}
+			break;
+		case 121:
+			if (skill0 == 2 && getSkillActualLvl(skill0) == 77) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 70) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 68) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[8704] == 90) {
+				int4 = 0;
+			}
+			break;
+		case 122:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 64) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 64) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 62) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 20 && getSkillActualLvl(skill0) == 61) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[5332] >= 120) {
+				int4 = 0;
+			}
+			break;
+		case 123:
+			if (skill0 == 1 && getSkillActualLvl(skill0) == 40) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 41) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 20 && getSkillActualLvl(skill0) == 39) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 42) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 39) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[998] >= 9) {
+				int4 = 0;
+			}
+			break;
+		case 124:
+			if (skill0 == 22 && getSkillActualLvl(skill0) == 62) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 24 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 18 && getSkillActualLvl(skill0) == 61) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 23 && getSkillActualLvl(skill0) == 65) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 13 && getSkillActualLvl(skill0) == 74) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 1 && getSkillActualLvl(skill0) == 76) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 74) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[8961] >= 200) {
+				int4 = 0;
+			}
+			break;
+		case 125:
+			if (skill0 == 10 && getSkillActualLvl(skill0) == 70) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 21 && getSkillActualLvl(skill0) == 67) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 17 && getSkillActualLvl(skill0) == 70) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[9369] == 50) {
+				int4 = 0;
+			}
+			break;
+		case 126:
+			if (skill0 == 1 && getSkillActualLvl(skill0) == 60) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 3 && getSkillActualLvl(skill0) == 50) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 15 && getSkillActualLvl(skill0) == 47) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 23 && getSkillActualLvl(skill0) == 45) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 24 && getSkillActualLvl(skill0) == 35) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[9491] == 250) {
+				int4 = 0;
+			}
+			break;
+		case 127:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 63) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 8 && getSkillActualLvl(skill0) == 76) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 19 && getSkillActualLvl(skill0) == 63) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 9 && getSkillActualLvl(skill0) == 70) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 64) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 18 && getSkillActualLvl(skill0) == 67) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 6 && getSkillActualLvl(skill0) == 70) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[9757] == 170) {
+				int4 = 0;
+			}
+			break;
+		case 128:
+			if (skill0 == 16 && getSkillActualLvl(skill0) == 77) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 12 && getSkillActualLvl(skill0) == 76) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (skill0 == 14 && getSkillActualLvl(skill0) == 76) {
+				str0, int3, int4 = script_1025(skill0, int2, arg1);
+			}
+			if (VARPBIT[9829] == 400) {
+				int4 = 0;
+			}
+			break;
+		default:
+			int4 = -1;
+			break;
+	}
+	return str0, int3, int4;
+}

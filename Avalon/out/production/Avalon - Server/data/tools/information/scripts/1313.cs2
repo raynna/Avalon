@@ -1,0 +1,11 @@
+void script_1313() {
+	script_2654();
+	widget(747, 2).setSprite(1207);
+	widget(747, 3).setPosition(25, 1, 0, 0);
+	widget(747, 4).setPosition(25, 1, 0, 0);
+	widget(747, 5).setPosition(3, 15, 0, 0);
+	widget(747, 6).setPosition(31, 7, 0, 0);
+	script_2303();
+	script_1741(widget(750, 1));
+	return;
+}

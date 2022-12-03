@@ -1,0 +1,42 @@
+void script_389() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	widget(1028, 45).clearChildren();
+	int0 = widget(1028, 45).getWidth();
+	int1 = datamapSize((DataMap)748);
+	int2 = (int0 - 22) / int1;
+	int3 = (int0 - int1 * int2) / 2 + 1;
+	int4 = int1 + 6;
+	int5 = 0;
+	int6 = -1;
+	int7 = -1;
+	while (int5 < int1) {
+		ACTIVE.createChild(widget(1028, 45), 3, int5);
+		ACTIVE.setSize(int2 - 2, 26, 0, 1);
+		ACTIVE.setPosition(int3 + int5 * int2, 5, 0, 2);
+		ACTIVE.setFilled(true);
+		ACTIVE.setRGB(datamap('i', 'i', (DataMap)746, int5));
+		ACTIVE.setContextMenuOption(1, datamap('i', 's', (DataMap)747, int5));
+		int6 = datamap('i', 'i', (DataMap)748, int5);
+		if (VARC[1019] == int6) {
+			int7 = int5;
+		} else {
+			ACTIVE.setScriptCallOnClickContextMenu(357, CTX_MENU_OPTION, int6, 4, "iii");
+			ACTIVE.setScriptCallOnMouseEntered(375, CTX_WIDGET, CTX_WIDGET, CTX_WIDGET_CHILD, 14006640, 10913874, 1, int4, "IIiiiii");
+			ACTIVE.setScriptCallOnMouseExit(377, CTX_WIDGET, int4, "Ii");
+		}
+		int5 = int5 + 1;
+	}
+	if (int7 != -1) {
+		script_376(widget(1028, 45), widget(1028, 45), int7, 0x96BBE2, 0x2C6592, 1, int1);
+	} else {
+		script_376(widget(1028, 45), null, -1, 0x000000, 0x000000, 1, int1);
+	}
+	return;
+}

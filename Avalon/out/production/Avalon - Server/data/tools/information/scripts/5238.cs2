@@ -1,0 +1,31 @@
+void script_5238(int arg0) {
+	AttrMap attrmap1;
+	string str0;
+	str0 = "Ability";
+	attrmap1 = datamap('i', 'J', (DataMap)5033, VARPBIT[9712]);
+	widget(1126, 4).setIsHidden(true);
+	widget(1126, 5).setIsHidden(true);
+	widget(1126, 6).setIsHidden(true);
+	widget(1126, 7).setIsHidden(true);
+	switch (arg0) {
+		case 1:
+			str0 = getAttributeMapValue(attrmap1, 1900);
+			widget(1126, 4).setIsHidden(false);
+			break;
+		case 2:
+			str0 = getAttributeMapValue(attrmap1, 1903);
+			widget(1126, 5).setIsHidden(false);
+			break;
+		case 3:
+			str0 = getAttributeMapValue(attrmap1, 1906);
+			widget(1126, 6).setIsHidden(false);
+			break;
+		case 4:
+			str0 = getAttributeMapValue(attrmap1, 1909);
+			widget(1126, 7).setIsHidden(false);
+			break;
+	}
+	widget(1126, 49).setText(str0);
+	widget(1126, 47).setIsHidden(false);
+	return;
+}

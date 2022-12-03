@@ -1,0 +1,4 @@
+void script_5375() {
+	widget(969, 0).setNoClickThrough(0);
+	return;
+}

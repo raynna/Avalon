@@ -1,0 +1,3 @@
+Location script_1145(int arg0, int arg1, Location location2) {
+	return moveCoord(location2, arg0, 2, arg1);
+}

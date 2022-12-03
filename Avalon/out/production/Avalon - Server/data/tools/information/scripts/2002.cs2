@@ -1,0 +1,36 @@
+int script_2002() {
+	int int0;
+	int0 = 0;
+	if (VARPBIT[8150] == 1) {
+		if (VARPBIT[4069] > 79) {
+			int0 = 0;
+		} else {
+			int0 = 80 - VARPBIT[4069];
+		}
+	} else if (VARPBIT[3976] == 1) {
+		if (VARPBIT[4069] > 63) {
+			int0 = 0;
+		} else {
+			int0 = 64 - VARPBIT[4069];
+		}
+	} else if (VARPBIT[3975] == 1) {
+		if (VARPBIT[4069] > 31) {
+			int0 = 0;
+		} else {
+			int0 = 32 - VARPBIT[4069];
+		}
+	} else if (VARPBIT[3974] == 1) {
+		if (VARPBIT[4069] > 15) {
+			int0 = 0;
+		} else {
+			int0 = 16 - VARPBIT[4069];
+		}
+	} else if (VARPBIT[3974] == 0) {
+		if (VARPBIT[4069] > 7) {
+			int0 = 0;
+		} else {
+			int0 = 8 - VARPBIT[4069];
+		}
+	}
+	return int0;
+}

@@ -1,0 +1,12 @@
+int script_5068(string string0, int arg1) {
+	int int1;
+	ACTIVE.createChild(widget(1111, 30), 4, widget(1111, 30).nextChild());
+	ACTIVE.setFont(494);
+	ACTIVE.setTextAlignment(0, 1, 0);
+	ACTIVE.setRGB(0xDFCFBF);
+	int1 = getLineCount(string0, widget(1111, 30).getWidth(), 494) * 10 + 2;
+	ACTIVE.setSize(0, int1, 1, 0);
+	ACTIVE.setText(string0);
+	ACTIVE.setPosition(0, arg1, 1, 0);
+	return int1;
+}

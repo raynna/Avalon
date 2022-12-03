@@ -1,0 +1,48 @@
+void script_5080(Widget widget0) {
+	int int1;
+	int int2;
+	DataMap datamap3;
+	int1 = 0;
+	int2 = datamapSize((DataMap)3921);
+	datamap3 = null;
+	while (int1 < int2) {
+		datamap3 = datamap('i', 'g', (DataMap)3921, int1);
+		if (datamap3 != null && ACTIVE.setChild(widget0, int1 * 10 + 9)) {
+			ACTIVE.setText(datamap('i', 's', datamap3, script_5089(datamap3)));
+		}
+		int1 = int1 + 1;
+	}
+	switch (VARPBIT[9539]) {
+		case 1:
+			if (VARC[1095] == 1) {
+				widget(1114, 8).setText("Press 'Confirm' when you've made your choices.");
+			} else {
+				widget(1114, 8).setText("Waiting for the battle's initiator to choose the rules...");
+			}
+			break;
+		case 2:
+			if (VARC[1095] == 1) {
+				widget(1114, 8).setText("Press 'Confirm' when you've made your choices.");
+			} else {
+				widget(1114, 8).setText("Waiting for " + STRING[129] + " to choose the rules...");
+			}
+			break;
+		case 3:
+			widget(1114, 8).setText("Loading elements...");
+			break;
+		case 4:
+			widget(1114, 8).setText("Building elements...");
+			break;
+		case 5:
+			widget(1114, 8).setText("Failed to build battlefield.");
+			break;
+		case 6:
+			widget(1114, 8).setText("Initialising build mode.");
+			break;
+		default:
+			widget(1114, 8).setText("Loading...");
+			break;
+	}
+	script_5085(widget0);
+	return;
+}

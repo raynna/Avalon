@@ -1,0 +1,87 @@
+void script_593(int arg0) {
+	Container container1;
+	Item item2;
+	Item item3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	string str0;
+	string str1;
+	container1 = datamap('i', 'v', (DataMap)1079, VARP[1112]);
+	item2 = getItemIdInSlot(container1, 0);
+	widget(105, 206).setItem(item2, getItemAmtInSlot(container1, 0));
+	widget(105, 206).setNoOptions();
+	if (item2 != null) {
+		if (getNotedItem(item2) != item2) {
+			if (getItemAmtInSlot(container1, 0) > 1) {
+				widget(105, 206).setContextMenuOption(1, "Collect-notes");
+				widget(105, 206).setContextMenuOption(2, "Collect-items");
+			} else {
+				widget(105, 206).setContextMenuOption(1, "Collect-items");
+				widget(105, 206).setContextMenuOption(2, "Collect-notes");
+			}
+		} else {
+			widget(105, 206).setContextMenuOption(1, "Collect");
+		}
+		widget(105, 206).setOptionBase(getItemName(item2));
+	} else {
+		widget(105, 206).setOptionBase("");
+	}
+	item3 = getItemIdInSlot(container1, 1);
+	widget(105, 208).setItem(item3, getItemAmtInSlot(container1, 1));
+	widget(105, 208).setNoOptions();
+	if (item3 != null) {
+		if (getNotedItem(item3) != item3) {
+			if (getItemAmtInSlot(container1, 1) > 1) {
+				widget(105, 208).setContextMenuOption(1, "Collect-notes");
+				widget(105, 208).setContextMenuOption(2, "Collect-items");
+			} else {
+				widget(105, 208).setContextMenuOption(1, "Collect-items");
+				widget(105, 208).setContextMenuOption(2, "Collect-notes");
+			}
+		} else {
+			widget(105, 208).setContextMenuOption(1, "Collect");
+		}
+		widget(105, 208).setOptionBase(getItemName(item3));
+	} else {
+		widget(105, 208).setOptionBase("");
+	}
+	widget(105, 197).setScriptCallOnItemContainerUpdate(589, container1, "Y");
+	int4 = getGEIsSelling(arg0);
+	int5 = getGEItemAmt(arg0);
+	int6 = getGEItemAmtTransfered(arg0);
+	int7 = getGECashTransfered(arg0);
+	str0 = formatNumber(int6, 1);
+	str1 = formatNumber(int7, 1);
+	widget(105, 199).clearChildren();
+	if (ACTIVE.setChild(widget(105, 199))) {
+		if (getGEIsStatus1(arg0)) {
+			_ACTIVE.createChild(widget(105, 199), 4, 0);
+			_ACTIVE.setPosition(0, 0, 0, 0);
+			_ACTIVE.setSize(ACTIVE.getWidth(), ACTIVE.getHeight(), 0, 0);
+			_ACTIVE.setFont(494);
+			_ACTIVE.setRGB(0xDBD884);
+			_ACTIVE.setText("Submitting offer...");
+			_ACTIVE.setTextAlignment(1, 1, 0);
+		} else {
+			script_652(0, 0, ACTIVE.getWidth(), ACTIVE.getHeight(), arg0, widget(105, 199), 0, widget(105, 210), 2);
+		}
+	}
+	if (getGEIsDone(arg0)) {
+		if (int4 == 0) {
+			widget(105, 198).setText("You bought a total of " + "<col=cc9900>" + str0 + "</col>" + "<br>" + "for a total price of " + "<col=cc9900>" + str1 + "</col>" + " gp.");
+		} else {
+			widget(105, 198).setText("You sold a total of " + "<col=cc9900>" + str0 + "</col>" + "<br>" + "for a total price of " + "<col=cc9900>" + str1 + "</col>" + " gp.");
+		}
+		widget(105, 200).setIsHidden(true);
+	} else {
+		if (int4 == 0) {
+			widget(105, 198).setText("You have bought a total of " + "<col=cc9900>" + str0 + "</col>" + " so far" + "<br>" + "for a total price of " + "<col=cc9900>" + str1 + "</col>" + " gp.");
+		} else {
+			widget(105, 198).setText("You have sold a total of " + "<col=cc9900>" + str0 + "</col>" + " so far" + "<br>" + "for a total price of " + "<col=cc9900>" + str1 + "</col>" + " gp.");
+		}
+		widget(105, 200).setIsHidden(false);
+	}
+	return;
+}

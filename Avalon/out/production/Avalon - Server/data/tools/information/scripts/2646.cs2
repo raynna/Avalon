@@ -1,0 +1,83 @@
+void script_2646(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	Item item6;
+	int int7;
+	int int8;
+	if (VARC[842] == 3) {
+		VARC[842] = 1;
+		widget0.setText("Check bank & inventory");
+		widget(860, 18).setText("Commodities");
+		widget(860, 20).setIsHidden(false);
+		script_2645(widget(860, 20));
+		script_2642();
+		return;
+	}
+	VARC[842] = 3;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	VARC[842] = 3;
+	item6 = null;
+	widget(860, 20).setIsHidden(true);
+	widget0.setText("View all commodities");
+	widget(860, 18).setText("Commodities in your bank & inventory");
+	widget(860, 23).clearChildren();
+	widget(860, 19).setText("A list of items already in your inventory or bank that you can trade with Mal for investment credit.");
+	int3 = (widget(860, 23).getWidth() - 36 * 10) / (10 - 1);
+	int4 = (widget(860, 23).getHeight() - 128) / 3;
+	int7 = 0;
+	while (int1 <= getItemContainerLength(95)) {
+		item6 = getItemIdInSlot(95, int1);
+		if (item6 != null && datamapContainsValue('o', (DataMap)1939, (int)item6)) {
+			ACTIVE.createChild(widget(860, 23), 5, int2);
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition((36 + int3) * (int2 % 10), int2 / 10 * (32 + int4), 0, 0);
+			ACTIVE.setItem(item6, -1);
+			ACTIVE.setOptionBase("<col=ff981f>" + getItemName(item6));
+			ACTIVE.setContextMenuOption(1, "Examine");
+			ACTIVE.setShadowColor(0x333333);
+			ACTIVE.setOutlineThickness(1);
+			int2 = int2 + 1;
+			int7 = ACTIVE.getY();
+		}
+		int1 = int1 + 1;
+	}
+	int8 = 0;
+	while (int8 <= getItemContainerLength(93)) {
+		item6 = getItemIdInSlot(93, int8);
+		if (item6 != null && datamapContainsValue('o', (DataMap)1939, (int)item6)) {
+			ACTIVE.createChild(widget(860, 23), 5, int2);
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition((36 + int3) * (int2 % 10), int2 / 10 * (32 + int4), 0, 0);
+			ACTIVE.setItem(item6, -1);
+			ACTIVE.setOptionBase("<col=ff981f>" + getItemName(item6));
+			ACTIVE.setContextMenuOption(1, "Examine");
+			ACTIVE.setShadowColor(0x333333);
+			ACTIVE.setOutlineThickness(1);
+			int2 = int2 + 1;
+			int7 = ACTIVE.getY();
+		}
+		int8 = int8 + 1;
+	}
+	if (int2 == 0) {
+		ACTIVE.createChild(widget(860, 23), 4, int2);
+		ACTIVE.setSize(200, 32, 0, 0);
+		ACTIVE.setPosition(0, 0, 1, 4);
+		ACTIVE.setText("No valid commodities were found in your bank or inventory.");
+		ACTIVE.setFont(496);
+		ACTIVE.setTextAlignment(1, 1, 0);
+		ACTIVE.setTextAntiMacro(false);
+		ACTIVE.setRGB(0xFF981F);
+		int2 = 1;
+	}
+	widget(860, 23).setScrollMax(widget(860, 23).getWidth(), int7 + 32);
+	widget(860, 23).setScrollPos(0, 0);
+	script_31(widget(860, 22), widget(860, 23), 792, 789, 790, 791, 773, 788);
+	return;
+}

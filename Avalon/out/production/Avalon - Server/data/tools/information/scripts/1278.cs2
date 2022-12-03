@@ -1,0 +1,4 @@
+void script_1278(Widget widget0, Container container1, int arg2, int arg3) {
+	script_1279(widget0, container1, arg2, arg3);
+	return;
+}

@@ -1,0 +1,11 @@
+void script_2947() {
+	STRING[321] = "";
+	STRING[322] = "";
+	STRING[323] = "";
+	STRING[324] = "";
+	STRING[325] = "";
+	widget(667, 52).setIsHidden(true);
+	widget(670, 1).setIsHidden(true);
+	widget(763, 3).setIsHidden(true);
+	return;
+}

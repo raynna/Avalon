@@ -1,0 +1,37 @@
+void script_4222() {
+	if (VARC[1468] > 100 && VARC[1468] <= 355) {
+		widget(1075, 0).setTrans(255 - (VARC[1468] - 100));
+	}
+	if (VARC[1468] > 100 && VARC[1468] <= 150) {
+		widget(1075, 4).setPosition(-35 + (VARC[1468] - 100), 122, 0, 0);
+	}
+	if (VARC[1468] > 200 && VARC[1468] <= 455) {
+		widget(1075, 1).setPosition(-255 + (VARC[1468] - 200), 70, 0, 0);
+	}
+	if (VARC[1468] > 250 && VARC[1468] <= 505) {
+		widget(1075, 2).setPosition(-255 + (VARC[1468] - 250), 85, 0, 0);
+	}
+	if (VARC[1468] > 300 && VARC[1468] <= 555) {
+		widget(1075, 3).setPosition(-255 + (VARC[1468] - 300), 100, 0, 0);
+	}
+	if (VARC[1468] > 500 && VARC[1468] <= 755) {
+		widget(1075, 1).setPosition(0 - (VARC[1468] - 500), 70, 0, 0);
+	}
+	if (VARC[1468] > 550 && VARC[1468] <= 805) {
+		widget(1075, 2).setPosition(0 - (VARC[1468] - 550), 85, 0, 0);
+	}
+	if (VARC[1468] > 600 && VARC[1468] <= 855) {
+		widget(1075, 3).setPosition(0 - (VARC[1468] - 600), 100, 0, 0);
+	}
+	if (VARC[1468] == 700) {
+		widget(1075, 4).set3DRotation(0, 0, 0, 210, 0, 1750);
+	}
+	if (VARC[1468] > 700 && VARC[1468] <= 955) {
+		widget(1075, 0).setTrans(VARC[1468] - 700);
+	}
+	if (VARC[1468] > 700 && VARC[1468] <= 750) {
+		widget(1075, 4).setPosition(0 - (VARC[1468] - 700), 122, 0, 0);
+	}
+	VARC[1468] = VARC[1468] + 1;
+	return;
+}

@@ -1,0 +1,91 @@
+int script_3228(int arg0, int arg1, int arg2) {
+	Widget widget3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	string str0;
+	string str1;
+	str0 = "";
+	widget3 = null;
+	switch (arg0) {
+		case 7:
+			str0 = STRING[124];
+			widget3 = widget(673, 84);
+			STRING[328] = STRING[124];
+			break;
+		case 8:
+			str0 = STRING[125];
+			widget3 = widget(673, 74);
+			STRING[329] = STRING[125];
+			break;
+	}
+	int4 = length(str0);
+	if (int4 <= 0) {
+		switch (arg0) {
+			case 7:
+				script_3213("Please enter your desired password here.", widget(673, 84));
+				break;
+			case 8:
+				script_3213("Please enter your desired password again here.", widget(673, 74));
+				break;
+		}
+		return 0;
+	}
+	if (arg1 == 1 && compare(STRING[124], STRING[125]) != 0 && (length(STRING[124]) > 0 || length(STRING[125]) > 0)) {
+		script_3213("Please ensure both passwords match.", widget(673, 74));
+		return 0;
+	}
+	if (int4 < 5) {
+		script_3213("Passwords must be at least 5 characters long.", widget3);
+		return 0;
+	}
+	if (int4 > 20) {
+		script_3213("Passwords must be no more than " + str(20) + " characters long.", widget3);
+		return 0;
+	}
+	if (script_2202(str0) == 1) {
+		script_3213("Passwords may only contain letters and numbers.", widget3);
+		return 0;
+	}
+	if (indexOf(STRING[122], str0, 0) != -1) {
+		script_3213("Your password is too similar to your Email address.", widget3);
+		return 0;
+	}
+	str1 = substr(str0, 0, 1);
+	int5 = length(str0);
+	int6 = 0;
+	int7 = 0;
+	while (int6 < int5) {
+		if (indexOf(str0, str1, int6) == int6) {
+			int7 = int7 + 1;
+		}
+		int6 = int6 + 1;
+	}
+	if (int7 == int5) {
+		script_3213("Your password is too easy to guess.", widget3);
+		return 0;
+	}
+	switch (arg0) {
+		case 7:
+			widget(673, 84).setSprite(4059);
+			widget(673, 89).setIsHidden(true);
+			break;
+		case 8:
+			widget(673, 74).setSprite(4059);
+			widget(673, 79).setIsHidden(true);
+			break;
+	}
+	widget(673, 31).setIsHidden(true);
+	if (arg2 == 1) {
+		switch (arg0) {
+			case 7:
+				script_2714(8, 1);
+				break;
+			case 8:
+				script_2714(15, 1);
+				break;
+		}
+	}
+	return 1;
+}

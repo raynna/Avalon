@@ -1,0 +1,21 @@
+int, int script_296(Location location0, int arg1, Widget widget2, int arg3, int arg4, int arg5, int arg6) {
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int7 = 0;
+	int8 = 0;
+	if (arg1 == 1) {
+		int7 = x(location0);
+		int8 = y(location0);
+	} else {
+		int7, int8 = cs2method5224(location0);
+	}
+	int9 = widget2.getWidth();
+	int10 = widget2.getHeight();
+	int7 = int9 * (arg5 - arg6) / (int7 - arg6);
+	int8 = int10 * (arg3 - arg4) / (int8 - arg4);
+	int7 = int7 - int9 / 2;
+	int8 = int10 / 2 - int8;
+	return int7, int8;
+}

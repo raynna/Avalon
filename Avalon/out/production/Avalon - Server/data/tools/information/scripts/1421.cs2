@@ -1,0 +1,64 @@
+void script_1421(int arg0) {
+	string str0;
+	str0 = "";
+	switch (arg0) {
+		case 1:
+			str0 = datamap('i', 's', (DataMap)1697, VARPBIT[5146]);
+			widget(575, 3).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(575, 2), str0, 25, 130, "IIsii");
+			break;
+		case 2:
+			str0 = datamap('i', 's', (DataMap)1698, VARPBIT[5147]);
+			widget(575, 4).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(575, 2), str0, 25, 160, "IIsii");
+			break;
+		case 3:
+			str0 = datamap('i', 's', (DataMap)1699, VARPBIT[5148]);
+			widget(575, 5).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(575, 2), str0, 25, 200, "IIsii");
+			break;
+		case 4:
+			str0 = datamap('i', 's', (DataMap)1700, VARPBIT[5149]);
+			widget(575, 6).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(575, 2), str0, 25, 200, "IIsii");
+			break;
+		case 5:
+			str0 = datamap('i', 's', (DataMap)1701, VARPBIT[5150]);
+			widget(575, 7).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(575, 2), str0, 25, 200, "IIsii");
+			break;
+		case 6:
+			str0 = datamap('i', 's', (DataMap)1702, VARPBIT[5151]);
+			widget(575, 8).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(575, 2), str0, 25, 200, "IIsii");
+			break;
+		case 7:
+			str0 = datamap('i', 's', (DataMap)1703, VARPBIT[5152]);
+			widget(575, 9).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(575, 2), str0, 25, 200, "IIsii");
+			break;
+		case 8:
+			str0 = datamap('i', 's', (DataMap)1704, VARPBIT[5153]);
+			widget(575, 10).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(575, 2), str0, 25, 200, "IIsii");
+			break;
+		case 9:
+			str0 = datamap('i', 's', (DataMap)1705, VARPBIT[5154]);
+			widget(575, 11).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(575, 2), str0, 25, 200, "IIsii");
+			break;
+		case 10:
+			str0 = datamap('i', 's', (DataMap)1706, VARPBIT[5155]);
+			widget(575, 12).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(575, 2), str0, 25, 200, "IIsii");
+			break;
+		case 11:
+			str0 = datamap('i', 's', (DataMap)1707, VARPBIT[5156]);
+			widget(575, 13).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(575, 2), str0, 25, 200, "IIsii");
+			break;
+		case 12:
+			str0 = datamap('i', 's', (DataMap)1708, VARPBIT[5157]);
+			widget(575, 14).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(575, 2), str0, 25, 200, "IIsii");
+			break;
+		case 13:
+			str0 = datamap('i', 's', (DataMap)1709, VARPBIT[5158]);
+			widget(575, 15).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(575, 2), str0, 25, 200, "IIsii");
+			break;
+		case 14:
+			str0 = datamap('i', 's', (DataMap)1710, VARPBIT[5159]);
+			widget(575, 16).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(575, 2), str0, 25, 200, "IIsii");
+			break;
+	}
+	VARC[2] = 0;
+	return;
+}

@@ -1,0 +1,13 @@
+void script_1924() {
+	widget(811, 127).setText(concat(str(20), "<br>" + "points."));
+	widget(811, 65).setText(concat(str(20), "<br>" + "points."));
+	widget(811, 49).setText(concat(str(30), "<br>" + "points."));
+	widget(811, 106).setText(concat(str(28), "<br>" + "points."));
+	widget(811, 92).setText(concat(str(24), "<br>" + "points."));
+	widget(811, 78).setText(concat(str(26), "<br>" + "points."));
+	widget(811, 74).setItem(14385, 1);
+	widget(811, 74).set3DRotation(0, 0, 1274, 876, 625, 1715);
+	script_1929();
+	VARC[544] = 0;
+	return;
+}

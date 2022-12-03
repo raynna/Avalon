@@ -1,0 +1,12 @@
+void script_2046(Widget widget0) {
+	widget0.setScriptCallOnGameloop(2045, widget0, widget(755, 28), 0, 0, 0, "IIiii");
+	widget0.clearChildren();
+	widget(755, 36).clearChildren();
+	widget(755, 37).clearChildren();
+	widget(755, 38).clearChildren();
+	widget(755, 39).clearChildren();
+	widget(755, 40).clearChildren();
+	widget(755, 41).clearChildren();
+	widget(755, 42).clearChildren();
+	return;
+}

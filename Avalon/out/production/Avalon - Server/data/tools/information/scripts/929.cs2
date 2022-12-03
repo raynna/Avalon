@@ -1,0 +1,48 @@
+int script_929(Item item0) {
+	int int1;
+	Skill skill2;
+	int1 = itemAttribute(item0, 823);
+	skill2 = itemAttribute(item0, 749);
+	if (skill2 == null) {
+		return 1;
+	}
+	if (!isBitFlagged(int1, 0) && getSkillActualLvl(skill2) < itemAttribute(item0, 750) || isBitFlagged(int1, 0) && getSkillCurrentLvl(skill2) < itemAttribute(item0, 750)) {
+		return 0;
+	}
+	skill2 = itemAttribute(item0, 751);
+	if (skill2 == null) {
+		return 1;
+	}
+	if (!isBitFlagged(int1, 1) && getSkillActualLvl(skill2) < itemAttribute(item0, 752) || isBitFlagged(int1, 1) && getSkillCurrentLvl(skill2) < itemAttribute(item0, 752)) {
+		return 0;
+	}
+	skill2 = itemAttribute(item0, 753);
+	if (skill2 == null) {
+		return 1;
+	}
+	if (!isBitFlagged(int1, 2) && getSkillActualLvl(skill2) < itemAttribute(item0, 754) || isBitFlagged(int1, 2) && getSkillCurrentLvl(skill2) < itemAttribute(item0, 754)) {
+		return 0;
+	}
+	skill2 = itemAttribute(item0, 755);
+	if (skill2 == null) {
+		return 1;
+	}
+	if (!isBitFlagged(int1, 3) && getSkillActualLvl(skill2) < itemAttribute(item0, 756) || isBitFlagged(int1, 3) && getSkillCurrentLvl(skill2) < itemAttribute(item0, 756)) {
+		return 0;
+	}
+	skill2 = itemAttribute(item0, 757);
+	if (skill2 == null) {
+		return 1;
+	}
+	if (!isBitFlagged(int1, 4) && getSkillActualLvl(skill2) < itemAttribute(item0, 758) || isBitFlagged(int1, 4) && getSkillCurrentLvl(skill2) < itemAttribute(item0, 758)) {
+		return 0;
+	}
+	skill2 = itemAttribute(item0, 759);
+	if (skill2 == null) {
+		return 1;
+	}
+	if (!isBitFlagged(int1, 5) && getSkillActualLvl(skill2) < itemAttribute(item0, 760) || isBitFlagged(int1, 5) && getSkillCurrentLvl(skill2) < itemAttribute(item0, 760)) {
+		return 0;
+	}
+	return 1;
+}

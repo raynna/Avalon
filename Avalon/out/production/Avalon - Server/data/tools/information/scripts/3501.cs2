@@ -1,0 +1,24 @@
+void script_3501(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	while (int1 < getItemContainerLength(207)) {
+		ACTIVE.createChild(widget0, 6, int1);
+		ACTIVE.setSize(49, 49, 0, 0);
+		ACTIVE.setPosition(56 * int2, 56 * int3, 0, 0);
+		if (getItemIdInSlot(207, int1) != null) {
+			ACTIVE.setItem(getItemIdInSlot(207, int1), getItemAmtInSlot(207, int1));
+			ACTIVE.set3DRotation(0, 0, 512, 0, 0, 1340);
+			ACTIVE.setModelOrthog(1);
+		} else {
+			ACTIVE.setHidden(true);
+		}
+		int1 = int1 + 1;
+		int2 = int1 % 5;
+		int3 = int1 / 5;
+	}
+	return;
+}

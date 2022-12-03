@@ -1,0 +1,33 @@
+void script_2906(Widget widget0, Item item1, Widget widget2) {
+	Widget widget3;
+	int int4;
+	widget3 = widget0.getLayer();
+	int4 = 0;
+	if (item1 == 10010) {
+		int4 = getItemAmtInContainer(94, 11259) + getItemAmtInContainer(93, 11259);
+		if (int4 > 0) {
+			item1 = 11259;
+		}
+	}
+	switch (item1) {
+		case 10010:
+		case 11259:
+			if (int4 == 0) {
+				int4 = getItemAmtInContainer(93, 10010) + getItemAmtInContainer(94, 10010);
+			}
+			break;
+		default:
+			int4 = getItemAmtInContainer(93, item1);
+			break;
+	}
+	widget2.setText(getItemName(item1));
+	if (int4 > 0) {
+		widget2.setRGB(0xFFFF00);
+		widget0.setItem(item1, int4);
+	} else {
+		widget2.setRGB(0xCC0000);
+		widget0.setItem(item1, -1);
+	}
+	widget0.setOutlineThickness(1);
+	return;
+}

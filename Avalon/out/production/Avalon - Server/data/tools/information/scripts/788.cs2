@@ -1,0 +1,3 @@
+int, int script_788(Widget widget0, int arg1, int arg2) {
+	return widget0.getX() + arg1, widget0.getY() + arg2;
+}

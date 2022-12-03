@@ -1,0 +1,74 @@
+void script_2561() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	if (VARC[844] == 0) {
+		widget(863, 27).setSprite(1135);
+		widget(863, 28).setSprite(1134);
+	} else {
+		widget(863, 27).setSprite(1134);
+		widget(863, 28).setSprite(1135);
+	}
+	if (VARC[844] == 0) {
+		if (VARC[845] == 1) {
+			widget(863, 57).setText("Dwarf");
+			int0 = 175;
+			int1 = 5300;
+			int2 = 60;
+		} else if (VARC[845] == 2) {
+			widget(863, 57).setText("Goblin");
+			int0 = 175;
+			int1 = 4800;
+			int2 = 110;
+		} else if (VARC[845] == 3) {
+			widget(863, 57).setText("Elf");
+			int0 = 225;
+			int1 = 4800;
+			int2 = 60;
+		}
+	} else if (VARC[844] == 1) {
+		if (VARC[845] == 1) {
+			widget(863, 57).setText("Dwarf");
+			int0 = 350;
+			int1 = 10100;
+			int2 = 60;
+		} else if (VARC[845] == 2) {
+			widget(863, 57).setText("Goblin");
+			int0 = 350;
+			int1 = 9600;
+			int2 = 110;
+		} else if (VARC[845] == 3) {
+			widget(863, 57).setText("Elf");
+			int0 = 400;
+			int1 = 9600;
+			int2 = 60;
+		}
+	}
+	int3 = 100;
+	widget(863, 15).setText(script_46(int3, ","));
+	widget(863, 5).setText(str(int0));
+	widget(863, 7).setText(str(int1));
+	widget(863, 9).setText(str(int2));
+	widget(863, 58).setText(datamap('i', 's', (DataMap)2386, VARC[845]));
+	if (VARC[845] == 1 && VARC[844] == 0) {
+		widget(863, 34).setModel(47798);
+	} else if (VARC[845] == 2 && VARC[844] == 0) {
+		widget(863, 34).setModel(47794);
+	} else if (VARC[845] == 3 && VARC[844] == 0) {
+		widget(863, 34).setModel(47792);
+	} else if (VARC[845] == 1 && VARC[844] == 1) {
+		widget(863, 34).setModel(47786);
+	} else if (VARC[845] == 2 && VARC[844] == 1) {
+		widget(863, 34).setModel(47787);
+	} else if (VARC[845] == 3 && VARC[844] == 1) {
+		widget(863, 34).setModel(47796);
+	}
+	VARC[839] = VARPBIT[6351];
+	VARC[846] = VARPBIT[6380];
+	return;
+}

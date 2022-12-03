@@ -1,0 +1,37 @@
+void script_1074(Widget widget0, QcPhrase qcphrase1, int arg2) {
+	switch (VARC[134]) {
+		case 0:
+			VARC[135] = arg2;
+			break;
+		case 1:
+			VARC[136] = arg2;
+			break;
+		case 2:
+			VARC[137] = arg2;
+			break;
+		case 3:
+			VARC[138] = arg2;
+			break;
+		case 4:
+			VARC[139] = arg2;
+			break;
+		case 5:
+			VARC[140] = arg2;
+			break;
+		case 6:
+			VARC[141] = arg2;
+			break;
+		case 7:
+			VARC[142] = arg2;
+			break;
+		case 8:
+			VARC[143] = arg2;
+			break;
+		case 9:
+			VARC[144] = arg2;
+			break;
+	}
+	VARC[134] = VARC[134] + 1;
+	script_1072(widget0, qcphrase1);
+	return;
+}

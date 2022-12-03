@@ -1,0 +1,118 @@
+void script_676() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	int2 = (widget(645, 16).getWidth() - 36 * 10) / (10 - 1);
+	int3 = (widget(645, 16).getHeight() - 128) / 3;
+	while (int4 == 0) {
+		if (datamap('i', 'O', (DataMap)1087, int0 + 1) != 11760) {
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 11846) {
+				int5 = int5 + 2;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 11858) {
+				int5 = int5 + 4;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 11864) {
+				int5 = int5 + 6;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 11872) {
+				int5 = int5 + 6;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 19520) {
+				int5 = int5 + 5;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 11902) {
+				int5 = int5 + 8;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 11908) {
+				int5 = int5 + 7;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 11926) {
+				int5 = int5 + 8;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 11942) {
+				int5 = int5 + 6;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 11967) {
+				int5 = int5 + 7;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 14525) {
+				int5 = int5 + 9;
+			}
+			ACTIVE.createChild(widget(645, 16), 5, int0);
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition((36 + int2) * (int5 % 10), int5 / 10 * (32 + int3), 0, 0);
+			ACTIVE.setItem(datamap('i', 'O', (DataMap)1087, int0 + 1), -1);
+			ACTIVE.setOptionBase("<col=ff981f>" + getItemName(datamap('i', 'O', (DataMap)1087, int0 + 1)));
+			ACTIVE.setContextMenuOption(1, "Components");
+			ACTIVE.setContextMenuOption(2, "Exchange");
+			ACTIVE.setContextMenuOption(3, "Examine");
+			ACTIVE.setShadowColor(0x333333);
+			ACTIVE.setOutlineThickness(1);
+			int0 = int0 + 1;
+			int5 = int5 + 1;
+		} else {
+			int4 = 1;
+		}
+	}
+	int1 = int0;
+	int0 = 0;
+	int5 = 0;
+	int4 = 0;
+	while (int4 == 0) {
+		if (datamap('i', 'O', (DataMap)1087, int0 + 1) != 11760) {
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 11846) {
+				int5 = int5 + 2;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 11858) {
+				int5 = int5 + 4;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 11864) {
+				int5 = int5 + 6;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 11872) {
+				int5 = int5 + 6;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 19520) {
+				int5 = int5 + 5;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 11902) {
+				int5 = int5 + 8;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 11908) {
+				int5 = int5 + 7;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 11926) {
+				int5 = int5 + 8;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 11942) {
+				int5 = int5 + 6;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 11967) {
+				int5 = int5 + 7;
+			}
+			if (datamap('i', 'O', (DataMap)1087, int0 + 1) == 14525) {
+				int5 = int5 + 9;
+			}
+			ACTIVE.createChild(widget(645, 16), 5, int1);
+			ACTIVE.setSize(12, 6, 0, 0);
+			ACTIVE.setPosition((36 + int2) * (int5 % 10), int5 / 10 * (32 + int3), 0, 0);
+			ACTIVE.setSprite(1066);
+		} else {
+			int4 = 1;
+		}
+		int0 = int0 + 1;
+		int5 = int5 + 1;
+		int1 = int1 + 1;
+	}
+	return;
+}

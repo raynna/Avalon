@@ -1,0 +1,51 @@
+void script_4709(DataMap datamap0, DataMap datamap1, int arg2, int arg3, int arg4, Widget widget5, Widget widget6, Widget widget7, Widget widget8, int arg9, int arg10, int arg11, Sprite sprite12, Color color13, Color color14, int arg15, Sprite sprite16, Sprite sprite17, Sprite sprite18, Sprite sprite19, Sprite sprite20, Sprite sprite21, Sprite sprite22) {
+	int int23;
+	int int24;
+	int int25;
+	int int26;
+	string str0;
+	int23 = 0;
+	int24 = 0;
+	int24, int23 = script_4710(datamap1, arg2, widget5, widget6, widget7, widget8, 897, 788, 788, 0xFFFFFF, 16776960, 494);
+	ACTIVE.createChild(widget6, 5, widget6.nextChild());
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setSize(widget6.getWidth(), widget6.getHeight(), 0, 0);
+	ACTIVE.setSprite(sprite12);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.createChild(widget6, 3, widget6.nextChild());
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setSize(widget6.getWidth(), widget6.getHeight(), 0, 0);
+	ACTIVE.setRGB(0x000000);
+	widget7.setScrollMax(widget7.getWidth(), arg4 * 15);
+	int25 = arg3;
+	int26 = -1;
+	str0 = "";
+	while (int25 <= arg4) {
+		int26 = widget7.nextChild();
+		str0 = datamap('i', 's', datamap1, int25);
+		ACTIVE.createChild(widget7, 4, int26);
+		ACTIVE.setText(str0);
+		ACTIVE.setTextAlignment(0, 1, 0);
+		ACTIVE.setPosition(5, int26 * 15, 0, 0);
+		ACTIVE.setSize(widget7.getWidth() - 16, 15, 0, 0);
+		ACTIVE.setTextAntiMacro(false);
+		ACTIVE.setFont(sprite16);
+		ACTIVE.setContextMenuOption(1, "Select");
+		ACTIVE.setScriptCallOnClickContextMenu(4713, datamap0, CTX_WIDGET_CHILD, "gi");
+		if (int25 > arg4) {
+			ACTIVE.setRGB(color14);
+			ACTIVE.setScriptCallOnMouseExit(1354, widget7, int26, color14, "Iii");
+			ACTIVE.setScriptCallOnMousePressed(4715, widget6, widget7, widget8, widget5, int23, int24, str0, color14, "IIIIiisi");
+		} else {
+			ACTIVE.setRGB(color13);
+			ACTIVE.setScriptCallOnMouseExit(1354, widget7, int26, color13, "Iii");
+			ACTIVE.setScriptCallOnMousePressed(4715, widget6, widget7, widget8, widget5, int23, int24, str0, color13, "IIIIiisi");
+		}
+		ACTIVE.setScriptCallOnMouseEntered(1353, widget7, int26, arg15, "Iii");
+		int25 = int25 + 1;
+	}
+	if (widget8 != null) {
+		script_31(widget8, widget7, sprite17, sprite18, sprite19, sprite20, sprite21, sprite22);
+	}
+	return;
+}

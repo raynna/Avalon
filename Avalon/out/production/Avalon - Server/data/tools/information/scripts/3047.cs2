@@ -1,0 +1,11 @@
+void script_3047(int arg0) {
+	switch (arg0) {
+		case 0:
+		case 1:
+		case 2:
+			cs2method5001(cs2method5000(), arg0, cs2method5016());
+			break;
+	}
+	script_3045();
+	return;
+}

@@ -1,0 +1,4 @@
+void script_1835(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, int arg6) {
+	script_2784(-1, widget0, widget1, widget2, widget3, widget4, widget5, arg6);
+	return;
+}

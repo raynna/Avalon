@@ -1,0 +1,256 @@
+void script_3977(int arg0) {
+	AttrMap attrmap1;
+	int int2;
+	Sprite sprite3;
+	int int4;
+	AttrMap attrmap5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	string str4;
+	string str5;
+	script_41(widget(1056, 136));
+	if (arg0 == 0 && VARP[281] < 1000) {
+		arg0 = 4094;
+	}
+	if (script_3999(arg0) == 1) {
+		return;
+	}
+	attrmap1 = null;
+	str0 = "";
+	str1 = "";
+	str2 = "";
+	int2 = -1;
+	sprite3 = null;
+	attrmap1 = datamap('i', 'J', (DataMap)3483, arg0);
+	int4 = (getAttributeMapValue(attrmap1, 1293) - 1) * 5 + getAttributeMapValue(attrmap1, 1272);
+	attrmap5 = datamap('i', 'J', (DataMap)3494, int4);
+	if (attrmap1 != null) {
+		str0 = getAttributeMapValue(attrmap1, 1266);
+		str1 = getAttributeMapValue(attrmap1, 1273);
+		if (arg0 > 419 && arg0 < 424) {
+			str1 = concat(str1, "<br>" + "<br>" + "Click on the Hints tab above if you wish to see more information on how to complete this Task.");
+		} else if (arg0 == 419) {
+			str1 = concat(str1, "<br>" + "<br>" + "Simply click on Jack to start a conversation - as a new player you will start just nearby.");
+		}
+		if (getAttributeMapValue(attrmap1, 1270) != 4094) {
+			str2 = getAttributeMapValue(datamap('i', 'J', (DataMap)2252, getAttributeMapValue(attrmap1, 1270)), 951);
+			sprite3 = getAttributeMapValue(datamap('i', 'J', (DataMap)2252, getAttributeMapValue(attrmap1, 1270)), 952);
+		} else {
+			str2 = getAttributeMapValue(attrmap1, 1292);
+			sprite3 = getAttributeMapValue(attrmap1, 1271);
+		}
+		widget(1056, 135).setSprite(sprite3);
+		widget(1056, 91).setText(str0);
+		widget(1056, 129).setText(str1);
+		widget(1056, 129).setFont(495);
+		widget(1056, 129).setTextAlignment(0, 0, 0);
+	}
+	str3 = "";
+	if (compare(str2, "") == 0 && VARP[281] == 1000) {
+		if (VARPBIT[8601] < 10) {
+			str3 = "ten";
+		} else if (VARPBIT[8601] < 25) {
+			str3 = "forty";
+		} else if (VARPBIT[8601] < 50) {
+			str3 = "160";
+		} else if (VARPBIT[8601] < 100) {
+			str3 = "640";
+		} else {
+			str3 = "2560";
+		}
+		str2 = "Completing this Task will earn you " + str3 + " coins.";
+	}
+	widget(1056, 76).setIsHidden(true);
+	widget(1056, 77).setIsHidden(true);
+	widget(1056, 78).setIsHidden(true);
+	widget(1056, 79).setIsHidden(true);
+	widget(1056, 80).setIsHidden(true);
+	widget(1056, 81).setIsHidden(true);
+	widget(1056, 82).setIsHidden(true);
+	widget(1056, 83).setIsHidden(true);
+	widget(1056, 84).setIsHidden(true);
+	widget(1056, 85).setIsHidden(true);
+	widget(1056, 86).setIsHidden(true);
+	widget(1056, 87).setIsHidden(true);
+	int6 = 10;
+	int7 = 0;
+	int8 = 15;
+	int9 = 0;
+	str4 = "";
+	int10 = 0;
+	int9, str4, int10 = script_3995(arg0);
+	if (getLanguage() == 1 || getLanguage() == 3 || getLanguage() == 2) {
+		widget(1056, 121).setIsHidden(true);
+		widget(1056, 141).setIsHidden(true);
+	} else {
+		if (getLanguage() == 0) {
+			widget(1056, 120).setText("    Pin");
+			widget(1056, 140).setText("     Back");
+		}
+		widget(1056, 121).setIsHidden(false);
+		widget(1056, 141).setIsHidden(false);
+	}
+	widget(1056, 88).setIsHidden(true);
+	if (compare(getAttributeMapValue(attrmap1, 1274), "") != 0) {
+		if (getAttributeMapValue(attrmap1, 1282) != null) {
+			int7 = arg0;
+		} else {
+			int7 = 4094;
+		}
+		int6 = script_3978(1, int6, getAttributeMapValue(attrmap1, 1274), widget(1056, 76), int7, widget(1056, 77), widget(1056, 123));
+	}
+	if (compare(getAttributeMapValue(attrmap1, 1275), "") != 0) {
+		if (getAttributeMapValue(attrmap1, 1283) != null) {
+			int7 = arg0;
+		} else {
+			int7 = 4094;
+		}
+		int6 = script_3978(2, int6, getAttributeMapValue(attrmap1, 1275), widget(1056, 78), int7, widget(1056, 79), widget(1056, 123));
+	}
+	if (compare(getAttributeMapValue(attrmap1, 1276), "") != 0) {
+		if (getAttributeMapValue(attrmap1, 1284) != null) {
+			int7 = arg0;
+		} else {
+			int7 = 4094;
+		}
+		int6 = script_3978(3, int6, getAttributeMapValue(attrmap1, 1276), widget(1056, 80), int7, widget(1056, 81), widget(1056, 123));
+	}
+	if (compare(getAttributeMapValue(attrmap1, 1277), "") != 0) {
+		if (getAttributeMapValue(attrmap1, 1285) != null) {
+			int7 = arg0;
+		} else {
+			int7 = 4094;
+		}
+		int6 = script_3978(4, int6, getAttributeMapValue(attrmap1, 1277), widget(1056, 82), int7, widget(1056, 83), widget(1056, 123));
+	}
+	if (compare(getAttributeMapValue(attrmap1, 1278), "") != 0) {
+		if (getAttributeMapValue(attrmap1, 1286) != null) {
+			int7 = arg0;
+		} else {
+			int7 = 4094;
+		}
+		int6 = script_3978(5, int6, getAttributeMapValue(attrmap1, 1278), widget(1056, 84), int7, widget(1056, 85), widget(1056, 123));
+	}
+	if (compare(getAttributeMapValue(attrmap1, 1279), "") != 0) {
+		if (getAttributeMapValue(attrmap1, 1287) != null) {
+			int7 = arg0;
+		} else {
+			int7 = 4094;
+		}
+		int6 = script_3978(6, int6, getAttributeMapValue(attrmap1, 1279), widget(1056, 86), int7, widget(1056, 87), widget(1056, 123));
+	}
+	int6 = max(int6, widget(1056, 123).getHeight());
+	widget(1056, 123).setScrollMax(0, int6);
+	script_31(widget(1056, 124), widget(1056, 123), 4343, 4340, 4341, 4342, 4337, 4336);
+	if (int6 > widget(1056, 123).getHeight()) {
+		widget(1056, 124).setIsHidden(false);
+	} else {
+		widget(1056, 124).setIsHidden(true);
+	}
+	widget(1056, 66).setIsHidden(true);
+	widget(1056, 67).setIsHidden(true);
+	widget(1056, 68).setIsHidden(true);
+	widget(1056, 69).setIsHidden(true);
+	widget(1056, 70).setIsHidden(true);
+	widget(1056, 71).setIsHidden(true);
+	widget(1056, 72).setIsHidden(true);
+	widget(1056, 73).setIsHidden(true);
+	int6 = script_3978(0, 10, str2, widget(1056, 65), 4094, null, widget(1056, 74));
+	if (attrmap5 != null && attrmap5 != (AttrMap)1645) {
+		int6 = script_3978(0, int6, getAttributeMapValue(attrmap5, 1273), widget(1056, 66), 4094, null, widget(1056, 74));
+		int6 = script_3978(0, int6, getAttributeMapValue(attrmap5, 1292), widget(1056, 67), 4094, null, widget(1056, 74));
+		if (compare(getAttributeMapValue(attrmap5, 1274), "") != 0) {
+			int6 = script_3978(0, int6, getAttributeMapValue(attrmap5, 1274), widget(1056, 68), 4094, null, widget(1056, 74));
+		}
+		if (compare(getAttributeMapValue(attrmap5, 1275), "") != 0) {
+			int6 = script_3978(0, int6, getAttributeMapValue(attrmap5, 1275), widget(1056, 69), 4094, null, widget(1056, 74));
+		}
+		if (compare(getAttributeMapValue(attrmap5, 1276), "") != 0) {
+			int6 = script_3978(0, int6, getAttributeMapValue(attrmap5, 1276), widget(1056, 70), 4094, null, widget(1056, 74));
+		}
+		if (compare(getAttributeMapValue(attrmap5, 1277), "") != 0) {
+			int6 = script_3978(0, int6, getAttributeMapValue(attrmap5, 1277), widget(1056, 71), 4094, null, widget(1056, 74));
+		}
+		if (compare(getAttributeMapValue(attrmap5, 1278), "") != 0) {
+			int6 = script_3978(0, int6, getAttributeMapValue(attrmap5, 1278), widget(1056, 72), 4094, null, widget(1056, 74));
+		}
+		if (compare(getAttributeMapValue(attrmap5, 1279), "") != 0) {
+			int6 = script_3978(0, int6, getAttributeMapValue(attrmap5, 1279), widget(1056, 73), 4094, null, widget(1056, 74));
+		}
+	} else if (VARPBIT[8601] > VARPBIT[8602]) {
+		str2 = "You have already earned a sum of money, which you may claim by talking to any Taskmaster or you can increase by completing more Tasks.";
+		int6 = script_3978(0, int6, str2, widget(1056, 67), 4094, null, widget(1056, 74));
+	}
+	int6 = max(int6, widget(1056, 74).getHeight());
+	widget(1056, 74).setScrollMax(0, int6);
+	script_31(widget(1056, 95), widget(1056, 74), 4343, 4340, 4341, 4342, 4337, 4336);
+	if (int6 > widget(1056, 74).getHeight()) {
+		widget(1056, 95).setIsHidden(false);
+	} else {
+		widget(1056, 95).setIsHidden(true);
+	}
+	str5 = "";
+	int11 = 5;
+	if (script_3227(arg0) == 2) {
+		widget(1056, 88).setIsHidden(true);
+		widget(1056, 90).setIsHidden(true);
+		if (VARP[281] == 1000 || VARPBIT[9029] == 1) {
+			widget(1056, 130).setIsHidden(false);
+		}
+		if (arg0 == 419 && VARPBIT[9030] == 1) {
+			str5 = "Task complete! Click here to return to the task list.";
+			if (getDisplayMode() >= 2) {
+				if (widget(746, 2).getWidth() < 997) {
+					int11 = int11 + 40;
+				}
+				script_4248(str5, 158, int11, 1, 0xFFFFFF, 5631);
+			} else {
+				script_4247(str5, 175, -1, 1, 0xFFFFFF, 5631);
+			}
+		}
+	} else if (getAttributeMapValue(attrmap1, 1267) == 60) {
+		widget(1056, 88).setIsHidden(true);
+		widget(1056, 130).setIsHidden(true);
+		if (VARP[281] < 135 && VARPBIT[9029] == 0) {
+			widget(1056, 90).setIsHidden(true);
+		} else {
+			widget(1056, 90).setIsHidden(false);
+		}
+	} else {
+		widget(1056, 90).setIsHidden(false);
+		if (script_3999(arg0) == 0 && int9 == 1 && arg0 != VARPBIT[8576]) {
+			widget(1056, 88).setIsHidden(false);
+		} else {
+			widget(1056, 88).setIsHidden(true);
+		}
+		if (arg0 == 420 || arg0 == 363 || arg0 == 419 && VARP[281] == 1000) {
+			str5 = "Click on the Hints tab for more on how to complete this Task.";
+		} else if (arg0 == 421) {
+			str5 = "Remember, the Hints tab provides more details about a Task.";
+		} else {
+			str5 = "";
+		}
+		if (VARPBIT[9030] == 0) {
+			str5 = "";
+		}
+		if (getDisplayMode() >= 2) {
+			if (widget(746, 2).getWidth() < 997) {
+				script_4248(str5, 196, 223, 1, 0xFFFFFF, 5631);
+			} else {
+				script_4248(str5, 196, 183, 1, 0xFFFFFF, 5631);
+			}
+		} else {
+			script_4247(str5, 217, 177, 1, 0xFFFFFF, 5631);
+		}
+	}
+	widget(1056, 96).setSize(0, 15 + int6, 1, 0);
+	return;
+}

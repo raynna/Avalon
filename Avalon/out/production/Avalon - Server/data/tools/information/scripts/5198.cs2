@@ -1,0 +1,13 @@
+void script_5198() {
+	widget(1122, 111).setRGB(getColorRelatedMethod4020(VARPBIT[9671]));
+	widget(1122, 118).setRGB(getColorRelatedMethod4020(VARPBIT[9672]));
+	widget(1122, 120).setRGB(getColorRelatedMethod4020(VARPBIT[9673]));
+	widget(1122, 313).setRGB(getColorRelatedMethod4020(VARPBIT[9672]));
+	widget(1122, 320).setRGB(getColorRelatedMethod4020(VARPBIT[9671]));
+	widget(1122, 322).setRGB(getColorRelatedMethod4020(VARPBIT[9673]));
+	widget(1122, 341).setRGB(getColorRelatedMethod4020(VARPBIT[9673]));
+	widget(1122, 359).setRGB(getColorRelatedMethod4020(VARPBIT[9673]));
+	widget(1122, 348).setRGB(getColorRelatedMethod4020(VARPBIT[9671]));
+	widget(1122, 350).setRGB(getColorRelatedMethod4020(VARPBIT[9672]));
+	return;
+}

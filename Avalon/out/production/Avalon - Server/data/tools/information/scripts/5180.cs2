@@ -1,0 +1,60 @@
+void script_5180(int arg0) {
+	AttrMap attrmap1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	attrmap1 = datamap('i', 'J', (DataMap)4849, arg0);
+	str0 = "";
+	str1 = "";
+	str2 = "";
+	if (attrmap1 == null) {
+		str1 = "Select a goal from the list above.";
+		if (arg0 > -1) {
+			return;
+		}
+	} else {
+		str0 = getAttributeMapValue(attrmap1, 1879);
+		str1 = getAttributeMapValue(attrmap1, 1880);
+		if (arg0 != 13) {
+			if (script_5200(arg0) == 1) {
+				str2 = "<col=00ff00>" + "COMPLETED" + "</col>";
+			} else {
+				str2 = "<col=ff0000>" + "INCOMPLETE" + "</col>";
+			}
+		}
+		script_5204();
+	}
+	str3 = "";
+	str3 = concat("Goal: ", str0);
+	if (length(str2) > 0) {
+		str3 = concat(str3, "<br>" + "Status: ");
+		str3 = concat(str3, str2);
+	}
+	str3 = concat(str3, "<br>");
+	str3 = concat(str3, str1);
+	int2 = 10;
+	int3 = 16;
+	int4 = widget(1122, 62).getWidth() - int2 * 2;
+	int5 = getLineCount(str3, int4, 495);
+	widget(1122, 63).setTextAlignment(0, 0, int3);
+	int6 = int3 * int5;
+	widget(1122, 63).setPosition(int2, int2, 0, 0);
+	widget(1122, 63).setSize(int4, int6, 0, 0);
+	widget(1122, 63).setText(str3);
+	int7 = int6 + int2 + int2;
+	if (int7 < widget(1122, 62).getHeight()) {
+		int7 = widget(1122, 62).getHeight();
+	}
+	widget(1122, 62).setScrollMax(widget(1122, 62).getWidth(), int7);
+	script_31(widget(1122, 127), widget(1122, 62), 5666, 5663, 5664, 5665, 5686, 5685);
+	VARC[1596] = arg0;
+	script_5176();
+	return;
+}

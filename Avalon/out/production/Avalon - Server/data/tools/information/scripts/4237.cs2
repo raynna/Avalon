@@ -1,0 +1,7 @@
+void script_4237() {
+	if (VARC[1495] == 0 && VARPBIT[8960] > 0) {
+		VARC[1495] = getClientCycle();
+		return;
+	}
+	return;
+}

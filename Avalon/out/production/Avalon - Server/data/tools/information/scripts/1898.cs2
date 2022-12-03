@@ -1,0 +1,25 @@
+int, int script_1898(int arg0) {
+	switch (arg0) {
+		case 0:
+			return VARC[523], VARC[533];
+		case 1:
+			return VARC[524], VARC[534];
+		case 2:
+			return VARC[525], VARC[535];
+		case 3:
+			return VARC[526], VARC[536];
+		case 4:
+			return VARC[527], VARC[537];
+		case 5:
+			return VARC[528], VARC[538];
+		case 6:
+			return VARC[529], VARC[539];
+		case 7:
+			return VARC[530], VARC[540];
+		case 8:
+			return VARC[531], VARC[541];
+		case 9:
+			return VARC[532], VARC[542];
+	}
+	return 0, 0;
+}

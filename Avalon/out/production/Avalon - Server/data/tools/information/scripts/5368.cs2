@@ -1,0 +1,10 @@
+void script_5368(int arg0) {
+	int int1;
+	VARC[1658] = VARC[1658] + 1;
+	int1 = VARC[1658] * 255 / VARC[1656];
+	int1 = min(255, max(0, int1));
+	if (ACTIVE.setChild(widget(951, 24), arg0)) {
+		ACTIVE.setTrans(int1);
+	}
+	return;
+}

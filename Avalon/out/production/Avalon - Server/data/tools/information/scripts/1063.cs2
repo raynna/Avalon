@@ -1,0 +1,99 @@
+void script_1063(Widget widget0, QcPhrase qcphrase1) {
+	Widget widget2;
+	Widget widget3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	QcPhrase qcphrase9;
+	int int10;
+	int int11;
+	Widget widget12;
+	string str0;
+	widget2 = datamap('i', 'I', (DataMap)1550, 0);
+	widget3 = datamap('i', 'I', (DataMap)1551, 0);
+	widget2.clearChildren();
+	widget3.clearChildren();
+	ACTIVE.createChild(widget0, 4, 0);
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.setFont(495);
+	ACTIVE.setTextAlignment(0, 1, 0);
+	ACTIVE.setPosition(0, 0, 0, 0);
+	str0 = cs2method5055(qcphrase1);
+	if (VARC[126] == 1) {
+		str0 = "From " + STRING[27] + ": " + "<col=800000>" + str0;
+	} else if (VARC[126] == 2) {
+		str0 = "[" + "<col=0000ff>" + clanChatDisplayName() + "<col=000000>" + "] " + STRING[27] + ": " + "<col=800000>" + str0;
+	} else if (VARC[126] == 8) {
+		if (cs2method3751()) {
+			str0 = "[" + "<col=0000ff>" + cs2method3752() + "<col=000000>" + "] " + STRING[27] + ": " + "<col=800000>" + str0;
+		}
+	} else if (VARC[126] == 10) {
+		if (cs2method3750()) {
+			str0 = "[" + "<col=0000ff>" + cs2method3752() + "<col=000000>" + "] " + STRING[27] + ": " + "<col=800000>" + str0;
+		}
+	} else {
+		str0 = STRING[27] + ": " + "<col=0000ff>" + str0;
+	}
+	ACTIVE.setText(str0);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setSize(getMaxLineWidth(str0, widget0.getWidth(), 495), widget0.getHeight(), 0, 0);
+	widget2.setIsHidden(false);
+	int4 = cs2method5056(qcphrase1);
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	int8 = 0;
+	qcphrase9 = null;
+	int10 = 0;
+	while (int5 < int4) {
+		ACTIVE.createChild(widget2, 4, int6);
+		ACTIVE.setRGB(0x000000);
+		ACTIVE.setFont(495);
+		ACTIVE.setTextAlignment(0, 1, 0);
+		qcphrase9 = cs2method5057(qcphrase1, int5);
+		str0 = cs2method5055(qcphrase9);
+		ACTIVE.setScriptCallOnClickContextMenu(1070, widget0, qcphrase9, 0, "Iei");
+		ACTIVE.setOptionBase(str0);
+		ACTIVE.setContextMenuOption(1, "Send: ");
+		ACTIVE.setScriptCallOnMouseEntered(1082, 0, widget3, int6, "iIi");
+		ACTIVE.setScriptCallOnMouseExit(1083, 0, widget3, int6, "iIi");
+		if (int5 < 10) {
+			str0 = "<col=555555>" + str((int5 + 1) % 10) + ". " + "<col=000000>" + str0;
+		}
+		ACTIVE.setText(str0);
+		ACTIVE.setTextAntiMacro(false);
+		int7 = getMaxLineWidth(str0, widget0.getWidth(), 495);
+		if (int7 > int8) {
+			int8 = int7;
+		}
+		int5 = int5 + 1;
+		int6 = int6 + 1;
+	}
+	widget2.setScriptCallOnKeyPress(1059, KEY_TYPED, (char)KEY_PRESSED, widget0, 0, null, qcphrase1, int6, "izIikei");
+	int5 = 0;
+	int11 = 0;
+	while (ACTIVE.setChild(widget2, int5)) {
+		if (int10 * 14 + 14 > widget2.getHeight()) {
+			int11 = int11 + int8 + 4;
+			int10 = 0;
+		}
+		ACTIVE.setSize(int8, 14, 0, 0);
+		ACTIVE.setPosition(int11 + 2, int10 * 14, 0, 0);
+		_ACTIVE.createChild(widget3, 3, int5);
+		_ACTIVE.setSize(ACTIVE.getWidth() + 4, ACTIVE.getHeight(), 0, 0);
+		_ACTIVE.setPosition(ACTIVE.getX() - 2, ACTIVE.getY(), 0, 0);
+		_ACTIVE.setRGB(0x577E45);
+		_ACTIVE.setFilled(true);
+		_ACTIVE.setHidden(true);
+		int5 = int5 + 1;
+		int10 = int10 + 1;
+	}
+	int11 = int11 + int8 + 4;
+	widget12 = widget2.getLayer();
+	widget2.setSize(int11, widget12.getHeight(), 0, 0);
+	widget3.setSize(int11, widget12.getHeight(), 0, 0);
+	script_1068(widget0, 0);
+	return;
+}

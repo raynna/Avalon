@@ -1,0 +1,9 @@
+void script_1315(Widget widget0) {
+	VARC[119] = VARP[173];
+	widget0.setScriptCallOnConfigChange(1316, widget0, 173, "IY");
+	widget0.setScriptCallOnMouseOver(1533, widget0, "I");
+	widget0.setScriptCallOnMouseExit(2307, widget0, "I");
+	widget0.setScriptCallOnClickContextMenu(1534, widget0, CTX_MENU_OPTION, "Ii");
+	script_1741(widget0);
+	return;
+}

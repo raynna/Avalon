@@ -1,0 +1,12 @@
+void script_1701() {
+	if (VARC[1052] == 1) {
+		playSoundEffect(8123, 1, 0);
+		VARC[1052] = 0;
+	} else {
+		playSoundEffect(8096, 1, 0);
+		VARC[1052] = 1;
+	}
+	widget(271, 9).setScriptCallOnGameloop(1702, 0, "i");
+	script_1700();
+	return;
+}

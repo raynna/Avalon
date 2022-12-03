@@ -1,0 +1,15 @@
+void script_2283(boolean boolean0, boolean boolean1) {
+	STRING[123] = STRING[122];
+	if (length(STRING[122]) <= 0) {
+		script_3213("Please enter your Email address here.", widget(673, 94));
+		return;
+	}
+	if (script_3936(STRING[122]) == 0) {
+		script_3213("Please enter a valid Email address.", widget(673, 94));
+		return;
+	}
+	script_3208(1);
+	sendRequestAccount(STRING[122]);
+	widget(673, 20).setScriptCallOnGameloop(2284, boolean0, boolean1, "11");
+	return;
+}

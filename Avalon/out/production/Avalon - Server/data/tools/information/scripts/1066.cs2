@@ -1,0 +1,78 @@
+void script_1066(Widget widget0, int arg1) {
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int2 = widget0.getWidth();
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	while (ACTIVE.setChild(widget0, int4)) {
+		int3 = int3 + ACTIVE.getWidth();
+		int4 = int4 + 1;
+	}
+	if (int3 <= int2) {
+		int4 = 0;
+		int5 = 0;
+		while (ACTIVE.setChild(widget0, int4)) {
+			ACTIVE.setHidden(false);
+			ACTIVE.setPosition(int5, 0, 0, 0);
+			if (_ACTIVE.setChild(widget(137, 2), int4)) {
+				_ACTIVE.setPosition(ACTIVE.getX(), ACTIVE.getY(), 0, 0);
+			}
+			int5 = int5 + ACTIVE.getWidth();
+			int4 = int4 + 1;
+		}
+		return;
+	}
+	ACTIVE.createChild(widget0, 4, arg1 + 1);
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.setFont(495);
+	ACTIVE.setTextAlignment(0, 1, 0);
+	ACTIVE.setText(" ... " + "<img=2>");
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setSize(getMaxLineWidth(" ... " + "<img=2>", int2, 495), widget0.getHeight(), 0, 0);
+	int3 = ACTIVE.getWidth();
+	if (ACTIVE.setChild(widget0, arg1)) {
+		int3 = int3 + ACTIVE.getWidth();
+	}
+	int4 = 0;
+	while (int4 < arg1) {
+		if (ACTIVE.setChild(widget0, int4)) {
+			if (int3 + ACTIVE.getWidth() <= int2) {
+				ACTIVE.setHidden(false);
+				int3 = int3 + ACTIVE.getWidth();
+			} else {
+				ACTIVE.setHidden(true);
+			}
+		}
+		int4 = int4 + 1;
+	}
+	int4 = 0;
+	int5 = 0;
+	while (int4 < arg1) {
+		if (ACTIVE.setChild(widget0, int4)) {
+			if (!ACTIVE.isHidden()) {
+				ACTIVE.setPosition(int5, 0, 0, 0);
+				if (_ACTIVE.setChild(widget(137, 2), int4)) {
+					_ACTIVE.setPosition(ACTIVE.getX(), ACTIVE.getY(), 0, 0);
+				}
+				int5 = int5 + ACTIVE.getWidth();
+			} else if (_ACTIVE.setChild(widget(137, 2), int4)) {
+				_ACTIVE.setHidden(true);
+			}
+		}
+		int4 = int4 + 1;
+	}
+	if (ACTIVE.setChild(widget0, arg1 + 1)) {
+		ACTIVE.setPosition(int5, 0, 0, 0);
+		int5 = int5 + ACTIVE.getWidth();
+	}
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setPosition(int5, 0, 0, 0);
+		if (_ACTIVE.setChild(widget(137, 2), int4)) {
+			_ACTIVE.setPosition(ACTIVE.getX(), ACTIVE.getY(), 0, 0);
+		}
+	}
+	return;
+}

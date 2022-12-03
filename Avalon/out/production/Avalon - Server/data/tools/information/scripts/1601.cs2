@@ -1,0 +1,57 @@
+void script_1601(int arg0) {
+	Widget widget1;
+	Widget widget2;
+	widget1 = null;
+	widget2 = null;
+	switch (rnd(2)) {
+		case 0:
+			playSoundEffect(7813, 1, 0);
+			break;
+		case 1:
+			playSoundEffect(7817, 1, 0);
+			break;
+		case 2:
+			playSoundEffect(7818, 1, 0);
+			break;
+	}
+	switch (arg0) {
+		case 63701023:
+			widget1 = widget(972, 3);
+			widget2 = widget(972, 4);
+			break;
+		case 63701017:
+			widget1 = widget(972, 4);
+			widget2 = widget(972, 5);
+			break;
+		case 63701012:
+			widget1 = widget(972, 5);
+			widget2 = widget(972, 6);
+			break;
+		case 63701007:
+			widget1 = widget(972, 6);
+			widget2 = widget(972, 7);
+			break;
+		case 63701003:
+			widget1 = widget(972, 7);
+			widget2 = widget(972, 6);
+			break;
+		case 63701008:
+			widget1 = widget(972, 6);
+			widget2 = widget(972, 5);
+			break;
+		case 63701013:
+			widget1 = widget(972, 5);
+			widget2 = widget(972, 4);
+			break;
+		case 63701018:
+			widget1 = widget(972, 4);
+			widget2 = widget(972, 3);
+			break;
+		default:
+			script_675();
+			break;
+	}
+	widget1.setIsHidden(true);
+	widget2.setIsHidden(false);
+	return;
+}

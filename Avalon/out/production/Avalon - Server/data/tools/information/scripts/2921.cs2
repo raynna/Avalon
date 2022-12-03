@@ -1,0 +1,103 @@
+void script_2921(string arg0, int arg1, int arg2) {
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	open(widget(906, 54), 979);
+	STRING[279] = arg0;
+	script_3397();
+	if (!datamap('i', 'I', (DataMap)941, 5).isHidden()) {
+		script_3161(0);
+	}
+	widget(979, 0).setScriptCallOnKeyPress(3398, KEY_TYPED, (char)KEY_PRESSED, CTX_WIDGET, "izI");
+	widget(979, 9).setScriptCallOnClickContextMenu(3399, "");
+	int2 = 100;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	widget(979, 27).clearChildren();
+	widget(979, 26).clearChildren();
+	widget(979, 25).clearChildren();
+	widget(979, 27).setScrollMax(0, 0);
+	widget(979, 27).setScrollPos(0, 0);
+	while (int2 >= 0) {
+		int4 = cs2method5004(int2);
+		if (int4 != 0 && int4 != 4 && int4 != 27 && int4 != 28 && int4 != 29 && int4 != 43 && int4 != 103 && int4 != 104 && int4 != 26 && int4 != 30 && int4 != 31 && int4 != 115 && compare(cs2method5010(int2), "") != 0 && compare(cs2method5003(int2), "") != 0) {
+			if (compare(removeTags(cs2method5010(int2)), cs2method5015()) != 0 && int4 != 6 && int4 != 19) {
+				int5 = 1;
+				ACTIVE.createChild(widget(979, 26), 3, widget(979, 26).nextChild());
+				ACTIVE.setPosition(2, int3 * 14 + 1, 0, 0);
+				ACTIVE.setSize(4, 14, 1, 0);
+				ACTIVE.setRGB(0x606060);
+				ACTIVE.setTrans(255);
+				ACTIVE.setFilled(true);
+				ACTIVE.setScriptCallOnMouseEntered(3392, CTX_WIDGET_CHILD, "i");
+				ACTIVE.setScriptCallOnMouseExit(3393, CTX_WIDGET_CHILD, "i");
+				ACTIVE.createChild(widget(979, 25), 3, widget(979, 25).nextChild());
+				ACTIVE.setPosition(2, int3 * 14 + 1, 0, 0);
+				ACTIVE.setSize(4, 14, 1, 0);
+				ACTIVE.setRGB(0x494949);
+				ACTIVE.setTrans(255);
+				ACTIVE.setFilled(true);
+				ACTIVE.setScriptCallOnMouseEntered(3394, CTX_WIDGET_CHILD, "i");
+			}
+			ACTIVE.createChild(widget(979, 27), 4, widget(979, 27).nextChild());
+			ACTIVE.setPosition(5, int3 * 14, 0, 0);
+			ACTIVE.setSize(10, 14, 1, 0);
+			if (int4 != 6 && int4 != 19) {
+				ACTIVE.setText(" " + cs2method5010(int2) + ": " + cs2method5003(int2));
+			} else {
+				ACTIVE.setText("To " + cs2method5010(int2) + ": " + cs2method5003(int2));
+			}
+			ACTIVE.setRGB(0x666678);
+			if (compare(removeTags(cs2method5010(int2)), cs2method5015()) != 0 && int4 != 6 && int4 != 19) {
+				ACTIVE.setOptionBase(removeTags(cs2method5010(int2)));
+				ACTIVE.setContextMenuOption(1, "Report");
+				ACTIVE.setScriptCallOnClickContextMenu(3396, CTX_WIDGET_CHILD, "i");
+				ACTIVE.setRGB(0xFFFFFF);
+			}
+			ACTIVE.setFont(495);
+			ACTIVE.setTextAlignment(0, 0, 14);
+			int3 = int3 + 1;
+		}
+		int2 = int2 - 1;
+	}
+	if (int5 == 0) {
+		ACTIVE.createChild(widget(979, 27), 4, widget(979, 27).nextChild());
+		ACTIVE.setPosition(5, int3 * 14, 0, 0);
+		ACTIVE.setSize(16384, 14, 2, 0);
+		ACTIVE.setText("There is no chat to report at the moment.");
+		ACTIVE.setRGB(0x7D7DD1);
+		ACTIVE.setFont(495);
+		ACTIVE.setTextAlignment(0, 0, 14);
+	}
+	if (int3 > widget(979, 5).getHeight() / 14) {
+		widget(979, 5).setSize(38, widget(979, 5).getHeight(), 1, 0);
+		widget(979, 24).setScrollMax(0, int3 * 14 + 5);
+		script_31(widget(979, 6), widget(979, 24), 792, 789, 790, 791, 773, 788);
+		if (ACTIVE.setChild(widget(979, 6), 1)) {
+			script_37(widget(979, 6), widget(979, 24), widget(979, 24).getScrollMaxV(), 1);
+		}
+	} else {
+		widget(979, 5).setSize(21, widget(979, 5).getHeight(), 1, 0);
+	}
+	if (arg1 == 1) {
+		if (VARC[6] == 0) {
+			widget(979, 20).setSprite(1768);
+		} else {
+			widget(979, 20).setSprite(1770);
+		}
+		if (arg2 == 5 || arg2 == 6) {
+			widget(979, 19).setText("Suggest to mute this player for 48 hours");
+		} else {
+			widget(979, 19).setText("Mute this player for 48 hours");
+		}
+		widget(979, 7).setSize(getTextWidth(widget(979, 19).getText(), 494) + 18, widget(979, 7).getHeight(), 0, 0);
+		widget(979, 8).setPosition(18, 273, 0, 0);
+		widget(979, 7).setIsHidden(false);
+	} else {
+		widget(979, 8).setPosition(18, 266, 0, 0);
+	}
+	widget(906, 46).setIsHidden(false);
+	return;
+}

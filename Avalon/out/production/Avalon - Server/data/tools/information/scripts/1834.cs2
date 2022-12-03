@@ -1,0 +1,13 @@
+void script_1834(int arg0) {
+	if (arg0 != 1) {
+		return;
+	}
+	if (VARC[250] == 1 && VARC[252] >= 2 && VARC[251] == 1 && (!isMember() || VARC[253] == 1)) {
+		return;
+	}
+	if (VARC[258] == 0) {
+		VARC[258] = 1;
+		script_1782();
+	}
+	return;
+}

@@ -1,0 +1,5 @@
+void script_1617() {
+	widget(63, 8).setText(str(VARP[620]) + " Constitution XP");
+	widget(63, 7).setText(str(VARP[621]) + " Slayer XP");
+	return;
+}

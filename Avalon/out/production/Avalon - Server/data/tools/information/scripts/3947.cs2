@@ -1,0 +1,18 @@
+void script_3947(string string0, string string1, string string2, string string3, string string4, string string5, int arg6) {
+	if (arg6 == 1) {
+		widget(1028, 158).setContextMenuOption(1, string0);
+		widget(1028, 159).setContextMenuOption(1, string1);
+		widget(1028, 160).setContextMenuOption(1, string2);
+		widget(1028, 161).setContextMenuOption(1, string3);
+		widget(1028, 162).setContextMenuOption(1, string4);
+		widget(1028, 163).setContextMenuOption(1, string5);
+	} else {
+		widget(890, 37).setContextMenuOption(1, string0);
+		widget(890, 38).setContextMenuOption(1, string1);
+		widget(890, 39).setContextMenuOption(1, string2);
+		widget(890, 40).setContextMenuOption(1, string3);
+		widget(890, 41).setContextMenuOption(1, string4);
+		widget(890, 42).setContextMenuOption(1, string5);
+	}
+	return;
+}

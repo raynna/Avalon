@@ -1,0 +1,20 @@
+void script_3957(Widget widget0) {
+	Sprite sprite1;
+	sprite1 = widget0.getSpriteId();
+	switch (sprite1) {
+		case 4117:
+			widget0.setSprite(4122);
+			break;
+		case 4118:
+			widget0.setSprite(4123);
+			break;
+		case 4119:
+			widget0.setSprite(4124);
+			break;
+		default:
+			return;
+	}
+	widget(744, 81).setSize(133, 16, 0, 0);
+	widget(744, 7).setScriptCallOnGameloop(3961, 0, widget(744, 7), "iI");
+	return;
+}

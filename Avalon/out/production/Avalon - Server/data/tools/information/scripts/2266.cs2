@@ -1,0 +1,55 @@
+void script_2266(int arg0) {
+	switch (arg0) {
+		case 61866061:
+			if (compare("", STRING[132]) != 0) {
+				widget(944, 15).setText(STRING[132]);
+			}
+			break;
+		case 61866008:
+			if (compare("", STRING[133]) != 0) {
+				widget(944, 15).setText(STRING[133]);
+			}
+			break;
+		case 61866014:
+			if (compare("", STRING[134]) != 0) {
+				widget(944, 15).setText(STRING[134]);
+			}
+			break;
+		case 61866020:
+			if (compare("", STRING[135]) != 0) {
+				widget(944, 15).setText(STRING[135]);
+			}
+			break;
+		case 61866026:
+			if (compare("", STRING[136]) != 0) {
+				widget(944, 15).setText(STRING[136]);
+			}
+			break;
+		case 61866032:
+			if (compare("", STRING[137]) != 0) {
+				widget(944, 15).setText(STRING[137]);
+			}
+			break;
+		case 61866038:
+			if (compare("", STRING[280]) != 0) {
+				widget(944, 15).setText(STRING[280]);
+			}
+			break;
+		case 61866044:
+			if (compare("", STRING[281]) != 0) {
+				widget(944, 15).setText(STRING[281]);
+			}
+			break;
+		case 61866050:
+			if (compare("", STRING[282]) != 0) {
+				widget(944, 15).setText(STRING[282]);
+			}
+			break;
+		case 61866056:
+			if (compare("", STRING[283]) != 0) {
+				widget(944, 15).setText(STRING[283]);
+			}
+			break;
+	}
+	return;
+}

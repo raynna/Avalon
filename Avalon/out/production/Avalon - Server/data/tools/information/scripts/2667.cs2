@@ -1,0 +1,55 @@
+void script_2667() {
+	Widget widget0;
+	Widget widget1;
+	widget0 = datamap('i', 'I', (DataMap)2566, VARPBIT[6297]);
+	widget1 = datamap('i', 'I', (DataMap)2565, VARPBIT[6297]);
+	if (widget0.getX() < 17 || widget0.getX() > 57) {
+		return;
+	}
+	if (widget0.getY() > 12 && widget0.getY() < 32) {
+		widget0.setPosition(37, 22, 0, 0);
+		widget1.setPosition(37, 22, 0, 0);
+		return;
+	}
+	if (widget0.getY() > 38 && widget0.getY() < 58) {
+		widget0.setPosition(37, 48, 0, 0);
+		widget1.setPosition(37, 48, 0, 0);
+		return;
+	}
+	if (widget0.getY() > 70 && widget0.getY() < 90) {
+		widget0.setPosition(37, 80, 0, 0);
+		widget1.setPosition(37, 80, 0, 0);
+		return;
+	}
+	if (widget0.getY() > 98 && widget0.getY() < 118) {
+		widget0.setPosition(37, 108, 0, 0);
+		widget1.setPosition(37, 108, 0, 0);
+		return;
+	}
+	if (widget0.getY() > 128 && widget0.getY() < 148) {
+		widget0.setPosition(37, 138, 0, 0);
+		widget1.setPosition(37, 138, 0, 0);
+		return;
+	}
+	if (widget0.getY() > 156 && widget0.getY() < 176) {
+		widget0.setPosition(37, 166, 0, 0);
+		widget1.setPosition(37, 166, 0, 0);
+		return;
+	}
+	if (widget0.getY() > 184 && widget0.getY() < 204) {
+		widget0.setPosition(37, 194, 0, 0);
+		widget1.setPosition(37, 194, 0, 0);
+		return;
+	}
+	if (widget0.getY() > 214 && widget0.getY() < 234) {
+		widget0.setPosition(37, 224, 0, 0);
+		widget1.setPosition(37, 224, 0, 0);
+		return;
+	}
+	if (widget0.getY() > 242 && widget0.getY() < 262) {
+		widget0.setPosition(37, 252, 0, 0);
+		widget1.setPosition(37, 252, 0, 0);
+		return;
+	}
+	return;
+}

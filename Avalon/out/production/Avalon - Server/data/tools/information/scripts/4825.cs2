@@ -1,0 +1,11 @@
+DataMap script_4825(int arg0) {
+	switch (arg0) {
+		case 1:
+			return (DataMap)script_4827(VARPBIT[9570]);
+		case 2:
+			return (DataMap)script_4827(VARPBIT[9579]);
+		case 3:
+			return (DataMap)script_4827(VARPBIT[9588]);
+	}
+	return null;
+}

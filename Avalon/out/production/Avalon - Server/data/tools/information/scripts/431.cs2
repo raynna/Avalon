@@ -1,0 +1,92 @@
+void script_431(Widget widget0, int arg1) {
+	Widget widget2;
+	Widget widget3;
+	int int4;
+	AttrMap attrmap5;
+	int int6;
+	widget2 = null;
+	widget3 = null;
+	int4 = 0;
+	attrmap5 = null;
+	int6 = -1;
+	switch (widget0) {
+		case widget(1024, 8):
+			widget2 = widget(1024, 80);
+			widget3 = widget(1024, 81);
+			if (VARC[1388] == 1) {
+				int4 = 1;
+			} else {
+				int4 = VARPBIT[7539];
+			}
+			break;
+		case widget(1024, 9):
+			widget2 = widget(1024, 63);
+			widget3 = widget(1024, 64);
+			if (VARC[1388] == 1) {
+				int4 = 3;
+			} else {
+				int4 = VARPBIT[7540];
+			}
+			break;
+		case widget(1024, 10):
+			widget2 = widget(1024, 46);
+			widget3 = widget(1024, 47);
+			if (VARC[1388] == 1) {
+				int4 = 5;
+			} else {
+				int4 = VARPBIT[7541];
+			}
+			break;
+		case widget(1024, 11):
+			widget2 = widget(1024, 29);
+			widget3 = widget(1024, 30);
+			if (VARC[1388] == 1) {
+				int4 = 6;
+			} else {
+				int4 = VARPBIT[7542];
+			}
+			break;
+		default:
+			return;
+	}
+	switch (int4) {
+		case 1:
+			attrmap5 = (AttrMap)293;
+			break;
+		case 2:
+			attrmap5 = (AttrMap)299;
+			break;
+		case 3:
+			attrmap5 = (AttrMap)300;
+			break;
+		case 4:
+			attrmap5 = (AttrMap)301;
+			break;
+		case 5:
+			attrmap5 = (AttrMap)305;
+			break;
+		case 6:
+			attrmap5 = (AttrMap)1044;
+			break;
+		case 7:
+			attrmap5 = (AttrMap)1045;
+			break;
+		case 8:
+			attrmap5 = (AttrMap)1046;
+			break;
+		case 9:
+			attrmap5 = (AttrMap)1047;
+			break;
+		default:
+			return;
+	}
+	if (arg1 == 1) {
+		widget2.setIsHidden(false);
+		widget3.setIsHidden(false);
+		widget0.setTargetCursor(getAttributeMapValue(attrmap5, 1157), getAttributeMapValue(attrmap5, 1157));
+	} else {
+		widget2.setIsHidden(true);
+		widget3.setIsHidden(true);
+	}
+	return;
+}

@@ -1,0 +1,6 @@
+void script_4743() {
+	widget(556, 8).setSprite(4666);
+	widget(556, 9).setSprite(4664);
+	widget(556, 10).setSprite(4664);
+	return;
+}

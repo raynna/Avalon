@@ -1,0 +1,19 @@
+void script_3098(string string0, string string1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, int arg6) {
+	Sprite sprite5;
+	Sprite sprite6;
+	Sprite sprite7;
+	sprite5 = 4044;
+	sprite6 = 4044;
+	sprite7 = 4046;
+	widget2.setScriptCallOnMouseExit(3071, widget3, sprite5, widget4, sprite7, widget5, sprite6, "IdIdId");
+	widget3.setSprite(sprite5);
+	widget4.setSprite(sprite7);
+	widget5.setSprite(sprite6);
+	sprite5 = 4045;
+	sprite6 = 4045;
+	sprite7 = 4047;
+	widget2.setScriptCallOnMouseEntered(3071, widget3, sprite5, widget4, sprite7, widget5, sprite6, "IdIdId");
+	widget(906, 241).setText(string0);
+	widget(906, 236).setContextMenuOption(1, string1);
+	return;
+}

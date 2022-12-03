@@ -1,0 +1,17 @@
+void script_960() {
+	script_333(widget(686, 3), 0x000000, 0x453D32, 0, 0);
+	script_333(widget(686, 4), 0x453D32, 0x5C5B63, 0, 0);
+	widget(686, 9).setIsHidden(true);
+	script_680(widget(686, 14));
+	widget(686, 14).setScriptCallOnMouseEntered(95, CTX_WIDGET, "I");
+	widget(686, 14).setScriptCallOnMouseExit(93, CTX_WIDGET, "I");
+	widget(686, 14).setScriptCallOnClickContextMenu(69, true, widget(686, 9), "1I");
+	script_680(widget(686, 16));
+	widget(686, 16).setScriptCallOnMouseEntered(95, CTX_WIDGET, "I");
+	widget(686, 16).setScriptCallOnMouseExit(93, CTX_WIDGET, "I");
+	widget(686, 16).setScriptCallOnClickContextMenu(69, true, widget(686, 9), "1I");
+	script_2003();
+	widget(686, 1).setScriptCallOnConfigChange(961, 1195, "Y");
+	widget(686, 1).setScriptCallOnSkillChange(961, 19, "Y");
+	return;
+}

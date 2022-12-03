@@ -1,0 +1,39 @@
+void script_3116() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	if (getWorldId() == -1) {
+		widget(910, 12).setIsHidden(true);
+		widget(910, 11).setText("World: Auto");
+		return;
+	}
+	int0 = 0;
+	str0 = "";
+	int1 = 0;
+	str1 = "";
+	int2 = 0;
+	int3 = 0;
+	str2 = "";
+	int0, str0, int1, str1, int2, int3, str2 = cs2method6506(getWorldId());
+	int4 = 0;
+	if (isBitFlagged(int0, 0)) {
+		int4 = 1;
+	} else {
+		int4 = 0;
+	}
+	str3 = "World " + str(getWorldId());
+	widget(910, 11).setText(str3);
+	widget(910, 12).setPosition(getTextWidth(str3, 3793) + 5, 0, 2, 2);
+	if (int4 == 1) {
+		widget(910, 12).setSprite(1531);
+	} else {
+		widget(910, 12).setSprite(1532);
+	}
+	return;
+}

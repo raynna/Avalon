@@ -1,0 +1,20 @@
+void script_4809() {
+	widget(1092, 1209).setIsHidden(true);
+	widget(1092, 1135).setIsHidden(true);
+	widget(1092, 1055).setIsHidden(true);
+	widget(1092, 1193).setIsHidden(true);
+	widget(1092, 1119).setIsHidden(true);
+	widget(1092, 1039).setIsHidden(true);
+	if (script_4828(VARPBIT[9558]) == 1) {
+		widget(1092, 1193).setIsHidden(false);
+		widget(1092, 1119).setIsHidden(false);
+		widget(1092, 1039).setIsHidden(false);
+	} else {
+		widget(1092, 1209).setIsHidden(false);
+		widget(1092, 1135).setIsHidden(false);
+		widget(1092, 1055).setIsHidden(false);
+	}
+	script_4840();
+	script_4814();
+	return;
+}

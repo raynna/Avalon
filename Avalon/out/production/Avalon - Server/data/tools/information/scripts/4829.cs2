@@ -1,0 +1,213 @@
+int script_4829(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int1 = script_4830(arg0);
+	if (int1 != 1) {
+		return int1;
+	}
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	switch (arg0) {
+		case 1:
+			int2 = VARPBIT[9570];
+			int3 = VARPBIT[9562];
+			int7 = VARPBIT[9563];
+			int4 = VARPBIT[9567];
+			int5 = VARPBIT[9568];
+			int6 = VARPBIT[9569];
+			break;
+		case 2:
+			int2 = VARPBIT[9579];
+			int3 = VARPBIT[9571];
+			int7 = VARPBIT[9572];
+			int4 = VARPBIT[9576];
+			int5 = VARPBIT[9577];
+			int6 = VARPBIT[9578];
+			break;
+		case 3:
+			int2 = VARPBIT[9588];
+			int3 = VARPBIT[9580];
+			int7 = VARPBIT[9581];
+			int4 = VARPBIT[9585];
+			int5 = VARPBIT[9586];
+			int6 = VARPBIT[9587];
+			break;
+	}
+	switch (int2) {
+		case 100:
+			if (int3 == CLANBIT[2210] && int7 == CLANBIT[2211] && int4 == CLANBIT[2216] && int5 == CLANBIT[2217] && int6 == CLANBIT[2218]) {
+				int1 = 4;
+			}
+			break;
+		case 101:
+			if (int3 == CLANBIT[2220] && int7 == CLANBIT[2221] && int4 == CLANBIT[2226] && int5 == CLANBIT[2227] && int6 == CLANBIT[2228]) {
+				int1 = 4;
+			}
+			break;
+		case 102:
+			if (int3 == CLANBIT[2240] && int7 == CLANBIT[2241] && int4 == CLANBIT[2246] && int5 == CLANBIT[2247] && int6 == CLANBIT[2248]) {
+				int1 = 4;
+			}
+			break;
+		case 103:
+			if (int3 == CLANBIT[2190] && int7 == CLANBIT[2191] && int4 == CLANBIT[2196] && int5 == CLANBIT[2197] && int6 == CLANBIT[2198]) {
+				int1 = 4;
+			}
+			break;
+		case 104:
+			if (int3 == CLANBIT[2230] && int7 == CLANBIT[2231] && int4 == CLANBIT[2236] && int5 == CLANBIT[2237] && int6 == CLANBIT[2238]) {
+				int1 = 4;
+			}
+			break;
+		case 105:
+			if (int3 == CLANBIT[2200] && int7 == CLANBIT[2201] && int4 == CLANBIT[2206] && int5 == CLANBIT[2207] && int6 == CLANBIT[2208]) {
+				int1 = 4;
+			}
+			break;
+		case 106:
+			if (int3 == CLANBIT[2260] && int7 == CLANBIT[2261] && int4 == CLANBIT[2266] && int5 == CLANBIT[2267] && int6 == CLANBIT[2268]) {
+				int1 = 4;
+			}
+			break;
+		case 107:
+			if (int3 == CLANBIT[2270] && int7 == CLANBIT[2271] && int4 == CLANBIT[2276] && int5 == CLANBIT[2277] && int6 == CLANBIT[2278]) {
+				int1 = 4;
+			}
+			break;
+		case 108:
+			if (int3 == CLANBIT[2280] && int7 == CLANBIT[2281] && int4 == CLANBIT[2286] && int5 == CLANBIT[2287] && int6 == CLANBIT[2288]) {
+				int1 = 4;
+			}
+			break;
+		case 109:
+			if (int3 == CLANBIT[2250] && int7 == CLANBIT[2251] && int4 == CLANBIT[2256] && int5 == CLANBIT[2257] && int6 == CLANBIT[2258]) {
+				int1 = 4;
+			}
+			break;
+		case 110:
+			if (int3 == CLANBIT[2290] && int7 == CLANBIT[2291] && int4 == CLANBIT[2296] && int5 == CLANBIT[2297] && int6 == CLANBIT[2298]) {
+				int1 = 4;
+			}
+			break;
+		case 111:
+			if (int3 == CLANBIT[2300] && int7 == CLANBIT[2301] && int4 == CLANBIT[2306] && int5 == CLANBIT[2307] && int6 == CLANBIT[2308]) {
+				int1 = 4;
+			}
+			break;
+		case 112:
+			if (int3 == CLANBIT[2310] && int7 == CLANBIT[2311] && int4 == CLANBIT[2316] && int5 == CLANBIT[2317] && int6 == CLANBIT[2318]) {
+				int1 = 4;
+			}
+			break;
+		case 113:
+			if (int3 == CLANBIT[2320] && int7 == CLANBIT[2321] && int4 == CLANBIT[2326] && int5 == CLANBIT[2327] && int6 == CLANBIT[2328]) {
+				int1 = 4;
+			}
+			break;
+		case 21:
+			if (int3 == CLANBIT[2330] && int7 == CLANBIT[2331] && int4 == CLANBIT[2336] && int5 == CLANBIT[2337] && int6 == CLANBIT[2338]) {
+				int1 = 4;
+			}
+			break;
+		case 22:
+			if (int3 == CLANBIT[2340] && int7 == CLANBIT[2341] && int4 == CLANBIT[2346] && int5 == CLANBIT[2347] && int6 == CLANBIT[2348]) {
+				int1 = 4;
+			}
+			break;
+		case 23:
+			if (int3 == CLANBIT[2350] && int7 == CLANBIT[2351] && int4 == CLANBIT[2356] && int5 == CLANBIT[2357] && int6 == CLANBIT[2358]) {
+				int1 = 4;
+			}
+			break;
+		case 24:
+			if (int3 == CLANBIT[2360] && int7 == CLANBIT[2361] && int4 == CLANBIT[2366] && int5 == CLANBIT[2367] && int6 == CLANBIT[2368]) {
+				int1 = 4;
+			}
+			break;
+		case 25:
+			if (int3 == CLANBIT[2370] && int7 == CLANBIT[2371] && int4 == CLANBIT[2376] && int5 == CLANBIT[2377] && int6 == CLANBIT[2378]) {
+				int1 = 4;
+			}
+			break;
+		case 26:
+			if (int3 == CLANBIT[2380] && int7 == CLANBIT[2381] && int4 == CLANBIT[2386] && int5 == CLANBIT[2387] && int6 == CLANBIT[2388]) {
+				int1 = 4;
+			}
+			break;
+		case 27:
+			if (int3 == CLANBIT[2390] && int7 == CLANBIT[2391] && int4 == CLANBIT[2396] && int5 == CLANBIT[2397] && int6 == CLANBIT[2398]) {
+				int1 = 4;
+			}
+			break;
+		case 28:
+			if (int3 == CLANBIT[2400] && int7 == CLANBIT[2401] && int4 == CLANBIT[2406] && int5 == CLANBIT[2407] && int6 == CLANBIT[2408]) {
+				int1 = 4;
+			}
+			break;
+		case 31:
+			if (int3 == CLANBIT[2460] && int7 == CLANBIT[2461] && int4 == CLANBIT[2466] && int5 == CLANBIT[2467] && int6 == CLANBIT[2468]) {
+				int1 = 4;
+			}
+			break;
+		case 32:
+			if (int3 == CLANBIT[2470] && int7 == CLANBIT[2471] && int4 == CLANBIT[2476] && int5 == CLANBIT[2477] && int6 == CLANBIT[2478]) {
+				int1 = 4;
+			}
+			break;
+		case 33:
+			if (int3 == CLANBIT[2480] && int7 == CLANBIT[2481] && int4 == CLANBIT[2486] && int5 == CLANBIT[2487] && int6 == CLANBIT[2488]) {
+				int1 = 4;
+			}
+			break;
+		case 34:
+			if (int3 == CLANBIT[2490] && int7 == CLANBIT[2491] && int4 == CLANBIT[2496] && int5 == CLANBIT[2497] && int6 == CLANBIT[2498]) {
+				int1 = 4;
+			}
+			break;
+		case 35:
+			if (int3 == CLANBIT[2500] && int7 == CLANBIT[2501] && int4 == CLANBIT[2506] && int5 == CLANBIT[2507] && int6 == CLANBIT[2508]) {
+				int1 = 4;
+			}
+			break;
+		case 41:
+			if (int3 == CLANBIT[2410] && int7 == CLANBIT[2411] && int4 == CLANBIT[2416] && int5 == CLANBIT[2417] && int6 == CLANBIT[2418]) {
+				int1 = 4;
+			}
+			break;
+		case 42:
+			if (int3 == CLANBIT[2420] && int7 == CLANBIT[2421] && int4 == CLANBIT[2426] && int5 == CLANBIT[2427] && int6 == CLANBIT[2428]) {
+				int1 = 4;
+			}
+			break;
+		case 43:
+			if (int3 == CLANBIT[2430] && int7 == CLANBIT[2431] && int4 == CLANBIT[2436] && int5 == CLANBIT[2437] && int6 == CLANBIT[2438]) {
+				int1 = 4;
+			}
+			break;
+		case 44:
+			if (int3 == CLANBIT[2440] && int7 == CLANBIT[2441] && int4 == CLANBIT[2446] && int5 == CLANBIT[2447] && int6 == CLANBIT[2448]) {
+				int1 = 4;
+			}
+			break;
+		case 45:
+			if (int3 == CLANBIT[2450] && int7 == CLANBIT[2451] && int4 == CLANBIT[2456] && int5 == CLANBIT[2457] && int6 == CLANBIT[2458]) {
+				int1 = 4;
+			}
+			break;
+		case 51:
+			if (int3 == CLANBIT[2510] && int7 == CLANBIT[2511] && int4 == CLANBIT[2516] && int5 == CLANBIT[2517] && int6 == CLANBIT[2518]) {
+				int1 = 4;
+			}
+			break;
+	}
+	return int1;
+}

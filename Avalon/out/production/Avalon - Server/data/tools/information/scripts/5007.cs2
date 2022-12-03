@@ -1,0 +1,27 @@
+void script_5007() {
+	widget(1092, 477).setText(str(0));
+	widget(1092, 484).setText(str(0));
+	widget(1092, 491).setText(str(0));
+	widget(1092, 498).setText(str(0));
+	widget(1092, 505).setText(str(0));
+	widget(1092, 513).setText(str(0));
+	widget(1092, 610).setText(str(0));
+	widget(1092, 618).setText(str(0));
+	widget(1092, 626).setText(str(0));
+	widget(1092, 634).setText(str(0));
+	widget(1092, 644).setText(str(0));
+	widget(1092, 651).setText(str(0));
+	widget(1092, 660).setText(str(0));
+	widget(1092, 668).setText(str(0));
+	widget(1092, 676).setText(str(0));
+	widget(1092, 684).setText(str(0));
+	widget(1092, 694).setText(str(0));
+	widget(1092, 701).setText(str(0));
+	widget(1092, 295).setText("");
+	widget(1092, 239).setText("");
+	widget(1092, 903).setIsHidden(false);
+	widget(1092, 915).setIsHidden(false);
+	widget(1092, 879).setIsHidden(false);
+	widget(1092, 891).setIsHidden(false);
+	return;
+}

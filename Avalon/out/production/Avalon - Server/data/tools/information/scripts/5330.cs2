@@ -1,0 +1,18 @@
+void script_5330() {
+	STRING[139] = "";
+	STRING[141] = "";
+	STRING[191] = "";
+	STRING[192] = "";
+	STRING[193] = "";
+	STRING[289] = "";
+	STRING[290] = "";
+	STRING[291] = "";
+	STRING[297] = "";
+	STRING[298] = "";
+	STRING[299] = "";
+	STRING[300] = "";
+	STRING[301] = "";
+	STRING[302] = "";
+	STRING[303] = "";
+	return;
+}

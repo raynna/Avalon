@@ -1,0 +1,5 @@
+void script_1786(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, Widget widget7, Widget widget8, Widget widget9, Widget widget10, Widget widget11, Widget widget12, Widget widget13, Widget widget14, Widget widget15, Widget widget16) {
+	widget0.setScriptCallOnConfigChange(1787, widget0, widget1, widget2, widget3, widget4, widget5, widget6, widget7, widget8, widget9, widget10, widget11, widget12, widget13, widget14, widget15, widget16, 1305, "IIIIIIIIIIIIIIIIIY");
+	widget0.setScriptCallOnGlobalConfigChange(1787, widget0, widget1, widget2, widget3, widget4, widget5, widget6, widget7, widget8, widget9, widget10, widget11, widget12, widget13, widget14, widget15, widget16, 270, 260, 261, 262, 263, 264, 271, "IIIIIIIIIIIIIIIIIY");
+	return;
+}

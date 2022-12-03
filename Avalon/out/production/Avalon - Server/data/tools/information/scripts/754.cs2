@@ -1,0 +1,8 @@
+void script_754(int arg0, int arg1) {
+	if (arg1 == 0) {
+		widget(662, 43).setText(str(arg0) + ".00");
+	} else {
+		widget(662, 43).setText(str(arg0) + ".30");
+	}
+	return;
+}

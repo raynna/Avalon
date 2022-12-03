@@ -1,0 +1,15 @@
+void script_1516(Widget widget0, int arg1, int arg2) {
+	ACTIVE.createChild(widget0, 6, widget0.nextChild());
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setSelfFull();
+	ACTIVE.set3DRotation(0, arg2, 0, 0, 0, arg1);
+	if (VARC[779] != -1) {
+		ACTIVE.setAnimation(getRenderEmoteMaxSomethingMethod4600((Stance)VARC[779]));
+	} else {
+		ACTIVE.setAnimation(getRenderEmoteMaxSomethingMethod4600(1426));
+	}
+	ACTIVE.setScriptCallOnGlobalConfigChange(1517, CTX_WIDGET, CTX_WIDGET_CHILD, 779, "IiY");
+	ACTIVE.setScriptCallOnMousePressed(347, CTX_WIDGET, CTX_WIDGET_CHILD, MOUSE_X, "Iii");
+	return;
+}

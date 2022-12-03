@@ -1,0 +1,118 @@
+void script_1226(int arg0) {
+	widget(308, 15).setIsHidden(true);
+	widget(308, 14).setIsHidden(true);
+	widget(308, 35).setSprite(1134);
+	widget(308, 13).setIsHidden(true);
+	widget(308, 12).setIsHidden(true);
+	widget(308, 34).setSprite(1134);
+	widget(308, 11).setIsHidden(true);
+	widget(308, 10).setIsHidden(true);
+	widget(308, 33).setSprite(1134);
+	widget(308, 9).setIsHidden(true);
+	widget(308, 8).setIsHidden(true);
+	widget(308, 39).setSprite(1134);
+	widget(308, 7).setIsHidden(true);
+	widget(308, 6).setIsHidden(true);
+	widget(308, 37).setSprite(1134);
+	widget(308, 5).setIsHidden(true);
+	widget(308, 4).setIsHidden(true);
+	widget(308, 36).setSprite(1134);
+	widget(308, 3).setIsHidden(true);
+	widget(308, 2).setIsHidden(true);
+	widget(308, 38).setSprite(1134);
+	if (IsFemale()) {
+		switch (arg0) {
+			case 0:
+				widget(308, 15).setIsHidden(false);
+				widget(308, 35).setSprite(1135);
+				break;
+			case 1:
+				widget(308, 13).setIsHidden(false);
+				widget(308, 34).setSprite(1135);
+				break;
+			case 2:
+				widget(308, 11).setIsHidden(false);
+				widget(308, 33).setSprite(1135);
+				break;
+			case 3:
+				widget(308, 9).setIsHidden(false);
+				widget(308, 39).setSprite(1135);
+				break;
+			case 4:
+				widget(308, 7).setIsHidden(false);
+				widget(308, 37).setSprite(1135);
+				break;
+			case 5:
+				widget(308, 5).setIsHidden(false);
+				widget(308, 36).setSprite(1135);
+				break;
+			case 6:
+				widget(308, 3).setIsHidden(false);
+				widget(308, 38).setSprite(1135);
+				break;
+		}
+	} else {
+		switch (arg0) {
+			case 0:
+				widget(308, 14).setIsHidden(false);
+				widget(308, 35).setSprite(1135);
+				break;
+			case 1:
+				widget(308, 12).setIsHidden(false);
+				widget(308, 34).setSprite(1135);
+				break;
+			case 2:
+				widget(308, 10).setIsHidden(false);
+				widget(308, 33).setSprite(1135);
+				break;
+			case 3:
+				widget(308, 8).setIsHidden(false);
+				widget(308, 39).setSprite(1135);
+				break;
+			case 4:
+				widget(308, 6).setIsHidden(false);
+				widget(308, 37).setSprite(1135);
+				break;
+			case 5:
+				widget(308, 4).setIsHidden(false);
+				widget(308, 36).setSprite(1135);
+				break;
+			case 6:
+				widget(308, 2).setIsHidden(false);
+				widget(308, 38).setSprite(1135);
+				break;
+		}
+	}
+	if (IsFemale()) {
+		widget(308, 20).setIsHidden(false);
+		widget(308, 22).setIsHidden(false);
+		widget(308, 24).setIsHidden(false);
+		widget(308, 26).setIsHidden(false);
+		widget(308, 28).setIsHidden(false);
+		widget(308, 30).setIsHidden(false);
+		widget(308, 32).setIsHidden(false);
+		widget(308, 19).setIsHidden(true);
+		widget(308, 21).setIsHidden(true);
+		widget(308, 23).setIsHidden(true);
+		widget(308, 25).setIsHidden(true);
+		widget(308, 27).setIsHidden(true);
+		widget(308, 29).setIsHidden(true);
+		widget(308, 31).setIsHidden(true);
+	} else {
+		widget(308, 20).setIsHidden(true);
+		widget(308, 22).setIsHidden(true);
+		widget(308, 24).setIsHidden(true);
+		widget(308, 26).setIsHidden(true);
+		widget(308, 28).setIsHidden(true);
+		widget(308, 30).setIsHidden(true);
+		widget(308, 32).setIsHidden(true);
+		widget(308, 19).setIsHidden(false);
+		widget(308, 21).setIsHidden(false);
+		widget(308, 23).setIsHidden(false);
+		widget(308, 25).setIsHidden(false);
+		widget(308, 27).setIsHidden(false);
+		widget(308, 29).setIsHidden(false);
+		widget(308, 31).setIsHidden(false);
+	}
+	return;
+}

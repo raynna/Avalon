@@ -1,0 +1,37 @@
+void script_1673() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	widget(84, 20).clearChildren();
+	widget(84, 22).clearChildren();
+	widget(84, 21).clearChildren();
+	int0 = 0;
+	int1 = 0;
+	int2 = 264;
+	int3 = 0;
+	widget(84, 20).setPosition(widget(84, 20).getX(), int0, 0, 0);
+	int1, int3 = script_1674(VARPBIT[6768]);
+	widget(84, 22).setScrollMax(0, int1);
+	widget(84, 22).setScrollPos(0, int3);
+	int1 = int1 + 4;
+	if (int1 > int2) {
+		widget(84, 21).setSize(16, 4, 0, 1);
+		widget(84, 22).setSize(20, 4, 1, 1);
+		if (!ACTIVE.setChild(widget(84, 21), 0)) {
+			script_31(widget(84, 21), widget(84, 22), 792, 789, 790, 791, 773, 788);
+		}
+		script_72(widget(84, 21), widget(84, 22), widget(84, 22).getScrollY());
+	} else {
+		widget(84, 21).setSize(0, 4, 0, 1);
+		widget(84, 22).setSize(4, 4, 1, 1);
+	}
+	if (int1 < 111) {
+		widget(84, 0).setSize(350, 111 + 68, 0, 0);
+	} else if (int1 < int2) {
+		widget(84, 0).setSize(350, int1 + 70, 0, 0);
+	} else {
+		widget(84, 0).setSize(350, int2 + 70, 0, 0);
+	}
+	return;
+}

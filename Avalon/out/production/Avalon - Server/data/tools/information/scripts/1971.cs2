@@ -1,0 +1,29 @@
+void script_1971(int arg0, Widget widget1) {
+	switch (arg0) {
+		case 0:
+			if (VARC[618] < 0 || VARC[618] > 25) {
+				VARC[618] = 0;
+			}
+			widget1.setText(datamap('i', 's', (DataMap)2121, VARC[618]));
+			break;
+		case 1:
+			if (VARC[619] < 0 || VARC[619] > 25) {
+				VARC[619] = 0;
+			}
+			widget1.setText(datamap('i', 's', (DataMap)2121, VARC[619]));
+			break;
+		case 2:
+			if (VARC[620] < 0 || VARC[620] > 25) {
+				VARC[620] = 0;
+			}
+			widget1.setText(datamap('i', 's', (DataMap)2121, VARC[620]));
+			break;
+		case 3:
+			if (VARC[621] < 0 || VARC[621] > 25) {
+				VARC[621] = 0;
+			}
+			widget1.setText(datamap('i', 's', (DataMap)2121, VARC[621]));
+			break;
+	}
+	return;
+}

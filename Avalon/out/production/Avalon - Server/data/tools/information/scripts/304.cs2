@@ -1,0 +1,23 @@
+void script_304(Location location0) {
+	Map map1;
+	if (location0 == null) {
+		return;
+	}
+	playSoundEffect(2266, 1, 0);
+	map1 = getDungeonmap(location0);
+	map1 = script_2785(map1);
+	if (map1 == null) {
+		return;
+	}
+	script_2046(widget(755, 29));
+	STRING[31] = "";
+	script_308(widget(755, 25));
+	widget(755, 20).setText(getDungeonMapName(map1));
+	script_41(widget(755, 57));
+	cs2method5227(map1, location0);
+	setPositionInMap(location0);
+	VARC[172] = getMapDefaultZoom(map1);
+	script_1372();
+	script_307();
+	return;
+}

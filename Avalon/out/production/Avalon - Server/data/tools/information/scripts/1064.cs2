@@ -1,0 +1,29 @@
+void script_1064(int arg0) {
+	Widget widget1;
+	Widget widget2;
+	int int3;
+	int int4;
+	widget1 = datamap('i', 'I', (DataMap)1550, arg0);
+	widget2 = widget1.getLayer();
+	if (widget2.getScrollMaxH() == 0) {
+		widget2.setScrollMax(widget2.getWidth(), 0);
+	}
+	int3 = widget1.getWidth();
+	int4 = widget1.getX();
+	while (arg0 > 0) {
+		arg0 = arg0 - 1;
+		widget1 = datamap('i', 'I', (DataMap)1550, arg0);
+		if (!widget1.isHidden() && int3 + widget1.getWidth() <= widget2.getWidth()) {
+			int3 = int3 + widget1.getWidth();
+			int4 = widget1.getX();
+		} else {
+			arg0 = -1;
+		}
+	}
+	if (widget2.getScrollX() == int4) {
+		widget2.setScriptCallOnGameloop(-1, "");
+	} else {
+		widget2.setScriptCallOnGameloop(1065, widget2, int4, "Ii");
+	}
+	return;
+}

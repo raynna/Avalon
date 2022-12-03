@@ -1,0 +1,122 @@
+void script_1118(Widget widget0) {
+	switch (widget0) {
+		case widget(192, 7):
+			if (VARPBIT[6459] == 0) {
+				widget0.setSprite(1703);
+			} else if (VARC[988] == 1) {
+				widget0.setSprite(1702);
+			} else {
+				widget0.setSprite(1701);
+			}
+			break;
+		case widget(192, 9):
+			if (VARPBIT[6462] == 0) {
+				widget0.setSprite(1703);
+			} else if (VARC[989] == 1) {
+				widget0.setSprite(1702);
+			} else {
+				widget0.setSprite(1701);
+			}
+			break;
+		case widget(192, 11):
+			if (VARPBIT[6461] == 0) {
+				widget0.setSprite(1703);
+			} else if (VARC[990] == 1) {
+				widget0.setSprite(1702);
+			} else {
+				widget0.setSprite(1701);
+			}
+			break;
+		case widget(192, 13):
+			if (VARPBIT[6460] == 0) {
+				widget0.setSprite(1703);
+			} else if (VARC[991] == 1) {
+				widget0.setSprite(1702);
+			} else {
+				widget0.setSprite(1701);
+			}
+			break;
+		case widget(430, 5):
+			if (VARPBIT[6463] == 0) {
+				widget0.setSprite(1703);
+			} else if (VARC[988] == 1) {
+				widget0.setSprite(1702);
+			} else {
+				widget0.setSprite(1701);
+			}
+			break;
+		case widget(430, 9):
+			if (VARPBIT[6464] == 0) {
+				widget0.setSprite(1703);
+			} else if (VARC[990] == 1) {
+				widget0.setSprite(1702);
+			} else {
+				widget0.setSprite(1701);
+			}
+			break;
+		case widget(430, 7):
+			if (VARPBIT[6465] == 0) {
+				widget0.setSprite(1703);
+			} else if (VARC[989] == 1) {
+				widget0.setSprite(1702);
+			} else {
+				widget0.setSprite(1701);
+			}
+			break;
+		case widget(193, 5):
+			if (VARPBIT[6466] == 0) {
+				widget0.setSprite(1703);
+			} else if (VARC[988] == 1) {
+				widget0.setSprite(1702);
+			} else {
+				widget0.setSprite(1701);
+			}
+			break;
+		case widget(193, 7):
+			if (VARPBIT[6467] == 0) {
+				widget0.setSprite(1703);
+			} else if (VARC[989] == 1) {
+				widget0.setSprite(1702);
+			} else {
+				widget0.setSprite(1701);
+			}
+			break;
+		case widget(950, 7):
+			if (VARPBIT[7348] == 0) {
+				widget0.setSprite(1703);
+			} else if (VARC[988] == 1) {
+				widget0.setSprite(1702);
+			} else {
+				widget0.setSprite(1701);
+			}
+			break;
+		case widget(950, 9):
+			if (VARPBIT[7351] == 0) {
+				widget0.setSprite(1703);
+			} else if (VARC[989] == 1) {
+				widget0.setSprite(1702);
+			} else {
+				widget0.setSprite(1701);
+			}
+			break;
+		case widget(950, 11):
+			if (VARPBIT[7350] == 0) {
+				widget0.setSprite(1703);
+			} else if (VARC[990] == 1) {
+				widget0.setSprite(1702);
+			} else {
+				widget0.setSprite(1701);
+			}
+			break;
+		case widget(950, 13):
+			if (VARPBIT[7349] == 0) {
+				widget0.setSprite(1703);
+			} else if (VARC[991] == 1) {
+				widget0.setSprite(1702);
+			} else {
+				widget0.setSprite(1701);
+			}
+			break;
+	}
+	return;
+}

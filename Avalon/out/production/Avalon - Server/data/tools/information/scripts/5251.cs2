@@ -1,0 +1,5 @@
+void script_5251() {
+	widget(1127, 18).setText("You have received a piece of Hybrid Armour!");
+	widget(1127, 17).setText("Select which reward you would prefer");
+	return;
+}

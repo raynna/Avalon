@@ -1,0 +1,15 @@
+int script_1980() {
+	int int0;
+	int0 = 0;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	return int0;
+}

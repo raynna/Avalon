@@ -1,0 +1,8 @@
+void script_1632() {
+	int int0;
+	widget(1109, 22).setIsHidden(true);
+	widget(1109, 20).setIsHidden(true);
+	int0 = widget(1109, 18).getY();
+	widget(1109, 18).setPosition(148, int0, 0, 0);
+	return;
+}

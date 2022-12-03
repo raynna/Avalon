@@ -1,0 +1,88 @@
+void script_1163(Widget widget0, int arg1, Widget widget2, string string3, int arg4, int arg5) {
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	Widget widget13;
+	int int14;
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int10 = 0;
+	int11 = 0;
+	int12 = 0;
+	widget13 = null;
+	int14 = 0;
+	if (arg1 == -1 && ACTIVE.setChild(widget0) || ACTIVE.setChild(widget0, arg1)) {
+		if (script_4761(arg4) == 0) {
+			return;
+		}
+		if (VARC[2] != 1) {
+			int5 = script_1743() + 5;
+			int14 = script_1744();
+			int6 = int14 + ACTIVE.getHeight() + 5;
+			widget13 = widget2.getLayer();
+			if (widget13 != null && arg5 >= widget13.getWidth()) {
+				arg5 = widget13.getWidth();
+			}
+			int11 = 4 + getMaxLineWidth(string3, arg5 - 4, 495);
+			int12 = 4 + 13 * getLineCount(string3, arg5 - 4, 495) + 3;
+			if (widget13 != null) {
+				int7 = int5 - widget13.getScrollX();
+				int8 = int6 - widget13.getScrollY();
+				if (int7 < 0) {
+					int5 = widget13.getScrollX();
+					int7 = 0;
+				}
+				if (int8 < 0) {
+					int6 = widget13.getScrollY();
+					int8 = 0;
+				}
+				if (int7 > 0) {
+					int9 = int7 - widget13.getWidth() + int11;
+					if (int9 > 0) {
+						int5 = int5 - int9;
+					}
+				}
+				if (int8 > 0) {
+					int10 = int8 - widget13.getHeight() + int12;
+					if (int10 > 0) {
+						if (int14 > int12 && ACTIVE.getHeight() < int12) {
+							int6 = int14 - int12;
+						} else {
+							int6 = int6 - int10 - ACTIVE.getHeight() - 10;
+						}
+					}
+				}
+			}
+			int5 = max(int5, 0);
+			int6 = max(int6, 0);
+			widget2.setSize(int11, int12, 0, 0);
+			widget2.setPosition(int5, int6, 0, 0);
+			widget2.clearChildren();
+			ACTIVE.createChild(widget2, 3, 0);
+			ACTIVE.setSize(widget2.getWidth(), widget2.getHeight(), 0, 0);
+			ACTIVE.setFilled(true);
+			ACTIVE.setRGB(0xFFFFA0);
+			ACTIVE.createChild(widget2, 3, 1);
+			ACTIVE.setSize(widget2.getWidth(), widget2.getHeight(), 0, 0);
+			ACTIVE.setFilled(false);
+			ACTIVE.setRGB(0x000000);
+			ACTIVE.createChild(widget2, 4, 2);
+			ACTIVE.setSize(arg5 - 4, widget2.getHeight(), 0, 0);
+			ACTIVE.setPosition(2, 0, 0, 0);
+			ACTIVE.setText(string3);
+			ACTIVE.setTextAlignment(0, 1, 0);
+			ACTIVE.setFont(495);
+			ACTIVE.setRGB(0x000000);
+			VARC[2] = 1;
+		}
+	}
+	return;
+}

@@ -1,0 +1,49 @@
+void script_1612(Widget widget0, int arg1) {
+	Item item2;
+	string str0;
+	item2 = getItemIdInSlot(94, arg1);
+	if (item2 == null) {
+		widget0.setItem(null, 0);
+		widget0.setSize(32, 32, 0, 0);
+		widget0.setPosition(0, 0, 1, 1);
+		widget0.setSprite(datamap('i', 'd', (DataMap)796, arg1));
+		widget0.setOutlineThickness(0);
+		widget0.setShadowColor(0x000000);
+		widget0.setScriptCallOnClickContextMenu(-1, "");
+		widget0.setNoOptions();
+		return;
+	}
+	widget0.setSize(36, 32, 0, 0);
+	widget0.setPosition(2, 0, 0, 1);
+	widget0.setItem(item2, getItemAmtInSlot(94, arg1));
+	widget0.setOutlineThickness(1);
+	widget0.setShadowColor(0x302020);
+	widget0.setScriptCallOnClickContextMenu(1620, CTX_WIDGET, -1, 100, 0, 8, "Iiiii");
+	widget0.setNoOptions();
+	if (itemAttribute(item2, 1430) == 0) {
+		widget0.setContextMenuOption(1, "Remove");
+	}
+	str0 = itemAttribute(item2, 528);
+	if (length(str0) > 0) {
+		widget0.setContextMenuOption(2, str0);
+	}
+	str0 = itemAttribute(item2, 529);
+	if (length(str0) > 0) {
+		widget0.setContextMenuOption(3, str0);
+	}
+	str0 = itemAttribute(item2, 530);
+	if (length(str0) > 0) {
+		widget0.setContextMenuOption(4, str0);
+	}
+	str0 = itemAttribute(item2, 531);
+	if (length(str0) > 0) {
+		widget0.setContextMenuOption(5, str0);
+	}
+	str0 = itemAttribute(item2, 1211);
+	if (length(str0) > 0) {
+		widget0.setContextMenuOption(6, str0);
+	}
+	widget0.setContextMenuOption(10, "Examine");
+	widget0.setOptionBase("<col=ff9040>" + getItemName(item2));
+	return;
+}

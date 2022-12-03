@@ -1,0 +1,11 @@
+void script_2994(Widget widget0, int arg1, int arg2, int arg3, int arg4, int arg5, Sprite sprite6, boolean boolean7, boolean boolean8, boolean boolean9, int arg10) {
+	ACTIVE.createChild(widget0, 5, arg1);
+	ACTIVE.setSize(arg2, arg3, 0, 0);
+	ACTIVE.setPosition(arg4, arg5, 0, 0);
+	ACTIVE.setSprite(sprite6);
+	ACTIVE.setHFlip(boolean7);
+	ACTIVE.setVFlip(boolean8);
+	ACTIVE.setSpriteTiling(boolean9);
+	ACTIVE.setTrans(arg10);
+	return;
+}

@@ -1,0 +1,89 @@
+void script_1382(int arg0, char char1, Widget widget2, Location location3) {
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	Location location9;
+	int int10;
+	int int11;
+	string str0;
+	string str1;
+	switch (arg0) {
+		case 84:
+			if (location3 != null) {
+				cs2method5221(location3);
+			}
+			STRING[31] = "";
+			script_308(widget2);
+			return;
+		case 96:
+			script_1603(-1, 0);
+			return;
+		case 97:
+			script_1603(1, 0);
+			return;
+		case 98:
+			script_1603(0, 1);
+			return;
+		case 99:
+			script_1603(0, -1);
+			return;
+	}
+	str0 = removeTags(script_74(STRING[31], 4, arg0, char1));
+	if (indexOf(str0, "  ", 0) != -1) {
+		return;
+	}
+	if (compare(str0, " ") == 0) {
+		return;
+	}
+	if (getLineCount(str0, widget2.getWidth(), 494) > 1) {
+		return;
+	}
+	STRING[31] = lower(str0);
+	int4 = length(STRING[31]);
+	if (int4 <= 0) {
+		script_308(widget2);
+		return;
+	}
+	int5 = -1;
+	int6 = -1;
+	int7 = -1;
+	int8 = 0;
+	str1 = "";
+	location9 = null;
+	int10 = 2147483647;
+	int11 = 2147483647;
+	int5, int6 = cs2method5212();
+	while (int5 != -1) {
+		str0 = removeTags(script_2332(getWorldmapLabelName(int5), "<br>", " "));
+		int7 = indexOf(lower(str0), STRING[31], 0);
+		if (int7 != -1 && int7 <= int10) {
+			int8 = length(str0);
+			if (int8 < int11) {
+				str1, location9 = str0, int6;
+				int10, int11 = int7, int8;
+			}
+		}
+		int5, int6 = cs2method5213();
+	}
+	if (location9 == null) {
+		widget2.setScriptCallOnKeyPress(1382, KEY_TYPED, (char)KEY_PRESSED, widget2, null, "izIc");
+		if (getMaxLineWidth(STRING[31], widget2.getWidth(), 494) > widget2.getWidth()) {
+			widget2.setTextAlignment(2, 1, 0);
+		} else {
+			widget2.setTextAlignment(0, 1, 0);
+		}
+		widget2.setText("<col=ff0000>" + STRING[31] + "</col>");
+		return;
+	}
+	str0 = "";
+	if (int10 > 0) {
+		str0 = substr(str1, 0, int10);
+	}
+	str0 = concat(str0, "<col=ffffff>" + substr(str1, int10, int10 + int4) + "</col>");
+	str0 = concat(str0, substr(str1, int10 + int4, length(str1)));
+	widget2.setText(str0);
+	widget2.setScriptCallOnKeyPress(1382, KEY_TYPED, (char)KEY_PRESSED, widget2, location9, "izIc");
+	return;
+}

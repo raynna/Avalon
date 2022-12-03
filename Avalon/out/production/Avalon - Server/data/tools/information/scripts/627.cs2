@@ -1,0 +1,3 @@
+Widget script_627(int arg0) {
+	return datamap('i', 'I', (DataMap)1076, arg0);
+}

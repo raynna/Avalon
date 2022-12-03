@@ -1,0 +1,10 @@
+void script_1034(int arg0, int arg1, int arg2, int arg3, int arg4, string string5, Color color6) {
+	ACTIVE.createChild(widget(157, 25), 4, arg0);
+	ACTIVE.setPosition(arg1, arg2, 0, 0);
+	ACTIVE.setSize(arg3, arg4, 0, 0);
+	ACTIVE.setRGB(color6);
+	ACTIVE.setTextAntiMacro(true);
+	ACTIVE.setFont(495);
+	ACTIVE.setText(string5);
+	return;
+}

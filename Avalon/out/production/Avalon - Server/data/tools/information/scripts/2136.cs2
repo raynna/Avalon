@@ -1,0 +1,95 @@
+void script_2136(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	widget0.clearChildren();
+	int1 = 118 + VARPBIT[5855] + VARPBIT[5855];
+	ACTIVE.createChild(widget0, 4, 0);
+	ACTIVE.setSize(200, 32, 0, 0);
+	ACTIVE.setPosition(int1, 36, 0, 0);
+	ACTIVE.setFont(497);
+	ACTIVE.setTextAlignment(0, 1, 0);
+	ACTIVE.setRGB(0x342E10);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setText(datamap('i', 's', (DataMap)2224, VARPBIT[5856]));
+	ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+	ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 3419664, "Iii");
+	ACTIVE.setContextMenuOption(1, "Select");
+	ACTIVE.createChild(widget0, 4, 1);
+	ACTIVE.setSize(200, 32, 0, 0);
+	ACTIVE.setPosition(int1, 70, 0, 0);
+	ACTIVE.setFont(497);
+	ACTIVE.setTextAlignment(0, 1, 0);
+	ACTIVE.setRGB(0x342E10);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setText(datamap('i', 's', (DataMap)2224, VARPBIT[5858]));
+	ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+	ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 3419664, "Iii");
+	ACTIVE.setContextMenuOption(1, "Select");
+	ACTIVE.createChild(widget0, 4, 2);
+	ACTIVE.setSize(200, 32, 0, 0);
+	ACTIVE.setPosition(int1, 104, 0, 0);
+	ACTIVE.setFont(497);
+	ACTIVE.setTextAlignment(0, 1, 0);
+	ACTIVE.setRGB(0x342E10);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setText(datamap('i', 's', (DataMap)2224, VARPBIT[5860]));
+	ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+	ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 3419664, "Iii");
+	ACTIVE.setContextMenuOption(1, "Select");
+	_ACTIVE.createChild(widget0, 6, 3);
+	_ACTIVE.setSize(226, 144, 0, 0);
+	_ACTIVE.setPosition(0, 147, 1, 0);
+	switch (VARPBIT[5857]) {
+		case 0:
+			_ACTIVE.setModel(datamap('i', 'm', (DataMap)2225, VARPBIT[5862]));
+			break;
+		case 1:
+			_ACTIVE.setModel(datamap('i', 'm', (DataMap)2226, VARPBIT[5862]));
+			break;
+		case 2:
+			_ACTIVE.setModel(datamap('i', 'm', (DataMap)2227, VARPBIT[5862]));
+			break;
+		default:
+			_ACTIVE.setModel(datamap('i', 'm', (DataMap)2228, VARPBIT[5862]));
+			break;
+	}
+	int2 = (VARPBIT[5855] - 5) * 4;
+	int3 = (VARPBIT[5859] - 4) * 4;
+	_ACTIVE.set3DRotation(int2, int3, pow(VARPBIT[5861], 2), pow(VARPBIT[5861], 2), pow(VARPBIT[5861], 2), 400 + VARPBIT[5863] + VARPBIT[5863]);
+	int4 = VARPBIT[5855];
+	int5 = VARPBIT[5859] / 2;
+	int6 = 0;
+	switch (VARPBIT[5863]) {
+		case 0:
+			int4, int5, int6 = int5, int6, int4;
+			break;
+		case 1:
+			int4, int5, int6 = int6, int4, int5;
+			break;
+		case 2:
+			int4, int5, int6 = int4, int6, int5;
+			break;
+	}
+	_ACTIVE.setScriptCallOnGameloop(2137, int4, int5, int6, int2, int3, CTX_WIDGET, CTX_WIDGET_CHILD, "iiiiiIi");
+	ACTIVE.createChild(widget0, 3, 4);
+	ACTIVE.setSize(226, 144, 0, 0);
+	ACTIVE.setPosition(0, 147, 1, 0);
+	ACTIVE.setRGB(script_693(VARPBIT[5861] + 95, VARPBIT[5859] + 85, VARPBIT[5855] + 29));
+	ACTIVE.setFilled(true);
+	ACTIVE.setTrans(0);
+	ACTIVE.setScriptCallOnGameloop(2138, CTX_WIDGET, CTX_WIDGET_CHILD, 0, "Iii");
+	ACTIVE.createChild(widget0, 5, 5);
+	ACTIVE.setSize(19, 16, 0, 0);
+	ACTIVE.setPosition(349, VARPBIT[5859] + 148, 0, 0);
+	ACTIVE.setHFlip(true);
+	ACTIVE.setSprite(1538);
+	ACTIVE.setScriptCallOnMouseEntered(2140, CTX_WIDGET, CTX_WIDGET_CHILD, 125, "Iii");
+	ACTIVE.setScriptCallOnMouseExit(2140, CTX_WIDGET, CTX_WIDGET_CHILD, 0, "Iii");
+	ACTIVE.setContextMenuOption(1, "Change spin");
+	ACTIVE.setScriptCallOnClickContextMenu(2139, CTX_MENU_OPTION, widget0, _ACTIVE.getChildId(), int2, int3, "iIiii");
+	return;
+}

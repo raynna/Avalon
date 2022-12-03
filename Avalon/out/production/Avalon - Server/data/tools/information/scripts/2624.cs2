@@ -1,0 +1,12 @@
+void script_2624() {
+	int int0;
+	Widget widget1;
+	int0 = 1;
+	widget1 = null;
+	while (datamap('i', 'I', (DataMap)2450, int0) != widget(850, 24)) {
+		widget1 = datamap('i', 'I', (DataMap)2450, int0);
+		widget1.setText("<col=800000>" + datamap('I', 's', (DataMap)2449, widget1) + "  " + "<col=000000>" + datamap('I', 's', (DataMap)2448, widget1));
+		int0 = int0 + 1;
+	}
+	return;
+}

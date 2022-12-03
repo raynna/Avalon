@@ -1,0 +1,18 @@
+void script_7() {
+	int int0;
+	Widget widget1;
+	int0 = VARC[10] - 100;
+	VARC[10] = 0;
+	if (int0 < -1 || int0 == script_1305()) {
+		return;
+	}
+	widget1 = script_8(int0);
+	if (widget1 == null) {
+		return;
+	}
+	if (!widget1.hasChild()) {
+		return;
+	}
+	script_71(int0);
+	return;
+}

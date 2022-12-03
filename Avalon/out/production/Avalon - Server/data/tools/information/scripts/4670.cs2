@@ -1,0 +1,12 @@
+void script_4670(int arg0) {
+	Location location1;
+	location1 = script_284(moveCoord(getMyLocation(), -16, 0, 0));
+	cs2method5405(0, 2);
+	cs2method5405(1, 2);
+	cs2method5406(0, 0, moveCoord(location1, 52, 0, 58), 700, moveCoord(location1, 52, 0, 58), 700, 0);
+	cs2method5406(1, 0, moveCoord(location1, 55, 0, 62), 500, moveCoord(location1, 55, 0, 62), 500, 0);
+	cs2method5406(0, 1, moveCoord(location1, 52, 0, 55), 900, moveCoord(location1, 52, 0, 55), 900, 0);
+	cs2method5406(1, 1, moveCoord(location1, 55, 0, 63), 400, moveCoord(location1, 55, 0, 63), 400, 0);
+	cameraMethod5502(0, 0, 100, 300, 1, 0);
+	return;
+}

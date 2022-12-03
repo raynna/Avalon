@@ -1,0 +1,33 @@
+void script_4654(int arg0, int arg1, int arg2) {
+	int int3;
+	int int4;
+	Widget widget5;
+	if (arg0 == -1 || arg1 == -1) {
+		return;
+	}
+	int3 = 0;
+	int4 = 0;
+	widget5 = widget(173, 80);
+	if (VARPBIT[9306] == 1) {
+		widget5 = widget(173, 80);
+	}
+	if (VARPBIT[9306] == 2) {
+		widget5 = widget(173, 61);
+	}
+	if (VARPBIT[9306] == 4) {
+		if (VARPBIT[9367] == 1) {
+			widget5 = widget(173, 7);
+		}
+		if (VARPBIT[9367] == 2) {
+			widget5 = widget(173, 38);
+		}
+		if (VARPBIT[9367] == 3) {
+			widget5 = widget(173, 41);
+		}
+	}
+	ACTIVE.createChild(widget5, 5, 0);
+	ACTIVE.setSprite(2825);
+	ACTIVE.setPosition(arg0 * 32 + 10 + int3, arg1 * 32 + 10 + int4, 0, 2);
+	ACTIVE.setSize(11, 11, 0, 0);
+	return;
+}

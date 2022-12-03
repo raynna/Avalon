@@ -1,0 +1,26 @@
+void script_1355(string string0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Sprite sprite5, Color color6, Sprite sprite7) {
+	widget1.clearChildren();
+	widget2.setIsHidden(true);
+	widget3.setIsHidden(true);
+	if (widget4 != null) {
+		widget4.setIsHidden(true);
+	}
+	ACTIVE.createChild(widget1, 5, widget1.nextChild());
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setSize(widget1.getWidth(), widget1.getHeight(), 0, 0);
+	ACTIVE.setSprite(sprite5);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.createChild(widget1, 3, widget1.nextChild());
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setSize(widget1.getWidth(), widget1.getHeight(), 0, 0);
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.createChild(widget1, 4, widget1.nextChild());
+	ACTIVE.setText(string0);
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setSize(widget1.getWidth(), widget1.getHeight(), 0, 0);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setFont(sprite7);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setRGB(color6);
+	return;
+}

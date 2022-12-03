@@ -1,0 +1,16 @@
+void script_1408() {
+	widget(756, 12).setSprite(180);
+	widget(756, 13).setSprite(180);
+	widget(756, 15).setSprite(180);
+	widget(756, 16).setSprite(180);
+	if (VARPBIT[49] == 0) {
+		widget(756, 12).setSprite(181);
+	} else if (VARPBIT[49] == 1) {
+		widget(756, 13).setSprite(181);
+	} else if (VARPBIT[49] == 2) {
+		widget(756, 15).setSprite(181);
+	} else if (VARPBIT[49] == 3) {
+		widget(756, 16).setSprite(181);
+	}
+	return;
+}

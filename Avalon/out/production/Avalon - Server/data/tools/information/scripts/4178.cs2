@@ -1,0 +1,171 @@
+void script_4178(int arg0, int arg1, int arg2) {
+	if (arg0 == 1) {
+		switch (arg1) {
+			case 0:
+				if (arg2 == 1) {
+					VARC[1465] = getClientCycle();
+				} else {
+					VARC[1465] = 0;
+				}
+				break;
+			case 1:
+				if (arg2 == 1) {
+					VARC[1466] = getClientCycle();
+				} else {
+					VARC[1466] = 0;
+				}
+				break;
+			case 2:
+				if (arg2 == 1) {
+					VARC[1467] = getClientCycle();
+				} else {
+					VARC[1467] = 0;
+				}
+				break;
+			case 3:
+				if (arg2 == 1) {
+					VARC[740] = getClientCycle();
+				} else {
+					VARC[740] = 0;
+				}
+				break;
+			case 4:
+				if (arg2 == 1) {
+					VARC[745] = getClientCycle();
+				} else {
+					VARC[745] = 0;
+				}
+				break;
+			case 5:
+				if (arg2 == 1) {
+					VARC[780] = getClientCycle();
+				} else {
+					VARC[780] = 0;
+				}
+				break;
+			case 7:
+				if (arg2 == 1) {
+					VARC[781] = getClientCycle();
+				} else {
+					VARC[781] = 0;
+				}
+				break;
+			case 9:
+				if (arg2 == 1) {
+					VARC[782] = getClientCycle();
+				} else {
+					VARC[782] = 0;
+				}
+				break;
+			case 10:
+				if (arg2 == 1) {
+					VARC[789] = getClientCycle();
+				} else {
+					VARC[789] = 0;
+				}
+				break;
+			case 12:
+				if (arg2 == 1) {
+					VARC[1409] = getClientCycle();
+				} else {
+					VARC[1409] = 0;
+				}
+				break;
+			case 13:
+				if (arg2 == 1) {
+					VARC[1410] = getClientCycle();
+				} else {
+					VARC[1410] = 0;
+				}
+				break;
+		}
+	} else {
+		switch (arg1) {
+			case 0:
+				if (arg2 == 1) {
+					VARC[1453] = getClientCycle();
+				} else {
+					VARC[1453] = 0;
+				}
+				break;
+			case 1:
+				if (arg2 == 1) {
+					VARC[1454] = getClientCycle();
+				} else {
+					VARC[1454] = 0;
+				}
+				break;
+			case 4:
+				if (arg2 == 1) {
+					VARC[1455] = getClientCycle();
+				} else {
+					VARC[1455] = 0;
+				}
+				break;
+			case 5:
+				if (arg2 == 1) {
+					VARC[1456] = getClientCycle();
+				} else {
+					VARC[1456] = 0;
+				}
+				break;
+			case 6:
+				if (arg2 == 1) {
+					VARC[1457] = getClientCycle();
+				} else {
+					VARC[1453] = 6;
+				}
+				break;
+			case 7:
+				if (arg2 == 1) {
+					VARC[1458] = getClientCycle();
+				} else {
+					VARC[1453] = 7;
+				}
+				break;
+			case 8:
+				if (arg2 == 1) {
+					VARC[1459] = getClientCycle();
+				} else {
+					VARC[1453] = 8;
+				}
+				break;
+			case 9:
+				if (arg2 == 1) {
+					VARC[1460] = getClientCycle();
+				} else {
+					VARC[1453] = 9;
+				}
+				break;
+			case 10:
+				if (arg2 == 1) {
+					VARC[1461] = getClientCycle();
+				} else {
+					VARC[1461] = 0;
+				}
+				break;
+			case 12:
+				if (arg2 == 1) {
+					VARC[1462] = getClientCycle();
+				} else {
+					VARC[1462] = 0;
+				}
+				break;
+			case 13:
+				if (arg2 == 1) {
+					VARC[1463] = getClientCycle();
+				} else {
+					VARC[1463] = 0;
+				}
+				break;
+			case 28:
+				if (arg2 == 1) {
+					VARC[1464] = getClientCycle();
+				} else {
+					VARC[1464] = 0;
+				}
+				break;
+		}
+	}
+	return;
+}

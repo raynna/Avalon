@@ -1,0 +1,44 @@
+void script_2773(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8) {
+	Widget widget9;
+	Widget widget10;
+	Sprite sprite11;
+	Sprite sprite12;
+	Sprite sprite13;
+	if (VARP[281] < 6) {
+		return;
+	}
+	widget9 = null;
+	widget10 = null;
+	sprite11 = null;
+	sprite12 = null;
+	switch (arg0) {
+		case 1:
+			cs2method5510();
+			widget9, widget10 = arg1, arg5;
+			sprite11, sprite12 = 2273, 2278;
+			break;
+		case 2:
+			cs2method5509();
+			widget9, widget10 = arg2, arg6;
+			sprite11, sprite12 = 2272, 2277;
+			break;
+		case 3:
+			cs2method5507();
+			widget9, widget10 = arg3, arg7;
+			sprite11, sprite12 = 2274, 2279;
+			break;
+		case 4:
+			cs2method5508();
+			widget9, widget10 = arg4, arg8;
+			sprite11, sprite12 = 2275, 2280;
+			break;
+		default:
+			return;
+	}
+	widget9.setSprite(2276);
+	sprite13 = 2271;
+	widget9.setScriptCallOnGameloop(1723, CTX_WIDGET, CTX_WIDGET_CHILD, sprite13, getClientCycle() + 10, "Iidi");
+	widget10.setSprite(sprite12);
+	widget10.setScriptCallOnGameloop(1723, CTX_WIDGET, CTX_WIDGET_CHILD, sprite11, getClientCycle() + 10, "Iidi");
+	return;
+}

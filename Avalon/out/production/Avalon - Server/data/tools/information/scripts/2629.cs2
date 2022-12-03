@@ -1,0 +1,9 @@
+void script_2629(Widget widget0) {
+	if (widget(VARC[905]) == widget0 && VARC[904] == 1) {
+		script_2635();
+		return;
+	}
+	script_2635();
+	script_2630(widget0);
+	return;
+}

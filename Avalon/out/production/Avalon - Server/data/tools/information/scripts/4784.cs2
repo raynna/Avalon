@@ -1,0 +1,17 @@
+void script_4784(string string0, Widget widget1, int arg2) {
+	int int2;
+	int int3;
+	int int4;
+	int2 = 2;
+	int3 = widget1.getWidth() / 2;
+	int4 = widget1.getY();
+	if (arg2 != -1 && ACTIVE.setChild(widget1, arg2)) {
+		int3 = ACTIVE.getWidth() / 2;
+		int4 = ACTIVE.getY();
+	}
+	if (int4 - widget1.getScrollY() > 114) {
+		int2 = 0;
+	}
+	script_4539(widget(1115, 186), widget1, arg2, string0, 150, null, null, 0xFFFFFF, 13, 4, int2, int3, int4);
+	return;
+}

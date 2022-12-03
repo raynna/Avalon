@@ -1,0 +1,21 @@
+void script_1929() {
+	widget(811, 110).setIsHidden(true);
+	widget(811, 126).setRGB(0xC8AA64);
+	widget(811, 127).setRGB(0xC8AA64);
+	widget(811, 52).setIsHidden(true);
+	widget(811, 63).setRGB(0xC8AA64);
+	widget(811, 65).setRGB(0xC8AA64);
+	widget(811, 38).setIsHidden(true);
+	widget(811, 48).setRGB(0xC8AA64);
+	widget(811, 49).setRGB(0xC8AA64);
+	widget(811, 95).setIsHidden(true);
+	widget(811, 105).setRGB(0xC8AA64);
+	widget(811, 106).setRGB(0xC8AA64);
+	widget(811, 81).setIsHidden(true);
+	widget(811, 91).setRGB(0xC8AA64);
+	widget(811, 92).setRGB(0xC8AA64);
+	widget(811, 67).setIsHidden(true);
+	widget(811, 77).setRGB(0xC8AA64);
+	widget(811, 78).setRGB(0xC8AA64);
+	return;
+}

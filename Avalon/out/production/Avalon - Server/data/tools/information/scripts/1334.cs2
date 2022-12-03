@@ -1,0 +1,12 @@
+void script_1334(Widget widget0, string arg1, int arg2) {
+	if (widget0 != null) {
+		if (arg2 == 1) {
+			widget0.setText("<u=91b1f4>" + arg1 + "</u>");
+			widget0.setRGB(0x91B1F4);
+		} else {
+			widget0.setText("<u=2c6ff8>" + arg1 + "</u>");
+			widget0.setRGB(0x2C6FF8);
+		}
+	}
+	return;
+}

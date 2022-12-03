@@ -1,0 +1,32 @@
+void script_5218(Widget widget0, Widget widget1, int arg2, int arg3, Widget widget4) {
+	int int5;
+	int int6;
+	int5 = 0;
+	int6 = 0;
+	widget0.getParentLayer().setIsHidden(false);
+	if (arg3 > 0) {
+		widget4.setScriptCallOnGameloop(5218, widget0, widget1, arg2, arg3 - 1, widget4, "IIiiI");
+		return;
+	}
+	if (ACTIVE.setChild(widget0, 0)) {
+		int5 = ACTIVE.getShadeColor();
+		if (arg2 == 0) {
+			int6 = int5 - 22;
+		} else {
+			int6 = int5 + 22;
+		}
+		int6 = max(int6, 0);
+		int6 = min(int6, 255);
+	}
+	script_4161(widget0, int6);
+	script_4161(widget1, int6);
+	if (int6 == 0 && arg2 == 0) {
+		widget4.setScriptCallOnGameloop(-1, "");
+	} else if (int6 == 255 && arg2 == 1) {
+		widget4.setScriptCallOnGameloop(-1, "");
+		widget0.getParentLayer().setIsHidden(true);
+	} else {
+		widget4.setScriptCallOnGameloop(5218, widget0, widget1, arg2, 0, widget4, "IIiiI");
+	}
+	return;
+}

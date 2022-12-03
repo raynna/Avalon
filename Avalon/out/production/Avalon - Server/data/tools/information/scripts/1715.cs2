@@ -1,0 +1,40 @@
+void script_1715() {
+	Widget widget0;
+	widget0 = null;
+	if (VARC[1043] == -1) {
+		return;
+	}
+	switch (VARC[1043]) {
+		case 4761:
+		case 4762:
+			widget0 = widget(24, 10);
+			break;
+		case 4763:
+		case 4764:
+			widget0 = widget(24, 8);
+			break;
+		case 4765:
+		case 4766:
+			widget0 = widget(24, 9);
+			break;
+		case 4768:
+		case 4767:
+			widget0 = widget(24, 11);
+			break;
+		case 4769:
+		case 4770:
+			widget0 = widget(24, 12);
+			break;
+		case 4771:
+		case 4772:
+			widget0 = widget(24, 13);
+			break;
+	}
+	if (widget0 == null) {
+		return;
+	}
+	widget0.setItem((Item)VARC[1043], -1);
+	widget0.set3DViewDistance(1600);
+	widget0.setAnimation(12554);
+	return;
+}

@@ -1,0 +1,4 @@
+void script_4255(Widget widget0, int arg1) {
+	widget0.setScriptCallOnGameloop(4159, CTX_WIDGET, arg1, 0, "Iii");
+	return;
+}

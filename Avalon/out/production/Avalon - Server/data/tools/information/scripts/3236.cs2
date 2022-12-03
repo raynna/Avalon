@@ -1,0 +1,15 @@
+void script_3236(int arg0, Widget widget1, Widget widget2, int arg3, Widget widget4) {
+	string str0;
+	str0 = "";
+	switch (arg3) {
+		case 3:
+			str0 = STRING[32];
+			break;
+		case 4:
+			str0 = script_2949(STRING[33]);
+			break;
+	}
+	VARC[1099] = script_1401(arg0, str0, 3793, 0);
+	script_3237(widget4, widget1, widget2, str0, arg3);
+	return;
+}

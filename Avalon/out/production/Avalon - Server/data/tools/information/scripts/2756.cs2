@@ -1,0 +1,14 @@
+void script_2756() {
+	if (VARPBIT[3756] == 16 + 1) {
+		script_736(widget(746, 179), -1, widget(548, 186), -1);
+	} else if (VARPBIT[3756] == 17 + 1) {
+		script_736(widget(746, 175), -1, widget(548, 184), -1);
+	} else if (VARPBIT[3756] == 18 + 1) {
+		script_736(widget(746, 181), -1, widget(548, 180), -1);
+	} else if (VARPBIT[3756] == 19 + 1) {
+		script_736(widget(746, 174), -1, widget(548, 178), -1);
+	} else {
+		script_736(script_1742(VARPBIT[3756] - 1), -1, script_121(VARPBIT[3756] - 1), -1);
+	}
+	return;
+}

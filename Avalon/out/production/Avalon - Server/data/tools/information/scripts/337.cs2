@@ -1,0 +1,22 @@
+void script_337(int arg0, int arg1, int arg2) {
+	if ((arg2 == 1 || VARPBIT[7232] == 0) && arg1 > 0) {
+		if (arg1 < 10) {
+			widget(548, 26).setText(formatNumber(arg0, 1) + "<col=ffffff>" + "(+0." + str(arg1) + ")" + "</col>" + "xp");
+			widget(746, 189).setText(formatNumber(arg0, 1) + "<col=ffffff>" + "(+0." + str(arg1) + ")" + "</col>" + "xp");
+			widget(548, 22).setScriptCallOnGameloop(3369, widget(548, 22), getClientCycle(), "Ii");
+			widget(746, 184).setScriptCallOnGameloop(3370, widget(746, 184), getClientCycle(), "Ii");
+			return;
+		}
+		arg1 = arg1 / 10;
+	}
+	if (arg1 < 1) {
+		widget(548, 26).setText(formatNumber(arg0, 1) + "<col=ffffff>" + "</col>" + "xp");
+		widget(746, 189).setText(formatNumber(arg0, 1) + "<col=ffffff>" + "</col>" + "xp");
+	} else {
+		widget(548, 26).setText(formatNumber(arg0, 1) + "<col=ffffff>" + "(+" + str(arg1) + ")" + "</col>" + "xp");
+		widget(746, 189).setText(formatNumber(arg0, 1) + "<col=ffffff>" + "(+" + str(arg1) + ")" + "</col>" + "xp");
+	}
+	widget(548, 22).setScriptCallOnGameloop(3369, widget(548, 22), getClientCycle(), "Ii");
+	widget(746, 184).setScriptCallOnGameloop(3370, widget(746, 184), getClientCycle(), "Ii");
+	return;
+}

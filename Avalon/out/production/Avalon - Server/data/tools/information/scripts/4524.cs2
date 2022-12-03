@@ -1,0 +1,9 @@
+void script_4524(Widget widget0, Sprite sprite1) {
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(16384, 16384, 2, 2);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setSprite(sprite1);
+	widget0.setNoClickThrough(1);
+	widget0.setIsHidden(true);
+	return;
+}

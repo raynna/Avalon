@@ -1,0 +1,5 @@
+Location script_4077(int arg0, int arg1) {
+	Location location2;
+	location2 = script_284(getMyLocation());
+	return moveCoord(location2, arg0, 0, arg1);
+}

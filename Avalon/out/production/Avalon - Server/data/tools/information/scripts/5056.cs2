@@ -1,0 +1,26 @@
+void script_5056(Widget widget0, int arg1) {
+	if (arg1 == 1) {
+		if (ACTIVE.setChild(widget0, 0)) {
+			ACTIVE.setSprite(7571);
+		}
+		if (ACTIVE.setChild(widget0, 1)) {
+			ACTIVE.setSprite(7570);
+		}
+		if (ACTIVE.setChild(widget0, 2)) {
+			ACTIVE.setSprite(7572);
+		}
+		if (ACTIVE.setChild(widget0, 3)) {
+			ACTIVE.setSprite(7577);
+		}
+		widget0.setScriptCallOnMouseOver(-1, "");
+		widget0.setScriptCallOnMouseExit(-1, "");
+	} else {
+		script_5058(widget0, 0);
+		if (ACTIVE.setChild(widget0, 3)) {
+			ACTIVE.setSprite(7576);
+		}
+		widget0.setScriptCallOnMouseOver(5057, CTX_WIDGET, true, "I1");
+		widget0.setScriptCallOnMouseExit(5057, CTX_WIDGET, false, "I1");
+	}
+	return;
+}

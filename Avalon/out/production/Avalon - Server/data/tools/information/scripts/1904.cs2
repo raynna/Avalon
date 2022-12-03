@@ -1,0 +1,10 @@
+void script_1904(Widget widget0, Widget widget1, Widget widget2) {
+	widget1.clearChildren();
+	if (length(STRING[30]) > 0) {
+		script_1902(widget0, widget1, widget2);
+	} else {
+		widget1.setScrollMax(0, 0);
+		script_1905(widget1, widget2);
+	}
+	return;
+}

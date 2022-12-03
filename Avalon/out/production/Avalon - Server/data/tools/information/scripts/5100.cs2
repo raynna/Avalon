@@ -1,0 +1,33 @@
+void script_5100(int arg0, string string1, Sprite sprite2, Sprite sprite3, int arg4, int arg5, int arg6, int arg7, int arg8, boolean boolean9, int arg10, Widget widget11, int arg12, Widget widget13, Widget widget14, Widget widget15, Widget widget16, Widget widget17, Widget widget18, Widget widget19, Widget widget20, Widget widget21) {
+	widget14.setIsHidden(true);
+	widget13.setIsHidden(false);
+	widget16.setIsHidden(true);
+	widget15.setContextMenuOption(1, "Details");
+	widget17.setText(string1);
+	switch (arg8) {
+		case -2:
+			widget11.setSprite(6194);
+			break;
+		case -1:
+			widget11.setSprite(6195);
+			break;
+		case 0:
+			widget11.setSprite(6196);
+			break;
+		case 1:
+			widget11.setSprite(6197);
+			break;
+		case 2:
+			widget11.setSprite(6198);
+			break;
+	}
+	widget18.setSprite(sprite2);
+	widget19.setSprite(sprite3);
+	widget18.setRGB(getColorRelatedMethod4020(arg4));
+	widget19.setRGB(getColorRelatedMethod4020(arg5));
+	widget20.setRGB(getColorRelatedMethod4020(arg6));
+	widget21.setRGB(getColorRelatedMethod4020(arg7));
+	widget15.setScriptCallOnClickContextMenu(5111, arg0, boolean9, "i1");
+	widget14.setIsHidden(true);
+	return;
+}

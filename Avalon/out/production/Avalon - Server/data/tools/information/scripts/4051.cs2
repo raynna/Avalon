@@ -1,0 +1,13 @@
+void script_4051(Widget widget0, int arg1) {
+	widget0.setIsHidden(false);
+	widget0.setTrans(0);
+	if (arg1 == 1) {
+		widget0.setSprite(489);
+		widget0.setPosition(0, 22, 2, 0);
+	} else {
+		widget0.setSprite(534);
+		widget0.setPosition(0, 1 - widget0.getHeight(), 2, 0);
+	}
+	widget0.setScriptCallOnGameloop(4052, widget0, arg1, "Ii");
+	return;
+}

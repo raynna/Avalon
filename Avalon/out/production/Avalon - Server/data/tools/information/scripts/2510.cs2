@@ -1,0 +1,23 @@
+void script_2510() {
+	if (VARC[852] <= 0) {
+		VARC[852] = 0;
+	}
+	if (VARC[853] <= 0) {
+		VARC[853] = 0;
+	}
+	if (VARC[854] <= 0) {
+		VARC[854] = 0;
+	}
+	if (VARC[855] <= 0) {
+		VARC[855] = 0;
+	}
+	if (VARC[856] <= 0) {
+		VARC[856] = 0;
+	}
+	widget(654, 9).setText(str(VARC[852]));
+	widget(654, 58).setText(str(VARC[853]));
+	widget(654, 50).setText(str(VARC[854]));
+	widget(654, 42).setText(str(VARC[855]));
+	widget(654, 67).setText(str(VARC[856]));
+	return;
+}

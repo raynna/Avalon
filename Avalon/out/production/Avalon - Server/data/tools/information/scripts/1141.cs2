@@ -1,0 +1,10 @@
+void script_1141() {
+	if (script_1431() == 1) {
+		if (getDisplayMode() < 2) {
+			widget(548, 10).setScriptCallOnGameloop(1175, "");
+		} else {
+			widget(746, 17).setScriptCallOnGameloop(1175, "");
+		}
+	}
+	return;
+}

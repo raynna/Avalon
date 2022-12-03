@@ -1,0 +1,7 @@
+void script_1738(Widget widget0, int arg1) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setTrans(0);
+		ACTIVE.setScriptCallOnGameloop(-1, "");
+	}
+	return;
+}

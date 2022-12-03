@@ -1,0 +1,13 @@
+void script_1726(Widget widget0) {
+	int int1;
+	int1 = 0;
+	if (getClientCycle() % 40 > 20) {
+		widget0.setTrans(0);
+		if (getClientCycle() % 40 == 21) {
+			playSoundEffect(5009, 1, 0);
+		}
+	} else {
+		widget0.setTrans(255);
+	}
+	return;
+}

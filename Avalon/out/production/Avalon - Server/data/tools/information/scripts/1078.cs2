@@ -1,0 +1,35 @@
+void script_1078(int arg0) {
+	switch (arg0) {
+		case 0:
+			cs2method5068(0, VARC[135]);
+			break;
+		case 1:
+			cs2method5068(1, VARC[136]);
+			break;
+		case 2:
+			cs2method5068(2, VARC[137]);
+			break;
+		case 3:
+			cs2method5068(3, VARC[138]);
+			break;
+		case 4:
+			cs2method5068(4, VARC[139]);
+			break;
+		case 5:
+			cs2method5068(5, VARC[140]);
+			break;
+		case 6:
+			cs2method5068(6, VARC[141]);
+			break;
+		case 7:
+			cs2method5068(7, VARC[142]);
+			break;
+		case 8:
+			cs2method5068(8, VARC[143]);
+			break;
+		case 9:
+			cs2method5068(9, VARC[144]);
+			break;
+	}
+	return;
+}

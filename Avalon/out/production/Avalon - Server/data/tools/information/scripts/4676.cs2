@@ -1,0 +1,68 @@
+void script_4676(int arg0) {
+	switch (arg0) {
+		case 1:
+			if (VARPBIT[9314] == 1) {
+				widget(102, 15).setIsHidden(true);
+				widget(102, 17).setIsHidden(true);
+			} else if (VARPBIT[9298] == 10 && getSkillActualLvl(6) >= 30 && getSkillActualLvl(4) >= 30 && getSkillActualLvl(0) >= 30) {
+				widget(102, 70).setIsHidden(false);
+				widget(102, 15).setIsHidden(false);
+				widget(102, 17).setIsHidden(false);
+				if (VARPBIT[9315] == 0) {
+					widget(102, 70).setText("You receive two new books.");
+				}
+			}
+			if (VARPBIT[9315] == 1) {
+				widget(102, 14).setIsHidden(true);
+				widget(102, 16).setIsHidden(true);
+			} else {
+				widget(102, 70).setIsHidden(false);
+				widget(102, 14).setIsHidden(false);
+				widget(102, 16).setIsHidden(false);
+			}
+			break;
+		case 2:
+			if (VARPBIT[9316] == 1) {
+				widget(102, 15).setIsHidden(true);
+				widget(102, 17).setIsHidden(true);
+			} else if (VARPBIT[9298] == 10 && getSkillActualLvl(16) >= 55 && getSkillActualLvl(17) >= 55) {
+				widget(102, 70).setIsHidden(false);
+				widget(102, 15).setIsHidden(false);
+				widget(102, 17).setIsHidden(false);
+				if (VARPBIT[9317] == 0) {
+					widget(102, 70).setText("You receive two new books.");
+				}
+			}
+			if (VARPBIT[9317] == 1) {
+				widget(102, 14).setIsHidden(true);
+				widget(102, 16).setIsHidden(true);
+			} else {
+				widget(102, 70).setIsHidden(false);
+				widget(102, 14).setIsHidden(false);
+				widget(102, 16).setIsHidden(false);
+			}
+			break;
+		case 4:
+			if (VARPBIT[9318] == 1) {
+				widget(102, 15).setIsHidden(true);
+				widget(102, 17).setIsHidden(true);
+			} else if (VARPBIT[9298] == 10 && getSkillActualLvl(2) >= 70) {
+				widget(102, 70).setIsHidden(false);
+				widget(102, 15).setIsHidden(false);
+				widget(102, 17).setIsHidden(false);
+				if (VARPBIT[9319] == 0) {
+					widget(102, 70).setText("You receive two new books.");
+				}
+			}
+			if (VARPBIT[9319] == 1) {
+				widget(102, 14).setIsHidden(true);
+				widget(102, 16).setIsHidden(true);
+			} else {
+				widget(102, 70).setIsHidden(false);
+				widget(102, 14).setIsHidden(false);
+				widget(102, 16).setIsHidden(false);
+			}
+			break;
+	}
+	return;
+}

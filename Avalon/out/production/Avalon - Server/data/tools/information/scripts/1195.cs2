@@ -1,0 +1,20 @@
+void script_1195() {
+	cs2method5405(0, 7);
+	cs2method5405(1, 7);
+	cs2method5406(0, 0, location(2825, 10215, 0), 858, location(2824, 10213, 0), 858, 0);
+	cs2method5406(1, 0, location(2827, 10213, 0), 690, location(2825, 10213, 0), 690, 0);
+	cs2method5406(0, 1, location(2826, 10210, 0), 858, location(2829, 10209, 0), 858, 0);
+	cs2method5406(1, 1, location(2827, 10212, 0), 690, location(2828, 10212, 0), 690, 0);
+	cs2method5406(0, 2, location(2836, 10213, 0), 1400, location(2842, 10213, 0), 1445, 0);
+	cs2method5406(1, 2, location(2841, 10211, 0), 530, location(2845, 10210, 0), 530, 0);
+	cs2method5406(0, 3, location(2852, 10210, 0), 1075, location(2855, 10207, 0), 830, 0);
+	cs2method5406(1, 3, location(2855, 10204, 0), 290, location(2857, 10200, 0), 290, 0);
+	cs2method5406(0, 4, location(2854, 10194, 0), 875, location(2854, 10189, 0), 885, 0);
+	cs2method5406(1, 4, location(2857, 10187, 0), 410, location(2857, 10183, 0), 410, 0);
+	cs2method5406(0, 5, location(2859, 10181, 0), 915, location(2862, 10179, 0), 905, 0);
+	cs2method5406(1, 5, location(2865, 10179, 0), 585, location(2867, 10178, 0), 695, 0);
+	cs2method5406(0, 6, location(2873, 10179, 0), 900, location(2876, 10179, 0), 835, 0);
+	cs2method5406(1, 6, location(2876, 10179, 0), 750, location(2878, 10179, 0), 740, 0);
+	script_1197(0);
+	return;
+}

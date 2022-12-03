@@ -1,0 +1,102 @@
+void script_1328(int arg0) {
+	int int1;
+	int int2;
+	string str0;
+	string str1;
+	if (!widget(906, 41).isHidden() || !widget(906, 42).isHidden() || !widget(906, 43).isHidden() || !widget(906, 29).isHidden() || !widget(906, 45).isHidden() || !widget(906, 55).isHidden() || !widget(906, 56).isHidden()) {
+		return;
+	}
+	int1 = -1;
+	if (arg0 == 80) {
+		if (!widget(906, 185).isHidden()) {
+			int1 = 0;
+		}
+		if (!widget(906, 186).isHidden()) {
+			int1 = 1;
+		}
+		if (!widget(906, 187).isHidden()) {
+			int1 = 2;
+		}
+		if (!widget(906, 188).isHidden()) {
+			int1 = 3;
+		}
+		if (!widget(906, 189).isHidden()) {
+			int1 = 5;
+		}
+		if (!widget(906, 190).isHidden()) {
+			int1 = 4;
+		}
+		if (!isHoldingCtrl()) {
+			switch (int1) {
+				case 0:
+					script_3060(1);
+					return;
+				case 1:
+					script_3060(2);
+					return;
+				case 2:
+					script_3060(3);
+					return;
+				case 3:
+					script_3060(5);
+					return;
+				case 5:
+					script_3060(4);
+					return;
+				case 4:
+					script_3060(0);
+					return;
+			}
+			script_3060(0);
+			return;
+		}
+		switch (int1) {
+			case 0:
+				script_3060(4);
+				return;
+			case 1:
+				script_3060(0);
+				return;
+			case 2:
+				script_3060(1);
+				return;
+			case 3:
+				script_3060(2);
+				return;
+			case 5:
+				script_3060(3);
+				return;
+			case 4:
+				script_3060(5);
+				return;
+		}
+		script_3060(0);
+		return;
+	}
+	int2 = 0;
+	str0 = "";
+	str1 = "";
+	if (arg0 == 84 && !widget(906, 187).isHidden()) {
+		if (length(STRING[276]) > 0) {
+			int2 = cs2method3628(STRING[276]);
+			if (int2 != -1 && !cs2method6900()) {
+				str0, str1 = getFriendName(int2);
+				script_3015("Send message to " + str0, "", 0, STRING[276], "");
+				return;
+			}
+			if (VARC[1271] > getClientCycle() - 100) {
+				return;
+			}
+			msg("That player is not on your Friends list.");
+			VARC[1271] = getClientCycle();
+			return;
+		}
+		if (VARC[1271] > getClientCycle() - 100) {
+			return;
+		}
+		msg("You haven't received any messages to which you can reply.");
+		VARC[1271] = getClientCycle();
+		return;
+	}
+	return;
+}

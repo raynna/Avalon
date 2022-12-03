@@ -1,0 +1,7 @@
+void script_2987(Widget widget0, Widget widget1, Widget widget2, Widget widget3) {
+	widget0.setIsHidden(false);
+	widget1.setIsHidden(false);
+	widget3.setIsHidden(false);
+	widget2.setIsHidden(true);
+	return;
+}

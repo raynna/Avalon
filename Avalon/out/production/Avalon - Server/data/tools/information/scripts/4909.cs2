@@ -1,0 +1,28 @@
+int, int script_4909(Location location0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int1 = 0;
+	int2 = 0;
+	int3 = 216;
+	int4 = 216;
+	int5 = 127;
+	if (location0 == null) {
+		return 0, 0;
+	}
+	int6 = x(location0);
+	if (int6 > int5 || int6 < 0) {
+		return -1, -1;
+	}
+	int7 = int5 - y(location0);
+	if (int7 > 127 || int7 < 0) {
+		return -1, -1;
+	}
+	int1 = int6 * int3 / int5;
+	int2 = int7 * int4 / int5;
+	return int1, int2;
+}

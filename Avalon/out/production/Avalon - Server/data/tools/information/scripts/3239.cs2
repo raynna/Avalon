@@ -1,0 +1,165 @@
+void script_3239(int arg0, int arg1, int arg2) {
+	int int3;
+	Sprite sprite4;
+	Sprite sprite5;
+	int int6;
+	int int7;
+	FontMetrics sprite8;
+	string str0;
+	int3 = script_2948();
+	if (arg1 == 0 && (int3 == -3 || int3 == 21 || int3 == 1)) {
+		return;
+	}
+	VARC[175] = getClientCycle();
+	script_41(widget(744, 80));
+	VARC[1] = 0;
+	VARC[174] = 1;
+	if (VARC[1090] != 6) {
+		VARC[1091] = VARC[1090];
+		widget(882, 20).setScriptCallOnMousePressed(1173, VARC[1091], "i");
+	}
+	if (arg0 == 0) {
+		VARC[174] = 0;
+		script_3385();
+		widget(744, 24).setIsHidden(false);
+	} else {
+		widget(744, 24).setIsHidden(true);
+		close(widget(744, 24));
+	}
+	if (arg0 == 5) {
+		open(widget(744, 27), 975);
+		widget(744, 23).setIsHidden(true);
+		widget(744, 27).setIsHidden(false);
+	} else {
+		close(widget(744, 27));
+		widget(744, 23).setIsHidden(false);
+		widget(744, 27).setIsHidden(true);
+	}
+	if (arg0 == 11 || arg0 == 12) {
+		VARC[547] = 0;
+		open(widget(744, 26), 596);
+		script_2937();
+		script_2940(arg0);
+		widget(596, 6).setIsHidden(false);
+		script_3230();
+	} else {
+		script_2941();
+		close(widget(744, 26));
+		widget(744, 26).setIsHidden(true);
+	}
+	if (arg0 == 7) {
+		open(widget(744, 48), 673);
+		script_2213();
+		widget(744, 48).setIsHidden(false);
+	} else {
+		close(widget(744, 48));
+		widget(744, 48).setIsHidden(true);
+	}
+	if (arg0 == 8) {
+		VARC[174] = 10;
+		widget(744, 49).setIsHidden(false);
+	} else {
+		close(widget(744, 49));
+		widget(744, 49).setIsHidden(true);
+	}
+	if (arg0 == 7 || arg0 == 8) {
+		widget(744, 23).setIsHidden(true);
+	} else {
+		widget(744, 23).setIsHidden(false);
+	}
+	sprite4 = 4120;
+	sprite5 = 4125;
+	if (arg0 == 0 || arg0 == 7 || arg0 == 8) {
+		widget(744, 107).setRGB(0x646464);
+		widget(744, 107).setScriptCallOnMousePressed(-1, "");
+		widget(744, 107).setScriptCallOnMouseEntered(-1, "");
+		widget(744, 107).setScriptCallOnMouseExit(-1, "");
+	} else {
+		widget(744, 107).setRGB(0x000000);
+		widget(744, 107).setScriptCallOnMousePressed(1173, 6, "i");
+		widget(744, 107).setScriptCallOnMouseEntered(44, CTX_WIDGET, sprite5, "Id");
+		widget(744, 107).setScriptCallOnMouseExit(44, CTX_WIDGET, sprite4, "Id");
+	}
+	if (arg0 == 6) {
+		script_2595(0);
+		if (arg2 == 1) {
+			script_3387(cs2method6131(), getDisplayMode(), (int, int)script_2692(cs2method6131()), 0);
+		}
+		widget(744, 50).setIsHidden(false);
+		VARC[174] = 13;
+	} else {
+		if (VARC[1090] == 6 && arg0 != 5) {
+			widget(744, 23).setIsHidden(false);
+		}
+		widget(744, 50).setIsHidden(true);
+		widget(744, 50).setScriptCallOnWidgetResize(-1, "");
+		widget(882, 4).setScriptCallOnWidgetResize(-1, "");
+	}
+	int6 = 0;
+	int7 = 0;
+	str0 = "";
+	sprite8 = 3793;
+	if (arg0 == 9) {
+		int6 = widget(744, 76).getWidth();
+		int7 = getLineCount(widget(744, 76).getText(), int6, 3793) * 14 + 5;
+		widget(744, 76).setSize(int6, int7, 0, 0);
+		str0 = widget(744, 78).getText();
+		int7 = widget(744, 76).getY() + int7 + 6;
+		if (length(str0) > 0) {
+			widget(744, 77).setPosition(0, int7, 1, 0);
+			widget(744, 77).setSize(getTextWidth(str0, sprite8), widget(744, 77).getHeight(), 0, 0);
+			widget(744, 78).setText("<u=c8c8c8>" + str0 + "</u>");
+			widget(744, 77).setScriptCallOnMouseEntered(2926, widget(744, 77), widget(744, 78), str0, sprite8, true, "IIsf1");
+			widget(744, 77).setScriptCallOnMouseExit(2926, widget(744, 77), widget(744, 78), str0, sprite8, false, "IIsf1");
+			widget(744, 77).setIsHidden(false);
+			int7 = int7 + widget(744, 77).getHeight() + 6;
+		} else {
+			widget(744, 77).setPosition(0, 0, 1, 0);
+			widget(744, 77).setScriptCallOnMouseEntered(-1, "");
+			widget(744, 77).setScriptCallOnMouseExit(-1, "");
+			widget(744, 77).setScriptCallOnMousePressed(-1, "");
+			widget(744, 77).setIsHidden(true);
+			widget(744, 78).setText("");
+		}
+		widget(744, 79).setSize(getTextWidth(widget(744, 79).getText(), 3795), widget(744, 79).getHeight(), 0, 0);
+		widget(744, 51).setSize(widget(744, 51).getWidth(), int7 + widget(744, 79).getHeight() + 11, 0, 0);
+		widget(744, 51).setIsHidden(false);
+	} else {
+		widget(744, 51).setIsHidden(true);
+		widget(744, 77).setPosition(0, 0, 1, 0);
+		widget(744, 77).setScriptCallOnMouseEntered(-1, "");
+		widget(744, 77).setScriptCallOnMouseExit(-1, "");
+		widget(744, 77).setScriptCallOnMousePressed(-1, "");
+		widget(744, 77).setIsHidden(true);
+		widget(744, 78).setText("");
+		widget(744, 76).setText("");
+		widget(744, 79).setScriptCallOnMousePressed(-1, "");
+	}
+	if (arg0 == 10) {
+		VARC[174] = 11;
+		widget(744, 52).setIsHidden(false);
+	} else {
+		widget(744, 52).setIsHidden(true);
+		widget(744, 56).setScriptCallOnMousePressed(-1, "");
+		widget(744, 57).setScriptCallOnMousePressed(-1, "");
+	}
+	if (arg0 != 9 && arg0 != 10) {
+		VARC[1090] = arg0;
+	}
+	if (arg0 == 12) {
+		STRING[32] = STRING[122];
+		STRING[33] = STRING[124];
+		STRING[122] = "";
+		STRING[124] = "";
+		STRING[125] = "";
+		widget(596, 73).setText(STRING[32]);
+		widget(596, 79).setText(script_2949(STRING[33]));
+		VARC[174] = 4;
+		VARC[175] = getClientCycle();
+		VARC[1099] = length(script_2949(STRING[33]));
+		script_3237(widget(596, 72), widget(596, 73), widget(596, 74), STRING[32], 3);
+		script_3237(widget(596, 78), widget(596, 79), widget(596, 80), script_2949(STRING[33]), 4);
+		script_2945();
+	}
+	return;
+}

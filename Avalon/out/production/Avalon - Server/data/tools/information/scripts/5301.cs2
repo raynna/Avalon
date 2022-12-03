@@ -1,0 +1,31 @@
+void script_5301() {
+	if (VARPBIT[9888] == 1) {
+		widget(824, 13).setRGB(0xAAAA00);
+		widget(824, 59).setText("On");
+	} else {
+		widget(824, 13).setRGB(0x000000);
+		widget(824, 59).setText("Off");
+	}
+	if (VARPBIT[9889] == 1) {
+		widget(824, 100).setRGB(0xAAAA00);
+		widget(824, 101).setText("On");
+	} else {
+		widget(824, 100).setRGB(0x000000);
+		widget(824, 101).setText("Off");
+	}
+	if (VARPBIT[9890] == 1) {
+		widget(824, 153).setRGB(0xAAAA00);
+		widget(824, 154).setText("On");
+	} else {
+		widget(824, 153).setRGB(0x000000);
+		widget(824, 154).setText("Off");
+	}
+	if (VARPBIT[9891] == 1) {
+		widget(824, 190).setRGB(0xAAAA00);
+		widget(824, 191).setText("On");
+	} else {
+		widget(824, 190).setRGB(0x000000);
+		widget(824, 191).setText("Off");
+	}
+	return;
+}

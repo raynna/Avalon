@@ -1,0 +1,23 @@
+void script_1788(int arg0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, int arg7, Widget widget8, Widget widget9, Widget widget10, Widget widget11, Widget widget12, Widget widget13, int arg14) {
+	int int15;
+	widget1.setSize(arg0, widget1.getHeight(), 0, 0);
+	widget2.setSize(arg0, widget2.getHeight(), 0, 0);
+	widget3.setSize(arg0, widget3.getHeight(), 0, 0);
+	widget4.setSize(arg0, widget4.getHeight(), 0, 0);
+	widget5.setSize(arg0, widget5.getHeight(), 0, 0);
+	widget6.setSize(arg0, widget6.getHeight(), 0, 0);
+	widget8.setSize(arg7, widget8.getHeight(), 0, 0);
+	widget9.setSize(arg7, widget9.getHeight(), 0, 0);
+	widget10.setSize(arg7, widget10.getHeight(), 0, 0);
+	widget11.setSize(arg7, widget11.getHeight(), 0, 0);
+	widget12.setSize(arg7, widget12.getHeight(), 0, 0);
+	widget13.setSize(arg7, widget13.getHeight(), 0, 0);
+	int15 = 4 + arg14 - arg7;
+	widget8.setPosition(int15, widget8.getY(), 0, 0);
+	widget9.setPosition(int15, widget9.getY(), 0, 0);
+	widget10.setPosition(int15, widget10.getY(), 0, 0);
+	widget11.setPosition(int15, widget11.getY(), 0, 0);
+	widget12.setPosition(int15, widget12.getY(), 0, 0);
+	widget13.setPosition(int15, widget13.getY(), 0, 0);
+	return;
+}

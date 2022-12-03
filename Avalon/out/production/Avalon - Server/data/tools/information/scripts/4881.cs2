@@ -1,0 +1,22 @@
+void script_4881() {
+	script_4880(widget(1092, 1377));
+	script_4880(widget(1092, 1383));
+	script_4880(widget(1092, 1389));
+	script_4880(widget(1092, 1395));
+	script_4880(widget(1092, 1401));
+	script_4880(widget(1092, 1407));
+	script_4880(widget(1092, 1414));
+	script_4880(widget(1092, 1420));
+	script_4880(widget(1092, 1426));
+	script_4880(widget(1092, 1432));
+	script_4880(widget(1092, 1438));
+	script_4880(widget(1092, 1444));
+	script_4880(widget(1092, 1450));
+	script_4880(widget(1092, 1456));
+	script_4880(widget(1092, 1462));
+	script_4880(widget(1092, 1468));
+	script_4880(widget(1092, 1474));
+	script_4880(widget(1092, 1480));
+	script_4880(widget(1092, 1486));
+	return;
+}

@@ -1,0 +1,60 @@
+void script_4130(Widget widget0) {
+	int int1;
+	int1 = 0;
+	switch (VARC[1452]) {
+		case 1:
+			ACTIVE.createChild(widget0, 3, int1);
+			ACTIVE.setFilled(true);
+			ACTIVE.setRGB(0xEEEEAA);
+			ACTIVE.setSize(30, 0, 0, 1);
+			ACTIVE.setPosition(0, 0, 0, 0);
+			ACTIVE.setHidden(true);
+			int1 = int1 + 1;
+			ACTIVE.createChild(widget0, 5, int1);
+			ACTIVE.setSprite(3181);
+			ACTIVE.setSize(30, 0, 0, 1);
+			ACTIVE.setPosition(0, 0, 0, 0);
+			ACTIVE.setHidden(true);
+			int1 = int1 + 1;
+			ACTIVE.createChild(widget0, 3, int1);
+			ACTIVE.setFilled(true);
+			ACTIVE.setRGB(0xEEEEAA);
+			ACTIVE.setSize(30, 0, 0, 1);
+			ACTIVE.setPosition(0, 0, 2, 2);
+			ACTIVE.setHidden(true);
+			int1 = int1 + 1;
+			ACTIVE.createChild(widget0, 5, int1);
+			ACTIVE.setSprite(3182);
+			ACTIVE.setSize(30, 0, 0, 1);
+			ACTIVE.setPosition(0, 0, 2, 2);
+			ACTIVE.setHidden(true);
+			int1 = int1 + 1;
+			script_665(0x000000, 50, widget0, int1);
+			break;
+		case 2:
+			while (int1 < 4) {
+				if (ACTIVE.setChild(widget0, int1)) {
+					ACTIVE.setHidden(false);
+				}
+				int1 = int1 + 1;
+			}
+			script_667(50, widget0, int1);
+			break;
+		case 3:
+			script_665(0x000000, 50, widget0, 4);
+			break;
+		case 4:
+			while (int1 < 4) {
+				if (ACTIVE.setChild(widget0, int1)) {
+					ACTIVE.setHidden(true);
+				}
+				int1 = int1 + 1;
+			}
+			script_667(50, widget0, int1);
+			break;
+		case 5:
+			widget0.clearChildren();
+			break;
+	}
+	return;
+}

@@ -1,0 +1,17 @@
+void script_2500(Widget widget0) {
+	int int1;
+	int1 = 1;
+	while (int1 <= 9 || datamap('i', 'I', (DataMap)2400, int1) != widget(45, 25)) {
+		if (datamap('i', 'I', (DataMap)2400, int1) != widget0) {
+			datamap('i', 'I', (DataMap)2400, int1).setSprite(1134);
+		} else {
+			widget0.setSprite(1135);
+			VARC[837] = int1;
+		}
+		int1 = int1 + 1;
+	}
+	if (VARC[837] > 0 && VARC[837] <= 9) {
+		widget(45, 39).setModel(datamap('i', 'm', (DataMap)2399, VARC[837]));
+	}
+	return;
+}

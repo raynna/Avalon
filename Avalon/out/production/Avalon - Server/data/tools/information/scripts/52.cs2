@@ -1,0 +1,10 @@
+void script_52(int arg0, Sprite sprite1, Sprite sprite2, Widget widget3, int arg4) {
+	if (ACTIVE.setChild(widget3, arg4)) {
+		if (getSkillActualLvl(5) < arg0) {
+			ACTIVE.setSprite(sprite1);
+		} else {
+			ACTIVE.setSprite(sprite2);
+		}
+	}
+	return;
+}

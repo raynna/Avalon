@@ -1,0 +1,3 @@
+int script_1647() {
+	return VARPBIT[6658] + VARPBIT[6659] + VARPBIT[6660] + VARPBIT[6661] + VARPBIT[6662];
+}

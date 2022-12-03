@@ -1,0 +1,8 @@
+void script_1165() {
+	int int0;
+	int int1;
+	int0 = widget(743, 39).getWidth() - widget(743, 8).getWidth();
+	int1 = cs2method6118() * 127 / int0;
+	widget(743, 8).setPosition(int1, 0, 0, 0);
+	return;
+}

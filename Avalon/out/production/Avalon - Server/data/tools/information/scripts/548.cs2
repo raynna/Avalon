@@ -1,0 +1,81 @@
+void script_548(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, Skill skill7, Widget widget8, Widget widget9) {
+	int int10;
+	int int11;
+	boolean boolean12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	string str0;
+	string str1;
+	if (VARC[80] == 0) {
+		return;
+	}
+	int10 = 0;
+	int11 = 0;
+	boolean12 = false;
+	int13 = 0;
+	int14 = 0;
+	int15 = 0;
+	int16 = 0;
+	int17 = 0;
+	int18 = 0;
+	str0 = "";
+	str1 = datamap('S', 's', (DataMap)680, skill7) + ": " + str(getSkillCurrentLvl(skill7)) + "/" + str(getSkillActualLvl(skill7));
+	if (ACTIVE.setChild(widget9, arg0) && getMaxLineWidth(str1, 190, 495) < ACTIVE.getWidth() && VARC[80] == getSkillActualLvl(skill7)) {
+		ACTIVE.setText(str1);
+		if (ACTIVE.setChild(widget9, arg1)) {
+			ACTIVE.setText(script_46(getSkillXp(skill7), ","));
+		}
+		if (getSkillActualLvl(skill7) < 99 && ACTIVE.setChild(widget9, arg2)) {
+			ACTIVE.setText(script_46(datamap('i', 'i', (DataMap)716, getSkillActualLvl(skill7) + 1) - getSkillXp(skill7), ","));
+		}
+		if (script_4036(datamap('S', 'i', (DataMap)1482, skill7))) {
+			boolean12, int10, int11 = script_4037(datamap('S', 'i', (DataMap)1482, skill7));
+			int17 = int10;
+			if (boolean12) {
+				int17 = datamap('i', 'i', (DataMap)716, int10);
+			}
+			int18 = max(0, int17 - getSkillXp(skill7));
+			str0 = script_46(int18, ",");
+			if (ACTIVE.setChild(widget9, arg5)) {
+				if (boolean12) {
+					int15 = datamap('i', 'i', (DataMap)716, int11);
+					int16 = datamap('i', 'i', (DataMap)716, int10);
+					if (int16 - int15 != 0) {
+						int13 = (getSkillXp(skill7) - int15) * (int16 - int15) / 100;
+					} else {
+						int13 = -1;
+					}
+				} else if (int10 - int11 != 0) {
+					int13 = (getSkillXp(skill7) - int11) * (int10 - int11) / 100;
+				} else {
+					int13 = -1;
+				}
+				if (int13 > 100) {
+					int13 = 100;
+				}
+				int13 = max(int13, 0);
+				int14 = int13 * (arg6 - 4);
+				int14 = int14 / 100;
+				ACTIVE.setSize(int14, 16, 0, 0);
+				if (ACTIVE.setChild(widget9, arg4)) {
+					if (int13 > 47) {
+						ACTIVE.setRGB(0x000000);
+					}
+					ACTIVE.setText(str(int13) + "%");
+				}
+				if (ACTIVE.setChild(widget9, arg3)) {
+					ACTIVE.setText(str0);
+				}
+			}
+		}
+		return;
+	}
+	widget9.clearChildren();
+	VARC[80] = getSkillActualLvl(skill7);
+	script_547(widget8, skill7, widget9);
+	return;
+}

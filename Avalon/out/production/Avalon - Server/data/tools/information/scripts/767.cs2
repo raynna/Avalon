@@ -1,0 +1,52 @@
+int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int script_767(Item item0) {
+	int int1;
+	ARRAY0 = new Item[10];
+	ARRAY1 = new int[10];
+	int1 = 0;
+	if (itemAttribute(item0, 538) != null) {
+		ARRAY0[int1] = itemAttribute(item0, 538);
+		ARRAY1[int1] = itemAttribute(item0, 539);
+		int1 = int1 + 1;
+	}
+	if (itemAttribute(item0, 540) != null) {
+		ARRAY0[int1] = itemAttribute(item0, 540);
+		ARRAY1[int1] = itemAttribute(item0, 541);
+		int1 = int1 + 1;
+	}
+	if (itemAttribute(item0, 542) != null) {
+		ARRAY0[int1] = itemAttribute(item0, 542);
+		ARRAY1[int1] = itemAttribute(item0, 543);
+		int1 = int1 + 1;
+	}
+	if (itemAttribute(item0, 697) != null) {
+		ARRAY0[int1] = itemAttribute(item0, 697);
+		ARRAY1[int1] = itemAttribute(item0, 698);
+		int1 = int1 + 1;
+	}
+	if (itemAttribute(item0, 699) != null) {
+		ARRAY0[int1] = itemAttribute(item0, 699);
+		ARRAY1[int1] = itemAttribute(item0, 700);
+		int1 = int1 + 1;
+	}
+	if (itemAttribute(item0, 701) != null) {
+		ARRAY0[int1] = itemAttribute(item0, 701);
+		ARRAY1[int1] = itemAttribute(item0, 702);
+		int1 = int1 + 1;
+	}
+	if (itemAttribute(item0, 703) != null) {
+		ARRAY0[int1] = itemAttribute(item0, 703);
+		ARRAY1[int1] = itemAttribute(item0, 704);
+		int1 = int1 + 1;
+	}
+	if (itemAttribute(item0, 705) != null) {
+		ARRAY0[int1] = itemAttribute(item0, 705);
+		ARRAY1[int1] = itemAttribute(item0, 706);
+		int1 = int1 + 1;
+	}
+	if (itemAttribute(item0, 707) != null) {
+		ARRAY0[int1] = itemAttribute(item0, 707);
+		ARRAY1[int1] = itemAttribute(item0, 708);
+		int1 = int1 + 1;
+	}
+	return ARRAY0[0], ARRAY0[1], ARRAY0[2], ARRAY0[3], ARRAY0[4], ARRAY0[5], ARRAY0[6], ARRAY0[7], ARRAY0[8], ARRAY0[9], ARRAY1[0], ARRAY1[1], ARRAY1[2], ARRAY1[3], ARRAY1[4], ARRAY1[5], ARRAY1[6], ARRAY1[7], ARRAY1[8], ARRAY1[9];
+}

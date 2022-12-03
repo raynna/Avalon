@@ -1,0 +1,22 @@
+void script_2135(Widget widget0, int arg1, int arg2) {
+	int int3;
+	int int4;
+	int3 = widget0.getX();
+	int4 = widget0.getY();
+	if (arg1 >= 0 && arg1 <= widget0.getWidth() / 2) {
+		int3 = int3 - (rndExcl(2) + 2);
+	} else if (arg1 <= widget0.getWidth()) {
+		int3 = int3 + rndExcl(2) + 2;
+	}
+	if (arg2 >= 0 && arg2 <= widget0.getHeight() / 2) {
+		int4 = int4 - (rndExcl(2) + 2);
+	} else if (arg2 <= widget0.getHeight()) {
+		int4 = int4 + rndExcl(2) + 2;
+	}
+	int3 = max(int3, 0);
+	int4 = max(int4, 0);
+	int3 = min(int3, widget0.getLayer().getWidth() - widget0.getWidth());
+	int4 = min(int4, widget0.getLayer().getHeight() - widget0.getHeight());
+	widget0.setPosition(int3, int4, 0, 0);
+	return;
+}

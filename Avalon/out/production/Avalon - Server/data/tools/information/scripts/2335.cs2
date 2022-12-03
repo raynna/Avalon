@@ -1,0 +1,71 @@
+void script_2335(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, int arg5, int arg6, int arg7, int arg8, int arg9, Widget widget10, Widget widget11, Widget widget12, Widget widget13, Widget widget14, Widget widget15, int arg16) {
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	if (VARPBIT[8725] < 4000) {
+		widget15.setText(str(VARPBIT[8725]));
+	} else {
+		widget15.setText("Max");
+	}
+	if (VARPBIT[3939] < 4000) {
+		widget10.setText(str(VARPBIT[3939]));
+	} else {
+		widget10.setText("Max");
+	}
+	if (VARPBIT[3941] < 4000) {
+		widget11.setText(str(VARPBIT[3941]));
+	} else {
+		widget11.setText("Max");
+	}
+	if (VARPBIT[3938] < 4000) {
+		widget12.setText(str(VARPBIT[3938]));
+	} else {
+		widget12.setText("Max");
+	}
+	if (VARPBIT[3942] < 4000) {
+		widget13.setText(str(VARPBIT[3942]));
+	} else {
+		widget13.setText("Max");
+	}
+	int17 = getMaxLineWidth(widget15.getText(), 512, 494);
+	int18 = getMaxLineWidth(widget10.getText(), 512, 494);
+	int19 = getMaxLineWidth(widget11.getText(), 512, 494);
+	int20 = getMaxLineWidth(widget12.getText(), 512, 494);
+	int21 = getMaxLineWidth(widget13.getText(), 512, 494);
+	int22 = arg5;
+	int22 = max(int22, arg16 + 10 + int17);
+	int22 = max(int22, arg6 + 10 + int18);
+	int22 = max(int22, arg7 + 10 + int19);
+	int22 = max(int22, arg8 + 10 + int20);
+	int22 = max(int22, arg9 + 10 + int21);
+	widget0.setSize(int22, widget0.getHeight(), 0, 0);
+	if (VARPBIT[8725] < 40) {
+		widget14.setRGB(0xFF981F);
+	} else {
+		widget14.setRGB(0x66FFFF);
+	}
+	if (VARPBIT[3939] < 40) {
+		widget1.setRGB(0xFF981F);
+	} else {
+		widget1.setRGB(0x66FFFF);
+	}
+	if (VARPBIT[3941] < 40) {
+		widget2.setRGB(0xFF981F);
+	} else {
+		widget2.setRGB(0x66FFFF);
+	}
+	if (VARPBIT[3938] < 40) {
+		widget3.setRGB(0xFF981F);
+	} else {
+		widget3.setRGB(0x66FFFF);
+	}
+	if (VARPBIT[3942] < 40) {
+		widget4.setRGB(0xFF981F);
+	} else {
+		widget4.setRGB(0x66FFFF);
+	}
+	return;
+}

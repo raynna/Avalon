@@ -1,0 +1,23 @@
+void script_4415() {
+	widget(1107, 173).setText(cs2method3702());
+	widget(1107, 19).setText("Game time:" + "<br>" + script_4337(CLANDEF112[0]));
+	widget(1107, 35).setText(cs2method3710(cs2method3715()));
+	if (CLANDEF113[6] > 0) {
+		widget(1107, 36).setText(str(CLANDEF113[6]));
+	}
+	widget(1107, 37).setText(str(cs2method3709()));
+	if (CLANDEF113[4] == 0) {
+		widget(1107, 5).setText("This clan is not recruiting.");
+	} else if (CLANDEF113[4] == 1) {
+		widget(1107, 5).setText("This clan is recruiting.");
+	}
+	script_4332(widget(1107, 102), widget(1107, 112));
+	script_4334(widget(1107, 7), widget(1107, 8));
+	script_4336(widget(1107, 94));
+	script_4343(widget(1107, 95));
+	script_4329(widget(1107, 38));
+	script_4328(widget(1107, 199));
+	script_4420();
+	widget(1107, 151).setIsHidden(true);
+	return;
+}

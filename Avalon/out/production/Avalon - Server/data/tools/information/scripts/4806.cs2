@@ -1,0 +1,169 @@
+void script_4806(DataMap datamap0, int arg1, int arg2, int arg3, int arg4) {
+	Widget widget5;
+	Widget widget6;
+	Widget widget7;
+	Widget widget8;
+	Widget widget9;
+	Widget widget10;
+	Widget widget11;
+	Widget widget12;
+	Widget widget13;
+	Widget widget14;
+	Widget widget15;
+	int int16;
+	int int17;
+	AttrMap attrmap18;
+	int int19;
+	widget5 = null;
+	widget6 = null;
+	widget7 = null;
+	widget8 = null;
+	widget9 = null;
+	widget10 = null;
+	widget11 = null;
+	widget12 = null;
+	widget13 = null;
+	widget14 = null;
+	widget15 = null;
+	widget5, widget6, widget7, widget8, widget9, widget10, widget11, widget12, widget13, widget14, widget15 = script_4818(arg1, arg2);
+	switch (arg2) {
+		case 1:
+			widget15.setText(datamap('i', 's', (DataMap)4044, arg4));
+			break;
+		case 2:
+			widget15.setText(datamap('i', 's', (DataMap)4045, arg4));
+			break;
+		case 3:
+			widget15.setText(datamap('i', 's', (DataMap)4046, arg4));
+			break;
+	}
+	widget5.setIsHidden(false);
+	int16 = 0;
+	int17 = 1;
+	attrmap18 = null;
+	int19 = 0;
+	switch (VARPBIT[9558]) {
+		case 1:
+			switch (arg2) {
+				case 1:
+					int19 = VARPBIT[9567];
+					break;
+				case 2:
+					int19 = VARPBIT[9568];
+					break;
+				case 3:
+					int19 = VARPBIT[9569];
+					break;
+			}
+			break;
+		case 2:
+			switch (arg2) {
+				case 1:
+					int19 = VARPBIT[9576];
+					break;
+				case 2:
+					int19 = VARPBIT[9577];
+					break;
+				case 3:
+					int19 = VARPBIT[9578];
+					break;
+			}
+			break;
+		case 3:
+			switch (arg2) {
+				case 1:
+					int19 = VARPBIT[9585];
+					break;
+				case 2:
+					int19 = VARPBIT[9586];
+					break;
+				case 3:
+					int19 = VARPBIT[9587];
+					break;
+			}
+			break;
+	}
+	while (int17 <= datamapSize(datamap0)) {
+		attrmap18 = datamap('i', 'J', datamap0, int17);
+		if (attrmap18 != null) {
+			ACTIVE.createChild(widget14, 3, int16);
+			ACTIVE.setSize(0, 26, 1, 0);
+			ACTIVE.setPosition(0, int16 * 27, 0, 0);
+			ACTIVE.setFilled(true);
+			ACTIVE.setRGB(0x2C2820);
+			ACTIVE.createChild(widget6, 5, int16);
+			ACTIVE.setSprite(getAttributeMapValue(attrmap18, 1565));
+			ACTIVE.setSize(22, 22, 0, 0);
+			ACTIVE.setPosition(0, 2 + int16 * 27, 0, 0);
+			ACTIVE.setScriptCallOnMouseOver(4812, getAttributeMapValue(attrmap18, 1566), getAttributeMapValue(attrmap18, 1565), getAttributeMapValue(attrmap18, 1567), 25, "sdii");
+			ACTIVE.setScriptCallOnMouseExit(4813, "");
+			ACTIVE.createChild(widget7, 5, int16);
+			ACTIVE.setSprite(getAttributeMapValue(attrmap18, 1572));
+			ACTIVE.setSize(20, 20, 0, 0);
+			ACTIVE.setPosition(1, 2 + int16 * 27, 0, 0);
+			ACTIVE.setScriptCallOnMouseExit(40, widget(1092, 1254), "I");
+			ACTIVE.setScriptCallOnMouseOver(4538, widget(1092, 1254), CTX_WIDGET, CTX_WIDGET_CHILD, getAttributeMapValue(attrmap18, 1570), 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			ACTIVE.createChild(widget10, 4, int16);
+			ACTIVE.setText(str(getAttributeMapValue(attrmap18, 1573)));
+			ACTIVE.setSize(0, 26, 1, 0);
+			ACTIVE.setPosition(0, int16 * 27, 0, 0);
+			ACTIVE.setTextAntiMacro(false);
+			ACTIVE.setFont(494);
+			ACTIVE.setTextAlignment(1, 1, 0);
+			ACTIVE.setRGB(0xFFFFFF);
+			if (widget8 != null) {
+				ACTIVE.createChild(widget8, 5, int16);
+				ACTIVE.setSprite(getAttributeMapValue(attrmap18, 1576));
+				ACTIVE.setSize(20, 20, 0, 0);
+				ACTIVE.setPosition(1, 2 + int16 * 27, 0, 0);
+				ACTIVE.setScriptCallOnMouseExit(40, widget(1092, 1254), "I");
+				ACTIVE.setScriptCallOnMouseOver(4538, widget(1092, 1254), CTX_WIDGET, CTX_WIDGET_CHILD, getAttributeMapValue(attrmap18, 1574), 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			}
+			if (widget11 != null) {
+				ACTIVE.createChild(widget11, 4, int16);
+				ACTIVE.setText(str(getAttributeMapValue(attrmap18, 1577)));
+				ACTIVE.setSize(0, 26, 1, 0);
+				ACTIVE.setPosition(0, int16 * 27, 0, 0);
+				ACTIVE.setTextAntiMacro(false);
+				ACTIVE.setFont(494);
+				ACTIVE.setTextAlignment(1, 1, 0);
+				ACTIVE.setRGB(0xFFFFFF);
+			}
+			if (widget9 != null) {
+				ACTIVE.createChild(widget9, 5, int16);
+				ACTIVE.setSprite(getAttributeMapValue(attrmap18, 1580));
+				ACTIVE.setSize(20, 20, 0, 0);
+				ACTIVE.setPosition(0, 2 + int16 * 27, 0, 0);
+				ACTIVE.setScriptCallOnMouseExit(40, widget(1092, 1254), "I");
+				ACTIVE.setScriptCallOnMouseOver(4538, widget(1092, 1254), CTX_WIDGET, CTX_WIDGET_CHILD, getAttributeMapValue(attrmap18, 1578), 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			}
+			if (widget12 != null) {
+				ACTIVE.createChild(widget12, 4, int16);
+				ACTIVE.setText(str(getAttributeMapValue(attrmap18, 1581)));
+				ACTIVE.setSize(0, 26, 1, 0);
+				ACTIVE.setPosition(0, int16 * 27, 0, 0);
+				ACTIVE.setTextAntiMacro(false);
+				ACTIVE.setFont(494);
+				ACTIVE.setTextAlignment(1, 1, 0);
+				ACTIVE.setRGB(0xFFFFFF);
+			}
+			ACTIVE.createChild(widget13, 5, int16);
+			ACTIVE.setSize(16, 16, 0, 0);
+			ACTIVE.setPosition(1, 5 + int16 * 27, 0, 0);
+			if (arg3 == 0) {
+				ACTIVE.setContextMenuOption(1, "Select");
+				ACTIVE.setScriptCallOnClickContextMenu(4832, CTX_WIDGET, CTX_WIDGET_CHILD, "Ii");
+			}
+			if (int19 == int16 + 1) {
+				ACTIVE.setSprite(6004);
+			} else {
+				ACTIVE.setSprite(6009);
+			}
+			int16 = int16 + 1;
+		}
+		int17 = int17 + 1;
+		attrmap18 = null;
+	}
+	widget5.setAttr(1564, int16 * 27);
+	return;
+}

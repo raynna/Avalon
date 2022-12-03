@@ -1,0 +1,17 @@
+void script_4695(int arg0, int arg1) {
+	int int2;
+	int2 = getClientCycle();
+	if (int2 >= arg0 + 15 || arg0 == 0) {
+		widget(500, 11).setTrans(arg1);
+		arg0 = int2;
+		if (VARC[1548] == 0) {
+			arg1 = 255;
+		} else if (arg1 == 255) {
+			arg1 = 0;
+		} else {
+			arg1 = 255;
+		}
+	}
+	widget(500, 11).setScriptCallOnGameloop(4695, arg0, arg1, "ii");
+	return;
+}

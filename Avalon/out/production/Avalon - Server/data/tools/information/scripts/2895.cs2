@@ -1,0 +1,11 @@
+void script_2895(Widget widget0) {
+	if (VARC[1078] > VARPBIT[7189]) {
+		if (VARC[1079] != 1) {
+			widget0.setScriptCallOnGameloop(2896, widget0, "I");
+			VARC[1079] = 1;
+		}
+	} else if (VARC[1078] == 0) {
+		VARC[1078] = VARPBIT[7189];
+	}
+	return;
+}

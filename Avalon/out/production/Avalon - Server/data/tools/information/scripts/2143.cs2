@@ -1,0 +1,23 @@
+void script_2143(Widget widget0, int arg1) {
+	DataMap datamap2;
+	int int3;
+	datamap2 = (DataMap)1093;
+	if (IsFemale()) {
+		datamap2 = (DataMap)3872;
+	}
+	int3 = 0;
+	while (int3 <= datamapSize(datamap2)) {
+		if (ACTIVE.setChild(widget0, int3)) {
+			if (script_2476(int3) == 1) {
+				ACTIVE.setRGB(0x11FF00);
+			} else {
+				ACTIVE.setRGB(0xFF1100);
+			}
+		}
+		int3 = 1 + int3;
+	}
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setRGB(0xFFFFFF);
+	}
+	return;
+}

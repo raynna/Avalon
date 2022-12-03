@@ -1,0 +1,8 @@
+void script_1295() {
+	widget(144, 147).setRGB(0xFF0000);
+	widget(144, 147).setScriptCallOnMouseExit(45, CTX_WIDGET, 16711680, "Ii");
+	widget(144, 186).setIsHidden(true);
+	widget(144, 187).setModel(4910);
+	widget(144, 187).setAnimation(1453);
+	return;
+}

@@ -1,0 +1,46 @@
+void script_1048(int arg0, char char1, Widget widget2, Widget widget3, QcPhrase qcphrase4) {
+	int int5;
+	int int6;
+	if (arg0 == 13) {
+		script_1054();
+		return;
+	}
+	if (arg0 == 102) {
+		script_1050(VARC[126], STRING[27]);
+		return;
+	}
+	int5 = length(str(VARC[129]));
+	int6 = indexOf("0123456789", char1, 0);
+	if (arg0 == 84) {
+		if (int5 > 0) {
+			script_1074(widget2, qcphrase4, VARC[129]);
+		} else {
+			script_1054();
+		}
+		return;
+	}
+	if (arg0 == 85) {
+		if (int5 > 0) {
+			VARC[129] = VARC[129] / 10;
+		} else {
+			if (!(VARC[127] == 0)) {
+				widget(137, 7).setIsHidden(true);
+				widget(137, 9).setIsHidden(true);
+				widget(137, 13).setIsHidden(true);
+				widget(137, 17).setIsHidden(false);
+				widget(137, 1).setIsHidden(false);
+				widget(137, 3).setIsHidden(true);
+				return;
+			}
+			script_1054();
+		}
+	} else if (int6 >= 0 && int5 < 10 && VARC[129] * 10 + int6 > 0) {
+		VARC[129] = VARC[129] * 10 + int6;
+	}
+	if (VARC[129] > 0) {
+		widget3.setText("Please enter a value: " + str(VARC[129]) + "*");
+	} else {
+		widget3.setText("Please enter a value: *");
+	}
+	return;
+}

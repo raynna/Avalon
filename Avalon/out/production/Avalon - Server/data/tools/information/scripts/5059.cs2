@@ -1,0 +1,55 @@
+void script_5059(Widget widget0, int arg1, int arg2) {
+	int int3;
+	int3 = arg1 * 12;
+	if (arg2 == 1) {
+		if (ACTIVE.setChild(widget0, int3 + 2)) {
+			ACTIVE.setSprite(7555);
+		}
+		if (ACTIVE.setChild(widget0, int3 + 3)) {
+			ACTIVE.setSprite(7554);
+		}
+		if (ACTIVE.setChild(widget0, int3 + 4)) {
+			ACTIVE.setSprite(7556);
+		}
+		if (ACTIVE.setChild(widget0, int3)) {
+			ACTIVE.setScriptCallOnMouseEntered(-1, "");
+			ACTIVE.setScriptCallOnMouseExit(-1, "");
+		}
+		if (widget(1111, 21).isHidden()) {
+			script_5063(widget0, arg1, 0);
+			if (ACTIVE.setChild(widget0, int3 + 1)) {
+				ACTIVE.setScriptCallOnMouseEntered(5061, CTX_WIDGET, arg1, true, false, "Ii11");
+				ACTIVE.setScriptCallOnMouseExit(5061, CTX_WIDGET, arg1, false, false, "Ii11");
+			}
+		} else {
+			if (ACTIVE.setChild(widget0, int3 + 5)) {
+				ACTIVE.setSprite(7555);
+			}
+			if (ACTIVE.setChild(widget0, int3 + 6)) {
+				ACTIVE.setSprite(7554);
+			}
+			if (ACTIVE.setChild(widget0, int3 + 7)) {
+				ACTIVE.setSprite(7556);
+			}
+			if (ACTIVE.setChild(widget0, int3 + 10)) {
+				ACTIVE.setSprite(7408);
+			}
+			if (ACTIVE.setChild(widget0, int3 + 1)) {
+				ACTIVE.setScriptCallOnMouseEntered(-1, "");
+				ACTIVE.setScriptCallOnMouseExit(-1, "");
+			}
+		}
+	} else {
+		script_5062(widget0, arg1, 0);
+		script_5063(widget0, arg1, 0);
+		if (ACTIVE.setChild(widget0, int3)) {
+			ACTIVE.setScriptCallOnMouseEntered(5060, CTX_WIDGET, arg1, true, "Ii1");
+			ACTIVE.setScriptCallOnMouseExit(5060, CTX_WIDGET, arg1, false, "Ii1");
+		}
+		if (ACTIVE.setChild(widget0, int3 + 1)) {
+			ACTIVE.setScriptCallOnMouseEntered(5061, CTX_WIDGET, arg1, true, true, "Ii11");
+			ACTIVE.setScriptCallOnMouseExit(5061, CTX_WIDGET, arg1, false, true, "Ii11");
+		}
+	}
+	return;
+}

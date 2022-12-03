@@ -1,0 +1,50 @@
+void script_1443() {
+	widget(4, 8).setText(str(VARPBIT[455]));
+	if (VARPBIT[455] == 0) {
+		widget(4, 4).setModel(null);
+	} else if (VARPBIT[455] == 1) {
+		widget(4, 4).setModel(6545);
+	} else if (VARPBIT[455] < 4) {
+		widget(4, 4).setModel(6547);
+	} else if (VARPBIT[455] < 7) {
+		widget(4, 4).setModel(6548);
+	} else if (VARPBIT[455] < 11) {
+		widget(4, 4).setModel(6549);
+	} else if (VARPBIT[455] < 16) {
+		widget(4, 4).setModel(6550);
+	} else if (VARPBIT[455] < 22) {
+		widget(4, 4).setModel(6551);
+	} else if (VARPBIT[455] < 29) {
+		widget(4, 4).setModel(6552);
+	} else if (VARPBIT[455] < 37) {
+		widget(4, 4).setModel(6553);
+	} else if (VARPBIT[455] < 46) {
+		widget(4, 4).setModel(6554);
+	} else {
+		widget(4, 4).setModel(6546);
+	}
+	if (VARPBIT[454] == 0) {
+		widget(4, 2).setModel(null);
+	} else if (VARPBIT[454] == 1) {
+		widget(4, 2).setModel(6557);
+	} else if (VARPBIT[454] == 2) {
+		widget(4, 2).setModel(6559);
+	} else if (VARPBIT[454] == 3) {
+		widget(4, 2).setModel(6560);
+	} else if (VARPBIT[454] == 4) {
+		widget(4, 2).setModel(6561);
+	} else if (VARPBIT[454] == 5) {
+		widget(4, 2).setModel(6562);
+	} else if (VARPBIT[454] == 6) {
+		widget(4, 2).setModel(6563);
+	} else if (VARPBIT[454] == 7) {
+		widget(4, 2).setModel(6564);
+	} else if (VARPBIT[454] == 8) {
+		widget(4, 2).setModel(6565);
+	} else if (VARPBIT[454] == 9) {
+		widget(4, 2).setModel(6566);
+	} else {
+		widget(4, 2).setModel(6558);
+	}
+	return;
+}

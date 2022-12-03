@@ -1,0 +1,22 @@
+void script_3953(int arg0) {
+	STRING[327] = STRING[326];
+	if (length(STRING[326]) <= 0) {
+		script_3213("Please enter your Email address again here.", widget(673, 113));
+		return;
+	}
+	if (compare(STRING[122], STRING[326]) != 0) {
+		script_3213("Please ensure both Email addresses match.", widget(673, 113));
+		return;
+	}
+	if (widget(673, 94).getSpriteId() == 4061) {
+		script_3213(widget(673, 137).getText(), widget(673, 113));
+		return;
+	}
+	widget(673, 113).setSprite(4059);
+	widget(673, 118).setIsHidden(true);
+	widget(673, 31).setIsHidden(true);
+	if (arg0 == 1) {
+		script_2714(7, 1);
+	}
+	return;
+}

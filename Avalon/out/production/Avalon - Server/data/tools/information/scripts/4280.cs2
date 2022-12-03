@@ -1,0 +1,4 @@
+void script_4280() {
+	script_4212(widget(1086, 29), "Confirm", 4040, 0xEBE0BC, 0x5A4E3A);
+	return;
+}

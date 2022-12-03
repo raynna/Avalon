@@ -1,0 +1,40 @@
+void script_3461(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4) {
+	if (VARC[1007] <= 0) {
+		widget1.setIsHidden(true);
+		widget4.setIsHidden(true);
+		cs2method5512();
+		return;
+	}
+	if (VARC[1007] <= 10) {
+		widget1.setIsHidden(true);
+		widget4.setIsHidden(true);
+		script_3470(widget0, script_284(getMyLocation()));
+		return;
+	}
+	if (VARC[1007] <= 20) {
+		widget1.setIsHidden(true);
+		widget4.setIsHidden(true);
+		script_3465(widget0, script_284(getMyLocation()));
+		return;
+	}
+	if (VARC[1007] <= 30) {
+		widget4.setIsHidden(true);
+		script_3462(widget0, widget1, widget2, widget3);
+		return;
+	}
+	if (VARC[1007] <= 40) {
+		widget1.setIsHidden(true);
+		widget4.setIsHidden(true);
+		script_3458(widget0, script_284(getMyLocation()));
+		return;
+	}
+	if (VARC[1007] <= 100) {
+		widget1.setIsHidden(true);
+		script_3472(widget0, widget4);
+		return;
+	}
+	widget1.setIsHidden(true);
+	widget4.setIsHidden(true);
+	script_3466(widget0, script_284(getMyLocation()));
+	return;
+}

@@ -1,0 +1,78 @@
+void script_1378(Widget widget0, Widget widget1) {
+	string str0;
+	string str1;
+	str0 = widget0.getText();
+	str1 = "";
+	if (length(str0) > 0) {
+		switch (widget1) {
+			case widget(1017, 225):
+			case widget(1017, 224):
+			case widget(1017, 217):
+			case widget(1017, 216):
+			case widget(1017, 219):
+			case widget(1017, 218):
+			case widget(1017, 221):
+			case widget(1017, 220):
+			case widget(1017, 223):
+			case widget(1017, 222):
+			case widget(1017, 209):
+			case widget(1017, 208):
+			case widget(1017, 211):
+			case widget(1017, 210):
+			case widget(1017, 213):
+			case widget(1017, 212):
+			case widget(1017, 215):
+			case widget(1017, 214):
+			case widget(1017, 201):
+			case widget(1017, 200):
+			case widget(1017, 203):
+			case widget(1017, 202):
+			case widget(1017, 205):
+			case widget(1017, 204):
+			case widget(1017, 207):
+			case widget(1017, 206):
+			case widget(1017, 193):
+			case widget(1017, 192):
+			case widget(1017, 195):
+			case widget(1017, 194):
+			case widget(1017, 197):
+			case widget(1017, 196):
+			case widget(1017, 199):
+			case widget(1017, 198):
+			case widget(1017, 185):
+			case widget(1017, 184):
+			case widget(1017, 187):
+			case widget(1017, 186):
+			case widget(1017, 189):
+			case widget(1017, 188):
+			case widget(1017, 191):
+			case widget(1017, 190):
+			case widget(1017, 177):
+			case widget(1017, 176):
+			case widget(1017, 179):
+			case widget(1017, 178):
+			case widget(1017, 181):
+			case widget(1017, 180):
+			case widget(1017, 183):
+			case widget(1017, 182):
+			case widget(1017, 169):
+			case widget(1017, 168):
+			case widget(1017, 171):
+			case widget(1017, 170):
+			case widget(1017, 173):
+			case widget(1017, 172):
+			case widget(1017, 175):
+			case widget(1017, 174):
+			case widget(1017, 167):
+			case widget(1017, 166):
+				str1 = widget1.getText();
+				widget1.setText(str0);
+				widget0.setText(str1);
+				VARC[1387] = 1;
+				break;
+			default:
+				return;
+		}
+	}
+	return;
+}

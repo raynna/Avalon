@@ -1,0 +1,33 @@
+void script_2986() {
+	if (VARPBIT[8386] == 1) {
+		script_2987(widget(72, 2), widget(72, 1), widget(72, 31), widget(72, 3));
+	}
+	if (VARPBIT[8393] == 1) {
+		script_2987(widget(72, 5), widget(72, 4), widget(72, 32), widget(72, 6));
+	}
+	if (VARPBIT[8394] == 1) {
+		script_2987(widget(72, 8), widget(72, 7), widget(72, 33), widget(72, 9));
+	}
+	if (VARPBIT[8395] == 1) {
+		script_2987(widget(72, 11), widget(72, 10), widget(72, 34), widget(72, 12));
+	}
+	if (VARPBIT[8391] == 1) {
+		script_2987(widget(72, 14), widget(72, 13), widget(72, 35), widget(72, 15));
+	}
+	if (VARPBIT[8387] == 1) {
+		script_2987(widget(72, 17), widget(72, 16), widget(72, 36), widget(72, 18));
+	}
+	if (VARPBIT[8388] == 1) {
+		script_2987(widget(72, 20), widget(72, 19), widget(72, 37), widget(72, 21));
+	}
+	if (VARPBIT[8390] == 1) {
+		script_2987(widget(72, 23), widget(72, 22), widget(72, 38), widget(72, 24));
+	}
+	if (VARPBIT[8389] == 1) {
+		script_2987(widget(72, 26), widget(72, 25), widget(72, 39), widget(72, 27));
+	}
+	if (VARPBIT[8392] == 1) {
+		script_2987(widget(72, 29), widget(72, 28), widget(72, 40), widget(72, 30));
+	}
+	return;
+}

@@ -1,0 +1,15 @@
+void script_4089() {
+	Widget widget0;
+	widget0 = widget(548, 199);
+	if (getDisplayMode() >= 2) {
+		widget0 = widget(746, 87);
+	}
+	if (hasChildOverlay(script_8(1), 1056) && !widget0.hasChild() && script_2728() == 1 && VARPBIT[8587] != 419) {
+		widget(746, 130).setIsHidden(false);
+		widget(548, 137).setIsHidden(false);
+	} else {
+		widget(746, 130).setIsHidden(true);
+		widget(548, 137).setIsHidden(true);
+	}
+	return;
+}

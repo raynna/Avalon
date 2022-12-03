@@ -1,0 +1,32 @@
+void script_62(int arg0, int arg1, int arg2, DataMap datamap3) {
+	int int4;
+	Widget widget5;
+	int int6;
+	int int7;
+	int int8;
+	int4 = (arg1 + arg2) / 2;
+	widget5 = widget(ARRAY0[int4]);
+	ARRAY0[int4] = ARRAY0[arg2];
+	ARRAY0[arg2] = widget5;
+	int6 = arg1;
+	int7 = arg1;
+	int8 = -1;
+	while (int7 < arg2) {
+		if (compare(lower(datamap('I', 's', datamap3, widget(ARRAY0[int7]))), lower(datamap('I', 's', datamap3, widget5))) < bitAnd(int7, 1)) {
+			int8 = ARRAY0[int7];
+			ARRAY0[int7] = ARRAY0[int6];
+			ARRAY0[int6] = int8;
+			int6 = int6 + 1;
+		}
+		int7 = int7 + 1;
+	}
+	ARRAY0[arg2] = ARRAY0[int6];
+	ARRAY0[int6] = widget5;
+	if (arg1 < int6 - 1) {
+		script_62(0, arg1, int6 - 1, datamap3);
+	}
+	if (int6 + 1 < arg2) {
+		script_62(0, int6 + 1, arg2, datamap3);
+	}
+	return;
+}

@@ -1,0 +1,39 @@
+void script_3102() {
+	script_3104(widget(910, 7));
+	script_3105(widget(910, 5));
+	script_3107(widget(910, 10));
+	script_3107(widget(910, 11));
+	script_3108(widget(910, 54));
+	script_3108(widget(910, 31));
+	script_3108(widget(910, 51));
+	script_3108(widget(910, 48));
+	script_3108(widget(910, 44));
+	if (getLanguage() != 0) {
+		widget(910, 51).setText("Language");
+	}
+	script_3109(widget(910, 26));
+	script_3109(widget(910, 19));
+	script_3111(widget(910, 36));
+	script_3111(widget(910, 24));
+	script_3110(widget(910, 56));
+	script_3110(widget(910, 57));
+	script_3110(widget(910, 58));
+	script_3110(widget(910, 59));
+	script_3110(widget(910, 61));
+	script_3155(widget(910, 53));
+	script_3155(widget(910, 50));
+	widget(910, 75).setIsHidden(false);
+	widget(910, 34).setIsHidden(false);
+	widget(910, 60).setIsHidden(false);
+	widget(910, 84).setIsHidden(false);
+	widget(910, 42).setIsHidden(false);
+	widget(910, 33).setPosition(110, 0, 2, 0);
+	widget(910, 74).setPosition(94, 0, 2, 0);
+	widget(910, 59).setPosition(173, 0, 2, 0);
+	widget(910, 83).setPosition(157, 0, 2, 0);
+	widget(910, 41).setPosition(173, 0, 2, 0);
+	widget(910, 32).setSize(330, 2, 1, 1);
+	widget(910, 72).setSize(313, 0, 1, 1);
+	script_3110(widget(910, 60));
+	return;
+}

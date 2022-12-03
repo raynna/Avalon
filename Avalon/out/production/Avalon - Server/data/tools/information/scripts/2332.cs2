@@ -1,0 +1,11 @@
+string script_2332(string string0, string string1, string arg2) {
+	int int0;
+	int int1;
+	int0 = indexOf(string0, string1, 0);
+	int1 = length(string1);
+	while (int0 != -1) {
+		string0 = substr(string0, 0, int0) + arg2 + substr(string0, int0 + int1, length(string0));
+		int0 = indexOf(string0, string1, int0);
+	}
+	return string0;
+}

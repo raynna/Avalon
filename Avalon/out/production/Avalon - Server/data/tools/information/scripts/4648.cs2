@@ -1,0 +1,91 @@
+void script_4648() {
+	widget(173, 1).setIsHidden(true);
+	widget(173, 3).setIsHidden(true);
+	widget(173, 2).setIsHidden(false);
+	widget(173, 42).setIsHidden(false);
+	widget(173, 58).setIsHidden(false);
+	if (isBitFlagged(VARP[2194], 1)) {
+		widget(173, 43).setIsHidden(false);
+	} else {
+		widget(173, 43).setIsHidden(true);
+	}
+	if (isBitFlagged(VARP[2194], 2)) {
+		widget(173, 44).setIsHidden(false);
+	} else {
+		widget(173, 44).setIsHidden(true);
+	}
+	if (isBitFlagged(VARP[2194], 3)) {
+		widget(173, 45).setIsHidden(false);
+	} else {
+		widget(173, 45).setIsHidden(true);
+	}
+	if (isBitFlagged(VARP[2194], 4)) {
+		widget(173, 46).setIsHidden(false);
+	} else {
+		widget(173, 46).setIsHidden(true);
+	}
+	if (isBitFlagged(VARP[2194], 5)) {
+		widget(173, 47).setIsHidden(false);
+	} else {
+		widget(173, 47).setIsHidden(true);
+	}
+	if (isBitFlagged(VARP[2194], 6)) {
+		widget(173, 48).setIsHidden(false);
+	} else {
+		widget(173, 48).setIsHidden(true);
+	}
+	if (isBitFlagged(VARP[2194], 7)) {
+		widget(173, 49).setIsHidden(false);
+	} else {
+		widget(173, 49).setIsHidden(true);
+	}
+	if (isBitFlagged(VARP[2194], 8)) {
+		widget(173, 51).setIsHidden(false);
+	} else {
+		widget(173, 51).setIsHidden(true);
+	}
+	if (isBitFlagged(VARP[2194], 9)) {
+		widget(173, 50).setIsHidden(false);
+	} else {
+		widget(173, 50).setIsHidden(true);
+	}
+	if (isBitFlagged(VARP[2194], 10)) {
+		widget(173, 52).setIsHidden(false);
+	} else {
+		widget(173, 52).setIsHidden(true);
+	}
+	if (isBitFlagged(VARP[2194], 11)) {
+		widget(173, 56).setIsHidden(false);
+	} else {
+		widget(173, 56).setIsHidden(true);
+	}
+	if (isBitFlagged(VARP[2194], 12)) {
+		widget(173, 55).setIsHidden(false);
+	} else {
+		widget(173, 55).setIsHidden(true);
+	}
+	if (isBitFlagged(VARP[2194], 13)) {
+		widget(173, 54).setIsHidden(false);
+	} else {
+		widget(173, 54).setIsHidden(true);
+	}
+	if (isBitFlagged(VARP[2194], 14)) {
+		widget(173, 53).setIsHidden(false);
+	} else {
+		widget(173, 53).setIsHidden(true);
+	}
+	if (isBitFlagged(VARP[2194], 15)) {
+		widget(173, 60).setIsHidden(false);
+	} else {
+		widget(173, 60).setIsHidden(true);
+	}
+	if (isBitFlagged(VARP[2194], 16)) {
+		widget(173, 57).setIsHidden(false);
+		widget(173, 59).setIsHidden(false);
+	} else {
+		widget(173, 57).setIsHidden(true);
+		widget(173, 59).setIsHidden(true);
+	}
+	script_4653();
+	return;
+}

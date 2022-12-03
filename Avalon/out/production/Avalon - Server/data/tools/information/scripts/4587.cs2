@@ -1,0 +1,4 @@
+void script_4587(Widget widget0, Sprite sprite1) {
+	widget0.setSprite(sprite1);
+	return;
+}

@@ -1,0 +1,69 @@
+void script_2954() {
+	Widget widget0;
+	Widget widget1;
+	Widget widget2;
+	Widget widget3;
+	Widget widget4;
+	Widget widget5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	Widget widget12;
+	Widget widget13;
+	widget0 = widget(596, 7);
+	widget1 = widget(596, 8);
+	widget2 = widget(596, 14);
+	widget3 = widget(596, 13);
+	widget4 = widget(596, 15);
+	widget5 = widget(596, 63);
+	int6 = 39059472;
+	int7 = 39059473;
+	int8 = 39059474;
+	int9 = 39059521;
+	int10 = 39059522;
+	int11 = 39059523;
+	widget12 = widget(596, 19);
+	widget13 = widget(596, 68);
+	if (hasSSKey()) {
+		widget0 = widget(975, 26);
+		widget1 = widget(975, 1);
+		widget2 = widget(975, 4);
+		widget3 = widget(975, 3);
+		widget4 = widget(975, 5);
+		widget5 = widget(975, 6);
+		int6 = 63897611;
+		int7 = 63897612;
+		int8 = 63897613;
+		int9 = 63897607;
+		int10 = 63897608;
+		int11 = 63897609;
+		widget12 = widget(975, 14);
+		widget13 = widget(975, 10);
+	}
+	widget4.setScriptCallOnMousePressed(-1, "");
+	widget5.setScriptCallOnMousePressed(-1, "");
+	widget5.setScriptCallOnMouseEntered(-1, "");
+	widget5.setScriptCallOnMouseExit(-1, "");
+	widget4.setScriptCallOnMouseEntered(-1, "");
+	widget4.setScriptCallOnMouseExit(-1, "");
+	widget4.setPosition(6, 5, 0, 2);
+	widget5.setPosition(6, 5, 0, 2);
+	widget12.setText("");
+	widget13.setText("");
+	widget4.setIsHidden(true);
+	widget5.setIsHidden(true);
+	widget2.setText("");
+	VARC[1092] = 0;
+	widget3.setSprite(null);
+	widget3.setScriptCallOnGameloop(-1, "");
+	widget0.setIsHidden(true);
+	widget1.setIsHidden(true);
+	if (hasSSKey()) {
+		return;
+	}
+	script_2940(11);
+	return;
+}

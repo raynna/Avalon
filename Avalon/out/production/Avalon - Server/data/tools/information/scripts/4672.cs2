@@ -1,0 +1,18 @@
+void script_4672(int arg0) {
+	Model model1;
+	model1 = null;
+	switch (arg0) {
+		case 1:
+			model1 = 1823;
+			break;
+		case 2:
+			model1 = 55612;
+			widget(102, 54).setAnimation(9804);
+			break;
+		case 4:
+			model1 = 55626;
+			break;
+	}
+	widget(102, 54).setModel(model1);
+	return;
+}

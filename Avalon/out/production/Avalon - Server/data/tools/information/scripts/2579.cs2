@@ -1,0 +1,10 @@
+void script_2579() {
+	widget(292, 117).setRGB(0x666666);
+	widget(292, 102).setNoOptions();
+	widget(292, 104).setNoOptions();
+	widget(292, 103).setNoOptions();
+	widget(292, 102).setScriptCallOnMousePressed(2606, CTX_WIDGET, "I");
+	widget(292, 104).setScriptCallOnMousePressed(2606, CTX_WIDGET, "I");
+	widget(292, 103).setScriptCallOnMousePressed(2606, CTX_WIDGET, "I");
+	return;
+}

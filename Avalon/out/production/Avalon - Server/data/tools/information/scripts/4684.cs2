@@ -1,0 +1,5 @@
+void script_4684() {
+	widget(744, 116).setNoClickThrough(0);
+	close(widget(744, 116));
+	return;
+}

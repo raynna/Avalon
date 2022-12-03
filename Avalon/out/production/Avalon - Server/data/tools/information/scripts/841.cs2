@@ -1,0 +1,25 @@
+void script_841(int arg0) {
+	int int1;
+	int1 = 0;
+	VARPBIT[4399] = arg0;
+	datamap('i', 'I', (DataMap)1355, VARPBIT[4398]).setIsHidden(true);
+	datamap('i', 'I', (DataMap)1358, VARPBIT[4398]).setIsHidden(true);
+	if (arg0 == 0) {
+		widget(681, 9).setIsHidden(false);
+		widget(681, 12).setIsHidden(true);
+	} else {
+		widget(681, 12).setIsHidden(false);
+		widget(681, 9).setIsHidden(true);
+	}
+	while (int1 < 10) {
+		if (script_855(int1) == arg0) {
+			if (script_851(int1) != 7 || script_852(int1) != 2) {
+				datamap('i', 'I', (DataMap)1354, int1).setIsHidden(false);
+			}
+		} else {
+			datamap('i', 'I', (DataMap)1354, int1).setIsHidden(true);
+		}
+		int1 = int1 + 1;
+	}
+	return;
+}

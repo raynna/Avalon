@@ -1,0 +1,11 @@
+void script_2881() {
+	if (VARPBIT[4393] == 1 || VARPBIT[542] == 1) {
+		return;
+	}
+	if (VARC[1077] == 1) {
+		script_39(widget(187, 12), widget(187, 16), "Click here to access full song list", 25, 189);
+	} else {
+		script_39(widget(187, 12), widget(187, 16), "Click here to access playlist", 25, 189);
+	}
+	return;
+}

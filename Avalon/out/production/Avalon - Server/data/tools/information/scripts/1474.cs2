@@ -1,0 +1,16 @@
+void script_1474() {
+	widget(762, 115).setIsHidden(true);
+	widget(762, 116).setIsHidden(true);
+	widget(762, 18).setSprite(1423);
+	widget(762, 17).setSprite(1431);
+	if (VARPBIT[4893] == 0) {
+		script_1456();
+	}
+	script_1463(1);
+	STRING[138] = "";
+	script_1548(11);
+	VARC[188] = 0;
+	widget(762, 45).setText("Bank of RuneScape");
+	widget(762, 17).setScriptCallOnGameloop(-1, "");
+	return;
+}

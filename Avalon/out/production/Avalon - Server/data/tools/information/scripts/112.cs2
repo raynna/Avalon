@@ -1,0 +1,142 @@
+void script_112(int arg0, char char1) {
+	switch (arg0) {
+		case 84:
+			if (VARC[5] == 12) {
+				script_1806(STRING[22]);
+				return;
+			}
+			if (length(STRING[22]) > 0) {
+				if (VARC[5] == 13) {
+					sendStringInput(STRING[22]);
+				} else if (VARC[5] == 4 || VARC[5] == 5) {
+					if (getIgnoreCount() < 0) {
+						msg("Unable to update Ignore List: system busy");
+					} else if (VARC[5] == 4) {
+						cs2method3607(STRING[22]);
+					} else if (VARC[5] == 5) {
+						if (cs2method3623(script_4591(STRING[22]))) {
+							cs2method3608(script_4591(STRING[22]));
+						} else {
+							msg("That player is not on your ignore list.");
+						}
+					}
+				} else if (VARC[5] < 7) {
+					if (getFriendCount() < 0) {
+						msg("Unable to complete action - system busy");
+					} else if (VARC[5] == 2) {
+						cs2method3605(STRING[22]);
+					} else if (VARC[5] == 3) {
+						if (isFriend(script_4591(STRING[22]))) {
+							cs2method3606(script_4591(STRING[22]));
+						} else {
+							msg("That player is not on your friends list.");
+						}
+					} else if (VARC[5] == 6) {
+						if (cs2method5005() == 2) {
+							cs2method5001(cs2method5000(), 1, cs2method5016());
+							script_178();
+							script_84();
+							script_89();
+						}
+						cs2method5009(STRING[23], STRING[22]);
+					}
+				} else if (VARC[5] == 11) {
+					script_1478();
+				} else if (VARC[5] == 7) {
+					STRING[22] = script_2332(STRING[22], "K", "000");
+					STRING[22] = script_2332(STRING[22], "k", "000");
+					STRING[22] = script_2332(STRING[22], "M", "000000");
+					STRING[22] = script_2332(STRING[22], "m", "000000");
+					if (getLanguage() == 1) {
+						STRING[22] = script_2332(STRING[22], "T", "000");
+						STRING[22] = script_2332(STRING[22], "t", "000");
+					}
+					sendIntegerInput(STRING[22]);
+				} else if (VARC[5] == 8) {
+					STRING[201] = escape(STRING[22]);
+					VARC[1026] = 1;
+					sendNameInput(STRING[22]);
+				} else if (VARC[5] == 9) {
+					if (compare(lower(STRING[22]), lower(STRING[33])) != 0) {
+						sendStringInput(STRING[22]);
+					} else {
+						msg("Please do not enter your password here!");
+					}
+				} else if (VARC[5] == 10) {
+					STRING[202] = escape(STRING[22]);
+					VARC[1027] = 1;
+					sendUnknownFriendPacketMethod3619(STRING[22]);
+				} else if (VARC[5] == 15) {
+					script_1633(STRING[22]);
+				} else if (VARC[5] == 16) {
+					script_4465(STRING[22]);
+				}
+			} else {
+				if (VARC[5] == 14) {
+					script_3683();
+					return;
+				}
+				if (VARC[5] == 7) {
+					
+				}
+			}
+			widget(752, 3).setIsHidden(true);
+			widget(752, 7).setIsHidden(true);
+			widget(752, 8).setIsHidden(false);
+			VARC[5] = 0;
+			if (getDisplayMode() >= 2) {
+				script_1364();
+			}
+			return;
+		case 13:
+			if (VARC[5] == 12) {
+				script_1806(STRING[38]);
+				script_1548(0);
+			} else if (VARC[5] == 14) {
+				script_3683();
+			}
+			return;
+		case 96:
+		case 97:
+		case 98:
+		case 99:
+		case 102:
+		case 103:
+			if (!isHoldingCtrl()) {
+				return;
+			}
+			VARC[1029] = script_1553(arg0, VARC[1029], STRING[22]);
+			break;
+		default:
+			switch (VARC[5]) {
+				case 9:
+				case 11:
+				case 6:
+					STRING[22], VARC[1029] = script_802(VARC[1029], STRING[22], 0, arg0, char1);
+					break;
+				case 7:
+					STRING[22], VARC[1029] = script_802(VARC[1029], STRING[22], 6, arg0, char1);
+					break;
+				case 13:
+					STRING[22], VARC[1029] = script_802(VARC[1029], STRING[22], 5, arg0, char1);
+					break;
+				case 14:
+					STRING[22], VARC[1029] = script_802(VARC[1029], STRING[22], 4, arg0, char1);
+					break;
+				default:
+					STRING[22], VARC[1029] = script_802(VARC[1029], STRING[22], 2, arg0, char1);
+					break;
+			}
+			break;
+	}
+	widget(752, 5).setText(escape(STRING[22]));
+	script_1557();
+	if (VARC[5] == 11) {
+		script_1475();
+	} else if (VARC[5] == 14) {
+		STRING[196] = lower(STRING[22]);
+		VARC[89] = 1;
+		script_3680();
+	}
+	return;
+}

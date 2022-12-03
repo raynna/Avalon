@@ -1,0 +1,68 @@
+void script_1558(boolean boolean0) {
+	if (script_2709() == 0 && VARP[281] == 1000) {
+		widget(137, 56).setText("");
+		widget(137, 56).setScriptCallOnMousePressed(-1, "");
+		widget(137, 56).setScriptCallOnGameloop(-1, "");
+		widget(137, 57).setIsHidden(true);
+		widget(137, 58).setPosition(0, 72, 0, 0);
+		widget(137, 58).setSize(488, 72, 0, 1);
+		widget(137, 59).setPosition(0, 72, 2, 0);
+		widget(137, 59).setSize(16, 72, 0, 1);
+		widget(137, 51).setIsHidden(true);
+		widget(137, 52).setIsHidden(true);
+		widget(137, 53).setIsHidden(true);
+		widget(137, 56).setIsHidden(true);
+		widget(137, 60).setIsHidden(false);
+		return;
+	}
+	widget(137, 57).setIsHidden(false);
+	widget(137, 58).setPosition(0, 0, 0, 0);
+	widget(137, 58).setSize(488, 18, 0, 1);
+	widget(137, 59).setPosition(0, 0, 2, 0);
+	widget(137, 59).setSize(16, 18, 0, 1);
+	widget(137, 51).setIsHidden(false);
+	widget(137, 52).setIsHidden(false);
+	widget(137, 53).setIsHidden(false);
+	widget(137, 56).setIsHidden(false);
+	widget(137, 60).setIsHidden(true);
+	if (boolean0 && (cs2method6900() || mapQuickchat())) {
+		widget(137, 56).setText("Left-click here to enter Public Quick Chat or right-click for Friends Channel Quick Chat.");
+		widget(137, 54).setPosition(0, 0, 1, 1);
+		widget(137, 54).setSize(0, 0, 1, 1);
+		widget(137, 56).setScriptCallOnMousePressed(-1, "");
+		widget(137, 56).setScriptCallOnGameloop(-1, "");
+		widget(137, 57).setIsHidden(true);
+		return;
+	}
+	if (VARC[1650] == 1) {
+		widget(137, 54).setText("To " + STRING[23] + ":");
+	} else if (VARC[1651] == 2) {
+		widget(137, 54).setText("Clan Chat" + "<img=3>" + ":");
+	} else if (VARC[1651] == 3) {
+		widget(137, 54).setText("Guest Clan Chat" + "<img=3>" + ":");
+	} else if (VARC[1651] == 1) {
+		widget(137, 54).setText("Friends Chat" + "<img=3>" + ":");
+	} else {
+		widget(137, 54).setText(cs2method5015() + "<img=3>" + ":");
+	}
+	if (getDisplayMode() >= 2) {
+		widget(137, 56).setRGB(0x7FA9FF);
+		widget(137, 54).setRGB(0xFFFFFF);
+	} else {
+		widget(137, 56).setRGB(0x0000FF);
+		widget(137, 54).setRGB(0x000000);
+	}
+	widget(137, 56).setText(escape(STRING[1]));
+	widget(137, 54).setSize(getTextWidth(widget(137, 54).getText(), 495), widget(137, 54).getHeight(), 0, 0);
+	widget(137, 55).setPosition(widget(137, 54).getX() + widget(137, 54).getWidth() + 2, 0, 0, 2);
+	widget(137, 55).setSize(widget(137, 50).getWidth() - widget(137, 55).getX() - 5, widget(137, 55).getHeight(), 0, 0);
+	widget(137, 56).setScriptCallOnMousePressed(1554, MOUSE_X, 0, "ii");
+	VARC[1028] = max(min(VARC[1028], length(escape(STRING[1]))), 0);
+	script_1555(0);
+	if (length(cs2method5015()) > 0) {
+		widget(137, 58).setScriptCallOnGameloop(-1, "");
+	} else {
+		widget(137, 58).setScriptCallOnGameloop(4308, boolean0, "1");
+	}
+	return;
+}

@@ -1,0 +1,36 @@
+void script_4421(Widget widget0, Widget widget1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, long long10) {
+	DataMap datamap10;
+	string str0;
+	datamap10 = datamap('i', 'g', (DataMap)3689, arg6);
+	str0 = "";
+	if (arg2 >= getCurrentDaysSinceLaunch() && arg5 > 0 && arg4 > 0 && arg6 > 0) {
+		str0 = timeToStr(arg2) + "<br>" + datamap('i', 's', (DataMap)3695, arg3);
+		if (CLANDEF113[5] == 0) {
+			str0 = str0 + " Game time:";
+		} else {
+			str0 = str0 + " Clan time:";
+		}
+		if (arg5 > 0) {
+			str0 = str0 + "<br>" + "World " + str(arg5);
+		}
+		str0 = str0 + "<br>" + datamap('i', 's', (DataMap)3696, arg4);
+		widget0.setText(str0);
+		str0 = datamap('i', 's', (DataMap)3687, arg6);
+		if (datamap10 != null && arg7 > 0) {
+			str0 = str0 + "<br>" + datamap('i', 's', datamap10, arg7);
+		}
+		str0 = str0 + "<br>" + "Open to: " + datamap('i', 's', (DataMap)3716, arg8);
+		if (arg9 == 1) {
+			str0 = str0 + "<br>" + "Attendance is mandatory.";
+		}
+		widget1.setText(str0);
+		if (long10 != -1L) {
+			widget(1107, 146).setIsHidden(false);
+			widget(1107, 146).setScriptCallOnClickContextMenu(4330, long10, "§");
+		} else {
+			widget(1107, 146).setScriptCallOnMousePressed(-1, "");
+			widget(1107, 52).setIsHidden(true);
+		}
+	}
+	return;
+}

@@ -1,0 +1,44 @@
+void script_2163(int arg0, DataMap datamap1, int arg2, int arg3) {
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	string str0;
+	string str1;
+	int4 = (arg2 + arg3) / 2;
+	int5 = ARRAY0[int4];
+	ARRAY0[int4] = ARRAY0[arg3];
+	ARRAY0[arg3] = int5;
+	int6 = arg2;
+	int7 = arg2;
+	int8 = -1;
+	str0 = "null";
+	str1 = "null";
+	str1 = lower(getAttributeMapValue(datamap('i', 'J', datamap1, int5), 846));
+	if (compare(str1, "") == 0) {
+		str1 = lower(getAttributeMapValue(datamap('i', 'J', datamap1, int5), 845));
+	}
+	while (int7 < arg3) {
+		str0 = lower(getAttributeMapValue(datamap('i', 'J', datamap1, ARRAY0[int7]), 846));
+		if (compare(str0, "") == 0) {
+			str0 = lower(getAttributeMapValue(datamap('i', 'J', datamap1, ARRAY0[int7]), 845));
+		}
+		if (compare(str0, str1) < bitAnd(int7, 1)) {
+			int8 = ARRAY0[int7];
+			ARRAY0[int7] = ARRAY0[int6];
+			ARRAY0[int6] = int8;
+			int6 = int6 + 1;
+		}
+		int7 = int7 + 1;
+	}
+	ARRAY0[arg3] = ARRAY0[int6];
+	ARRAY0[int6] = int5;
+	if (arg2 < int6 - 1) {
+		script_2163(0, datamap1, arg2, int6 - 1);
+	}
+	if (int6 + 1 < arg3) {
+		script_2163(0, datamap1, int6 + 1, arg3);
+	}
+	return;
+}

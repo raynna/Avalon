@@ -1,0 +1,7 @@
+void script_4014(int arg0, Sprite sprite1) {
+	if (ACTIVE.setChild(widget(917, 98), arg0) && widget(917, 119).isHidden()) {
+		ACTIVE.setSprite(sprite1);
+	}
+	script_41(widget(917, 101));
+	return;
+}

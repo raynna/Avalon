@@ -1,0 +1,57 @@
+void script_1816(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5) {
+	switch (VARC[268]) {
+		case 4:
+			script_1817(widget0, widget1, widget2, widget3, widget4, widget5);
+			widget2.setText("Your clan knocked the enemy right out of the arena.");
+			break;
+		case 5:
+			script_1817(widget0, widget1, widget2, widget3, widget4, widget5);
+			widget2.setText("Your clan reached the target kill-count.");
+			break;
+		case 6:
+			script_1817(widget0, widget1, widget2, widget3, widget4, widget5);
+			widget2.setText("Your clan had the highest kill-count when the time expired.");
+			break;
+		case 7:
+			script_1817(widget0, widget1, widget2, widget3, widget4, widget5);
+			widget2.setText("Your clan had the most survivors when the time expired.");
+			break;
+		case 8:
+			script_1818(widget0, widget1, widget2, widget3, widget4, widget5);
+			widget2.setText("Your clan was knocked right out of the arena.");
+			break;
+		case 9:
+			script_1818(widget0, widget1, widget2, widget3, widget4, widget5);
+			widget2.setText("Your enemy reached the target kill-count.");
+			break;
+		case 10:
+			script_1818(widget0, widget1, widget2, widget3, widget4, widget5);
+			widget2.setText("Your enemy had the highest kill-count when the time expired.");
+			break;
+		case 11:
+			script_1818(widget0, widget1, widget2, widget3, widget4, widget5);
+			widget2.setText("Your enemy had the most survivors when the time expired.");
+			break;
+		case 1:
+			script_1819(widget0, widget1, widget2, widget3, widget4, widget5);
+			widget2.setText("The match was aborted due to a lack of fighters.");
+			break;
+		case 2:
+			script_1819(widget0, widget1, widget2, widget3, widget4, widget5);
+			widget2.setText("Your kill-counts were equal.");
+			break;
+		case 3:
+			script_1819(widget0, widget1, widget2, widget3, widget4, widget5);
+			widget2.setText("You had equal numbers of survivors.");
+			break;
+		default:
+			widget0.setIsHidden(true);
+			widget1.setIsHidden(true);
+			widget2.setIsHidden(true);
+			widget3.setIsHidden(true);
+			widget4.setIsHidden(true);
+			widget5.setIsHidden(true);
+			break;
+	}
+	return;
+}

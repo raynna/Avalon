@@ -1,0 +1,6 @@
+void script_2716(Widget widget0, Widget widget1) {
+	script_2723(widget0, widget1, (Container)VARP[118], VARP[1496]);
+	widget0.setScriptCallOnItemContainerUpdate(2722, widget0, widget1, (Container)VARP[118], (Container)VARP[1496], VARP[118], "IIvvY");
+	widget0.setScriptCallOnGlobalConfigChange(2722, widget0, widget1, (Container)VARP[118], (Container)VARP[1496], 946, 947, 948, 949, 950, 951, 952, 953, 954, 955, 956, 957, 958, 959, 960, 961, 962, 963, 964, 965, 966, 967, 968, 969, 970, 971, 972, 973, 974, 975, 976, 977, 978, 979, 980, 981, 982, 983, 984, 985, "IIvvY");
+	return;
+}

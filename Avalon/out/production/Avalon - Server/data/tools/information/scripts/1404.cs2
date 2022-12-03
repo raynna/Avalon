@@ -1,0 +1,9 @@
+void script_1404(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, int arg5) {
+	script_1839(VARPBIT[5367], widget0, widget1, widget2);
+	if (arg5 != VARPBIT[6175]) {
+		widget4.setScriptCallOnConfigChange(1404, widget0, widget1, widget2, widget3, widget4, VARPBIT[6175], 463, "IIIIIiY");
+		script_2046(widget3);
+	}
+	script_307();
+	return;
+}

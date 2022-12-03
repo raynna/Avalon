@@ -1,0 +1,11 @@
+void script_2871(int arg0) {
+	if (arg0 == 1) {
+		if (VARC[1077] == 1) {
+			VARC[1077] = 0;
+		} else {
+			VARC[1077] = 1;
+		}
+	}
+	script_2872();
+	return;
+}

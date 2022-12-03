@@ -1,0 +1,11 @@
+QcCat script_1036() {
+	QcCat qccat0;
+	qccat0 = null;
+	if (datamap('i', 'i', (DataMap)1548, VARPBIT[4758]) > 0) {
+		qccat0 = datamap('i', 'k', (DataMap)1549, VARPBIT[4758]);
+		if (qccat0 != null) {
+			return qccat0;
+		}
+	}
+	return datamap('i', 'k', (DataMap)1483, VARPBIT[4759]);
+}

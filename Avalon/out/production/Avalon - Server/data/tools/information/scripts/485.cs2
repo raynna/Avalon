@@ -1,0 +1,54 @@
+void script_485(Widget widget0) {
+	int int1;
+	int int2;
+	int1 = -1;
+	int2 = 0;
+	widget0.setRGB(0xFF981F);
+	switch (VARPBIT[7512]) {
+		case 1:
+			int1 = script_486(VARPBIT[7520]);
+			break;
+		case 2:
+			int1 = script_486(VARPBIT[7521]);
+			break;
+		case 3:
+			int1 = script_486(VARPBIT[7526]);
+			break;
+		case 4:
+			int1 = script_486(VARPBIT[7527]);
+			break;
+		case 5:
+			int1 = script_486(VARPBIT[7530]);
+			break;
+		case 6:
+			int1 = script_486(VARPBIT[7531]);
+			break;
+		case 7:
+			int1 = script_486(VARPBIT[7532]);
+			break;
+		case 8:
+			int1 = script_486(VARPBIT[7533]);
+			break;
+		case 9:
+			int1 = script_486(VARPBIT[7534]);
+			break;
+		case 10:
+			int1 = script_486(VARPBIT[7535]);
+			break;
+		default:
+			return;
+	}
+	if (int1 == -1) {
+		widget(1015, 135).setIsHidden(false);
+		widget(1015, 115).setIsHidden(true);
+	} else {
+		widget(1015, 2).setSprite(getNpcAttribute(int1, 1148));
+		widget(1015, 0).setText(getNpcAttribute(int1, 1139));
+		widget(1015, 138).setText("Movement: " + str(getNpcAttribute(int1, 1134)));
+		widget(1015, 139).setText("Damage: " + str(getNpcAttribute(int1, 1135) * 100));
+		widget(1015, 140).setText("Health: " + str(getNpcAttribute(int1, 1136) * 100));
+		widget(1015, 141).setText("Range: " + str(getNpcAttribute(int1, 1137)));
+		widget(1015, 142).setText("Cost: " + str(getNpcAttribute(int1, 1138)));
+	}
+	return;
+}

@@ -1,0 +1,124 @@
+void script_1291(Widget widget0, Item item1, int arg2, Widget widget3) {
+	Widget widget4;
+	int int5;
+	widget4 = widget0.getLayer();
+	int5 = 0;
+	switch (item1) {
+		case 5341:
+			int5 = VARPBIT[1435];
+			widget3.setText(getItemName(item1) + "<br>" + "(" + str(int5) + "/" + str(arg2) + ")");
+			break;
+		case 5343:
+			int5 = VARPBIT[1436];
+			widget3.setText("Dibber" + "<br>" + "(" + str(int5) + "/" + str(arg2) + ")");
+			break;
+		case 952:
+			int5 = VARPBIT[1437];
+			widget3.setText(getItemName(item1) + "<br>" + "(" + str(int5) + "/" + str(arg2) + ")");
+			break;
+		case 5325:
+			int5 = VARPBIT[1440];
+			widget3.setText("Trowel" + "<br>" + "(" + str(int5) + "/" + str(arg2) + ")");
+			break;
+		case 6059:
+			int5 = VARPBIT[1778];
+			widget3.setText(getItemName(item1) + "<br>" + "(" + str(int5) + "/" + str(arg2) + ")");
+			break;
+		case 1925:
+			int5 = VARPBIT[1441];
+			widget3.setText(getItemName(item1) + "<br>" + "(" + str(int5) + "/" + str(arg2) + ")");
+			break;
+		case 6032:
+			int5 = VARPBIT[1442];
+			widget3.setText(getItemName(item1) + "<br>" + "(" + str(int5) + "/" + str(arg2) + ")");
+			break;
+		case 6034:
+			int5 = VARPBIT[1443];
+			widget3.setText(getItemName(item1) + "<br>" + "(" + str(int5) + "/" + str(arg2) + ")");
+			break;
+		case 5329:
+			int5 = VARPBIT[1438];
+			widget3.setText(getItemName(item1) + "<br>" + "(" + str(int5) + "/" + str(arg2) + ")");
+			if (VARPBIT[1848] == 1) {
+				item1 = 7409;
+			}
+			break;
+		case 6797:
+			switch (VARPBIT[1439]) {
+				case 10:
+					item1 = 18682;
+					int5 = 1;
+					widget3.setText("Magic watering can" + "<br>" + "(1/1)");
+					widget0.setOptionBase("<col=ff9040>" + "Magic watering can");
+					break;
+				case 9:
+					item1 = 5340;
+					int5 = 1;
+					widget3.setText("Watering can (8)" + "<br>" + "(1/1)");
+					widget0.setOptionBase("<col=ff9040>" + "Watering can (8)");
+					break;
+				case 8:
+					item1 = 5339;
+					int5 = 1;
+					widget3.setText("Watering can (7)" + "<br>" + "(1/1)");
+					widget0.setOptionBase("<col=ff9040>" + "Watering can (7)");
+					break;
+				case 7:
+					item1 = 5338;
+					int5 = 1;
+					widget3.setText("Watering can (6)" + "<br>" + "(1/1)");
+					widget0.setOptionBase("<col=ff9040>" + "Watering can (6)");
+					break;
+				case 6:
+					item1 = 5337;
+					int5 = 1;
+					widget3.setText("Watering can (5)" + "<br>" + "(1/1)");
+					widget0.setOptionBase("<col=ff9040>" + "Watering can (5)");
+					break;
+				case 5:
+					item1 = 5336;
+					int5 = 1;
+					widget3.setText("Watering can (4)" + "<br>" + "(1/1)");
+					widget0.setOptionBase("<col=ff9040>" + "Watering can (4)");
+					break;
+				case 4:
+					item1 = 5335;
+					int5 = 1;
+					widget3.setText("Watering can (3)" + "<br>" + "(1/1)");
+					widget0.setOptionBase("<col=ff9040>" + "Watering can (3)");
+					break;
+				case 3:
+					item1 = 5334;
+					int5 = 1;
+					widget3.setText("Watering can (2)" + "<br>" + "(1/1)");
+					widget0.setOptionBase("<col=ff9040>" + "Watering can (2)");
+					break;
+				case 2:
+					item1 = 5333;
+					int5 = 1;
+					widget3.setText("Watering can (1)" + "<br>" + "(1/1)");
+					widget0.setOptionBase("<col=ff9040>" + "Watering can (1)");
+					break;
+				case 1:
+					item1 = 5331;
+					int5 = 1;
+					widget3.setText("Watering can (0)" + "<br>" + "(1/1)");
+					widget0.setOptionBase("<col=ff9040>" + "Watering can (0)");
+					break;
+				default:
+					int5 = 0;
+					widget3.setText("Watering can" + "<br>" + "(0/1)");
+					widget0.setOptionBase("<col=ff9040>" + "Watering can");
+					break;
+			}
+			break;
+	}
+	widget0.setItemOnWidgetMethod2205(item1, -1);
+	widget0.setOutlineThickness(1);
+	if (int5 > 0) {
+		widget3.setRGB(0x7DD764);
+	} else {
+		widget3.setRGB(0x872300);
+	}
+	return;
+}

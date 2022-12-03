@@ -1,0 +1,10 @@
+void script_1700() {
+	if (VARC[1052] == 1) {
+		widget(271, 12).setText("Hide stat adjustments.");
+		widget(271, 12).setContextMenuOption(1, "Hide stat adjustments");
+	} else {
+		widget(271, 12).setText("Show stat adjustments.");
+		widget(271, 12).setContextMenuOption(1, "Show stat adjustments");
+	}
+	return;
+}

@@ -1,0 +1,73 @@
+Widget script_4968(int arg0) {
+	switch (arg0) {
+		case 1:
+			return widget(1092, 213);
+		case 2:
+			return widget(1092, 214);
+		case 3:
+			return widget(1092, 215);
+		case 4:
+			return widget(1092, 184);
+		case 5:
+			return widget(1092, 185);
+		case 6:
+			return widget(1092, 186);
+		case 7:
+			return widget(1092, 187);
+		case 8:
+			return widget(1092, 188);
+		case 9:
+			return widget(1092, 189);
+		case 10:
+			return widget(1092, 190);
+		case 11:
+			return widget(1092, 191);
+		case 12:
+			return widget(1092, 192);
+		case 13:
+			return widget(1092, 193);
+		case 14:
+			return widget(1092, 194);
+		case 15:
+			return widget(1092, 195);
+		case 16:
+			return widget(1092, 166);
+		case 17:
+			return widget(1092, 167);
+		case 18:
+			return widget(1092, 168);
+		case 19:
+			return widget(1092, 169);
+		case 20:
+			return widget(1092, 170);
+		case 21:
+			return widget(1092, 171);
+		case 22:
+			return widget(1092, 172);
+		case 23:
+			return widget(1092, 173);
+		case 24:
+			return widget(1092, 174);
+		case 25:
+			return widget(1092, 175);
+		case 26:
+			return widget(1092, 176);
+		case 27:
+			return widget(1092, 177);
+		case 28:
+			return widget(1092, 178);
+		case 29:
+			return widget(1092, 179);
+		case 30:
+			return widget(1092, 180);
+		case 31:
+			return widget(1092, 181);
+		case 32:
+			return widget(1092, 182);
+		case 33:
+			return widget(1092, 183);
+		case 34:
+			return widget(1092, 218);
+	}
+	return null;
+}

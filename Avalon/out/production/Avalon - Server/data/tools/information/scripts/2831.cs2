@@ -1,0 +1,13 @@
+void script_2831(int arg0, Identikit identikit1, int arg2) {
+	if (arg0 != 1) {
+		return;
+	}
+	setBaseIdkit(arg2, identikit1);
+	if (arg2 == 1) {
+		VARC[1009] = identikit1;
+	} else {
+		VARC[1008] = identikit1;
+	}
+	script_2790();
+	return;
+}

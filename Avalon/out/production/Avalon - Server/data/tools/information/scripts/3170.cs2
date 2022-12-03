@@ -1,0 +1,24 @@
+void script_3170(string string0, int arg1) {
+	int int1;
+	int int2;
+	int1 = -1;
+	int2 = -1;
+	switch (arg1) {
+		case 6:
+			cs2method3605(removeTags(string0));
+			break;
+		case 7:
+			cs2method3607(removeTags(string0));
+			break;
+		case 8:
+			cs2method3606(removeTags(string0));
+			break;
+		case 9:
+			cs2method3608(removeTags(string0));
+			break;
+		case 10:
+			script_4465(string0);
+			break;
+	}
+	return;
+}

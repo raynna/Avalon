@@ -1,0 +1,20 @@
+void script_4234(Widget widget0, Widget widget1, Widget widget2, int arg3, int arg4) {
+	int int5;
+	int int6;
+	int5 = 0;
+	int6 = 65353 / arg4;
+	int5 = max(0, arg4 - (getClientCycle() - arg3));
+	if (int5 >= arg4 / 2 && int5 <= arg4) {
+		widget2.set2DAngle(min(int5 * int6, 65353));
+		widget1.set2DAngle(0);
+	} else if (int5 > 0 && int5 < arg4 / 2) {
+		widget2.set2DAngle(32768);
+		widget1.set2DAngle(min(32768 + int5 * int6, 65353));
+	} else {
+		widget2.set2DAngle(32768);
+		widget1.set2DAngle(32768);
+		widget0.setScriptCallOnClickContextMenu(4233, widget0, widget1, widget2, arg4, "IIIi");
+		widget0.setScriptCallOnGameloop(-1, "");
+	}
+	return;
+}

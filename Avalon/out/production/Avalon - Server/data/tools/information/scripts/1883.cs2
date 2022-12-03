@@ -1,0 +1,12 @@
+int script_1883(int arg0, int arg1, int arg2, Item item3, string string4, Widget widget5) {
+	widget5.clearChildren();
+	if (item3 == null) {
+		widget5.setIsHidden(true);
+		return arg0;
+	}
+	script_1885(arg0, arg1, item3, string4, widget5);
+	widget5.setIsHidden(false);
+	widget5.setScriptCallOnMouseEntered(1894, arg0 - arg2, arg1 + arg2 + arg2, item3, string4, widget5, "iiosI");
+	widget5.setScriptCallOnMouseExit(1884, arg0, arg1, item3, string4, widget5, "iiosI");
+	return arg0 + arg1 + arg2;
+}

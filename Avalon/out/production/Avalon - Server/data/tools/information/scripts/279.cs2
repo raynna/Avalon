@@ -1,0 +1,21 @@
+void script_279(int arg0, Widget widget1) {
+	string str0;
+	str0 = "";
+	switch (arg0) {
+		case 1:
+			str0 = "Found the perfect tackle for three species.";
+			break;
+		case 2:
+			str0 = "Found the perfect tackle for all six species.";
+			break;
+		case 3:
+			str0 = "Achieved an average rating of at least 80%.";
+			break;
+		case 4:
+			str0 = "At least 80% of fish caught were the heaviest species.";
+			break;
+	}
+	widget1.setScriptCallOnMouseOver(38, CTX_WIDGET, widget(922, 57), str0, 25, 128, "IIsii");
+	widget1.setScriptCallOnMouseExit(40, widget(922, 57), "I");
+	return;
+}

@@ -1,0 +1,16 @@
+Color script_805(Skill skill0) {
+	int int1;
+	int int2;
+	int1 = script_807(skill0);
+	int2 = 5592405;
+	if (int1 > 75) {
+		int2 = 65280;
+	} else if (int1 > 50) {
+		int2 = 16776960;
+	} else if (int1 > 25) {
+		int2 = 16750623;
+	} else {
+		int2 = 16711680;
+	}
+	return color(int2);
+}

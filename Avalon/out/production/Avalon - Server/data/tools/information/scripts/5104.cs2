@@ -1,0 +1,14 @@
+void script_5104(int arg0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5) {
+	widget1.setIsHidden(true);
+	widget2.setIsHidden(false);
+	if (arg0 == 1) {
+		widget3.setText("Click to add" + "<br>" + "clan relationship");
+		widget4.setContextMenuOption(1, "Add");
+		widget5.setIsHidden(true);
+	} else {
+		widget3.setText("No clan set");
+		widget4.setNoOptions();
+		widget5.setIsHidden(false);
+	}
+	return;
+}

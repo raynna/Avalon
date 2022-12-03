@@ -1,0 +1,38 @@
+void script_4038() {
+	int int0;
+	int0 = 0;
+	if (VARC[1407] < 9) {
+		switch (getAffid()) {
+			case 257:
+			case 289:
+			case 290:
+			case 291:
+			case 292:
+			case 293:
+			case 373:
+			case 294:
+			case 295:
+			case 296:
+			case 13:
+			case 254:
+				int0 = 0;
+				break;
+			default:
+				int0 = 1;
+				break;
+		}
+		if (int0 == 1) {
+			cs2method5421("redirect.ws?mod=create&ssl=true&dest=herotopia.ws#herotopia_info", 0);
+			return;
+		}
+	}
+	VARC[174] = 17;
+	widget(673, 57).setIsHidden(true);
+	widget(673, 56).setIsHidden(true);
+	widget(673, 58).setIsHidden(false);
+	widget(673, 17).setSprite(4129);
+	widget(673, 14).setSprite(4129);
+	widget(673, 16).setSprite(4129);
+	widget(673, 15).setSprite(4129);
+	return;
+}

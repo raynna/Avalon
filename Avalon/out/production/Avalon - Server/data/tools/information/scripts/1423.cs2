@@ -1,0 +1,15 @@
+void script_1423(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, Widget widget7, Widget widget8, Widget widget9, Widget widget10, Widget widget11) {
+	widget0.setSprite(181);
+	widget1.setSprite(180);
+	widget2.setSprite(180);
+	widget3.setSprite(180);
+	widget4.setSprite(180);
+	widget5.setSprite(180);
+	widget6.setSprite(180);
+	widget7.setSprite(180);
+	widget8.setSprite(180);
+	widget9.setSprite(180);
+	widget10.setSprite(180);
+	widget11.setSprite(180);
+	return;
+}

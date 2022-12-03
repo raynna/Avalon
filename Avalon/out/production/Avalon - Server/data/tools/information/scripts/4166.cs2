@@ -1,0 +1,32 @@
+void script_4166(Widget widget0, Widget widget1, int arg2, int arg3, string string4, string string5) {
+	widget0.clearChildren();
+	script_4178(0, arg2, 0);
+	if (!isMember() && arg3 == 1) {
+		widget0.setIsHidden(true);
+		return;
+	}
+	ACTIVE.createChild(widget0, 3, 0);
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setFilled(true);
+	ACTIVE.setRGB(0xFF0000);
+	ACTIVE.setHidden(true);
+	widget0.setScriptCallOnGameloop(4175, CTX_WIDGET, ACTIVE.getChildId(), arg2, false, "Iii1");
+	ACTIVE.createChild(widget0, 5, 1);
+	ACTIVE.setSize(15, 15, 0, 0);
+	ACTIVE.setPosition(10, 0, 0, 1);
+	script_4169(arg2);
+	widget0.setScriptCallOnConfigChange(4168, CTX_WIDGET, ACTIVE.getChildId(), arg2, 286, "IiiY");
+	ACTIVE.createChild(widget0, 4, 2);
+	ACTIVE.setSize(35, 0, 1, 1);
+	ACTIVE.setPosition(0, 0, 2, 1);
+	ACTIVE.setFont(494);
+	ACTIVE.setTextAlignment(0, 1, 0);
+	ACTIVE.setRGB(0xFF981F);
+	ACTIVE.setTextAntiMacro(true);
+	ACTIVE.setText(string4);
+	widget0.setScriptCallOnMouseEntered(1356, CTX_WIDGET, ACTIVE.getChildId(), 16777215, "Iii");
+	widget0.setScriptCallOnMouseOver(1160, CTX_WIDGET, -1, widget1, string5, 25, 200, "IiIsii");
+	widget0.setScriptCallOnMouseExit(4167, CTX_WIDGET, ACTIVE.getChildId(), widget1, "IiI");
+	return;
+}

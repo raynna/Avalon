@@ -1,0 +1,32 @@
+void script_4425(int arg0, Widget widget1, int arg2, int arg3) {
+	int int4;
+	int int5;
+	int int6;
+	Color color7;
+	int int8;
+	int4 = (arg2 + arg3) / 2;
+	int5 = ARRAY0[int4];
+	ARRAY0[int4] = ARRAY0[arg3];
+	ARRAY0[arg3] = int5;
+	int6 = arg2;
+	color7 = color(arg2);
+	int8 = -1;
+	while (color7 < color(arg3)) {
+		if (ACTIVE.setChild(widget1, int5) && _ACTIVE.setChild(widget1, ARRAY0[color7]) && compare(lower(ACTIVE.getText()), lower(_ACTIVE.getText())) < bitAnd(color7, 1)) {
+			int8 = ARRAY0[color7];
+			ARRAY0[color7] = ARRAY0[int6];
+			ARRAY0[int6] = int8;
+			int6 = int6 + 1;
+		}
+		color7 = color7 + 1;
+	}
+	ARRAY0[arg3] = ARRAY0[int6];
+	ARRAY0[int6] = int5;
+	if (arg2 < int6 - 1) {
+		script_4425(0, widget1, arg2, int6 - 1);
+	}
+	if (int6 + 1 < arg3) {
+		script_4425(0, widget1, int6 + 1, arg3);
+	}
+	return;
+}

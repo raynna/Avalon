@@ -1,0 +1,86 @@
+void script_5269(int arg0, int arg1, Location location2, int arg3, int arg4, Location location5, int arg6, int arg7, Location location8, int arg9, int arg10, Location location11, int arg12, int arg13, Location location14, int arg15, int arg16, Location location17, int arg18, int arg19, Location location20, int arg21, int arg22, Location location23, int arg24, int arg25, int arg26, int arg27, string string28, string string29, string string30, string string31, string string32, string string33, string string34, string string35, string string36, string string37) {
+	int int28;
+	int int29;
+	int int30;
+	int28 = 0;
+	int29 = 0;
+	int30 = 0;
+	widget(1137, 43).setText(string28);
+	widget(1137, 30).setScriptCallOnMouseOver(1160, CTX_WIDGET, -1, widget(1137, 6), string29, 25, 519, "IiIsii");
+	widget(1137, 6).setScriptCallOnMouseExit(40, widget(1137, 6), "I");
+	widget(1137, 48).setText(str(arg25));
+	widget(1137, 39).setText(str(arg26 + arg27));
+	widget(1137, 28).clearChildren();
+	widget(1137, 83).clearChildren();
+	widget(1137, 94).clearChildren();
+	if (arg0 == 1) {
+		widget(1137, 15).setIsHidden(true);
+		widget(1137, 16).setIsHidden(false);
+		widget(1137, 17).setIsHidden(false);
+		widget(1137, 67).setText(str(arg26));
+		widget(1137, 73).setText(str(arg27));
+		if (arg1 != -1) {
+			int28 = script_5271(widget(1137, 83), string30, location2, arg3, int28);
+		}
+		if (arg4 != -1) {
+			int28 = script_5271(widget(1137, 83), string31, location5, arg6, int28);
+		}
+		if (arg7 != -1) {
+			int28 = script_5271(widget(1137, 83), string32, location8, arg9, int28);
+		}
+		if (arg10 != -1) {
+			int28 = script_5271(widget(1137, 83), string33, location11, arg12, int28);
+		}
+		if (arg13 != -1) {
+			int29 = script_5271(widget(1137, 94), string34, location14, arg15, int29);
+		}
+		if (arg16 != -1) {
+			int29 = script_5271(widget(1137, 94), string35, location17, arg18, int29);
+		}
+		if (arg19 != -1) {
+			int29 = script_5271(widget(1137, 94), string36, location20, arg21, int29);
+		}
+		if (arg22 != -1) {
+			int29 = script_5271(widget(1137, 94), string37, location23, arg24, int29);
+		}
+		while (int30 < int28) {
+			int30 = script_5272(widget(1137, 83), int30, int28);
+		}
+		int30 = 0;
+		while (int30 < int29) {
+			int30 = script_5272(widget(1137, 94), int30, int29);
+		}
+	} else {
+		widget(1137, 15).setIsHidden(false);
+		widget(1137, 16).setIsHidden(true);
+		widget(1137, 17).setIsHidden(true);
+		if (arg1 != -1) {
+			int28 = script_5271(widget(1137, 28), string30, location2, arg3, int28);
+		}
+		if (arg4 != -1) {
+			int28 = script_5271(widget(1137, 28), string31, location5, arg6, int28);
+		}
+		if (arg7 != -1) {
+			int28 = script_5271(widget(1137, 28), string32, location8, arg9, int28);
+		}
+		if (arg10 != -1) {
+			int28 = script_5271(widget(1137, 28), string33, location11, arg12, int28);
+		}
+		if (arg13 != -1) {
+			int28 = script_5271(widget(1137, 28), string34, location14, arg15, int28);
+		}
+		if (arg16 != -1) {
+			int28 = script_5271(widget(1137, 28), string35, location17, arg18, int28);
+		}
+		if (arg19 != -1) {
+			int28 = script_5271(widget(1137, 28), string36, location20, arg21, int28);
+		}
+		if (arg22 != -1) {
+			int28 = script_5271(widget(1137, 28), string37, location23, arg24, int28);
+		}
+		while (int30 < int28) {
+			int30 = script_5272(widget(1137, 28), int30, int28);
+		}
+	}
+	return;
+}

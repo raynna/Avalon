@@ -1,0 +1,18 @@
+void script_9(Widget widget0, Widget widget1, Widget widget2) {
+	if (VARC[169] == 1) {
+		widget0.setIsHidden(false);
+		widget1.setIsHidden(false);
+		widget2.setIsHidden(false);
+		script_680(widget0);
+		widget0.setScriptCallOnMouseEntered(95, widget0, "I");
+		widget0.setScriptCallOnMouseExit(93, widget0, "I");
+	} else {
+		widget0.clearChildren();
+		widget0.setIsHidden(true);
+		widget1.setIsHidden(true);
+		widget2.setIsHidden(true);
+		widget0.setScriptCallOnMouseEntered(-1, "");
+		widget0.setScriptCallOnMouseExit(-1, "");
+	}
+	return;
+}

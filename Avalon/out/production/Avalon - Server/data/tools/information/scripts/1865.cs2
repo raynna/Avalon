@@ -1,0 +1,7 @@
+void script_1865(int arg0, Item item1) {
+	if (arg0 != 1) {
+		return;
+	}
+	msg(datamap('o', 's', (DataMap)2024, item1));
+	return;
+}

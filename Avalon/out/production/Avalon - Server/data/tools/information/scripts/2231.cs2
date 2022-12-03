@@ -1,0 +1,8 @@
+void script_2231() {
+	if (VARC[1129] > 0) {
+		playSoundEffect(8729, 1, 0);
+		VARC[1129] = VARC[1129] - 1;
+		script_2220();
+	}
+	return;
+}

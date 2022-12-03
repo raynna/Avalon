@@ -1,0 +1,31 @@
+void script_153(Widget widget0, Container container1, int arg2, int arg3, int arg4, Widget widget5, string string6, string string7, string string8, string string9, string string10, string string11, string string12, string string13, string string14) {
+	int int6;
+	int int7;
+	int int8;
+	widget0.clearChildren();
+	int6 = 0;
+	int7 = 0;
+	if (arg2 > 1) {
+		if (widget0.getScrollMaxH() > 0) {
+			int6 = (widget0.getScrollMaxH() - 36 * arg2) / (arg2 - 1);
+		} else {
+			int6 = (widget0.getWidth() - 36 * arg2) / (arg2 - 1);
+		}
+	}
+	if (arg3 > 1) {
+		if (widget0.getScrollMaxV() > 0) {
+			int7 = (widget0.getScrollMaxV() - 32 * arg3) / (arg3 - 1);
+		} else {
+			int7 = (widget0.getHeight() - 32 * arg3) / (arg3 - 1);
+		}
+	}
+	int8 = 0;
+	while (int8 <= arg2 * arg3) {
+		ACTIVE.createChild(widget0, 5, int8);
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setPosition((36 + int6) * (int8 % arg2), int8 / arg2 * (32 + int7), 0, 0);
+		script_154(container1, int8, widget0, int8, arg4, widget5, string6, string7, string8, string9, string10, string11, string12, string13, string14);
+		int8 = int8 + 1;
+	}
+	return;
+}

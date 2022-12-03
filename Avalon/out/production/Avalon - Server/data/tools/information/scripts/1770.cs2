@@ -1,0 +1,76 @@
+void script_1770() {
+	if (VARC[246] == 0) {
+		widget(791, 19).setSprite(699);
+		script_1783(widget(791, 22), widget(791, 53), null, -1);
+	} else {
+		widget(791, 19).setSprite(697);
+	}
+	if (VARC[246] == 1) {
+		widget(791, 24).setSprite(699);
+		script_1783(widget(791, 22), widget(791, 53), widget(791, 24), -1);
+	} else {
+		widget(791, 24).setSprite(697);
+	}
+	if (VARC[246] == 2) {
+		widget(791, 27).setSprite(699);
+		script_1783(widget(791, 22), widget(791, 53), widget(791, 27), -1);
+	} else {
+		widget(791, 27).setSprite(697);
+	}
+	if (VARC[246] == 3) {
+		widget(791, 30).setSprite(699);
+		script_1783(widget(791, 22), widget(791, 53), widget(791, 30), -1);
+	} else {
+		widget(791, 30).setSprite(697);
+	}
+	if (VARC[246] == 4) {
+		widget(791, 33).setSprite(699);
+		script_1783(widget(791, 22), widget(791, 53), widget(791, 33), -1);
+	} else {
+		widget(791, 33).setSprite(697);
+	}
+	if (VARC[246] == 5) {
+		widget(791, 36).setSprite(699);
+		script_1783(widget(791, 22), widget(791, 53), widget(791, 36), -1);
+	} else {
+		widget(791, 36).setSprite(697);
+	}
+	if (VARC[246] == 6) {
+		widget(791, 39).setSprite(699);
+		script_1783(widget(791, 22), widget(791, 53), widget(791, 39), -1);
+	} else {
+		widget(791, 39).setSprite(697);
+	}
+	if (VARC[246] == 7) {
+		widget(791, 42).setSprite(699);
+		script_1783(widget(791, 22), widget(791, 53), widget(791, 42), -1);
+	} else {
+		widget(791, 42).setSprite(697);
+	}
+	if (VARC[246] == 8) {
+		widget(791, 45).setSprite(699);
+		script_1783(widget(791, 22), widget(791, 53), widget(791, 45), -1);
+	} else {
+		widget(791, 45).setSprite(697);
+	}
+	if (VARC[246] == 9) {
+		widget(791, 48).setSprite(699);
+		script_1783(widget(791, 22), widget(791, 53), widget(791, 48), -1);
+	} else {
+		widget(791, 48).setSprite(697);
+	}
+	if (VARC[246] == 10) {
+		widget(791, 51).setSprite(699);
+		script_1783(widget(791, 22), widget(791, 53), widget(791, 51), -1);
+	} else {
+		widget(791, 51).setSprite(697);
+	}
+	if (VARC[246] == 15) {
+		widget(791, 55).setSprite(699);
+		script_1783(widget(791, 22), widget(791, 53), null, -1);
+	} else {
+		widget(791, 55).setSprite(697);
+	}
+	script_1784();
+	return;
+}

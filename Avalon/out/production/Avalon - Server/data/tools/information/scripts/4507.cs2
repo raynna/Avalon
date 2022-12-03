@@ -1,0 +1,16 @@
+void script_4507(int arg0, Widget widget1, Widget widget2) {
+	string str0;
+	str0 = "";
+	if (ACTIVE.setChild(widget1, arg0)) {
+		str0 = ACTIVE.getText();
+	}
+	widget2.clearChildren();
+	ACTIVE.createChild(widget2, 4, widget2.nextChild());
+	ACTIVE.setText(str0);
+	ACTIVE.setFont(3793);
+	ACTIVE.setPosition(5, 0, 0, 1);
+	ACTIVE.setSize(5, 16384, 1, 2);
+	ACTIVE.setTextAlignment(0, 1, 0);
+	ACTIVE.setRGB(0x000000);
+	return;
+}

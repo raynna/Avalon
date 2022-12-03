@@ -1,0 +1,11 @@
+void script_3961(int arg0, Widget widget1) {
+	if (arg0 < 50) {
+		arg0 = arg0 + 1;
+		widget1.setScriptCallOnGameloop(3961, arg0, widget1, "iI");
+	} else {
+		widget(744, 81).setSize(63, 16, 0, 0);
+		widget1.setScriptCallOnGameloop(-1, "");
+		script_3960(widget(744, 108));
+	}
+	return;
+}

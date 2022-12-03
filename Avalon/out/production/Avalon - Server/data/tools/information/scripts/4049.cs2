@@ -1,0 +1,8 @@
+void script_4049() {
+	script_4051(widget(1057, 15), 0);
+	script_4051(widget(1057, 24), 0);
+	script_4051(widget(1057, 21), 0);
+	script_4051(widget(1057, 12), 0);
+	script_4051(widget(1057, 18), 0);
+	return;
+}

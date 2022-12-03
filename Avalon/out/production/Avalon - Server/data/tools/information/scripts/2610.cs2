@@ -1,0 +1,89 @@
+void script_2610(Widget widget0) {
+	string str0;
+	str0 = "";
+	if (VARPBIT[6357] == 2) {
+		widget0.setIsHidden(false);
+		if (VARPBIT[6372] == 15) {
+			if (VARPBIT[6373] > 0) {
+				str0 = "Collected " + str(VARPBIT[6373]) + " out of 4 rocks";
+				widget(37, 36).setSprite(1985);
+			} else {
+				str0 = "Send a squad to collect rocks";
+				widget(37, 36).setSprite(1990);
+			}
+			widget(37, 0).setScriptCallOnMouseOver(38, widget(37, 0), widget(37, 41), str0, 50, 150, "IIsii");
+			widget(37, 0).setScriptCallOnMouseExit(40, widget(37, 41), "I");
+			if (VARPBIT[6373] > 1) {
+				str0 = "Collected " + str(VARPBIT[6373]) + " out of 4 rocks";
+				widget(37, 39).setSprite(1985);
+			} else {
+				str0 = "Send a squad to collect rocks.";
+				widget(37, 39).setSprite(1990);
+			}
+			widget(37, 3).setScriptCallOnMouseOver(38, widget(37, 3), widget(37, 41), str0, 50, 150, "IIsii");
+			widget(37, 3).setScriptCallOnMouseExit(40, widget(37, 41), "I");
+			if (VARPBIT[6373] > 2) {
+				str0 = "Collected " + str(VARPBIT[6373]) + " out of 4 rocks";
+				widget(37, 38).setSprite(1985);
+			} else {
+				str0 = "Send a squad to collect rocks.";
+				widget(37, 38).setSprite(1990);
+			}
+			widget(37, 4).setScriptCallOnMouseOver(38, widget(37, 4), widget(37, 41), str0, 50, 150, "IIsii");
+			widget(37, 4).setScriptCallOnMouseExit(40, widget(37, 41), "I");
+			if (VARPBIT[6373] > 3) {
+				str0 = "Collected " + str(VARPBIT[6373]) + " out of 4 rocks";
+				widget(37, 37).setSprite(1985);
+			} else {
+				str0 = "Send a squad to collect rocks.";
+				widget(37, 37).setSprite(1990);
+			}
+			widget(37, 5).setScriptCallOnMouseOver(38, widget(37, 5), widget(37, 41), str0, 50, 150, "IIsii");
+			widget(37, 5).setScriptCallOnMouseExit(40, widget(37, 41), "I");
+		} else {
+			if (VARPBIT[6368] > 0) {
+				str0 = "Collected wheels";
+				widget(37, 36).setSprite(1981);
+			} else {
+				str0 = "Send a squad to collect wheels.";
+				widget(37, 36).setSprite(1986);
+			}
+			widget(37, 0).setScriptCallOnMouseOver(38, widget(37, 0), widget(37, 41), str0, 50, 150, "IIsii");
+			widget(37, 0).setScriptCallOnMouseExit(40, widget(37, 41), "I");
+			if (VARPBIT[6370] > 0) {
+				str0 = "Collected logs";
+				widget(37, 39).setSprite(1982);
+			} else {
+				str0 = "Send a squad to collect logs.";
+				widget(37, 39).setSprite(1987);
+			}
+			widget(37, 3).setScriptCallOnMouseOver(38, widget(37, 3), widget(37, 41), str0, 50, 150, "IIsii");
+			widget(37, 3).setScriptCallOnMouseExit(40, widget(37, 41), "I");
+			if (VARPBIT[6371] > 0) {
+				str0 = "Collected rope";
+				widget(37, 38).setSprite(1983);
+			} else {
+				str0 = "Send a squad to collect rope.";
+				widget(37, 38).setSprite(1988);
+			}
+			widget(37, 4).setScriptCallOnMouseOver(38, widget(37, 4), widget(37, 41), str0, 50, 150, "IIsii");
+			widget(37, 4).setScriptCallOnMouseExit(40, widget(37, 41), "I");
+			if (VARPBIT[6369] > 0) {
+				str0 = "Collected metal limbs";
+				widget(37, 37).setSprite(1984);
+			} else {
+				str0 = "Send a squad to collect metal limbs.";
+				widget(37, 37).setSprite(1989);
+			}
+			widget(37, 5).setScriptCallOnMouseOver(38, widget(37, 5), widget(37, 41), str0, 50, 150, "IIsii");
+			widget(37, 5).setScriptCallOnMouseExit(40, widget(37, 41), "I");
+		}
+	} else if (VARPBIT[6357] == 1) {
+		widget0.setIsHidden(true);
+	} else if (VARPBIT[6357] == 3) {
+		widget0.setIsHidden(true);
+	} else if (VARPBIT[6357] == 4) {
+		widget0.setIsHidden(true);
+	}
+	return;
+}

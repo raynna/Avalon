@@ -1,0 +1,13 @@
+void script_555() {
+	int int0;
+	int0 = (15 - VARPBIT[4109]) * 6;
+	widget(624, 15).setPosition(0, int0, 0, 0);
+	widget(624, 70).setText(str(VARPBIT[4109]));
+	int0 = (15 - VARPBIT[4110]) * 6;
+	widget(624, 17).setPosition(0, int0, 0, 0);
+	widget(624, 71).setText(str(VARPBIT[4110]));
+	int0 = (15 - VARPBIT[4111]) * 6;
+	widget(624, 19).setPosition(0, int0, 0, 0);
+	widget(624, 72).setText(str(VARPBIT[4111]));
+	return;
+}

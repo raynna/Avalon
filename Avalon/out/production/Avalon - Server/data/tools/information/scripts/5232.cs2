@@ -1,0 +1,14 @@
+void script_5232(Widget widget0, int arg1) {
+	if (cs2method5407(0) == 5 && VARC[1007] == 2) {
+		if (arg1 == 1) {
+			cameraMethod5502(0, 1, 800, 700, 1, 1);
+			widget0.setScriptCallOnMinimapRelatedSetting3(5232, widget0, 2, "Ii");
+			return;
+		}
+		if (arg1 == 2) {
+			cameraMethod5502(0, 2, 700, 40, 1, 2);
+		}
+	}
+	widget0.setScriptCallOnMinimapRelatedSetting3(-1, "");
+	return;
+}

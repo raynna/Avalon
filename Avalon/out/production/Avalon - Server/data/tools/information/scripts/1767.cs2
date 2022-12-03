@@ -1,0 +1,16 @@
+void script_1767() {
+	script_71(5);
+	widget(783, 1).bindMouseToSpriteShape(false);
+	widget(783, 2).bindMouseToSpriteShape(false);
+	widget(783, 3).bindMouseToSpriteShape(false);
+	widget(783, 4).bindMouseToSpriteShape(false);
+	widget(783, 5).bindMouseToSpriteShape(false);
+	widget(783, 6).bindMouseToSpriteShape(false);
+	widget(783, 7).bindMouseToSpriteShape(false);
+	widget(783, 8).bindMouseToSpriteShape(false);
+	widget(783, 9).bindMouseToSpriteShape(false);
+	widget(783, 10).bindMouseToSpriteShape(false);
+	widget(783, 11).bindMouseToSpriteShape(false);
+	script_1766();
+	return;
+}

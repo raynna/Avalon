@@ -1,0 +1,32 @@
+void script_3499(int arg0, Widget widget1, Widget widget2) {
+	int int3;
+	int3 = 0;
+	if (arg0 > 20000000) {
+		arg0 = 0;
+	}
+	if (y(getMyLocation()) > 6400 || y(getMyLocation()) > y(location(2944, 4479, 0))) {
+		widget1.set3DRotation(0, 0, 512, (widget1.getRotateY() - 30) % 2047, 40, 275);
+		widget2.setIsHidden(true);
+	} else if (script_133(location(2048, 2496, 0), location(3903, 4159, 3), getMyLocation()) == 0) {
+		if (arg0 % 68 > 34) {
+			widget1.set3DRotation(0, 0, 512, (widget1.getRotateY() - 30) % 2047, 40, 275);
+		} else {
+			widget1.set3DRotation(0, 0, 512, (widget1.getRotateY() + 30) % 2047, 40, 275);
+		}
+		widget2.setIsHidden(true);
+	} else if (z(getMyLocation()) - z(location(VARC[1323])) > 0) {
+		widget1.set3DRotation(0, 0, 512, (widget1.getRotateY() + 30) % 2047, 40, 275);
+		widget2.setIsHidden(true);
+	} else {
+		int3 = script_3500(x(getMyLocation()), y(getMyLocation()), x(location(VARC[1323])), y(location(VARC[1323])));
+		if (int3 == -1) {
+			widget1.set3DRotation(0, 0, 0, 0, 40, 275);
+			widget2.setIsHidden(false);
+		} else {
+			widget1.set3DRotation(0, 0, 512, 2047 * int3 / 65535, 40, 275);
+			widget2.setIsHidden(true);
+		}
+	}
+	widget1.setScriptCallOnGameloop(3499, arg0 + 1, widget1, widget2, "iII");
+	return;
+}

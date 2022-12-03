@@ -1,0 +1,331 @@
+void script_3477() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int0 = 3 - script_3484(1);
+	if (int0 > 0) {
+		widget(991, 7).setItemNum(datamap('i', 'o', (DataMap)3082, 1), int0);
+		widget(991, 7).setScriptCallOnClickContextMenu(3481, CTX_MENU_OPTION, "i");
+		widget(991, 7).setContextMenuOption(1, "Select");
+	} else {
+		widget(991, 7).setItemOnWidgetMethod2205(null, 0);
+		widget(991, 7).setScriptCallOnClickContextMenu(-1, "");
+		widget(991, 7).setNoOptions();
+	}
+	int0 = 2 - script_3484(2);
+	if (int0 > 0) {
+		widget(991, 8).setItemNum(datamap('i', 'o', (DataMap)3082, 2), int0);
+		widget(991, 8).setScriptCallOnClickContextMenu(3481, CTX_MENU_OPTION, "i");
+		widget(991, 8).setContextMenuOption(1, "Select");
+	} else {
+		widget(991, 8).setItemOnWidgetMethod2205(null, 0);
+		widget(991, 8).setScriptCallOnClickContextMenu(-1, "");
+		widget(991, 8).setNoOptions();
+	}
+	int0 = 2 - script_3484(3);
+	if (int0 > 0) {
+		widget(991, 9).setItemNum(datamap('i', 'o', (DataMap)3082, 3), int0);
+		widget(991, 9).setScriptCallOnClickContextMenu(3481, CTX_MENU_OPTION, "i");
+		widget(991, 9).setContextMenuOption(1, "Select");
+	} else {
+		widget(991, 9).setItemOnWidgetMethod2205(null, 0);
+		widget(991, 9).setScriptCallOnClickContextMenu(-1, "");
+		widget(991, 9).setNoOptions();
+	}
+	int0 = 2 - script_3485(1);
+	if (int0 > 0) {
+		widget(991, 17).setItemNum(datamap('i', 'o', (DataMap)3083, 1), int0);
+		widget(991, 17).setScriptCallOnClickContextMenu(3481, CTX_MENU_OPTION, "i");
+		widget(991, 17).setContextMenuOption(1, "Select");
+	} else {
+		widget(991, 17).setItemOnWidgetMethod2205(null, 0);
+		widget(991, 17).setScriptCallOnClickContextMenu(-1, "");
+		widget(991, 17).setNoOptions();
+	}
+	int0 = 4 - script_3485(2);
+	if (int0 > 0) {
+		widget(991, 18).setItemNum(datamap('i', 'o', (DataMap)3083, 2), int0);
+		widget(991, 18).setScriptCallOnClickContextMenu(3481, CTX_MENU_OPTION, "i");
+		widget(991, 18).setContextMenuOption(1, "Select");
+	} else {
+		widget(991, 18).setItemOnWidgetMethod2205(null, 0);
+		widget(991, 18).setScriptCallOnClickContextMenu(-1, "");
+		widget(991, 18).setNoOptions();
+	}
+	int0 = 2 - script_3485(3);
+	if (int0 > 0) {
+		widget(991, 19).setItemNum(datamap('i', 'o', (DataMap)3083, 3), int0);
+		widget(991, 19).setScriptCallOnClickContextMenu(3481, CTX_MENU_OPTION, "i");
+		widget(991, 19).setContextMenuOption(1, "Select");
+	} else {
+		widget(991, 19).setItemOnWidgetMethod2205(null, 0);
+		widget(991, 19).setScriptCallOnClickContextMenu(-1, "");
+		widget(991, 19).setNoOptions();
+	}
+	widget(991, 13).clearChildren();
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	while (int1 < 28) {
+		ACTIVE.createChild(widget(991, 13), 5, int1);
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setPosition((6 - int2) * 16 + int3 * 32, int2 * 32, 0, 2);
+		int0 = script_3482(int1);
+		ACTIVE.setItemNoNum(datamap('i', 'o', (DataMap)3082, int0), 1);
+		if (int0 > 0) {
+			ACTIVE.setContextMenuOption(1, "Remove tile");
+			ACTIVE.setScriptCallOnClickContextMenu(1620, CTX_WIDGET, CTX_WIDGET_CHILD, 150, 0, 10, "Iiiii");
+			ACTIVE.setDragDeadZone(5);
+			ACTIVE.setDragDeadTime(5);
+			ACTIVE.setDragRenderBehaviour(2);
+		}
+		if (int3 >= int2) {
+			int3 = 0;
+			int2 = int2 + 1;
+		} else {
+			int3 = int3 + 1;
+		}
+		int1 = int1 + 1;
+	}
+	widget(991, 23).clearChildren();
+	int1 = 0;
+	int2 = 6;
+	int3 = 0;
+	while (int1 < 28) {
+		ACTIVE.createChild(widget(991, 23), 5, int1);
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setPosition((6 - int2) * 16 + int3 * 32, int2 * 32, 0, 0);
+		int0 = script_3483(int1);
+		ACTIVE.setItemNoNum(datamap('i', 'o', (DataMap)3083, int0), 1);
+		if (int0 > 0) {
+			ACTIVE.setContextMenuOption(1, "Remove tile");
+			ACTIVE.setScriptCallOnClickContextMenu(1620, CTX_WIDGET, CTX_WIDGET_CHILD, 125, 0, 8, "Iiiii");
+			ACTIVE.setDragDeadZone(5);
+			ACTIVE.setDragDeadTime(5);
+			ACTIVE.setDragRenderBehaviour(2);
+		}
+		if (int3 >= int2) {
+			int3 = 0;
+			int2 = int2 - 1;
+		} else {
+			int3 = int3 + 1;
+		}
+		int1 = int1 + 1;
+	}
+	script_3478(widget(991, 13), 0, 7, 0xFF981F);
+	int1 = 0;
+	while (int1 <= 30) {
+		if (isBitFlagged(VARC[1317], int1)) {
+			switch (int1) {
+				case 0:
+					script_3478(widget(991, 13), -1, 5, 0xFF981F);
+					break;
+				case 1:
+					script_3478(widget(991, 13), -2, 3, 0xFF981F);
+					break;
+				case 2:
+					script_3478(widget(991, 13), 0, 3, 0xFF981F);
+					break;
+				case 3:
+					script_3478(widget(991, 13), 2, 3, 0xFF981F);
+					break;
+				case 4:
+					script_3478(widget(991, 13), -3, 1, 0xFF981F);
+					break;
+				case 5:
+					script_3478(widget(991, 13), 1, 1, 0xFF981F);
+					break;
+				case 6:
+					script_3478(widget(991, 13), 3, 1, 0xFF981F);
+					break;
+				case 7:
+					script_3478(widget(991, 13), -4, -1, 0xFF981F);
+					break;
+				case 8:
+					script_3478(widget(991, 13), -2, -1, 0xFF981F);
+					break;
+				case 9:
+					script_3478(widget(991, 13), 2, -1, 0xFF981F);
+					break;
+				case 10:
+					script_3478(widget(991, 13), 4, -1, 0xFF981F);
+					break;
+				case 11:
+					script_3478(widget(991, 13), -5, -3, 0xFF981F);
+					break;
+				case 12:
+					script_3478(widget(991, 13), -3, -3, 0xFF981F);
+					break;
+				case 13:
+					script_3478(widget(991, 13), 1, -3, 0xFF981F);
+					break;
+				case 14:
+					script_3478(widget(991, 13), 3, -3, 0xFF981F);
+					break;
+				case 15:
+					script_3478(widget(991, 13), 5, -3, 0xFF981F);
+					break;
+				case 16:
+					script_3478(widget(991, 13), -6, -5, 0xFF981F);
+					break;
+				case 17:
+					script_3478(widget(991, 13), -4, -5, 0xFF981F);
+					break;
+				case 18:
+					script_3478(widget(991, 13), -2, -5, 0xFF981F);
+					break;
+				case 19:
+					script_3478(widget(991, 13), 0, -5, 0xFF981F);
+					break;
+				case 20:
+					script_3478(widget(991, 13), 2, -5, 0xFF981F);
+					break;
+				case 21:
+					script_3478(widget(991, 13), 4, -5, 0xFF981F);
+					break;
+				case 22:
+					script_3478(widget(991, 13), 6, -5, 0xFF981F);
+					break;
+				case 23:
+					script_3478(widget(991, 13), -7, -7, 0xFF981F);
+					script_3478(widget(991, 23), -7, 7, 0xFF981F);
+					break;
+				case 24:
+					script_3478(widget(991, 13), -5, -7, 0xFF981F);
+					script_3478(widget(991, 23), -5, 7, 0xFF981F);
+					break;
+				case 25:
+					script_3478(widget(991, 13), -3, -7, 0xFF981F);
+					script_3478(widget(991, 23), -3, 7, 0xFF981F);
+					break;
+				case 26:
+					script_3478(widget(991, 13), -1, -7, 0xFF981F);
+					script_3478(widget(991, 23), -1, 7, 0xFF981F);
+					break;
+				case 27:
+					script_3478(widget(991, 13), 1, -7, 0xFF981F);
+					script_3478(widget(991, 23), 1, 7, 0xFF981F);
+					break;
+				case 28:
+					script_3478(widget(991, 13), 3, -7, 0xFF981F);
+					script_3478(widget(991, 23), 3, 7, 0xFF981F);
+					break;
+				case 29:
+					script_3478(widget(991, 13), 5, -7, 0xFF981F);
+					script_3478(widget(991, 23), 5, 7, 0xFF981F);
+					break;
+				case 30:
+					script_3478(widget(991, 13), 7, -7, 0xFF981F);
+					script_3478(widget(991, 23), 7, 7, 0xFF981F);
+					break;
+			}
+		}
+		int1 = int1 + 1;
+	}
+	int1 = 0;
+	while (int1 <= 30) {
+		if (isBitFlagged(VARC[1318], int1)) {
+			switch (int1) {
+				case 0:
+					script_3478(widget(991, 23), -6, 5, 0xFF981F);
+					break;
+				case 1:
+					script_3478(widget(991, 23), -4, 5, 0xFF981F);
+					break;
+				case 2:
+					script_3478(widget(991, 23), -2, 5, 0xFF981F);
+					break;
+				case 3:
+					script_3478(widget(991, 23), 0, 5, 0xFF981F);
+					break;
+				case 4:
+					script_3478(widget(991, 23), 2, 5, 0xFF981F);
+					break;
+				case 5:
+					script_3478(widget(991, 23), 4, 5, 0xFF981F);
+					break;
+				case 6:
+					script_3478(widget(991, 23), 6, 5, 0xFF981F);
+					break;
+				case 7:
+					script_3478(widget(991, 23), -5, 3, 0xFF981F);
+					break;
+				case 8:
+					script_3478(widget(991, 23), -3, 3, 0xFF981F);
+					break;
+				case 9:
+					script_3478(widget(991, 23), 3, 3, 0xFF981F);
+					break;
+				case 10:
+					script_3478(widget(991, 23), 5, 3, 0xFF981F);
+					break;
+				case 11:
+					script_3478(widget(991, 23), -4, 1, 0xFF981F);
+					break;
+				case 12:
+					script_3478(widget(991, 23), 4, 1, 0xFF981F);
+					break;
+				case 13:
+					script_3478(widget(991, 23), -3, -1, 0xFF981F);
+					break;
+				case 14:
+					script_3478(widget(991, 23), -1, -1, 0xFF981F);
+					break;
+				case 15:
+					script_3478(widget(991, 23), 1, -1, 0xFF981F);
+					break;
+				case 16:
+					script_3478(widget(991, 23), 3, -1, 0xFF981F);
+					break;
+				case 17:
+					script_3478(widget(991, 23), 0, -3, 0xFF981F);
+					break;
+				case 18:
+					script_3478(widget(991, 23), 2, -3, 0xFF981F);
+					break;
+				case 19:
+					script_3478(widget(991, 23), -1, -5, 0xFF981F);
+					break;
+				case 20:
+					script_3478(widget(991, 23), 0, -7, 0xFF981F);
+					break;
+				case 21:
+					script_3478(widget(991, 13), 1, 5, 0x000000);
+					break;
+				case 22:
+					script_3478(widget(991, 13), -1, 1, 0x000000);
+					break;
+				case 23:
+					script_3478(widget(991, 13), 0, -1, 0x000000);
+					break;
+				case 24:
+					script_3478(widget(991, 13), -1, -3, 0x000000);
+					break;
+				case 25:
+					script_3478(widget(991, 23), 1, 3, 0x000000);
+					break;
+				case 26:
+					script_3478(widget(991, 23), -2, 1, 0x000000);
+					break;
+				case 27:
+					script_3478(widget(991, 23), 0, 1, 0x000000);
+					break;
+				case 28:
+					script_3478(widget(991, 23), 2, 1, 0x000000);
+					break;
+				case 29:
+					script_3478(widget(991, 23), -2, -3, 0x000000);
+					break;
+				case 30:
+					script_3478(widget(991, 23), 1, -5, 0x000000);
+					break;
+				default:
+					ACTIVE.setHidden(true);
+					break;
+			}
+		}
+		int1 = int1 + 1;
+	}
+	return;
+}

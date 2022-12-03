@@ -1,0 +1,7 @@
+void script_3632(Widget widget0) {
+	if (ACTIVE.setChild(widget0)) {
+		ACTIVE.setAttr(1101, ACTIVE.getX());
+		ACTIVE.setAttr(1102, ACTIVE.getY());
+	}
+	return;
+}

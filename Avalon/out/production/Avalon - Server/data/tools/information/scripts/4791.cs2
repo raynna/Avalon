@@ -1,0 +1,214 @@
+Sprite, string, int, int, int, int, int, int script_4791(int arg0) {
+	Sprite sprite1;
+	int int2;
+	AttrMap attrmap3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	DataMap datamap11;
+	DataMap datamap12;
+	int int13;
+	string str0;
+	sprite1 = null;
+	str0 = "";
+	int2 = 0;
+	attrmap3 = datamap('i', 'J', (DataMap)4008, arg0);
+	if (attrmap3 == null) {
+		msg("Clan Build Tick : Job ID " + str(arg0) + " has no associated struct. Please report this as a bug, quoting this line.");
+		return -1, "", 0, 0, 0, 0, 0, 0;
+	}
+	int4 = getAttributeMapValue(attrmap3, 1481);
+	int5 = getAttributeMapValue(attrmap3, 1482);
+	int6 = 0;
+	int7 = 0;
+	int8 = 0;
+	int9 = -1;
+	int10 = 0;
+	datamap11 = null;
+	datamap12 = null;
+	int13 = 0;
+	if (citadelConfigsInitialized()) {
+		switch (int4) {
+			case 1:
+				str0 = "Stronghold";
+				sprite1 = 7418;
+				int6 = CLANBIT[2580];
+				int7 = min(CLANBIT[2633], int6 - 1);
+				int2 = CLANBIT[2600] + CLANBIT[2616];
+				break;
+			case 2:
+				str0 = "Storehouse";
+				sprite1 = 7419;
+				int6 = CLANBIT[2581];
+				int7 = min(CLANBIT[2631], int6 - 1);
+				int2 = CLANBIT[2596] + CLANBIT[2614];
+				break;
+			case 3:
+				str0 = "Battlefield";
+				sprite1 = 7417;
+				int6 = CLANBIT[2582];
+				int7 = min(CLANBIT[2632], int6 - 1);
+				int2 = CLANBIT[2597] + CLANBIT[2615];
+				break;
+			case 4:
+				switch (int5) {
+					case 1:
+						int8 = CLANBIT[2553];
+						int6 = CLANBIT[2567];
+						if (int8 == 1) {
+							int13 = 1;
+						}
+						int7 = min(CLANBIT[2617], int6 - int13);
+						int2 = CLANBIT[2584] + CLANBIT[2602];
+						break;
+					case 2:
+						int8 = CLANBIT[2554];
+						int6 = CLANBIT[2568];
+						if (int8 == 1) {
+							int13 = 1;
+						}
+						int7 = min(CLANBIT[2618], int6 - int13);
+						int2 = CLANBIT[2585] + CLANBIT[2603];
+						break;
+					case 3:
+						int8 = CLANBIT[2555];
+						int6 = CLANBIT[2569];
+						if (int8 == 1) {
+							int13 = 1;
+						}
+						int7 = min(CLANBIT[2620], int6 - int13);
+						int2 = CLANBIT[2586] + CLANBIT[2604];
+						break;
+					case 4:
+						int8 = CLANBIT[2556];
+						int6 = CLANBIT[2570];
+						if (int8 == 1) {
+							int13 = 1;
+						}
+						int7 = min(CLANBIT[2621], int6 - int13);
+						int2 = CLANBIT[2587] + CLANBIT[2605];
+						break;
+					case 5:
+						int8 = CLANBIT[2557];
+						int6 = CLANBIT[2571];
+						if (int8 == 1) {
+							int13 = 1;
+						}
+						int7 = min(CLANBIT[2622], int6 - int13);
+						int2 = CLANBIT[2588] + CLANBIT[2606];
+						break;
+					case 6:
+						int8 = CLANBIT[2558];
+						int6 = CLANBIT[2572];
+						if (int8 == 1) {
+							int13 = 1;
+						}
+						int7 = min(CLANBIT[2623], int6 - int13);
+						int2 = CLANBIT[2589] + CLANBIT[2607];
+						break;
+					case 7:
+						int8 = CLANBIT[2560];
+						int6 = CLANBIT[2573];
+						if (int8 == 1) {
+							int13 = 1;
+						}
+						int7 = min(CLANBIT[2624], int6 - int13);
+						int2 = CLANBIT[2590] + CLANBIT[2608];
+						break;
+					case 8:
+						int8 = CLANBIT[2561];
+						int6 = CLANBIT[2574];
+						if (int8 == 1) {
+							int13 = 1;
+						}
+						int7 = min(CLANBIT[2625], int6 - int13);
+						int2 = CLANBIT[2591] + CLANBIT[2609];
+						break;
+					case 9:
+						int8 = CLANBIT[2562];
+						int6 = CLANBIT[2576];
+						if (int8 == 1) {
+							int13 = 1;
+						}
+						int7 = min(CLANBIT[2626], int6 - int13);
+						int2 = CLANBIT[2592] + CLANBIT[2610];
+						break;
+					case 10:
+						int8 = CLANBIT[2563];
+						int6 = CLANBIT[2577];
+						if (int8 == 1) {
+							int13 = 1;
+						}
+						int7 = min(CLANBIT[2627], int6 - int13);
+						int2 = CLANBIT[2593] + CLANBIT[2611];
+						break;
+					case 11:
+						int8 = CLANBIT[2564];
+						int6 = CLANBIT[2578];
+						if (int8 == 1) {
+							int13 = 1;
+						}
+						int7 = min(CLANBIT[2629], int6 - int13);
+						int2 = CLANBIT[2594] + CLANBIT[2612];
+						break;
+					case 12:
+						int8 = CLANBIT[2565];
+						int6 = CLANBIT[2579];
+						if (int8 == 1) {
+							int13 = 1;
+						}
+						int7 = min(CLANBIT[2630], int6 - int13);
+						int2 = CLANBIT[2595] + CLANBIT[2613];
+						break;
+					default:
+						msg("Clan Build Tick : No skill plot found with index " + str(int5) + ". Please report this as a bug, quoting this line.");
+						break;
+				}
+				str0 = datamap('i', 's', (DataMap)4287, int8);
+				sprite1 = datamap('i', 'd', (DataMap)4288, int8);
+				break;
+			case 5:
+				switch (int5) {
+					case 1:
+						int8 = CLANBIT[2139];
+						int6 = CLANBIT[2140];
+						break;
+					case 2:
+						int8 = CLANBIT[2156];
+						int6 = CLANBIT[2157];
+						break;
+					case 3:
+						int8 = CLANBIT[2173];
+						int6 = CLANBIT[2174];
+						break;
+					default:
+						msg("Clan Build Tick : No cosmetic job slot found with index " + str(int5) + ". Please report this as a bug, quoting this line.");
+						break;
+				}
+				int9 = script_4820(int5);
+				datamap11 = (DataMap)script_4823(int5);
+				datamap12 = (DataMap)script_4826(int5);
+				if (arg0 == 16 || arg0 == 17 || arg0 == 18) {
+					str0 = "Reset hotspot (slot " + str(int5) + ").";
+					sprite1 = 6496;
+				} else {
+					str0 = datamap('i', 's', datamap11, int8);
+					sprite1 = datamap('i', 'd', datamap12, int8);
+				}
+				break;
+			default:
+				msg("Clan Build Tick : Unexpected job building class " + str(int4) + ". Please report this as a bug, quoting this line.");
+				return -1, "", 0, 0, 0, 0, 0, 0;
+		}
+		if (arg0 > 600 && int4 != 5) {
+			int6 = int6 + 1;
+		}
+		return sprite1, str0, int6, int7, int2, int4, int5, int8;
+	}
+	msg("Clan Build Tick : Could not access clan profile.");
+	return -1, "", 0, 0, 0, 0, 0, 0;
+}

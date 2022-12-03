@@ -1,0 +1,46 @@
+void script_1230() {
+	Item item0;
+	Model model1;
+	Widget widget2;
+	int int3;
+	item0 = null;
+	model1 = null;
+	widget2 = null;
+	int3 = 0;
+	while (int3 < 16) {
+		item0 = getItemIdInSlot(308, int3);
+		switch (item0) {
+			case 6422:
+			case 556:
+				model1 = 8975;
+				break;
+			case 6424:
+			case 555:
+				model1 = 8987;
+				break;
+			case 6426:
+			case 557:
+				model1 = 8979;
+				break;
+			case 554:
+			case 6428:
+				model1 = 8980;
+				break;
+			default:
+				model1 = null;
+				break;
+		}
+		widget2 = datamap('i', 'I', (DataMap)2273, int3);
+		if (ACTIVE.setChild(widget2)) {
+			ACTIVE.setModel(model1);
+		}
+		if (item0 == 6422 || item0 == 6422 || item0 == 6424 || item0 == 6426 || item0 == 6428) {
+			widget2 = datamap('i', 'I', (DataMap)2276, int3);
+			if (ACTIVE.setChild(widget2)) {
+				ACTIVE.setRGB(0x440000);
+			}
+		}
+		int3 = int3 + 1;
+	}
+	return;
+}

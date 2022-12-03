@@ -1,0 +1,14 @@
+void script_499(int arg0) {
+	AttrMap attrmap1;
+	Widget widget2;
+	attrmap1 = script_488(arg0);
+	widget2 = widget(1012, 20);
+	if (attrmap1 != null) {
+		widget(1012, 27).setText(getAttributeMapValue(attrmap1, 1150));
+		widget(1012, 28).setText(getAttributeMapValue(attrmap1, 1152));
+		widget2.setIsHidden(false);
+	} else {
+		widget2.setIsHidden(true);
+	}
+	return;
+}

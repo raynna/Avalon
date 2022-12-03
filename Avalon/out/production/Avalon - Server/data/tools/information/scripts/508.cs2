@@ -1,0 +1,23 @@
+void script_508() {
+	VARC[6] = 0;
+	if (getBlackmarks() == 5 || getBlackmarks() == 6) {
+		widget(594, 83).setText("Suggest to mute this player for 48 hours");
+		widget(594, 10).setText("Suggest to mute this player for 48 hours");
+		widget(594, 60).setText("Suggest to mute this player for 48 hours");
+	} else {
+		widget(594, 83).setText("Mute this player for 48 hours");
+		widget(594, 10).setText("Mute this player for 48 hours");
+		widget(594, 60).setText("Mute this player for 48 hours");
+	}
+	VARC[11] = 1;
+	if (getLanguage() != 1) {
+		script_216();
+		script_246();
+		return;
+	}
+	widget(594, 32).setScriptCallOnGlobalStringChange(218, 24, "Y");
+	VARC[792] = -1;
+	script_224();
+	script_216();
+	return;
+}

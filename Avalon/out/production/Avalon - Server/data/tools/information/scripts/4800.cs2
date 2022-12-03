@@ -1,0 +1,6 @@
+int script_4800(int arg0) {
+	if (arg0 == CLANBIT[2100] || arg0 == CLANBIT[2101] || arg0 == CLANBIT[2102] || arg0 == CLANBIT[2103] || arg0 == CLANBIT[2104] || arg0 == CLANBIT[2105] || arg0 == CLANBIT[2106] || arg0 == CLANBIT[2107] || arg0 == CLANBIT[2108] || arg0 == CLANBIT[2109] || arg0 == CLANBIT[2110] || arg0 == CLANBIT[2111] || arg0 == CLANBIT[2112] || arg0 == CLANBIT[2113] || arg0 == CLANBIT[2114] || arg0 == CLANBIT[2115] || arg0 == CLANBIT[2116] || arg0 == CLANBIT[2117] || arg0 == CLANBIT[2118] || arg0 == CLANBIT[2119] || arg0 == CLANBIT[2120] || arg0 == CLANBIT[2121] || arg0 == CLANBIT[2122] || arg0 == CLANBIT[2123] || arg0 == CLANBIT[2124] || arg0 == CLANBIT[2125] || arg0 == CLANBIT[2126] || arg0 == CLANBIT[2127] || arg0 == CLANBIT[2128] || arg0 == CLANBIT[2129] || arg0 == CLANBIT[2130]) {
+		return 1;
+	}
+	return 0;
+}

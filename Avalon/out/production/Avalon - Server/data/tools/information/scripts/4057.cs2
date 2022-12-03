@@ -1,0 +1,31 @@
+void script_4057(Widget widget0) {
+	if (VARC[1432] == 1 || !widget(1058, 10).isHidden()) {
+		return;
+	}
+	if (widget(1058, 10).isHidden() && widget(1058, 9).isHidden()) {
+		widget(1058, 10).setIsHidden(false);
+		widget(1058, 10).setPosition(0, 1 - widget(1058, 10).getHeight(), 1, 0);
+		VARC[1432] = 1;
+		widget(1058, 2).setNoOptions();
+		widget(1058, 3).setNoOptions();
+		widget0.setScriptCallOnGameloop(4059, widget(1058, 10), widget0, "II");
+	} else {
+		VARC[1432] = 1;
+		widget(1058, 2).setNoOptions();
+		widget(1058, 3).setNoOptions();
+		widget0.setScriptCallOnGameloop(4058, widget(1058, 9), widget(1058, 10), widget0, "III");
+	}
+	widget(1058, 32).setSprite(4465);
+	widget(1058, 33).setSprite(2657);
+	widget(1058, 34).setSprite(2657);
+	widget(1058, 36).setSprite(4464);
+	widget(1058, 37).setSprite(2659);
+	widget(1058, 38).setSprite(2659);
+	if (VARPBIT[8662] < 200 && VARPBIT[8663] < 200 && VARPBIT[8664] < 200 && VARPBIT[8665] < 200 && VARPBIT[8666] < 200) {
+		script_4061();
+	} else {
+		script_4062();
+	}
+	VARC[1431] = 1;
+	return;
+}

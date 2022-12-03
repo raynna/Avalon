@@ -1,0 +1,28 @@
+void script_3384(int arg0) {
+	int int1;
+	int int2;
+	int1 = 0;
+	int2 = 0;
+	int1, int2 = cs2method7000();
+	script_2593(int1);
+	if (int1 == 1 || int1 == 3) {
+		script_2700(1, arg0, true, false);
+		return;
+	}
+	VARC[1240] = 3;
+	VARC[1277] = 0;
+	cs2method6032(int1, 1);
+	if (arg0 == 3) {
+		if (hasSSKey()) {
+			script_1174(5);
+			widget(975, 44).setScriptCallOnGameloop(3381, widget(975, 44), 0, "Ii");
+		} else if (script_3487(1)) {
+			script_1174(11);
+		} else {
+			script_1174(11);
+		}
+	} else {
+		script_2596(int1, getDisplayMode(), (int, int)script_2692(int1), arg0);
+	}
+	return;
+}

@@ -1,0 +1,9 @@
+void script_1217(Widget widget0, Widget widget1) {
+	int int2;
+	int int3;
+	widget1.setDraggable(widget0, -1);
+	int2 = widget0.getWidth() - widget1.getWidth();
+	int3 = cs2method6118() * 127 / int2;
+	widget1.setPosition(int3, 0, 0, 0);
+	return;
+}

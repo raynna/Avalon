@@ -1,0 +1,26 @@
+void script_202(string string0, string string1, int arg2, int arg3) {
+	switch (arg2) {
+		case 5:
+			if (isFriend(string1)) {
+				VARC[1650] = 1;
+				STRING[23] = string0;
+				script_1558(false);
+				return;
+			}
+			cs2method3605(string0);
+			break;
+		case 6:
+			cs2method3607(string0);
+			break;
+		case 7:
+			cs2method3606(string0);
+			break;
+		case 8:
+			cs2method3608(string0);
+			break;
+		case 9:
+			script_1633(string0);
+			break;
+	}
+	return;
+}

@@ -1,0 +1,78 @@
+void script_2784(int arg0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, int arg7) {
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	if (arg0 == 0 || x(getMyLocation()) >= x(location(2752, 5504, 0)) && x(getMyLocation()) <= x(location(2879, 5631, 3)) && y(getMyLocation()) >= y(location(2752, 5504, 0)) && y(getMyLocation()) <= y(location(2879, 5631, 3))) {
+		if (widget6 != null) {
+			if (y(getMyLocation()) < y(location(2752, 5504, 0)) + 8) {
+				widget6.setIsHidden(false);
+				widget6.clearChildren();
+				script_1086(widget6, 0, 0, 0);
+			} else {
+				widget6.setIsHidden(true);
+			}
+		}
+		if (arg7 == 0 && getClientCycle() % 50 != 0) {
+			return;
+		}
+		widget4.setRGB(0xFF981F);
+		widget5.setRGB(0xFF981F);
+		widget2.setSprite(444);
+		widget5.setText("ITEMS ARE" + "<br>" + "SAFE");
+	} else {
+		if (!(arg0 == 1 || x(getMyLocation()) >= x(location(2944, 5504, 0)) && x(getMyLocation()) <= x(location(3071, 5631, 3)) && y(getMyLocation()) >= y(location(2944, 5504, 0)) && y(getMyLocation()) <= y(location(3071, 5631, 3)))) {
+			widget4.setIsHidden(true);
+			widget5.setIsHidden(true);
+			widget2.setIsHidden(true);
+			widget3.setIsHidden(true);
+			if (widget6 != null) {
+				widget6.setIsHidden(true);
+			}
+			widget1.clearChildren();
+			return;
+		}
+		if (widget6 != null) {
+			if (y(getMyLocation()) < y(location(2944, 5504, 0)) + 8) {
+				widget6.setIsHidden(false);
+				widget6.clearChildren();
+				script_1086(widget6, 0, 0, 0);
+			} else {
+				widget6.setIsHidden(true);
+			}
+		}
+		if (arg7 == 0 && getClientCycle() % 50 != 0) {
+			return;
+		}
+		widget4.setRGB(0xFFFF00);
+		widget5.setRGB(0xFFFF00);
+		widget2.setSprite(445);
+		widget5.setText("ITEMS ARE" + "<br>" + "DROPPED");
+	}
+	widget4.setIsHidden(false);
+	widget5.setIsHidden(false);
+	widget2.setIsHidden(false);
+	widget3.setIsHidden(false);
+	widget2.setSpriteTiling(true);
+	int8 = getMaxLineWidth(widget4.getText(), 512, 494);
+	int8 = max(getMaxLineWidth(widget5.getText(), 512, 494), int8);
+	int8 = int8 + 8;
+	int9 = 5;
+	widget4.setPosition(0, int9, 0, 0);
+	int10 = getLineCount(widget4.getText(), int8, 494);
+	int10 = int10 * 10 + 3;
+	widget4.setSize(int8, int10, 0, 0);
+	int9 = int9 + int10 - 1;
+	widget3.setPosition((int8 - widget3.getWidth()) / 2, int9, 0, 0);
+	int9 = int9 + widget3.getHeight() - 1;
+	widget5.setPosition(0, int9, 0, 0);
+	int11 = getLineCount(widget5.getText(), int8, 494);
+	int11 = int11 * 10 + 3;
+	widget5.setSize(int8, int10, 0, 0);
+	int9 = int9 + int11 + 3;
+	widget1.setSize(int8, int9, 0, 0);
+	widget2.setSize(int8, int9, 0, 0);
+	widget1.clearChildren();
+	script_1086(widget1, 0, 0, 0);
+	return;
+}

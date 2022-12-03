@@ -1,0 +1,10 @@
+void script_397() {
+	if (VARC[743] == -1 && VARP[1109] != -1) {
+		if (VARP[1111] * VARP[1110] > getItemAmtInContainer(93, 995)) {
+			widget(449, 25).setRGB(0xFF0000);
+		} else {
+			widget(449, 25).setRGB(color(VARC[1241]));
+		}
+	}
+	return;
+}

@@ -1,0 +1,6 @@
+void script_4335(Widget widget0) {
+	if (cs2method3700()) {
+		script_4336(widget0);
+	}
+	return;
+}

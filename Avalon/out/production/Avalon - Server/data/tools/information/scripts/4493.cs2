@@ -1,0 +1,96 @@
+void script_4493(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, Widget widget7, Widget widget8, Widget widget9, Widget widget10, Widget widget11, Widget widget12, Widget widget13, Widget widget14, Widget widget15, Widget widget16, Widget widget17, Widget widget18, Widget widget19, Widget widget20, Widget widget21, Widget widget22, Widget widget23, Widget widget24, Widget widget25, Widget widget26, Widget widget27, Widget widget28, Widget widget29, Widget widget30) {
+	if (widget0 != null) {
+		widget0.setIsHidden(true);
+	}
+	if (widget1 != null) {
+		script_4504(widget1);
+	}
+	if (widget2 != null) {
+		script_4504(widget2);
+	}
+	if (widget3 != null) {
+		script_4504(widget3);
+	}
+	if (widget4 != null) {
+		script_4504(widget4);
+	}
+	if (widget5 != null) {
+		script_4504(widget5);
+	}
+	if (widget6 != null) {
+		script_4504(widget6);
+	}
+	if (widget7 != null) {
+		script_4504(widget7);
+	}
+	if (widget8 != null) {
+		script_4504(widget8);
+	}
+	if (widget9 != null) {
+		script_4504(widget9);
+	}
+	if (widget10 != null) {
+		script_4504(widget10);
+	}
+	if (widget11 != null) {
+		script_4504(widget11);
+	}
+	if (widget12 != null) {
+		script_4504(widget12);
+	}
+	if (widget13 != null) {
+		script_4504(widget13);
+	}
+	if (widget14 != null) {
+		script_4504(widget14);
+	}
+	if (widget15 != null) {
+		script_4504(widget15);
+	}
+	if (widget16 != null) {
+		script_4504(widget16);
+	}
+	if (widget17 != null) {
+		script_4504(widget17);
+	}
+	if (widget18 != null) {
+		script_4504(widget18);
+	}
+	if (widget19 != null) {
+		script_4504(widget19);
+	}
+	if (widget20 != null) {
+		script_4504(widget20);
+	}
+	if (widget21 != null) {
+		script_4504(widget21);
+	}
+	if (widget22 != null) {
+		script_4504(widget22);
+	}
+	if (widget23 != null) {
+		script_4504(widget23);
+	}
+	if (widget24 != null) {
+		script_4504(widget24);
+	}
+	if (widget25 != null) {
+		script_4504(widget25);
+	}
+	if (widget26 != null) {
+		script_4504(widget26);
+	}
+	if (widget27 != null) {
+		script_4504(widget27);
+	}
+	if (widget28 != null) {
+		script_4504(widget28);
+	}
+	if (widget29 != null) {
+		script_4504(widget29);
+	}
+	if (widget30 != null) {
+		script_4504(widget30);
+	}
+	return;
+}

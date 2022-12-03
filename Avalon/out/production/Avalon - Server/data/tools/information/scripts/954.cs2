@@ -1,0 +1,4 @@
+void script_954() {
+	widget(730, 29).setSize((1000 - VARPBIT[4564]) * 1000 / 182, 6, 0, 0);
+	return;
+}

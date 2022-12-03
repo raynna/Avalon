@@ -1,0 +1,72 @@
+void script_5121() {
+	int int0;
+	int int1;
+	Sprite sprite2;
+	Sprite sprite3;
+	widget(1119, 19).clearChildren();
+	int0 = 0;
+	int1 = 126 + 1;
+	sprite2 = null;
+	sprite3 = null;
+	while (int0 <= int1) {
+		if (int0 > VARPBIT[9545]) {
+			if (ACTIVE.setChild(widget(1119, 11), int0 * 3) && !ACTIVE.isHidden()) {
+				ACTIVE.removeAllEventListeners();
+				if (_ACTIVE.setChild(widget(1119, 11), int0 * 3 + 1)) {
+					if (VARC[777] == int0) {
+						_ACTIVE.setSprite(5918);
+					} else {
+						_ACTIVE.setSprite(5922);
+					}
+				}
+				if (_ACTIVE.setChild(widget(1119, 11), int0 * 3 + 2)) {
+					_ACTIVE.setRGB(0x7F7F7F);
+				}
+			}
+		} else if (VARC[777] == int0) {
+			sprite2 = 5917;
+			sprite3 = 5916;
+			if (ACTIVE.setChild(widget(1119, 11), int0 * 3) && !ACTIVE.isHidden()) {
+				ACTIVE.setScriptCallOnMouseEntered(5122, CTX_WIDGET, CTX_WIDGET_CHILD, sprite2, 16777215, "Iidi");
+				ACTIVE.setScriptCallOnMouseExit(5122, CTX_WIDGET, CTX_WIDGET_CHILD, sprite3, 14671823, "Iidi");
+				if (_ACTIVE.setChild(widget(1119, 11), int0 * 3 + 1)) {
+					_ACTIVE.setSprite(sprite3);
+				}
+				if (_ACTIVE.setChild(widget(1119, 11), int0 * 3 + 2)) {
+					_ACTIVE.setRGB(0xDFDFCF);
+				}
+			}
+		} else {
+			sprite2 = 5921;
+			sprite3 = 5920;
+			if (ACTIVE.setChild(widget(1119, 11), int0 * 3) && !ACTIVE.isHidden()) {
+				ACTIVE.setScriptCallOnMouseEntered(5122, CTX_WIDGET, CTX_WIDGET_CHILD, sprite2, 16777215, "Iidi");
+				ACTIVE.setScriptCallOnMouseExit(5122, CTX_WIDGET, CTX_WIDGET_CHILD, sprite3, 13615023, "Iidi");
+				if (_ACTIVE.setChild(widget(1119, 11), int0 * 3 + 1)) {
+					_ACTIVE.setSprite(sprite3);
+				}
+				if (_ACTIVE.setChild(widget(1119, 11), int0 * 3 + 2)) {
+					_ACTIVE.setRGB(0xCFBFAF);
+				}
+			}
+		}
+		if (int0 <= VARC[777]) {
+			ACTIVE.createChild(widget(1119, 19), 3, int0);
+			if (int0 == VARC[777]) {
+				ACTIVE.setSize(0, 0, 1, 1);
+				ACTIVE.setPosition(0, 0, 1, 1);
+				ACTIVE.setTrans(255);
+				ACTIVE.setContextMenuOption(1, "Confirm");
+			} else {
+				ACTIVE.setHidden(true);
+			}
+		}
+		int0 = int0 + 1;
+	}
+	if (VARC[777] >= 0) {
+		widget(1119, 22).setIsHidden(true);
+	} else {
+		widget(1119, 22).setIsHidden(false);
+	}
+	return;
+}

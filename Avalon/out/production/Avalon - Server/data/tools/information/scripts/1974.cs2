@@ -1,0 +1,5 @@
+void script_1974(Widget widget0, Item item1, int arg2) {
+	widget0.set3DRotation(0, 0, widget0.getRotateX(), widget0.getRotateY(), widget0.getRotateY(), arg2);
+	widget0.setItem(item1, 1);
+	return;
+}

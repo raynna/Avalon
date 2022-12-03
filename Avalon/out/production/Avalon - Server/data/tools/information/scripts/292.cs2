@@ -1,0 +1,11 @@
+int script_292(AttrMap attrmap0, Widget widget1, int arg2, int arg3) {
+	if (attrmap0 == null) {
+		attrmap0 = (AttrMap)280;
+	}
+	_ACTIVE.createChild(widget1, 5, widget1.nextChild());
+	_ACTIVE.setPosition(arg3, arg2, 2, 0);
+	_ACTIVE.setSize(20, 20, 0, 0);
+	_ACTIVE.setSpriteTiling(false);
+	_ACTIVE.setSprite(getAttributeMapValue(attrmap0, 130));
+	return arg3 + 10;
+}

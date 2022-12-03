@@ -1,0 +1,31 @@
+void script_1323(Widget widget0, Widget widget1, Widget widget2, Widget widget3) {
+	if (getItemIdInSlot(439, 0) != null) {
+		widget0.setIsHidden(false);
+		widget0.setItemOnWidgetMethod2205(getItemIdInSlot(439, 0), 1);
+		widget0.setOptionBase("<col=ff9040>" + getItemName(getItemIdInSlot(439, 0)));
+	} else {
+		widget0.setIsHidden(true);
+	}
+	if (getItemIdInSlot(439, 1) != null) {
+		widget1.setIsHidden(false);
+		widget1.setItemOnWidgetMethod2205(getItemIdInSlot(439, 1), 1);
+		widget1.setOptionBase("<col=ff9040>" + getItemName(getItemIdInSlot(439, 1)));
+	} else {
+		widget1.setIsHidden(true);
+	}
+	if (getItemIdInSlot(439, 2) != null) {
+		widget2.setIsHidden(false);
+		widget2.setItemOnWidgetMethod2205(getItemIdInSlot(439, 2), 1);
+		widget2.setOptionBase("<col=ff9040>" + getItemName(getItemIdInSlot(439, 2)));
+	} else {
+		widget2.setIsHidden(true);
+	}
+	if (getItemIdInSlot(439, 3) != null) {
+		widget3.setIsHidden(false);
+		widget3.setItemOnWidgetMethod2205(getItemIdInSlot(439, 3), 1);
+		widget3.setOptionBase("<col=ff9040>" + getItemName(getItemIdInSlot(439, 3)));
+	} else {
+		widget3.setIsHidden(true);
+	}
+	return;
+}

@@ -1,0 +1,15 @@
+void script_4128(Widget widget0) {
+	if (VARC[1452] <= 100) {
+		script_4130(widget0);
+		return;
+	}
+	if (VARC[1452] <= 200) {
+		script_4131(widget0, script_284(getMyLocation()));
+		return;
+	}
+	if (VARC[1452] <= 300) {
+		script_4132(widget0, script_284(getMyLocation()));
+		return;
+	}
+	return;
+}

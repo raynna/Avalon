@@ -1,0 +1,5 @@
+void script_2381(Widget widget0, Color color1, string string2) {
+	widget0.setText(string2);
+	widget0.setRGB(color1);
+	return;
+}

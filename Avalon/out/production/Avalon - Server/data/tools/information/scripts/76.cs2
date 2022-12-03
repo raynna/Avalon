@@ -1,0 +1,20 @@
+void script_76() {
+	string str0;
+	str0 = "null";
+	if (VARC[3] != -1) {
+		VARC[3] = VARC[3] + 1;
+		if (VARC[3] >= 20) {
+			VARC[3] = 0;
+		}
+		if (VARC[3] == VARC[4]) {
+			STRING[1] = "";
+			VARC[3] = -1;
+		} else {
+			str0 = script_79(VARC[3]);
+			if (length(str0) > 0) {
+				STRING[1] = str0;
+			}
+		}
+	}
+	return;
+}

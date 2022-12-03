@@ -1,0 +1,10 @@
+void script_667(int arg0, Widget widget1, int arg2) {
+	if (ACTIVE.setChild(widget1, arg2)) {
+		ACTIVE.setFilled(true);
+		ACTIVE.setSize(0, 0, 1, 1);
+		ACTIVE.setPosition(0, 0, 1, 1);
+		ACTIVE.setTrans(0);
+		ACTIVE.setScriptCallOnGameloop(668, getClientCycle() + arg0, widget1, arg2, "iIi");
+	}
+	return;
+}

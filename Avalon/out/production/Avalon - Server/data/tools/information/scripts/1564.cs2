@@ -1,0 +1,8 @@
+void script_1564(string string0) {
+	widget(752, 5).setText(escape(string0));
+	STRING[22] = string0;
+	VARC[1029] = length(string0);
+	widget(752, 5).setScriptCallOnMousePressed(1556, MOUSE_X, CTX_WIDGET, CTX_WIDGET_CHILD, "iIi");
+	script_1557();
+	return;
+}

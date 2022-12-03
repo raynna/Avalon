@@ -1,0 +1,22 @@
+void script_1795(Widget widget0, Widget widget1) {
+	Sprite sprite2;
+	Sprite sprite3;
+	sprite2 = 697;
+	sprite3 = 699;
+	if (VARPBIT[5279] == 1) {
+		if (VARPBIT[5295] == 1) {
+			widget1.setSprite(sprite3);
+			widget0.setScriptCallOnClickContextMenu(44, widget1, sprite2, "Id");
+		} else {
+			widget1.setSprite(sprite2);
+			widget0.setScriptCallOnClickContextMenu(44, widget1, sprite3, "Id");
+		}
+	} else if (VARPBIT[5294] == 1) {
+		widget1.setSprite(sprite3);
+		widget0.setScriptCallOnClickContextMenu(44, widget1, sprite2, "Id");
+	} else {
+		widget1.setSprite(sprite2);
+		widget0.setScriptCallOnClickContextMenu(44, widget1, sprite3, "Id");
+	}
+	return;
+}

@@ -1,0 +1,14 @@
+void script_1329() {
+	if (script_1305() == 6) {
+		if (VARPBIT[6522] == 1) {
+			widget(894, 7).setText("Click the flashing Prayer icon to activate the Thick Skin prayer. This prayer increases your Defence by 5%, which can be seen if you hover your mouse over the flashing Prayer icon.");
+			widget(894, 6).setText("");
+			widget(894, 4).setSprite(115);
+		}
+	} else {
+		widget(894, 7).setText("Click on the stone with the Prayer icon to open the Prayer side interface.");
+		widget(894, 6).setText("");
+		widget(894, 4).setSprite(1823);
+	}
+	return;
+}

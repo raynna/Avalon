@@ -1,0 +1,6 @@
+void script_698(Widget widget0) {
+	if (ACTIVE.setChild(widget0)) {
+		ACTIVE.setOutlineThickness(0);
+	}
+	return;
+}

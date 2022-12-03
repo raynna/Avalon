@@ -1,0 +1,103 @@
+void script_359(AttrMap attrmap0, int arg1) {
+	Identikit identikit2;
+	Container container3;
+	AttrMap attrmap4;
+	Item item5;
+	Item item6;
+	identikit2 = null;
+	if (arg1 == 1) {
+		setBaseIdkit(2, null);
+		setBaseIdkit(3, null);
+		setBaseIdkit(4, null);
+		setBaseIdkit(5, null);
+		setBaseIdkit(6, null);
+		setBaseIdkit(8, null);
+		setBaseIdkit(14, null);
+		setBaseIdkit(15, null);
+		VARC[1009] = -1;
+		identikit2 = getAttributeMapValue(attrmap0, 1182);
+		if (identikit2 != null) {
+			VARC[1010] = identikit2;
+			setBaseIdkit(9, identikit2);
+		}
+		identikit2 = getAttributeMapValue(attrmap0, 1183);
+		VARC[1011] = identikit2;
+		setBaseIdkit(10, identikit2);
+		identikit2 = getAttributeMapValue(attrmap0, 1184);
+		if (identikit2 != null) {
+			VARC[1012] = identikit2;
+			setBaseIdkit(11, identikit2);
+		}
+		identikit2 = getAttributeMapValue(attrmap0, 1185);
+		if (identikit2 != null) {
+			VARC[1013] = identikit2;
+			setBaseIdkit(12, identikit2);
+		}
+		identikit2 = getAttributeMapValue(attrmap0, 1186);
+		if (identikit2 != null) {
+			VARC[1014] = identikit2;
+			setBaseIdkit(13, identikit2);
+		}
+	} else {
+		setBaseIdkit(9, null);
+		setBaseIdkit(10, null);
+		setBaseIdkit(11, null);
+		setBaseIdkit(12, null);
+		setBaseIdkit(13, null);
+		setBaseIdkit(14, null);
+		setBaseIdkit(15, null);
+		identikit2 = getAttributeMapValue(attrmap0, 1182);
+		if (identikit2 != null) {
+			VARC[1010] = identikit2;
+			setBaseIdkit(2, identikit2);
+		}
+		identikit2 = getAttributeMapValue(attrmap0, 1183);
+		VARC[1011] = identikit2;
+		setBaseIdkit(3, identikit2);
+		identikit2 = getAttributeMapValue(attrmap0, 1184);
+		if (identikit2 != null) {
+			VARC[1012] = identikit2;
+			setBaseIdkit(4, identikit2);
+		}
+		identikit2 = getAttributeMapValue(attrmap0, 1185);
+		if (identikit2 != null) {
+			VARC[1013] = identikit2;
+			setBaseIdkit(5, identikit2);
+		}
+		identikit2 = getAttributeMapValue(attrmap0, 1186);
+		if (identikit2 != null) {
+			setBaseIdkit(6, identikit2);
+			VARC[1014] = identikit2;
+		}
+	}
+	VARC[1016], VARC[1017], VARC[1018] = script_360(attrmap0);
+	setBaseColor(1, VARC[1016]);
+	setBaseColor(2, VARC[1017]);
+	setBaseColor(3, VARC[1018]);
+	container3 = null;
+	attrmap4 = null;
+	item5 = null;
+	item6 = null;
+	if (VARC[86] != 0) {
+		attrmap4 = datamap('i', 'J', (DataMap)3278, VARC[197] - 1);
+		if (attrmap4 != null) {
+			container3 = getAttributeMapValue(attrmap4, 1163);
+			if (container3 != null) {
+				if (getItemContainerLength(container3) >= 2) {
+					item5 = getItemIdInSlot(container3, 1);
+				}
+				if (getItemContainerLength(container3) >= 3) {
+					item6 = getItemIdInSlot(container3, 2);
+				}
+			}
+		}
+		script_392(attrmap4, arg1);
+	} else {
+		script_392(null, arg1);
+	}
+	setBaseItem(2, 19713);
+	setBaseItem(3, item5);
+	setBaseItem(5, item6);
+	VARPBIT[8092] = 0;
+	return;
+}

@@ -1,0 +1,10 @@
+void script_4678(Widget widget0, Widget widget1) {
+	int int2;
+	int int3;
+	int int4;
+	int2 = widget1.getWidth();
+	int3 = int2 / datamap('i', 'i', (DataMap)3840, VARPBIT[9373]);
+	int4 = VARPBIT[9376] * int3;
+	widget0.setSize(int4, widget0.getHeight(), 0, 0);
+	return;
+}

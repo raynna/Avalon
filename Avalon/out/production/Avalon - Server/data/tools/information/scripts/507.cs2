@@ -1,0 +1,8 @@
+void script_507(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6) {
+	widget0.setScriptCallOnItemContainerUpdate(712, widget0, widget1, widget2, widget3, widget4, widget5, widget6, 541, "IIIIIIIY");
+	widget0.setScriptCallOnConfigChange(712, widget0, widget1, widget2, widget3, widget4, widget5, widget6, 259, "IIIIIIIY");
+	script_1086(widget0, 0, 0, 0);
+	script_1086(widget4, 0, 0, 0);
+	script_713(widget0, widget1, widget2, widget3, widget4, widget5, widget6);
+	return;
+}

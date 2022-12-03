@@ -1,0 +1,143 @@
+void script_2591() {
+	Item item0;
+	int int1;
+	script_2590();
+	item0 = null;
+	switch (VARC[929]) {
+		case 0:
+			item0 = getItemIdInSlot(93, VARC[930]);
+			break;
+		case 1:
+			item0 = getItemIdInSlot(93, VARC[931]);
+			break;
+		case 2:
+			item0 = getItemIdInSlot(93, VARC[932]);
+			break;
+		case 3:
+			item0 = getItemIdInSlot(93, VARC[933]);
+			break;
+		case 4:
+			item0 = getItemIdInSlot(93, VARC[934]);
+			break;
+		case 5:
+			item0 = getItemIdInSlot(93, VARC[935]);
+			break;
+		case 6:
+			item0 = getItemIdInSlot(93, VARC[936]);
+			break;
+		case 7:
+			item0 = getItemIdInSlot(93, VARC[937]);
+			break;
+		case 8:
+			item0 = getItemIdInSlot(93, VARC[938]);
+			break;
+		case 9:
+			item0 = getItemIdInSlot(93, VARC[939]);
+			break;
+	}
+	if (item0 == null) {
+		return;
+	}
+	int1 = itemAttribute(item0, 806);
+	switch (VARC[929]) {
+		case 0:
+			if (VARPBIT[6415] == 1) {
+				if (int1 == 0) {
+					int1 = 1;
+				} else {
+					int1 = 0;
+				}
+			}
+			break;
+		case 1:
+			if (VARPBIT[6416] == 1) {
+				if (int1 == 0) {
+					int1 = 1;
+				} else {
+					int1 = 0;
+				}
+			}
+			break;
+		case 2:
+			if (VARPBIT[6417] == 1) {
+				if (int1 == 0) {
+					int1 = 1;
+				} else {
+					int1 = 0;
+				}
+			}
+			break;
+		case 3:
+			if (VARPBIT[6418] == 1) {
+				if (int1 == 0) {
+					int1 = 1;
+				} else {
+					int1 = 0;
+				}
+			}
+			break;
+		case 4:
+			if (VARPBIT[6419] == 1) {
+				if (int1 == 0) {
+					int1 = 1;
+				} else {
+					int1 = 0;
+				}
+			}
+			break;
+		case 5:
+			if (VARPBIT[6420] == 1) {
+				if (int1 == 0) {
+					int1 = 1;
+				} else {
+					int1 = 0;
+				}
+			}
+			break;
+		case 6:
+			if (VARPBIT[6421] == 1) {
+				if (int1 == 0) {
+					int1 = 1;
+				} else {
+					int1 = 0;
+				}
+			}
+			break;
+		case 7:
+			if (VARPBIT[6422] == 1) {
+				if (int1 == 0) {
+					int1 = 1;
+				} else {
+					int1 = 0;
+				}
+			}
+			break;
+		case 8:
+			if (VARPBIT[6423] == 1) {
+				if (int1 == 0) {
+					int1 = 1;
+				} else {
+					int1 = 0;
+				}
+			}
+			break;
+		case 9:
+			if (VARPBIT[6424] == 1) {
+				if (int1 == 0) {
+					int1 = 1;
+				} else {
+					int1 = 0;
+				}
+			}
+			break;
+	}
+	switch (int1) {
+		case 0:
+			widget(292, 110).setSprite(1135);
+			break;
+		case 1:
+			widget(292, 111).setSprite(1135);
+			break;
+	}
+	return;
+}

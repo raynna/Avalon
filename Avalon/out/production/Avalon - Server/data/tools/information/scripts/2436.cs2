@@ -1,0 +1,14 @@
+void script_2436() {
+	VARC[815] = 0;
+	script_1952();
+	if (getDisplayMode() < 2) {
+		widget(548, 12).setScriptCallOnGameloop(-1, "");
+		widget(548, 14).setIsHidden(true);
+		widget(548, 13).setIsHidden(true);
+	} else {
+		widget(746, 14).setScriptCallOnGameloop(-1, "");
+		widget(746, 169).setIsHidden(true);
+		widget(746, 168).setIsHidden(true);
+	}
+	return;
+}

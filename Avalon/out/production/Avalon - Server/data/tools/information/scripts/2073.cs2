@@ -1,0 +1,25 @@
+void script_2073(int arg0) {
+	switch (arg0) {
+		case 18087988:
+		case 18087940:
+			widget(276, 79).setIsHidden(false);
+			widget(276, 80).setIsHidden(true);
+			widget(276, 78).setIsHidden(true);
+			break;
+		case 18087957:
+		case 18087987:
+			widget(276, 79).setIsHidden(true);
+			widget(276, 80).setIsHidden(true);
+			widget(276, 78).setIsHidden(false);
+			break;
+		case 18087941:
+		case 18087958:
+			widget(276, 79).setIsHidden(true);
+			widget(276, 80).setIsHidden(false);
+			widget(276, 78).setIsHidden(true);
+			break;
+		default:
+			return;
+	}
+	return;
+}

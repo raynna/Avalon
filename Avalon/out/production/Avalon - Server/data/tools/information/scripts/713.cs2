@@ -1,0 +1,60 @@
+void script_713(Widget arg0, Widget widget1, Widget widget2, Widget widget3, Widget arg4, Widget widget5, Widget widget6) {
+	Item item7;
+	item7 = getItemIdInSlot(541, 0);
+	if (item7 != null) {
+		widget1.setItemOnWidgetMethod2205(item7, 1);
+		widget1.setOutlineThickness(1);
+		widget1.setShadowColor(0x333333);
+		widget1.setContextMenuOption(1, "Remove");
+		widget1.setContextMenuOption(10, "Examine");
+		widget1.setOptionBase("<col=ff9040>" + getItemName(item7) + "</col>");
+		if (VARPBIT[5026] == 0) {
+			widget2.setText("<col=ff0000>" + "Until" + "</col>" + "<br>" + "<col=ff0000>" + "logout" + "</col>");
+			widget2.setNoOptions();
+			widget2.setContextMenuOption(2, "Specify");
+		} else {
+			if (VARPBIT[5026] == 1) {
+				widget2.setText("1 hour");
+			} else {
+				widget2.setText(str(VARPBIT[5026]) + " hours");
+			}
+			widget2.setContextMenuOption(1, "'Until logout'");
+			widget2.setContextMenuOption(2, "Edit");
+		}
+		widget2.setOptionBase("<col=ff9040>" + "Duration" + "</col>");
+		script_679(widget3);
+		widget3.setScriptCallOnMouseOver(94, widget3, "I");
+		widget3.setScriptCallOnMouseExit(92, widget3, "I");
+	} else {
+		widget1.setItemOnWidgetMethod2205(null, 0);
+		widget2.setText("");
+		widget1.setNoOptions();
+		widget2.setNoOptions();
+		widget1.setOptionBase("");
+		widget2.setOptionBase("");
+		widget3.clearChildren();
+		widget3.setScriptCallOnMouseOver(-1, "");
+		widget3.setScriptCallOnMouseExit(-1, "");
+	}
+	item7 = getItemIdInInpsectingSlot(541, 0);
+	if (item7 != null) {
+		widget5.setItemOnWidgetMethod2205(item7, 1);
+		widget5.setOutlineThickness(1);
+		widget5.setShadowColor(0x333333);
+		widget5.setContextMenuOption(10, "Examine");
+		widget5.setOptionBase("<col=ff9040>" + getItemName(item7) + "</col>");
+		if (VARPBIT[5070] == 0) {
+			widget6.setText("<col=ff0000>" + "Until" + "</col>" + "<br>" + "<col=ff0000>" + "logout" + "</col>");
+		} else if (VARPBIT[5070] == 1) {
+			widget6.setText("1 hour");
+		} else {
+			widget6.setText(str(VARPBIT[5070]) + " hours");
+		}
+	} else {
+		widget5.setItemOnWidgetMethod2205(null, 0);
+		widget6.setText("");
+		widget5.setNoOptions();
+		widget5.setOptionBase("");
+	}
+	return;
+}

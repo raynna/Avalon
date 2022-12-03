@@ -1,0 +1,14 @@
+void script_394(Widget widget0) {
+	if (VARC[1391] == 0) {
+		widget0.setTrans(max(widget0.getShadeColor() - 10, 0));
+		if (widget0.getShadeColor() == 0) {
+			VARC[1391] = 1;
+		}
+	} else {
+		widget0.setTrans(min(widget0.getShadeColor() + 10, 255));
+		if (widget0.getShadeColor() == 255) {
+			VARC[1391] = 0;
+		}
+	}
+	return;
+}

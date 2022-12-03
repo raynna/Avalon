@@ -1,0 +1,44 @@
+void script_495(Widget widget0) {
+	int int1;
+	int1 = 0;
+	switch (widget0) {
+		case widget(1015, 144):
+			int1 = VARPBIT[7520];
+			break;
+		case widget(1015, 146):
+			int1 = VARPBIT[7521];
+			break;
+		case widget(1015, 148):
+			int1 = VARPBIT[7526];
+			break;
+		case widget(1015, 150):
+			int1 = VARPBIT[7527];
+			break;
+		case widget(1015, 152):
+			int1 = VARPBIT[7530];
+			break;
+		case widget(1015, 154):
+			int1 = VARPBIT[7531];
+			break;
+		case widget(1015, 156):
+			int1 = VARPBIT[7532];
+			break;
+		case widget(1015, 158):
+			int1 = VARPBIT[7533];
+			break;
+		case widget(1015, 160):
+			int1 = VARPBIT[7534];
+			break;
+		case widget(1015, 162):
+			int1 = VARPBIT[7535];
+			break;
+		default:
+			return;
+	}
+	if (int1 == 0) {
+		widget0.setRGB(0x585042);
+	} else {
+		widget0.setRGB(0xE6CA98);
+	}
+	return;
+}

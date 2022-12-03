@@ -1,0 +1,73 @@
+int script_24(int arg0, Item item1, Sprite sprite2, string string3, int arg4, int arg5) {
+	int int5;
+	ACTIVE.createChild(widget(499, 7), 4, arg4 * 3);
+	ACTIVE.setSize(26, 32, 0, 0);
+	if (arg0 > 0) {
+		ACTIVE.setText(str(arg0));
+	} else {
+		ACTIVE.setText(" ");
+	}
+	ACTIVE.setPosition(0, arg5, 0, 0);
+	ACTIVE.setTextAlignment(2, 0, 0);
+	ACTIVE.setRGB(0x46320A);
+	ACTIVE.setFont(497);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.createChild(widget(499, 7), 5, arg4 * 3 + 1);
+	ACTIVE.setSize(36, 32, 0, 0);
+	if (script_1566(VARPBIT[3288], VARPBIT[3289]) == 1) {
+		if (VARPBIT[3288] == 7) {
+			ACTIVE.setSize(30, 30, 0, 0);
+		} else if (VARPBIT[3288] == 4) {
+			ACTIVE.setSize(24, 24, 0, 0);
+			ACTIVE.setPosition(0, arg5, 1, 0);
+		}
+		ACTIVE.setOutlineThickness(0);
+		if (sprite2 != null) {
+			ACTIVE.setSprite(sprite2);
+		} else {
+			ACTIVE.setSprite(2287);
+		}
+	} else if (item1 != null) {
+		if (item1 == 18637 || item1 == 18638) {
+			ACTIVE.setSize(24, 24, 0, 0);
+			ACTIVE.setPosition(0, arg5, 1, 0);
+			ACTIVE.setOutlineThickness(0);
+			if (item1 == 18637) {
+				ACTIVE.setSprite(3057);
+			} else {
+				ACTIVE.setSprite(3056);
+			}
+		} else {
+			ACTIVE.setOutlineThickness(1);
+			ACTIVE.setShadowColor(0x604E32);
+			ACTIVE.setItem(item1, -1);
+			if (VARPBIT[3288] == 21 && VARPBIT[3289] != 10) {
+				ACTIVE.setContextMenuOption(1, "Check protection price");
+				ACTIVE.setScriptCallOnClickContextMenu(1865, CTX_MENU_OPTION, item1, "io");
+				ACTIVE.setScriptCallOnMouseEntered(1862, CTX_WIDGET, CTX_WIDGET_CHILD, "Ii");
+				ACTIVE.setScriptCallOnMouseExit(1863, CTX_WIDGET, CTX_WIDGET_CHILD, "Ii");
+			} else if (VARPBIT[3288] == 22 && VARPBIT[3289] != 13 && VARPBIT[3289] != 14 && VARPBIT[3289] != 15) {
+				ACTIVE.setContextMenuOption(1, "Check materials");
+				ACTIVE.setScriptCallOnClickContextMenu(1864, CTX_MENU_OPTION, item1, VARPBIT[3289], arg4, "ioii");
+				ACTIVE.setScriptCallOnMouseEntered(1862, CTX_WIDGET, CTX_WIDGET_CHILD, "Ii");
+				ACTIVE.setScriptCallOnMouseExit(1863, CTX_WIDGET, CTX_WIDGET_CHILD, "Ii");
+			}
+		}
+	} else {
+		ACTIVE.setItem(7620, -1);
+	}
+	ACTIVE.setPosition(28, arg5, 0, 0);
+	ACTIVE.createChild(widget(499, 7), 4, arg4 * 3 + 2);
+	int5 = getLineCount(string3, 228, 495);
+	ACTIVE.setSize(228, int5 * 15, 0, 0);
+	ACTIVE.setText(string3);
+	ACTIVE.setPosition(66, arg5, 0, 0);
+	ACTIVE.setTextAlignment(0, 0, 0);
+	ACTIVE.setRGB(0x46320A);
+	ACTIVE.setFont(495);
+	ACTIVE.setTextAntiMacro(false);
+	if (int5 * 15 < 32) {
+		return 32;
+	}
+	return int5 * 15 + 5;
+}

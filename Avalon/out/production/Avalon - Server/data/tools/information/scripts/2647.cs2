@@ -1,0 +1,25 @@
+void script_2647(Widget widget0) {
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setPosition(0, 0, 1, 0);
+	ACTIVE.setSize(0, 32, 1, 0);
+	ACTIVE.setSprite(1076);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setPosition(0, 0, 1, 2);
+	ACTIVE.setSize(0, 32, 1, 0);
+	ACTIVE.setSprite(1076);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setVFlip(true);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setPosition(0, 0, 0, 1);
+	ACTIVE.setSize(32, 2, 0, 1);
+	ACTIVE.setSprite(1077);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setPosition(0, 0, 2, 1);
+	ACTIVE.setSize(32, 2, 0, 1);
+	ACTIVE.setSprite(1077);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setHFlip(true);
+	return;
+}

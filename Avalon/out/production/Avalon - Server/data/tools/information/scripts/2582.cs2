@@ -1,0 +1,109 @@
+int script_2582(int arg0, boolean boolean1, int arg2) {
+	switch (arg0) {
+		case 830:
+			cs2method6003(script_734(boolean1));
+			break;
+		case 831:
+			cs2method6005(script_734(boolean1));
+			break;
+		case 833:
+			cs2method6029(boolean1);
+			break;
+		case 834:
+			cs2method6008(script_734(boolean1));
+			break;
+		case 836:
+			cs2method6010(script_734(boolean1));
+			break;
+		case 837:
+			if (boolean1 > false && !cs2method6136()) {
+				cs2method6034(true);
+			}
+			cs2method6011(boolean1);
+			break;
+		case 838:
+			cs2method6012(script_734(boolean1));
+			break;
+		case 839:
+			cs2method6014(script_734(boolean1));
+			break;
+		case 840:
+			if (!boolean1 && (cs2method6131() == 0 || cs2method6131() == 2)) {
+				cs2method6014(false);
+				cs2method6015(false);
+			} else {
+				if (!cs2method6130()) {
+					cs2method6030(true);
+				}
+				cs2method6015(script_734(boolean1));
+			}
+			break;
+		case 841:
+			cs2method6016(boolean1);
+			if (boolean1 > false && cs2method6131() != 0 && cs2method6131() != 2) {
+				script_2700(4, arg2, false, true);
+				return 2;
+			}
+			cs2method6024(boolean1);
+			break;
+		case 842:
+			if (!cs2method7206() || cs2method7306(boolean1) == 0) {
+				return 0;
+			}
+			cs2method6023(boolean1);
+			return 1;
+		case 843:
+			if (!boolean1 && (cs2method6131() == 0 || cs2method6131() == 2)) {
+				cs2method6014(false);
+				cs2method6015(false);
+				cs2method6034(false);
+				cs2method6030(false);
+			} else {
+				cs2method6030(script_734(boolean1));
+			}
+			break;
+		case 844:
+			VARC[987] = script_734(boolean1);
+			cs2method6028((boolean)VARC[987]);
+			break;
+		case 845:
+			VARC[178] = boolean1;
+			if (getDisplayMode() == 3) {
+				if (cs2method5300((int, int)cs2method5303(boolean1))) {
+					script_2700(2, arg2, false, false);
+					return 2;
+				}
+				return 0;
+			}
+			break;
+		case 908:
+			cs2method6033(boolean1);
+			break;
+		case 963:
+			if (!boolean1) {
+				cs2method6011(0);
+			} else if (!cs2method6130()) {
+				cs2method6030(true);
+			}
+			cs2method6034(script_734(boolean1));
+			break;
+		case 1009:
+			if (cs2method7211() && cs2method7311(boolean1) == 1) {
+				cs2method6036(boolean1);
+				return 1;
+			}
+			return 0;
+		case 2430:
+			if (!cs2method7215()) {
+				return 0;
+			}
+			if (cs2method7315(boolean1) == 3) {
+				return 0;
+			}
+			cs2method6041(boolean1);
+			break;
+		default:
+			return 0;
+	}
+	return 1;
+}

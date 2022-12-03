@@ -1,0 +1,45 @@
+void script_724(Widget widget0, int arg1, int arg2, string string3) {
+	int int3;
+	int int4;
+	int int5;
+	Widget widget6;
+	Widget widget7;
+	Widget widget8;
+	if (widget0 == widget(745, 1) && VARC[616] == 0) {
+		return;
+	}
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	widget6 = null;
+	widget7 = null;
+	widget8 = null;
+	if (VARC[1] < getClientCycle() + 25) {
+		if (VARC[1] < getClientCycle()) {
+			VARC[1] = getClientCycle();
+		}
+		VARC[1] = VARC[1] + 2;
+		return;
+	}
+	VARC[1] = getClientCycle() + 25 + 10;
+	if (VARC[2] != 1) {
+		int5 = getMaxLineWidth(string3, 1000, 495) + 8;
+		if (getDisplayMode() < 2) {
+			widget6 = widget(548, 16);
+			widget8 = widget(548, 225);
+			widget7 = widget(548, 15);
+		} else {
+			widget6 = widget(746, 16);
+			widget8 = widget(746, 167);
+			widget7 = widget(746, 15);
+		}
+		int3 = widget7.getX() + widget0.getX() + arg1 - int5;
+		int4 = widget7.getY() + widget0.getY() + arg2 - 17;
+		widget6.setIsHidden(false);
+		widget6.setSize(int5, 17, 0, 0);
+		widget6.setPosition(int3, int4, 0, 0);
+		widget8.setText(string3);
+		VARC[2] = 1;
+	}
+	return;
+}

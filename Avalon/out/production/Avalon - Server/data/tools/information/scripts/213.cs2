@@ -1,0 +1,48 @@
+void script_213(Widget widget0, Widget widget1, Widget widget2, Widget widget3) {
+	switch (VARPBIT[278]) {
+		case 1:
+			widget2.setTrans(200);
+			break;
+		case 2:
+			widget2.setTrans(150);
+			break;
+		case 3:
+			widget2.setTrans(50);
+			break;
+		default:
+			widget2.setTrans(255);
+			break;
+	}
+	switch (VARC[97]) {
+		case 1:
+			script_2766(0x000000, 20, widget3);
+			break;
+		case 2:
+			widget0.setIsHidden(false);
+			widget1.setAnimation(10708);
+			widget2.setIsHidden(true);
+			script_2768(10, widget3);
+			break;
+		case 3:
+			widget0.setIsHidden(true);
+			widget2.setIsHidden(true);
+			script_2768(50, widget3);
+			break;
+		case 4:
+			widget0.setIsHidden(false);
+			widget1.setAnimation(10712);
+			widget2.setIsHidden(true);
+			script_2768(115, widget3);
+			break;
+		case 5:
+			widget0.setIsHidden(true);
+			widget2.setIsHidden(false);
+			script_2768(50, widget3);
+			break;
+		default:
+			widget0.setIsHidden(true);
+			widget2.setIsHidden(false);
+			break;
+	}
+	return;
+}

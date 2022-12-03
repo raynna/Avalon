@@ -1,0 +1,8 @@
+void script_4737(int arg0) {
+	if (ACTIVE.setChild(widget(1144, 0), 0)) {
+		script_4738(widget(1144, 0), widget(1144, 1));
+	}
+	widget(1144, 45).setIsHidden(true);
+	widget(1144, 9).setIsHidden(true);
+	return;
+}

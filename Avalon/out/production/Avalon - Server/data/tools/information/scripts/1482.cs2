@@ -1,0 +1,9 @@
+void script_1482(Widget widget0) {
+	int int1;
+	int1 = datamap('I', 'i', (DataMap)1613, widget0);
+	if (int1 != -1 && int1 != VARPBIT[4893]) {
+		script_1463(int1);
+		widget0.setScriptCallOnGameloop(1483, getClientCycle() + 15, CTX_WIDGET, "iI");
+	}
+	return;
+}

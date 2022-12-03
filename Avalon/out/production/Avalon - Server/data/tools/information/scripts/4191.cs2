@@ -1,0 +1,45 @@
+void script_4191() {
+	if (ACTIVE.setChild(widget(1070, 95))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1070, 96))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1070, 97))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1070, 98))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1070, 99))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1070, 100))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1070, 101))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1070, 81))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1070, 82))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1070, 83))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1070, 84))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1070, 85))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1070, 86))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1070, 87))) {
+		ACTIVE.setVFlip(true);
+	}
+	return;
+}

@@ -1,0 +1,43 @@
+void script_2419() {
+	if (VARC[806] > 0) {
+		widget(765, 11).setIsHidden(true);
+	}
+	if (VARC[806] > 1) {
+		widget(765, 5).setModel(46964);
+	}
+	if (VARC[806] > 2) {
+		if (VARPBIT[6180] == 75) {
+			widget(765, 5).setModel(46956);
+			widget(765, 15).setIsHidden(true);
+		} else {
+			widget(765, 5).setModel(46966);
+			widget(765, 36).setIsHidden(true);
+		}
+	}
+	if (VARC[806] > 3) {
+		if (VARPBIT[6180] == 75) {
+			widget(765, 5).setModel(46965);
+			widget(765, 17).setIsHidden(true);
+		} else {
+			widget(765, 5).setModel(46957);
+			widget(765, 37).setIsHidden(true);
+			widget(765, 5).setContextMenuOption(1, "Inspect");
+		}
+	}
+	if (VARPBIT[6194] == 0) {
+		widget(765, 10).setAnimation(11762);
+	} else if (VARPBIT[6194] == 1) {
+		widget(765, 10).setAnimation(11761);
+	} else if (VARPBIT[6194] == 2) {
+		widget(765, 10).setAnimation(11760);
+	} else if (VARPBIT[6194] == 3) {
+		widget(765, 10).setAnimation(11759);
+	} else if (VARPBIT[6194] == 4) {
+		widget(765, 10).setAnimation(11763);
+	} else if (VARPBIT[6194] == 5) {
+		widget(765, 10).setAnimation(11764);
+	} else if (VARPBIT[6194] == 6) {
+		widget(765, 10).setAnimation(11765);
+	}
+	return;
+}

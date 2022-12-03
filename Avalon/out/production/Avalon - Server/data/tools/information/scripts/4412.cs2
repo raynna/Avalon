@@ -1,0 +1,23 @@
+void script_4412(Widget widget0, AttrMap attrmap1) {
+	int int2;
+	if (widget0 == null || attrmap1 == null) {
+		return;
+	}
+	int2 = getAttributeMapValue(attrmap1, 1346);
+	if (int2 == 2) {
+		widget0.setScriptCallOnMouseEntered(4159, CTX_WIDGET, 0, 0, "Iii");
+		widget0.setScriptCallOnMouseExit(4159, CTX_WIDGET, 1, 0, "Iii");
+	} else if (int2 == 3) {
+		widget0.setScriptCallOnMousePressed(4162, CTX_WIDGET, "I");
+		widget0.setScriptCallOnMouseReleased(4163, CTX_WIDGET, "I");
+		widget0.setScriptCallOnMouseExit(4163, CTX_WIDGET, "I");
+	} else if (int2 == 5) {
+		return;
+	}
+	script_5154(widget0, attrmap1);
+	if (int2 == 4) {
+		script_4161(widget0, 0);
+		widget0.setIsHidden(true);
+	}
+	return;
+}

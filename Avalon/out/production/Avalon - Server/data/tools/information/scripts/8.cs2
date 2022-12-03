@@ -1,0 +1,82 @@
+Widget script_8(int arg0) {
+	if (getDisplayMode() >= 2) {
+		switch (arg0) {
+			case 0:
+				return widget(746, 90);
+			case 1:
+				return widget(746, 91);
+			case 2:
+				return widget(746, 92);
+			case 3:
+				return widget(746, 93);
+			case 4:
+				return widget(746, 94);
+			case 5:
+				return widget(746, 95);
+			case 6:
+				return widget(746, 96);
+			case 7:
+				return widget(746, 97);
+			case 8:
+				return widget(746, 98);
+			case 9:
+				return widget(746, 99);
+			case 10:
+				return widget(746, 100);
+			case 11:
+				return widget(746, 101);
+			case 12:
+				return widget(746, 102);
+			case 13:
+				return widget(746, 103);
+			case 14:
+				return widget(746, 104);
+			case 15:
+				return widget(746, 105);
+			case 95:
+				return widget(746, 107);
+			case 99:
+				return widget(746, 108);
+		}
+	} else {
+		switch (arg0) {
+			case 0:
+				return widget(548, 204);
+			case 1:
+				return widget(548, 205);
+			case 2:
+				return widget(548, 206);
+			case 3:
+				return widget(548, 207);
+			case 4:
+				return widget(548, 208);
+			case 5:
+				return widget(548, 209);
+			case 6:
+				return widget(548, 210);
+			case 7:
+				return widget(548, 211);
+			case 8:
+				return widget(548, 212);
+			case 9:
+				return widget(548, 213);
+			case 10:
+				return widget(548, 214);
+			case 11:
+				return widget(548, 215);
+			case 12:
+				return widget(548, 216);
+			case 13:
+				return widget(548, 217);
+			case 14:
+				return widget(548, 218);
+			case 15:
+				return widget(548, 219);
+			case 95:
+				return widget(548, 221);
+			case 99:
+				return widget(548, 222);
+		}
+	}
+	return null;
+}

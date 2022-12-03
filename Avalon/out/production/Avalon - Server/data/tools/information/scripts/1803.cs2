@@ -1,0 +1,5 @@
+void script_1803(Widget widget0, int arg1) {
+	widget0.setScrollPos(0, 0);
+	script_1784();
+	return;
+}

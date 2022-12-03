@@ -1,0 +1,10 @@
+void script_528(int arg0, Sprite sprite1, Sprite sprite2, Widget widget3, Widget widget4) {
+	if (arg0 == 1) {
+		widget3.setSprite(sprite1);
+		widget4.setIsHidden(false);
+	} else {
+		widget3.setSprite(sprite2);
+		widget4.setIsHidden(true);
+	}
+	return;
+}

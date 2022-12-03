@@ -1,0 +1,5 @@
+void script_317(Widget widget0, int arg1, int arg2, int arg3, int arg4, string string5, string string6, string string7, string string8, string string9, string string10) {
+	script_319(widget0, arg1, arg2, string5, string6, string7, string8, string9, string10, arg3, arg4);
+	widget0.setScriptCallOnItemContainerUpdate(318, widget0, arg1, arg2, string5, string6, string7, string8, string9, string10, arg3, arg4, 93, "IiissssssiiY");
+	return;
+}

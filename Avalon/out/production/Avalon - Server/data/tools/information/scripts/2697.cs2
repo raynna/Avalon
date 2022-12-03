@@ -1,0 +1,21 @@
+void script_2697(int arg0, int arg1) {
+	int int2;
+	if (arg0 == cs2method6131()) {
+		return;
+	}
+	cs2method6031(arg0);
+	int2 = cs2method6131();
+	script_2593(int2);
+	if (arg0 != int2) {
+		cs2method6032(int2, 1);
+		script_2694(arg1, 1, "RuneScape was unable to enter that display mode." + "<br>" + "<br>" + "Please visit our Knowledge Base for more information.", "Consult Knowledge Base", "kbase/view.ws?guid=controls_display_options");
+		script_3387(int2, getDisplayMode(), (int, int)script_2692(int2), arg1);
+	}
+	script_3387(int2, getDisplayMode(), (int, int)script_2692(int2), arg1);
+	if (int2 == 1 || int2 == 3) {
+		script_2700(1, arg1, false, true);
+	} else {
+		cs2method6032(int2, 0);
+	}
+	return;
+}

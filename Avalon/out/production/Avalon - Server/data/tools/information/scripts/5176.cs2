@@ -1,0 +1,295 @@
+void script_5176() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	Sprite sprite18;
+	Sprite sprite19;
+	Sprite sprite20;
+	Sprite sprite21;
+	int int22;
+	Sprite sprite23;
+	int int24;
+	int int25;
+	AttrMap attrmap26;
+	int int27;
+	int0 = -1;
+	int1 = 60;
+	int2 = 120;
+	int3 = 34;
+	int4 = 60;
+	int5 = 10;
+	int6 = 6;
+	int7 = 60;
+	int8 = 60;
+	int9 = int6;
+	int10 = 0;
+	int11 = -1;
+	int12 = -1;
+	int13 = int3 - 21;
+	int14 = 3;
+	int15 = 0;
+	int16 = 0;
+	int17 = 0;
+	sprite18 = 5523;
+	sprite19 = 5524;
+	sprite20 = 5525;
+	sprite21 = 5526;
+	int22 = 5527;
+	sprite23 = null;
+	int24 = 0;
+	int25 = datamap('i', 'i', (DataMap)4848, VARPBIT[9646]);
+	attrmap26 = datamap('i', 'J', (DataMap)4849, int25);
+	while (attrmap26 != null) {
+		if (getAttributeMapValue(attrmap26, 1882) == 0) {
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9, 0, 0, 0);
+			ACTIVE.setSize(int1, int4, 0, 0);
+			if (int25 == VARC[1596]) {
+				sprite23 = sprite21;
+			} else {
+				sprite23 = sprite18;
+			}
+			ACTIVE.setSprite(sprite23);
+			ACTIVE.setScriptCallOnMouseEntered(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite19, "Iid");
+			ACTIVE.setScriptCallOnMouseExit(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite23, "Iid");
+			ACTIVE.setScriptCallOnMousePressed(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite20, "Iid");
+			ACTIVE.setScriptCallOnMouseReleased(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite23, "Iid");
+			ACTIVE.setContextMenuOption(1, "Goal details");
+			ACTIVE.setScriptCallOnClickContextMenu(5179, int25, "i");
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9, 0, 0, 0);
+			ACTIVE.setSprite(getAttributeMapValue(attrmap26, 1881));
+			ACTIVE.setSize(int1, int4, 0, 0);
+			int9 = int9 + int1 + int5;
+		} else {
+			int12 = int10;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9, 0, 0, 0);
+			ACTIVE.setSize(7, 7, 0, 0);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9 + 7, 0, 0, 0);
+			ACTIVE.setSize(int2 - 14, 7, 0, 0);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9 + int2 - 7, 0, 0, 0);
+			ACTIVE.setSize(7, 7, 0, 0);
+			ACTIVE.setHFlip(true);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9, 7, 0, 0);
+			ACTIVE.setSize(7, 7, 0, 0);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9 + 7, 7, 0, 0);
+			ACTIVE.setSize(int2 - 14, 7, 0, 0);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9 + int2 - 7, 7, 0, 0);
+			ACTIVE.setSize(7, 7, 0, 0);
+			ACTIVE.setHFlip(true);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9, 14, 0, 0);
+			ACTIVE.setSize(7, int13, 0, 0);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9 + 7, 14, 0, 0);
+			ACTIVE.setSize(int2 - 14, int13, 0, 0);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9 + int2 - 7, 14, 0, 0);
+			ACTIVE.setSize(7, int13, 0, 0);
+			ACTIVE.setHFlip(true);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9, int3 - 7, 0, 0);
+			ACTIVE.setSize(7, 7, 0, 0);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9 + 7, int3 - 7, 0, 0);
+			ACTIVE.setSize(int2 - 14, 7, 0, 0);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9 + int2 - 7, int3 - 7, 0, 0);
+			ACTIVE.setSize(7, 7, 0, 0);
+			ACTIVE.setHFlip(true);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9 + int14, int3, 0, 0);
+			ACTIVE.setSize(7, int4 - int3 - 7, 0, 0);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9 + int14 + 7, int3, 0, 0);
+			ACTIVE.setSize(int2 - 14 - int14 - int14, int4 - int3 - 7, 0, 0);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9 + int2 - 7 - int14, int3, 0, 0);
+			ACTIVE.setSize(7, int4 - int3 - 7, 0, 0);
+			ACTIVE.setHFlip(true);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9 + int14, int4 - 7, 0, 0);
+			ACTIVE.setSize(7, 7, 0, 0);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9 + int14 + 7, int4 - 7, 0, 0);
+			ACTIVE.setSize(int2 - 14 - int14 - int14, 7, 0, 0);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9 + int2 - 7 - int14, int4 - 7, 0, 0);
+			ACTIVE.setSize(7, 7, 0, 0);
+			ACTIVE.setHFlip(true);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 4, int10);
+			ACTIVE.setPosition(int9, 0, 0, 0);
+			ACTIVE.setSize(int2, int3, 0, 0);
+			ACTIVE.setText("Tasks Complete");
+			ACTIVE.setTextAlignment(1, 1, 0);
+			ACTIVE.setRGB(0xEBE0BC);
+			ACTIVE.setFont(3793);
+			int10 = int10 + 1;
+			switch (int25) {
+				case 4:
+					int15 = 56;
+					if (script_5200(int25) == 1) {
+						int16 = 56;
+					} else {
+						int16 = VARC[1594];
+					}
+					break;
+				case 8:
+					int15 = 17;
+					if (script_5200(int25) == 1) {
+						int16 = 17;
+					} else {
+						int16 = VARC[1594];
+					}
+					break;
+				case 12:
+					int15 = 11;
+					if (script_5200(int25) == 1) {
+						int16 = 11;
+					} else {
+						int16 = VARC[1594];
+					}
+					break;
+			}
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9 + int14 + 7, int3, 0, 0);
+			ACTIVE.setSize(int2 - int14 - int14 - 14, int4 - int3 - 7, 0, 0);
+			ACTIVE.setSprite(7536);
+			int10 = int10 + 1;
+			int17 = (int2 - int14 - int14 - 14) * int16 / int15;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setPosition(int9 + int14 + 7, int3, 0, 0);
+			ACTIVE.setSize(int17, int4 - int3 - 7, 0, 0);
+			ACTIVE.setSprite(7540);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 4, int10);
+			ACTIVE.setPosition(int9, int3, 0, 0);
+			ACTIVE.setSize(int2, int4 - int3 - 7, 0, 0);
+			ACTIVE.setText(str(int16) + " of " + str(int15));
+			ACTIVE.setTextAlignment(1, 1, 0);
+			ACTIVE.setRGB(0xEBE0BC);
+			ACTIVE.setFont(3793);
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 3, int10);
+			ACTIVE.setPosition(int9, 0, 0, 0);
+			ACTIVE.setSize(int2, int4, 0, 0);
+			ACTIVE.setFilled(true);
+			ACTIVE.setRGB(0x000000);
+			ACTIVE.setTrans(255);
+			if (int25 == VARC[1596]) {
+				int24 = 4;
+			} else {
+				int24 = 1;
+			}
+			ACTIVE.setScriptCallOnMouseEntered(5177, int12, 2, "ii");
+			ACTIVE.setScriptCallOnMouseExit(5177, int12, int24, "ii");
+			ACTIVE.setScriptCallOnMousePressed(5177, int12, 3, "ii");
+			ACTIVE.setScriptCallOnMouseReleased(5177, int12, int24, "ii");
+			ACTIVE.setContextMenuOption(1, "Goal details");
+			ACTIVE.setScriptCallOnClickContextMenu(5179, int25, "i");
+			int9 = int9 + int2 + int5;
+		}
+		if (script_5200(int25) == 1) {
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setSize(int7, int8, 0, 0);
+			ACTIVE.setPosition(int9 - int5 - int7, int4 - int7, 0, 0);
+			ACTIVE.setSprite(7465);
+		}
+		int25 = getAttributeMapValue(attrmap26, 1878);
+		attrmap26 = datamap('i', 'J', (DataMap)4849, int25);
+		int10 = int10 + 1;
+	}
+	int25 = 14;
+	attrmap26 = datamap('i', 'J', (DataMap)4849, int25);
+	while (attrmap26 != null) {
+		ACTIVE.createChild(widget(1122, 88), 5, int10);
+		ACTIVE.setSize(int1, int4, 0, 0);
+		ACTIVE.setPosition(int9, 0, 0, 0);
+		if (int25 == VARC[1596]) {
+			sprite23 = sprite21;
+		} else {
+			sprite23 = sprite18;
+		}
+		ACTIVE.setSprite(sprite23);
+		ACTIVE.setScriptCallOnMouseEntered(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite19, "Iid");
+		ACTIVE.setScriptCallOnMouseExit(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite23, "Iid");
+		ACTIVE.setScriptCallOnMousePressed(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite20, "Iid");
+		ACTIVE.setScriptCallOnMouseReleased(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite23, "Iid");
+		ACTIVE.setContextMenuOption(1, "Goal details");
+		if (VARC[1595] > 3) {
+			ACTIVE.setScriptCallOnClickContextMenu(5179, int25, "i");
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setSprite(getAttributeMapValue(attrmap26, 1881));
+			ACTIVE.setSize(int1, int4, 0, 0);
+			ACTIVE.setPosition(int9, 0, 0, 0);
+			if (script_5200(int25) == 1) {
+				int10 = int10 + 1;
+				ACTIVE.createChild(widget(1122, 88), 5, int10);
+				ACTIVE.setSize(int7, int8, 0, 0);
+				ACTIVE.setPosition(int9 + int1 - int7, int4 - int7, 0, 0);
+				ACTIVE.setSprite(7465);
+			}
+		} else {
+			ACTIVE.setScriptCallOnClickContextMenu(5179, 13, "i");
+			int10 = int10 + 1;
+			ACTIVE.createChild(widget(1122, 88), 5, int10);
+			ACTIVE.setSprite(7454);
+			ACTIVE.setSize(int1, int4, 0, 0);
+			ACTIVE.setPosition(int9, 0, 0, 0);
+		}
+		int25 = getAttributeMapValue(attrmap26, 1878);
+		attrmap26 = datamap('i', 'J', (DataMap)4849, int25);
+		int10 = int10 + 1;
+		int9 = int9 + int1 + int5;
+	}
+	int27 = int9 - int5 + int6;
+	if (int27 > widget(1122, 88).getWidth()) {
+		widget(1122, 88).setScrollMax(int27, widget(1122, 88).getHeight());
+		widget(1122, 88).setScrollPos(0, 0);
+	}
+	script_5182();
+	script_5178(int12, 1);
+	return;
+}

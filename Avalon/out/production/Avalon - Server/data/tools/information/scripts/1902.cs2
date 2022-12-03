@@ -1,0 +1,75 @@
+void script_1902(Widget widget0, Widget widget1, Widget widget2) {
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	QcPhrase qcphrase7;
+	string str0;
+	VARC[128] = -1;
+	int3 = cs2method5071(STRING[30], 0);
+	int4 = widget1.getWidth();
+	int5 = int4 - 8;
+	if (int3 == -1) {
+		ACTIVE.createChild(widget1, 4, 0);
+		ACTIVE.setPosition(0, 48, 0, 0);
+		ACTIVE.setSize(int4, 14, 0, 0);
+		ACTIVE.setFont(495);
+		ACTIVE.setText("Too many results. Please refine your search.");
+		ACTIVE.setTextAlignment(1, 1, 0);
+		ACTIVE.setRGB(0x000000);
+		ACTIVE.setTextAntiMacro(false);
+		widget1.setScrollMax(0, 0);
+		script_1905(widget1, widget2);
+		return;
+	}
+	if (int3 == 0) {
+		ACTIVE.createChild(widget1, 4, 0);
+		ACTIVE.setPosition(0, 48, 0, 0);
+		ACTIVE.setSize(int4, 14, 0, 0);
+		ACTIVE.setFont(495);
+		ACTIVE.setText("No matching items found.");
+		ACTIVE.setTextAlignment(1, 1, 0);
+		ACTIVE.setRGB(0x000000);
+		ACTIVE.setTextAntiMacro(false);
+		widget1.setScrollMax(0, 0);
+		script_1905(widget1, widget2);
+		return;
+	}
+	int6 = 1;
+	qcphrase7 = (QcPhrase)cs2method5072();
+	str0 = "";
+	ACTIVE.createChild(widget1, 3, 0);
+	while (qcphrase7 != null) {
+		if (compare(str0, cs2method5055(qcphrase7)) != 0) {
+			str0 = cs2method5055(qcphrase7);
+			ACTIVE.createChild(widget1, 4, int6);
+			ACTIVE.setPosition(4, 14 * (int6 - 1), 0, 0);
+			ACTIVE.setSize(int5, 14, 0, 0);
+			ACTIVE.setRGB(0x000000);
+			ACTIVE.setText(cs2method5055(qcphrase7));
+			ACTIVE.setFont(495);
+			ACTIVE.setTextAntiMacro(false);
+			ACTIVE.setScriptCallOnMouseEntered(1906, int6, widget1, "iI");
+			ACTIVE.setScriptCallOnMousePressed(1070, widget0, qcphrase7, 0, "Iei");
+			int6 = int6 + 1;
+		}
+		qcphrase7 = (QcPhrase)cs2method5072();
+	}
+	if (int6 == 1) {
+		ACTIVE.createChild(widget1, 4, 0);
+		ACTIVE.setPosition(0, 48, 0, 0);
+		ACTIVE.setSize(int4, 14, 0, 0);
+		ACTIVE.setFont(495);
+		ACTIVE.setText("No matching items found.");
+		ACTIVE.setTextAlignment(1, 1, 0);
+		ACTIVE.setRGB(0x000000);
+		ACTIVE.setTextAntiMacro(false);
+		widget1.setScrollMax(0, 0);
+		script_1905(widget1, widget2);
+		return;
+	}
+	widget(137, 13).setScriptCallOnKeyPress(1901, KEY_TYPED, (char)KEY_PRESSED, widget(137, 1), widget(137, 14), widget(137, 16), widget(137, 15), int6 - 1, "izIIIIi");
+	widget1.setScrollMax(0, 14 * (int6 - 1));
+	script_1905(widget1, widget2);
+	return;
+}

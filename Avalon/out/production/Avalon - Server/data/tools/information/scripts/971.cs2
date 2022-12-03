@@ -1,0 +1,6 @@
+void script_971() {
+	if (VARPBIT[4757] > 0) {
+		widget(740, 4).setSprite(datamap('i', 'd', (DataMap)1478, VARPBIT[4757]));
+	}
+	return;
+}

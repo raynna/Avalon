@@ -1,0 +1,13 @@
+string, int script_1003(int arg0) {
+	switch (arg0) {
+		case 0:
+			return "Prayers", 0;
+		case 1:
+			return "Equipment", 1;
+		case 2:
+			return "Dungeoneering", 0;
+		case 3:
+			return "Milestones", 0;
+	}
+	return "", -1;
+}

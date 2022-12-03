@@ -1,0 +1,29 @@
+void script_1603(int arg0, int arg1) {
+	int int2;
+	int int3;
+	int int4;
+	if (!cs2method5220()) {
+		return;
+	}
+	int2 = 15 + max(VARC[1030] - getClientCycle(), 0);
+	VARC[1030] = min(max(VARC[1030] + 2, getClientCycle() + 2), getClientCycle() + 25);
+	switch (VARC[172]) {
+		case 37:
+			int2 = int2 * 5;
+			break;
+		case 50:
+			int2 = int2 * 4;
+			break;
+		case 75:
+			int2 = int2 * 3;
+			break;
+		case 100:
+			int2 = int2 * 2;
+			break;
+	}
+	int3 = 0;
+	int4 = 0;
+	int3, int4 = cs2method5209();
+	cs2method5221(moveCoord(location(0, 0, 0), max(int3 + arg0 * int2, 0), 0, max(int4 + arg1 * int2, 0)));
+	return;
+}

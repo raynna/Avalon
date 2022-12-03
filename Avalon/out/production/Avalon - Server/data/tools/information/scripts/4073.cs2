@@ -1,0 +1,10 @@
+void script_4073() {
+	if (VARPBIT[8669] == 0) {
+		VARC[1432] = 0;
+		script_4057(widget(1058, 2));
+	} else {
+		VARC[1432] = 0;
+		script_4055(widget(1058, 3));
+	}
+	return;
+}

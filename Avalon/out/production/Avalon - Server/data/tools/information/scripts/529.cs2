@@ -1,0 +1,22 @@
+void script_529(Widget widget0) {
+	int int1;
+	string str0;
+	string str1;
+	str0 = "null";
+	int1 = 0;
+	str1 = "null";
+	if (widget0 == widget(301, 11)) {
+		str0 = "This is the total XP you have gained through the Assist System in the past 24 hours. There is a limit to the XP you can gain within 24 hours, but this amount gets reset once the day has passed.";
+		script_39(widget0, widget(301, 85), str0, 25, 180);
+		return;
+	}
+	int1, str1 = script_530(widget0);
+	if (int1 == 1) {
+		str0 = "Assist with " + str1 + " while using the Assist System (ON).";
+	} else {
+		str0 = "Assist with " + str1 + " while using the Assist System (OFF).";
+	}
+	script_39(widget0, widget(301, 85), str0, 25, 180);
+	VARC[2] = 0;
+	return;
+}

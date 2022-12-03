@@ -1,0 +1,24 @@
+int script_1543() {
+	int int0;
+	int0 = 0;
+	int0 = int0 + VARPBIT[4972];
+	int0 = int0 + VARPBIT[4973];
+	int0 = int0 + VARPBIT[4974];
+	int0 = int0 + VARPBIT[4975];
+	int0 = int0 + VARPBIT[4976];
+	int0 = int0 + VARPBIT[4977];
+	int0 = int0 + VARPBIT[4978];
+	int0 = int0 + VARPBIT[4979];
+	int0 = int0 + VARPBIT[4980];
+	int0 = int0 + VARPBIT[4981];
+	int0 = int0 + VARPBIT[4982];
+	int0 = int0 + VARPBIT[4983];
+	int0 = int0 + VARPBIT[4984];
+	int0 = int0 + VARPBIT[4985];
+	int0 = int0 + VARPBIT[4986];
+	int0 = int0 + VARPBIT[4987];
+	int0 = int0 + VARPBIT[4988];
+	int0 = int0 + VARPBIT[4989];
+	int0 = int0 + VARPBIT[4991];
+	return int0;
+}

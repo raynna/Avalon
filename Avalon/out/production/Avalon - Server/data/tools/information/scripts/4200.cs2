@@ -1,0 +1,6 @@
+void script_4200(Widget widget0) {
+	widget0.setSprite(5415);
+	widget(891, 65).setIsHidden(true);
+	widget(891, 76).setIsHidden(true);
+	return;
+}

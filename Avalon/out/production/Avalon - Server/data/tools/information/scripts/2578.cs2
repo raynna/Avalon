@@ -1,0 +1,8 @@
+void script_2578() {
+	widget(292, 114).setRGB(0x666666);
+	widget(292, 113).setSprite(941);
+	widget(292, 113).setNoOptions();
+	widget(292, 113).setScriptCallOnClickContextMenu(-1, "");
+	widget(292, 113).setScriptCallOnMousePressed(2606, CTX_WIDGET, "I");
+	return;
+}

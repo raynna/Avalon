@@ -1,0 +1,31 @@
+int, int script_4644(int arg0) {
+	switch (arg0) {
+		case 1:
+			if (VARPBIT[9315] == 1) {
+				if (VARPBIT[9314] == 1) {
+					return 1, 1;
+				}
+				return 1, 0;
+			}
+			break;
+		case 2:
+			if (VARPBIT[9317] == 1) {
+				if (VARPBIT[9316] == 1) {
+					return 1, 1;
+				}
+				return 1, 0;
+			}
+			break;
+		case 4:
+			if (VARPBIT[9319] == 1) {
+				if (VARPBIT[9318] == 1) {
+					return 1, 1;
+				}
+				return 1, 0;
+			}
+			break;
+		default:
+			return 0, 0;
+	}
+	return 0, 0;
+}

@@ -1,0 +1,14 @@
+Color script_806() {
+	int int0;
+	int0 = 5592405;
+	if (getRunEnergy() > 75) {
+		int0 = 65280;
+	} else if (getRunEnergy() > 50) {
+		int0 = 16776960;
+	} else if (getRunEnergy() > 25) {
+		int0 = 16750623;
+	} else {
+		int0 = 16711680;
+	}
+	return color(int0);
+}

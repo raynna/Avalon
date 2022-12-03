@@ -1,0 +1,5 @@
+void script_592() {
+	VARP[1113] = 0;
+	script_621();
+	return;
+}

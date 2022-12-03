@@ -1,0 +1,21 @@
+void script_5309(int arg0) {
+	Sprite sprite1;
+	int int2;
+	int int3;
+	int int4;
+	sprite1 = 7287;
+	int2 = 7706;
+	int3 = 7289;
+	int4 = 0;
+	while (int4 < datamapSize((DataMap)840)) {
+		if (ACTIVE.setChild(widget(823, 3), int4)) {
+			if (int4 != arg0) {
+				ACTIVE.setSprite(sprite1);
+			} else {
+				ACTIVE.setSprite(sprite1);
+			}
+		}
+		int4 = int4 + 1;
+	}
+	return;
+}

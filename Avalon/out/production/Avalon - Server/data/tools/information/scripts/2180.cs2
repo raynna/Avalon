@@ -1,0 +1,9 @@
+void script_2180(int arg0) {
+	AttrMap attrmap1;
+	attrmap1 = datamap('i', 'J', (DataMap)2252, arg0);
+	if (ACTIVE.setChild(widget(190, 18), arg0)) {
+		ACTIVE.setText(getAttributeMapValue(attrmap1, 845));
+		ACTIVE.setScriptCallOnGameloop(-1, "");
+	}
+	return;
+}

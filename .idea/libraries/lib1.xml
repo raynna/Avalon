@@ -1,0 +1,36 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/commons-codec-1.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/xpp3-1.1.3.4.C.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/mysql-connector-java-5.1.18-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/gson-2.8.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/slf4j-simple-1.7.25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/netty-3.4.6.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/commons-codec-1.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/RS-Cache-Library.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/xstream-1.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/mysql-5.0.5-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/metrik.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/ip2c.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/c3p0-0.9.5.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/log4j-1.2.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/RuneTopListV2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/demorpg.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/mchange-commons-java-0.2.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/lzma-4.63-jio-0.94.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/mysql-connector-5.1.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/mysql.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/netty-3.6.5.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/FileStore.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/netty-3.2.6.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/jode-1.1.2-pre1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/collections-generic-4.01.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/everythingrs-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/javacord-2.0.17-shaded.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

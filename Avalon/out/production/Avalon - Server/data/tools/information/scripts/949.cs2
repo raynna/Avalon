@@ -1,0 +1,23 @@
+void script_949() {
+	if (VARC[1198] == 1) {
+		widget(933, 322).setIsHidden(false);
+		widget(933, 323).setIsHidden(false);
+	}
+	if (VARC[1199] == 1) {
+		widget(933, 321).setIsHidden(false);
+		widget(933, 324).setIsHidden(false);
+	}
+	if (VARC[1200] == 1) {
+		widget(933, 320).setIsHidden(false);
+		widget(933, 325).setIsHidden(false);
+	}
+	if (VARC[1201] == 1) {
+		widget(933, 319).setIsHidden(false);
+		widget(933, 326).setIsHidden(false);
+	}
+	if (VARC[1202] == 1) {
+		widget(933, 318).setIsHidden(false);
+		widget(933, 327).setIsHidden(false);
+	}
+	return;
+}

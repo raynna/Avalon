@@ -1,0 +1,25 @@
+int script_4798(int arg0) {
+	int int1;
+	int int2;
+	int1 = 604;
+	int2 = 0;
+	if (arg0 == 603) {
+		return script_4800(602);
+	}
+	if (arg0 == 602) {
+		return script_4800(603);
+	}
+	if (arg0 >= 604 && arg0 <= 615) {
+		while (int1 <= 615) {
+			if (int1 != arg0 && script_4800(int1) == 1) {
+				int2 = int2 + 1;
+				if (int2 == 2) {
+					return 1;
+				}
+			}
+			int1 = int1 + 1;
+		}
+		return 0;
+	}
+	return 0;
+}

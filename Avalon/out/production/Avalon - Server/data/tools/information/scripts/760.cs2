@@ -1,0 +1,28 @@
+void script_760(Item item0, Item item1, Widget widget2, int arg3, string string4, string string5, string string6, string string7, string string8, string string9) {
+	if (ACTIVE.setChild(widget2, arg3)) {
+		if (item0 != null) {
+			ACTIVE.setItem(item0, -1);
+			ACTIVE.setOptionBase(getItemName(item1));
+			ACTIVE.setContextMenuOption(1, string4);
+			ACTIVE.setContextMenuOption(2, string5);
+			ACTIVE.setContextMenuOption(3, string6);
+			ACTIVE.setContextMenuOption(4, string7);
+			ACTIVE.setContextMenuOption(5, string8);
+			ACTIVE.setContextMenuOption(6, "Examine" + "<col=ff9040>");
+			ACTIVE.setContextMenuOption(7, string9);
+			ACTIVE.setShadowColor(0x333333);
+			ACTIVE.setOutlineThickness(1);
+		} else {
+			ACTIVE.setItem(null, 0);
+			ACTIVE.setOptionBase("");
+			ACTIVE.setContextMenuOption(1, "");
+			ACTIVE.setContextMenuOption(2, "");
+			ACTIVE.setContextMenuOption(3, "");
+			ACTIVE.setContextMenuOption(4, "");
+			ACTIVE.setContextMenuOption(5, "");
+			ACTIVE.setContextMenuOption(6, "");
+			ACTIVE.setContextMenuOption(7, "");
+		}
+	}
+	return;
+}

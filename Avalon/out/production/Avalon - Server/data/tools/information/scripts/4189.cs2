@@ -1,0 +1,15 @@
+void script_4189(int arg0) {
+	if (arg0 == 70385726) {
+		widget(1074, 57).setRGB(0xFFFFFF);
+	}
+	if (arg0 == 70385727) {
+		widget(1074, 58).setRGB(0xFFFFFF);
+	}
+	if (arg0 == 70385728) {
+		widget(1074, 59).setRGB(0xFFFFFF);
+	}
+	if (arg0 == 70385729) {
+		widget(1074, 60).setRGB(0xFFFFFF);
+	}
+	return;
+}

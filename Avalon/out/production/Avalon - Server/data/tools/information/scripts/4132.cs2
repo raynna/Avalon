@@ -1,0 +1,33 @@
+void script_4132(Widget widget0, Location arg1) {
+	switch (VARC[1452]) {
+		case 201:
+			widget0.clearChildren();
+			ACTIVE.createChild(widget0, 3, 0);
+			ACTIVE.setFilled(true);
+			ACTIVE.setRGB(0x7F0000);
+			ACTIVE.setSize(0, 0, 1, 1);
+			ACTIVE.setPosition(0, 0, 0, 0);
+			ACTIVE.setTrans(255);
+			script_665(0x000000, 50, widget0, 1);
+			break;
+		case 202:
+			script_667(50, widget0, 1);
+			break;
+		case 203:
+			if (ACTIVE.setChild(widget0, 0)) {
+				ACTIVE.setScriptCallOnGameloop(4133, widget0, 0, 3, -3, 150, 255, 50, 0, 3581, "Iiiiiiii«");
+			}
+			break;
+		case 204:
+			widget0.clearChildren();
+			script_4138(0x000000, 50, widget0);
+			break;
+		case 205:
+			script_4140(50, widget0);
+			break;
+		case 206:
+			widget0.clearChildren();
+			break;
+	}
+	return;
+}

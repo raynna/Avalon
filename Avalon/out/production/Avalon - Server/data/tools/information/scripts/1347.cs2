@@ -1,0 +1,9 @@
+void script_1347(DataMap datamap0, int arg1, Widget widget2, Sprite sprite3, Widget widget4, Widget widget5, Widget widget6, Color color7, Color color8, int arg9, Sprite sprite10, int arg11, int arg12, Sprite sprite13, Sprite sprite14, Sprite sprite15, Sprite sprite16, Sprite sprite17, Sprite sprite18) {
+	if (widget2.isHidden()) {
+		widget4.setScrollPos(0, 0);
+		script_1348(datamap0, arg1, widget2, sprite3, widget4, widget5, widget6, color7, color8, arg9, sprite10, arg11, arg12, sprite13, sprite14, sprite15, sprite16, sprite17, sprite18);
+	} else {
+		script_1349(widget6, widget2, widget4, widget5, arg12);
+	}
+	return;
+}

@@ -1,0 +1,28 @@
+void script_4552() {
+	Widget widget0;
+	int int1;
+	int int2;
+	widget(550, 19).setText("Friends List" + "<br>" + "RuneScape " + str(getWorldId()));
+	widget(550, 6).setScriptCallOnFriendListChange(124, "");
+	widget(550, 11).setScrollMax(0, 0);
+	widget(550, 11).setScrollPos(0, 0);
+	script_31(widget(550, 12), widget(550, 11), 5666, 5663, 5664, 5665, 5686, 5685);
+	widget0 = widget(550, 0);
+	widget0.clearChildren();
+	int1 = 0;
+	int2 = 0;
+	while (int2 < 200) {
+		int1 = int2 * 15 + 5;
+		if (int2 % 2 != 0) {
+			ACTIVE.createChild(widget0, 3, widget0.nextChild());
+			ACTIVE.setSize(16384, 15, 2, 0);
+			ACTIVE.setPosition(0, int1, 0, 0);
+			ACTIVE.setRGB(0x232220);
+			ACTIVE.setFilled(true);
+			ACTIVE.setTrans(128);
+		}
+		int2 = int2 + 1;
+	}
+	script_125(VARC[1036]);
+	return;
+}

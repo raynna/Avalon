@@ -1,0 +1,39 @@
+void script_4379(Widget widget0, Widget widget1, char char2, int arg3, Widget widget4) {
+	STRING[345] = widget0.getText();
+	switch (arg3) {
+		case 84:
+			script_4382();
+			break;
+		case 96:
+		case 97:
+		case 98:
+		case 99:
+		case 102:
+		case 103:
+			if (!isHoldingCtrl()) {
+				return;
+			}
+			_ = script_1553(arg3, VARC[1496], STRING[345]);
+			break;
+		case 85:
+			if (length(STRING[345]) > 0) {
+				STRING[345] = substr(STRING[345], 0, length(STRING[345]) - 1);
+			}
+			break;
+		default:
+			if (length(STRING[345]) < 80) {
+				STRING[345] = script_74(STRING[345], 0, arg3, char2);
+			}
+			break;
+	}
+	VARC[1496] = script_1552(VARC[1496], STRING[345], 5631, widget0, -1);
+	widget4.setPosition(VARC[1496], widget4.getY(), 0, 0);
+	widget1.setText(str(length(STRING[345])) + "/80");
+	if (length(STRING[345]) >= 70) {
+		widget1.setRGB(0xDD0000);
+	} else {
+		widget1.setRGB(0x1F1D19);
+	}
+	widget0.setText(STRING[345]);
+	return;
+}

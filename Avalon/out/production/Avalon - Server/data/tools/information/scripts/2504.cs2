@@ -1,0 +1,15 @@
+void script_2504() {
+	int int0;
+	int0 = 0;
+	widget(291, 73).setText(STRING[180]);
+	widget(291, 28).setText(STRING[181]);
+	int0 = getLineCount(STRING[180], 207, 497) * 17 + 5;
+	widget(291, 73).setSize(207, int0, 0, 0);
+	widget(291, 72).setScrollMax(0, int0);
+	script_72(widget(291, 69), widget(291, 72), 0);
+	int0 = getLineCount(STRING[181], 207, 497) * 17 + 5;
+	widget(291, 28).setSize(207, int0, 0, 0);
+	widget(291, 68).setScrollMax(0, int0);
+	script_72(widget(291, 70), widget(291, 68), 0);
+	return;
+}

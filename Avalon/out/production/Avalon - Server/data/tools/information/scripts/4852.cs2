@@ -1,0 +1,53 @@
+void script_4852() {
+	DataMap datamap0;
+	string str0;
+	datamap0 = null;
+	str0 = "This build slot is available, select your options and click the buy button.";
+	if (citadelConfigsInitialized()) {
+		datamap0 = script_4825(1);
+		widget(1092, 976).set2DAngle(0);
+		widget(1092, 967).set2DAngle(0);
+		widget(1092, 958).set2DAngle(0);
+		if (VARPBIT[9562] > 0 && VARPBIT[9562] == CLANBIT[2139]) {
+			widget(1092, 976).setSprite(datamap('i', 'd', datamap0, VARPBIT[9562]));
+			str0 = "This build slot is full, you may view the contents of it, but to modify you will need to cancel the job.";
+		} else if (CLANBIT[2143] == 1) {
+			widget(1092, 976).setSprite(6496);
+			widget(1092, 976).set2DAngle(49149);
+			str0 = "This build slot is full, you may view the contents of it, but to modify you will need to cancel the job.";
+		} else {
+			widget(1092, 976).setSprite(null);
+		}
+		widget(1092, 974).setScriptCallOnMouseOver(4538, widget(1092, 261), CTX_WIDGET, -1, str0, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 974).setScriptCallOnMouseExit(40, widget(1092, 261), "I");
+		datamap0 = script_4825(2);
+		str0 = "This build slot available, select your options and click the buy button.";
+		if (VARPBIT[9571] > 0 && VARPBIT[9571] == CLANBIT[2156]) {
+			widget(1092, 967).setSprite(datamap('i', 'd', datamap0, VARPBIT[9571]));
+			str0 = "This build slot is full, you may view the contents of it, but to modify you will need to cancel the job.";
+		} else if (CLANBIT[2160] == 1) {
+			widget(1092, 967).setSprite(6496);
+			widget(1092, 967).set2DAngle(49149);
+			str0 = "This build slot is full, you may view the contents of it, but to modify you will need to cancel the job.";
+		} else {
+			widget(1092, 967).setSprite(null);
+		}
+		widget(1092, 965).setScriptCallOnMouseOver(4538, widget(1092, 261), CTX_WIDGET, -1, str0, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 965).setScriptCallOnMouseExit(40, widget(1092, 261), "I");
+		datamap0 = script_4825(3);
+		str0 = "This build slot available, select your options and click the buy button.";
+		if (VARPBIT[9580] > 0 && VARPBIT[9580] == CLANBIT[2173]) {
+			widget(1092, 958).setSprite(datamap('i', 'd', datamap0, VARPBIT[9580]));
+			str0 = "This build slot is full, you may view the contents of it, but to modify you will need to cancel the job.";
+		} else if (CLANBIT[2177] == 1) {
+			widget(1092, 958).setSprite(6496);
+			widget(1092, 958).set2DAngle(49149);
+			str0 = "This build slot is full, you may view the contents of it, but to modify you will need to cancel the job.";
+		} else {
+			widget(1092, 958).setSprite(null);
+		}
+		widget(1092, 956).setScriptCallOnMouseOver(4538, widget(1092, 261), CTX_WIDGET, -1, str0, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 956).setScriptCallOnMouseExit(40, widget(1092, 261), "I");
+	}
+	return;
+}

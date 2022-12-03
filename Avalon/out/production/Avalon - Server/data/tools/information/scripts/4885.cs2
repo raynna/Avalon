@@ -1,0 +1,75 @@
+void script_4885(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	if (citadelConfigsInitialized()) {
+		int2 = script_4964(widget0);
+		int3 = script_4971(int2);
+		if (script_4886(int3) == 0) {
+			return;
+		}
+		if (VARPBIT[9570] == int3 || VARPBIT[9579] == int3 || VARPBIT[9588] == int3) {
+			return;
+		}
+		switch (int2) {
+			case 35:
+			case 36:
+			case 37:
+			case 38:
+			case 39:
+			case 40:
+			case 41:
+			case 42:
+			case 43:
+			case 44:
+			case 45:
+			case 46:
+			case 47:
+			case 48:
+				int1 = 0;
+				break;
+			default:
+				int1 = 1;
+				break;
+		}
+		if (VARPBIT[9558] > 0 && script_4828(VARPBIT[9558]) == 0) {
+			switch (VARPBIT[9558]) {
+				case 1:
+					VARPBIT[9570] = int3;
+					VARPBIT[9564] = int1;
+					break;
+				case 2:
+					VARPBIT[9579] = int3;
+					VARPBIT[9573] = int1;
+					break;
+				case 3:
+					VARPBIT[9588] = int3;
+					VARPBIT[9582] = int1;
+					break;
+			}
+			return;
+		}
+		if (CLANBIT[2148] != int3 && CLANBIT[2165] != int3 && CLANBIT[2182] != int3) {
+			if (VARPBIT[9559] == 0) {
+				VARPBIT[9570] = int3;
+				VARPBIT[9564] = int1;
+				VARPBIT[9558] = 1;
+				script_4849();
+			} else if (VARPBIT[9560] == 0) {
+				VARPBIT[9579] = int3;
+				VARPBIT[9573] = int1;
+				VARPBIT[9558] = 2;
+				script_4849();
+			} else if (VARPBIT[9561] == 0) {
+				VARPBIT[9588] = int3;
+				VARPBIT[9582] = int1;
+				VARPBIT[9558] = 3;
+				script_4849();
+			}
+		}
+	}
+	return;
+}

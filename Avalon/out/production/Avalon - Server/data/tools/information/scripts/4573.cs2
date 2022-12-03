@@ -1,0 +1,12 @@
+void script_4573() {
+	int int0;
+	int int1;
+	int0 = 0;
+	int1 = 0;
+	if (script_1891() == 1) {
+		widget(589, 50).setIsHidden(false);
+		return;
+	}
+	script_4574();
+	return;
+}

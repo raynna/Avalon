@@ -1,0 +1,62 @@
+void script_3969() {
+	int int0;
+	AttrMap attrmap1;
+	int int2;
+	int int3;
+	int int4;
+	Sprite sprite5;
+	int0 = widget(1055, 13).getShadeColor();
+	attrmap1 = null;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	sprite5 = null;
+	if (widget(1055, 1).isHidden()) {
+		if (int0 > 0) {
+			int2 = int0 * 255 / 100;
+			int2 = 100 - int2;
+			int3 = 270 * 100 / int2 + 10;
+			int4 = 100 * 100 / int2 + 10;
+			widget(1055, 13).setSize(min(int3, 270), min(int4, 100), 0, 0);
+			int0 = max(int0 - 8, 0);
+			widget(1055, 13).setTrans(int0);
+		} else {
+			attrmap1 = datamap('i', 'J', (DataMap)3483, VARC[1425]);
+			if (attrmap1 != null) {
+				widget(1055, 13).setFilled(true);
+				widget(1055, 2).setTrans(0);
+				widget(1055, 3).setTrans(0);
+				widget(1055, 4).setTrans(0);
+				widget(1055, 5).setTrans(0);
+				widget(1055, 6).setTrans(0);
+				widget(1055, 7).setTrans(0);
+				widget(1055, 8).setTrans(0);
+				widget(1055, 9).setTrans(0);
+				widget(1055, 10).setTrans(0);
+				widget(1055, 11).setTrans(0);
+				widget(1055, 5).setText(getAttributeMapValue(attrmap1, 1266));
+				if (getAttributeMapValue(attrmap1, 1270) != 4094) {
+					sprite5 = getAttributeMapValue(datamap('i', 'J', (DataMap)2252, getAttributeMapValue(attrmap1, 1270)), 952);
+				} else {
+					sprite5 = getAttributeMapValue(attrmap1, 1271);
+				}
+				widget(1055, 3).setSprite(sprite5);
+				widget(1055, 0).setScriptCallOnGameloop(3970, "");
+				widget(1055, 1).setIsHidden(false);
+			} else {
+				widget(1055, 12).setScriptCallOnGameloop(-1, "");
+				widget(1055, 0).setScriptCallOnGameloop(-1, "");
+				widget(1055, 1).setIsHidden(true);
+				widget(1055, 12).setIsHidden(true);
+			}
+		}
+	} else if (int0 < 255) {
+		int0 = min(int0 + 8, 255);
+		widget(1055, 13).setTrans(int0);
+	} else {
+		widget(1055, 12).setScriptCallOnGameloop(-1, "");
+		widget(1055, 13).setFilled(false);
+		widget(1055, 12).setIsHidden(true);
+	}
+	return;
+}

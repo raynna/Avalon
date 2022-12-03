@@ -1,0 +1,10 @@
+void script_3940() {
+	widget(137, 56).setScriptCallOnKeyPress(-1, "");
+	widget(890, 55).setScriptCallOnKeyPress(3944, KEY_TYPED, (char)KEY_PRESSED, false, "iz1");
+	widget(890, 60).setScriptCallOnMousePressed(3217, MOUSE_X, widget(890, 59), widget(890, 60), widget(890, 61), 16, "iIIIi");
+	VARC[1099] = 0;
+	STRING[330] = "";
+	VARC[1412] = 0;
+	script_3218(widget(890, 59), widget(890, 60), widget(890, 61), STRING[330], 16);
+	return;
+}

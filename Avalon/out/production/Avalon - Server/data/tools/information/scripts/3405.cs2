@@ -1,0 +1,25 @@
+void script_3405(Widget widget0, Widget widget1, Widget widget2) {
+	int int3;
+	int int4;
+	int int5;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	int3, int4, int5 = script_3406();
+	script_3054(widget0);
+	script_3173(widget1);
+	script_4567(widget2);
+	if (widget(906, 187).isHidden() && int3 > VARC[1275]) {
+		widget(906, 201).setScriptCallOnGameloop(3407, getClientCycle(), widget(906, 187), CTX_WIDGET, "iII");
+	}
+	if (widget(906, 189).isHidden() && int4 > VARC[1276]) {
+		widget(906, 203).setScriptCallOnGameloop(3407, getClientCycle(), widget(906, 189), CTX_WIDGET, "iII");
+	}
+	if (widget(906, 188).isHidden() && int5 > VARC[1510]) {
+		widget(906, 202).setScriptCallOnGameloop(3407, getClientCycle(), widget(906, 188), CTX_WIDGET, "iII");
+	}
+	VARC[1275] = int3;
+	VARC[1276] = int4;
+	VARC[1510] = int5;
+	return;
+}

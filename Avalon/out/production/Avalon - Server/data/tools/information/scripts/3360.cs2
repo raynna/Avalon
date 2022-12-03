@@ -1,0 +1,25 @@
+int, string, int script_3360() {
+	switch (VARP[448]) {
+		case 17955:
+			return 5, "Aptitude (Tier 1)", 18057;
+		case 17956:
+			return 15, "Aptitude (Tier 2)", 18058;
+		case 17957:
+			return 25, "Aptitude (Tier 3)", 18059;
+		case 17958:
+			return 35, "Aptitude (Tier 4)", 18060;
+		case 17959:
+			return 45, "Aptitude (Tier 5)", 18061;
+		case 17960:
+			return 55, "Aptitude (Tier 6)", 18062;
+		case 17961:
+			return 65, "Aptitude (Tier 7)", 18063;
+		case 17962:
+			return 75, "Aptitude (Tier 8)", 18064;
+		case 17963:
+			return 85, "Aptitude (Tier 9)", 18065;
+		case 17964:
+			return 95, "Aptitude (Tier 10)", 18066;
+	}
+	return 5, "Aptitude (Tier 1)", 18057;
+}

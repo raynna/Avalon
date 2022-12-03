@@ -1,0 +1,8 @@
+void script_5150(Widget widget0) {
+	string str0;
+	str0 = "It would be advisable to retrieve items you have dropped and do not wish to lose.";
+	if (ACTIVE.setChild(widget0)) {
+		ACTIVE.setScriptCallOnMouseOver(4538, widget(800, 1), CTX_WIDGET, -1, str0, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+	}
+	return;
+}

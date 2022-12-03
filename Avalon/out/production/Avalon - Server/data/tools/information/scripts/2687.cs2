@@ -1,0 +1,15 @@
+int script_2687() {
+	if (VARP[1447] < 100) {
+		return 10000;
+	}
+	if (VARP[1447] < 200) {
+		return 12500;
+	}
+	if (VARP[1447] < 300) {
+		return 15000;
+	}
+	if (VARP[1447] < 400) {
+		return 17500;
+	}
+	return 20000;
+}

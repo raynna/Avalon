@@ -1,0 +1,4 @@
+void script_2375(Widget widget0, Widget widget1) {
+	script_2377(VARPBIT[6098], widget0, widget1);
+	return;
+}

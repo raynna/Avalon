@@ -1,0 +1,6 @@
+void script_4600(int arg0, string string1) {
+	if (arg0 == 10) {
+		message(27, 0, string1);
+	}
+	return;
+}

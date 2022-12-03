@@ -1,0 +1,10 @@
+void script_3226(Widget widget0, string arg1, int arg2) {
+	if (arg2 == 1) {
+		widget0.setRGB(0x43C800);
+		widget0.setText("<u=43c800>" + arg1 + "</u>");
+	} else {
+		widget0.setRGB(0x339900);
+		widget0.setText("<u=339900>" + arg1 + "</u>");
+	}
+	return;
+}

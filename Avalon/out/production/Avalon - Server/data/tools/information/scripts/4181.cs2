@@ -1,0 +1,13 @@
+void script_4181(Widget widget0, int arg1) {
+	int int2;
+	int2 = 0;
+	if (ACTIVE.setChild(widget0, arg1)) {
+		int2 = ACTIVE.getShadeColor() + 1;
+		if (int2 >= 255) {
+			ACTIVE.deleteChild();
+			return;
+		}
+		ACTIVE.setTrans(int2);
+	}
+	return;
+}

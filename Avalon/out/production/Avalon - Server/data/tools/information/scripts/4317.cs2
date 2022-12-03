@@ -1,0 +1,27 @@
+void script_4317(Widget widget0, int arg1) {
+	int int2;
+	int2 = 0;
+	if (cs2method3751()) {
+		if (arg1 < 0 || arg1 >= cs2method3755()) {
+			VARC[1518] = -1;
+			STRING[126] = "";
+			msg("That person isn't in your clan channel.");
+			return;
+		}
+		if (ACTIVE.setChild(widget0, arg1)) {
+			int2 = ACTIVE.getY();
+		}
+		VARC[1518] = arg1;
+		STRING[126] = cs2method3756(arg1);
+		if (ACTIVE.setChild(widget(1110, 20))) {
+			ACTIVE.setSize(1, 19, 0, 0);
+			ACTIVE.setPosition(0, int2, 2, 0);
+			ACTIVE.setScriptCallOnGameloop(4629, 1, "i");
+			widget(1110, 13).setIsHidden(false);
+			widget(1110, 13).setPosition(0, int2, 2, 0);
+		}
+	} else {
+		msg("You must be in your clan channel to do that.");
+	}
+	return;
+}

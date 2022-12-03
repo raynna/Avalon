@@ -1,0 +1,80 @@
+int, int script_1674(int arg0) {
+	DataMap datamap1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	string str0;
+	datamap1 = (DataMap)836;
+	int2 = 1;
+	int3 = 2;
+	str0 = "";
+	int4 = 0;
+	int5 = 0;
+	str0 = datamap('i', 's', datamap1, 0);
+	ACTIVE.createChild(widget(84, 22), 5, 0);
+	ACTIVE.setSize(17, 17, 0, 0);
+	ACTIVE.setPosition(2, int3, 0, 0);
+	if (arg0 == 0) {
+		ACTIVE.setSprite(699);
+		int4 = int3;
+	} else {
+		ACTIVE.setSprite(697);
+	}
+	_ACTIVE.createChild(widget(84, 22), 4, 1);
+	_ACTIVE.setFont(494);
+	_ACTIVE.setRGB(0xFF981F);
+	_ACTIVE.setTextAlignment(0, 1, 0);
+	_ACTIVE.setSize(23, 16, 1, 0);
+	_ACTIVE.setPosition(0, int3 + 2, 2, 0);
+	_ACTIVE.setText(str0);
+	ACTIVE.createChild(widget(84, 22), 3, 2);
+	ACTIVE.setSize(0, 17, 1, 0);
+	ACTIVE.setPosition(0, int3, 1, 0);
+	ACTIVE.setTrans(255);
+	ACTIVE.setFilled(true);
+	if (arg0 != 0) {
+		ACTIVE.setContextMenuOption(1, str0);
+		ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, _ACTIVE.getChildId(), 16777215, "Iii");
+		ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, _ACTIVE.getChildId(), 16750623, "Iii");
+		ACTIVE.setScriptCallOnClickContextMenu(1676, CTX_MENU_OPTION, 0, arg0, "iii");
+	}
+	int3 = int3 + ACTIVE.getHeight();
+	int5 = 1;
+	while (int2 < datamapSize(datamap1)) {
+		if (isBitFlagged(VARP[617], int2 - 1)) {
+			str0 = datamap('i', 's', datamap1, int2);
+			ACTIVE.createChild(widget(84, 22), 5, int5 * 3);
+			ACTIVE.setSize(17, 17, 0, 0);
+			ACTIVE.setPosition(2, int3, 0, 0);
+			if (int2 == arg0) {
+				ACTIVE.setSprite(699);
+				int4 = int3;
+			} else {
+				ACTIVE.setSprite(697);
+			}
+			_ACTIVE.createChild(widget(84, 22), 4, int5 * 3 + 1);
+			_ACTIVE.setFont(494);
+			_ACTIVE.setRGB(0xFF981F);
+			_ACTIVE.setTextAlignment(0, 1, 0);
+			_ACTIVE.setSize(23, 16, 1, 0);
+			_ACTIVE.setPosition(0, int3 + 2, 2, 0);
+			_ACTIVE.setText(str0);
+			ACTIVE.createChild(widget(84, 22), 3, int5 * 3 + 2);
+			ACTIVE.setSize(0, 17, 1, 0);
+			ACTIVE.setPosition(0, int3, 1, 0);
+			ACTIVE.setTrans(255);
+			ACTIVE.setFilled(true);
+			if (int2 != arg0) {
+				ACTIVE.setContextMenuOption(1, str0);
+				ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, _ACTIVE.getChildId(), 16777215, "Iii");
+				ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, _ACTIVE.getChildId(), 16750623, "Iii");
+				ACTIVE.setScriptCallOnClickContextMenu(1676, CTX_MENU_OPTION, int2, arg0, "iii");
+			}
+			int3 = int3 + ACTIVE.getHeight();
+			int5 = int5 + 1;
+		}
+		int2 = int2 + 1;
+	}
+	return int3, max(int4 - 8, 0);
+}

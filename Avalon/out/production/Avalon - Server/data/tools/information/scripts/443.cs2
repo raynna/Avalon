@@ -1,0 +1,84 @@
+void script_443() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int0 = 5;
+	int1 = 5;
+	int2 = 0;
+	int3 = 0;
+	int4 = 1;
+	int5 = 0;
+	int6 = 1;
+	int7 = 0;
+	int8 = 0;
+	while (int0 < 270) {
+		while (int1 < 200) {
+			ACTIVE.createChild(widget(1022, 19), 5, int2);
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition(int1, int0, 0, 0);
+			if (getItemIdInSlot(583, int2) != null) {
+				ACTIVE.setItem(getItemIdInSlot(583, int2), getItemAmtInSlot(583, int2));
+				ACTIVE.setOptionBase("<col=ff981f>" + getItemName(getItemIdInSlot(583, int2)));
+				ACTIVE.setContextMenuOption(1, "Remove 1");
+				ACTIVE.setContextMenuOption(2, "Remove 5");
+				ACTIVE.setContextMenuOption(3, "Remove 10");
+				ACTIVE.setContextMenuOption(4, "Remove All");
+				ACTIVE.setContextMenuOption(5, "Remove X");
+				ACTIVE.setContextMenuOption(10, "Examine");
+				ACTIVE.setOutlineThickness(1);
+				int3 = int3 + 1;
+				if (int3 > 5) {
+					int4 = int4 + 1;
+					int3 = 1;
+				}
+			}
+			ACTIVE.createChild(widget(1022, 14), 5, int2);
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition(int1, int0, 0, 0);
+			if (getItemIdInInpsectingSlot(583, int2) != null) {
+				ACTIVE.setItem(getItemIdInInpsectingSlot(583, int2), getItemAmtInInspectingSlot(583, int2));
+				ACTIVE.setOptionBase("<col=ff981f>" + getItemName(getItemIdInInpsectingSlot(583, int2)));
+				ACTIVE.setContextMenuOption(1, "Examine");
+				ACTIVE.setOutlineThickness(1);
+				int5 = int5 + 1;
+				if (int5 > 5) {
+					int6 = int6 + 1;
+					int5 = 1;
+				}
+			}
+			int1 = int1 + 40;
+			int2 = int2 + 1;
+		}
+		int0 = int0 + 40;
+		int1 = 5;
+	}
+	int7 = int4 * 40 + 5;
+	if (int7 > widget(1022, 19).getHeight()) {
+		widget(1022, 19).setScrollMax(0, int7);
+		script_31(widget(1022, 20), widget(1022, 19), 2598, 2595, 2596, 2597, 2593, 2594);
+		widget(1022, 19).setPosition(6, widget(1022, 19).getY(), 0, 0);
+	} else {
+		widget(1022, 19).setScrollMax(0, 0);
+		widget(1022, 19).setScrollPos(0, 0);
+		widget(1022, 20).clearChildren();
+		widget(1022, 19).setPosition(16, widget(1022, 19).getY(), 0, 0);
+	}
+	int8 = int6 * 40 + 5;
+	if (int8 > widget(1022, 14).getHeight()) {
+		widget(1022, 14).setScrollMax(0, int8);
+		script_31(widget(1022, 16), widget(1022, 14), 2598, 2595, 2596, 2597, 2593, 2594);
+		widget(1022, 14).setPosition(6, widget(1022, 14).getY(), 0, 0);
+	} else {
+		widget(1022, 14).setScrollMax(0, 0);
+		widget(1022, 14).setScrollPos(0, 0);
+		widget(1022, 16).clearChildren();
+		widget(1022, 14).setPosition(16, widget(1022, 14).getY(), 0, 0);
+	}
+	return;
+}

@@ -1,0 +1,14 @@
+void script_2263(Widget widget0, int arg1, string arg2, string arg3) {
+	if (arg1 != 1) {
+		widget0.setContextMenuOption(1, "Make 1 " + arg3 + "(" + str(arg1) + ") ");
+		widget0.setContextMenuOption(2, "Make 5 " + arg3 + "(" + str(arg1 * 5) + ")");
+		widget0.setContextMenuOption(3, "Make X " + arg3);
+		widget0.setContextMenuOption(4, "Make All " + arg3);
+		return;
+	}
+	widget0.setContextMenuOption(1, "Make 1 " + arg2);
+	widget0.setContextMenuOption(2, "Make 5 " + arg3);
+	widget0.setContextMenuOption(3, "Make X " + arg3);
+	widget0.setContextMenuOption(4, "Make All " + arg3);
+	return;
+}

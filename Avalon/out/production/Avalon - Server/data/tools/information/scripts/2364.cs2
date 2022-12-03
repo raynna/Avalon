@@ -1,0 +1,23 @@
+void script_2364(int arg0) {
+	int int1;
+	int int2;
+	Widget widget3;
+	Widget widget4;
+	int1 = 1;
+	int2 = 0;
+	widget3 = null;
+	widget4 = null;
+	while (int1 < 9) {
+		widget3 = datamap('i', 'I', (DataMap)2352, int1);
+		if (ACTIVE.setChild(widget3)) {
+			int2 = ACTIVE.getAttribute(1224);
+			widget4 = datamap('i', 'I', (DataMap)3308, int2);
+			if (widget(arg0) == widget4) {
+				script_2365(widget3);
+				return;
+			}
+		}
+		int1 = int1 + 1;
+	}
+	return;
+}

@@ -1,0 +1,21 @@
+int script_1470(int arg0) {
+	switch (arg0) {
+		case 2:
+			return 0;
+		case 3:
+			return VARPBIT[4885];
+		case 4:
+			return VARPBIT[4885] + VARPBIT[4886];
+		case 5:
+			return VARPBIT[4885] + VARPBIT[4886] + VARPBIT[4887];
+		case 6:
+			return VARPBIT[4885] + VARPBIT[4886] + VARPBIT[4887] + VARPBIT[4888];
+		case 7:
+			return VARPBIT[4885] + VARPBIT[4886] + VARPBIT[4887] + VARPBIT[4888] + VARPBIT[4889];
+		case 8:
+			return VARPBIT[4885] + VARPBIT[4886] + VARPBIT[4887] + VARPBIT[4888] + VARPBIT[4889] + VARPBIT[4890];
+		case 9:
+			return VARPBIT[4885] + VARPBIT[4886] + VARPBIT[4887] + VARPBIT[4888] + VARPBIT[4889] + VARPBIT[4890] + VARPBIT[4891];
+	}
+	return 0;
+}

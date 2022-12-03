@@ -1,0 +1,13 @@
+void script_5372(Widget widget0, int arg1) {
+	int int2;
+	int int3;
+	int2 = 3;
+	int3 = widget0.getX() + widget0.getWidth() / 2 - widget(951, 14).getWidth() / 2;
+	if (int3 >= arg1) {
+		widget0.setPosition(arg1, widget0.getY(), 1, 0);
+		widget0.setScriptCallOnGameloop(-1, "");
+	} else {
+		widget0.setPosition(int3 + int2, widget0.getY(), 1, 0);
+	}
+	return;
+}

@@ -1,0 +1,7 @@
+void script_1484() {
+	if (VARC[188] == 1) {
+		script_1474();
+	}
+	script_675();
+	return;
+}

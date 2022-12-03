@@ -1,0 +1,5 @@
+void script_1462(int arg0) {
+	datamap('i', 'I', (DataMap)1614, arg0).setIsHidden(true);
+	datamap('i', 'I', (DataMap)1615, arg0).setIsHidden(true);
+	return;
+}

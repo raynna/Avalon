@@ -1,0 +1,4 @@
+void script_2063() {
+	script_2064(VARP[153]);
+	return;
+}

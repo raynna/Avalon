@@ -1,0 +1,7 @@
+void script_214(Widget widget0, int arg1) {
+	Widget widget2;
+	widget2 = widget0.getLayer();
+	widget2.setScriptCallOnConfigChange(1660, widget0, arg1, widget2, 281, 1255, "IiIY");
+	script_1661(widget0, arg1, widget2);
+	return;
+}

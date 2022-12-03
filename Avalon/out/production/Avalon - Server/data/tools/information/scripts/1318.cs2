@@ -1,0 +1,52 @@
+void script_1318(int arg0) {
+	if (arg0 == 17170456) {
+		if (VARC[163] == 0) {
+			widget(262, 24).setModel(18796);
+			VARC[163] = 1;
+		} else {
+			widget(262, 24).setModel(18794);
+			VARC[163] = 0;
+		}
+	} else if (arg0 == 17170457) {
+		if (VARC[164] == 0) {
+			widget(262, 25).setModel(18796);
+			VARC[164] = 1;
+		} else {
+			widget(262, 25).setModel(18794);
+			VARC[164] = 0;
+		}
+	} else if (arg0 == 17170452) {
+		if (VARC[162] == 0) {
+			widget(262, 20).setModel(18796);
+			VARC[162] = 1;
+		} else {
+			widget(262, 20).setModel(18794);
+			VARC[162] = 0;
+		}
+	} else if (arg0 == 17170453) {
+		if (VARC[165] == 0) {
+			widget(262, 21).setModel(18792);
+			VARC[165] = 1;
+		} else {
+			widget(262, 21).setModel(18790);
+			VARC[165] = 0;
+		}
+	} else if (arg0 == 17170454) {
+		if (VARC[166] == 0) {
+			widget(262, 22).setModel(18792);
+			VARC[166] = 1;
+		} else {
+			widget(262, 22).setModel(18790);
+			VARC[166] = 0;
+		}
+	} else if (arg0 == 17170455) {
+		if (VARC[167] == 0) {
+			widget(262, 23).setModel(18792);
+			VARC[167] = 1;
+		} else {
+			widget(262, 23).setModel(18790);
+			VARC[167] = 0;
+		}
+	}
+	return;
+}

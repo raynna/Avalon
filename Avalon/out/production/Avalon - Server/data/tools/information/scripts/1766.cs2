@@ -1,0 +1,210 @@
+void script_1766() {
+	if (VARC[232] == 0) {
+		widget(548, 138).setSprite(1817);
+		widget(746, 24).setSprite(1817);
+		widget(548, 129).setContextMenuOption(1, "Combat Styles");
+		widget(746, 39).setContextMenuOption(1, "Combat Styles");
+	} else if (VARC[232] == 1) {
+		widget(548, 138).setSprite(7710);
+		widget(746, 24).setSprite(7710);
+		widget(548, 129).setContextMenuOption(1, "Props");
+		widget(746, 39).setContextMenuOption(1, "Props");
+	}
+	if (VARC[822] == 0) {
+		script_4089();
+		widget(548, 139).setSprite(1820);
+		widget(746, 131).setSprite(1820);
+		widget(548, 130).setContextMenuOption(1, "Task List");
+		widget(746, 40).setContextMenuOption(1, "Task List");
+	} else if (VARC[822] == 1) {
+		widget(746, 130).setIsHidden(true);
+		widget(548, 137).setIsHidden(true);
+		widget(548, 139).setSprite(1812);
+		widget(746, 131).setSprite(1812);
+		widget(548, 130).setContextMenuOption(1, "Camera");
+		widget(746, 40).setContextMenuOption(1, "Camera");
+	} else if (VARC[822] == 2) {
+		widget(746, 130).setIsHidden(true);
+		widget(548, 137).setIsHidden(true);
+		widget(548, 139).setSprite(7709);
+		widget(746, 131).setSprite(7709);
+		widget(548, 130).setContextMenuOption(1, "Spotlights");
+		widget(746, 40).setContextMenuOption(1, "Spotlights");
+	}
+	switch (VARC[233]) {
+		case 1:
+			widget(548, 140).setSprite(1815);
+			widget(746, 25).setSprite(1815);
+			widget(548, 131).setContextMenuOption(1, "Squad Commands");
+			widget(746, 41).setContextMenuOption(1, "Squad Commands");
+			break;
+		case 2:
+			widget(548, 140).setSprite(7708);
+			widget(746, 25).setSprite(7708);
+			widget(548, 131).setContextMenuOption(1, "Sound Effects");
+			widget(746, 41).setContextMenuOption(1, "Sound Effects");
+			break;
+		case 4:
+			widget(548, 140).setSprite(3248);
+			widget(746, 25).setSprite(3248);
+			widget(548, 131).setContextMenuOption(1, "Turn Options");
+			widget(746, 41).setContextMenuOption(1, "Turn Options");
+			break;
+		case 5:
+			widget(548, 140).setSprite(3248);
+			widget(746, 25).setSprite(3248);
+			widget(548, 131).setContextMenuOption(1, "Command Options");
+			widget(746, 41).setContextMenuOption(1, "Command Options");
+			break;
+		default:
+			widget(548, 140).setSprite(1818);
+			widget(746, 25).setSprite(1818);
+			widget(548, 131).setContextMenuOption(1, "Stats");
+			widget(746, 41).setContextMenuOption(1, "Stats");
+			break;
+	}
+	switch (VARC[234]) {
+		case 1:
+			widget(548, 141).setSprite(1813);
+			widget(746, 26).setSprite(1813);
+			widget(548, 132).setContextMenuOption(1, "Special Units");
+			widget(746, 42).setContextMenuOption(1, "Special Units");
+			break;
+		case 2:
+			widget(548, 141).setSprite(3249);
+			widget(746, 26).setSprite(3249);
+			widget(548, 132).setContextMenuOption(1, "Troop Details");
+			widget(746, 42).setContextMenuOption(1, "Troop Details");
+			break;
+		case 3:
+			widget(548, 141).setSprite(3028);
+			widget(746, 26).setSprite(3028);
+			widget(548, 132).setContextMenuOption(1, "Party organiser");
+			widget(746, 42).setContextMenuOption(1, "Party organiser");
+			break;
+		case 4:
+			widget(548, 141).setSprite(1834);
+			widget(746, 26).setSprite(1834);
+			widget(548, 132).setContextMenuOption(1, "Book");
+			widget(746, 42).setContextMenuOption(1, "Book");
+			break;
+		case 5:
+			widget(548, 141).setSprite(7711);
+			widget(746, 26).setSprite(7711);
+			widget(548, 132).setContextMenuOption(1, "Actors");
+			widget(746, 42).setContextMenuOption(1, "Actors");
+			break;
+		default:
+			widget(548, 141).setSprite(1819);
+			widget(746, 26).setSprite(1819);
+			widget(548, 132).setContextMenuOption(1, "Quest Journals");
+			widget(746, 42).setContextMenuOption(1, "Quest Journals");
+			break;
+	}
+	if (VARC[235] == 0) {
+		widget(548, 142).setSprite(1821);
+		widget(746, 27).setSprite(1821);
+		widget(548, 133).setContextMenuOption(1, "Inventory");
+		widget(746, 43).setContextMenuOption(1, "Inventory");
+	} else if (VARC[235] == 1) {
+		widget(548, 142).setSprite(1814);
+		widget(746, 27).setSprite(1814);
+		widget(548, 133).setContextMenuOption(1, "My Squads");
+		widget(746, 43).setContextMenuOption(1, "My Squads");
+	} else if (VARC[235] == 2) {
+		widget(548, 142).setSprite(3247);
+		widget(746, 27).setSprite(3247);
+		widget(548, 133).setContextMenuOption(1, "Commands");
+		widget(746, 43).setContextMenuOption(1, "Commands");
+	}
+	if (VARC[236] == 0) {
+		widget(548, 143).setSprite(1822);
+		widget(746, 28).setSprite(1822);
+		widget(548, 134).setContextMenuOption(1, "Worn Equipment");
+		widget(746, 44).setContextMenuOption(1, "Worn Equipment");
+	} else if (VARC[236] == 1) {
+		widget(548, 143).setSprite(1833);
+		widget(746, 28).setSprite(1833);
+		widget(548, 134).setContextMenuOption(1, "Acrobat Emotes");
+		widget(746, 44).setContextMenuOption(1, "Acrobat Emotes");
+	} else if (VARC[236] == 2) {
+		widget(548, 143).setSprite(1816);
+		widget(746, 28).setSprite(1816);
+		widget(548, 134).setContextMenuOption(1, "Forfeit");
+		widget(746, 44).setContextMenuOption(1, "Forfeit");
+	} else if (VARC[236] == 3) {
+		widget(548, 143).setSprite(3250);
+		widget(746, 28).setSprite(3250);
+		widget(548, 134).setContextMenuOption(1, "Diplomacy");
+		widget(746, 44).setContextMenuOption(1, "Diplomacy");
+	} else if (VARC[236] == 4) {
+		widget(548, 143).setSprite(3250);
+		widget(746, 28).setSprite(3250);
+		widget(548, 134).setContextMenuOption(1, "Retreat");
+		widget(746, 44).setContextMenuOption(1, "Retreat");
+	}
+	if (VARC[237] == 0) {
+		widget(548, 144).setSprite(1823);
+		widget(746, 29).setSprite(1823);
+	}
+	if (VARC[238] == 0) {
+		widget(548, 145).setSprite(1824);
+		widget(746, 30).setSprite(1824);
+		widget(548, 136).setContextMenuOption(1, "Magic Spellbook");
+		widget(746, 46).setContextMenuOption(1, "Magic Spellbook");
+	}
+	if (VARC[823] != 2) {
+		widget(548, 107).setSprite(null);
+		widget(746, 31).setSprite(null);
+		widget(746, 47).setNoOptions();
+		widget(548, 99).setNoOptions();
+	} else if (VARC[823] == 2) {
+		widget(548, 107).setSprite(447);
+		widget(746, 31).setSprite(447);
+		widget(548, 99).setContextMenuOption(1, "Production");
+		widget(746, 47).setContextMenuOption(1, "Production");
+	}
+	if (VARC[240] == 0) {
+		widget(548, 108).setSprite(6238);
+		widget(746, 32).setSprite(6238);
+	}
+	if (VARC[241] == 0) {
+		widget(548, 109).setSprite(6237);
+		widget(746, 33).setSprite(6237);
+	}
+	if (VARC[242] == 0) {
+		widget(548, 110).setSprite(1828);
+		widget(746, 34).setSprite(1828);
+	}
+	if (VARC[243] == 0) {
+		widget(548, 111).setSprite(1829);
+		widget(746, 35).setSprite(1829);
+	}
+	if (VARC[244] == 0) {
+		widget(548, 112).setSprite(1830);
+		widget(746, 36).setSprite(1830);
+		widget(548, 104).setContextMenuOption(1, "Emotes");
+		widget(746, 52).setContextMenuOption(1, "Emotes");
+	} else if (VARC[244] == 1) {
+		widget(548, 112).setSprite(3247);
+		widget(746, 36).setSprite(3247);
+		widget(548, 104).setContextMenuOption(1, "Special Attacks");
+		widget(746, 52).setContextMenuOption(1, "Special Attacks");
+	}
+	if (VARC[245] == 0) {
+		widget(548, 113).setSprite(1831);
+		widget(746, 37).setSprite(1831);
+		widget(548, 105).setContextMenuOption(1, "Music Player");
+		widget(746, 53).setContextMenuOption(1, "Music Player");
+	} else if (VARC[245] == 1) {
+		widget(548, 113).setSprite(7707);
+		widget(746, 37).setSprite(7707);
+		widget(548, 105).setContextMenuOption(1, "Face Direction");
+		widget(746, 53).setContextMenuOption(1, "Face Direction");
+	}
+	if (VARC[824] == 0) {
+		widget(548, 114).setSprite(1832);
+		widget(746, 38).setSprite(1832);
+	}
+	return;
+}

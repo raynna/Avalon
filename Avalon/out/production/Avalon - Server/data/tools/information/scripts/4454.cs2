@@ -1,0 +1,13 @@
+void script_4454(Widget widget0, int arg1) {
+	if (cs2method3750()) {
+		widget(1110, 52).setScriptCallOnGameloop(-1, "");
+		script_4444(VARC[1506]);
+	} else {
+		widget(1110, 96).setSprite(6256);
+		if (getClientCycle() - arg1 > 200) {
+			script_4445();
+			widget(1110, 52).setScriptCallOnGameloop(4454, widget0, getClientCycle(), "Ii");
+		}
+	}
+	return;
+}

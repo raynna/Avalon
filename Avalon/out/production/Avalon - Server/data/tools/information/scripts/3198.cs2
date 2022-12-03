@@ -1,0 +1,33 @@
+void script_3198(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4) {
+	Widget widget5;
+	int int6;
+	widget5 = null;
+	int6 = 0;
+	widget3.setIsHidden(true);
+	widget0.setText("");
+	widget1.setText("");
+	widget2.setSize(widget2.getWidth(), 300, 0, 0);
+	switch (widget4) {
+		case widget(913, 0):
+			widget5 = widget(906, 64);
+			int6 = 300;
+			break;
+		case widget(914, 0):
+			widget5 = widget(906, 80);
+			int6 = 122;
+			break;
+		case widget(979, 0):
+			widget5 = widget(906, 54);
+			int6 = 303;
+			break;
+		case widget(915, 18):
+			widget5 = widget(906, 72);
+			int6 = 312;
+			break;
+	}
+	if (widget5 != null) {
+		widget5.setSize(widget5.getWidth(), int6, 0, 0);
+		widget4.setSize(widget4.getWidth(), int6, 0, 0);
+	}
+	return;
+}

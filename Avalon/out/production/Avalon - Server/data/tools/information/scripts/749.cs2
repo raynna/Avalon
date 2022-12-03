@@ -1,0 +1,24 @@
+void script_749(int arg0) {
+	if (arg0 == 1) {
+		if (ACTIVE.setChild(widget(18, 29), 0)) {
+			ACTIVE.setSprite(6135);
+		}
+		if (ACTIVE.setChild(widget(18, 29), 1)) {
+			ACTIVE.setSprite(6134);
+		}
+		if (ACTIVE.setChild(widget(18, 29), 2)) {
+			ACTIVE.setSprite(6136);
+		}
+	} else {
+		if (ACTIVE.setChild(widget(18, 29), 0)) {
+			ACTIVE.setSprite(6132);
+		}
+		if (ACTIVE.setChild(widget(18, 29), 1)) {
+			ACTIVE.setSprite(6131);
+		}
+		if (ACTIVE.setChild(widget(18, 29), 2)) {
+			ACTIVE.setSprite(6133);
+		}
+	}
+	return;
+}

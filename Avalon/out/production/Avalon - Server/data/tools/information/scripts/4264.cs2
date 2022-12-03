@@ -1,0 +1,6 @@
+void script_4264(Widget widget0) {
+	widget0.setRGB(0xFF0000);
+	widget0.setScriptCallOnMouseEntered(4265, widget0, 14516095, "Ii");
+	widget0.setScriptCallOnMouseExit(4265, widget0, 16711680, "Ii");
+	return;
+}

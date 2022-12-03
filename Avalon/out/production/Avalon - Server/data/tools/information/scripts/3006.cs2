@@ -1,0 +1,31 @@
+void script_3006(int arg0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, Widget widget7) {
+	widget1.setSize(0, 88, 1, 0);
+	if (widget5.getSpriteId() == 2669) {
+		script_3007(widget1, widget2, widget3, widget4, widget5, widget6, widget7);
+	} else {
+		script_3009(widget1, widget2, widget3, widget4, widget5, widget6, widget7);
+	}
+	switch (arg0) {
+		case 0:
+			widget(907, 4).setPosition(0, 88, 0, 0);
+			widget(907, 5).setPosition(0, 88 + 30, 0, 0);
+			widget(907, 43).setPosition(0, 88 + 30 * 2, 0, 0);
+			break;
+		case 1:
+			widget(907, 4).setPosition(0, 30, 0, 0);
+			widget(907, 5).setPosition(0, 88 + 30, 0, 0);
+			widget(907, 43).setPosition(0, 88 + 30 * 2, 0, 0);
+			break;
+		case 2:
+			widget(907, 4).setPosition(0, 30, 0, 0);
+			widget(907, 5).setPosition(0, 30 * 2, 0, 0);
+			widget(907, 43).setPosition(0, 88 + 30 * 2, 0, 0);
+			break;
+		case 3:
+			widget(907, 4).setPosition(0, 30, 0, 0);
+			widget(907, 5).setPosition(0, 30 * 2, 0, 0);
+			widget(907, 43).setPosition(0, 30 * 3, 0, 0);
+			break;
+	}
+	return;
+}

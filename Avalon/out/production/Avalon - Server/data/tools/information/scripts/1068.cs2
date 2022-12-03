@@ -1,0 +1,40 @@
+void script_1068(Widget widget0, int arg1) {
+	int int2;
+	Widget widget3;
+	Widget widget4;
+	int2 = arg1 + 1;
+	widget3 = datamap('i', 'I', (DataMap)1550, int2);
+	widget4 = datamap('i', 'I', (DataMap)1551, int2);
+	while (widget3 != null) {
+		widget3.clearChildren();
+		widget4.clearChildren();
+		widget3.setIsHidden(true);
+		widget3.setScriptCallOnKeyPress(-1, "");
+		widget3 = datamap('i', 'I', (DataMap)1550, int2);
+		widget4 = datamap('i', 'I', (DataMap)1551, int2);
+		int2 = int2 + 1;
+	}
+	int2 = arg1 + 1;
+	while (ACTIVE.setChild(widget0, int2)) {
+		ACTIVE.deleteChild();
+		if (_ACTIVE.setChild(widget(137, 2), int2)) {
+			_ACTIVE.deleteChild();
+		}
+		int2 = int2 + 1;
+	}
+	int2 = 0;
+	widget3 = datamap('i', 'I', (DataMap)1550, arg1);
+	widget4 = datamap('i', 'I', (DataMap)1551, arg1);
+	while (ACTIVE.setChild(widget3, int2)) {
+		ACTIVE.setScriptCallOnMouseEntered(1082, arg1, widget4, int2, "iIi");
+		ACTIVE.setScriptCallOnMouseExit(1083, arg1, widget4, int2, "iIi");
+		if (_ACTIVE.setChild(widget4, int2)) {
+			_ACTIVE.setHidden(true);
+		}
+		int2 = int2 + 1;
+	}
+	VARC[128] = -1;
+	script_1064(arg1);
+	script_1066(widget0, arg1);
+	return;
+}

@@ -1,0 +1,16 @@
+void script_4988(int arg0) {
+	int int1;
+	int int2;
+	AttrMap attrmap3;
+	AttrMap attrmap4;
+	int1 = -1;
+	int2 = -1;
+	attrmap3 = null;
+	attrmap4 = null;
+	if (citadelConfigsInitialized()) {
+		int1, attrmap3, attrmap4, int2 = script_4957(arg0);
+		script_4981(arg0, int1, attrmap3, attrmap4, int2);
+		script_4937();
+	}
+	return;
+}

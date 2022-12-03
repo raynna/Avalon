@@ -1,0 +1,30 @@
+void script_1249(Widget widget0, Widget widget1, Widget widget2) {
+	int int3;
+	Location location4;
+	Color color5;
+	if (getClientCycle() < VARC[177]) {
+		return;
+	}
+	int3 = VARC[176] % 10;
+	location4 = null;
+	color5 = 0x000000;
+	if (int3 == 0) {
+		widget2.setIsHidden(false);
+		widget2.setScriptCallOnGameloop(-1, "");
+		widget2.setTrans(0);
+		location4, color5 = script_1239(0);
+		cameraMoveTo(location4, 1000, 100, 100);
+		cameraPointAt(location4, 0, 100, 100);
+		VARC[177] = getClientCycle() + 30;
+		VARC[176] = VARC[176] + 2;
+	} else if (int3 == 2) {
+		if (!widget1.isHidden()) {
+			widget1.setScriptCallOnGameloop(1252, widget1, 3, "Ii");
+		}
+		widget2.setScriptCallOnGameloop(1252, widget2, 1, "Ii");
+		location4, color5 = script_1239(1);
+		script_1251(0, widget0, widget1, widget2, color5);
+		widget0.setScriptCallOnGameloop(-1, "");
+	}
+	return;
+}

@@ -1,0 +1,19 @@
+void script_2691(Widget widget0, int arg1, int arg2, int arg3, Color color4, int arg5) {
+	if (arg5 == 1 && ACTIVE.setChild(widget0, arg3)) {
+		ACTIVE.setRGB(color4);
+	}
+	if (ACTIVE.setChild(widget0, arg1)) {
+		if (arg2 == 1) {
+			if (ACTIVE.getSpriteId() == 2554) {
+				ACTIVE.setSprite(2555);
+			} else if (ACTIVE.getSpriteId() == 2556) {
+				ACTIVE.setSprite(2557);
+			}
+		} else if (ACTIVE.getSpriteId() == 2555) {
+			ACTIVE.setSprite(2554);
+		} else if (ACTIVE.getSpriteId() == 2557) {
+			ACTIVE.setSprite(2556);
+		}
+	}
+	return;
+}

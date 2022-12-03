@@ -1,0 +1,16 @@
+void script_2911(boolean boolean0, int arg1, int arg2, int arg3, Widget widget4) {
+	int int5;
+	int5 = 10;
+	arg3 = arg3 + 1;
+	if (!boolean0) {
+		widget4.setSize(widget4.getWidth(), arg1 + arg2 * (int5 - arg3) / int5, 0, 0);
+	} else {
+		widget4.setSize(widget4.getWidth(), arg1 + arg2 * arg3 / int5, 0, 0);
+	}
+	if (arg3 == int5) {
+		widget4.setScriptCallOnGameloop(-1, "");
+	} else {
+		widget4.setScriptCallOnGameloop(2911, boolean0, arg1, arg2, arg3, widget4, "1iiiI");
+	}
+	return;
+}

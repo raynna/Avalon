@@ -1,0 +1,40 @@
+int, string script_942(int arg0) {
+	if (location(VARP[1469]) == datamap('i', 'c', (DataMap)2536, arg0)) {
+		return 0, "null";
+	}
+	switch (arg0) {
+		case 0:
+			return 1, datamap('i', 's', (DataMap)2535, 0);
+		case 1:
+			return 1, datamap('i', 's', (DataMap)2535, 1);
+		case 2:
+			return 1, datamap('i', 's', (DataMap)2535, 2);
+		case 3:
+			return 1, datamap('i', 's', (DataMap)2535, 3);
+		case 4:
+			return 1, datamap('i', 's', (DataMap)2535, 4);
+		case 5:
+			if (VARPBIT[720] == 20) {
+				return 1, datamap('i', 's', (DataMap)2535, 5);
+			}
+			break;
+		case 6:
+			if (VARPBIT[722] == 20) {
+				return 1, datamap('i', 's', (DataMap)2535, 6);
+			}
+			break;
+		case 7:
+			if (VARPBIT[724] == 20) {
+				return 1, datamap('i', 's', (DataMap)2535, 7);
+			}
+			break;
+		case 8:
+			if (VARPBIT[3959] >= 3) {
+				return 1, datamap('i', 's', (DataMap)2535, 8);
+			}
+			break;
+		default:
+			return -1, "null";
+	}
+	return 0, "null";
+}

@@ -1,0 +1,7 @@
+void script_1607() {
+	Animation animation0;
+	animation0 = 12411;
+	widget(549, 54).setAnimation(animation0);
+	widget(549, 54).cs2method2202();
+	return;
+}

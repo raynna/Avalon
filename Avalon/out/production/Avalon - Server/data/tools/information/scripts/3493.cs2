@@ -1,0 +1,24 @@
+void script_3493(int arg0) {
+	switch (arg0) {
+		case 65077384:
+			widget(993, 137).setIsHidden(true);
+			break;
+		case 65077291:
+			widget(993, 44).setIsHidden(true);
+			break;
+		case 65077333:
+			widget(993, 86).setIsHidden(true);
+			break;
+		case 65077526:
+			widget(993, 281).setSprite(2566);
+			widget(993, 282).setSprite(2567);
+			widget(993, 283).setSprite(2566);
+			break;
+		case 65077527:
+			widget(993, 284).setSprite(2566);
+			widget(993, 285).setSprite(2567);
+			widget(993, 286).setSprite(2566);
+			break;
+	}
+	return;
+}

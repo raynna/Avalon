@@ -1,0 +1,46 @@
+void script_4420() {
+	widget(1107, 60).setText("Event");
+	widget(1107, 58).setIsHidden(false);
+	widget(1107, 59).setIsHidden(false);
+	switch (CLANDEF113[130]) {
+		case 1:
+			script_4421(widget(1107, 50), widget(1107, 51), CLANDEF113[98], CLANDEF113[106], CLANDEF113[82], CLANDEF113[90], CLANDEF113[74], CLANDEF113[114], CLANDEF112[65], CLANDEF113[132], CLANDEF_LONG114[122]);
+			break;
+		case 2:
+			script_4421(widget(1107, 50), widget(1107, 51), CLANDEF113[99], CLANDEF113[107], CLANDEF113[83], CLANDEF113[91], CLANDEF113[75], CLANDEF113[115], CLANDEF112[66], CLANDEF113[133], CLANDEF_LONG114[123]);
+			break;
+		case 3:
+			script_4421(widget(1107, 50), widget(1107, 51), CLANDEF113[100], CLANDEF113[108], CLANDEF113[84], CLANDEF113[92], CLANDEF113[76], CLANDEF113[116], CLANDEF112[67], CLANDEF113[134], CLANDEF_LONG114[124]);
+			break;
+		case 4:
+			script_4421(widget(1107, 50), widget(1107, 51), CLANDEF113[101], CLANDEF113[109], CLANDEF113[85], CLANDEF113[93], CLANDEF113[77], CLANDEF113[117], CLANDEF112[68], CLANDEF113[135], CLANDEF_LONG114[125]);
+			break;
+		case 5:
+			script_4421(widget(1107, 50), widget(1107, 51), CLANDEF113[102], CLANDEF113[110], CLANDEF113[86], CLANDEF113[94], CLANDEF113[78], CLANDEF113[118], CLANDEF112[69], CLANDEF113[136], CLANDEF_LONG114[126]);
+			break;
+		case 6:
+			script_4421(widget(1107, 50), widget(1107, 51), CLANDEF113[103], CLANDEF113[111], CLANDEF113[87], CLANDEF113[95], CLANDEF113[79], CLANDEF113[119], CLANDEF112[70], CLANDEF113[137], CLANDEF_LONG114[127]);
+			break;
+		case 7:
+			script_4421(widget(1107, 50), widget(1107, 51), CLANDEF113[104], CLANDEF113[112], CLANDEF113[88], CLANDEF113[96], CLANDEF113[80], CLANDEF113[120], CLANDEF112[71], CLANDEF113[138], CLANDEF_LONG114[128]);
+			break;
+		case 8:
+			script_4421(widget(1107, 50), widget(1107, 51), CLANDEF113[105], CLANDEF113[113], CLANDEF113[89], CLANDEF113[97], CLANDEF113[81], CLANDEF113[121], CLANDEF112[72], CLANDEF113[139], CLANDEF_LONG114[129]);
+			break;
+		default:
+			widget(1107, 54).setScriptCallOnMouseEntered(-1, "");
+			widget(1107, 54).setScriptCallOnMouseExit(-1, "");
+			widget(1107, 56).setScriptCallOnMouseEntered(-1, "");
+			widget(1107, 55).setScriptCallOnMouseExit(-1, "");
+			widget(1107, 56).setScriptCallOnMouseEntered(-1, "");
+			widget(1107, 56).setScriptCallOnMouseExit(-1, "");
+			widget(1107, 60).setText("Events (none)");
+			widget(1107, 58).setIsHidden(true);
+			widget(1107, 59).setIsHidden(true);
+			widget(1107, 50).setText("");
+			widget(1107, 51).setText("");
+			widget(1107, 57).setScriptCallOnMousePressed(-1, "");
+			break;
+	}
+	return;
+}

@@ -1,0 +1,10 @@
+void script_1594(Widget widget0, Widget widget1, int arg2, string string3, int arg4, int arg5) {
+	if (ACTIVE.setChild(widget1, arg2) || arg2 == -1 && ACTIVE.setChild(widget1)) {
+		if (script_1744() < 3 * 5 / 261) {
+			script_4539(widget0, widget1, arg2, string3, 120, 3793, 3793, 0xFFFFFF, 13, 4, 2, arg4, arg5);
+		} else {
+			script_4539(widget0, widget1, arg2, string3, 120, 3793, 3793, 0xFFFFFF, 13, 4, 0, arg4, arg5);
+		}
+	}
+	return;
+}

@@ -1,0 +1,28 @@
+void script_3284(int arg0, Widget widget1, Widget widget2, Widget widget3) {
+	int int4;
+	int4 = 61 + 10 * (arg0 - 1);
+	playSoundEffect(8809, 1, 0);
+	widget1.setPosition(0, int4, 0, 0);
+	widget2.setText(str(arg0));
+	switch (datamap('i', 'i', (DataMap)1264, arg0)) {
+		case 1:
+			widget3.setText("Frozen");
+			break;
+		case 2:
+			widget3.setText("Abandoned");
+			break;
+		case 3:
+			widget3.setText("Furnished");
+			break;
+		case 4:
+			widget3.setText("Occult");
+			break;
+		case 5:
+			widget3.setText("Warped");
+			break;
+		default:
+			widget3.setText("Dungeon");
+			break;
+	}
+	return;
+}

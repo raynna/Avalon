@@ -1,0 +1,39 @@
+void script_4114() {
+	Item item0;
+	string str0;
+	string str1;
+	script_662(0);
+	script_662(1);
+	script_662(2);
+	script_662(3);
+	script_662(4);
+	script_662(5);
+	item0 = getItemIdInSlot(540, 0);
+	if (item0 == null) {
+		widget(109, 45).setIsHidden(true);
+		widget(109, 1).setSize(widget(109, 1).getWidth(), 225, 0, 0);
+		widget(109, 0).setSize(widget(109, 1).getWidth(), 225, 0, 0);
+		return;
+	}
+	widget(109, 45).setIsHidden(false);
+	widget(109, 1).setSize(widget(109, 1).getWidth(), 305, 0, 0);
+	widget(109, 0).setSize(widget(109, 1).getWidth(), 305, 0, 0);
+	widget(109, 58).setItem(item0, -1);
+	widget(109, 58).setOptionBase("<col=ff9040>" + getItemName(item0) + "</col>");
+	str0 = "Lent item";
+	str1 = "Still on loan";
+	widget(109, 57).setText(str0);
+	if (VARP[1267] != -1 || VARP[1269] > 0) {
+		widget(109, 58).setTrans(200);
+		widget(109, 59).setRGB(0xFF0000);
+		widget(109, 58).setContextMenuOption(1, "Demand");
+	} else {
+		widget(109, 58).setTrans(0);
+		widget(109, 59).setRGB(0x00DF00);
+		str1 = "Available";
+		widget(109, 58).setContextMenuOption(1, "Reclaim");
+	}
+	widget(109, 59).setText(str1);
+	widget(109, 45).setSize(max(max(getTextWidth(str0, 495), getTextWidth(str1, 494)), widget(109, 58).getWidth()) + 30, widget(109, 45).getHeight(), 0, 0);
+	return;
+}

@@ -1,0 +1,9 @@
+void script_1208(Widget widget0, Widget widget1, int arg2, int arg3) {
+	if (arg3 == 1) {
+		widget1.setScrollMax(0, arg2 + widget1.getHeight());
+	} else {
+		widget1.setScrollMax(0, arg2);
+	}
+	script_72(widget0, widget1, widget1.getScrollY());
+	return;
+}

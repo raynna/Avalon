@@ -1,0 +1,10 @@
+void script_4397(int arg0, Widget widget1) {
+	if (ACTIVE.setChild(widget1, arg0)) {
+		if (widget1 == widget(1105, 65) && VARPBIT[9086] - 1 == arg0 || widget1 == widget(1105, 62) && VARPBIT[9087] - 1 == arg0) {
+			ACTIVE.setSprite(5526);
+		} else {
+			ACTIVE.setSprite(5523);
+		}
+	}
+	return;
+}

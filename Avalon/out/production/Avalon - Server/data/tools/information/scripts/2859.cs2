@@ -1,0 +1,9 @@
+void script_2859() {
+	if (VARC[1069] >= 100) {
+		VARC[1069] = VARC[1069] - 50;
+	}
+	if (VARC[1073] > VARC[1069]) {
+		VARC[1073] = VARC[1069];
+	}
+	return;
+}

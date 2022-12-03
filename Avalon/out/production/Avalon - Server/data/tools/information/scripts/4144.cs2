@@ -1,0 +1,16 @@
+void script_4144(Widget widget0, Widget widget1, Widget widget2) {
+	int int3;
+	int3 = getLineCount(STRING[343], widget1.getWidth(), 495) * 12 + 5;
+	widget1.setSize(0, int3, 1, 0);
+	widget0.setScrollMax(0, int3);
+	widget0.setScrollPos(0, 0);
+	widget1.setText(STRING[343]);
+	if (int3 <= widget0.getHeight()) {
+		widget2.clearChildren();
+		widget2.setIsHidden(true);
+		return;
+	}
+	widget2.setIsHidden(false);
+	script_31(widget2, widget0, 798, 795, 796, 797, 793, 794);
+	return;
+}

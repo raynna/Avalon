@@ -1,0 +1,127 @@
+int script_2721(int arg0) {
+	int int1;
+	int1 = -1;
+	switch (arg0) {
+		case 0:
+			int1 = VARC[946];
+			break;
+		case 1:
+			int1 = VARC[947];
+			break;
+		case 2:
+			int1 = VARC[948];
+			break;
+		case 3:
+			int1 = VARC[949];
+			break;
+		case 4:
+			int1 = VARC[950];
+			break;
+		case 5:
+			int1 = VARC[951];
+			break;
+		case 6:
+			int1 = VARC[952];
+			break;
+		case 7:
+			int1 = VARC[953];
+			break;
+		case 8:
+			int1 = VARC[954];
+			break;
+		case 9:
+			int1 = VARC[955];
+			break;
+		case 10:
+			int1 = VARC[956];
+			break;
+		case 11:
+			int1 = VARC[957];
+			break;
+		case 12:
+			int1 = VARC[958];
+			break;
+		case 13:
+			int1 = VARC[959];
+			break;
+		case 14:
+			int1 = VARC[960];
+			break;
+		case 15:
+			int1 = VARC[961];
+			break;
+		case 16:
+			int1 = VARC[962];
+			break;
+		case 17:
+			int1 = VARC[963];
+			break;
+		case 18:
+			int1 = VARC[964];
+			break;
+		case 19:
+			int1 = VARC[965];
+			break;
+		case 20:
+			int1 = VARC[966];
+			break;
+		case 21:
+			int1 = VARC[967];
+			break;
+		case 22:
+			int1 = VARC[968];
+			break;
+		case 23:
+			int1 = VARC[969];
+			break;
+		case 24:
+			int1 = VARC[970];
+			break;
+		case 25:
+			int1 = VARC[971];
+			break;
+		case 26:
+			int1 = VARC[972];
+			break;
+		case 27:
+			int1 = VARC[973];
+			break;
+		case 28:
+			int1 = VARC[974];
+			break;
+		case 29:
+			int1 = VARC[975];
+			break;
+		case 30:
+			int1 = VARC[976];
+			break;
+		case 31:
+			int1 = VARC[977];
+			break;
+		case 32:
+			int1 = VARC[978];
+			break;
+		case 33:
+			int1 = VARC[979];
+			break;
+		case 34:
+			int1 = VARC[980];
+			break;
+		case 35:
+			int1 = VARC[981];
+			break;
+		case 36:
+			int1 = VARC[982];
+			break;
+		case 37:
+			int1 = VARC[983];
+			break;
+		case 38:
+			int1 = VARC[984];
+			break;
+		case 39:
+			int1 = VARC[985];
+			break;
+	}
+	return int1;
+}

@@ -1,0 +1,245 @@
+void script_4982(AttrMap attrmap0, AttrMap attrmap1, int arg2, int arg3, int arg4) {
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	int int23;
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int10 = 0;
+	int11 = 0;
+	int12 = 0;
+	int13 = 0;
+	int14 = 0;
+	int15 = 0;
+	int16 = 0;
+	int17 = 0;
+	int18 = 0;
+	int19 = 0;
+	int20 = 0;
+	int21 = 0;
+	int22 = 0;
+	int23 = arg2 - arg4;
+	int23 = max(int23, 0);
+	if (citadelConfigsInitialized()) {
+		switch (arg2) {
+			case 0:
+				int17 = getAttributeMapValue(attrmap0, 1483);
+				int18 = getAttributeMapValue(attrmap0, 1490);
+				int19 = getAttributeMapValue(attrmap0, 1497);
+				int20 = getAttributeMapValue(attrmap0, 1504);
+				int21 = getAttributeMapValue(attrmap0, 1511);
+				int22 = getAttributeMapValue(attrmap0, 1518);
+				break;
+			case 1:
+				int17 = getAttributeMapValue(attrmap0, 1484);
+				int18 = getAttributeMapValue(attrmap0, 1491);
+				int19 = getAttributeMapValue(attrmap0, 1498);
+				int20 = getAttributeMapValue(attrmap0, 1505);
+				int21 = getAttributeMapValue(attrmap0, 1512);
+				int22 = getAttributeMapValue(attrmap0, 1519);
+				break;
+			case 2:
+				int17 = getAttributeMapValue(attrmap0, 1485);
+				int18 = getAttributeMapValue(attrmap0, 1492);
+				int19 = getAttributeMapValue(attrmap0, 1499);
+				int20 = getAttributeMapValue(attrmap0, 1506);
+				int21 = getAttributeMapValue(attrmap0, 1513);
+				int22 = getAttributeMapValue(attrmap0, 1520);
+				break;
+			case 3:
+				int17 = getAttributeMapValue(attrmap0, 1486);
+				int18 = getAttributeMapValue(attrmap0, 1493);
+				int19 = getAttributeMapValue(attrmap0, 1500);
+				int20 = getAttributeMapValue(attrmap0, 1507);
+				int21 = getAttributeMapValue(attrmap0, 1514);
+				int22 = getAttributeMapValue(attrmap0, 1521);
+				break;
+			case 4:
+				int17 = getAttributeMapValue(attrmap0, 1487);
+				int18 = getAttributeMapValue(attrmap0, 1494);
+				int19 = getAttributeMapValue(attrmap0, 1501);
+				int20 = getAttributeMapValue(attrmap0, 1508);
+				int21 = getAttributeMapValue(attrmap0, 1515);
+				int22 = getAttributeMapValue(attrmap0, 1522);
+				break;
+			case 5:
+				int17 = getAttributeMapValue(attrmap0, 1488);
+				int18 = getAttributeMapValue(attrmap0, 1495);
+				int19 = getAttributeMapValue(attrmap0, 1502);
+				int20 = getAttributeMapValue(attrmap0, 1509);
+				int21 = getAttributeMapValue(attrmap0, 1516);
+				int22 = getAttributeMapValue(attrmap0, 1523);
+				break;
+			case 6:
+				int17 = getAttributeMapValue(attrmap0, 1489);
+				int18 = getAttributeMapValue(attrmap0, 1496);
+				int19 = getAttributeMapValue(attrmap0, 1503);
+				int20 = getAttributeMapValue(attrmap0, 1510);
+				int21 = getAttributeMapValue(attrmap0, 1517);
+				int22 = getAttributeMapValue(attrmap0, 1524);
+				break;
+		}
+		switch (arg2) {
+			case 1:
+				int5 = getAttributeMapValue(attrmap1, 1483);
+				int6 = getAttributeMapValue(attrmap1, 1490);
+				int7 = getAttributeMapValue(attrmap1, 1497);
+				int8 = getAttributeMapValue(attrmap1, 1504);
+				int9 = getAttributeMapValue(attrmap1, 1511);
+				int10 = getAttributeMapValue(attrmap1, 1518);
+				break;
+			case 2:
+				int5 = getAttributeMapValue(attrmap1, 1484);
+				int6 = getAttributeMapValue(attrmap1, 1491);
+				int7 = getAttributeMapValue(attrmap1, 1498);
+				int8 = getAttributeMapValue(attrmap1, 1505);
+				int9 = getAttributeMapValue(attrmap1, 1512);
+				int10 = getAttributeMapValue(attrmap1, 1519);
+				break;
+			case 3:
+				int5 = getAttributeMapValue(attrmap1, 1485);
+				int6 = getAttributeMapValue(attrmap1, 1492);
+				int7 = getAttributeMapValue(attrmap1, 1499);
+				int8 = getAttributeMapValue(attrmap1, 1506);
+				int9 = getAttributeMapValue(attrmap1, 1513);
+				int10 = getAttributeMapValue(attrmap1, 1520);
+				break;
+			case 4:
+				int5 = getAttributeMapValue(attrmap1, 1486);
+				int6 = getAttributeMapValue(attrmap1, 1493);
+				int7 = getAttributeMapValue(attrmap1, 1500);
+				int8 = getAttributeMapValue(attrmap1, 1507);
+				int9 = getAttributeMapValue(attrmap1, 1514);
+				int10 = getAttributeMapValue(attrmap1, 1521);
+				break;
+			case 5:
+				int5 = getAttributeMapValue(attrmap1, 1487);
+				int6 = getAttributeMapValue(attrmap1, 1494);
+				int7 = getAttributeMapValue(attrmap1, 1501);
+				int8 = getAttributeMapValue(attrmap1, 1508);
+				int9 = getAttributeMapValue(attrmap1, 1515);
+				int10 = getAttributeMapValue(attrmap1, 1522);
+				break;
+			case 6:
+				int5 = getAttributeMapValue(attrmap1, 1488);
+				int6 = getAttributeMapValue(attrmap1, 1495);
+				int7 = getAttributeMapValue(attrmap1, 1502);
+				int8 = getAttributeMapValue(attrmap1, 1509);
+				int9 = getAttributeMapValue(attrmap1, 1516);
+				int10 = getAttributeMapValue(attrmap1, 1523);
+				break;
+			case 7:
+				int5 = getAttributeMapValue(attrmap1, 1489);
+				int6 = getAttributeMapValue(attrmap1, 1496);
+				int7 = getAttributeMapValue(attrmap1, 1503);
+				int8 = getAttributeMapValue(attrmap1, 1510);
+				int9 = getAttributeMapValue(attrmap1, 1517);
+				int10 = getAttributeMapValue(attrmap1, 1524);
+				break;
+		}
+		if (int23 > 0) {
+			switch (int23) {
+				case 1:
+					int11 = getAttributeMapValue(attrmap1, 1483);
+					int12 = getAttributeMapValue(attrmap1, 1490);
+					int13 = getAttributeMapValue(attrmap1, 1497);
+					int14 = getAttributeMapValue(attrmap1, 1504);
+					int15 = getAttributeMapValue(attrmap1, 1511);
+					int16 = getAttributeMapValue(attrmap1, 1518);
+					break;
+				case 2:
+					int11 = getAttributeMapValue(attrmap1, 1484);
+					int12 = getAttributeMapValue(attrmap1, 1491);
+					int13 = getAttributeMapValue(attrmap1, 1498);
+					int14 = getAttributeMapValue(attrmap1, 1505);
+					int15 = getAttributeMapValue(attrmap1, 1512);
+					int16 = getAttributeMapValue(attrmap1, 1519);
+					break;
+				case 3:
+					int11 = getAttributeMapValue(attrmap1, 1485);
+					int12 = getAttributeMapValue(attrmap1, 1492);
+					int13 = getAttributeMapValue(attrmap1, 1499);
+					int14 = getAttributeMapValue(attrmap1, 1506);
+					int15 = getAttributeMapValue(attrmap1, 1513);
+					int16 = getAttributeMapValue(attrmap1, 1520);
+					break;
+				case 4:
+					int11 = getAttributeMapValue(attrmap1, 1486);
+					int12 = getAttributeMapValue(attrmap1, 1493);
+					int13 = getAttributeMapValue(attrmap1, 1500);
+					int14 = getAttributeMapValue(attrmap1, 1507);
+					int15 = getAttributeMapValue(attrmap1, 1514);
+					int16 = getAttributeMapValue(attrmap1, 1521);
+					break;
+				case 5:
+					int11 = getAttributeMapValue(attrmap1, 1487);
+					int12 = getAttributeMapValue(attrmap1, 1494);
+					int13 = getAttributeMapValue(attrmap1, 1501);
+					int14 = getAttributeMapValue(attrmap1, 1508);
+					int15 = getAttributeMapValue(attrmap1, 1515);
+					int16 = getAttributeMapValue(attrmap1, 1522);
+					break;
+				case 6:
+					int11 = getAttributeMapValue(attrmap1, 1488);
+					int12 = getAttributeMapValue(attrmap1, 1495);
+					int13 = getAttributeMapValue(attrmap1, 1502);
+					int14 = getAttributeMapValue(attrmap1, 1509);
+					int15 = getAttributeMapValue(attrmap1, 1516);
+					int16 = getAttributeMapValue(attrmap1, 1523);
+					break;
+			}
+		} else {
+			int11 = 0;
+			int12 = 0;
+			int13 = 0;
+			int14 = 0;
+			int15 = 0;
+			int16 = 0;
+		}
+		if (arg3 == 1 && arg2 == 1) {
+			int5 = int5 * 2;
+			int6 = int6 * 2;
+			int7 = int7 * 2;
+			int8 = int8 * 2;
+			int9 = int9 * 2;
+			int10 = int10 * 2;
+		}
+		widget(1092, 477).setText(str(int5));
+		widget(1092, 484).setText(str(int6));
+		widget(1092, 491).setText(str(int7));
+		widget(1092, 498).setText(str(int8));
+		widget(1092, 505).setText(str(int9));
+		widget(1092, 513).setText(str(int10));
+		widget(1092, 610).setText(str(int17));
+		widget(1092, 618).setText(str(int18));
+		widget(1092, 626).setText(str(int19));
+		widget(1092, 634).setText(str(int20));
+		widget(1092, 644).setText(str(int21));
+		widget(1092, 651).setText(str(int22));
+		widget(1092, 660).setText(str(int11));
+		widget(1092, 668).setText(str(int12));
+		widget(1092, 676).setText(str(int13));
+		widget(1092, 684).setText(str(int14));
+		widget(1092, 694).setText(str(int15));
+		widget(1092, 701).setText(str(int16));
+	}
+	return;
+}

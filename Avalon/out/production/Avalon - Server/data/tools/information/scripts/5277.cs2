@@ -1,0 +1,7 @@
+void script_5277(Widget widget0) {
+	script_5279(widget0);
+	widget0.setScriptCallOnConfigChange(5278, widget0, 1734, "IY");
+	script_5291();
+	widget0.getLayer().setScriptCallOnConfigChange(5290, 2387, "Y");
+	return;
+}

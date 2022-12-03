@@ -1,0 +1,11 @@
+void script_2004(Widget widget0, Widget widget1) {
+	int int2;
+	int2 = cs2method6143();
+	if (int2 == 0 && VARC[1394] > 0 && VARC[1394] <= 255) {
+		cs2method6038(VARC[1394]);
+	} else if (int2 > 0) {
+		cs2method6038(0);
+	}
+	script_2007(widget0, widget1, 0, 1);
+	return;
+}

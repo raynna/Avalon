@@ -1,0 +1,67 @@
+void script_2707(Widget widget0, int arg1, Widget widget2, string string3, int arg4, int arg5, int arg6, int arg7) {
+	int int7;
+	int int8;
+	Widget widget9;
+	if (widget0 == null || widget2 == null || compare(string3, "") == 0) {
+		return;
+	}
+	if (VARC[1] < getClientCycle() + arg4) {
+		if (VARC[1] < getClientCycle()) {
+			VARC[1] = getClientCycle();
+		}
+		VARC[1] = VARC[1] + 2;
+		return;
+	}
+	if (ACTIVE.setChild(widget0, arg1)) {
+		arg6 = arg6 + script_1743();
+		arg7 = arg7 + script_1744();
+	}
+	VARC[1] = getClientCycle() + arg4 + 10;
+	int7 = 0;
+	int8 = 0;
+	widget9 = null;
+	if (VARC[2] != 1) {
+		widget9 = widget2.getLayer();
+		if (widget9 != null && arg5 >= widget9.getWidth()) {
+			arg5 = widget9.getWidth();
+		}
+		int7 = 6 + getMaxLineWidth(string3, arg5 - 6, 495);
+		int8 = 6 + 16 * getLineCount(string3, arg5 - 6, 495);
+		widget2.setSize(int7, int8, 0, 0);
+		arg6 = arg6 - 5 - int7;
+		arg7 = arg7 - 3 - int8;
+		if (widget9 != null) {
+			if (arg6 + int7 > widget9.getWidth()) {
+				arg6 = widget9.getWidth() - int7;
+			}
+			if (arg7 + int8 > widget9.getHeight()) {
+				arg7 = widget9.getHeight() - int8;
+			}
+		}
+		if (arg6 < 0) {
+			arg6 = 0;
+		}
+		if (arg7 < 0) {
+			arg7 = 0;
+		}
+		widget2.setPosition(arg6, arg7, 0, 0);
+		widget2.clearChildren();
+		ACTIVE.createChild(widget2, 3, 0);
+		ACTIVE.setSize(int7, int8, 0, 0);
+		ACTIVE.setFilled(true);
+		ACTIVE.setRGB(0xFFFFA0);
+		ACTIVE.createChild(widget2, 3, 1);
+		ACTIVE.setSize(int7, int8, 0, 0);
+		ACTIVE.setFilled(false);
+		ACTIVE.setRGB(0x000000);
+		ACTIVE.createChild(widget2, 4, 2);
+		ACTIVE.setSize(arg5 - 6, int8, 0, 0);
+		ACTIVE.setPosition(0, 0, 1, 1);
+		ACTIVE.setText(string3);
+		ACTIVE.setTextAlignment(1, 1, 16);
+		ACTIVE.setFont(495);
+		ACTIVE.setRGB(0x000000);
+		VARC[2] = 1;
+	}
+	return;
+}

@@ -1,0 +1,32 @@
+void script_5228(int arg0) {
+	int int1;
+	Widget widget2;
+	Widget widget3;
+	int int4;
+	string str0;
+	int1 = 0;
+	str0 = "";
+	widget2 = widget(script_4969(arg0));
+	widget3 = null;
+	int4 = 2;
+	if (widget2 == null) {
+		return;
+	}
+	if (citadelConfigsInitialized()) {
+		int1 = script_4949(arg0);
+		if (int1 > 0) {
+			str0 = "Teleport to the " + datamap('i', 's', (DataMap)4287, int1) + " skill plot.";
+			widget3 = widget2.getParentLayer();
+			if (widget2.getY() > widget3.getHeight() / 2) {
+				int4 = 0;
+			}
+			widget2.setScriptCallOnMouseOver(4538, widget(1092, 327), widget2, -1, str0, 120, 3793, 3793, 16777215, 13, 4, int4, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget2.setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+			widget2.setContextMenuOption(1, "Teleport to " + datamap('i', 's', (DataMap)4287, int1));
+			return;
+		}
+	}
+	widget2.setScriptCallOnMouseOver(-1, "");
+	widget2.setScriptCallOnMouseExit(-1, "");
+	return;
+}

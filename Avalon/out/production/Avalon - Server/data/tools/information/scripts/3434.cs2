@@ -1,0 +1,23 @@
+void script_3434(int arg0) {
+	if (VARC[1280] == 1) {
+		return;
+	}
+	if (VARC[1278] != arg0) {
+		playSoundEffect(9439, 1, 0);
+	}
+	VARC[1278] = arg0;
+	widget(54, 16).setSprite(1134);
+	widget(54, 17).setSprite(1134);
+	widget(54, 18).setSprite(1134);
+	if (VARC[1278] == 1) {
+		widget(54, 16).setSprite(1135);
+	} else if (VARC[1278] == 2) {
+		widget(54, 17).setSprite(1135);
+	} else if (VARC[1278] == 3) {
+		widget(54, 18).setSprite(1135);
+	} else {
+		VARC[1278] = 1;
+		widget(54, 16).setSprite(1135);
+	}
+	return;
+}

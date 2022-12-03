@@ -1,0 +1,27 @@
+void script_60() {
+	int int0;
+	int int1;
+	int int2;
+	int0 = 3;
+	int1 = 5;
+	int2 = 0;
+	while (int0 < 255) {
+		while (int1 < 235) {
+			ACTIVE.createChild(widget(260, 42), 5, int2);
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition(int1, int0, 0, 0);
+			if (getItemIdInSlot(514, int2) != null) {
+				ACTIVE.setItem(getItemIdInSlot(514, int2), getItemAmtInSlot(514, int2));
+				ACTIVE.setOptionBase(getItemName(getItemIdInSlot(514, int2)));
+				ACTIVE.setContextMenuOption(1, "Withdraw");
+				ACTIVE.setShadowColor(0x111111);
+				ACTIVE.setOutlineThickness(1);
+			}
+			int1 = int1 + 40;
+			int2 = int2 + 1;
+		}
+		int0 = int0 + 44;
+		int1 = 5;
+	}
+	return;
+}

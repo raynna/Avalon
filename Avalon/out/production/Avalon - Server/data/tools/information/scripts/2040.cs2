@@ -1,0 +1,8 @@
+void script_2040(Widget widget0) {
+	if (VARPBIT[949] == 0) {
+		widget0.setText("Coal to add: " + str(VARPBIT[940]));
+	} else {
+		widget0.setText("Coal in furnace: " + str(VARPBIT[949]));
+	}
+	return;
+}

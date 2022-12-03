@@ -1,0 +1,94 @@
+void script_2570() {
+	int int0;
+	int int1;
+	Item item2;
+	int0 = 0;
+	int1 = 0;
+	item2 = null;
+	VARC[930] = -1;
+	VARC[931] = -1;
+	VARC[932] = -1;
+	VARC[933] = -1;
+	VARC[934] = -1;
+	VARC[935] = -1;
+	VARC[936] = -1;
+	VARC[937] = -1;
+	VARC[938] = -1;
+	VARC[939] = -1;
+	if (VARPBIT[6429] > 0 && VARPBIT[6429] < 11) {
+		VARC[929] = VARPBIT[6429] - 1;
+	} else {
+		VARC[929] = 0;
+	}
+	while (int1 < 10 && int0 < 28) {
+		item2 = getItemIdInSlot(93, int0);
+		if (itemAttribute(item2, 802) == 1 || itemAttribute(item2, 803) == 1) {
+			datamap('i', 'I', (DataMap)2423, int1).setText("Squad " + str(int1 + 1));
+			if (itemAttribute(item2, 806) == 0) {
+				datamap('i', 'I', (DataMap)2427, int1).setSprite(2023);
+			} else if (itemAttribute(item2, 806) == 1) {
+				datamap('i', 'I', (DataMap)2427, int1).setSprite(2022);
+			}
+			if (itemAttribute(item2, 805) == 1) {
+				datamap('i', 'I', (DataMap)2426, int1).setSprite(2016);
+			} else if (itemAttribute(item2, 805) == 2) {
+				datamap('i', 'I', (DataMap)2426, int1).setSprite(2018);
+			} else if (itemAttribute(item2, 805) == 3) {
+				datamap('i', 'I', (DataMap)2426, int1).setSprite(2017);
+			}
+			if (itemAttribute(item2, 803) == 1) {
+				datamap('i', 'I', (DataMap)2429, int1).setRGB(0xCC0000);
+			} else {
+				datamap('i', 'I', (DataMap)2429, int1).setRGB(0x000000);
+			}
+			switch (int1) {
+				case 0:
+					VARC[930] = int0;
+					break;
+				case 1:
+					VARC[931] = int0;
+					break;
+				case 2:
+					VARC[932] = int0;
+					break;
+				case 3:
+					VARC[933] = int0;
+					break;
+				case 4:
+					VARC[934] = int0;
+					break;
+				case 5:
+					VARC[935] = int0;
+					break;
+				case 6:
+					VARC[936] = int0;
+					break;
+				case 7:
+					VARC[937] = int0;
+					break;
+				case 8:
+					VARC[938] = int0;
+					break;
+				case 9:
+					VARC[939] = int0;
+					break;
+			}
+			int1 = int1 + 1;
+		}
+		int0 = int0 + 1;
+	}
+	if (int1 < 10) {
+		while (int1 < 10) {
+			datamap('i', 'I', (DataMap)2423, int1).setText("No squad");
+			datamap('i', 'I', (DataMap)2424, int1).setText("");
+			datamap('i', 'I', (DataMap)2427, int1).setSprite(null);
+			datamap('i', 'I', (DataMap)2426, int1).setSprite(null);
+			datamap('i', 'I', (DataMap)2422, int1).setScriptCallOnClickContextMenu(-1, "");
+			datamap('i', 'I', (DataMap)2422, int1).setNoOptions();
+			int1 = int1 + 1;
+		}
+	}
+	script_2599();
+	script_2573();
+	return;
+}

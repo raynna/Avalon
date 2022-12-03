@@ -1,0 +1,20 @@
+void script_5070(int arg0, int arg1, boolean arg2) {
+	if (arg0 != 1 || datamap('i', 'J', (DataMap)3943, arg1) == null) {
+		return;
+	}
+	playSoundEffect2False(6185, 1, 0, 200);
+	if (arg1 == VARPBIT[9516]) {
+		arg2 = widget(1111, 21).isHidden();
+	} else {
+		widget(1111, 30).setScrollPos(0, 0);
+		VARPBIT[9517], VARPBIT[9518], VARPBIT[9519] = 0, 0, 0;
+	}
+	VARPBIT[9516] = arg1;
+	if (arg2) {
+		script_5073(false);
+	} else {
+		script_5073(true);
+	}
+	script_5067();
+	return;
+}

@@ -1,0 +1,50 @@
+void script_2967(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	script_3209();
+	script_3208(1);
+	int1 = script_3228(7, 0, 0);
+	int2 = script_3228(8, 0, 0);
+	int3 = 1;
+	if (compare(STRING[124], STRING[125]) != 0 && length(STRING[124]) > 0 && length(STRING[125]) > 0) {
+		script_3213("Please ensure both passwords match.", widget(673, 74));
+		int3 = 0;
+	}
+	int4 = 1;
+	if (length(STRING[122]) <= 0) {
+		script_3213("Please enter your Email address here.", widget(673, 94));
+		int4 = 0;
+	}
+	if (script_3936(STRING[122]) == 0) {
+		script_3213("Please enter a valid Email address.", widget(673, 94));
+		int4 = 0;
+	}
+	int5 = 1;
+	if (length(STRING[326]) <= 0) {
+		script_3213("Please enter your Email address again here.", widget(673, 113));
+		int5 = 0;
+	}
+	if (compare(STRING[122], STRING[326]) != 0) {
+		script_3213("Please ensure both Email addresses match.", widget(673, 113));
+		int5 = 0;
+	}
+	int6 = script_3954(0);
+	if (int4 == 1 && int5 == 1 && int1 == 1 && int2 == 1 && int3 == 1 && int6 == 1) {
+		if (VARC[1407] < 13) {
+			setAgeMinor();
+			script_4038();
+		} else if (isAgeMinor()) {
+			script_4038();
+		} else {
+			sendCreateAccount(STRING[122], STRING[124], VARC[1407], VARC[1411]);
+			widget(673, 26).setScriptCallOnGameloop(3220, "");
+		}
+	} else {
+		script_3208(0);
+	}
+	return;
+}

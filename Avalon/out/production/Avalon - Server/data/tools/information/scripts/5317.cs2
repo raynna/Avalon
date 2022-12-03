@@ -1,0 +1,22 @@
+void script_5317() {
+	if (widget(319, 38).isHidden()) {
+		widget(319, 38).setIsHidden(false);
+		widget(319, 30).setIsHidden(true);
+		widget(319, 6).setIsHidden(true);
+		widget(319, 9).setIsHidden(true);
+		widget(319, 10).setIsHidden(true);
+		widget(319, 7).setIsHidden(false);
+		widget(319, 8).setIsHidden(false);
+		widget(319, 12).setIsHidden(false);
+	} else {
+		widget(319, 38).setIsHidden(true);
+		widget(319, 30).setIsHidden(false);
+		widget(319, 6).setIsHidden(false);
+		widget(319, 9).setIsHidden(false);
+		widget(319, 10).setIsHidden(false);
+		widget(319, 7).setIsHidden(true);
+		widget(319, 8).setIsHidden(true);
+		widget(319, 12).setIsHidden(true);
+	}
+	return;
+}

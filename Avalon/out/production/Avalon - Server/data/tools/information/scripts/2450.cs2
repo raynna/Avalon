@@ -1,0 +1,47 @@
+void script_2450(Widget widget0, int arg1, int arg2) {
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int3 = 0;
+	int4 = 0;
+	if (ACTIVE.setChild(widget0, arg1)) {
+		widget(34, 14).setIsHidden(true);
+		widget(34, 10).setIsHidden(false);
+		int4 = ACTIVE.getHeight();
+		widget(34, 10).setPosition(ACTIVE.getX(), arg2, 0, 0);
+		widget(34, 10).setSize(ACTIVE.getWidth(), int4, 0, 0);
+		int3 = arg2 + int4 / 2;
+	}
+	int5 = widget(34, 11).getY();
+	int6 = int5 + widget(34, 11).getHeight();
+	if (int3 >= int5 && int3 <= int6) {
+		widget(34, 8).setSprite(1846);
+	} else {
+		widget(34, 8).setSprite(1845);
+	}
+	int7 = 0;
+	int8 = widget(34, 9).getY();
+	int9 = int8 + int4;
+	int10 = int8 + widget(34, 9).getHeight();
+	int11 = int10 - int4;
+	if (int3 >= int8 && int3 <= int9) {
+		int7 = -4;
+	} else {
+		if (!(int3 >= int11 && int3 <= int10)) {
+			VARC[821] = 0;
+			return;
+		}
+		int7 = 4;
+	}
+	VARC[821] = VARC[821] + 1;
+	if (VARC[821] > 5) {
+		script_157(widget(34, 15), widget(34, 9), widget(34, 9).getScrollY() + int7, 1);
+	}
+	return;
+}

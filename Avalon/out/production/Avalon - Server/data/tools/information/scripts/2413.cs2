@@ -1,0 +1,3 @@
+Color, int, int script_2413(Color color0) {
+	return color0 / 65536, bitAnd(color0, 65280) / 256, bitAnd(color0, 255);
+}

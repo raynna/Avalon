@@ -1,0 +1,97 @@
+void script_3148(int arg0) {
+	int int1;
+	int1 = script_1851();
+	if (int1 == arg0) {
+		return;
+	}
+	switch (arg0) {
+		case 0:
+			if (int1 == 1) {
+				script_1855(0);
+				script_3113();
+				return;
+			}
+			break;
+		case 2:
+			if (int1 == 3) {
+				script_1855(2);
+				script_3113();
+				return;
+			}
+			break;
+		case 4:
+			if (int1 == 5) {
+				script_1855(4);
+				script_3113();
+				return;
+			}
+			break;
+		case 6:
+			if (int1 == 7) {
+				script_1855(6);
+				script_3113();
+				return;
+			}
+			break;
+		case 8:
+			if (int1 == 9) {
+				script_1855(8);
+				script_3113();
+				return;
+			}
+			break;
+		case 10:
+			if (int1 == 11) {
+				script_1855(10);
+				script_3113();
+				return;
+			}
+			break;
+		case 1:
+			if (int1 == 0) {
+				script_1855(1);
+				script_3113();
+				return;
+			}
+			break;
+		case 3:
+			if (int1 == 2) {
+				script_1855(3);
+				script_3113();
+				return;
+			}
+			break;
+		case 5:
+			if (int1 == 4) {
+				script_1855(5);
+				script_3113();
+				return;
+			}
+			break;
+		case 7:
+			if (int1 == 6) {
+				script_1855(7);
+				script_3113();
+				return;
+			}
+			break;
+		case 9:
+			if (int1 == 8) {
+				script_1855(9);
+				script_3113();
+				return;
+			}
+			break;
+		case 11:
+			if (int1 == 10) {
+				script_1855(11);
+				script_3113();
+				return;
+			}
+			break;
+	}
+	script_1856(int1);
+	script_1855(arg0);
+	script_3113();
+	return;
+}

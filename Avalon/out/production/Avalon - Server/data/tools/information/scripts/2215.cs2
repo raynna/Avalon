@@ -1,0 +1,9 @@
+void script_2215() {
+	if (widget(932, 14).getY() < 180) {
+		widget(932, 1).setScriptCallOnGameloop(2215, "");
+		widget(932, 14).setPosition(widget(932, 14).getX(), 2 + widget(932, 14).getY(), 0, 0);
+	} else {
+		VARC[1137] = 0;
+	}
+	return;
+}

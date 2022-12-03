@@ -1,0 +1,38 @@
+void script_2973() {
+	if (getSkillCurrentLvl(22) < 56) {
+		widget(459, 27).setRGB(0x868360);
+	} else {
+		widget(459, 27).setRGB(0xEAE7C4);
+	}
+	if (getSkillCurrentLvl(22) < 57) {
+		widget(459, 23).setRGB(0x868360);
+	} else {
+		widget(459, 23).setRGB(0xEAE7C4);
+	}
+	if (getSkillCurrentLvl(22) < 59) {
+		widget(459, 19).setRGB(0x868360);
+	} else {
+		widget(459, 19).setRGB(0xEAE7C4);
+	}
+	if (getSkillCurrentLvl(22) < 62) {
+		widget(459, 15).setRGB(0x868360);
+	} else {
+		widget(459, 15).setRGB(0xEAE7C4);
+	}
+	if (getSkillCurrentLvl(22) < 65) {
+		widget(459, 7).setRGB(0x868360);
+	} else {
+		widget(459, 7).setRGB(0xEAE7C4);
+	}
+	if (getSkillCurrentLvl(22) < 70) {
+		widget(459, 11).setRGB(0x868360);
+	} else {
+		widget(459, 11).setRGB(0xEAE7C4);
+	}
+	if (getSkillCurrentLvl(22) < 80) {
+		widget(459, 3).setRGB(0x868360);
+	} else {
+		widget(459, 3).setRGB(0xEAE7C4);
+	}
+	return;
+}

@@ -1,0 +1,10 @@
+void script_3017() {
+	script_3018();
+	widget(906, 41).setIsHidden(true);
+	if (!datamap('i', 'I', (DataMap)941, 5).isHidden()) {
+		script_3161(1);
+	} else if (!datamap('i', 'I', (DataMap)941, 3).isHidden()) {
+		script_4556(1);
+	}
+	return;
+}

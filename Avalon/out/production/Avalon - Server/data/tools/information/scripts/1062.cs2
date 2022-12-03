@@ -1,0 +1,186 @@
+void script_1062(Widget widget0, int arg1, QcCat qccat2, QcCat qccat3, int arg4) {
+	Widget widget5;
+	Widget widget6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	QcCat qccat13;
+	QcPhrase qcphrase14;
+	char char15;
+	int int16;
+	int int17;
+	Widget widget18;
+	string str0;
+	widget5 = datamap('i', 'I', (DataMap)1550, arg1);
+	widget6 = datamap('i', 'I', (DataMap)1551, arg1);
+	widget5.clearChildren();
+	widget6.clearChildren();
+	if (widget5 == null) {
+		return;
+	}
+	ACTIVE.createChild(widget0, 4, arg1);
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.setFont(495);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	str0 = cs2method5050(qccat2);
+	ACTIVE.setOptionBase(str0);
+	ACTIVE.setScriptCallOnClickContextMenu(1067, widget0, arg1, "Ii");
+	ACTIVE.setContextMenuOption(1, "Return to: ");
+	if (arg1 > 0) {
+		str0 = " " + "<col=0000ff>" + str0 + " " + "<img=2>";
+	} else if (VARC[126] == 1) {
+		str0 = " To " + STRING[27] + ": " + "<col=800000>" + str0 + " " + "<img=2>";
+	} else if (VARC[126] == 2) {
+		str0 = " [" + "<col=0000ff>" + clanChatDisplayName() + "<col=000000>" + "]: " + "<col=800000>" + str0 + " " + "<img=2>";
+	} else if (VARC[126] == 8) {
+		if (cs2method3751()) {
+			str0 = " [" + "<col=0000ff>" + cs2method3752() + "<col=000000>" + "]: " + "<col=800000>" + str0 + " " + "<img=2>";
+		}
+	} else if (VARC[126] == 10) {
+		if (cs2method3750()) {
+			str0 = " [" + "<col=0000ff>" + cs2method3752() + "<col=000000>" + "]: " + "<col=800000>" + str0 + " " + "<img=2>";
+		}
+	} else {
+		str0 = " " + "<col=0000ff>" + str0 + " " + "<img=2>";
+	}
+	ACTIVE.setText(str0);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setSize(getMaxLineWidth(str0, widget0.getWidth(), 495) + 4, widget0.getHeight(), 0, 0);
+	ACTIVE.setScriptCallOnMouseEntered(1080, widget(137, 2), arg1, "Ii");
+	ACTIVE.setScriptCallOnMouseExit(1081, widget(137, 2), arg1, "Ii");
+	_ACTIVE.createChild(widget(137, 2), 3, arg1);
+	_ACTIVE.setSize(ACTIVE.getWidth(), ACTIVE.getHeight(), 0, 0);
+	_ACTIVE.setRGB(0x577E45);
+	_ACTIVE.setFilled(true);
+	_ACTIVE.setHidden(true);
+	widget5.setIsHidden(false);
+	int7 = cs2method5051(qccat2);
+	int8 = cs2method5053(qccat2);
+	int9 = 0;
+	int10 = 0;
+	int11 = 0;
+	int12 = 0;
+	qccat13 = null;
+	qcphrase14 = null;
+	char15 = null;
+	int16 = 0;
+	while (int9 < int7) {
+		ACTIVE.createChild(widget5, 4, int10);
+		ACTIVE.setRGB(0x000000);
+		ACTIVE.setFont(495);
+		ACTIVE.setTextAlignment(0, 1, 0);
+		qccat13 = cs2method5052(qccat2, int9);
+		str0 = cs2method5050(qccat13);
+		ACTIVE.setScriptCallOnClickContextMenu(1060, widget5, widget6, int10, widget0, arg1 + 1, qccat13, "IIiIik");
+		ACTIVE.setOptionBase(str0);
+		ACTIVE.setContextMenuOption(1, "Select: ");
+		ACTIVE.setScriptCallOnMouseEntered(1082, arg1, widget6, int10, "iIi");
+		ACTIVE.setScriptCallOnMouseExit(1083, arg1, widget6, int10, "iIi");
+		char15 = upper(cs2method5062(qccat2, int9));
+		if (isAlphaNumeric(char15)) {
+			str0 = "<col=555555>" + concatChar("", char15) + ". " + "<col=000000>" + str0 + " " + "<img=2>";
+		} else {
+			str0 = str0 + " " + "<img=2>";
+		}
+		ACTIVE.setText(str0);
+		ACTIVE.setTextAntiMacro(false);
+		int11 = getMaxLineWidth(str0, widget0.getWidth(), 495);
+		if (int11 > int12) {
+			int12 = int11;
+		}
+		int9 = int9 + 1;
+		int10 = int10 + 1;
+	}
+	int9 = 0;
+	while (int9 < int8) {
+		ACTIVE.createChild(widget5, 4, int10);
+		ACTIVE.setRGB(0x000000);
+		ACTIVE.setFont(495);
+		ACTIVE.setTextAlignment(0, 1, 0);
+		qcphrase14 = cs2method5054(qccat2, int9);
+		str0 = cs2method5055(qcphrase14);
+		ACTIVE.setScriptCallOnClickContextMenu(1070, widget0, qcphrase14, arg1, "Iei");
+		ACTIVE.setOptionBase(str0);
+		ACTIVE.setContextMenuOption(1, "Send: ");
+		ACTIVE.setScriptCallOnMouseEntered(1082, arg1, widget6, int10, "iIi");
+		ACTIVE.setScriptCallOnMouseExit(1083, arg1, widget6, int10, "iIi");
+		if (int9 < 10) {
+			str0 = "<col=555555>" + str((int9 + 1) % 10) + ". " + "<col=000000>" + str0;
+		}
+		ACTIVE.setText(str0);
+		ACTIVE.setTextAntiMacro(false);
+		int11 = getMaxLineWidth(str0, widget0.getWidth(), 495);
+		if (int11 > int12) {
+			int12 = int11;
+		}
+		int9 = int9 + 1;
+		int10 = int10 + 1;
+	}
+	if (qccat3 != null) {
+		ACTIVE.createChild(widget5, 4, int10);
+		ACTIVE.setRGB(0x000000);
+		ACTIVE.setFont(495);
+		ACTIVE.setTextAlignment(0, 1, 0);
+		str0 = cs2method5050(qccat3);
+		ACTIVE.setScriptCallOnClickContextMenu(1060, widget5, widget6, int10, widget0, arg1 + 1, qccat3, "IIiIik");
+		ACTIVE.setOptionBase(str0);
+		ACTIVE.setContextMenuOption(1, "Select: ");
+		ACTIVE.setScriptCallOnMouseEntered(1082, arg1, widget6, int10, "iIi");
+		ACTIVE.setScriptCallOnMouseExit(1083, arg1, widget6, int10, "iIi");
+		str0 = "<col=555555>" + "X. " + "<col=000000>" + str0 + " " + "<img=2>";
+		ACTIVE.setText(str0);
+		ACTIVE.setTextAntiMacro(false);
+		int11 = getMaxLineWidth(str0, widget0.getWidth(), 495);
+		if (int11 > int12) {
+			int12 = int11;
+		}
+		int10 = int10 + 1;
+	}
+	if (arg4 == 1) {
+		ACTIVE.createChild(widget5, 4, int10);
+		ACTIVE.setRGB(0x000000);
+		ACTIVE.setFont(495);
+		ACTIVE.setTextAlignment(0, 1, 0);
+		ACTIVE.setScriptCallOnClickContextMenu(1877, widget5, widget6, int10, arg1, "IIii");
+		ACTIVE.setOptionBase("Search phrases");
+		ACTIVE.setContextMenuOption(1, "Select: ");
+		ACTIVE.setScriptCallOnMouseEntered(1082, arg1, widget6, int10, "iIi");
+		ACTIVE.setScriptCallOnMouseExit(1083, arg1, widget6, int10, "iIi");
+		ACTIVE.setText("<col=555555>" + "Enter. " + "<col=000000>" + "Search " + "<img=2>");
+		ACTIVE.setTextAntiMacro(false);
+		int11 = getMaxLineWidth(str0, widget0.getWidth(), 495);
+		if (int11 > int12) {
+			int12 = int11;
+		}
+		int10 = int10 + 1;
+	}
+	widget5.setScriptCallOnKeyPress(1059, KEY_TYPED, (char)KEY_PRESSED, widget0, arg1, qccat2, null, int10, "izIikei");
+	int9 = 0;
+	int17 = 0;
+	while (ACTIVE.setChild(widget5, int9)) {
+		if (int16 * 14 + 14 > widget5.getHeight()) {
+			int17 = int17 + int12 + 4;
+			int16 = 0;
+		}
+		ACTIVE.setSize(int12, 14, 0, 0);
+		ACTIVE.setPosition(int17 + 2, int16 * 14, 0, 0);
+		_ACTIVE.createChild(widget6, 3, int9);
+		_ACTIVE.setSize(ACTIVE.getWidth() + 4, ACTIVE.getHeight(), 0, 0);
+		_ACTIVE.setPosition(ACTIVE.getX() - 2, ACTIVE.getY(), 0, 0);
+		_ACTIVE.setRGB(0x577E45);
+		_ACTIVE.setFilled(true);
+		_ACTIVE.setHidden(true);
+		int9 = int9 + 1;
+		int16 = int16 + 1;
+	}
+	int17 = int17 + int12 + 4;
+	widget18 = widget5.getLayer();
+	widget5.setSize(int17, widget18.getHeight(), 0, 0);
+	widget6.setSize(int17, widget18.getHeight(), 0, 0);
+	datamap('i', 'I', (DataMap)1550, arg1 + 1).setPosition(widget5.getX() + int17, 0, 0, 0);
+	script_1068(widget0, arg1);
+	return;
+}

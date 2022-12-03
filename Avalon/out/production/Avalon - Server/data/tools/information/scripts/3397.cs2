@@ -1,0 +1,23 @@
+void script_3397() {
+	Sprite sprite0;
+	Sprite sprite1;
+	widget(979, 18).setText(STRING[279]);
+	sprite0 = 2568;
+	sprite1 = 2569;
+	if (compare(STRING[279], "") != 0) {
+		widget(979, 40).setText("Reporting: " + STRING[279]);
+		widget(979, 10).setTrans(0);
+		widget(979, 11).setTrans(0);
+		widget(979, 12).setTrans(0);
+		widget(979, 13).setTrans(0);
+		widget(979, 9).setScriptCallOnMouseEntered(3071, widget(979, 10), sprite0, widget(979, 11), sprite1, widget(979, 12), sprite0, "IdIdId");
+	} else {
+		widget(979, 40).setText("Report Abuse: Select Player");
+		widget(979, 10).setTrans(100);
+		widget(979, 11).setTrans(100);
+		widget(979, 12).setTrans(100);
+		widget(979, 13).setTrans(100);
+		widget(979, 9).setScriptCallOnMouseEntered(-1, "");
+	}
+	return;
+}

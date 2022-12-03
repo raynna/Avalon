@@ -1,0 +1,17 @@
+void script_5376() {
+	int int0;
+	int0 = 0;
+	while (int0 < 8) {
+		if (ACTIVE.setChild(widget(951, 24), int0 * 6 + 3)) {
+			ACTIVE.setScriptCallOnGameloop(-1, "");
+		}
+		if (ACTIVE.setChild(widget(951, 24), int0 * 6 + 4)) {
+			ACTIVE.setScriptCallOnGameloop(-1, "");
+		}
+		if (ACTIVE.setChild(widget(951, 24), int0 * 6 + 5)) {
+			ACTIVE.setScriptCallOnGameloop(-1, "");
+		}
+		int0 = int0 + 1;
+	}
+	return;
+}

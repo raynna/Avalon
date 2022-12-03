@@ -1,0 +1,45 @@
+int script_4568(int arg0, string string1, int arg2, string string3, string string4, int arg5) {
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int3 = widget(589, 23).getWidth();
+	int4 = max(getLineCount(string1, int3, 494), 1) * 15;
+	ACTIVE.createChild(widget(589, 23), 4, arg0);
+	ACTIVE.setPosition(0, arg0 * 15, 0, 2);
+	ACTIVE.setSize(0, int4, 1, 0);
+	ACTIVE.setRGB(0xFFFFFF);
+	ACTIVE.setFont(494);
+	ACTIVE.setText(string1);
+	ACTIVE.setTextAlignment(0, 0, 15);
+	int5 = 0;
+	int6 = 0;
+	while (int6 < arg0) {
+		if (_ACTIVE.setChild(widget(589, 23), int6)) {
+			int5 = int5 + _ACTIVE.getHeight();
+		}
+		int6 = int6 + 1;
+	}
+	ACTIVE.setPosition(0, int5, 0, 2);
+	if (arg2 == 1) {
+		ACTIVE.setOptionBase(removeTags(string3));
+		ACTIVE.setScriptCallOnClickContextMenu(4569, CTX_MENU_OPTION, string3, string4, "iss");
+		switch (arg5) {
+			case 20:
+			case 9:
+				if (compare(removeTags(cs2method5020()), removeTags(string4)) != 0) {
+					if (!isFriend(removeTags(string4)) && !cs2method3623(removeTags(string4))) {
+						ACTIVE.setContextMenuOption(1, "Add friend");
+						ACTIVE.setContextMenuOption(2, "Add ignore");
+					} else if (isFriend(removeTags(string4)) && !cs2method6900()) {
+						ACTIVE.setContextMenuOption(3, "Message");
+					}
+					if (script_1891() == 1) {
+						ACTIVE.setContextMenuOption(10, "Kick/ban");
+					}
+				}
+				break;
+		}
+	}
+	return arg0 + 1;
+}

@@ -1,0 +1,49 @@
+void script_432(int arg0, int arg1) {
+	AttrMap attrmap2;
+	Widget widget3;
+	attrmap2 = null;
+	widget3 = widget(1024, 85);
+	switch (arg0) {
+		case 67108929:
+			if (VARC[1388] == 1) {
+				attrmap2 = (AttrMap)293;
+			} else {
+				attrmap2 = script_488(VARPBIT[7539]);
+			}
+			break;
+		case 67108912:
+			if (VARC[1388] == 1) {
+				attrmap2 = (AttrMap)300;
+			} else {
+				attrmap2 = script_488(VARPBIT[7540]);
+			}
+			break;
+		case 67108895:
+			if (VARC[1388] == 1) {
+				attrmap2 = (AttrMap)305;
+			} else {
+				attrmap2 = script_488(VARPBIT[7541]);
+			}
+			break;
+		case 67108878:
+			if (VARC[1388] == 1) {
+				attrmap2 = (AttrMap)1044;
+			} else {
+				attrmap2 = script_488(VARPBIT[7542]);
+			}
+			break;
+		default:
+			return;
+	}
+	if (attrmap2 != null) {
+		widget(1024, 92).setText(getAttributeMapValue(attrmap2, 1150));
+		widget(1024, 93).setText(getAttributeMapValue(attrmap2, 1151));
+		widget(1024, 94).setText("Cost: " + str(getAttributeMapValue(attrmap2, 1154)));
+		widget(1024, 95).setText("Cooldown: " + str(getAttributeMapValue(attrmap2, 1155)));
+		widget3.setPosition(widget3.getX(), arg1, 0, 0);
+		widget3.setIsHidden(false);
+	} else {
+		widget3.setIsHidden(true);
+	}
+	return;
+}

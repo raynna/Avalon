@@ -1,0 +1,8 @@
+void script_2351(Widget widget0, Item item1) {
+	if (getItemAmtInContainer(93, item1) > 0) {
+		widget0.setRGB(0x00CC00);
+	} else {
+		widget0.setRGB(0xFF981F);
+	}
+	return;
+}

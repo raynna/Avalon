@@ -1,0 +1,11 @@
+void script_5286() {
+	playSoundEffect2False(7536, 1, 0, 200, rndRelatedMethod4019(20, 20));
+	if (widget(555, 48).isHidden()) {
+		widget(555, 48).setIsHidden(false);
+		widget(555, 49).setIsHidden(true);
+	} else {
+		widget(555, 49).setIsHidden(false);
+		widget(555, 48).setIsHidden(true);
+	}
+	return;
+}

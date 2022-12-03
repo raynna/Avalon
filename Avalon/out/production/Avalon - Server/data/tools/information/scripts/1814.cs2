@@ -1,0 +1,36 @@
+string script_1814(string string0) {
+	int int0;
+	string str1;
+	int0 = length(string0);
+	if (int0 <= 0) {
+		return string0;
+	}
+	str1 = concat(" ", string0);
+	str1 = script_2332(str1, " a", " A");
+	str1 = script_2332(str1, " b", " B");
+	str1 = script_2332(str1, " c", " C");
+	str1 = script_2332(str1, " d", " D");
+	str1 = script_2332(str1, " e", " E");
+	str1 = script_2332(str1, " f", " F");
+	str1 = script_2332(str1, " g", " G");
+	str1 = script_2332(str1, " h", " H");
+	str1 = script_2332(str1, " i", " I");
+	str1 = script_2332(str1, " j", " J");
+	str1 = script_2332(str1, " k", " K");
+	str1 = script_2332(str1, " l", " L");
+	str1 = script_2332(str1, " m", " M");
+	str1 = script_2332(str1, " n", " N");
+	str1 = script_2332(str1, " o", " O");
+	str1 = script_2332(str1, " p", " P");
+	str1 = script_2332(str1, " q", " Q");
+	str1 = script_2332(str1, " r", " R");
+	str1 = script_2332(str1, " s", " S");
+	str1 = script_2332(str1, " t", " T");
+	str1 = script_2332(str1, " u", " U");
+	str1 = script_2332(str1, " v", " V");
+	str1 = script_2332(str1, " w", " W");
+	str1 = script_2332(str1, " x", " X");
+	str1 = script_2332(str1, " y", " Y");
+	str1 = script_2332(str1, " z", " Z");
+	return substr(str1, 1, int0 + 1);
+}

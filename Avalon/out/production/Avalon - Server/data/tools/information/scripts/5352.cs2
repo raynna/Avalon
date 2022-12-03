@@ -1,0 +1,260 @@
+int, int, int, int, int script_5352(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, Sprite sprite7, Sprite sprite8, Sprite sprite9) {
+	DataMap datamap10;
+	AttrMap attrmap11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	string str0;
+	string str1;
+	datamap10 = null;
+	attrmap11 = null;
+	int12 = 0;
+	int13 = -1;
+	int14 = 0;
+	int15 = 0;
+	int16 = 0;
+	int17 = 0;
+	while (int16 < 5) {
+		switch (int16) {
+			case 0:
+				datamap10 = (DataMap)5182;
+				break;
+			case 1:
+				datamap10 = (DataMap)3875;
+				break;
+			case 2:
+				if (!IsFemale()) {
+					datamap10 = (DataMap)5189;
+				} else {
+					datamap10 = (DataMap)5188;
+				}
+				break;
+			case 3:
+				datamap10 = (DataMap)5184;
+				break;
+			case 4:
+				datamap10 = (DataMap)5183;
+				break;
+		}
+		int14 = 0;
+		while (int14 < datamapSize(datamap10)) {
+			attrmap11 = datamap('i', 'J', datamap10, int14);
+			if (getAttributeMapValue(attrmap11, 1933) > 0) {
+				int15 = int15 + 1;
+			}
+			int14 = int14 + 1;
+		}
+		int16 = int16 + 1;
+	}
+	if (int15 < 1) {
+		return arg0, arg1, arg2, arg3, arg5;
+	}
+	ARRAY0 = new AttrMap[int15];
+	int17 = int15 - 1;
+	int16 = 0;
+	while (int16 < 5) {
+		switch (int16) {
+			case 0:
+				datamap10 = (DataMap)5182;
+				break;
+			case 1:
+				datamap10 = (DataMap)3875;
+				break;
+			case 2:
+				if (!IsFemale()) {
+					datamap10 = (DataMap)5189;
+				} else {
+					datamap10 = (DataMap)5188;
+				}
+				break;
+			case 3:
+				datamap10 = (DataMap)5184;
+				break;
+			case 4:
+				datamap10 = (DataMap)5183;
+				break;
+		}
+		int14 = 0;
+		while (int14 < datamapSize(datamap10)) {
+			attrmap11 = datamap('i', 'J', datamap10, int14);
+			if (getAttributeMapValue(attrmap11, 1933) > 0) {
+				ARRAY0[int17] = attrmap11;
+				int17 = max(int17 - 1, 0);
+			}
+			int14 = int14 + 1;
+		}
+		int16 = int16 + 1;
+	}
+	int14 = 0;
+	int12 = 1;
+	int18 = 0;
+	int19 = 0;
+	str0 = "";
+	str1 = "";
+	int20 = 0;
+	int21 = 0;
+	switch (VARC[1659]) {
+		case 1:
+			while (int12 == 1) {
+				int12 = 0;
+				int14 = int15 - 1;
+				while (int14 > 0) {
+					if (getAttributeMapValue((AttrMap)ARRAY0[int14], 1933) > 0) {
+						int18 = getAttributeMapValue((AttrMap)ARRAY0[int14], 1933);
+					} else {
+						int18 = getAttributeMapValue((AttrMap)ARRAY0[int14], 1932);
+					}
+					if (getAttributeMapValue((AttrMap)ARRAY0[int14 - 1], 1933) > 0) {
+						int19 = getAttributeMapValue((AttrMap)ARRAY0[int14 - 1], 1933);
+					} else {
+						int19 = getAttributeMapValue((AttrMap)ARRAY0[int14 - 1], 1932);
+					}
+					if (int18 > int19) {
+						int12 = 1;
+						int13 = ARRAY0[int14 - 1];
+						ARRAY0[int14 - 1] = ARRAY0[int14];
+						ARRAY0[int14] = int13;
+					}
+					int14 = int14 - 1;
+				}
+			}
+			break;
+		case 2:
+			while (int12 == 1) {
+				int12 = 0;
+				int14 = int15 - 1;
+				while (int14 > 0) {
+					if (getAttributeMapValue((AttrMap)ARRAY0[int14], 1937) == 4) {
+						int20 = 0;
+						int21 = 0;
+						while (int20 < datamapSize((DataMap)5184) && int21 == 0) {
+							if (datamap('i', 'J', (DataMap)5184, int20) == (AttrMap)ARRAY0[int14]) {
+								if (!IsFemale()) {
+									str0 = datamap('i', 's', (DataMap)5186, int20);
+								} else {
+									str0 = datamap('i', 's', (DataMap)5187, int20);
+								}
+								int21 = 1;
+							}
+							int20 = int20 + 1;
+						}
+					} else {
+						str0 = getAttributeMapValue((AttrMap)ARRAY0[int14], 1930);
+					}
+					if (getAttributeMapValue((AttrMap)ARRAY0[int14 - 1], 1937) == 4) {
+						int20 = 0;
+						int21 = 0;
+						while (int20 < datamapSize((DataMap)5184) && int21 == 0) {
+							if (datamap('i', 'J', (DataMap)5184, int20) == (AttrMap)ARRAY0[int14 - 1]) {
+								if (!IsFemale()) {
+									str1 = datamap('i', 's', (DataMap)5186, int20);
+								} else {
+									str1 = datamap('i', 's', (DataMap)5187, int20);
+								}
+								int21 = 1;
+							}
+							int20 = int20 + 1;
+						}
+					} else {
+						str1 = getAttributeMapValue((AttrMap)ARRAY0[int14 - 1], 1930);
+					}
+					if (compare(str0, str1) < 0) {
+						int12 = 1;
+						int13 = ARRAY0[int14 - 1];
+						ARRAY0[int14 - 1] = ARRAY0[int14];
+						ARRAY0[int14] = int13;
+					}
+					int14 = int14 - 1;
+				}
+			}
+			break;
+		case 3:
+			while (int12 == 1) {
+				int12 = 0;
+				int14 = int15 - 1;
+				while (int14 > 0) {
+					if (getAttributeMapValue((AttrMap)ARRAY0[int14], 1937) == 4) {
+						int20 = 0;
+						int21 = 0;
+						while (int20 < datamapSize((DataMap)5184) && int21 == 0) {
+							if (datamap('i', 'J', (DataMap)5184, int20) == (AttrMap)ARRAY0[int14]) {
+								if (!IsFemale()) {
+									str0 = datamap('i', 's', (DataMap)5186, int20);
+								} else {
+									str0 = datamap('i', 's', (DataMap)5187, int20);
+								}
+								int21 = 1;
+							}
+							int20 = int20 + 1;
+						}
+					} else {
+						str0 = getAttributeMapValue((AttrMap)ARRAY0[int14], 1930);
+					}
+					if (getAttributeMapValue((AttrMap)ARRAY0[int14 - 1], 1937) == 4) {
+						int20 = 0;
+						int21 = 0;
+						while (int20 < datamapSize((DataMap)5184) && int21 == 0) {
+							if (datamap('i', 'J', (DataMap)5184, int20) == (AttrMap)ARRAY0[int14 - 1]) {
+								if (!IsFemale()) {
+									str1 = datamap('i', 's', (DataMap)5186, int20);
+								} else {
+									str1 = datamap('i', 's', (DataMap)5187, int20);
+								}
+								int21 = 1;
+							}
+							int20 = int20 + 1;
+						}
+					} else {
+						str1 = getAttributeMapValue((AttrMap)ARRAY0[int14 - 1], 1930);
+					}
+					if (compare(str0, str1) > 0) {
+						int12 = 1;
+						int13 = ARRAY0[int14 - 1];
+						ARRAY0[int14 - 1] = ARRAY0[int14];
+						ARRAY0[int14] = int13;
+					}
+					int14 = int14 - 1;
+				}
+			}
+			break;
+		default:
+			while (int12 == 1) {
+				int12 = 0;
+				int14 = int15 - 1;
+				while (int14 > 0) {
+					if (getAttributeMapValue((AttrMap)ARRAY0[int14], 1933) > 0) {
+						int18 = getAttributeMapValue((AttrMap)ARRAY0[int14], 1933);
+					} else {
+						int18 = getAttributeMapValue((AttrMap)ARRAY0[int14], 1932);
+					}
+					if (getAttributeMapValue((AttrMap)ARRAY0[int14 - 1], 1933) > 0) {
+						int19 = getAttributeMapValue((AttrMap)ARRAY0[int14 - 1], 1933);
+					} else {
+						int19 = getAttributeMapValue((AttrMap)ARRAY0[int14 - 1], 1932);
+					}
+					if (int18 < int19) {
+						int12 = 1;
+						int13 = ARRAY0[int14 - 1];
+						ARRAY0[int14 - 1] = ARRAY0[int14];
+						ARRAY0[int14] = int13;
+					}
+					int14 = int14 - 1;
+				}
+			}
+			break;
+	}
+	int14 = 0;
+	while (int14 < int15) {
+		attrmap11 = (AttrMap)ARRAY0[int14];
+		arg0, arg1, arg2, arg3, arg5 = script_5351(attrmap11, arg0, arg1, arg2, arg3, arg4, arg5, arg6, sprite7, sprite8, sprite9);
+		int14 = int14 + 1;
+	}
+	return arg0, arg1, arg2, arg3, arg5;
+}

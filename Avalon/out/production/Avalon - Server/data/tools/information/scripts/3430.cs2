@@ -1,0 +1,188 @@
+void script_3430() {
+	widget(54, 25).setFilled(false);
+	widget(54, 27).setFilled(false);
+	widget(54, 29).setFilled(false);
+	widget(54, 31).setFilled(false);
+	widget(54, 33).setFilled(false);
+	widget(54, 35).setFilled(false);
+	widget(54, 37).setFilled(false);
+	widget(54, 39).setFilled(false);
+	widget(54, 41).setFilled(false);
+	widget(54, 43).setFilled(false);
+	widget(54, 45).setFilled(false);
+	widget(54, 47).setFilled(false);
+	widget(54, 49).setFilled(false);
+	widget(54, 51).setFilled(false);
+	widget(54, 53).setFilled(false);
+	widget(54, 55).setFilled(false);
+	widget(54, 57).setFilled(false);
+	widget(54, 59).setFilled(false);
+	widget(54, 61).setFilled(false);
+	widget(54, 63).setFilled(false);
+	widget(54, 65).setFilled(false);
+	widget(54, 67).setFilled(false);
+	widget(54, 69).setFilled(false);
+	widget(54, 71).setFilled(false);
+	widget(54, 73).setFilled(false);
+	widget(54, 75).setFilled(false);
+	widget(54, 77).setFilled(false);
+	widget(54, 79).setFilled(false);
+	widget(54, 81).setFilled(false);
+	widget(54, 83).setFilled(false);
+	widget(54, 85).setFilled(false);
+	widget(54, 87).setFilled(false);
+	widget(54, 89).setFilled(false);
+	widget(54, 91).setFilled(false);
+	widget(54, 93).setFilled(false);
+	widget(54, 95).setFilled(false);
+	widget(54, 97).setFilled(false);
+	widget(54, 99).setFilled(false);
+	widget(54, 101).setFilled(false);
+	widget(54, 103).setFilled(false);
+	widget(54, 105).setFilled(false);
+	widget(54, 107).setFilled(false);
+	widget(54, 109).setFilled(false);
+	widget(54, 111).setFilled(false);
+	widget(54, 113).setFilled(false);
+	widget(54, 115).setFilled(false);
+	widget(54, 117).setFilled(false);
+	widget(54, 119).setFilled(false);
+	widget(54, 121).setFilled(false);
+	widget(54, 123).setFilled(false);
+	widget(54, 125).setFilled(false);
+	widget(54, 127).setFilled(false);
+	widget(54, 129).setFilled(false);
+	widget(54, 131).setFilled(false);
+	widget(54, 133).setFilled(false);
+	widget(54, 135).setFilled(false);
+	if (VARPBIT[157] == 1) {
+		if (VARPBIT[156] == 3) {
+			widget(54, 25).setFilled(true);
+		} else if (VARPBIT[156] == 4) {
+			widget(54, 27).setFilled(true);
+		} else if (VARPBIT[156] == 5) {
+			widget(54, 29).setFilled(true);
+		} else if (VARPBIT[156] == 6) {
+			widget(54, 31).setFilled(true);
+		} else if (VARPBIT[156] == 7) {
+			widget(54, 33).setFilled(true);
+		} else if (VARPBIT[156] == 8) {
+			widget(54, 35).setFilled(true);
+		}
+	} else if (VARPBIT[157] == 2) {
+		if (VARPBIT[156] == 3) {
+			widget(54, 37).setFilled(true);
+		} else if (VARPBIT[156] == 4) {
+			widget(54, 39).setFilled(true);
+		} else if (VARPBIT[156] == 5) {
+			widget(54, 41).setFilled(true);
+		} else if (VARPBIT[156] == 6) {
+			widget(54, 43).setFilled(true);
+		} else if (VARPBIT[156] == 7) {
+			widget(54, 45).setFilled(true);
+		} else if (VARPBIT[156] == 8) {
+			widget(54, 47).setFilled(true);
+		}
+	} else if (VARPBIT[157] == 3) {
+		if (VARPBIT[156] == 1) {
+			widget(54, 49).setFilled(true);
+		} else if (VARPBIT[156] == 2) {
+			widget(54, 51).setFilled(true);
+		} else if (VARPBIT[156] == 3) {
+			widget(54, 53).setFilled(true);
+		} else if (VARPBIT[156] == 4) {
+			widget(54, 55).setFilled(true);
+		} else if (VARPBIT[156] == 5) {
+			widget(54, 57).setFilled(true);
+		} else if (VARPBIT[156] == 6) {
+			widget(54, 59).setFilled(true);
+		} else if (VARPBIT[156] == 7) {
+			widget(54, 61).setFilled(true);
+		} else if (VARPBIT[156] == 8) {
+			widget(54, 63).setFilled(true);
+		}
+	} else if (VARPBIT[157] == 4) {
+		if (VARPBIT[156] == 1) {
+			widget(54, 65).setFilled(true);
+		} else if (VARPBIT[156] == 2) {
+			widget(54, 67).setFilled(true);
+		} else if (VARPBIT[156] == 3) {
+			widget(54, 69).setFilled(true);
+		} else if (VARPBIT[156] == 4) {
+			widget(54, 71).setFilled(true);
+		} else if (VARPBIT[156] == 5) {
+			widget(54, 73).setFilled(true);
+		} else if (VARPBIT[156] == 6) {
+			widget(54, 75).setFilled(true);
+		} else if (VARPBIT[156] == 7) {
+			widget(54, 77).setFilled(true);
+		} else if (VARPBIT[156] == 8) {
+			widget(54, 79).setFilled(true);
+		}
+	} else if (VARPBIT[157] == 5) {
+		if (VARPBIT[156] == 1) {
+			widget(54, 81).setFilled(true);
+		} else if (VARPBIT[156] == 2) {
+			widget(54, 83).setFilled(true);
+		} else if (VARPBIT[156] == 3) {
+			widget(54, 85).setFilled(true);
+		} else if (VARPBIT[156] == 4) {
+			widget(54, 87).setFilled(true);
+		} else if (VARPBIT[156] == 5) {
+			widget(54, 89).setFilled(true);
+		} else if (VARPBIT[156] == 6) {
+			widget(54, 91).setFilled(true);
+		} else if (VARPBIT[156] == 7) {
+			widget(54, 93).setFilled(true);
+		} else if (VARPBIT[156] == 8) {
+			widget(54, 95).setFilled(true);
+		}
+	} else if (VARPBIT[157] == 6) {
+		if (VARPBIT[156] == 1) {
+			widget(54, 97).setFilled(true);
+		} else if (VARPBIT[156] == 2) {
+			widget(54, 99).setFilled(true);
+		} else if (VARPBIT[156] == 3) {
+			widget(54, 101).setFilled(true);
+		} else if (VARPBIT[156] == 4) {
+			widget(54, 103).setFilled(true);
+		} else if (VARPBIT[156] == 5) {
+			widget(54, 105).setFilled(true);
+		} else if (VARPBIT[156] == 6) {
+			widget(54, 107).setFilled(true);
+		} else if (VARPBIT[156] == 7) {
+			widget(54, 109).setFilled(true);
+		} else if (VARPBIT[156] == 8) {
+			widget(54, 111).setFilled(true);
+		}
+	} else if (VARPBIT[157] == 7) {
+		if (VARPBIT[156] == 1) {
+			widget(54, 113).setFilled(true);
+		} else if (VARPBIT[156] == 2) {
+			widget(54, 115).setFilled(true);
+		} else if (VARPBIT[156] == 3) {
+			widget(54, 117).setFilled(true);
+		} else if (VARPBIT[156] == 4) {
+			widget(54, 119).setFilled(true);
+		} else if (VARPBIT[156] == 5) {
+			widget(54, 121).setFilled(true);
+		} else if (VARPBIT[156] == 6) {
+			widget(54, 123).setFilled(true);
+		}
+	} else if (VARPBIT[157] == 8) {
+		if (VARPBIT[156] == 1) {
+			widget(54, 125).setFilled(true);
+		} else if (VARPBIT[156] == 2) {
+			widget(54, 127).setFilled(true);
+		} else if (VARPBIT[156] == 3) {
+			widget(54, 129).setFilled(true);
+		} else if (VARPBIT[156] == 4) {
+			widget(54, 131).setFilled(true);
+		} else if (VARPBIT[156] == 5) {
+			widget(54, 133).setFilled(true);
+		} else if (VARPBIT[156] == 6) {
+			widget(54, 135).setFilled(true);
+		}
+	}
+	return;
+}

@@ -1,0 +1,10 @@
+void script_4888(int arg0) {
+	script_4944();
+	script_4933();
+	script_4899(2);
+	widget(1092, 303).setIsHidden(false);
+	widget(1092, 260).setIsHidden(false);
+	VARPBIT[9558] = arg0;
+	script_4849();
+	return;
+}

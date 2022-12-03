@@ -1,0 +1,76 @@
+int, int, int script_3273() {
+	int int0;
+	int int1;
+	int int2;
+	int0 = 0;
+	int1 = VARC[1191] / 10;
+	int2 = VARC[1191] - VARC[1191] / 10 * 10;
+	switch (int1) {
+		case 1:
+			switch (int2) {
+				case 1:
+					int0 = 0;
+					break;
+			}
+			break;
+		case 2:
+			switch (int2) {
+				case 1:
+					int0 = -760;
+					break;
+				case 2:
+					int0 = 507;
+					break;
+			}
+			break;
+		case 3:
+			switch (int2) {
+				case 1:
+					int0 = -1520;
+					break;
+				case 2:
+					int0 = 190;
+					break;
+				case 3:
+					int0 = 950;
+					break;
+			}
+			break;
+		case 4:
+			switch (int2) {
+				case 1:
+					int0 = -2280;
+					break;
+				case 2:
+					int0 = -760;
+					break;
+				case 3:
+					int0 = 633;
+					break;
+				case 4:
+					int0 = 1457;
+					break;
+			}
+			break;
+		case 5:
+			switch (int2) {
+				case 1:
+					int0 = -3040;
+					break;
+				case 2:
+					int0 = -1267;
+					break;
+				case 3:
+					int0 = 380;
+					break;
+				case 4:
+					int0 = 1140;
+					break;
+				case 5:
+					int0 = 1900;
+					break;
+			}
+			break;
+	}
+	return int1, int2, int0;
+}

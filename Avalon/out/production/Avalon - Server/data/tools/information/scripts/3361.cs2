@@ -1,0 +1,25 @@
+int, string, int script_3361() {
+	switch (VARP[448]) {
+		case 17975:
+			return 7, "Second Wind (Tier 1)", 18067;
+		case 17976:
+			return 17, "Second Wind (Tier 2)", 18068;
+		case 17977:
+			return 27, "Second Wind (Tier 3)", 18069;
+		case 17978:
+			return 37, "Second Wind (Tier 4)", 18070;
+		case 17979:
+			return 47, "Second Wind (Tier 5)", 18071;
+		case 17980:
+			return 57, "Second Wind (Tier 6)", 18072;
+		case 17981:
+			return 67, "Second Wind (Tier 7)", 18073;
+		case 17982:
+			return 77, "Second Wind (Tier 8)", 18074;
+		case 17983:
+			return 87, "Second Wind (Tier 9)", 18075;
+		case 17984:
+			return 97, "Second Wind (Tier 10)", 18076;
+	}
+	return 7, "Second Wind (Tier 1)", 18067;
+}

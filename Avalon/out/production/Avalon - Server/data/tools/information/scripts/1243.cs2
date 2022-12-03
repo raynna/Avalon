@@ -1,0 +1,33 @@
+int, int script_1243(int arg0) {
+	if (arg0 == 1) {
+		cs2method5405(0, 9);
+		cs2method5405(1, 9);
+		cs2method5406(0, 0, location(3780, 2820, 0), 1600, location(3788, 2819, 0), 1580, 0);
+		cs2method5406(1, 0, location(3786, 2829, 0), 470, location(3788, 2827, 0), 460, 0);
+		cs2method5406(0, 1, location(3814, 2818, 0), 1215, location(3822, 2820, 0), 1095, 0);
+		cs2method5406(1, 1, location(3815, 2827, 0), 375, location(3821, 2831, 0), 360, 0);
+		script_1899(0, 100, 150);
+		cs2method5406(0, 2, location(3832, 2833, 0), 965, location(3834, 2841, 0), 940, 0);
+		cs2method5406(1, 2, location(3823, 2841, 0), 350, location(3823, 2847, 0), 330, 0);
+		script_1899(1, 100, 150);
+		cs2method5406(0, 3, location(3825, 2861, 0), 970, location(3814, 2866, 0), 985, 0);
+		cs2method5406(1, 3, location(3816, 2853, 0), 330, location(3810, 2853, 0), 330, 0);
+		script_1899(2, 100, 150);
+		cs2method5406(0, 4, location(3794, 2845, 0), 950, location(3793, 2830, 0), 980, 0);
+		cs2method5406(1, 4, location(3811, 2842, 0), 240, location(3815, 2840, 0), 195, 0);
+		script_1899(3, 100, 150);
+		cs2method5406(0, 5, location(3818, 2831, 0), 1445, location(3828, 2839, 0), 1420, 0);
+		cs2method5406(1, 5, location(3819, 2848, 0), 190, location(3820, 2853, 0), 160, 0);
+		script_1899(4, 100, 150);
+		cs2method5406(0, 6, location(3816, 2859, 0), 1070, location(3808, 2866, 0), 1070, 0);
+		cs2method5406(1, 6, location(3813, 2864, 0), 100, location(3807, 2871, 0), 65, 0);
+		script_1899(5, 100, 150);
+		cs2method5406(0, 7, location(3801, 2865, 0), 1115, location(3801, 2865, 0), 1115, 0);
+		cs2method5406(1, 7, location(3797, 2868, 0), 45, location(3797, 2868, 0), 45, 0);
+		script_1899(6, 100, 150);
+		cs2method5406(0, 8, location(3786, 2866, 0), 1420, location(3786, 2866, 0), 1395, 0);
+		cs2method5406(1, 8, location(3797, 2868, 0), -245, location(3797, 2868, 0), -245, 0);
+		script_1899(7, 100, 150);
+	}
+	return 62343961, 1250324;
+}

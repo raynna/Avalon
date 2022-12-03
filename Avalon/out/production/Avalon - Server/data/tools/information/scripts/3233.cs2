@@ -1,0 +1,9 @@
+void script_3233(string string0) {
+	Widget widget0;
+	widget0 = widget(596, 14);
+	if (hasSSKey()) {
+		widget0 = widget(975, 4);
+	}
+	widget0.setText(string0);
+	return;
+}

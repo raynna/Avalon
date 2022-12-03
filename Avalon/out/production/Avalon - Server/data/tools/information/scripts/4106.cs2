@@ -1,0 +1,3 @@
+int script_4106(string string0, Widget widget1) {
+	return (widget1.getWidth() + max(getTextWidth(string0, 495), getTextWidth(widget1.getText(), 494))) / 2;
+}

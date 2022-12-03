@@ -1,0 +1,57 @@
+void script_497() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	str0 = "";
+	str1 = "";
+	str2 = "";
+	str3 = "";
+	if (VARC[1367] != -1) {
+		int0 = getNpcAttribute(VARC[1367], 1134);
+		if (VARC[1368] > int0) {
+			str0 = "Movement: " + "<col=00c800>" + str(VARC[1368]) + "<col=ff981f>" + "/" + str(int0);
+		} else if (VARC[1368] < int0) {
+			str0 = "Movement: " + "<col=c80000>" + str(VARC[1368]) + "<col=ff981f>" + "/" + str(int0);
+		} else {
+			str0 = "Movement: " + str(VARC[1368]) + "/" + str(int0);
+		}
+		int1 = getNpcAttribute(VARC[1367], 1135);
+		if (VARC[1369] > int1) {
+			str1 = "Damage: " + "<col=00c800>" + str(VARC[1369] * 100) + "<col=ff981f>" + "/" + str(int1 * 100);
+		} else if (VARC[1369] < int1) {
+			str1 = "Damage: " + "<col=c80000>" + str(VARC[1369] * 100) + "<col=ff981f>" + "/" + str(int1 * 100);
+		} else {
+			str1 = "Damage: " + str(VARC[1369] * 100) + "/" + str(int1 * 100);
+		}
+		int2 = getNpcAttribute(VARC[1367], 1136);
+		if (VARC[1370] > int2) {
+			str2 = "Health: " + "<col=00c800>" + str(VARC[1370] * 100) + "<col=ff981f>" + "/" + str(int2 * 100);
+		} else if (VARC[1370] < int2) {
+			str2 = "Health: " + "<col=c80000>" + str(VARC[1370] * 100) + "<col=ff981f>" + "/" + str(int2 * 100);
+		} else {
+			str2 = "Health: " + str(VARC[1370] * 100) + "/" + str(int2 * 100);
+		}
+		int3 = getNpcAttribute(VARC[1367], 1137);
+		if (VARC[1371] > int3) {
+			str3 = "Range: " + "<col=00c800>" + str(VARC[1371]) + "<col=ff981f>" + "/" + str(int3);
+		} else if (VARC[1371] < int3) {
+			str3 = "Range: " + "<col=c80000>" + str(VARC[1371]) + "<col=ff981f>" + "/" + str(int3);
+		} else {
+			str3 = "Range: " + str(VARC[1371]) + "/" + str(int3);
+		}
+		widget(1012, 8).setText(str0);
+		widget(1012, 9).setText(str1);
+		widget(1012, 10).setText(str2);
+		widget(1012, 11).setText(str3);
+	}
+	return;
+}

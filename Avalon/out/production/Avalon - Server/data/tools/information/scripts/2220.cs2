@@ -1,0 +1,48 @@
+void script_2220() {
+	if (VARPBIT[7324] == 1) {
+		widget(931, 121).setIsHidden(true);
+	} else {
+		widget(931, 121).setIsHidden(false);
+	}
+	if (VARPBIT[7325] == 1) {
+		widget(931, 122).setIsHidden(true);
+	} else {
+		widget(931, 122).setIsHidden(false);
+	}
+	if (VARPBIT[7326] == 1) {
+		widget(931, 123).setIsHidden(true);
+	} else {
+		widget(931, 123).setIsHidden(false);
+	}
+	widget(931, 154).setText(str(VARC[1126]));
+	widget(931, 148).setText(str(VARC[1127]));
+	widget(931, 142).setText(str(VARC[1128]));
+	widget(931, 112).setText(str(VARC[1129]));
+	widget(931, 136).setText(str(VARC[1131]));
+	widget(931, 130).setText(str(VARC[1130]));
+	widget(931, 155).setText("Total Workers: " + str(VARC[1135]));
+	widget(931, 115).setText(str(VARP[1687]) + "/15");
+	widget(931, 117).setText(str(VARP[1688]) + "/15");
+	widget(931, 116).setText(str(VARP[1686]) + "/15");
+	widget(931, 120).setText(str(VARP[1689]) + "/7");
+	widget(931, 118).setText(str(VARP[1690]) + "/7");
+	widget(931, 119).setText(str(VARP[1691]) + "/7");
+	script_2221();
+	widget(931, 20).setText("Turn " + str(VARP[1674]) + "/15");
+	if (VARC[1132] == 0) {
+		widget(931, 121).setSprite(941);
+	} else {
+		widget(931, 121).setSprite(942);
+	}
+	if (VARC[1134] == 0) {
+		widget(931, 122).setSprite(941);
+	} else {
+		widget(931, 122).setSprite(942);
+	}
+	if (VARC[1133] == 0) {
+		widget(931, 123).setSprite(941);
+	} else {
+		widget(931, 123).setSprite(942);
+	}
+	return;
+}

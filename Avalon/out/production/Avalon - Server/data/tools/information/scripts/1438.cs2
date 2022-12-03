@@ -1,0 +1,7 @@
+void script_1438(Widget widget0, Widget widget1, Widget widget2) {
+	if (VARC[657] <= 0) {
+		return;
+	}
+	script_1439(widget0, widget1, widget2);
+	return;
+}

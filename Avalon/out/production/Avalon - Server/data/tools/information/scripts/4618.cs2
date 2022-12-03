@@ -1,0 +1,31 @@
+int, int script_4618(int arg0, int arg1) {
+	int int2;
+	int int3;
+	int int4;
+	if (arg0 == 0) {
+		return 0, 0;
+	}
+	int2 = arg0;
+	int3 = arg1;
+	int4 = 0;
+	if (CLANDEF113[5] == 1) {
+		int4 = max(CLANDEF112[0], 0 - CLANDEF112[0]);
+	}
+	int3 = arg1 / 10 * 60 + arg1 % 10 * 10;
+	if (CLANDEF113[5] == 1) {
+		if (CLANDEF112[0] < 0) {
+			if (int3 + int4 >= 1440) {
+				int2 = int2 + 1;
+				int3 = int3 + int4 - 1440;
+			} else {
+				int3 = int3 + int4;
+			}
+		} else if (int3 - int4 < 0) {
+			int2 = int2 - 1;
+			int3 = 1440 + arg1 - int4;
+		} else {
+			int3 = int3 - int4;
+		}
+	}
+	return int2, int3;
+}

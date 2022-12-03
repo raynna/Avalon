@@ -1,0 +1,8 @@
+void script_5212(Widget widget0) {
+	if (VARPBIT[9511] == 2000) {
+		widget0.setText("<col=ff0000>" + str(VARPBIT[9511]) + "/" + str(2000) + "</col>");
+	} else {
+		widget0.setText("<col=ff981f>" + str(VARPBIT[9511]) + "/" + str(2000) + "</col>");
+	}
+	return;
+}

@@ -1,0 +1,3 @@
+int script_3546(int arg0) {
+	return datamap('i', 'i', script_3549(VARPBIT[7392]), (arg0 + VARPBIT[7389]) % datamapSize(script_3549(VARPBIT[7392])));
+}

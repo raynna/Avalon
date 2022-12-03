@@ -1,0 +1,18 @@
+Sprite, Sprite script_4384(int arg0, int arg1, int arg2) {
+	Sprite sprite3;
+	Sprite sprite4;
+	sprite3 = datamap('i', 'd', (DataMap)3686, arg0);
+	sprite4 = datamap('i', 'd', (DataMap)3686, arg1);
+	if (arg2 == 1 && (CLANDEF113[10] == 1 || cs2method3709() < 5)) {
+		sprite3 = 5723;
+		sprite4 = 5789;
+	} else {
+		if (sprite3 == null) {
+			sprite3 = 5723;
+		}
+		if (sprite4 == null) {
+			sprite4 = 5789;
+		}
+	}
+	return sprite3, sprite4;
+}

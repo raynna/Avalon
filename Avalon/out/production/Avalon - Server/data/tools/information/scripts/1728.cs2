@@ -1,0 +1,5 @@
+void script_1728(Widget widget0) {
+	widget0.setScriptCallOnGameloop(-1, "");
+	widget0.setTrans(0);
+	return;
+}

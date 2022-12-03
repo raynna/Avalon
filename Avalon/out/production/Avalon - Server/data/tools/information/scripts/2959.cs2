@@ -1,0 +1,7 @@
+void script_2959(Widget widget0) {
+	widget0.cs2method2309(1, 170);
+	widget0.cs2method2309(2, 170);
+	widget0.cs2method2309(3, 170);
+	widget0.cs2method2309(4, 170);
+	return;
+}

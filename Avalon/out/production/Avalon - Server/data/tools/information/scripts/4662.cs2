@@ -1,0 +1,48 @@
+void script_4662(Widget widget0, Color color1) {
+	int int2;
+	int int3;
+	int2 = 0;
+	int3 = 0;
+	int2, int3 = script_4661();
+	if (int2 == 1 && int3 >= 3) {
+		switch (widget0) {
+			case widget(23, 2):
+				widget0.setRGB(color1);
+				break;
+			case widget(23, 3):
+				widget0.setRGB(color1);
+				break;
+			case widget(23, 4):
+				return;
+			case widget(23, 5):
+				return;
+		}
+	} else if (int2 == 2 && int3 >= 3) {
+		switch (widget0) {
+			case widget(23, 4):
+				widget0.setRGB(color1);
+				break;
+			case widget(23, 5):
+				widget0.setRGB(color1);
+				break;
+			case widget(23, 2):
+				return;
+			case widget(23, 3):
+				return;
+		}
+	} else {
+		switch (widget0) {
+			case widget(23, 3):
+				widget0.setRGB(color1);
+				break;
+			case widget(23, 4):
+				widget0.setRGB(color1);
+				break;
+			case widget(23, 2):
+				return;
+			case widget(23, 5):
+				return;
+		}
+	}
+	return;
+}

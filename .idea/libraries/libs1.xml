@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="libs1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Avalon/out/production/Avalon - Server/data/libs/commons-codec-1.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/out/production/Avalon - Server/data/libs/FileStore.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/out/production/Avalon - Server/data/libs/mysql-connector-java-5.1.28-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Avalon/out/production/Avalon - Server/data/libs/netty-3.5.2.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

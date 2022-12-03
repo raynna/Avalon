@@ -1,0 +1,7 @@
+void script_2941() {
+	widget(744, 26).setScriptCallOnWidgetResize(-1, "");
+	STRING[33] = "";
+	VARC[1099] = 0;
+	resetRCs();
+	return;
+}

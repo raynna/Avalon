@@ -1,0 +1,147 @@
+void script_5335(Widget widget0, int arg1, Widget widget2, string string3, int arg4, int arg5, int arg6) {
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	Widget widget14;
+	int6 = 0;
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int10 = 0;
+	int11 = 0;
+	int12 = 0;
+	int13 = 0;
+	widget14 = null;
+	if (arg1 == -1 && ACTIVE.setChild(widget0) || ACTIVE.setChild(widget0, arg1)) {
+		if (script_4761(arg4) == 0) {
+			return;
+		}
+		if (VARC[2] != 1) {
+			int6 = ACTIVE.getX() + 5;
+			int7 = ACTIVE.getY() + ACTIVE.getHeight() + 5;
+			widget14 = widget2.getLayer();
+			if (widget14 != null && arg5 >= widget14.getWidth()) {
+				arg5 = widget14.getWidth();
+			}
+			if (arg6 == 0) {
+				int12 = 4 + getMaxLineWidth(string3, arg5 - 4, 495);
+				int13 = 4 + 16 * getLineCount(string3, arg5 - 4, 495);
+			} else {
+				int12 = 12 + getMaxLineWidth(string3, arg5 - 12, 3793);
+				int13 = 12 + 16 * getLineCount(string3, arg5 - 12, 3793);
+			}
+			if (widget14 != null) {
+				int8 = int6 - widget14.getScrollX();
+				int9 = int7 - widget14.getScrollY();
+				if (int8 < 0) {
+					int6 = widget14.getScrollX();
+					int8 = 0;
+				}
+				if (int9 < 0) {
+					int7 = widget14.getScrollY();
+					int9 = 0;
+				}
+				if (int8 > 0) {
+					int10 = int8 - widget14.getWidth() + int12;
+					if (int10 > 0) {
+						int6 = int6 - int10;
+					}
+				}
+				if (int9 > 0) {
+					int11 = int9 - widget14.getHeight() + int13;
+					if (int11 > 0) {
+						int7 = int7 - int11 - ACTIVE.getHeight() - 10;
+					}
+				}
+			}
+			if (int6 < 0) {
+				int6 = 0;
+			}
+			if (int7 < 0) {
+				int7 = 0;
+			}
+			widget2.setSize(int12, int13, 0, 0);
+			widget2.setPosition(int6, int7, 0, 0);
+			widget2.clearChildren();
+			ACTIVE.createChild(widget2, 3, 0);
+			ACTIVE.setSize(widget2.getWidth(), widget2.getHeight(), 0, 0);
+			ACTIVE.setFilled(true);
+			if (arg6 == 0) {
+				ACTIVE.setRGB(0xFFFFA0);
+			} else {
+				ACTIVE.setRGB(0x000000);
+			}
+			if (arg6 == 0) {
+				ACTIVE.createChild(widget2, 3, 1);
+				ACTIVE.setSize(widget2.getWidth(), widget2.getHeight(), 0, 0);
+				ACTIVE.setFilled(false);
+				ACTIVE.setRGB(0x000000);
+			} else {
+				ACTIVE.createChild(widget2, 5, widget2.nextChild());
+				ACTIVE.setSize(4, 10, 1, 0);
+				ACTIVE.setPosition(0, 0, 1, 0);
+				ACTIVE.setSprite(4649);
+				ACTIVE.setSpriteTiling(true);
+				ACTIVE.createChild(widget2, 5, widget2.nextChild());
+				ACTIVE.setSize(4, 10, 1, 0);
+				ACTIVE.setPosition(0, 0, 1, 2);
+				ACTIVE.setSprite(4649);
+				ACTIVE.setSpriteTiling(true);
+				ACTIVE.setVFlip(true);
+				ACTIVE.createChild(widget2, 5, widget2.nextChild());
+				ACTIVE.setSize(10, 4, 0, 1);
+				ACTIVE.setPosition(0, 0, 0, 1);
+				ACTIVE.setSprite(4651);
+				ACTIVE.setSpriteTiling(true);
+				ACTIVE.setHFlip(true);
+				ACTIVE.createChild(widget2, 5, widget2.nextChild());
+				ACTIVE.setSize(10, 4, 0, 1);
+				ACTIVE.setPosition(0, 0, 2, 1);
+				ACTIVE.setSprite(4651);
+				ACTIVE.setSpriteTiling(true);
+				ACTIVE.createChild(widget2, 5, widget2.nextChild());
+				ACTIVE.setSize(10, 10, 0, 0);
+				ACTIVE.setPosition(0, 0, 0, 0);
+				ACTIVE.setSprite(4650);
+				ACTIVE.setHFlip(true);
+				ACTIVE.createChild(widget2, 5, widget2.nextChild());
+				ACTIVE.setSize(10, 10, 0, 0);
+				ACTIVE.setPosition(0, 0, 2, 0);
+				ACTIVE.setSprite(4650);
+				ACTIVE.createChild(widget2, 5, widget2.nextChild());
+				ACTIVE.setSize(10, 10, 0, 0);
+				ACTIVE.setPosition(0, 0, 0, 2);
+				ACTIVE.setSprite(4650);
+				ACTIVE.setHFlip(true);
+				ACTIVE.setVFlip(true);
+				ACTIVE.createChild(widget2, 5, widget2.nextChild());
+				ACTIVE.setSize(10, 10, 0, 0);
+				ACTIVE.setPosition(0, 0, 2, 2);
+				ACTIVE.setSprite(4650);
+				ACTIVE.setVFlip(true);
+			}
+			ACTIVE.createChild(widget2, 4, widget2.nextChild());
+			ACTIVE.setText(string3);
+			if (arg6 == 0) {
+				ACTIVE.setSize(arg5 - 4, widget2.getHeight(), 0, 0);
+				ACTIVE.setPosition(2, 0, 0, 0);
+				ACTIVE.setTextAlignment(0, 1, 16);
+				ACTIVE.setFont(495);
+				ACTIVE.setRGB(0x000000);
+			} else {
+				ACTIVE.setSize(widget2.getWidth() - 12, widget2.getHeight() - 12, 0, 0);
+				ACTIVE.setPosition(6, 6, 0, 0);
+				ACTIVE.setTextAlignment(1, 1, 13);
+				ACTIVE.setRGB(0xFFFFFF);
+				ACTIVE.setFont(3793);
+			}
+			VARC[2] = 1;
+		}
+	}
+	return;
+}

@@ -1,0 +1,10 @@
+void script_1156() {
+	if (!cs2method6117()) {
+		widget(743, 51).setSprite(1134);
+		widget(743, 49).setSprite(1135);
+	} else {
+		widget(743, 49).setSprite(1134);
+		widget(743, 51).setSprite(1135);
+	}
+	return;
+}

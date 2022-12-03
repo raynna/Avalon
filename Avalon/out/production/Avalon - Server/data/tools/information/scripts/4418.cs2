@@ -1,0 +1,11 @@
+void script_4418() {
+	string str0;
+	str0 = removeTags(widget(1107, 98).getText());
+	if (!isFriend(str0)) {
+		msg("Attempting to add " + str0 + " to your Friends List.");
+		cs2method3605(str0);
+	} else {
+		msg("You've already added " + str0 + " to your friends list.");
+	}
+	return;
+}

@@ -1,0 +1,8 @@
+void script_2511() {
+	widget(654, 8).setText(datamap('i', 's', (DataMap)2385, 1));
+	widget(654, 57).setText(datamap('i', 's', (DataMap)2385, 2));
+	widget(654, 49).setText(datamap('i', 's', (DataMap)2385, 3));
+	widget(654, 41).setText(datamap('i', 's', (DataMap)2385, 4));
+	widget(654, 66).setText(datamap('i', 's', (DataMap)2385, 5));
+	return;
+}

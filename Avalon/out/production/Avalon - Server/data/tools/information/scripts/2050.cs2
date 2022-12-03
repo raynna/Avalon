@@ -1,0 +1,9 @@
+void script_2050(Widget widget0, int arg1) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setHidden(true);
+	} else {
+		ACTIVE.createChild(widget0, 5, arg1);
+		ACTIVE.setHidden(true);
+	}
+	return;
+}

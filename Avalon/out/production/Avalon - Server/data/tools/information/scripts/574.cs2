@@ -1,0 +1,18 @@
+void script_574(int arg0, char char1) {
+	string str0;
+	if (arg0 == 84) {
+		VARC[81] = 0;
+		widget(389, 9).setScriptCallOnGameloop(-1, "");
+		script_576();
+		return;
+	}
+	str0 = script_74(STRING[22], 0, arg0, char1);
+	if (compare(STRING[22], str0) == 0) {
+		return;
+	}
+	STRING[22] = str0;
+	widget(389, 9).setText(escape(STRING[22]) + "*");
+	VARC[81] = 50;
+	widget(389, 9).setScriptCallOnGameloop(575, "");
+	return;
+}

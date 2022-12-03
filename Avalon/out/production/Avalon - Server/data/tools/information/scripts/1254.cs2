@@ -1,0 +1,6 @@
+void script_1254() {
+	widget(328, 1).setText(str(VARP[343]));
+	widget(328, 3).setText(str(VARP[344]));
+	widget(328, 5).setText(str(VARP[345]));
+	return;
+}

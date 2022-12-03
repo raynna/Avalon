@@ -1,0 +1,7 @@
+void script_1422(Widget widget0, Widget widget1, Widget widget2, Widget widget3) {
+	widget0.setSprite(181);
+	widget1.setSprite(180);
+	widget2.setSprite(180);
+	widget3.setSprite(180);
+	return;
+}

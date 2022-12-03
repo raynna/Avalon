@@ -1,0 +1,63 @@
+void script_312(string string0, int arg1, int arg2) {
+	Widget widget2;
+	Widget widget3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	if (VARC[1] < getClientCycle() + 25) {
+		VARC[1] = max(VARC[1], getClientCycle());
+		VARC[1] = VARC[1] + 2;
+		return;
+	}
+	widget2 = widget(755, 57);
+	widget3 = widget2.getLayer();
+	int4 = widget3.getWidth();
+	int5 = 0;
+	int6 = 0;
+	VARC[1] = getClientCycle() + 10;
+	if (VARC[2] == 0) {
+		int5 = getMaxLineWidth(string0, int4, 495);
+		int6 = getLineCount(string0, int5, 495) * 12 + 9;
+		int5 = int5 + 4;
+		widget2.setSize(int5, int6, 0, 0);
+		ACTIVE.createChild(widget2, 3, 0);
+		ACTIVE.setSize(0, 0, 1, 1);
+		ACTIVE.setPosition(0, 0, 1, 1);
+		ACTIVE.setFilled(true);
+		ACTIVE.setRGB(0xFFFFA0);
+		ACTIVE.createChild(widget2, 3, 1);
+		ACTIVE.setSize(0, 0, 1, 1);
+		ACTIVE.setPosition(0, 0, 1, 1);
+		ACTIVE.setFilled(false);
+		ACTIVE.setRGB(0x010101);
+		ACTIVE.createChild(widget2, 4, 2);
+		ACTIVE.setSize(4, 6, 1, 1);
+		ACTIVE.setPosition(0, 0, 1, 1);
+		ACTIVE.setRGB(0x000000);
+		ACTIVE.setTextAlignment(0, 1, 0);
+		ACTIVE.setFont(495);
+		ACTIVE.setText(string0);
+		VARC[2] = 1;
+	}
+	int5 = arg1;
+	int6 = arg2;
+	int7 = 0 - int5;
+	if (int7 > 0) {
+		int5 = int5 + int7;
+	}
+	int7 = int5 + widget2.getWidth() - int4;
+	if (int7 > 0) {
+		int5 = int5 - int7;
+	}
+	int7 = int6 + widget2.getHeight() - widget3.getHeight();
+	if (int7 > 0) {
+		int6 = int6 - int7;
+	}
+	int7 = 0 - int6;
+	if (int7 > 0) {
+		int6 = int6 + int7;
+	}
+	widget2.setPosition(int5, int6, 0, 0);
+	return;
+}

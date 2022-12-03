@@ -1,0 +1,281 @@
+void script_1439(Widget widget0, Widget widget1, Widget widget2) {
+	int int3;
+	int int4;
+	int int5;
+	string str0;
+	widget0.clearChildren();
+	widget1.clearChildren();
+	widget2.clearChildren();
+	VARC[656] = min(VARC[656], VARC[657] - 1);
+	int3 = 0;
+	if (VARC[658] > 0 || VARC[659] > 0 || VARC[660] > 0 || VARC[661] > 0 || VARC[662] > 0 || VARC[663] > 0 || VARC[664] > 0 || VARC[665] > 0 || VARC[666] > 0 || VARC[667] > 0 || VARC[668] > 0 || VARC[669] > 0 || VARC[670] > 0 || VARC[658] > 13 || VARC[672] > 0 || VARC[673] > 0) {
+		int3 = 1;
+	}
+	if (int3 == 0 || VARC[656] > 0) {
+		ACTIVE.createChild(widget2, 4, widget2.nextChild());
+		ACTIVE.setSize(2, 14, 1, 0);
+		ACTIVE.setPosition(0, 0, 1, 2);
+		ACTIVE.setTextAlignment(1, 1, 0);
+		ACTIVE.setFont(494);
+		ACTIVE.setRGB(0xFF981F);
+		if (int3 == 0) {
+			ACTIVE.setText(str(VARC[656] + 1) + " / " + str(VARC[657]));
+		} else {
+			ACTIVE.setText(str(VARC[656]) + " / " + str(VARC[657] - 1));
+		}
+	}
+	if (VARC[656] > 0) {
+		ACTIVE.createChild(widget2, 4, widget2.nextChild());
+		ACTIVE.setSize(2, 17, 1, 1);
+		ACTIVE.setPosition(0, 1, 1, 0);
+		ACTIVE.setTextAlignment(0, 0, 0);
+		ACTIVE.setFont(495);
+		ACTIVE.setRGB(0xFF981F);
+		switch (VARC[656]) {
+			case 1:
+				ACTIVE.setText(STRING[73]);
+				break;
+			case 2:
+				ACTIVE.setText(STRING[74]);
+				break;
+			case 3:
+				ACTIVE.setText(STRING[75]);
+				break;
+			case 4:
+				ACTIVE.setText(STRING[76]);
+				break;
+			case 5:
+				ACTIVE.setText(STRING[77]);
+				break;
+			case 6:
+				ACTIVE.setText(STRING[78]);
+				break;
+			case 7:
+				ACTIVE.setText(STRING[79]);
+				break;
+			case 8:
+				ACTIVE.setText(STRING[80]);
+				break;
+			case 9:
+				ACTIVE.setText(STRING[81]);
+				break;
+			case 10:
+				ACTIVE.setText(STRING[82]);
+				break;
+			case 11:
+				ACTIVE.setText(STRING[83]);
+				break;
+			case 12:
+				ACTIVE.setText(STRING[84]);
+				break;
+			case 13:
+				ACTIVE.setText(STRING[85]);
+				break;
+			case 14:
+				ACTIVE.setText(STRING[86]);
+				break;
+			case 15:
+				ACTIVE.setText(STRING[87]);
+				break;
+			case 16:
+				ACTIVE.setText(STRING[88]);
+				break;
+			case 17:
+				ACTIVE.setText(STRING[89]);
+				break;
+			case 18:
+				ACTIVE.setText(STRING[90]);
+				break;
+			case 19:
+				ACTIVE.setText(STRING[91]);
+				break;
+			case 20:
+				ACTIVE.setText(STRING[92]);
+				break;
+			case 21:
+				ACTIVE.setText(STRING[93]);
+				break;
+			case 22:
+				ACTIVE.setText(STRING[94]);
+				break;
+			case 23:
+				ACTIVE.setText(STRING[95]);
+				break;
+			case 24:
+				ACTIVE.setText(STRING[96]);
+				break;
+			case 25:
+				ACTIVE.setText(STRING[97]);
+				break;
+			case 26:
+				ACTIVE.setText(STRING[98]);
+				break;
+			case 27:
+				ACTIVE.setText(STRING[99]);
+				break;
+			case 28:
+				ACTIVE.setText(STRING[100]);
+				break;
+			case 29:
+				ACTIVE.setText(STRING[101]);
+				break;
+			case 30:
+				ACTIVE.setText(STRING[102]);
+				break;
+			case 31:
+				ACTIVE.setText(STRING[103]);
+				break;
+			case 32:
+				ACTIVE.setText(STRING[104]);
+				break;
+			case 33:
+				ACTIVE.setText(STRING[105]);
+				break;
+			case 34:
+				ACTIVE.setText(STRING[106]);
+				break;
+			case 35:
+				ACTIVE.setText(STRING[107]);
+				break;
+			case 36:
+				ACTIVE.setText(STRING[108]);
+				break;
+			case 37:
+				ACTIVE.setText(STRING[109]);
+				break;
+			case 38:
+				ACTIVE.setText(STRING[110]);
+				break;
+			case 39:
+				ACTIVE.setText(STRING[111]);
+				break;
+			case 40:
+				ACTIVE.setText(STRING[112]);
+				break;
+			case 41:
+				ACTIVE.setText(STRING[113]);
+				break;
+			case 42:
+				ACTIVE.setText(STRING[114]);
+				break;
+			case 43:
+				ACTIVE.setText(STRING[115]);
+				break;
+			case 44:
+				ACTIVE.setText(STRING[116]);
+				break;
+			case 45:
+				ACTIVE.setText(STRING[117]);
+				break;
+			case 46:
+				ACTIVE.setText(STRING[118]);
+				break;
+			case 47:
+				ACTIVE.setText(STRING[119]);
+				break;
+			case 48:
+				ACTIVE.setText(STRING[120]);
+				break;
+			case 49:
+				ACTIVE.setText(STRING[121]);
+				break;
+		}
+		return;
+	}
+	int4 = 0;
+	str0 = "";
+	int5 = 0;
+	while (int4 < 16) {
+		switch (int4) {
+			case 0:
+				str0 = STRING[57];
+				int5 = VARC[658];
+				break;
+			case 1:
+				str0 = STRING[58];
+				int5 = VARC[659];
+				break;
+			case 2:
+				str0 = STRING[59];
+				int5 = VARC[660];
+				break;
+			case 3:
+				str0 = STRING[60];
+				int5 = VARC[661];
+				break;
+			case 4:
+				str0 = STRING[61];
+				int5 = VARC[662];
+				break;
+			case 5:
+				str0 = STRING[62];
+				int5 = VARC[663];
+				break;
+			case 6:
+				str0 = STRING[63];
+				int5 = VARC[664];
+				break;
+			case 7:
+				str0 = STRING[64];
+				int5 = VARC[665];
+				break;
+			case 8:
+				str0 = STRING[65];
+				int5 = VARC[666];
+				break;
+			case 9:
+				str0 = STRING[66];
+				int5 = VARC[667];
+				break;
+			case 10:
+				str0 = STRING[67];
+				int5 = VARC[668];
+				break;
+			case 11:
+				str0 = STRING[68];
+				int5 = VARC[669];
+				break;
+			case 12:
+				str0 = STRING[69];
+				int5 = VARC[670];
+				break;
+			case 13:
+				str0 = STRING[70];
+				int5 = VARC[671];
+				break;
+			case 14:
+				str0 = STRING[71];
+				int5 = VARC[672];
+				break;
+			case 15:
+				str0 = STRING[72];
+				int5 = VARC[673];
+				break;
+			default:
+				str0 = "";
+				int5 = 0;
+				break;
+		}
+		if (length(str0) > 0) {
+			ACTIVE.createChild(widget2, 4, widget2.nextChild());
+			if (int4 == 16 - 1) {
+				ACTIVE.setSize(6, 17, 1, 0);
+			} else {
+				ACTIVE.setSize(2, 12, 1, 0);
+			}
+			ACTIVE.setPosition(0, int4 * 12 + 1, 1, 0);
+			ACTIVE.setTextAlignment(0, 0, 0);
+			ACTIVE.setFont(495);
+			ACTIVE.setRGB(0xFF981F);
+			ACTIVE.setText(str0);
+			if (int5 > 0) {
+				ACTIVE.setContextMenuOption(1, "Go");
+				ACTIVE.setScriptCallOnClickContextMenu(2065, CTX_MENU_OPTION, int5, widget0, widget1, widget2, "iiIII");
+				ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+				ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16750623, "Iii");
+			}
+		}
+		int4 = int4 + 1;
+	}
+	return;
+}

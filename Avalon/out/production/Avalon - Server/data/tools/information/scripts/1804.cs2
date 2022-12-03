@@ -1,0 +1,8 @@
+void script_1804(Widget widget0, int arg1, Widget widget2) {
+	if (isMember()) {
+		script_1163(widget0, arg1, widget2, "You may choose:" + "<br>" + "- Allow all spells" + "<br>" + "- Standard spellbook only" + "<br>" + "- Bind/Snare/Entangle only" + "<br>" + "- No Magic", 25, 250);
+	} else {
+		script_1163(widget0, arg1, widget2, "You may choose:" + "<br>" + "- Standard spellbook" + "<br>" + "- Bind only" + "<br>" + "- No Magic", 25, 250);
+	}
+	return;
+}

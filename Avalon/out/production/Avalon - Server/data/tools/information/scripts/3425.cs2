@@ -1,0 +1,15 @@
+void script_3425(Widget widget0, Widget widget1) {
+	Item item2;
+	int int3;
+	item2 = datamap('I', 'O', (DataMap)3058, widget1);
+	int3 = datamap('O', 'i', (DataMap)3059, item2);
+	if (item2 == 4055) {
+		widget0.setText("Free!");
+	} else {
+		widget0.setText(str(int3));
+	}
+	widget1.setItem(item2, -1);
+	widget1.setOutlineThickness(1);
+	widget1.setShadowColor(0x333333);
+	return;
+}

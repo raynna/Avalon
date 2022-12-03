@@ -1,0 +1,15 @@
+void script_5264(Widget widget0, Widget widget1) {
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	widget0.setSize(getTextWidth(str(script_5255()) + " / " + str(script_5255()), 495), widget0.getHeight(), 0, 0);
+	int2 = 190;
+	int3 = 8;
+	int4 = widget0.getWidth() + widget1.getWidth() + int3;
+	int5 = (int2 - int4) / 2;
+	widget1.setPosition(int5, widget1.getY(), 0, 0);
+	int5 = int5 + widget1.getWidth() + int3;
+	widget0.setPosition(int5, widget0.getY(), 0, 0);
+	return;
+}

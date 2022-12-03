@@ -1,0 +1,16 @@
+void script_5182() {
+	if (widget(1122, 88).getScrollMaxH() == 0) {
+		widget(1122, 87).setIsHidden(false);
+		widget(1122, 367).setIsHidden(false);
+	} else if (widget(1122, 88).getScrollX() == 0) {
+		widget(1122, 87).setIsHidden(false);
+		widget(1122, 367).setIsHidden(true);
+	} else if (widget(1122, 88).getScrollX() == widget(1122, 88).getScrollMaxH() - widget(1122, 88).getWidth()) {
+		widget(1122, 87).setIsHidden(true);
+		widget(1122, 367).setIsHidden(false);
+	} else {
+		widget(1122, 87).setIsHidden(true);
+		widget(1122, 367).setIsHidden(true);
+	}
+	return;
+}

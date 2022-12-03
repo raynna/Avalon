@@ -1,0 +1,9 @@
+void script_2832(int arg0, int arg1) {
+	if (arg0 != 1) {
+		return;
+	}
+	setBaseColor(0, arg1);
+	VARC[1015] = arg1;
+	script_2790();
+	return;
+}

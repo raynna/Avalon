@@ -1,0 +1,30 @@
+void script_4068(Widget widget0) {
+	switch (widget0) {
+		case widget(1058, 22):
+			if (widget(1058, 19).getSpriteId() != 4444) {
+				widget0.setPosition(-160, 18, 1, 0);
+			}
+			break;
+		case widget(1058, 23):
+			if (widget(1058, 17).getSpriteId() != 4445) {
+				widget0.setPosition(-80, 18, 1, 0);
+			}
+			break;
+		case widget(1058, 24):
+			if (widget(1058, 15).getSpriteId() != 4446) {
+				widget0.setPosition(0, 18, 1, 0);
+			}
+			break;
+		case widget(1058, 26):
+			if (widget(1058, 13).getSpriteId() != 4447) {
+				widget0.setPosition(80, 18, 1, 0);
+			}
+			break;
+		case widget(1058, 25):
+			if (widget(1058, 11).getSpriteId() != 4448) {
+				widget0.setPosition(160, 18, 1, 0);
+			}
+			break;
+	}
+	return;
+}

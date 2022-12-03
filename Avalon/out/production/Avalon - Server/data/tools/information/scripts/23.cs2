@@ -1,0 +1,238 @@
+void script_23() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	Item item5;
+	Sprite sprite6;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	int0 = 0;
+	str0 = "";
+	str0, int0 = script_12(VARPBIT[3288]);
+	widget(499, 6).setText(str0);
+	widget(499, 28).setScriptCallOnClickContextMenu(212, datamap('i', 's', (DataMap)696, VARPBIT[3288]), "s");
+	str1 = "";
+	int1 = 0;
+	if (int0 > 1) {
+		str1, int1 = script_13(VARPBIT[3288], 0);
+		widget(499, 10).setText(str1);
+		widget(499, 10).setIsHidden(false);
+	} else {
+		widget(499, 10).setText("");
+		widget(499, 10).setIsHidden(true);
+	}
+	if (int0 >= 2) {
+		str1, int1 = script_13(VARPBIT[3288], 1);
+		widget(499, 11).setText(str1);
+		widget(499, 5).setPosition(353, 78, 0, 0);
+		widget(499, 11).setIsHidden(false);
+	} else {
+		widget(499, 11).setText("");
+		widget(499, 11).setIsHidden(true);
+	}
+	if (int0 >= 3) {
+		str1, int1 = script_13(VARPBIT[3288], 2);
+		widget(499, 12).setText(str1);
+		widget(499, 5).setPosition(353, 95, 0, 0);
+		widget(499, 12).setIsHidden(false);
+	} else {
+		widget(499, 12).setText("");
+		widget(499, 12).setIsHidden(true);
+	}
+	if (int0 >= 4) {
+		str1, int1 = script_13(VARPBIT[3288], 3);
+		widget(499, 13).setText(str1);
+		widget(499, 5).setPosition(353, 114, 0, 0);
+		widget(499, 13).setIsHidden(false);
+	} else {
+		widget(499, 13).setText("");
+		widget(499, 13).setIsHidden(true);
+	}
+	if (int0 >= 5) {
+		str1, int1 = script_13(VARPBIT[3288], 4);
+		widget(499, 14).setText(str1);
+		widget(499, 5).setPosition(353, 129, 0, 0);
+		widget(499, 14).setIsHidden(false);
+	} else {
+		widget(499, 14).setText("");
+		widget(499, 14).setIsHidden(true);
+	}
+	if (int0 >= 6) {
+		str1, int1 = script_13(VARPBIT[3288], 5);
+		widget(499, 15).setText(str1);
+		widget(499, 5).setPosition(353, 146, 0, 0);
+		widget(499, 15).setIsHidden(false);
+	} else {
+		widget(499, 15).setText("");
+		widget(499, 15).setIsHidden(true);
+	}
+	if (int0 >= 7) {
+		str1, int1 = script_13(VARPBIT[3288], 6);
+		widget(499, 16).setText(str1);
+		widget(499, 5).setPosition(353, 168, 0, 0);
+		widget(499, 16).setIsHidden(false);
+	} else {
+		widget(499, 16).setText("");
+		widget(499, 16).setIsHidden(true);
+	}
+	if (int0 >= 8) {
+		str1, int1 = script_13(VARPBIT[3288], 7);
+		widget(499, 17).setText(str1);
+		widget(499, 5).setPosition(353, 180, 0, 0);
+		widget(499, 17).setIsHidden(false);
+	} else {
+		widget(499, 17).setText("");
+		widget(499, 17).setIsHidden(true);
+	}
+	if (int0 >= 9) {
+		str1, int1 = script_13(VARPBIT[3288], 8);
+		widget(499, 18).setText(str1);
+		widget(499, 5).setPosition(353, 197, 0, 0);
+		widget(499, 18).setIsHidden(false);
+	} else {
+		widget(499, 18).setText("");
+		widget(499, 18).setIsHidden(true);
+	}
+	if (int0 >= 10) {
+		str1, int1 = script_13(VARPBIT[3288], 9);
+		widget(499, 19).setText(str1);
+		widget(499, 5).setPosition(353, 214, 0, 0);
+		widget(499, 19).setIsHidden(false);
+	} else {
+		widget(499, 19).setText("");
+		widget(499, 19).setIsHidden(true);
+	}
+	if (int0 >= 11) {
+		str1, int1 = script_13(VARPBIT[3288], 10);
+		widget(499, 20).setText(str1);
+		widget(499, 5).setPosition(353, 231, 0, 0);
+		widget(499, 20).setIsHidden(false);
+	} else {
+		widget(499, 20).setText("");
+		widget(499, 20).setIsHidden(true);
+	}
+	if (int0 >= 12) {
+		str1, int1 = script_13(VARPBIT[3288], 11);
+		widget(499, 21).setText(str1);
+		widget(499, 5).setPosition(353, 248, 0, 0);
+		widget(499, 21).setIsHidden(false);
+	} else {
+		widget(499, 21).setText("");
+		widget(499, 21).setIsHidden(true);
+	}
+	if (int0 >= 13) {
+		str1, int1 = script_13(VARPBIT[3288], 12);
+		widget(499, 22).setText(str1);
+		widget(499, 5).setPosition(353, 265, 0, 0);
+		widget(499, 22).setIsHidden(false);
+	} else {
+		widget(499, 22).setText("");
+		widget(499, 22).setIsHidden(true);
+	}
+	if (int0 >= 14) {
+		str1, int1 = script_13(VARPBIT[3288], 13);
+		widget(499, 23).setText(str1);
+		widget(499, 5).setPosition(353, 282, 0, 0);
+		widget(499, 23).setIsHidden(false);
+	} else {
+		widget(499, 23).setText("");
+		widget(499, 23).setIsHidden(true);
+	}
+	if (int0 >= 15) {
+		str1, int1 = script_13(VARPBIT[3288], 14);
+		widget(499, 24).setText(str1);
+		widget(499, 5).setPosition(353, 299, 0, 0);
+		widget(499, 24).setIsHidden(false);
+	} else {
+		widget(499, 24).setText("");
+		widget(499, 24).setIsHidden(true);
+	}
+	if (int0 >= 16) {
+		str1, int1 = script_13(VARPBIT[3288], 15);
+		widget(499, 25).setText(str1);
+		widget(499, 5).setPosition(353, 316, 0, 0);
+		widget(499, 25).setIsHidden(false);
+	} else {
+		widget(499, 25).setText("");
+		widget(499, 25).setIsHidden(true);
+	}
+	if (int0 < 2) {
+		widget(499, 4).setIsHidden(true);
+		widget(499, 3).setIsHidden(true);
+		widget(499, 5).setIsHidden(true);
+	} else {
+		widget(499, 4).setIsHidden(false);
+		widget(499, 3).setIsHidden(false);
+		widget(499, 5).setIsHidden(false);
+	}
+	if (int0 == 2) {
+		widget(499, 3).setModel(20838);
+	} else if (int0 == 3) {
+		widget(499, 3).setModel(20839);
+	} else if (int0 == 4) {
+		widget(499, 3).setModel(20840);
+	} else if (int0 == 5) {
+		widget(499, 3).setModel(20841);
+	} else if (int0 == 6) {
+		widget(499, 3).setModel(20842);
+	} else if (int0 == 7) {
+		widget(499, 3).setModel(20843);
+	} else if (int0 == 8) {
+		widget(499, 3).setModel(20844);
+	} else if (int0 == 9) {
+		widget(499, 3).setModel(20845);
+	} else if (int0 == 10) {
+		widget(499, 3).setModel(20846);
+	} else if (int0 == 11) {
+		widget(499, 3).setModel(20847);
+	} else if (int0 == 12) {
+		widget(499, 3).setModel(20848);
+	} else if (int0 == 13) {
+		widget(499, 3).setModel(20849);
+	} else if (int0 == 14) {
+		widget(499, 3).setModel(20850);
+	} else if (int0 == 15) {
+		widget(499, 3).setModel(43501);
+	} else if (int0 == 16) {
+		widget(499, 3).setModel(43500);
+	}
+	str1, int1 = script_13(VARPBIT[3288], VARPBIT[3289]);
+	widget(499, 9).setText(str1);
+	if (int1 == 0) {
+		widget(499, 9).setText(str1);
+	} else {
+		widget(499, 9).setText(concat(str1, " - Members Only"));
+	}
+	widget(499, 7).clearChildren();
+	widget(499, 8).clearChildren();
+	int2 = 0;
+	int3 = 3;
+	int4 = 0;
+	item5 = 7620;
+	sprite6 = 2287;
+	str2 = "";
+	str3 = "";
+	if (script_1566(VARPBIT[3288], VARPBIT[3289]) == 1) {
+		while (sprite6 != null) {
+			int4, sprite6, str2, str3 = script_1567(VARPBIT[3288], VARPBIT[3289], int2);
+			int3 = int3 + script_24(int4, item5, sprite6, str2, int2, int3);
+			int2 = int2 + 1;
+		}
+	} else {
+		while (item5 != null) {
+			int4, item5, str2, str3 = script_14(VARPBIT[3288], VARPBIT[3289], int2);
+			int3 = int3 + script_24(int4, item5, sprite6, str2, int2, int3);
+			int2 = int2 + 1;
+		}
+	}
+	widget(499, 7).setScrollPos(0, 0);
+	widget(499, 7).setScrollMax(296, int3);
+	if (int3 > 240) {
+		script_31(widget(499, 8), widget(499, 7), 798, 795, 796, 797, 793, 794);
+	}
+	return;
+}

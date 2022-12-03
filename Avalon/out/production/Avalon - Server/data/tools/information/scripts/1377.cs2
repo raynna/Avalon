@@ -1,0 +1,31 @@
+void script_1377(Widget widget0, int arg1) {
+	int int2;
+	int2 = -1;
+	if (VARPBIT[7516] == arg1) {
+		int2 = script_486(VARPBIT[7520]);
+	} else if (VARPBIT[7517] == arg1) {
+		int2 = script_486(VARPBIT[7521]);
+	} else if (VARPBIT[7518] == arg1) {
+		int2 = script_486(VARPBIT[7526]);
+	} else if (VARPBIT[7519] == arg1) {
+		int2 = script_486(VARPBIT[7527]);
+	} else if (VARPBIT[7522] == arg1) {
+		int2 = script_486(VARPBIT[7530]);
+	} else if (VARPBIT[7523] == arg1) {
+		int2 = script_486(VARPBIT[7531]);
+	} else if (VARPBIT[7524] == arg1) {
+		int2 = script_486(VARPBIT[7532]);
+	} else if (VARPBIT[7525] == arg1) {
+		int2 = script_486(VARPBIT[7533]);
+	} else if (VARPBIT[7528] == arg1) {
+		int2 = script_486(VARPBIT[7534]);
+	} else if (VARPBIT[7529] == arg1) {
+		int2 = script_486(VARPBIT[7535]);
+	}
+	if (int2 != -1) {
+		widget0.setText(getNpcAttribute(int2, 1140));
+	} else {
+		widget0.setText("");
+	}
+	return;
+}

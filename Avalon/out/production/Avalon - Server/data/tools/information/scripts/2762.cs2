@@ -1,0 +1,66 @@
+void script_2762(Widget widget0, Location location1) {
+	switch (VARC[1007]) {
+		case 101:
+			cs2method5405(0, 2);
+			cs2method5406(0, 0, script_2764(location(3683, 4941, 0), location1), 450, script_2764(location(3683, 4941, 0), location1), 500, 0);
+			cs2method5406(0, 1, script_2764(location(3684, 4941, 0), location1), 600, script_2764(location(3684, 4941, 0), location1), 550, 0);
+			cs2method5405(1, 2);
+			cs2method5406(1, 0, script_2764(location(3677, 4947, 0), location1), 350, script_2764(location(3677, 4947, 0), location1), 375, 0);
+			cs2method5406(1, 1, script_2764(location(3680, 4945, 0), location1), 350, script_2764(location(3680, 4945, 0), location1), 375, 0);
+			cameraMethod5502(0, 0, 300, 400, 1, 0);
+			break;
+		case 102:
+			cs2method5405(0, 2);
+			cs2method5406(0, 0, script_2764(location(3677, 4953, 0), location1), 600, script_2764(location(3677, 4954, 0), location1), 600, 0);
+			cs2method5406(0, 1, script_2764(location(3678, 4958, 0), location1), 700, script_2764(location(3678, 4957, 0), location1), 700, 0);
+			cs2method5405(1, 2);
+			cs2method5406(1, 0, script_2764(location(3678, 4943, 0), location1), 400, script_2764(location(3678, 4941, 0), location1), 400, 0);
+			cs2method5406(1, 1, script_2764(location(3678, 4946, 0), location1), 400, script_2764(location(3678, 4946, 0), location1), 400, 0);
+			cameraMethod5502(0, 0, 250, 200, 1, 0);
+			break;
+		case 103:
+			cs2method5405(0, 2);
+			cs2method5406(0, 0, script_2764(location(3679, 4949, 0), location1), 700, script_2764(location(3680, 4950, 0), location1), 650, 0);
+			cs2method5406(0, 1, script_2764(location(3680, 4954, 0), location1), 650, script_2764(location(3680, 4954, 0), location1), 650, 0);
+			cs2method5405(1, 2);
+			cs2method5406(1, 0, script_2764(location(3680, 4963, 0), location1), 5, script_2764(location(3680, 4963, 0), location1), 5, 0);
+			cs2method5406(1, 1, script_2764(location(3680, 4968, 0), location1), 5, script_2764(location(3680, 4968, 0), location1), 5, 0);
+			cameraMethod5502(0, 0, 200, 200, 1, 0);
+			break;
+		case 104:
+			cs2method5405(0, 2);
+			cs2method5406(0, 0, script_2764(location(3669, 4965, 0), location1), 300, script_2764(location(3669, 4964, 0), location1), 300, 0);
+			cs2method5406(0, 1, script_2764(location(3671, 4962, 0), location1), 300, script_2764(location(3670, 4962, 0), location1), 300, 0);
+			cs2method5405(1, 2);
+			cs2method5406(1, 0, script_2764(location(3680, 4957, 0), location1), 250, script_2764(location(3680, 4957, 0), location1), 250, 0);
+			cs2method5406(1, 1, script_2764(location(3680, 4957, 0), location1), 250, script_2764(location(3680, 4957, 0), location1), 250, 0);
+			cameraMethod5502(0, 0, 100, 50, 1, 0);
+			break;
+		case 105:
+			cs2method5405(0, 2);
+			cs2method5406(0, 0, script_2764(location(3680, 4959, 0), location1), 700, script_2764(location(3680, 4963, 0), location1), 700, 0);
+			cs2method5406(0, 1, script_2764(location(3675, 4963, 0), location1), 700, script_2764(location(3676, 4963, 0), location1), 700, 0);
+			cs2method5405(1, 2);
+			cs2method5406(1, 0, script_2764(location(3666, 4963, 0), location1), 5, script_2764(location(3666, 4963, 0), location1), 5, 0);
+			cs2method5406(1, 1, script_2764(location(3666, 4963, 0), location1), 5, script_2764(location(3666, 4963, 0), location1), 5, 0);
+			cameraMethod5502(0, 0, 80, 50, 1, 0);
+			break;
+		case 106:
+			script_2766(0x000000, 40, widget0);
+			break;
+		case 107:
+			script_2768(25, widget0);
+			cs2method5405(0, 2);
+			cs2method5406(0, 0, script_2764(location(3679, 4958, 0), location1), 350, script_2764(location(3679, 4959, 0), location1), 350, 0);
+			cs2method5406(0, 1, script_2764(location(3675, 4965, 0), location1), 550, script_2764(location(3676, 4965, 0), location1), 550, 0);
+			cs2method5405(1, 2);
+			cs2method5406(1, 0, script_2764(location(3675, 4958, 0), location1), 300, script_2764(location(3675, 4958, 0), location1), 300, 0);
+			cs2method5406(1, 1, script_2764(location(3668, 4958, 0), location1), 350, script_2764(location(3668, 4958, 0), location1), 350, 0);
+			cameraMethod5502(0, 0, 120, 40, 1, 0);
+			break;
+		default:
+			cs2method5512();
+			break;
+	}
+	return;
+}

@@ -1,0 +1,11 @@
+void script_4138(Color color0, int arg1, Widget widget2) {
+	ACTIVE.createChild(widget2, 3, 0);
+	ACTIVE.setTrans(255);
+	ACTIVE.setFilled(true);
+	ACTIVE.setRGB(color0);
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	arg1 = min(arg1, 250);
+	ACTIVE.setScriptCallOnGameloop(4139, getClientCycle() + arg1, widget2, "iI");
+	return;
+}

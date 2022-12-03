@@ -1,0 +1,10 @@
+void script_5052(Widget widget0, int arg1) {
+	if (ACTIVE.setChild(widget0, 3)) {
+		if (arg1 == 1) {
+			cs2method3109(0, ACTIVE.getHeight() / 2);
+		} else {
+			cs2method3109(ACTIVE.getWidth() / 2, 0);
+		}
+	}
+	return;
+}

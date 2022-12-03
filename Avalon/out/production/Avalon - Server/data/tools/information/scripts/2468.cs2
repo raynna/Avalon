@@ -1,0 +1,48 @@
+void script_2468(Widget widget0, int arg1, string string2, int arg3, int arg4, Widget widget5, Widget widget6, Widget widget7, Sprite sprite8) {
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int8 = 0;
+	int9 = 0;
+	int10 = 0;
+	int11 = 0;
+	if (VARC[1] < getClientCycle() + 25) {
+		if (VARC[1] < getClientCycle()) {
+			VARC[1] = getClientCycle();
+		}
+		VARC[1] = VARC[1] + 2;
+		return;
+	}
+	VARC[1] = getClientCycle() + 25 + 10;
+	if (VARC[2] != 1) {
+		int10 = getMaxLineWidth(string2, 2147483647, sprite8) + 8;
+		int11 = getLineCount(string2, int10, sprite8);
+		if (int11 > 1) {
+			int11 = int11 * 15;
+		} else {
+			int11 = 17;
+		}
+		if (!ACTIVE.setChild(widget0, arg1)) {
+			return;
+		}
+		int8 = widget5.getX() + ACTIVE.getX() + arg3 + 3;
+		int9 = widget5.getY() + ACTIVE.getY() + arg4 - int11 - widget5.getScrollY();
+		if (int8 < 0) {
+			int8 = 0;
+		} else if (int8 + int10 > widget5.getX() + widget5.getWidth()) {
+			int8 = int8 - (int8 + int10 - (widget5.getX() + widget5.getWidth()));
+		}
+		if (int9 < 0) {
+			int9 = 0;
+		} else if (int9 + int11 > widget5.getY() + widget5.getHeight()) {
+			int9 = int9 - (int9 + int11 - (widget5.getY() + widget5.getHeight()));
+		}
+		widget6.setIsHidden(false);
+		widget6.setSize(int10, int11, 0, 0);
+		widget6.setPosition(int8, int9, 0, 0);
+		widget7.setText(string2);
+		VARC[2] = 1;
+	}
+	return;
+}

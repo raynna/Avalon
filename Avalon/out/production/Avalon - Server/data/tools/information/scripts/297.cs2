@@ -1,0 +1,108 @@
+int script_297(Location location0, Location location1, boolean boolean2, Color color3, int arg4, Widget widget5, int arg6, int arg7, int arg8, int arg9, int arg10) {
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	int int23;
+	int int24;
+	int int25;
+	int int26;
+	Color color27;
+	if (VARPBIT[6175] == 1) {
+		return arg10;
+	}
+	color3 = 0xFFFF00;
+	int11 = arg10 + 1;
+	int12 = arg10 + 2;
+	int13 = arg10 + 3;
+	int14 = arg10 + 4;
+	int15 = 0;
+	int16 = 0;
+	int15, int16 = script_296(location0, boolean2, widget5, arg6, arg7, arg8, arg9);
+	int17 = 0;
+	int18 = 0;
+	int17, int18 = script_296(location1, boolean2, widget5, arg6, arg7, arg8, arg9);
+	int19 = int15 + (int17 - int15) / 2;
+	int20 = int16 + (int18 - int16) / 2;
+	int21 = int17 - int15;
+	int22 = int18 - int16;
+	int23 = 0;
+	if (int21 < 0) {
+		if (int22 < 0) {
+			int21 = 0 - int21;
+			int22 = 0 - int22;
+		} else {
+			int21 = 0 - int21;
+			int23 = 1;
+		}
+	} else if (int22 < 0) {
+		int22 = 0 - int22;
+		int23 = 1;
+	}
+	if (ACTIVE.setChild(widget5, arg10) && _ACTIVE.setChild(widget5, int11)) {
+		ACTIVE.setPosition(int15 + 1, int16 + 1, 1, 1);
+		_ACTIVE.setPosition(int17 + 1, int18 + 1, 1, 1);
+	} else {
+		ACTIVE.createChild(widget5, 3, arg10);
+		_ACTIVE.createChild(widget5, 3, int11);
+		ACTIVE.setPosition(int15 + 1, int16 + 1, 1, 1);
+		_ACTIVE.setPosition(int17 + 1, int18 + 1, 1, 1);
+		ACTIVE.setSize(arg4, arg4, 0, 0);
+		_ACTIVE.setSize(arg4, arg4, 0, 0);
+		ACTIVE.setRGB(0x000000);
+		_ACTIVE.setRGB(0x000000);
+		ACTIVE.setFilled(true);
+		_ACTIVE.setFilled(true);
+	}
+	int24 = 0;
+	int25 = 0;
+	int26 = 0;
+	color27 = 0x000000;
+	if (ACTIVE.setChild(widget5, int12) && _ACTIVE.setChild(widget5, int13)) {
+		ACTIVE.setPosition(int15, int16, 1, 1);
+		_ACTIVE.setPosition(int17, int18, 1, 1);
+	} else {
+		int24, int25, int26 = script_2413(color3);
+		int24, int25, int26 = max(int24 - 48, 0), max(int25 - 48, 0), max(int26 - 48, 0);
+		color27 = script_693(int24, int25, int26);
+		ACTIVE.createChild(widget5, 3, int12);
+		_ACTIVE.createChild(widget5, 3, int13);
+		ACTIVE.setPosition(int15, int16, 1, 1);
+		_ACTIVE.setPosition(int17, int18, 1, 1);
+		ACTIVE.setSize(arg4, arg4, 0, 0);
+		_ACTIVE.setSize(arg4, arg4, 0, 0);
+		ACTIVE.setRGB(color27);
+		_ACTIVE.setRGB(color27);
+		ACTIVE.setFilled(true);
+		_ACTIVE.setFilled(true);
+		ACTIVE.setScriptCallOnMouseEntered(301, true, widget5, int12, int13, int14, color3, "1Iiiii");
+		_ACTIVE.setScriptCallOnMouseEntered(301, true, widget5, int12, int13, int14, color3, "1Iiiii");
+		ACTIVE.setScriptCallOnMouseExit(301, false, widget5, int12, int13, int14, color27, "1Iiiii");
+		_ACTIVE.setScriptCallOnMouseExit(301, false, widget5, int12, int13, int14, color27, "1Iiiii");
+		ACTIVE.setContextMenuOption(1, "Scroll map");
+		_ACTIVE.setContextMenuOption(1, "Scroll map");
+		ACTIVE.setScriptCallOnClickContextMenu(302, CTX_MENU_OPTION, location1, boolean2, "ic1");
+		_ACTIVE.setScriptCallOnClickContextMenu(302, CTX_MENU_OPTION, location0, boolean2, "ic1");
+	}
+	if (ACTIVE.setChild(widget5, int14)) {
+		ACTIVE.setPosition(int19, int20, 1, 1);
+		ACTIVE.setSize(int21, int22, 0, 0);
+	} else {
+		ACTIVE.createChild(widget5, 9, int14);
+		ACTIVE.setPosition(int19, int20, 1, 1);
+		ACTIVE.setSize(int21, int22, 0, 0);
+		ACTIVE.setLineDirection(int23);
+		ACTIVE.setLineWid(1 + arg4 / 5);
+		ACTIVE.setRGB(color3);
+		ACTIVE.setHidden(true);
+	}
+	return int14 + 1;
+}

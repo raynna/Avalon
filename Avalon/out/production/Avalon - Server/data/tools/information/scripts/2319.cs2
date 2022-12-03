@@ -1,0 +1,15 @@
+void script_2319() {
+	if (VARPBIT[8348] == 1) {
+		widget(762, 0).setIsHidden(true);
+		widget(763, 0).setIsHidden(true);
+		widget(667, 0).setIsHidden(false);
+		widget(763, 1).setIsHidden(false);
+	} else {
+		widget(762, 0).setIsHidden(false);
+		widget(763, 0).setIsHidden(false);
+		widget(667, 0).setIsHidden(true);
+		widget(763, 1).setIsHidden(true);
+	}
+	script_722();
+	return;
+}

@@ -1,0 +1,6 @@
+void script_280() {
+	widget(925, 0).setScriptCallOnGlobalConfigChange(281, 1118, 1119, 1120, 1121, "Y");
+	widget(925, 0).setScriptCallOnConfigChange(281, 1660, 1661, "Y");
+	widget(925, 78).setText(str(VARPBIT[7285]));
+	return;
+}

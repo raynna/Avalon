@@ -1,0 +1,9 @@
+void script_4197(Widget widget0) {
+	widget(891, 76).setIsHidden(true);
+	widget(891, 65).setIsHidden(false);
+	widget0.setSprite(5412);
+	widget(891, 75).setText("You are here.");
+	widget(891, 77).setText("");
+	widget(891, 78).setText("");
+	return;
+}

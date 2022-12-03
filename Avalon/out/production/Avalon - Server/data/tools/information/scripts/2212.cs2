@@ -1,0 +1,10 @@
+void script_2212() {
+	if (widget(VARC[1136]).getX() < widget(932, 1).getWidth() - 1) {
+		widget(932, 1).setScriptCallOnGameloop(2212, "");
+		widget(VARC[1136]).setPosition(1 + widget(VARC[1136]).getX(), widget(VARC[1136]).getY(), 0, 0);
+	} else {
+		widget(VARC[1136]).setIsHidden(true);
+		widget(VARC[1136]).setPosition(0, 120, 0, 0);
+	}
+	return;
+}

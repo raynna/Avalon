@@ -1,0 +1,8 @@
+void script_1963(Widget widget0, int arg1) {
+	if (VARP[261] != arg1) {
+		widget0.setText("<col=ff981f>" + removeTags(widget0.getText()) + "</col>");
+	} else {
+		widget0.setText(removeTags(widget0.getText()));
+	}
+	return;
+}

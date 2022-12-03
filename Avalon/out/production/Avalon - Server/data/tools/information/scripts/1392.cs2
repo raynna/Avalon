@@ -1,0 +1,49 @@
+void script_1392() {
+	int int0;
+	int0 = rndExcl(4);
+	if (int0 == 0) {
+		widget(188, 2).setPosition(59, 9, 0, 0);
+		widget(188, 3).setPosition(59, 50, 0, 0);
+		widget(188, 4).setPosition(139, 9, 0, 0);
+		widget(188, 5).setPosition(139, 50, 0, 0);
+		widget(188, 6).setPosition(219, 9, 0, 0);
+		widget(188, 7).setPosition(219, 50, 0, 0);
+		widget(188, 8).setPosition(319, 9, 0, 0);
+		widget(188, 9).setPosition(319, 50, 0, 0);
+		return;
+	}
+	if (int0 == 1) {
+		widget(188, 3).setPosition(59, 9, 0, 0);
+		widget(188, 4).setPosition(59, 50, 0, 0);
+		widget(188, 5).setPosition(139, 9, 0, 0);
+		widget(188, 2).setPosition(139, 50, 0, 0);
+		widget(188, 7).setPosition(219, 9, 0, 0);
+		widget(188, 8).setPosition(219, 50, 0, 0);
+		widget(188, 9).setPosition(319, 9, 0, 0);
+		widget(188, 6).setPosition(319, 50, 0, 0);
+		return;
+	}
+	if (int0 == 2) {
+		widget(188, 4).setPosition(59, 9, 0, 0);
+		widget(188, 5).setPosition(59, 50, 0, 0);
+		widget(188, 2).setPosition(139, 9, 0, 0);
+		widget(188, 3).setPosition(139, 50, 0, 0);
+		widget(188, 8).setPosition(219, 9, 0, 0);
+		widget(188, 9).setPosition(219, 50, 0, 0);
+		widget(188, 6).setPosition(319, 9, 0, 0);
+		widget(188, 7).setPosition(319, 50, 0, 0);
+		return;
+	}
+	if (int0 == 3) {
+		widget(188, 5).setPosition(59, 9, 0, 0);
+		widget(188, 2).setPosition(59, 50, 0, 0);
+		widget(188, 3).setPosition(139, 9, 0, 0);
+		widget(188, 4).setPosition(139, 50, 0, 0);
+		widget(188, 9).setPosition(219, 9, 0, 0);
+		widget(188, 6).setPosition(219, 50, 0, 0);
+		widget(188, 7).setPosition(319, 9, 0, 0);
+		widget(188, 8).setPosition(319, 50, 0, 0);
+		return;
+	}
+	return;
+}

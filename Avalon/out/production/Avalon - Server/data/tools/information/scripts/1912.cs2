@@ -1,0 +1,13 @@
+void script_1912() {
+	widget(813, 16).setIsHidden(true);
+	widget(813, 76).setIsHidden(true);
+	widget(813, 17).setIsHidden(true);
+	widget(813, 77).setIsHidden(true);
+	widget(813, 18).setIsHidden(false);
+	widget(813, 78).setIsHidden(false);
+	widget(813, 19).setIsHidden(true);
+	widget(813, 79).setIsHidden(true);
+	widget(813, 75).setIsHidden(true);
+	VARC[582] = 0;
+	return;
+}

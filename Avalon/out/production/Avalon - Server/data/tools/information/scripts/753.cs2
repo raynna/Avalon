@@ -1,0 +1,20 @@
+void script_753() {
+	if (VARPBIT[4286] != 101) {
+		widget(662, 48).setText(str(VARPBIT[4286]) + "%");
+		if (VARPBIT[4286] > 74) {
+			widget(662, 48).setRGB(0xFF0000);
+		} else {
+			widget(662, 48).setRGB(0xFFFFFF);
+		}
+	} else {
+		widget(662, 48).setText("NA");
+	}
+	if (VARPBIT[4285] != 101) {
+		widget(662, 45).setText(str(VARPBIT[4285]) + "%");
+		widget(662, 46).setText(str(VARPBIT[4285]) + "%");
+	} else {
+		widget(662, 45).setText("NA");
+		widget(662, 46).setText("NA");
+	}
+	return;
+}

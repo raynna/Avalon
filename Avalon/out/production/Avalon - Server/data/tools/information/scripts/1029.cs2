@@ -1,0 +1,48 @@
+void script_1029(DataMap datamap0, int arg1) {
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	string str0;
+	widget(157, 23).clearChildren();
+	widget(157, 25).clearChildren();
+	widget(157, 14).setText("Quick-chat - Shortcut Reference");
+	widget(157, 35).setIsHidden(false);
+	widget(157, 17).setIsHidden(true);
+	widget(157, 30).setScriptCallOnMousePressed(784, (DataMap)1486, 0, 7, "gii");
+	widget(157, 30).setText("User Guide");
+	int2 = 0;
+	int3 = 20;
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	str0 = "";
+	ACTIVE.createChild(widget(157, 25), 5, int4);
+	ACTIVE.setSprite(1074);
+	ACTIVE.setPosition(35, int3 - 22, 0, 0);
+	ACTIVE.setSize(400, 32, 0, 0);
+	int4 = int4 + 1;
+	while (int2 < arg1) {
+		int2 = int2 + 1;
+		script_1034(int4, 35, int3, 400, 100, datamap('i', 's', datamap0, int5), 0xFFFF00);
+		int4 = int4 + 1;
+		int5 = int5 + 1;
+		str0 = datamap('i', 's', datamap0, int5);
+		int6 = getLineCount(str0, 300, 495) * 12;
+		script_1034(int4, 150, int3, 300, int6, str0, 0xFFFFFF);
+		int4 = int4 + 1;
+		int5 = int5 + 1;
+		int3 = int3 + int6 + 10;
+		ACTIVE.createChild(widget(157, 25), 5, int4);
+		ACTIVE.setSprite(1074);
+		ACTIVE.setPosition(35, int3 - 20, 0, 0);
+		ACTIVE.setSize(400, 32, 0, 0);
+		int4 = int4 + 1;
+	}
+	if (int3 > widget(157, 25).getHeight()) {
+		widget(157, 25).setScrollMax(0, int3);
+		script_31(widget(157, 24), widget(157, 25), 792, 789, 790, 791, 773, 788);
+	}
+	return;
+}

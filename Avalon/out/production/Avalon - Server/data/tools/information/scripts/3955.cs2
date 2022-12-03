@@ -1,0 +1,8 @@
+void script_3955(int arg0, Widget widget1) {
+	if ((getClientCycle() - arg0) % 40 < 20 && hasWindowFocus() && VARC[1412] == 0) {
+		widget1.setIsHidden(false);
+	} else {
+		widget1.setIsHidden(true);
+	}
+	return;
+}

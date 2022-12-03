@@ -1,0 +1,17 @@
+void script_108(string string0) {
+	if (getDisplayMode() >= 2) {
+		widget(746, 73).setIsHidden(false);
+	}
+	widget(752, 3).setIsHidden(false);
+	widget(752, 7).setIsHidden(true);
+	widget(752, 8).setIsHidden(true);
+	widget(752, 4).setText(string0);
+	VARC[5] = 7;
+	script_1564("");
+	widget(752, 3).setScriptCallOnMousePressed(-1, "");
+	script_2026();
+	widget(752, 5).setScriptCallOnKeyPress(112, KEY_TYPED, (char)KEY_PRESSED, "iz");
+	widget(752, 5).setScriptCallOnDialogAbort(138, "");
+	script_1188();
+	return;
+}

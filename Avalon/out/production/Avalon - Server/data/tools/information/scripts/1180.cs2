@@ -1,0 +1,18 @@
+void script_1180() {
+	if (VARPBIT[7232] == 1) {
+		if (getLanguage() == 1) {
+			widget(548, 0).setSprite(5570);
+			widget(746, 229).setSprite(5570);
+		} else {
+			widget(548, 0).setSprite(5568);
+			widget(746, 229).setSprite(5568);
+		}
+	} else if (getLanguage() == 1) {
+		widget(548, 0).setSprite(2714);
+		widget(746, 229).setSprite(2714);
+	} else {
+		widget(548, 0).setSprite(2730);
+		widget(746, 229).setSprite(2730);
+	}
+	return;
+}

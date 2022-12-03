@@ -1,0 +1,10 @@
+void script_5050(int arg0, int arg1, int arg2) {
+	arg0 = arg0 * arg1;
+	if (arg2 == 1) {
+		widget(1111, 15).setScrollPos(widget(1111, 15).getScrollX(), max(widget(1111, 15).getScrollY() + arg0, 0));
+	} else {
+		widget(1111, 15).setScrollPos(max(widget(1111, 15).getScrollX() + arg0, 0), widget(1111, 15).getScrollY());
+	}
+	script_5053(0, 0);
+	return;
+}

@@ -1,0 +1,6 @@
+void script_383() {
+	widget(1028, 125).clearChildren();
+	widget(1028, 125).setIsHidden(true);
+	VARC[2], VARC[773] = -1, -1;
+	return;
+}

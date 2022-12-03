@@ -1,0 +1,17 @@
+void script_1595(int arg0, string arg1, string string2) {
+	if (!cs2method3624(arg0)) {
+		if (isFriend(string2)) {
+			ACTIVE.setContextMenuOption(5, "Message " + arg1);
+			ACTIVE.setContextMenuOption(7, "Remove friend " + arg1);
+		} else if (cs2method3623(string2)) {
+			ACTIVE.setContextMenuOption(8, "Remove ignore " + arg1);
+		} else {
+			ACTIVE.setContextMenuOption(5, "Add friend " + arg1);
+			ACTIVE.setContextMenuOption(6, "Add ignore " + arg1);
+		}
+	}
+	if (clanmethod3618() >= clanmethod3616() && clanmethod3618() > clanChatUserRank(arg0)) {
+		ACTIVE.setContextMenuOption(9, "Kick/ban user " + arg1);
+	}
+	return;
+}

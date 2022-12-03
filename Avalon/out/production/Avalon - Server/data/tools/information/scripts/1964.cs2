@@ -1,0 +1,4 @@
+void script_1964(Widget widget0) {
+	widget0.setText(removeTags(widget0.getText()));
+	return;
+}

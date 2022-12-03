@@ -1,0 +1,39 @@
+void script_558(int arg0) {
+	if (arg0 == 1) {
+		widget(625, 69).setSprite(181);
+		widget(625, 39).setModel(29248);
+	} else {
+		widget(625, 69).setSprite(180);
+	}
+	if (arg0 == 2) {
+		widget(625, 72).setSprite(181);
+		widget(625, 39).setModel(29242);
+	} else {
+		widget(625, 72).setSprite(180);
+	}
+	if (arg0 == 3) {
+		widget(625, 75).setSprite(181);
+		widget(625, 39).setModel(29237);
+	} else {
+		widget(625, 75).setSprite(180);
+	}
+	if (arg0 == 4) {
+		widget(625, 78).setSprite(181);
+		widget(625, 39).setModel(29245);
+	} else {
+		widget(625, 78).setSprite(180);
+	}
+	if (arg0 == 5) {
+		widget(625, 81).setSprite(181);
+		widget(625, 39).setModel(29246);
+	} else {
+		widget(625, 81).setSprite(180);
+	}
+	if (arg0 == 6) {
+		widget(625, 84).setSprite(181);
+		widget(625, 39).setModel(29241);
+	} else {
+		widget(625, 84).setSprite(180);
+	}
+	return;
+}

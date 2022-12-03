@@ -1,0 +1,79 @@
+void script_365(Widget widget0, int arg1, int arg2) {
+	if (arg2 == 1) {
+		if (ACTIVE.setChild(widget0, arg1)) {
+			ACTIVE.setSprite(4096);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 1)) {
+			ACTIVE.setSprite(4096);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 2)) {
+			ACTIVE.setSprite(4093);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 3)) {
+			ACTIVE.setSprite(4093);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 4)) {
+			ACTIVE.setSprite(4090);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 5)) {
+			ACTIVE.setSprite(4090);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 6)) {
+			ACTIVE.setSprite(4090);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 7)) {
+			ACTIVE.setSprite(4090);
+		}
+	} else if (arg2 == 2) {
+		if (ACTIVE.setChild(widget0, arg1)) {
+			ACTIVE.setSprite(4095);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 1)) {
+			ACTIVE.setSprite(4095);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 2)) {
+			ACTIVE.setSprite(4092);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 3)) {
+			ACTIVE.setSprite(4092);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 4)) {
+			ACTIVE.setSprite(4089);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 5)) {
+			ACTIVE.setSprite(4089);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 6)) {
+			ACTIVE.setSprite(4089);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 7)) {
+			ACTIVE.setSprite(4089);
+		}
+	} else {
+		if (ACTIVE.setChild(widget0, arg1)) {
+			ACTIVE.setSprite(4097);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 1)) {
+			ACTIVE.setSprite(4097);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 2)) {
+			ACTIVE.setSprite(4094);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 3)) {
+			ACTIVE.setSprite(4094);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 4)) {
+			ACTIVE.setSprite(4091);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 5)) {
+			ACTIVE.setSprite(4091);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 6)) {
+			ACTIVE.setSprite(4091);
+		}
+		if (ACTIVE.setChild(widget0, arg1 + 7)) {
+			ACTIVE.setSprite(4091);
+		}
+	}
+	return;
+}

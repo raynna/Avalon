@@ -1,0 +1,39 @@
+void script_4996(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int1 = -1;
+	int2 = -1;
+	int3 = 0;
+	int4 = -1;
+	int5 = -1;
+	int6 = -1;
+	widget(1092, 289).setIsHidden(false);
+	if (citadelConfigsInitialized()) {
+		script_4899(1);
+		int2 = script_4963(arg0);
+		VARPBIT[9550] = int2;
+		if (int2 <= 0) {
+			msg("You must first select a building.");
+			return;
+		}
+		int1 = script_4948(int2);
+		int4 = script_4954(int2);
+		if (int4 == -1) {
+			return;
+		}
+		int5 = script_4955(int2);
+		if (int5 == -1) {
+			return;
+		}
+		if (int1 > 0) {
+			int3 = script_4959(int1);
+		}
+		script_4988(VARPBIT[9550]);
+		script_4937();
+	}
+	return;
+}

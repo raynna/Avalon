@@ -1,0 +1,5 @@
+void script_4734() {
+	script_4736(widget(1144, 0), 74973185);
+	script_4738(widget(1144, 0), widget(1144, 1));
+	return;
+}

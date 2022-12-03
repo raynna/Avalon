@@ -1,0 +1,16 @@
+void script_1349(Widget widget0, Widget widget1, Widget widget2, Widget widget3, int arg4) {
+	if (ACTIVE.setChild(widget0, arg4)) {
+		ACTIVE.setVFlip(false);
+	}
+	widget1.setIsHidden(true);
+	widget2.setIsHidden(true);
+	if (widget3 != null) {
+		widget3.setIsHidden(true);
+	}
+	widget1.clearChildren();
+	widget2.clearChildren();
+	if (widget3 != null) {
+		widget3.clearChildren();
+	}
+	return;
+}

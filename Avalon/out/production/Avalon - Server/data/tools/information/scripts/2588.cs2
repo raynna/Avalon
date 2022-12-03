@@ -1,0 +1,106 @@
+void script_2588() {
+	Item item0;
+	int int1;
+	script_2587();
+	item0 = null;
+	switch (VARC[929]) {
+		case 0:
+			item0 = getItemIdInSlot(93, VARC[930]);
+			break;
+		case 1:
+			item0 = getItemIdInSlot(93, VARC[931]);
+			break;
+		case 2:
+			item0 = getItemIdInSlot(93, VARC[932]);
+			break;
+		case 3:
+			item0 = getItemIdInSlot(93, VARC[933]);
+			break;
+		case 4:
+			item0 = getItemIdInSlot(93, VARC[934]);
+			break;
+		case 5:
+			item0 = getItemIdInSlot(93, VARC[935]);
+			break;
+		case 6:
+			item0 = getItemIdInSlot(93, VARC[936]);
+			break;
+		case 7:
+			item0 = getItemIdInSlot(93, VARC[937]);
+			break;
+		case 8:
+			item0 = getItemIdInSlot(93, VARC[938]);
+			break;
+		case 9:
+			item0 = getItemIdInSlot(93, VARC[939]);
+			break;
+	}
+	if (item0 == null) {
+		return;
+	}
+	int1 = itemAttribute(item0, 805);
+	switch (VARC[929]) {
+		case 0:
+			if (VARPBIT[6385] != 0 && VARPBIT[6385] != int1) {
+				int1 = VARPBIT[6385];
+			}
+			break;
+		case 1:
+			if (VARPBIT[6386] != 0 && VARPBIT[6386] != int1) {
+				int1 = VARPBIT[6386];
+			}
+			break;
+		case 2:
+			if (VARPBIT[6387] != 0 && VARPBIT[6387] != int1) {
+				int1 = VARPBIT[6387];
+			}
+			break;
+		case 3:
+			if (VARPBIT[6388] != 0 && VARPBIT[6388] != int1) {
+				int1 = VARPBIT[6388];
+			}
+			break;
+		case 4:
+			if (VARPBIT[6389] != 0 && VARPBIT[6389] != int1) {
+				int1 = VARPBIT[6389];
+			}
+			break;
+		case 5:
+			if (VARPBIT[6390] != 0 && VARPBIT[6390] != int1) {
+				int1 = VARPBIT[6390];
+			}
+			break;
+		case 6:
+			if (VARPBIT[6391] != 0 && VARPBIT[6391] != int1) {
+				int1 = VARPBIT[6391];
+			}
+			break;
+		case 7:
+			if (VARPBIT[6392] != 0 && VARPBIT[6392] != int1) {
+				int1 = VARPBIT[6392];
+			}
+			break;
+		case 8:
+			if (VARPBIT[6393] != 0 && VARPBIT[6393] != int1) {
+				int1 = VARPBIT[6393];
+			}
+			break;
+		case 9:
+			if (VARPBIT[6394] != 0 && VARPBIT[6394] != int1) {
+				int1 = VARPBIT[6394];
+			}
+			break;
+	}
+	switch (int1) {
+		case 1:
+			widget(292, 102).setSprite(1135);
+			break;
+		case 2:
+			widget(292, 104).setSprite(1135);
+			break;
+		case 3:
+			widget(292, 103).setSprite(1135);
+			break;
+	}
+	return;
+}

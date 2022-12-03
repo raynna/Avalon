@@ -1,0 +1,7 @@
+int script_5183(int arg0, int arg1, int arg2, int arg3) {
+	VARP[2347] = arg0;
+	VARPBIT[9642] = min(63, max(0, VARPBIT[9642] + arg1));
+	VARPBIT[9643] = min(7, max(0, VARPBIT[9643] + arg2));
+	VARPBIT[9644] = min(127, max(0, VARPBIT[9644] + arg3));
+	return VARP[2347];
+}

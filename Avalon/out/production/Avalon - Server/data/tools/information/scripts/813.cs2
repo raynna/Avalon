@@ -1,0 +1,44 @@
+void script_813(int arg0) {
+	int int1;
+	Model model2;
+	int int3;
+	Widget widget4;
+	int1 = arg0;
+	model2 = null;
+	int3 = 0;
+	widget4 = null;
+	int3, widget4, model2 = script_814(arg0);
+	widget4.setModel(model2);
+	script_1421(arg0);
+	int1 = arg0 - 1;
+	while (int1 > 0) {
+		int3, widget4, model2 = script_814(int1);
+		widget4.setModel(model2);
+		script_1421(int1);
+		if (int3 > 1) {
+			int1 = int1 - 1;
+		} else {
+			int1 = int1 - 1;
+			while (int1 > 0) {
+				script_818(int1);
+				int1 = int1 - 1;
+			}
+		}
+	}
+	int1 = arg0 + 1;
+	while (int1 <= 14) {
+		int3, widget4, model2 = script_814(int1);
+		widget4.setModel(model2);
+		script_1421(int1);
+		if (int3 > 1) {
+			int1 = int1 + 1;
+		} else {
+			int1 = int1 + 1;
+			while (int1 <= 14) {
+				script_818(int1);
+				int1 = int1 + 1;
+			}
+		}
+	}
+	return;
+}

@@ -1,0 +1,66 @@
+void script_4194(int arg0) {
+	if (arg0 == 70385736) {
+		if (VARPBIT[8911] == 0) {
+			widget(1074, 34).setSprite(4700);
+		}
+	} else if (arg0 == 70385765) {
+		if (VARPBIT[8912] == 0) {
+			widget(1074, 35).setSprite(4700);
+		}
+	} else if (arg0 == 70385766) {
+		if (VARPBIT[8913] == 0) {
+			widget(1074, 36).setSprite(4700);
+		}
+	} else if (arg0 == 70385767) {
+		if (VARPBIT[8914] == 0) {
+			widget(1074, 37).setSprite(4700);
+		}
+	} else if (arg0 == 70385768) {
+		if (VARPBIT[8915] == 0) {
+			widget(1074, 38).setSprite(4700);
+		}
+	} else if (arg0 == 70385769) {
+		if (VARPBIT[8916] == 0) {
+			widget(1074, 39).setSprite(4700);
+		}
+	} else if (arg0 == 70385770) {
+		if (VARPBIT[8917] == 0) {
+			widget(1074, 40).setSprite(4700);
+		}
+	} else if (arg0 == 70385771) {
+		if (VARPBIT[8918] == 0) {
+			widget(1074, 41).setSprite(4700);
+		}
+	} else if (arg0 == 70385772) {
+		if (VARPBIT[8919] == 0) {
+			widget(1074, 42).setSprite(4700);
+		}
+	} else if (arg0 == 70385773) {
+		if (VARPBIT[8920] == 0) {
+			widget(1074, 43).setSprite(4700);
+		}
+	} else if (arg0 == 70385774) {
+		if (VARPBIT[8921] == 0) {
+			widget(1074, 44).setSprite(4700);
+		}
+	} else if (arg0 == 70385775) {
+		if (VARPBIT[8922] == 0) {
+			widget(1074, 45).setSprite(4700);
+		}
+	} else if (arg0 == 70385776) {
+		if (VARPBIT[8923] == 0) {
+			widget(1074, 46).setSprite(4700);
+		}
+	} else if (arg0 == 70385777) {
+		if (VARPBIT[8924] == 0) {
+			widget(1074, 47).setSprite(4700);
+		}
+	} else if (arg0 == 70385778) {
+		if (VARPBIT[8925] == 0) {
+			widget(1074, 48).setSprite(4700);
+		}
+	} else if (arg0 == 70385779 && VARPBIT[8926] == 0) {
+		widget(1074, 49).setSprite(4700);
+	}
+	return;
+}

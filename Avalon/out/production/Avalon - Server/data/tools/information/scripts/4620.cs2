@@ -1,0 +1,4 @@
+void script_4620(Widget widget0) {
+	script_4621(widget0);
+	return;
+}

@@ -1,0 +1,339 @@
+void script_2430() {
+	if (VARPBIT[1628] == 1) {
+		widget(43, 56).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1629] == 1) {
+		widget(43, 57).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1630] == 1) {
+		widget(43, 58).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1631] == 1) {
+		widget(43, 59).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1632] == 1) {
+		widget(43, 60).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1633] == 1) {
+		widget(43, 61).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1634] == 1) {
+		widget(43, 62).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1635] == 1) {
+		widget(43, 63).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1636] == 1) {
+		widget(43, 64).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1637] == 1) {
+		widget(43, 65).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1638] == 1) {
+		widget(43, 66).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1639] == 1) {
+		widget(43, 67).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1640] == 1) {
+		widget(43, 68).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1641] == 1) {
+		widget(43, 69).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1642] == 1) {
+		widget(43, 70).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1643] == 1) {
+		widget(43, 71).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1644] == 1) {
+		widget(43, 72).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1645] == 1) {
+		widget(43, 73).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1646] == 1) {
+		widget(43, 74).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1647] == 1) {
+		widget(43, 75).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1648] == 1) {
+		widget(43, 76).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1649] == 1) {
+		widget(43, 77).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1650] == 1) {
+		widget(43, 78).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1651] == 1) {
+		widget(43, 79).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1652] == 1) {
+		widget(43, 80).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1653] == 1) {
+		widget(43, 81).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1654] == 1) {
+		widget(43, 82).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1655] == 1) {
+		widget(43, 83).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1656] == 1) {
+		widget(43, 84).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1657] == 1) {
+		widget(43, 85).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1658] == 1) {
+		widget(43, 86).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1659] == 1) {
+		widget(43, 87).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1660] == 1) {
+		widget(43, 88).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1661] == 1) {
+		widget(43, 89).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1662] == 1) {
+		widget(43, 90).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1663] == 1) {
+		widget(43, 91).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1664] == 1) {
+		widget(43, 92).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1665] == 1) {
+		widget(43, 93).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1666] == 1) {
+		widget(43, 94).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1667] == 1) {
+		widget(43, 95).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1668] == 1) {
+		widget(43, 96).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1669] == 1) {
+		widget(43, 97).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1670] == 1) {
+		widget(43, 98).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1671] == 1) {
+		widget(43, 99).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1672] == 1) {
+		widget(43, 100).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1673] == 1) {
+		widget(43, 101).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1674] == 1) {
+		widget(43, 102).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1675] == 1) {
+		widget(43, 103).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1676] == 1) {
+		widget(43, 104).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1677] == 1) {
+		widget(43, 105).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1678] == 1) {
+		widget(43, 106).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1679] == 1) {
+		widget(43, 107).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1680] == 1) {
+		widget(43, 108).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1681] == 1) {
+		widget(43, 109).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1682] == 1) {
+		widget(43, 110).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1683] == 1) {
+		widget(43, 111).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1684] == 1) {
+		widget(43, 0).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1685] == 1) {
+		widget(43, 1).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1686] == 1) {
+		widget(43, 2).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1687] == 1) {
+		widget(43, 3).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1688] == 1) {
+		widget(43, 4).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1689] == 1) {
+		widget(43, 5).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1690] == 1) {
+		widget(43, 6).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1691] == 1) {
+		widget(43, 7).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1692] == 1) {
+		widget(43, 8).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1693] == 1) {
+		widget(43, 9).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1694] == 1) {
+		widget(43, 10).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1695] == 1) {
+		widget(43, 11).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1696] == 1) {
+		widget(43, 12).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1697] == 1) {
+		widget(43, 13).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1698] == 1) {
+		widget(43, 14).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1699] == 1) {
+		widget(43, 15).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1700] == 1) {
+		widget(43, 16).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1701] == 1) {
+		widget(43, 17).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1702] == 1) {
+		widget(43, 18).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1703] == 1) {
+		widget(43, 19).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1704] == 1) {
+		widget(43, 20).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1705] == 1) {
+		widget(43, 21).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1706] == 1) {
+		widget(43, 22).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1707] == 1) {
+		widget(43, 23).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1708] == 1) {
+		widget(43, 24).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1709] == 1) {
+		widget(43, 25).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1710] == 1) {
+		widget(43, 26).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1711] == 1) {
+		widget(43, 27).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1712] == 1) {
+		widget(43, 28).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1713] == 1) {
+		widget(43, 29).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1714] == 1) {
+		widget(43, 30).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1715] == 1) {
+		widget(43, 31).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1716] == 1) {
+		widget(43, 32).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1717] == 1) {
+		widget(43, 33).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1718] == 1) {
+		widget(43, 34).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1719] == 1) {
+		widget(43, 35).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1720] == 1) {
+		widget(43, 36).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1721] == 1) {
+		widget(43, 37).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1722] == 1) {
+		widget(43, 38).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1723] == 1) {
+		widget(43, 39).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1724] == 1) {
+		widget(43, 40).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1725] == 1) {
+		widget(43, 41).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1726] == 1) {
+		widget(43, 42).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1727] == 1) {
+		widget(43, 43).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1728] == 1) {
+		widget(43, 44).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1729] == 1) {
+		widget(43, 45).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1730] == 1) {
+		widget(43, 46).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1731] == 1) {
+		widget(43, 47).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1732] == 1) {
+		widget(43, 48).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1733] == 1) {
+		widget(43, 49).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1734] == 1) {
+		widget(43, 50).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1735] == 1) {
+		widget(43, 51).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1736] == 1) {
+		widget(43, 52).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1737] == 1) {
+		widget(43, 53).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1738] == 1) {
+		widget(43, 54).setRGB(0xFFFFFF);
+	}
+	if (VARPBIT[1739] == 1) {
+		widget(43, 55).setRGB(0xFFFFFF);
+	}
+	return;
+}

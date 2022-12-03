@@ -1,0 +1,4 @@
+void script_1073(Widget widget0, QcPhrase qcphrase1, int arg2) {
+	script_1074(widget0, qcphrase1, arg2);
+	return;
+}

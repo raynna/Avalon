@@ -1,0 +1,9 @@
+void script_87(Widget widget0) {
+	widget0.setText("Score: " + str(VARPBIT[2121]));
+	if (VARPBIT[2121] == 0) {
+		widget0.setRGB(0xFF0000);
+	} else {
+		widget0.setRGB(0xFFFF00);
+	}
+	return;
+}

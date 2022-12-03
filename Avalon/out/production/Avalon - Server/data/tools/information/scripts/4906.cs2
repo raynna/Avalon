@@ -1,0 +1,221 @@
+void script_4906(int arg0) {
+	AttrMap attrmap1;
+	AttrMap attrmap2;
+	Location location3;
+	Widget widget4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	Widget widget10;
+	attrmap1 = null;
+	attrmap2 = null;
+	location3 = location(0, 0, 0);
+	widget4 = script_4968(arg0);
+	int5 = -1;
+	int6 = -1;
+	int7 = 1;
+	int8 = 0;
+	int9 = 0;
+	widget10 = null;
+	if (citadelConfigsInitialized()) {
+		if (!widget(1092, 209).isHidden()) {
+			int7 = 0;
+		}
+		if (int7 == 1) {
+			attrmap1 = script_5116(CLANBIT[2598], CLANBIT[2580]);
+			attrmap2 = script_5117(CLANBIT[2598], CLANBIT[2580]);
+		} else {
+			attrmap1 = script_5116(CLANBIT[2074], CLANBIT[2580]);
+			attrmap2 = script_5117(CLANBIT[2074], CLANBIT[2580]);
+		}
+		if (attrmap1 == null) {
+			return;
+		}
+		if (attrmap2 == null) {
+			return;
+		}
+		int8 = script_4978(arg0);
+		if (int8 < 4) {
+			int8 = arg0;
+		}
+		if (int7 == 1) {
+			int9 = arg0;
+		} else {
+			int9 = int8;
+		}
+		switch (int9) {
+			case 4:
+				int5 = getAttributeMapValue(attrmap1, 1655);
+				int6 = getAttributeMapValue(attrmap1, 1656);
+				break;
+			case 5:
+				int5 = getAttributeMapValue(attrmap1, 1661);
+				int6 = getAttributeMapValue(attrmap1, 1662);
+				break;
+			case 6:
+				int5 = getAttributeMapValue(attrmap1, 1667);
+				int6 = getAttributeMapValue(attrmap1, 1668);
+				break;
+			case 7:
+				int5 = getAttributeMapValue(attrmap1, 1673);
+				int6 = getAttributeMapValue(attrmap1, 1674);
+				break;
+			case 8:
+				int5 = getAttributeMapValue(attrmap1, 1679);
+				int6 = getAttributeMapValue(attrmap1, 1680);
+				break;
+			case 9:
+				int5 = getAttributeMapValue(attrmap1, 1685);
+				int6 = getAttributeMapValue(attrmap1, 1686);
+				break;
+			case 10:
+				int5 = getAttributeMapValue(attrmap1, 1691);
+				int6 = getAttributeMapValue(attrmap1, 1692);
+				break;
+			case 11:
+				int5 = getAttributeMapValue(attrmap1, 1697);
+				int6 = getAttributeMapValue(attrmap1, 1698);
+				break;
+			case 12:
+				int5 = getAttributeMapValue(attrmap1, 1703);
+				int6 = getAttributeMapValue(attrmap1, 1704);
+				break;
+			case 13:
+				int5 = getAttributeMapValue(attrmap1, 1709);
+				int6 = getAttributeMapValue(attrmap1, 1710);
+				break;
+			case 14:
+				int5 = getAttributeMapValue(attrmap1, 1715);
+				int6 = getAttributeMapValue(attrmap1, 1716);
+				break;
+			case 15:
+				int5 = getAttributeMapValue(attrmap1, 1721);
+				int6 = getAttributeMapValue(attrmap1, 1722);
+				break;
+			case 3:
+				int5 = getAttributeMapValue(attrmap1, 1649);
+				int6 = getAttributeMapValue(attrmap1, 1650);
+				break;
+			case 2:
+				int5 = getAttributeMapValue(attrmap1, 1627) + 14;
+				int6 = getAttributeMapValue(attrmap1, 1628);
+				break;
+			case 1:
+				int5 = getAttributeMapValue(attrmap1, 1627) - 14;
+				int6 = getAttributeMapValue(attrmap1, 1628);
+				break;
+			case 16:
+				location3 = getAttributeMapValue(attrmap2, 1723);
+				break;
+			case 17:
+				location3 = getAttributeMapValue(attrmap2, 1726);
+				break;
+			case 18:
+				location3 = getAttributeMapValue(attrmap2, 1729);
+				break;
+			case 19:
+				location3 = getAttributeMapValue(attrmap2, 1732);
+				break;
+			case 20:
+				location3 = getAttributeMapValue(attrmap2, 1735);
+				break;
+			case 21:
+				location3 = getAttributeMapValue(attrmap2, 1738);
+				break;
+			case 22:
+				location3 = getAttributeMapValue(attrmap2, 1741);
+				break;
+			case 23:
+				location3 = getAttributeMapValue(attrmap2, 1744);
+				break;
+			case 24:
+				location3 = getAttributeMapValue(attrmap2, 1747);
+				break;
+			case 25:
+				location3 = getAttributeMapValue(attrmap2, 1750);
+				break;
+			case 26:
+				location3 = getAttributeMapValue(attrmap2, 1753);
+				break;
+			case 27:
+				location3 = getAttributeMapValue(attrmap2, 1756);
+				break;
+			case 28:
+				location3 = getAttributeMapValue(attrmap2, 1759);
+				break;
+			case 29:
+				location3 = getAttributeMapValue(attrmap2, 1762);
+				break;
+			case 30:
+				location3 = getAttributeMapValue(attrmap2, 1765);
+				break;
+			case 31:
+				location3 = getAttributeMapValue(attrmap2, 1768);
+				break;
+			case 32:
+				location3 = getAttributeMapValue(attrmap2, 1771);
+				break;
+			case 33:
+				location3 = getAttributeMapValue(attrmap2, 1772);
+				break;
+			case 34:
+				location3 = getAttributeMapValue(attrmap2, 1775);
+				break;
+			case 35:
+				location3 = getAttributeMapValue(attrmap2, 1778);
+				break;
+			case 36:
+				location3 = getAttributeMapValue(attrmap2, 1779);
+				break;
+			case 37:
+				location3 = getAttributeMapValue(attrmap2, 1780);
+				break;
+			case 38:
+				location3 = getAttributeMapValue(attrmap2, 1781);
+				break;
+			case 39:
+				location3 = getAttributeMapValue(attrmap2, 1782);
+				break;
+			case 40:
+				location3 = getAttributeMapValue(attrmap2, 1783);
+				break;
+			case 41:
+				location3 = getAttributeMapValue(attrmap2, 1784);
+				break;
+			case 42:
+				location3 = getAttributeMapValue(attrmap2, 1785);
+				break;
+			case 43:
+				location3 = getAttributeMapValue(attrmap2, 1786);
+				break;
+			case 44:
+				location3 = getAttributeMapValue(attrmap2, 1787);
+				break;
+			case 45:
+				location3 = getAttributeMapValue(attrmap2, 1788);
+				break;
+			case 46:
+				location3 = getAttributeMapValue(attrmap2, 1789);
+				break;
+			case 47:
+				location3 = getAttributeMapValue(attrmap2, 1790);
+				break;
+			case 48:
+				location3 = getAttributeMapValue(attrmap2, 1791);
+				break;
+		}
+		if (location3 != location(0, 0, 0) && location3 != null) {
+			int5, int6 = script_4909(location3);
+			int5 = int5 + 14;
+			int6 = int6 + 3;
+		}
+		widget4.setPosition(int5, int6, 0, 0);
+		widget10 = widget(script_5213(arg0));
+		if (widget10 != null) {
+			widget10.setPosition(int5, int6, 0, 0);
+		}
+	}
+	return;
+}

@@ -1,0 +1,138 @@
+int script_1709(int arg0) {
+	int int1;
+	int1 = 0;
+	switch (arg0) {
+		case 0:
+			if (VARPBIT[5944] == 1) {
+				if (getItemIdInSlot(94, 2) == 19892) {
+					int1 = int1 + 5 + 5;
+				} else {
+					int1 = int1 + 5;
+				}
+			} else if (VARPBIT[5947] == 1) {
+				if (getItemIdInSlot(94, 2) == 19892) {
+					int1 = int1 + 10 + 5;
+				} else {
+					int1 = int1 + 10;
+				}
+			} else if (VARPBIT[5953] == 1) {
+				if (getItemIdInSlot(94, 2) == 19892) {
+					int1 = int1 + 15 + 5;
+				} else {
+					int1 = int1 + 15;
+				}
+			}
+			if (VARPBIT[5967] == 1) {
+				int1 = int1 + 15;
+			}
+			if (VARPBIT[5968] == 1) {
+				int1 = int1 + 20;
+			}
+			break;
+		case 2:
+			if (VARPBIT[5943] == 1) {
+				if (getItemIdInSlot(94, 2) == 19892) {
+					int1 = int1 + 5 + 5;
+				} else {
+					int1 = int1 + 5;
+				}
+			} else if (VARPBIT[5946] == 1) {
+				if (getItemIdInSlot(94, 2) == 19892) {
+					int1 = int1 + 10 + 5;
+				} else {
+					int1 = int1 + 10;
+				}
+			} else if (VARPBIT[5952] == 1) {
+				if (getItemIdInSlot(94, 2) == 19892) {
+					int1 = int1 + 15 + 5;
+				} else {
+					int1 = int1 + 15;
+				}
+			}
+			if (VARPBIT[5967] == 1) {
+				int1 = int1 + 18;
+			}
+			if (VARPBIT[5968] == 1) {
+				int1 = int1 + 23;
+			}
+			break;
+		case 1:
+			if (VARPBIT[5942] == 1) {
+				if (getItemIdInSlot(94, 2) == 19892) {
+					int1 = int1 + 5 + 5;
+				} else {
+					int1 = int1 + 5;
+				}
+			} else if (VARPBIT[5945] == 1) {
+				if (getItemIdInSlot(94, 2) == 19892) {
+					int1 = int1 + 10 + 5;
+				} else {
+					int1 = int1 + 10;
+				}
+			} else if (VARPBIT[5951] == 1) {
+				if (getItemIdInSlot(94, 2) == 19892) {
+					int1 = int1 + 15 + 5;
+				} else {
+					int1 = int1 + 15;
+				}
+			} else if (VARPBIT[7769] == 1) {
+				int1 = int1 + 25;
+			} else if (VARPBIT[7381] == 1) {
+				int1 = int1 + 25;
+			}
+			if (VARPBIT[5967] == 1) {
+				int1 = int1 + 20;
+			}
+			if (VARPBIT[5968] == 1) {
+				int1 = int1 + 25;
+			}
+			break;
+		case 4:
+			if (VARPBIT[5960] == 1) {
+				if (getItemIdInSlot(94, 2) == 19892) {
+					int1 = int1 + 5 + 5;
+				} else {
+					int1 = int1 + 5;
+				}
+			} else if (VARPBIT[5962] == 1) {
+				if (getItemIdInSlot(94, 2) == 19892) {
+					int1 = int1 + 10 + 5;
+				} else {
+					int1 = int1 + 10;
+				}
+			} else if (VARPBIT[5964] == 1) {
+				if (getItemIdInSlot(94, 2) == 19892) {
+					int1 = int1 + 15 + 5;
+				} else {
+					int1 = int1 + 15;
+				}
+			} else if (VARPBIT[7381] == 1) {
+				int1 = int1 + 20;
+			}
+			break;
+		case 6:
+			if (VARPBIT[5961] == 1) {
+				if (getItemIdInSlot(94, 2) == 19892) {
+					int1 = int1 + 5 + 5;
+				} else {
+					int1 = int1 + 5;
+				}
+			} else if (VARPBIT[5963] == 1) {
+				if (getItemIdInSlot(94, 2) == 19892) {
+					int1 = int1 + 10 + 5;
+				} else {
+					int1 = int1 + 10;
+				}
+			} else if (VARPBIT[5965] == 1) {
+				if (getItemIdInSlot(94, 2) == 19892) {
+					int1 = int1 + 15 + 5;
+				} else {
+					int1 = int1 + 15;
+				}
+			} else if (VARPBIT[7769] == 1) {
+				int1 = int1 + 20;
+			}
+			break;
+	}
+	return int1;
+}

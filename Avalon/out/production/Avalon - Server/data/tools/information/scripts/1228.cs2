@@ -1,0 +1,35 @@
+void script_1228(Widget widget0, Widget widget1, Widget widget2, int arg3) {
+	int int4;
+	int int5;
+	int int6;
+	int4 = widget0.getHeight();
+	int5 = getClientCycle() - arg3;
+	int6 = 0;
+	if (int5 <= 30) {
+		if (int5 == 5) {
+			playSoundEffect(2871, 1, 0);
+		}
+		int6 = int5 * 30 / int4 - int4;
+		widget1.setPosition(0, int6, 1, 1);
+		widget2.setPosition(0, int6, 1, 1);
+		return;
+	}
+	if (int5 < 170) {
+		return;
+	}
+	if (int5 < 200) {
+		if (int5 == 170) {
+			playSoundEffect(2871, 1, 0);
+		}
+		int6 = 0 - (int5 - 170) * 30 / int4;
+		widget1.setPosition(0, int6, 1, 1);
+		widget2.setPosition(0, int6, 1, 1);
+		return;
+	}
+	widget0.setScriptCallOnGameloop(-1, "");
+	widget1.setNoOptions();
+	widget1.setIsHidden(true);
+	widget2.setIsHidden(true);
+	widget0.setIsHidden(true);
+	return;
+}

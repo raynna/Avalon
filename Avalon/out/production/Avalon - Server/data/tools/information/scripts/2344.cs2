@@ -1,0 +1,24 @@
+void script_2344() {
+	if (VARC[770] < cs2method5407(0)) {
+		VARC[770] = VARC[770] + 1;
+		switch (VARC[770]) {
+			case 9:
+			case 10:
+			case 11:
+				widget(558, 0).setScriptCallOnMinimapRelatedSetting3(2344, "");
+				cameraMethod5502(0, VARC[770], 900, 900, 1, VARC[770]);
+				break;
+			case 12:
+				widget(558, 0).setScriptCallOnMinimapRelatedSetting3(-1, "");
+				cameraMethod5502(0, VARC[770], 900, 100, 1, VARC[770]);
+				break;
+			default:
+				widget(558, 0).setScriptCallOnMinimapRelatedSetting3(-1, "");
+				cameraMethod5502(0, VARC[770], 900, 500, 1, VARC[770]);
+				break;
+		}
+	} else {
+		VARC[770] = 0;
+	}
+	return;
+}

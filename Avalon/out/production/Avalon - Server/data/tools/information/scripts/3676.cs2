@@ -1,0 +1,4 @@
+void script_3676(Widget widget0) {
+	widget0.setTrans(0);
+	return;
+}

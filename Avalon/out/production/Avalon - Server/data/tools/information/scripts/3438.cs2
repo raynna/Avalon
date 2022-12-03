@@ -1,0 +1,10 @@
+void script_3438() {
+	if (getLanguage() == 1) {
+		widget(329, 11).setSprite(861);
+	} else if (getLanguage() == 2) {
+		widget(329, 11).setSprite(644);
+	} else if (getLanguage() == 3) {
+		widget(329, 11).setSprite(866);
+	}
+	return;
+}

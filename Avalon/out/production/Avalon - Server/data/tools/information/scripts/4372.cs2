@@ -1,0 +1,8 @@
+void script_4372(int arg0) {
+	if (arg0 == 1) {
+		sendUnknownPacketMethod3117(STRING[346]);
+	} else {
+		sendUnknownPacketMethod3117("");
+	}
+	return;
+}

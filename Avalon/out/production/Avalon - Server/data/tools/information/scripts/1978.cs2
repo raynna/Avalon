@@ -1,0 +1,17 @@
+int script_1978() {
+	int int0;
+	int0 = 0;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 3;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	return int0;
+}

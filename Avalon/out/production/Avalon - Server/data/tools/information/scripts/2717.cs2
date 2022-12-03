@@ -1,0 +1,9 @@
+void script_2717(Widget widget0) {
+	if (VARP[1496] != -1) {
+		script_2726(widget0, (Container)VARP[1496]);
+		widget0.setScriptCallOnItemContainerUpdate(2725, widget0, (Container)VARP[1496], VARP[1496], "IvY");
+		widget(620, 22).setIsHidden(false);
+		widget(620, 21).setIsHidden(false);
+	}
+	return;
+}

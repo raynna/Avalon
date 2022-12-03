@@ -1,0 +1,9 @@
+void script_2361(int arg0) {
+	Widget widget1;
+	if (VARPBIT[8271] == 0) {
+		return;
+	}
+	widget1 = datamap('i', 'I', (DataMap)2352, VARPBIT[8271]);
+	widget1.setAttr(1224, arg0);
+	return;
+}

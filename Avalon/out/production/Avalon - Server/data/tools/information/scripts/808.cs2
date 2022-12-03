@@ -1,0 +1,41 @@
+void script_808() {
+	int int0;
+	int int1;
+	widget(748, 7).setIsHidden(false);
+	int0 = VARPBIT[7198] * script_2916() / 100;
+	int1 = getClientCycle() % 32;
+	if (int0 > 25) {
+		VARC[615] = 0;
+		if (script_2916() < 200 && VARPBIT[7198] < 45 && int0 < 100 && getSkillActualLvl(3) > 0) {
+			script_1888();
+		} else {
+			VARC[1025] = 0;
+		}
+		if (!(widget(748, 7).getShadeColor() != 0)) {
+			return;
+		}
+		widget(748, 7).setTrans(0);
+	} else {
+		if (int1 == 1) {
+			if (VARC[615] <= 0) {
+				VARC[615] = getClientCycle();
+			}
+			if (getClientCycle() - VARC[615] < 1500) {
+				playSoundEffect(5644, 1, 0);
+			}
+			if (getSkillActualLvl(3) > 0) {
+				script_1888();
+			}
+		}
+		if (int1 < 8) {
+			widget(748, 7).setTrans(0);
+		} else if (int1 < 16) {
+			widget(748, 7).setTrans(85);
+		} else if (int1 < 24) {
+			widget(748, 7).setTrans(255);
+		} else {
+			widget(748, 7).setTrans(85);
+		}
+	}
+	return;
+}

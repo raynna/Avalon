@@ -1,0 +1,122 @@
+void script_4804() {
+	int int0;
+	DataMap datamap1;
+	DataMap datamap2;
+	DataMap datamap3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	DataMap datamap9;
+	DataMap datamap10;
+	int0 = script_4828(VARPBIT[9558]);
+	if (int0 == 1) {
+		script_4842(1);
+		script_4842(2);
+		script_4842(3);
+		switch (VARPBIT[9558]) {
+			case 1:
+				script_4846(VARPBIT[9563]);
+				break;
+			case 2:
+				script_4846(VARPBIT[9572]);
+				break;
+			case 3:
+				script_4846(VARPBIT[9581]);
+				break;
+		}
+	} else {
+		script_4843(1);
+		script_4843(2);
+		script_4843(3);
+	}
+	script_4807();
+	datamap1 = null;
+	datamap2 = null;
+	datamap3 = null;
+	int4 = -1;
+	int5 = 0;
+	int6 = 1;
+	int7 = 1;
+	int8 = 0;
+	switch (VARPBIT[9558]) {
+		case 1:
+			int5 = VARPBIT[9562];
+			int8 = VARPBIT[9566];
+			break;
+		case 2:
+			int5 = VARPBIT[9571];
+			int8 = VARPBIT[9575];
+			break;
+		case 3:
+			int5 = VARPBIT[9580];
+			int8 = VARPBIT[9584];
+			break;
+	}
+	if (int5 == 0 && int8 == 0) {
+		script_4940();
+		return;
+	}
+	script_4942();
+	datamap9 = script_4825(VARPBIT[9558]);
+	datamap10 = (DataMap)script_4822(VARPBIT[9558]);
+	if (int8 == 1) {
+		script_4846(1);
+		widget(1092, 980).setSprite(null);
+		widget(1092, 981).setText("Reset Hotspot to its default state");
+		widget(1092, 1153).setText("");
+		widget(1092, 1154).setText("");
+		widget(1092, 1155).setText("");
+		widget(1092, 1073).setText("");
+		widget(1092, 1074).setText("");
+		widget(1092, 1075).setText("");
+		widget(1092, 987).setText("");
+		widget(1092, 988).setText("");
+		widget(1092, 989).setText("");
+		script_4805(1, 1);
+		script_4805(2, 1);
+		script_4805(3, 1);
+		script_4805(1, 2);
+		script_4805(2, 2);
+		script_4805(3, 2);
+		script_4805(1, 3);
+		script_4805(2, 3);
+		script_4805(3, 3);
+	} else {
+		if (datamap9 != null) {
+			widget(1092, 980).setSprite(datamap('i', 'd', datamap9, int5));
+		}
+		if (datamap10 != null) {
+			widget(1092, 981).setText(datamap('i', 's', datamap10, int5));
+		}
+		datamap1 = datamap('i', 'g', (DataMap)4043, int5);
+		if (datamap1 == null && int8 == 0) {
+			return;
+		}
+		while (int6 <= 3) {
+			datamap2 = datamap('i', 'g', datamap1, int6);
+			if (datamap2 != null) {
+				while (int7 <= 3) {
+					datamap3 = datamap('i', 'g', datamap2, int7);
+					if (datamap3 != null) {
+						script_4806(datamap3, int6, int7, int0, int5);
+					} else {
+						script_4805(int6, int7);
+					}
+					datamap3 = null;
+					int7 = int7 + 1;
+				}
+			} else {
+				script_4842(int6);
+			}
+			int7 = 1;
+			int6 = int6 + 1;
+		}
+		script_4838();
+		script_4810();
+	}
+	script_4809();
+	script_4814();
+	return;
+}

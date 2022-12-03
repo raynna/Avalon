@@ -1,0 +1,6 @@
+void script_308(Widget widget0) {
+	widget0.setScriptCallOnKeyPress(1382, KEY_TYPED, (char)KEY_PRESSED, widget0, null, "izIc");
+	widget0.setText("Search the map by typing here.");
+	widget0.setTextAlignment(0, 1, 0);
+	return;
+}

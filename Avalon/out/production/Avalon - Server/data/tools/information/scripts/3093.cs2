@@ -1,0 +1,4 @@
+void script_3093(int arg0, int arg1, string string2, int arg3, Sprite sprite4, int arg5, int arg6, string string7, string string8, int arg9, string string10, string string11) {
+	script_2779(arg0, arg1, string2, arg3, sprite4, arg5, arg6, string7, string8, arg9, string10, string11, 250);
+	return;
+}

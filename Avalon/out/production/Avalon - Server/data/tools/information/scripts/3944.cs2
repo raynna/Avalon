@@ -1,0 +1,41 @@
+void script_3944(int arg0, char char1, int arg2) {
+	Widget widget3;
+	Widget widget4;
+	Widget widget5;
+	if (VARC[1412] == 1) {
+		return;
+	}
+	widget3 = widget(1028, 181);
+	widget4 = widget(1028, 182);
+	widget5 = widget(1028, 183);
+	if (arg2 == 0) {
+		widget3 = widget(890, 59);
+		widget4 = widget(890, 60);
+		widget5 = widget(890, 61);
+	}
+	switch (arg0) {
+		case 13:
+			return;
+		case 84:
+			VARC[1412] = 1;
+			return;
+		case 96:
+		case 97:
+		case 98:
+		case 99:
+		case 102:
+		case 103:
+			VARC[1099] = script_1553(arg0, VARC[1099], STRING[330]);
+			script_3218(widget3, widget4, widget5, STRING[330], 16);
+			return;
+	}
+	if (length(STRING[330]) >= 12 && arg0 != 85 && arg0 != 101) {
+		return;
+	}
+	if (indexOf("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 _-", char1, 0) != -1 || arg0 == 85 || arg0 == 101) {
+		STRING[330], VARC[1099] = script_802(VARC[1099], STRING[330], 2, arg0, char1);
+		widget4.setText(STRING[330]);
+		script_3218(widget3, widget4, widget5, STRING[330], 16);
+	}
+	return;
+}

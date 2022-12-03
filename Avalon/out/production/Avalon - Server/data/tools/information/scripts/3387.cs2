@@ -1,0 +1,279 @@
+void script_3387(int arg0, int arg1, int arg2, int arg3, int arg4) {
+	Widget widget5;
+	Widget widget6;
+	int int7;
+	int int8;
+	Widget widget9;
+	Widget widget10;
+	Widget widget11;
+	Widget widget12;
+	Widget widget13;
+	int int14;
+	int int15;
+	Widget widget16;
+	Widget widget17;
+	int int18;
+	int int19;
+	int int20;
+	AttrMap attrmap21;
+	DataMap datamap22;
+	int int23;
+	int int24;
+	int int25;
+	int int26;
+	widget5 = null;
+	widget6 = null;
+	switch (arg4) {
+		case 1:
+			widget(742, 19).setText("Custom Graphics Options");
+			open(widget(742, 6), 977);
+			widget5 = widget(742, 4);
+			widget6 = widget(742, 20);
+			widget(742, 18).setScriptCallOnMousePressed(3386, arg0, arg1, arg2, arg3, arg4, "iiiii");
+			widget(742, 18).setContextMenuOption(1, "Back");
+			break;
+		case 0:
+			open(widget(882, 28), 977);
+			widget5 = widget(882, 4);
+			widget6 = widget(882, 5);
+			widget(882, 29).setIsHidden(true);
+			widget(882, 23).setIsHidden(false);
+			widget(882, 23).setScriptCallOnMousePressed(3386, arg0, arg1, arg2, arg3, arg4, "iiiii");
+			widget(882, 4).setScriptCallOnWidgetResize(2917, true, "1");
+			widget(744, 50).setScriptCallOnWidgetResize(2919, true, arg4, "1i");
+			break;
+		case 2:
+			open(widget(911, 2), 977);
+			widget5 = widget(911, 0);
+			widget6 = widget(911, 59);
+			widget(911, 5).setIsHidden(true);
+			widget(911, 3).setIsHidden(false);
+			widget(911, 3).setScriptCallOnMousePressed(3386, arg0, arg1, arg2, arg3, arg4, "iiiii");
+			widget(906, 23).setScriptCallOnWidgetResize(2919, true, arg4, "1i");
+			script_4041();
+			break;
+	}
+	widget6.setIsHidden(true);
+	widget5.setScriptCallOnMousePressed(-1, "");
+	int7 = 0;
+	int8 = 1;
+	widget9 = null;
+	widget10 = null;
+	widget11 = null;
+	widget12 = null;
+	widget13 = null;
+	widget(977, 60).setSprite(null);
+	widget(977, 56).setSprite(null);
+	widget(977, 58).setSprite(null);
+	widget(977, 54).setSprite(null);
+	widget(977, 59).setScriptCallOnMouseEntered(-1, "");
+	widget(977, 55).setScriptCallOnMouseEntered(-1, "");
+	widget(977, 57).setScriptCallOnMouseEntered(-1, "");
+	widget(977, 53).setScriptCallOnMouseEntered(-1, "");
+	widget(977, 59).setScriptCallOnMouseExit(-1, "");
+	widget(977, 55).setScriptCallOnMouseExit(-1, "");
+	widget(977, 57).setScriptCallOnMouseExit(-1, "");
+	widget(977, 53).setScriptCallOnMouseExit(-1, "");
+	widget(977, 59).setScriptCallOnMousePressed(-1, "");
+	widget(977, 55).setScriptCallOnMousePressed(-1, "");
+	widget(977, 57).setScriptCallOnMousePressed(-1, "");
+	widget(977, 53).setScriptCallOnMousePressed(-1, "");
+	if (!cs2method7214()) {
+		switch (arg0) {
+			case 0:
+				script_1147(0, arg0, 64028721, widget(977, 59), widget(977, 60), arg4);
+				break;
+			case 2:
+				script_1147(2, arg0, 64028721, widget(977, 59), widget(977, 60), arg4);
+				break;
+			case 1:
+				script_1147(1, arg0, 64028721, widget(977, 59), widget(977, 60), arg4);
+				break;
+			case 3:
+				script_1147(3, arg0, 64028721, widget(977, 59), widget(977, 60), arg4);
+				break;
+		}
+		widget(977, 49).setPosition(175, widget(977, 49).getY(), 2, 0);
+		widget(977, 46).setSize(350, widget(977, 47).getHeight(), 0, 0);
+	} else {
+		if (cs2method6147() || arg0 == 0) {
+			widget9 = widget(977, 49);
+			script_1147(0, arg0, 64028721, widget(977, 59), widget(977, 60), arg4);
+			int7 = int7 + 1;
+		}
+		while (int8 < 4) {
+			if (cs2method7314(int8) < 3) {
+				switch (int8) {
+					case 2:
+						widget13 = widget(977, 50);
+						script_1147(1, arg0, 64028722, widget(977, 57), widget(977, 58), arg4);
+						break;
+					case 1:
+						widget13 = widget(977, 51);
+						script_1147(2, arg0, 64028723, widget(977, 55), widget(977, 56), arg4);
+						break;
+					case 3:
+						widget13 = widget(977, 52);
+						script_1147(3, arg0, 64028724, widget(977, 53), widget(977, 54), arg4);
+						break;
+				}
+				int7 = int7 + 1;
+				if (widget9 == null) {
+					widget9 = widget13;
+				} else if (widget10 == null) {
+					widget10 = widget13;
+				} else if (widget11 == null) {
+					widget11 = widget13;
+				} else if (widget12 == null) {
+					widget12 = widget13;
+				}
+			}
+			int8 = int8 + 1;
+		}
+		switch (int7) {
+			case 1:
+				widget9.setPosition(175, widget9.getY(), 2, 0);
+				widget(977, 46).setSize(350, widget(977, 47).getHeight(), 0, 0);
+				break;
+			case 2:
+				widget9.setPosition(90, widget9.getY(), 0, 0);
+				widget10.setPosition(90, widget10.getY(), 2, 0);
+				widget(977, 46).setSize(400, widget(977, 47).getHeight(), 0, 0);
+				break;
+			case 3:
+				widget9.setPosition(58, widget9.getY(), 0, 0);
+				widget10.setPosition(173, widget10.getY(), 2, 0);
+				widget11.setPosition(58, widget11.getY(), 2, 0);
+				widget(977, 46).setSize(400, widget(977, 47).getHeight(), 0, 0);
+				break;
+		}
+	}
+	int14 = 0;
+	int15 = -1;
+	widget16 = widget(977, 28);
+	widget17 = widget(977, 27);
+	widget16.clearChildren();
+	widget17.clearChildren();
+	_ = script_2601("Brightness", 0, int14, widget16);
+	script_1185(widget(977, 32), widget(977, 33));
+	widget(977, 33).setDraggable(widget(977, 32), -1);
+	int18 = 1;
+	int19 = arg3 + 21;
+	int20 = -1;
+	attrmap21 = null;
+	datamap22 = null;
+	int23 = 0;
+	int24 = 0;
+	int25 = 0;
+	int26 = -1;
+	while (int24 < datamapSize((DataMap)201)) {
+		attrmap21 = datamap('i', 'J', (DataMap)201, int24);
+		int20 = script_2601(getAttributeMapValue(attrmap21, 845), int18, int14, widget16);
+		ACTIVE.createChild(widget16, 3, widget16.nextChild());
+		ACTIVE.setSize(int19, 16, 0, 0);
+		if (int18 == 1) {
+			ACTIVE.setPosition(4, int14, 2, 0);
+		} else {
+			ACTIVE.setPosition(233 - int19, int14, 0, 0);
+		}
+		ACTIVE.setFilled(true);
+		ACTIVE.setRGB(0x2E2B26);
+		_ACTIVE.createChild(widget16, 3, widget16.nextChild());
+		_ACTIVE.setSize(ACTIVE.getWidth(), ACTIVE.getHeight(), 0, 0);
+		_ACTIVE.setPosition(ACTIVE.getX(), ACTIVE.getY(), 0, 0);
+		_ACTIVE.setFilled(false);
+		_ACTIVE.setRGB(0x5F5B52);
+		int15 = _ACTIVE.getChildId();
+		_ACTIVE.createChild(widget16, 4, widget16.nextChild());
+		_ACTIVE.setFont(494);
+		_ACTIVE.setTextAlignment(1, 1, 0);
+		int23 = script_2581(attrmap21);
+		if (int23 <= -1) {
+			_ACTIVE.setSize(ACTIVE.getWidth(), ACTIVE.getHeight(), 0, 0);
+			_ACTIVE.setPosition(ACTIVE.getX(), ACTIVE.getY(), 0, 0);
+			_ACTIVE.setRGB(0xEBE0BC);
+			_ACTIVE.setText("<col=646464>" + "N/A");
+		} else {
+			_ACTIVE.setSize(arg3, ACTIVE.getHeight(), 0, 0);
+			_ACTIVE.setPosition(ACTIVE.getX() + 2, ACTIVE.getY(), 0, 0);
+			datamap22 = getAttributeMapValue(attrmap21, 683);
+			int25 = script_829(attrmap21, datamap22);
+			if (attrmap21 != (AttrMap)1009) {
+				if (int23 < int25) {
+					_ACTIVE.setRGB(0xEBE0BC);
+				} else {
+					_ACTIVE.setRGB(0x00B1E1);
+				}
+			} else if (int23 > 0) {
+				_ACTIVE.setRGB(0xEBE0BC);
+			} else {
+				_ACTIVE.setRGB(0x00B1E1);
+			}
+			if (isBitFlagged(getAttributeMapValue(attrmap21, 682), arg0) != true) {
+				_ACTIVE.setText("<col=646464>" + "N/A");
+				_ACTIVE.setSize(ACTIVE.getWidth(), ACTIVE.getHeight(), 0, 0);
+				_ACTIVE.setPosition(ACTIVE.getX(), ACTIVE.getY(), 0, 0);
+			} else {
+				_ACTIVE.setText(datamap('i', 's', datamap22, int23));
+				_ACTIVE.createChild(widget16, 5, widget16.nextChild());
+				_ACTIVE.setSize(16, 16, 0, 0);
+				_ACTIVE.setPosition(ACTIVE.getX() + ACTIVE.getWidth() - (_ACTIVE.getWidth() + 1), int14 + (16 - _ACTIVE.getHeight()) / 2, 0, 0);
+				_ACTIVE.setSprite(2554);
+				ACTIVE.setScriptCallOnMouseEntered(2691, CTX_WIDGET, _ACTIVE.getChildId(), true, int15, 8419437, true, "Ii1ii1");
+				ACTIVE.setScriptCallOnMouseExit(2691, CTX_WIDGET, _ACTIVE.getChildId(), false, int15, 6249298, true, "Ii1ii1");
+				ACTIVE.setScriptCallOnMousePressed(2695, CTX_WIDGET, CTX_WIDGET_CHILD, _ACTIVE.getChildId(), int15, int20, attrmap21, arg2, arg3, arg0, arg1, arg4, "IiiiiJiiiii");
+			}
+		}
+		if (int18 == 1) {
+			int18 = 0;
+			int14 = int14 + 20;
+			int26 = widget17.nextChild();
+			ACTIVE.createChild(widget17, 3, int26);
+			ACTIVE.setSize(2, 1, 1, 0);
+			ACTIVE.setPosition(1, int14 + 3, 0, 0);
+			ACTIVE.setFilled(true);
+			ACTIVE.setRGB(0x80786D);
+		} else {
+			int18 = 1;
+		}
+		int24 = int24 + 1;
+	}
+	if (int18 == 1) {
+		int14 = int14 + 20;
+	}
+	if (int26 != -1 && int18 == 0 && ACTIVE.setChild(widget17, int26)) {
+		ACTIVE.deleteChild();
+	}
+	widget(977, 26).setSize(widget(977, 26).getWidth(), int14 + 5, 0, 0);
+	widget(977, 24).setSize(widget(977, 24).getWidth(), widget(977, 26).getY() + widget(977, 26).getHeight(), 0, 0);
+	widget(977, 3).setSize(widget(977, 3).getWidth(), widget(977, 24).getY() + widget(977, 24).getHeight(), 0, 0);
+	switch (arg4) {
+		case 1:
+			widget(742, 4).setSize(widget(742, 4).getWidth(), 334, 0, 0);
+			widget(977, 2).setPosition(0, widget(977, 2).getY(), 0, 0);
+			widget(977, 2).setSize(20, widget(742, 6).getHeight() - widget(977, 1).getHeight(), 1, 0);
+			widget(977, 0).setSize(widget(977, 0).getWidth(), widget(742, 6).getHeight(), 0, 0);
+			widget(977, 2).setScrollMax(0, widget(977, 3).getHeight() + 5);
+			script_31(widget(977, 70), widget(977, 2), 792, 789, 790, 791, 773, 788);
+			break;
+		case 0:
+			widget(977, 0).setPosition(0, 0, 1, 0);
+			widget(882, 28).setPosition(0, 0, 1, 0);
+			widget(977, 2).setSize(widget(977, 2).getWidth(), widget(977, 3).getHeight(), 0, 0);
+			widget(977, 0).setSize(widget(977, 0).getWidth(), widget(977, 2).getY() + widget(977, 2).getHeight(), 0, 0);
+			widget(882, 28).setSize(widget(882, 28).getWidth(), widget(977, 0).getHeight() + 15 + widget(882, 23).getHeight(), 0, 0);
+			widget(882, 22).setSize(widget(882, 22).getWidth(), widget(882, 28).getHeight() + 5, 0, 0);
+			widget(882, 8).setSize(widget(882, 8).getWidth(), 40 + widget(882, 22).getHeight(), 0, 0);
+			widget(882, 22).setPosition(0, 10, 1, 1);
+			break;
+		case 2:
+			widget(977, 0).setPosition(0, 0, 1, 0);
+			widget(977, 2).setSize(widget(977, 2).getWidth(), widget(977, 3).getHeight(), 0, 0);
+			widget(977, 0).setSize(widget(977, 0).getWidth(), widget(977, 2).getY() + widget(977, 2).getHeight(), 0, 0);
+			widget(911, 2).setSize(widget(911, 2).getWidth(), widget(977, 0).getHeight() + 2 + widget(911, 3).getHeight(), 0, 0);
+			break;
+	}
+	script_3451(arg4, true);
+	script_2918(1);
+	return;
+}

@@ -1,0 +1,4 @@
+void script_4610(int arg0) {
+	widget(19, 19).setPosition(0, arg0 + 1, 0, 0);
+	return;
+}

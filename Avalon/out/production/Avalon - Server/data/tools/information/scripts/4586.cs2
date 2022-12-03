@@ -1,0 +1,15 @@
+void script_4586(Widget widget0, Widget widget1, int arg2, int arg3) {
+	DataMap datamap4;
+	datamap4 = null;
+	if (arg2 > 0 && arg3 > 0) {
+		datamap4 = datamap('i', 'g', (DataMap)3703, arg2);
+		if (datamap4 != null) {
+			widget0.setText(datamap('i', 's', datamap4, arg3));
+			widget1.setIsHidden(false);
+			return;
+		}
+	}
+	widget0.setText("");
+	widget1.setIsHidden(true);
+	return;
+}

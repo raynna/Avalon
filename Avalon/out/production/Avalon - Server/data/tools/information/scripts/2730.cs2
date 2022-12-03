@@ -1,0 +1,14 @@
+void script_2730(Widget widget0, Widget widget1, int arg2) {
+	if (arg2 != 1) {
+		widget0.setSprite(297);
+		widget0.setSize(0, 0, 1, 1);
+		widget0.setSpriteTiling(true);
+		widget1.setTextAntiMacro(true);
+	} else {
+		widget0.setSprite(1017);
+		widget0.setSize(519, 142, 0, 0);
+		widget0.setSpriteTiling(false);
+		widget1.setTextAntiMacro(false);
+	}
+	return;
+}

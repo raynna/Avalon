@@ -1,0 +1,14 @@
+int script_2728() {
+	int int0;
+	if (script_2761() > 100) {
+		return 0;
+	}
+	int0 = datamapSize((DataMap)681);
+	while (int0 > 0) {
+		if (getSkillActualLvl(datamap('i', 'S', (DataMap)681, int0)) > 20) {
+			return 0;
+		}
+		int0 = int0 - 1;
+	}
+	return 1;
+}

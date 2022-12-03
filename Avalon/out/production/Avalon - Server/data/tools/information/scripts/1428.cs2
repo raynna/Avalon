@@ -1,0 +1,11 @@
+void script_1428(Widget widget0, int arg1) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		if (VARC[1024] == VARPBIT[6521] && VARC[1024] != 0) {
+			ACTIVE.setScriptCallOnGameloop(1429, widget0, arg1, "Ii");
+		} else {
+			ACTIVE.setScriptCallOnGameloop(-1, "");
+			ACTIVE.setTrans(0);
+		}
+	}
+	return;
+}

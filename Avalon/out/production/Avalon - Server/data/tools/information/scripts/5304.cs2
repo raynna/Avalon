@@ -1,0 +1,88 @@
+void script_5304(Widget widget0) {
+	if (widget0 == widget(824, 50)) {
+		switch (VARPBIT[9892]) {
+			case 0:
+				widget0.setRGB(0xFFFFFF);
+				break;
+			case 1:
+				widget0.setRGB(0xFFFF00);
+				break;
+			case 2:
+				widget0.setRGB(0x00FF00);
+				break;
+			case 3:
+				widget0.setRGB(0x0000FF);
+				break;
+			case 4:
+				widget0.setRGB(0xFF0000);
+				break;
+			default:
+				widget0.setRGB(0xFFFFFF);
+				break;
+		}
+	} else if (widget0 == widget(824, 120)) {
+		switch (VARPBIT[9893]) {
+			case 0:
+				widget0.setRGB(0xFFFFFF);
+				break;
+			case 1:
+				widget0.setRGB(0xFFFF00);
+				break;
+			case 2:
+				widget0.setRGB(0x00FF00);
+				break;
+			case 3:
+				widget0.setRGB(0x0000FF);
+				break;
+			case 4:
+				widget0.setRGB(0xFF0000);
+				break;
+			default:
+				widget0.setRGB(0xFFFFFF);
+				break;
+		}
+	} else if (widget0 == widget(824, 173)) {
+		switch (VARPBIT[9894]) {
+			case 0:
+				widget0.setRGB(0xFFFFFF);
+				break;
+			case 1:
+				widget0.setRGB(0xFFFF00);
+				break;
+			case 2:
+				widget0.setRGB(0x00FF00);
+				break;
+			case 3:
+				widget0.setRGB(0x0000FF);
+				break;
+			case 4:
+				widget0.setRGB(0xFF0000);
+				break;
+			default:
+				widget0.setRGB(0xFFFFFF);
+				break;
+		}
+	} else if (widget0 == widget(824, 210)) {
+		switch (VARPBIT[9895]) {
+			case 0:
+				widget0.setRGB(0xFFFFFF);
+				break;
+			case 1:
+				widget0.setRGB(0xFFFF00);
+				break;
+			case 2:
+				widget0.setRGB(0x00FF00);
+				break;
+			case 3:
+				widget0.setRGB(0x0000FF);
+				break;
+			case 4:
+				widget0.setRGB(0xFF0000);
+				break;
+			default:
+				widget0.setRGB(0xFFFFFF);
+				break;
+		}
+	}
+	return;
+}

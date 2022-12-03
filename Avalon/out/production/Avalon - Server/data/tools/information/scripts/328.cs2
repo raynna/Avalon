@@ -1,0 +1,63 @@
+void script_328(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	DataMap datamap7;
+	string str0;
+	widget0.clearChildren();
+	int1 = 5;
+	int2 = 5;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	str0 = " ";
+	datamap7 = null;
+	if (IsFemale()) {
+		int4 = datamapSize((DataMap)2363);
+		if (VARC[783] == 0) {
+			datamap7 = (DataMap)2362;
+		} else {
+			datamap7 = (DataMap)2361;
+		}
+	} else {
+		int4 = datamapSize((DataMap)2132);
+		if (VARC[783] == 0) {
+			datamap7 = (DataMap)2129;
+		} else {
+			datamap7 = (DataMap)1609;
+		}
+	}
+	int5 = int4 * 2;
+	while (int3 < int4) {
+		ACTIVE.createChild(widget0, 5, int3);
+		ACTIVE.setSize(36, 36, 0, 0);
+		ACTIVE.setPosition(int1, int2, 0, 0);
+		ACTIVE.setSprite(180);
+		ACTIVE.setContextMenuOption(1, "Select" + "<col=ff9040>");
+		ACTIVE.setScriptCallOnClickContextMenu(331, CTX_WIDGET, CTX_WIDGET_CHILD, "Ii");
+		int3 = int3 + 1;
+		int2 = 28 + int2;
+	}
+	int2 = 5;
+	while (int3 < int5) {
+		str0 = datamap('i', 's', datamap7, int6);
+		ACTIVE.createChild(widget0, 4, int3);
+		ACTIVE.setText(str0);
+		ACTIVE.setSize(124, 16, 0, 0);
+		ACTIVE.setPosition(int1 + 20, int2, 0, 0);
+		ACTIVE.setRGB(0xFFFFFF);
+		ACTIVE.setFont(494);
+		ACTIVE.setTextAntiMacro(false);
+		ACTIVE.setTextAlignment(0, 1, 0);
+		ACTIVE.setContextMenuOption(1, "Select" + "<col=ff9040>");
+		ACTIVE.setScriptCallOnClickContextMenu(331, CTX_WIDGET, int3 - int4, "Ii");
+		int3 = int3 + 1;
+		int6 = int6 + 1;
+		int2 = 28 + int2;
+	}
+	return;
+}

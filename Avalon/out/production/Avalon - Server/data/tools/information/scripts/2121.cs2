@@ -1,0 +1,13 @@
+void script_2121(Widget widget0, Widget widget1) {
+	script_2122("Mime outfit", 1, widget0);
+	script_2122("Frog kit", 11, widget0);
+	script_2122("Zombie outfit (Gravedigger reward)", 21, widget0);
+	script_2122("Camo kit (Drill Demon reward)", 31, widget0);
+	script_2122("Lederhosen outfit (Freaky Forester reward)", 41, widget0);
+	widget0.setScrollMax(0, 320);
+	script_31(widget1, widget0, 792, 789, 790, 791, 773, 788);
+	if (ACTIVE.setChild(widget1, 1)) {
+		script_37(widget1, widget0, widget0.getScrollY(), 1);
+	}
+	return;
+}

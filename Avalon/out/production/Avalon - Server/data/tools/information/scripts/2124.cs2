@@ -1,0 +1,17 @@
+void script_2124(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, Widget widget7, Widget widget8) {
+	VARC[681] = rndExcl(2048);
+	VARC[684] = rndExcl(2048);
+	VARC[687] = rndExcl(2048);
+	VARC[690] = rndExcl(2048);
+	VARC[680] = 25 - rnd(50);
+	VARC[682] = 25 - rnd(50);
+	VARC[683] = 25 - rnd(50);
+	VARC[685] = 25 - rnd(50);
+	VARC[686] = 25 - rnd(50);
+	VARC[688] = 25 - rnd(50);
+	VARC[689] = 25 - rnd(50);
+	VARC[691] = 25 - rnd(50);
+	script_2127(widget1, widget2, widget3, widget4, widget5, widget6, widget7, widget8);
+	widget0.setScriptCallOnGameloop(2126, widget1, widget2, widget3, widget4, widget5, widget6, widget7, widget8, "IIIIIIII");
+	return;
+}

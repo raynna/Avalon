@@ -1,0 +1,18 @@
+int script_2142(string string0, int arg1, int arg2, int arg3) {
+	int int3;
+	int int4;
+	int3 = getLineCount(string0, 390, 495);
+	int4 = 15;
+	ACTIVE.createChild(widget(864, 7), 4, arg1);
+	ACTIVE.setSize(390, int3 * int4, 0, 0);
+	ACTIVE.setText(string0);
+	ACTIVE.setPosition(15, arg2, 0, 0);
+	ACTIVE.setTextAlignment(0, 0, 0);
+	ACTIVE.setRGB(0x46320A);
+	ACTIVE.setFont(495);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setContextMenuOption(1, "Teleport");
+	ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 6574120, "Iii");
+	ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 4600330, "Iii");
+	return int3 * int4 + 5;
+}

@@ -1,0 +1,4 @@
+void script_816(int arg0, Skill skill1) {
+	script_817(skill1);
+	return;
+}

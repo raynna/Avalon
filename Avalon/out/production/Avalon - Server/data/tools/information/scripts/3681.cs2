@@ -1,0 +1,25 @@
+void script_3681(int arg0) {
+	string str0;
+	string str1;
+	str0 = "Add to playlist";
+	str1 = "Remove from playlist";
+	ACTIVE.setContextMenuOption(1, "Play");
+	ACTIVE.setRGB(0x00FF00);
+	ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 65280, "Iii");
+	_ACTIVE.setHidden(false);
+	_ACTIVE.setScriptCallOnClickContextMenu(2885, CTX_WIDGET, CTX_WIDGET_CHILD, 150, 0, 20, CTX_MENU_OPTION, "Iiiiii");
+	if (arg0 == VARPBIT[7081] || arg0 == VARPBIT[7082] || arg0 == VARPBIT[7083] || arg0 == VARPBIT[7084] || arg0 == VARPBIT[7085] || arg0 == VARPBIT[7086] || arg0 == VARPBIT[7087] || arg0 == VARPBIT[7088] || arg0 == VARPBIT[7089] || arg0 == VARPBIT[7090] || arg0 == VARPBIT[7091] || arg0 == VARPBIT[7092]) {
+		_ACTIVE.setSprite(2430);
+		_ACTIVE.setContextMenuOption(4, str1);
+		ACTIVE.setContextMenuOption(4, str1);
+		_ACTIVE.setScriptCallOnMouseOver(1160, widget(187, 1), CTX_WIDGET_CHILD, widget(187, 16), str1, 25, 189, "IiIsii");
+		_ACTIVE.setScriptCallOnMouseExit(40, widget(187, 16), "I");
+	} else {
+		ACTIVE.setContextMenuOption(3, str0);
+		_ACTIVE.setContextMenuOption(3, str0);
+		_ACTIVE.setSprite(2429);
+		_ACTIVE.setScriptCallOnMouseOver(1160, widget(187, 1), CTX_WIDGET_CHILD, widget(187, 16), str0, 25, 189, "IiIsii");
+		_ACTIVE.setScriptCallOnMouseExit(40, widget(187, 16), "I");
+	}
+	return;
+}

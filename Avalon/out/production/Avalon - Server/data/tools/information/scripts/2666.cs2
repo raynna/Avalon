@@ -1,0 +1,12 @@
+void script_2666() {
+	Widget widget0;
+	Widget widget1;
+	widget0 = datamap('i', 'I', (DataMap)2566, VARPBIT[6297]);
+	widget1 = datamap('i', 'I', (DataMap)2565, VARPBIT[6297]);
+	if (widget0.getY() < 293) {
+		playSoundEffect2False(7570, 1, 0, 50);
+		widget0.setPosition(widget0.getX(), widget0.getY() + 2, 0, 0);
+		widget1.setPosition(widget1.getX(), widget1.getY() + 2, 0, 0);
+	}
+	return;
+}

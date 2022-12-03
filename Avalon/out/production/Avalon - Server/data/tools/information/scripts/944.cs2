@@ -1,0 +1,4 @@
+void script_944(int arg0, int arg1, int arg2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, Sprite sprite7, Sprite sprite8, Sprite sprite9, Sprite sprite10, Color color11, int arg12, Sprite sprite13, Sprite sprite14, Sprite sprite15, Sprite sprite16, Sprite sprite17, Sprite sprite18, Sprite sprite19) {
+	script_945(arg0, arg1, arg2, widget3, widget4, widget5, widget6, sprite7, sprite8, sprite9, sprite10, color11, color11, arg12, sprite13, sprite14, sprite15, sprite16, sprite17, sprite18, sprite19);
+	return;
+}

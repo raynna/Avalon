@@ -1,0 +1,10 @@
+void script_2575() {
+	int int0;
+	int0 = 0;
+	while (int0 < datamapSize((DataMap)2428)) {
+		datamap('i', 'I', (DataMap)2428, int0).setRGB(0x666666);
+		int0 = int0 + 1;
+	}
+	datamap('i', 'I', (DataMap)2428, VARC[929]).setRGB(0xFF0033);
+	return;
+}

@@ -1,0 +1,3 @@
+int script_5035(Color arg0) {
+	return bitAnd(arg0 / pow(2, 6), 15);
+}

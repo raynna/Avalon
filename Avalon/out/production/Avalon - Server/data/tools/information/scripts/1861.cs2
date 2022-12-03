@@ -1,0 +1,10 @@
+void script_1861() {
+	widget(799, 10).setModel(datamap('i', 'm', (DataMap)1318, VARPBIT[5470]));
+	widget(799, 11).setModel(datamap('i', 'm', (DataMap)1318, VARPBIT[5471]));
+	widget(799, 12).setModel(datamap('i', 'm', (DataMap)1318, VARPBIT[5472]));
+	widget(799, 13).setModel(datamap('i', 'm', (DataMap)1318, VARPBIT[5473]));
+	widget(799, 14).setModel(datamap('i', 'm', (DataMap)1318, VARPBIT[5474]));
+	widget(799, 15).setModel(datamap('i', 'm', (DataMap)1318, VARPBIT[5475]));
+	widget(799, 16).setModel(datamap('i', 'm', (DataMap)1318, VARPBIT[5476]));
+	return;
+}

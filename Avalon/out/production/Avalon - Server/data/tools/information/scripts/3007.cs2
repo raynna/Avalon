@@ -1,0 +1,14 @@
+void script_3007(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget arg4, Widget widget5, Widget widget6) {
+	widget1.setSize(13, 88, 0, 0);
+	widget1.setSprite(4681);
+	widget2.setSize(26, 88, 1, 0);
+	widget2.setSprite(4682);
+	widget3.setSize(13, 88, 0, 0);
+	widget3.setSprite(4684);
+	widget5.setSprite(2670);
+	widget6.setSize(13, 88, 0, 0);
+	widget6.setSprite(4683);
+	widget0.setScriptCallOnMouseEntered(-1, "");
+	widget0.setScriptCallOnMouseExit(-1, "");
+	return;
+}

@@ -1,0 +1,23 @@
+void script_4745(int arg0, int arg1) {
+	Container container2;
+	Item item3;
+	string str0;
+	container2 = null;
+	item3 = null;
+	str0 = "null";
+	if (VARPBIT[9903] != 0) {
+		container2 = datamap('i', 'v', (DataMap)3879, VARPBIT[9903]);
+		if (arg1 < getItemContainerLength(container2)) {
+			item3 = getItemIdInSlot(container2, arg1);
+			if (item3 != null) {
+				str0 = script_4747(item3);
+				if (length(str0) > 0) {
+					widget(1144, 23).setText(str0);
+					widget(1144, 23).setIsHidden(false);
+					widget(1144, 22).setIsHidden(true);
+				}
+			}
+		}
+	}
+	return;
+}

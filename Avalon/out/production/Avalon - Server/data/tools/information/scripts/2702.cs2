@@ -1,0 +1,10 @@
+void script_2702(int arg0, Widget widget1, Widget widget2) {
+	if (arg0 == 1) {
+		script_1166(widget1);
+		widget2.setRGB(0xFFFFFF);
+	} else {
+		script_1151(widget1);
+		widget2.setRGB(0xFF981F);
+	}
+	return;
+}

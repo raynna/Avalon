@@ -1,0 +1,125 @@
+void script_4851(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget arg5) {
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	DataMap datamap11;
+	DataMap datamap12;
+	DataMap datamap13;
+	int int14;
+	int int15;
+	widget(1092, 938).setIsHidden(true);
+	widget2.clearChildren();
+	widget3.clearChildren();
+	widget4.clearChildren();
+	int6 = 0;
+	int7 = 0;
+	int8 = 1;
+	int9 = 0;
+	int10 = 28;
+	datamap11 = null;
+	datamap12 = null;
+	datamap13 = null;
+	int14 = 0;
+	int15 = 0;
+	switch (VARPBIT[9558]) {
+		case 1:
+			int14 = VARPBIT[9562];
+			int15 = VARPBIT[9566];
+			break;
+		case 2:
+			int14 = VARPBIT[9571];
+			int15 = VARPBIT[9575];
+			break;
+		case 3:
+			int14 = VARPBIT[9580];
+			int15 = VARPBIT[9584];
+			break;
+	}
+	ACTIVE.createChild(widget4, 3, 0);
+	ACTIVE.setHidden(true);
+	ACTIVE.createChild(widget2, 4, 0);
+	ACTIVE.setHidden(true);
+	ACTIVE.createChild(widget3, 5, 0);
+	ACTIVE.setHidden(true);
+	if (int15 == 0) {
+		datamap11 = (DataMap)script_4819(VARPBIT[9558]);
+		datamap12 = (DataMap)script_4822(VARPBIT[9558]);
+		datamap13 = script_4825(VARPBIT[9558]);
+		if (datamap11 == null || datamap12 == null || datamap13 == null) {
+			return;
+		}
+		int6 = min(min(datamapSize(datamap11), datamapSize(datamap13)), datamapSize(datamap12));
+		while (int8 <= int6) {
+			int7 = datamap('i', 'i', datamap11, int8);
+			ACTIVE.createChild(widget4, 3, int8);
+			ACTIVE.setSize(0, int10, 1, 0);
+			ACTIVE.setFilled(true);
+			if (int8 % 2 == 0) {
+				ACTIVE.setRGB(0x201F1A);
+				ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 2105114, "Iii");
+			} else {
+				ACTIVE.setRGB(0x1A1712);
+				ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 1709842, "Iii");
+			}
+			ACTIVE.setPosition(0, int9, 0, 0);
+			if (script_4828(VARPBIT[9558]) == 0) {
+				ACTIVE.setScriptCallOnClickContextMenu(4803, int8, "i");
+				ACTIVE.setContextMenuOption(1, "Select");
+				ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 4537648, "Iii");
+			}
+			if (int14 == int7) {
+				widget(1092, 938).setIsHidden(false);
+				widget(1092, 938).setPosition(0, int9, 0, 0);
+			}
+			ACTIVE.createChild(widget2, 4, int8);
+			ACTIVE.setSize(30, int10, 1, 0);
+			ACTIVE.setPosition(30, int9, 0, 0);
+			ACTIVE.setText(datamap('i', 's', datamap12, int7));
+			ACTIVE.setRGB(0xE5E1BB);
+			ACTIVE.setFont(494);
+			ACTIVE.setTextAlignment(0, 1, 0);
+			ACTIVE.createChild(widget3, 5, int8);
+			ACTIVE.setSize(22, 22, 0, 0);
+			ACTIVE.setPosition(5, 4 + int9, 0, 0);
+			ACTIVE.setSprite(datamap('i', 'd', datamap13, int7));
+			int9 = int10 * int8;
+			int8 = int8 + 1;
+		}
+	} else {
+		ACTIVE.createChild(widget4, 3, int8);
+		ACTIVE.setSize(0, int10, 1, 0);
+		ACTIVE.setFilled(true);
+		if (int8 % 2 == 0) {
+			ACTIVE.setRGB(0x201F1A);
+			ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 2105114, "Iii");
+		} else {
+			ACTIVE.setRGB(0x1A1712);
+			ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 1709842, "Iii");
+		}
+		ACTIVE.setPosition(0, int9, 0, 0);
+		ACTIVE.setScriptCallOnClickContextMenu(4803, int8, "i");
+		ACTIVE.setContextMenuOption(1, "Select");
+		ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 4537648, "Iii");
+		widget(1092, 938).setIsHidden(false);
+		widget(1092, 938).setPosition(0, int9, 0, 0);
+		ACTIVE.createChild(widget2, 4, int8);
+		ACTIVE.setSize(30, int10, 1, 0);
+		ACTIVE.setPosition(30, int9, 0, 0);
+		ACTIVE.setText("Reset hotspot");
+		ACTIVE.setRGB(0xE5E1BB);
+		ACTIVE.setFont(494);
+		ACTIVE.setTextAlignment(0, 1, 0);
+		ACTIVE.createChild(widget3, 5, int8);
+		ACTIVE.setSize(22, 22, 0, 0);
+		ACTIVE.setPosition(5, 4 + int9, 0, 0);
+		ACTIVE.setSprite(6496);
+		ACTIVE.set2DAngle(49149);
+		int9 = int10 * int8;
+	}
+	widget0.setScrollPos(0, 0);
+	widget0.setScrollMax(0, int9);
+	script_31(widget1, widget0, 5666, 5663, 5664, 5665, 5686, 5685);
+	return;
+}

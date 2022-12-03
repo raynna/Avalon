@@ -1,0 +1,11 @@
+int script_4761(int arg0) {
+	if (VARC[1] < getClientCycle() + arg0) {
+		if (VARC[1] < getClientCycle()) {
+			VARC[1] = getClientCycle();
+		}
+		VARC[1] = VARC[1] + 2;
+		return 0;
+	}
+	VARC[1] = getClientCycle() + arg0 + 10;
+	return 1;
+}

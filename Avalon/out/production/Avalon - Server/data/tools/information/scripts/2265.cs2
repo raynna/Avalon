@@ -1,0 +1,56 @@
+void script_2265(Widget widget0) {
+	widget0.setIsHidden(false);
+	switch (widget0) {
+		case widget(944, 77):
+			if (VARC[755] != -1) {
+				widget0.setItemOnWidgetMethod2208((Item)VARC[755], -1);
+			}
+			break;
+		case widget(944, 24):
+			if (VARC[756] != -1) {
+				widget0.setItemOnWidgetMethod2208((Item)VARC[756], -1);
+			}
+			break;
+		case widget(944, 30):
+			if (VARC[757] != -1) {
+				widget0.setItemOnWidgetMethod2208((Item)VARC[757], -1);
+			}
+			break;
+		case widget(944, 36):
+			if (VARC[758] != -1) {
+				widget0.setItemOnWidgetMethod2208((Item)VARC[758], -1);
+			}
+			break;
+		case widget(944, 42):
+			if (VARC[759] != -1) {
+				widget0.setItemOnWidgetMethod2208((Item)VARC[759], -1);
+			}
+			break;
+		case widget(944, 48):
+			if (VARC[760] != -1) {
+				widget0.setItemOnWidgetMethod2208((Item)VARC[760], -1);
+			}
+			break;
+		case widget(944, 54):
+			if (VARC[1139] != -1) {
+				widget0.setItemOnWidgetMethod2208((Item)VARC[1139], -1);
+			}
+			break;
+		case widget(944, 60):
+			if (VARC[1140] != -1) {
+				widget0.setItemOnWidgetMethod2208((Item)VARC[1140], -1);
+			}
+			break;
+		case widget(944, 66):
+			if (VARC[1141] != -1) {
+				widget0.setItemOnWidgetMethod2208((Item)VARC[1141], -1);
+			}
+			break;
+		case widget(944, 72):
+			if (VARC[1142] != -1) {
+				widget0.setItemOnWidgetMethod2208((Item)VARC[1142], -1);
+			}
+			break;
+	}
+	return;
+}

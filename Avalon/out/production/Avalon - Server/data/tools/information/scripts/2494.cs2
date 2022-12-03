@@ -1,0 +1,9 @@
+void script_2494(Item item0, Item item1, Item item2, Item item3, Item item4, Item item5) {
+	widget(653, 26).setItem(item0, -1);
+	widget(653, 27).setItem(item1, -1);
+	widget(653, 28).setItem(item2, -1);
+	widget(653, 29).setItem(item3, -1);
+	widget(653, 30).setItem(item4, -1);
+	widget(653, 31).setItem(item5, -1);
+	return;
+}

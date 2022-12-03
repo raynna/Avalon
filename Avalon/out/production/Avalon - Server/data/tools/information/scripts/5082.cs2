@@ -1,0 +1,28 @@
+void script_5082(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	if (VARC[160] != -1 && _ACTIVE.setChild(widget0, VARC[160] * 10 + 2)) {
+		int1 = script_4405() + _ACTIVE.getHeight() - script_3366(widget(1114, 28));
+		if (int1 >= widget0.getHeight()) {
+			widget(1114, 29).setIsHidden(true);
+		} else if (int1 <= 0) {
+			widget(1114, 29).setIsHidden(true);
+		} else {
+			widget(1114, 29).setIsHidden(false);
+			widget(1114, 29).setPosition(script_1815() - script_3365(widget(1114, 28)), int1, 0, 0);
+			if (_ACTIVE.setChild(widget(1114, 29))) {
+				int3 = _ACTIVE.getAttribute(1477) + 8;
+				int2 = max(min(int3, widget(1114, 28).getHeight() - int1), 0);
+				_ACTIVE.setSize(_ACTIVE.getAttribute(1476), int2, 0, 0);
+			}
+			widget(1114, 29).setScriptCallOnGameloop(5083, CTX_WIDGET, VARC[160], getClientCycle() + 2, "Iii");
+		}
+	} else {
+		widget(1114, 29).setIsHidden(true);
+	}
+	return;
+}

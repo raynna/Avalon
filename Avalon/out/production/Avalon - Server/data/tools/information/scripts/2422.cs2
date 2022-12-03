@@ -1,0 +1,5 @@
+void script_2422() {
+	cs2method6509(false);
+	logout();
+	return;
+}

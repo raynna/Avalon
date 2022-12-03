@@ -1,0 +1,12 @@
+string script_4107(Item item0, int arg1) {
+	if (arg1 >= 10000000) {
+		return "<col=ff981f>" + getItemName(item0) + "</col>" + " x " + formatNumber(arg1 / 1000000, 1) + "M (" + formatNumber(arg1, 1) + ")";
+	}
+	if (arg1 >= 10000) {
+		return "<col=ff981f>" + getItemName(item0) + "</col>" + " x " + formatNumber(arg1 / 1000, 1) + "K (" + formatNumber(arg1, 1) + ")";
+	}
+	if (arg1 > 1) {
+		return "<col=ff981f>" + getItemName(item0) + "</col>" + " x " + formatNumber(arg1, 1);
+	}
+	return "<col=ff981f>" + getItemName(item0) + "</col>";
+}

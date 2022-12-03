@@ -1,0 +1,173 @@
+void script_1864(int arg0, Item item1, int arg2, int arg3) {
+	int int4;
+	if (arg0 != 1) {
+		return;
+	}
+	switch (arg2) {
+		case 12:
+			switch (arg3) {
+				case 0:
+					msg("Rick: " + str(datamap('i', 'i', (DataMap)238, 1)) + " coins.");
+					break;
+				case 1:
+					msg("Maid: " + str(datamap('i', 'i', (DataMap)238, 3)) + " coins.");
+					break;
+				case 2:
+					msg("Cook: " + str(datamap('i', 'i', (DataMap)238, 5)) + " coins.");
+					break;
+				case 3:
+					msg("Butler: " + str(datamap('i', 'i', (DataMap)238, 6)) + " coins.");
+					break;
+				case 4:
+					msg("Demon Butler: " + str(datamap('i', 'i', (DataMap)238, 8)) + " coins.");
+					break;
+			}
+			return;
+		case 0:
+			switch (item1) {
+				case 8170:
+					item1 = 8415;
+					break;
+				case 8315:
+					item1 = 8395;
+					break;
+				case 8222:
+					item1 = 8396;
+					break;
+				case 8121:
+					item1 = 8397;
+					break;
+				case 8379:
+					item1 = 8406;
+					break;
+				case 8037:
+					item1 = 8398;
+					break;
+				case 8255:
+					item1 = 8401;
+					break;
+				case 8163:
+					item1 = 8399;
+					break;
+				case 8027:
+					item1 = 8400;
+					break;
+				case 8259:
+					item1 = 8403;
+					break;
+				case 8340:
+					item1 = 8407;
+					break;
+				case 9822:
+					item1 = 9842;
+					break;
+				case 8068:
+					item1 = 8405;
+					break;
+				case 8333:
+					item1 = 8408;
+					break;
+				case 8195:
+					item1 = 8416;
+					break;
+				case 8363:
+					item1 = 8409;
+					break;
+				case 8302:
+					item1 = 8410;
+					break;
+				case 8123:
+					item1 = 8411;
+					break;
+				case 8122:
+					item1 = 18800;
+					break;
+				case 8151:
+					item1 = 8414;
+					break;
+			}
+			msg(getItemName(item1) + ": " + formatNumber(getItemValue(item1), 1) + " coins.");
+			return;
+		case 14:
+		case 15:
+			return;
+	}
+	ARRAY0 = new Item[6];
+	ARRAY1 = new int[6];
+	int4 = 0;
+	if (itemAttribute(item1, 211) != null) {
+		ARRAY0[0] = itemAttribute(item1, 211);
+		ARRAY1[0] = itemAttribute(item1, 212);
+		int4 = int4 + 1;
+	}
+	if (itemAttribute(item1, 213) != null) {
+		ARRAY0[1] = itemAttribute(item1, 213);
+		ARRAY1[1] = itemAttribute(item1, 214);
+		int4 = int4 + 1;
+	}
+	if (itemAttribute(item1, 215) != null) {
+		ARRAY0[2] = itemAttribute(item1, 215);
+		ARRAY1[2] = itemAttribute(item1, 216);
+		int4 = int4 + 1;
+	}
+	if (itemAttribute(item1, 217) != null) {
+		ARRAY0[3] = itemAttribute(item1, 217);
+		ARRAY1[3] = itemAttribute(item1, 218);
+		int4 = int4 + 1;
+	}
+	if (itemAttribute(item1, 219) != null) {
+		ARRAY0[4] = itemAttribute(item1, 219);
+		ARRAY1[4] = itemAttribute(item1, 220);
+		int4 = int4 + 1;
+	}
+	if (itemAttribute(item1, 221) != null) {
+		ARRAY0[5] = itemAttribute(item1, 221);
+		ARRAY1[5] = itemAttribute(item1, 222);
+		int4 = int4 + 1;
+	}
+	switch (int4) {
+		case 1:
+			msg(getItemName(item1) + ":");
+			msg(formatNumber(ARRAY1[0], 1) + " x " + getItemName((Item)ARRAY0[0]));
+			break;
+		case 2:
+			msg(getItemName(item1) + ":");
+			msg(formatNumber(ARRAY1[0], 1) + " x " + getItemName((Item)ARRAY0[0]));
+			msg(formatNumber(ARRAY1[1], 1) + " x " + getItemName((Item)ARRAY0[1]));
+			break;
+		case 3:
+			msg(getItemName(item1) + ":");
+			msg(formatNumber(ARRAY1[0], 1) + " x " + getItemName((Item)ARRAY0[0]));
+			msg(formatNumber(ARRAY1[1], 1) + " x " + getItemName((Item)ARRAY0[1]));
+			msg(formatNumber(ARRAY1[2], 1) + " x " + getItemName((Item)ARRAY0[2]));
+			break;
+		case 4:
+			msg(getItemName(item1) + ":");
+			msg(formatNumber(ARRAY1[0], 1) + " x " + getItemName((Item)ARRAY0[0]));
+			msg(formatNumber(ARRAY1[1], 1) + " x " + getItemName((Item)ARRAY0[1]));
+			msg(formatNumber(ARRAY1[2], 1) + " x " + getItemName((Item)ARRAY0[2]));
+			msg(formatNumber(ARRAY1[3], 1) + " x " + getItemName((Item)ARRAY0[3]));
+			break;
+		case 5:
+			msg(getItemName(item1) + ":");
+			msg(formatNumber(ARRAY1[0], 1) + " x " + getItemName((Item)ARRAY0[0]));
+			msg(formatNumber(ARRAY1[1], 1) + " x " + getItemName((Item)ARRAY0[1]));
+			msg(formatNumber(ARRAY1[2], 1) + " x " + getItemName((Item)ARRAY0[2]));
+			msg(formatNumber(ARRAY1[3], 1) + " x " + getItemName((Item)ARRAY0[3]));
+			msg(formatNumber(ARRAY1[4], 1) + " x " + getItemName((Item)ARRAY0[4]));
+			break;
+		case 6:
+			msg(getItemName(item1) + ":");
+			msg(formatNumber(ARRAY1[0], 1) + " x " + getItemName((Item)ARRAY0[0]));
+			msg(formatNumber(ARRAY1[1], 1) + " x " + getItemName((Item)ARRAY0[1]));
+			msg(formatNumber(ARRAY1[2], 1) + " x " + getItemName((Item)ARRAY0[2]));
+			msg(formatNumber(ARRAY1[3], 1) + " x " + getItemName((Item)ARRAY0[3]));
+			msg(formatNumber(ARRAY1[4], 1) + " x " + getItemName((Item)ARRAY0[4]));
+			msg(formatNumber(ARRAY1[5], 1) + " x " + getItemName((Item)ARRAY0[5]));
+			break;
+		default:
+			msg(getItemName(item1));
+			break;
+	}
+	return;
+}

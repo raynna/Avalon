@@ -1,0 +1,16 @@
+void script_5() {
+	int int0;
+	int int1;
+	int0 = 30;
+	if (VARPBIT[6840] == 1) {
+		int0 = 20;
+	}
+	int1 = 0;
+	while (int1 < int0) {
+		if (ACTIVE.setChild(widget(271, 7), int1) && script_2297(int1) == 1 && script_2295(int1) == 1) {
+			ACTIVE.setSprite(155);
+		}
+		int1 = int1 + 1;
+	}
+	return;
+}

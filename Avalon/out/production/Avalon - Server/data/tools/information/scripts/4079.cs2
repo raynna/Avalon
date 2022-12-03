@@ -1,0 +1,14 @@
+void script_4079(int arg0) {
+	if (ACTIVE.setChild(widget(1064, 2), 0)) {
+		if (arg0 <= 30) {
+			ACTIVE.setSize(arg0 * 8, 8, 0, 0);
+		}
+	} else {
+		ACTIVE.createChild(widget(1064, 2), 3, 0);
+		ACTIVE.setPosition(44, 44, 0, 0);
+		ACTIVE.setSize(8 * 30, 8, 0, 0);
+		ACTIVE.setRGB(0xC96C3E);
+		ACTIVE.setFilled(true);
+	}
+	return;
+}

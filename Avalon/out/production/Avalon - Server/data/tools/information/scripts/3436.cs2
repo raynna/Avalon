@@ -1,0 +1,21 @@
+void script_3436(Model model0, Widget widget1, Widget widget2, string string3) {
+	widget(311, 57).setModel(model0);
+	widget(311, 59).setText(string3);
+	widget(311, 39).setIsHidden(true);
+	widget(311, 11).setIsHidden(true);
+	widget(311, 7).setIsHidden(true);
+	widget(311, 3).setIsHidden(true);
+	widget(311, 23).setIsHidden(true);
+	widget(311, 19).setIsHidden(true);
+	widget(311, 15).setIsHidden(true);
+	widget1.setIsHidden(false);
+	widget(311, 24).setSprite(4041);
+	widget(311, 20).setSprite(4041);
+	widget(311, 16).setSprite(4041);
+	widget(311, 12).setSprite(4041);
+	widget(311, 8).setSprite(4041);
+	widget(311, 4).setSprite(4041);
+	widget(311, 0).setSprite(4041);
+	widget2.setSprite(4043);
+	return;
+}

@@ -1,0 +1,4 @@
+void script_66(int arg0, int arg1, int arg2, Widget widget3) {
+	widget3.set3DRotation(0, 0, bitAnd(widget3.getRotateX() + arg0, 2047), bitAnd(widget3.getRotateY() + arg1, 2047), bitAnd(widget3.getRotateZ() + arg2, 2047), widget3.get3DDistance());
+	return;
+}

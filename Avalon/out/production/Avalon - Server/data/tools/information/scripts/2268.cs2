@@ -1,0 +1,8 @@
+void script_2268(Widget widget0) {
+	if (VARP[170] == 0) {
+		widget0.setText("Right-click the object to see more options.");
+	} else {
+		widget0.setText("Click the object to see more options.");
+	}
+	return;
+}

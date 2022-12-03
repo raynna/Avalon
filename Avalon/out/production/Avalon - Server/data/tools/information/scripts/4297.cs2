@@ -1,0 +1,8 @@
+void script_4297() {
+	widget(1096, 82).setIsHidden(false);
+	widget(1096, 81).setIsHidden(true);
+	if (cs2method3701()) {
+		
+	}
+	return;
+}

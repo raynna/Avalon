@@ -1,0 +1,18 @@
+void script_1783(Widget widget0, Widget widget1, Widget widget2, int arg3) {
+	int int4;
+	if (widget2 == null) {
+		if (ACTIVE.setChild(widget1, 1)) {
+			script_157(widget1, widget0, 0, 1);
+		}
+		return;
+	}
+	int4 = 0;
+	if (ACTIVE.setChild(widget2, arg3) || arg3 == -1 && ACTIVE.setChild(widget2)) {
+		int4 = ACTIVE.getY() + ACTIVE.getHeight() / 2;
+		int4 = int4 - widget0.getHeight() / 2;
+		if (ACTIVE.setChild(widget1, 1)) {
+			script_157(widget1, widget0, int4, 1);
+		}
+	}
+	return;
+}

@@ -1,0 +1,5 @@
+void script_546(Widget widget0) {
+	VARC[80] = 0;
+	widget0.clearChildren();
+	return;
+}

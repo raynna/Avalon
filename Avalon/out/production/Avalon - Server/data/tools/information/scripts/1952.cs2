@@ -1,0 +1,17 @@
+void script_1952() {
+	Widget widget0;
+	Widget widget1;
+	widget0 = null;
+	widget1 = null;
+	if (getDisplayMode() < 2) {
+		widget0 = widget(548, 16);
+		widget1 = widget(548, 225);
+	} else {
+		widget0 = widget(746, 16);
+		widget1 = widget(746, 167);
+	}
+	widget1.setText("");
+	widget0.setIsHidden(true);
+	VARC[2] = 0;
+	return;
+}

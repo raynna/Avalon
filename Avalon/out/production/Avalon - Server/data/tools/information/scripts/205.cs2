@@ -1,0 +1,74 @@
+void script_205(Widget widget0) {
+	if (VARPBIT[8902] > 0 && VARPBIT[8902] < 13) {
+		if (widget(825, 94).getSpriteId() == 5459) {
+			widget(825, 94).setSprite(5457);
+		} else if (widget(825, 94).getSpriteId() == 5458) {
+			widget(825, 94).setSprite(5455);
+		}
+		if (widget(825, 98).getSpriteId() == 5459) {
+			widget(825, 98).setSprite(5457);
+		} else if (widget(825, 98).getSpriteId() == 5458) {
+			widget(825, 98).setSprite(5455);
+		}
+		if (widget(825, 102).getSpriteId() == 5459) {
+			widget(825, 102).setSprite(5457);
+		} else if (widget(825, 102).getSpriteId() == 5458) {
+			widget(825, 102).setSprite(5455);
+		}
+		if (widget(825, 106).getSpriteId() == 5459) {
+			widget(825, 106).setSprite(5457);
+		} else if (widget(825, 106).getSpriteId() == 5458) {
+			widget(825, 106).setSprite(5455);
+		}
+		if (widget(825, 110).getSpriteId() == 5459) {
+			widget(825, 110).setSprite(5457);
+		} else if (widget(825, 110).getSpriteId() == 5458) {
+			widget(825, 110).setSprite(5455);
+		}
+		if (widget(825, 114).getSpriteId() == 5459) {
+			widget(825, 114).setSprite(5457);
+		} else if (widget(825, 114).getSpriteId() == 5458) {
+			widget(825, 114).setSprite(5455);
+		}
+		if (widget(825, 118).getSpriteId() == 5459) {
+			widget(825, 118).setSprite(5457);
+		} else if (widget(825, 118).getSpriteId() == 5458) {
+			widget(825, 118).setSprite(5455);
+		}
+		if (widget(825, 122).getSpriteId() == 5459) {
+			widget(825, 122).setSprite(5457);
+		} else if (widget(825, 122).getSpriteId() == 5458) {
+			widget(825, 122).setSprite(5455);
+		}
+		if (widget(825, 126).getSpriteId() == 5459) {
+			widget(825, 126).setSprite(5457);
+		} else if (widget(825, 126).getSpriteId() == 5458) {
+			widget(825, 126).setSprite(5455);
+		}
+		if (widget(825, 130).getSpriteId() == 5459) {
+			widget(825, 130).setSprite(5457);
+		} else if (widget(825, 130).getSpriteId() == 5458) {
+			widget(825, 130).setSprite(5455);
+		}
+		if (widget(825, 0).getSpriteId() == 5459) {
+			widget(825, 0).setSprite(5457);
+		} else if (widget(825, 0).getSpriteId() == 5458) {
+			widget(825, 0).setSprite(5455);
+		}
+		if (widget(825, 137).getSpriteId() == 5459) {
+			widget(825, 137).setSprite(5457);
+		} else if (widget(825, 137).getSpriteId() == 5458) {
+			widget(825, 137).setSprite(5455);
+		}
+	}
+	if (widget0.getSpriteId() == 5456) {
+		widget0.setSprite(5458);
+	}
+	if (widget0.getSpriteId() == 5455) {
+		widget0.setSprite(5458);
+	}
+	if (widget0.getSpriteId() == 5457) {
+		widget0.setSprite(5459);
+	}
+	return;
+}

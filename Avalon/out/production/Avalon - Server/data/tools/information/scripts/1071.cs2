@@ -1,0 +1,12 @@
+void script_1071(Widget widget0, QcPhrase qcphrase1, int arg2) {
+	if (arg2 >= 0) {
+		script_1068(widget0, arg2);
+	}
+	VARC[134] = 0;
+	if (cs2method5066(qcphrase1) > 0) {
+		script_1072(widget0, qcphrase1);
+	} else {
+		script_1077(qcphrase1);
+	}
+	return;
+}

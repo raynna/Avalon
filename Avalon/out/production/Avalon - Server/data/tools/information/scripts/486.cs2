@@ -1,0 +1,40 @@
+int script_486(int arg0) {
+	switch (arg0) {
+		case 1:
+			if (VARPBIT[7510] == 0) {
+				return 12200;
+			}
+			return 12197;
+		case 2:
+			if (VARPBIT[7510] == 0) {
+				return 12205;
+			}
+			return 12202;
+		case 3:
+			if (VARPBIT[7510] == 0) {
+				return 12210;
+			}
+			return 12207;
+		case 4:
+			if (VARPBIT[7510] == 0) {
+				return 12215;
+			}
+			return 12212;
+		case 5:
+			if (VARPBIT[7510] == 0) {
+				return 12219;
+			}
+			return 12216;
+		case 6:
+			if (VARPBIT[7510] == 0) {
+				return 12223;
+			}
+			return 12220;
+		case 7:
+			if (VARPBIT[7510] == 0) {
+				return 12227;
+			}
+			return 12224;
+	}
+	return -1;
+}

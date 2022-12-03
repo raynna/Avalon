@@ -1,0 +1,13 @@
+int, int, int, int, int script_4958(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int1 = script_4949(arg0);
+	int2 = script_4959(arg0);
+	int3 = script_4980(int1);
+	int4 = script_4954(int1);
+	int5 = script_4955(int1);
+	return int1, int2, int4, int5, int3;
+}

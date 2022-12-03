@@ -1,0 +1,19 @@
+int, int script_1637(Widget widget0, int arg1, string string2, int arg3) {
+	int int3;
+	if (compare(string2, "") == 0) {
+		return arg1, arg3;
+	}
+	ACTIVE.createChild(widget0, 4, arg1);
+	ACTIVE.setText(string2);
+	ACTIVE.setFont(495);
+	int3 = getLineCount(string2, 430, 495);
+	if (int3 < 1) {
+		int3 = 1;
+	}
+	ACTIVE.setSize(430, 14 * int3, 0, 0);
+	ACTIVE.setPosition(3, arg3 * 15 + 4, 0, 0);
+	ACTIVE.setTextAlignment(1, 0, 14);
+	ACTIVE.setRGB(0xAAAAAA);
+	ACTIVE.setTextAntiMacro(true);
+	return arg1 + 1, arg3 + int3;
+}

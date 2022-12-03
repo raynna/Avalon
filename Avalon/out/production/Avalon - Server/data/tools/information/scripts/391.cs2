@@ -1,0 +1,351 @@
+void script_391() {
+	Widget widget0;
+	DataMap datamap1;
+	DataMap datamap2;
+	DataMap datamap3;
+	int int4;
+	int int5;
+	DataMap datamap6;
+	DataMap datamap7;
+	DataMap datamap8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	AttrMap attrmap15;
+	Identikit identikit16;
+	int int17;
+	int int18;
+	Sprite sprite19;
+	int int20;
+	int int21;
+	string str0;
+	string str1;
+	widget0 = null;
+	datamap1 = null;
+	datamap2 = null;
+	datamap3 = null;
+	int4 = -1;
+	int5 = -1;
+	datamap6 = null;
+	datamap7 = null;
+	datamap8 = null;
+	int9 = -1;
+	int10 = -1;
+	str0 = "";
+	switch (VARC[1020]) {
+		case 0:
+			widget0 = widget(1028, 95);
+			datamap6 = (DataMap)748;
+			datamap7 = (DataMap)746;
+			datamap8 = (DataMap)747;
+			int9 = 4;
+			int10 = VARC[1019];
+			str0 = "Select skin colour:";
+			widget(1028, 102).setIsHidden(true);
+			break;
+		case 1:
+			widget0 = widget(1028, 96);
+			if (IsFemale()) {
+				datamap1 = (DataMap)3302;
+				datamap2 = (DataMap)3303;
+				int4 = 7;
+			} else {
+				datamap1 = (DataMap)3304;
+				datamap2 = (DataMap)3305;
+				int4 = 0;
+			}
+			int5 = VARC[1008];
+			datamap6 = (DataMap)2345;
+			datamap7 = (DataMap)2343;
+			datamap8 = (DataMap)2344;
+			int9 = 0;
+			int10 = VARC[1015];
+			str0 = "Select hairstyle:";
+			widget(1028, 102).setIsHidden(true);
+			break;
+		case 2:
+			widget0 = widget(1028, 100);
+			if (IsFemale() != true) {
+				datamap1 = (DataMap)3307;
+				datamap2 = (DataMap)3306;
+				datamap3 = (DataMap)2340;
+				int4 = 1;
+				int5 = VARC[1009];
+				datamap6 = (DataMap)2345;
+				datamap7 = (DataMap)2343;
+				datamap8 = (DataMap)2344;
+				int9 = 0;
+				int10 = VARC[1015];
+			}
+			str0 = "Select facial hair:";
+			widget(1028, 102).setIsHidden(true);
+			break;
+		case 3:
+			widget0 = widget(1028, 97);
+			if (IsFemale()) {
+				datamap1 = (DataMap)3299;
+				datamap2 = (DataMap)3298;
+				datamap3 = (DataMap)1590;
+				int4 = 9;
+			} else {
+				datamap1 = (DataMap)3287;
+				datamap2 = (DataMap)3286;
+				datamap3 = (DataMap)689;
+				int4 = 2;
+			}
+			int5 = VARC[1010];
+			datamap6 = (DataMap)3283;
+			datamap7 = (DataMap)2347;
+			datamap8 = (DataMap)2348;
+			int9 = 1;
+			int10 = VARC[1016];
+			str0 = "Select torso:";
+			widget(1028, 102).setIsHidden(false);
+			break;
+		case 6:
+			widget0 = widget(1028, 98);
+			if (IsFemale()) {
+				datamap1 = (DataMap)3301;
+				datamap2 = (DataMap)3300;
+				datamap3 = (DataMap)1606;
+				int4 = 12;
+			} else {
+				datamap1 = (DataMap)3289;
+				datamap2 = (DataMap)3288;
+				datamap3 = (DataMap)1585;
+				int4 = 5;
+			}
+			int5 = VARC[1013];
+			datamap6 = (DataMap)3283;
+			datamap7 = (DataMap)2347;
+			datamap8 = (DataMap)2348;
+			int9 = 2;
+			int10 = VARC[1017];
+			str0 = "Select legs:";
+			widget(1028, 102).setIsHidden(false);
+			break;
+		case 7:
+			widget0 = widget(1028, 99);
+			if (IsFemale()) {
+				datamap1 = (DataMap)1137;
+				datamap2 = (DataMap)3295;
+				datamap3 = (DataMap)3294;
+				int4 = 13;
+			} else {
+				datamap1 = (DataMap)1136;
+				datamap2 = (DataMap)3292;
+				datamap3 = (DataMap)3291;
+				int4 = 6;
+			}
+			int5 = VARC[1014];
+			datamap6 = (DataMap)3297;
+			datamap7 = (DataMap)753;
+			datamap8 = (DataMap)3296;
+			int9 = 3;
+			int10 = VARC[1018];
+			str0 = "Select footwear:";
+			widget(1028, 102).setIsHidden(false);
+			break;
+	}
+	widget(1028, 94).clearChildren();
+	widget0.setScriptCallOnMouseEntered(-1, "");
+	widget0.setScriptCallOnMouseExit(382, "");
+	script_376(widget(1028, 94), widget0, -1, 0x96BBE2, 0x2C6592, 0, 0);
+	if (widget0 != widget(1028, 95)) {
+		widget(1028, 95).setScriptCallOnMouseEntered(375, widget(1028, 94), CTX_WIDGET, -1, 14006640, 10913874, 0, 6, "IIiiiii");
+		widget(1028, 95).setScriptCallOnMouseExit(377, widget(1028, 94), 6, "Ii");
+	}
+	widget(1028, 95).setScriptCallOnMouseOver(378, widget(1028, 95).getOption(1), CTX_WIDGET, -1, MOUSE_X, "sIii");
+	if (widget0 != widget(1028, 96)) {
+		widget(1028, 96).setScriptCallOnMouseEntered(375, widget(1028, 94), CTX_WIDGET, -1, 14006640, 10913874, 0, 6, "IIiiiii");
+		widget(1028, 96).setScriptCallOnMouseExit(377, widget(1028, 94), 6, "Ii");
+	}
+	widget(1028, 96).setScriptCallOnMouseOver(378, widget(1028, 96).getOption(1), CTX_WIDGET, -1, MOUSE_X, "sIii");
+	if (widget0 != widget(1028, 100)) {
+		widget(1028, 100).setScriptCallOnMouseEntered(375, widget(1028, 94), CTX_WIDGET, -1, 14006640, 10913874, 0, 6, "IIiiiii");
+		widget(1028, 100).setScriptCallOnMouseExit(377, widget(1028, 94), 6, "Ii");
+	}
+	widget(1028, 100).setScriptCallOnMouseOver(378, widget(1028, 100).getOption(1), CTX_WIDGET, -1, MOUSE_X, "sIii");
+	if (widget0 != widget(1028, 97)) {
+		widget(1028, 97).setScriptCallOnMouseEntered(375, widget(1028, 94), CTX_WIDGET, -1, 14006640, 10913874, 0, 6, "IIiiiii");
+		widget(1028, 97).setScriptCallOnMouseExit(377, widget(1028, 94), 6, "Ii");
+	}
+	widget(1028, 97).setScriptCallOnMouseOver(378, widget(1028, 97).getOption(1), CTX_WIDGET, -1, MOUSE_X, "sIii");
+	if (widget0 != widget(1028, 98)) {
+		widget(1028, 98).setScriptCallOnMouseEntered(375, widget(1028, 94), CTX_WIDGET, -1, 14006640, 10913874, 0, 6, "IIiiiii");
+		widget(1028, 98).setScriptCallOnMouseExit(377, widget(1028, 94), 6, "Ii");
+	}
+	widget(1028, 98).setScriptCallOnMouseOver(378, widget(1028, 98).getOption(1), CTX_WIDGET, -1, MOUSE_X, "sIii");
+	if (widget0 != widget(1028, 99)) {
+		widget(1028, 99).setScriptCallOnMouseEntered(375, widget(1028, 94), CTX_WIDGET, -1, 14006640, 10913874, 0, 6, "IIiiiii");
+		widget(1028, 99).setScriptCallOnMouseExit(377, widget(1028, 94), 6, "Ii");
+	}
+	widget(1028, 99).setScriptCallOnMouseOver(378, widget(1028, 99).getOption(1), CTX_WIDGET, -1, MOUSE_X, "sIii");
+	int11 = 0;
+	int12 = 0;
+	int13 = 0;
+	int14 = 0;
+	attrmap15 = null;
+	identikit16 = null;
+	int17 = -1;
+	int18 = 0;
+	str1 = "";
+	widget(1028, 107).clearChildren();
+	widget(1028, 104).clearChildren();
+	if (datamap1 != null && datamap2 != null && int4 != -1) {
+		int14 = (widget(1028, 107).getWidth() - 4 * 65) / 3;
+		int12 = datamapSize(datamap1);
+		while (int11 < int12) {
+			ACTIVE.createChild(widget(1028, 107), 5, int11);
+			ACTIVE.setSize(65, 65, 0, 0);
+			ACTIVE.setPosition(int11 % 4 * (65 + int14), int11 / 4 * (65 + int14), 0, 0);
+			ACTIVE.setSprite(datamap('i', 'd', datamap2, int11));
+			if (VARC[1020] == 1) {
+				attrmap15 = datamap('i', 'J', datamap1, int11);
+				if (attrmap15 != null) {
+					str1 = getAttributeMapValue(attrmap15, 792);
+					ACTIVE.setContextMenuOption(1, str1);
+					identikit16 = getAttributeMapValue(attrmap15, 788);
+				} else {
+					identikit16, str1 = -1, "";
+				}
+			} else {
+				str1 = datamap('i', 's', datamap3, int11);
+				ACTIVE.setContextMenuOption(1, str1);
+				identikit16 = datamap('i', 'K', datamap1, int11);
+			}
+			if ((Identikit)int5 == identikit16) {
+				int17 = int11;
+				int18 = ACTIVE.getY();
+				if (length(str1) > 0) {
+					str0 = str0 + " " + str1;
+				}
+				ACTIVE.setScriptCallOnMouseExit(382, "");
+			} else {
+				ACTIVE.setScriptCallOnClickContextMenu(355, CTX_MENU_OPTION, identikit16, int4, "iKi");
+				ACTIVE.setScriptCallOnMouseEntered(373, CTX_WIDGET, CTX_WIDGET_CHILD, int12 + 1, 2, true, "Iiii1");
+				ACTIVE.setScriptCallOnMouseExit(373, CTX_WIDGET, CTX_WIDGET_CHILD, int12 + 1, 2, false, "Iiii1");
+			}
+			if (length(str1) > 0) {
+				ACTIVE.setScriptCallOnMouseOver(378, str1, CTX_WIDGET, CTX_WIDGET_CHILD, MOUSE_X, "sIii");
+			}
+			int13 = ACTIVE.getY();
+			int11 = int11 + 1;
+		}
+		int13 = int13 + 65;
+		_ACTIVE.createChild(widget(1028, 107), 3, int12);
+		if (int17 != -1 && ACTIVE.setChild(widget(1028, 107), int17)) {
+			_ACTIVE.setSize(ACTIVE.getWidth() - 6, ACTIVE.getHeight() - 6, 0, 0);
+			_ACTIVE.setPosition(ACTIVE.getX() + 3, ACTIVE.getY() + 3, 0, 0);
+			_ACTIVE.setRGB(0x000000);
+			_ACTIVE.setTrans(175);
+			_ACTIVE.setFilled(true);
+		} else {
+			_ACTIVE.setHidden(true);
+		}
+	}
+	sprite19 = 3466;
+	if (int13 > widget(1028, 107).getHeight()) {
+		widget(1028, 107).setScrollMax(0, int13);
+		if (int18 < widget(1028, 107).getScrollY()) {
+			widget(1028, 107).setScrollPos(0, int18 - 15);
+		} else if (int18 + 65 >= widget(1028, 107).getScrollY() + widget(1028, 107).getHeight()) {
+			widget(1028, 107).setScrollPos(0, int18 + 65 + 15 - widget(1028, 107).getHeight());
+		}
+		script_31(widget(1028, 105), widget(1028, 107), 3471, 3468, 3469, 3470, 3465, 3464);
+		if (_ACTIVE.setChild(widget(1028, 105), 4)) {
+			ACTIVE.setScriptCallOnMouseEntered(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite19, "Iid");
+			sprite19 = 3467;
+			_ACTIVE.setScriptCallOnMouseEntered(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite19, "Iid");
+			sprite19 = 3464;
+			ACTIVE.setScriptCallOnMouseExit(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite19, "Iid");
+			sprite19 = 3465;
+			_ACTIVE.setScriptCallOnMouseExit(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite19, "Iid");
+		}
+	} else {
+		widget(1028, 107).setScrollPos(0, 0);
+		widget(1028, 107).setScrollMax(0, 0);
+		widget(1028, 105).clearChildren();
+		if (VARC[1020] == 0) {
+			script_374(widget(1028, 107), "Please choose your skin colour" + "<br>" + "from the selection on the right.", 20);
+		} else if (VARC[1020] == 2 && IsFemale()) {
+			script_374(widget(1028, 107), "Female characters cannot have" + "<br>" + "facial hair in RuneScape.", 20);
+		}
+	}
+	script_374(widget(1028, 104), str0, 0);
+	widget(1028, 111).clearChildren();
+	int20 = -1;
+	int17 = -1;
+	int11 = 0;
+	int18 = 0;
+	int21 = 0;
+	if (datamap6 != null && datamap7 != null && int9 != -1) {
+		int12 = datamapSize(datamap6);
+		int21 = int12 + 6;
+		while (int11 < int12) {
+			ACTIVE.createChild(widget(1028, 111), 3, int11);
+			ACTIVE.setSize(15, 17 - 2, 1, 0);
+			ACTIVE.setPosition(0, int11 * 17 + 1, 1, 0);
+			ACTIVE.setFilled(true);
+			ACTIVE.setRGB(datamap('i', 'i', datamap7, int11));
+			str1 = datamap('i', 's', datamap8, int11);
+			ACTIVE.setContextMenuOption(1, str1);
+			int20 = datamap('i', 'i', datamap6, int11);
+			if (int10 == int20) {
+				int17 = int11;
+				int18 = ACTIVE.getY();
+				ACTIVE.setScriptCallOnMouseExit(382, "");
+			} else {
+				ACTIVE.setScriptCallOnClickContextMenu(357, CTX_MENU_OPTION, int20, int9, "iii");
+				ACTIVE.setScriptCallOnMouseEntered(375, CTX_WIDGET, CTX_WIDGET, CTX_WIDGET_CHILD, 14006640, 10913874, 1, int21, "IIiiiii");
+				ACTIVE.setScriptCallOnMouseExit(377, CTX_WIDGET, int21, "Ii");
+			}
+			if (length(str1) > 0) {
+				ACTIVE.setScriptCallOnMouseOver(381, str1, CTX_WIDGET, CTX_WIDGET_CHILD, MOUSE_Y, "sIii");
+			}
+			int11 = int11 + 1;
+		}
+	} else {
+		int12 = 0;
+	}
+	int13 = max(int12 * 17, 0);
+	if (int13 > widget(1028, 108).getHeight() - 12) {
+		widget(1028, 111).setSize(23, 12, 1, 1);
+		widget(1028, 111).setPosition(5, 0, 0, 1);
+		widget(1028, 111).setScrollMax(0, int13);
+		if (int18 < widget(1028, 111).getScrollY()) {
+			widget(1028, 111).setScrollPos(0, int18 - 5);
+		} else if (int18 + 17 >= widget(1028, 111).getScrollY() + widget(1028, 111).getHeight()) {
+			widget(1028, 111).setScrollPos(0, int18 + 17 + 5 - widget(1028, 111).getHeight());
+		}
+		widget(1028, 110).setIsHidden(false);
+		script_31(widget(1028, 110), widget(1028, 111), 3471, 3468, 3469, 3470, 3465, 3464);
+		if (_ACTIVE.setChild(widget(1028, 110), 4)) {
+			sprite19 = 3466;
+			ACTIVE.setScriptCallOnMouseEntered(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite19, "Iid");
+			sprite19 = 3467;
+			_ACTIVE.setScriptCallOnMouseEntered(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite19, "Iid");
+			sprite19 = 3464;
+			ACTIVE.setScriptCallOnMouseExit(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite19, "Iid");
+			sprite19 = 3465;
+			_ACTIVE.setScriptCallOnMouseExit(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite19, "Iid");
+		}
+	} else {
+		widget(1028, 111).setSize(10, 12, 1, 1);
+		widget(1028, 111).setPosition(0, 0, 1, 1);
+		widget(1028, 111).setScrollMax(0, 0);
+		widget(1028, 111).setScrollPos(0, 0);
+		widget(1028, 110).clearChildren();
+		widget(1028, 110).setIsHidden(true);
+	}
+	if (int17 != -1) {
+		script_376(widget(1028, 111), widget(1028, 111), int17, 0x96BBE2, 0x2C6592, 1, int12);
+	} else {
+		script_376(widget(1028, 111), null, -1, 0x000000, 0x000000, 1, int12);
+	}
+	script_389();
+	return;
+}

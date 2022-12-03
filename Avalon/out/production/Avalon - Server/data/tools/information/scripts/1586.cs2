@@ -1,0 +1,4 @@
+void script_1586(Widget widget0, Widget widget1, Sprite sprite2) {
+	script_1587(STRING[219], widget0, widget1, sprite2);
+	return;
+}

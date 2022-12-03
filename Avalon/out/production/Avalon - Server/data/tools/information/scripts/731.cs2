@@ -1,0 +1,14 @@
+void script_731() {
+	widget(781, 15).setModel(null);
+	widget(781, 16).setModel(null);
+	widget(781, 17).setModel(null);
+	widget(781, 18).setModel(null);
+	widget(781, 19).setModel(null);
+	widget(781, 20).setModel(null);
+	widget(781, 21).setModel(null);
+	widget(781, 22).setModel(null);
+	widget(781, 33).setAnimation(10139);
+	widget(781, 42).setAnimation(10139);
+	widget(781, 1).setIsHidden(true);
+	return;
+}

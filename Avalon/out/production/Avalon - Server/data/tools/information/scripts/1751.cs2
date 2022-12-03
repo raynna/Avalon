@@ -1,0 +1,27 @@
+string script_1751(int arg0) {
+	int int1;
+	if (arg0 < 2) {
+		return "in a minute";
+	}
+	int1 = arg0 / 60;
+	arg0 = arg0 % 60;
+	if (int1 > 1) {
+		if (arg0 > 1) {
+			return "in " + str(int1) + " hours " + str(arg0) + " minutes";
+		}
+		if (arg0 == 1) {
+			return "in " + str(int1) + " hours 1 minute";
+		}
+		return "in " + str(int1) + " hours";
+	}
+	if (int1 == 1) {
+		if (arg0 > 1) {
+			return "in 1 hour " + str(arg0) + " minutes";
+		}
+		if (arg0 == 1) {
+			return "in 1 hour 1 minute";
+		}
+		return "in 1 hour";
+	}
+	return "in " + str(arg0) + " minutes";
+}

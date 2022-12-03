@@ -1,0 +1,6 @@
+void script_2426(Widget widget0, Widget widget1, Widget widget2, Widget widget3) {
+	widget0.setText(STRING[143]);
+	widget1.setText(STRING[144]);
+	script_1585(widget2, STRING[145], widget3);
+	return;
+}

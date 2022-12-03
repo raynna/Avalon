@@ -1,0 +1,21 @@
+void script_5345() {
+	widget(622, 6).setIsHidden(true);
+	widget(622, 7).setIsHidden(true);
+	widget(622, 9).setIsHidden(true);
+	widget(622, 8).setIsHidden(true);
+	switch (getLanguage()) {
+		case 1:
+			widget(622, 9).setIsHidden(false);
+			break;
+		case 2:
+			widget(622, 7).setIsHidden(false);
+			break;
+		case 3:
+			widget(622, 8).setIsHidden(false);
+			break;
+		default:
+			widget(622, 6).setIsHidden(false);
+			break;
+	}
+	return;
+}

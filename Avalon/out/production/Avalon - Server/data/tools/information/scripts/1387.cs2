@@ -1,0 +1,276 @@
+void script_1387(int arg0) {
+	if (VARC[1413] == 0 && arg0 != 99) {
+		return;
+	}
+	script_4249(arg0);
+	if (getDisplayMode() >= 2) {
+		if (widget(746, 87).hasChild()) {
+			if (arg0 != 98 || !widget(746, 88).hasChild()) {
+				widget(746, 87).setIsHidden(false);
+				widget(746, 88).setIsHidden(true);
+				widget(746, 86).setIsHidden(false);
+				widget(746, 89).setIsHidden(true);
+			} else {
+				widget(746, 87).setIsHidden(true);
+				widget(746, 88).setIsHidden(false);
+				widget(746, 86).setIsHidden(false);
+				widget(746, 89).setIsHidden(true);
+			}
+		} else {
+			widget(746, 87).setIsHidden(true);
+			widget(746, 89).setIsHidden(false);
+			if (arg0 != 2) {
+				script_1659();
+			}
+			switch (arg0) {
+				case 0:
+					widget(746, 39).setSprite(1836);
+					widget(746, 90).setIsHidden(false);
+					widget(746, 132).setSprite(1841);
+					widget(746, 133).setSprite(1840);
+					widget(746, 86).setIsHidden(false);
+					break;
+				case 1:
+					widget(746, 40).setSprite(1836);
+					widget(746, 91).setIsHidden(false);
+					widget(746, 134).setSprite(1841);
+					widget(746, 135).setSprite(1840);
+					widget(746, 86).setIsHidden(false);
+					break;
+				case 2:
+					widget(746, 41).setSprite(1836);
+					widget(746, 136).setSprite(1841);
+					widget(746, 137).setSprite(1840);
+					widget(746, 92).setIsHidden(false);
+					widget(746, 86).setIsHidden(false);
+					script_1658();
+					break;
+				case 3:
+					widget(746, 42).setSprite(1836);
+					widget(746, 138).setSprite(1841);
+					widget(746, 139).setSprite(1840);
+					widget(746, 93).setIsHidden(false);
+					widget(746, 86).setIsHidden(false);
+					break;
+				case 4:
+					widget(746, 43).setSprite(1836);
+					widget(746, 140).setSprite(1841);
+					widget(746, 141).setSprite(1840);
+					widget(746, 94).setIsHidden(false);
+					widget(746, 86).setIsHidden(false);
+					break;
+				case 5:
+					widget(746, 44).setSprite(1836);
+					widget(746, 142).setSprite(1841);
+					widget(746, 143).setSprite(1840);
+					widget(746, 95).setIsHidden(false);
+					widget(746, 86).setIsHidden(false);
+					break;
+				case 6:
+					widget(746, 45).setSprite(1836);
+					widget(746, 144).setSprite(1841);
+					widget(746, 145).setSprite(1840);
+					widget(746, 96).setIsHidden(false);
+					widget(746, 86).setIsHidden(false);
+					break;
+				case 7:
+					widget(746, 46).setSprite(1836);
+					widget(746, 146).setSprite(1841);
+					widget(746, 147).setSprite(1840);
+					widget(746, 97).setIsHidden(false);
+					widget(746, 86).setIsHidden(false);
+					break;
+				case 8:
+					widget(746, 47).setSprite(1836);
+					widget(746, 148).setSprite(1841);
+					widget(746, 149).setSprite(1840);
+					widget(746, 98).setIsHidden(false);
+					widget(746, 86).setIsHidden(false);
+					break;
+				case 9:
+					widget(746, 48).setSprite(1836);
+					widget(746, 150).setSprite(1841);
+					widget(746, 151).setSprite(1840);
+					widget(746, 99).setIsHidden(false);
+					widget(746, 86).setIsHidden(false);
+					break;
+				case 10:
+					widget(746, 49).setSprite(1836);
+					widget(746, 152).setSprite(1841);
+					widget(746, 153).setSprite(1840);
+					widget(746, 100).setIsHidden(false);
+					widget(746, 86).setIsHidden(false);
+					break;
+				case 11:
+					widget(746, 50).setSprite(1836);
+					widget(746, 154).setSprite(1841);
+					widget(746, 155).setSprite(1840);
+					widget(746, 101).setIsHidden(false);
+					widget(746, 86).setIsHidden(false);
+					break;
+				case 12:
+					widget(746, 51).setSprite(1836);
+					widget(746, 156).setSprite(1841);
+					widget(746, 157).setSprite(1840);
+					widget(746, 102).setIsHidden(false);
+					widget(746, 86).setIsHidden(false);
+					break;
+				case 13:
+					widget(746, 52).setSprite(1836);
+					widget(746, 158).setSprite(1841);
+					widget(746, 159).setSprite(1840);
+					widget(746, 103).setIsHidden(false);
+					widget(746, 86).setIsHidden(false);
+					break;
+				case 14:
+					widget(746, 53).setSprite(1836);
+					widget(746, 160).setSprite(1841);
+					widget(746, 161).setSprite(1840);
+					widget(746, 104).setIsHidden(false);
+					widget(746, 86).setIsHidden(false);
+					break;
+				case 15:
+					widget(746, 54).setSprite(1836);
+					widget(746, 162).setSprite(1841);
+					widget(746, 163).setSprite(1840);
+					widget(746, 105).setIsHidden(false);
+					widget(746, 86).setIsHidden(false);
+					break;
+				case 98:
+					widget(746, 88).setIsHidden(false);
+					widget(746, 86).setIsHidden(false);
+					break;
+				case 95:
+					widget(746, 107).setIsHidden(false);
+					widget(746, 86).setIsHidden(false);
+					break;
+				case 99:
+					widget(746, 108).setIsHidden(false);
+					widget(746, 86).setIsHidden(false);
+					break;
+			}
+		}
+	} else if (widget(548, 199).hasChild()) {
+		if (arg0 != 98 || !widget(548, 200).hasChild()) {
+			widget(548, 199).setIsHidden(false);
+			widget(548, 200).setIsHidden(true);
+			widget(548, 201).setIsHidden(true);
+		} else {
+			widget(548, 199).setIsHidden(true);
+			widget(548, 200).setIsHidden(false);
+			widget(548, 201).setIsHidden(true);
+		}
+	} else {
+		widget(548, 199).setIsHidden(true);
+		widget(548, 201).setIsHidden(false);
+		switch (arg0) {
+			case 0:
+				widget(548, 129).setSprite(1836);
+				widget(548, 147).setSprite(1841);
+				widget(548, 148).setSprite(1840);
+				widget(548, 204).setIsHidden(false);
+				break;
+			case 1:
+				widget(548, 130).setSprite(1836);
+				widget(548, 149).setSprite(1841);
+				widget(548, 150).setSprite(1840);
+				widget(548, 205).setIsHidden(false);
+				break;
+			case 2:
+				widget(548, 131).setSprite(1836);
+				widget(548, 151).setSprite(1841);
+				widget(548, 152).setSprite(1840);
+				widget(548, 206).setIsHidden(false);
+				script_1659();
+				break;
+			case 3:
+				widget(548, 132).setSprite(1836);
+				widget(548, 153).setSprite(1841);
+				widget(548, 154).setSprite(1840);
+				widget(548, 207).setIsHidden(false);
+				break;
+			case 4:
+				widget(548, 133).setSprite(1836);
+				widget(548, 155).setSprite(1841);
+				widget(548, 156).setSprite(1840);
+				widget(548, 208).setIsHidden(false);
+				break;
+			case 5:
+				widget(548, 134).setSprite(1836);
+				widget(548, 157).setSprite(1841);
+				widget(548, 158).setSprite(1840);
+				widget(548, 209).setIsHidden(false);
+				break;
+			case 6:
+				widget(548, 135).setSprite(1836);
+				widget(548, 159).setSprite(1841);
+				widget(548, 160).setSprite(1840);
+				widget(548, 210).setIsHidden(false);
+				break;
+			case 7:
+				widget(548, 136).setSprite(1836);
+				widget(548, 161).setSprite(1841);
+				widget(548, 162).setSprite(1840);
+				widget(548, 211).setIsHidden(false);
+				break;
+			case 8:
+				widget(548, 99).setSprite(1836);
+				widget(548, 83).setSprite(1841);
+				widget(548, 84).setSprite(1840);
+				widget(548, 212).setIsHidden(false);
+				break;
+			case 9:
+				widget(548, 100).setSprite(1836);
+				widget(548, 85).setSprite(1841);
+				widget(548, 86).setSprite(1840);
+				widget(548, 213).setIsHidden(false);
+				break;
+			case 10:
+				widget(548, 101).setSprite(1836);
+				widget(548, 87).setSprite(1841);
+				widget(548, 88).setSprite(1840);
+				widget(548, 214).setIsHidden(false);
+				break;
+			case 11:
+				widget(548, 102).setSprite(1836);
+				widget(548, 89).setSprite(1841);
+				widget(548, 90).setSprite(1840);
+				widget(548, 215).setIsHidden(false);
+				break;
+			case 12:
+				widget(548, 103).setSprite(1836);
+				widget(548, 91).setSprite(1841);
+				widget(548, 92).setSprite(1840);
+				widget(548, 216).setIsHidden(false);
+				break;
+			case 13:
+				widget(548, 104).setSprite(1836);
+				widget(548, 93).setSprite(1841);
+				widget(548, 94).setSprite(1840);
+				widget(548, 217).setIsHidden(false);
+				break;
+			case 14:
+				widget(548, 105).setSprite(1836);
+				widget(548, 95).setSprite(1841);
+				widget(548, 96).setSprite(1840);
+				widget(548, 218).setIsHidden(false);
+				break;
+			case 15:
+				widget(548, 106).setSprite(1836);
+				widget(548, 97).setSprite(1841);
+				widget(548, 98).setSprite(1840);
+				widget(548, 219).setIsHidden(false);
+				break;
+			case 98:
+				widget(548, 200).setIsHidden(false);
+				break;
+			case 95:
+				widget(548, 221).setIsHidden(false);
+				break;
+			case 99:
+				widget(548, 222).setIsHidden(false);
+				break;
+		}
+	}
+	return;
+}

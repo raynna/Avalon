@@ -1,0 +1,10 @@
+void script_5344(Widget widget0, int arg1, Sprite sprite2, Sprite sprite3) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		if (ACTIVE.getSpriteId() == sprite2) {
+			ACTIVE.setSprite(sprite3);
+		} else {
+			ACTIVE.setSprite(sprite2);
+		}
+	}
+	return;
+}

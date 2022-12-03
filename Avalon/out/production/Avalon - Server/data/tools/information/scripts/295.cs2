@@ -1,0 +1,267 @@
+void script_295(Widget widget0, int arg1, int arg2, int arg3, int arg4) {
+	int int5;
+	if (cs2method5229()) {
+		widget0.clearChildren();
+		return;
+	}
+	int5 = 0;
+	switch (cs2method5235()) {
+		case 31:
+			int5 = script_297(location(3219, 9533, 2), location(3226, 9542, 0), false, 0xFFFF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 1:
+			int5 = script_297(location(2400, 4379, 0), location(2348, 4386, 0), false, 0xFFFF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 26:
+			int5 = script_300(location(0, 143, 0), 1, "Lower level", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(96, 207, 0), 1, "Middle level", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(192, 271, 0), 1, "Upper level", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2736, 5278, 0), location(2736, 5278, 1), false, 0xFFFF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2723, 5292, 0), location(2724, 5292, 1), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2705, 5364, 0), location(2705, 5364, 1), false, 0x00FFFF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2699, 5328, 0), location(2699, 5328, 1), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2720, 5360, 0), location(2720, 5360, 1), false, 0x00FF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2731, 5349, 0), location(2731, 5349, 1), false, 0x007FFF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2739, 5325, 0), location(2739, 5325, 1), false, 0xFFFF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2730, 5305, 0), location(2730, 5305, 1), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2723, 5264, 0), location(2724, 5264, 1), false, 0x00FFFF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2702, 5305, 0), location(2702, 5305, 1), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2737, 5357, 1), location(2737, 5357, 2), false, 0xFFFF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2701, 5362, 1), location(2701, 5362, 2), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2696, 5303, 1), location(2696, 5303, 2), false, 0x00FFFF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2697, 5292, 1), location(2697, 5292, 2), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2722, 5253, 1), location(2722, 5253, 2), false, 0x00FF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2741, 5258, 1), location(2741, 5258, 2), false, 0x007FFF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2740, 5292, 1), location(2740, 5292, 2), false, 0xFFFF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 21:
+			int5 = script_298(location(2839, 10130, 0), location(2837, 10141, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_298(location(2855, 10143, 0), location(2858, 10133, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2843, 10130, 0), location(2887, 10223, 0), false, 0xFFFF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2838, 10123, 0), location(2780, 10161, 0), false, 0x00FFFF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 20:
+			int5 = script_297(location(3510, 9497, 2), location(3510, 9494, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 25:
+			int5 = script_297(location(3056, 9561, 0), location(3056, 9556, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 3:
+			int5 = script_298(location(2598, 9491, 0), location(2599, 9555, 0), false, 0xFFFF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_298(location(2578, 9585, 0), location(2567, 9524, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_298(location(2579, 9516, 0), location(2578, 9580, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2621, 9497, 0), location(2620, 9563, 0), false, 0x00FFFF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2616, 9571, 0), location(2616, 9504, 0), false, 0x007FFF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2578, 9506, 0), location(2572, 9506, 0), false, 0x007FFF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 14:
+			int5 = script_297(location(2508, 10289, 0), location(2514, 10291, 0), false, 0xFFFF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 2:
+			int5 = script_297(location(2843, 10109, 2), location(2843, 10109, 1), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2843, 10051, 2), location(2843, 10051, 1), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2853, 10062, 1), location(2853, 10062, 0), false, 0xFFFF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2852, 10107, 1), location(2852, 10107, 0), false, 0x00FFFF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(0, 79, 0), 1, "Lower level", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(96, 79, 0), 1, "Middle level", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(192, 79, 0), 1, "Upper level", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 6:
+			int5 = script_297(location(3067, 10252, 0), location(2271, 4680, 0), false, 0x007FFF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2543, 4723, 0), location(2509, 4687, 0), false, 0xFFFF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 24:
+			int5 = script_300(location(32, 176, 0), 1, "War", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_298(location(1863, 5238, 0), location(1914, 5222, 0), false, 0x007FFF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_298(location(1881, 5232, 0), location(1859, 5243, 0), false, 0x007FFF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1902, 5222, 0), location(2042, 5245, 0), false, 0x007FFF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(120, 160, 0), 1, "Famine", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_298(location(2039, 5240, 0), location(2021, 5223, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_298(location(2017, 5210, 0), location(2042, 5245, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_298(location(2040, 5208, 0), location(2042, 5245, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_298(location(2011, 5192, 0), location(2042, 5245, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_298(location(2031, 5189, 0), location(2042, 5245, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2026, 5218, 0), location(2123, 5252, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(40, 88, 0), 1, "Pestilence", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_298(location(2120, 5258, 0), location(2146, 5287, 0), false, 0xFF007F, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_298(location(2150, 5278, 0), location(2123, 5252, 0), false, 0xFF007F, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2148, 5283, 0), location(2358, 5215, 0), false, 0xFF007F, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(128, 72, 0), 1, "Death", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_298(location(2365, 5212, 0), location(2341, 5219, 0), false, 0x00FF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 9:
+			int5 = script_300(location(96, 232, 0), 1, "Jail", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(32, 144, 0), 1, "Lower level", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(104, 144, 0), 1, "Middle level", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(176, 144, 0), 1, "Upper level", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(104, 64, 0), 1, "Secure sector", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3077, 4235, 0), location(3139, 4230, 2), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3153, 4248, 2), location(3153, 4248, 1), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3171, 4273, 2), location(3172, 4273, 3), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3178, 4269, 2), location(3178, 4266, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3141, 4272, 1), location(3142, 4270, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 15:
+			int5 = script_297(location(2913, 5300, 2), location(2913, 5300, 1), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2920, 5275, 1), location(2920, 5274, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2884, 5275, 2), location(2855, 5221, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 13:
+			int5 = script_300(location(32, 200, 0), 1, "Upper level", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2649, 9592, 0), location(2644, 9595, 2), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2636, 9516, 0), location(2636, 9511, 2), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 22:
+			int5 = script_297(location(3378, 9369, 0), location(3320, 4340, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3378, 9427, 0), location(3320, 4365, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3341, 9427, 0), location(3279, 4368, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3341, 9369, 0), location(3274, 4340, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 16:
+			int5 = script_300(location(32, 522, 0), 1, "Sub-level 1", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(2547, 10143, 0), location(1798, 4406, 3), false, 0xFFFF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(96, 427, 0), 1, "Sub-level 2", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1809, 4405, 3), location(1809, 4405, 2), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1823, 4404, 3), location(1823, 4404, 2), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1834, 4389, 3), location(1834, 4389, 2), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1824, 4381, 3), location(1824, 4381, 2), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1838, 4376, 3), location(1838, 4376, 2), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1961, 4392, 3), location(1961, 4392, 2), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(96, 330, 0), 1, "Sub-level 3", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1810, 4394, 2), location(1810, 4394, 1), false, 0x7F00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1799, 4387, 2), location(1799, 4387, 1), false, 0x7F00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1798, 4382, 2), location(1798, 4382, 1), false, 0x7F00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1802, 4369, 2), location(1802, 4369, 1), false, 0x7F00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1826, 4362, 2), location(1826, 4362, 1), false, 0x7F00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1850, 4385, 2), location(1850, 4385, 1), false, 0x7F00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1864, 4388, 2), location(1864, 4388, 1), false, 0x7F00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1863, 4372, 2), location(1863, 4372, 1), false, 0x7F00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1932, 4379, 2), location(1932, 4379, 1), false, 0x7F00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(96, 235, 0), 1, "Sub-level 4", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1890, 4408, 1), location(1890, 4408, 0), false, 0xFF7F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1957, 4372, 1), location(1957, 4372, 0), false, 0xFF7F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(160, 138, 0), 1, "Sub-level 5", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1911, 4367, 0), location(2899, 4449, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(212, 55, 0), 1, "Sub-level 6", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 30:
+			int5 = script_300(location(32, 114, 0), 1, "Lower level", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(128, 88, 0), 1, "Middle level", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(224, 88, 0), 1, "Upper level", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3163, 4560, 0), location(3163, 4565, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3155, 4559, 0), location(3161, 4559, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3141, 4565, 1), location(3141, 4560, 2), false, 0xFF7F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3144, 4571, 2), location(3144, 4566, 1), false, 0xFF7F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3144, 4582, 1), location(3144, 4577, 2), false, 0xFF7F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3151, 4583, 0), location(3146, 4583, 1), false, 0x007F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3166, 4577, 0), location(3161, 4577, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3184, 4571, 0), location(3184, 4566, 1), false, 0x007F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3184, 4585, 1), location(3184, 4579, 0), false, 0x007F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3170, 4577, 0), location(3175, 4577, 1), false, 0x007F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3174, 4561, 1), location(3179, 4561, 0), false, 0x007F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3195, 4575, 1), location(3195, 4570, 0), false, 0x007F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3189, 4577, 2), location(3194, 4577, 1), false, 0xFF7F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3186, 4585, 1), location(3186, 4578, 2), false, 0xFF7F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3168, 4586, 0), location(3168, 4579, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3161, 4589, 1), location(3166, 4589, 0), false, 0x007F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3145, 4594, 0), location(3145, 4589, 1), false, 0x007F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3160, 4598, 0), location(3149, 4598, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3168, 4592, 0), location(3168, 4597, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3151, 4597, 1), location(3155, 4597, 1), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3179, 4598, 1), location(3175, 4598, 1), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3147, 4548, 0), location(3144, 4548, 1), false, 0x007F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3158, 4553, 0), location(3158, 4556, 1), false, 0x007F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3168, 4569, 0), location(3171, 4569, 1), false, 0x007F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3184, 4553, 0), location(3184, 4556, 1), false, 0x007F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3190, 4598, 0), location(3193, 4598, 1), false, 0x007F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3141, 4551, 1), location(3141, 4554, 2), false, 0xFF7F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3158, 4564, 1), location(3158, 4567, 2), false, 0xFF7F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3177, 4577, 1), location(3180, 4577, 2), false, 0xFF7F00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3185, 4602, 0), location(3149, 4643, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3149, 4659, 0), location(3149, 4663, 0), false, 0xFF0000, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 23:
+			int5 = script_297(location(3194, 5490, 0), location(3191, 5495, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3191, 5482, 0), location(3185, 5478, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3186, 5472, 0), location(3192, 5472, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3189, 5444, 0), location(3187, 5460, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3178, 5460, 0), location(3168, 5456, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3155, 5449, 0), location(3143, 5443, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3154, 5462, 0), location(3142, 5462, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3167, 5471, 0), location(3171, 5473, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3171, 5478, 0), location(3167, 5478, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3141, 5480, 0), location(3142, 5489, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3244, 5495, 0), location(3239, 5498, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3233, 5470, 0), location(3241, 5469, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3218, 5497, 0), location(3222, 5488, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3224, 5479, 0), location(3222, 5474, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3229, 5454, 0), location(3235, 5457, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3241, 5445, 0), location(3233, 5445, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3212, 5452, 0), location(3214, 5456, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3218, 5478, 0), location(3215, 5475, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3208, 5471, 0), location(3210, 5477, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3250, 5448, 0), location(3254, 5451, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3204, 5445, 0), location(3197, 5448, 0), false, 0x00FF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3307, 5496, 0), location(3317, 5496, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3299, 5484, 0), location(3303, 5477, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3318, 5481, 0), location(3322, 5480, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3302, 5469, 0), location(3290, 5463, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3296, 5455, 0), location(3299, 5450, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3287, 5448, 0), location(3283, 5448, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3286, 5470, 0), location(3285, 5474, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3273, 5460, 0), location(3280, 5460, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3266, 5446, 0), location(3260, 5491, 0), false, 0x00FF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3265, 5491, 0), location(3259, 5446, 0), false, 0x00FF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3282, 5531, 0), location(3285, 5527, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3288, 5536, 0), location(3289, 5533, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3285, 5556, 0), location(3291, 5555, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3297, 5536, 0), location(3299, 5533, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3321, 5554, 0), location(3315, 5552, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3323, 5531, 0), location(3325, 5518, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3300, 5514, 0), location(3297, 5510, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3285, 5508, 0), location(3280, 5501, 0), false, 0x00FF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3211, 5523, 0), location(3208, 5527, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3204, 5546, 0), location(3206, 5553, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3211, 5533, 0), location(3214, 5533, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3230, 5547, 0), location(3224, 5553, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3241, 5529, 0), location(3243, 5526, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3252, 5543, 0), location(3249, 5546, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3253, 5561, 0), location(3256, 5561, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3262, 5552, 0), location(3266, 5552, 0), false, 0x00FF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3261, 5536, 0), location(3268, 5534, 0), false, 0x00FF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3238, 5507, 0), location(3232, 5501, 0), false, 0x00FF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3147, 5541, 0), location(3143, 5535, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3158, 5561, 0), location(3162, 5557, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3162, 5545, 0), location(3166, 5553, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3153, 5537, 0), location(3148, 5533, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3168, 5541, 0), location(3171, 5542, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3174, 5558, 0), location(3180, 5557, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3190, 5554, 0), location(3190, 5549, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3156, 5523, 0), location(3152, 5520, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3173, 5530, 0), location(3165, 5515, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3182, 5530, 0), location(3187, 5531, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3181, 5517, 0), location(3185, 5518, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3190, 5519, 0), location(3190, 5515, 0), false, 0xFF00FF, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3196, 5512, 0), location(3202, 5515, 0), false, 0x00FF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3197, 5529, 0), location(3201, 5531, 0), false, 0x00FF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(3169, 5510, 0), location(3159, 5501, 0), false, 0x00FF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 32:
+		case 33:
+		case 34:
+			int5 = script_300(location(0, 15, 0), 1, "The world map screen" + "<br>" + "shows you where you are," + "<br>" + "and where important" + "<br>" + "features may be found.", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		case 36:
+			int5 = script_300(location(1728, 5375, 0), 0, "Lower level", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_300(location(1728, 5375, 1), 0, "Upper level", (AttrMap)280, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1769, 5366, 1), location(1773, 5366, 0), false, 0x00FF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1778, 5346, 0), location(1778, 5343, 1), false, 0x00FF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1744, 5325, 0), location(1744, 5321, 1), false, 0x00FF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			int5 = script_297(location(1735, 5313, 1), location(1661, 5257, 0), false, 0x00FF00, 6, widget0, arg1, arg2, arg3, arg4, int5);
+			break;
+		default:
+			widget0.clearChildren();
+			break;
+	}
+	return;
+}

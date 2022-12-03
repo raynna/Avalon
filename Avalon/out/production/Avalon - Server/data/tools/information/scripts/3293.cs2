@@ -1,0 +1,6 @@
+void script_3293(Widget widget0, int arg1, int arg2, int arg3) {
+	if (ACTIVE.setChild(widget0, 1)) {
+		cs2method3109(0, ACTIVE.getHeight() / 2);
+	}
+	return;
+}

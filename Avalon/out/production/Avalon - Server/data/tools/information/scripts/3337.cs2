@@ -1,0 +1,28 @@
+void script_3337() {
+	VARC[1243] = getSkillXp(0);
+	VARC[1244] = getSkillXp(2);
+	VARC[1245] = getSkillXp(1);
+	VARC[1246] = getSkillXp(4);
+	VARC[1247] = getSkillXp(5);
+	VARC[1248] = getSkillXp(6);
+	VARC[1249] = getSkillXp(20);
+	VARC[1250] = getSkillXp(3);
+	VARC[1251] = getSkillXp(12);
+	VARC[1252] = getSkillXp(14);
+	VARC[1253] = getSkillXp(13);
+	VARC[1254] = getSkillXp(10);
+	VARC[1255] = getSkillXp(7);
+	VARC[1256] = getSkillXp(11);
+	VARC[1257] = getSkillXp(8);
+	VARC[1258] = getSkillXp(16);
+	VARC[1259] = getSkillXp(15);
+	VARC[1260] = getSkillXp(17);
+	VARC[1261] = getSkillXp(9);
+	VARC[1262] = getSkillXp(18);
+	VARC[1263] = getSkillXp(19);
+	VARC[1264] = getSkillXp(22);
+	VARC[1265] = getSkillXp(21);
+	VARC[1266] = getSkillXp(23);
+	VARC[1267] = getSkillXp(24);
+	return;
+}

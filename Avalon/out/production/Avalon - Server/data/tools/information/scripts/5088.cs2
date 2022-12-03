@@ -1,0 +1,33 @@
+void script_5088(Widget widget0, int arg1) {
+	int int2;
+	int2 = 0;
+	if (_ACTIVE.setChild(widget0, ACTIVE.getChildId() + 4)) {
+		int2 = _ACTIVE.getShadeColor();
+		if (arg1 == 0) {
+			int2 = max(int2 - 22, 0);
+			_ACTIVE.setTrans(int2);
+			if (_ACTIVE.setChild(widget0, ACTIVE.getChildId() + 6)) {
+				_ACTIVE.setTrans(int2);
+			}
+			if (_ACTIVE.setChild(widget0, ACTIVE.getChildId() + 8)) {
+				_ACTIVE.setTrans(int2);
+			}
+			if (int2 <= 0) {
+				ACTIVE.setScriptCallOnGameloop(-1, "");
+			}
+		} else {
+			int2 = min(int2 + 22, 255);
+			_ACTIVE.setTrans(int2);
+			if (_ACTIVE.setChild(widget0, ACTIVE.getChildId() + 6)) {
+				_ACTIVE.setTrans(int2);
+			}
+			if (_ACTIVE.setChild(widget0, ACTIVE.getChildId() + 8)) {
+				_ACTIVE.setTrans(int2);
+			}
+			if (int2 >= 255) {
+				ACTIVE.setScriptCallOnGameloop(-1, "");
+			}
+		}
+	}
+	return;
+}

@@ -1,0 +1,70 @@
+string script_79(int arg0) {
+	if (arg0 < 10) {
+		if (arg0 < 5) {
+			if (arg0 == 0) {
+				return STRING[2];
+			}
+			if (arg0 == 1) {
+				return STRING[3];
+			}
+			if (arg0 == 2) {
+				return STRING[4];
+			}
+			if (arg0 == 3) {
+				return STRING[5];
+			}
+			if (arg0 == 4) {
+				return STRING[6];
+			}
+		} else {
+			if (arg0 == 5) {
+				return STRING[7];
+			}
+			if (arg0 == 6) {
+				return STRING[8];
+			}
+			if (arg0 == 7) {
+				return STRING[9];
+			}
+			if (arg0 == 8) {
+				return STRING[10];
+			}
+			if (arg0 == 9) {
+				return STRING[11];
+			}
+		}
+	} else if (arg0 < 15) {
+		if (arg0 == 10) {
+			return STRING[12];
+		}
+		if (arg0 == 11) {
+			return STRING[13];
+		}
+		if (arg0 == 12) {
+			return STRING[14];
+		}
+		if (arg0 == 13) {
+			return STRING[15];
+		}
+		if (arg0 == 14) {
+			return STRING[16];
+		}
+	} else {
+		if (arg0 == 15) {
+			return STRING[17];
+		}
+		if (arg0 == 16) {
+			return STRING[18];
+		}
+		if (arg0 == 17) {
+			return STRING[19];
+		}
+		if (arg0 == 18) {
+			return STRING[20];
+		}
+		if (arg0 == 19) {
+			return STRING[21];
+		}
+	}
+	return "";
+}

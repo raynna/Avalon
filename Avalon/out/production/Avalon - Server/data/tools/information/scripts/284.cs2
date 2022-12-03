@@ -1,0 +1,9 @@
+Location script_284(Location location0) {
+	int int1;
+	int int2;
+	int1 = x(location0);
+	int2 = y(location0);
+	int1 = int1 - int1 % 64;
+	int2 = int2 - int2 % 64;
+	return moveCoord(location(0, 0, 0), int1, 0, int2);
+}

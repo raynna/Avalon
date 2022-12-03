@@ -1,0 +1,19 @@
+string, int script_1015(int arg0) {
+	switch (arg0) {
+		case 0:
+			return "Ores", 0;
+		case 1:
+			return "Equipment", 0;
+		case 2:
+			return "Other", 0;
+		case 3:
+			return "Shooting Stars", 1;
+		case 4:
+			return "Minigames", 1;
+		case 5:
+			return "Dungeoneering", 0;
+		case 6:
+			return "Milestones", 0;
+	}
+	return "", -1;
+}

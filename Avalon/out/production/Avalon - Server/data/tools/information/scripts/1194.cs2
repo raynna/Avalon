@@ -1,0 +1,17 @@
+void script_1194() {
+	int int0;
+	int int1;
+	if (VARC[1002] == -1) {
+		return;
+	}
+	int0 = x(location(VARC[1002])) - x(getMyLocation());
+	if (int0 > 10 || int0 < -10) {
+		return;
+	}
+	int1 = y(location(VARC[1002])) - y(getMyLocation());
+	if (int1 > 10 || int1 < -10) {
+		return;
+	}
+	cameraMethod5511(location(VARC[1002]));
+	return;
+}

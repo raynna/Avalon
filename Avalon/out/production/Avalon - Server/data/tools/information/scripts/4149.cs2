@@ -1,0 +1,20 @@
+void script_4149(Widget widget0, string string1, int arg2) {
+	if (arg2 == 1) {
+		script_1361(widget0);
+	} else {
+		script_915(widget0);
+	}
+	ACTIVE.createChild(widget0, 4, widget0.nextChild());
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setFont(495);
+	ACTIVE.setTextAntiMacro(true);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	if (arg2 == 1) {
+		ACTIVE.setRGB(0xFFFFFF);
+	} else {
+		ACTIVE.setRGB(0xFF981F);
+	}
+	ACTIVE.setText(string1);
+	return;
+}

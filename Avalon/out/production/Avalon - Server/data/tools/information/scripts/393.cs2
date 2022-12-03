@@ -1,0 +1,31 @@
+void script_393() {
+	widget(1010, 4).setIsHidden(true);
+	widget(1010, 20).setIsHidden(true);
+	widget(1010, 1).setText("Command Options");
+	widget(1010, 40).setPosition(0, 133, 0, 0);
+	widget(1010, 40).setSize(190, 116, 0, 0);
+	widget(1010, 41).setText("Comm Orb Recharging");
+	widget(1010, 41).setPosition(0, 133, 0, 0);
+	widget(1010, 41).setSize(190, 116, 0, 0);
+	widget(1010, 41).setTextAlignment(1, 1, 0);
+	widget(1010, 34).setPosition(30, 152, 0, 0);
+	widget(1010, 37).setPosition(30, 200, 0, 0);
+	widget(1010, 39).setText("Recharge");
+	widget(1010, 39).setContextMenuOption(1, "Recharge");
+	widget(1010, 31).setPosition(4, 148, 0, 0);
+	widget(1010, 25).setPosition(15, 204, 0, 0);
+	widget(1010, 28).setPosition(105, 204, 0, 0);
+	widget(1010, 32).setIsHidden(true);
+	widget(1019, 5).setIsHidden(true);
+	widget(1019, 6).setIsHidden(true);
+	widget(1019, 9).setIsHidden(true);
+	widget(1019, 8).setIsHidden(true);
+	widget(1019, 3).setText("Retreat");
+	widget(1019, 12).setIsHidden(true);
+	widget(1019, 16).setText("Retreat");
+	widget(1019, 16).setContextMenuOption(1, "Retreat");
+	widget(1019, 1).setPosition(30, 0, 0, 1);
+	widget(1019, 0).setPosition(0, 50, 0, 1);
+	widget(1019, 0).setText("Force Savant to teleport you to safety and order your remaining troops to fall back.");
+	return;
+}

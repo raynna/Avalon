@@ -1,0 +1,4 @@
+void script_3427() {
+	widget(60, 92).setText("Items can be bought with Castle Wars tickets only.");
+	return;
+}

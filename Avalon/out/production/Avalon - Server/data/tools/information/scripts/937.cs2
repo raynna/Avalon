@@ -1,0 +1,36 @@
+void script_937() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	widget(335, 32).clearChildren();
+	int0 = 0;
+	int1 = 0;
+	int2 = 4;
+	int3 = 7;
+	if (widget(335, 32).getScrollMaxH() > 0) {
+		int0 = (widget(335, 32).getScrollMaxH() - 36 * int2) / (int2 - 1);
+	} else {
+		int0 = (widget(335, 32).getWidth() - 36 * int2) / (int2 - 1);
+	}
+	if (widget(335, 32).getScrollMaxV() > 0) {
+		int1 = (widget(335, 32).getScrollMaxV() - 32 * int3) / (int3 - 1);
+	} else {
+		int1 = (widget(335, 32).getHeight() - 32 * int3) / (int3 - 1);
+	}
+	int4 = 0;
+	int5 = -1;
+	while (int4 < getItemContainerLength(90)) {
+		ACTIVE.createChild(widget(335, 32), 3, int4);
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setPosition((36 + int0) * (int4 % int2), int4 / int2 * (32 + int1), 0, 0);
+		ACTIVE.setFilled(true);
+		ACTIVE.setRGB(0xFF0000);
+		ACTIVE.setTrans(255);
+		int4 = int4 + 1;
+	}
+	widget(335, 32).setScriptCallOnItemContainerUpdate(938, 90, "Y");
+	return;
+}

@@ -1,0 +1,18 @@
+void script_424() {
+	int int0;
+	int int1;
+	string str0;
+	int0 = VARC[1365] * 6 / 10;
+	int1 = 0;
+	str0 = "1 minute";
+	if (int0 < 60) {
+		widget(1027, 24).setText("Your opponent has logged out." + "<br>" + "You may wait for them to return or end the Conquest now and be declared the winner.");
+		return;
+	}
+	if (int0 > 120) {
+		int1 = int0 / 60;
+		str0 = str(int1) + " minutes";
+	}
+	widget(1027, 24).setText("Your opponent has been logged out for " + str0 + "." + "<br>" + "You may wait for them to return or end the Conquest now and be declared the winner.");
+	return;
+}

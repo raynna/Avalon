@@ -1,0 +1,25 @@
+void script_1190() {
+	int int0;
+	int int1;
+	int int2;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	while (int0 < getItemContainerLength(482)) {
+		ACTIVE.createChild(widget(477, 26), 5, int0);
+		ACTIVE.setSize(36, 32, 0, 0);
+		int1 = script_1425(int0);
+		int2 = script_1426(int0);
+		ACTIVE.setPosition(int1, int2, 0, 0);
+		if (getItemIdInSlot(482, int0) != null) {
+			ACTIVE.setItem(getItemIdInSlot(482, int0), getItemAmtInSlot(482, int0));
+			ACTIVE.setOptionBase(getItemName(getItemIdInSlot(482, int0)));
+			ACTIVE.setContextMenuOption(1, "Value");
+			ACTIVE.setContextMenuOption(2, "Buy 1");
+			ACTIVE.setContextMenuOption(3, "Buy 5");
+			ACTIVE.setContextMenuOption(4, "Buy 10");
+		}
+		int0 = int0 + 1;
+	}
+	return;
+}

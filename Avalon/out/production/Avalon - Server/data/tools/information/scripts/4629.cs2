@@ -1,0 +1,22 @@
+void script_4629(int arg0) {
+	int int1;
+	int1 = 0;
+	if (ACTIVE.setChild(widget(1110, 20))) {
+		if (arg0 == 1) {
+			int1 = ACTIVE.getWidth() + 3;
+			int1 = min(31, int1);
+			if (int1 == 31) {
+				ACTIVE.setScriptCallOnGameloop(-1, "");
+			}
+		} else {
+			int1 = ACTIVE.getWidth() - 3;
+			int1 = max(1, int1);
+			if (int1 == 1) {
+				ACTIVE.setScriptCallOnGameloop(-1, "");
+				widget(1110, 13).setIsHidden(true);
+			}
+		}
+		ACTIVE.setSize(int1, 19, 0, 0);
+	}
+	return;
+}

@@ -1,0 +1,6 @@
+void script_4380(Widget widget0, Widget widget1, int arg2) {
+	STRING[345] = widget0.getText();
+	VARC[1496] = script_1552(arg2, STRING[345], 5631, widget0, -1);
+	widget1.setPosition(VARC[1496], 5, 0, 0);
+	return;
+}

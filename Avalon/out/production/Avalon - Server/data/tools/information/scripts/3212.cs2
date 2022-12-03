@@ -1,0 +1,5 @@
+void script_3212(string string0) {
+	string0 = string0 + "?cty=" + str(cs2method3629());
+	script_2934(string0, 1);
+	return;
+}

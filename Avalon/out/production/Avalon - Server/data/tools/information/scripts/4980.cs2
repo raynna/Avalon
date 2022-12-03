@@ -1,0 +1,70 @@
+int script_4980(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int1 = 0;
+	int2 = 0;
+	int3 = 1;
+	if (citadelConfigsInitialized()) {
+		int1 = script_4948(arg0);
+		if (int1 <= 0) {
+			return 0;
+		}
+		int2 = script_4959(int1);
+		if (int2 == 0) {
+			return 0;
+		}
+		switch (int1) {
+			case 1:
+				int3 = CLANBIT[2600];
+				break;
+			case 2:
+				int3 = CLANBIT[2596];
+				break;
+			case 3:
+				int3 = CLANBIT[2597];
+				break;
+			case 4:
+				int3 = CLANBIT[2584];
+				break;
+			case 5:
+				int3 = CLANBIT[2585];
+				break;
+			case 6:
+				int3 = CLANBIT[2586];
+				break;
+			case 7:
+				int3 = CLANBIT[2587];
+				break;
+			case 8:
+				int3 = CLANBIT[2588];
+				break;
+			case 9:
+				int3 = CLANBIT[2589];
+				break;
+			case 10:
+				int3 = CLANBIT[2590];
+				break;
+			case 11:
+				int3 = CLANBIT[2591];
+				break;
+			case 12:
+				int3 = CLANBIT[2592];
+				break;
+			case 13:
+				int3 = CLANBIT[2593];
+				break;
+			case 14:
+				int3 = CLANBIT[2594];
+				break;
+			case 15:
+				int3 = CLANBIT[2595];
+				break;
+		}
+		if (int3 > 0) {
+			return 4;
+		}
+		return 3;
+	}
+	return 0;
+}

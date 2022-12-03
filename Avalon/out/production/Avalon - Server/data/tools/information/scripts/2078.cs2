@@ -1,0 +1,11 @@
+void script_2078() {
+	int int0;
+	int0 = 0;
+	int0 = 20 - VARC[636];
+	if (int0 == 1) {
+		widget(836, 27).setText(str(int0) + " min");
+	} else {
+		widget(836, 27).setText(str(int0) + " mins");
+	}
+	return;
+}

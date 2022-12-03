@@ -1,0 +1,7 @@
+void script_654() {
+	widget(109, 16).setScriptCallOnItemContainerUpdate(4113, 523, 524, 525, 526, 527, 528, 540, "Y");
+	widget(109, 16).setScriptCallOnGrandExchangeUpdate(4113, "");
+	widget(109, 16).setScriptCallOnConfigChange(4113, 1267, 1269, "Y");
+	script_4114();
+	return;
+}

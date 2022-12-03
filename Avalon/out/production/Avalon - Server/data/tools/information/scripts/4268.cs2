@@ -1,0 +1,410 @@
+void script_4268(int arg0) {
+	switch (arg0) {
+		case 1:
+			widget(1083, 85).setText("Teleport to South Falador");
+			break;
+		case 2:
+			widget(1083, 85).setText("Repair Rune Pouch");
+			break;
+		case 3:
+			widget(1083, 85).setText("Teleport to North Ardougne");
+			break;
+		case 4:
+			widget(1083, 85).setText("Remote Farming");
+			break;
+		case 5:
+			widget(1083, 85).setText("Spiritualise Food");
+			break;
+		case 6:
+			widget(1083, 85).setText("Make Leather");
+			break;
+		case 7:
+			widget(1083, 85).setText("Disruption Shield");
+			break;
+		case 8:
+			widget(1083, 85).setText("Vengeance Group");
+			break;
+		case 9:
+			widget(1083, 85).setText("Let it Rain Seeds!");
+			break;
+		case 10:
+			widget(1083, 85).setText("Gimme Herbs!");
+			break;
+		case 11:
+			widget(1083, 85).setText("Vial My Herbs!");
+			break;
+		case 12:
+			widget(1083, 85).setText("Turn Lunar Lumber into Runes!");
+			break;
+		case 13:
+			widget(1083, 85).setText("Reduce the Fish I Burn!");
+			break;
+		case 14:
+			widget(1083, 85).setText("More Planks, Please!");
+			break;
+		case 15:
+			widget(1083, 85).setText("Teleport to Trollheim");
+			break;
+		case 16:
+			widget(1083, 85).setText("Teleport Group to Trollheim");
+			break;
+		case 17:
+			widget(1083, 85).setText("Borrowed Power");
+			break;
+		case 18:
+			widget(1083, 85).setText("Let it Rain Awesome Seeds!");
+			break;
+		case 19:
+			widget(1083, 85).setText("I'd Like a New Patch!");
+			break;
+		case 20:
+			widget(1083, 85).setText("Give Me An Arcane Capacitor!");
+			break;
+		case 21:
+			widget(1083, 85).setText("Protect A Patch For Me!");
+			break;
+	}
+	switch (arg0) {
+		case 1:
+			widget(1083, 87).setText("Teleports you to the south of Falador.");
+			break;
+		case 2:
+			widget(1083, 87).setText("Use on a degraded pouch to repair it and improve its strength, so it takes longer to degrade.");
+			break;
+		case 3:
+			widget(1083, 87).setText("Teleports you to the north of Ardougne.");
+			break;
+		case 4:
+			widget(1083, 87).setText("View the status of farming patches and cure any disease from a distance.");
+			break;
+		case 5:
+			widget(1083, 87).setText("Cast on ordinary food and feed it to your familiar to heal it, boost its combat stats and extend its timer.");
+			break;
+		case 6:
+			widget(1083, 87).setText("Cast on hides to turn them into leather. This will convert 5 hides at a time.");
+			break;
+		case 7:
+			widget(1083, 87).setText("Nullifies the next hit you receive from another player. This works against players only, not against monsters.");
+			break;
+		case 8:
+			widget(1083, 87).setText("When cast, those nearby get to rebound damage." + "<br>" + "After learning this last spell, your current produce will be reduced by " + script_46(datamap('i', 'i', (DataMap)3674, 7) * 10, ",") + " and the remainder can be spent on wishes.");
+			break;
+		case 9:
+			widget(1083, 87).setText("Seeds will appear on the floor. Be quick to pick up the ones you want.");
+			break;
+		case 10:
+			widget(1083, 87).setText("Puts a load of grimy herbs in your inventory.");
+			break;
+		case 11:
+			widget(1083, 87).setText("Takes all the clean herbs in your inventory and turns them into unfinished potions of that herb type. This will work on noted herbs of up to 50 at a time.");
+			break;
+		case 12:
+			widget(1083, 87).setText("Turns all lunar lumber in your inventory into runes. You'll need a full inventory of logs.");
+			break;
+		case 13:
+			widget(1083, 87).setText("For the next thirty minutes, you'll find that you burn fewer fish.");
+			break;
+		case 14:
+			widget(1083, 87).setText("This will be active for the next twenty minutes: when casting Plank Make, you will have a chance of receiving additional planks.");
+			break;
+		case 15:
+			widget(1083, 87).setText("Teleports you to the farming patch in Trollheim.");
+			break;
+		case 16:
+			widget(1083, 87).setText("Teleports you and those nearby to the farming patch in Trollheim.");
+			break;
+		case 17:
+			widget(1083, 87).setText("Allows you to store and cast certain spells from the standard spellbook.");
+			break;
+		case 18:
+			widget(1083, 87).setText("High value seeds will appear on the floor. Be quick to pick up the ones you want.");
+			break;
+		case 19:
+			widget(1083, 87).setText("A new allotment patch will become available nearby. It will vanish if the patch is cleared.");
+			break;
+		case 20:
+			widget(1083, 87).setText("You'll be given an Arcane Capacitor, for use with the Borrowed Power spell.");
+			break;
+		case 21:
+			if (VARPBIT[9067] < 11) {
+				widget(1083, 87).setText("Gives you a scroll which, when used on a fruit tree or tree patch, will protect that patch for the next 10 growths in that patch. ");
+			} else {
+				widget(1083, 87).setText("Gives you a scroll which, when used on a fruit tree or tree patch, will protect that patch for the next 10 growths in that patch. You will need to use the scroll on a patch that is currently growing something and you must have the produce in your inventory that would cover the cost of protecting that patch normally.");
+			}
+			break;
+	}
+	switch (arg0) {
+		case 1:
+			if (VARPBIT[9067] < 1) {
+				widget(1083, 89).setText("Requires level 72 Magic to cast. You must unlock the spells in order.");
+			} else {
+				widget(1083, 89).setText("Learned!");
+			}
+			break;
+		case 2:
+			if (VARPBIT[9067] < 2) {
+				widget(1083, 89).setText("Requires level 75 Magic to cast. You must unlock the spells in order.");
+			} else {
+				widget(1083, 89).setText("Learned!");
+			}
+			break;
+		case 3:
+			if (VARPBIT[9067] < 3) {
+				widget(1083, 89).setText("Requires level 76 Magic to cast. You must unlock the spells in order.");
+			} else {
+				widget(1083, 89).setText("Learned!");
+			}
+			break;
+		case 4:
+			if (VARPBIT[9067] < 4) {
+				widget(1083, 89).setText("Requires level 78 Magic to cast. You must unlock the spells in order.");
+			} else {
+				widget(1083, 89).setText("Learned!");
+			}
+			break;
+		case 5:
+			if (VARPBIT[9067] < 5) {
+				widget(1083, 89).setText("Requires level 80 Magic to cast. You must unlock the spells in order.");
+			} else {
+				widget(1083, 89).setText("Learned!");
+			}
+			break;
+		case 6:
+			if (VARPBIT[9067] < 6) {
+				widget(1083, 89).setText("Requires level 83 Magic to cast. You must unlock the spells in order.");
+			} else {
+				widget(1083, 89).setText("Learned!");
+			}
+			break;
+		case 7:
+			if (VARPBIT[9067] < 7) {
+				widget(1083, 89).setText("Requires level 90 Magic to cast. You must unlock the spells in order.");
+			} else {
+				widget(1083, 89).setText("Learned!");
+			}
+			break;
+		case 8:
+			if (VARPBIT[9067] < 8) {
+				widget(1083, 89).setText("Requires level 95 Magic to cast. You must unlock the spells in order.");
+			} else {
+				widget(1083, 89).setText("Learned!");
+			}
+			break;
+		case 15:
+			if (VARPBIT[9067] < 9) {
+				widget(1083, 89).setText("Requires level 92 Magic to cast. You must unlock the spells in order.");
+			} else {
+				widget(1083, 89).setText("Learned!");
+			}
+			break;
+		case 16:
+			if (VARPBIT[9067] < 10) {
+				widget(1083, 89).setText("Requires level 93 Magic to cast. You must unlock the spells in order.");
+			} else {
+				widget(1083, 89).setText("Learned!");
+			}
+			break;
+		case 17:
+			if (VARPBIT[9067] < 11) {
+				widget(1083, 89).setText("Requires level 99 Magic to cast. You must unlock the spells in order.");
+			} else {
+				widget(1083, 89).setText("Learned!");
+			}
+			break;
+		default:
+			if (VARPBIT[9067] < 11) {
+				widget(1083, 89).setText("You must unlock all the spells before you can use wishes.");
+			}
+			break;
+	}
+	if (arg0 < 9 || arg0 > 14 && arg0 < 18) {
+		widget(1083, 90).setIsHidden(false);
+	} else {
+		widget(1083, 90).setIsHidden(true);
+	}
+	switch (arg0) {
+		case 1:
+			widget(1083, 93).setSprite(4585);
+			break;
+		case 2:
+			widget(1083, 93).setSprite(4586);
+			break;
+		case 3:
+			widget(1083, 93).setSprite(4587);
+			break;
+		case 4:
+			widget(1083, 93).setSprite(4588);
+			break;
+		case 5:
+			widget(1083, 93).setSprite(4590);
+			break;
+		case 6:
+			widget(1083, 93).setSprite(4589);
+			break;
+		case 7:
+			widget(1083, 93).setSprite(4591);
+			break;
+		case 8:
+			widget(1083, 93).setSprite(4592);
+			break;
+		case 15:
+			widget(1083, 93).setSprite(7685);
+			break;
+		case 16:
+			widget(1083, 93).setSprite(7686);
+			break;
+		case 17:
+			widget(1083, 93).setSprite(7687);
+			break;
+	}
+	widget(1083, 94).setIsHidden(true);
+	widget(1083, 95).setIsHidden(true);
+	widget(1083, 96).setIsHidden(true);
+	widget(1083, 97).setIsHidden(true);
+	widget(1083, 98).setIsHidden(true);
+	widget(1083, 99).setIsHidden(true);
+	widget(1083, 100).setIsHidden(true);
+	widget(1083, 101).setIsHidden(true);
+	widget(1083, 102).setIsHidden(true);
+	widget(1083, 103).setIsHidden(true);
+	widget(1083, 104).setIsHidden(true);
+	widget(1083, 105).setIsHidden(true);
+	widget(1083, 106).setIsHidden(true);
+	widget(1083, 107).setIsHidden(true);
+	widget(1083, 460).setIsHidden(true);
+	widget(1083, 470).setIsHidden(true);
+	widget(1083, 480).setIsHidden(true);
+	widget(1083, 518).setIsHidden(true);
+	widget(1083, 528).setIsHidden(true);
+	widget(1083, 538).setIsHidden(true);
+	widget(1083, 558).setIsHidden(true);
+	switch (arg0) {
+		case 1:
+			if (VARPBIT[9067] < 1) {
+				widget(1083, 94).setIsHidden(false);
+			}
+			break;
+		case 2:
+			if (VARPBIT[9067] < 2) {
+				widget(1083, 95).setIsHidden(false);
+			}
+			break;
+		case 3:
+			if (VARPBIT[9067] < 3) {
+				widget(1083, 96).setIsHidden(false);
+			}
+			break;
+		case 4:
+			if (VARPBIT[9067] < 4) {
+				widget(1083, 97).setIsHidden(false);
+			}
+			break;
+		case 5:
+			if (VARPBIT[9067] < 5) {
+				widget(1083, 98).setIsHidden(false);
+			}
+			break;
+		case 6:
+			if (VARPBIT[9067] < 6) {
+				widget(1083, 99).setIsHidden(false);
+			}
+			break;
+		case 7:
+			if (VARPBIT[9067] < 7) {
+				widget(1083, 100).setIsHidden(false);
+			}
+			break;
+		case 8:
+			if (VARPBIT[9067] < 8) {
+				widget(1083, 101).setIsHidden(false);
+			}
+			break;
+		case 9:
+			if (VARPBIT[9067] > 10) {
+				widget(1083, 102).setIsHidden(false);
+			}
+			break;
+		case 10:
+			if (VARPBIT[9067] > 10) {
+				widget(1083, 103).setIsHidden(false);
+			}
+			break;
+		case 11:
+			if (VARPBIT[9067] > 10) {
+				widget(1083, 104).setIsHidden(false);
+			}
+			break;
+		case 12:
+			if (VARPBIT[9067] > 10) {
+				widget(1083, 105).setIsHidden(false);
+			}
+			break;
+		case 13:
+			if (VARPBIT[9067] > 10) {
+				widget(1083, 106).setIsHidden(false);
+			}
+			break;
+		case 14:
+			if (VARPBIT[9067] > 10) {
+				widget(1083, 107).setIsHidden(false);
+			}
+			break;
+		case 15:
+			if (VARPBIT[9067] < 9) {
+				widget(1083, 460).setIsHidden(false);
+			}
+			break;
+		case 16:
+			if (VARPBIT[9067] < 10) {
+				widget(1083, 470).setIsHidden(false);
+			}
+			break;
+		case 17:
+			if (VARPBIT[9067] < 11) {
+				widget(1083, 480).setIsHidden(false);
+			}
+			break;
+		case 18:
+			if (VARPBIT[9067] > 10) {
+				widget(1083, 518).setIsHidden(false);
+			}
+			break;
+		case 19:
+			if (VARPBIT[9067] > 10) {
+				widget(1083, 528).setIsHidden(false);
+			}
+			break;
+		case 20:
+			if (VARPBIT[9067] > 10) {
+				widget(1083, 538).setIsHidden(false);
+			}
+			break;
+		case 21:
+			if (VARPBIT[9067] > 10) {
+				widget(1083, 558).setIsHidden(false);
+			}
+			break;
+	}
+	widget(1083, 385).setIsHidden(true);
+	widget(1083, 72).setIsHidden(true);
+	widget(1083, 67).setIsHidden(true);
+	widget(1083, 62).setIsHidden(true);
+	widget(1083, 57).setIsHidden(true);
+	widget(1083, 52).setIsHidden(true);
+	widget(1083, 47).setIsHidden(true);
+	widget(1083, 42).setIsHidden(true);
+	widget(1083, 37).setIsHidden(true);
+	widget(1083, 32).setIsHidden(true);
+	widget(1083, 27).setIsHidden(true);
+	widget(1083, 22).setIsHidden(true);
+	widget(1083, 17).setIsHidden(true);
+	widget(1083, 12).setIsHidden(true);
+	widget(1083, 431).setIsHidden(true);
+	widget(1083, 442).setIsHidden(true);
+	widget(1083, 453).setIsHidden(true);
+	widget(1083, 493).setIsHidden(true);
+	widget(1083, 502).setIsHidden(true);
+	widget(1083, 512).setIsHidden(true);
+	widget(1083, 552).setIsHidden(true);
+	return;
+}

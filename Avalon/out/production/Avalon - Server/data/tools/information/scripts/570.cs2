@@ -1,0 +1,17 @@
+void script_570(string string0) {
+	widget(752, 8).setIsHidden(true);
+	widget(752, 3).setIsHidden(true);
+	widget(752, 7).setIsHidden(false);
+	widget(389, 9).setScriptCallOnKeyPress(574, KEY_TYPED, (char)KEY_PRESSED, "iz");
+	widget(389, 6).setText(string0);
+	widget(389, 5).setIsHidden(false);
+	widget(389, 15).setItem(null, -1);
+	script_1188();
+	STRING[22] = "";
+	widget(389, 9).setText("*");
+	widget(389, 4).clearChildren();
+	widget(389, 4).setScrollMax(0, 15);
+	script_31(widget(389, 8), widget(389, 4), 792, 789, 790, 791, 773, 788);
+	widget(389, 9).setScriptCallOnDialogAbort(572, "");
+	return;
+}

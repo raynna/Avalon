@@ -1,0 +1,81 @@
+void script_1237(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	AttrMap attrmap10;
+	Sprite sprite11;
+	Sprite sprite12;
+	int int13;
+	int int14;
+	string str0;
+	widget0.clearChildren();
+	int1 = 5;
+	int2 = 30;
+	int3 = 30;
+	int4 = 0;
+	int5 = 8;
+	int6 = int5;
+	int7 = 6;
+	int8 = 30 + 7;
+	if (VARC[1052] == 1 && VARPBIT[6840] == 0) {
+		int5 = 5;
+		int6 = int5;
+		int8 = 30 + 4;
+	}
+	int9 = 30 + 6;
+	if (VARC[181] == 1) {
+		int5 = 8;
+		int6 = int5;
+		int7 = 30;
+		int8 = 30 + 7;
+		int9 = 30 + 5;
+	}
+	attrmap10 = null;
+	sprite11 = null;
+	sprite12 = null;
+	str0 = "";
+	int13 = 0;
+	int14 = 30;
+	if (VARPBIT[6840] == 1) {
+		int14 = 20;
+	}
+	while (int4 < int14) {
+		attrmap10 = datamap('i', 'J', (DataMap)2279, int4);
+		if (VARPBIT[6840] == 1) {
+			attrmap10 = datamap('i', 'J', (DataMap)863, int4);
+		}
+		sprite12 = getAttributeMapValue(attrmap10, 736);
+		sprite11 = getAttributeMapValue(attrmap10, 735);
+		str0 = getAttributeMapValue(attrmap10, 734);
+		int13 = getAttributeMapValue(attrmap10, 737);
+		ACTIVE.createChild(widget0, 5, int4);
+		ACTIVE.setSize(int2, int3, 0, 0);
+		ACTIVE.setPosition(int6, int7, 0, 0);
+		ACTIVE.setSprite(sprite12);
+		ACTIVE.bindMouseToSpriteShape(false);
+		if (VARC[181] == 0) {
+			ACTIVE.setContextMenuOption(1, "Activate" + "<col=ff9040>");
+			ACTIVE.setScriptCallOnConfigChange(49, CTX_WIDGET, widget(271, 7), int4, 1395, 1582, "IIiY");
+			ACTIVE.setScriptCallOnMouseOver(1160, CTX_WIDGET, CTX_WIDGET_CHILD, widget(271, 49), str0, 25, 190, "IiIsii");
+			if (int4 == 0 && VARPBIT[6521] == 10) {
+				ACTIVE.setScriptCallOnGlobalConfigChange(1428, CTX_WIDGET, CTX_WIDGET_CHILD, 1024, "IiY");
+			}
+		}
+		ACTIVE.setScriptCallOnSkillChange(52, int13, sprite12, sprite11, CTX_WIDGET, CTX_WIDGET_CHILD, 5, "iddIiY");
+		ACTIVE.setScriptCallOnMouseExit(40, widget(271, 49), "I");
+		int4 = int4 + 1;
+		if (int4 % int1 == 0) {
+			int6 = int5;
+			int7 = int7 + int9;
+		} else {
+			int6 = int6 + int8;
+		}
+	}
+	return;
+}

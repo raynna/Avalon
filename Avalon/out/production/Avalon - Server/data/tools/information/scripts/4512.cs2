@@ -1,0 +1,16 @@
+void script_4512(Widget widget0, AttrMap attrmap1) {
+	Sprite sprite2;
+	int int3;
+	if (widget0 == null || attrmap1 == null) {
+		return;
+	}
+	sprite2 = getAttributeMapValue(attrmap1, 1351);
+	int3 = getAttributeMapValue(attrmap1, 1358);
+	widget0.clearChildren();
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setSize(60, 60, 0, 0);
+	ACTIVE.setSprite(sprite2);
+	ACTIVE.setTrans(int3);
+	return;
+}

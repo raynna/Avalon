@@ -1,0 +1,20 @@
+void script_1123(Widget widget0) {
+	switch (VARPBIT[804]) {
+		case 1:
+			widget0.setItem(6090, 300);
+			break;
+		case 2:
+			widget0.setItem(6092, 300);
+			break;
+		case 3:
+			widget0.setItem(6089, 300);
+			break;
+		case 4:
+			widget0.setItem(6091, 300);
+			break;
+		default:
+			widget0.setItem(null, 300);
+			break;
+	}
+	return;
+}

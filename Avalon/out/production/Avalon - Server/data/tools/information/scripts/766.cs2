@@ -1,0 +1,156 @@
+int script_766(Item item0) {
+	if (itemAttribute(item0, 538) != null && getItemAmtInContainer(93, itemAttribute(item0, 538)) < itemAttribute(item0, 539)) {
+		return 0;
+	}
+	if (itemAttribute(item0, 540) != null && getItemAmtInContainer(93, itemAttribute(item0, 540)) < itemAttribute(item0, 541)) {
+		return 0;
+	}
+	if (itemAttribute(item0, 542) != null && getItemAmtInContainer(93, itemAttribute(item0, 542)) < itemAttribute(item0, 543)) {
+		return 0;
+	}
+	if (itemAttribute(item0, 697) != null) {
+		switch (itemAttribute(item0, 697)) {
+			case 6287:
+				if (getItemAmtInContainer(93, 6287) + getItemAmtInContainer(93, 7801) < itemAttribute(item0, 698)) {
+					return 0;
+				}
+				break;
+			case 6979:
+				if (getItemAmtInContainer(93, 6979) + getItemAmtInContainer(93, 6981) + getItemAmtInContainer(93, 6983) < itemAttribute(item0, 698)) {
+					return 0;
+				}
+				break;
+			case 2462:
+				if (getItemAmtInContainer(93, 2462) + getItemAmtInContainer(93, 2460) + getItemAmtInContainer(93, 2464) + getItemAmtInContainer(93, 2466) + getItemAmtInContainer(93, 2468) + getItemAmtInContainer(93, 2470) + getItemAmtInContainer(93, 2472) < itemAttribute(item0, 698)) {
+					return 0;
+				}
+				break;
+			default:
+				if (getItemAmtInContainer(93, itemAttribute(item0, 697)) < itemAttribute(item0, 698)) {
+					return 0;
+				}
+				break;
+		}
+	}
+	if (itemAttribute(item0, 699) != null) {
+		switch (itemAttribute(item0, 699)) {
+			case 6287:
+				if (getItemAmtInContainer(93, 6287) + getItemAmtInContainer(93, 7801) < itemAttribute(item0, 700)) {
+					return 0;
+				}
+				break;
+			case 6979:
+				if (getItemAmtInContainer(93, 6979) + getItemAmtInContainer(93, 6981) + getItemAmtInContainer(93, 6983) < itemAttribute(item0, 700)) {
+					return 0;
+				}
+				break;
+			case 2462:
+				if (getItemAmtInContainer(93, 2462) + getItemAmtInContainer(93, 2460) + getItemAmtInContainer(93, 2464) + getItemAmtInContainer(93, 2466) + getItemAmtInContainer(93, 2468) + getItemAmtInContainer(93, 2470) + getItemAmtInContainer(93, 2472) < itemAttribute(item0, 700)) {
+					return 0;
+				}
+				break;
+			default:
+				if (getItemAmtInContainer(93, itemAttribute(item0, 699)) < itemAttribute(item0, 700)) {
+					return 0;
+				}
+				break;
+		}
+	}
+	if (itemAttribute(item0, 701) != null) {
+		switch (itemAttribute(item0, 701)) {
+			case 6287:
+				if (getItemAmtInContainer(93, 6287) + getItemAmtInContainer(93, 7801) < itemAttribute(item0, 702)) {
+					return 0;
+				}
+				break;
+			case 6979:
+				if (getItemAmtInContainer(93, 6979) + getItemAmtInContainer(93, 6981) + getItemAmtInContainer(93, 6983) < itemAttribute(item0, 702)) {
+					return 0;
+				}
+				break;
+			case 2462:
+				if (getItemAmtInContainer(93, 2462) + getItemAmtInContainer(93, 2460) + getItemAmtInContainer(93, 2464) + getItemAmtInContainer(93, 2466) + getItemAmtInContainer(93, 2468) + getItemAmtInContainer(93, 2470) + getItemAmtInContainer(93, 2472) < itemAttribute(item0, 702)) {
+					return 0;
+				}
+				break;
+			default:
+				if (getItemAmtInContainer(93, itemAttribute(item0, 701)) < itemAttribute(item0, 702)) {
+					return 0;
+				}
+				break;
+		}
+	}
+	if (itemAttribute(item0, 703) != null) {
+		switch (itemAttribute(item0, 703)) {
+			case 6287:
+				if (getItemAmtInContainer(93, 6287) + getItemAmtInContainer(93, 7801) < itemAttribute(item0, 704)) {
+					return 0;
+				}
+				break;
+			case 6979:
+				if (getItemAmtInContainer(93, 6979) + getItemAmtInContainer(93, 6981) + getItemAmtInContainer(93, 6983) < itemAttribute(item0, 704)) {
+					return 0;
+				}
+				break;
+			case 2462:
+				if (getItemAmtInContainer(93, 2462) + getItemAmtInContainer(93, 2460) + getItemAmtInContainer(93, 2464) + getItemAmtInContainer(93, 2466) + getItemAmtInContainer(93, 2468) + getItemAmtInContainer(93, 2470) + getItemAmtInContainer(93, 2472) < itemAttribute(item0, 704)) {
+					return 0;
+				}
+				break;
+			default:
+				if (getItemAmtInContainer(93, itemAttribute(item0, 703)) < itemAttribute(item0, 704)) {
+					return 0;
+				}
+				break;
+		}
+	}
+	if (itemAttribute(item0, 705) != null) {
+		switch (itemAttribute(item0, 705)) {
+			case 6287:
+				if (getItemAmtInContainer(93, 6287) + getItemAmtInContainer(93, 7801) < itemAttribute(item0, 706)) {
+					return 0;
+				}
+				break;
+			case 6979:
+				if (getItemAmtInContainer(93, 6979) + getItemAmtInContainer(93, 6981) + getItemAmtInContainer(93, 6983) < itemAttribute(item0, 706)) {
+					return 0;
+				}
+				break;
+			case 2462:
+				if (getItemAmtInContainer(93, 2462) + getItemAmtInContainer(93, 2460) + getItemAmtInContainer(93, 2464) + getItemAmtInContainer(93, 2466) + getItemAmtInContainer(93, 2468) + getItemAmtInContainer(93, 2470) + getItemAmtInContainer(93, 2472) < itemAttribute(item0, 706)) {
+					return 0;
+				}
+				break;
+			default:
+				if (getItemAmtInContainer(93, itemAttribute(item0, 705)) < itemAttribute(item0, 706)) {
+					return 0;
+				}
+				break;
+		}
+	}
+	if (itemAttribute(item0, 707) != null) {
+		switch (itemAttribute(item0, 707)) {
+			case 6287:
+				if (getItemAmtInContainer(93, 6287) + getItemAmtInContainer(93, 7801) < itemAttribute(item0, 708)) {
+					return 0;
+				}
+				break;
+			case 6979:
+				if (getItemAmtInContainer(93, 6979) + getItemAmtInContainer(93, 6981) + getItemAmtInContainer(93, 6983) < itemAttribute(item0, 708)) {
+					return 0;
+				}
+				break;
+			case 2462:
+				if (getItemAmtInContainer(93, 2462) + getItemAmtInContainer(93, 2460) + getItemAmtInContainer(93, 2464) + getItemAmtInContainer(93, 2466) + getItemAmtInContainer(93, 2468) + getItemAmtInContainer(93, 2470) + getItemAmtInContainer(93, 2472) < itemAttribute(item0, 708)) {
+					return 0;
+				}
+				break;
+			default:
+				if (getItemAmtInContainer(93, itemAttribute(item0, 707)) < itemAttribute(item0, 708)) {
+					return 0;
+				}
+				break;
+		}
+	}
+	return 1;
+}

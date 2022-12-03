@@ -1,0 +1,11 @@
+void script_5260(int arg0) {
+	Widget widget1;
+	widget1 = widget(1133, 2);
+	if (widget1.getHeight() >= arg0) {
+		widget1.setSize(widget1.getWidth(), arg0, 0, 0);
+		widget1.setScriptCallOnGameloop(-1, "");
+	} else {
+		widget1.setSize(widget1.getWidth(), widget1.getHeight() + 1, 0, 0);
+	}
+	return;
+}

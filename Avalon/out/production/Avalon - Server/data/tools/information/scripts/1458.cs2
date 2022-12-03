@@ -1,0 +1,14 @@
+void script_1458(int arg0) {
+	int int1;
+	int1 = arg0 / 10 * 44;
+	if (arg0 % 10 != 0) {
+		int1 = int1 + 44;
+	}
+	widget(762, 93).setScrollMax(widget(762, 93).getWidth(), int1);
+	widget(762, 114).clearChildren();
+	if (int1 > widget(762, 93).getHeight()) {
+		script_31(widget(762, 114), widget(762, 93), 792, 789, 790, 791, 773, 788);
+	}
+	script_157(widget(762, 114), widget(762, 93), widget(762, 93).getScrollY(), 1);
+	return;
+}

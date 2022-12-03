@@ -1,0 +1,4 @@
+void script_3282(Widget widget0, int arg1, Widget widget2, string string3) {
+	script_3364(widget0, arg1, widget2, string3, 25, widget2.getLayer().getWidth(), 11, 11);
+	return;
+}

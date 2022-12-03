@@ -1,0 +1,8 @@
+void script_1272() {
+	string str0;
+	str0 = "null";
+	str0 = "House options";
+	widget(261, 8).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(261, 22), str0, 25, 180, "IIsii");
+	VARC[2] = 0;
+	return;
+}

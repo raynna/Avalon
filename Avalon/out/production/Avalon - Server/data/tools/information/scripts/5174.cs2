@@ -1,0 +1,8 @@
+int, int script_5174() {
+	int int0;
+	int int1;
+	int0 = 0;
+	int1 = 0;
+	int0, int1 = script_5175(3);
+	return int0, int1;
+}

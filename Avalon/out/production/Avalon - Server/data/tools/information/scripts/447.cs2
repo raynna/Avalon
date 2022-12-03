@@ -1,0 +1,17 @@
+void script_447(Widget widget0, Widget widget1, Widget widget2) {
+	int int3;
+	int int4;
+	int int5;
+	string str0;
+	str0 = widget2.getText();
+	int3 = widget2.getWidth();
+	int4 = getLineCount(str0, int3, 494);
+	int5 = int4 * 10 + 5;
+	if (int5 > widget1.getHeight()) {
+		widget1.setScrollMax(0, int5);
+		script_31(widget0, widget1, 2598, 2595, 2596, 2597, 2593, 2594);
+		widget2.setTextAlignment(1, 0, 0);
+		widget2.setSize(widget2.getWidth(), int5, 0, 0);
+	}
+	return;
+}

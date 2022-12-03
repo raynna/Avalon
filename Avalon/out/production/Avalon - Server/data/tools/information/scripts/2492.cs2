@@ -1,0 +1,27 @@
+void script_2492() {
+	if (compare(STRING[184], "") == 0) {
+		widget(862, 50).setScriptCallOnMouseOver(38, widget(862, 50), widget(862, 11), STRING[184], 50, 250, "IIsii");
+		widget(862, 50).setScriptCallOnMouseExit(40, widget(862, 11), "I");
+	}
+	if (compare(STRING[185], "") == 0) {
+		widget(862, 51).setScriptCallOnMouseOver(38, widget(862, 51), widget(862, 11), STRING[185], 50, 250, "IIsii");
+		widget(862, 51).setScriptCallOnMouseExit(40, widget(862, 11), "I");
+	}
+	if (compare(STRING[186], "") == 0) {
+		widget(862, 52).setScriptCallOnMouseOver(38, widget(862, 52), widget(862, 11), STRING[186], 50, 250, "IIsii");
+		widget(862, 52).setScriptCallOnMouseExit(40, widget(862, 11), "I");
+	}
+	if (compare(STRING[187], "") == 0) {
+		widget(862, 53).setScriptCallOnMouseOver(38, widget(862, 53), widget(862, 11), STRING[187], 50, 250, "IIsii");
+		widget(862, 53).setScriptCallOnMouseExit(40, widget(862, 11), "I");
+	}
+	if (compare(STRING[188], "") == 0) {
+		widget(862, 54).setScriptCallOnMouseOver(38, widget(862, 54), widget(862, 11), STRING[188], 50, 250, "IIsii");
+		widget(862, 54).setScriptCallOnMouseExit(40, widget(862, 11), "I");
+	}
+	if (compare(STRING[189], "") == 0) {
+		widget(862, 55).setScriptCallOnMouseOver(38, widget(862, 55), widget(862, 11), STRING[189], 50, 250, "IIsii");
+		widget(862, 55).setScriptCallOnMouseExit(40, widget(862, 11), "I");
+	}
+	return;
+}

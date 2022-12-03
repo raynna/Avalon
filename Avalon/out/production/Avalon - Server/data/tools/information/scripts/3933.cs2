@@ -1,0 +1,11 @@
+void script_3933(Widget widget0, Color color1, int arg2, int arg3, Widget widget4, int arg5) {
+	widget0.setRGB(color1);
+	if (arg2 == 1) {
+		widget4.setSprite(datamap('i', 'd', (DataMap)3480, arg3));
+	} else if (arg5 == arg3) {
+		widget4.setSprite(datamap('i', 'd', (DataMap)736, arg3));
+	} else {
+		widget4.setSprite(datamap('i', 'd', (DataMap)735, arg3));
+	}
+	return;
+}

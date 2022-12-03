@@ -1,0 +1,98 @@
+void script_4862() {
+	if (citadelConfigsInitialized()) {
+		if (script_4949(4) <= 0) {
+			widget(1092, 184).setIsHidden(true);
+		}
+		if (script_4949(5) <= 0) {
+			widget(1092, 185).setIsHidden(true);
+		}
+		if (script_4949(6) <= 0) {
+			widget(1092, 186).setIsHidden(true);
+		}
+		if (script_4949(7) <= 0) {
+			widget(1092, 187).setIsHidden(true);
+		}
+		if (script_4949(8) <= 0) {
+			widget(1092, 188).setIsHidden(true);
+		}
+		if (script_4949(9) <= 0) {
+			widget(1092, 189).setIsHidden(true);
+		}
+		if (script_4949(10) <= 0) {
+			widget(1092, 190).setIsHidden(true);
+		}
+		if (script_4949(11) <= 0) {
+			widget(1092, 191).setIsHidden(true);
+		}
+		if (script_4949(12) <= 0) {
+			widget(1092, 192).setIsHidden(true);
+		}
+		if (script_4949(13) <= 0) {
+			widget(1092, 193).setIsHidden(true);
+		}
+		if (script_4949(14) <= 0) {
+			widget(1092, 194).setIsHidden(true);
+		}
+		if (script_4949(15) <= 0) {
+			widget(1092, 195).setIsHidden(true);
+		}
+		if (script_4949(16) <= 0) {
+			widget(1092, 0).setIsHidden(true);
+		}
+		if (script_4949(17) <= 0) {
+			widget(1092, 1).setIsHidden(true);
+		}
+		if (script_4949(18) <= 0) {
+			widget(1092, 2).setIsHidden(true);
+		}
+		if (script_4949(19) <= 0) {
+			widget(1092, 3).setIsHidden(true);
+		}
+		if (script_4949(20) <= 0) {
+			widget(1092, 4).setIsHidden(true);
+		}
+		if (script_4949(21) <= 0) {
+			widget(1092, 5).setIsHidden(true);
+		}
+		if (script_4949(22) <= 0) {
+			widget(1092, 6).setIsHidden(true);
+		}
+		if (script_4949(23) <= 0) {
+			widget(1092, 7).setIsHidden(true);
+		}
+		if (script_4949(24) <= 0) {
+			widget(1092, 8).setIsHidden(true);
+		}
+		if (script_4949(25) <= 0) {
+			widget(1092, 9).setIsHidden(true);
+		}
+		if (script_4949(26) <= 0) {
+			widget(1092, 10).setIsHidden(true);
+		}
+		if (script_4949(27) <= 0) {
+			widget(1092, 11).setIsHidden(true);
+		}
+		if (script_4949(28) <= 0) {
+			widget(1092, 12).setIsHidden(true);
+		}
+		if (script_4949(29) <= 0) {
+			widget(1092, 13).setIsHidden(true);
+		}
+		if (script_4949(30) <= 0) {
+			widget(1092, 14).setIsHidden(true);
+		}
+		if (script_4949(31) <= 0) {
+			widget(1092, 15).setIsHidden(true);
+		}
+		if (script_4949(32) <= 0) {
+			widget(1092, 16).setIsHidden(true);
+		}
+		if (script_4949(33) <= 0) {
+			widget(1092, 17).setIsHidden(true);
+		}
+		if (script_4949(34) <= 0) {
+			widget(1092, 18).setIsHidden(true);
+		}
+	}
+	return;
+}

@@ -1,0 +1,10 @@
+void script_4147(Widget widget0, int arg1, int arg2, string string3) {
+	widget0.setIsHidden(false);
+	widget0.cs2method2310(string3);
+	widget0.setSize(16, arg1, 1, 0);
+	widget0.setPosition(0, arg2, 1, 1);
+	script_4149(widget0, string3, 0);
+	widget0.setScriptCallOnMouseOver(4148, widget0, string3, true, "Is1");
+	widget0.setScriptCallOnMouseExit(4148, widget0, string3, false, "Is1");
+	return;
+}

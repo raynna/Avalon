@@ -1,0 +1,18 @@
+void script_2164(int arg0) {
+	AttrMap attrmap1;
+	DataMap datamap2;
+	Widget widget3;
+	int int4;
+	attrmap1 = datamap('i', 'J', (DataMap)169, arg0);
+	datamap2 = getAttributeMapValue(attrmap1, 61);
+	widget3 = getAttributeMapValue(attrmap1, 152);
+	int4 = 0;
+	while (int4 < VARC[273] + 10) {
+		if (ACTIVE.setChild(widget3, int4)) {
+			ACTIVE.setPosition(0, 0, 0, 0);
+			ACTIVE.setHidden(true);
+		}
+		int4 = int4 + 1;
+	}
+	return;
+}

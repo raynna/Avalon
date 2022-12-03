@@ -1,0 +1,6 @@
+void script_1169(int arg0, int arg1, string string2) {
+	Widget widget2;
+	widget2 = datamap('i', 'I', (DataMap)737, arg1);
+	widget2.setScriptCallOnGameloop(1168, arg0, string2, widget2, "isI");
+	return;
+}

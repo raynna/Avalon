@@ -1,0 +1,12 @@
+void script_4083() {
+	if (ACTIVE.setChild(widget(1061, 3)) && ACTIVE.getSpriteId() == 4032) {
+		ACTIVE.setSprite(4031);
+	}
+	if (ACTIVE.setChild(widget(1061, 4)) && ACTIVE.getSpriteId() == 4035) {
+		ACTIVE.setSprite(4034);
+	}
+	if (ACTIVE.setChild(widget(1061, 5)) && ACTIVE.getSpriteId() == 4038) {
+		ACTIVE.setSprite(4037);
+	}
+	return;
+}

@@ -1,0 +1,7 @@
+void script_4235() {
+	if (VARC[1494] > 100) {
+		VARC[1494] = 100;
+	}
+	widget(481, 15).setSize(VARC[1494] * 100 / 16384, 16384, 2, 2);
+	return;
+}

@@ -1,0 +1,6 @@
+void script_544(Widget widget0) {
+	int int1;
+	int1 = script_2761();
+	widget0.setText("Total level: " + str(int1));
+	return;
+}

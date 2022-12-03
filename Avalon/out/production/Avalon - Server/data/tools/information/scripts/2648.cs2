@@ -1,0 +1,6 @@
+void script_2648(Widget widget0, Widget widget1) {
+	widget0.clearChildren();
+	VARC[2] = 0;
+	script_679(widget1);
+	return;
+}

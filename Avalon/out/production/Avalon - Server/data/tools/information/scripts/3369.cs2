@@ -1,0 +1,15 @@
+void script_3369(int arg0, int arg1) {
+	int int2;
+	int int3;
+	int2 = getClientCycle() - arg1;
+	int3 = 0;
+	if (int2 > 70) {
+		widget(548, 24).setIsHidden(true);
+		widget(548, 22).setScriptCallOnGameloop(-1, "");
+		return;
+	}
+	int3 = min(70, int2 * 2);
+	widget(548, 24).setPosition(7, int3, 0, 0);
+	widget(548, 24).setIsHidden(false);
+	return;
+}

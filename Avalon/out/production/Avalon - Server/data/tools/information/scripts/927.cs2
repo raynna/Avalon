@@ -1,0 +1,12 @@
+int script_927(Item item0) {
+	if (itemAttribute(item0, 749) != null) {
+		return 1;
+	}
+	if (itemAttribute(item0, 743) > -1) {
+		return 1;
+	}
+	if (itemAttribute(item0, 741) == 1) {
+		return 1;
+	}
+	return 0;
+}

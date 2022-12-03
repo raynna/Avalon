@@ -1,0 +1,13 @@
+void script_117() {
+	if (VARPBIT[3756] < 1 || VARPBIT[3756] > 20 || script_1314(VARPBIT[3756] - 1) == 0) {
+		widget(746, 22).setScriptCallOnGameloop(-1, "");
+		widget(548, 128).setScriptCallOnGameloop(-1, "");
+		script_736(null, -1, null, -1);
+		script_1364();
+		return;
+	}
+	script_2756();
+	widget(746, 22).setScriptCallOnGameloop(1420, "");
+	widget(548, 128).setScriptCallOnGameloop(1420, "");
+	return;
+}

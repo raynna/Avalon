@@ -1,0 +1,9 @@
+void script_1110(int arg0) {
+	if (arg0 != 1) {
+		return;
+	}
+	VARPBIT[1010] = min(VARPBIT[1010] + 1, 3);
+	playSoundEffect(1041, 1, 0);
+	script_1271(1);
+	return;
+}

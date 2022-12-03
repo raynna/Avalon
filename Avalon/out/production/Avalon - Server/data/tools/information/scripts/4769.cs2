@@ -1,0 +1,115 @@
+int, int, int, int, int, int, int, int script_4769(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8) {
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	Widget widget13;
+	Widget widget14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	int int23;
+	int int24;
+	int int25;
+	int int26;
+	int int27;
+	int int28;
+	int int29;
+	int int30;
+	int int31;
+	int int32;
+	int int33;
+	int int34;
+	int int35;
+	int int36;
+	int int37;
+	int int38;
+	int int39;
+	int int40;
+	int int41;
+	int int42;
+	int9 = 0;
+	int10 = 0;
+	int11 = 0;
+	int12 = 0;
+	widget13 = null;
+	widget14 = null;
+	int15 = 0;
+	int16 = 0;
+	int17 = 0;
+	int18 = 0;
+	int19 = 0;
+	int20 = 0;
+	int21 = 0;
+	int22 = 0;
+	int23 = 0;
+	int24 = 0;
+	int25 = 0;
+	int26 = 0;
+	int27 = 0;
+	int28 = 0;
+	int29 = 0;
+	int30 = 0;
+	int31 = 0;
+	int32 = 0;
+	int33 = 0;
+	int34 = 0;
+	int35 = 0;
+	int36 = 0;
+	int37 = 0;
+	int38 = 0;
+	int39 = 0;
+	int40 = 0;
+	if (arg0 == 1) {
+		int11 = 300;
+		widget13 = widget(1115, 67);
+		widget14 = widget(1115, 66);
+	} else if (arg0 == 2) {
+		int11 = 600;
+		widget13 = widget(1115, 65);
+		widget14 = widget(1115, 64);
+	} else {
+		int11 = 900;
+		widget13 = widget(1115, 63);
+		widget14 = widget(1115, 62);
+		VARC[1561] = 0;
+		VARC[1562] = 0;
+	}
+	while (arg1 <= 31 && int12 == 0) {
+		int10 = script_4790(arg1);
+		if (int10 > int11 || int10 == 0) {
+			int12 = 1;
+		} else {
+			arg2, arg3, arg4, arg5, arg6, arg7, arg8, int15, int16, int17, int18, int19, int20, int21, int22, int23, int24, int25, int26, int27, int28, int29, int30, int31, int32, int33, int34, int35, int36, int37, int38, int39 = script_4795(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+			if (int15 + int16 + int17 + int18 + int19 + int20 == 0) {
+				int40 = 0;
+			} else if (int33 + int34 + int35 + int36 + int37 + int38 > 0) {
+				int40 = 3;
+			} else if (int27 + int28 + int29 + int30 + int31 + int32 > 0) {
+				int40 = 2;
+			} else if (int21 + int22 + int23 + int24 + int25 + int26 > 0) {
+				int40 = 1;
+			}
+			int9 = script_4770(widget13, int9, int10, int39, int40, arg1);
+			if (int9 == 0) {
+				return 0, arg2, arg3, arg4, arg5, arg6, arg7, arg8;
+			}
+			arg1 = arg1 + 1;
+		}
+	}
+	int41 = 38;
+	int42 = int9 / 8 * int41;
+	if (int9 > 0) {
+		int9 = script_4771(widget13, int9);
+	}
+	int42 = int42 + 10;
+	widget13.setScrollMax(widget13.getWidth(), int42);
+	widget13.setScrollPos(0, 0);
+	script_31(widget14, widget13, 5666, 5663, 5664, 5665, 5686, 5685);
+	return arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8;
+}

@@ -1,0 +1,7 @@
+void script_4016() {
+	script_4017(VARPBIT[8582]);
+	script_4028(0, VARPBIT[8579]);
+	script_4028(1, VARPBIT[8580]);
+	script_4253();
+	return;
+}

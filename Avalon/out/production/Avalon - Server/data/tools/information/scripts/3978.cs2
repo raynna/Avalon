@@ -1,0 +1,31 @@
+int script_3978(int arg0, int arg1, string string2, Widget widget3, int arg4, Widget widget5, Widget widget6) {
+	int int6;
+	int int7;
+	int int8;
+	widget3.setIsHidden(false);
+	widget3.setText(string2);
+	widget3.setFont(495);
+	widget3.setTextAlignment(0, 1, 0);
+	int6 = widget6.getWidth() - 18;
+	if (script_3999(arg4) == 1) {
+		int6 = int6 + 9;
+	}
+	int7 = 0;
+	if (widget5 != null) {
+		int7 = widget5.getHeight();
+		int6 = int6 - 21;
+	}
+	int8 = max(int7 + 5, 15 * getLineCount(string2, int6, 495));
+	widget3.setSize(int6, int8, 0, 0);
+	widget3.setPosition(9, arg1, 0, 0);
+	if (script_3999(arg4) == 0 && widget5 != null) {
+		widget5.setIsHidden(false);
+		widget5.setPosition(2, arg1 + (int8 - widget5.getHeight()) / 2, 2, 0);
+		if (VARPBIT[8578] == arg0 && VARPBIT[8594] == arg4) {
+			widget5.setSprite(5623);
+		} else {
+			widget5.setSprite(5621);
+		}
+	}
+	return arg1 + int8;
+}

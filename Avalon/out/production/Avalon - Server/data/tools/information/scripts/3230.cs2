@@ -1,0 +1,44 @@
+void script_3230() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int0 = 0;
+	if (getDisplayMode() < 2) {
+		widget(596, 6).setPosition(0, 16, 1, 1);
+		widget(596, 7).setPosition(0, 16, 1, 1);
+		widget(744, 16).setSize(0, 0, 1, 1);
+		widget(744, 23).setPosition(0, 26, 1, 0);
+	} else {
+		widget(596, 6).setPosition(0, 0, 1, 1);
+		widget(596, 7).setPosition(0, 0, 1, 1);
+		widget(744, 16).setSize(956, 503, 0, 0);
+		int0 = widget(744, 16).getY();
+		int0 = int0 - widget(744, 23).getHeight();
+		int0 = int0 / 2;
+		widget(744, 23).setPosition(0, max(int0, 0), 1, 0);
+	}
+	int1 = 0;
+	int2 = 0;
+	int3 = 2;
+	int1 = widget(744, 99).getX() + widget(744, 16).getX();
+	int1 = int1 - (widget(744, 81).getWidth() + int3);
+	int2 = widget(744, 101).getY() + widget(744, 16).getY();
+	int2 = int2 + int3;
+	int2 = int2 + widget(744, 101).getHeight();
+	widget(744, 81).setPosition(int1, int2, 0, 0);
+	int1 = widget(744, 81).getX();
+	int1 = int1 + widget(744, 81).getWidth();
+	int1 = widget(744, 17).getWidth() - int1;
+	widget(744, 81).setPosition(int1, int2, 2, 0);
+	if (cs2method6139() == 2 && getDisplayMode() != 1) {
+		widget(744, 81).setPosition(9, 57, 2, 0);
+		widget(744, 16).setSize(800, 503, 0, 0);
+	} else if (widget(744, 81).getWidth() + widget(744, 81).getX() > widget(744, 17).getWidth()) {
+		widget(744, 81).setPosition(5, 5, 2, 0);
+	}
+	if (VARC[986] == 0) {
+		widget(744, 81).setPosition(5, 5, 2, 0);
+	}
+	return;
+}

@@ -1,0 +1,89 @@
+void script_3498(int arg0, int arg1) {
+	Widget widget2;
+	Widget widget3;
+	Widget widget4;
+	int int5;
+	int int6;
+	widget2 = widget(994, 74);
+	widget3 = widget(994, 78);
+	widget4 = widget(994, 80);
+	int5 = 10 + 10 * arg0;
+	int6 = widget(994, 135).getY();
+	switch (int6) {
+		case -22:
+			int6 = arg0;
+			break;
+		case -137:
+			int6 = arg0 + 11;
+			break;
+		case -222:
+			int6 = arg0 + 17;
+			break;
+		case -277:
+			int6 = arg0 + 29;
+			break;
+		case -400:
+			int6 = arg0 + 35;
+			break;
+		case -500:
+			int6 = arg0 + 47;
+			break;
+		default:
+			int6 = arg0;
+			break;
+	}
+	if (arg1 != 0) {
+		int6 = arg1;
+	}
+	playSoundEffect(8809, 1, 0);
+	widget2.setPosition(0, int5, 0, 0);
+	widget3.setText(str(int6));
+	switch (arg0) {
+		case 1:
+			widget4.setText(widget(994, 44).getText());
+			break;
+		case 2:
+			widget4.setText(widget(994, 46).getText());
+			break;
+		case 3:
+			widget4.setText(widget(994, 48).getText());
+			break;
+		case 4:
+			widget4.setText(widget(994, 50).getText());
+			break;
+		case 5:
+			widget4.setText(widget(994, 52).getText());
+			break;
+		case 6:
+			widget4.setText(widget(994, 54).getText());
+			break;
+		case 7:
+			widget4.setText(widget(994, 56).getText());
+			break;
+		case 8:
+			widget4.setText(widget(994, 58).getText());
+			break;
+		case 9:
+			widget4.setText(widget(994, 60).getText());
+			break;
+		case 10:
+			widget4.setText(widget(994, 62).getText());
+			break;
+		case 11:
+			widget4.setText(widget(994, 64).getText());
+			break;
+		case 12:
+			widget4.setText(widget(994, 66).getText());
+			break;
+		case 13:
+			widget4.setText(widget(994, 68).getText());
+			break;
+		case 14:
+			widget4.setText(widget(994, 70).getText());
+			break;
+		case 15:
+			widget4.setText(widget(994, 72).getText());
+			break;
+	}
+	return;
+}

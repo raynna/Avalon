@@ -1,0 +1,31 @@
+void script_2930(Widget widget0, boolean boolean1, int arg2, Widget widget3, Widget widget4, Widget widget5, int arg6, int arg7, int arg8, int arg9) {
+	int int10;
+	if (arg7 < arg8) {
+		arg7 = arg7 + 1;
+		widget0.setScriptCallOnGameloop(2930, widget0, boolean1, arg2, widget3, widget4, widget5, arg6, arg7, arg8, arg9, "I1iIIIiiii");
+		return;
+	}
+	int10 = widget0.getWidth();
+	if (boolean1) {
+		if (int10 - arg2 < arg6) {
+			widget0.setSize(min(int10 + arg9, arg6 + arg2), 31, 0, 0);
+		} else {
+			widget0.setScriptCallOnGameloop(-1, "");
+			widget0.setSize(arg6 + arg2, 31, 0, 0);
+		}
+		widget3.setSprite(2569);
+		widget4.setSprite(2568);
+		widget5.setSprite(2568);
+	} else {
+		if (int10 > 32) {
+			widget0.setSize(max(int10 - arg9, 32), 31, 0, 0);
+		} else {
+			widget0.setScriptCallOnGameloop(-1, "");
+			widget0.setSize(32, 31, 0, 0);
+		}
+		widget3.setSprite(2567);
+		widget4.setSprite(2566);
+		widget5.setSprite(2566);
+	}
+	return;
+}

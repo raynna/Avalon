@@ -1,0 +1,92 @@
+void script_147(int arg0, int arg1) {
+	switch (arg0) {
+		case 0:
+			VARC[12] = arg1;
+			break;
+		case 1:
+			VARC[13] = arg1;
+			break;
+		case 2:
+			VARC[14] = arg1;
+			break;
+		case 3:
+			VARC[15] = arg1;
+			break;
+		case 4:
+			VARC[16] = arg1;
+			break;
+		case 5:
+			VARC[17] = arg1;
+			break;
+		case 6:
+			VARC[18] = arg1;
+			break;
+		case 7:
+			VARC[19] = arg1;
+			break;
+		case 8:
+			VARC[20] = arg1;
+			break;
+		case 9:
+			VARC[21] = arg1;
+			break;
+		case 10:
+			VARC[22] = arg1;
+			break;
+		case 11:
+			VARC[23] = arg1;
+			break;
+		case 12:
+			VARC[24] = arg1;
+			break;
+		case 13:
+			VARC[25] = arg1;
+			break;
+		case 14:
+			VARC[26] = arg1;
+			break;
+		case 15:
+			VARC[27] = arg1;
+			break;
+		case 16:
+			VARC[28] = arg1;
+			break;
+		case 17:
+			VARC[29] = arg1;
+			break;
+		case 18:
+			VARC[30] = arg1;
+			break;
+		case 19:
+			VARC[31] = arg1;
+			break;
+		case 20:
+			VARC[32] = arg1;
+			break;
+		case 21:
+			VARC[33] = arg1;
+			break;
+		case 22:
+			VARC[34] = arg1;
+			break;
+		case 23:
+			VARC[35] = arg1;
+			break;
+		case 24:
+			VARC[36] = arg1;
+			break;
+		case 25:
+			VARC[37] = arg1;
+			break;
+		case 26:
+			VARC[38] = arg1;
+			break;
+		case 27:
+			VARC[39] = arg1;
+			break;
+		case -1:
+			VARC[212] = arg1;
+			break;
+	}
+	return;
+}

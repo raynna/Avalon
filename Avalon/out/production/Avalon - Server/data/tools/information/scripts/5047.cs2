@@ -1,0 +1,44 @@
+void script_5047(int arg0, int arg1, int arg2, int arg3, int arg4) {
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int5 = arg0 * (112 + 2 + 2);
+	widget(1111, 15).setScrollMax(int5, int5);
+	int6 = int5 - widget(1111, 15).getWidth();
+	if (widget(1111, 15).getScrollX() > int6) {
+		widget(1111, 15).setScrollPos(int6, widget(1111, 15).getScrollY());
+	}
+	if (widget(1111, 15).getScrollY() > int6) {
+		widget(1111, 15).setScrollPos(widget(1111, 15).getScrollX(), int6);
+	}
+	widget(1111, 16).setSize(int5, int5, 0, 0);
+	widget(1111, 18).setSize(int5, int5, 0, 0);
+	int7 = 0;
+	int8 = arg0 - 1;
+	int9 = 0;
+	int10 = arg1;
+	while (int10 < arg2) {
+		int9 = int5 - (int10 + 2 + 1) * arg0;
+		while (int7 < 112) {
+			if (ACTIVE.setChild(widget(1111, 16), int10 * 112 + int7)) {
+				ACTIVE.setSize(int8, int8, 0, 0);
+				ACTIVE.setPosition((int7 + 2) * arg0, int9, 0, 0);
+				ACTIVE.setDragDeadZone(arg0 / 2);
+			}
+			int7 = int7 + 1;
+		}
+		int7 = 0;
+		int10 = int10 + 1;
+	}
+	if (arg1 <= 0) {
+		script_5053(arg3, arg4);
+		int9 = arg0 * 2 - 3;
+		widget(1111, 17).setPosition(int9, int9, 0, 0);
+		int9 = arg0 * 112 + 5;
+		widget(1111, 17).setSize(int9, int9, 0, 0);
+	}
+	return;
+}

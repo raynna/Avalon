@@ -1,0 +1,8 @@
+void script_4892() {
+	if (citadelConfigsInitialized()) {
+		VARPBIT[9548] = CLANBIT[2074];
+		VARPBIT[9549] = CLANBIT[2075];
+		script_4895();
+	}
+	return;
+}

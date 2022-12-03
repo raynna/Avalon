@@ -1,0 +1,30 @@
+void script_1360(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	widget0.clearChildren();
+	int1 = widget0.getWidth();
+	int2 = widget0.getHeight();
+	int3 = int1 - 9;
+	int4 = int2 - 9;
+	int5 = int1 - 18;
+	int6 = int2 - 18;
+	ACTIVE.createChild(widget0, 3, 0);
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setSize(int1, int2, 0, 0);
+	ACTIVE.setFilled(true);
+	ACTIVE.setRGB(0x30201C);
+	ACTIVE.setTrans(200);
+	script_98(widget0, 1, 921, 0, 0, 9, 9);
+	script_98(widget0, 2, 922, int3, 0, 9, 9);
+	script_98(widget0, 3, 923, 0, int4, 9, 9);
+	script_98(widget0, 4, 924, int3, int4, 9, 9);
+	script_98(widget0, 5, 925, 0, 9, 9, int6);
+	script_98(widget0, 6, 926, 9, 0, int5, 9);
+	script_98(widget0, 7, 927, int3, 9, 9, int6);
+	script_98(widget0, 8, 928, 9, int4, int5, 9);
+	return;
+}

@@ -1,0 +1,28 @@
+void script_2356(int arg0) {
+	int int1;
+	int int2;
+	int1 = widget(905, 5).getWidth();
+	int2 = 0;
+	if (int1 < arg0) {
+		int2 = int1 + 9;
+		if (int2 >= arg0) {
+			widget(916, 2).setSize(arg0 + 5, 0, 0, 1);
+			widget(905, 5).setSize(arg0, 0, 0, 1);
+			widget(916, 21).setScriptCallOnGameloop(-1, "");
+			return;
+		}
+		widget(916, 2).setSize(int2 + 5, 0, 0, 1);
+		widget(905, 5).setSize(int2, 0, 0, 1);
+	} else {
+		int2 = int1 - 9;
+		if (int2 <= arg0) {
+			widget(916, 2).setSize(arg0 + 5, 0, 0, 1);
+			widget(905, 5).setSize(arg0, 0, 0, 1);
+			widget(916, 21).setScriptCallOnGameloop(-1, "");
+			return;
+		}
+		widget(916, 2).setSize(int2 + 5, 0, 0, 1);
+		widget(905, 5).setSize(int2, 0, 0, 1);
+	}
+	return;
+}

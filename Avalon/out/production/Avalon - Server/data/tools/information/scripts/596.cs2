@@ -1,0 +1,11 @@
+void script_596() {
+	string str0;
+	str0 = "null";
+	if (VARC[84] > 0) {
+		VARC[84] = VARC[84] - 1;
+		str0 = formatNumber(VARC[84], 1);
+		widget(105, 148).setText(str0);
+		script_602();
+	}
+	return;
+}

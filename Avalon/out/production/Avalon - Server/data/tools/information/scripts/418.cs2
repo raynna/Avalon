@@ -1,0 +1,10 @@
+void script_418() {
+	if (VARC[1354] == -1 || VARC[1357] < 0 || VARC[1358] < 0) {
+		return;
+	}
+	cameraMethod5511(location(VARC[1354]));
+	VARC[1355] = cameraGetVrot();
+	VARC[1356] = cameraGetHrot();
+	widget(1013, 0).setScriptCallOnGameloop(421, VARC[1357], VARC[1358], 0, "iii");
+	return;
+}

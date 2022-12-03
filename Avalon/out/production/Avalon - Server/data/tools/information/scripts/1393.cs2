@@ -1,0 +1,16 @@
+int script_1393(int arg0) {
+	int int1;
+	if (arg0 <= 0) {
+		return -1;
+	}
+	arg0 = arg0 - 1;
+	int1 = getItemContainerLength(94);
+	if (arg0 < int1) {
+		return getItemAmtInSlot(94, arg0);
+	}
+	arg0 = arg0 - int1;
+	if (arg0 < getItemContainerLength(93)) {
+		return getItemAmtInSlot(93, arg0);
+	}
+	return -1;
+}

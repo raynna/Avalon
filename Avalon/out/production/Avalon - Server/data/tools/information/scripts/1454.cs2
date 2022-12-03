@@ -1,0 +1,23 @@
+void script_1454(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int1 = 0;
+	int2 = widget(762, 93).getY() - 25;
+	int3 = widget(762, 93).getY() + widget(762, 93).getHeight() - 16;
+	if (arg0 > int2 && arg0 < int2 + 25) {
+		int1 = -4;
+	} else {
+		if (!(arg0 < int3 && arg0 > int3 - 30)) {
+			VARC[189] = 0;
+			return;
+		}
+		int1 = 4;
+	}
+	VARC[189] = VARC[189] + 1;
+	if (VARC[189] > 5) {
+		script_705(VARPBIT[4893], widget(762, 93).getScrollY() + int1);
+		script_157(widget(762, 114), widget(762, 93), widget(762, 93).getScrollY() + int1, 1);
+	}
+	return;
+}

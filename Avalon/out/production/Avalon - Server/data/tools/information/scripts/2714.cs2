@@ -1,0 +1,69 @@
+void script_2714(int arg0, int arg1) {
+	int int2;
+	if (getAccountCreateRC() == -3) {
+		return;
+	}
+	int2 = VARC[174];
+	VARC[174] = arg0;
+	VARC[175] = getClientCycle();
+	switch (arg0) {
+		case 6:
+			if (arg1 == 1) {
+				VARC[1099] = length(STRING[122]);
+				script_3218(widget(673, 100), widget(673, 44), widget(673, 101), STRING[122], 6);
+			}
+			break;
+		case 14:
+			if (arg1 == 1) {
+				VARC[1099] = length(STRING[326]);
+				script_3218(widget(673, 119), widget(673, 120), widget(673, 121), STRING[326], 14);
+			}
+			break;
+		case 7:
+			if (arg1 == 1) {
+				VARC[1099] = length(STRING[124]);
+				script_3218(widget(673, 90), widget(673, 91), widget(673, 92), script_2949(STRING[124]), 7);
+			}
+			break;
+		case 8:
+			if (arg1 == 1) {
+				VARC[1099] = length(STRING[125]);
+				script_3218(widget(673, 80), widget(673, 81), widget(673, 82), script_2949(STRING[125]), 8);
+			}
+			break;
+		case 15:
+			if (arg1 == 1) {
+				if (VARC[1407] < 1) {
+					VARC[1099] = 0;
+					script_3218(widget(673, 126), widget(673, 43), widget(673, 127), "", 15);
+				} else {
+					VARC[1099] = length(str(VARC[1407]));
+					script_3218(widget(673, 126), widget(673, 43), widget(673, 127), str(VARC[1407]), 15);
+				}
+			}
+			break;
+	}
+	if (int2 == 6 && arg0 != 6) {
+		if (compare(STRING[123], STRING[122]) != 0) {
+			script_2283(false, true);
+		}
+	} else if (int2 == 14 && arg0 != 14) {
+		if (compare(STRING[327], STRING[326]) != 0) {
+			script_3953(0);
+		}
+	} else if (int2 == 7 && arg0 != 7) {
+		if (compare(STRING[328], STRING[124]) != 0) {
+			_ = script_3228(7, 0, 0);
+			if (length(STRING[125]) > 0) {
+				_ = script_3228(8, 1, 0);
+			}
+		}
+	} else if (int2 == 8 && arg0 != 8) {
+		if (compare(STRING[329], STRING[125]) != 0) {
+			_ = script_3228(8, 1, 0);
+		}
+	} else if (int2 == 15 && arg0 != 15 && VARC[1408] != VARC[1407]) {
+		_ = script_3954(0);
+	}
+	return;
+}

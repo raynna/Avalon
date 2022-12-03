@@ -1,0 +1,7 @@
+void script_2131(Widget widget0, Widget widget1) {
+	widget0.setScriptCallOnGameloop(2132, widget0, rndExcl(6) - 3, rndExcl(6) - 3, widget1, 0, "IiiIi");
+	widget0.setScriptCallOnMouseEntered(2133, widget0, "I");
+	widget0.setScriptCallOnMouseOver(2135, widget0, MOUSE_X, MOUSE_Y, "Iii");
+	widget0.setScriptCallOnMouseExit(2134, widget0, "I");
+	return;
+}

@@ -1,0 +1,11 @@
+void script_2234() {
+	if (VARC[1127] < 15 && script_2240() < VARC[1135]) {
+		playSoundEffect(8729, 1, 0);
+		VARC[1130] = VARC[1130] + 1;
+	} else {
+		VARP[1685] = 1;
+		playSoundEffect(2277, 1, 0);
+	}
+	script_2220();
+	return;
+}

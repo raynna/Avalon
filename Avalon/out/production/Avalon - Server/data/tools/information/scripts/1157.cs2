@@ -1,0 +1,28 @@
+void script_1157(int arg0) {
+	if (arg0 != 1) {
+		return;
+	}
+	if (getDisplayMode() >= 2) {
+		widget(746, 73).setIsHidden(false);
+	}
+	widget(752, 3).setIsHidden(false);
+	widget(752, 7).setIsHidden(true);
+	widget(752, 8).setIsHidden(true);
+	if (!script_42(VARC[266])) {
+		STRING[38] = "";
+		STRING[39] = "";
+		VARC[266] = 1;
+	}
+	if (length(STRING[38]) > 0) {
+		widget(752, 4).setText("Edit the name of your caller:" + "<br>" + "(Delete it to disable this feature.)");
+	} else {
+		widget(752, 4).setText("Enter the name of your caller:");
+	}
+	VARC[5] = 12;
+	script_1564(STRING[38]);
+	widget(752, 3).setScriptCallOnMousePressed(1805, "");
+	script_2026();
+	widget(752, 5).setScriptCallOnKeyPress(112, KEY_TYPED, (char)KEY_PRESSED, "iz");
+	script_1188();
+	return;
+}

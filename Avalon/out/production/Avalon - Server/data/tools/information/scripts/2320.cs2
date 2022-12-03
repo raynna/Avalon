@@ -1,0 +1,4 @@
+void script_2320() {
+	widget(305, 2).setAnimation(1378);
+	return;
+}

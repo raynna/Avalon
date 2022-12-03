@@ -1,0 +1,35 @@
+void script_4910(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int1 = 0;
+	int2 = 24;
+	int3 = 24;
+	if (widget0.getWidth() < int2) {
+		widget0.setSize(int2, widget0.getHeight(), 0, 0);
+	}
+	if (widget0.getHeight() < int3) {
+		widget0.setSize(widget0.getWidth(), int3, 0, 0);
+	}
+	widget0.clearChildren();
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setSize(int2, int3, 0, 0);
+	ACTIVE.setSprite(7599);
+	int1 = widget0.nextChild();
+	ACTIVE.createChild(widget0, 5, int1);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setSize(int2, int3, 0, 0);
+	ACTIVE.setSprite(7600);
+	ACTIVE.setScriptCallOnMouseEntered(4410, widget0, int1, 0, "Iii");
+	ACTIVE.setScriptCallOnMouseExit(4410, widget0, int1, 1, "Iii");
+	ACTIVE.setTrans(255);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setSize(int2, int3, 0, 0);
+	ACTIVE.setSprite(7601);
+	ACTIVE.setScriptCallOnMousePressed(4207, CTX_WIDGET, 0, "Ii");
+	ACTIVE.setScriptCallOnMouseReleased(4207, CTX_WIDGET, 1, "Ii");
+	ACTIVE.setTrans(255);
+	return;
+}

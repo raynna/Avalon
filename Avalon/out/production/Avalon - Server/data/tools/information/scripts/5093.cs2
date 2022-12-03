@@ -1,0 +1,7 @@
+void script_5093(Widget widget0, int arg1) {
+	VARC[995] = max(VARC[995] - 1, 0);
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setText(script_5094());
+	}
+	return;
+}

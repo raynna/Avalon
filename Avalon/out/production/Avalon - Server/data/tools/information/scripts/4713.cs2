@@ -1,0 +1,4 @@
+void script_4713(DataMap datamap0, int arg1) {
+	script_4716(widget(590, 8), widget(590, 7), datamap0, -5, 10, arg1);
+	return;
+}

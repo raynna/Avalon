@@ -1,0 +1,8 @@
+void script_314(Widget widget0) {
+	if (VARC[179] != -1) {
+		widget0.setModel((Model)VARC[179]);
+	} else {
+		widget0.setModel(18535);
+	}
+	return;
+}

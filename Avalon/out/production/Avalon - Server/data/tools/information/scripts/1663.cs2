@@ -1,0 +1,28 @@
+void script_1663(Widget widget0, int arg1, Widget widget2) {
+	int int3;
+	int3 = 0;
+	if (_ACTIVE.setChild(widget0, arg1) && !_ACTIVE.isHidden()) {
+		ACTIVE.setHidden(false);
+		if (_ACTIVE.getY() + _ACTIVE.getHeight() < widget0.getScrollY()) {
+			ACTIVE.set3DRotation(0, 0, 512, 1024, 0, 1500);
+			ACTIVE.setPosition(0, widget0.getY(), 1, 0);
+			return;
+		}
+		if (_ACTIVE.getY() >= widget0.getScrollY() + widget0.getHeight()) {
+			ACTIVE.set3DRotation(0, 0, 512, 0, 0, 1500);
+			ACTIVE.setPosition(0, widget0.getY() + widget0.getHeight() - ACTIVE.getHeight(), 1, 0);
+			return;
+		}
+		int3 = _ACTIVE.getY() - widget0.getScrollY() + widget0.getY();
+		if (int3 > widget2.getHeight() - ACTIVE.getHeight()) {
+			ACTIVE.set3DRotation(0, 0, 512, 256, 0, 1500);
+			ACTIVE.setPosition(0, int3 - ACTIVE.getHeight(), 1, 0);
+		} else {
+			ACTIVE.set3DRotation(0, 0, 512, 768, 0, 1500);
+			ACTIVE.setPosition(0, int3 + _ACTIVE.getHeight(), 1, 0);
+		}
+		return;
+	}
+	ACTIVE.setHidden(true);
+	return;
+}

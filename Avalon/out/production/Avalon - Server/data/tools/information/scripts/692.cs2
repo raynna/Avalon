@@ -1,0 +1,14 @@
+void script_692(Widget widget0, Widget widget1, Widget widget2) {
+	switch (VARPBIT[5367]) {
+		case 0:
+			script_1839(1, widget0, widget1, widget2);
+			break;
+		case 1:
+			script_1839(2, widget0, widget1, widget2);
+			break;
+		default:
+			script_1839(0, widget0, widget1, widget2);
+			break;
+	}
+	return;
+}

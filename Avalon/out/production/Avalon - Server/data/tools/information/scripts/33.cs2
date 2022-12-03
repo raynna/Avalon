@@ -1,0 +1,13 @@
+void script_33(Widget widget0, Widget widget1) {
+	int int2;
+	int2 = widget1.getScrollY() + 4;
+	switch (widget1) {
+		case widget(590, 8):
+			int2 = script_4754(widget1, int2, 0);
+			break;
+	}
+	if (ACTIVE.setChild(widget0, 1)) {
+		script_37(widget0, widget1, int2, 1);
+	}
+	return;
+}

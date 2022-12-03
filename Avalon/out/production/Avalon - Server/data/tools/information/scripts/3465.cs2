@@ -1,0 +1,32 @@
+void script_3465(Widget widget0, Location location1) {
+	switch (VARC[1007]) {
+		case 11:
+			widget0.clearChildren();
+			script_2766(0x000000, 75, widget0);
+			break;
+		case 12:
+			cs2method5405(0, 2);
+			cs2method5405(1, 2);
+			cs2method5406(0, 0, script_3460(30, 27, location1), 800, script_3460(30, 30, location1), 850, 0);
+			cs2method5406(1, 0, script_3460(35, 30, location1), 300, script_3460(35, 40, location1), 300, 0);
+			cs2method5406(0, 1, script_3460(40, 40, location1), 1000, script_3460(40, 40, location1), 950, 0);
+			cs2method5406(1, 1, script_3460(28, 52, location1), 200, script_3460(28, 46, location1), 200, 0);
+			cameraMethod5502(0, 0, 100, 200, 1, 0);
+			script_2768(25, widget0);
+			break;
+		case 13:
+			cs2method5512();
+			cameraMethod5504(268, 644);
+			break;
+		case 14:
+			script_2766(0x000000, 25, widget0);
+			break;
+		case 15:
+			script_2768(25, widget0);
+			break;
+		default:
+			cs2method5512();
+			break;
+	}
+	return;
+}

@@ -1,0 +1,4 @@
+void script_4495(Widget widget0, AttrMap attrmap1) {
+	script_4762(widget0, attrmap1);
+	return;
+}

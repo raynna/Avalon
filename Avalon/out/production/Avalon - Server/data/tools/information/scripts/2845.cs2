@@ -1,0 +1,308 @@
+void script_2845() {
+	int int0;
+	if (VARPBIT[3251] == 1) {
+		widget(473, 43).setModel(20522);
+		widget(473, 44).setText("Attacker level up to 2");
+		widget(473, 46).setText("+20 bonus damage");
+		widget(473, 45).setText("200 Attacker Honour Points");
+		if (VARPBIT[3256] > 199) {
+			widget(473, 45).setRGB(0x00FF00);
+		}
+	} else if (VARPBIT[3251] == 2) {
+		widget(473, 43).setModel(20523);
+		widget(473, 44).setText("Attacker level up to 3");
+		widget(473, 46).setText("+30 bonus damage");
+		widget(473, 45).setText("300 Attacker Honour Points");
+		if (VARPBIT[3256] > 299) {
+			widget(473, 45).setRGB(0x00FF00);
+		}
+	} else if (VARPBIT[3251] == 3) {
+		widget(473, 43).setModel(20524);
+		widget(473, 44).setText("Attacker level up to 4");
+		widget(473, 46).setText("+40 bonus damage");
+		widget(473, 45).setText("400 Attacker Honour Points");
+		if (VARPBIT[3256] > 399) {
+			widget(473, 45).setRGB(0x00FF00);
+		}
+	} else if (VARPBIT[3251] == 4) {
+		widget(473, 43).setModel(20525);
+		widget(473, 44).setText("Attacker level up to 5");
+		widget(473, 46).setText("+50 bonus damage");
+		widget(473, 45).setText("500 Attacker Honour Points");
+		if (VARPBIT[3256] > 499) {
+			widget(473, 45).setRGB(0x00FF00);
+		}
+	} else if (VARPBIT[3251] == 5) {
+		widget(473, 43).setModel(20525);
+		widget(473, 44).setText("Attacker level up complete");
+		widget(473, 46).setText(" - Mastered - ");
+		widget(473, 45).setText(" - Mastered - ");
+	} else {
+		VARPBIT[3251] = 1;
+		widget(473, 43).setModel(20522);
+		widget(473, 44).setText("Attacker level up to 2");
+		widget(473, 46).setText("+20 bonus damage");
+		widget(473, 45).setText("200 Attacker Honour Points");
+		if (VARPBIT[3256] > 199) {
+			widget(473, 45).setRGB(0x00FF00);
+		}
+	}
+	if (VARPBIT[3253] == 1) {
+		widget(473, 50).setModel(20531);
+		widget(473, 51).setText("Defender level up to 2");
+		widget(473, 53).setText("Lure range 5");
+		widget(473, 52).setText("200 Defender Honour Points");
+		if (VARPBIT[3263] > 199) {
+			widget(473, 52).setRGB(0x00FF00);
+		}
+	} else if (VARPBIT[3253] == 2) {
+		widget(473, 50).setModel(20532);
+		widget(473, 51).setText("Defender level up to 3");
+		widget(473, 53).setText("Lure range 6");
+		widget(473, 52).setText("300 Defender Honour Points");
+		if (VARPBIT[3263] > 299) {
+			widget(473, 52).setRGB(0x00FF00);
+		}
+	} else if (VARPBIT[3253] == 3) {
+		widget(473, 50).setModel(20533);
+		widget(473, 51).setText("Defender level up to 4");
+		widget(473, 53).setText("Lure range 8");
+		widget(473, 52).setText("400 Defender Honour Points");
+		if (VARPBIT[3263] > 399) {
+			widget(473, 52).setRGB(0x00FF00);
+		}
+	} else if (VARPBIT[3253] == 4) {
+		widget(473, 50).setModel(20534);
+		widget(473, 51).setText("Defender level up to 5");
+		widget(473, 53).setText("Lure range 10");
+		widget(473, 52).setText("500 Defender Honour Points");
+		if (VARPBIT[3263] > 499) {
+			widget(473, 52).setRGB(0x00FF00);
+		}
+	} else if (VARPBIT[3253] == 5) {
+		widget(473, 50).setModel(20534);
+		widget(473, 51).setText("Defender level up complete");
+		widget(473, 53).setText(" - Mastered - ");
+		widget(473, 52).setText(" - Mastered - ");
+	} else {
+		VARPBIT[3253] = 1;
+		widget(473, 50).setModel(20531);
+		widget(473, 51).setText("Defender level up to 2");
+		widget(473, 53).setText("Lure range 5");
+		widget(473, 52).setText("200 Defender Honour Points");
+		if (VARPBIT[3263] > 199) {
+			widget(473, 52).setRGB(0x00FF00);
+		}
+	}
+	if (VARPBIT[3254] == 1) {
+		widget(473, 57).setModel(20526);
+		widget(473, 58).setText("Collector level up to 2");
+		widget(473, 60).setText("Egg conversion");
+		widget(473, 59).setText("200 Collector Honour Points");
+		if (VARPBIT[3261] > 199) {
+			widget(473, 59).setRGB(0x00FF00);
+		}
+	} else if (VARPBIT[3254] == 2) {
+		widget(473, 57).setModel(20527);
+		widget(473, 58).setText("Collector level up to 3");
+		widget(473, 60).setText("Egg convert success (80%)");
+		widget(473, 59).setText("300 Collector Honour Points");
+		if (VARPBIT[3261] > 299) {
+			widget(473, 59).setRGB(0x00FF00);
+		}
+	} else if (VARPBIT[3254] == 3) {
+		widget(473, 57).setModel(20528);
+		widget(473, 58).setText("Collector level up to 4");
+		widget(473, 60).setText("Egg convert success (90%)");
+		widget(473, 59).setText("400 Collector Honour Points");
+		if (VARPBIT[3261] > 399) {
+			widget(473, 59).setRGB(0x00FF00);
+		}
+	} else if (VARPBIT[3254] == 4) {
+		widget(473, 57).setModel(20529);
+		widget(473, 58).setText("Collector level up to 5");
+		widget(473, 60).setText("Egg convert success (100%)");
+		widget(473, 59).setText("500 Collector Honour Points");
+		if (VARPBIT[3261] > 499) {
+			widget(473, 59).setRGB(0x00FF00);
+		}
+	} else if (VARPBIT[3254] == 5) {
+		widget(473, 57).setModel(20529);
+		widget(473, 58).setText("Collector level up complete");
+		widget(473, 60).setText(" - Mastered - ");
+		widget(473, 59).setText(" - Mastered - ");
+	} else {
+		VARPBIT[3254] = 1;
+		widget(473, 57).setModel(20526);
+		widget(473, 58).setText("Collector level up to 2");
+		widget(473, 60).setText("Egg conversion");
+		widget(473, 59).setText("200 Collector Honour Points");
+		if (VARPBIT[3261] > 199) {
+			widget(473, 59).setRGB(0x00FF00);
+		}
+	}
+	if (VARPBIT[3255] == 1) {
+		widget(473, 64).setModel(20538);
+		widget(473, 65).setText("Healer level up to 2");
+		widget(473, 67).setText("Heal 150 points, more run energy");
+		widget(473, 66).setText("200 Healer Honour Points");
+		if (VARPBIT[3262] > 199) {
+			widget(473, 66).setRGB(0x00FF00);
+		}
+	} else if (VARPBIT[3255] == 2) {
+		widget(473, 64).setModel(20539);
+		widget(473, 65).setText("Healer level up to 3");
+		widget(473, 67).setText("Heal 200 points, more run energy");
+		widget(473, 66).setText("300 Healer Honour Points");
+		if (VARPBIT[3262] > 299) {
+			widget(473, 66).setRGB(0x00FF00);
+		}
+	} else if (VARPBIT[3255] == 3) {
+		widget(473, 64).setModel(20540);
+		widget(473, 65).setText("Healer level up to 4");
+		widget(473, 67).setText("Heal 250 points, more run energy");
+		widget(473, 66).setText("400 Healer Honour Points");
+		if (VARPBIT[3262] > 399) {
+			widget(473, 66).setRGB(0x00FF00);
+		}
+	} else if (VARPBIT[3255] == 4) {
+		widget(473, 64).setModel(20541);
+		widget(473, 65).setText("Healer level up to 5");
+		widget(473, 67).setText("Heal 350 points, more run energy");
+		widget(473, 66).setText("500 Healer Honour Points");
+		if (VARPBIT[3262] > 499) {
+			widget(473, 66).setRGB(0x00FF00);
+		}
+	} else if (VARPBIT[3255] == 5) {
+		widget(473, 64).setModel(20541);
+		widget(473, 65).setText("Healer level up complete");
+		widget(473, 67).setText(" - Mastered - ");
+		widget(473, 66).setText(" - Mastered - ");
+	} else {
+		VARPBIT[3255] = 1;
+		widget(473, 64).setModel(20538);
+		widget(473, 65).setText("Healer level up to 2");
+		widget(473, 67).setText("Heal 150 points and even more run energy");
+		widget(473, 66).setText("200 Healer Honour Points");
+		if (VARPBIT[3262] > 199) {
+			widget(473, 66).setRGB(0x00FF00);
+		}
+	}
+	if (VARPBIT[3256] > 274 && VARPBIT[3263] > 274 && VARPBIT[3261] > 274 && VARPBIT[3262] > 274) {
+		widget(473, 128).setRGB(0x00FF00);
+	}
+	if (VARPBIT[3256] > 274 && VARPBIT[3263] > 274 && VARPBIT[3261] > 274 && VARPBIT[3262] > 274) {
+		widget(473, 121).setRGB(0x00FF00);
+	}
+	if (VARPBIT[3256] > 274 && VARPBIT[3263] > 274 && VARPBIT[3261] > 274 && VARPBIT[3262] > 274) {
+		widget(473, 114).setRGB(0x00FF00);
+	}
+	if (VARPBIT[3256] > 274 && VARPBIT[3263] > 274 && VARPBIT[3261] > 274 && VARPBIT[3262] > 274) {
+		widget(473, 107).setRGB(0x00FF00);
+	}
+	if (VARPBIT[3256] > 374 && VARPBIT[3263] > 374 && VARPBIT[3261] > 374 && VARPBIT[3262] > 374) {
+		widget(473, 100).setRGB(0x00FF00);
+	}
+	if (VARPBIT[3256] > 374 && VARPBIT[3263] > 374 && VARPBIT[3261] > 374 && VARPBIT[3262] > 374) {
+		widget(473, 93).setRGB(0x00FF00);
+	}
+	if (VARPBIT[3256] > 99 && VARPBIT[3263] > 99 && VARPBIT[3261] > 99 && VARPBIT[3262] > 99) {
+		widget(473, 87).setRGB(0x00FF00);
+	}
+	if (VARPBIT[3256] > 149 && VARPBIT[3263] > 149 && VARPBIT[3261] > 149 && VARPBIT[3262] > 149) {
+		widget(473, 81).setRGB(0x00FF00);
+	}
+	if (getItemAmtInContainer(93, 995) > 94999) {
+		widget(473, 212).setRGB(0x00FF00);
+	}
+	if (VARPBIT[3245] == 1) {
+		widget(473, 95).setRGB(0x00FF00);
+		widget(473, 102).setRGB(0x00FF00);
+		widget(473, 109).setRGB(0x00FF00);
+		widget(473, 116).setRGB(0x00FF00);
+		widget(473, 123).setRGB(0x00FF00);
+		widget(473, 130).setRGB(0x00FF00);
+		widget(473, 214).setRGB(0x00FF00);
+	}
+	if (VARPBIT[3256] > 9 || VARPBIT[3263] > 9 || VARPBIT[3261] > 9 || VARPBIT[3262] > 9) {
+		widget(473, 206).setRGB(0x00FF00);
+	}
+	if (VARPBIT[3256] > 19 || VARPBIT[3263] > 19 || VARPBIT[3261] > 19 || VARPBIT[3262] > 19) {
+		widget(473, 200).setRGB(0x00FF00);
+	}
+	if (VARPBIT[3256] > 29 || VARPBIT[3263] > 29 || VARPBIT[3261] > 29 || VARPBIT[3262] > 29) {
+		widget(473, 194).setRGB(0x00FF00);
+	}
+	if (getItemAmtInContainer(93, 15439) < 1 && getItemAmtInContainer(95, 15439) < 1 && getItemAmtInContainer(94, 15439) < 1 && getItemAmtInContainer(530, 15439) < 1 && getItemAmtInContainer(93, 15440) < 1 && getItemAmtInContainer(95, 15440) < 1 && getItemAmtInContainer(94, 15440) < 1 && getItemAmtInContainer(530, 15440) < 1) {
+		widget(473, 219).setRGB(0x00FF00);
+	}
+	if (VARPBIT[3251] == 5 || VARPBIT[3253] == 5 || VARPBIT[3254] == 5 || VARPBIT[3255] == 5) {
+		widget(473, 183).setRGB(0x00FF00);
+	}
+	if (getItemAmtInContainer(93, 15440) < 1 && getItemAmtInContainer(95, 15440) < 1 && getItemAmtInContainer(94, 15440) < 1 && getItemAmtInContainer(530, 15440) < 1 && (getItemAmtInContainer(93, 15439) > 0 || getItemAmtInContainer(95, 15439) > 0 || getItemAmtInContainer(94, 15439) > 0 || getItemAmtInContainer(530, 15439) > 0)) {
+		widget(473, 184).setRGB(0x00FF00);
+	}
+	if (VARPBIT[3256] > 389 && VARPBIT[3263] > 389 && VARPBIT[3261] > 389 && VARPBIT[3262] > 389) {
+		widget(473, 146).setRGB(0x00FF00);
+	}
+	if (getItemAmtInContainer(93, 15438) > 0 || getItemAmtInContainer(94, 15438) > 0) {
+		widget(473, 140).setRGB(0x00FF00);
+	}
+	int0 = 0;
+	if (getItemAmtInContainer(93, 4151) > 0 || getItemAmtInContainer(93, 11235) > 0) {
+		int0 = 1;
+	}
+	if (VARPBIT[7342] == 0) {
+		if (VARPBIT[3256] > 49 || VARPBIT[3263] > 49 || VARPBIT[3261] > 49 || VARPBIT[3262] > 49) {
+			widget(473, 162).setRGB(0x00FF00);
+		}
+	} else if (int0 == 1) {
+		widget(473, 162).setRGB(0x00FF00);
+	}
+	if (VARPBIT[7344] == 0) {
+		if (VARPBIT[3256] > 49 || VARPBIT[3263] > 49 || VARPBIT[3261] > 49 || VARPBIT[3262] > 49) {
+			widget(473, 156).setRGB(0x00FF00);
+		}
+	} else if (int0 == 1) {
+		widget(473, 156).setRGB(0x00FF00);
+	}
+	if (VARPBIT[7341] == 0) {
+		if (VARPBIT[3256] > 49 || VARPBIT[3263] > 49 || VARPBIT[3261] > 49 || VARPBIT[3262] > 49) {
+			widget(473, 174).setRGB(0x00FF00);
+		}
+	} else if (int0 == 1) {
+		widget(473, 174).setRGB(0x00FF00);
+	}
+	if (VARPBIT[7343] == 0) {
+		if (VARPBIT[3256] > 49 || VARPBIT[3263] > 49 || VARPBIT[3261] > 49 || VARPBIT[3262] > 49) {
+			widget(473, 168).setRGB(0x00FF00);
+		}
+	} else if (int0 == 1) {
+		widget(473, 168).setRGB(0x00FF00);
+	}
+	if (VARPBIT[7342] == 1) {
+		widget(473, 162).setText("Carrying a valid weapon");
+		widget(473, 161).setText("Use Penance Egg Paint (White)");
+	}
+	if (VARPBIT[7344] == 1) {
+		widget(473, 156).setText("Carrying a valid weapon");
+		widget(473, 155).setText("Use Penance Egg Paint (Green)");
+	}
+	if (VARPBIT[7343] == 1) {
+		widget(473, 168).setText("Carrying a valid weapon");
+		widget(473, 167).setText("Use Penance Egg Paint (Blue)");
+	}
+	if (VARPBIT[7341] == 1) {
+		widget(473, 174).setText("Carrying a valid weapon");
+		widget(473, 173).setText("Use Penance Egg Paint (Yellow)");
+	}
+	widget(473, 172).setItem(10534, -1);
+	widget(473, 154).setItem(10531, -1);
+	widget(473, 160).setItem(15705, -1);
+	widget(473, 166).setItem(10533, -1);
+	widget(473, 9).setText(str(VARPBIT[3256]));
+	widget(473, 10).setText(str(VARPBIT[3263]));
+	widget(473, 11).setText(str(VARPBIT[3261]));
+	widget(473, 12).setText(str(VARPBIT[3262]));
+	return;
+}

@@ -1,0 +1,30 @@
+void script_3451(int arg0, boolean boolean1) {
+	Widget widget2;
+	Widget widget3;
+	Widget widget4;
+	Widget widget5;
+	Widget widget6;
+	Widget widget7;
+	widget2 = widget(978, 36);
+	widget3 = widget(978, 37);
+	widget4 = widget(978, 38);
+	widget5 = widget(978, 39);
+	widget6 = widget(978, 40);
+	widget7 = widget(978, 1);
+	if (boolean1) {
+		widget2 = widget(977, 10);
+		widget3 = widget(977, 11);
+		widget4 = widget(977, 12);
+		widget5 = widget(977, 13);
+		widget6 = widget(977, 14);
+	}
+	script_3932(arg0, boolean1, widget2, 1, "MIN", getTextWidth("MIN", 3793) + 30, "");
+	script_3932(arg0, boolean1, widget3, 2, "LOW", getTextWidth("LOW", 3793) + 30, "");
+	script_3932(arg0, boolean1, widget4, 3, "MID", getTextWidth("MID", 3793) + 30, "");
+	script_3932(arg0, boolean1, widget5, 4, "HIGH", getTextWidth("HIGH", 3793) + 30, "");
+	script_3932(arg0, boolean1, widget6, 0, "CUSTOM", getTextWidth("CUSTOM", 3793) + 30, "");
+	if (!boolean1) {
+		script_3932(arg0, boolean1, widget7, -1, "RE-RUN AUTO SETUP", getTextWidth("RE-RUN AUTO SETUP", 3793) + 30, "");
+	}
+	return;
+}

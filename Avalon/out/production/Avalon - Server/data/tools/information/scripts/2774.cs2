@@ -1,0 +1,6 @@
+void script_2774(Widget widget0) {
+	playSoundEffect(2277, 1, 0);
+	widget0.setRGB(0xFFFF00);
+	widget0.setScriptCallOnGameloop(2775, getClientCycle() + 15, CTX_WIDGET, "iI");
+	return;
+}

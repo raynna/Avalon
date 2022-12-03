@@ -1,0 +1,5 @@
+void script_4061() {
+	widget(1058, 45).setText("Not Enough Tokens");
+	widget(1058, 45).setRGB(0xFF0000);
+	return;
+}

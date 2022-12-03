@@ -1,0 +1,9 @@
+void script_77(string string0) {
+	script_78(VARC[4], string0);
+	VARC[4] = VARC[4] + 1;
+	if (VARC[4] >= 20) {
+		VARC[4] = 0;
+	}
+	VARC[3] = -1;
+	return;
+}

@@ -1,0 +1,6 @@
+void script_4774(int arg0) {
+	if (arg0 == VARPBIT[9555]) {
+		script_4775();
+	}
+	return;
+}

@@ -1,0 +1,89 @@
+void script_2373(Widget widget0, int arg1) {
+	int int2;
+	Widget widget3;
+	Item item4;
+	string str0;
+	widget(667, 7).clearChildren();
+	int2 = 0;
+	widget3 = null;
+	item4 = null;
+	str0 = "";
+	while (int2 < getItemContainerLength(94)) {
+		switch (int2) {
+			case 0:
+				widget3 = widget(667, 13);
+				break;
+			case 1:
+				widget3 = widget(667, 15);
+				break;
+			case 2:
+				widget3 = widget(667, 16);
+				break;
+			case 3:
+				widget3 = widget(667, 18);
+				break;
+			case 4:
+				widget3 = widget(667, 19);
+				break;
+			case 5:
+				widget3 = widget(667, 20);
+				break;
+			case 7:
+				widget3 = widget(667, 21);
+				break;
+			case 9:
+				widget3 = widget(667, 23);
+				break;
+			case 10:
+				widget3 = widget(667, 22);
+				break;
+			case 12:
+				widget3 = widget(667, 24);
+				break;
+			case 13:
+				widget3 = widget(667, 17);
+				break;
+			case 14:
+				widget3 = widget(667, 14);
+				break;
+			default:
+				widget3 = null;
+				break;
+		}
+		ACTIVE.createChild(widget(667, 7), 5, int2);
+		if (widget3 != null) {
+			item4 = getItemIdInSlot(94, int2);
+			if (item4 != null) {
+				ACTIVE.setSize(36, 32, 0, 0);
+				ACTIVE.setPosition((int, int)script_788(widget3, 2, 2), 0, 0);
+				ACTIVE.setItem(item4, getItemAmtInSlot(94, int2));
+				ACTIVE.setOptionBase(concat("<col=ff9040>", getItemName(item4)));
+				ACTIVE.setContextMenuOption(1, "Remove");
+				ACTIVE.setContextMenuOption(9, "Stats");
+				ACTIVE.setTargetVerb("Compare");
+				ACTIVE.setContextMenuOption(10, "Examine");
+				ACTIVE.setShadowColor(0x302020);
+				if (arg1 == int2) {
+					ACTIVE.setOutlineThickness(2);
+				} else {
+					ACTIVE.setOutlineThickness(1);
+				}
+				ACTIVE.setScriptCallOnClickContextMenu(1620, CTX_WIDGET, CTX_WIDGET_CHILD, 100, 0, 8, "Iiiii");
+				ACTIVE.setScriptCallOnUse(2372, widget0, int2, "Ii");
+				ACTIVE.setScriptCallOnUseWith(2372, widget0, -1, "Ii");
+			} else {
+				ACTIVE.setSize(32, 32, 0, 0);
+				ACTIVE.setPosition((int, int)script_788(widget3, 2, 2), 0, 0);
+				ACTIVE.setSprite(datamap('i', 'd', (DataMap)796, int2));
+			}
+		} else {
+			ACTIVE.setHidden(true);
+		}
+		int2 = int2 + 1;
+	}
+	if (arg1 != -1 && getItemIdInSlot(94, arg1) == null) {
+		arg1 = -1;
+	}
+	widget0.setScriptCallOnItemContainerUpdate(2372, CTX_WIDGET, arg1, 94, "IiY");
+	return;
+}

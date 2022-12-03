@@ -1,0 +1,21 @@
+void script_4544(Widget widget0, Widget widget1, Sprite sprite2, Sprite sprite3, int arg4, int arg5, int arg6, int arg7) {
+	Widget widget8;
+	widget8 = widget0.getLayer();
+	if (widget8 == null) {
+		return;
+	}
+	if (arg6 == 0 || arg6 == 1) {
+		if (widget8.getWidth() == arg4) {
+			widget8.setScriptCallOnGameloop(4545, CTX_WIDGET, arg5, arg6, widget1, sprite2, arg7, "IiiIdi");
+		} else if (widget8.getWidth() == arg5) {
+			widget8.setScriptCallOnGameloop(4546, CTX_WIDGET, arg4, arg6, widget1, sprite3, arg7, "IiiIdi");
+		}
+	} else if (arg6 == 2 || arg6 == 3) {
+		if (widget8.getHeight() == arg4) {
+			widget8.setScriptCallOnGameloop(4545, CTX_WIDGET, arg5, arg6, widget1, sprite2, arg7, "IiiIdi");
+		} else if (widget8.getHeight() == arg5) {
+			widget8.setScriptCallOnGameloop(4546, CTX_WIDGET, arg4, arg6, widget1, sprite3, arg7, "IiiIdi");
+		}
+	}
+	return;
+}

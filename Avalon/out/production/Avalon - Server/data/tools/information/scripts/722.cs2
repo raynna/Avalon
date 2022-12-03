@@ -1,0 +1,186 @@
+void script_722() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	if (getDisplayMode() >= 2) {
+		widget(746, 9).setSize((int, int)cs2method6203(), 0, 0);
+		script_1658();
+		script_1650();
+		int0 = widget(746, 3).getWidth();
+		int1 = widget(746, 3).getHeight();
+		int2 = (int0 - 512) / 2;
+		if (hasChildModal(widget(746, 12), 762)) {
+			if (VARPBIT[8348] == 1) {
+				widget(746, 12).setSize(10, 10, 0, 0);
+			} else {
+				int4 = int1 - 185;
+				int3 = 175;
+				if (int4 > 942) {
+					int4 = 942;
+					int3 = (int1 - 175 - int4) / 2 + 175;
+				} else if (int4 < 334) {
+					int4 = 334;
+					int3 = (int1 - 334) / 2;
+				}
+				widget(746, 12).setSize(512, int4, 0, 0);
+				script_1654();
+			}
+		} else {
+			widget(746, 12).setSize(512, 334, 0, 0);
+			int3 = (int1 - 334) / 2;
+		}
+		if (int2 < 223) {
+			int2 = 223;
+		}
+		if (int3 < 165) {
+			int3 = 165;
+		}
+		widget(746, 12).setPosition(int2, int3, 2, 2);
+		if (hasChildModal(widget(746, 9), 667)) {
+			widget(746, 9).setSize(512, 334, 0, 0);
+			widget(746, 9).setPosition(int2, max((int1 - 334) / 2, int3), 2, 2);
+			widget(746, 10).setSize(219, 164, 1, 1);
+			widget(746, 10).setPosition(0, 0, 0, 0);
+		} else if (hasChildModal(widget(746, 10), 667)) {
+			widget(746, 10).setSize(512, 334, 0, 0);
+			widget(746, 10).setPosition(int2, max((int1 - 334) / 2, int3), 2, 2);
+			widget(746, 9).setSize(0, 0, 1, 1);
+			widget(746, 9).setPosition(0, 0, 1, 1);
+		} else {
+			widget(746, 10).setSize(219, 164, 1, 1);
+			widget(746, 10).setPosition(0, 0, 0, 0);
+			widget(746, 9).setSize(0, 0, 1, 1);
+			widget(746, 9).setPosition(0, 0, 1, 1);
+		}
+		if (int0 < 996) {
+			widget(746, 79).setPosition(0, 74, 2, 2);
+			widget(746, 20).setSize(240, 74, 0, 0);
+			widget(746, 30).setPosition(4, 42, 2, 2);
+			widget(746, 29).setPosition(34, 43, 2, 2);
+			widget(746, 28).setPosition(64, 43, 2, 2);
+			widget(746, 27).setPosition(94, 43, 2, 2);
+			widget(746, 26).setPosition(124, 43, 2, 2);
+			widget(746, 25).setPosition(154, 43, 2, 2);
+			widget(746, 131).setPosition(184, 44, 2, 2);
+			widget(746, 24).setPosition(214, 43, 2, 2);
+			widget(746, 62).setPosition(0, 37, 2, 2);
+			widget(746, 61).setPosition(30, 37, 2, 2);
+			widget(746, 60).setPosition(60, 37, 2, 2);
+			widget(746, 59).setPosition(90, 37, 2, 2);
+			widget(746, 58).setPosition(120, 37, 2, 2);
+			widget(746, 57).setPosition(150, 37, 2, 2);
+			widget(746, 56).setPosition(180, 37, 2, 2);
+			widget(746, 55).setPosition(210, 37, 2, 2);
+			widget(746, 46).setPosition(0, 37, 2, 2);
+			widget(746, 45).setPosition(30, 37, 2, 2);
+			widget(746, 44).setPosition(60, 37, 2, 2);
+			widget(746, 43).setPosition(90, 37, 2, 2);
+			widget(746, 42).setPosition(120, 37, 2, 2);
+			widget(746, 41).setPosition(150, 37, 2, 2);
+			widget(746, 40).setPosition(180, 37, 2, 2);
+			widget(746, 39).setPosition(210, 37, 2, 2);
+			widget(746, 71).setSize(249, 78, 0, 0);
+			widget(746, 133).setPosition(0, 0, 0, 0);
+			widget(746, 135).setPosition(30, 0, 0, 0);
+			widget(746, 137).setPosition(60, 0, 0, 0);
+			widget(746, 139).setPosition(90, 0, 0, 0);
+			widget(746, 141).setPosition(120, 0, 0, 0);
+			widget(746, 143).setPosition(150, 0, 0, 0);
+			widget(746, 145).setPosition(180, 0, 0, 0);
+			widget(746, 147).setPosition(210, 0, 0, 0);
+			widget(746, 132).setPosition(0, 0, 0, 0);
+			widget(746, 134).setPosition(30, 0, 0, 0);
+			widget(746, 136).setPosition(60, 0, 0, 0);
+			widget(746, 138).setPosition(90, 0, 0, 0);
+			widget(746, 140).setPosition(120, 0, 0, 0);
+			widget(746, 142).setPosition(150, 0, 0, 0);
+			widget(746, 144).setPosition(180, 0, 0, 0);
+			widget(746, 146).setPosition(210, 0, 0, 0);
+		} else {
+			widget(746, 79).setPosition(0, 37, 2, 2);
+			widget(746, 20).setSize(480, 37, 0, 0);
+			widget(746, 30).setPosition(244, 6, 2, 2);
+			widget(746, 29).setPosition(274, 7, 2, 2);
+			widget(746, 28).setPosition(305, 7, 2, 2);
+			widget(746, 27).setPosition(334, 6, 2, 2);
+			widget(746, 26).setPosition(364, 6, 2, 2);
+			widget(746, 25).setPosition(394, 6, 2, 2);
+			widget(746, 131).setPosition(424, 7, 2, 2);
+			widget(746, 24).setPosition(454, 6, 2, 2);
+			widget(746, 62).setPosition(240, 0, 2, 2);
+			widget(746, 61).setPosition(270, 0, 2, 2);
+			widget(746, 60).setPosition(300, 0, 2, 2);
+			widget(746, 59).setPosition(330, 0, 2, 2);
+			widget(746, 58).setPosition(360, 0, 2, 2);
+			widget(746, 57).setPosition(390, 0, 2, 2);
+			widget(746, 56).setPosition(420, 0, 2, 2);
+			widget(746, 55).setPosition(450, 0, 2, 2);
+			widget(746, 46).setPosition(240, 0, 2, 2);
+			widget(746, 45).setPosition(270, 0, 2, 2);
+			widget(746, 44).setPosition(300, 0, 2, 2);
+			widget(746, 43).setPosition(330, 0, 2, 2);
+			widget(746, 42).setPosition(360, 0, 2, 2);
+			widget(746, 41).setPosition(390, 0, 2, 2);
+			widget(746, 40).setPosition(420, 0, 2, 2);
+			widget(746, 39).setPosition(450, 0, 2, 2);
+			widget(746, 71).setSize(489, 42, 0, 0);
+			widget(746, 133).setPosition(0, 0, 0, 0);
+			widget(746, 135).setPosition(30, 0, 0, 0);
+			widget(746, 137).setPosition(60, 0, 0, 0);
+			widget(746, 139).setPosition(90, 0, 0, 0);
+			widget(746, 141).setPosition(120, 0, 0, 0);
+			widget(746, 143).setPosition(150, 0, 0, 0);
+			widget(746, 145).setPosition(180, 0, 0, 0);
+			widget(746, 147).setPosition(210, 0, 0, 0);
+			widget(746, 132).setPosition(0, 0, 0, 0);
+			widget(746, 134).setPosition(30, 0, 0, 0);
+			widget(746, 136).setPosition(60, 0, 0, 0);
+			widget(746, 138).setPosition(90, 0, 0, 0);
+			widget(746, 140).setPosition(120, 0, 0, 0);
+			widget(746, 142).setPosition(150, 0, 0, 0);
+			widget(746, 144).setPosition(180, 0, 0, 0);
+			widget(746, 146).setPosition(210, 0, 0, 0);
+		}
+		script_4251();
+	} else if (hasChildModal(widget(548, 19), 762) && VARPBIT[8348] == 1) {
+		widget(548, 19).setSize(10, 10, 0, 0);
+		widget(548, 10).sendChildFront();
+		widget(548, 11).sendChildFront();
+		widget(548, 12).sendChildFront();
+		widget(548, 15).sendChildFront();
+		widget(548, 16).sendChildFront();
+		widget(548, 17).sendChildFront();
+		widget(548, 18).sendChildFront();
+		widget(548, 20).sendChildFront();
+		widget(548, 21).sendChildFront();
+		widget(548, 22).sendChildFront();
+		widget(548, 40).sendChildFront();
+		widget(548, 8).sendChildFront();
+		widget(548, 9).sendChildFront();
+		widget(548, 19).sendChildFront();
+	} else {
+		widget(548, 19).setSize(512, 334, 0, 0);
+		widget(548, 8).sendChildFront();
+		widget(548, 9).sendChildFront();
+		widget(548, 10).sendChildFront();
+		widget(548, 11).sendChildFront();
+		widget(548, 12).sendChildFront();
+		widget(548, 15).sendChildFront();
+		widget(548, 16).sendChildFront();
+		widget(548, 17).sendChildFront();
+		widget(548, 18).sendChildFront();
+		widget(548, 19).sendChildFront();
+		widget(548, 20).sendChildFront();
+		widget(548, 21).sendChildFront();
+		widget(548, 22).sendChildFront();
+		widget(548, 40).sendChildFront();
+	}
+	return;
+}

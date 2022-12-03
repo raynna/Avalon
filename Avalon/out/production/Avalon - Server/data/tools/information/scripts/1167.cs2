@@ -1,0 +1,84 @@
+void script_1167() {
+	DataMap datamap0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	Item item9;
+	datamap0 = null;
+	switch (VARC[1001]) {
+		case 1:
+			datamap0 = (DataMap)738;
+			break;
+		case 2:
+			datamap0 = (DataMap)739;
+			break;
+		case 3:
+			datamap0 = (DataMap)740;
+			break;
+		case 4:
+			datamap0 = (DataMap)741;
+			break;
+		case 5:
+			datamap0 = (DataMap)742;
+			break;
+		default:
+			return;
+	}
+	widget(885, 14).setText(datamap('i', 's', (DataMap)205, VARC[1001]));
+	int1 = 0;
+	int2 = 0;
+	int3 = 16;
+	int4 = 16;
+	int5 = 56;
+	int6 = 50;
+	int7 = datamapSize(datamap0);
+	int8 = 5;
+	item9 = null;
+	widget(885, 16).clearChildren();
+	while (int1 < int7) {
+		item9 = datamap('i', 'o', datamap0, int1);
+		if (item9 != null) {
+			ACTIVE.createChild(widget(885, 16), 5, int2);
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setItemWearCol(datamap('i', 'o', datamap0, int1), -1);
+			ACTIVE.setPosition(11 + (int3 + (36 + int5) * (int1 % int8)), 6 + (int4 + int1 / int8 * (32 + int6)), 0, 0);
+			ACTIVE.setContextMenuOption(1, "Examine");
+			ACTIVE.setOptionBase("<col=ff9040>" + getItemName(item9));
+			ACTIVE.createChild(widget(885, 16), 4, int2 + 1);
+			ACTIVE.setSize(56, 10, 0, 0);
+			ACTIVE.setFont(494);
+			ACTIVE.setRGB(0xCC9900);
+			ACTIVE.setTextAntiMacro(true);
+			ACTIVE.setTextAlignment(1, 0, 0);
+			if (compare(ACTIVE.getText(), "") == 0) {
+				ACTIVE.setText("Getting data...");
+			}
+			ACTIVE.setPosition(int3 + (int5 + 36) * (int1 % int8), 47 + (int4 + int1 / int8 * (32 + int6)), 0, 0);
+			datamap('i', 'I', (DataMap)737, int1).setIsHidden(false);
+			datamap('i', 'I', (DataMap)737, int1).setPosition(int3 + (36 + int5) * (int1 % int8), int4 + int1 / int8 * (32 + int6), 0, 0);
+			int2 = int2 + 2;
+		}
+		int1 = int1 + 1;
+	}
+	while (int1 < datamapSize((DataMap)737)) {
+		datamap('i', 'I', (DataMap)737, int1).setIsHidden(true);
+		int1 = int1 + 1;
+	}
+	if (int7 <= 15) {
+		widget(885, 16).setScrollPos(0, 0);
+		widget(885, 16).setScrollMax(0, 0);
+		widget(885, 48).clearChildren();
+		widget(885, 48).setIsHidden(true);
+	} else {
+		widget(885, 48).setIsHidden(false);
+		widget(885, 16).setScrollPos(0, 0);
+		widget(885, 16).setScrollMax(widget(885, 16).getWidth(), 60 + (int4 + int7 / int8 * (32 + int6)));
+		script_31(widget(885, 48), widget(885, 16), 792, 789, 790, 791, 773, 788);
+	}
+	return;
+}

@@ -1,0 +1,10 @@
+void script_2030(Widget widget0) {
+	if (isBitFlagged(VARP[331], 26)) {
+		widget0.set3DRotation(0, 0, 512, 1024, 0, 1000);
+	} else if (isBitFlagged(VARP[331], 27)) {
+		widget0.set3DRotation(0, 0, 512, 1536, 0, 1000);
+	} else if (isBitFlagged(VARP[331], 28)) {
+		widget0.set3DRotation(0, 0, 512, 0, 0, 1000);
+	}
+	return;
+}

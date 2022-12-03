@@ -1,0 +1,26 @@
+void script_1127(Widget widget0) {
+	Widget widget1;
+	string str0;
+	widget1 = null;
+	str0 = "";
+	switch (widget0) {
+		case widget(192, 2):
+			str0 = "Toggle defensive casting.";
+			widget1 = widget(192, 96);
+			break;
+		case widget(193, 18):
+			str0 = "Toggle defensive casting.";
+			widget1 = widget(193, 53);
+			break;
+		case widget(430, 20):
+			str0 = "Toggle defensive casting.";
+			widget1 = widget(430, 65);
+			break;
+		case widget(950, 2):
+			str0 = "Toggle defensive casting.";
+			widget1 = widget(950, 72);
+			break;
+	}
+	script_39(widget0, widget1, str0, 25, widget1.getLayer().getWidth());
+	return;
+}

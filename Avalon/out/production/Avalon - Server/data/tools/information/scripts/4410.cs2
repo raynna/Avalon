@@ -1,0 +1,6 @@
+void script_4410(Widget widget0, int arg1, int arg2) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setScriptCallOnGameloop(4411, widget0, arg1, arg2, 0, "Iiii");
+	}
+	return;
+}

@@ -1,0 +1,10 @@
+void script_2569() {
+	widget(292, 130).setIsHidden(true);
+	if (getLanguage() == 0) {
+		widget(292, 124).setFont(496);
+	} else {
+		widget(292, 124).setFont(494);
+	}
+	script_2570();
+	return;
+}

@@ -1,0 +1,92 @@
+boolean script_1314(int arg0) {
+	if (getDisplayMode() >= 2) {
+		switch (arg0) {
+			case 0:
+				return widget(746, 90).isHidden();
+			case 1:
+				return widget(746, 91).isHidden();
+			case 2:
+				return widget(746, 92).isHidden();
+			case 3:
+				return widget(746, 93).isHidden();
+			case 4:
+				return widget(746, 94).isHidden();
+			case 5:
+				return widget(746, 95).isHidden();
+			case 6:
+				return widget(746, 96).isHidden();
+			case 7:
+				return widget(746, 97).isHidden();
+			case 8:
+				return widget(746, 98).isHidden();
+			case 9:
+				return widget(746, 99).isHidden();
+			case 10:
+				return widget(746, 100).isHidden();
+			case 11:
+				return widget(746, 101).isHidden();
+			case 12:
+				return widget(746, 102).isHidden();
+			case 13:
+				return widget(746, 103).isHidden();
+			case 14:
+				return widget(746, 104).isHidden();
+			case 15:
+				return widget(746, 105).isHidden();
+			case 95:
+				return widget(746, 107).isHidden();
+			case 99:
+				return widget(746, 108).isHidden();
+			case 98:
+				if (widget(746, 88).hasChild()) {
+					return widget(746, 88).isHidden();
+				}
+				return true;
+		}
+	} else {
+		switch (arg0) {
+			case 0:
+				return widget(548, 204).isHidden();
+			case 1:
+				return widget(548, 205).isHidden();
+			case 2:
+				return widget(548, 206).isHidden();
+			case 3:
+				return widget(548, 207).isHidden();
+			case 4:
+				return widget(548, 208).isHidden();
+			case 5:
+				return widget(548, 209).isHidden();
+			case 6:
+				return widget(548, 210).isHidden();
+			case 7:
+				return widget(548, 211).isHidden();
+			case 8:
+				return widget(548, 212).isHidden();
+			case 9:
+				return widget(548, 213).isHidden();
+			case 10:
+				return widget(548, 214).isHidden();
+			case 11:
+				return widget(548, 215).isHidden();
+			case 12:
+				return widget(548, 216).isHidden();
+			case 13:
+				return widget(548, 217).isHidden();
+			case 14:
+				return widget(548, 218).isHidden();
+			case 15:
+				return widget(548, 219).isHidden();
+			case 95:
+				return widget(548, 221).isHidden();
+			case 99:
+				return widget(548, 222).isHidden();
+			case 98:
+				if (widget(548, 200).hasChild()) {
+					return widget(548, 200).isHidden();
+				}
+				return true;
+		}
+	}
+	return null;
+}

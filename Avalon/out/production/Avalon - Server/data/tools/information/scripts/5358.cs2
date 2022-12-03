@@ -1,0 +1,46 @@
+void script_5358(int arg0, Widget widget1) {
+	switch (arg0) {
+		case 0:
+			arg0 = 1;
+			break;
+		case 1:
+			arg0 = 4;
+			break;
+		case 2:
+			arg0 = 7;
+			break;
+		case 3:
+			arg0 = 10;
+			break;
+		case 4:
+			arg0 = 13;
+			break;
+		default:
+			return;
+	}
+	if (ACTIVE.setChild(widget1, 1)) {
+		ACTIVE.setSprite(7766);
+		ACTIVE.setScriptCallOnMouseExit(5357, 1, widget1, "iI");
+	}
+	if (ACTIVE.setChild(widget1, 4)) {
+		ACTIVE.setSprite(7766);
+		ACTIVE.setScriptCallOnMouseExit(5357, 4, widget1, "iI");
+	}
+	if (ACTIVE.setChild(widget1, 7)) {
+		ACTIVE.setSprite(7766);
+		ACTIVE.setScriptCallOnMouseExit(5357, 7, widget1, "iI");
+	}
+	if (ACTIVE.setChild(widget1, 10)) {
+		ACTIVE.setSprite(7766);
+		ACTIVE.setScriptCallOnMouseExit(5357, 10, widget1, "iI");
+	}
+	if (ACTIVE.setChild(widget1, 13)) {
+		ACTIVE.setSprite(7766);
+		ACTIVE.setScriptCallOnMouseExit(5357, 13, widget1, "iI");
+	}
+	if (ACTIVE.setChild(widget1, arg0)) {
+		ACTIVE.setSprite(7767);
+		ACTIVE.setScriptCallOnMouseExit(-1, "");
+	}
+	return;
+}

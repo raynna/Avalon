@@ -1,0 +1,32 @@
+void script_5099(int arg0, Sprite sprite1, Sprite sprite2, int arg3, int arg4, int arg5, int arg6, int arg7, boolean boolean8, int arg9, string string10) {
+	switch (arg0) {
+		case 1:
+			script_5100(1, string10, sprite1, sprite2, arg3, arg4, arg5, arg6, arg7, boolean8, arg9, widget(1116, 157), 73138179, widget(1116, 35), widget(1116, 53), widget(1116, 34), widget(1116, 52), widget(1116, 60), widget(1116, 62), widget(1116, 72), widget(1116, 81), widget(1116, 82));
+			break;
+		case 2:
+			script_5100(2, string10, sprite1, sprite2, arg3, arg4, arg5, arg6, arg7, boolean8, arg9, widget(1116, 202), 73138179, widget(1116, 163), widget(1116, 205), widget(1116, 162), widget(1116, 203), widget(1116, 191), widget(1116, 166), widget(1116, 177), widget(1116, 187), widget(1116, 188));
+			break;
+		case 3:
+			script_5100(3, string10, sprite1, sprite2, arg3, arg4, arg5, arg6, arg7, boolean8, arg9, widget(1116, 251), 73138179, widget(1116, 212), widget(1116, 254), widget(1116, 211), widget(1116, 252), widget(1116, 240), widget(1116, 215), widget(1116, 226), widget(1116, 236), widget(1116, 237));
+			break;
+		case 4:
+			script_5100(4, string10, sprite1, sprite2, arg3, arg4, arg5, arg6, arg7, boolean8, arg9, widget(1116, 300), 73138179, widget(1116, 261), widget(1116, 303), widget(1116, 260), widget(1116, 301), widget(1116, 289), widget(1116, 264), widget(1116, 275), widget(1116, 285), widget(1116, 286));
+			break;
+		case 5:
+			script_5100(5, string10, sprite1, sprite2, arg3, arg4, arg5, arg6, arg7, boolean8, arg9, widget(1116, 349), 73138179, widget(1116, 310), widget(1116, 352), widget(1116, 309), widget(1116, 350), widget(1116, 338), widget(1116, 313), widget(1116, 324), widget(1116, 334), widget(1116, 335));
+			break;
+		case 6:
+			script_5100(6, string10, sprite1, sprite2, arg3, arg4, arg5, arg6, arg7, boolean8, arg9, widget(1116, 398), 73138179, widget(1116, 359), widget(1116, 401), widget(1116, 358), widget(1116, 399), widget(1116, 387), widget(1116, 362), widget(1116, 373), widget(1116, 383), widget(1116, 384));
+			break;
+		case 7:
+			script_5100(7, string10, sprite1, sprite2, arg3, arg4, arg5, arg6, arg7, boolean8, arg9, widget(1116, 447), 73138179, widget(1116, 408), widget(1116, 450), widget(1116, 407), widget(1116, 448), widget(1116, 436), widget(1116, 411), widget(1116, 422), widget(1116, 432), widget(1116, 433));
+			break;
+		case 8:
+			script_5100(8, string10, sprite1, sprite2, arg3, arg4, arg5, arg6, arg7, boolean8, arg9, widget(1116, 496), 73138179, widget(1116, 457), widget(1116, 499), widget(1116, 456), widget(1116, 497), widget(1116, 485), widget(1116, 460), widget(1116, 471), widget(1116, 481), widget(1116, 482));
+			break;
+		case 9:
+			script_5100(9, string10, sprite1, sprite2, arg3, arg4, arg5, arg6, arg7, boolean8, arg9, widget(1116, 545), 73138179, widget(1116, 506), widget(1116, 548), widget(1116, 505), widget(1116, 546), widget(1116, 534), widget(1116, 509), widget(1116, 520), widget(1116, 530), widget(1116, 531));
+			break;
+	}
+	return;
+}

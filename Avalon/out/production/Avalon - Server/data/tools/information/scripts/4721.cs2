@@ -1,0 +1,33 @@
+string, string, string, string, string, string, string, string, string, string script_4721() {
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	string str4;
+	string str5;
+	string str6;
+	string str7;
+	string str8;
+	string str9;
+	str0 = "";
+	str1 = "";
+	str2 = "";
+	str3 = "";
+	str4 = "";
+	str5 = "";
+	str6 = "";
+	str7 = "";
+	str8 = "";
+	str9 = "";
+	str0 = script_4345(CLANDEF113[25], CLANDEF113[26]);
+	str1 = script_4345(CLANDEF113[27], CLANDEF113[28]);
+	str2 = script_4345(CLANDEF113[29], CLANDEF113[30]);
+	str3 = script_4345(CLANDEF113[31], CLANDEF113[32]);
+	str4 = script_4345(CLANDEF113[33], CLANDEF113[34]);
+	str5 = script_4345(CLANDEF113[35], CLANDEF113[36]);
+	str6 = script_4345(CLANDEF113[37], CLANDEF113[38]);
+	str7 = script_4345(CLANDEF113[39], CLANDEF113[40]);
+	str8 = script_4345(CLANDEF113[41], CLANDEF113[42]);
+	str9 = script_4345(CLANDEF113[43], CLANDEF113[44]);
+	return str0, str1, str2, str3, str4, str5, str6, str7, str8, str9;
+}

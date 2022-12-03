@@ -1,0 +1,5 @@
+void script_4306() {
+	widget(1096, 70).setIsHidden(true);
+	widget(1096, 59).setText("Loading, please wait.");
+	return;
+}

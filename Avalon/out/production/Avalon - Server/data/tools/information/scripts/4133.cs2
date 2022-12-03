@@ -1,0 +1,25 @@
+void script_4133(Widget widget0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, SoundEff soundeff8) {
+	int int9;
+	int int10;
+	int9 = 0;
+	int10 = 0;
+	if (arg1 == -1 && ACTIVE.setChild(widget0) || ACTIVE.setChild(widget0, arg1)) {
+		if (arg7 > 0) {
+			ACTIVE.setScriptCallOnGameloop(4133, widget0, arg1, arg2, arg3, arg4, arg5, arg6, arg7 - 1, soundeff8, "Iiiiiiii«");
+			return;
+		}
+		int9 = ACTIVE.getShadeColor();
+		int10 = min(max(int9 + arg2, arg4), arg5);
+		if (int10 == arg4 || int10 == arg5) {
+			if (int10 == arg5) {
+				arg7 = arg6;
+			}
+			if (int10 == arg4 && soundeff8 != null) {
+				playSoundEffect2False(soundeff8, 1, 50, 255);
+			}
+			ACTIVE.setScriptCallOnGameloop(4133, widget0, arg1, arg3, arg2, arg4, arg5, arg6, arg7, soundeff8, "Iiiiiiii«");
+		}
+		ACTIVE.setTrans(int10);
+	}
+	return;
+}

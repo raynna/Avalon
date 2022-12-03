@@ -1,0 +1,7 @@
+void script_4225() {
+	widget(746, 190).setScriptCallOnMouseOver(4226, "");
+	widget(746, 190).setScriptCallOnMouseExit(40, widget(746, 186), "I");
+	widget(548, 27).setScriptCallOnMouseOver(4226, "");
+	widget(548, 27).setScriptCallOnMouseExit(40, widget(548, 23), "I");
+	return;
+}

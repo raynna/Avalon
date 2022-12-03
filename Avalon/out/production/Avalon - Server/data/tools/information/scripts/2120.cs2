@@ -1,0 +1,42 @@
+void script_2120(int arg0, Widget widget1, int arg2, Widget widget3, Widget widget4) {
+	int int5;
+	Sprite sprite6;
+	if (arg0 != 1) {
+		return;
+	}
+	int5 = 0;
+	while (int5 < getItemContainerLength(307)) {
+		if (ACTIVE.setChild(widget1, int5 * 7)) {
+			if (int5 == arg2) {
+				ACTIVE.setTrans(100);
+			} else {
+				ACTIVE.setTrans(200);
+			}
+		}
+		int5 = int5 + 1;
+	}
+	widget4.setText("Confirm:" + "<br>" + datamap('i', 's', (DataMap)2238, arg2));
+	widget3.clearChildren();
+	sprite6 = 833;
+	int5 = 0;
+	while (int5 < getItemContainerLength(307)) {
+		if (int5 == arg2) {
+			ACTIVE.createChild(widget3, 5, int5);
+			ACTIVE.setSize(90, 56, 0, 0);
+			ACTIVE.setPosition(0, 0, 0, 0);
+			ACTIVE.setSprite(sprite6);
+			ACTIVE.setHidden(false);
+			ACTIVE.setScriptCallOnMouseExit(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite6, "Iid");
+			sprite6 = 834;
+			ACTIVE.setScriptCallOnMouseEntered(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite6, "Iid");
+			ACTIVE.setContextMenuOption(1, "Confirm");
+			return;
+		}
+		ACTIVE.createChild(widget3, 3, int5);
+		ACTIVE.setPosition(-1, -1, 0, 0);
+		ACTIVE.setSize(0, 0, 0, 0);
+		ACTIVE.setHidden(true);
+		int5 = int5 + 1;
+	}
+	return;
+}

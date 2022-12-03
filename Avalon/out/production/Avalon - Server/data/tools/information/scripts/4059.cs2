@@ -1,0 +1,14 @@
+void script_4059(Widget widget0, Widget widget1) {
+	int int2;
+	int2 = 5;
+	if (widget0.getY() >= 0) {
+		widget0.setPosition(0, 0, 1, 0);
+		VARC[1432] = 0;
+		widget(1058, 2).setContextMenuOption(1, "Select");
+		widget(1058, 3).setContextMenuOption(1, "Select");
+		widget1.setScriptCallOnGameloop(-1, "");
+	} else {
+		widget0.setPosition(0, widget0.getY() + int2, 1, 0);
+	}
+	return;
+}

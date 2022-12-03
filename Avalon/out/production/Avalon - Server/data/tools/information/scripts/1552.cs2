@@ -1,0 +1,9 @@
+int script_1552(int arg0, string string1, Sprite sprite2, Widget widget3, int arg4) {
+	int int4;
+	int4 = 0;
+	if (ACTIVE.setChild(widget3, arg4) || arg4 == -1 && ACTIVE.setChild(widget3)) {
+		int4 = ACTIVE.getX() + ACTIVE.getWidth() / 2;
+		return script_1551(arg0, string1, sprite2, int4 - getTextWidth(script_1602(string1), sprite2) / 2);
+	}
+	return 0;
+}

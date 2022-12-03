@@ -1,0 +1,20 @@
+void script_3976(int arg0, int arg1, int arg2) {
+	if (arg2 != 1) {
+		return;
+	}
+	script_41(widget(1056, 163));
+	VARC[1416] = arg1;
+	widget(1056, 92).setIsHidden(true);
+	widget(1056, 94).setIsHidden(true);
+	widget(1056, 125).setIsHidden(false);
+	widget(1056, 122).setIsHidden(false);
+	if (script_3999(arg0) == 1) {
+		if (!(VARPBIT[8588] == 4094)) {
+			return;
+		}
+		script_3977(VARPBIT[8587]);
+	} else {
+		script_3977(arg0);
+	}
+	return;
+}

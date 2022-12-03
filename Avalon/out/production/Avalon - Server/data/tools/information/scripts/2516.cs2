@@ -1,0 +1,16 @@
+void script_2516() {
+	VARC[847] = VARPBIT[6364];
+	VARC[848] = VARPBIT[6366];
+	VARC[849] = VARPBIT[6367];
+	VARC[850] = VARPBIT[6363];
+	VARC[851] = VARPBIT[6365];
+	VARC[839] = VARPBIT[6351];
+	widget(654, 13).setText(str(VARC[847]));
+	widget(654, 61).setText(str(VARC[848]));
+	widget(654, 53).setText(str(VARC[849]));
+	widget(654, 45).setText(str(VARC[850]));
+	widget(654, 70).setText(str(VARC[851]));
+	widget(654, 77).setText(script_46(VARC[839], ","));
+	script_2517();
+	return;
+}

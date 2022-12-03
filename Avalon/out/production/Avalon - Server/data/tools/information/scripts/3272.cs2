@@ -1,0 +1,40 @@
+void script_3272(int arg0) {
+	switch (arg0) {
+		case 61145353:
+			if (VARC[1184] != 1 && VARC[1198] == 1) {
+				VARC[1184] = 1;
+			} else {
+				VARC[1184] = 0;
+			}
+			break;
+		case 61145354:
+			if (VARC[1184] != 2 && VARC[1199] == 1) {
+				VARC[1184] = 2;
+			} else {
+				VARC[1184] = 0;
+			}
+			break;
+		case 61145364:
+			if (VARC[1184] != 3 && VARC[1200] == 1) {
+				VARC[1184] = 3;
+			} else {
+				VARC[1184] = 0;
+			}
+			break;
+		case 61145374:
+			if (VARC[1184] != 4 && VARC[1201] == 1) {
+				VARC[1184] = 4;
+			} else {
+				VARC[1184] = 0;
+			}
+			break;
+		case 61145384:
+			if (VARC[1184] != 5 && VARC[1202] == 1) {
+				VARC[1184] = 5;
+			} else {
+				VARC[1184] = 0;
+			}
+			break;
+	}
+	return;
+}

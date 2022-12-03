@@ -1,0 +1,48 @@
+void script_1397() {
+	if (VARPBIT[1412] == 1) {
+		widget(282, 19).setModel(10112);
+	} else {
+		widget(282, 19).setModel(10111);
+	}
+	if (VARPBIT[1412] == 24) {
+		widget(282, 20).setModel(10114);
+	} else {
+		widget(282, 20).setModel(10113);
+	}
+	if (VARPBIT[1412] == 32) {
+		widget(282, 18).setModel(10110);
+	} else {
+		widget(282, 18).setModel(10109);
+	}
+	if (VARPBIT[1412] == 48) {
+		widget(282, 17).setModel(10108);
+	} else {
+		widget(282, 17).setModel(10107);
+	}
+	if (VARPBIT[1412] == 56) {
+		widget(282, 16).setModel(10106);
+	} else {
+		widget(282, 16).setModel(10105);
+	}
+	if (VARPBIT[1412] == 60) {
+		widget(282, 15).setModel(10104);
+	} else {
+		widget(282, 15).setModel(10103);
+	}
+	if (VARPBIT[1412] == 62) {
+		widget(282, 14).setModel(10102);
+	} else {
+		widget(282, 14).setModel(10101);
+	}
+	if (VARPBIT[1412] == 63) {
+		widget(282, 13).setModel(10100);
+	} else {
+		widget(282, 13).setModel(10099);
+	}
+	if (VARPBIT[1413] == 1) {
+		widget(282, 12).setModel(10116);
+	} else {
+		widget(282, 12).setModel(10115);
+	}
+	return;
+}

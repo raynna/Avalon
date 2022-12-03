@@ -1,0 +1,6 @@
+void script_5000() {
+	script_5001();
+	widget(1092, 238).setIsHidden(false);
+	widget(1092, 702).setIsHidden(false);
+	return;
+}

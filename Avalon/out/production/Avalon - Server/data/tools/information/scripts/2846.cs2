@@ -1,0 +1,57 @@
+void script_2846(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	widget0.clearChildren();
+	int1 = 308;
+	int2 = 55;
+	int3 = 0;
+	int4 = datamapSize((DataMap)903);
+	while (int3 < int4) {
+		ACTIVE.createChild(widget0, 6, int3);
+		ACTIVE.setSize(50, 50, 0, 0);
+		ACTIVE.setPosition(int1, int2, 0, 0);
+		ACTIVE.setModel(datamap('i', 'm', (DataMap)903, int3));
+		ACTIVE.set3DRotation(0, 0, 512, 0, 0, 2750);
+		ACTIVE.setScriptCallOnMouseDragReleased(2848, CTX_WIDGET, CTX_WIDGET_CHILD, DRAG_WIDGET, DRAG_WIDGET_CHILD, MOUSE_X, MOUSE_Y, "IiIiii");
+		ACTIVE.setDragRenderBehaviour(2);
+		ACTIVE.setDragDeadZone(14);
+		ACTIVE.setContextMenuOption(1, "Select");
+		int3 = int3 + 1;
+		if (int3 == 3) {
+			int1 = 308 + 48;
+			int2 = 55;
+		} else if (int3 == 6) {
+			int1 = 308 + 96;
+			int2 = 55;
+		} else {
+			int2 = 48 + int2;
+		}
+	}
+	int1 = 113;
+	int2 = 83;
+	int4 = datamapSize((DataMap)904);
+	int4 = int4 + int3;
+	int5 = 0;
+	while (int3 < int4) {
+		ACTIVE.createChild(widget0, 3, int3);
+		ACTIVE.setSize(50, 50, 0, 0);
+		ACTIVE.setPosition(int1, int2, 0, 0);
+		ACTIVE.setTrans(255);
+		int3 = int3 + 1;
+		int5 = int5 + 1;
+		if (int5 == 3) {
+			int1 = 113;
+			int2 = 83 + 52;
+		} else if (int5 == 6) {
+			int1 = 113;
+			int2 = 83 + 104;
+		} else {
+			int1 = 50 + int1;
+		}
+	}
+	script_2847(widget0);
+	return;
+}

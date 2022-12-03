@@ -1,0 +1,6 @@
+void script_2503() {
+	if (VARC[837] > 0 && VARC[837] <= 9) {
+		widget(291, 33).setText(datamap('i', 's', (DataMap)2403, VARC[837]));
+	}
+	return;
+}

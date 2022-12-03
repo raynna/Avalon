@@ -1,0 +1,45 @@
+void script_4838() {
+	Widget widget0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	widget0 = null;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 1;
+	switch (VARPBIT[9558]) {
+		case 1:
+			int1 = VARPBIT[9567];
+			int2 = VARPBIT[9568];
+			int3 = VARPBIT[9569];
+			int4 = VARPBIT[9563];
+			break;
+		case 2:
+			int1 = VARPBIT[9576];
+			int2 = VARPBIT[9577];
+			int3 = VARPBIT[9578];
+			int4 = VARPBIT[9572];
+			break;
+		case 3:
+			int1 = VARPBIT[9585];
+			int2 = VARPBIT[9586];
+			int3 = VARPBIT[9587];
+			int4 = VARPBIT[9581];
+			break;
+	}
+	widget0 = script_4815(int4, 1);
+	if (widget0 != null) {
+		script_4839(widget0, (int1 - 1) * 27);
+	}
+	widget0 = script_4815(int4, 2);
+	if (widget0 != null) {
+		script_4839(widget0, (int2 - 1) * 27);
+	}
+	widget0 = script_4815(int4, 3);
+	if (widget0 != null) {
+		script_4839(widget0, (int3 - 1) * 27);
+	}
+	return;
+}

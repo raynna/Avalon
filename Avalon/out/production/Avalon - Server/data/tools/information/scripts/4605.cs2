@@ -1,0 +1,11 @@
+void script_4605(Widget widget0, Widget widget1, Widget widget2, int arg3, int arg4) {
+	int int5;
+	Color color6;
+	int5 = widget1.getHeight();
+	color6 = color((int5 - arg4) * 64 / int5);
+	widget0.setRGB(color6);
+	VARPBIT[9258] = color6 % 64;
+	script_4610(arg4);
+	widget2.setRGB(getColorRelatedMethod4020(VARP[2174]));
+	return;
+}

@@ -1,0 +1,6 @@
+int script_829(AttrMap arg0, DataMap datamap1) {
+	if (arg0 == (AttrMap)845) {
+		return cs2method5302() - 1;
+	}
+	return datamapSize(datamap1) - 1;
+}

@@ -1,0 +1,76 @@
+void script_490() {
+	AttrMap attrmap0;
+	AttrMap attrmap1;
+	AttrMap attrmap2;
+	AttrMap attrmap3;
+	Widget widget4;
+	Widget widget5;
+	Widget widget6;
+	Widget widget7;
+	attrmap0 = script_488(VARPBIT[7539]);
+	attrmap1 = script_488(VARPBIT[7540]);
+	attrmap2 = script_488(VARPBIT[7541]);
+	attrmap3 = script_488(VARPBIT[7542]);
+	widget4 = widget(script_489(VARPBIT[7539]));
+	widget5 = widget(script_489(VARPBIT[7540]));
+	widget6 = widget(script_489(VARPBIT[7541]));
+	widget7 = widget(script_489(VARPBIT[7542]));
+	widget(1015, 58).setRGB(0xFF981F);
+	widget(1015, 60).setRGB(0xFF981F);
+	widget(1015, 62).setRGB(0xFF981F);
+	widget(1015, 64).setRGB(0xFF981F);
+	widget(1015, 68).setRGB(0xFF981F);
+	widget(1015, 70).setRGB(0xFF981F);
+	widget(1015, 72).setRGB(0xFF981F);
+	widget(1015, 74).setRGB(0xFF981F);
+	widget(1015, 66).setRGB(0xFF981F);
+	if (widget4 != null) {
+		widget4.setRGB(0x585042);
+	}
+	if (widget5 != null) {
+		widget5.setRGB(0x585042);
+	}
+	if (widget6 != null) {
+		widget6.setRGB(0x585042);
+	}
+	if (widget7 != null) {
+		widget7.setRGB(0x585042);
+	}
+	if (attrmap0 == null) {
+		widget(1015, 96).setIsHidden(true);
+		widget(1015, 97).setIsHidden(false);
+	} else {
+		widget(1015, 96).setIsHidden(false);
+		widget(1015, 97).setIsHidden(true);
+		widget(1015, 100).setText(getAttributeMapValue(attrmap0, 1150));
+		widget(1015, 99).setSprite(getAttributeMapValue(attrmap0, 1153));
+	}
+	if (attrmap1 == null) {
+		widget(1015, 90).setIsHidden(true);
+		widget(1015, 93).setIsHidden(false);
+	} else {
+		widget(1015, 90).setIsHidden(false);
+		widget(1015, 93).setIsHidden(true);
+		widget(1015, 92).setText(getAttributeMapValue(attrmap1, 1150));
+		widget(1015, 91).setSprite(getAttributeMapValue(attrmap1, 1153));
+	}
+	if (attrmap2 == null) {
+		widget(1015, 84).setIsHidden(true);
+		widget(1015, 87).setIsHidden(false);
+	} else {
+		widget(1015, 84).setIsHidden(false);
+		widget(1015, 87).setIsHidden(true);
+		widget(1015, 86).setText(getAttributeMapValue(attrmap2, 1150));
+		widget(1015, 85).setSprite(getAttributeMapValue(attrmap2, 1153));
+	}
+	if (attrmap3 == null) {
+		widget(1015, 78).setIsHidden(true);
+		widget(1015, 81).setIsHidden(false);
+	} else {
+		widget(1015, 78).setIsHidden(false);
+		widget(1015, 81).setIsHidden(true);
+		widget(1015, 80).setText(getAttributeMapValue(attrmap3, 1150));
+		widget(1015, 79).setSprite(getAttributeMapValue(attrmap3, 1153));
+	}
+	return;
+}

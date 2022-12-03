@@ -1,0 +1,10 @@
+void script_5083(Widget widget0, int arg1, int arg2) {
+	if (getClientCycle() < arg2) {
+		return;
+	}
+	widget0.setScriptCallOnGameloop(-1, "");
+	if (arg1 == VARC[160]) {
+		script_72(widget(1114, 33), widget(1114, 32), widget(1114, 32).getScrollY());
+	}
+	return;
+}

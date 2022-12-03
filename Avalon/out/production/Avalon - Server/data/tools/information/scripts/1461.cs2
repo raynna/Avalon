@@ -1,0 +1,19 @@
+void script_1461(int arg0) {
+	Widget widget1;
+	Widget widget2;
+	string str0;
+	widget1 = datamap('i', 'I', (DataMap)1614, arg0);
+	widget2 = datamap('i', 'I', (DataMap)1615, arg0);
+	widget1.setIsHidden(false);
+	widget2.setIsHidden(false);
+	widget2.setItem(null, -1);
+	widget2.setSprite(1435);
+	widget2.setOutlineThickness(0);
+	widget2.setShadowColor(0x000000);
+	widget1.setNoOptions();
+	widget1.setScriptCallOnMousePressed(1481, "");
+	str0 = "Drag an item here to create a new tab";
+	widget1.setScriptCallOnMouseOver(38, CTX_WIDGET, widget(762, 119), str0, 25, 150, "IIsii");
+	widget1.setScriptCallOnMouseExit(40, widget(762, 119), "I");
+	return;
+}

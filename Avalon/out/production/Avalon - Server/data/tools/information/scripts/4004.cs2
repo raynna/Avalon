@@ -1,0 +1,15 @@
+void script_4004(int arg0) {
+	if (arg0 == 0) {
+		widget(1056, 138).setSprite(4324);
+		widget(1056, 139).setSprite(4324);
+		widget(1056, 137).setSprite(4325);
+		widget(1056, 141).setSprite(4309);
+	} else {
+		widget(1056, 138).setSprite(4322);
+		widget(1056, 139).setSprite(4322);
+		widget(1056, 137).setSprite(4323);
+		widget(1056, 141).setSprite(4308);
+		script_41(widget(1056, 136));
+	}
+	return;
+}

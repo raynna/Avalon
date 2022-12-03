@@ -1,0 +1,90 @@
+void script_563() {
+	int int0;
+	int int1;
+	int0 = 50;
+	int1 = 45;
+	widget(641, 4).setText(str(VARPBIT[4143]));
+	if (VARPBIT[4144] == 0) {
+		widget(641, 27).setSprite(223);
+		widget(641, 27).setPosition(int0, int1, 0, 0);
+		widget(641, 12).setIsHidden(false);
+		int1 = int1 + 29;
+	} else {
+		widget(641, 12).setIsHidden(true);
+	}
+	if (VARPBIT[4145] == 0) {
+		widget(641, 28).setSprite(225);
+		widget(641, 28).setPosition(int0, int1, 0, 0);
+		widget(641, 13).setIsHidden(false);
+		int1 = int1 + 29;
+	} else {
+		widget(641, 13).setIsHidden(true);
+	}
+	if (VARPBIT[4146] == 0) {
+		widget(641, 29).setSprite(201);
+		widget(641, 29).setPosition(int0, int1, 0, 0);
+		widget(641, 14).setIsHidden(false);
+		int1 = int1 + 29;
+	} else {
+		widget(641, 14).setIsHidden(true);
+	}
+	if (VARPBIT[4147] == 0) {
+		widget(641, 30).setSprite(226);
+		widget(641, 30).setPosition(int0, int1, 0, 0);
+		widget(641, 15).setIsHidden(false);
+		int1 = int1 + 29;
+	} else {
+		widget(641, 15).setIsHidden(true);
+	}
+	if (VARPBIT[4151] == 0) {
+		widget(641, 32).setSprite(203);
+		widget(641, 32).setPosition(int0, int1, 0, 0);
+		widget(641, 17).setIsHidden(false);
+		int1 = int1 + 29;
+	} else {
+		widget(641, 17).setIsHidden(true);
+	}
+	if (VARPBIT[4152] == 1) {
+		widget(641, 33).setSprite(227);
+		widget(641, 33).setPosition(int0, int1, 0, 0);
+		widget(641, 18).setIsHidden(false);
+		int1 = int1 + 29;
+	} else {
+		widget(641, 18).setIsHidden(true);
+	}
+	if (VARPBIT[4276] == 1) {
+		widget(641, 31).setSprite(222);
+		widget(641, 31).setPosition(int0, int1, 0, 0);
+		widget(641, 16).setIsHidden(false);
+		int1 = int1 + 29;
+	} else {
+		widget(641, 16).setIsHidden(true);
+	}
+	int0 = 8;
+	int1 = 45;
+	if (VARPBIT[4148] == 0) {
+		widget(641, 34).setSprite(200);
+		widget(641, 34).setPosition(int0, int1, 0, 0);
+		widget(641, 19).setIsHidden(false);
+		int1 = int1 + 29;
+	} else {
+		widget(641, 19).setIsHidden(true);
+	}
+	if (VARPBIT[4149] == 0) {
+		widget(641, 35).setSprite(197);
+		widget(641, 35).setPosition(int0, int1, 0, 0);
+		widget(641, 20).setIsHidden(false);
+		int1 = int1 + 29;
+	} else {
+		widget(641, 20).setIsHidden(true);
+	}
+	if (VARPBIT[4150] == 0) {
+		widget(641, 36).setSprite(202);
+		widget(641, 36).setPosition(int0, int1, 0, 0);
+		widget(641, 21).setIsHidden(false);
+		int1 = int1 + 29;
+	} else {
+		widget(641, 21).setIsHidden(true);
+	}
+	return;
+}

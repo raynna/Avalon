@@ -1,0 +1,66 @@
+void script_1231() {
+	Item item0;
+	Model model1;
+	Widget widget2;
+	int int3;
+	item0 = null;
+	model1 = null;
+	widget2 = null;
+	int3 = 0;
+	while (int3 < 81) {
+		item0 = getItemIdInSlot(308, int3);
+		switch (item0) {
+			case 556:
+			case 6422:
+				model1 = 8975;
+				break;
+			case 555:
+			case 6424:
+				model1 = 8987;
+				break;
+			case 557:
+			case 6426:
+				model1 = 8979;
+				break;
+			case 554:
+			case 6428:
+				model1 = 8980;
+				break;
+			case 6436:
+			case 558:
+				model1 = 8982;
+				break;
+			case 6438:
+			case 559:
+				model1 = 8976;
+				break;
+			case 6432:
+			case 560:
+				model1 = 8978;
+				break;
+			case 562:
+			case 6430:
+				model1 = 8977;
+				break;
+			case 6434:
+			case 563:
+				model1 = 8981;
+				break;
+			default:
+				model1 = null;
+				break;
+		}
+		widget2 = datamap('i', 'I', (DataMap)2274, int3);
+		if (ACTIVE.setChild(widget2)) {
+			ACTIVE.setModel(model1);
+		}
+		if (item0 == 6422 || item0 == 6422 || item0 == 6424 || item0 == 6426 || item0 == 6428 || item0 == 6436 || item0 == 6438 || item0 == 6432 || item0 == 6430 || item0 == 6434) {
+			widget2 = datamap('i', 'I', (DataMap)2275, int3);
+			if (ACTIVE.setChild(widget2)) {
+				ACTIVE.setRGB(0x440000);
+			}
+		}
+		int3 = int3 + 1;
+	}
+	return;
+}

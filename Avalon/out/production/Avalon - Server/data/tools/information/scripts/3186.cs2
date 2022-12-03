@@ -1,0 +1,7 @@
+void script_3186(Widget widget0, Widget widget1) {
+	widget1.setSize(getTextWidth(widget1.getText(), 2710), 0, 0, 1);
+	widget1.setPosition(40, 0, 2, 1);
+	widget0.setSize(38, 31, 0, 0);
+	widget0.setIsHidden(false);
+	return;
+}

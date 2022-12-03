@@ -1,0 +1,13 @@
+void script_2885(Widget widget0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+	if (arg5 != 2 && arg5 != 3 && arg5 != 4) {
+		return;
+	}
+	script_41(widget(187, 16));
+	VARC[1] = 0;
+	arg4 = arg4 + getClientCycle();
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setTrans(arg2);
+		ACTIVE.setScriptCallOnGameloop(1621, widget0, arg1, arg3, arg4, "Iiii");
+	}
+	return;
+}

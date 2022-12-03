@@ -1,0 +1,5 @@
+void script_3065(int arg0) {
+	script_3066(VARC[998], 1, widget(906, 176), widget(906, 178), arg0);
+	script_3066(VARC[999], 2, widget(906, 177), widget(906, 179), arg0);
+	return;
+}

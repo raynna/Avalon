@@ -1,0 +1,96 @@
+void script_3054(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	string str0;
+	string str1;
+	string str2;
+	if (cs2method5428(widget(909, 52), -1)) {
+		widget0.setScriptCallOnGameloop(3053, widget0, "I");
+		return;
+	}
+	widget(909, 52).clearChildren();
+	str0 = "<col=ff5256>";
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	str1 = "";
+	str2 = "";
+	while (int2 < 100) {
+		int3 = cs2method5004(int2);
+		str1 = cs2method5010(int2);
+		str2 = cs2method5019(int2);
+		switch (int3) {
+			case 0:
+			case 4:
+			case 26:
+			case 27:
+			case 28:
+			case 29:
+			case 30:
+			case 31:
+				int1 = script_3055(int1, cs2method5003(int2), 0, "", "", int3);
+				break;
+			case 3:
+				int1 = script_3055(int1, "From " + str1 + ": " + str0 + cs2method5003(int2), 1, str1, str2, int3);
+				STRING[276] = str2;
+				break;
+			case 5:
+				int1 = script_3055(int1, str0 + cs2method5003(int2), 0, str1, str2, int3);
+				break;
+			case 6:
+				int1 = script_3055(int1, "To " + str1 + ": " + str0 + cs2method5003(int2), 1, str1, str2, int3);
+				break;
+			case 7:
+				int1 = script_3055(int1, "From " + str1 + ": " + str0 + cs2method5003(int2), 1, str1, str2, int3);
+				STRING[276] = str2;
+				break;
+			case 18:
+				int1 = script_3055(int1, "From " + str1 + ": " + str0 + cs2method5003(int2), 1, str1, str2, int3);
+				STRING[276] = str2;
+				break;
+			case 19:
+				int1 = script_3055(int1, "To " + str1 + ": " + str0 + cs2method5003(int2), 1, str1, str2, int3);
+				break;
+			case 115:
+				int1 = script_3055(int1, "<col=ff0000>" + cs2method5003(int2) + "</col>", 0, "", "", int3);
+				break;
+		}
+		int2 = int2 + 1;
+	}
+	int4 = widget(909, 52).getHeight() / 15;
+	int2 = 0;
+	int5 = 0;
+	if (int1 < int4) {
+		int5 = int4 - int1;
+		while (int2 < int5) {
+			int1 = script_3055(int1, "", 0, "", "", 0);
+			int2 = int2 + 1;
+		}
+	}
+	int6 = 0;
+	int7 = 0;
+	while (int7 <= int1) {
+		if (_ACTIVE.setChild(widget(909, 52), int7)) {
+			int6 = int6 + _ACTIVE.getHeight();
+		}
+		int7 = int7 + 1;
+	}
+	int8 = max(int6, int4 * 15);
+	if (int8 > widget(909, 52).getHeight()) {
+		widget(909, 52).setScrollMax(0, int8);
+		script_72(widget(909, 53), widget(909, 52), VARC[1122] + widget(909, 52).getScrollMaxV() - VARC[1123]);
+	} else {
+		widget(909, 52).setScrollMax(0, 0);
+		widget(909, 52).setScrollPos(0, 0);
+		script_72(widget(909, 53), widget(909, 52), 0);
+	}
+	VARC[1122] = widget(909, 52).getScrollY();
+	VARC[1123] = widget(909, 52).getScrollMaxV();
+	return;
+}

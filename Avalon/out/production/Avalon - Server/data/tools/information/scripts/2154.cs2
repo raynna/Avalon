@@ -1,0 +1,4 @@
+int script_2154(int arg0) {
+	VARC[699] = datamap('i', 'J', (DataMap)2252, arg0);
+	return script_2155();
+}

@@ -1,0 +1,42 @@
+int script_933(Item item0) {
+	switch (itemAttribute(item0, 741)) {
+		case 1:
+			if (VARPBIT[1852] < itemAttribute(item0, 742)) {
+				return 0;
+			}
+			break;
+		case 2:
+			if (VARPBIT[3763] < 2) {
+				return 0;
+			}
+			break;
+		case 3:
+			if (VARPBIT[4310] < 10) {
+				return 0;
+			}
+			break;
+		case 4:
+			if (VARPBIT[1990] < 280) {
+				return 0;
+			}
+			break;
+		case 5:
+			if (VARPBIT[1850] < 4) {
+				return 0;
+			}
+			break;
+		case 6:
+			if (VARPBIT[3550] < 8) {
+				return 0;
+			}
+			break;
+		case 7:
+			if (VARPBIT[998] < 7) {
+				return 0;
+			}
+			break;
+		default:
+			return 1;
+	}
+	return -1;
+}

@@ -1,0 +1,12 @@
+void script_5244(int arg0) {
+	if (arg0 == 1) {
+		widget(1128, 329).setSprite(6370);
+		widget(1128, 330).setSprite(6371);
+		widget(1128, 331).setSprite(6372);
+	} else {
+		widget(1128, 0).setSprite(6370);
+		widget(1128, 1).setSprite(6371);
+		widget(1128, 2).setSprite(6372);
+	}
+	return;
+}

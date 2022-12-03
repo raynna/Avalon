@@ -1,0 +1,33 @@
+int, int, int script_814(int arg0) {
+	switch (arg0) {
+		case 1:
+			return VARPBIT[5146], 37683203, datamap('i', 'm', (DataMap)1696, VARPBIT[5146]);
+		case 2:
+			return VARPBIT[5147], 37683204, datamap('i', 'm', (DataMap)1696, VARPBIT[5147]);
+		case 3:
+			return VARPBIT[5148], 37683205, datamap('i', 'm', (DataMap)1696, VARPBIT[5148]);
+		case 4:
+			return VARPBIT[5149], 37683206, datamap('i', 'm', (DataMap)1696, VARPBIT[5149]);
+		case 5:
+			return VARPBIT[5150], 37683207, datamap('i', 'm', (DataMap)1696, VARPBIT[5150]);
+		case 6:
+			return VARPBIT[5151], 37683208, datamap('i', 'm', (DataMap)1696, VARPBIT[5151]);
+		case 7:
+			return VARPBIT[5152], 37683209, datamap('i', 'm', (DataMap)1696, VARPBIT[5152]);
+		case 8:
+			return VARPBIT[5153], 37683210, datamap('i', 'm', (DataMap)1696, VARPBIT[5153]);
+		case 9:
+			return VARPBIT[5154], 37683211, datamap('i', 'm', (DataMap)1696, VARPBIT[5154]);
+		case 10:
+			return VARPBIT[5155], 37683212, datamap('i', 'm', (DataMap)1696, VARPBIT[5155]);
+		case 11:
+			return VARPBIT[5156], 37683213, datamap('i', 'm', (DataMap)1696, VARPBIT[5156]);
+		case 12:
+			return VARPBIT[5157], 37683214, datamap('i', 'm', (DataMap)1696, VARPBIT[5157]);
+		case 13:
+			return VARPBIT[5158], 37683215, datamap('i', 'm', (DataMap)1696, VARPBIT[5158]);
+		case 14:
+			return VARPBIT[5159], 37683216, datamap('i', 'm', (DataMap)1696, VARPBIT[5159]);
+	}
+	return -1, -1, -1;
+}

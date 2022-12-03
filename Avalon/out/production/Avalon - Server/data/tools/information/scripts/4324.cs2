@@ -1,0 +1,4 @@
+void script_4324(int arg0) {
+	script_4325(VARP[2149], widget(1089, 0), arg0);
+	return;
+}

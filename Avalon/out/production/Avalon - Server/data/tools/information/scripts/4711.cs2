@@ -1,0 +1,8 @@
+void script_4711(Widget widget0, Widget widget1, Widget widget2, Widget widget3, int arg4) {
+	if (widget1.isHidden()) {
+		script_4712(widget0, widget1, widget2, widget3, arg4);
+	} else {
+		script_4714(widget0, widget1, widget2, widget3, arg4);
+	}
+	return;
+}

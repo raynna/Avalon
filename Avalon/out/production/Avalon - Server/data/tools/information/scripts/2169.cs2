@@ -1,0 +1,18 @@
+void script_2169() {
+	int int0;
+	if (isMember()) {
+		VARC[693] = VARPBIT[4536];
+	} else {
+		VARC[693] = 0;
+	}
+	VARC[694] = VARPBIT[4538];
+	VARC[692] = VARPBIT[4537];
+	script_2162(1, VARC[693], VARC[694], VARC[692], VARC[1103]);
+	int0 = 0;
+	if (isMember() && VARP[281] >= 1000) {
+		script_944(1, VARC[693], 2, widget(190, 16), widget(190, 14), widget(190, 15), null, 897, 788, 788, 1040, 0xFFFFFF, 16776960, 494, 792, 789, 790, 791, 773, 788);
+	} else {
+		script_1355("Free/Members", widget(190, 16), widget(190, 14), widget(190, 15), null, 897, 0xFFFF00, 494);
+	}
+	return;
+}

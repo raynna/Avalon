@@ -1,0 +1,54 @@
+void script_4692(Widget widget0, int arg1) {
+	Widget widget2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	string str0;
+	string str1;
+	string str2;
+	widget2 = widget(551, 23);
+	int3 = -1;
+	str0 = "";
+	str1 = "";
+	int4 = 0;
+	int5 = 0;
+	str2 = "";
+	int6 = 0;
+	switch (widget0) {
+		case widget(551, 10):
+			int6 = 1;
+			str1 = "Nothing breaks for 30 seconds.";
+			break;
+		case widget(551, 36):
+			int6 = 2;
+			str1 = "Kill twice as many trolls when repairing things.";
+			break;
+		case widget(551, 50):
+			int6 = 3;
+			str1 = "Fix twice as fast and counter-acts troll magic run energy effects.";
+			break;
+		case widget(551, 64):
+			int6 = 4;
+			str1 = "Broken things don't hurt gatehouse health for 30 seconds.";
+			break;
+		default:
+			widget2.setIsHidden(true);
+			return;
+	}
+	widget(551, 29).setText(datamap('i', 's', (DataMap)3855, int6));
+	widget(551, 30).setText(str1);
+	widget(551, 31).setText("Cost: " + str(datamap('i', 'i', (DataMap)3856, int6)));
+	int5 = datamap('i', 'i', (DataMap)3857, int6);
+	if (int5 == 50) {
+		str2 = "30 sec";
+	}
+	if (int5 == 100) {
+		str2 = "1 min";
+	}
+	widget(551, 32).setText("Cooldown: " + str2);
+	widget0.setRGB(0x363536);
+	widget2.setPosition(widget2.getX(), arg1, 0, 0);
+	widget2.setIsHidden(false);
+	return;
+}

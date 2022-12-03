@@ -1,0 +1,5 @@
+void script_1277(Widget widget0, Container container1, int arg2, int arg3) {
+	script_1279(widget0, container1, arg2, arg3);
+	widget0.setScriptCallOnItemContainerUpdate(1278, widget0, container1, arg2, arg3, container1, "IviiY");
+	return;
+}

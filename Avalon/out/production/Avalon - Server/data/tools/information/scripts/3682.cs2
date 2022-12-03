@@ -1,0 +1,9 @@
+void script_3682() {
+	if (length(STRING[196]) == 0 && VARC[5] != 14) {
+		widget(187, 17).setSprite(3246);
+		script_3685();
+	} else {
+		script_3683();
+	}
+	return;
+}

@@ -1,0 +1,19 @@
+void script_5137(int arg0) {
+	widget(1096, 513).setIsHidden(true);
+	widget(1096, 522).setIsHidden(true);
+	widget(1096, 530).setIsHidden(true);
+	widget(1096, 538).setIsHidden(true);
+	widget(1096, 546).setIsHidden(true);
+	if (arg0 == 1) {
+		widget(1096, 513).setIsHidden(false);
+	} else if (arg0 == 2) {
+		widget(1096, 522).setIsHidden(false);
+	} else if (arg0 == 3) {
+		widget(1096, 530).setIsHidden(false);
+	} else if (arg0 == 4) {
+		widget(1096, 538).setIsHidden(false);
+	} else if (arg0 == 5) {
+		widget(1096, 546).setIsHidden(false);
+	}
+	return;
+}

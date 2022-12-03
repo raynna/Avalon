@@ -1,0 +1,7 @@
+void script_4940() {
+	Widget widget0;
+	widget0 = widget(1092, 728);
+	widget0.setScriptCallOnGameloop(4943, 1, "i");
+	script_5220();
+	return;
+}

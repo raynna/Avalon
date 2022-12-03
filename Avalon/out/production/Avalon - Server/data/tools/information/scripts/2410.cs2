@@ -1,0 +1,48 @@
+void script_2410(string string0, int arg1, string string2, int arg3, string string4, int arg5, string string6, int arg7, string string8, int arg9, string arg10) {
+	if (length(string0) > 0) {
+		ACTIVE.setContextMenuOption(1, string0);
+		if (arg1 != -1) {
+			ACTIVE.cs2method1309(1, arg1);
+		} else {
+			ACTIVE.cs2method1309(1, 36);
+		}
+	}
+	if (length(string2) > 0) {
+		ACTIVE.setContextMenuOption(2, string2);
+		if (arg3 != -1) {
+			ACTIVE.cs2method1309(2, arg3);
+		} else {
+			ACTIVE.cs2method1309(2, 36);
+		}
+	}
+	if (length(string4) > 0) {
+		ACTIVE.setContextMenuOption(3, string4);
+		if (arg5 != -1) {
+			ACTIVE.cs2method1309(3, arg5);
+		} else {
+			ACTIVE.cs2method1309(3, 36);
+		}
+	}
+	ACTIVE.setTargetVerb("Use");
+	ACTIVE.cs2method1311(46);
+	ACTIVE.cs2method1308(46, 36);
+	ACTIVE.setContextMenuOption(10, "Examine");
+	if (length(string6) > 0) {
+		ACTIVE.setContextMenuOption(7, string6);
+		if (arg7 != -1) {
+			ACTIVE.cs2method1309(7, arg7);
+		} else {
+			ACTIVE.cs2method1309(7, 36);
+		}
+	}
+	if (length(string8) > 0) {
+		ACTIVE.setContextMenuOption(8, string8);
+		if (arg9 != -1) {
+			ACTIVE.cs2method1309(8, arg9);
+		} else {
+			ACTIVE.cs2method1309(8, 36);
+		}
+	}
+	ACTIVE.setOptionBase("<col=ff9040>" + arg10);
+	return;
+}

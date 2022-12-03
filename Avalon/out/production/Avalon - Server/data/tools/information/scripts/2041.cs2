@@ -1,0 +1,75 @@
+void script_2041() {
+	widget(28, 42).setText("Bronze: " + str(VARPBIT[941]));
+	if (VARPBIT[941] > 0) {
+		widget(28, 44).setRGB(0xFF981F);
+		widget(28, 42).setRGB(0xFF981F);
+	} else {
+		widget(28, 44).setRGB(0x999999);
+		widget(28, 42).setRGB(0x999999);
+	}
+	widget(28, 39).setText("Iron: " + str(VARPBIT[942]));
+	if (VARPBIT[942] > 0) {
+		widget(28, 41).setRGB(0xFF981F);
+		widget(28, 39).setRGB(0xFF981F);
+	} else {
+		widget(28, 41).setRGB(0x999999);
+		widget(28, 39).setRGB(0x999999);
+	}
+	widget(28, 37).setText("Steel: " + str(VARPBIT[943]));
+	if (VARPBIT[943] > 0) {
+		widget(28, 38).setRGB(0xFF981F);
+		widget(28, 37).setRGB(0xFF981F);
+	} else {
+		widget(28, 38).setRGB(0x999999);
+		widget(28, 37).setRGB(0x999999);
+	}
+	widget(28, 34).setText("Mithril: " + str(VARPBIT[944]));
+	if (VARPBIT[944] > 0) {
+		widget(28, 35).setRGB(0xFF981F);
+		widget(28, 34).setRGB(0xFF981F);
+	} else {
+		widget(28, 35).setRGB(0x999999);
+		widget(28, 34).setRGB(0x999999);
+	}
+	widget(28, 31).setText("Adamantite: " + str(VARPBIT[945]));
+	if (VARPBIT[945] > 0) {
+		widget(28, 32).setRGB(0xFF981F);
+		widget(28, 31).setRGB(0xFF981F);
+	} else {
+		widget(28, 32).setRGB(0x999999);
+		widget(28, 31).setRGB(0x999999);
+	}
+	widget(28, 28).setText("Runite: " + str(VARPBIT[946]));
+	if (VARPBIT[946] > 0) {
+		widget(28, 29).setRGB(0xFF981F);
+		widget(28, 28).setRGB(0xFF981F);
+	} else {
+		widget(28, 29).setRGB(0x999999);
+		widget(28, 28).setRGB(0x999999);
+	}
+	widget(28, 25).setText("Silver: " + str(VARPBIT[948]));
+	if (VARPBIT[948] > 0) {
+		widget(28, 26).setRGB(0xFF981F);
+		widget(28, 25).setRGB(0xFF981F);
+	} else {
+		widget(28, 26).setRGB(0x999999);
+		widget(28, 25).setRGB(0x999999);
+	}
+	widget(28, 22).setText("Gold: " + str(VARPBIT[947]));
+	if (VARPBIT[947] > 0) {
+		widget(28, 23).setRGB(0xFF981F);
+		widget(28, 22).setRGB(0xFF981F);
+	} else {
+		widget(28, 23).setRGB(0x999999);
+		widget(28, 22).setRGB(0x999999);
+	}
+	widget(28, 2).setText("Perfect Gold: " + str(VARPBIT[958]));
+	if (VARPBIT[958] > 0) {
+		widget(28, 4).setRGB(0xFF981F);
+		widget(28, 2).setRGB(0xFF981F);
+	} else {
+		widget(28, 4).setRGB(0x999999);
+		widget(28, 2).setRGB(0x999999);
+	}
+	return;
+}

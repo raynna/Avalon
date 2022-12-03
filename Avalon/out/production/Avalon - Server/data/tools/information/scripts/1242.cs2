@@ -1,0 +1,10 @@
+void script_1242(Widget widget0) {
+	Location location1;
+	widget0.setSprite(3152);
+	widget0.setScriptCallOnMousePressed(1950, CTX_WIDGET, "I");
+	location1 = moveCoord(location(0, 0, 0), x(getMyLocation()) - x(getMyLocation()) % 64 + 13, 0, y(getMyLocation()) - y(getMyLocation()) % 64 + 23);
+	cameraMethod5511(location1);
+	cameraPointAt(location1, 25, 100, 10);
+	cameraMoveTo(moveCoord(location1, 11, 0, 0), 2600, 100, 10);
+	return;
+}

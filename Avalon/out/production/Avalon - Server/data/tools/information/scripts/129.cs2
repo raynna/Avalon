@@ -1,0 +1,127 @@
+void script_129() {
+	int int0;
+	Widget widget1;
+	Widget widget2;
+	Widget widget3;
+	Widget widget4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	widget(550, 4).clearChildren();
+	int0 = getIgnoreCount();
+	if (int0 < 0) {
+		widget(550, 46).setText("Loading Ignore List." + "<br>" + "Please wait.");
+		widget(550, 46).setIsHidden(false);
+		widget(550, 35).setText("");
+		return;
+	}
+	widget(550, 35).setText(str(int0) + " / " + str(100));
+	widget(550, 46).setText("");
+	widget(550, 46).setIsHidden(true);
+	widget1 = widget(550, 4);
+	widget2 = widget(550, 2);
+	widget3 = widget(550, 3);
+	widget4 = widget(550, 31);
+	int5 = 0;
+	str0 = "";
+	str1 = "";
+	str2 = "";
+	int6 = 0;
+	int7 = 0;
+	str3 = "";
+	int8 = 0;
+	int9 = 0;
+	int10 = 15;
+	int11 = widget3.getHeight() / int10;
+	widget1.clearChildren();
+	widget2.clearChildren();
+	while (int5 < int0) {
+		int8 = int5 * 2;
+		int9 = int5 * int10;
+		str0, str1 = getIgnoreName(int5);
+		if (compare(str1, "") != 0) {
+			int6 = 1;
+		} else {
+			int6 = 0;
+		}
+		if (int6 == 1) {
+			str2 = "      " + str0;
+		} else {
+			str2 = str0;
+		}
+		ACTIVE.createChild(widget(550, 4), 4, int8);
+		ACTIVE.setSize(168, int10, 0, 0);
+		ACTIVE.setPosition(0, int9, 0, 0);
+		ACTIVE.setRGB(0xA4997D);
+		ACTIVE.setFont(3793);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setTextAlignment(0, 0, 0);
+		if (int6 == 1) {
+			ACTIVE.setText("      " + str2);
+		} else {
+			ACTIVE.setText(str2);
+		}
+		ACTIVE.setText(str2);
+		ACTIVE.setOptionBase("<col=ffffff>" + str0);
+		ACTIVE.setContextMenuOption(1, "Remove");
+		ACTIVE.setScriptCallOnClickContextMenu(130, cs2method3633(int5), "s");
+		if (int6 == 1) {
+			int7 = getTextWidth("Last known as: " + str1, 3793) + 8;
+			if (int7 > widget(550, 4).getWidth()) {
+				str3 = "Last known as:" + "<br>" + str1;
+			} else {
+				str3 = "Last known as: " + str1;
+			}
+			ACTIVE.setScriptCallOnMouseOver(1594, widget(550, 52), CTX_WIDGET, CTX_WIDGET_CHILD, str3, MOUSE_X, MOUSE_Y, "IIisii");
+			ACTIVE.setScriptCallOnMouseExit(40, widget(550, 52), "I");
+		}
+		ACTIVE.createChild(widget(550, 4), 5, int8 + 1);
+		ACTIVE.setSprite(2313);
+		ACTIVE.setSize(14, 14, 0, 0);
+		ACTIVE.setPosition(0, int9, 0, 0);
+		if (int6 == 0) {
+			ACTIVE.setHidden(true);
+		}
+		if (int5 % 2 != 0) {
+			ACTIVE.createChild(widget(550, 2), 3, widget2.nextChild());
+			ACTIVE.setSize(16384, int10, 2, 0);
+			ACTIVE.setPosition(0, int9, 0, 0);
+			ACTIVE.setRGB(0x232220);
+			ACTIVE.setFilled(true);
+			ACTIVE.setTrans(128);
+		}
+		int5 = int5 + 1;
+	}
+	while (int5 < int11) {
+		int9 = int5 * int10;
+		if (int5 % 2 != 0) {
+			ACTIVE.createChild(widget(550, 2), 3, widget2.nextChild());
+			ACTIVE.setSize(16384, int10, 2, 0);
+			ACTIVE.setPosition(0, int9, 0, 0);
+			ACTIVE.setRGB(0x232220);
+			ACTIVE.setFilled(true);
+			ACTIVE.setTrans(128);
+		}
+		int5 = int5 + 1;
+	}
+	int12 = 0;
+	int13 = 0;
+	int12 = widget3.getScrollY();
+	int13 = int5 * int10;
+	widget3.setScrollMax(widget3.getWidth(), int13);
+	if (int12 > int13) {
+		int12 = int13;
+	}
+	script_72(widget4, widget3, int12);
+	return;
+}

@@ -1,0 +1,56 @@
+int script_4176(int arg0, int arg1) {
+	if (arg0 == 1) {
+		switch (arg1) {
+			case 0:
+				return VARC[1465];
+			case 1:
+				return VARC[1466];
+			case 2:
+				return VARC[1467];
+			case 3:
+				return VARC[740];
+			case 4:
+				return VARC[745];
+			case 5:
+				return VARC[780];
+			case 7:
+				return VARC[781];
+			case 9:
+				return VARC[782];
+			case 10:
+				return VARC[789];
+			case 12:
+				return VARC[1409];
+			case 13:
+				return VARC[1410];
+		}
+	} else {
+		switch (arg1) {
+			case 0:
+				return VARC[1453];
+			case 1:
+				return VARC[1454];
+			case 4:
+				return VARC[1455];
+			case 5:
+				return VARC[1456];
+			case 6:
+				return VARC[1457];
+			case 7:
+				return VARC[1458];
+			case 8:
+				return VARC[1459];
+			case 9:
+				return VARC[1460];
+			case 10:
+				return VARC[1461];
+			case 12:
+				return VARC[1462];
+			case 13:
+				return VARC[1463];
+			case 28:
+				return VARC[1464];
+		}
+	}
+	return -1;
+}

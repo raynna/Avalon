@@ -1,0 +1,5 @@
+void script_85(Widget widget0) {
+	widget0.setText("");
+	widget0.setNoOptions();
+	return;
+}

@@ -1,0 +1,13 @@
+void script_1960() {
+	if (VARC[1279] != 0) {
+		playSoundEffect(9445, 1, 0);
+	}
+	VARC[1279] = 0;
+	widget(60, 45).setIsHidden(false);
+	widget(60, 46).setIsHidden(true);
+	widget(60, 87).setIsHidden(true);
+	widget(60, 20).setIsHidden(false);
+	widget(60, 17).setIsHidden(true);
+	widget(60, 14).setIsHidden(true);
+	return;
+}

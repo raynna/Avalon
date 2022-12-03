@@ -1,0 +1,14 @@
+void script_1615(int arg0, Widget widget1, int arg2) {
+	if (arg0 == 1) {
+		if (ACTIVE.setChild(widget1, arg2)) {
+			ACTIVE.setOutlineThickness(2);
+		}
+		VARC[1031] = 1 + arg2;
+	} else {
+		if (ACTIVE.setChild(widget1, arg2)) {
+			ACTIVE.setOutlineThickness(1);
+		}
+		VARC[1031] = 0;
+	}
+	return;
+}

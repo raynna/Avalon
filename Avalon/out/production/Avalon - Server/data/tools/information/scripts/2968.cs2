@@ -1,0 +1,17 @@
+void script_2968(Widget widget0, Item item1, Widget widget2) {
+	Widget widget3;
+	int int4;
+	widget3 = widget0.getLayer();
+	int4 = 0;
+	int4 = getItemAmtInContainer(93, item1);
+	if (int4 > 0) {
+		widget2.setRGB(0x7DD764);
+		widget0.setItem(item1, int4);
+	} else {
+		widget2.setRGB(0x872300);
+		widget0.setItem(item1, -1);
+	}
+	widget0.setOutlineThickness(1);
+	widget2.cs2method2314(171);
+	return;
+}

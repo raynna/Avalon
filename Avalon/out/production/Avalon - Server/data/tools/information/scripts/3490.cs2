@@ -1,0 +1,22 @@
+void script_3490(int arg0) {
+	Widget widget1;
+	widget1 = widget(arg0);
+	switch (arg0) {
+		case 65077432:
+			widget1 = widget(993, 257);
+			break;
+		case 65077433:
+			widget1 = widget(993, 242);
+			break;
+		case 65077434:
+			widget1 = widget(993, 227);
+			break;
+		case 65077435:
+			widget1 = widget(993, 212);
+			break;
+	}
+	if (widget1.getShadeColor() > 220) {
+		widget1.setTrans(widget1.getShadeColor() - 2);
+	}
+	return;
+}

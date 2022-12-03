@@ -1,0 +1,28 @@
+void script_5152() {
+	int int0;
+	int int1;
+	int int2;
+	string str0;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	str0 = "";
+	VARC[1563] = max(VARC[1563] - 1, 0);
+	if (VARC[1563] % 50 == 0) {
+		int2 = VARC[1563] / 50;
+		int1 = int2 % 60;
+		int0 = int2 / 60;
+		str0 = str(int0) + ":";
+		if (int1 < 10) {
+			str0 = concat(str0, "0" + str(int1));
+		} else {
+			str0 = concat(str0, str(int1));
+		}
+		widget(800, 6).setText(str0);
+	}
+	if (VARC[1563] <= 0) {
+		widget(800, 6).setScriptCallOnGameloop(-1, "");
+		sendCloseWidgetPacket();
+	}
+	return;
+}

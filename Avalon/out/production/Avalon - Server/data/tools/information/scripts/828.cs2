@@ -1,0 +1,51 @@
+void script_828() {
+	int int0;
+	int int1;
+	int int2;
+	script_2872();
+	ARRAY0 = new int[1016 + 1];
+	int0 = 0;
+	if (VARC[89] == 0 || VARC[89] == -1) {
+		STRING[196] = "";
+		VARC[89] = 1;
+	}
+	while (int0 <= 1016) {
+		ARRAY0[int0] = int0;
+		ACTIVE.createChild(widget(187, 1), 4, int0 * 2);
+		ACTIVE.createChild(widget(187, 1), 5, int0 * 2 + 1);
+		int0 = int0 + 1;
+	}
+	script_520(0, 0, 1016, (DataMap)1347);
+	widget(187, 4).setAttr(1133, -1);
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	while (int1 <= 1016) {
+		int0 = ARRAY0[int1];
+		if (ACTIVE.setChild(widget(187, 1), int0 * 2) && _ACTIVE.setChild(widget(187, 1), int0 * 2 + 1)) {
+			if (datamap('i', 'M', (DataMap)1351, int0) != 147 && datamap('i', 'i', (DataMap)1350, int0) == 0) {
+				ACTIVE.setTextAlignment(0, 1, 0);
+				ACTIVE.setText(datamap((DataMap)1345, int0));
+				ACTIVE.setSize(150, 15, 0, 0);
+				ACTIVE.setScriptCallOnClickContextMenu(833, CTX_MENU_OPTION, int0, "ii");
+				ACTIVE.setOptionBase(datamap((DataMap)1345, int0));
+				_ACTIVE.setOptionBase(datamap((DataMap)1345, int0));
+				ACTIVE.setTextAntiMacro(false);
+				ACTIVE.setFont(494);
+				ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+				_ACTIVE.setSize(12, 12, 0, 0);
+				if (int2 == 0) {
+					widget(187, 4).setAttr(1133, int0);
+					int2 = 1;
+				}
+			}
+			if (int1 < 1016) {
+				ACTIVE.setAttr(1133, ARRAY0[int1 + 1]);
+			}
+		}
+		int1 = int1 + 1;
+	}
+	script_31(widget(187, 2), widget(187, 1), 792, 789, 790, 791, 773, 788);
+	script_3680();
+	return;
+}

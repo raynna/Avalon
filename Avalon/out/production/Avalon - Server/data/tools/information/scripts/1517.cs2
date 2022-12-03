@@ -1,0 +1,10 @@
+void script_1517(Widget widget0, int arg1) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		if (VARC[779] != -1) {
+			ACTIVE.setAnimation(getRenderEmoteMaxSomethingMethod4600((Stance)VARC[779]));
+		} else {
+			ACTIVE.setAnimation(getRenderEmoteMaxSomethingMethod4600(1426));
+		}
+	}
+	return;
+}

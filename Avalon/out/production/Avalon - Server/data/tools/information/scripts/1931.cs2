@@ -1,0 +1,21 @@
+int script_1931(Widget arg0) {
+	if (arg0 == widget(811, 21)) {
+		return 1;
+	}
+	if (arg0 == widget(811, 22)) {
+		return 2;
+	}
+	if (arg0 == widget(811, 23)) {
+		return 3;
+	}
+	if (arg0 == widget(811, 24)) {
+		return 4;
+	}
+	if (arg0 == widget(811, 25)) {
+		return 5;
+	}
+	if (arg0 == widget(811, 26)) {
+		return 6;
+	}
+	return 0;
+}

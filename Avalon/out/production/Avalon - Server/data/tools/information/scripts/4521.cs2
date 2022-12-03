@@ -1,0 +1,25 @@
+void script_4521(Widget widget0, Sprite sprite1, Sprite sprite2, Sprite sprite3) {
+	if (widget0 == null) {
+		return;
+	}
+	widget0.clearChildren();
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(16384, 16384, 2, 2);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setSprite(sprite1);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(16384, 16384, 2, 2);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setSprite(sprite2);
+	ACTIVE.setTrans(255);
+	ACTIVE.setScriptCallOnMouseEntered(4209, CTX_WIDGET, 0, "Ii");
+	ACTIVE.setScriptCallOnMouseExit(4209, CTX_WIDGET, 1, "Ii");
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(16384, 16384, 2, 2);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setSprite(sprite3);
+	ACTIVE.setTrans(255);
+	ACTIVE.setScriptCallOnMousePressed(4207, CTX_WIDGET, 0, "Ii");
+	ACTIVE.setScriptCallOnMouseReleased(4207, CTX_WIDGET, 255, "Ii");
+	return;
+}

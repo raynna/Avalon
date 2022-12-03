@@ -1,0 +1,37 @@
+void script_4247(string string0, int arg1, int arg2, int arg3, Color color4, Sprite sprite5) {
+	if (!hasChildOverlay(script_8(1), 1056)) {
+		string0 = "";
+	}
+	if (x(getMyLocation()) / 64 < 48 || x(getMyLocation()) / 64 > 52 || y(getMyLocation()) / 64 < 48 || y(getMyLocation()) / 64 > 52) {
+		string0 = "";
+	}
+	if (color4 == 0xFFFFFF) {
+		color4 = 0xFFFFFF;
+	}
+	if (sprite5 == null) {
+		sprite5 = 5631;
+	}
+	widget(746, 185).setIsHidden(true);
+	widget(548, 196).setIsHidden(true);
+	if (compare(string0, "") == 0) {
+		return;
+	}
+	widget(548, 236).setText(string0);
+	widget(548, 196).setPosition(arg1, arg2, 2, 2);
+	widget(548, 236).setRGB(color4);
+	widget(548, 236).setFont(sprite5);
+	if (arg3 == 1) {
+		widget(548, 238).setIsHidden(false);
+		widget(548, 239).setIsHidden(true);
+	} else {
+		widget(548, 238).setIsHidden(true);
+		widget(548, 239).setIsHidden(false);
+	}
+	widget(548, 196).setIsHidden(false);
+	if (compare(string0, "The '?' icon will add an arrow to the screen which points to your destination.") == 0 && getLanguage() == 0) {
+		widget(548, 237).setIsHidden(false);
+	} else {
+		widget(548, 237).setIsHidden(true);
+	}
+	return;
+}

@@ -1,0 +1,17 @@
+void script_5190(int arg0, int arg1) {
+	int int2;
+	int int3;
+	int2 = 25;
+	int3 = widget(1122, 73).getWidth() * arg0;
+	if (arg1 == 0) {
+		widget(1122, 74).setScrollPos(int3, 0);
+		widget(1122, 75).setIsHidden(true);
+		return;
+	}
+	widget(1122, 75).setIsHidden(false);
+	if (int3 < widget(1122, 74).getScrollX()) {
+		int2 = 0 - int2;
+	}
+	widget(1122, 74).setScriptCallOnGameloop(5191, int3, int2, "ii");
+	return;
+}

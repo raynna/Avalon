@@ -1,0 +1,33 @@
+void script_407() {
+	int int0;
+	int int1;
+	int int2;
+	string str0;
+	if (VARC[1362] < 1) {
+		return;
+	}
+	int0 = VARC[1362] * 6 / 10;
+	int1 = 0;
+	int2 = 0;
+	str0 = "";
+	if (int0 < 60) {
+		int1 = int0;
+	} else {
+		int1 = int0 % 60;
+		int2 = int0 / 60;
+	}
+	if (int1 < 10) {
+		str0 = concat("0", str(int1));
+		if (int2 == 0 && VARC[1389] == 0) {
+			VARC[1389] = 1;
+			if (VARPBIT[7511] == 1) {
+				playSoundEffect2False(3434, 1, 0, 255);
+			}
+		}
+	} else {
+		str0 = str(int1);
+	}
+	widget(1010, 21).setText("Turn Time Left" + "<br>" + str(int2) + ":" + str0);
+	widget(1013, 24).setText(str(int2) + ":" + str0);
+	return;
+}

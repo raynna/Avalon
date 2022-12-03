@@ -1,0 +1,204 @@
+string script_4914(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	DataMap datamap5;
+	DataMap datamap6;
+	DataMap datamap7;
+	AttrMap attrmap8;
+	string str0;
+	int1 = script_4824(arg0);
+	str0 = "";
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	switch (arg0) {
+		case 21:
+			int3 = CLANBIT[2330];
+			int2 = CLANBIT[2331];
+			int4 = CLANBIT[2336];
+			break;
+		case 22:
+			int3 = CLANBIT[2340];
+			int2 = CLANBIT[2341];
+			int4 = CLANBIT[2346];
+			break;
+		case 23:
+			int3 = CLANBIT[2350];
+			int2 = CLANBIT[2351];
+			int4 = CLANBIT[2356];
+			break;
+		case 24:
+			int3 = CLANBIT[2360];
+			int2 = CLANBIT[2361];
+			int4 = CLANBIT[2366];
+			break;
+		case 25:
+			int3 = CLANBIT[2370];
+			int2 = CLANBIT[2371];
+			int4 = CLANBIT[2376];
+			break;
+		case 26:
+			int3 = CLANBIT[2380];
+			int2 = CLANBIT[2381];
+			int4 = CLANBIT[2386];
+			break;
+		case 27:
+			int3 = CLANBIT[2390];
+			int2 = CLANBIT[2391];
+			int4 = CLANBIT[2396];
+			break;
+		case 28:
+			int3 = CLANBIT[2400];
+			int2 = CLANBIT[2401];
+			int4 = CLANBIT[2406];
+			break;
+		case 31:
+			int3 = CLANBIT[2460];
+			int2 = CLANBIT[2461];
+			int4 = CLANBIT[2466];
+			break;
+		case 32:
+			int3 = CLANBIT[2470];
+			int2 = CLANBIT[2471];
+			int4 = CLANBIT[2476];
+			break;
+		case 33:
+			int3 = CLANBIT[2480];
+			int2 = CLANBIT[2481];
+			int4 = CLANBIT[2486];
+			break;
+		case 34:
+			int3 = CLANBIT[2490];
+			int2 = CLANBIT[2491];
+			int4 = CLANBIT[2496];
+			break;
+		case 35:
+			int3 = CLANBIT[2500];
+			int2 = CLANBIT[2501];
+			int4 = CLANBIT[2506];
+			break;
+		case 41:
+			int3 = CLANBIT[2410];
+			int2 = CLANBIT[2411];
+			int4 = CLANBIT[2416];
+			break;
+		case 42:
+			int3 = CLANBIT[2420];
+			int2 = CLANBIT[2421];
+			int4 = CLANBIT[2426];
+			break;
+		case 43:
+			int3 = CLANBIT[2430];
+			int2 = CLANBIT[2431];
+			int4 = CLANBIT[2436];
+			break;
+		case 44:
+			int3 = CLANBIT[2440];
+			int2 = CLANBIT[2441];
+			int4 = CLANBIT[2446];
+			break;
+		case 45:
+			int3 = CLANBIT[2450];
+			int2 = CLANBIT[2451];
+			int4 = CLANBIT[2456];
+			break;
+		case 51:
+			int3 = CLANBIT[2510];
+			int2 = CLANBIT[2511];
+			int4 = CLANBIT[2516];
+			break;
+		case 100:
+			int3 = CLANBIT[2210];
+			int2 = CLANBIT[2211];
+			int4 = CLANBIT[2216];
+			break;
+		case 101:
+			int3 = CLANBIT[2220];
+			int2 = CLANBIT[2221];
+			int4 = CLANBIT[2226];
+			break;
+		case 102:
+			int3 = CLANBIT[2240];
+			int2 = CLANBIT[2241];
+			int4 = CLANBIT[2246];
+			break;
+		case 103:
+			int3 = CLANBIT[2190];
+			int2 = CLANBIT[2191];
+			int4 = CLANBIT[2196];
+			break;
+		case 104:
+			int3 = CLANBIT[2230];
+			int2 = CLANBIT[2231];
+			int4 = CLANBIT[2236];
+			break;
+		case 105:
+			int3 = CLANBIT[2200];
+			int2 = CLANBIT[2201];
+			int4 = CLANBIT[2206];
+			break;
+		case 106:
+			int3 = CLANBIT[2260];
+			int2 = CLANBIT[2261];
+			int4 = CLANBIT[2266];
+			break;
+		case 107:
+			int3 = CLANBIT[2270];
+			int2 = CLANBIT[2271];
+			int4 = CLANBIT[2276];
+			break;
+		case 108:
+			int3 = CLANBIT[2280];
+			int2 = CLANBIT[2281];
+			int4 = CLANBIT[2286];
+			break;
+		case 109:
+			int3 = CLANBIT[2250];
+			int2 = CLANBIT[2251];
+			int4 = CLANBIT[2256];
+			break;
+		case 110:
+			int3 = CLANBIT[2290];
+			int2 = CLANBIT[2291];
+			int4 = CLANBIT[2296];
+			break;
+		case 111:
+			int3 = CLANBIT[2300];
+			int2 = CLANBIT[2301];
+			int4 = CLANBIT[2306];
+			break;
+		case 112:
+			int3 = CLANBIT[2310];
+			int2 = CLANBIT[2311];
+			int4 = CLANBIT[2316];
+			break;
+		case 113:
+			int3 = CLANBIT[2320];
+			int2 = CLANBIT[2321];
+			int4 = CLANBIT[2326];
+			break;
+	}
+	if (int3 <= 0) {
+		return "empty customisation";
+	}
+	datamap5 = datamap('i', 'g', (DataMap)4043, int3);
+	if (datamap5 == null) {
+		return "";
+	}
+	datamap6 = datamap('i', 'g', datamap5, int2);
+	if (datamap6 == null) {
+		return "";
+	}
+	datamap7 = datamap('i', 'g', datamap6, 1);
+	if (datamap7 == null) {
+		return "";
+	}
+	attrmap8 = datamap('i', 'J', datamap7, int4);
+	if (attrmap8 == null) {
+		return "";
+	}
+	str0 = getAttributeMapValue(attrmap8, 1566);
+	return str0;
+}

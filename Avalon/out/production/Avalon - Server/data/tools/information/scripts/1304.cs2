@@ -1,0 +1,26 @@
+void script_1304(int arg0) {
+	int int1;
+	int1 = script_1305();
+	if (script_2709() == 0 && (arg0 == 9 || arg0 == 11 || arg0 == 10)) {
+		return;
+	}
+	if (arg0 == int1 && VARPBIT[9030] == 1) {
+		arg0 = 1;
+		script_4089();
+	}
+	if (int1 > -1) {
+		if (int1 == arg0) {
+			if (!(getDisplayMode() >= 2 && VARPBIT[9030] == 0)) {
+				return;
+			}
+			script_1306();
+		} else {
+			script_1306();
+			script_1387(arg0);
+		}
+	} else {
+		script_1306();
+		script_1387(arg0);
+	}
+	return;
+}

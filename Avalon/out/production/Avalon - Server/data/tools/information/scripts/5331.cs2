@@ -1,0 +1,9 @@
+void script_5331() {
+	if (VARC[1606] == 1) {
+		VARC[1606] = 0;
+	} else {
+		VARC[1606] = 1;
+	}
+	script_4725();
+	return;
+}

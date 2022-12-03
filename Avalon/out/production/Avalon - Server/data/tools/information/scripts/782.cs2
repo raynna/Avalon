@@ -1,0 +1,56 @@
+void script_782(int arg0, Widget widget1, Widget widget2, int arg3, string arg4) {
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	widget1.clearChildren();
+	int4 = 2 + 13 * getLineCount("This space is reserved", 177, 495);
+	int5 = 2 + 13 * getLineCount("You cannot make this pouch.", 177, 494);
+	int6 = 2 + int4 + int5 + 32 + 14 + 2;
+	int7 = 5;
+	int8 = 5;
+	int9 = 1;
+	int10 = 1;
+	if (ACTIVE.setChild(widget2, arg0)) {
+		int6 = int6 - 32 - 14;
+		int7 = ACTIVE.getY() - widget2.getScrollY() + 110;
+		if (int7 > 200) {
+			int7 = ACTIVE.getY() - widget2.getScrollY() - int6 + 45;
+		}
+		int8 = ACTIVE.getX() - 60;
+		if (int8 < 0) {
+			int8 = 5;
+		}
+		if (int8 > 270) {
+			int8 = 285;
+		}
+		ACTIVE.createChild(widget1, 3, 0);
+		ACTIVE.setPosition(int8, int7, 0, 0);
+		ACTIVE.setSize(180, int6, 0, 0);
+		ACTIVE.setFilled(true);
+		ACTIVE.setRGB(0x000000);
+		ACTIVE.setTrans(42);
+		ACTIVE.createChild(widget1, 3, 1);
+		ACTIVE.setPosition(int8 + 1, int7 + 1, 0, 0);
+		ACTIVE.setSize(179, int6 - 1, 0, 0);
+		ACTIVE.setFilled(false);
+		ACTIVE.setRGB(0x2E2B23);
+		ACTIVE.createChild(widget1, 3, 2);
+		ACTIVE.setPosition(int8, int7, 0, 0);
+		ACTIVE.setSize(179, int6 - 1, 0, 0);
+		ACTIVE.setFilled(false);
+		ACTIVE.setRGB(0x726451);
+		ACTIVE.createChild(widget1, 4, 3);
+		ACTIVE.setPosition(int8 + 2, int7 + 2, 0, 0);
+		ACTIVE.setSize(177, int4, 0, 0);
+		ACTIVE.setTextAlignment(1, 1, 0);
+		ACTIVE.setFont(495);
+		ACTIVE.setRGB(0xFF981F);
+		ACTIVE.setTextAntiMacro(false);
+		ACTIVE.setText("This space is reserved.");
+	}
+	return;
+}

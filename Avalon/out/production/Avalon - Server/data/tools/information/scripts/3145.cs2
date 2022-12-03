@@ -1,0 +1,12 @@
+void script_3145(int arg0, Widget widget1, int arg2, int arg3) {
+	widget(910, 65).setIsHidden(true);
+	widget(910, 66).setIsHidden(true);
+	if (ACTIVE.setChild(widget1, arg2)) {
+		if (ACTIVE.getSpriteId() == 1542) {
+			ACTIVE.setSprite(1541);
+		} else if (ACTIVE.getSpriteId() == 1546) {
+			ACTIVE.setSprite(1545);
+		}
+	}
+	return;
+}

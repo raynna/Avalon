@@ -1,0 +1,9 @@
+void script_5265() {
+	if (VARPBIT[9822] == 0) {
+		widget(1137, 5).setIsHidden(false);
+		widget(1137, 62).setIsHidden(true);
+	} else {
+		widget(1137, 5).setIsHidden(true);
+	}
+	return;
+}

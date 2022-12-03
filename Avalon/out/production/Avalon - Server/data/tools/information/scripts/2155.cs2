@@ -1,0 +1,88 @@
+int script_2155() {
+	int int0;
+	int0 = getAttributeMapValue((AttrMap)VARC[699], 859);
+	if (int0 == -1) {
+		return 1;
+	}
+	if (script_2156(int0) == 0) {
+		return 0;
+	}
+	int0 = getAttributeMapValue((AttrMap)VARC[699], 860);
+	if (int0 == -1) {
+		return 1;
+	}
+	if (script_2156(int0) == 0) {
+		return 0;
+	}
+	int0 = getAttributeMapValue((AttrMap)VARC[699], 861);
+	if (int0 == -1) {
+		return 1;
+	}
+	if (script_2156(int0) == 0) {
+		return 0;
+	}
+	int0 = getAttributeMapValue((AttrMap)VARC[699], 862);
+	if (int0 == -1) {
+		return 1;
+	}
+	if (script_2156(int0) == 0) {
+		return 0;
+	}
+	int0 = getAttributeMapValue((AttrMap)VARC[699], 863);
+	if (int0 == -1) {
+		return 1;
+	}
+	if (script_2156(int0) == 0) {
+		return 0;
+	}
+	int0 = getAttributeMapValue((AttrMap)VARC[699], 864);
+	if (int0 == -1) {
+		return 1;
+	}
+	if (script_2156(int0) == 0) {
+		return 0;
+	}
+	int0 = getAttributeMapValue((AttrMap)VARC[699], 865);
+	if (int0 == -1) {
+		return 1;
+	}
+	if (script_2156(int0) == 0) {
+		return 0;
+	}
+	int0 = getAttributeMapValue((AttrMap)VARC[699], 866);
+	if (int0 == -1) {
+		return 1;
+	}
+	if (script_2156(int0) == 0) {
+		return 0;
+	}
+	int0 = getAttributeMapValue((AttrMap)VARC[699], 867);
+	if (int0 == -1) {
+		return 1;
+	}
+	if (script_2156(int0) == 0) {
+		return 0;
+	}
+	int0 = getAttributeMapValue((AttrMap)VARC[699], 868);
+	if (int0 == -1) {
+		return 1;
+	}
+	if (script_2156(int0) == 0) {
+		return 0;
+	}
+	int0 = getAttributeMapValue((AttrMap)VARC[699], 869);
+	if (int0 == -1) {
+		return 1;
+	}
+	if (script_2156(int0) == 0) {
+		return 0;
+	}
+	int0 = getAttributeMapValue((AttrMap)VARC[699], 870);
+	if (int0 == -1) {
+		return 1;
+	}
+	if (script_2156(int0) == 0) {
+		return 0;
+	}
+	return 1;
+}

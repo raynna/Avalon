@@ -1,0 +1,38 @@
+void script_1047(QcPhrase qcphrase0) {
+	string str0;
+	VARC[129] = 0;
+	str0 = cs2method5055(qcphrase0);
+	if (VARC[126] == 1) {
+		str0 = "To " + STRING[27] + ": " + "<col=800000>" + str0;
+	} else if (VARC[126] == 2) {
+		str0 = "[" + "<col=0000ff>" + clanChatDisplayName() + "<col=000000>" + "]: " + "<col=800000>" + str0;
+	} else if (VARC[126] == 8) {
+		if (cs2method3751()) {
+			str0 = "[" + "<col=0000ff>" + cs2method3752() + "<col=000000>" + "]: " + "<col=800000>" + str0;
+		}
+	} else if (VARC[126] == 10) {
+		if (cs2method3750()) {
+			str0 = "[" + "<col=0000ff>" + cs2method3752() + "<col=000000>" + "]: " + "<col=800000>" + str0;
+		}
+	} else {
+		str0 = "<col=0000ff>" + str0;
+	}
+	widget(137, 50).setIsHidden(true);
+	widget(137, 56).setScriptCallOnKeyPress(-1, "");
+	widget(137, 0).setIsHidden(false);
+	widget(137, 7).setIsHidden(false);
+	widget(137, 9).setIsHidden(true);
+	widget(137, 13).setIsHidden(true);
+	widget(137, 17).setIsHidden(true);
+	widget(137, 1).setIsHidden(true);
+	widget(137, 3).setIsHidden(false);
+	widget(137, 3).setRGB(0x000000);
+	widget(137, 3).setFont(495);
+	widget(137, 3).setTextAlignment(0, 1, 0);
+	widget(137, 3).setText(str0);
+	widget(137, 3).setTextAntiMacro(false);
+	widget(137, 7).clearChildren();
+	widget(137, 8).setText("Please enter a value: *");
+	widget(137, 7).setScriptCallOnKeyPress(1048, KEY_TYPED, (char)KEY_PRESSED, widget(137, 1), widget(137, 8), qcphrase0, "izIIe");
+	return;
+}

@@ -1,0 +1,5 @@
+void script_1184(Widget widget0) {
+	widget0.setRGB(script_806());
+	widget0.setText(str(getRunEnergy()));
+	return;
+}

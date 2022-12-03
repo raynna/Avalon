@@ -1,0 +1,23 @@
+void script_439(Widget widget0) {
+	switch (VARPBIT[8087]) {
+		case 0:
+			widget0.setText("0:30");
+			break;
+		case 1:
+			widget0.setText("1:00");
+			break;
+		case 2:
+			widget0.setText("1:30");
+			break;
+		case 3:
+			widget0.setText("2:00");
+			break;
+		case 4:
+			widget0.setText("2:30");
+			break;
+		case 5:
+			widget0.setText("3:00");
+			break;
+	}
+	return;
+}

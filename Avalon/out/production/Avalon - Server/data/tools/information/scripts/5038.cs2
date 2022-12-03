@@ -1,0 +1,11 @@
+void script_5038(int arg0) {
+	playSoundEffect2False(6185, 1, 0, 200);
+	if (arg0 == 1) {
+		widget(1111, 9).setIsHidden(true);
+		widget(1111, 1).setIsHidden(false);
+	} else {
+		widget(1111, 9).setIsHidden(false);
+		widget(1111, 1).setIsHidden(true);
+	}
+	return;
+}

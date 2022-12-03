@@ -1,0 +1,107 @@
+int, int script_4217() {
+	int int0;
+	int int1;
+	int0 = 0;
+	int1 = 0;
+	int0 = int0 + getSkillXp(7);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(12);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(11);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(10);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(6);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(14);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(5);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(4);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(20);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(13);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(8);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(16);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(15);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(9);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(17);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(18);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(0);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(1);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(2);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(3);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(19);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(22);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(21);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(23);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	int0 = int0 + getSkillXp(24);
+	if (int0 > 1000000000) {
+		int1, int0 = int1 + 1, int0 - 1000000000;
+	}
+	return int0, int1;
+}

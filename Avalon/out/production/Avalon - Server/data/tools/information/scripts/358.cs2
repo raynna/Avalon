@@ -1,0 +1,106 @@
+void script_358(int arg0) {
+	int int1;
+	AttrMap attrmap2;
+	if (arg0 != 1) {
+		return;
+	}
+	playSoundEffect(9830, 1, 0);
+	VARPBIT[8092] = (VARPBIT[8092] + 1) % 8;
+	int1 = 0;
+	attrmap2 = (AttrMap)script_361((Identikit)VARC[1010], 3);
+	if (attrmap2 == null) {
+		attrmap2 = (AttrMap)1076;
+	}
+	switch ((VARPBIT[8091] + VARPBIT[8092]) % 8) {
+		case 1:
+			int1 = getAttributeMapValue(attrmap2, 1190);
+			VARC[1016] = int1;
+			setBaseColor(1, int1);
+			int1 = getAttributeMapValue(attrmap2, 1191);
+			VARC[1017] = int1;
+			setBaseColor(2, int1);
+			int1 = getAttributeMapValue(attrmap2, 1192);
+			VARC[1018] = int1;
+			setBaseColor(3, int1);
+			break;
+		case 2:
+			int1 = getAttributeMapValue(attrmap2, 1193);
+			VARC[1016] = int1;
+			setBaseColor(1, int1);
+			int1 = getAttributeMapValue(attrmap2, 1194);
+			VARC[1017] = int1;
+			setBaseColor(2, int1);
+			int1 = getAttributeMapValue(attrmap2, 1195);
+			VARC[1018] = int1;
+			setBaseColor(3, int1);
+			break;
+		case 3:
+			int1 = getAttributeMapValue(attrmap2, 1196);
+			VARC[1016] = int1;
+			setBaseColor(1, int1);
+			int1 = getAttributeMapValue(attrmap2, 1197);
+			VARC[1017] = int1;
+			setBaseColor(2, int1);
+			int1 = getAttributeMapValue(attrmap2, 1198);
+			VARC[1018] = int1;
+			setBaseColor(3, int1);
+			break;
+		case 4:
+			int1 = getAttributeMapValue(attrmap2, 1199);
+			VARC[1016] = int1;
+			setBaseColor(1, int1);
+			int1 = getAttributeMapValue(attrmap2, 1200);
+			VARC[1017] = int1;
+			setBaseColor(2, int1);
+			int1 = getAttributeMapValue(attrmap2, 1201);
+			VARC[1018] = int1;
+			setBaseColor(3, int1);
+			break;
+		case 5:
+			int1 = getAttributeMapValue(attrmap2, 1202);
+			VARC[1016] = int1;
+			setBaseColor(1, int1);
+			int1 = getAttributeMapValue(attrmap2, 1203);
+			VARC[1017] = int1;
+			setBaseColor(2, int1);
+			int1 = getAttributeMapValue(attrmap2, 1204);
+			VARC[1018] = int1;
+			setBaseColor(3, int1);
+			break;
+		case 6:
+			int1 = getAttributeMapValue(attrmap2, 1205);
+			VARC[1016] = int1;
+			setBaseColor(1, int1);
+			int1 = getAttributeMapValue(attrmap2, 1206);
+			VARC[1017] = int1;
+			setBaseColor(2, int1);
+			int1 = getAttributeMapValue(attrmap2, 1207);
+			VARC[1018] = int1;
+			setBaseColor(3, int1);
+			break;
+		case 7:
+			int1 = getAttributeMapValue(attrmap2, 1208);
+			VARC[1016] = int1;
+			setBaseColor(1, int1);
+			int1 = getAttributeMapValue(attrmap2, 1209);
+			VARC[1017] = int1;
+			setBaseColor(2, int1);
+			int1 = getAttributeMapValue(attrmap2, 1210);
+			VARC[1018] = int1;
+			setBaseColor(3, int1);
+			break;
+		default:
+			int1 = getAttributeMapValue(attrmap2, 1187);
+			VARC[1016] = int1;
+			setBaseColor(1, int1);
+			int1 = getAttributeMapValue(attrmap2, 1188);
+			VARC[1017] = int1;
+			setBaseColor(2, int1);
+			int1 = getAttributeMapValue(attrmap2, 1189);
+			VARC[1018] = int1;
+			setBaseColor(3, int1);
+			break;
+	}
+	script_391();
+	return;
+}

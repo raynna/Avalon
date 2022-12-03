@@ -1,0 +1,17 @@
+void script_135(int arg0) {
+	int int1;
+	int1 = -1;
+	if (length(STRING[24]) > 0) {
+		cs2method5002(STRING[24], arg0, VARC[6], "");
+	}
+	if (compare(STRING[24], cs2method5015()) == 0) {
+		script_675();
+		return;
+	}
+	if (!cs2method3623(STRING[24]) && compare(STRING[24], cs2method5015()) != 0) {
+		script_221();
+	} else {
+		script_675();
+	}
+	return;
+}

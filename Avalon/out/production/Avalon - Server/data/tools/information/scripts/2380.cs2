@@ -1,0 +1,9 @@
+void script_2380(Widget widget0, Widget widget1) {
+	if (widget0 == null) {
+		widget1.setIsHidden(true);
+		return;
+	}
+	widget1.setIsHidden(false);
+	widget1.setPosition(widget0.getX() + widget0.getWidth() - widget1.getWidth(), widget0.getY() + widget0.getHeight() - widget1.getHeight(), 0, 0);
+	return;
+}

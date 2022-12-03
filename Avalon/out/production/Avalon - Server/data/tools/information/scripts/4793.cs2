@@ -1,0 +1,49 @@
+int, int, int, int, int, int script_4793(int arg0, int arg1) {
+	switch (arg0) {
+		case 1:
+			return CLAN[2634], CLAN[2635], CLAN[2636], CLAN[2637], CLAN[2638], CLAN[2639];
+		case 2:
+			return CLAN[2640], CLAN[2641], CLAN[2642], CLAN[2643], CLAN[2644], CLAN[2645];
+		case 3:
+			return CLAN[2646], CLAN[2647], CLAN[2648], CLAN[2649], CLAN[2650], CLAN[2651];
+		case 4:
+			switch (arg1) {
+				case 1:
+					return CLAN[2652], CLAN[2653], CLAN[2654], CLAN[2655], CLAN[2656], CLAN[2657];
+				case 2:
+					return CLAN[2658], CLAN[2659], CLAN[2660], CLAN[2661], CLAN[2662], CLAN[2663];
+				case 3:
+					return CLAN[2664], CLAN[2665], CLAN[2666], CLAN[2667], CLAN[2668], CLAN[2669];
+				case 4:
+					return CLAN[2670], CLAN[2671], CLAN[2672], CLAN[2673], CLAN[2674], CLAN[2675];
+				case 5:
+					return CLAN[2676], CLAN[2677], CLAN[2678], CLAN[2679], CLAN[2680], CLAN[2681];
+				case 6:
+					return CLAN[2682], CLAN[2683], CLAN[2684], CLAN[2685], CLAN[2686], CLAN[2687];
+				case 7:
+					return CLAN[2688], CLAN[2689], CLAN[2690], CLAN[2691], CLAN[2692], CLAN[2693];
+				case 8:
+					return CLAN[2694], CLAN[2695], CLAN[2696], CLAN[2697], CLAN[2698], CLAN[2699];
+				case 9:
+					return CLAN[2700], CLAN[2701], CLAN[2702], CLAN[2703], CLAN[2704], CLAN[2705];
+				case 10:
+					return CLAN[2706], CLAN[2707], CLAN[2708], CLAN[2709], CLAN[2710], CLAN[2711];
+				case 11:
+					return CLAN[2712], CLAN[2713], CLAN[2714], CLAN[2715], CLAN[2716], CLAN[2717];
+				case 12:
+					return CLAN[2718], CLAN[2719], CLAN[2720], CLAN[2721], CLAN[2722], CLAN[2723];
+			}
+			break;
+		case 5:
+			switch (arg1) {
+				case 1:
+					return CLAN[2149], CLAN[2150], CLAN[2151], CLAN[2152], CLAN[2153], CLAN[2154];
+				case 2:
+					return CLAN[2166], CLAN[2167], CLAN[2168], CLAN[2169], CLAN[2170], CLAN[2171];
+				case 3:
+					return CLAN[2183], CLAN[2184], CLAN[2185], CLAN[2186], CLAN[2187], CLAN[2188];
+			}
+			break;
+	}
+	return 0, 0, 0, 0, 0, 0;
+}

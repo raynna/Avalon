@@ -1,0 +1,36 @@
+int script_1840(Widget widget0, int arg1, int arg2) {
+	AttrMap attrmap3;
+	Category category4;
+	string str0;
+	attrmap3 = datamap('i', 'J', (DataMap)1805, arg1);
+	if (attrmap3 == null) {
+		return arg2;
+	}
+	str0 = getAttributeMapValue(attrmap3, 596);
+	category4 = getAttributeMapValue(attrmap3, 477);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	_ACTIVE.createChild(widget0, 4, widget0.nextChild());
+	ACTIVE.setPosition(3, arg2, 0, 0);
+	ACTIVE.setSize(15, 15, 0, 0);
+	_ACTIVE.setPosition(ACTIVE.getX() + ACTIVE.getWidth(), arg2, 0, 0);
+	_ACTIVE.setSize(_ACTIVE.getX() + ACTIVE.getX(), ACTIVE.getHeight(), 1, 0);
+	ACTIVE.setSprite(getAttributeMapValue(attrmap3, 595));
+	_ACTIVE.setRGB(0xAFAFAF);
+	_ACTIVE.setFont(495);
+	_ACTIVE.setTextAntiMacro(true);
+	_ACTIVE.setTextAlignment(0, 1, 0);
+	_ACTIVE.setText(str0);
+	if (category4 != null) {
+		ACTIVE.setOptionBase("<col=ff9040>" + str0 + "</col>");
+		_ACTIVE.setOptionBase("<col=ff9040>" + str0 + "</col>");
+		ACTIVE.setContextMenuOption(1, "Highlight");
+		_ACTIVE.setContextMenuOption(1, "Highlight");
+		ACTIVE.setScriptCallOnClickContextMenu(288, category4, "y");
+		_ACTIVE.setScriptCallOnClickContextMenu(288, category4, "y");
+		ACTIVE.setScriptCallOnMouseEntered(1356, widget0, _ACTIVE.getChildId(), 16777215, "Iii");
+		_ACTIVE.setScriptCallOnMouseEntered(1356, widget0, _ACTIVE.getChildId(), 16777215, "Iii");
+		ACTIVE.setScriptCallOnMouseExit(1356, widget0, _ACTIVE.getChildId(), 11513775, "Iii");
+		_ACTIVE.setScriptCallOnMouseExit(1356, widget0, _ACTIVE.getChildId(), 11513775, "Iii");
+	}
+	return arg2 + ACTIVE.getHeight();
+}

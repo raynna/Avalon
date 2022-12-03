@@ -1,0 +1,14 @@
+string script_4338(int arg0) {
+	string str0;
+	str0 = "";
+	if (arg0 < 10) {
+		str0 = concat("00:0", arg0);
+	} else if (arg0 < 60) {
+		str0 = concat("00:", arg0);
+	} else if (arg0 < 959) {
+		str0 = "0" + str(arg0 / 100) + ":" + str(arg0 % 100);
+	} else {
+		str0 = str(arg0 / 100) + ":" + str(arg0 % 100);
+	}
+	return str0;
+}

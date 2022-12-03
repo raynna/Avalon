@@ -1,0 +1,46 @@
+int script_932(Item item0) {
+	int int1;
+	int1 = itemAttribute(item0, 764);
+	if (int1 == -1) {
+		return 1;
+	}
+	if (script_2156(int1) == 0) {
+		return 0;
+	}
+	int1 = itemAttribute(item0, 765);
+	if (int1 == -1) {
+		return 1;
+	}
+	if (script_2156(int1) == 0) {
+		return 0;
+	}
+	int1 = itemAttribute(item0, 766);
+	if (int1 == -1) {
+		return 1;
+	}
+	if (script_2156(int1) == 0) {
+		return 0;
+	}
+	int1 = itemAttribute(item0, 767);
+	if (int1 == -1) {
+		return 1;
+	}
+	if (script_2156(int1) == 0) {
+		return 0;
+	}
+	int1 = itemAttribute(item0, 768);
+	if (int1 == -1) {
+		return 1;
+	}
+	if (script_2156(int1) == 0) {
+		return 0;
+	}
+	int1 = itemAttribute(item0, 769);
+	if (int1 == -1) {
+		return 1;
+	}
+	if (script_2156(int1) == 0) {
+		return 0;
+	}
+	return 1;
+}

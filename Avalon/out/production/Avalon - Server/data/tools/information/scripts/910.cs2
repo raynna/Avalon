@@ -1,0 +1,8 @@
+void script_910() {
+	if (VARC[116] == 1 || VARC[117] == 1) {
+		widget(716, 31).setOutlineThickness(2);
+	} else {
+		widget(716, 31).setOutlineThickness(0);
+	}
+	return;
+}

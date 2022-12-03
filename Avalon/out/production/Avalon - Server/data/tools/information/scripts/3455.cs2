@@ -1,0 +1,5 @@
+void script_3455() {
+	VARC[1281] = 0;
+	widget(475, 78).setText(str(VARC[1281]));
+	return;
+}

@@ -1,0 +1,23 @@
+void script_3066(int arg0, int arg1, Widget widget2, Widget widget3, int arg4) {
+	if (arg0 > 0) {
+		widget2.setSprite(4661);
+		widget3.setText(str(arg0));
+		if (arg4 == 1) {
+			widget2.setContextMenuOption(1, "Click Here To Play");
+			widget2.setScriptCallOnClickContextMenu(3067, arg1, "i");
+		} else {
+			widget2.setNoOptions();
+			widget2.setScriptCallOnClickContextMenu(-1, "");
+		}
+		widget2.setScriptCallOnMouseEntered(3068, widget2, "I");
+		widget2.setScriptCallOnMouseExit(3069, widget2, "I");
+	} else {
+		widget2.setSprite(4660);
+		widget3.setText("");
+		widget2.setScriptCallOnMouseEntered(-1, "");
+		widget2.setScriptCallOnMouseExit(-1, "");
+		widget2.setScriptCallOnClickContextMenu(-1, "");
+		widget2.setNoOptions();
+	}
+	return;
+}

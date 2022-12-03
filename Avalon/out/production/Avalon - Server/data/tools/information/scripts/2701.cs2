@@ -1,0 +1,24 @@
+void script_2701(int arg0, boolean boolean1, boolean boolean2) {
+	if (getDisplayMode() == 1) {
+		open(widget(548, 21), 883);
+	} else {
+		open(widget(746, 83), 883);
+	}
+	widget(746, 83).setIsHidden(false);
+	widget(548, 21).setIsHidden(false);
+	script_1151(widget(883, 18));
+	script_1151(widget(883, 21));
+	widget(883, 17).setScriptCallOnMouseEntered(2702, true, widget(883, 18), widget(883, 19), "1II");
+	widget(883, 17).setScriptCallOnMouseExit(2702, false, widget(883, 18), widget(883, 19), "1II");
+	widget(883, 20).setScriptCallOnMouseEntered(2702, true, widget(883, 21), widget(883, 22), "1II");
+	widget(883, 20).setScriptCallOnMouseExit(2702, false, widget(883, 21), widget(883, 22), "1II");
+	widget(883, 17).setScriptCallOnMousePressed(2704, true, arg0, 1, boolean1, boolean2, "1ii11");
+	widget(883, 20).setScriptCallOnMousePressed(2704, false, arg0, 1, boolean1, boolean2, "1ii11");
+	widget(548, 191).setIsHidden(false);
+	widget(548, 69).setIsHidden(false);
+	widget(548, 194).setIsHidden(false);
+	widget(548, 203).setIsHidden(false);
+	widget(548, 163).setIsHidden(false);
+	widget(548, 115).setIsHidden(false);
+	return;
+}

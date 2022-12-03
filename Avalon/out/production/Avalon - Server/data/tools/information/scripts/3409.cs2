@@ -1,0 +1,9 @@
+void script_3409(Widget widget0) {
+	string str0;
+	str0 = "Access Forums";
+	script_3408(widget0, str0);
+	widget0.setSize(getTextWidth(str0, 495), widget0.getHeight(), 0, 0);
+	widget0.setText("<u=64c8fa>" + str0 + "</u>");
+	widget0.setScriptCallOnClickContextMenu(3410, "");
+	return;
+}

@@ -1,0 +1,11 @@
+void script_1807(Widget widget0, Widget widget1, Widget widget2) {
+	if (!script_42(VARC[266])) {
+		STRING[38] = "";
+		STRING[39] = "";
+		VARC[266] = 1;
+	}
+	script_1809(widget0, widget1, widget2);
+	widget0.setScriptCallOnGlobalStringChange(1808, widget0, widget1, widget2, 38, "IIIY");
+	widget0.setScriptCallOnMessage(1810, widget0, widget1, widget2, "III");
+	return;
+}

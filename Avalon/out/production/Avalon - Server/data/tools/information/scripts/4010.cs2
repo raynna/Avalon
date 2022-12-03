@@ -1,0 +1,55 @@
+void script_4010(int arg0) {
+	switch (arg0) {
+		case 0:
+			widget(1056, 16).setSprite(4316);
+			widget(1056, 18).setSprite(4316);
+			widget(1056, 17).setSprite(4317);
+			widget(1056, 11).setSprite(4316);
+			widget(1056, 13).setSprite(4316);
+			widget(1056, 12).setSprite(4317);
+			widget(1056, 31).setSprite(4316);
+			widget(1056, 33).setSprite(4316);
+			widget(1056, 32).setSprite(4317);
+			widget(1056, 21).setSprite(4316);
+			widget(1056, 23).setSprite(4316);
+			widget(1056, 22).setSprite(4317);
+			widget(1056, 44).setSprite(4316);
+			widget(1056, 46).setSprite(4316);
+			widget(1056, 45).setSprite(4317);
+			widget(1056, 39).setSprite(4316);
+			widget(1056, 41).setSprite(4316);
+			widget(1056, 40).setSprite(4317);
+			break;
+		case 1:
+			widget(1056, 16).setSprite(4318);
+			widget(1056, 18).setSprite(4318);
+			widget(1056, 17).setSprite(4319);
+			break;
+		case 2:
+			widget(1056, 11).setSprite(4318);
+			widget(1056, 13).setSprite(4318);
+			widget(1056, 12).setSprite(4319);
+			break;
+		case 3:
+			widget(1056, 31).setSprite(4318);
+			widget(1056, 33).setSprite(4318);
+			widget(1056, 32).setSprite(4319);
+			break;
+		case 4:
+			widget(1056, 21).setSprite(4318);
+			widget(1056, 23).setSprite(4318);
+			widget(1056, 22).setSprite(4319);
+			break;
+		case 5:
+			widget(1056, 44).setSprite(4318);
+			widget(1056, 46).setSprite(4318);
+			widget(1056, 45).setSprite(4319);
+			break;
+		case 6:
+			widget(1056, 39).setSprite(4318);
+			widget(1056, 41).setSprite(4318);
+			widget(1056, 40).setSprite(4319);
+			break;
+	}
+	return;
+}

@@ -1,0 +1,7 @@
+void script_1262(Widget widget0, Widget widget1) {
+	widget0.setRGB(0xFFFFFF);
+	if (widget1 != null) {
+		widget1.setRGB(0xFFFFFF);
+	}
+	return;
+}

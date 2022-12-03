@@ -1,0 +1,12 @@
+void script_3390(Widget widget0, Sprite sprite1, Widget widget2, Sprite sprite3, Widget widget4, Sprite sprite5) {
+	if (widget0 != null) {
+		widget0.setSprite(sprite1);
+	}
+	if (widget2 != null) {
+		widget2.setSprite(sprite3);
+	}
+	if (widget4 != null) {
+		widget4.setSprite(sprite5);
+	}
+	return;
+}

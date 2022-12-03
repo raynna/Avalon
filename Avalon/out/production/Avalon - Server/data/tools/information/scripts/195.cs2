@@ -1,0 +1,18 @@
+void script_195(Widget widget0, int arg1) {
+	int int2;
+	widget0.setScriptCallOnClanListChange(203, CTX_WIDGET, "I");
+	widget0.setScriptCallOnFriendListChange(203, CTX_WIDGET, "I");
+	script_1600();
+	widget(1109, 4).clearChildren();
+	int2 = 0;
+	while (int2 < 50) {
+		ACTIVE.createChild(widget(1109, 4), 3, int2);
+		ACTIVE.setSize(0, 19, 1, 0);
+		ACTIVE.setPosition(0, int2 * 2 * 19, 1, 0);
+		ACTIVE.setRGB(0x232220);
+		ACTIVE.setFilled(true);
+		ACTIVE.setTrans(128);
+		int2 = int2 + 1;
+	}
+	return;
+}

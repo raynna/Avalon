@@ -1,0 +1,5 @@
+void script_5237() {
+	widget(1126, 124).setSize(0, widget(1126, 124).getHeight(), 0, 0);
+	widget(1126, 47).setIsHidden(true);
+	return;
+}

@@ -1,0 +1,40 @@
+void script_267(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	if (script_269() >= 5) {
+		return;
+	}
+	ARRAY0 = new int[5];
+	ARRAY0[0] = VARC[1104];
+	ARRAY0[1] = VARC[1105];
+	ARRAY0[2] = VARC[1106];
+	ARRAY0[3] = VARC[1107];
+	ARRAY0[4] = VARC[1108];
+	ARRAY1 = new int[5];
+	int1 = 0;
+	int2 = 0;
+	int3 = 3;
+	while (int3 > 0) {
+		if (arg0 == int3) {
+			ARRAY1[int2] = arg0;
+			int2 = int2 + 1;
+		}
+		int1 = 0;
+		while (int1 < 5) {
+			if (ARRAY0[int1] == int3) {
+				ARRAY1[int2] = int3;
+				int2 = int2 + 1;
+			}
+			int1 = int1 + 1;
+		}
+		int3 = int3 - 1;
+	}
+	VARC[1104] = ARRAY1[0];
+	VARC[1105] = ARRAY1[1];
+	VARC[1106] = ARRAY1[2];
+	VARC[1107] = ARRAY1[3];
+	VARC[1108] = ARRAY1[4];
+	script_261();
+	return;
+}

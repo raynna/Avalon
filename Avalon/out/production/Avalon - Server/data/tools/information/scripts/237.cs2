@@ -1,0 +1,6 @@
+void script_237(int arg0) {
+	if (ACTIVE.setChild(widget(594, 93), arg0)) {
+		ACTIVE.setTrans(192);
+	}
+	return;
+}

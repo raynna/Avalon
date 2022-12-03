@@ -1,0 +1,22 @@
+void script_2209() {
+	widget(932, 3).setText("Correct " + str(VARP[1703]) + "/5");
+	VARC[1137] = 0;
+	widget(932, 1).setScriptCallOnGameloop(-1, "");
+	widget(932, 10).setPosition(0, 120, 0, 0);
+	widget(932, 11).setPosition(0, 120, 0, 0);
+	widget(932, 12).setPosition(0, 120, 0, 0);
+	widget(932, 13).setPosition(0, 120, 0, 0);
+	widget(932, 6).setPosition(0, 120, 0, 0);
+	widget(932, 7).setPosition(0, 120, 0, 0);
+	widget(932, 8).setPosition(0, 120, 0, 0);
+	widget(932, 9).setPosition(0, 120, 0, 0);
+	widget(932, 10).setIsHidden(true);
+	widget(932, 11).setIsHidden(true);
+	widget(932, 12).setIsHidden(true);
+	widget(932, 13).setIsHidden(true);
+	widget(932, 6).setIsHidden(true);
+	widget(932, 7).setIsHidden(true);
+	widget(932, 8).setIsHidden(true);
+	widget(932, 9).setIsHidden(true);
+	return;
+}

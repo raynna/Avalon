@@ -1,0 +1,14 @@
+void script_3045() {
+	switch (cs2method5005()) {
+		case 0:
+			widget(909, 66).setText("Everybody");
+			break;
+		case 1:
+			widget(909, 66).setText("Friends");
+			break;
+		case 2:
+			widget(909, 66).setText("Nobody");
+			break;
+	}
+	return;
+}

@@ -1,0 +1,25 @@
+int script_5215(int arg0) {
+	switch (arg0) {
+		case 1:
+			return CLAN[2734];
+		case 2:
+			return CLAN[2735];
+		case 3:
+			return CLAN[2736];
+		case 4:
+			return CLAN[2737];
+		case 5:
+			return CLAN[2738];
+		case 6:
+			return CLAN[2739];
+		case 7:
+			return CLAN[2740];
+		case 8:
+			return CLAN[2741];
+		case 10:
+			return CLAN[2743];
+		case 9:
+			return CLAN[2742];
+	}
+	return -1;
+}

@@ -1,0 +1,39 @@
+int script_4886(int arg0) {
+	int int1;
+	switch (arg0) {
+		case 32:
+		case 33:
+		case 34:
+		case 35:
+		case 21:
+		case 22:
+		case 41:
+		case 42:
+		case 31:
+			return 1;
+	}
+	int1 = 0;
+	if (citadelConfigsInitialized()) {
+		int1 = CLANBIT[2580];
+		if (int1 >= 2) {
+			switch (arg0) {
+				case 24:
+				case 23:
+					return 1;
+			}
+		}
+		if (int1 >= 4) {
+			switch (arg0) {
+				case 25:
+				case 26:
+				case 43:
+				case 44:
+					return 1;
+			}
+		}
+		if (int1 >= 6) {
+			return 1;
+		}
+	}
+	return 0;
+}

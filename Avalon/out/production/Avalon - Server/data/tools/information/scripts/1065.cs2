@@ -1,0 +1,26 @@
+void script_1065(Widget widget0, int arg1) {
+	if (widget0.getScrollX() > arg1) {
+		widget0.setScrollMax(widget0.getScrollMaxH() - 10, 0);
+		widget0.setScrollPos(widget0.getScrollX() - 10, 0);
+		if (widget0.getScrollX() < arg1) {
+			widget0.setScrollMax(arg1 + widget0.getWidth(), 0);
+			widget0.setScrollPos(arg1, 0);
+			widget0.setScriptCallOnGameloop(-1, "");
+			return;
+		}
+	} else {
+		if (!(widget0.getScrollX() < arg1)) {
+			widget0.setScriptCallOnGameloop(-1, "");
+			return;
+		}
+		widget0.setScrollMax(widget0.getScrollMaxH() + 10, 0);
+		widget0.setScrollPos(widget0.getScrollX() + 10, 0);
+		if (widget0.getScrollX() > arg1) {
+			widget0.setScrollMax(arg1 + widget0.getWidth(), 0);
+			widget0.setScrollPos(arg1, 0);
+			widget0.setScriptCallOnGameloop(-1, "");
+			return;
+		}
+	}
+	return;
+}

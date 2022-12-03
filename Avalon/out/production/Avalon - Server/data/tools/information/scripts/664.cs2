@@ -1,0 +1,26 @@
+void script_664(Widget widget0, Sprite sprite1, Sprite sprite2, int arg3, Item item4, int arg5, Item item6, int arg7, Item item8, int arg9, Item item10, int arg11) {
+	if (!widget0.isHidden() && ACTIVE.setChild(widget0, 0)) {
+		if (item4 != null && script_19(item4, widget(662, 74)) < arg5) {
+			ACTIVE.setSprite(sprite2);
+			return;
+		}
+		if (item6 != null && script_19(item6, widget(662, 74)) < arg7) {
+			ACTIVE.setSprite(sprite2);
+			return;
+		}
+		if (item8 != null && script_19(item8, widget(662, 74)) < arg9) {
+			ACTIVE.setSprite(sprite2);
+			return;
+		}
+		if (item10 != null && script_19(item10, widget(662, 74)) < arg11) {
+			ACTIVE.setSprite(sprite2);
+			return;
+		}
+		if (getSkillActualLvl(23) < arg3) {
+			ACTIVE.setSprite(sprite2);
+		} else {
+			ACTIVE.setSprite(sprite1);
+		}
+	}
+	return;
+}

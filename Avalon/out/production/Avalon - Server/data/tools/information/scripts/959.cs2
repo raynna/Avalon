@@ -1,0 +1,112 @@
+void script_959(Widget widget0, Widget widget1, int arg2) {
+	int int3;
+	Widget widget4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	string str0;
+	widget0.clearChildren();
+	ARRAY0 = new Widget[64];
+	int3 = 0;
+	widget4 = null;
+	int5 = 0;
+	while (int5 < 64) {
+		widget4 = datamap('i', 'I', (DataMap)1467, int5);
+		if (length(widget4.getText()) > 0) {
+			widget4.setIsHidden(false);
+			ARRAY0[int3] = widget4;
+			int3 = int3 + 1;
+		} else {
+			widget4.setIsHidden(true);
+		}
+		int5 = int5 + 1;
+	}
+	if (int3 > 1) {
+		if (arg2 == 0) {
+			script_0(0, 0, int3 - 1);
+		} else {
+			script_62(0, 0, int3 - 1, (DataMap)1466);
+		}
+	}
+	int6 = 0;
+	int7 = 0;
+	int8 = widget4.getWidth();
+	int5 = 0;
+	while (int5 < int3) {
+		widget4 = widget(ARRAY0[int5]);
+		int7 = getLineCount(widget4.getText(), int8, 495);
+		int7 = 12 * int7 + 10;
+		widget4.setFont(495);
+		widget4.setSize(int8, int7, 0, 0);
+		widget4.setPosition(0, int6, 0, 0);
+		ACTIVE.createChild(widget0, 4, int5);
+		ACTIVE.setSize(int8, int7, 0, 0);
+		ACTIVE.setPosition(0, int6, 0, 0);
+		ACTIVE.setFont(495);
+		ACTIVE.setRGB(0xDF0F0F);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setTextAlignment(0, 0, 0);
+		ACTIVE.setText(datamap('I', 's', (DataMap)1466, widget4));
+		int6 = int6 + int7;
+		int5 = int5 + 1;
+	}
+	widget4 = datamap('i', 'I', (DataMap)1467, 64);
+	str0 = widget4.getText();
+	if (length(str0) > 0) {
+		if (int6 > 0) {
+			int6 = int6 + 5;
+		}
+		int7 = getLineCount(str0, int8, 495);
+		int7 = 12 * int7 + 5;
+		widget4.setSize(int8, int7, 0, 0);
+		widget4.setPosition(0, int6, 0, 0);
+		widget4.setIsHidden(false);
+		int6 = int6 + int7;
+	} else {
+		widget4.setIsHidden(true);
+	}
+	widget4 = datamap('i', 'I', (DataMap)1467, 65);
+	str0 = widget4.getText();
+	if (length(str0) > 0) {
+		if (int6 > 0) {
+			int6 = int6 + 5;
+		}
+		int7 = getLineCount(str0, int8, 495);
+		int7 = 12 * int7 + 5;
+		widget4.setSize(int8, int7, 0, 0);
+		widget4.setPosition(0, int6, 0, 0);
+		widget4.setIsHidden(false);
+		int6 = int6 + int7;
+	} else {
+		widget4.setIsHidden(true);
+	}
+	widget4 = datamap('i', 'I', (DataMap)1467, 66);
+	str0 = widget4.getText();
+	if (length(str0) > 0) {
+		if (int6 > 0) {
+			int6 = int6 + 5;
+		}
+		int7 = getLineCount(str0, int8, 495);
+		int7 = 12 * int7 + 5;
+		widget4.setSize(int8, int7, 0, 0);
+		widget4.setPosition(0, int6, 0, 0);
+		widget4.setIsHidden(false);
+		int6 = int6 + int7;
+	} else {
+		widget4.setIsHidden(true);
+	}
+	widget0.setScrollMax(int8, int6);
+	if (int6 > widget0.getHeight()) {
+		widget0.setPosition(3, widget0.getY(), 0, 0);
+		script_31(widget1, widget0, 792, 789, 790, 791, 773, 788);
+		if (ACTIVE.setChild(widget1, 1)) {
+			script_157(widget1, widget0, VARC[121], 1);
+		}
+	} else {
+		widget0.setScrollPos(0, 0);
+		VARC[121] = 0;
+		widget0.setPosition(12, widget0.getY(), 0, 0);
+	}
+	return;
+}

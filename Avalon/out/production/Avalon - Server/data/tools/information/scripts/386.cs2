@@ -1,0 +1,31 @@
+void script_386(int arg0) {
+	boolean boolean1;
+	boolean1 = script_734(VARC[196]);
+	if (arg0 == 1 && VARC[197] != 0) {
+		script_391();
+		widget(1028, 35).setIsHidden(true);
+		widget(1028, 115).setIsHidden(true);
+		widget(1028, 117).setIsHidden(false);
+		widget(1028, 116).setIsHidden(false);
+		widget(1028, 89).setIsHidden(false);
+	} else {
+		script_387(boolean1);
+		script_390(boolean1);
+		widget(1028, 35).setIsHidden(false);
+		if (VARC[197] == 0) {
+			widget(1028, 115).setIsHidden(true);
+			widget(1028, 117).setIsHidden(true);
+		} else {
+			widget(1028, 115).setIsHidden(false);
+			if (VARPBIT[8246] == 1 && VARPBIT[8247] == 0) {
+				widget(1028, 117).setIsHidden(true);
+			} else {
+				widget(1028, 117).setIsHidden(false);
+			}
+		}
+		widget(1028, 116).setIsHidden(true);
+		widget(1028, 89).setIsHidden(true);
+	}
+	script_383();
+	return;
+}

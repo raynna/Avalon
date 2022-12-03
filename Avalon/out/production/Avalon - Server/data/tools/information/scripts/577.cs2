@@ -1,0 +1,55 @@
+void script_577(string string0) {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	Item item4;
+	int0 = cs2method4210(string0, 1);
+	int1 = widget(389, 4).getWidth();
+	int2 = int1 - 8;
+	if (int0 == -1) {
+		ACTIVE.createChild(widget(389, 4), 4, 0);
+		ACTIVE.setPosition(0, 48, 0, 0);
+		ACTIVE.setSize(int1, 16, 0, 0);
+		ACTIVE.setFont(494);
+		ACTIVE.setText("Too many results. Please refine your search.");
+		ACTIVE.setTextAlignment(1, 1, 0);
+		ACTIVE.setRGB(0xA05A00);
+		ACTIVE.setTextAntiMacro(false);
+		widget(389, 4).setScrollMax(0, 15);
+		script_578();
+		return;
+	}
+	if (int0 == 0) {
+		ACTIVE.createChild(widget(389, 4), 4, 0);
+		ACTIVE.setPosition(0, 48, 0, 0);
+		ACTIVE.setSize(int1, 16, 0, 0);
+		ACTIVE.setFont(494);
+		ACTIVE.setText("No matching items found.");
+		ACTIVE.setTextAlignment(1, 1, 0);
+		ACTIVE.setRGB(0xA05A00);
+		ACTIVE.setTextAntiMacro(false);
+		widget(389, 4).setScrollMax(0, 15);
+		script_578();
+		return;
+	}
+	int3 = 1;
+	item4 = nextSearchResult();
+	ACTIVE.createChild(widget(389, 4), 3, 0);
+	while (item4 != null) {
+		ACTIVE.createChild(widget(389, 4), 4, int3);
+		ACTIVE.setPosition(4, 15 * (int3 - 1), 0, 0);
+		ACTIVE.setSize(int2, 15, 0, 0);
+		ACTIVE.setRGB(0xA05A00);
+		ACTIVE.setText(getItemName(item4));
+		ACTIVE.setFont(495);
+		ACTIVE.setTextAntiMacro(false);
+		ACTIVE.setScriptCallOnMouseEntered(579, int3, item4, "io");
+		ACTIVE.setScriptCallOnMousePressed(580, item4, "o");
+		item4 = nextSearchResult();
+		int3 = int3 + 1;
+	}
+	widget(389, 4).setScrollMax(0, 15 * (int3 - 1));
+	script_578();
+	return;
+}

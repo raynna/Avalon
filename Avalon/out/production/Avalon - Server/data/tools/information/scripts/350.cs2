@@ -1,0 +1,41 @@
+void script_350(int arg0, int arg1) {
+	AttrMap attrmap2;
+	AttrMap attrmap3;
+	if (arg0 != 1) {
+		return;
+	}
+	if (arg1 == 1) {
+		if (IsFemale()) {
+			return;
+		}
+		setBaseIdkit(0, null);
+		setBaseIdkit(1, null);
+		setBaseIdkit(7, getAttributeMapValue(datamap('i', 'J', (DataMap)3302, VARPBIT[8091]), 788));
+		setBaseIdkit(8, null);
+	} else {
+		if (!IsFemale()) {
+			return;
+		}
+		setBaseIdkit(7, null);
+		setBaseIdkit(8, null);
+		setBaseIdkit(0, getAttributeMapValue(datamap('i', 'J', (DataMap)3304, VARPBIT[8091]), 788));
+		setBaseIdkit(1, datamap('i', 'K', (DataMap)3307, VARPBIT[8091] / 2));
+	}
+	playSoundEffect(9819, 1, 0);
+	setFemale(script_42(arg1));
+	VARC[196] = IsFemale();
+	VARPBIT[8093] = VARC[196];
+	script_387(arg1);
+	VARC[86] = 1;
+	VARPBIT[8090] = 1;
+	attrmap2 = datamap('i', 'J', (DataMap)3278, VARC[197] - 1);
+	attrmap3 = null;
+	if (attrmap2 != null) {
+		attrmap3 = script_384(0, attrmap2, arg1);
+		if (attrmap3 != null) {
+			script_359(attrmap3, arg1);
+		}
+	}
+	script_390(arg1);
+	return;
+}

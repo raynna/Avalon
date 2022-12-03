@@ -1,0 +1,13 @@
+void script_4671(int arg0) {
+	VARC[1526] = 0;
+	VARC[1527] = 0;
+	VARC[1528] = 0;
+	VARC[1529] = 0;
+	VARC[1530] = 0;
+	VARC[1531] = 0;
+	script_4672(VARPBIT[9306]);
+	script_4677();
+	script_4673(VARPBIT[9306]);
+	widget(102, 62).setScriptCallOnGameloop(4675, "");
+	return;
+}

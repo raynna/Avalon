@@ -1,0 +1,19 @@
+void script_2214() {
+	if (VARC[1137] == 1) {
+		if (widget(VARC[1136]).getX() < 256) {
+			widget(VARC[1136]).setPosition(1 + widget(VARC[1136]).getX(), widget(VARC[1136]).getY(), 0, 0);
+		}
+		if (widget(VARC[1136]).getX() > 256) {
+			widget(VARC[1136]).setPosition(widget(VARC[1136]).getX() - 1, widget(VARC[1136]).getY(), 0, 0);
+		}
+		if (widget(932, 14).getY() > 70) {
+			widget(VARC[1136]).setPosition(widget(VARC[1136]).getX(), widget(VARC[1136]).getY() - 2, 0, 0);
+			widget(932, 14).setPosition(widget(932, 14).getX(), widget(932, 14).getY() - 2, 0, 0);
+			widget(932, 1).setScriptCallOnGameloop(2214, "");
+		} else {
+			widget(VARC[1136]).setIsHidden(true);
+			widget(932, 1).setScriptCallOnGameloop(2215, "");
+		}
+	}
+	return;
+}

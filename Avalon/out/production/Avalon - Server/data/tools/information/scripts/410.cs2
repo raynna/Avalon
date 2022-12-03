@@ -1,0 +1,61 @@
+void script_410(int arg0) {
+	if (VARC[1361] == arg0) {
+		return;
+	}
+	widget(1010, 6).setScriptCallOnGlobalConfigChange(410, VARC[1361], 1361, "iY");
+	if (VARC[1363] == VARPBIT[7510]) {
+		widget(1010, 33).setIsHidden(false);
+		widget(1010, 24).setIsHidden(true);
+	}
+	if (VARC[1361] == 0) {
+		widget(1010, 12).setRGB(0xFF981F);
+		widget(1010, 13).setSprite(3745);
+		widget(1010, 14).setRGB(0x969664);
+		widget(1010, 15).setSprite(3745);
+		widget(1010, 16).setRGB(0x969664);
+		widget(1010, 17).setSprite(3745);
+		widget(1010, 18).setRGB(0x969664);
+		widget(1010, 19).setSprite(3745);
+	} else if (VARC[1361] == 1) {
+		if (VARPBIT[7511] == 1) {
+			if (rndExcl(2) == 0) {
+				playSoundEffect2False(3436, 1, 0, 255);
+			} else {
+				playSoundEffect2False(3438, 1, 0, 255);
+			}
+		}
+		widget(1010, 12).setRGB(0x00C800);
+		widget(1010, 13).setSprite(3746);
+		widget(1010, 14).setRGB(0xFF981F);
+		widget(1010, 15).setSprite(3745);
+		widget(1010, 16).setRGB(0x969664);
+		widget(1010, 17).setSprite(3745);
+		widget(1010, 18).setRGB(0x969664);
+		widget(1010, 19).setSprite(3745);
+	} else if (VARC[1361] == 2) {
+		if (VARPBIT[7511] == 1) {
+			playSoundEffect2False(3437, 1, 0, 255);
+		}
+		widget(1010, 12).setRGB(0x00C800);
+		widget(1010, 13).setSprite(3746);
+		widget(1010, 14).setRGB(0x00C800);
+		widget(1010, 15).setSprite(3746);
+		widget(1010, 16).setRGB(0xFF981F);
+		widget(1010, 17).setSprite(3745);
+		widget(1010, 18).setRGB(0x969664);
+		widget(1010, 19).setSprite(3745);
+	} else {
+		if (VARPBIT[7511] == 1) {
+			playSoundEffect2False(3441, 1, 0, 255);
+		}
+		widget(1010, 12).setRGB(0x00C800);
+		widget(1010, 13).setSprite(3746);
+		widget(1010, 14).setRGB(0x00C800);
+		widget(1010, 15).setSprite(3746);
+		widget(1010, 16).setRGB(0x00C800);
+		widget(1010, 17).setSprite(3746);
+		widget(1010, 18).setRGB(0xFF981F);
+		widget(1010, 19).setSprite(3745);
+	}
+	return;
+}

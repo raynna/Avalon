@@ -1,0 +1,11 @@
+void script_4669(int arg0) {
+	switch (VARC[1525]) {
+		case 1:
+			script_4670(arg0);
+			break;
+		default:
+			cameraUnlock();
+			break;
+	}
+	return;
+}

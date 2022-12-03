@@ -1,0 +1,4 @@
+void script_2806() {
+	script_2807(widget(89, 1));
+	return;
+}

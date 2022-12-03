@@ -1,0 +1,5 @@
+void script_1137(Widget widget0, Widget widget1) {
+	widget0.setSize(VARP[300] * 1000 / 143, 13, 0, 0);
+	widget1.setText("Special Attack (" + str(VARP[300] / 10) + "%)");
+	return;
+}

@@ -1,0 +1,49 @@
+void script_2710(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5) {
+	Location location6;
+	int int7;
+	widget2.setTrans(0);
+	widget2.setScriptCallOnGameloop(-1, "");
+	widget2.setIsHidden(false);
+	widget0.setScriptCallOnGameloop(-1, "");
+	widget0.setScriptCallOnMinimapRelatedSetting3(-1, "");
+	widget0.setIsHidden(true);
+	cs2method6021(true);
+	cs2method6035(true);
+	widget1.setScriptCallOnGameloop(-1, "");
+	widget1.setRGB(0x000000);
+	widget1.setTrans(0);
+	widget1.setIsHidden(false);
+	if (VARC[994] == 1) {
+		VARC[986] = 1;
+	} else if (VARC[994] != 2) {
+		if (getBenchmarkToolkit() > 400) {
+			VARC[994] = 1;
+			VARC[986] = 1;
+			if (getDisplayMode() > 1) {
+				cs2method5307(1);
+			}
+			if (cs2method5308() > 1) {
+				cs2method5309(1);
+			}
+		} else {
+			VARC[994] = 2;
+		}
+	}
+	widget3.setScriptCallOnMousePressed(2713, widget0, widget1, widget2, widget3, widget4, widget5, "IIIIII");
+	widget3.setScriptCallOnMouseOver(2961, widget4, widget5, true, "II1");
+	widget3.setScriptCallOnMouseExit(2961, widget4, widget5, false, "II1");
+	VARC[986] = 1;
+	if (VARC[986] == 1) {
+		widget4.setSprite(2700);
+		return;
+	}
+	location6 = null;
+	int7 = 0;
+	location6, int7 = script_1239(0);
+	cameraMoveTo(location6, 1000, 100, 100);
+	cameraPointAt(location6, 0, 100, 100);
+	widget4.setSprite(2703);
+	VARC[177] = getClientCycle() + 30 + 30;
+	widget2.setScriptCallOnGameloop(2712, widget0, widget2, widget1, "III");
+	return;
+}

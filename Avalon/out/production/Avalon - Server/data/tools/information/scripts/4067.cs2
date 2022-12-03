@@ -1,0 +1,20 @@
+void script_4067(Widget widget0) {
+	switch (widget0) {
+		case widget(1058, 22):
+			widget0.setPosition(-160, 13, 1, 0);
+			break;
+		case widget(1058, 23):
+			widget0.setPosition(-80, 13, 1, 0);
+			break;
+		case widget(1058, 24):
+			widget0.setPosition(0, 13, 1, 0);
+			break;
+		case widget(1058, 26):
+			widget0.setPosition(80, 13, 1, 0);
+			break;
+		case widget(1058, 25):
+			widget0.setPosition(160, 13, 1, 0);
+			break;
+	}
+	return;
+}

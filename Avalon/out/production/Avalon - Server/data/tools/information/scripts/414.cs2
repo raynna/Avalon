@@ -1,0 +1,49 @@
+void script_414(int arg0) {
+	widget(1013, 19).setRGB(0x000000);
+	widget(1013, 18).setRGB(0x000000);
+	widget(1013, 20).setRGB(0x000000);
+	widget(1013, 21).setRGB(0x000000);
+	widget(1013, 17).setRGB(0x000000);
+	widget(1013, 15).setRGB(0x000000);
+	widget(1013, 16).setRGB(0x000000);
+	widget(1013, 14).setRGB(0x000000);
+	switch (arg0) {
+		case 66387971:
+			widget(1013, 19).setIsHidden(false);
+			break;
+		case 66387973:
+			widget(1013, 18).setIsHidden(false);
+			break;
+		case 66387970:
+			widget(1013, 20).setIsHidden(false);
+			break;
+		case 66387972:
+			widget(1013, 21).setIsHidden(false);
+			break;
+		case 66387978:
+			widget(1013, 17).setIsHidden(false);
+			break;
+		case 66387979:
+			widget(1013, 17).setIsHidden(false);
+			break;
+		case 66387980:
+			widget(1013, 15).setIsHidden(false);
+			break;
+		case 66387981:
+			widget(1013, 15).setIsHidden(false);
+			break;
+		case 66387974:
+			widget(1013, 16).setIsHidden(false);
+			break;
+		case 66387975:
+			widget(1013, 16).setIsHidden(false);
+			break;
+		case 66387976:
+			widget(1013, 14).setIsHidden(false);
+			break;
+		case 66387977:
+			widget(1013, 14).setIsHidden(false);
+			break;
+	}
+	return;
+}

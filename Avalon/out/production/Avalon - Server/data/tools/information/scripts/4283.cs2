@@ -1,0 +1,8 @@
+void script_4283() {
+	widget(1095, 28).setText(cs2method3702());
+	script_4332(widget(1095, 50), widget(1095, 60));
+	script_4334(widget(1095, 70), widget(1095, 71));
+	script_4329(widget(1095, 29));
+	widget(1095, 5).setIsHidden(true);
+	return;
+}

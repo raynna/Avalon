@@ -1,0 +1,28 @@
+void script_1919() {
+	if (VARC[583] > 0) {
+		widget(813, 99).setRGB(0xC8AA64);
+	} else {
+		widget(813, 99).setRGB(0x333333);
+	}
+	if (VARC[584] > 0) {
+		widget(813, 101).setRGB(0xC8AA64);
+	} else {
+		widget(813, 101).setRGB(0x333333);
+	}
+	if (VARC[585] > 0) {
+		widget(813, 103).setRGB(0xC8AA64);
+	} else {
+		widget(813, 103).setRGB(0x333333);
+	}
+	if (VARC[586] > 0) {
+		widget(813, 105).setRGB(0xC8AA64);
+	} else {
+		widget(813, 105).setRGB(0x333333);
+	}
+	if (VARC[587] > 0) {
+		widget(813, 107).setRGB(0xC8AA64);
+	} else {
+		widget(813, 107).setRGB(0x333333);
+	}
+	return;
+}

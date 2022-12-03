@@ -1,0 +1,7 @@
+void script_1472() {
+	if (VARC[190] == 1) {
+		widget(762, 17).setContextMenuOption(1, "Search");
+		widget(762, 17).setScriptCallOnClickContextMenu(1471, "");
+	}
+	return;
+}

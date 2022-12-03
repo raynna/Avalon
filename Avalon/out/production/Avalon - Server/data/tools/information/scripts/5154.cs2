@@ -1,0 +1,33 @@
+void script_5154(Widget widget0, AttrMap attrmap1) {
+	Sprite sprite2;
+	Sprite sprite3;
+	Sprite sprite4;
+	int int5;
+	if (widget0 == null || attrmap1 == null) {
+		return;
+	}
+	sprite2 = getAttributeMapValue(attrmap1, 1348);
+	sprite3 = getAttributeMapValue(attrmap1, 1355);
+	sprite4 = getAttributeMapValue(attrmap1, 1356);
+	int5 = getAttributeMapValue(attrmap1, 1358);
+	widget0.clearChildren();
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setPosition(0, 0, 0, 1);
+	ACTIVE.setSize(8, 20, 0, 0);
+	ACTIVE.setSprite(sprite2);
+	ACTIVE.setTrans(int5);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setSize(16, 20, 1, 0);
+	ACTIVE.setSprite(sprite3);
+	ACTIVE.setTrans(int5);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setPosition(0, 0, 2, 1);
+	ACTIVE.setSize(8, 20, 0, 0);
+	ACTIVE.setSprite(sprite4);
+	ACTIVE.setTrans(int5);
+	ACTIVE.setSpriteTiling(true);
+	return;
+}

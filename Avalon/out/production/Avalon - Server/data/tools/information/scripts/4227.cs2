@@ -1,0 +1,121 @@
+void script_4227(Widget widget0, Widget widget1) {
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	Item item7;
+	int int8;
+	int int9;
+	int int10;
+	string str0;
+	string str1;
+	widget0.clearChildren();
+	int2 = 0;
+	int3 = (widget0.getWidth() - 125 * 3) / 2;
+	int4 = datamapSize((DataMap)828);
+	int5 = 0;
+	int6 = 0;
+	while (int2 < int4) {
+		ACTIVE.createChild(widget0, 5, int2);
+		ACTIVE.setSize(125 - 4, 125 - 4, 0, 0);
+		if (int5 == 0) {
+			ACTIVE.setPosition(2, int6 + 2, 0, 0);
+			int5 = 1;
+		} else if (int5 == 1) {
+			ACTIVE.setPosition(0, int6 + 2, 1, 0);
+			int5 = 2;
+		} else {
+			ACTIVE.setPosition(2, int6 + 2, 2, 0);
+			int5 = 0;
+			int6 = int6 + 125 + int3;
+		}
+		ACTIVE.setSprite(297);
+		ACTIVE.setSpriteTiling(true);
+		int2 = int2 + 1;
+	}
+	if (int5 == 0) {
+		int6 = max(int6 - int3, 0);
+	}
+	widget0.setScrollMax(0, int6);
+	script_31(widget1, widget0, 792, 789, 790, 791, 773, 788);
+	item7 = null;
+	str0 = "";
+	str1 = "";
+	int8 = 0;
+	int9 = 0;
+	int10 = 125 - 18;
+	int2 = 0;
+	while (int2 < int4) {
+		item7 = datamap('i', 'O', (DataMap)828, int2);
+		if (item7 != null && ACTIVE.setChild(widget0, int2)) {
+			str0, str1 = itemAttribute(item7, 1367), itemAttribute(item7, 1368);
+			int3 = itemAttribute(item7, 1366);
+			int5, int6 = ACTIVE.getX() - 2, ACTIVE.getY() - 2;
+			int8 = int5 + 125 - 9;
+			int9 = int6 + 125 - 9;
+			_ACTIVE.createChild(widget0, 6, widget0.nextChild());
+			_ACTIVE.setSize(75, 75, 0, 0);
+			_ACTIVE.setPosition(int5 + 25, int6 + 20, 0, 0);
+			_ACTIVE.setItemNoNum(item7, 1);
+			_ACTIVE.createChild(widget0, 4, widget0.nextChild());
+			_ACTIVE.setSize(125, 20, 0, 0);
+			_ACTIVE.setPosition(int5, int6 + 5, 0, 0);
+			_ACTIVE.setFont(494);
+			_ACTIVE.setTextAlignment(1, 1, 0);
+			_ACTIVE.setRGB(0xFF981F);
+			_ACTIVE.setTextAntiMacro(true);
+			_ACTIVE.setText(str0);
+			_ACTIVE.createChild(widget0, 4, widget0.nextChild());
+			_ACTIVE.setSize(125, 20, 0, 0);
+			_ACTIVE.setPosition(int5, int6 + 125 - 25, 0, 0);
+			_ACTIVE.setFont(494);
+			_ACTIVE.setTextAlignment(1, 1, 0);
+			_ACTIVE.setRGB(0xFF981F);
+			_ACTIVE.setTextAntiMacro(true);
+			script_4229(int3, str1);
+			_ACTIVE.setScriptCallOnConfigChange(4228, CTX_WIDGET, CTX_WIDGET_CHILD, int3, str1, 294, "IiisY");
+			_ACTIVE.setScriptCallOnItemContainerUpdate(4228, CTX_WIDGET, CTX_WIDGET_CHILD, int3, str1, 93, 94, "IiisY");
+			_ACTIVE.createChild(widget0, 5, widget0.nextChild());
+			_ACTIVE.setSize(9, 9, 0, 0);
+			_ACTIVE.setPosition(int5, int6, 0, 0);
+			_ACTIVE.setSprite(913);
+			_ACTIVE.createChild(widget0, 5, widget0.nextChild());
+			_ACTIVE.setSize(9, 9, 0, 0);
+			_ACTIVE.setPosition(int8, int6, 0, 0);
+			_ACTIVE.setSprite(914);
+			_ACTIVE.createChild(widget0, 5, widget0.nextChild());
+			_ACTIVE.setSize(9, 9, 0, 0);
+			_ACTIVE.setPosition(int5, int9, 0, 0);
+			_ACTIVE.setSprite(915);
+			_ACTIVE.createChild(widget0, 5, widget0.nextChild());
+			_ACTIVE.setSize(9, 9, 0, 0);
+			_ACTIVE.setPosition(int8, int9, 0, 0);
+			_ACTIVE.setSprite(916);
+			_ACTIVE.createChild(widget0, 5, widget0.nextChild());
+			_ACTIVE.setSize(9, int10, 0, 0);
+			_ACTIVE.setPosition(int5, int6 + 9, 0, 0);
+			_ACTIVE.setSprite(917);
+			_ACTIVE.createChild(widget0, 5, widget0.nextChild());
+			_ACTIVE.setSize(int10, 9, 0, 0);
+			_ACTIVE.setPosition(int5 + 9, int6, 0, 0);
+			_ACTIVE.setSprite(918);
+			_ACTIVE.createChild(widget0, 5, widget0.nextChild());
+			_ACTIVE.setSize(9, int10, 0, 0);
+			_ACTIVE.setPosition(int8, int6 + 9, 0, 0);
+			_ACTIVE.setSprite(919);
+			_ACTIVE.createChild(widget0, 5, widget0.nextChild());
+			_ACTIVE.setSize(int10, 9, 0, 0);
+			_ACTIVE.setPosition(int5 + 9, int9, 0, 0);
+			_ACTIVE.setSprite(920);
+			ACTIVE.setContextMenuOption(1, "Claim");
+			ACTIVE.setContextMenuOption(10, "Examine");
+			str0 = script_2332(str0, "<br>", " ");
+			ACTIVE.setOptionBase("<col=ff9040>" + str0);
+			ACTIVE.setScriptCallOnMouseEntered(688, CTX_WIDGET, CTX_WIDGET_CHILD, 897, "Iid");
+			ACTIVE.setScriptCallOnMouseExit(688, CTX_WIDGET, CTX_WIDGET_CHILD, 297, "Iid");
+		}
+		int2 = int2 + 1;
+	}
+	return;
+}

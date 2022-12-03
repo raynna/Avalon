@@ -1,0 +1,4 @@
+void script_2072() {
+	widget(276, 59).setText("Zeal: " + str(VARPBIT[5827]));
+	return;
+}

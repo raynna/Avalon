@@ -1,0 +1,14 @@
+void script_392(AttrMap attrmap0, int arg1) {
+	if (attrmap0 == null) {
+		attrmap0 = (AttrMap)1112;
+	}
+	widget(1028, 113).setModel(getAttributeMapValue(attrmap0, 1166));
+	if (arg1 == 1) {
+		widget(1028, 112).setAnimation(getAttributeMapValue(attrmap0, 1165));
+		widget(1028, 113).setAnimation(getAttributeMapValue(attrmap0, 1168));
+	} else {
+		widget(1028, 112).setAnimation(getAttributeMapValue(attrmap0, 1164));
+		widget(1028, 113).setAnimation(getAttributeMapValue(attrmap0, 1167));
+	}
+	return;
+}

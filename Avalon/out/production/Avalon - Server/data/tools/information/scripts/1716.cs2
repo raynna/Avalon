@@ -1,0 +1,7 @@
+void script_1716() {
+	if (VARC[1063] != VARPBIT[6840]) {
+		VARC[1063] = VARPBIT[6840];
+		script_1717();
+	}
+	return;
+}

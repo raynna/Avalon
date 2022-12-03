@@ -1,0 +1,10 @@
+void script_1762(Widget widget0) {
+	if (VARC[231] > 6) {
+		widget0.setText("Time Left : " + str(VARC[231] - 5) + " mins");
+	} else if (VARC[231] == 6) {
+		widget0.setText("Time Left : 1 min");
+	} else {
+		widget0.setText("Time Left : 0 mins");
+	}
+	return;
+}

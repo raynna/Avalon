@@ -1,0 +1,137 @@
+void script_1059(int arg0, char char1, Widget widget2, int arg3, QcCat qccat4, QcPhrase qcphrase5, int arg6) {
+	Widget widget7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	char char12;
+	int int13;
+	if (!datamap('i', 'I', (DataMap)1550, arg3 + 1).isHidden()) {
+		return;
+	}
+	widget7 = datamap('i', 'I', (DataMap)1551, arg3);
+	if (arg0 == 104) {
+		if (arg6 == 0) {
+			return;
+		}
+		if (ACTIVE.setChild(widget7, VARC[128])) {
+			ACTIVE.setHidden(true);
+		}
+		if (VARC[128] <= 0) {
+			VARC[128] = arg6 - 1;
+		} else {
+			VARC[128] = VARC[128] - 1;
+		}
+		if (ACTIVE.setChild(widget7, VARC[128]) && ACTIVE.isHidden()) {
+			ACTIVE.setHidden(false);
+			ACTIVE.setRGB(0x577E45);
+		}
+		return;
+	}
+	if (arg0 == 105) {
+		if (arg6 == 0) {
+			return;
+		}
+		if (ACTIVE.setChild(widget7, VARC[128])) {
+			ACTIVE.setHidden(true);
+		}
+		if (VARC[128] == arg6 - 1) {
+			VARC[128] = 0;
+		} else {
+			VARC[128] = VARC[128] + 1;
+		}
+		if (ACTIVE.setChild(widget7, VARC[128]) && ACTIVE.isHidden()) {
+			ACTIVE.setHidden(false);
+			ACTIVE.setRGB(0x577E45);
+		}
+		return;
+	}
+	int8 = 0;
+	int9 = 0;
+	if (arg0 == 84) {
+		if (VARC[128] < 0) {
+			if (qccat4 != 32769 && arg3 == 0) {
+				script_1900(datamap('i', 'I', (DataMap)1550, arg3), datamap('i', 'I', (DataMap)1551, arg3), VARC[128], arg3 + 1);
+			}
+		} else if (qccat4 != null) {
+			int8 = cs2method5051(qccat4);
+			int9 = cs2method5053(qccat4);
+			if (VARC[128] == int8 + int9) {
+				if (arg3 == 0 && script_1036() != null && ACTIVE.setChild(datamap('i', 'I', (DataMap)1550, arg3), VARC[128])) {
+					script_1061(datamap('i', 'I', (DataMap)1550, arg3), datamap('i', 'I', (DataMap)1551, arg3), VARC[128], widget2, arg3 + 1, script_1036());
+				}
+			} else if (VARC[128] < int8) {
+				script_1061(datamap('i', 'I', (DataMap)1550, arg3), datamap('i', 'I', (DataMap)1551, arg3), VARC[128], widget2, arg3 + 1, cs2method5052(qccat4, VARC[128]));
+			} else if (VARC[128] < int8 + int9) {
+				script_1071(widget2, cs2method5054(qccat4, VARC[128] - int8), arg3);
+			} else {
+				script_1900(datamap('i', 'I', (DataMap)1550, arg3), datamap('i', 'I', (DataMap)1551, arg3), VARC[128], arg3 + 1);
+			}
+		} else if (qcphrase5 != null) {
+			int8 = 0;
+			int9 = cs2method5056(qcphrase5);
+			script_1071(widget2, cs2method5057(qcphrase5, VARC[128]), arg3);
+		}
+		return;
+	}
+	if (arg0 == 102) {
+		script_1050(VARC[126], STRING[27]);
+		return;
+	}
+	if (arg0 == 13) {
+		script_1054();
+		return;
+	}
+	if (arg0 == 85 && arg3 > 0) {
+		script_1068(widget2, arg3 - 1);
+		return;
+	}
+	if (!isAlphaNumeric(char1)) {
+		return;
+	}
+	char1 = upper(char1);
+	int10 = 0;
+	int11 = 0;
+	char12 = null;
+	if (qccat4 != null) {
+		int8 = cs2method5051(qccat4);
+		int9 = cs2method5053(qccat4);
+		if (arg3 == 0 && compare("X", concatChar("", char1)) == 0 && script_1036() != null) {
+			int10 = int8 + int9;
+			if (ACTIVE.setChild(datamap('i', 'I', (DataMap)1550, arg3), int10)) {
+				script_1061(datamap('i', 'I', (DataMap)1550, arg3), datamap('i', 'I', (DataMap)1551, arg3), int10, widget2, arg3 + 1, script_1036());
+			}
+			return;
+		}
+		int10 = 0;
+		while (int11 < int8) {
+			char12 = upper(cs2method5062(qccat4, int11));
+			if (char12 == char1) {
+				script_1061(datamap('i', 'I', (DataMap)1550, arg3), datamap('i', 'I', (DataMap)1551, arg3), int10, widget2, arg3 + 1, cs2method5052(qccat4, int10));
+				return;
+			}
+			int10 = int10 + 1;
+			int11 = int11 + 1;
+		}
+	} else {
+		int8 = 0;
+		int9 = cs2method5056(qcphrase5);
+	}
+	if (!isDigit(char1)) {
+		return;
+	}
+	int13 = indexOf("0123456789", char1, 0);
+	if (int13 == 0) {
+		int13 = 10;
+	}
+	if (int13 > int9) {
+		return;
+	}
+	int10 = int13 - 1;
+	if (qccat4 != null) {
+		script_1071(widget2, cs2method5054(qccat4, int10), arg3);
+	} else if (qcphrase5 != null) {
+		script_1071(widget2, cs2method5057(qcphrase5, int10), arg3);
+	}
+	return;
+}

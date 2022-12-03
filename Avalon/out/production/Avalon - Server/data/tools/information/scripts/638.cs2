@@ -1,0 +1,10 @@
+void script_638(Widget widget0) {
+	int int1;
+	widget0.setSprite(1170);
+	int1 = 0;
+	while (int1 < 6) {
+		script_41(script_626(int1));
+		int1 = int1 + 1;
+	}
+	return;
+}

@@ -1,0 +1,32 @@
+void script_4987(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int1 = 0;
+	int2 = 0;
+	int3 = -1;
+	int4 = -1;
+	int5 = 0;
+	int6 = script_4966(arg0);
+	if (citadelConfigsInitialized()) {
+		int1 = script_4949(int6);
+		VARPBIT[9550] = int1;
+	}
+	if (VARPBIT[9552] == 1 || VARPBIT[9552] == 2) {
+		int1, int2, int3, int4, int5 = script_4958(int6);
+		script_4988(VARPBIT[9550]);
+		script_4937();
+	} else if (VARPBIT[9552] == 4 || VARPBIT[9552] == 3) {
+		VARPBIT[9550] = script_4949(int6);
+		script_4988(VARPBIT[9550]);
+		script_4937();
+		script_4905();
+		script_4907();
+		VARPBIT[9552] = 1;
+		script_4899(1);
+	}
+	return;
+}

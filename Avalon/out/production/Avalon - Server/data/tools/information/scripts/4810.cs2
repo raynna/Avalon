@@ -1,0 +1,97 @@
+void script_4810() {
+	int int0;
+	int0 = 1;
+	widget(1092, 1153).setPosition(4, int0, 0, 0);
+	int0 = int0 + 13;
+	widget(1092, 1180).setPosition(0, int0, 0, 0);
+	int0 = int0 + 1 + widget(1092, 1180).getHeight();
+	if (widget(1092, 1168).getHeight() > 0) {
+		widget(1092, 1154).setIsHidden(false);
+		widget(1092, 1154).setPosition(4, int0, 0, 0);
+		int0 = int0 + 13;
+		widget(1092, 1168).setPosition(0, int0, 0, 0);
+		int0 = int0 + 1 + widget(1092, 1168).getHeight();
+	} else {
+		widget(1092, 1154).setIsHidden(true);
+		widget(1092, 1168).setPosition(0, int0, 0, 0);
+	}
+	if (widget(1092, 1156).getHeight() > 0) {
+		widget(1092, 1155).setIsHidden(false);
+		widget(1092, 1155).setPosition(4, int0, 0, 0);
+		int0 = int0 + 13;
+		widget(1092, 1156).setPosition(0, int0, 0, 0);
+		int0 = int0 + 1 + widget(1092, 1156).getHeight();
+	} else {
+		widget(1092, 1155).setIsHidden(true);
+		widget(1092, 1156).setPosition(0, int0, 0, 0);
+	}
+	widget(1092, 1192).setPosition(0, int0, 0, 0);
+	int0 = int0 + 1 + widget(1092, 1192).getHeight();
+	widget(1092, 1152).setScrollMax(0, int0);
+	if (!widget(1092, 1152).isHidden()) {
+		script_31(widget(1092, 984), widget(1092, 1152), 5666, 5663, 5664, 5665, 5686, 5685);
+	}
+	int0 = 1;
+	widget(1092, 1073).setPosition(4, int0, 0, 0);
+	int0 = int0 + 13;
+	widget(1092, 1104).setPosition(0, int0, 0, 0);
+	int0 = int0 + 1 + widget(1092, 1104).getHeight();
+	if (widget(1092, 1090).getHeight() > 0) {
+		widget(1092, 1074).setIsHidden(false);
+		widget(1092, 1074).setPosition(4, int0, 0, 0);
+		int0 = int0 + 13;
+		widget(1092, 1090).setPosition(0, int0, 0, 0);
+		int0 = int0 + 1 + widget(1092, 1090).getHeight();
+	} else {
+		widget(1092, 1074).setIsHidden(true);
+		widget(1092, 1090).setPosition(0, int0, 0, 0);
+	}
+	if (widget(1092, 1076).getHeight() > 0) {
+		widget(1092, 1075).setIsHidden(false);
+		widget(1092, 1075).setPosition(4, int0, 0, 0);
+		int0 = int0 + 13;
+		widget(1092, 1076).setPosition(0, int0, 0, 0);
+		int0 = int0 + 1 + widget(1092, 1076).getHeight();
+	} else {
+		widget(1092, 1075).setIsHidden(true);
+		widget(1092, 1076).setPosition(0, int0, 0, 0);
+	}
+	widget(1092, 1118).setPosition(0, int0, 0, 0);
+	int0 = int0 + 1 + widget(1092, 1118).getHeight();
+	widget(1092, 1072).setScrollMax(0, int0);
+	if (!widget(1092, 1072).isHidden()) {
+		script_31(widget(1092, 984), widget(1092, 1072), 5666, 5663, 5664, 5665, 5686, 5685);
+	}
+	int0 = 1;
+	widget(1092, 987).setPosition(4, int0, 0, 0);
+	int0 = int0 + 13;
+	widget(1092, 1022).setPosition(0, int0, 0, 0);
+	int0 = int0 + 1 + widget(1092, 1022).getHeight();
+	if (widget(1092, 1006).getHeight() > 0) {
+		widget(1092, 988).setIsHidden(false);
+		widget(1092, 988).setPosition(4, int0, 0, 0);
+		int0 = int0 + 13;
+		widget(1092, 1006).setPosition(0, int0, 0, 0);
+		int0 = int0 + 1 + widget(1092, 1006).getHeight();
+	} else {
+		widget(1092, 988).setIsHidden(true);
+		widget(1092, 1006).setPosition(0, int0, 0, 0);
+	}
+	if (widget(1092, 990).getHeight() > 0) {
+		widget(1092, 989).setIsHidden(false);
+		widget(1092, 989).setPosition(4, int0, 0, 0);
+		int0 = int0 + 13;
+		widget(1092, 990).setPosition(0, int0, 0, 0);
+		int0 = int0 + 1 + widget(1092, 990).getHeight();
+	} else {
+		widget(1092, 989).setIsHidden(true);
+		widget(1092, 990).setPosition(0, int0, 0, 0);
+	}
+	widget(1092, 1038).setPosition(0, int0, 0, 0);
+	int0 = int0 + 1 + widget(1092, 1038).getHeight();
+	widget(1092, 986).setScrollMax(0, int0);
+	if (!widget(1092, 986).isHidden()) {
+		script_31(widget(1092, 984), widget(1092, 986), 5666, 5663, 5664, 5665, 5686, 5685);
+	}
+	return;
+}

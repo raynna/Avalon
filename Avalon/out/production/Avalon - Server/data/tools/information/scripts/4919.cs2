@@ -1,0 +1,25 @@
+void script_4919() {
+	int int0;
+	int0 = 0;
+	if (citadelConfigsInitialized()) {
+		if (VARPBIT[9550] > 0) {
+			if (!widget(1092, 259).isHidden()) {
+				script_4989(script_4948(VARPBIT[9550]));
+			}
+		} else {
+			script_5007();
+			script_4935();
+			script_4905();
+			script_4907();
+			script_5012();
+			script_4895();
+			script_4864();
+			script_4994();
+			script_4889();
+			script_4881();
+		}
+		script_4853();
+		return;
+	}
+	return;
+}

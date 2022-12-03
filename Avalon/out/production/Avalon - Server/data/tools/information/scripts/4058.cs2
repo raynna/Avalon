@@ -1,0 +1,14 @@
+void script_4058(Widget widget0, Widget widget1, Widget widget2) {
+	int int3;
+	int3 = 5;
+	if (widget0.getY() > 1 - widget0.getHeight()) {
+		widget0.setPosition(0, widget0.getY() - int3, 1, 0);
+	} else {
+		widget2.setScriptCallOnGameloop(-1, "");
+		widget0.setIsHidden(true);
+		widget1.setIsHidden(false);
+		widget1.setPosition(0, 1 - widget1.getHeight(), 1, 0);
+		widget2.setScriptCallOnGameloop(4059, widget1, widget2, "II");
+	}
+	return;
+}

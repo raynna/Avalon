@@ -1,0 +1,51 @@
+void script_4858() {
+	int int0;
+	int0 = 0;
+	if (citadelConfigsInitialized()) {
+		widget(1092, 213).setIsHidden(true);
+		widget(1092, 214).setIsHidden(true);
+		widget(1092, 215).setIsHidden(true);
+		int0 = script_4948(VARPBIT[9550]);
+		if (int0 <= 0) {
+			return;
+		}
+		script_4968(int0).setIsHidden(true);
+		if (CLANBIT[2076] >= 4 && CLANBIT[2076] != 4) {
+			widget(1092, 184).setIsHidden(true);
+		}
+		if (CLANBIT[2077] >= 4 && CLANBIT[2077] != 5) {
+			widget(1092, 185).setIsHidden(true);
+		}
+		if (CLANBIT[2078] >= 4 && CLANBIT[2078] != 6) {
+			widget(1092, 186).setIsHidden(true);
+		}
+		if (CLANBIT[2079] >= 4 && CLANBIT[2079] != 7) {
+			widget(1092, 187).setIsHidden(true);
+		}
+		if (CLANBIT[2080] >= 4 && CLANBIT[2080] != 8) {
+			widget(1092, 188).setIsHidden(true);
+		}
+		if (CLANBIT[2081] >= 4 && CLANBIT[2081] != 9) {
+			widget(1092, 189).setIsHidden(true);
+		}
+		if (CLANBIT[2082] >= 4 && CLANBIT[2082] != 10) {
+			widget(1092, 190).setIsHidden(true);
+		}
+		if (CLANBIT[2083] >= 4 && CLANBIT[2083] != 11) {
+			widget(1092, 191).setIsHidden(true);
+		}
+		if (CLANBIT[2084] >= 4 && CLANBIT[2084] != 12) {
+			widget(1092, 192).setIsHidden(true);
+		}
+		if (CLANBIT[2085] >= 4 && CLANBIT[2085] != 13) {
+			widget(1092, 193).setIsHidden(true);
+		}
+		if (CLANBIT[2086] >= 4 && CLANBIT[2086] != 14) {
+			widget(1092, 194).setIsHidden(true);
+		}
+		if (CLANBIT[2087] >= 4 && CLANBIT[2087] != 15) {
+			widget(1092, 195).setIsHidden(true);
+		}
+	}
+	return;
+}

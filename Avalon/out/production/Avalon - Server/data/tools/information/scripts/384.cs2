@@ -1,0 +1,35 @@
+AttrMap script_384(int arg0, AttrMap attrmap1, int arg2) {
+	switch (arg0) {
+		case 0:
+			if (arg2 == 1) {
+				return getAttributeMapValue(attrmap1, 1175);
+			}
+			return getAttributeMapValue(attrmap1, 1169);
+		case 1:
+			if (arg2 == 1) {
+				return getAttributeMapValue(attrmap1, 1176);
+			}
+			return getAttributeMapValue(attrmap1, 1170);
+		case 2:
+			if (arg2 == 1) {
+				return getAttributeMapValue(attrmap1, 1177);
+			}
+			return getAttributeMapValue(attrmap1, 1171);
+		case 3:
+			if (arg2 == 1) {
+				return getAttributeMapValue(attrmap1, 1178);
+			}
+			return getAttributeMapValue(attrmap1, 1172);
+		case 4:
+			if (arg2 == 1) {
+				return getAttributeMapValue(attrmap1, 1179);
+			}
+			return getAttributeMapValue(attrmap1, 1173);
+		case 5:
+			if (arg2 == 1) {
+				return getAttributeMapValue(attrmap1, 1180);
+			}
+			return getAttributeMapValue(attrmap1, 1174);
+	}
+	return null;
+}

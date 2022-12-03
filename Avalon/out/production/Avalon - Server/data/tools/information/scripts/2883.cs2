@@ -1,0 +1,7 @@
+void script_2883() {
+	if (VARPBIT[4393] == 1 || VARPBIT[542] == 1) {
+		return;
+	}
+	script_39(widget(187, 11), widget(187, 16), "Clear playlist", 25, 189);
+	return;
+}

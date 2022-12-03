@@ -1,0 +1,24 @@
+void script_4694(Widget widget0) {
+	if (VARC[1548] == 1) {
+		widget0.setPosition(widget(500, 2).getWidth(), 63, 0, 0);
+	}
+	if (VARC[1548] == 2) {
+		widget0.setPosition(widget(500, 2).getWidth(), 93, 0, 0);
+	}
+	if (VARC[1548] == 3) {
+		widget0.setPosition(widget(500, 2).getWidth(), 123, 0, 0);
+	}
+	if (VARC[1548] == 4) {
+		widget0.setPosition(widget(500, 2).getWidth(), 153, 0, 0);
+	}
+	if (VARC[1548] == 5) {
+		widget0.setPosition(widget(500, 2).getWidth(), 183, 0, 0);
+	}
+	if (VARC[1548] == 6) {
+		widget0.setPosition(widget(500, 2).getWidth(), 213, 0, 0);
+	}
+	if (VARC[1548] == 7) {
+		widget0.setPosition(widget(500, 2).getWidth(), 213, 0, 0);
+	}
+	return;
+}

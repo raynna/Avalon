@@ -1,0 +1,10 @@
+void script_732(Widget widget0) {
+	if (VARPBIT[278] == 0) {
+		widget0.setAnimation(1377);
+	} else if (VARPBIT[278] == 1) {
+		widget0.setAnimation(2114);
+	} else {
+		widget0.setAnimation(2116);
+	}
+	return;
+}

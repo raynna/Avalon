@@ -1,0 +1,20 @@
+void script_2635() {
+	VARC[904] = 0;
+	widget(859, 2).setScriptCallOnGameloop(-1, "");
+	widget(859, 2).setSprite(1914);
+	widget(859, 8).setScriptCallOnGameloop(-1, "");
+	widget(859, 8).setSprite(1915);
+	widget(859, 7).setScriptCallOnGameloop(-1, "");
+	widget(859, 7).setSprite(1916);
+	widget(859, 22).setScriptCallOnGameloop(-1, "");
+	widget(859, 22).setSprite(1917);
+	widget(859, 23).setScriptCallOnGameloop(-1, "");
+	widget(859, 23).setSprite(1921);
+	widget(859, 6).setScriptCallOnGameloop(-1, "");
+	widget(859, 6).setSprite(1918);
+	widget(859, 20).setScriptCallOnGameloop(-1, "");
+	widget(859, 20).setSprite(1919);
+	widget(859, 21).setScriptCallOnGameloop(-1, "");
+	widget(859, 21).setSprite(1920);
+	return;
+}

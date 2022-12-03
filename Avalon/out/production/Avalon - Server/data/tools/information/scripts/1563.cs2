@@ -1,0 +1,47 @@
+int script_1563(Location location0, Location location1, int arg2, Color color3, int arg4, Widget widget5, int arg6, int arg7, int arg8, int arg9, int arg10) {
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int11 = 0;
+	int12 = 0;
+	int11, int12 = script_296(location0, arg2, widget5, arg6, arg7, arg8, arg9);
+	int13 = 0;
+	int14 = 0;
+	int13, int14 = script_296(location1, arg2, widget5, arg6, arg7, arg8, arg9);
+	int15 = int11 + (int13 - int11) / 2;
+	int16 = int12 + (int14 - int12) / 2;
+	int17 = int13 - int11;
+	int18 = int14 - int12;
+	int17, int18 = max(int17, 0 - int17), max(int18, 0 - int18);
+	if (ACTIVE.setChild(widget5, arg10)) {
+		ACTIVE.setPosition(int15, int16, 1, 1);
+		ACTIVE.setSize(int17, int18, 0, 0);
+	} else {
+		ACTIVE.createChild(widget5, 3, arg10);
+		ACTIVE.setPosition(int15, int16, 1, 1);
+		ACTIVE.setSize(int17, int18, 0, 0);
+		ACTIVE.setRGB(color3);
+		ACTIVE.setFilled(false);
+		ACTIVE.setTrans(0);
+	}
+	arg10 = arg10 + 1;
+	int17 = int17 + 2 * arg4;
+	int18 = int18 + 2 * arg4;
+	if (ACTIVE.setChild(widget5, arg10)) {
+		ACTIVE.setPosition(int15, int16, 1, 1);
+		ACTIVE.setSize(int17, int18, 0, 0);
+	} else {
+		ACTIVE.createChild(widget5, 3, arg10);
+		ACTIVE.setPosition(int15, int16, 1, 1);
+		ACTIVE.setSize(int17, int18, 0, 0);
+		ACTIVE.setRGB(color3);
+		ACTIVE.setFilled(false);
+		ACTIVE.setTrans(0);
+	}
+	return arg10 + 1;
+}

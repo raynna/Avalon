@@ -1,0 +1,5 @@
+void script_2985(Widget widget0) {
+	widget0.setScriptCallOnMinimapRelatedSetting3(-1, "");
+	cameraMethod5502(0, 1, 450, 450, 1, 1);
+	return;
+}

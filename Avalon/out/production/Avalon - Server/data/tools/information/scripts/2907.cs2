@@ -1,0 +1,5 @@
+void script_2907(Widget widget0, Widget widget1) {
+	widget1.setText("");
+	widget0.setTrans(0);
+	return;
+}

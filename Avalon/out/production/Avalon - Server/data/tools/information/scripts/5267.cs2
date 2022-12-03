@@ -1,0 +1,6 @@
+void script_5267() {
+	widget(1137, 5).setIsHidden(true);
+	script_5219(widget(1137, 6));
+	widget(1137, 109).clearChildren();
+	return;
+}

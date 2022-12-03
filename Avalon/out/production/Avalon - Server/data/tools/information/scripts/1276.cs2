@@ -1,0 +1,5 @@
+void script_1276(Widget widget0) {
+	VARC[814] = 0;
+	widget0.setTrans(255);
+	return;
+}

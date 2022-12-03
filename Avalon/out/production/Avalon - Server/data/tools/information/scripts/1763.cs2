@@ -1,0 +1,8 @@
+void script_1763() {
+	widget(894, 5).setText(STRING[197]);
+	widget(894, 6).setText(STRING[198]);
+	widget(894, 8).setText(STRING[199]);
+	widget(894, 9).setText(STRING[200]);
+	widget(894, 7).setText("");
+	return;
+}

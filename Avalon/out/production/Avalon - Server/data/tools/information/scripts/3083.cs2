@@ -1,0 +1,8 @@
+void script_3083(Widget widget0, int arg1, string string2) {
+	if (arg1 < 0) {
+		widget0.setScriptCallOnMouseOver(3084, widget0, arg1, getClientCycle() + 25, string2, MOUSE_X, MOUSE_Y, "Iiisii");
+	} else if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setScriptCallOnMouseOver(3084, widget0, arg1, getClientCycle() + 25, string2, MOUSE_X, MOUSE_Y, "Iiisii");
+	}
+	return;
+}

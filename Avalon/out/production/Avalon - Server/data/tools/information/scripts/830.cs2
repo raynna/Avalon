@@ -1,0 +1,6 @@
+void script_830(Widget widget0, Widget widget1) {
+	widget1.setAnimation(3320);
+	widget0.setScriptCallOnConfigChange(831, widget0, 425, "IY");
+	script_834(widget0);
+	return;
+}

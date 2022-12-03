@@ -1,0 +1,11 @@
+int script_3270(int arg0, int arg1) {
+	int int2;
+	int2 = 2;
+	if (arg0 + (int2 - 1) < arg1) {
+		return arg0 + int2;
+	}
+	if (arg0 - (int2 - 1) > arg1) {
+		return arg0 - int2;
+	}
+	return arg1;
+}

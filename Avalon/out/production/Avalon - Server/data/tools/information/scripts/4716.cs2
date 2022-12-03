@@ -1,0 +1,81 @@
+void script_4716(Widget widget0, Widget widget1, DataMap datamap2, int arg3, int arg4, int arg5) {
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	AttrMap attrmap10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	string str0;
+	int6 = 48;
+	int7 = 48;
+	int8 = 0;
+	int9 = 0;
+	attrmap10 = null;
+	int11 = -1;
+	int12 = -1;
+	str0 = "";
+	int13 = 1;
+	int14 = 0;
+	int15 = 0;
+	int16 = 0;
+	int17 = 0;
+	int18 = 1;
+	if (widget0.getScrollMaxH() > 0) {
+		int16 = widget0.getScrollMaxH();
+	} else {
+		int16 = widget0.getWidth();
+	}
+	int16 = int16 / (int6 + arg3);
+	while (int8 < datamapSize(datamap2)) {
+		int18 = 0;
+		attrmap10 = datamap('i', 'J', datamap2, int8);
+		if (ACTIVE.setChild(widget0, int8)) {
+			int13 = script_4718(attrmap10);
+			if (arg5 == 0) {
+				int18 = 1;
+			} else if (arg5 == 1) {
+				if (int13 == 1) {
+					int18 = 1;
+				}
+			} else if (arg5 == getAttributeMapValue(attrmap10, 1422)) {
+				int18 = 1;
+			} else if (arg5 == getAttributeMapValue(attrmap10, 1423)) {
+				int18 = 1;
+			} else if (arg5 == getAttributeMapValue(attrmap10, 1424)) {
+				int18 = 1;
+			} else if (arg5 == getAttributeMapValue(attrmap10, 1425)) {
+				int18 = 1;
+			} else if (arg5 == getAttributeMapValue(attrmap10, 1426)) {
+				int18 = 1;
+			}
+			if (int18 == 1) {
+				ACTIVE.setHidden(false);
+				int14 = (int6 + arg3) * (int9 % int16);
+				int15 = int9 / int16 * (int7 + arg4);
+				ACTIVE.setPosition(int14, int15, 0, 0);
+				int9 = int9 + 1;
+			} else {
+				ACTIVE.setHidden(true);
+			}
+		}
+		int8 = int8 + 1;
+	}
+	if (arg4 + int15 + int7 > widget0.getHeight()) {
+		widget0.setScrollMax(0, int7 + int15);
+		widget1.setIsHidden(false);
+		script_31(widget1, widget0, 792, 789, 790, 791, 773, 788);
+	} else {
+		widget0.setScrollMax(0, 0);
+		widget0.setScrollPos(0, 0);
+		widget1.clearChildren();
+		widget1.setIsHidden(true);
+	}
+	return;
+}

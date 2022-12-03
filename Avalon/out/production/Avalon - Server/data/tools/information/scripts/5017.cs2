@@ -1,0 +1,12 @@
+void script_5017(Widget widget0, Widget widget1, Sprite sprite2, Sprite sprite3, int arg4, int arg5, int arg6) {
+	widget0.setSprite(sprite2);
+	widget1.setSprite(sprite3);
+	if (arg6 >= 5) {
+		widget0.setRGB(getColorRelatedMethod4020(arg4));
+		widget1.setRGB(getColorRelatedMethod4020(arg5));
+	} else {
+		widget0.setRGB(getColorRelatedMethod4020(6716));
+		widget1.setRGB(getColorRelatedMethod4020(6716));
+	}
+	return;
+}

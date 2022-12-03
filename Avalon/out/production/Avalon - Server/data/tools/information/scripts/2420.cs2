@@ -1,0 +1,12 @@
+void script_2420() {
+	widget(674, 18).setIsHidden(true);
+	widget(674, 19).setIsHidden(false);
+	widget(674, 19).setAnimation(null);
+	widget(674, 9).setAnimation(null);
+	widget(674, 10).setIsHidden(false);
+	widget(674, 6).setModel(46967);
+	widget(674, 5).setIsHidden(true);
+	widget(674, 9).setAnimation(11762);
+	VARC[737] = 0;
+	return;
+}

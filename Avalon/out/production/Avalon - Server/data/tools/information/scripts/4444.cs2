@@ -1,0 +1,213 @@
+void script_4444(int arg0) {
+	int int1;
+	int int2;
+	Widget widget3;
+	Widget widget4;
+	Widget widget5;
+	Widget widget6;
+	Widget widget7;
+	Widget widget8;
+	Widget widget9;
+	Widget widget10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	int int23;
+	int int24;
+	int int25;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	string str4;
+	int1 = 9;
+	int2 = 23;
+	script_4445();
+	widget(1110, 96).setSprite(6255);
+	widget(1110, 64).setIsHidden(true);
+	widget(1110, 70).setText("");
+	if (VARC[1513] != 1) {
+		VARC[1513] = 1;
+	}
+	widget3 = widget(1110, 5);
+	widget4 = widget(1110, 8);
+	widget5 = widget(1110, 6);
+	widget6 = widget(1110, 7);
+	widget7 = widget(1110, 38);
+	widget8 = widget(1110, 37);
+	widget9 = widget(1110, 9);
+	widget10 = widget(1110, 63);
+	widget3.clearChildren();
+	widget4.clearChildren();
+	widget5.clearChildren();
+	widget6.clearChildren();
+	int11 = 0;
+	int12 = cs2method3755();
+	int13 = widget7.getWidth();
+	if (arg0 <= -1) {
+		arg0 = widget7.getX();
+	}
+	arg0 = max(min(arg0, widget8.getWidth() - int13), 0);
+	VARC[1506] = arg0;
+	widget7.setPosition(arg0, 0, 0, 1);
+	widget7.setIsHidden(false);
+	widget7.cs2method2314(149);
+	int11 = 0;
+	int14 = 2;
+	str0 = "";
+	int15 = 19;
+	int16 = widget3.getHeight() / int15;
+	str1 = "";
+	int17 = 0;
+	str2 = "";
+	int18 = 0;
+	int19 = 0;
+	str3 = "";
+	int20 = -1;
+	int21 = script_3365(widget8);
+	int22 = arg0 + int21 - script_3365(widget3);
+	int23 = widget5.getWidth() - (arg0 + (int21 - script_3365(widget5)) + int13);
+	widget(1110, 95).setContextMenuOption(1, "Leave chat");
+	widget(1110, 96).setSprite(6255);
+	widget5.setSize(int23, 0, 0, 1);
+	widget6.setSize(int23, 0, 0, 1);
+	widget(1110, 65).setText(cs2method3752());
+	str4 = "Leave another" + "<br>" + "clan's clanchat.";
+	widget(1110, 95).setScriptCallOnMouseOver(4538, widget(1110, 60), CTX_WIDGET, -1, str4, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+	widget(1110, 95).setContextMenuOption(1, "Leave Clan Chat channel");
+	while (int11 < int12) {
+		str1 = cs2method3756(int11);
+		int20 = cs2method3757(int11);
+		ACTIVE.createChild(widget3, 4, widget3.nextChild());
+		ACTIVE.setTextAlignment(0, 1, 0);
+		ACTIVE.setPosition(0, int14, 0, 0);
+		ACTIVE.setSize(int22, int15, 0, 0);
+		ACTIVE.setRGB(0xA4997D);
+		ACTIVE.setFont(3793);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setText(str1);
+		if (compare(str1, removeTags(cs2method5020())) != 0) {
+			if (isFriend(str1)) {
+				ACTIVE.setContextMenuOption(1, "Message");
+				ACTIVE.setContextMenuOption(7, "Remove friend " + str1);
+			} else if (cs2method3623(str1)) {
+				ACTIVE.setContextMenuOption(8, "Remove ignore " + str1);
+			} else {
+				ACTIVE.setContextMenuOption(5, "Add friend " + str1);
+				ACTIVE.setContextMenuOption(6, "Add ignore " + str1);
+			}
+		}
+		ACTIVE.setScriptCallOnClickContextMenu(4472, str1, CTX_MENU_OPTION, int11, "sii");
+		str0 = "   " + str1;
+		if (getTextWidth(str0, 3793) > int22) {
+			while (getTextWidth(str0 + "...", 3793) > int22 && length(str0) > 0) {
+				str0 = substr(str0, 0, length(str0) - 1);
+			}
+			str0 = str0 + "...";
+			ACTIVE.setScriptCallOnMouseOver(1594, widget(1110, 60), CTX_WIDGET, CTX_WIDGET_CHILD, str1, MOUSE_X, MOUSE_Y, "IIisii");
+			ACTIVE.setScriptCallOnMouseExit(40, widget(1110, 60), "I");
+		}
+		ACTIVE.setText(str0);
+		ACTIVE.setTextAntiMacro(true);
+		int17 = cs2method3758(int11);
+		if (int17 >= 1100 && int17 < 5001) {
+			str2 = "Lobby";
+			str3 = "Lobby";
+			int18 = 0;
+		} else if (int17 >= 5001 && int17 < 6000) {
+			str2 = "Classic " + str(int17 - 5000);
+			str3 = "Classic " + str(int17 - 5000);
+			int18 = 0;
+		} else {
+			str2 = str(int17);
+			str3 = "World " + str(int17);
+			int18 = 2 + 24 + 2;
+		}
+		int19 = getTextWidth(str2, 3793);
+		ACTIVE.createChild(widget6, 5, widget6.nextChild());
+		if (int23 >= int19 + int18) {
+			if (int18 > 0) {
+				ACTIVE.setSprite(2173);
+				ACTIVE.setSize(24, 12, 0, 0);
+				ACTIVE.setPosition(2, int14 + 1, 0, 0);
+				ACTIVE.setScriptCallOnMouseOver(1594, widget(1110, 60), CTX_WIDGET, CTX_WIDGET_CHILD, str3, MOUSE_X, MOUSE_Y, "IIisii");
+				ACTIVE.setScriptCallOnMouseExit(40, widget(1110, 60), "I");
+			}
+		} else {
+			int18 = 0;
+		}
+		if (!(int23 >= int19)) {
+			ACTIVE.setScriptCallOnMouseOver(1594, widget(1110, 60), CTX_WIDGET, CTX_WIDGET_CHILD, str3, MOUSE_X, MOUSE_Y, "IIisii");
+			ACTIVE.setScriptCallOnMouseExit(40, widget(1110, 60), "I");
+			str2 = "...";
+		}
+		ACTIVE.createChild(widget5, 4, widget5.nextChild());
+		ACTIVE.setSize(int23, int15, 0, 0);
+		ACTIVE.setPosition(int18 + 2, int14, 0, 0);
+		ACTIVE.setFont(3793);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setTextAlignment(0, 0, 0);
+		ACTIVE.setText(str2);
+		if (int17 == getWorldId()) {
+			ACTIVE.setRGB(0x3CB71E);
+		} else {
+			ACTIVE.setRGB(0xFFFF64);
+		}
+		ACTIVE.setScriptCallOnMouseOver(1594, widget(1110, 60), CTX_WIDGET, CTX_WIDGET_CHILD, str3, MOUSE_X, MOUSE_Y, "IIisii");
+		ACTIVE.setScriptCallOnMouseExit(40, widget(1110, 60), "I");
+		ACTIVE.createChild(widget4, 5, widget4.nextChild());
+		if (int20 == 127) {
+			ACTIVE.setPosition(3, 3, 0, 0);
+			ACTIVE.setSize(9, 9, 0, 0);
+		} else {
+			ACTIVE.setPosition(0, 0, 0, 0);
+			ACTIVE.setSize(15, 15, 0, 0);
+		}
+		ACTIVE.setSprite(datamap('i', 'd', (DataMap)3712, int20));
+		int11 = int11 + 1;
+	}
+	int11 = 0;
+	int24 = 0;
+	while (int11 < int12) {
+		cs2method3761();
+		int24 = int11;
+		if (ACTIVE.setChild(widget3, int24) && compare(ACTIVE.getText(), "") != 0) {
+			int14 = int11 * int15;
+			ACTIVE.setPosition(ACTIVE.getX(), int14, 0, 0);
+			if (ACTIVE.setChild(widget4, int24)) {
+				ACTIVE.setPosition(ACTIVE.getX(), ACTIVE.getY() + int14 + 3, 0, 0);
+			}
+			if (ACTIVE.setChild(widget5, int24)) {
+				ACTIVE.setPosition(ACTIVE.getX(), int14, 0, 0);
+			}
+			if (ACTIVE.setChild(widget6, int24)) {
+				ACTIVE.setPosition(ACTIVE.getX(), int14 + 2, 0, 0);
+			}
+		}
+		int11 = int11 + 1;
+	}
+	if (int11 * 19 > widget9.getHeight()) {
+		widget9.setScrollMax(0, int11 * 19);
+	} else {
+		widget9.setScrollMax(0, 0);
+	}
+	int25 = widget9.getScrollY();
+	widget9.setScrollMax(widget9.getWidth(), int15 * int12);
+	int25 = min(int25, widget9.getScrollMaxV());
+	widget9.setScrollPos(0, int25);
+	script_31(widget10, widget9, 5666, 5663, 5664, 5665, 5686, 5685);
+	widget3.setScriptCallOnClanChatDeltaStuff(4443, -1, "i");
+	widget3.setScriptCallOnClanChatSettingsStuff(4443, -1, "i");
+	widget(1110, 25).setScrollMax(widget(1110, 25).getWidth(), int15 * int12);
+	script_31(widget(1110, 29), widget(1110, 25), 5666, 5663, 5664, 5665, 5686, 5685);
+	return;
+}

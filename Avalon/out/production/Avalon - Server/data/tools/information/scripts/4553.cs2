@@ -1,0 +1,16 @@
+void script_4553(int arg0) {
+	if (arg0 == 1) {
+		widget(550, 9).setIsHidden(true);
+		widget(550, 30).setIsHidden(false);
+		widget(550, 48).setIsHidden(true);
+		widget(550, 50).setIsHidden(false);
+		script_4551();
+	} else {
+		widget(550, 30).setIsHidden(true);
+		widget(550, 9).setIsHidden(false);
+		widget(550, 50).setIsHidden(true);
+		widget(550, 48).setIsHidden(false);
+		script_4552();
+	}
+	return;
+}

@@ -1,0 +1,6 @@
+int script_133(Location location0, Location location1, Location location2) {
+	if (x(location2) >= min(x(location0), x(location1)) && y(location2) >= min(y(location0), y(location1)) && z(location2) >= min(z(location0), z(location1)) && x(location2) <= max(x(location0), x(location1)) && y(location2) <= max(y(location0), y(location1)) && z(location2) <= max(z(location0), z(location1))) {
+		return 1;
+	}
+	return 0;
+}

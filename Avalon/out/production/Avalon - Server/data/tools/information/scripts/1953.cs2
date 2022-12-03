@@ -1,0 +1,187 @@
+void script_1953() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int0 = getItemAmtInContainer(93, 2015);
+	int1 = getItemAmtInContainer(93, 2019);
+	int2 = getItemAmtInContainer(93, 2017);
+	int3 = getItemAmtInContainer(93, 2108);
+	int4 = getItemAmtInContainer(93, 2102);
+	int5 = getItemAmtInContainer(93, 2128);
+	int6 = getItemAmtInContainer(93, 2120);
+	int7 = getItemAmtInContainer(93, 1973);
+	int8 = getItemAmtInContainer(93, 2114);
+	int9 = getItemAmtInContainer(93, 2126);
+	int10 = getItemAmtInContainer(93, 1927);
+	int11 = getItemAmtInContainer(93, 2021);
+	if (int0 >= 2 && int1 >= 1 && int3 >= 1 && int6 >= 1 && int4 >= 1) {
+		widget(436, 81).setRGB(0x00FF00);
+	} else {
+		widget(436, 81).setRGB(0xFF0000);
+	}
+	if (int0 >= 1 && int6 >= 3) {
+		widget(436, 82).setRGB(0x00FF00);
+	} else {
+		widget(436, 82).setRGB(0xFF0000);
+	}
+	if (int8 >= 1 && int4 >= 1 && int3 >= 1) {
+		widget(436, 83).setRGB(0x00FF00);
+	} else {
+		widget(436, 83).setRGB(0xFF0000);
+	}
+	if (int8 >= 2 && int4 >= 1 && int3 >= 1) {
+		widget(436, 84).setRGB(0x00FF00);
+	} else {
+		widget(436, 84).setRGB(0xFF0000);
+	}
+	if (int0 >= 1 && int1 >= 1 && int9 >= 1) {
+		widget(436, 85).setRGB(0x00FF00);
+	} else {
+		widget(436, 85).setRGB(0xFF0000);
+	}
+	if (int2 >= 1 && int5 >= 1 && int10 >= 1 && int7 >= 1) {
+		widget(436, 86).setRGB(0x00FF00);
+	} else {
+		widget(436, 86).setRGB(0xFF0000);
+	}
+	if (int0 >= 1 && int1 >= 1 && int11 >= 1 && int4 >= 2 && int3 >= 1) {
+		widget(436, 87).setRGB(0x00FF00);
+	} else {
+		widget(436, 87).setRGB(0xFF0000);
+	}
+	if (getItemAmtInContainer(93, 2114) > 0) {
+		widget(436, 24).setItem(2114, 100);
+	} else {
+		widget(436, 24).setItem(9497, 100);
+	}
+	if (getItemAmtInContainer(93, 2102) > 0) {
+		widget(436, 25).setItem(2102, 140);
+	} else {
+		widget(436, 25).setItem(9492, 140);
+	}
+	if (getItemAmtInContainer(93, 2108) > 0) {
+		widget(436, 26).setItem(2108, 140);
+	} else {
+		widget(436, 26).setItem(9493, 140);
+	}
+	if (getItemAmtInContainer(93, 2015) > 1) {
+		widget(436, 4).setItem(2015, 120);
+	} else {
+		widget(436, 4).setItem(9491, 120);
+	}
+	if (getItemAmtInContainer(93, 2019) > 0) {
+		widget(436, 5).setItem(2019, 120);
+	} else {
+		widget(436, 5).setItem(9491, 120);
+	}
+	if (getItemAmtInContainer(93, 2108) > 0) {
+		widget(436, 6).setItem(2108, 140);
+	} else {
+		widget(436, 6).setItem(9493, 140);
+	}
+	if (getItemAmtInContainer(93, 2120) > 0) {
+		widget(436, 7).setItem(2120, 140);
+	} else {
+		widget(436, 7).setItem(9555, 140);
+	}
+	if (getItemAmtInContainer(93, 2102) > 0) {
+		widget(436, 8).setItem(2102, 140);
+	} else {
+		widget(436, 8).setItem(9492, 140);
+	}
+	if (getItemAmtInContainer(93, 2015) > 0) {
+		widget(436, 17).setItem(2015, 120);
+	} else {
+		widget(436, 17).setItem(9491, 120);
+	}
+	if (getItemAmtInContainer(93, 2120) > 2) {
+		widget(436, 18).setItem(2120, 120);
+	} else {
+		widget(436, 18).setItem(9555, 140);
+	}
+	if (getItemAmtInContainer(93, 2015) > 0) {
+		widget(436, 62).setItem(2015, 120);
+	} else {
+		widget(436, 62).setItem(9491, 120);
+	}
+	if (getItemAmtInContainer(93, 2019) > 0) {
+		widget(436, 64).setItem(2019, 120);
+	} else {
+		widget(436, 64).setItem(9491, 120);
+	}
+	if (getItemAmtInContainer(93, 2021) > 0) {
+		widget(436, 63).setItem(2021, 120);
+	} else {
+		widget(436, 63).setItem(9556, 120);
+	}
+	if (getItemAmtInContainer(93, 2108) > 0) {
+		widget(436, 65).setItem(2108, 140);
+	} else {
+		widget(436, 65).setItem(9493, 140);
+	}
+	if (getItemAmtInContainer(93, 2102) > 1) {
+		widget(436, 66).setItem(2102, 140);
+	} else {
+		widget(436, 66).setItem(9492, 140);
+	}
+	if (getItemAmtInContainer(93, 2017) > 0) {
+		widget(436, 51).setItem(2017, 120);
+	} else {
+		widget(436, 51).setItem(9491, 120);
+	}
+	if (getItemAmtInContainer(93, 2128) > 0) {
+		widget(436, 52).setItem(2128, 120);
+	} else {
+		widget(436, 52).setItem(9494, 120);
+	}
+	if (getItemAmtInContainer(93, 1973) > 0) {
+		widget(436, 54).setItem(1973, 140);
+	} else {
+		widget(436, 54).setItem(9507, 140);
+	}
+	if (getItemAmtInContainer(93, 1927) > 0) {
+		widget(436, 53).setItem(1927, 100);
+	} else {
+		widget(436, 53).setItem(9495, 100);
+	}
+	if (getItemAmtInContainer(93, 2114) > 1) {
+		widget(436, 33).setItem(2114, 100);
+	} else {
+		widget(436, 33).setItem(9497, 100);
+	}
+	if (getItemAmtInContainer(93, 2102) > 0) {
+		widget(436, 34).setItem(2102, 140);
+	} else {
+		widget(436, 34).setItem(9492, 140);
+	}
+	if (getItemAmtInContainer(93, 2108) > 0) {
+		widget(436, 35).setItem(2108, 140);
+	} else {
+		widget(436, 35).setItem(9493, 140);
+	}
+	if (getItemAmtInContainer(93, 2015) > 0) {
+		widget(436, 42).setItem(2015, 120);
+	} else {
+		widget(436, 42).setItem(9491, 120);
+	}
+	if (getItemAmtInContainer(93, 2019) > 0) {
+		widget(436, 43).setItem(2019, 120);
+	} else {
+		widget(436, 43).setItem(9491, 120);
+	}
+	if (getItemAmtInContainer(93, 2126) > 0) {
+		widget(436, 44).setItem(2126, 140);
+	} else {
+		widget(436, 44).setItem(9496, 140);
+	}
+	return;
+}

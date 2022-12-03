@@ -1,0 +1,17 @@
+int script_4464() {
+	int int0;
+	int0 = -1;
+	if (cs2method3701()) {
+		if (cs2method3751()) {
+			int0 = cs2method3717(removeTags(cs2method5020()));
+			if (int0 != -1 && cs2method3757(int0) >= cs2method3705()) {
+				return 1;
+			}
+		} else {
+			msg("You must be in a clan to do that.");
+		}
+	} else {
+		msg("You must be in a clan to do that.");
+	}
+	return 0;
+}

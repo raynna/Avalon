@@ -1,0 +1,160 @@
+void script_711() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	Sprite sprite6;
+	Sprite sprite7;
+	Sprite sprite8;
+	Sprite sprite9;
+	string str0;
+	string str1;
+	widget(916, 19).setScriptCallOnClickContextMenu(2023, CTX_MENU_OPTION, 1, "ii");
+	widget(916, 20).setScriptCallOnClickContextMenu(2023, CTX_MENU_OPTION, -1, "ii");
+	script_2020(1, "1", 41, widget(916, 5));
+	script_2020(5, "5", 41, widget(916, 6));
+	script_2020(10, "10", 41, widget(916, 7));
+	int0 = widget(916, 9).getWidth();
+	int1 = widget(905, 3).getWidth();
+	int2 = int1 - int0 - (41 * 3 + 5 * 2);
+	int3 = 0;
+	int4 = 0;
+	str0 = "All";
+	str1 = "Custom";
+	if (script_1103() == 1) {
+		int3 = max(getTextWidth(str0, 494), getTextWidth(str1, 494)) + 20;
+		script_2020(VARPBIT[8094], str0, int3, widget(916, 8));
+		script_2020(-1, str1, int3, widget(905, 6));
+		int2 = int2 - (int3 * 2 + 5);
+		int4 = 2 * 5 / int2;
+		widget(916, 8).setPosition(int4, 0, 0, 1);
+		int4 = int4 + int3 + 5;
+		widget(905, 6).setPosition(int4, 0, 0, 1);
+		int4 = int4 + int3;
+		int4 = int4 + int2 / 5;
+		widget(916, 5).setPosition(int4, 0, 0, 1);
+		int4 = int4 + 41 + 5;
+		widget(916, 6).setPosition(int4, 0, 0, 1);
+		int4 = int4 + 41 + 5;
+		widget(916, 7).setPosition(int4, 0, 0, 1);
+	} else {
+		widget(916, 8).setIsHidden(true);
+		widget(905, 6).setIsHidden(true);
+		int4 = int2 / 2;
+		widget(916, 5).setPosition(int4, 0, 0, 1);
+		int4 = int4 + 41 + 5;
+		widget(916, 6).setPosition(int4, 0, 0, 1);
+		int4 = int4 + 41 + 5;
+		widget(916, 7).setPosition(int4, 0, 0, 1);
+	}
+	widget(916, 2).setPosition(int0 - 5, 0, 2, 1);
+	widget(905, 5).setPosition(int0, 0, 2, 1);
+	int5 = int1 - int0;
+	if (VARC[92] == 1) {
+		widget(916, 2).setSize(int5 + 5, 0, 0, 1);
+		widget(905, 5).setSize(int5, 0, 0, 1);
+		script_2192(0, int5);
+	} else {
+		widget(916, 2).setSize(5, 0, 0, 1);
+		widget(905, 5).setSize(0, 0, 0, 1);
+		script_2192(1, int5);
+	}
+	widget(916, 1).setSize(widget(916, 1).getX() * 2 + int0, 0, 1, 1);
+	str1 = "Show/Hide additional number buttons";
+	sprite6 = 3883;
+	widget(916, 21).setScriptCallOnMouseOver(1160, CTX_WIDGET, -1, widget(905, 29), str1, 25, 519, "IiIsii");
+	widget(916, 21).setScriptCallOnMouseExit(299, widget(905, 29), widget(916, 22), sprite6, "IId");
+	int2 = (70 - 56) / 2;
+	int3 = 0;
+	if (VARC[755] != -1) {
+		int3 = getMaxLineWidth(STRING[132], 2147483647, 494);
+	}
+	if (VARC[756] != -1) {
+		int3 = max(getMaxLineWidth(STRING[133], 2147483647, 494), int3);
+	}
+	if (VARC[757] != -1) {
+		int3 = max(getMaxLineWidth(STRING[134], 2147483647, 494), int3);
+	}
+	if (VARC[758] != -1) {
+		int3 = max(getMaxLineWidth(STRING[135], 2147483647, 494), int3);
+	}
+	if (VARC[759] != -1) {
+		int3 = max(getMaxLineWidth(STRING[136], 2147483647, 494), int3);
+	}
+	if (VARC[760] != -1) {
+		int3 = max(getMaxLineWidth(STRING[137], 2147483647, 494), int3);
+	}
+	if (VARC[1139] != -1) {
+		int3 = max(getMaxLineWidth(STRING[280], 2147483647, 494), int3);
+	}
+	if (VARC[1140] != -1) {
+		int3 = max(getMaxLineWidth(STRING[281], 2147483647, 494), int3);
+	}
+	if (VARC[1141] != -1) {
+		int3 = max(getMaxLineWidth(STRING[282], 2147483647, 494), int3);
+	}
+	if (VARC[1142] != -1) {
+		int3 = max(getMaxLineWidth(STRING[283], 2147483647, 494), int3);
+	}
+	if (VARC[120] != -1) {
+		int3 = max(getMaxLineWidth(STRING[275], 2147483647, 494), int3);
+	}
+	if (VARC[185] != -1) {
+		int3 = max(getMaxLineWidth(STRING[316], 2147483647, 494), int3);
+	}
+	if (VARC[87] != -1) {
+		int3 = max(getMaxLineWidth(STRING[317], 2147483647, 494), int3);
+	}
+	if (VARC[90] != -1) {
+		int3 = max(getMaxLineWidth(STRING[318], 2147483647, 494), int3);
+	}
+	int3 = int3 + 4;
+	int3 = max(int3 + 4 * 2, 56);
+	int4 = script_1883(int2, int3, int2, (Item)VARC[755], STRING[132], widget(905, 14));
+	int4 = script_1883(int4, int3, int2, (Item)VARC[756], STRING[133], widget(905, 15));
+	int4 = script_1883(int4, int3, int2, (Item)VARC[757], STRING[134], widget(905, 16));
+	int4 = script_1883(int4, int3, int2, (Item)VARC[758], STRING[135], widget(905, 17));
+	int4 = script_1883(int4, int3, int2, (Item)VARC[759], STRING[136], widget(905, 18));
+	int4 = script_1883(int4, int3, int2, (Item)VARC[760], STRING[137], widget(905, 19));
+	int4 = script_1883(int4, int3, int2, (Item)VARC[1139], STRING[280], widget(905, 20));
+	int4 = script_1883(int4, int3, int2, (Item)VARC[1140], STRING[281], widget(905, 21));
+	int4 = script_1883(int4, int3, int2, (Item)VARC[1141], STRING[282], widget(905, 22));
+	int4 = script_1883(int4, int3, int2, (Item)VARC[1142], STRING[283], widget(905, 23));
+	int4 = script_1883(int4, int3, int2, (Item)VARC[120], STRING[275], widget(905, 24));
+	int4 = script_1883(int4, int3, int2, (Item)VARC[185], STRING[316], widget(905, 25));
+	int4 = script_1883(int4, int3, int2, (Item)VARC[87], STRING[317], widget(905, 26));
+	int4 = script_1883(int4, int3, int2, (Item)VARC[90], STRING[318], widget(905, 27));
+	script_2047();
+	int3 = widget(905, 7).getWidth() - 50;
+	sprite7 = 3877;
+	sprite6 = 3879;
+	sprite8 = 3878;
+	sprite9 = 3880;
+	if (int4 > int3) {
+		widget(905, 13).setSize(int3, 0, 0, 1);
+		widget(905, 13).setScrollMax(int4, 0);
+		widget(905, 13).setScrollPos(VARC[93], 0);
+		widget(905, 11).setScriptCallOnMouseOver(2369, CTX_WIDGET, sprite8, -4, "Idi");
+		widget(905, 12).setScriptCallOnMouseOver(2369, CTX_WIDGET, sprite9, 4, "Idi");
+		widget(905, 11).setScriptCallOnMouseDraggedOver(2369, CTX_WIDGET, sprite8, -6, "Idi");
+		widget(905, 12).setScriptCallOnMouseDraggedOver(2369, CTX_WIDGET, sprite9, 6, "Idi");
+		widget(905, 11).setScriptCallOnMouseExit(44, CTX_WIDGET, sprite7, "Id");
+		widget(905, 12).setScriptCallOnMouseExit(44, CTX_WIDGET, sprite6, "Id");
+		script_2370();
+	} else {
+		widget(905, 13).setSize(int4, 0, 0, 1);
+		widget(905, 13).setScrollMax(0, 0);
+		widget(905, 13).setScrollPos(0, 0);
+		widget(905, 11).removeAllEventListeners();
+		widget(905, 12).removeAllEventListeners();
+		widget(905, 11).setTrans(150);
+		widget(905, 12).setTrans(150);
+	}
+	widget(905, 11).setSprite(sprite7);
+	widget(905, 12).setSprite(sprite6);
+	widget(905, 2).setScriptCallOnGlobalConfigChange(711, 754, "Y");
+	widget(905, 2).setScriptCallOnConfigChange(2025, 1363, "Y");
+	return;
+}

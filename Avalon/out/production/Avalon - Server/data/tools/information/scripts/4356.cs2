@@ -1,0 +1,61 @@
+void script_4356(Widget widget0) {
+	switch (VARP[2128]) {
+		case 1:
+			if (VARPBIT[9141] == 0) {
+				widget0.setSprite(5920);
+			} else {
+				widget0.setSprite(5916);
+			}
+			break;
+		case 2:
+			if (VARPBIT[9142] == 0) {
+				widget0.setSprite(5920);
+			} else {
+				widget0.setSprite(5916);
+			}
+			break;
+		case 3:
+			if (VARPBIT[9143] == 0) {
+				widget0.setSprite(5920);
+			} else {
+				widget0.setSprite(5916);
+			}
+			break;
+		case 4:
+			if (VARPBIT[9144] == 0) {
+				widget0.setSprite(5920);
+			} else {
+				widget0.setSprite(5916);
+			}
+			break;
+		case 5:
+			if (VARPBIT[9145] == 0) {
+				widget0.setSprite(5920);
+			} else {
+				widget0.setSprite(5916);
+			}
+			break;
+		case 6:
+			if (VARPBIT[9146] == 0) {
+				widget0.setSprite(5920);
+			} else {
+				widget0.setSprite(5916);
+			}
+			break;
+		case 7:
+			if (VARPBIT[9147] == 0) {
+				widget0.setSprite(5920);
+			} else {
+				widget0.setSprite(5916);
+			}
+			break;
+		case 8:
+			if (VARPBIT[9148] == 0) {
+				widget0.setSprite(5920);
+			} else {
+				widget0.setSprite(5916);
+			}
+			break;
+	}
+	return;
+}

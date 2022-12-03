@@ -1,0 +1,17 @@
+int script_935(Item item0) {
+	switch (itemAttribute(item0, 762)) {
+		case 1:
+			if (VARP[322] < 10) {
+				return 0;
+			}
+			break;
+		case 2:
+			if (VARPBIT[4310] < 10) {
+				return 0;
+			}
+			break;
+		default:
+			return 1;
+	}
+	return -1;
+}

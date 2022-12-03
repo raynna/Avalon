@@ -1,0 +1,6 @@
+void script_2455(Widget widget0, Sprite sprite1) {
+	if (widget(34, 16).isHidden() && widget(34, 44).isHidden()) {
+		widget0.setSprite(sprite1);
+	}
+	return;
+}

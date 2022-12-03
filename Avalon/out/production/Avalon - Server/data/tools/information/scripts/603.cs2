@@ -1,0 +1,8 @@
+void script_603() {
+	if (VARC[82] <= 0) {
+		widget(105, 148).setScriptCallOnGameloop(-1, "");
+		script_621();
+	}
+	VARC[82] = VARC[82] - 1;
+	return;
+}

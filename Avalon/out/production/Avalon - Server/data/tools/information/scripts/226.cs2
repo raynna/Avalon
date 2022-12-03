@@ -1,0 +1,13 @@
+void script_226() {
+	script_231();
+	script_232();
+	widget(594, 149).setIsHidden(false);
+	if (getLanguage() == 1) {
+		widget(594, 210).setIsHidden(false);
+		widget(594, 212).setIsHidden(true);
+	} else {
+		widget(594, 210).setIsHidden(true);
+		widget(594, 212).setIsHidden(false);
+	}
+	return;
+}

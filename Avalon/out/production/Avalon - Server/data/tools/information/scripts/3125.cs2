@@ -1,0 +1,16 @@
+void script_3125(Widget widget0, int arg1, int arg2, string string3, string string4) {
+	script_2994(widget0, 0, 11, 11, 0, 0, 1535, false, false, false, 0);
+	ACTIVE.setScriptCallOnMouseEntered(3126, widget0, 0, "Ii");
+	ACTIVE.setScriptCallOnMouseExit(3127, widget0, 0, "Ii");
+	ACTIVE.setContextMenuOption(1, "Sort");
+	ACTIVE.setOptionBase(string3);
+	ACTIVE.setScriptCallOnClickContextMenu(3148, arg1, "i");
+	script_2994(widget0, 1, 11, 11, 0, 0, 1536, false, false, false, 0);
+	ACTIVE.setPosition(0, 0, 2, 0);
+	ACTIVE.setScriptCallOnMouseEntered(3126, widget0, 1, "Ii");
+	ACTIVE.setScriptCallOnMouseExit(3127, widget0, 1, "Ii");
+	ACTIVE.setContextMenuOption(1, "Sort");
+	ACTIVE.setOptionBase(string4);
+	ACTIVE.setScriptCallOnClickContextMenu(3148, arg2, "i");
+	return;
+}

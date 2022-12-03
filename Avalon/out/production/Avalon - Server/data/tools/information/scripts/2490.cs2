@@ -1,0 +1,98 @@
+void script_2490() {
+	if (VARC[826] < 0) {
+		VARC[826] = 0;
+	}
+	if (VARC[827] < 0) {
+		VARC[827] = 1;
+	}
+	widget(844, 47).setText("Charges left: " + str(VARC[826]));
+	widget(844, 29).setItemOnWidgetMethod2205(436, 1);
+	widget(844, 30).setItemOnWidgetMethod2205(438, 1);
+	widget(844, 31).setItemOnWidgetMethod2205(440, 1);
+	widget(844, 32).setItemOnWidgetMethod2205(442, 1);
+	widget(844, 33).setItemOnWidgetMethod2205(434, 1);
+	widget(844, 34).setItemOnWidgetMethod2205(444, 1);
+	widget(844, 35).setItemOnWidgetMethod2205(447, 1);
+	widget(844, 36).setItemOnWidgetMethod2205(449, 1);
+	widget(844, 37).setItemOnWidgetMethod2205(451, 1);
+	widget(844, 38).setText(getItemName(436));
+	widget(844, 39).setText(getItemName(438));
+	widget(844, 40).setText(getItemName(440));
+	widget(844, 41).setText(getItemName(442));
+	widget(844, 42).setText(getItemName(434));
+	widget(844, 43).setText(getItemName(444));
+	widget(844, 44).setText(getItemName(447));
+	widget(844, 45).setText(getItemName(449));
+	widget(844, 46).setText(getItemName(451));
+	widget(844, 38).setRGB(0xE1981F);
+	widget(844, 39).setRGB(0xE1981F);
+	widget(844, 40).setRGB(0xE1981F);
+	widget(844, 41).setRGB(0x996600);
+	widget(844, 42).setRGB(0x996600);
+	widget(844, 43).setRGB(0x996600);
+	widget(844, 44).setRGB(0x996600);
+	widget(844, 45).setRGB(0x996600);
+	widget(844, 46).setRGB(0x996600);
+	if (VARC[827] >= 2) {
+		widget(844, 41).setRGB(0xE1981F);
+		widget(844, 42).setRGB(0xE1981F);
+	}
+	if (VARC[827] >= 3) {
+		widget(844, 43).setRGB(0xE1981F);
+		widget(844, 44).setRGB(0xE1981F);
+	}
+	if (VARC[827] >= 4) {
+		widget(844, 45).setRGB(0xE1981F);
+		widget(844, 46).setRGB(0xE1981F);
+	}
+	widget(844, 13).setItemOnWidgetMethod2205(1521, 1);
+	widget(844, 14).setItemOnWidgetMethod2205(1519, 1);
+	widget(844, 15).setItemOnWidgetMethod2205(1517, 1);
+	widget(844, 16).setItemOnWidgetMethod2205(12581, 1);
+	widget(844, 17).setItemOnWidgetMethod2205(1515, 1);
+	widget(844, 18).setItemOnWidgetMethod2205(1513, 1);
+	widget(844, 21).setText(getItemName(1521));
+	widget(844, 22).setText(getItemName(1519));
+	widget(844, 23).setText(getItemName(1517));
+	widget(844, 24).setText("Special logs");
+	widget(844, 25).setText(getItemName(1515));
+	widget(844, 26).setText(getItemName(1513));
+	widget(844, 21).setRGB(0xE1981F);
+	widget(844, 22).setRGB(0xE1981F);
+	widget(844, 23).setRGB(0x996600);
+	widget(844, 24).setRGB(0x996600);
+	widget(844, 25).setRGB(0x996600);
+	widget(844, 26).setRGB(0x996600);
+	if (VARC[827] >= 2) {
+		widget(844, 23).setRGB(0xE1981F);
+		widget(844, 24).setRGB(0xE1981F);
+	}
+	if (VARC[827] >= 3) {
+		widget(844, 25).setRGB(0xE1981F);
+	}
+	if (VARC[827] >= 4) {
+		widget(844, 26).setRGB(0xE1981F);
+	}
+	widget(844, 6).setItemOnWidgetMethod2205(317, 1);
+	widget(844, 8).setItemOnWidgetMethod2205(377, 1);
+	widget(844, 7).setText("Fish 1");
+	widget(844, 9).setText("Fish 2");
+	widget(844, 7).setRGB(0xE1981F);
+	if (VARC[827] >= 3) {
+		widget(844, 9).setRGB(0xE1981F);
+	} else {
+		widget(844, 9).setRGB(0x996600);
+	}
+	widget(844, 2).setItemOnWidgetMethod2205(2152, 1);
+	widget(844, 4).setItemOnWidgetMethod2205(239, 1);
+	widget(844, 3).setText("Herblore" + "<br>" + "secondaries 1");
+	widget(844, 5).setText("Herblore" + "<br>" + "secondaries 2");
+	widget(844, 3).setRGB(0xE1981F);
+	widget(844, 5).setRGB(0xE1981F);
+	if (VARC[827] >= 3) {
+		widget(844, 5).setRGB(0xE1981F);
+	} else {
+		widget(844, 5).setRGB(0x996600);
+	}
+	return;
+}

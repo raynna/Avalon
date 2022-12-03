@@ -1,0 +1,49 @@
+void script_2508(int arg0) {
+	switch (arg0) {
+		case 55836719:
+			VARC[840] = 0;
+			break;
+		case 55836713:
+			if (VARC[840] < 2147483647 - 10 && VARC[839] >= 10 && script_2509(10) == 1) {
+				VARC[840] = VARC[840] + 10;
+				VARC[839] = VARC[839] - 10;
+			}
+			break;
+		case 55836715:
+			if (VARC[840] < 2147483647 - 100 && VARC[839] >= 100 && script_2509(100) == 1) {
+				VARC[840] = VARC[840] + 100;
+				VARC[839] = VARC[839] - 100;
+			}
+			break;
+		case 55836721:
+			if (VARC[840] < 2147483647 - 500 && VARC[839] >= 500 && script_2509(500) == 1) {
+				VARC[840] = VARC[840] + 500;
+				VARC[839] = VARC[839] - 500;
+			}
+			break;
+		case 55836723:
+			if (VARC[840] < 2147483647 - 1000 && VARC[839] >= 1000 && script_2509(1000) == 1) {
+				VARC[840] = VARC[840] + 1000;
+				VARC[839] = VARC[839] - 1000;
+			}
+			break;
+		case 55836725:
+			if (VARC[840] < 2147483647 - 10000 && VARC[839] >= 10000 && script_2509(10000) == 1) {
+				VARC[840] = VARC[840] + 10000;
+				VARC[839] = VARC[839] - 10000;
+			}
+			break;
+		case 55836717:
+			if (VARC[839] < script_2687()) {
+				VARC[840] = VARC[839];
+				VARC[839] = 0;
+			} else if (VARC[840] < script_2687()) {
+				VARC[840] = script_2687();
+				VARC[839] = VARC[839] - script_2687();
+			}
+			break;
+	}
+	widget(852, 63).setText(script_46(VARC[840], ","));
+	widget(852, 62).setText(script_46(VARC[839], ","));
+	return;
+}

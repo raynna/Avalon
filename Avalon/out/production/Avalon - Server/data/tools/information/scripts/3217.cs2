@@ -1,0 +1,33 @@
+void script_3217(int arg0, Widget widget1, Widget widget2, Widget widget3, int arg4) {
+	string str0;
+	if (getAccountCreateRC() == -3) {
+		return;
+	}
+	str0 = "";
+	switch (arg4) {
+		case 6:
+			str0 = STRING[122];
+			break;
+		case 14:
+			str0 = STRING[326];
+			break;
+		case 7:
+			str0 = script_2949(STRING[124]);
+			break;
+		case 8:
+			str0 = script_2949(STRING[125]);
+			break;
+		case 15:
+			if (VARC[1407] > 0) {
+				str0 = str(VARC[1407]);
+			}
+			break;
+		case 16:
+			str0 = STRING[330];
+			break;
+	}
+	VARC[1099] = script_1401(arg0, str0, 3793, 0);
+	script_3218(widget1, widget2, widget3, str0, arg4);
+	script_2714(arg4, 0);
+	return;
+}

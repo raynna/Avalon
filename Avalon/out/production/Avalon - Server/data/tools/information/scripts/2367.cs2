@@ -1,0 +1,11 @@
+void script_2367() {
+	widget(1054, 30).setAttr(1224, 0);
+	widget(1054, 31).setAttr(1224, 0);
+	widget(1054, 32).setAttr(1224, 0);
+	widget(1054, 33).setAttr(1224, 0);
+	widget(1054, 34).setAttr(1224, 0);
+	widget(1054, 35).setAttr(1224, 0);
+	widget(1054, 36).setAttr(1224, 0);
+	widget(1054, 37).setAttr(1224, 0);
+	return;
+}

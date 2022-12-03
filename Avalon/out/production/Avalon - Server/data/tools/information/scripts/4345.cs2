@@ -1,0 +1,11 @@
+string script_4345(int arg0, int arg1) {
+	DataMap datamap2;
+	datamap2 = null;
+	if (arg0 > 0 && arg1 > 0) {
+		datamap2 = datamap('i', 'g', (DataMap)3703, arg0);
+		if (datamap2 != null) {
+			return datamap('i', 's', datamap2, arg1);
+		}
+	}
+	return "";
+}

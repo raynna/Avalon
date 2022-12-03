@@ -1,0 +1,10 @@
+void script_2801(Widget widget0, int arg1, Color color2) {
+	widget0.setRGB(color2);
+	if (arg1 > 0) {
+		widget0.setTrans(0);
+	} else {
+		widget0.setTrans(255);
+	}
+	widget0.setScriptCallOnGameloop(2802, arg1, widget0, "iI");
+	return;
+}

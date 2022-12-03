@@ -1,0 +1,53 @@
+void script_5118(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	string str0;
+	script_4534(widget(1119, 3));
+	script_4534(widget(1119, 7));
+	VARC[777] = -1;
+	str0 = "";
+	int1 = 0;
+	int2 = 0;
+	int3 = 126 + 1;
+	while (int2 <= int3) {
+		ACTIVE.createChild(widget(1119, 11), 3, widget(1119, 11).nextChild());
+		ACTIVE.setSize(0, 14, 1, 0);
+		ACTIVE.setPosition(0, int1, 1, 0);
+		ACTIVE.setTrans(255);
+		_ACTIVE.createChild(widget(1119, 11), 5, widget(1119, 11).nextChild());
+		_ACTIVE.setSize(12, 12, 0, 0);
+		_ACTIVE.setPosition(5, int1 + 1, 0, 0);
+		str0 = datamap('i', 's', (DataMap)3725, int2);
+		if (length(str0) > 0) {
+			_ACTIVE.createChild(widget(1119, 11), 4, widget(1119, 11).nextChild());
+			_ACTIVE.setSize(22, 14, 1, 0);
+			_ACTIVE.setPosition(0, int1, 2, 0);
+			_ACTIVE.setTextAlignment(0, 1, 0);
+			_ACTIVE.setFont(494);
+			_ACTIVE.setTextAntiMacro(true);
+			_ACTIVE.setText(str0);
+			ACTIVE.setContextMenuOption(1, str0);
+			ACTIVE.setScriptCallOnClickContextMenu(5119, int2, "i");
+			int1 = int1 + ACTIVE.getHeight();
+		} else {
+			ACTIVE.setHidden(true);
+			_ACTIVE.setHidden(true);
+			_ACTIVE.createChild(widget(1119, 11), 4, widget(1119, 11).nextChild());
+			_ACTIVE.setHidden(true);
+		}
+		int2 = int2 + 1;
+	}
+	if (int1 > widget(1119, 11).getHeight()) {
+		widget(1119, 11).setScrollMax(0, int1);
+	} else {
+		widget(1119, 11).setScrollMax(0, 0);
+	}
+	widget(1119, 11).setScrollPos(0, 0);
+	script_31(widget(1119, 12), widget(1119, 11), 6507, 6504, 6505, 6506, 6499, 6498);
+	script_5121();
+	widget0.setScriptCallOnConfigChange(5120, 1734, "Y");
+	script_5124();
+	widget0.setScriptCallOnGlobalConfigChange(5123, 696, "Y");
+	return;
+}

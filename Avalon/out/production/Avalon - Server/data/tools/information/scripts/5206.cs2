@@ -1,0 +1,105 @@
+void script_5206() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	Sprite sprite6;
+	Sprite sprite7;
+	Sprite sprite8;
+	Sprite sprite9;
+	Sprite sprite10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	AttrMap attrmap16;
+	int int17;
+	int int18;
+	int0 = 60;
+	int1 = widget(1122, 93).getWidth() - int0 * 4;
+	int2 = int1 / 5;
+	int3 = int2 + (int1 - int2 * 5) / 2;
+	int4 = 0;
+	int5 = 0;
+	sprite6 = 5523;
+	sprite7 = 5524;
+	sprite8 = 5525;
+	sprite9 = 5526;
+	sprite10 = 5527;
+	int11 = widget(1122, 93).getScrollX();
+	int12 = widget(1122, 93).getScrollY();
+	widget(1122, 93).clearChildren();
+	int13 = 0;
+	int14 = 0;
+	int15 = datamapSize((DataMap)4850);
+	attrmap16 = null;
+	while (int13 < int15) {
+		attrmap16 = datamap('i', 'J', (DataMap)4850, int13);
+		if (int13 != 0 && attrmap16 == null) {
+			return;
+		}
+		int4 = int3 + int13 % 4 * (int2 + int0);
+		int5 = int2 + int13 / 4 * (int2 + int0);
+		ACTIVE.createChild(widget(1122, 93), 5, int14);
+		ACTIVE.setPosition(int4, int5, 0, 0);
+		ACTIVE.setSize(int0, int0, 0, 0);
+		if (VARPBIT[9675] == int13) {
+			ACTIVE.setSprite(sprite9);
+			int14 = int14 + 1;
+			ACTIVE.createChild(widget(1122, 93), 5, int14);
+			ACTIVE.setPosition(int4, int5, 0, 0);
+			ACTIVE.setSize(int0, int0, 0, 0);
+			ACTIVE.setSprite(getAttributeMapValue(attrmap16, 1883));
+			int14 = int14 + 1;
+			ACTIVE.createChild(widget(1122, 93), 5, int14);
+			ACTIVE.setPosition(int4, int5, 0, 0);
+			ACTIVE.setSize(int0, int0, 0, 0);
+			ACTIVE.setSprite(null);
+		} else if (getAttributeMapValue(attrmap16, 1885) == 0 || script_5200(getAttributeMapValue(attrmap16, 1885)) == 1) {
+			ACTIVE.setSprite(sprite6);
+			ACTIVE.setScriptCallOnMouseEntered(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite7, "Iid");
+			ACTIVE.setScriptCallOnMouseExit(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite6, "Iid");
+			ACTIVE.setScriptCallOnMousePressed(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite8, "Iid");
+			ACTIVE.setScriptCallOnMouseReleased(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite6, "Iid");
+			ACTIVE.setContextMenuOption(1, "Select crest");
+			ACTIVE.setScriptCallOnClickContextMenu(5207, CTX_WIDGET, CTX_WIDGET_CHILD, int13, "Iii");
+			int14 = int14 + 1;
+			ACTIVE.createChild(widget(1122, 93), 5, int14);
+			ACTIVE.setPosition(int4, int5, 0, 0);
+			ACTIVE.setSize(int0, int0, 0, 0);
+			ACTIVE.setSprite(getAttributeMapValue(attrmap16, 1883));
+			int14 = int14 + 1;
+			ACTIVE.createChild(widget(1122, 93), 5, int14);
+			ACTIVE.setPosition(int4, int5, 0, 0);
+			ACTIVE.setSize(int0, int0, 0, 0);
+			ACTIVE.setSprite(null);
+		} else {
+			ACTIVE.setSprite(sprite10);
+			int14 = int14 + 1;
+			ACTIVE.createChild(widget(1122, 93), 5, int14);
+			ACTIVE.setPosition(int4, int5, 0, 0);
+			ACTIVE.setSize(int0, int0, 0, 0);
+			ACTIVE.setSprite(getAttributeMapValue(attrmap16, 1883));
+			ACTIVE.setTrans(196);
+			int14 = int14 + 1;
+			ACTIVE.createChild(widget(1122, 93), 5, int14);
+			ACTIVE.setPosition(int4, int5, 0, 0);
+			ACTIVE.setSize(int0, int0, 0, 0);
+			ACTIVE.setSprite(7454);
+		}
+		int14 = int14 + 1;
+		int13 = int13 + 1;
+	}
+	int17 = int15 / 4;
+	if (int15 % 4 != 0) {
+		int17 = int17 + 1;
+	}
+	int18 = int17 * (int0 + int2) + int2;
+	widget(1122, 93).setScrollMax(widget(1122, 93).getWidth(), int18);
+	widget(1122, 93).setScrollPos(int11, int12);
+	script_31(widget(1122, 94), widget(1122, 93), 5666, 5663, 5664, 5665, 5686, 5685);
+	return;
+}

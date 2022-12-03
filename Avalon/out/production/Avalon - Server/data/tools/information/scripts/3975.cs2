@@ -1,0 +1,34 @@
+void script_3975() {
+	Widget widget0;
+	widget0 = null;
+	widget(1056, 63).setIsHidden(true);
+	widget(1056, 143).setIsHidden(true);
+	widget(1056, 148).setIsHidden(true);
+	widget(1056, 153).setIsHidden(true);
+	widget(1056, 158).setIsHidden(true);
+	widget(1056, 164).setIsHidden(true);
+	switch (VARPBIT[8577]) {
+		case 1:
+			widget0 = widget(1056, 63);
+			break;
+		case 2:
+			widget0 = widget(1056, 143);
+			break;
+		case 3:
+			widget0 = widget(1056, 148);
+			break;
+		case 4:
+			widget0 = widget(1056, 153);
+			break;
+		case 5:
+			widget0 = widget(1056, 158);
+			break;
+		case 6:
+			widget0 = widget(1056, 164);
+			break;
+	}
+	if (widget0 != null) {
+		widget0.setIsHidden(false);
+	}
+	return;
+}

@@ -1,0 +1,42 @@
+void script_2613() {
+	int int0;
+	int int1;
+	Location location2;
+	int0 = 0;
+	int1 = 0;
+	location2 = location(0, 0, 0);
+	switch (script_2617()) {
+		case 0:
+			location2 = moveCoord(location(VARC[834]), 0, 0, 5);
+			break;
+		case 7:
+			location2 = moveCoord(location(VARC[834]), -4, 0, 4);
+			break;
+		case 6:
+			location2 = moveCoord(location(VARC[834]), -5, 0, 0);
+			break;
+		case 5:
+			location2 = moveCoord(location(VARC[834]), -4, 0, -4);
+			break;
+		case 4:
+			location2 = moveCoord(location(VARC[834]), 0, 0, -5);
+			break;
+		case 3:
+			location2 = moveCoord(location(VARC[834]), 4, 0, -4);
+			break;
+		case 2:
+			location2 = moveCoord(location(VARC[834]), 5, 0, 0);
+			break;
+		case 1:
+			location2 = moveCoord(location(VARC[834]), 4, 0, 4);
+			break;
+	}
+	int0 = x(location2) / 64;
+	int1 = y(location2) / 64;
+	if (VARC[835] != int0 || VARC[836] != int1) {
+		return;
+	}
+	VARC[834] = location2;
+	script_2612(location(VARC[834]), VARC[833]);
+	return;
+}

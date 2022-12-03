@@ -1,0 +1,9 @@
+void script_4395(int arg0) {
+	if (VARPBIT[9086] > 0) {
+		script_4398(VARPBIT[9086] - 1, widget(1105, 65), arg0);
+	}
+	if (VARPBIT[9087] > 0) {
+		script_4398(VARPBIT[9087] - 1, widget(1105, 62), arg0);
+	}
+	return;
+}

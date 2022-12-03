@@ -1,0 +1,16 @@
+void script_1149(int arg0, int arg1, Widget widget2, Widget widget3, Widget widget4, int arg5, int arg6, int arg7, int arg8) {
+	if (arg1 == arg0) {
+		widget4.setRGB(0xEBE0BC);
+		widget3.setSprite(datamap('i', 'd', (DataMap)736, arg0));
+		widget2.setScriptCallOnMouseEntered(3933, widget4, 15458492, true, arg0, widget3, arg1, "Ii1iIi");
+		widget2.setScriptCallOnMouseExit(3933, widget4, 11709087, false, arg0, widget3, arg1, "Ii1iIi");
+		widget2.setScriptCallOnMousePressed(-1, "");
+	} else {
+		widget4.setRGB(0xB2AA9F);
+		widget3.setSprite(datamap('i', 'd', (DataMap)735, arg0));
+		widget2.setScriptCallOnMouseEntered(3933, widget4, 15458492, true, arg0, widget3, arg1, "Ii1iIi");
+		widget2.setScriptCallOnMouseExit(3933, widget4, 11709087, false, arg0, widget3, arg1, "Ii1iIi");
+		widget2.setScriptCallOnMousePressed(2698, arg0, arg5, arg6, arg7, arg8, "iiiii");
+	}
+	return;
+}

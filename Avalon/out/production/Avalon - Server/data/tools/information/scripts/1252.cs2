@@ -1,0 +1,12 @@
+void script_1252(Widget widget0, int arg1) {
+	int int2;
+	int2 = widget0.getShadeColor();
+	int2 = min(int2 + 255 * arg1 / 30, 255);
+	widget0.setTrans(int2);
+	if (int2 >= 255) {
+		widget0.setScriptCallOnGameloop(-1, "");
+		widget0.setIsHidden(true);
+		return;
+	}
+	return;
+}

@@ -1,0 +1,6 @@
+void script_4396(int arg0, Widget widget1) {
+	if (ACTIVE.setChild(widget1, arg0)) {
+		ACTIVE.setSprite(5524);
+	}
+	return;
+}

@@ -1,0 +1,27 @@
+void script_4728(int arg0) {
+	if (citadelConfigsInitialized()) {
+		script_4896();
+		switch (CLANBIT[2074]) {
+			case 0:
+			case 1:
+			case 2:
+			case 3:
+				script_4897(CLANBIT[2074]);
+				break;
+			default:
+				script_4897(CLANBIT[2598]);
+				break;
+		}
+		script_31(widget(1092, 220), widget(1092, 221), 5666, 5663, 5664, 5665, 5686, 5685);
+		script_4991();
+		script_4900();
+		script_4905();
+		script_5012();
+		script_4859();
+		script_4928();
+		script_4989(arg0);
+	} else {
+		msg("Clan stronghold information not yet available.");
+	}
+	return;
+}

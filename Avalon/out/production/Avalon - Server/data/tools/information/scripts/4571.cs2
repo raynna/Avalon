@@ -1,0 +1,10 @@
+void script_4571(Widget widget0, Widget widget1, string string2) {
+	widget1.setPosition(script_1551(VARC[1507], string2, 494, widget0.getX()), 1, 0, 1);
+	if (hasWindowFocus()) {
+		widget1.setIsHidden(false);
+	} else {
+		widget1.setIsHidden(true);
+	}
+	widget0.setScriptCallOnGameloop(4572, getClientCycle(), widget1, "iI");
+	return;
+}

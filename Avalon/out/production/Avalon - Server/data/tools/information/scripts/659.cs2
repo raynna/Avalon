@@ -1,0 +1,15 @@
+void script_659(Widget widget0, Sprite sprite1, Sprite sprite2, int arg3, string string4, string string5, Item item6, int arg7, Item item8, int arg9, Item item10, int arg11, Item item12, int arg13) {
+	if (ACTIVE.setChild(widget(662, 74), 0)) {
+		ACTIVE.setScriptCallOnUse(657, CTX_WIDGET, "I");
+		ACTIVE.setScriptCallOnUseWith(658, CTX_WIDGET, "I");
+		ACTIVE.setScriptCallOnItemContainerUpdate(660, widget(662, 74), widget0, sprite1, sprite2, arg3, string4, string5, item6, arg7, item8, arg9, item10, arg11, item12, arg13, 93, "IIddissoioioioiY");
+		ACTIVE.setScriptCallOnSkillChange(660, widget(662, 74), widget0, sprite1, sprite2, arg3, string4, string5, item6, arg7, item8, arg9, item10, arg11, item12, arg13, 23, "IIddissoioioioiY");
+		ACTIVE.setScriptCallOnConfigChange(660, widget(662, 74), widget0, sprite1, sprite2, arg3, string4, string5, item6, arg7, item8, arg9, item10, arg11, item12, arg13, 1175, 448, "IIddissoioioioiY");
+		script_661(widget(662, 74), widget0, sprite1, sprite2, arg3, string4, string5, item6, arg7, item8, arg9, item10, arg11, item12, arg13);
+	}
+	if (ACTIVE.setChild(widget(747, 17), 0)) {
+		ACTIVE.setScriptCallOnUse(697, widget(747, 6), "I");
+		ACTIVE.setScriptCallOnUseWith(698, widget(747, 6), "I");
+	}
+	return;
+}

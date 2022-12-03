@@ -1,0 +1,19 @@
+void script_4594(Item item0, int arg1, int arg2, int arg3, Widget widget4) {
+	ACTIVE.createChild(widget4, 5, widget4.nextChild());
+	if (arg2 != -1 && arg3 != -1) {
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setPosition(arg2 + 2, arg3 + 2, 0, 0);
+		if (arg1 <= 0) {
+			ACTIVE.setItemNoNum(item0, 1);
+		} else {
+			ACTIVE.setItem(item0, arg1);
+		}
+		ACTIVE.setContextMenuOption(10, "Examine");
+		ACTIVE.setShadowColor(0x302020);
+		ACTIVE.setOutlineThickness(1);
+		ACTIVE.setOptionBase("<col=ff9040>" + getItemName(item0) + "</col>");
+	} else {
+		ACTIVE.setHidden(true);
+	}
+	return;
+}

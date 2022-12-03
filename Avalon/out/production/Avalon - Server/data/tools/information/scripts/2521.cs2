@@ -1,0 +1,51 @@
+void script_2521() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	Item item5;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = -1;
+	item5 = null;
+	int1 = (widget(848, 2).getWidth() - 180) / 4;
+	int2 = (widget(848, 2).getHeight() - 128) / 3;
+	while (int0 < 5 && datamap('i', 'O', (DataMap)VARC[875], int0) != 11760) {
+		item5 = datamap('i', 'O', (DataMap)VARC[875], int0);
+		switch (int0) {
+			case 0:
+				widget(848, 19).setText(getItemName(getRealItem(item5)));
+				int3 = VARC[876];
+				break;
+			case 1:
+				widget(848, 20).setText(getItemName(getRealItem(item5)));
+				int3 = VARC[877];
+				break;
+			case 2:
+				widget(848, 21).setText(getItemName(getRealItem(item5)));
+				int3 = VARC[878];
+				break;
+			case 3:
+				widget(848, 22).setText(getItemName(getRealItem(item5)));
+				int3 = VARC[879];
+				break;
+			case 4:
+				widget(848, 23).setText(getItemName(getRealItem(item5)));
+				int3 = VARC[880];
+				break;
+		}
+		ACTIVE.createChild(widget(848, 2), 5, int0);
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setPosition((36 + int1) * (int0 % 5), int0 / 5 * (32 + int2), 0, 0);
+		ACTIVE.setItem(getRealItem(item5), int3);
+		ACTIVE.setOptionBase("<col=ff981f>" + getItemName(getRealItem(item5)));
+		ACTIVE.setContextMenuOption(1, "Select");
+		ACTIVE.setContextMenuOption(2, "Examine");
+		ACTIVE.setShadowColor(0x333333);
+		int0 = int0 + 1;
+	}
+	return;
+}

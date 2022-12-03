@@ -1,0 +1,51 @@
+void script_2328(Widget widget0) {
+	if (VARC[766] == 1) {
+		if (widget0.getY() > 100) {
+			widget0.setPosition(widget0.getX(), widget0.getY() - 2, 0, 0);
+			playSoundEffect(6422, 1, 0);
+			if (widget0.getY() < 170) {
+				switch (VARC[765]) {
+					case 1:
+						widget(306, 6).setPosition(widget(306, 6).getX(), widget(306, 6).getY() - 2, 0, 0);
+						break;
+					case 2:
+						widget(306, 7).setPosition(widget(306, 7).getX(), widget(306, 7).getY() - 2, 0, 0);
+						break;
+					case 3:
+						widget(306, 8).setPosition(widget(306, 8).getX(), widget(306, 8).getY() - 2, 0, 0);
+						break;
+					case 4:
+						widget(306, 9).setPosition(widget(306, 9).getX(), widget(306, 9).getY() - 2, 0, 0);
+						break;
+				}
+			}
+		} else {
+			widget0.setPosition(widget0.getX(), 100, 0, 0);
+			VARC[766] = 2;
+			switch (VARC[765]) {
+				case 1:
+					script_1411();
+					break;
+				case 2:
+					script_2056();
+					break;
+				case 3:
+					script_2322();
+					break;
+				case 4:
+					script_2324();
+					break;
+			}
+		}
+	} else if (VARC[766] == 2) {
+		if (widget0.getY() < 200) {
+			widget0.setPosition(widget0.getX(), widget0.getY() + 2, 0, 0);
+		} else {
+			widget0.setPosition(widget0.getX(), 200, 0, 0);
+			VARC[766] = 0;
+			VARC[765] = 0;
+			widget0.setScriptCallOnGameloop(-1, "");
+		}
+	}
+	return;
+}

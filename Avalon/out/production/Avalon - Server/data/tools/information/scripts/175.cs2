@@ -1,0 +1,78 @@
+void script_175(int arg0, int arg1) {
+	if (VARP[281] < 1000) {
+		msg("You can't do this while in the tutorial.");
+		return;
+	}
+	switch (arg0) {
+		case 1:
+			if (VARC[41] == arg1 && getDisplayMode() >= 2) {
+				VARC[41] = -1;
+				script_1364();
+			} else if (VARC[41] == -1) {
+				VARC[41] = arg1;
+				script_1364();
+			} else {
+				VARC[41] = arg1;
+			}
+			switch (arg1) {
+				case 0:
+				case 2:
+					VARC[1650] = 0;
+					VARC[1651] = 0;
+					cs2method5006(0);
+					STRING[1] = "";
+					VARC[1028] = 0;
+					script_1558(false);
+					break;
+				case 4:
+					VARC[1650] = 0;
+					VARC[1651] = 1;
+					cs2method5006(1);
+					STRING[1] = "";
+					VARC[1028] = 0;
+					script_1558(false);
+					break;
+				case 7:
+					VARC[1650] = 0;
+					VARC[1651] = 2;
+					cs2method5006(2);
+					STRING[1] = "";
+					VARC[1028] = 0;
+					script_1558(false);
+					break;
+			}
+			script_181(VARC[41]);
+			script_178();
+			script_84();
+			script_89();
+			break;
+		case 2:
+			script_184(arg1, 0);
+			script_178();
+			script_84();
+			script_89();
+			break;
+		case 3:
+			if (arg1 == 3 && getFriendCount() < 0) {
+				msg("The friends list is still loading, your selection won't take effect immediately.");
+			}
+			script_184(arg1, 1);
+			script_178();
+			script_84();
+			script_89();
+			break;
+		case 4:
+			script_184(arg1, 2);
+			script_178();
+			script_84();
+			script_89();
+			break;
+		case 5:
+			script_184(arg1, 3);
+			script_178();
+			script_84();
+			script_89();
+			break;
+	}
+	return;
+}

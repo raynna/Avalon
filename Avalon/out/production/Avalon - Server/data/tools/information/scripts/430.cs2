@@ -1,0 +1,97 @@
+void script_430(int arg0, int arg1) {
+	int int2;
+	Color color3;
+	int int4;
+	Widget widget5;
+	int int6;
+	int2 = 0;
+	color3 = 0x000000;
+	int4 = 0;
+	widget5 = null;
+	int6 = 0;
+	switch (arg0) {
+		case 67108872:
+			if (VARC[1388] == 1) {
+				int2 = 1;
+			} else {
+				int2 = VARPBIT[7539];
+			}
+			widget5 = widget(1024, 75);
+			break;
+		case 67108873:
+			if (VARC[1388] == 1) {
+				int2 = 3;
+			} else {
+				int2 = VARPBIT[7540];
+			}
+			widget5 = widget(1024, 58);
+			break;
+		case 67108874:
+			if (VARC[1388] == 1) {
+				int2 = 5;
+			} else {
+				int2 = VARPBIT[7541];
+			}
+			widget5 = widget(1024, 41);
+			break;
+		case 67108875:
+			if (VARC[1388] == 1) {
+				int2 = 6;
+			} else {
+				int2 = VARPBIT[7542];
+			}
+			widget5 = widget(1024, 24);
+			break;
+		default:
+			return;
+	}
+	switch (int2) {
+		case 1:
+			int4 = VARC[1378];
+			int6 = getAttributeMapValue((AttrMap)293, 1154);
+			break;
+		case 2:
+			int4 = VARC[1379];
+			int6 = getAttributeMapValue((AttrMap)299, 1154);
+			break;
+		case 3:
+			int4 = VARC[1380];
+			int6 = getAttributeMapValue((AttrMap)300, 1154);
+			break;
+		case 4:
+			int4 = VARC[1386];
+			int6 = getAttributeMapValue((AttrMap)301, 1154);
+			break;
+		case 5:
+			int4 = VARC[1381];
+			int6 = getAttributeMapValue((AttrMap)305, 1154);
+			break;
+		case 6:
+			int4 = VARC[1383];
+			int6 = getAttributeMapValue((AttrMap)1044, 1154);
+			break;
+		case 7:
+			int4 = VARC[1384];
+			int6 = getAttributeMapValue((AttrMap)1045, 1154);
+			break;
+		case 8:
+			int4 = VARC[1385];
+			int6 = getAttributeMapValue((AttrMap)1046, 1154);
+			break;
+		case 9:
+			int4 = VARC[1382];
+			int6 = getAttributeMapValue((AttrMap)1047, 1154);
+			break;
+		default:
+			return;
+	}
+	if (int4 == 0 && VARPBIT[7514] >= int6) {
+		if (arg1 == 1) {
+			color3 = 0xFFFFFF;
+		} else {
+			color3 = 0xFF981F;
+		}
+		widget5.setRGB(color3);
+	}
+	return;
+}

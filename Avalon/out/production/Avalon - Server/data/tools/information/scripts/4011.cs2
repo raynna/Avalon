@@ -1,0 +1,14 @@
+void script_4011() {
+	if (VARC[1421] == 0) {
+		VARC[1421] = 1;
+		widget(1056, 173).setSprite(4086);
+		widget(1056, 173).setScriptCallOnMouseEntered(4012, 0, 1, "ii");
+		widget(1056, 173).setScriptCallOnMouseExit(4012, 1, 1, "ii");
+	} else {
+		VARC[1421] = 0;
+		widget(1056, 173).setSprite(4084);
+		widget(1056, 173).setScriptCallOnMouseEntered(4012, 0, 0, "ii");
+		widget(1056, 173).setScriptCallOnMouseExit(4012, 1, 0, "ii");
+	}
+	return;
+}

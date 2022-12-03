@@ -1,0 +1,10 @@
+void script_2645(Widget widget0) {
+	if (VARC[842] == 1) {
+		widget0.setText("Next page");
+		widget(860, 20).setScriptCallOnClickContextMenu(2641, "");
+	} else if (VARC[842] == 2) {
+		widget0.setText("Previous page");
+		widget(860, 20).setScriptCallOnClickContextMenu(2640, "");
+	}
+	return;
+}

@@ -1,0 +1,89 @@
+void script_765(Widget widget0, int arg1, int arg2, string string3, string string4, string string5, string string6, string string7, int arg8, int arg9) {
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	Item item13;
+	Item item14;
+	int int15;
+	int int16;
+	string str5;
+	widget0.clearChildren();
+	int5 = 0;
+	int6 = 0;
+	widget0.setScrollMax(0, ((arg9 - arg8) / arg1 + 1) * 57);
+	int7 = 0;
+	int8 = arg8;
+	int9 = 0;
+	int10 = arg9;
+	int11 = 0;
+	int12 = -1;
+	item13 = null;
+	item14 = null;
+	str5 = "hello";
+	int15 = 0;
+	int16 = 0;
+	while (int7 <= arg9 - arg8) {
+		if (VARPBIT[8701] == 0 || getItemAmtInContainer(93, datamap('i', 'o', (DataMap)1182, int8)) > 0) {
+			int5 = 16 + int9 % arg1 * 48 + int9 % arg1 * 5;
+			int6 = int9 / arg1 * 52 + int9 / arg1 * 5;
+			ACTIVE.createChild(widget0, 5, int16);
+			int16 = int16 + 1;
+			ACTIVE.setSize(48, 52, 0, 0);
+			ACTIVE.setPosition(int5, int6, 0, 0);
+			ACTIVE.setSprite(2205);
+			ACTIVE.setScriptCallOnMouseEntered(2724, CTX_WIDGET, int16, false, "Ii1");
+			ACTIVE.setScriptCallOnMouseExit(2724, CTX_WIDGET, int16, true, "Ii1");
+			ACTIVE.createChild(widget0, 5, int16);
+			int16 = int16 + 1;
+			ACTIVE.setSize(48, 52, 0, 0);
+			ACTIVE.setPosition(int5, int6, 0, 0);
+			ACTIVE.setSprite(2206);
+			ACTIVE.setHidden(true);
+			ACTIVE.createChild(widget0, 5, int16);
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition(int5 + 6, int6 + 4, 0, 0);
+			item13 = datamap('i', 'o', (DataMap)1277, int8);
+			item14 = datamap('i', 'o', (DataMap)1188, int8);
+			if (item14 == 12421) {
+				script_760(item14, item14, widget0, int16, string3, string4, string5, string6, string7, "");
+			} else if (script_768(item14, item13) == 1 && getSkillActualLvl(23) >= datamap('o', 'i', (DataMap)1185, item13)) {
+				script_760(item14, item14, widget0, int16, string3, string4, string5, string6, string7, "");
+			} else {
+				script_760(datamap('i', 'o', (DataMap)1184, int8), item14, widget0, int16, string3, string4, string5, string6, string7, "");
+			}
+			if (item14 == 12421) {
+				ACTIVE.setScriptCallOnMouseOver(782, CTX_WIDGET_CHILD, widget(79, 31), widget(79, 17), int15, str5, "iIIis");
+				ACTIVE.setScriptCallOnMouseExit(40, widget(79, 31), "I");
+			} else {
+				str5 = datamap('o', 's', (DataMap)1187, item14);
+				int15 = datamap('o', 'i', (DataMap)1185, item13);
+				ACTIVE.setScriptCallOnMouseOver(770, CTX_WIDGET_CHILD, widget(79, 31), widget(79, 17), int15, str5, item13, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, null, 1, "iIIisoioioioioioioioioioi");
+				ACTIVE.setScriptCallOnMouseExit(40, widget(79, 31), "I");
+			}
+			int16 = int16 + 1;
+			ACTIVE.createChild(widget0, 5, int16);
+			int16 = int16 + 1;
+			ACTIVE.setSize(12, 12, 0, 0);
+			ACTIVE.setPosition(int5 + 2, int6 + 38, 0, 0);
+			ACTIVE.setItemNoNum(item13, 1);
+			ACTIVE.createChild(widget0, 4, int16);
+			int16 = int16 + 1;
+			ACTIVE.setSize(31, 12, 0, 0);
+			ACTIVE.setPosition(int5 + 13, int6 + 39, 0, 0);
+			ACTIVE.setFont(494);
+			ACTIVE.setRGB(0xFFFFFF);
+			ACTIVE.setTextAlignment(2, 1, 0);
+			ACTIVE.setText("1");
+			ACTIVE.setTextAntiMacro(true);
+			int9 = int9 + 1;
+		}
+		int7 = int7 + 1;
+		int8 = int8 + 1;
+	}
+	return;
+}

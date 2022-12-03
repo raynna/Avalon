@@ -1,0 +1,4 @@
+void script_163(Widget widget0) {
+	widget0.setSprite(941);
+	return;
+}

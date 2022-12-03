@@ -1,0 +1,4 @@
+void script_4630() {
+	script_4465(STRING[126]);
+	return;
+}

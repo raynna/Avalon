@@ -1,0 +1,37 @@
+void script_5370(int arg0, int arg1, string string2, string string3) {
+	int int2;
+	int int3;
+	if (arg0 == 1) {
+		widget(951, 14).setIsHidden(true);
+	} else {
+		widget(951, 14).setIsHidden(false);
+	}
+	if (arg1 == 1) {
+		widget(951, 2).setIsHidden(true);
+	} else {
+		widget(951, 2).setIsHidden(false);
+	}
+	widget(951, 48).setText(string2);
+	widget(951, 51).setText(string3);
+	int2 = getTextWidth(string3, 4040);
+	widget(951, 1).setSize(int2 + 16, widget(951, 1).getHeight(), 0, 0);
+	int2 = getTextWidth(string2, 4040);
+	widget(951, 3).setSize(int2 + 16, widget(951, 3).getHeight(), 0, 0);
+	int2 = max(widget(951, 1).getWidth(), widget(951, 3).getWidth());
+	if (arg1 == 0) {
+		int2 = max(int2, widget(951, 2).getWidth());
+	}
+	if (arg0 == 0) {
+		int2 = max(int2, widget(951, 14).getWidth());
+	}
+	widget(951, 49).setSize(int2 + 48, widget(951, 49).getHeight(), 0, 0);
+	int3 = widget(951, 1).getHeight() + widget(951, 3).getHeight();
+	if (arg1 == 0) {
+		int3 = int3 + widget(951, 2).getHeight();
+	}
+	widget(951, 49).setSize(widget(951, 49).getWidth(), int3, 0, 0);
+	if (arg0 == 0) {
+		widget(951, 14).setPosition(0, 7 + widget(951, 49).getHeight(), 1, 0);
+	}
+	return;
+}

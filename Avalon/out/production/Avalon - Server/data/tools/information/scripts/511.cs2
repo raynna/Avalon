@@ -1,0 +1,9 @@
+void script_511() {
+	if (VARC[51] > 170) {
+		VARC[51] = VARC[51] - 1;
+		widget(605, 0).set3DRotation(0, 0, 0, 0, 0, VARC[51]);
+	} else {
+		widget(605, 0).setModel(null);
+	}
+	return;
+}

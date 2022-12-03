@@ -1,0 +1,18 @@
+void script_2370() {
+	int int0;
+	int0 = widget(905, 13).getScrollX();
+	if (int0 <= 0) {
+		widget(905, 11).setTrans(150);
+		widget(905, 11).setSprite(3877);
+	} else {
+		widget(905, 11).setTrans(0);
+	}
+	if (int0 >= widget(905, 13).getScrollMaxH() - widget(905, 13).getWidth()) {
+		widget(905, 12).setTrans(150);
+		widget(905, 12).setSprite(3879);
+	} else {
+		widget(905, 12).setTrans(0);
+	}
+	VARC[93] = int0;
+	return;
+}

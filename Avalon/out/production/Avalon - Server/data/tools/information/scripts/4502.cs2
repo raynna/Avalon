@@ -1,0 +1,7 @@
+void script_4502(Widget widget0, Widget widget1, int arg2) {
+	if (ACTIVE.setChild(widget1, arg2) && length(ACTIVE.getText()) > 0) {
+		widget0.setIsHidden(false);
+		widget0.setPosition(0, ACTIVE.getY(), 0, 0);
+	}
+	return;
+}

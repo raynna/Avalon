@@ -1,0 +1,13 @@
+void script_1507(int arg0, Identikit identikit1) {
+	if (arg0 != 1) {
+		return;
+	}
+	if (IsFemale()) {
+		setBaseIdkit(13, identikit1);
+	} else {
+		setBaseIdkit(6, identikit1);
+	}
+	VARC[1014] = identikit1;
+	script_1506();
+	return;
+}

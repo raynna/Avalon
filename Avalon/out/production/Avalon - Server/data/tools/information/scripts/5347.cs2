@@ -1,0 +1,45 @@
+void script_5347() {
+	Sprite sprite0;
+	Sprite sprite1;
+	sprite0 = null;
+	sprite1 = null;
+	switch (getLanguage()) {
+		case 1:
+			sprite0 = 7794;
+			sprite1 = 7795;
+			break;
+		case 2:
+			sprite0 = 7792;
+			sprite1 = 7793;
+			break;
+		case 3:
+			sprite0 = 7796;
+			sprite1 = 7797;
+			break;
+		default:
+			sprite0 = 7790;
+			sprite1 = 7791;
+			break;
+	}
+	switch (VARC[1659]) {
+		case 0:
+			widget(1143, 11).setText("Price: Low-High");
+			break;
+		case 1:
+			widget(1143, 11).setText("Price: High-Low");
+			break;
+		case 2:
+			widget(1143, 11).setText("Name: A-Z");
+			break;
+		case 3:
+			widget(1143, 11).setText("Name: Z-A");
+			break;
+		default:
+			widget(1143, 11).setText("Sort By...");
+			break;
+	}
+	widget(1143, 6).setIsHidden(true);
+	widget(1143, 70).setSprite(sprite0);
+	widget(1143, 71).setSprite(sprite1);
+	return;
+}

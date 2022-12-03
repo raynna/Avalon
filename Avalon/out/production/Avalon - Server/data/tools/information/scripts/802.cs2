@@ -1,0 +1,133 @@
+string, int script_802(int arg0, string string1, int arg2, int arg3, char char4) {
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	string str1;
+	string str2;
+	int4 = length(string1);
+	if (arg0 <= -1) {
+		arg0 = int4;
+	} else {
+		arg0 = min(arg0, int4);
+	}
+	str1 = "";
+	if (arg0 > 0) {
+		str1 = substr(string1, 0, arg0);
+	}
+	str2 = "";
+	if (arg0 < int4) {
+		str2 = substr(string1, arg0, int4);
+	}
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	if (arg3 == 85) {
+		int5 = length(str1);
+		if (int5 > 1) {
+			str1 = substr(str1, 0, int5 - 1);
+		} else {
+			str1 = "";
+			int7 = 1;
+		}
+		string1 = concat(str1, str2);
+		arg0 = max(arg0 - 1, 0);
+	} else if (arg3 == 101) {
+		int5 = length(str2);
+		if (int5 > 1) {
+			str2 = substr(str2, 1, int5);
+		} else {
+			str2 = "";
+			int7 = 1;
+		}
+		string1 = concat(str1, str2);
+	} else if (isValidChar(char4)) {
+		switch (arg2) {
+			case 0:
+				if (VARC[1650] == 1) {
+					int6 = 255;
+				} else {
+					int6 = 80;
+				}
+				if (int4 < int6) {
+					string1 = concat(concatChar(str1, char4), str2);
+					arg0 = arg0 + 1;
+				} else {
+					int7 = 1;
+				}
+				break;
+			case 1:
+				if (isDigit(char4) && int4 < 10) {
+					string1 = concat(concatChar(str1, char4), str2);
+					arg0 = arg0 + 1;
+				} else {
+					int7 = 1;
+				}
+				break;
+			case 2:
+				if (int4 < 12) {
+					string1 = concat(concatChar(str1, char4), str2);
+					arg0 = arg0 + 1;
+				} else {
+					int7 = 1;
+				}
+				break;
+			case 3:
+				if (int4 < 320) {
+					string1 = concat(concatChar(str1, char4), str2);
+					arg0 = arg0 + 1;
+				} else {
+					int7 = 1;
+				}
+				break;
+			case 4:
+				if ((isAlphaNumeric(char4) || indexOf(" '&,.!-àÀáÁâÂãÃäÄåÅçÇèÈéÉêÊëËìÌíÍîÎïÏñÑòÒóÓôÔõÕöÖùÙúÚûÛüÜýÝÿ", char4, 0) != -1) && int4 < 50) {
+					string1 = concat(concatChar(str1, char4), str2);
+					arg0 = arg0 + 1;
+				} else {
+					int7 = 1;
+				}
+				break;
+			case 5:
+				if (int4 < 50) {
+					string1 = concat(concatChar(str1, char4), str2);
+					arg0 = arg0 + 1;
+				} else {
+					int7 = 1;
+				}
+				break;
+			case 6:
+				switch (getLanguage()) {
+					case 1:
+						if ((isDigit(char4) || indexOf("KkMmTt", char4, 0) != -1 && int4 > 0) && int4 < 10) {
+							if (indexOf(string1, "K", 0) == -1 && indexOf(string1, "k", 0) == -1 && indexOf(string1, "M", 0) == -1 && indexOf(string1, "m", 0) == -1 && indexOf(string1, "T", 0) == -1 && indexOf(string1, "t", 0) == -1) {
+								string1 = concat(concatChar(str1, char4), str2);
+								arg0 = arg0 + 1;
+							} else {
+								int7 = 1;
+							}
+						} else {
+							int7 = 1;
+						}
+						break;
+					default:
+						if ((isDigit(char4) || indexOf("KkMm", char4, 0) != -1 && int4 > 0) && int4 < 10) {
+							if (indexOf(string1, "K", 0) == -1 && indexOf(string1, "k", 0) == -1 && indexOf(string1, "M", 0) == -1 && indexOf(string1, "m", 0) == -1) {
+								string1 = concat(concatChar(str1, char4), str2);
+								arg0 = arg0 + 1;
+							} else {
+								int7 = 1;
+							}
+						} else {
+							int7 = 1;
+						}
+						break;
+				}
+				break;
+		}
+	}
+	if (int7 == 1) {
+		playSoundEffect2False(4173, 1, 0, 255);
+	}
+	return string1, arg0;
+}

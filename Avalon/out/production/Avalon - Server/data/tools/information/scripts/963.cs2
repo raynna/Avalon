@@ -1,0 +1,53 @@
+void script_963(int arg0) {
+	VARC[157] = 1;
+	if (VARC[125] >= getClientCycle() - 5) {
+		return;
+	}
+	if (arg0 == 48103425) {
+		switch (VARC[122]) {
+			case 0:
+				VARC[122] = 512;
+				break;
+			case 512:
+				VARC[122] = 1024;
+				break;
+			case 1024:
+				VARC[122] = 1536;
+				break;
+			default:
+				VARC[122] = 0;
+				break;
+		}
+	} else if (arg0 == 48103430) {
+		switch (VARC[123]) {
+			case 0:
+				VARC[123] = 512;
+				break;
+			case 512:
+				VARC[123] = 1024;
+				break;
+			case 1024:
+				VARC[123] = 1536;
+				break;
+			default:
+				VARC[123] = 0;
+				break;
+		}
+	} else if (arg0 == 48103435) {
+		switch (VARC[124]) {
+			case 0:
+				VARC[124] = 512;
+				break;
+			case 512:
+				VARC[124] = 1024;
+				break;
+			case 1024:
+				VARC[124] = 1536;
+				break;
+			default:
+				VARC[124] = 0;
+				break;
+		}
+	}
+	return;
+}

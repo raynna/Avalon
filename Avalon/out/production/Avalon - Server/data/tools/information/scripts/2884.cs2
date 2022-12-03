@@ -1,0 +1,11 @@
+void script_2884() {
+	if (VARPBIT[4393] == 1 || VARPBIT[542] == 1) {
+		return;
+	}
+	if (VARPBIT[7079] == 0) {
+		script_39(widget(187, 13), widget(187, 16), "Shuffle on", 25, 189);
+	} else {
+		script_39(widget(187, 13), widget(187, 16), "Shuffle off", 25, 189);
+	}
+	return;
+}

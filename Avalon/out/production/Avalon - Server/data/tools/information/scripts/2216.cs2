@@ -1,0 +1,12 @@
+void script_2216() {
+	if (VARP[1700] == 2) {
+		if (VARC[1137] == 0) {
+			playSoundEffect(8731, 1, 0);
+		}
+		VARC[1137] = 1;
+		widget(932, 1).setScriptCallOnGameloop(2214, "");
+	} else {
+		msg("There is nothing to push off!");
+	}
+	return;
+}

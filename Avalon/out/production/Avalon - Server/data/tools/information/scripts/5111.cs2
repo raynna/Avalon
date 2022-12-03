@@ -1,0 +1,10 @@
+void script_5111(int arg0, int arg1) {
+	VARP[2317] = arg0;
+	if (arg1 == 1) {
+		script_5108(1);
+	} else {
+		script_5108(0);
+	}
+	script_5113(arg1);
+	return;
+}

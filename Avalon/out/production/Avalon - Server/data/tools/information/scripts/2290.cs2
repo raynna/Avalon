@@ -1,0 +1,15 @@
+void script_2290(Widget widget0, int arg1) {
+	if (script_2297(arg1) == 0) {
+		if (script_2295(arg1) == 0) {
+			return;
+		}
+		if (ACTIVE.setChild(widget0, arg1)) {
+			ACTIVE.setSprite(181);
+			ACTIVE.setContextMenuOption(1, "Deselect");
+		}
+	} else if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setSprite(180);
+		ACTIVE.setContextMenuOption(1, "Select");
+	}
+	return;
+}

@@ -1,0 +1,7 @@
+void script_64() {
+	widget(532, 1).setText(str(VARPBIT[3637]) + "/" + str(183));
+	if (VARPBIT[3637] == 183) {
+		widget(532, 1).setRGB(0x00FF00);
+	}
+	return;
+}

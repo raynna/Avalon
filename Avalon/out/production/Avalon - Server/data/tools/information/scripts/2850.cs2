@@ -1,0 +1,26 @@
+void script_2850() {
+	VARC[1069] = 500;
+	VARC[1070] = moveCoord(getMyLocation(), 0, 0, -8);
+	VARC[1071] = 0;
+	VARC[1072] = getMyLocation();
+	VARC[1073] = 450;
+	VARC[1074] = 0;
+	VARC[1282] = 25;
+	cameraMoveTo(location(VARC[1070]), VARC[1069], 10, 3);
+	cameraPointAt(script_2865(location(VARC[1070]), VARC[1071]), VARC[1073], 10, 3);
+	VARC[1075] = 0;
+	VARC[1076] = 0;
+	widget(475, 1).setScriptCallOnKeyPress(2851, CTX_WIDGET, KEY_TYPED, 0, "Iii");
+	widget(475, 54).setIsHidden(false);
+	widget(475, 7).setIsHidden(false);
+	widget(475, 58).setIsHidden(false);
+	widget(475, 33).setIsHidden(true);
+	widget(475, 28).setSprite(1232);
+	widget(475, 29).setText("You are now in Aim Mode");
+	widget(475, 1).setScriptCallOnGameloop(2853, widget(475, 1), getClientCycle(), "Ii");
+	widget(475, 7).setScriptCallOnGameloop(2852, widget(475, 7), "I");
+	widget(475, 2).setIsHidden(false);
+	widget(475, 2).setScriptCallOnGameloop(2870, CTX_WIDGET, getClientCycle() + 150, "Ii");
+	script_3455();
+	return;
+}

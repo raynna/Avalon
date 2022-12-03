@@ -1,0 +1,17 @@
+void script_924(string string0, int arg1, int arg2, int arg3, Sprite sprite4) {
+	int int4;
+	int4 = 6 + VARC[742] * 11;
+	if (compare(string0, "") != 0) {
+		ACTIVE.createChild(widget(449, 8), 4, widget(449, 8).nextChild());
+		ACTIVE.setPosition(0, int4, 0, 0);
+		ACTIVE.setSize(16384, 11 * arg1, 2, 0);
+		ACTIVE.setFont(sprite4);
+		ACTIVE.setRGB(color(VARC[1242]));
+		ACTIVE.setText(string0);
+		ACTIVE.setTextAlignment(arg2, 0, 0);
+		if (arg3 == 1) {
+			VARC[742] = VARC[742] + arg1;
+		}
+	}
+	return;
+}

@@ -1,0 +1,28 @@
+void script_2449(int arg0) {
+	int int1;
+	int1 = 0;
+	while (ACTIVE.setChild(widget(34, 9), int1)) {
+		ACTIVE.setContextMenuOption(1, "Select");
+		int1 = int1 + 1;
+	}
+	if (ACTIVE.setChild(widget(34, 9), VARP[1439])) {
+		ACTIVE.setContextMenuOption(1, "Unselect");
+		if (!widget(34, 10).isHidden()) {
+			widget(34, 14).setIsHidden(true);
+			return;
+		}
+		widget(34, 14).setIsHidden(false);
+		widget(34, 14).setPosition(ACTIVE.getX(), ACTIVE.getY(), 0, 0);
+		widget(34, 14).setSize(ACTIVE.getWidth(), ACTIVE.getHeight(), 0, 0);
+		if (arg0 == 1) {
+			if (ACTIVE.getY() < widget(34, 9).getScrollY()) {
+				script_157(widget(34, 15), widget(34, 9), ACTIVE.getY() - 5, 1);
+			} else if (ACTIVE.getY() + ACTIVE.getHeight() > widget(34, 9).getScrollY() + widget(34, 9).getHeight()) {
+				script_157(widget(34, 15), widget(34, 9), ACTIVE.getY() - widget(34, 9).getHeight() + ACTIVE.getHeight() + 5, 1);
+			}
+		}
+	} else {
+		widget(34, 14).setIsHidden(true);
+	}
+	return;
+}

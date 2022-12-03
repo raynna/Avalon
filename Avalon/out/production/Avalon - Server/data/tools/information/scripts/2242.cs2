@@ -1,0 +1,56 @@
+void script_2242() {
+	int int0;
+	playSoundEffect(8727, 3, 0);
+	widget(927, 22).setText("Turns taken score: " + str(VARP[1674]) + " x 101 = " + str(VARP[1674] * 101));
+	widget(927, 26).setText("Resources spare: " + str(VARP[1688] + (VARP[1687] + VARP[1686])) + " x -10 = -" + str((VARP[1688] + (VARP[1687] + VARP[1686])) * 10));
+	if (VARP[1674] < 16) {
+		widget(927, 27).setText("Completed within turn limit: -100");
+	} else {
+		widget(927, 27).setText("Not completed within turn limit: 0");
+	}
+	widget(927, 28).setText("Workers employed: " + str(VARP[1681]) + " x -10 = -" + str(VARP[1681] * 10));
+	widget(927, 32).setText("Turns taken: " + str(VARP[1674]));
+	if (VARPBIT[7324] == 0) {
+		widget(927, 23).setText("Oven not repaired: 50");
+	} else {
+		widget(927, 23).setText("Oven repaired: 0");
+	}
+	if (VARPBIT[7326] == 0) {
+		widget(927, 24).setText("Conveyor not repaired: 50");
+	} else {
+		widget(927, 24).setText("Conveyor repaired: 0");
+	}
+	if (VARPBIT[7325] == 0) {
+		widget(927, 25).setText("Painter not repaired: 50");
+	} else {
+		widget(927, 25).setText("Painter repaired: 0");
+	}
+	int0 = 0;
+	int0 = VARP[1674] * 101;
+	if (VARPBIT[7325] == 0) {
+		int0 = int0 + 50;
+	}
+	if (VARPBIT[7324] == 0) {
+		int0 = int0 + 50;
+	}
+	if (VARPBIT[7326] == 0) {
+		int0 = int0 + 50;
+	}
+	int0 = int0 - (VARP[1688] + (VARP[1687] + VARP[1686])) * 10;
+	if (VARP[1674] < 16) {
+		int0 = int0 - 100;
+	}
+	int0 = int0 - VARP[1681] * 10;
+	if (int0 < 0) {
+		int0 = 0;
+	}
+	if (int0 > 32768) {
+		int0 = 32768;
+	}
+	if (int0 == VARPBIT[7339]) {
+		widget(927, 31).setText("Final score: " + str(int0) + " (New best score)");
+	} else {
+		widget(927, 31).setText("Final score: " + str(int0));
+	}
+	return;
+}

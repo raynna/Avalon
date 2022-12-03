@@ -1,0 +1,25 @@
+void script_2690(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int1 = 0;
+	int2 = 0;
+	int3 = 5;
+	while (ACTIVE.setChild(widget(1022, 15), int1)) {
+		int1 = int1 + 1;
+	}
+	if (arg0 > 4) {
+		int3 = int3 + 40;
+		int2 = (arg0 - 5) * 40;
+	} else {
+		int2 = arg0 * 40;
+	}
+	int2 = int2 + 17;
+	ACTIVE.createChild(widget(1022, 15), 5, int1);
+	ACTIVE.setSprite(937);
+	ACTIVE.setSize(10, 32, 0, 0);
+	ACTIVE.setPosition(int2, int3, 0, 0);
+	ACTIVE.setHidden(false);
+	ACTIVE.setScriptCallOnGameloop(144, widget(1022, 15), int1, getClientCycle(), getClientCycle() + 750, "Iiii");
+	return;
+}

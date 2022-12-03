@@ -1,0 +1,5 @@
+void script_2564() {
+	VARC[839] = VARPBIT[6351];
+	script_2565();
+	return;
+}

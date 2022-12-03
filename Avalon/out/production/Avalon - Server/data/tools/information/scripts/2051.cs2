@@ -1,0 +1,9 @@
+void script_2051(Widget widget0, int arg1, string string2, int arg3, int arg4, int arg5, int arg6, Color color7, string string8, string string9, Location location10) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		script_2052(string2, arg3, arg4, arg5, arg6, color7, string8, string9, location10);
+	} else {
+		ACTIVE.createChild(widget0, 4, arg1);
+		script_2052(string2, arg3, arg4, arg5, arg6, color7, string8, string9, location10);
+	}
+	return;
+}

@@ -1,0 +1,6 @@
+void script_2207() {
+	if (VARC[1137] == 0) {
+		widget(932, 1).setScriptCallOnGameloop(2212, "");
+	}
+	return;
+}

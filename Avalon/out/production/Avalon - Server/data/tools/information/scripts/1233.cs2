@@ -1,0 +1,22 @@
+void script_1233(Widget widget0, int arg1, Widget widget2, int arg3, int arg4, int arg5) {
+	int int6;
+	int int7;
+	int6 = 0;
+	int7 = 0;
+	if (ACTIVE.setChild(widget0, arg1)) {
+		if (widget2 == widget0) {
+			if (_ACTIVE.setChild(widget2, arg3)) {
+				int6, int7 = ACTIVE.getX(), ACTIVE.getY();
+				ACTIVE.setPosition(_ACTIVE.getX(), _ACTIVE.getY(), 0, 0);
+				_ACTIVE.setPosition(int6, int7, 0, 0);
+			}
+			return;
+		}
+		if (widget2 == widget(arg4) || widget2 == widget(arg5)) {
+			ACTIVE.setHidden(true);
+			return;
+		}
+		ACTIVE.setPosition(ACTIVE.getX(), ACTIVE.getY(), 0, 0);
+	}
+	return;
+}

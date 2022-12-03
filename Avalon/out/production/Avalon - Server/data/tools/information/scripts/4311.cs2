@@ -1,0 +1,120 @@
+void script_4311() {
+	int int0;
+	int int1;
+	int int2;
+	DataMap datamap3;
+	int0 = 0;
+	int1 = script_4293();
+	int2 = -1;
+	if (script_4309() == 1) {
+		int2 = VARC[1500];
+	}
+	widget(1096, 55).setText("Settings for: " + STRING[347]);
+	widget(1096, 751).setIsHidden(true);
+	widget(1096, 752).setIsHidden(true);
+	widget(1096, 754).setIsHidden(true);
+	widget(1096, 753).setIsHidden(true);
+	widget(1096, 157).setIsHidden(true);
+	widget(1096, 158).setIsHidden(true);
+	widget(1096, 160).setIsHidden(true);
+	widget(1096, 159).setIsHidden(true);
+	widget(1096, 376).setIsHidden(true);
+	widget(1096, 377).setIsHidden(true);
+	widget(1096, 379).setIsHidden(true);
+	widget(1096, 378).setIsHidden(true);
+	widget(1096, 780).setIsHidden(true);
+	widget(1096, 781).setIsHidden(true);
+	widget(1096, 783).setIsHidden(true);
+	widget(1096, 782).setIsHidden(true);
+	widget(1096, 69).setIsHidden(true);
+	widget(1096, 329).setIsHidden(false);
+	widget(1096, 341).setIsHidden(false);
+	widget(1096, 279).setIsHidden(false);
+	widget(1096, 265).setIsHidden(false);
+	datamap3 = (DataMap)3720;
+	if (getLanguage() == 1) {
+		datamap3 = (DataMap)3727;
+	} else if (getLanguage() == 2) {
+		datamap3 = (DataMap)3728;
+	} else if (getLanguage() == 3) {
+		datamap3 = (DataMap)3729;
+	}
+	if (script_4309() == 1) {
+		if (VARC[1568] == 1) {
+			widget(1096, 69).setIsHidden(false);
+		}
+		if (script_4292() == 1) {
+			if (int1 > int2 || int1 == 126) {
+				widget(1096, 329).setIsHidden(true);
+				widget(1096, 341).setIsHidden(true);
+				widget(1096, 279).setIsHidden(true);
+				widget(1096, 265).setIsHidden(true);
+				if (int1 != 126) {
+					if (VARC[1565] == 1) {
+						widget(1096, 157).setIsHidden(false);
+					} else {
+						widget(1096, 159).setIsHidden(false);
+					}
+					if (VARC[1566] == 1) {
+						widget(1096, 376).setIsHidden(false);
+					} else {
+						widget(1096, 378).setIsHidden(false);
+					}
+					if (VARC[1567] == 1) {
+						widget(1096, 780).setIsHidden(false);
+					} else {
+						widget(1096, 782).setIsHidden(false);
+					}
+				} else {
+					widget(1096, 160).setIsHidden(false);
+					widget(1096, 379).setIsHidden(false);
+					widget(1096, 783).setIsHidden(false);
+				}
+			} else {
+				if (VARC[1565] == 1) {
+					widget(1096, 158).setIsHidden(false);
+				} else {
+					widget(1096, 160).setIsHidden(false);
+				}
+				if (VARC[1566] == 1) {
+					widget(1096, 377).setIsHidden(false);
+				} else {
+					widget(1096, 379).setIsHidden(false);
+				}
+				if (VARC[1567] == 1) {
+					widget(1096, 781).setIsHidden(false);
+				} else {
+					widget(1096, 783).setIsHidden(false);
+				}
+			}
+		} else {
+			if (VARC[1564] == 1) {
+				widget(1096, 752).setIsHidden(false);
+			} else {
+				widget(1096, 754).setIsHidden(false);
+			}
+			if (VARC[1565] == 1) {
+				widget(1096, 158).setIsHidden(false);
+			} else {
+				widget(1096, 160).setIsHidden(false);
+			}
+			if (VARC[1566] == 1) {
+				widget(1096, 377).setIsHidden(false);
+			} else {
+				widget(1096, 379).setIsHidden(false);
+			}
+			if (VARC[1567] == 1) {
+				widget(1096, 781).setIsHidden(false);
+			} else {
+				widget(1096, 783).setIsHidden(false);
+			}
+		}
+		script_4501(widget(1096, 273), datamap('i', 's', (DataMap)3715, VARC[1500]));
+		if (compare("", datamap('i', 's', datamap3, VARC[1501])) == 0) {
+			script_4501(widget(1096, 259), datamap('i', 's', datamap3, VARC[1501] - 1));
+		} else {
+			script_4501(widget(1096, 259), datamap('i', 's', datamap3, VARC[1501]));
+		}
+	}
+	return;
+}

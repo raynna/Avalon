@@ -1,0 +1,9 @@
+void script_634(Widget widget0, int arg1, int arg2, int arg3) {
+	int int4;
+	int4 = widget0.getShadeColor() - arg3;
+	widget0.setTrans(int4);
+	if (int4 <= arg1) {
+		widget0.setScriptCallOnGameloop(633, widget0, arg1, arg2, arg3, "Iiii");
+	}
+	return;
+}

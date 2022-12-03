@@ -1,0 +1,7 @@
+void script_4167(Widget widget0, int arg1, Widget widget2) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setRGB(0xFF981F);
+	}
+	script_41(widget2);
+	return;
+}

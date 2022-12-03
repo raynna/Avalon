@@ -1,0 +1,50 @@
+void script_4267() {
+	int int0;
+	int0 = VARPBIT[9065] * 10;
+	widget(1083, 201).setText(script_46(int0, ","));
+	if (VARPBIT[9067] > 0) {
+		widget(1083, 139).setSprite(null);
+	}
+	if (VARPBIT[9067] > 1) {
+		widget(1083, 135).setSprite(null);
+	}
+	if (VARPBIT[9067] > 2) {
+		widget(1083, 131).setSprite(null);
+	}
+	if (VARPBIT[9067] > 3) {
+		widget(1083, 127).setSprite(null);
+	}
+	if (VARPBIT[9067] > 4) {
+		widget(1083, 123).setSprite(null);
+	}
+	if (VARPBIT[9067] > 5) {
+		widget(1083, 119).setSprite(null);
+	}
+	if (VARPBIT[9067] > 6) {
+		widget(1083, 115).setSprite(null);
+	}
+	if (VARPBIT[9067] > 7) {
+		widget(1083, 111).setSprite(null);
+	}
+	if (VARPBIT[9067] > 8) {
+		widget(1083, 437).setSprite(null);
+	}
+	if (VARPBIT[9067] > 9) {
+		widget(1083, 448).setSprite(null);
+	}
+	if (VARPBIT[9067] > 10) {
+		widget(1083, 459).setSprite(null);
+		widget(1083, 135).setSprite(null);
+		widget(1083, 216).setSprite(null);
+		widget(1083, 220).setSprite(null);
+		widget(1083, 224).setSprite(null);
+		widget(1083, 228).setSprite(null);
+		widget(1083, 232).setSprite(null);
+		widget(1083, 236).setSprite(null);
+		widget(1083, 498).setSprite(null);
+		widget(1083, 507).setSprite(null);
+		widget(1083, 517).setSprite(null);
+		widget(1083, 557).setSprite(null);
+	}
+	return;
+}

@@ -1,0 +1,33 @@
+void script_5259(int arg0) {
+	Widget widget1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	widget1 = widget(1133, 2);
+	int2 = 0;
+	int3 = 0;
+	int4 = 126;
+	int5 = 99;
+	if (arg0 == 0) {
+		widget1.setSize(widget1.getWidth(), 0, 0, 0);
+	}
+	if (arg0 < 61) {
+		int2 = arg0 * 61 / 100;
+		int3 = int4 * 100 / int2;
+		if (int3 == 0) {
+			widget1.setSize(widget1.getWidth(), 1, 0, 0);
+		} else {
+			widget1.setScriptCallOnGameloop(5260, int3, "i");
+		}
+	} else {
+		arg0 = arg0 - 60;
+		int2 = arg0 * 140 / 100;
+		int3 = int4 + int5 * 100 / int2;
+		if (widget1.isHidden()) {
+			msg("Hidden.");
+		}
+		widget1.setScriptCallOnGameloop(5260, int3, "i");
+	}
+	return;
+}

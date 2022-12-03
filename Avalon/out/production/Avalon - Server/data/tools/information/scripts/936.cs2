@@ -1,0 +1,13 @@
+string script_936(Item item0) {
+	int int1;
+	string str0;
+	str0 = "";
+	int1 = itemAttribute(item0, 763);
+	switch (itemAttribute(item0, 762)) {
+		case 1:
+			return script_913(VARP[322], 10, "Part of quest: Tai Bwo Wannai Trio");
+		case 2:
+			return script_913(VARPBIT[4310], 10, "Complete: Chaos Tunnels");
+	}
+	return "";
+}

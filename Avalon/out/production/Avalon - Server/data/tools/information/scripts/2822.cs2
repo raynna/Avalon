@@ -1,0 +1,9 @@
+void script_2822() {
+	if (VARC[1065] != -1) {
+		script_2823();
+		widget(89, 0).setScriptCallOnGlobalConfigChange(-1, "");
+	} else {
+		widget(89, 0).setScriptCallOnGlobalConfigChange(2822, 1065, "Y");
+	}
+	return;
+}

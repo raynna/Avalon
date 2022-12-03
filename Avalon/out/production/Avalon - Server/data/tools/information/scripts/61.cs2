@@ -1,0 +1,63 @@
+void script_61() {
+	int int0;
+	int0 = 0;
+	while (int0 < 5) {
+		ACTIVE.createChild(widget(260, 45), 5, int0);
+		ACTIVE.setSize(36, 32, 0, 0);
+		if (int0 == 0) {
+			ACTIVE.setPosition(0, 43, 0, 0);
+		}
+		if (int0 == 1) {
+			ACTIVE.setPosition(50, 2, 0, 0);
+		}
+		if (int0 == 2) {
+			ACTIVE.setPosition(50, 43, 0, 0);
+		}
+		if (int0 == 3) {
+			ACTIVE.setPosition(50, 85, 0, 0);
+		}
+		if (int0 == 4) {
+			ACTIVE.setPosition(50, 125, 0, 0);
+		}
+		if (getItemIdInSlot(515, int0) != null) {
+			ACTIVE.setItem(getItemIdInSlot(515, int0), getItemAmtInSlot(515, int0));
+			ACTIVE.setOptionBase(getItemName(getItemIdInSlot(515, int0)));
+			ACTIVE.setContextMenuOption(1, "Deposit");
+			ACTIVE.setShadowColor(0x111111);
+			ACTIVE.setOutlineThickness(1);
+			if (int0 == 0) {
+				widget(260, 40).setSprite(null);
+			}
+			if (int0 == 1) {
+				widget(260, 36).setSprite(null);
+			}
+			if (int0 == 2) {
+				widget(260, 37).setSprite(null);
+			}
+			if (int0 == 3) {
+				widget(260, 38).setSprite(null);
+			}
+			if (int0 == 4) {
+				widget(260, 39).setSprite(null);
+			}
+		} else {
+			if (int0 == 0) {
+				widget(260, 40).setSprite(159);
+			}
+			if (int0 == 1) {
+				widget(260, 36).setSprite(156);
+			}
+			if (int0 == 2) {
+				widget(260, 37).setSprite(161);
+			}
+			if (int0 == 3) {
+				widget(260, 38).setSprite(163);
+			}
+			if (int0 == 4) {
+				widget(260, 39).setSprite(165);
+			}
+		}
+		int0 = int0 + 1;
+	}
+	return;
+}

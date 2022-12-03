@@ -1,0 +1,12 @@
+void script_1892(Widget widget0, Widget widget1) {
+	widget0.setScriptCallOnFriendListChange(1893, widget0, widget1, "II");
+	widget0.setScrollMax(0, 0);
+	widget0.setScrollPos(0, 0);
+	script_31(widget1, widget0, 5666, 5663, 5664, 5665, 5686, 5685);
+	script_1895(widget0, widget1);
+	if (cs2method6900()) {
+		widget(1108, 27).setText("Friends Chat channel:");
+		widget(1108, 22).setContextMenuOption(1, "Enable");
+	}
+	return;
+}

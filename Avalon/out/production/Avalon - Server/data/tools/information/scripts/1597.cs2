@@ -1,0 +1,14 @@
+void script_1597(Widget widget0) {
+	if (VARPBIT[4072] == 1 || VARPBIT[4073] == 1) {
+		widget0.setSprite(1071);
+	} else if (VARPBIT[4071] == 1) {
+		if (VARPBIT[4465] == 1) {
+			widget0.setSprite(306);
+		} else {
+			widget0.setSprite(1069);
+		}
+	} else {
+		widget0.setSprite(1070);
+	}
+	return;
+}

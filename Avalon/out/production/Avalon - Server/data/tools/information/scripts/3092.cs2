@@ -1,0 +1,8 @@
+void script_3092(int arg0) {
+	VARC[547] = arg0;
+	widget(906, 43).setIsHidden(true);
+	if (VARC[547] == 1) {
+		script_3062(widget(906, 171));
+	}
+	return;
+}

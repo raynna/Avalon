@@ -1,0 +1,151 @@
+void script_1750() {
+	if (VARPBIT[2309] == 1) {
+		widget(464, 32).setSprite(731);
+	} else {
+		widget(464, 32).setSprite(751);
+	}
+	if (VARPBIT[2310] == 1) {
+		widget(464, 30).setSprite(729);
+	} else {
+		widget(464, 30).setSprite(749);
+	}
+	if (VARPBIT[2311] == 1) {
+		widget(464, 33).setSprite(732);
+	} else {
+		widget(464, 33).setSprite(752);
+	}
+	if (VARPBIT[2312] == 1) {
+		widget(464, 31).setSprite(730);
+	} else {
+		widget(464, 31).setSprite(750);
+	}
+	if (VARPBIT[532] >= 7) {
+		widget(464, 24).setSprite(726);
+		widget(464, 25).setSprite(727);
+	} else {
+		widget(464, 24).setSprite(746);
+		widget(464, 25).setSprite(747);
+	}
+	if (VARPBIT[1367] == 1) {
+		widget(464, 29).setSprite(725);
+	} else {
+		widget(464, 29).setSprite(745);
+	}
+	if (VARPBIT[1368] == 1) {
+		widget(464, 26).setSprite(722);
+	} else {
+		widget(464, 26).setSprite(742);
+	}
+	if (VARPBIT[1369] == 1) {
+		widget(464, 27).setSprite(723);
+	} else {
+		widget(464, 27).setSprite(743);
+	}
+	if (VARPBIT[1370] == 1) {
+		widget(464, 28).setSprite(724);
+	} else {
+		widget(464, 28).setSprite(744);
+	}
+	if (VARPBIT[1371] == 1) {
+		widget(464, 37).setSprite(728);
+	} else {
+		widget(464, 37).setSprite(748);
+	}
+	if (VARPBIT[1920] == 1) {
+		widget(464, 35).setSprite(734);
+	} else {
+		widget(464, 35).setSprite(754);
+	}
+	if (VARPBIT[1921] == 1) {
+		widget(464, 34).setSprite(733);
+	} else {
+		widget(464, 34).setSprite(753);
+	}
+	if (VARPBIT[2055] == 1) {
+		widget(464, 38).setSprite(735);
+	} else {
+		widget(464, 38).setSprite(755);
+	}
+	if (VARPBIT[2787] == 1) {
+		widget(464, 39).setSprite(736);
+	} else {
+		widget(464, 39).setSprite(756);
+	}
+	if (VARPBIT[4075] == 12) {
+		widget(464, 36).setSprite(737);
+	} else {
+		widget(464, 36).setSprite(757);
+	}
+	if (VARPBIT[4202] == 1) {
+		widget(464, 40).setSprite(738);
+	} else {
+		widget(464, 40).setSprite(758);
+	}
+	if (VARPBIT[4394] == 1) {
+		widget(464, 41).setSprite(739);
+	} else {
+		widget(464, 41).setSprite(759);
+	}
+	if (VARPBIT[4476] == 1) {
+		widget(464, 42).setSprite(0);
+	} else {
+		widget(464, 42).setSprite(5);
+	}
+	if (VARPBIT[4884] == 1) {
+		widget(464, 43).setSprite(1416);
+	} else {
+		widget(464, 43).setSprite(1417);
+	}
+	if (VARPBIT[5490] == 1) {
+		widget(464, 44).setSprite(1585);
+	} else {
+		widget(464, 44).setSprite(1588);
+	}
+	if (VARPBIT[5732] == 1) {
+		widget(464, 45).setSprite(1587);
+	} else {
+		widget(464, 45).setSprite(1590);
+	}
+	if (VARPBIT[5641] == 1) {
+		widget(464, 46).setSprite(1592);
+	} else {
+		widget(464, 46).setSprite(1593);
+	}
+	if (VARPBIT[6014] == 85 || VARPBIT[7322] == 18) {
+		widget(464, 47).setSprite(1215);
+	} else {
+		widget(464, 47).setSprite(1742);
+	}
+	script_1626();
+	if (VARPBIT[6936] == 1) {
+		widget(464, 48).setSprite(2422);
+	} else {
+		widget(464, 48).setSprite(2423);
+	}
+	if (VARPBIT[6095] == 1) {
+		widget(464, 49).setSprite(3757);
+	} else {
+		widget(464, 49).setSprite(3758);
+	}
+	if (VARPBIT[8300] == 20) {
+		widget(464, 50).setSprite(3887);
+	} else {
+		widget(464, 50).setSprite(3889);
+	}
+	if (VARPBIT[8688] == 1) {
+		widget(464, 52).setSprite(3888);
+	} else {
+		widget(464, 52).setSprite(4408);
+	}
+	if (VARPBIT[8601] == 428) {
+		widget(464, 51).setSprite(4407);
+	} else {
+		widget(464, 51).setSprite(4409);
+	}
+	if (VARPBIT[9198] == 60) {
+		widget(464, 53).setSprite(6559);
+	} else {
+		widget(464, 53).setSprite(6573);
+	}
+	return;
+}

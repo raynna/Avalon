@@ -1,0 +1,12 @@
+void script_471(Widget widget0, int arg1) {
+	if (getSkillActualLvl(15) < 25) {
+		widget0.setText("<col=c80000>" + "A Herblore level of " + str(25) + " is required." + "</col>");
+		return;
+	}
+	if (VARPBIT[2086] < arg1) {
+		widget0.setText("<col=c80000>" + str(arg1) + " Commendations required." + "</col>");
+	} else {
+		widget0.setText(str(arg1) + " Commendations.");
+	}
+	return;
+}

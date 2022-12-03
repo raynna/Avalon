@@ -1,0 +1,9 @@
+void script_5220() {
+	script_5219(widget(1092, 300));
+	script_5219(widget(1092, 327));
+	script_5219(widget(1092, 261));
+	script_5219(widget(1092, 1254));
+	script_5219(widget(1092, 243));
+	script_5219(widget(1092, 257));
+	return;
+}

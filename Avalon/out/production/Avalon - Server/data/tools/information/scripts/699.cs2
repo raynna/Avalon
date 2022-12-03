@@ -1,0 +1,31 @@
+void script_699(int arg0, Widget widget1) {
+	int int2;
+	int int3;
+	int2 = 0;
+	int3 = 0;
+	if (ACTIVE.setChild(widget1)) {
+		int2 = ACTIVE.getX();
+		if (arg0 < 5) {
+			int2 = ACTIVE.getX();
+			if (script_700(arg0) == 0) {
+				int3 = -57;
+			} else if (script_700(arg0) == 1) {
+				int3 = -68;
+			} else {
+				int3 = -79;
+			}
+			ACTIVE.setPosition(int2, int3, 0, 1);
+		} else {
+			int3 = ACTIVE.getY();
+			if (script_700(arg0) == 0) {
+				int2 = -42;
+			} else if (script_700(arg0) == 1) {
+				int2 = -53;
+			} else {
+				int2 = -64;
+			}
+			ACTIVE.setPosition(int2, int3, 1, 0);
+		}
+	}
+	return;
+}

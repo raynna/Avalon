@@ -1,0 +1,9 @@
+void script_5299() {
+	if (VARPBIT[9891] == 1) {
+		VARPBIT[9891] = 0;
+	} else {
+		VARPBIT[9891] = 1;
+	}
+	script_5301();
+	return;
+}

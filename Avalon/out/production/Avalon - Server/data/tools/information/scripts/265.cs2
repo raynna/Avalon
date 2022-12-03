@@ -1,0 +1,26 @@
+void script_265() {
+	string str0;
+	str0 = "None";
+	switch (VARC[1110]) {
+		case 1:
+			str0 = "Standard";
+			break;
+		case 3:
+			str0 = "Large";
+			break;
+		case 2:
+			str0 = "Slim";
+			break;
+		case 4:
+			str0 = "Bone";
+			break;
+		case 5:
+			str0 = "Wooden";
+			break;
+		case 6:
+			str0 = "Double";
+			break;
+	}
+	widget(923, 52).setText(str0);
+	return;
+}

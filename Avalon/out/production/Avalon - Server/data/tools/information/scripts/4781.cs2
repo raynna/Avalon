@@ -1,0 +1,11 @@
+void script_4781(Widget widget0, int arg1, int arg2) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		if (arg2 == 1) {
+			ACTIVE.setSprite(7543);
+		} else {
+			ACTIVE.setSprite(7542);
+			script_41(widget(1115, 186));
+		}
+	}
+	return;
+}

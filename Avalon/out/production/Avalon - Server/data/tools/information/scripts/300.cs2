@@ -1,0 +1,158 @@
+int script_300(Location location0, int arg1, string string2, AttrMap attrmap3, Widget widget4, int arg5, int arg6, int arg7, int arg8, int arg9) {
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	Sprite sprite15;
+	Sprite sprite16;
+	Sprite sprite17;
+	Color color18;
+	int int19;
+	int int20;
+	int9 = 0;
+	int10 = 0;
+	int9, int10 = script_296(location0, arg1, widget4, arg5, arg6, arg7, arg8);
+	int11 = getAttributeMapValue(attrmap3, 650);
+	int12 = getAttributeMapValue(attrmap3, 651);
+	int13 = getMaxLineWidth(string2, 512, 591) + int11 + int11;
+	int14 = getLineCount(string2, widget4.getWidth(), 591) * 13 + 2 + int12 + int12;
+	sprite15 = getAttributeMapValue(attrmap3, 647);
+	sprite16 = getAttributeMapValue(attrmap3, 648);
+	sprite17 = getAttributeMapValue(attrmap3, 649);
+	color18 = color(getAttributeMapValue(attrmap3, 652));
+	int19 = (int13 - int11) / 2;
+	int20 = (int14 - int12) / 2;
+	if (ACTIVE.setChild(widget4, arg9)) {
+		ACTIVE.setPosition(int9, int10, 1, 1);
+	} else {
+		ACTIVE.createChild(widget4, 5, arg9);
+		ACTIVE.setPosition(int9, int10, 1, 1);
+		ACTIVE.setSize(int13 - int11 * 2, int14 - int12 * 2, 0, 0);
+		ACTIVE.setSprite(getAttributeMapValue(attrmap3, 646));
+		ACTIVE.setSpriteTiling(true);
+	}
+	arg9 = arg9 + 1;
+	if (ACTIVE.setChild(widget4, arg9)) {
+		ACTIVE.setPosition(int9, int10 - int20, 1, 1);
+	} else {
+		ACTIVE.createChild(widget4, 5, arg9);
+		ACTIVE.setPosition(int9, int10 - int20, 1, 1);
+		ACTIVE.setSize(int13 - int11 * 2, int12, 0, 0);
+		ACTIVE.setSprite(sprite16);
+		ACTIVE.setSpriteTiling(true);
+		ACTIVE.setVFlip(false);
+		ACTIVE.setHFlip(false);
+	}
+	arg9 = arg9 + 1;
+	if (ACTIVE.setChild(widget4, arg9)) {
+		ACTIVE.setPosition(int9, int10 + int20, 1, 1);
+	} else {
+		ACTIVE.createChild(widget4, 5, arg9);
+		ACTIVE.setPosition(int9, int10 + int20, 1, 1);
+		ACTIVE.setSize(int13 - int11 * 2, int12, 0, 0);
+		ACTIVE.setSprite(sprite16);
+		ACTIVE.setSpriteTiling(true);
+		ACTIVE.setVFlip(true);
+		ACTIVE.setHFlip(false);
+	}
+	arg9 = arg9 + 1;
+	if (ACTIVE.setChild(widget4, arg9)) {
+		ACTIVE.setPosition(int9 - int19, int10, 1, 1);
+	} else {
+		ACTIVE.createChild(widget4, 5, arg9);
+		ACTIVE.setPosition(int9 - int19, int10, 1, 1);
+		ACTIVE.setSize(int11, int14 - int12 * 2, 0, 0);
+		ACTIVE.setSprite(sprite17);
+		ACTIVE.setSpriteTiling(true);
+		ACTIVE.setVFlip(false);
+		ACTIVE.setHFlip(false);
+	}
+	arg9 = arg9 + 1;
+	if (ACTIVE.setChild(widget4, arg9)) {
+		ACTIVE.setPosition(int9 + int19, int10, 1, 1);
+	} else {
+		ACTIVE.createChild(widget4, 5, arg9);
+		ACTIVE.setPosition(int9 + int19, int10, 1, 1);
+		ACTIVE.setSize(int11, int14 - int12 * 2, 0, 0);
+		ACTIVE.setSprite(sprite17);
+		ACTIVE.setSpriteTiling(true);
+		ACTIVE.setVFlip(false);
+		ACTIVE.setHFlip(true);
+	}
+	arg9 = arg9 + 1;
+	if (ACTIVE.setChild(widget4, arg9)) {
+		ACTIVE.setPosition(int9 - int19, int10 - int20, 1, 1);
+	} else {
+		ACTIVE.createChild(widget4, 5, arg9);
+		ACTIVE.setPosition(int9 - int19, int10 - int20, 1, 1);
+		ACTIVE.setSize(int11, int12, 0, 0);
+		ACTIVE.setSprite(sprite15);
+		ACTIVE.setSpriteTiling(false);
+		ACTIVE.setVFlip(false);
+		ACTIVE.setHFlip(false);
+	}
+	arg9 = arg9 + 1;
+	if (ACTIVE.setChild(widget4, arg9)) {
+		ACTIVE.setPosition(int9 + int19, int10 - int20, 1, 1);
+	} else {
+		ACTIVE.createChild(widget4, 5, arg9);
+		ACTIVE.setPosition(int9 + int19, int10 - int20, 1, 1);
+		ACTIVE.setSize(int11, int12, 0, 0);
+		ACTIVE.setSprite(sprite15);
+		ACTIVE.setSpriteTiling(false);
+		ACTIVE.setVFlip(false);
+		ACTIVE.setHFlip(true);
+	}
+	arg9 = arg9 + 1;
+	if (ACTIVE.setChild(widget4, arg9)) {
+		ACTIVE.setPosition(int9 - int19, int10 + int20, 1, 1);
+	} else {
+		ACTIVE.createChild(widget4, 5, arg9);
+		ACTIVE.setPosition(int9 - int19, int10 + int20, 1, 1);
+		ACTIVE.setSize(int11, int12, 0, 0);
+		ACTIVE.setSprite(sprite15);
+		ACTIVE.setSpriteTiling(false);
+		ACTIVE.setVFlip(true);
+		ACTIVE.setHFlip(false);
+	}
+	arg9 = arg9 + 1;
+	if (ACTIVE.setChild(widget4, arg9)) {
+		ACTIVE.setPosition(int9 + int19, int10 + int20, 1, 1);
+	} else {
+		ACTIVE.createChild(widget4, 5, arg9);
+		ACTIVE.setPosition(int9 + int19, int10 + int20, 1, 1);
+		ACTIVE.setSize(int11, int12, 0, 0);
+		ACTIVE.setSprite(sprite15);
+		ACTIVE.setSpriteTiling(false);
+		ACTIVE.setVFlip(true);
+		ACTIVE.setHFlip(true);
+	}
+	arg9 = arg9 + 1;
+	if (ACTIVE.setChild(widget4, arg9)) {
+		ACTIVE.setPosition(int9 + 1, int10 + 1, 1, 1);
+	} else {
+		ACTIVE.createChild(widget4, 4, arg9);
+		ACTIVE.setPosition(int9 + 1, int10 + 1, 1, 1);
+		ACTIVE.setSize(int13, int14, 0, 0);
+		ACTIVE.setRGB(getAttributeMapValue(attrmap3, 653));
+		ACTIVE.setTextAlignment(1, 1, 13);
+		ACTIVE.setFont(591);
+		ACTIVE.setText(string2);
+	}
+	arg9 = arg9 + 1;
+	if (ACTIVE.setChild(widget4, arg9)) {
+		ACTIVE.setPosition(int9, int10, 1, 1);
+	} else {
+		ACTIVE.createChild(widget4, 4, arg9);
+		ACTIVE.setPosition(int9, int10, 1, 1);
+		ACTIVE.setSize(int13, int14, 0, 0);
+		ACTIVE.setRGB(color18);
+		ACTIVE.setTextAlignment(1, 1, 13);
+		ACTIVE.setFont(591);
+		ACTIVE.setText(string2);
+	}
+	arg9 = arg9 + 1;
+	return arg9;
+}

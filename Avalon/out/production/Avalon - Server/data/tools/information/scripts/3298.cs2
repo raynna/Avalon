@@ -1,0 +1,23 @@
+void script_3298(Widget widget0, Widget widget1, Widget widget2, int arg3) {
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int4 = widget1.getScrollMaxV();
+	int5 = widget0.getHeight();
+	int6 = int5 - 32;
+	int7 = 0;
+	if (int4 > 0) {
+		int7 = int6 * int5 / int4;
+	} else {
+		int7 = int6;
+	}
+	if (int7 < 10) {
+		int7 = 10;
+	}
+	if (ACTIVE.setChild(widget0, 1)) {
+		ACTIVE.setSize(16, int7, 0, 0);
+		script_3296(widget0, widget1, widget2, arg3, 1);
+	}
+	return;
+}

@@ -1,0 +1,16 @@
+void script_1503() {
+	widget(728, 1).clearChildren();
+	script_1088(widget(728, 1), 22);
+	widget(728, 6).clearChildren();
+	script_333(widget(728, 6), 0x483F33, 0x302922, 0, 0);
+	script_2647(widget(728, 6));
+	widget(728, 9).clearChildren();
+	script_333(widget(728, 9), 0x483F33, 0x302922, 0, 0);
+	script_1516(widget(728, 9), 380, 100);
+	script_2647(widget(728, 9));
+	widget(728, 11).clearChildren();
+	script_2647(widget(728, 11));
+	script_1506();
+	widget(728, 1).setScriptCallOnGlobalConfigChange(1505, 1014, 1018, "Y");
+	return;
+}

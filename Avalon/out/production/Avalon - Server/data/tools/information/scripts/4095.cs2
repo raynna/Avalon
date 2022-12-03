@@ -1,0 +1,28 @@
+void script_4095(Widget widget0, Widget widget1, int arg2, int arg3, boolean boolean4) {
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int5 = widget1.getWidth();
+	int6 = arg2 + (widget(746, 130).getWidth() - int5) / 2;
+	int7 = 0;
+	int8 = 0;
+	if (!boolean4) {
+		int7 = int6 + int5 - script_3365(widget(746, 86));
+		if (int7 > 0) {
+			int8 = min(int7, widget(746, 40).getWidth() / 2);
+			int6 = int6 - int8;
+			int7 = int7 - int8;
+			if (int7 > 0) {
+				int8 = min(int7, (int5 - ACTIVE.getWidth()) / 2 - 4);
+				int6 = int6 - int8;
+			} else {
+				int8 = 0;
+			}
+		}
+	}
+	ACTIVE.setPosition(int8, 0, 1, 2);
+	widget1.setPosition(int6, arg3 + 5 - widget1.getHeight(), 0, 0);
+	widget0.setScriptCallOnGameloop(4094, widget0, widget1, ACTIVE.getChildId(), arg2, arg3, boolean4, "IIiii1");
+	return;
+}

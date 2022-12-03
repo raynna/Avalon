@@ -1,0 +1,55 @@
+void script_1465() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	string str0;
+	string str1;
+	string str2;
+	str0 = "Total number of " + "<col=ba1626>" + "free" + "</col>" + " bank slots used";
+	str1 = "Total number of " + "<col=ba1626>" + "member" + "</col>" + " bank slots used";
+	str2 = "Total number of " + "<col=ba1626>" + "demo" + "</col>" + " bank slots used";
+	int0 = 0;
+	int1 = 0;
+	if (script_3287() == 1) {
+		int0 = 516 - 439 + 1;
+		int1 = 516 - int0;
+	} else {
+		int0 = 516 - 439 + 1 - 10;
+		int1 = 516 - 10 - int0;
+	}
+	int2 = VARC[1038];
+	int3 = VARC[192] - int2;
+	int4 = (int0 - int2) * -1;
+	int5 = int3 - (439 - 1);
+	widget(762, 22).setIsHidden(false);
+	widget(762, 23).setIsHidden(true);
+	if (int5 > 0) {
+		int2 = int2 + int5;
+		int3 = 439 - 1;
+		if (int5 == 1) {
+			str0 = "Total number of " + "<col=ba1626>" + "free" + "</col>" + " bank slots used" + "<br>" + "<col=ba1626>" + "Note: this includes an overflow of 1 member item" + "</col>";
+		} else {
+			str0 = "Total number of " + "<col=ba1626>" + "free" + "</col>" + " bank slots used" + "<br>" + "<col=ba1626>" + "Note: this includes an overflow of " + str(int5) + " member items" + "</col>";
+		}
+		str1 = "Total number of " + "<col=ba1626>" + "member" + "</col>" + " bank slots used";
+	} else if (int4 > 0) {
+		int3 = int3 + int4;
+		int2 = int0;
+		str0 = "Total number of " + "<col=ba1626>" + "free" + "</col>" + " bank slots used";
+		if (int4 == 1) {
+			str1 = "Total number of " + "<col=ba1626>" + "member" + "</col>" + " bank slots used" + "<br>" + "<col=ba1626>" + "Note: this includes an overflow of 1 free item" + "</col>";
+		} else {
+			str1 = "Total number of " + "<col=ba1626>" + "member" + "</col>" + " bank slots used" + "<br>" + "<col=ba1626>" + "Note: this includes an overflow of " + str(int4) + " free items" + "</col>";
+		}
+	}
+	widget(762, 29).setText(str(int2));
+	widget(762, 31).setText(str(int3));
+	widget(762, 29).setScriptCallOnMouseOver(1160, CTX_WIDGET, -1, widget(762, 119), str0, 25, 150, "IiIsii");
+	widget(762, 31).setScriptCallOnMouseOver(1160, CTX_WIDGET, -1, widget(762, 119), str1, 25, 150, "IiIsii");
+	widget(762, 30).setText(str(int0));
+	widget(762, 32).setText(str(int1));
+	return;
+}

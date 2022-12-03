@@ -1,0 +1,62 @@
+void script_376(Widget widget0, Widget widget1, int arg2, Color color3, Color color4, int arg5, int arg6) {
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	if (widget1 == null) {
+		ACTIVE.createChild(widget0, 3, arg6);
+		ACTIVE.setHidden(true);
+		ACTIVE.createChild(widget0, 3, arg6 + 1);
+		ACTIVE.setHidden(true);
+		ACTIVE.createChild(widget0, 3, arg6 + 2);
+		ACTIVE.setHidden(true);
+		ACTIVE.createChild(widget0, 3, arg6 + 3);
+		ACTIVE.setHidden(true);
+		ACTIVE.createChild(widget0, 3, arg6 + 4);
+		ACTIVE.setHidden(true);
+		ACTIVE.createChild(widget0, 3, arg6 + 5);
+		ACTIVE.setHidden(true);
+		return;
+	}
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int10 = 0;
+	if (ACTIVE.setChild(widget1, arg2) || arg2 == -1 && ACTIVE.setChild(widget1)) {
+		int7, int8 = ACTIVE.getX() - arg5, ACTIVE.getY() - arg5;
+		int9 = min(ACTIVE.getWidth() + arg5 * 2, widget0.getWidth());
+		int10 = ACTIVE.getHeight() + arg5 * 2;
+		ACTIVE.createChild(widget0, 3, arg6);
+		ACTIVE.setSize(int9 - 2, 2, 0, 0);
+		ACTIVE.setPosition(int7 + 1, int8, 0, 0);
+		ACTIVE.setFilled(true);
+		ACTIVE.setRGB(color3);
+		ACTIVE.createChild(widget0, 3, arg6 + 1);
+		ACTIVE.setSize(int9 - 2, 2, 0, 0);
+		ACTIVE.setPosition(int7 + 1, int8 + int10 - 2, 0, 0);
+		ACTIVE.setFilled(true);
+		ACTIVE.setRGB(color4);
+		ACTIVE.createChild(widget0, 3, arg6 + 2);
+		ACTIVE.setSize(2, int10 - 2, 0, 0);
+		ACTIVE.setPosition(int7, int8 + 1, 0, 0);
+		ACTIVE.setFilled(true);
+		ACTIVE.setRGB(color4);
+		ACTIVE.createChild(widget0, 3, arg6 + 3);
+		ACTIVE.setSize(2, int10 - 2, 0, 0);
+		ACTIVE.setPosition(int7 + int9 - 2, int8 + 1, 0, 0);
+		ACTIVE.setFilled(true);
+		ACTIVE.setRGB(color4);
+		ACTIVE.createChild(widget0, 3, arg6 + 4);
+		ACTIVE.setSize(2, (int10 - 2) / 2, 0, 0);
+		ACTIVE.setPosition(int7, int8 + 1, 0, 0);
+		ACTIVE.setFilled(true);
+		ACTIVE.setRGB(color3);
+		ACTIVE.createChild(widget0, 3, arg6 + 5);
+		ACTIVE.setSize(2, (int10 - 2) / 2, 0, 0);
+		ACTIVE.setPosition(int7 + int9 - 2, int8 + 1, 0, 0);
+		ACTIVE.setFilled(true);
+		ACTIVE.setRGB(color3);
+		return;
+	}
+	return;
+}

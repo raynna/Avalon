@@ -1,0 +1,64 @@
+void script_4645(int arg0) {
+	Widget widget1;
+	Widget widget2;
+	int int3;
+	int int4;
+	widget1 = null;
+	widget2 = null;
+	int3 = 0;
+	int4 = 0;
+	int3, int4 = script_4644(arg0);
+	switch (arg0) {
+		case 1:
+			widget1 = widget(153, 16);
+			widget2 = widget(153, 171);
+			break;
+		case 2:
+			widget1 = widget(153, 13);
+			widget2 = widget(153, 14);
+			break;
+		case 4:
+			widget1 = widget(153, 10);
+			widget2 = widget(153, 11);
+			break;
+		case 3:
+			widget1 = widget(153, 7);
+			widget2 = widget(153, 8);
+			break;
+		case 6:
+			widget1 = widget(153, 4);
+			widget2 = widget(153, 5);
+			break;
+		case 5:
+			widget1 = widget(153, 1);
+			widget2 = widget(153, 2);
+			break;
+		default:
+			return;
+	}
+	if (script_4643(arg0) == 1) {
+		if (int3 == 1) {
+			if (int4 == 1) {
+				widget1.setSprite(6274);
+				widget1.setIsHidden(false);
+				widget2.setSprite(6275);
+				widget2.setIsHidden(false);
+			} else {
+				widget1.setSprite(6272);
+				widget1.setIsHidden(false);
+				widget2.setSprite(6275);
+				widget2.setIsHidden(false);
+			}
+		} else {
+			widget1.setSprite(6272);
+			widget1.setIsHidden(false);
+		}
+	} else if (int3 == 1) {
+		widget1.setSprite(6275);
+		widget1.setIsHidden(false);
+	} else {
+		widget1.setSprite(6273);
+		widget1.setIsHidden(false);
+	}
+	return;
+}

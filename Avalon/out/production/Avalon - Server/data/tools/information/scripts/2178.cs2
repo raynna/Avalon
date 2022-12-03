@@ -1,0 +1,13 @@
+void script_2178(int arg0, string string1) {
+	if (ACTIVE.setChild(widget(190, 18), arg0)) {
+		if (getClientCycle() % 20 > 9) {
+			ACTIVE.setText("");
+			if (getClientCycle() % 20 == 10) {
+				playSoundEffect(5009, 1, 0);
+			}
+		} else {
+			ACTIVE.setText(string1);
+		}
+	}
+	return;
+}

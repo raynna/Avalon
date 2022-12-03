@@ -1,0 +1,5 @@
+void script_5294(Widget widget0, Widget widget1) {
+	widget1.setIsHidden(false);
+	widget0.setScriptCallOnUseWith(5295, widget0, widget1, "II");
+	return;
+}

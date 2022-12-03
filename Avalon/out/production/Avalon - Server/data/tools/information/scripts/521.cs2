@@ -1,0 +1,12 @@
+void script_521() {
+	VARC[54] = getSkillXp(20);
+	VARC[55] = getSkillXp(12);
+	VARC[57] = getSkillXp(9);
+	VARC[58] = getSkillXp(7);
+	VARC[60] = getSkillXp(22);
+	VARC[61] = getSkillXp(15);
+	VARC[64] = getSkillXp(6);
+	VARC[66] = getSkillXp(13);
+	VARC[62] = getSkillXp(19);
+	return;
+}

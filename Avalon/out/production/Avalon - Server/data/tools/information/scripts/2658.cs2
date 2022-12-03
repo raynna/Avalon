@@ -1,0 +1,11 @@
+void script_2658() {
+	VARPBIT[6302] = VARPBIT[6302] + 1;
+	if (VARPBIT[6302] >= cs2method5407(0) - 1) {
+		VARPBIT[6302] = 0;
+		widget(876, 0).setScriptCallOnMinimapRelatedSetting3(-1, "");
+		return;
+	}
+	cameraMethod5502(0, VARPBIT[6302], 600, 400, 1, VARPBIT[6302]);
+	widget(876, 0).setScriptCallOnMinimapRelatedSetting3(2658, "");
+	return;
+}

@@ -1,0 +1,255 @@
+void script_2162(int arg0, int arg1, int arg2, int arg3, int arg4) {
+	AttrMap attrmap5;
+	DataMap datamap6;
+	Widget widget7;
+	Widget widget8;
+	Widget widget9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	DataMap datamap15;
+	DataMap datamap16;
+	DataMap datamap17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	int int23;
+	int int24;
+	int int25;
+	int int26;
+	string str0;
+	string str1;
+	if (arg1 == -1 || arg2 == -1 || arg3 == -1 || arg4 == -1) {
+		return;
+	}
+	ARRAY0 = new int[VARC[273] + 1];
+	ARRAY1 = new int[VARC[273] + 1];
+	attrmap5 = datamap('i', 'J', (DataMap)169, arg0);
+	if (attrmap5 == null) {
+		return;
+	}
+	datamap6 = getAttributeMapValue(attrmap5, 61);
+	widget7 = getAttributeMapValue(attrmap5, 152);
+	widget8 = getAttributeMapValue(attrmap5, 153);
+	widget9 = getAttributeMapValue(attrmap5, 670);
+	VARC[698] = script_1432();
+	int10 = 0;
+	int11 = 0;
+	int12 = 1;
+	int13 = 0;
+	int14 = 1;
+	datamap15 = datamap('i', 'g', getAttributeMapValue(attrmap5, 673), arg1);
+	datamap16 = datamap('i', 'g', getAttributeMapValue(attrmap5, 676), arg1);
+	datamap17 = datamap('i', 'g', getAttributeMapValue(attrmap5, 675), arg1);
+	if (datamap17 == null) {
+		datamap17 = (DataMap)223;
+	}
+	if (datamap15 == null) {
+		return;
+	}
+	int18 = datamapSize(datamap15);
+	int19 = widget7.getScrollY();
+	int20 = widget7.getScrollMaxV();
+	int21 = 0;
+	int22 = 0;
+	str0 = "";
+	script_2164(arg0);
+	while (int10 <= VARC[273]) {
+		ARRAY0[int10] = int10;
+		int10 = int10 + 1;
+	}
+	int10 = 0;
+	script_2163(0, datamap6, 0, VARC[273]);
+	switch (arg0) {
+		case 1:
+			while (int10 <= VARC[273]) {
+				ARRAY1[int10] = script_2193(ARRAY0[int10]);
+				int10 = int10 + 1;
+			}
+			break;
+		case 3:
+			while (int10 <= VARC[273]) {
+				ARRAY1[int10] = 0;
+				int10 = int10 + 1;
+			}
+			break;
+	}
+	int10 = 0;
+	int23 = 0;
+	if (arg2 == 1) {
+		int23 = int18 - 1;
+	}
+	int24 = 5;
+	int25 = 0;
+	int26 = -1;
+	if (arg0 == 1) {
+		int26 = VARPBIT[6913];
+	} else if (getAttributeMapValue(attrmap5, 693) > 0) {
+		int26 = VARPBIT[697] - 1000 * (getAttributeMapValue(attrmap5, 693) - 1);
+	} else {
+		int26 = VARPBIT[697] - 1000 * (arg0 - 1);
+	}
+	while (arg2 == 0 && int23 < int18 || arg2 == 1 && int23 >= 0) {
+		int21 = datamap('i', 'i', datamap17, int23);
+		if (ACTIVE.setChild(widget7, VARC[273] + int23 + 1)) {
+			ACTIVE.setPosition(0, int24, 0, 0);
+			str0 = datamap('i', 's', datamap15, int21);
+			ACTIVE.setText(str0);
+			ACTIVE.setHidden(false);
+			int24 = int24 + ACTIVE.getHeight();
+		}
+		int13 = 0;
+		while (int11 < VARC[272]) {
+			VARC[699] = datamap('i', 'J', datamap6, ARRAY0[int10]);
+			if (VARC[699] != -1) {
+				int11 = int11 + 1;
+				switch (arg1) {
+					case 0:
+						int22 = getAttributeMapValue((AttrMap)VARC[699], 856);
+						if (int22 == 4 && VARP[281] == 1000) {
+							int22 = 0;
+						}
+						break;
+					case 1:
+						switch (arg0) {
+							case 1:
+								int22 = ARRAY1[int10];
+								break;
+							case 3:
+								int22 = getAttributeMapValue((AttrMap)VARC[699], 677);
+								break;
+						}
+						break;
+					case 2:
+						switch (arg0) {
+							case 1:
+								int22 = getAttributeMapValue((AttrMap)VARC[699], 848);
+								break;
+							case 3:
+								int22 = getAttributeMapValue((AttrMap)VARC[699], 678);
+								break;
+						}
+						break;
+				}
+				if (int22 != int21) {
+					int14 = 0;
+				}
+				if (int14 == 1 && arg3 == 0 && ARRAY1[int10] == 0) {
+					int12 = script_2149();
+					if (int12 == 0) {
+						int14 = 0;
+					}
+				}
+				if (int14 == 1 && arg4 == 1 && ARRAY1[int10] == 2) {
+					int14 = 0;
+				}
+				if (int14 == 1 && ACTIVE.setChild(widget7, ARRAY0[int10])) {
+					ACTIVE.setPosition(10, int24, 0, 0);
+					ACTIVE.setHidden(false);
+					if (getAttributeMapValue((AttrMap)VARC[699], 694) == 1) {
+						if (ARRAY1[int10] == 0) {
+							ACTIVE.setContextMenuOption(1, "View Quest Overview");
+							ACTIVE.setContextMenuOption(2, "View Quest Journal");
+							ACTIVE.setContextMenuOption(3, "Toggle Map Hint");
+						} else if (ARRAY1[int10] == 1) {
+							ACTIVE.setContextMenuOption(1, "View Quest Journal");
+							ACTIVE.setContextMenuOption(2, "View Quest Overview");
+							ACTIVE.setContextMenuOption(3, "Toggle Map Hints");
+						} else {
+							ACTIVE.setContextMenuOption(1, "View Quest Journal");
+							ACTIVE.setContextMenuOption(2, "View Quest Overview");
+							ACTIVE.setContextMenuOption(3, "");
+						}
+					} else {
+						ACTIVE.setContextMenuOption(1, "View Quest Journal");
+						ACTIVE.setContextMenuOption(3, "");
+						if (ARRAY1[int10] == 0) {
+							ACTIVE.setContextMenuOption(2, "Toggle Map Hint");
+						} else {
+							ACTIVE.setContextMenuOption(2, "");
+						}
+					}
+					ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+					if (ARRAY0[int10] == int26) {
+						ACTIVE.setRGB(0x00FFFF);
+						ACTIVE.setScriptCallOnMouseExit(1949, CTX_WIDGET, CTX_WIDGET_CHILD, 65535, widget9, "IiiI");
+					} else if (ARRAY1[int10] == 0) {
+						ACTIVE.setRGB(0xFF0000);
+						ACTIVE.setScriptCallOnMouseExit(1949, CTX_WIDGET, CTX_WIDGET_CHILD, 16711680, widget9, "IiiI");
+					} else if (ARRAY1[int10] == 1) {
+						ACTIVE.setRGB(0xFFFF00);
+						ACTIVE.setScriptCallOnMouseExit(1949, CTX_WIDGET, CTX_WIDGET_CHILD, 16776960, widget9, "IiiI");
+					} else {
+						ACTIVE.setRGB(0x00FF00);
+						ACTIVE.setScriptCallOnMouseExit(1949, CTX_WIDGET, CTX_WIDGET_CHILD, 65280, widget9, "IiiI");
+					}
+					int24 = int24 + ACTIVE.getHeight();
+					int13 = int13 + 1;
+					if (datamap('i', 'i', datamap16, int21) == 1 && compare(getAttributeMapValue((AttrMap)VARC[699], 857), "") != 0 && ACTIVE.setChild(widget7, VARC[273] + int23 + 1)) {
+						ACTIVE.setText(getAttributeMapValue((AttrMap)VARC[699], 857));
+					}
+					int25 = int25 + 1;
+				}
+				int14 = 1;
+			}
+			int10 = int10 + 1;
+		}
+		if (int13 != 0) {
+			int24 = int24 + 10;
+		} else {
+			if (ACTIVE.setChild(widget7, VARC[273] + int23 + 1)) {
+				ACTIVE.setText("");
+				ACTIVE.setHidden(true);
+			}
+			int24 = int24 - 20;
+		}
+		int10 = 0;
+		int11 = 0;
+		if (arg2 == 0) {
+			int23 = int23 + 1;
+		} else {
+			int23 = int23 - 1;
+		}
+	}
+	str1 = "";
+	if (arg0 == 1) {
+		if (int25 == VARC[272]) {
+			str1 = "Showing all " + str(VARC[272]) + " items";
+		} else {
+			str1 = "Showing " + str(int25) + " of " + str(VARC[272]) + " items";
+		}
+		if (arg2 == 1) {
+			str1 = concat(str1, " (reversed)");
+		}
+		widget(190, 8).setText(str1);
+	}
+	if (VARC[695] == 1 || int20 != int24 + 5 || arg2 == 1 && VARC[694] == 0 || arg2 == 0 && VARC[694] == 1) {
+		widget7.setScrollMax(widget7.getWidth(), int24 + 5);
+		int20 = int24;
+		widget7.setScrollPos(0, 0);
+		script_31(widget8, widget7, 792, 789, 790, 791, 773, 788);
+	} else {
+		widget7.setScrollPos(0, int19);
+	}
+	if (arg0 == 1) {
+		VARC[692] = arg3;
+		VARC[1103] = arg4;
+		VARC[694] = arg2;
+		if (VARC[692] == 0) {
+			widget(190, 10).setSprite(699);
+		} else {
+			widget(190, 10).setSprite(697);
+		}
+		if (VARC[1103] == 1) {
+			widget(190, 12).setSprite(699);
+		} else {
+			widget(190, 12).setSprite(697);
+		}
+	}
+	VARC[695] = 0;
+	return;
+}

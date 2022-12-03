@@ -1,0 +1,101 @@
+int, int, int, int, int, int script_4841(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	DataMap datamap9;
+	AttrMap attrmap10;
+	DataMap datamap11;
+	DataMap datamap12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	if (citadelConfigsInitialized()) {
+		switch (arg0) {
+			case 1:
+				int3 = VARPBIT[9570];
+				int1 = VARPBIT[9562];
+				int2 = VARPBIT[9563];
+				int4 = VARPBIT[9567];
+				int5 = VARPBIT[9568];
+				int6 = VARPBIT[9569];
+				break;
+			case 2:
+				int3 = VARPBIT[9579];
+				int1 = VARPBIT[9571];
+				int2 = VARPBIT[9572];
+				int4 = VARPBIT[9576];
+				int5 = VARPBIT[9577];
+				int6 = VARPBIT[9578];
+				break;
+			case 3:
+				int3 = VARPBIT[9588];
+				int1 = VARPBIT[9580];
+				int2 = VARPBIT[9581];
+				int4 = VARPBIT[9585];
+				int5 = VARPBIT[9586];
+				int6 = VARPBIT[9587];
+				break;
+		}
+	}
+	int7 = 1;
+	int8 = 1;
+	datamap9 = null;
+	attrmap10 = null;
+	datamap11 = null;
+	datamap12 = null;
+	int13 = 0;
+	int14 = 0;
+	int15 = 0;
+	int16 = 0;
+	int17 = 0;
+	int18 = 0;
+	datamap11 = datamap('i', 'g', (DataMap)4043, int1);
+	if (datamap11 == null) {
+		return 0, 0, 0, 0, 0, 0;
+	}
+	datamap12 = datamap('i', 'g', datamap11, int2);
+	if (datamap12 == null) {
+		return 0, 0, 0, 0, 0, 0;
+	}
+	while (int7 <= 3) {
+		datamap9 = datamap('i', 'g', datamap12, int7);
+		if (datamap9 != null) {
+			switch (int7) {
+				case 1:
+					attrmap10 = datamap('i', 'J', datamap9, int4);
+					break;
+				case 2:
+					attrmap10 = datamap('i', 'J', datamap9, int5);
+					break;
+				case 3:
+					attrmap10 = datamap('i', 'J', datamap9, int6);
+					break;
+			}
+			if (attrmap10 != null) {
+				int13 = getAttributeMapValue(attrmap10, 1571);
+				int16 = int16 + getAttributeMapValue(attrmap10, 1573);
+				int14 = getAttributeMapValue(attrmap10, 1575);
+				int17 = int17 + getAttributeMapValue(attrmap10, 1577);
+				int15 = getAttributeMapValue(attrmap10, 1579);
+				int18 = int18 + getAttributeMapValue(attrmap10, 1581);
+			}
+		}
+		datamap9 = null;
+		int7 = int7 + 1;
+	}
+	return int13, int16, int14, int17, int15, int18;
+}

@@ -1,0 +1,7 @@
+void script_4565(Widget widget0) {
+	widget0.setScriptCallOnFriendListChange(4566, widget0, "I");
+	widget0.setScriptCallOnClanListChange(4566, widget0, "I");
+	widget0.setScriptCallOnMessage(4566, widget0, "I");
+	script_4567(widget0);
+	return;
+}

@@ -1,0 +1,17 @@
+void script_923(string string0, string string1, string string2, int arg3) {
+	int int1;
+	int int2;
+	int1 = getLineCount(string0, arg3, 494);
+	int2 = getLineCount(string1, arg3, 494);
+	if (int2 > int1) {
+		int1 = int2;
+	}
+	int2 = getLineCount(string2, arg3, 494);
+	if (int2 > int1) {
+		int1 = int2;
+	}
+	script_924(string0, int1, 0, 0, 494);
+	script_924(string1, int1, 1, 0, 494);
+	script_924(string2, int1, 2, 1, 494);
+	return;
+}

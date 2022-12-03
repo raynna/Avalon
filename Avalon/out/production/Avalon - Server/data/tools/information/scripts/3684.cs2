@@ -1,0 +1,7 @@
+void script_3684() {
+	if (VARPBIT[4393] == 1 || VARPBIT[542] == 1) {
+		return;
+	}
+	script_39(widget(187, 10), widget(187, 16), "Click here to search for a song", 25, 189);
+	return;
+}

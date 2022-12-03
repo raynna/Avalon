@@ -1,0 +1,5 @@
+void script_223() {
+	VARC[11] = 0;
+	script_675();
+	return;
+}

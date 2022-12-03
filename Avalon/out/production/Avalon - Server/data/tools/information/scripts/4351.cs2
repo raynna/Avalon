@@ -1,0 +1,9 @@
+void script_4351(Widget widget0) {
+	if (VARPBIT[9139] == VARP[2128]) {
+		VARPBIT[9139] = 0;
+	} else {
+		VARPBIT[9139] = VARP[2128];
+	}
+	script_4353(widget0);
+	return;
+}

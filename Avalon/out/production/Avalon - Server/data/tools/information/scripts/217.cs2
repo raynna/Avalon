@@ -1,0 +1,10 @@
+void script_217() {
+	widget(594, 106).setText("Reporting: " + STRING[24]);
+	widget(594, 71).setText(STRING[24]);
+	if (compare(STRING[24], "") != 0) {
+		widget(594, 81).setIsHidden(true);
+	} else {
+		widget(594, 81).setIsHidden(false);
+	}
+	return;
+}

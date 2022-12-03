@@ -1,0 +1,9 @@
+void script_2857() {
+	if (script_2869(moveCoord(location(VARC[1070]), -1, 0, 0)) == 1) {
+		return;
+	}
+	if (script_2866(getMyLocation(), moveCoord(location(VARC[1070]), -1, 0, 0)) < 31) {
+		VARC[1070] = moveCoord(location(VARC[1070]), -1, 0, 0);
+	}
+	return;
+}

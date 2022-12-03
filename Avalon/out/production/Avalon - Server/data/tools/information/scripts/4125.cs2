@@ -1,0 +1,6 @@
+void script_4125(Widget widget0, int arg1, Widget widget2, string arg3) {
+	if (ACTIVE.setChild(widget0)) {
+		script_1163(widget0, arg1, widget2, arg3 + ACTIVE.getAttribute(718), 0, 180);
+	}
+	return;
+}

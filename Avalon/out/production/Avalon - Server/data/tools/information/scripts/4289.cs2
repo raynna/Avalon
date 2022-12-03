@@ -1,0 +1,11 @@
+void script_4289() {
+	if (cs2method3701()) {
+		script_4291();
+	} else {
+		widget(1096, 151).setScriptCallOnClanChatSettingsStuff(4290, "");
+	}
+	if (VARC[1516] == -1) {
+		VARC[1516] = 0;
+	}
+	return;
+}

@@ -1,0 +1,29 @@
+void script_1327(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, Widget widget7) {
+	widget0.setModel(datamap('i', 'm', (DataMap)1595, VARPBIT[2513] / 10));
+	widget1.setModel(datamap('i', 'm', (DataMap)1595, VARPBIT[2513] % 10));
+	widget5.setItemOnWidgetMethod2205((Item)VARP[853], 1);
+	widget6.setItemOnWidgetMethod2205((Item)VARP[854], 1);
+	widget7.setItemOnWidgetMethod2205((Item)VARP[855], 1);
+	if (VARPBIT[2542] == 0) {
+		widget3.setModel(17219);
+		widget2.setModel(null);
+		widget4.setModel(null);
+		return;
+	}
+	if (VARPBIT[2542] > VARPBIT[2513]) {
+		widget3.setModel(17219);
+		widget2.setModel(17221);
+		widget4.setModel(17217);
+		return;
+	}
+	if (VARPBIT[2542] < VARPBIT[2513]) {
+		widget3.setModel(17219);
+		widget2.setModel(17220);
+		widget4.setModel(17218);
+		return;
+	}
+	widget3.setModel(17216);
+	widget2.setModel(null);
+	widget4.setModel(null);
+	return;
+}

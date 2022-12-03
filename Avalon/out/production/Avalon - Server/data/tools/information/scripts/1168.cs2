@@ -1,0 +1,9 @@
+void script_1168(int arg0, string string1, int arg2) {
+	if (getClientCycle() % 50 != 0) {
+		return;
+	}
+	if (ACTIVE.setChild(widget(885, 16), arg0)) {
+		ACTIVE.setText(string1);
+	}
+	return;
+}

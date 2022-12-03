@@ -1,0 +1,9 @@
+void script_2316(int arg0) {
+	widget(137, 140).setText(str(arg0 + 1));
+	widget(137, 146).setVFlip(false);
+	widget(137, 75).setIsHidden(true);
+	widget(137, 76).setIsHidden(true);
+	widget(137, 74).setIsHidden(true);
+	widget(137, 68).setIsHidden(true);
+	return;
+}

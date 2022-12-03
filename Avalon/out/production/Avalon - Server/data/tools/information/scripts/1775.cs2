@@ -1,0 +1,42 @@
+void script_1775() {
+	switch (VARC[252]) {
+		case 0:
+			widget(791, 127).setSprite(699);
+			widget(791, 125).setIsHidden(false);
+			widget(791, 126).setIsHidden(false);
+			widget(791, 124).setIsHidden(false);
+			widget(791, 123).setIsHidden(false);
+			widget(791, 122).setTrans(0);
+			break;
+		case 1:
+			widget(791, 127).setSprite(699);
+			widget(791, 125).setIsHidden(true);
+			widget(791, 126).setIsHidden(true);
+			widget(791, 124).setIsHidden(false);
+			widget(791, 123).setIsHidden(false);
+			if (isMember()) {
+				widget(791, 122).setTrans(225);
+			} else {
+				widget(791, 122).setTrans(0);
+			}
+			break;
+		case 2:
+			widget(791, 127).setSprite(699);
+			widget(791, 125).setIsHidden(true);
+			widget(791, 126).setIsHidden(true);
+			widget(791, 124).setIsHidden(true);
+			widget(791, 123).setIsHidden(false);
+			widget(791, 122).setTrans(225);
+			break;
+		case 3:
+			widget(791, 127).setSprite(698);
+			widget(791, 125).setIsHidden(true);
+			widget(791, 126).setIsHidden(true);
+			widget(791, 124).setIsHidden(true);
+			widget(791, 123).setIsHidden(true);
+			widget(791, 122).setTrans(225);
+			break;
+	}
+	script_1784();
+	return;
+}

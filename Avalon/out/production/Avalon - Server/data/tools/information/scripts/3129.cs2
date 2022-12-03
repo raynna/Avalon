@@ -1,0 +1,4 @@
+void script_3129(int arg0, int arg1, int arg2, string string3) {
+	script_4701(arg0, arg1, arg2, string3);
+	return;
+}

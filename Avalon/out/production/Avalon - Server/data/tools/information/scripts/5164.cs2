@@ -1,0 +1,13 @@
+void script_5164(Widget widget0, int arg1, Widget widget2, int arg3, int arg4) {
+	int int5;
+	int int6;
+	int int7;
+	int5 = widget0.getHeight();
+	int6 = (int5 - arg4) * 8 / int5;
+	int7 = arg3 * 128 / widget0.getWidth();
+	VARPBIT[9643] = int6 % 8;
+	VARPBIT[9644] = int7 % 128;
+	script_5167(arg3, arg4);
+	widget2.setRGB(getColorRelatedMethod4020(VARP[2347]));
+	return;
+}

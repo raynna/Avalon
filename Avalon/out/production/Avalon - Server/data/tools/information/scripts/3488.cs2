@@ -1,0 +1,22 @@
+void script_3488() {
+	VARC[1186] = 1337;
+	VARC[1184] = 0;
+	widget(993, 112).setPosition(widget(993, 112).getX(), 52, 0, 0);
+	widget(993, 27).setPosition(widget(993, 27).getX(), 52, 0, 0);
+	widget(993, 26).setPosition(widget(993, 26).getX(), 52, 0, 0);
+	widget(993, 254).setIsHidden(true);
+	widget(993, 239).setIsHidden(true);
+	widget(993, 224).setIsHidden(true);
+	widget(993, 209).setIsHidden(true);
+	widget(993, 257).setTrans(255);
+	widget(993, 242).setTrans(255);
+	widget(993, 227).setTrans(255);
+	widget(993, 212).setTrans(255);
+	widget(993, 194).setIsHidden(true);
+	widget(993, 195).setIsHidden(true);
+	widget(993, 196).setIsHidden(true);
+	widget(993, 197).setIsHidden(true);
+	widget(993, 261).setIsHidden(true);
+	widget(993, 191).setIsHidden(true);
+	return;
+}

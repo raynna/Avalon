@@ -1,0 +1,9 @@
+void script_2181() {
+	int int0;
+	int0 = 0;
+	while (int0 <= VARC[273]) {
+		script_2180(int0);
+		int0 = int0 + 1;
+	}
+	return;
+}

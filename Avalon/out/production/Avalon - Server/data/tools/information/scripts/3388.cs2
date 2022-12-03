@@ -1,0 +1,61 @@
+void script_3388(int arg0, int arg1, int arg2) {
+	int int3;
+	int int4;
+	int3 = 4;
+	switch (arg0) {
+		case 1:
+			if (!(cs2method7007() != 1)) {
+				return;
+			}
+			cs2method7004();
+			break;
+		case 2:
+			if (int3 >= 2) {
+				if (!(cs2method7007() != 2)) {
+					return;
+				}
+				cs2method7003();
+			} else {
+				script_3413(arg1);
+			}
+			break;
+		case 3:
+			if (int3 >= 3) {
+				if (!(cs2method7007() != 3)) {
+					return;
+				}
+				cs2method7002();
+			} else {
+				script_3413(arg1);
+			}
+			break;
+		case 4:
+			if (int3 >= 4) {
+				if (!(cs2method7007() != 4)) {
+					return;
+				}
+				cs2method7001();
+			} else {
+				script_3413(arg1);
+			}
+			break;
+		case 0:
+			if (arg2 == 1) {
+				if (!(cs2method7007() != 0)) {
+					return;
+				}
+				cs2method7005();
+			}
+			break;
+		case -1:
+			script_3384(arg1);
+			break;
+	}
+	int4 = cs2method6131();
+	if (arg0 == 0 || arg2 == 1) {
+		script_3387(int4, getDisplayMode(), (int, int)script_2692(int4), arg1);
+	} else {
+		script_2596(int4, getDisplayMode(), (int, int)script_2692(int4), arg1);
+	}
+	return;
+}

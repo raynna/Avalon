@@ -1,0 +1,101 @@
+string script_2781() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	string str0;
+	str0 = "";
+	int0 = getCurrentDaysSinceLaunch();
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int1, int2, int3 = cs2method6901();
+	int1 = int1 / 1440 - 11745;
+	int4 = cs2method6907();
+	int5 = cs2method6908();
+	int6 = int5 - int0;
+	if (int5 <= int4 || int6 < 0) {
+		int6 = 0;
+	}
+	if (int4 != 0 && int1 + int0 >= int4 && VARC[1315] != int0 && int1 <= 14) {
+		if (int1 <= 7) {
+			if (int1 <= 3) {
+				if (int1 <= 1) {
+					if (int1 == 0) {
+						if (int6 > 0 && int6 <= 14) {
+							if (int6 <= 7) {
+								if (int6 <= 3) {
+									if (int6 == 1) {
+										str0 = "Your credit card has expired and your membership credit has run out. Please re-subscribe using a new credit card to restart your membership." + "<br>" + "<br>" + "If you renew today, you will pay the lower 'loyalty' rate. After this, your discount will no longer be available.";
+										VARC[1316] = int0;
+									} else if (VARC[1316] + 2 < int0) {
+										str0 = "Your credit card has expired and your membership credit has run out. Please re-subscribe using a new credit card to restart your membership." + "<br>" + "<br>" + "If you renew within the next " + str(int6) + " days, you will pay the lower 'loyalty' rate. After this, your discount will no longer be available.";
+										VARC[1316] = int0;
+									}
+								} else if (VARC[1316] + 4 < int0) {
+									str0 = "Your credit card has expired and your membership credit has run out. Please re-subscribe using a new credit card to restart your membership." + "<br>" + "<br>" + "If you renew within the next " + str(int6) + " days, you will pay the lower 'loyalty' rate. After this, your discount will no longer be available.";
+									if (int6 == 7) {
+										VARC[1316] = int0;
+									} else {
+										VARC[1316] = int0 - (7 - int6);
+									}
+								}
+							} else if (VARC[1316] + 7 < int0) {
+								str0 = "Your credit card has expired and your membership credit has run out. Please re-subscribe using a new credit card to restart your membership." + "<br>" + "<br>" + "If you renew within the next " + str(int6) + " days, you will pay the lower 'loyalty' rate. After this, your discount will no longer be available.";
+								if (int6 == 14) {
+									VARC[1316] = int0;
+								} else {
+									VARC[1316] = int0 - (14 - int6);
+								}
+							}
+						}
+					} else {
+						if (int6 > 0) {
+							str0 = "Your credit card has expired. Please re-subscribe using a new credit card to continue your membership." + "<br>" + "<br>" + "If you renew within the next " + str(int6) + " days, you will continue paying your lower 'loyalty' rate. After this, your discount will no longer be available.";
+						} else {
+							str0 = "Your credit card has expired. Please re-subscribe using a new credit card to continue your membership.";
+						}
+						VARC[1315] = int0;
+					}
+				} else if (VARC[1315] + 2 < int0) {
+					if (int6 > 0) {
+						str0 = "Your credit card has expired. Please re-subscribe using a new credit card to continue your membership." + "<br>" + "<br>" + "If you renew within the next " + str(int6) + " days, you will continue paying your lower 'loyalty' rate. After this, your discount will no longer be available.";
+					} else {
+						str0 = "Your credit card has expired. Please re-subscribe using a new credit card to continue your membership.";
+					}
+					if (int1 == 3) {
+						VARC[1315] = int0;
+					} else {
+						VARC[1315] = int0 - (3 - int1);
+					}
+				}
+			} else if (VARC[1315] + 4 < int0) {
+				if (int6 > 0) {
+					str0 = "Your credit card has expired. Please re-subscribe using a new credit card to continue your membership." + "<br>" + "<br>" + "If you renew within the next " + str(int6) + " days, you will continue paying your lower 'loyalty' rate. After this, your discount will no longer be available.";
+				} else {
+					str0 = "Your credit card has expired. Please re-subscribe using a new credit card to continue your membership.";
+				}
+				if (int1 == 7) {
+					VARC[1315] = int0;
+				} else {
+					VARC[1315] = int0 - (7 - int1);
+				}
+			}
+		} else if (VARC[1315] + 7 < int0) {
+			if (int6 > 0) {
+				str0 = "Your credit card has expired. Please re-subscribe using a new credit card to continue your membership." + "<br>" + "<br>" + "If you renew within the next " + str(int6) + " days, you will continue paying your lower 'loyalty' rate. After this, your discount will no longer be available.";
+			} else {
+				str0 = "Your credit card has expired. Please re-subscribe using a new credit card to continue your membership.";
+			}
+			if (int1 == 14) {
+				VARC[1315] = int0;
+			} else {
+				VARC[1315] = int0 - (14 - int1);
+			}
+		}
+	}
+	return str0;
+}

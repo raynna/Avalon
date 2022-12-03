@@ -1,0 +1,13 @@
+void script_5011() {
+	script_4407(widget(1092, 738), 1, 180);
+	script_4407(widget(1092, 749), 1, 180);
+	script_4407(widget(1092, 760), 1, 180);
+	script_4407(widget(1092, 771), 1, 180);
+	script_4407(widget(1092, 782), 1, 180);
+	script_4407(widget(1092, 793), 1, 180);
+	script_4407(widget(1092, 804), 1, 180);
+	script_4407(widget(1092, 815), 1, 180);
+	script_4407(widget(1092, 838), 1, 180);
+	script_4407(widget(1092, 826), 1, 180);
+	return;
+}

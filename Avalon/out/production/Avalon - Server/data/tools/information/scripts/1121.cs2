@@ -1,0 +1,47 @@
+void script_1121() {
+	Widget widget0;
+	int int1;
+	int int2;
+	Widget widget3;
+	Widget widget4;
+	widget0 = datamap('i', 'I', (DataMap)729, VARPBIT[276]);
+	int1 = 0;
+	int2 = 0;
+	widget3 = null;
+	widget4 = null;
+	switch (VARPBIT[357]) {
+		case 0:
+			widget3 = widget(192, 93);
+			widget4 = widget(192, 92);
+			break;
+		case 1:
+			widget3 = widget(193, 50);
+			widget4 = widget(193, 49);
+			break;
+		case 3:
+			widget3 = widget(950, 69);
+			widget4 = widget(950, 68);
+			break;
+		default:
+			return;
+	}
+	if (VARPBIT[276] == 1) {
+		if (VARPBIT[6521] == 3) {
+			script_948();
+		} else if (VARPBIT[6521] == 28) {
+			script_1331();
+		}
+	}
+	if (widget0 != null && VARPBIT[275] == 1) {
+		int1 = widget0.getX() - 2;
+		int2 = widget0.getY() - 2;
+		widget3.setPosition(int1, int2, 0, 0);
+		widget4.setPosition(int1, int2, 0, 0);
+		widget3.setIsHidden(false);
+		widget4.setIsHidden(false);
+		return;
+	}
+	widget3.setIsHidden(true);
+	widget4.setIsHidden(true);
+	return;
+}

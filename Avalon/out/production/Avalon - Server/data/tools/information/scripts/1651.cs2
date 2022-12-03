@@ -1,0 +1,25 @@
+void script_1651(int arg0, int arg1) {
+	int int2;
+	if (script_1653() == 1) {
+		arg0 = widget(746, 3).getHeight() - 172;
+		widget(746, 75).setIsHidden(true);
+	} else if (VARC[41] != -1) {
+		widget(746, 75).setIsHidden(false);
+	}
+	int2 = widget(746, 3).getHeight() - 87 - arg0 - 30;
+	int2 = int2 - int2 % 14;
+	if (int2 < 142) {
+		int2 = 142;
+	}
+	VARC[7] = VARC[7] - (int2 - widget(746, 73).getHeight());
+	widget(746, 73).setSize(519, int2, 0, 0);
+	widget(746, 73).setPosition(0, 23, 0, 2);
+	if (arg1 == 1) {
+		VARC[1037] = int2;
+	}
+	widget(746, 75).setPosition(0, widget(746, 73).getY() - 94, 0, 0);
+	widget(746, 72).setPosition(0, widget(746, 73).getY() - 69, 0, 0);
+	script_1301(widget(137, 59), widget(137, 58));
+	script_84();
+	return;
+}

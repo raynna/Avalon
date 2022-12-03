@@ -1,0 +1,10 @@
+void script_3238(int arg0, Widget widget1, int arg2) {
+	int int3;
+	int3 = script_2948();
+	if (VARC[174] == arg2 && (getClientCycle() - arg0) % 40 < 20 && int3 != -3 && int3 != 21 && int3 != 1 && widget(596, 7).isHidden() && hasWindowFocus()) {
+		widget1.setIsHidden(false);
+	} else {
+		widget1.setIsHidden(true);
+	}
+	return;
+}

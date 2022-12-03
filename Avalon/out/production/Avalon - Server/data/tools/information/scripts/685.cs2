@@ -1,0 +1,16 @@
+void script_685(Widget widget0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+	arg3 = (arg3 + arg5) % (arg4 * 4);
+	if (ACTIVE.setChild(widget0, arg1)) {
+		if (arg3 <= arg4) {
+			ACTIVE.set3DRotation(0, 0, ACTIVE.getRotateX(), (arg2 + arg3) % 2048, ACTIVE.getRotateZ(), ACTIVE.get3DDistance());
+		} else if (arg3 <= arg4 * 2) {
+			ACTIVE.set3DRotation(0, 0, ACTIVE.getRotateX(), (arg2 + arg4 - (arg3 - arg4)) % 2048, ACTIVE.getRotateZ(), ACTIVE.get3DDistance());
+		} else if (arg3 <= arg4 * 3) {
+			ACTIVE.set3DRotation(0, 0, ACTIVE.getRotateX(), script_686(arg2 - (arg3 - arg4 * 2), 2048), ACTIVE.getRotateZ(), ACTIVE.get3DDistance());
+		} else {
+			ACTIVE.set3DRotation(0, 0, ACTIVE.getRotateX(), script_686(arg2 - arg4 + (arg3 - arg4 * 3), 2048), ACTIVE.getRotateZ(), ACTIVE.get3DDistance());
+		}
+		ACTIVE.setScriptCallOnGameloop(685, CTX_WIDGET, CTX_WIDGET_CHILD, arg2, arg3, arg4, arg5, "Iiiiii");
+	}
+	return;
+}

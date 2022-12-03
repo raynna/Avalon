@@ -1,0 +1,19 @@
+void script_156(Container container0, int arg1, int arg2, Widget widget3, int arg4, Widget widget5, string string6, string string7, string string8, string string9, string string10, string string11, string string12, string string13, string string14) {
+	int int6;
+	if (arg2 == -1) {
+		script_154(container0, arg1, widget3, arg1, arg4, widget5, string6, string7, string8, string9, string10, string11, string12, string13, string14);
+		return;
+	}
+	int6 = arg1;
+	while (int6 != arg2) {
+		if (int6 > arg2) {
+			script_154(container0, int6 - 1, widget3, int6, arg4, widget5, string6, string7, string8, string9, string10, string11, string12, string13, string14);
+			int6 = int6 - 1;
+		} else if (int6 < arg2) {
+			script_154(container0, int6 + 1, widget3, int6, arg4, widget5, string6, string7, string8, string9, string10, string11, string12, string13, string14);
+			int6 = int6 + 1;
+		}
+	}
+	script_154(container0, arg1, widget3, arg2, arg4, widget5, string6, string7, string8, string9, string10, string11, string12, string13, string14);
+	return;
+}

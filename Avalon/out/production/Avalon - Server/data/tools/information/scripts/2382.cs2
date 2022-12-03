@@ -1,0 +1,6 @@
+void script_2382(Widget widget0, int arg1, int arg2) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setOutlineThickness(arg2);
+	}
+	return;
+}

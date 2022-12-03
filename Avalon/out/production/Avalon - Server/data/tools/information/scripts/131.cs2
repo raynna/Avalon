@@ -1,0 +1,4 @@
+void script_131(string arg0) {
+	STRING[24] = arg0;
+	return;
+}

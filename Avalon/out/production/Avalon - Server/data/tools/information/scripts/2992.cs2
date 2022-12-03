@@ -1,0 +1,33 @@
+void script_2992() {
+	if (VARPBIT[8386] == 0) {
+		widget(311, 25).setIsHidden(true);
+		widget(311, 26).setIsHidden(false);
+		widget(311, 57).setIsHidden(true);
+		widget(311, 59).setIsHidden(true);
+	}
+	if (VARPBIT[8388] == 0) {
+		widget(311, 9).setIsHidden(true);
+		widget(311, 10).setIsHidden(false);
+	}
+	if (VARPBIT[8390] == 0) {
+		widget(311, 5).setIsHidden(true);
+		widget(311, 6).setIsHidden(false);
+	}
+	if (VARPBIT[8392] == 0) {
+		widget(311, 1).setIsHidden(true);
+		widget(311, 2).setIsHidden(false);
+	}
+	if (VARPBIT[8387] == 0) {
+		widget(311, 13).setIsHidden(true);
+		widget(311, 14).setIsHidden(false);
+	}
+	if (VARPBIT[8395] == 0) {
+		widget(311, 21).setIsHidden(true);
+		widget(311, 22).setIsHidden(false);
+	}
+	if (VARPBIT[8391] == 0) {
+		widget(311, 17).setIsHidden(true);
+		widget(311, 18).setIsHidden(false);
+	}
+	return;
+}

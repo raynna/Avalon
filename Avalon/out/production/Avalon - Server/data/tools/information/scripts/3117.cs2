@@ -1,0 +1,122 @@
+Sprite, string, int, int, int, int, int, string, string script_3117(int arg0, int arg1, int arg2, string string3, string arg4, int arg5, int arg6) {
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	Sprite sprite9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	string str2;
+	string str3;
+	string str4;
+	int5 = -1;
+	int6 = -1;
+	int7 = 0;
+	int8 = 0;
+	str2 = "";
+	sprite9 = null;
+	int10 = -1;
+	int11 = 0;
+	int12 = 0;
+	int13 = 0;
+	int14 = 0;
+	int15 = 0;
+	str3 = "";
+	str4 = "";
+	if (isBitFlagged(arg1, 0)) {
+		int11 = 1;
+	} else {
+		int11 = 0;
+	}
+	if (isBitFlagged(arg1, 1)) {
+		int12 = 1;
+	} else {
+		int12 = 0;
+	}
+	if (isBitFlagged(arg1, 2)) {
+		int13 = 1;
+	} else {
+		int13 = 0;
+	}
+	if (isBitFlagged(arg1, 3)) {
+		int14 = 1;
+	} else {
+		int14 = 0;
+	}
+	if (isBitFlagged(arg1, 4)) {
+		int15 = 1;
+	} else {
+		int15 = 0;
+	}
+	if (getLanguage() == 0) {
+		if (int15 == 1) {
+			sprite9 = datamap('i', 'd', (DataMap)730, 1);
+			str2 = string3;
+		} else if (length(string3) > 1) {
+			sprite9 = datamap('i', 'd', (DataMap)730, 1);
+			str2 = string3;
+		} else {
+			sprite9 = datamap('i', 'd', (DataMap)1810, arg6);
+			str2 = arg4;
+		}
+	} else {
+		if (getLanguage() == 1) {
+			sprite9 = 1517;
+		} else if (getLanguage() == 2) {
+			sprite9 = datamap('i', 'd', (DataMap)1810, 74);
+		} else if (getLanguage() == 3) {
+			sprite9 = datamap('i', 'd', (DataMap)1810, 31);
+		}
+		if (int15 == 1) {
+			str2 = string3;
+		} else if (length(string3) > 1) {
+			str2 = string3;
+		} else if (getLanguage() == 1) {
+			str2 = "German";
+		} else if (getLanguage() == 2) {
+			str2 = "French";
+		} else if (getLanguage() == 3) {
+			str2 = "Portuguese";
+		}
+	}
+	if (int11 == 0) {
+		int5 = 1532;
+		int8 = 16579836;
+		str3 = "Free";
+	} else {
+		int5 = 1531;
+		int8 = 16579684;
+		str3 = "Members";
+	}
+	if (int14 == 1) {
+		int10 = 699;
+	} else {
+		int10 = 698;
+	}
+	if (arg0 == VARC[998]) {
+		int7 = 2109969;
+		int6 = 1541;
+	} else if (arg0 == VARC[999]) {
+		int7 = 2112529;
+		int6 = 1541;
+	} else {
+		if (arg2 % 2 == 0) {
+			int7 = 2103569;
+		} else {
+			int7 = 2695190;
+		}
+		int6 = 1545;
+	}
+	if (arg5 >= 1980) {
+		str4 = "FULL";
+	} else if (arg5 >= 0) {
+		str4 = str(arg5);
+	} else {
+		str4 = "OFFLINE";
+	}
+	return sprite9, str2, int5, int8, int10, int7, int6, str3, str4;
+}

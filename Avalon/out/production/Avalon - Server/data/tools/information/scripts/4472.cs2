@@ -1,0 +1,39 @@
+void script_4472(string string0, int arg1, int arg2) {
+	int int2;
+	int int3;
+	int int4;
+	int2 = -1;
+	int3 = -1;
+	int4 = -1;
+	switch (arg1) {
+		case 1:
+			VARC[1650] = 1;
+			STRING[23] = string0;
+			script_1558(false);
+			return;
+		case 5:
+			msg("Attempting to add " + string0 + " to your Friends List.");
+			string0 = removeTags(string0);
+			cs2method3605(string0);
+			break;
+		case 6:
+			msg("Attempting to add " + string0 + " to your Ignore List.");
+			string0 = removeTags(string0);
+			cs2method3607(string0);
+			break;
+		case 7:
+			msg("Attempting to remove " + string0 + " from your Friends List.");
+			string0 = removeTags(string0);
+			cs2method3606(string0);
+			break;
+		case 8:
+			msg("Attempting to remove " + string0 + " from your Ignore List.");
+			string0 = removeTags(string0);
+			cs2method3608(string0);
+			break;
+		case 9:
+			script_4465(string0);
+			break;
+	}
+	return;
+}

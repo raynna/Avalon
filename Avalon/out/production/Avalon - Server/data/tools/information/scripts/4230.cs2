@@ -1,0 +1,58 @@
+void script_4230(int arg0, int arg1, int arg2, int arg3, int arg4) {
+	if (arg0 < 1) {
+		widget(495, 2).setModel(20542);
+		widget(495, 15).setModel(20542);
+		widget(495, 28).setModel(20542);
+		widget(495, 41).setModel(20542);
+	} else {
+		widget(495, 2).setModel(20544);
+		widget(495, 15).setModel(20544);
+		widget(495, 28).setModel(20544);
+		widget(495, 41).setModel(20544);
+	}
+	if (arg1 < 1) {
+		widget(495, 3).setModel(20542);
+		widget(495, 16).setModel(20542);
+		widget(495, 29).setModel(20542);
+		widget(495, 42).setModel(20542);
+	} else {
+		widget(495, 3).setModel(20545);
+		widget(495, 16).setModel(20545);
+		widget(495, 29).setModel(20545);
+		widget(495, 42).setModel(20545);
+	}
+	if (arg2 < 1) {
+		widget(495, 4).setModel(20542);
+		widget(495, 17).setModel(20542);
+		widget(495, 30).setModel(20542);
+		widget(495, 43).setModel(20542);
+	} else {
+		widget(495, 4).setModel(20543);
+		widget(495, 17).setModel(20543);
+		widget(495, 30).setModel(20543);
+		widget(495, 43).setModel(20543);
+	}
+	if (arg4 != 10) {
+		widget(495, 53).setModel(20542);
+	} else if (arg3 < 1) {
+		widget(495, 53).setModel(20542);
+	}
+	widget(495, 57).setText(str(arg0));
+	widget(495, 60).setText(str(arg0));
+	widget(495, 63).setText(str(arg0));
+	widget(495, 66).setText(str(arg0));
+	widget(495, 58).setText(str(arg1));
+	widget(495, 61).setText(str(arg1));
+	widget(495, 64).setText(str(arg1));
+	widget(495, 67).setText(str(arg1));
+	widget(495, 59).setText(str(arg2));
+	widget(495, 62).setText(str(arg2));
+	widget(495, 65).setText(str(arg2));
+	widget(495, 68).setText(str(arg2));
+	if (arg4 != 10) {
+		widget(495, 69).setText("0");
+	} else {
+		widget(495, 69).setText(str(arg3));
+	}
+	return;
+}

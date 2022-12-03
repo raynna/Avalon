@@ -1,0 +1,11 @@
+int script_4962(int arg0) {
+	int int1;
+	int1 = -1;
+	if (citadelConfigsInitialized()) {
+		int1 = script_4971(arg0);
+		if (CLANBIT[2148] == int1 || CLANBIT[2165] == int1 || CLANBIT[2182] == int1) {
+			return 1;
+		}
+	}
+	return 0;
+}

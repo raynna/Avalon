@@ -1,0 +1,19 @@
+void script_1457(int arg0, int arg1) {
+	int int2;
+	int int3;
+	int2 = 0;
+	int3 = arg0;
+	while (int3 < arg1) {
+		if (ACTIVE.setChild(widget(762, 93), int3)) {
+			ACTIVE.setPosition(44 * (int2 % 10) + 8, int2 / 10 * 44 + 5, 0, 0);
+			ACTIVE.setHidden(false);
+			int2 = int2 + 1;
+		}
+		int3 = int3 + 1;
+	}
+	script_1464();
+	widget(762, 84).setIsHidden(false);
+	widget(762, 84).setPosition(8 - 2, 5 - 2, 0, 0);
+	script_1458(int2);
+	return;
+}

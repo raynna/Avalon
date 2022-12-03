@@ -1,0 +1,11 @@
+void script_1129() {
+	cs2method5426(36, 41);
+	cs2method5427(46, -1);
+	if (VARC[987] == 1 || VARC[987] == 0) {
+		cs2method6028((boolean)VARC[987]);
+	} else {
+		VARC[987] = 1;
+		cs2method6028((boolean)VARC[987]);
+	}
+	return;
+}

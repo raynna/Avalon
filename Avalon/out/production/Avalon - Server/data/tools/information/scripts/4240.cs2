@@ -1,0 +1,5 @@
+void script_4240() {
+	widget(1078, 23).setOutlineThickness(0);
+	script_4161(widget(1078, 17), 255);
+	return;
+}

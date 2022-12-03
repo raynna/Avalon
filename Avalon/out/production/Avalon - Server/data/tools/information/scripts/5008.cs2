@@ -1,0 +1,23 @@
+int script_5008() {
+	int int0;
+	int int1;
+	int int2;
+	int0 = -1;
+	int1 = -1;
+	int2 = 0;
+	if (cs2method3701()) {
+		int0 = cs2method3717(cs2method5020());
+		if (int0 < 0) {
+			return 0;
+		}
+		int1 = cs2method3711(int0);
+		int2 = CLAN[2132] - getMinute();
+		if (!(int2 < 360)) {
+			return 1;
+		}
+		if (int1 < 126) {
+			return 0;
+		}
+	}
+	return 0;
+}

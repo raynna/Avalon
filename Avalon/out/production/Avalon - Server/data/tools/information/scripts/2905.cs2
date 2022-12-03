@@ -1,0 +1,30 @@
+void script_2905(Widget widget0, Item item1, int arg2, Widget widget3) {
+	Widget widget4;
+	int int5;
+	widget4 = widget0.getLayer();
+	int5 = 0;
+	if (item1 == 10010) {
+		switch (VARPBIT[7193]) {
+			case 1:
+				int5 = 1;
+				break;
+			case 2:
+				int5 = 1;
+				item1 = 11259;
+				break;
+		}
+	} else if (item1 == 11262) {
+		int5 = VARPBIT[7192];
+	} else if (item1 == 11260) {
+		int5 = VARPBIT[7194];
+	}
+	widget3.setText(getItemName(item1) + "<br>" + "(" + str(int5) + "/" + str(arg2) + ")");
+	widget0.setItemOnWidgetMethod2205(item1, -1);
+	widget0.setOutlineThickness(1);
+	if (int5 > 0) {
+		widget3.setRGB(0xFFFF00);
+	} else {
+		widget3.setRGB(0xCC0000);
+	}
+	return;
+}

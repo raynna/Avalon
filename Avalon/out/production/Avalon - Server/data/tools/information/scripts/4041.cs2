@@ -1,0 +1,13 @@
+void script_4041() {
+	int int0;
+	int0 = 0;
+	if (getDisplayMode() < 2) {
+		widget(906, 256).setSize(0, 0, 1, 1);
+	} else {
+		widget(906, 256).setSize(956, 503, 0, 0);
+	}
+	if (cs2method6139() == 2 && getDisplayMode() != 1) {
+		widget(906, 256).setSize(800, 503, 0, 0);
+	}
+	return;
+}

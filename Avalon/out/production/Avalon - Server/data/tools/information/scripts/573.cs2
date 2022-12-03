@@ -1,0 +1,13 @@
+void script_573() {
+	widget(389, 4).clearChildren();
+	widget(752, 8).setIsHidden(false);
+	widget(752, 3).setIsHidden(true);
+	widget(752, 7).setIsHidden(true);
+	widget(389, 9).setScriptCallOnKeyPress(-1, "");
+	widget(389, 9).setScriptCallOnDialogAbort(-1, "");
+	widget(389, 9).setScriptCallOnGameloop(-1, "");
+	if (getDisplayMode() >= 2) {
+		script_1364();
+	}
+	return;
+}

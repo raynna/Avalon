@@ -1,0 +1,97 @@
+void script_673(int arg0, int arg1, int arg2, int arg3, int arg4, Item item5, int arg6, int arg7, int arg8, int arg9) {
+	Widget widget10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	Widget widget16;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	widget10 = datamap('i', 'I', (DataMap)1083, arg0);
+	widget10.clearChildren();
+	int11 = widget10.getWidth();
+	int12 = widget10.getHeight();
+	str0 = "";
+	if (arg7 == 1) {
+		str0 = "Empty";
+	} else if (arg1 == 0) {
+		str0 = "Buy";
+	} else {
+		str0 = "Sell";
+	}
+	ACTIVE.createChild(widget10, 3, 0);
+	ACTIVE.setSize(int11, int12, 0, 0);
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setFilled(true);
+	ACTIVE.setRGB(0xFFFFFF);
+	ACTIVE.setTrans(255);
+	script_584(widget10, str0);
+	int13 = widget10.nextChild();
+	if (arg7 == 1) {
+		if (arg0 < 2 || isSiteSettingsMembers()) {
+			if (arg9 == arg0 && ACTIVE.setChild(widget10, 0)) {
+				ACTIVE.setTrans(230);
+			}
+		} else {
+			datamap('i', 'I', (DataMap)1085, arg0).setIsHidden(false);
+		}
+	}
+	str1 = script_46(arg2, ",");
+	str2 = script_46(arg6, ",");
+	int14 = 0;
+	int15 = 0;
+	widget16 = datamap('i', 'I', (DataMap)1084, arg0);
+	widget16.setIsHidden(true);
+	str3 = "";
+	if (arg7 == 1) {
+		if (arg0 < 2 || isSiteSettingsMembers()) {
+			if (arg0 == arg9) {
+				widget16.setIsHidden(false);
+			} else {
+				ACTIVE.createChild(widget10, 5, int13);
+				ACTIVE.setSprite(1155);
+				ACTIVE.setSize(16, 14, 0, 0);
+				ACTIVE.setPosition(5, 29, 0, 0);
+				int13 = int13 + 1;
+			}
+		}
+	} else {
+		int14 = 7;
+		int15 = int12 - 30;
+		script_674(int14, int15, int11 - 14, 15, arg0, widget10, int13, 1, arg7, arg8, arg2, arg3);
+		int13 = widget10.nextChild();
+		ACTIVE.createChild(widget10, 5, int13);
+		int13 = int13 + 1;
+		ACTIVE.setPosition(6, 30, 0, 0);
+		ACTIVE.setSize(40, 36, 0, 0);
+		ACTIVE.setSprite(1137);
+		ACTIVE.createChild(widget10, 5, int13);
+		ACTIVE.setPosition(8, 32, 0, 0);
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setItem(item5, arg2);
+		ACTIVE.setShadowColor(0x000000);
+		int13 = int13 + 1;
+		ACTIVE.createChild(widget10, 4, int13);
+		int13 = int13 + 1;
+		ACTIVE.setPosition(48, 30, 0, 0);
+		ACTIVE.setSize(int11 - 53, 22, 0, 0);
+		ACTIVE.setRGB(0xCC9900);
+		ACTIVE.setFont(494);
+		ACTIVE.setTextAlignment(0, 0, 0);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setText(getItemName(item5));
+		ACTIVE.createChild(widget10, 4, int13);
+		int13 = int13 + 1;
+		ACTIVE.setPosition(48, 54, 0, 0);
+		ACTIVE.setSize(int11 - 53, 15, 0, 0);
+		ACTIVE.setRGB(0xBDBB5B);
+		ACTIVE.setFont(494);
+		ACTIVE.setTextAlignment(0, 0, 15);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setText(str2 + " gp");
+	}
+	return;
+}

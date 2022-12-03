@@ -1,0 +1,102 @@
+void script_2597() {
+	Item item0;
+	int int1;
+	item0 = null;
+	int1 = 0;
+	switch (VARC[929]) {
+		case 0:
+			item0 = getItemIdInSlot(93, VARC[930]);
+			break;
+		case 1:
+			item0 = getItemIdInSlot(93, VARC[931]);
+			break;
+		case 2:
+			item0 = getItemIdInSlot(93, VARC[932]);
+			break;
+		case 3:
+			item0 = getItemIdInSlot(93, VARC[933]);
+			break;
+		case 4:
+			item0 = getItemIdInSlot(93, VARC[934]);
+			break;
+		case 5:
+			item0 = getItemIdInSlot(93, VARC[935]);
+			break;
+		case 6:
+			item0 = getItemIdInSlot(93, VARC[936]);
+			break;
+		case 7:
+			item0 = getItemIdInSlot(93, VARC[937]);
+			break;
+		case 8:
+			item0 = getItemIdInSlot(93, VARC[938]);
+			break;
+		case 9:
+			item0 = getItemIdInSlot(93, VARC[939]);
+			break;
+	}
+	if (item0 == null || itemAttribute(item0, 803) != 1) {
+		return;
+	}
+	switch (VARC[929]) {
+		case 0:
+			if (VARPBIT[6405] == 1) {
+				int1 = 1;
+			}
+			break;
+		case 1:
+			if (VARPBIT[6406] == 1) {
+				int1 = 1;
+			}
+			break;
+		case 2:
+			if (VARPBIT[6407] == 1) {
+				int1 = 1;
+			}
+			break;
+		case 3:
+			if (VARPBIT[6408] == 1) {
+				int1 = 1;
+			}
+			break;
+		case 4:
+			if (VARPBIT[6409] == 1) {
+				int1 = 1;
+			}
+			break;
+		case 5:
+			if (VARPBIT[6410] == 1) {
+				int1 = 1;
+			}
+			break;
+		case 6:
+			if (VARPBIT[6411] == 1) {
+				int1 = 1;
+			}
+			break;
+		case 7:
+			if (VARPBIT[6412] == 1) {
+				int1 = 1;
+			}
+			break;
+		case 8:
+			if (VARPBIT[6413] == 1) {
+				int1 = 1;
+			}
+			break;
+		case 9:
+			if (VARPBIT[6414] == 1) {
+				int1 = 1;
+			}
+			break;
+	}
+	switch (int1) {
+		case 0:
+			widget(292, 113).setSprite(941);
+			break;
+		case 1:
+			widget(292, 113).setSprite(942);
+			break;
+	}
+	return;
+}

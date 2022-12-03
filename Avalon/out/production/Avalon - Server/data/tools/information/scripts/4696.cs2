@@ -1,0 +1,7 @@
+void script_4696() {
+	widget(500, 8).setScriptCallOnGameloop(4697, 0, "i");
+	if (!widget(500, 11).isHidden()) {
+		widget(500, 11).setScriptCallOnGameloop(4695, 0, 0, "ii");
+	}
+	return;
+}

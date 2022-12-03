@@ -1,0 +1,9 @@
+void script_1800(Widget widget0) {
+	script_915(widget0);
+	if (VARP[1149] != -1) {
+		script_1801();
+	} else {
+		script_1802();
+	}
+	return;
+}

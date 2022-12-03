@@ -1,0 +1,9 @@
+void script_2900(int arg0) {
+	if (getClientCycle() > arg0 + 200) {
+		widget(476, 58).setScriptCallOnGameloop(-1, "");
+		widget(476, 58).setIsHidden(true);
+	} else if (getClientCycle() > arg0 + 150) {
+		widget(476, 58).setTrans(min(widget(476, 58).getShadeColor() + 10, 255));
+	}
+	return;
+}

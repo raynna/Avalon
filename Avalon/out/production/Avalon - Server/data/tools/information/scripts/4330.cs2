@@ -1,0 +1,4 @@
+void script_4330(long long0) {
+	cs2method5400("clan-forum", "threads.ws?threadid=" + toBase36(long0), 0);
+	return;
+}

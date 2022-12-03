@@ -1,0 +1,5 @@
+void script_560(Model model0) {
+	widget(825, 68).setIsHidden(false);
+	widget(825, 68).setModel(model0);
+	return;
+}

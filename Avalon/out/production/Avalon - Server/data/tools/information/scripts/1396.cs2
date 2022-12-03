@@ -1,0 +1,4 @@
+void script_1396(boolean boolean0, string string1, string string2) {
+	widget(445, 2).setScriptCallOnMousePressed(1338, string1, string2, boolean0, "ss1");
+	return;
+}

@@ -1,0 +1,16 @@
+void script_4703() {
+	widget(744, 103).setIsHidden(true);
+	widget(744, 97).setSprite(4129);
+	VARC[1100] = -1;
+	script_2954();
+	resetRCs();
+	widget(975, 49).setText("Play Game");
+	widget(596, 60).setText("Play Game");
+	widget(975, 48).setText("Play Game");
+	widget(596, 59).setText("Play Game");
+	widget(975, 44).setScriptCallOnMousePressed(2944, "");
+	widget(596, 45).setScriptCallOnMousePressed(2944, "");
+	widget(975, 26).setScriptCallOnGameloop(-1, "");
+	widget(596, 7).setScriptCallOnGameloop(-1, "");
+	return;
+}

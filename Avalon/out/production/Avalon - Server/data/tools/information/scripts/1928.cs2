@@ -1,0 +1,17 @@
+void script_1928() {
+	int int0;
+	int0 = 1;
+	while (int0 <= 6) {
+		if (int0 == VARC[544]) {
+			datamap('i', 'I', (DataMap)2031, int0).setIsHidden(false);
+			datamap('i', 'I', (DataMap)2030, int0).setRGB(0xFFFFFF);
+			datamap('i', 'I', (DataMap)2029, int0).setRGB(0xFFFFFF);
+		} else {
+			datamap('i', 'I', (DataMap)2031, int0).setIsHidden(true);
+			datamap('i', 'I', (DataMap)2030, int0).setRGB(0xC8AA64);
+			datamap('i', 'I', (DataMap)2029, int0).setRGB(0xC8AA64);
+		}
+		int0 = int0 + 1;
+	}
+	return;
+}

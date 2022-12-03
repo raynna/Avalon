@@ -1,0 +1,160 @@
+void script_1908() {
+	int int0;
+	string str0;
+	int0 = 12;
+	str0 = "";
+	widget(806, 138).setSize(16, VARC[564] * 100 / int0 * 16384 / 100, 0, 2);
+	widget(806, 139).setSize(16, VARC[565] * 100 / int0 * 16384 / 100, 0, 2);
+	widget(806, 140).setSize(16, VARC[566] * 100 / int0 * 16384 / 100, 0, 2);
+	widget(806, 144).setSize(16, VARC[567] * 100 / int0 * 16384 / 100, 0, 2);
+	widget(806, 148).setSize(16, VARC[568] * 100 / int0 * 16384 / 100, 0, 2);
+	widget(806, 82).setSize(16, VARC[569] * 100 / int0 * 16384 / 100, 0, 2);
+	widget(806, 86).setSize(16, VARC[570] * 100 / int0 * 16384 / 100, 0, 2);
+	widget(806, 90).setSize(16, VARC[571] * 100 / int0 * 16384 / 100, 0, 2);
+	widget(806, 94).setSize(16, VARC[572] * 100 / int0 * 16384 / 100, 0, 2);
+	widget(806, 61).setSize(16, VARC[573] * 100 / int0 * 16384 / 100, 0, 2);
+	widget(806, 65).setSize(16, VARC[574] * 100 / int0 * 16384 / 100, 0, 2);
+	widget(806, 69).setSize(16, VARC[575] * 100 / int0 * 16384 / 100, 0, 2);
+	widget(806, 73).setSize(16, VARC[576] * 100 / int0 * 16384 / 100, 0, 2);
+	widget(806, 103).setSize(16, VARC[577] * 100 / int0 * 16384 / 100, 0, 2);
+	widget(806, 107).setSize(16, VARC[578] * 100 / int0 * 16384 / 100, 0, 2);
+	widget(806, 111).setSize(16, VARC[579] * 100 / int0 * 16384 / 100, 0, 2);
+	widget(806, 115).setSize(16, VARC[580] * 100 / int0 * 16384 / 100, 0, 2);
+	if (VARC[564] == 0) {
+		str0 = "There are no class 1 clay locations in the area.";
+	} else if (VARC[564] == 1) {
+		str0 = "There is 1 class 1 clay location in the area.";
+	} else {
+		str0 = "There are " + str(VARC[564]) + " class 1 clay locations in the area.";
+	}
+	widget(806, 138).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(806, 49), str0, 25, 100, "IIsii");
+	if (VARC[565] == 0) {
+		str0 = "There are no class 2 fishing locations in the area.";
+	} else if (VARC[565] == 1) {
+		str0 = "There is 1 class 2 fishing location in the area.";
+	} else {
+		str0 = "There are " + str(VARC[565]) + " class 2 fishing locations in the area.";
+	}
+	widget(806, 139).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(806, 49), str0, 25, 100, "IIsii");
+	if (VARC[566] == 0) {
+		str0 = "There are no class 3 fishing locations in the area.";
+	} else if (VARC[566] == 1) {
+		str0 = "There is 1 class 3 fishing location in the area.";
+	} else {
+		str0 = "There are " + str(VARC[566]) + " class 3 fishing locations in the area.";
+	}
+	widget(806, 140).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(806, 49), str0, 25, 100, "IIsii");
+	if (VARC[567] == 0) {
+		str0 = "There are no class 4 fishing locations in the area.";
+	} else if (VARC[567] == 1) {
+		str0 = "There is 1 class 4 fishing location in the area.";
+	} else {
+		str0 = "There are " + str(VARC[567]) + " class 4 fishing locations in the area.";
+	}
+	widget(806, 144).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(806, 49), str0, 25, 100, "IIsii");
+	if (VARC[568] == 0) {
+		str0 = "There are no class 5 fishing locations in the area.";
+	} else if (VARC[568] == 1) {
+		str0 = "There is 1 class 5 fishing location in the area.";
+	} else {
+		str0 = "There are " + str(VARC[568]) + " class 5 fishing locations in the area.";
+	}
+	widget(806, 148).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(806, 49), str0, 25, 100, "IIsii");
+	if (VARC[569] == 0) {
+		str0 = "There are no class 2 mining locations in the area.";
+	} else if (VARC[569] == 1) {
+		str0 = "There is 1 class 2 mining location in the area.";
+	} else {
+		str0 = "There are " + str(VARC[569]) + " class 2 mining locations in the area.";
+	}
+	widget(806, 82).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(806, 49), str0, 25, 100, "IIsii");
+	if (VARC[570] == 0) {
+		str0 = "There are no class 3 mining locations in the area.";
+	} else if (VARC[570] == 1) {
+		str0 = "There is 1 class 3 mining location in the area.";
+	} else {
+		str0 = "There are " + str(VARC[570]) + " class 3 mining locations in the area.";
+	}
+	widget(806, 86).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(806, 49), str0, 25, 100, "IIsii");
+	if (VARC[571] == 0) {
+		str0 = "There are no class 4 mining locations in the area.";
+	} else if (VARC[571] == 1) {
+		str0 = "There is 1 class 4 mining location in the area.";
+	} else {
+		str0 = "There are " + str(VARC[571]) + " class 4 mining locations in the area.";
+	}
+	widget(806, 90).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(806, 49), str0, 25, 100, "IIsii");
+	if (VARC[572] == 0) {
+		str0 = "There are no class 5 mining locations in the area.";
+	} else if (VARC[572] == 1) {
+		str0 = "There is 1 class 5 mining location in the area.";
+	} else {
+		str0 = "There are " + str(VARC[572]) + " class 5 mining locations in the area.";
+	}
+	widget(806, 94).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(806, 49), str0, 25, 100, "IIsii");
+	if (VARC[573] == 0) {
+		str0 = "There are no class 2 woodcutting locations in the area.";
+	} else if (VARC[573] == 1) {
+		str0 = "There is 1 class 2 woodcutting location in the area.";
+	} else {
+		str0 = "There are " + str(VARC[573]) + " class 2 woodcutting locations in the area.";
+	}
+	widget(806, 61).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(806, 49), str0, 25, 100, "IIsii");
+	if (VARC[574] == 0) {
+		str0 = "There are no class 3 woodcutting locations in the area.";
+	} else if (VARC[574] == 1) {
+		str0 = "There is 1 class 3 woodcutting location in the area.";
+	} else {
+		str0 = "There are " + str(VARC[574]) + " class 3 woodcutting locations in the area.";
+	}
+	widget(806, 65).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(806, 49), str0, 25, 100, "IIsii");
+	if (VARC[575] == 0) {
+		str0 = "There are no class 4 woodcutting locations in the area.";
+	} else if (VARC[575] == 1) {
+		str0 = "There is 1 class 4 woodcutting location in the area.";
+	} else {
+		str0 = "There are " + str(VARC[575]) + " class 4 woodcutting locations in the area.";
+	}
+	widget(806, 69).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(806, 49), str0, 25, 100, "IIsii");
+	if (VARC[576] == 0) {
+		str0 = "There are no class 5 woodcutting locations in the area.";
+	} else if (VARC[576] == 1) {
+		str0 = "There is 1 class 5 woodcutting location in the area.";
+	} else {
+		str0 = "There are " + str(VARC[576]) + " class 5 woodcutting locations in the area.";
+	}
+	widget(806, 73).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(806, 49), str0, 25, 100, "IIsii");
+	if (VARC[577] == 0) {
+		str0 = "There are no class 2 hunting locations in the area.";
+	} else if (VARC[577] == 1) {
+		str0 = "There is 1 class 2 hunting location in the area.";
+	} else {
+		str0 = "There are " + str(VARC[577]) + " class 2 hunting locations in the area.";
+	}
+	widget(806, 103).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(806, 49), str0, 25, 100, "IIsii");
+	if (VARC[578] == 0) {
+		str0 = "There are no class 3 hunting locations in the area.";
+	} else if (VARC[578] == 1) {
+		str0 = "There is 1 class 3 hunting location in the area.";
+	} else {
+		str0 = "There are " + str(VARC[578]) + " class 3 hunting locations in the area.";
+	}
+	widget(806, 107).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(806, 49), str0, 25, 100, "IIsii");
+	if (VARC[579] == 0) {
+		str0 = "There are no class 4 hunting locations in the area.";
+	} else if (VARC[579] == 1) {
+		str0 = "There is 1 class 4 hunting location in the area.";
+	} else {
+		str0 = "There are " + str(VARC[579]) + " class 4 hunting locations in the area.";
+	}
+	widget(806, 111).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(806, 49), str0, 25, 100, "IIsii");
+	if (VARC[580] == 0) {
+		str0 = "There are no class 5 hunting locations in the area.";
+	} else if (VARC[580] == 1) {
+		str0 = "There is 1 class 5 hunting location in the area.";
+	} else {
+		str0 = "There are " + str(VARC[580]) + " class 5 hunting locations in the area.";
+	}
+	widget(806, 115).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(806, 49), str0, 25, 100, "IIsii");
+	return;
+}

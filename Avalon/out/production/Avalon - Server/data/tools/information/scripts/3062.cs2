@@ -1,0 +1,45 @@
+void script_3062(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	if (VARC[1100] == 42 || VARC[1100] == 43) {
+		return;
+	}
+	if (!cs2method6500()) {
+		script_3064(0);
+		widget0.setScriptCallOnGameloop(3061, widget0, "I");
+		return;
+	}
+	VARC[1322] = 0;
+	script_3064(1);
+	widget0.setScriptCallOnGameloop(-1, "");
+	script_3097();
+	VARC[1100] = -1;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	if (script_2727() == 1 && VARC[547] == 0) {
+		script_3076(widget(906, 104));
+		script_3074(widget(906, 102));
+		script_3026(widget(906, 104));
+		script_3025(widget(906, 102));
+		widget(906, 43).setIsHidden(false);
+		playMusicEffect(349, 0);
+		script_3412(widget(906, 97), widget(906, 98));
+		int3 = widget(906, 98).getWidth();
+		int4 = widget(906, 98).getWidth();
+		int1 = max(337, getTextWidth(widget(906, 97).getText(), 496) + 30);
+		int4 = max(152, getLineCount(widget(906, 98).getText(), int3, 496) * 16);
+		int2 = max(243, int4 + 91);
+		widget(906, 98).setSize(int3, int4, 0, 0);
+		widget(906, 95).setSize(int1, int2, 0, 0);
+		return;
+	}
+	VARC[200] = 0;
+	script_3064(0);
+	cs2method5612(0);
+	widget0.setScriptCallOnGameloop(3063, widget0, getWorldId(), "Ii");
+	return;
+}

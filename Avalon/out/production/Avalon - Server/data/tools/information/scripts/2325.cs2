@@ -1,0 +1,26 @@
+void script_2325() {
+	if (VARC[766] == 1 || VARC[766] == 2) {
+		msg("You can't do that right now.");
+		return;
+	}
+	playSoundEffect(6421, 1, 0);
+	if (widget(306, 6).getX() >= widget(306, 18).getX() && widget(306, 6).getX() < widget(306, 18).getX() + widget(306, 18).getWidth()) {
+		VARC[765] = 1;
+		script_2326(VARC[761]);
+	}
+	if (widget(306, 7).getX() >= widget(306, 18).getX() && widget(306, 7).getX() < widget(306, 18).getX() + widget(306, 18).getWidth()) {
+		VARC[765] = 2;
+		script_2326(VARC[762]);
+	}
+	if (widget(306, 8).getX() >= widget(306, 18).getX() && widget(306, 8).getX() < widget(306, 18).getX() + widget(306, 18).getWidth()) {
+		VARC[765] = 3;
+		script_2326(VARC[763]);
+	}
+	if (widget(306, 9).getX() >= widget(306, 18).getX() && widget(306, 9).getX() < widget(306, 18).getX() + widget(306, 18).getWidth()) {
+		VARC[765] = 4;
+		script_2326(VARC[764]);
+	}
+	VARC[766] = 1;
+	widget(306, 10).setScriptCallOnGameloop(2328, CTX_WIDGET, "I");
+	return;
+}

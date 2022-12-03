@@ -1,0 +1,130 @@
+void script_429(int arg0) {
+	int int1;
+	int int2;
+	Widget widget3;
+	Widget widget4;
+	Widget widget5;
+	Widget widget6;
+	int int7;
+	Widget widget8;
+	int1 = 0;
+	int2 = 0;
+	widget3 = null;
+	widget4 = null;
+	widget5 = null;
+	widget6 = null;
+	int7 = 0;
+	widget8 = null;
+	switch (arg0) {
+		case 67108940:
+		case 67108942:
+			if (VARC[1388] == 1) {
+				int1 = 1;
+			} else {
+				int1 = VARPBIT[7539];
+			}
+			widget3 = widget(1024, 77);
+			widget4 = widget(1024, 79);
+			widget5 = widget(1024, 75);
+			widget6 = widget(1024, 76);
+			widget8 = widget(1024, 78);
+			break;
+		case 67108923:
+		case 67108925:
+			if (VARC[1388] == 1) {
+				int1 = 3;
+			} else {
+				int1 = VARPBIT[7540];
+			}
+			widget3 = widget(1024, 60);
+			widget4 = widget(1024, 62);
+			widget5 = widget(1024, 58);
+			widget6 = widget(1024, 59);
+			widget8 = widget(1024, 61);
+			break;
+		case 67108906:
+		case 67108908:
+			if (VARC[1388] == 1) {
+				int1 = 5;
+			} else {
+				int1 = VARPBIT[7541];
+			}
+			widget3 = widget(1024, 43);
+			widget4 = widget(1024, 45);
+			widget5 = widget(1024, 41);
+			widget6 = widget(1024, 42);
+			widget8 = widget(1024, 44);
+			break;
+		case 67108889:
+		case 67108891:
+			if (VARC[1388] == 1) {
+				int1 = 6;
+			} else {
+				int1 = VARPBIT[7542];
+			}
+			widget3 = widget(1024, 26);
+			widget4 = widget(1024, 28);
+			widget5 = widget(1024, 24);
+			widget6 = widget(1024, 25);
+			widget8 = widget(1024, 27);
+			break;
+		default:
+			return;
+	}
+	switch (int1) {
+		case 1:
+			int2 = VARC[1378];
+			int7 = getAttributeMapValue((AttrMap)293, 1154);
+			break;
+		case 2:
+			int2 = VARC[1379];
+			int7 = getAttributeMapValue((AttrMap)299, 1154);
+			break;
+		case 3:
+			int2 = VARC[1380];
+			int7 = getAttributeMapValue((AttrMap)300, 1154);
+			break;
+		case 4:
+			int2 = VARC[1386];
+			int7 = getAttributeMapValue((AttrMap)301, 1154);
+			break;
+		case 5:
+			int2 = VARC[1381];
+			int7 = getAttributeMapValue((AttrMap)305, 1154);
+			break;
+		case 6:
+			int2 = VARC[1383];
+			int7 = getAttributeMapValue((AttrMap)1044, 1154);
+			break;
+		case 7:
+			int2 = VARC[1384];
+			int7 = getAttributeMapValue((AttrMap)1045, 1154);
+			break;
+		case 8:
+			int2 = VARC[1385];
+			int7 = getAttributeMapValue((AttrMap)1046, 1154);
+			break;
+		case 9:
+			int2 = VARC[1382];
+			int7 = getAttributeMapValue((AttrMap)1047, 1154);
+			break;
+		default:
+			return;
+	}
+	if (int2 > 0 || VARPBIT[7514] < int7) {
+		if (int2 > 0) {
+			widget8.setText(str(int2));
+		}
+		widget3.setRGB(0x282828);
+		widget4.setIsHidden(false);
+		widget5.setRGB(0x7D7D7D);
+		widget6.setRGB(0x7D7D7D);
+	} else {
+		widget8.setText("");
+		widget3.setRGB(0x000000);
+		widget4.setIsHidden(true);
+		widget5.setRGB(0xFF981F);
+		widget6.setRGB(0xFF981F);
+	}
+	return;
+}

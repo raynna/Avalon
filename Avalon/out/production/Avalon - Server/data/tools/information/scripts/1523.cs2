@@ -1,0 +1,16 @@
+void script_1523() {
+	if (VARPBIT[4895] == 2) {
+		ACTIVE.createChild(widget(275, 9), 4, 0);
+		ACTIVE.setPosition(0, -2, 0, 0);
+		ACTIVE.setSize(102, 23, 0, 0);
+		ACTIVE.setFont(645);
+		ACTIVE.setTextAlignment(0, 1, 0);
+		ACTIVE.setText("Back");
+		ACTIVE.setRGB(0x46320A);
+		ACTIVE.setTextAntiMacro(false);
+		ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+		ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 4600330, "Iii");
+		widget(275, 9).setContextMenuOption(1, "Back to Index");
+	}
+	return;
+}

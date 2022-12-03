@@ -1,0 +1,10 @@
+void script_4015() {
+	if (widget(917, 119).isHidden()) {
+		widget(917, 119).setIsHidden(false);
+		widget(917, 115).setIsHidden(false);
+	} else {
+		widget(917, 119).setIsHidden(true);
+		widget(917, 115).setIsHidden(true);
+	}
+	return;
+}

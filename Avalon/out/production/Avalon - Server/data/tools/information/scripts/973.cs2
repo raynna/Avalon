@@ -1,0 +1,233 @@
+void script_973() {
+	int int0;
+	Skill skill1;
+	Sprite sprite2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	Item item9;
+	Sprite sprite10;
+	Sprite sprite11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	string str0;
+	string str1;
+	string str2;
+	int0 = VARPBIT[4729];
+	if (VARPBIT[4729] < 1 || VARPBIT[4729] > 25) {
+		return;
+	}
+	str0 = datamap((DataMap)1477, int0);
+	skill1 = datamap('i', 'S', (DataMap)681, int0);
+	sprite2 = datamap('i', 'd', (DataMap)1478, int0);
+	int3 = 1;
+	int4 = 1;
+	switch (int0) {
+		case 1:
+			int4 = VARC[1469];
+			break;
+		case 2:
+			int4 = VARC[1470];
+			break;
+		case 5:
+			int4 = VARC[1471];
+			break;
+		case 3:
+			int4 = VARC[1472];
+			break;
+		case 7:
+			int4 = VARC[1473];
+			break;
+		case 4:
+			int4 = VARC[1474];
+			break;
+		case 6:
+			int4 = VARC[1475];
+			break;
+		case 8:
+			int4 = VARC[1476];
+			break;
+		case 9:
+			int4 = VARC[1477];
+			break;
+		case 10:
+			int4 = VARC[1478];
+			break;
+		case 11:
+			int4 = VARC[1479];
+			break;
+		case 19:
+			int4 = VARC[1480];
+			break;
+		case 13:
+			int4 = VARC[1481];
+			break;
+		case 14:
+			int4 = VARC[1482];
+			break;
+		case 15:
+			int4 = VARC[1483];
+			break;
+		case 16:
+			int4 = VARC[1484];
+			break;
+		case 17:
+			int4 = VARC[1485];
+			break;
+		case 18:
+			int4 = VARC[1486];
+			break;
+		case 12:
+			int4 = VARC[1487];
+			break;
+		case 20:
+			int4 = VARC[1488];
+			break;
+		case 21:
+			int4 = VARC[1489];
+			break;
+		case 22:
+			int4 = VARC[1490];
+			break;
+		case 23:
+			int4 = VARC[1491];
+			break;
+		case 24:
+			int4 = VARC[1492];
+			break;
+		case 25:
+			int4 = VARC[1493];
+			break;
+	}
+	if (int4 + 1 != getSkillActualLvl(skill1)) {
+		str0 = datamap((DataMap)3644, int0) + str(getSkillActualLvl(skill1) - int4) + datamap((DataMap)3645, int0);
+	}
+	widget(741, 4).setText(str0);
+	widget(741, 6).setText("You have now reached level " + str(getSkillActualLvl(skill1)) + ".");
+	widget(741, 7).setSprite(sprite2);
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	str1 = "";
+	int8 = 0;
+	item9 = null;
+	sprite10 = 2287;
+	sprite11 = sprite10;
+	int12 = 0;
+	widget(741, 2).clearChildren();
+	widget(741, 3).clearChildren();
+	if (VARP[281] < 1000 && getSkillActualLvl(skill1) == 3) {
+		str1 = "<col=000080>" + "You've now reached the highest skill level that you can achieve during the tutorial. Once you finish the tutorial, you can advance this skill even further!";
+		int7 = script_974(int5, int6, 7620, sprite10, str1, 0, 0);
+		ACTIVE.setText(str1);
+		int6 = script_975(int6, int7);
+		int5 = 2 + int5;
+	}
+	if (VARPBIT[4730] == 1) {
+		str1 = "<col=800000>" + "Well done! You've reached the total level " + str(datamap('i', 'i', (DataMap)1475, VARPBIT[4728])) + " milestone!";
+		int7 = script_974(int5, int6, 7620, sprite10, str1, 0, 0);
+		ACTIVE.setText(str1);
+		int6 = script_975(int6, int7);
+		int5 = 2 + int5;
+	}
+	int8 = 0;
+	str1 = "null";
+	item9 = 7620;
+	if (int0 == 1 || int0 == 2 || int0 == 5 || int0 == 3 || int0 == 7 || int0 == 4 || int0 == 6 || int0 == 24) {
+		if (VARPBIT[4731] == 1) {
+			str1 = "<col=800000>" + "Well done! You've reached the Combat level " + str(datamap('i', 'i', (DataMap)1473, VARPBIT[4727])) + " milestone!";
+			int7 = script_974(int5, int6, 7620, sprite10, str1, 0, 0);
+			ACTIVE.setText(str1);
+			int6 = script_975(int6, int7);
+			int5 = 2 + int5;
+		}
+		if (VARPBIT[5395] == 1) {
+			while (item9 != null) {
+				int12, item9, str1 = script_976(int8);
+				if (int12 == script_1432()) {
+					int7 = script_974(int5, int6, item9, sprite10, str1, 0, 0);
+					ACTIVE.setText(str1);
+					int6 = script_975(int6, int7);
+					int5 = 2 + int5;
+				}
+				int8 = int8 + 1;
+			}
+		}
+	}
+	str1 = "";
+	item9 = 7620;
+	int13 = 0;
+	int8 = 0;
+	while (int13 != -1) {
+		int13 = 0;
+		str1, item9, int13 = script_1023(skill1, int8);
+		if (int13 == 1) {
+			int7 = script_974(int5, int6, item9, sprite10, str1, 0, 0);
+			ACTIVE.setText(str1);
+			int6 = script_975(int6, int7);
+			int5 = 2 + int5;
+			int3 = 0;
+		}
+		int8 = int8 + 1;
+	}
+	sprite11 = sprite10;
+	item9 = 7620;
+	str1 = "";
+	int8 = 0;
+	int14 = 0;
+	int15 = 0;
+	int16 = 0;
+	str2 = "";
+	str0, int14 = script_12(int0);
+	while (int8 < int14) {
+		str0, int15 = script_13(int0, int8);
+		int16 = 0;
+		item9 = 7620;
+		sprite11 = sprite10;
+		if (script_1566(int0, int8) == 1) {
+			while (sprite11 != null) {
+				int12, sprite11, str2, str1 = script_1567(int0, int8, int16);
+				if (int12 <= getSkillActualLvl(skill1) && int12 > int4) {
+					int7 = script_974(int5, int6, item9, sprite11, str1, int0, int8);
+					ACTIVE.setText(str1);
+					int6 = script_975(int6, int7);
+					int5 = 2 + int5;
+					int3 = 0;
+				}
+				int16 = int16 + 1;
+			}
+			int8 = int8 + 1;
+		} else {
+			while (item9 != null) {
+				int12, item9, str2, str1 = script_14(int0, int8, int16);
+				if (int12 <= getSkillActualLvl(skill1) && int12 > int4) {
+					int7 = script_974(int5, int6, item9, sprite11, str1, int0, int8);
+					ACTIVE.setText(str1);
+					int6 = script_975(int6, int7);
+					int5 = 2 + int5;
+					int3 = 0;
+				}
+				int16 = int16 + 1;
+			}
+			int8 = int8 + 1;
+		}
+	}
+	if (int3 == 1) {
+		str1 = concat(script_4242(int0), "Check out the skill advance guide to see what you'll be able to do when you reach even higher levels...");
+		int7 = script_974(int5, int6, 7620, sprite10, str1, 0, 0);
+		ACTIVE.setText(str1);
+		int6 = script_975(int6, int7);
+	}
+	widget(741, 2).setScrollPos(0, 0);
+	widget(741, 2).setScrollMax(296, int6);
+	if (int6 > 160) {
+		script_31(widget(741, 3), widget(741, 2), 798, 795, 796, 797, 793, 794);
+	}
+	return;
+}

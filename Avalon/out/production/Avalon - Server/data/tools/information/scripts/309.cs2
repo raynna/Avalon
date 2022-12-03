@@ -1,0 +1,26 @@
+void script_309(Map arg0, Widget widget1, int arg2) {
+	int int3;
+	int3 = 0;
+	if (VARC[623] != -1 && getDungeonmap(location(VARC[623])) == arg0) {
+		int3 = script_292((AttrMap)VARC[624], widget1, arg2, int3);
+	}
+	if (VARC[625] != -1 && getDungeonmap(location(VARC[625])) == arg0) {
+		int3 = script_292((AttrMap)VARC[626], widget1, arg2, int3);
+	}
+	if (VARC[627] != -1 && getDungeonmap(location(VARC[627])) == arg0) {
+		int3 = script_292((AttrMap)VARC[628], widget1, arg2, int3);
+	}
+	if (VARC[629] != -1 && getDungeonmap(location(VARC[629])) == arg0) {
+		int3 = script_292((AttrMap)VARC[630], widget1, arg2, int3);
+	}
+	if (VARP[1159] != -1 && getDungeonmap(location(VARP[1159])) == arg0) {
+		int3 = script_292((AttrMap)972, widget1, arg2, int3);
+	}
+	if (VARC[940] != -1 && getDungeonmap(location(VARC[940])) == arg0) {
+		int3 = script_292((AttrMap)VARC[941], widget1, arg2, int3);
+	}
+	if (VARC[674] != -1 && getDungeonmap(location(VARC[674])) == arg0) {
+		int3 = script_292((AttrMap)280, widget1, arg2, int3);
+	}
+	return;
+}

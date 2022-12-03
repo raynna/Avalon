@@ -1,0 +1,15 @@
+void script_1736(Widget widget0, int arg1) {
+	int int2;
+	int2 = 0;
+	if (ACTIVE.setChild(widget0, arg1)) {
+		if (getClientCycle() % 40 > 20) {
+			ACTIVE.setTrans(0);
+			if (getClientCycle() % 40 == 21) {
+				playSoundEffect(5009, 1, 0);
+			}
+		} else {
+			ACTIVE.setTrans(255);
+		}
+	}
+	return;
+}

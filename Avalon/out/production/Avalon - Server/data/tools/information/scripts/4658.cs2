@@ -1,0 +1,12 @@
+void script_4658(Widget widget0) {
+	int int1;
+	int1 = VARP[2201] / 3;
+	widget0.setText(str(VARP[2201]));
+	script_4542(int1, widget(22, 40), widget(22, 45));
+	if (VARP[2201] <= 100) {
+		widget(22, 2).setAnimation(9777);
+	} else {
+		widget(22, 2).setAnimation(9804);
+	}
+	return;
+}

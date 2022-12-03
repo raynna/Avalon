@@ -1,0 +1,11 @@
+void script_522(Widget widget0, Skill skill1) {
+	int int2;
+	int int3;
+	int int4;
+	int2 = getSkillXp(skill1);
+	int3 = getSkillXp(skill1);
+	int2 = script_523(skill1);
+	int4 = int3 - int2;
+	widget0.setText(str(int4));
+	return;
+}

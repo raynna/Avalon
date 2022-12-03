@@ -1,0 +1,14 @@
+void script_197(int arg0, int arg1) {
+	int int2;
+	string str0;
+	string str1;
+	int2 = arg1 - 1;
+	str0 = "";
+	str1 = "";
+	str0, str1 = getFriendName(arg0);
+	cs2method3604(str0, int2);
+	if (ACTIVE.setChild(widget(1108, 13), arg0 * 2 + 1)) {
+		ACTIVE.setText(script_196(int2));
+	}
+	return;
+}

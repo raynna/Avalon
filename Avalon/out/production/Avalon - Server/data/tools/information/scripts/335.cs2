@@ -1,0 +1,9 @@
+int, int script_335(int arg0, int arg1, int arg2, int arg3) {
+	int int4;
+	int int5;
+	int int6;
+	int4 = script_338(arg3);
+	int5 = arg2 * 1000 / int4;
+	int6 = arg2 - int5;
+	return arg0 + int5, arg1 + int6;
+}

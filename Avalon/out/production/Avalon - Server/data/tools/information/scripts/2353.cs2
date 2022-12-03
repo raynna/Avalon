@@ -1,0 +1,11 @@
+void script_2353(Widget widget0) {
+	if (VARC[771] == 1) {
+		widget0.setScriptCallOnGameloop(2354, widget0, "I");
+	} else {
+		widget0.setScriptCallOnGameloop(-1, "");
+		widget0.setText("Saving your game and loading QuestHelp");
+		widget0.setIsHidden(true);
+		widget(275, 14).setIsHidden(false);
+	}
+	return;
+}

@@ -1,0 +1,37 @@
+void script_2005(Widget widget0, Widget widget1, int arg2, int arg3) {
+	int int4;
+	int int5;
+	if (arg2 >= widget1.getX() && arg2 <= widget1.getX() + widget1.getWidth()) {
+		return;
+	}
+	int4 = widget0.getWidth() - widget1.getWidth();
+	int5 = widget1.getWidth() / 2;
+	if (arg2 == -1) {
+		arg2 = widget0.getWidth();
+	}
+	arg2 = max(arg2 - int5, 0);
+	arg2 = min(arg2, int4);
+	switch (arg3) {
+		case 0:
+			cs2method6018(arg2 * int4 / 127);
+			script_1217(widget0, widget1);
+			break;
+		case 1:
+			cs2method6019(arg2 * int4 / 255);
+			script_1216(widget0, widget1);
+			break;
+		case 2:
+			cs2method6020(arg2 * int4 / 127);
+			script_1218(widget0, widget1);
+			break;
+		case 3:
+			cs2method6001(min(arg2 * int4 / 4, 3) + 1);
+			script_1185(widget0, widget1);
+			break;
+		case 4:
+			cs2method6038(arg2 * int4 / 255);
+			script_2007(widget0, widget1, 1, 1);
+			break;
+	}
+	return;
+}

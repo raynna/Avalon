@@ -1,0 +1,5 @@
+void script_1501(Widget widget0, Widget widget1) {
+	script_41(widget1);
+	widget0.setTrans(0);
+	return;
+}

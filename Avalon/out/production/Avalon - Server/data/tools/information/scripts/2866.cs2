@@ -1,0 +1,18 @@
+int script_2866(Location location0, Location location1) {
+	int int2;
+	int int3;
+	int2 = 0;
+	int3 = 0;
+	int2 = x(location0) - x(location1);
+	if (int2 < 0) {
+		int2 = int2 * -1;
+	}
+	int3 = y(location0) - y(location1);
+	if (int3 < 0) {
+		int3 = int3 * -1;
+	}
+	if (int2 > int3) {
+		return int2;
+	}
+	return int3;
+}

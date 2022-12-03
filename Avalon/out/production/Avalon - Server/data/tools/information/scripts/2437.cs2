@@ -1,0 +1,32 @@
+void script_2437() {
+	int int0;
+	int int1;
+	int int2;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	switch (VARC[816]) {
+		case 0:
+			return;
+		case 1:
+			int2 = VARC[817];
+			break;
+		case 2:
+			int2 = VARC[817] * 125 / 100;
+			break;
+		case 3:
+			int2 = VARC[817] * 150 / 100;
+			break;
+		default:
+			int2 = VARC[817] * 175 / 100;
+			break;
+	}
+	if (int2 > 100) {
+		int2 = 100;
+	}
+	int0 = datamap('i', 'i', (DataMap)1090, int2);
+	int1 = datamap('i', 'i', (DataMap)1091, int2);
+	widget(15, 11).setPosition(91, int0, 2, 0);
+	widget(15, 11).setSize(18, int1, 0, 0);
+	return;
+}

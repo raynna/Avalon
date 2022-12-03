@@ -1,0 +1,67 @@
+void script_3220() {
+	int int0;
+	int int1;
+	string str0;
+	string str1;
+	int0 = getAccountCreateRC();
+	if (int0 == -3) {
+		return;
+	}
+	widget(673, 26).setScriptCallOnGameloop(-1, "");
+	int1 = 0;
+	str0 = "accountappeal";
+	str1 = "passwordchoice.ws";
+	if (int0 == 2) {
+		cs2method5430();
+		script_2223();
+	} else {
+		switch (int0) {
+			case -1:
+			case -4:
+			case 3:
+				script_3213("Error contacting server.", widget(673, 94));
+				break;
+			case -5:
+				script_3213("No response from server.", widget(673, 94));
+				break;
+			case 7:
+				script_3213("The server is currently very busy. Please try again shortly.", widget(673, 94));
+				break;
+			case 38:
+			case 9:
+				script_3213("You cannot create an account at this time. Please try again later.", widget(673, 94));
+				break;
+			case 20:
+				script_3213("Email already in use. Try a different email or click " + "<u=ebe0bc>" + "here" + "</u>" + " to recover this account.", widget(673, 94));
+				break;
+			case 21:
+				script_3213("Please enter a valid Email address.", widget(673, 94));
+				break;
+			case 37:
+				script_3213("RuneScape has been updated. Please reload this page.", widget(673, 94));
+				break;
+			case 30:
+				int1 = length(STRING[124]);
+				if (int1 < 5) {
+					script_3213("Passwords must be at least 5 characters long.", widget(673, 84));
+				} else if (int1 > 20) {
+					script_3213("Passwords must be no more than " + str(20) + " characters long.", widget(673, 84));
+				} else {
+					script_3213("Please supply a valid password.", widget(673, 84));
+				}
+				break;
+			case 31:
+				script_3213("Passwords may only contain letters and numbers.", widget(673, 84));
+				break;
+			case 32:
+			case 33:
+				script_3213("Your password is too easy to guess.", widget(673, 84));
+				break;
+			default:
+				script_3213("Unexpected server response.", widget(673, 94));
+				break;
+		}
+	}
+	script_3208(0);
+	return;
+}

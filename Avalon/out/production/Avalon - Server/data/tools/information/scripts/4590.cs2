@@ -1,0 +1,29 @@
+int, int, int, int, int, int script_4590() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int0 = -1;
+	int1 = -1;
+	int2 = -1;
+	int3 = -1;
+	int4 = -1;
+	int5 = -1;
+	if (cs2method3751()) {
+		int2 = cs2method3754();
+		int0 = cs2method3760(removeTags(cs2method5020()));
+		if (int0 >= 0) {
+			int1 = cs2method3757(int0);
+		}
+	}
+	if (cs2method3750()) {
+		int5 = cs2method3754();
+		int3 = cs2method3760(removeTags(cs2method5020()));
+		if (int3 >= 0) {
+			int4 = cs2method3757(int3);
+		}
+	}
+	return int0, int1, int2, int3, int4, int5;
+}

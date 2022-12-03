@@ -1,0 +1,144 @@
+void script_4880(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	Sprite sprite6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	Widget widget11;
+	string str0;
+	str0 = "";
+	int1 = 0;
+	int2 = 0;
+	int3 = 3;
+	int4 = 0;
+	int5 = 2236962;
+	sprite6 = null;
+	int7 = 0;
+	int8 = script_4964(widget0);
+	int9 = 0;
+	int10 = 0;
+	switch (widget0) {
+		case widget(1092, 1444):
+		case widget(1092, 1414):
+		case widget(1092, 1383):
+		case widget(1092, 1377):
+		case widget(1092, 1474):
+		case widget(1092, 1420):
+		case widget(1092, 1389):
+		case widget(1092, 1486):
+		case widget(1092, 1480):
+		case widget(1092, 1450):
+		case widget(1092, 1462):
+		case widget(1092, 1456):
+		case widget(1092, 1426):
+		case widget(1092, 1395):
+		case widget(1092, 1468):
+		case widget(1092, 1438):
+		case widget(1092, 1407):
+		case widget(1092, 1432):
+		case widget(1092, 1401):
+			int10 = 1;
+			break;
+	}
+	if (citadelConfigsInitialized()) {
+		widget0.clearChildren();
+		script_4407(widget0, 1, 178);
+		ACTIVE.createChild(widget0, 3, 0);
+		ACTIVE.setSize(20, 20, 0, 0);
+		ACTIVE.setPosition(0, 0, 1, 1);
+		ACTIVE.setRGB(0x553333);
+		ACTIVE.setFilled(true);
+		if (int10 == 1) {
+			ACTIVE.setTrans(255);
+			ACTIVE.setHidden(true);
+		}
+		int4 = widget0.nextChild();
+		ACTIVE.createChild(widget0, 3, 1);
+		ACTIVE.setSize(20, 20, 0, 0);
+		ACTIVE.setPosition(0, 0, 1, 1);
+		ACTIVE.setRGB(0xEECCEE);
+		if (int10 == 1) {
+			ACTIVE.setTrans(255);
+		}
+		int7 = script_4971(int8);
+		sprite6 = script_5171(int7);
+		ACTIVE.createChild(widget0, 5, 2);
+		ACTIVE.setSize(18, 18, 0, 0);
+		ACTIVE.setPosition(0, 0, 1, 1);
+		if (int10 == 1) {
+			ACTIVE.setTrans(255);
+		}
+		switch (int8) {
+			case 35:
+			case 36:
+			case 37:
+			case 38:
+			case 39:
+			case 40:
+			case 41:
+			case 42:
+			case 43:
+			case 44:
+			case 45:
+			case 46:
+			case 47:
+			case 48:
+				int2 = 1;
+				int3 = 1;
+				break;
+			default:
+				int2 = 0;
+				int3 = 3;
+				break;
+		}
+		if (int9 > 0) {
+			int1 = 1;
+			int5 = 12303291;
+		} else {
+			int1 = 0;
+			int5 = 2236962;
+		}
+		if (int2 == 1) {
+			if (int1 == 1) {
+				str0 = "Build over the existing blanket change.";
+			} else {
+				str0 = "Build a new blanket change.";
+			}
+		} else {
+			switch (int8) {
+				case 24:
+				case 25:
+				case 26:
+				case 27:
+				case 28:
+					if (int1 == 1) {
+						str0 = "Build over the existing statue.";
+					} else {
+						str0 = "Build a new statue.";
+					}
+					break;
+				default:
+					if (int1 == 1) {
+						str0 = "Build over the existing customisation.";
+					} else {
+						str0 = "Build a new customisation.";
+					}
+					break;
+			}
+		}
+	}
+	widget11 = script_5216(int8);
+	if (int2 == 0) {
+		widget0.getParentLayer().setIsHidden(true);
+		if (widget11 != null) {
+			widget11.setScriptCallOnMouseOver(4882, CTX_WIDGET, str0, int3, "Isi");
+		}
+	}
+	widget0.setScriptCallOnMouseOver(4882, CTX_WIDGET, str0, int3, "Isi");
+	return;
+}

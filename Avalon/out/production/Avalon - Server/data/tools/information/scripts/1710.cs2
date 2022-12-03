@@ -1,0 +1,21 @@
+int script_1710(Skill skill0) {
+	int int1;
+	int1 = script_1711(skill0);
+	if (VARPBIT[6839] > 0) {
+		switch (skill0) {
+			case 0:
+				int1 = int1 + 15;
+				int1 = int1 + script_1714(skill0, VARPBIT[6844]);
+				break;
+			case 2:
+				int1 = int1 + 23;
+				int1 = int1 + script_1714(skill0, VARPBIT[6845]);
+				break;
+			case 1:
+				int1 = int1 + 15;
+				int1 = int1 + script_1714(skill0, VARPBIT[6846]);
+				break;
+		}
+	}
+	return int1;
+}

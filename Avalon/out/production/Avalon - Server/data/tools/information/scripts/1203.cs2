@@ -1,0 +1,5 @@
+void script_1203(Widget widget0, int arg1, int arg2, int arg3, int arg4) {
+	VARC[1186] = (VARC[1186] + 1) % 360;
+	widget0.set3DRotation(widget0.getModelXOffset(), widget0.getModelYOffset(), arg1, (arg2 + arg4 * 10000 / datamap('i', 'i', (DataMap)3384, VARC[1186])) % 2048, (arg3 + arg4 * 10000 / datamap('i', 'i', (DataMap)3385, VARC[1186])) % 2048, widget0.get3DDistance());
+	return;
+}

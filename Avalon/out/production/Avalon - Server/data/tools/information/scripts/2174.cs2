@@ -1,0 +1,18 @@
+void script_2174() {
+	int int0;
+	int int1;
+	int int2;
+	int0 = 0;
+	int1 = 141;
+	int2 = datamapSize((DataMap)964);
+	while (int0 < int2) {
+		if (script_2189(int0) == 1) {
+			int1 = 255;
+		} else {
+			int1 = 141;
+		}
+		datamap('i', 'I', (DataMap)964, int0).setTrans(int1);
+		int0 = int0 + 1;
+	}
+	return;
+}

@@ -1,0 +1,18 @@
+int script_5194() {
+	int int0;
+	int int1;
+	int0 = -1;
+	int1 = -1;
+	switch (VARPBIT[9646]) {
+		case 1:
+			int0, int1 = script_5172();
+			break;
+		case 2:
+			int0, int1 = script_5173();
+			break;
+		case 3:
+			int0, int1 = script_5174();
+			break;
+	}
+	return int0;
+}

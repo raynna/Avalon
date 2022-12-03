@@ -1,0 +1,5 @@
+void script_5043(Widget widget0, Widget widget1, int arg2) {
+	VARC[1396] = max(min(3 + (arg2 + widget1.getWidth() / 2) * widget1.getLayer().getWidth() / (21 - 3 + 1), 21), 3);
+	script_5044(widget0, 0, 0);
+	return;
+}

@@ -1,0 +1,8 @@
+void script_4413() {
+	if (cs2method3700()) {
+		script_4415();
+	} else {
+		widget(1107, 170).setScriptCallOnClanChatSettingsStuff(4414, "");
+	}
+	return;
+}

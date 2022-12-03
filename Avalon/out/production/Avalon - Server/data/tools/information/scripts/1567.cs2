@@ -1,0 +1,9 @@
+int, int, string, string script_1567(int arg0, int arg1, int arg2) {
+	if (arg0 == 7) {
+		return script_2788(arg1, arg2);
+	}
+	if (arg0 == 4) {
+		return script_2787(arg1, arg2);
+	}
+	return 0, -1, "", "";
+}

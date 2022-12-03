@@ -1,0 +1,13 @@
+void script_1833(int arg0, int arg1) {
+	if (script_1820(arg0) == 0) {
+		return;
+	}
+	if (!isMember() && getAttributeMapValue(datamap('i', 'J', (DataMap)1604, arg1), 557)) {
+		return;
+	}
+	if (VARC[257] != arg1) {
+		VARC[257] = arg1;
+		script_1781();
+	}
+	return;
+}

@@ -1,0 +1,5 @@
+void script_4236(Widget widget0) {
+	widget0.setScriptCallOnUse(4239, "");
+	widget0.setScriptCallOnUseWith(4240, "");
+	return;
+}

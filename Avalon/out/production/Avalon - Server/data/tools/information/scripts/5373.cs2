@@ -1,0 +1,14 @@
+void script_5373(Widget widget0, int arg1) {
+	if (arg1 == -1) {
+		playSoundEffect2False(7715, 45, 0, 100);
+		widget0.setScriptCallOnGameloop(5369, widget0, "I");
+	} else {
+		widget0.setScriptCallOnGameloop(-1, "");
+		if (arg1 == -2) {
+			widget0.setText("-");
+		} else {
+			widget0.setText(str(arg1));
+		}
+	}
+	return;
+}

@@ -1,0 +1,84 @@
+void script_4343(Widget widget0) {
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	string str4;
+	string str5;
+	string str6;
+	string str7;
+	string str8;
+	string str9;
+	string str10;
+	str0 = "";
+	str1 = "";
+	str2 = "";
+	str3 = "";
+	str4 = "";
+	str5 = "";
+	str6 = "";
+	str7 = "";
+	str8 = "";
+	str9 = "";
+	str10 = "";
+	str0, str1, str2, str3, str4, str5, str6, str7, str8, str9 = script_4721();
+	if (compare(str0, "") != 0) {
+		str10 = str0;
+	}
+	if (compare(str1, "") != 0) {
+		if (length(str10) > 0) {
+			str10 = concat(str10, ", ");
+		}
+		str10 = concat(str10, str1);
+	}
+	if (compare(str2, "") != 0) {
+		if (length(str10) > 0) {
+			str10 = concat(str10, ", ");
+		}
+		str10 = concat(str10, str2);
+	}
+	if (compare(str3, "") != 0) {
+		if (length(str10) > 0) {
+			str10 = concat(str10, ", ");
+		}
+		str10 = concat(str10, str3);
+	}
+	if (compare(str4, "") != 0) {
+		if (length(str10) > 0) {
+			str10 = concat(str10, ", ");
+		}
+		str10 = concat(str10, str4);
+	}
+	if (compare(str5, "") != 0) {
+		if (length(str10) > 0) {
+			str10 = concat(str10, ", ");
+		}
+		str10 = concat(str10, str5);
+	}
+	if (compare(str6, "") != 0) {
+		if (length(str10) > 0) {
+			str10 = concat(str10, ", ");
+		}
+		str10 = concat(str10, str6);
+	}
+	if (compare(str7, "") != 0) {
+		if (length(str10) > 0) {
+			str10 = concat(str10, ", ");
+		}
+		str10 = concat(str10, str7);
+	}
+	if (compare(str8, "") != 0) {
+		if (length(str10) > 0) {
+			str10 = concat(str10, ", ");
+		}
+		str10 = concat(str10, str8);
+	}
+	if (compare(str9, "") != 0) {
+		if (length(str10) > 0) {
+			str10 = concat(str10, ", ");
+		}
+		str10 = concat(str10, str9);
+	}
+	widget0.setText(str10);
+	return;
+}

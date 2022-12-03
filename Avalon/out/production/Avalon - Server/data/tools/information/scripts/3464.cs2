@@ -1,0 +1,6 @@
+void script_3464(Widget widget0, int arg1) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.set3DRotation(ACTIVE.getModelXOffset(), ACTIVE.getModelYOffset(), ACTIVE.getRotateX(), (ACTIVE.getRotateY() + 2) % 2028, ACTIVE.getRotateZ(), ACTIVE.get3DDistance());
+	}
+	return;
+}

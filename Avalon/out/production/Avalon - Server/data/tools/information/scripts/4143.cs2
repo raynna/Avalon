@@ -1,0 +1,16 @@
+void script_4143() {
+	string str0;
+	str0 = "null";
+	if (VARPBIT[8780] == 1) {
+		widget(261, 3).setSprite(4584);
+		str0 = "Toggle Profanity Filter" + "<br>" + "(filter is currently off)";
+		widget(261, 3).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(261, 22), str0, 25, 180, "IIsii");
+		VARC[2] = 0;
+	} else if (VARPBIT[8780] == 0) {
+		widget(261, 3).setSprite(4583);
+		str0 = "Toggle Profanity Filter" + "<br>" + "(filter is currently on)";
+		widget(261, 3).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(261, 22), str0, 25, 180, "IIsii");
+		VARC[2] = 0;
+	}
+	return;
+}

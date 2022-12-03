@@ -1,0 +1,8 @@
+void script_1170() {
+	if (widget(601, 1).getShadeColor() > VARC[1435]) {
+		widget(601, 1).setTrans(max(50, widget(601, 1).getShadeColor() - 1));
+	} else {
+		widget(601, 1).setTrans(min(255, widget(601, 1).getShadeColor() + 1));
+	}
+	return;
+}

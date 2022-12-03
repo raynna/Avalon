@@ -1,0 +1,40 @@
+void script_4555(int arg0, char char1) {
+	if (clanGetChatCount() <= 0 || cs2method6900() || script_5280() == 1) {
+		return;
+	}
+	switch (arg0) {
+		case 84:
+			if (clanGetChatCount() > 0) {
+				if (length(STRING[349]) > 0) {
+					cs2method5006(1);
+					cs2method5008(STRING[349]);
+				}
+			} else {
+				message(11, 0, "You are not in a Friends Chat Channel.");
+			}
+			STRING[349] = "";
+			widget(589, 27).setText(escape(STRING[349]));
+			VARC[1507] = length(STRING[349]);
+			script_4571(widget(589, 27), widget(589, 28), STRING[349]);
+			break;
+		case 96:
+		case 97:
+		case 98:
+		case 99:
+		case 102:
+		case 103:
+			VARC[1507] = script_1553(arg0, VARC[1507], STRING[349]);
+			script_4571(widget(589, 27), widget(589, 28), STRING[349]);
+			break;
+		case -1:
+		case 85:
+		case 101:
+			if (isValidChar(char1) || arg0 == 85 || arg0 == 101) {
+				STRING[349], VARC[1507] = script_802(VARC[1507], STRING[349], 0, arg0, char1);
+				widget(589, 27).setText(escape(STRING[349]));
+				script_4571(widget(589, 27), widget(589, 28), STRING[349]);
+			}
+			break;
+	}
+	return;
+}

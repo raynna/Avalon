@@ -1,0 +1,35 @@
+void script_1082(int arg0, Widget widget1, int arg2) {
+	int int3;
+	int3 = arg0 + 1;
+	if (!datamap('i', 'I', (DataMap)1550, int3).isHidden()) {
+		if (ACTIVE.setChild(widget1, arg2)) {
+			ACTIVE.setHidden(false);
+			ACTIVE.setRGB(0x969777);
+		}
+		if (VARC[128] >= 0) {
+			int3 = int3 + 1;
+			while (!datamap('i', 'I', (DataMap)1550, int3).isHidden()) {
+				int3 = int3 + 1;
+			}
+			if (ACTIVE.setChild(datamap('i', 'I', (DataMap)1551, int3 - 1), VARC[128])) {
+				ACTIVE.setHidden(true);
+			}
+			VARC[128] = -1;
+		}
+		return;
+	}
+	if (VARC[128] == arg2) {
+		return;
+	}
+	if (VARC[128] >= 0 && ACTIVE.setChild(widget1, VARC[128])) {
+		ACTIVE.setHidden(true);
+	}
+	if (ACTIVE.setChild(widget1, arg2)) {
+		if (ACTIVE.isHidden()) {
+			ACTIVE.setHidden(false);
+			ACTIVE.setRGB(0x577E45);
+		}
+		VARC[128] = arg2;
+	}
+	return;
+}

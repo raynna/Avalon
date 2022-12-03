@@ -1,0 +1,14 @@
+void script_180(int arg0) {
+	if (arg0 == VARC[41]) {
+		return;
+	}
+	if (arg0 == 3 && VARP[287] > 0 && VARC[41] != -1) {
+		return;
+	}
+	if (script_179(arg0) > 24) {
+		return;
+	}
+	script_183(arg0, 249);
+	datamap('i', 'I', (DataMap)683, arg0).setScriptCallOnGameloop(182, arg0, "i");
+	return;
+}

@@ -1,0 +1,8 @@
+void script_70() {
+	if (VARP[560] < 1) {
+		widget(373, 1).setText("You're the Winner!");
+	} else {
+		widget(373, 1).setText("Foes Remaining: " + str(VARP[560]));
+	}
+	return;
+}

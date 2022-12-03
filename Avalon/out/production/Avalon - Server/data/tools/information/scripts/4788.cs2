@@ -1,0 +1,6 @@
+int script_4788() {
+	if (script_4785() == 1) {
+		return script_4786(CLANBIT[2580]);
+	}
+	return 0;
+}

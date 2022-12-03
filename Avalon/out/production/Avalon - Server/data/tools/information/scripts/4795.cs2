@@ -1,0 +1,157 @@
+int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int script_4795(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	int int23;
+	int int24;
+	int int25;
+	int int26;
+	int int27;
+	Sprite sprite28;
+	int int29;
+	int int30;
+	int int31;
+	int int32;
+	int int33;
+	int int34;
+	int int35;
+	int int36;
+	int int37;
+	int int38;
+	int int39;
+	int int40;
+	int int41;
+	int int42;
+	int int43;
+	int int44;
+	int int45;
+	int int46;
+	string str0;
+	int8 = 0;
+	int9 = 0;
+	int10 = 0;
+	int11 = 0;
+	int12 = 0;
+	int13 = 0;
+	int14 = 0;
+	int15 = 0;
+	int16 = 0;
+	int17 = 0;
+	int18 = 0;
+	int19 = 0;
+	int20 = 0;
+	int21 = 0;
+	int22 = 0;
+	int23 = 0;
+	int24 = 0;
+	int25 = 0;
+	int26 = 0;
+	int27 = script_4790(arg0);
+	sprite28 = null;
+	str0 = "";
+	int29 = 0;
+	int30 = 0;
+	int31 = 0;
+	int32 = 0;
+	int33 = 0;
+	int34 = 0;
+	if (int27 < 1 || int27 > 900) {
+		msg("Clan Build Tick : Check resources for invalid job " + str(int27) + " at position " + str(arg0) + ".");
+		return 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0;
+	}
+	sprite28, str0, int30, int31, int34, int29, int32, int33 = script_4791(int27);
+	if (int27 > 300 && int27 < 600) {
+		int30 = int30 - int31;
+	}
+	if (int27 == 616) {
+		int8, int9, int10, int11, int12, int13 = script_4724(1);
+	} else if (int27 == 617) {
+		int8, int9, int10, int11, int12, int13 = script_4724(2);
+	} else if (int27 == 618) {
+		int8, int9, int10, int11, int12, int13 = script_4724(3);
+	} else {
+		int8, int9, int10, int11, int12, int13 = script_4792(int27, int30);
+	}
+	if (int34 == 2 && int27 > 300 && int27 < 600) {
+		int8 = int8 * 2;
+		int9 = int9 * 2;
+		int10 = int10 * 2;
+		int11 = int11 * 2;
+		int12 = int12 * 2;
+		int13 = int13 * 2;
+	}
+	if (int27 < 300) {
+		return arg1, arg2, arg3, arg4, arg5, arg6, arg7, int8, int9, int10, int11, int12, int13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0;
+	}
+	int35 = int8;
+	int36 = int9;
+	int37 = int10;
+	int38 = int11;
+	int39 = int12;
+	int40 = int13;
+	if (int27 > 600) {
+		int14, int15, int16, int17, int18, int19 = script_4793(int29, int32);
+	}
+	int35 = max(0, int35 - int14);
+	int36 = max(0, int36 - int15);
+	int37 = max(0, int37 - int16);
+	int38 = max(0, int38 - int17);
+	int39 = max(0, int39 - int18);
+	int40 = max(0, int40 - int19);
+	if (int35 == 0 && int36 == 0 && int37 == 0 && int38 == 0 && int39 == 0 && int40 == 0) {
+		return arg1, arg2, arg3, arg4, arg5, arg6, arg7, int8, int9, int10, int11, int12, int13, int14, int15, int16, int17, int18, int19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100;
+	}
+	int41 = min(int35, arg1);
+	int42 = min(int36, arg2);
+	int43 = min(int37, arg3);
+	int44 = min(int38, arg4);
+	int45 = min(int39, arg5);
+	int46 = min(int40, arg6);
+	int35 = max(0, int35 - int41);
+	int36 = max(0, int36 - int42);
+	int37 = max(0, int37 - int43);
+	int38 = max(0, int38 - int44);
+	int39 = max(0, int39 - int45);
+	int40 = max(0, int40 - int46);
+	arg1 = max(0, arg1 - int41);
+	arg2 = max(0, arg2 - int42);
+	arg3 = max(0, arg3 - int43);
+	arg4 = max(0, arg4 - int44);
+	arg5 = max(0, arg5 - int45);
+	arg6 = max(0, arg6 - int46);
+	if (int35 == 0 && int36 == 0 && int37 == 0 && int38 == 0 && int39 == 0 && int40 == 0) {
+		return arg1, arg2, arg3, arg4, arg5, arg6, arg7, int8, int9, int10, int11, int12, int13, int14, int15, int16, int17, int18, int19, int41, int42, int43, int44, int45, int46, 0, 0, 0, 0, 0, 0, 100;
+	}
+	int20 = min(int35, arg7 / 1);
+	int35 = max(0, int35 - int20);
+	arg7 = arg7 - int20 * 1;
+	int21 = min(int36, arg7 / 1);
+	int36 = max(0, int36 - int21);
+	arg7 = arg7 - int21 * 1;
+	int22 = min(int37, arg7 / 3);
+	int37 = max(0, int37 - int22);
+	arg7 = arg7 - int22 * 3;
+	int23 = min(int38, arg7 / 1);
+	int38 = max(0, int38 - int23);
+	arg7 = arg7 - int23 * 1;
+	int24 = min(int39, arg7 / 1);
+	int39 = max(0, int39 - int24);
+	arg7 = arg7 - int24 * 1;
+	int25 = min(int40, arg7 / 3);
+	int40 = max(0, int40 - int25);
+	arg7 = arg7 - int25 * 3;
+	int26 = script_4796(int35, int8, int36, int9, int37, int10, int38, int11, int39, int12, int40, int13);
+	return arg1, arg2, arg3, arg4, arg5, arg6, arg7, int8, int9, int10, int11, int12, int13, int14, int15, int16, int17, int18, int19, int41, int42, int43, int44, int45, int46, int20, int21, int22, int23, int24, int25, int26;
+}

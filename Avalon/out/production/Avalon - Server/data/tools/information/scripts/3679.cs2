@@ -1,0 +1,6 @@
+void script_3679(Widget widget0, int arg1) {
+	widget0.setNoOptions();
+	widget0.setContextMenuOption(5, "Examine" + "<col=ff9040>");
+	widget0.setOptionBase("<col=ff981f>" + datamap('i', 's', (DataMap)3274, arg1) + " Piece");
+	return;
+}

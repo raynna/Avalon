@@ -1,0 +1,28 @@
+void script_1052(int arg0, string arg1, QcPhrase qcphrase2) {
+	if (qcphrase2 == null || cs2method5056(qcphrase2) == 0) {
+		return;
+	}
+	VARC[126] = arg0;
+	STRING[27] = arg1;
+	VARC[127] = 1;
+	if (getDisplayMode() >= 2) {
+		widget(752, 1).setSprite(1017);
+		widget(752, 1).setAlpha(false);
+		widget(752, 1).setIsHidden(false);
+		widget(752, 2).setIsHidden(false);
+		script_1652(0);
+		widget(746, 75).setIsHidden(true);
+	}
+	widget(137, 50).setIsHidden(true);
+	widget(137, 56).setScriptCallOnKeyPress(-1, "");
+	widget(137, 0).setIsHidden(false);
+	widget(137, 7).setIsHidden(true);
+	widget(137, 9).setIsHidden(true);
+	widget(137, 13).setIsHidden(true);
+	widget(137, 17).setIsHidden(false);
+	widget(137, 1).setIsHidden(false);
+	widget(137, 3).setIsHidden(true);
+	widget(137, 17).setScrollPos(0, 0);
+	script_1063(widget(137, 1), qcphrase2);
+	return;
+}

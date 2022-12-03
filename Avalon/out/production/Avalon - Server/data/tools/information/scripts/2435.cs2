@@ -1,0 +1,40 @@
+void script_2435() {
+	int int0;
+	int int1;
+	string str0;
+	string str1;
+	if (VARC[815] > 0) {
+		VARC[815] = VARC[815] - 1;
+		int0 = VARC[815] / 50;
+		int1 = int0 / 60;
+		int0 = int0 - int1 * 60;
+		str0 = "";
+		str1 = "";
+		if (int1 == 0) {
+			str0 = "00";
+		} else if (int1 < 10) {
+			str0 = "0" + str(int1);
+		} else {
+			str0 = str(int1);
+		}
+		if (int0 == 0) {
+			str1 = "00";
+		} else if (int0 < 10) {
+			str1 = "0" + str(int0);
+		} else {
+			str1 = str(int0);
+		}
+		if (getDisplayMode() < 2) {
+			widget(548, 14).setIsHidden(false);
+			widget(548, 13).setIsHidden(false);
+			widget(548, 14).setText(str0 + ":" + str1);
+		} else {
+			widget(746, 169).setIsHidden(false);
+			widget(746, 168).setIsHidden(false);
+			widget(746, 169).setText(str0 + ":" + str1);
+		}
+		return;
+	}
+	script_2436();
+	return;
+}

@@ -1,0 +1,4 @@
+void script_5310() {
+	script_5311(widget(319, 22), widget(319, 23), widget(319, 24), widget(319, 25));
+	return;
+}

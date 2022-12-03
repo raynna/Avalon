@@ -1,0 +1,15 @@
+void script_1920() {
+	widget(812, 5).setScriptCallOnGlobalStringChange(1921, 40, "Y");
+	widget(812, 6).setScriptCallOnGlobalStringChange(1921, 41, "Y");
+	widget(812, 7).setScriptCallOnGlobalStringChange(1921, 42, "Y");
+	widget(812, 5).setScriptCallOnGlobalConfigChange(1921, 551, "Y");
+	widget(812, 6).setScriptCallOnGlobalConfigChange(1921, 552, "Y");
+	widget(812, 7).setScriptCallOnGlobalConfigChange(1921, 553, "Y");
+	STRING[40] = "You have no clan leader.";
+	STRING[41] = "You have no allied clans.";
+	STRING[42] = "";
+	VARC[551] = 0;
+	VARC[552] = 0;
+	VARC[553] = 0;
+	return;
+}

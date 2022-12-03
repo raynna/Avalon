@@ -1,0 +1,12 @@
+int script_2294(int arg0) {
+	if (VARPBIT[6840] == 1) {
+		if (getAttributeMapValue(datamap('i', 'J', (DataMap)863, arg0), 739)) {
+			return 1;
+		}
+		return 0;
+	}
+	if (getAttributeMapValue(datamap('i', 'J', (DataMap)2279, arg0), 739)) {
+		return 1;
+	}
+	return 0;
+}

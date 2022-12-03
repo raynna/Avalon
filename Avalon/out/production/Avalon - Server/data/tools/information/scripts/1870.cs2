@@ -1,0 +1,29 @@
+void script_1870(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	string str0;
+	int1 = 0;
+	int2 = 0;
+	int3 = getSystemUpdateTimer();
+	str0 = "0";
+	if (int3 > 0) {
+		int1 = int3 / 50 % 60;
+		int2 = int3 / 3000;
+		if (int1 < 10) {
+			str0 = "System update in: " + str(int2) + ":0" + str(int1);
+		} else {
+			str0 = "System update in: " + str(int2) + ":" + str(int1);
+		}
+		widget0.setText(str0);
+		if (length(str0) > 0) {
+			widget(906, 30).setSize(getTextWidth("System update in: ", 494) + 40, widget(906, 30).getHeight(), 0, 0);
+			widget(906, 30).setIsHidden(false);
+		} else {
+			widget(906, 30).setIsHidden(true);
+		}
+	} else {
+		widget0.setScriptCallOnGameloop(-1, "");
+	}
+	return;
+}

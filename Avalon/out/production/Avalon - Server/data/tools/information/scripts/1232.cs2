@@ -1,0 +1,32 @@
+void script_1232(Widget widget0, Widget widget1, Widget widget2) {
+	int int3;
+	int int4;
+	int int5;
+	widget2.setSize(widget2.getWidth(), getLineCount(widget2.getText(), widget2.getWidth(), 494) * 12 + 3, 0, 0);
+	widget0.clearChildren();
+	int3 = (widget0.getWidth() - 36 * 8) / 7;
+	int4 = (widget0.getHeight() - 32 * 5) / 4;
+	int5 = 0;
+	while (int5 < getItemContainerLength(0)) {
+		ACTIVE.createChild(widget0, 5, int5);
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setPosition((36 + int3) * (int5 % 8), int5 / 8 * (32 + int4), 0, 0);
+		ACTIVE.setHidden(false);
+		if (getItemIdInSlot(0, int5) != null) {
+			ACTIVE.setItem(getItemIdInSlot(0, int5), getItemAmtInSlot(0, int5));
+			ACTIVE.setOptionBase("<col=ff981f>" + getItemName(getItemIdInSlot(0, int5)));
+			ACTIVE.setContextMenuOption(1, "Withdraw" + "<col=ff9040>");
+			ACTIVE.setContextMenuOption(2, "Withdraw-All" + "<col=ff9040>");
+			ACTIVE.setContextMenuOption(10, "Examine" + "<col=ff9040>");
+			ACTIVE.setDragDeadZone(5);
+			ACTIVE.setDragDeadTime(10);
+			ACTIVE.setShadowColor(0x333333);
+			ACTIVE.setOutlineThickness(1);
+			ACTIVE.setScriptCallOnMouseDragReleased(1233, widget0, CTX_WIDGET_CHILD, DRAG_WIDGET, DRAG_WIDGET_CHILD, widget1, widget2, "IiIiII");
+		} else {
+			ACTIVE.setItemNoNum(null, 0);
+		}
+		int5 = int5 + 1;
+	}
+	return;
+}

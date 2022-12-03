@@ -1,0 +1,232 @@
+void script_1513() {
+	DataMap datamap0;
+	DataMap datamap1;
+	int int2;
+	int int3;
+	DataMap datamap4;
+	DataMap datamap5;
+	DataMap datamap6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	Identikit identikit11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	Sprite sprite17;
+	int int18;
+	string str0;
+	datamap0 = null;
+	datamap1 = null;
+	int2 = -1;
+	int3 = -1;
+	datamap4 = null;
+	datamap5 = null;
+	datamap6 = null;
+	int7 = -1;
+	int8 = -1;
+	switch (VARC[778]) {
+		case 1:
+			widget(729, 6).setSprite(1052);
+			widget(729, 7).setSprite(1045);
+			widget(729, 8).setSprite(1057);
+			widget(729, 9).setSprite(1054);
+			if (IsFemale()) {
+				datamap0, int2 = 693, 10;
+				datamap1 = (DataMap)1593;
+			} else {
+				datamap0, int2 = 711, 3;
+				datamap1 = (DataMap)702;
+			}
+			int3 = VARC[1011];
+			datamap4 = (DataMap)3282;
+			datamap5 = (DataMap)2347;
+			datamap6 = (DataMap)2348;
+			int7 = 1;
+			int8 = VARC[1016];
+			break;
+		case 2:
+			widget(729, 6).setSprite(1052);
+			widget(729, 7).setSprite(1053);
+			widget(729, 8).setSprite(1049);
+			widget(729, 9).setSprite(1054);
+			if (IsFemale()) {
+				datamap0, int2 = 751, 11;
+			} else {
+				datamap0, int2 = 749, 4;
+			}
+			datamap1 = (DataMap)750;
+			int3 = VARC[1012];
+			break;
+		case 3:
+			widget(729, 6).setSprite(1052);
+			widget(729, 7).setSprite(1053);
+			widget(729, 8).setSprite(1057);
+			widget(729, 9).setSprite(1046);
+			if (IsFemale()) {
+				datamap0, int2 = 1607, 12;
+				datamap1 = (DataMap)1606;
+			} else {
+				datamap0, int2 = 1586, 5;
+				datamap1 = (DataMap)1585;
+			}
+			int3 = VARC[1013];
+			datamap4 = (DataMap)3284;
+			datamap5 = (DataMap)2347;
+			datamap6 = (DataMap)2348;
+			int7 = 2;
+			int8 = VARC[1017];
+			break;
+		default:
+			VARC[778] = 0;
+			widget(729, 6).setSprite(1044);
+			widget(729, 7).setSprite(1053);
+			widget(729, 8).setSprite(1057);
+			widget(729, 9).setSprite(1054);
+			if (IsFemale()) {
+				datamap0, int2 = 1591, 9;
+				datamap1 = (DataMap)1590;
+			} else {
+				datamap0, int2 = 690, 2;
+				datamap1 = (DataMap)689;
+			}
+			int3 = VARC[1010];
+			datamap4 = (DataMap)3282;
+			datamap5 = (DataMap)2347;
+			datamap6 = (DataMap)2348;
+			int7 = 1;
+			int8 = VARC[1016];
+			break;
+	}
+	widget(729, 12).clearChildren();
+	int9 = 0;
+	int10 = datamapSize(datamap0);
+	identikit11 = null;
+	str0 = "";
+	int12 = 0;
+	int13 = 0;
+	while (int9 < int10) {
+		identikit11 = datamap('i', 'K', datamap0, int9);
+		str0 = datamap('i', 's', datamap1, int9);
+		ACTIVE.createChild(widget(729, 12), 5, widget(729, 12).nextChild());
+		ACTIVE.setSize(17, 17, 0, 0);
+		ACTIVE.setPosition(0, int12 + 1, 0, 0);
+		_ACTIVE.createChild(widget(729, 12), 4, widget(729, 12).nextChild());
+		_ACTIVE.setSize(20, 19, 1, 0);
+		_ACTIVE.setPosition(0, int12, 2, 0);
+		_ACTIVE.setTextAlignment(0, 1, 0);
+		_ACTIVE.setRGB(0xFF981F);
+		_ACTIVE.setFont(495);
+		_ACTIVE.setText(str0);
+		if (identikit11 == (Identikit)int3) {
+			ACTIVE.setSprite(699);
+			int13 = int12;
+		} else {
+			ACTIVE.setSprite(697);
+			ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, _ACTIVE.getChildId(), 16777215, "Iii");
+			ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, _ACTIVE.getChildId(), 16750623, "Iii");
+			_ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, _ACTIVE.getChildId(), 16777215, "Iii");
+			_ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, _ACTIVE.getChildId(), 16750623, "Iii");
+			ACTIVE.setContextMenuOption(1, str0);
+			_ACTIVE.setContextMenuOption(1, str0);
+			ACTIVE.setScriptCallOnClickContextMenu(1514, CTX_MENU_OPTION, identikit11, int2, "iKi");
+			_ACTIVE.setScriptCallOnClickContextMenu(1514, CTX_MENU_OPTION, identikit11, int2, "iKi");
+		}
+		int9 = int9 + 1;
+		int12 = int12 + 19;
+	}
+	if (int12 > widget(729, 12).getHeight()) {
+		widget(729, 12).setSize(20, 4, 1, 1);
+		widget(729, 12).setScrollMax(0, int12);
+		if (int13 < widget(729, 12).getScrollY()) {
+			widget(729, 12).setScrollPos(0, int13 - 5);
+		} else if (int13 + 19 >= widget(729, 12).getScrollY() + widget(729, 12).getHeight()) {
+			widget(729, 12).setScrollPos(0, int13 + 25 - widget(729, 12).getHeight());
+		}
+		widget(729, 13).setIsHidden(false);
+		script_31(widget(729, 13), widget(729, 12), 792, 789, 790, 791, 773, 788);
+	} else {
+		widget(729, 12).setSize(4, 4, 1, 1);
+		widget(729, 12).setScrollMax(0, 0);
+		widget(729, 12).setScrollPos(0, 0);
+		widget(729, 13).clearChildren();
+		widget(729, 13).setIsHidden(true);
+	}
+	widget(729, 17).clearChildren();
+	if (datamap5 == null) {
+		widget(729, 17).setSize(4, 4, 1, 1);
+		widget(729, 17).setScrollMax(0, 0);
+		widget(729, 17).setScrollPos(0, 0);
+		widget(729, 18).clearChildren();
+		widget(729, 18).setIsHidden(true);
+		return;
+	}
+	int10 = datamapSize(datamap5);
+	int14 = 5;
+	int15 = 0;
+	if (((int10 - 1) / int14 + 1) * 21 > widget(729, 17).getHeight()) {
+		int14, int15 = 4, 2;
+	}
+	int9 = 0;
+	int12 = 0;
+	int16 = 0;
+	sprite17 = null;
+	int18 = 0;
+	while (int9 < int10) {
+		int18 = datamap('i', 'i', datamap4, int9);
+		str0 = datamap('i', 's', datamap6, int9);
+		ACTIVE.createChild(widget(729, 17), 3, widget(729, 17).nextChild());
+		ACTIVE.setSize(21, 21, 0, 0);
+		ACTIVE.setFilled(true);
+		ACTIVE.setPosition(int16 * ACTIVE.getWidth() + int15, int12, 0, 0);
+		ACTIVE.setRGB(datamap('i', 'i', datamap5, int9));
+		ACTIVE.setScriptCallOnMouseOver(1160, CTX_WIDGET, CTX_WIDGET_CHILD, widget(729, 23), str0, 0, 512, "IiIsii");
+		ACTIVE.setScriptCallOnMouseExit(40, widget(729, 23), "I");
+		_ACTIVE.createChild(widget(729, 17), 5, widget(729, 17).nextChild());
+		_ACTIVE.setSize(ACTIVE.getWidth(), ACTIVE.getHeight(), 0, 0);
+		_ACTIVE.setPosition(ACTIVE.getX(), ACTIVE.getY(), 0, 0);
+		if (int18 == int8) {
+			_ACTIVE.setSprite(1043);
+			int13 = int12;
+		} else {
+			sprite17 = 1041;
+			_ACTIVE.setSprite(sprite17);
+			_ACTIVE.setScriptCallOnMouseExit(688, CTX_WIDGET, _ACTIVE.getChildId(), sprite17, "Iid");
+			sprite17 = 1042;
+			_ACTIVE.setScriptCallOnMouseEntered(688, CTX_WIDGET, _ACTIVE.getChildId(), sprite17, "Iid");
+			_ACTIVE.setContextMenuOption(1, str0);
+			_ACTIVE.setScriptCallOnClickContextMenu(1515, CTX_MENU_OPTION, int18, int7, "iii");
+		}
+		int9 = int9 + 1;
+		if (int16 < int14 - 1) {
+			int16 = int16 + 1;
+		} else {
+			int16 = 0;
+			int12 = int12 + ACTIVE.getHeight();
+		}
+	}
+	if (int16 != 0) {
+		int12 = int12 + 21;
+	}
+	if (int12 > widget(729, 17).getHeight() || int14 < 5) {
+		widget(729, 17).setSize(20, 4, 1, 1);
+		widget(729, 17).setScrollMax(0, int12);
+		if (int13 < widget(729, 17).getScrollY()) {
+			widget(729, 17).setScrollPos(0, int13 - 5);
+		} else if (int13 + 21 >= widget(729, 17).getScrollY() + widget(729, 17).getHeight()) {
+			widget(729, 17).setScrollPos(0, int13 + 25 - widget(729, 17).getHeight());
+		}
+		widget(729, 18).setIsHidden(false);
+		script_31(widget(729, 18), widget(729, 17), 792, 789, 790, 791, 773, 788);
+	} else {
+		widget(729, 17).setSize(4, 4, 1, 1);
+		widget(729, 17).setScrollMax(0, 0);
+		widget(729, 17).setScrollPos(0, 0);
+		widget(729, 18).clearChildren();
+		widget(729, 18).setIsHidden(true);
+	}
+	return;
+}

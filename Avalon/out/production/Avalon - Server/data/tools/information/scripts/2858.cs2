@@ -1,0 +1,6 @@
+void script_2858() {
+	if (VARC[1069] < 5000) {
+		VARC[1069] = VARC[1069] + 50;
+	}
+	return;
+}

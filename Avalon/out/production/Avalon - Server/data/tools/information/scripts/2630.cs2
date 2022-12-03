@@ -1,0 +1,56 @@
+void script_2630(Widget widget0) {
+	Sprite sprite1;
+	Sprite sprite2;
+	sprite1 = null;
+	sprite2 = null;
+	VARC[905] = widget0;
+	VARC[904] = 1;
+	switch (widget0) {
+		case widget(859, 13):
+			widget0 = widget(859, 2);
+			sprite1 = 1914;
+			sprite2 = 1922;
+			break;
+		case widget(859, 14):
+			widget0 = widget(859, 8);
+			sprite1 = 1915;
+			sprite2 = 1923;
+			break;
+		case widget(859, 15):
+			widget0 = widget(859, 7);
+			sprite1 = 1916;
+			sprite2 = 1924;
+			break;
+		case widget(859, 16):
+			if (VARPBIT[6357] == 2) {
+				widget0 = widget(859, 22);
+				sprite1 = 1917;
+				sprite2 = 1925;
+			}
+			if (VARPBIT[6357] == 3) {
+				widget0 = widget(859, 6);
+				sprite1 = 1918;
+				sprite2 = 1926;
+			}
+			if (VARPBIT[6357] == 4) {
+				widget0 = widget(859, 23);
+				sprite1 = 1921;
+				sprite2 = 1929;
+			}
+			break;
+		case widget(859, 17):
+			if (VARPBIT[6357] == 2) {
+				widget0 = widget(859, 21);
+				sprite1 = 1920;
+				sprite2 = 1928;
+			}
+			if (VARPBIT[6357] == 4) {
+				widget0 = widget(859, 20);
+				sprite1 = 1919;
+				sprite2 = 1927;
+			}
+			break;
+	}
+	widget0.setScriptCallOnGameloop(2631, widget0, sprite1, sprite2, "Idd");
+	return;
+}

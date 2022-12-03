@@ -1,0 +1,95 @@
+void script_5041(AttrMap attrmap0, int arg1, int arg2, Color color3) {
+	DataMap datamap4;
+	string str0;
+	ACTIVE.setContextMenuOption(6, "Delete");
+	ACTIVE.setAttr(1474, arg1);
+	ACTIVE.setAttr(1475, arg2);
+	str0 = getAttributeMapValue(attrmap0, 1463);
+	ACTIVE.setOptionBase("<col=ff9040>" + str0);
+	datamap4 = null;
+	switch (getAttributeMapValue(attrmap0, 1466)) {
+		case 1:
+			ACTIVE.setAttr(1476, script_5020(color3));
+			ACTIVE.setAttr(1477, script_5021(color3));
+			datamap4 = getAttributeMapValue(attrmap0, 1470);
+			if (datamap4 != null) {
+				str0 = concat(str0, "<br>" + datamap('i', 's', datamap4, -1) + " " + datamap('i', 's', datamap4, script_5022(color3)));
+			}
+			break;
+		case 2:
+			datamap4 = getAttributeMapValue(attrmap0, 1470);
+			if (datamap4 != null) {
+				str0 = concat(str0, "<br>" + datamap('i', 's', datamap4, -1) + " " + datamap('i', 's', datamap4, script_5023(color3)));
+			}
+			datamap4 = getAttributeMapValue(attrmap0, 1471);
+			if (datamap4 != null) {
+				str0 = concat(str0, "<br>" + datamap('i', 's', datamap4, -1) + " " + datamap('i', 's', datamap4, script_5024(color3)));
+			}
+			datamap4 = getAttributeMapValue(attrmap0, 1472);
+			if (datamap4 != null) {
+				str0 = concat(str0, "<br>" + datamap('i', 's', datamap4, -1) + " " + datamap('i', 's', datamap4, script_5025(color3)));
+			}
+			break;
+		case 3:
+			datamap4 = getAttributeMapValue(attrmap0, 1470);
+			if (datamap4 != null) {
+				str0 = concat(str0, "<br>" + datamap('i', 's', datamap4, -1) + " " + datamap('i', 's', datamap4, script_5026(color3)));
+			}
+			datamap4 = getAttributeMapValue(attrmap0, 1471);
+			if (datamap4 != null) {
+				str0 = concat(str0, "<br>" + datamap('i', 's', datamap4, -1) + " " + datamap('i', 's', datamap4, script_5027(color3)));
+			}
+			datamap4 = getAttributeMapValue(attrmap0, 1472);
+			if (datamap4 != null) {
+				str0 = concat(str0, "<br>" + datamap('i', 's', datamap4, -1) + " " + datamap('i', 's', datamap4, script_5028(color3)));
+			}
+			break;
+		case 4:
+			datamap4 = getAttributeMapValue(attrmap0, 1470);
+			if (datamap4 != null) {
+				str0 = concat(str0, "<br>" + datamap('i', 's', datamap4, -1) + " " + datamap('i', 's', datamap4, script_5029(color3)));
+			}
+			datamap4 = getAttributeMapValue(attrmap0, 1471);
+			if (datamap4 != null) {
+				str0 = concat(str0, "<br>" + datamap('i', 's', datamap4, -1) + " " + datamap('i', 's', datamap4, script_5030(color3)));
+			}
+			break;
+		case 5:
+			datamap4 = getAttributeMapValue(attrmap0, 1470);
+			if (datamap4 != null) {
+				str0 = concat(str0, "<br>" + datamap('i', 's', datamap4, -1) + " " + datamap('i', 's', datamap4, script_5031(color3)));
+			}
+			datamap4 = getAttributeMapValue(attrmap0, 1471);
+			if (datamap4 != null) {
+				str0 = concat(str0, "<br>" + datamap('i', 's', datamap4, -1) + " " + datamap('i', 's', datamap4, script_5032(color3)));
+			}
+			datamap4 = getAttributeMapValue(attrmap0, 1472);
+			if (datamap4 != null) {
+				str0 = concat(str0, "<br>" + datamap('i', 's', datamap4, -1) + " " + datamap('i', 's', datamap4, script_5033(color3)));
+			}
+			break;
+		case 6:
+			datamap4 = getAttributeMapValue(attrmap0, 1470);
+			if (datamap4 != null) {
+				str0 = concat(str0, "<br>" + datamap('i', 's', datamap4, -1) + " " + datamap('i', 's', datamap4, script_5034(color3)));
+			}
+			datamap4 = getAttributeMapValue(attrmap0, 1471);
+			if (datamap4 != null) {
+				str0 = concat(str0, "<br>" + datamap('i', 's', datamap4, -1) + " " + datamap('i', 's', datamap4, script_5035(color3)));
+			}
+			datamap4 = getAttributeMapValue(attrmap0, 1472);
+			if (datamap4 != null) {
+				str0 = concat(str0, "<br>" + datamap('i', 's', datamap4, -1) + " " + datamap('i', 's', datamap4, script_5036(color3)));
+			}
+			break;
+		default:
+			datamap4 = getAttributeMapValue(attrmap0, 1470);
+			if (datamap4 != null) {
+				str0 = concat(str0, "<br>" + datamap('i', 's', datamap4, -1) + " " + datamap('i', 's', datamap4, color3));
+			}
+			break;
+	}
+	ACTIVE.setScriptCallOnMouseOver(5077, CTX_WIDGET, CTX_WIDGET_CHILD, str0, MOUSE_X, MOUSE_Y, "Iisii");
+	ACTIVE.setScriptCallOnMouseExit(40, widget(1111, 131), "I");
+	return;
+}

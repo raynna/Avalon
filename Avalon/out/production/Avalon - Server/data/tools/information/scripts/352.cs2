@@ -1,0 +1,23 @@
+void script_352(int arg0, int arg1) {
+	AttrMap attrmap2;
+	boolean boolean3;
+	AttrMap attrmap4;
+	if (arg1 == VARC[86] || arg0 != 1) {
+		return;
+	}
+	playSoundEffect(9819, 1, 0);
+	attrmap2 = datamap('i', 'J', (DataMap)3278, VARC[197] - 1);
+	if (attrmap2 == null) {
+		return;
+	}
+	boolean3 = script_734(IsFemale());
+	attrmap4 = script_384(arg1 - 1, attrmap2, boolean3);
+	if (attrmap4 == null) {
+		return;
+	}
+	VARC[86] = arg1;
+	VARPBIT[8090] = arg1;
+	script_359(attrmap4, boolean3);
+	script_390(boolean3);
+	return;
+}

@@ -1,0 +1,18 @@
+void script_1565() {
+	widget(210, 1).setFont(307);
+	widget(211, 1).setFont(307);
+	widget(211, 2).setFont(307);
+	widget(212, 1).setFont(307);
+	widget(212, 2).setFont(307);
+	widget(212, 3).setFont(307);
+	widget(213, 1).setFont(307);
+	widget(213, 2).setFont(307);
+	widget(213, 3).setFont(307);
+	widget(213, 4).setFont(307);
+	widget(214, 1).setFont(307);
+	widget(214, 2).setFont(307);
+	widget(214, 3).setFont(307);
+	widget(214, 4).setFont(307);
+	widget(214, 5).setFont(307);
+	return;
+}

@@ -1,0 +1,5 @@
+void script_3068(Widget widget0) {
+	widget0.setSprite(4662);
+	script_3083(widget0, -1, "Click here to login to your favourite world");
+	return;
+}

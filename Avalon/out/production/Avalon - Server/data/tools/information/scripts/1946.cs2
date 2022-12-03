@@ -1,0 +1,99 @@
+void script_1946() {
+	int int0;
+	string str0;
+	int0 = 0;
+	str0 = "";
+	widget(810, 10).setScriptCallOnMouseExit(40, widget(810, 5), "I");
+	if (VARC[589] == 99999992) {
+		widget(810, 81).setText("You abandon the game!");
+		widget(810, 17).setText("You abandon the game." + "<br>" + "<br>" + "The mystics don't seem happy and scowl at you, muttering unpleasant sentiments under their breath." + "<br>" + "<br>" + "You notice that you received no score as a result.");
+		widget(810, 58).setText("-100%");
+		widget(810, 32).setText("");
+		widget(810, 33).setText("");
+		str0 = "The awards tab is not available when you leave a game early.";
+		widget(810, 10).setScriptCallOnMouseOver(38, widget(810, 10), widget(810, 5), str0, 25, 189, "IIsii");
+	} else {
+		if (VARC[588] == 1) {
+			widget(810, 32).setText(str(VARC[597]));
+			widget(810, 33).setText(str(VARC[598]));
+		} else {
+			widget(810, 32).setText(str(VARC[598]));
+			widget(810, 33).setText(str(VARC[597]));
+		}
+		if (VARC[588] == VARC[589]) {
+			widget(810, 81).setText("Your valiant team takes the victory!");
+			if (int0 == 1) {
+				widget(810, 17).setText("With the heroic conquest of all resources and facilities, your team have ripped success from the feeble fingers of your unworthy foes." + "<br>" + "<br>" + "The mystics stand in awe of your power, and you hear them praising you in excited whispers." + "<br>" + "<br>" + "You notice that they have increased your score as a reward.");
+			} else {
+				widget(810, 17).setText("The heroic, skillful and brave deeds of your team have ripped success from the feeble fingers of your unworthy foes." + "<br>" + "<br>" + "The mystics stand in awe of your power, and you hear them praising you in excited whispers." + "<br>" + "<br>" + "You notice that they have increased your score as a reward.");
+			}
+			widget(810, 58).setText("+10%");
+		} else if (VARC[589] == 0) {
+			widget(810, 81).setText("The game was a draw!");
+			widget(810, 17).setText("As if ordained by fate, the teams were equally brave and skillful, resulting in a draw." + "<br>" + "<br>" + "The mystics nod knowingly, and you hear them discussing how the balance of the universe is reflected beautifully in the conflict's outcome." + "<br>" + "<br>");
+			widget(810, 58).setText("+0%");
+		} else {
+			widget(810, 81).setText("The enemy team has defeated you!");
+			if (int0 == 1) {
+				widget(810, 17).setText("Despite your best efforts, your team was beaten; the victory snatched away as the enemy took control of all resources and facilities." + "<br>" + "<br>" + "The mystics frown at you, and shake their heads sadly." + "<br>" + "<br>" + "You hear them arguing over whether they overestimated you, or if you were just unlucky.");
+			}
+			widget(810, 17).setText("Despite your best efforts, your team was beaten; the victory snatched away by your fearsome foes." + "<br>" + "<br>" + "The mystics frown at you, and shake their heads sadly." + "<br>" + "<br>" + "You hear them arguing over whether they overestimated you, or if you were just unlucky.");
+			widget(810, 58).setText("+0%");
+		}
+	}
+	widget(810, 59).setText(str(VARC[590]));
+	widget(810, 59).setText(str(VARC[590]));
+	widget(810, 60).setText(str(VARC[591]));
+	widget(810, 61).setText(str(VARC[592]));
+	widget(810, 62).setText(str(VARC[593]));
+	widget(810, 23).setText(str(VARC[594]));
+	widget(810, 25).setText(str(VARC[595]));
+	if (VARC[589] != 99999992) {
+		widget(810, 63).setText(str(VARC[596]));
+	} else {
+		widget(810, 63).setText(str(0));
+	}
+	if (VARC[600] > 0 || VARC[603] > 0) {
+		widget(810, 136).setText(str(VARC[599]));
+		widget(810, 135).setText(str(VARC[600]));
+		widget(810, 139).setText(str(VARC[601]));
+		widget(810, 140).setText(str(VARC[602]));
+		widget(810, 138).setText(str(VARC[603]));
+		widget(810, 137).setText(str(VARC[604]));
+		widget(810, 141).setText(str(VARC[605]));
+		widget(810, 142).setText(str(VARC[606]));
+		script_1587(STRING[44], widget(810, 118), widget(810, 143), 495);
+		script_1587(STRING[45], widget(810, 117), widget(810, 143), 495);
+		script_1587(STRING[46], widget(810, 121), widget(810, 143), 495);
+		script_1587(STRING[47], widget(810, 122), widget(810, 143), 495);
+		script_1587(STRING[48], widget(810, 120), widget(810, 143), 495);
+		script_1587(STRING[49], widget(810, 119), widget(810, 143), 495);
+		script_1587(STRING[50], widget(810, 123), widget(810, 143), 495);
+		script_1587(STRING[51], widget(810, 124), widget(810, 143), 495);
+		if (VARC[607] > 0) {
+			widget(810, 127).setText(str(VARC[607]));
+		}
+		if (VARC[608] > 0) {
+			widget(810, 126).setText(str(VARC[608]));
+		}
+		if (VARC[609] > 0) {
+			widget(810, 130).setText(str(VARC[609]));
+		}
+		if (VARC[610] > 0) {
+			widget(810, 131).setText(str(VARC[610]));
+		}
+		if (VARC[611] > 0) {
+			widget(810, 129).setText(str(VARC[611]));
+		}
+		if (VARC[612] > 0) {
+			widget(810, 128).setText(str(VARC[612]));
+		}
+		if (VARC[613] > 0) {
+			widget(810, 132).setText(str(VARC[613]));
+		}
+		if (VARC[614] > 0) {
+			widget(810, 133).setText(str(VARC[614]));
+		}
+	}
+	return;
+}

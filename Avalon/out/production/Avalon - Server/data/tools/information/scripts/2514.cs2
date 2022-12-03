@@ -1,0 +1,12 @@
+void script_2514() {
+	widget(654, 11).setText("0");
+	widget(654, 60).setText("0");
+	widget(654, 52).setText("0");
+	widget(654, 44).setText("0");
+	widget(654, 69).setText("0");
+	widget(654, 74).setText("0");
+	if (VARC[839] >= 0) {
+		widget(654, 77).setText(script_46(VARC[839], ","));
+	}
+	return;
+}

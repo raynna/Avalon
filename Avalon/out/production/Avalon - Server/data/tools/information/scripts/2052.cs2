@@ -1,0 +1,18 @@
+void script_2052(string string0, int arg1, int arg2, int arg3, int arg4, Color color5, string arg6, string string7, Location location8) {
+	ACTIVE.setHidden(false);
+	ACTIVE.setSize(arg1, arg2, 0, 0);
+	ACTIVE.setPosition(arg3, arg4, 1, 1);
+	ACTIVE.setRGB(color5);
+	ACTIVE.setFont(591);
+	ACTIVE.setTextAlignment(1, 1, 13);
+	ACTIVE.setText(string0);
+	if (location8 != null) {
+		ACTIVE.setOptionBase("<col=ff9040>" + arg6 + "</col>");
+		ACTIVE.setContextMenuOption(1, string7);
+		ACTIVE.setScriptCallOnClickContextMenu(2053, CTX_MENU_OPTION, CTX_WIDGET, location8, "iIc");
+	} else {
+		ACTIVE.setContextMenuOption(1, "");
+		ACTIVE.setScriptCallOnClickContextMenu(-1, "");
+	}
+	return;
+}

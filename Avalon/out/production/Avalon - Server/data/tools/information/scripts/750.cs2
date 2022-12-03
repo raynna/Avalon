@@ -1,0 +1,16 @@
+Item script_750(int arg0) {
+	int int1;
+	if (arg0 <= 0) {
+		return null;
+	}
+	arg0 = arg0 - 1;
+	int1 = getItemContainerLength(94);
+	if (arg0 < int1) {
+		return getItemIdInSlot(94, arg0);
+	}
+	arg0 = arg0 - int1;
+	if (arg0 < getItemContainerLength(93)) {
+		return getItemIdInSlot(93, arg0);
+	}
+	return null;
+}

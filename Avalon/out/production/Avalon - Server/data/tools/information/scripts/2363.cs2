@@ -1,0 +1,6 @@
+void script_2363(Widget widget0, Widget widget1) {
+	widget1.setScrollMax(200, VARC[773]);
+	widget1.setScrollPos(0, 0);
+	script_31(widget0, widget1, 792, 789, 790, 791, 773, 788);
+	return;
+}

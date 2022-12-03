@@ -1,0 +1,9 @@
+void script_303(Location location0, int arg1) {
+	playSoundEffect(2266, 1, 0);
+	if (arg1 == 0) {
+		setPositionInMap(location0);
+	} else {
+		cs2method5221(location0);
+	}
+	return;
+}

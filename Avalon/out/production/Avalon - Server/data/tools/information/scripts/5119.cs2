@@ -1,0 +1,8 @@
+void script_5119(int arg0) {
+	if (VARC[777] != arg0) {
+		playSoundEffect2False(6185, 1, 0, 200);
+		VARC[777] = arg0;
+	}
+	script_5121();
+	return;
+}

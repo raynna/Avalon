@@ -1,0 +1,11 @@
+void script_4679() {
+	if (datamap('i', 'i', (DataMap)3839, VARC[1535]) < 1) {
+		widget(302, 23).setPosition(10, 26, 0, 0);
+		widget(302, 24).setIsHidden(true);
+		widget(302, 11).setText("Difficulty: " + str(VARC[1535]) + "/10");
+	} else {
+		widget(302, 24).setIsHidden(false);
+		widget(302, 11).setText("Difficulty: " + str(VARC[1535]) + "/10");
+	}
+	return;
+}

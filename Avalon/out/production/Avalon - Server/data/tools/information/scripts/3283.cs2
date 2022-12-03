@@ -1,0 +1,21 @@
+void script_3283(Widget widget0, Widget widget1, Sprite sprite2, int arg3) {
+	int int4;
+	if (arg3 == 0) {
+		arg3 = 12;
+	}
+	int4 = getLineCount(widget1.getText(), widget1.getWidth() + 16, sprite2);
+	int4 = int4 * arg3;
+	msg("txt " + str(int4) + ", layer " + str(widget1.getHeight()));
+	if (widget1.getHeight() >= int4) {
+		msg("No scroll txt " + str(int4) + ", layer " + str(widget1.getHeight()));
+		widget1.setSize(widget1.getWidth() + 16, widget1.getHeight(), 0, 0);
+		widget0.setIsHidden(true);
+	} else {
+		int4 = getLineCount(widget1.getText(), widget1.getWidth(), sprite2);
+		int4 = int4 * arg3;
+		widget1.setScrollMax(0, int4 + 10);
+		msg("Scroll txt " + str(int4) + ", layer " + str(widget1.getHeight()));
+		script_31(widget0, widget1, 792, 789, 790, 791, 773, 788);
+	}
+	return;
+}

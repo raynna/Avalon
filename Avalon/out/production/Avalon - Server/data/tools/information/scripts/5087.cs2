@@ -1,0 +1,6 @@
+void script_5087(Widget widget0, int arg1, int arg2) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		script_5088(widget0, arg2);
+	}
+	return;
+}

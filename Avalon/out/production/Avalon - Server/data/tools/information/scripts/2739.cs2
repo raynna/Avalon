@@ -1,0 +1,46 @@
+void script_2739(Widget widget0, int arg1) {
+	int int2;
+	Item item3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	widget0.clearChildren();
+	int2 = getItemContainerLength(93);
+	item3 = null;
+	int4 = int2 / 4;
+	int5 = (widget0.getWidth() - 4 * 36) / 3;
+	int6 = (widget0.getHeight() - int4 * 32) / 6;
+	int7 = 0;
+	while (int7 < int2) {
+		ACTIVE.createChild(widget0, 5, int7);
+		item3 = getItemIdInSlot(93, int7);
+		if (item3 != null) {
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition(int7 % 4 * (36 + int5), int7 / 4 * (32 + int6), 0, 0);
+			ACTIVE.setItem(item3, getItemAmtInSlot(93, int7));
+			ACTIVE.setOptionBase(concat("<col=ff9040>", getItemName(item3)));
+			ACTIVE.setContextMenuOption(1, "Equip");
+			ACTIVE.setContextMenuOption(9, "Stats");
+			ACTIVE.setTargetVerb("Compare");
+			ACTIVE.setContextMenuOption(10, "Examine");
+			ACTIVE.setShadowColor(0x302020);
+			if (arg1 == int7) {
+				ACTIVE.setOutlineThickness(2);
+			} else {
+				ACTIVE.setOutlineThickness(1);
+			}
+			ACTIVE.setScriptCallOnClickContextMenu(1620, CTX_WIDGET, CTX_WIDGET_CHILD, 100, 0, 8, "Iiiii");
+			ACTIVE.setScriptCallOnUse(2738, widget0, int7, "Ii");
+			ACTIVE.setScriptCallOnUseWith(2738, widget0, -1, "Ii");
+		} else {
+			ACTIVE.setHidden(true);
+		}
+		int7 = int7 + 1;
+	}
+	if (arg1 != -1 && getItemIdInSlot(93, arg1) == null) {
+		arg1 = -1;
+	}
+	widget0.setScriptCallOnItemContainerUpdate(2738, CTX_WIDGET, arg1, 93, "IiY");
+	return;
+}

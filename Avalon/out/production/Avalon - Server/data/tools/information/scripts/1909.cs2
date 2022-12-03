@@ -1,0 +1,8 @@
+void script_1909() {
+	if (widget(806, 122).isHidden()) {
+		widget(806, 122).setIsHidden(false);
+	} else {
+		widget(806, 122).setIsHidden(true);
+	}
+	return;
+}

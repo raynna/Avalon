@@ -1,0 +1,10 @@
+void script_1030(int arg0) {
+	widget(157, 17).setIsHidden(true);
+	widget(157, 35).setIsHidden(false);
+	widget(157, 23).clearChildren();
+	widget(157, 25).clearChildren();
+	widget(157, 30).setScriptCallOnMousePressed(1031, "");
+	widget(157, 30).setText("Safety Guide");
+	script_1033(datamap('i', 's', (DataMap)1485, 0));
+	return;
+}

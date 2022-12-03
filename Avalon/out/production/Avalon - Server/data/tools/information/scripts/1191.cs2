@@ -1,0 +1,6 @@
+void script_1191(Widget widget0, Sprite sprite1) {
+	if (getLanguage() != 0) {
+		widget0.setFont(sprite1);
+	}
+	return;
+}

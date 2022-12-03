@@ -1,0 +1,6 @@
+int script_1653() {
+	if (widget(752, 8).isHidden() && (!widget(752, 3).isHidden() || !widget(752, 7).isHidden()) || widget(752, 13).hasChild() || widget(752, 12).hasChild() || widget(752, 11).hasChild() || widget(752, 10).hasChild() || !widget(137, 0).isHidden()) {
+		return 1;
+	}
+	return 0;
+}

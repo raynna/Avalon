@@ -1,0 +1,65 @@
+void script_4602(int arg0, Widget arg1) {
+	switch (arg0) {
+		case 1:
+			widget(16, 1).setIsHidden(false);
+			widget(16, 52).setIsHidden(false);
+			widget(16, 59).setIsHidden(false);
+			widget(16, 37).setIsHidden(true);
+			widget(16, 4).setIsHidden(true);
+			widget(16, 18).setIsHidden(true);
+			widget(16, 64).setIsHidden(true);
+			widget(16, 76).setIsHidden(true);
+			break;
+		case 2:
+			widget(16, 1).setIsHidden(true);
+			widget(16, 52).setIsHidden(true);
+			widget(16, 59).setIsHidden(true);
+			widget(16, 37).setIsHidden(true);
+			widget(16, 4).setIsHidden(true);
+			widget(16, 18).setIsHidden(true);
+			widget(16, 64).setIsHidden(true);
+			widget(16, 76).setIsHidden(false);
+			break;
+		case 3:
+			widget(16, 1).setIsHidden(false);
+			widget(16, 52).setIsHidden(false);
+			widget(16, 59).setIsHidden(true);
+			widget(16, 37).setIsHidden(false);
+			widget(16, 4).setIsHidden(true);
+			widget(16, 18).setIsHidden(true);
+			widget(16, 64).setIsHidden(true);
+			widget(16, 76).setIsHidden(true);
+			break;
+		case 4:
+			widget(16, 1).setIsHidden(false);
+			widget(16, 52).setIsHidden(false);
+			widget(16, 59).setIsHidden(true);
+			widget(16, 37).setIsHidden(false);
+			widget(16, 4).setIsHidden(false);
+			widget(16, 18).setIsHidden(false);
+			widget(16, 64).setIsHidden(true);
+			widget(16, 76).setIsHidden(true);
+			break;
+		case 5:
+			widget(16, 1).setIsHidden(false);
+			widget(16, 52).setIsHidden(false);
+			widget(16, 59).setIsHidden(true);
+			widget(16, 37).setIsHidden(false);
+			widget(16, 4).setIsHidden(false);
+			widget(16, 18).setIsHidden(false);
+			widget(16, 64).setIsHidden(false);
+			widget(16, 76).setIsHidden(true);
+			break;
+		default:
+			widget(16, 1).setIsHidden(true);
+			widget(16, 52).setIsHidden(true);
+			widget(16, 59).setIsHidden(true);
+			widget(16, 37).setIsHidden(true);
+			widget(16, 4).setIsHidden(true);
+			widget(16, 18).setIsHidden(true);
+			widget(16, 64).setIsHidden(true);
+			widget(16, 76).setIsHidden(true);
+			break;
+	}
+	return;
+}

@@ -1,0 +1,17 @@
+void script_1773() {
+	if (VARC[249] == 0) {
+		widget(791, 111).setRGB(0x000000);
+		widget(791, 112).setRGB(0xFF981F);
+		widget(791, 114).setIsHidden(true);
+		widget(791, 115).setRGB(0xFF981F);
+		widget(791, 115).setText("...you keep" + "<br>" + "your items.");
+	} else {
+		widget(791, 111).setRGB(0xFF0000);
+		widget(791, 112).setRGB(0xFFFF00);
+		widget(791, 114).setIsHidden(false);
+		widget(791, 115).setRGB(0xFFFF00);
+		widget(791, 115).setText("...you DROP ALL your items.");
+	}
+	script_1784();
+	return;
+}

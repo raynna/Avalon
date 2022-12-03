@@ -1,0 +1,13 @@
+void script_2962(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, int arg6) {
+	if (getClientCycle() >= arg6) {
+		VARC[176] = VARC[176] + 2;
+		widget0.setScriptCallOnGameloop(1249, widget0, widget2, widget1, "III");
+		VARC[177] = 0;
+		widget3.setScriptCallOnMousePressed(2713, widget0, widget1, widget2, widget3, widget4, widget5, "IIIIII");
+		widget3.setScriptCallOnMouseOver(2961, widget4, widget5, true, "II1");
+		widget3.setScriptCallOnMouseExit(2961, widget4, widget5, false, "II1");
+		widget4.setSprite(2703);
+		VARC[986] = 0;
+	}
+	return;
+}

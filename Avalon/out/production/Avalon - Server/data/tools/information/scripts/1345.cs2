@@ -1,0 +1,5 @@
+int script_1345(int arg0, Widget widget1) {
+	int int2;
+	int2 = (arg0 + widget1.getScrollY()) / 15;
+	return int2;
+}

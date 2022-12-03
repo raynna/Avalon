@@ -1,0 +1,44 @@
+void script_4002() {
+	int int0;
+	int int1;
+	int int2;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	if (getDisplayMode() >= 2) {
+		if (hasChildModal(widget(746, 12), 917)) {
+			return;
+		}
+	} else if (hasChildModal(widget(548, 19), 917)) {
+		return;
+	}
+	str0 = "Progress:  ";
+	int0 = VARC[1424];
+	str1 = "";
+	int1 = VARC[1423];
+	str2 = "";
+	str3 = datamap('i', 's', (DataMap)3487, VARPBIT[8575]);
+	if (VARPBIT[9030] == 1) {
+		int0 = VARPBIT[9028];
+		int1 = datamapSize((DataMap)3656);
+		str3 = "Introductory Tasks";
+	}
+	str1 = str(int0);
+	str2 = str(int1);
+	if (VARPBIT[8575] == 61) {
+		str3 = "Quest Area";
+		widget(1056, 111).setIsHidden(true);
+		widget(1056, 112).setIsHidden(true);
+	} else {
+		widget(1056, 111).setIsHidden(false);
+		widget(1056, 112).setIsHidden(false);
+	}
+	int2 = int0 * (widget(1056, 111).getWidth() - 2) / max(1, int1);
+	str0 = concat(str0, str1);
+	widget(1056, 108).setText(str2);
+	widget(1056, 106).setText(str0);
+	widget(1056, 110).setText(str3);
+	widget(1056, 105).setSize(int2, 18, 0, 0);
+	return;
+}

@@ -1,0 +1,10 @@
+void script_2349(Widget widget0, Item item1, int arg2) {
+	if (script_19(item1, null) >= arg2) {
+		widget0.setRGB(0x00CC00);
+		widget0.setText(str(arg2) + "/" + str(arg2));
+	} else {
+		widget0.setRGB(0xC00000);
+		widget0.setText(script_20(script_19(item1, null)) + "/" + str(arg2));
+	}
+	return;
+}

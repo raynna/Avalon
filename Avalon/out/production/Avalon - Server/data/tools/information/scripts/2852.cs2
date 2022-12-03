@@ -1,0 +1,29 @@
+void script_2852(int arg0) {
+	if (VARC[1076] < VARC[1075] + 250 && VARC[1076] > VARC[1075] - 250) {
+		VARC[1076] = VARC[1075];
+	} else if (VARC[1076] > VARC[1075]) {
+		if (VARC[1076] - 32768 > VARC[1075]) {
+			VARC[1076] = VARC[1076] + 250;
+			if (VARC[1076] > 65535) {
+				VARC[1076] = VARC[1076] - 63335;
+			}
+		} else {
+			VARC[1076] = VARC[1076] - 250;
+			if (VARC[1076] < 0) {
+				VARC[1076] = VARC[1076] + 63335;
+			}
+		}
+	} else if (VARC[1076] + 32768 < VARC[1075]) {
+		VARC[1076] = VARC[1076] - 250;
+		if (VARC[1076] < 0) {
+			VARC[1076] = VARC[1076] + 63335;
+		}
+	} else {
+		VARC[1076] = VARC[1076] + 250;
+		if (VARC[1076] > 65535) {
+			VARC[1076] = VARC[1076] - 63335;
+		}
+	}
+	widget(475, 31).set2DAngle(VARC[1076]);
+	return;
+}

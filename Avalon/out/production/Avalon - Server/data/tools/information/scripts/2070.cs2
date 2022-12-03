@@ -1,0 +1,12 @@
+void script_2070(int arg0, int arg1, Widget widget2, Widget widget3, Widget widget4) {
+	if (arg0 != 1) {
+		return;
+	}
+	if (arg1 >= VARC[657] || arg1 < 0) {
+		return;
+	}
+	VARC[656] = arg1;
+	playSoundEffect2False(3550, 1, 0, 100);
+	script_1439(widget2, widget3, widget4);
+	return;
+}

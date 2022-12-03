@@ -1,0 +1,6 @@
+void script_630(int arg0) {
+	if (!getGENotStarted(arg0) && ACTIVE.setChild(script_623(arg0), 0)) {
+		ACTIVE.setTrans(230);
+	}
+	return;
+}

@@ -1,0 +1,28 @@
+void script_5196() {
+	widget(1122, 61).setIsHidden(true);
+	widget(1122, 252).setIsHidden(true);
+	widget(1122, 264).setIsHidden(true);
+	widget(1122, 276).setIsHidden(true);
+	widget(1122, 288).setIsHidden(true);
+	widget(1122, 233).setIsHidden(true);
+	widget(1122, 242).setIsHidden(true);
+	widget(1122, 357).setIsHidden(true);
+	widget(1122, 79).setIsHidden(false);
+	if (VARC[1595] < 4) {
+		widget(1122, 288).setIsHidden(false);
+		widget(1122, 242).setIsHidden(false);
+	}
+	if (VARC[1595] < 3) {
+		widget(1122, 276).setIsHidden(false);
+		widget(1122, 357).setIsHidden(false);
+	}
+	if (VARC[1595] < 2) {
+		widget(1122, 264).setIsHidden(false);
+		widget(1122, 233).setIsHidden(false);
+		widget(1122, 79).setIsHidden(true);
+	}
+	if (VARC[1595] < 1) {
+		widget(1122, 252).setIsHidden(false);
+	}
+	return;
+}

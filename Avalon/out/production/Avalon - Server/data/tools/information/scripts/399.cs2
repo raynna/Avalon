@@ -1,0 +1,11 @@
+void script_399(Widget widget0) {
+	if (widget0.getX() < widget(306, 1).getWidth() - 1 || widget0.getY() - widget0.getHeight() > 110) {
+		if (widget0.getX() == 140 + widget0.getWidth()) {
+			widget(306, 20).setScriptCallOnGameloop(1550, widget(306, 7), "I");
+		}
+		widget0.setPosition(1 + widget0.getX(), widget0.getY(), 0, 0);
+	} else {
+		script_1411();
+	}
+	return;
+}

@@ -1,0 +1,10 @@
+void script_3381(Widget widget0, int arg1) {
+	arg1 = arg1 + 1;
+	widget0.setScriptCallOnGameloop(3381, widget0, arg1, "Ii");
+	if (arg1 > 1) {
+		VARC[1273] = 1;
+		widget0.setScriptCallOnGameloop(-1, "");
+		script_2945();
+	}
+	return;
+}

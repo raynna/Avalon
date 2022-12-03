@@ -1,0 +1,7 @@
+void script_3683() {
+	script_1548(14);
+	STRING[196] = "";
+	script_3680();
+	widget(187, 17).setSprite(3245);
+	return;
+}

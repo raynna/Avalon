@@ -1,0 +1,38 @@
+void script_2519(int arg0) {
+	int int1;
+	int1 = script_2520();
+	switch (arg0) {
+		case 42860558:
+			if (VARC[847] > 0) {
+				VARC[847] = VARC[847] - 1;
+				widget(654, 13).setText(str(VARC[847]));
+			}
+			break;
+		case 42860606:
+			if (VARC[848] > 0) {
+				VARC[848] = VARC[848] - 1;
+				widget(654, 61).setText(str(VARC[848]));
+			}
+			break;
+		case 42860598:
+			if (VARC[849] > 0) {
+				VARC[849] = VARC[849] - 1;
+				widget(654, 53).setText(str(VARC[849]));
+			}
+			break;
+		case 42860590:
+			if (VARC[850] > 0) {
+				VARC[850] = VARC[850] - 1;
+				widget(654, 45).setText(str(VARC[850]));
+			}
+			break;
+		case 42860615:
+			if (VARC[851] > 0) {
+				VARC[851] = VARC[851] - 1;
+				widget(654, 70).setText(str(VARC[851]));
+			}
+			break;
+	}
+	script_2517();
+	return;
+}

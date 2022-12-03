@@ -1,0 +1,9 @@
+void script_1444() {
+	script_1447(0);
+	script_1665(widget(767, 41), widget(767, 42), widget(767, 43), widget(767, 44));
+	script_2957(widget(767, 52));
+	widget(767, 13).setScriptCallOnGlobalConfigChange(1445, widget(767, 41), widget(767, 42), widget(767, 43), widget(767, 44), 192, 1038, 1324, "IIIIY");
+	widget(767, 13).setScriptCallOnConfigChange(1655, 638, "Y");
+	script_1656();
+	return;
+}

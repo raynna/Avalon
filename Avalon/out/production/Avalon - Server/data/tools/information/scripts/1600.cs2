@@ -1,0 +1,14 @@
+void script_1600() {
+	int int0;
+	int int1;
+	int0 = 0;
+	int1 = 0;
+	if (script_1891() == 1) {
+		widget(1109, 20).setIsHidden(false);
+		int0 = widget(1109, 18).getY();
+		widget(1109, 18).setPosition(134, int0, 0, 0);
+		return;
+	}
+	script_1632();
+	return;
+}

@@ -1,0 +1,90 @@
+void script_2782() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	string str0;
+	if (length(STRING[321]) <= 0) {
+		widget(667, 52).setIsHidden(true);
+		widget(670, 1).setIsHidden(true);
+		widget(763, 3).setIsHidden(true);
+		return;
+	}
+	widget(667, 54).clearChildren();
+	int0 = getTextWidth(STRING[321], 496);
+	int1 = getMaxLineWidth(STRING[322], 2147483647, 494);
+	int2 = getMaxLineWidth(STRING[323], 2147483647, 494);
+	int3 = getMaxLineWidth(STRING[324], 2147483647, 494);
+	int4 = 0;
+	int5 = 0;
+	str0 = "Superior stats are shown in " + "<col=ffffff>" + "white" + "</col>" + ".";
+	if (length(STRING[325]) > 0) {
+		int4 = getMaxLineWidth(STRING[325], 2147483647, 494);
+		int5 = getTextWidth(str0, 494);
+	}
+	int6 = getLineCount(STRING[324], 2147483647, 494) * 10 + 3;
+	int7 = 5 + int2 + 5 + int3;
+	if (int4 > 0) {
+		int7 = int7 + 5 + int4;
+		int7 = max(int7, int5 + 10);
+	}
+	int7 = max(int7, int1);
+	int8 = max(max(int7, int0), widget(667, 65).getWidth());
+	int9 = 0;
+	if (int8 > int7) {
+		int9 = (int8 - int7) / 2;
+	}
+	ACTIVE.createChild(widget(667, 54), 4, widget(667, 54).nextChild());
+	ACTIVE.setPosition(int9 + 10, 25, 0, 0);
+	ACTIVE.setSize(ACTIVE.getX(), int6, 1, 0);
+	ACTIVE.setFont(494);
+	ACTIVE.setTextAntiMacro(true);
+	ACTIVE.setRGB(0xFF981F);
+	ACTIVE.setText(STRING[322]);
+	ACTIVE.createChild(widget(667, 54), 4, widget(667, 54).nextChild());
+	ACTIVE.setPosition(int9 + 15, 25, 0, 0);
+	ACTIVE.setSize(ACTIVE.getX(), int6, 1, 0);
+	ACTIVE.setFont(494);
+	ACTIVE.setTextAntiMacro(true);
+	ACTIVE.setRGB(0xFF981F);
+	ACTIVE.setText(STRING[323]);
+	ACTIVE.createChild(widget(667, 54), 4, widget(667, 54).nextChild());
+	ACTIVE.setPosition(int9 + 15 + int2 + 5, 25, 0, 0);
+	ACTIVE.setSize(int3, int6, 0, 0);
+	ACTIVE.setFont(494);
+	ACTIVE.setTextAntiMacro(true);
+	ACTIVE.setRGB(0xFF981F);
+	ACTIVE.setTextAlignment(1, 0, 0);
+	ACTIVE.setText(STRING[324]);
+	if (int4 > 0) {
+		ACTIVE.createChild(widget(667, 54), 4, widget(667, 54).nextChild());
+		ACTIVE.setPosition(int9 + 15 + int2 + 5 + int3 + 5, 25, 0, 0);
+		ACTIVE.setSize(int4, int6, 0, 0);
+		ACTIVE.setFont(494);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setRGB(0xFF981F);
+		ACTIVE.setTextAlignment(1, 0, 0);
+		ACTIVE.setText(STRING[325]);
+		ACTIVE.createChild(widget(667, 54), 4, widget(667, 54).nextChild());
+		ACTIVE.setPosition(0, 25 + int6, 1, 0);
+		ACTIVE.setSize(int5, 12, 0, 0);
+		ACTIVE.setTextAlignment(1, 1, 0);
+		ACTIVE.setFont(494);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setRGB(0xFF981F);
+		ACTIVE.setText(str0);
+		int6 = int6 + ACTIVE.getHeight();
+	}
+	widget(667, 54).setSize(int8 + 20, int6 + 60, 0, 0);
+	widget(667, 64).setText(STRING[321]);
+	widget(667, 52).setIsHidden(false);
+	widget(670, 1).setIsHidden(false);
+	widget(763, 3).setIsHidden(false);
+	return;
+}

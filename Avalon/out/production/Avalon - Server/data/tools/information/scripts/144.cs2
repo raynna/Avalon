@@ -1,0 +1,19 @@
+void script_144(Widget widget0, int arg1, int arg2, int arg3) {
+	int int4;
+	int4 = 0;
+	if (ACTIVE.setChild(widget0, arg1)) {
+		if (getClientCycle() >= arg3) {
+			ACTIVE.deleteChild();
+			return;
+		}
+		if (getClientCycle() % 40 < 20) {
+			int4 = getClientCycle() - arg2;
+			int4 = int4 * 255;
+			int4 = int4 / (arg3 - arg2);
+			ACTIVE.setTrans(int4);
+		} else {
+			ACTIVE.setTrans(255);
+		}
+	}
+	return;
+}

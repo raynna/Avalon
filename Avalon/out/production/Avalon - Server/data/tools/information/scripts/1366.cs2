@@ -1,0 +1,10 @@
+void script_1366() {
+	if (VARP[380] == 25) {
+		widget(57, 0).setText("Time until next game starts: 0");
+	} else if (VARP[380] > 0) {
+		widget(57, 0).setText("Time until next game starts: " + str(VARP[380]));
+	} else {
+		widget(57, 0).setText("Waiting for players to join the other team.");
+	}
+	return;
+}

@@ -1,0 +1,22 @@
+void script_1972(int arg0, Widget widget1, int arg2) {
+	if (arg2 != 1) {
+		return;
+	}
+	playSoundEffect(4911, 1, 0);
+	switch (arg0) {
+		case 0:
+			VARC[618] = (VARC[618] + 1) % 26;
+			break;
+		case 1:
+			VARC[619] = (VARC[619] + 1) % 26;
+			break;
+		case 2:
+			VARC[620] = (VARC[620] + 1) % 26;
+			break;
+		case 3:
+			VARC[621] = (VARC[621] + 1) % 26;
+			break;
+	}
+	script_1971(arg0, widget1);
+	return;
+}

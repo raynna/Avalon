@@ -1,0 +1,8 @@
+void script_1730(Widget widget0, int arg1) {
+	if ((arg1 == -1 && ACTIVE.setChild(widget0) || ACTIVE.setChild(widget0, arg1)) && VARC[198] != 1) {
+		ACTIVE.setHidden(false);
+		VARC[198] = 1;
+		ACTIVE.setScriptCallOnGameloop(2196, widget0, arg1, ACTIVE.getText(), "Iis");
+	}
+	return;
+}

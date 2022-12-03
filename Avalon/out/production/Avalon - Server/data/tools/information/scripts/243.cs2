@@ -1,0 +1,165 @@
+void script_243(int arg0, int arg1) {
+	Widget widget2;
+	Widget widget3;
+	Widget widget4;
+	int int5;
+	widget2 = null;
+	widget3 = null;
+	widget4 = null;
+	int5 = 1;
+	switch (arg0) {
+		case 38928641:
+			widget2 = widget(594, 253);
+			widget3 = widget(594, 254);
+			widget4 = widget(594, 255);
+			break;
+		case 38928642:
+			widget2 = widget(594, 284);
+			widget3 = widget(594, 285);
+			widget4 = widget(594, 286);
+			break;
+		case 38928643:
+			widget2 = widget(594, 260);
+			widget3 = widget(594, 261);
+			widget4 = widget(594, 262);
+			break;
+		case 38928648:
+			widget2 = widget(594, 280);
+			widget3 = widget(594, 281);
+			widget4 = widget(594, 282);
+			break;
+		case 38928649:
+			widget2 = widget(594, 276);
+			widget3 = widget(594, 277);
+			widget4 = widget(594, 278);
+			break;
+		case 38928650:
+			widget2 = widget(594, 267);
+			widget3 = widget(594, 268);
+			widget4 = widget(594, 269);
+			break;
+		case 38928655:
+			widget2 = widget(594, 272);
+			widget3 = widget(594, 273);
+			widget4 = widget(594, 274);
+			break;
+		case 38928672:
+			widget2 = widget(594, 237);
+			widget3 = widget(594, 238);
+			widget4 = widget(594, 239);
+			break;
+		case 38928673:
+			widget2 = widget(594, 295);
+			widget3 = widget(594, 296);
+			widget4 = widget(594, 297);
+			break;
+		case 38928674:
+			widget2 = widget(594, 291);
+			widget3 = widget(594, 292);
+			widget4 = widget(594, 293);
+			break;
+		case 38928683:
+			widget2 = widget(594, 241);
+			widget3 = widget(594, 242);
+			widget4 = widget(594, 243);
+			break;
+		case 38928684:
+			widget2 = widget(594, 245);
+			widget3 = widget(594, 246);
+			widget4 = widget(594, 247);
+			break;
+		case 38928690:
+			widget2 = widget(594, 249);
+			widget3 = widget(594, 250);
+			widget4 = widget(594, 251);
+			break;
+		case 38928685:
+			widget2 = widget(594, 302);
+			widget3 = widget(594, 303);
+			widget4 = widget(594, 304);
+			break;
+		case 38928386:
+			widget2 = widget(594, 11);
+			widget3 = widget(594, 12);
+			widget4 = widget(594, 13);
+			int5 = 0;
+			break;
+		case 38928460:
+			widget2 = widget(594, 77);
+			widget3 = widget(594, 78);
+			widget4 = widget(594, 79);
+			int5 = 0;
+			break;
+		case 38928387:
+			widget2 = widget(594, 4);
+			widget3 = widget(594, 5);
+			widget4 = widget(594, 6);
+			int5 = 0;
+			break;
+		case 38928438:
+			widget2 = widget(594, 55);
+			widget3 = widget(594, 56);
+			widget4 = widget(594, 57);
+			int5 = 0;
+			break;
+		case 38928509:
+			widget2 = widget(594, 126);
+			widget3 = widget(594, 127);
+			widget4 = widget(594, 128);
+			int5 = 0;
+			break;
+		case 38928514:
+			widget2 = widget(594, 131);
+			widget3 = widget(594, 132);
+			widget4 = widget(594, 133);
+			int5 = 0;
+			break;
+		default:
+			script_675();
+			break;
+	}
+	if (arg1 == 0) {
+		if (int5 == 1) {
+			if (widget2 != null) {
+				widget2.setSprite(1750);
+			}
+			if (widget3 != null) {
+				widget3.setSprite(1751);
+			}
+			if (widget4 != null) {
+				widget4.setSprite(1752);
+			}
+		} else {
+			if (widget2 != null) {
+				widget2.setSprite(1756);
+			}
+			if (widget3 != null) {
+				widget3.setSprite(1757);
+			}
+			if (widget4 != null) {
+				widget4.setSprite(1758);
+			}
+		}
+	} else if (int5 == 1) {
+		if (widget2 != null) {
+			widget2.setSprite(1753);
+		}
+		if (widget3 != null) {
+			widget3.setSprite(1754);
+		}
+		if (widget4 != null) {
+			widget4.setSprite(1755);
+		}
+	} else {
+		if (widget2 != null) {
+			widget2.setSprite(1759);
+		}
+		if (widget3 != null) {
+			widget3.setSprite(1760);
+		}
+		if (widget4 != null) {
+			widget4.setSprite(1761);
+		}
+	}
+	return;
+}

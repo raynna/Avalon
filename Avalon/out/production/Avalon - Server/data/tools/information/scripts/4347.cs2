@@ -1,0 +1,17 @@
+void script_4347() {
+	DataMap datamap0;
+	datamap0 = null;
+	if (VARP[2136] > 0) {
+		datamap0 = datamap('i', 'g', (DataMap)3703, VARP[2136]);
+		if (datamap0 != null) {
+			widget(1097, 219).setIsHidden(true);
+			widget(1097, 224).setScrollPos(0, 0);
+			script_4499(datamap0, 1, "Select a keyword", datamapSize(datamap0), 7, widget(1097, 213), widget(1097, 223), widget(1097, 225), widget(1097, 224), widget(1097, 230));
+		}
+	} else {
+		widget(1097, 219).setIsHidden(false);
+		script_4501(widget(1097, 213), "Select a keyword");
+		script_4501(widget(1097, 199), "Select a category");
+	}
+	return;
+}

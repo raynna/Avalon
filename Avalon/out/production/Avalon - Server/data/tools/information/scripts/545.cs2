@@ -1,0 +1,5 @@
+void script_545(Widget widget0, Skill skill1, Widget widget2) {
+	VARC[80] = getSkillActualLvl(skill1);
+	script_547(widget0, skill1, widget2);
+	return;
+}

@@ -1,0 +1,7 @@
+void script_5090(Widget widget0) {
+	script_4534(widget(1112, 2));
+	script_5092();
+	widget0.setScriptCallOnConfigChange(5091, 1736, 1735, "Y");
+	widget0.setScriptCallOnGlobalConfigChange(5091, 786, 788, 787, "Y");
+	return;
+}

@@ -1,0 +1,5 @@
+void script_5333(Widget widget0, Widget widget1, int arg2, int arg3, Sprite sprite4, string string5) {
+	widget0.setSprite(sprite4);
+	script_5335(widget0, -1, widget1, string5, arg2, arg3, 1);
+	return;
+}

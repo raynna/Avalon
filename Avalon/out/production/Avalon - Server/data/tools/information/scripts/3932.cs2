@@ -1,0 +1,37 @@
+void script_3932(int arg0, boolean boolean1, Widget widget2, int arg3, string string4, int arg5, string arg6) {
+	widget2.clearChildren();
+	widget2.setSize(arg5, 27, 0, 0);
+	ACTIVE.createChild(widget2, 5, widget2.nextChild());
+	ACTIVE.setSize(6, 26, 1, 0);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.createChild(widget2, 5, widget2.nextChild());
+	ACTIVE.setSize(26, 26, 0, 0);
+	ACTIVE.setPosition(0, 0, 0, 1);
+	ACTIVE.createChild(widget2, 5, widget2.nextChild());
+	ACTIVE.setSize(26, 26, 0, 0);
+	ACTIVE.setPosition(3, 0, 2, 1);
+	ACTIVE.createChild(widget2, 4, widget2.nextChild());
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setPosition(0, -3, 1, 1);
+	ACTIVE.setFont(3793);
+	ACTIVE.setRGB(0xEBE0BC);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setText(string4);
+	script_3929(widget2, arg3, 0);
+	if (arg3 == -1) {
+		widget2.setScriptCallOnMouseExit(3930, widget2, arg3, false, "Ii1");
+		widget2.setScriptCallOnMouseEntered(3930, widget2, arg3, true, "Ii1");
+	} else {
+		widget2.setScriptCallOnMouseExit(3928, widget2, arg3, false, "Ii1");
+		widget2.setScriptCallOnMouseEntered(3928, widget2, arg3, true, "Ii1");
+	}
+	if (arg0 == 0) {
+		widget2.setScriptCallOnMousePressed(3388, arg3, arg0, boolean1, "ii1");
+	} else {
+		widget2.setContextMenuOption(1, string4);
+		widget2.setScriptCallOnClickContextMenu(3388, arg3, arg0, boolean1, "ii1");
+	}
+	return;
+}

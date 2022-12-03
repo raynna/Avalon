@@ -1,0 +1,67 @@
+Location script_2865(Location location0, int arg1) {
+	Location location2;
+	location2 = location0;
+	switch (arg1) {
+		case 0:
+			location2 = moveCoord(location0, 0, 0, 4);
+			break;
+		case 1:
+			location2 = moveCoord(location0, 1, 0, 4);
+			break;
+		case 2:
+			location2 = moveCoord(location0, 2, 0, 3);
+			break;
+		case 3:
+			location2 = moveCoord(location0, 3, 0, 2);
+			break;
+		case 4:
+			location2 = moveCoord(location0, 4, 0, 1);
+			break;
+		case 5:
+			location2 = moveCoord(location0, 4, 0, 0);
+			break;
+		case 6:
+			location2 = moveCoord(location0, 4, 0, -1);
+			break;
+		case 7:
+			location2 = moveCoord(location0, 3, 0, -2);
+			break;
+		case 8:
+			location2 = moveCoord(location0, 2, 0, -3);
+			break;
+		case 9:
+			location2 = moveCoord(location0, 1, 0, -4);
+			break;
+		case 10:
+			location2 = moveCoord(location0, 0, 0, -4);
+			break;
+		case 11:
+			location2 = moveCoord(location0, -1, 0, -4);
+			break;
+		case 12:
+			location2 = moveCoord(location0, -2, 0, -3);
+			break;
+		case 13:
+			location2 = moveCoord(location0, -3, 0, -2);
+			break;
+		case 14:
+			location2 = moveCoord(location0, -4, 0, -1);
+			break;
+		case 15:
+			location2 = moveCoord(location0, -4, 0, 0);
+			break;
+		case 16:
+			location2 = moveCoord(location0, -4, 0, 1);
+			break;
+		case 17:
+			location2 = moveCoord(location0, -3, 0, 2);
+			break;
+		case 18:
+			location2 = moveCoord(location0, -2, 0, 3);
+			break;
+		case 19:
+			location2 = moveCoord(location0, -1, 0, 4);
+			break;
+	}
+	return location2;
+}

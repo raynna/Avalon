@@ -1,0 +1,6 @@
+void script_3429(Widget widget0, Widget widget1, Widget widget2, Sprite sprite3, Sprite sprite4, Sprite sprite5) {
+	widget0.setSprite(sprite3);
+	widget1.setSprite(sprite4);
+	widget2.setSprite(sprite5);
+	return;
+}

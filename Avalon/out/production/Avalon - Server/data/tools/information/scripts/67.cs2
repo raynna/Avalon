@@ -1,0 +1,4 @@
+void script_67(Widget widget0, Model model1) {
+	widget0.setModel(model1);
+	return;
+}

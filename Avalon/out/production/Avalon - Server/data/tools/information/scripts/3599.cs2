@@ -1,0 +1,4 @@
+void script_3599(int arg0, int arg1, int arg2) {
+	script_3626((DataMap)3174, (DataMap)3175, (DataMap)3176, script_3623(VARPBIT[7392]), arg0, arg1, arg2);
+	return;
+}

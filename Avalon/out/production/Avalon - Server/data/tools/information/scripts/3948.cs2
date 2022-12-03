@@ -1,0 +1,4 @@
+void script_3948(int arg0) {
+	widget(890, 52).setPosition(widget(890, 52).getX(), arg0, 1, 0);
+	return;
+}

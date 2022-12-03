@@ -1,0 +1,19 @@
+int script_669(int arg0, int arg1, int arg2) {
+	int int3;
+	int int4;
+	int3 = 0;
+	int4 = 0;
+	if (arg1 == 0) {
+		return 0;
+	}
+	if (arg0 == 0 || arg2 == 0) {
+		return 0;
+	}
+	if (arg0 / arg1 >= 2147483647 / arg2) {
+		return 2147483647;
+	}
+	if (arg0 % arg1 * (arg2 % arg1) % arg1 > arg1 / 2) {
+		return arg0 * arg1 / arg2 + 1;
+	}
+	return arg0 * arg1 / arg2;
+}

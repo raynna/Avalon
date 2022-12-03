@@ -1,0 +1,89 @@
+void script_2642() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	Item item4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	VARC[842] = 1;
+	item4 = null;
+	script_2645(widget(860, 24));
+	widget(860, 23).clearChildren();
+	widget(860, 19).setText("A list of items you can trade with Mal for investment credit." + "<br>" + "Items highlighted with a green rectangle are present in your bank or inventory.");
+	int1 = (widget(860, 23).getWidth() - 36 * 10) / 10;
+	int2 = (widget(860, 23).getHeight() - 128) / 3;
+	int5 = 3;
+	int6 = 3;
+	int7 = 0;
+	while (int3 == 0 && int0 < 900) {
+		item4 = datamap('i', 'o', (DataMap)1939, int0);
+		if (item4 != 11760 && item4 != null) {
+			ACTIVE.createChild(widget(860, 23), 5, int0);
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition(int5 + (36 + int1) * (int0 % 10), int6 + int0 / 10 * (32 + int2), 0, 0);
+			ACTIVE.setItem(item4, -1);
+			ACTIVE.setOptionBase("<col=ff981f>" + getItemName(item4));
+			ACTIVE.setContextMenuOption(1, "Examine");
+			ACTIVE.setShadowColor(0x333333);
+			ACTIVE.setOutlineThickness(1);
+			int7 = ACTIVE.getY();
+			int0 = int0 + 1;
+		} else {
+			int3 = 1;
+		}
+	}
+	int8 = 0;
+	int9 = 9999;
+	int10 = 0;
+	int11 = 0;
+	while (int8 <= getItemContainerLength(93)) {
+		if (getItemIdInSlot(93, int8) != null) {
+			int9 = datamap('o', 'i', (DataMap)1941, getItemIdInSlot(93, int8));
+			if (int9 != 9999 && int9 < 900 && ACTIVE.setChild(widget(860, 23), int9)) {
+				int10 = ACTIVE.getX();
+				int11 = ACTIVE.getY();
+				ACTIVE.setOutlineThickness(2);
+				ACTIVE.createChild(widget(860, 23), 3, int0);
+				ACTIVE.setSize(36, 32, 0, 0);
+				ACTIVE.setPosition(int10 - 1, int11 - 1, 0, 0);
+				ACTIVE.setRGB(0x66FF66);
+				ACTIVE.setTrans(150);
+				int0 = int0 + 1;
+			}
+		}
+		int8 = int8 + 1;
+	}
+	int8 = 0;
+	int9 = 9999;
+	while (int8 <= getItemContainerLength(95)) {
+		if (getItemIdInSlot(95, int8) != null) {
+			int9 = datamap('o', 'i', (DataMap)1941, getItemIdInSlot(95, int8));
+			if (int9 != 9999 && int9 < 900 && ACTIVE.setChild(widget(860, 23), int9)) {
+				int10 = ACTIVE.getX();
+				int11 = ACTIVE.getY();
+				ACTIVE.setOutlineThickness(2);
+				ACTIVE.createChild(widget(860, 23), 3, int0);
+				ACTIVE.setSize(36, 32, 0, 0);
+				ACTIVE.setPosition(int10 - 1, int11 - 1, 0, 0);
+				ACTIVE.setRGB(0x66FF66);
+				ACTIVE.setTrans(150);
+				int0 = int0 + 1;
+			}
+		}
+		int8 = int8 + 1;
+	}
+	widget(860, 23).setScrollMax(widget(860, 23).getWidth(), int7 + 32);
+	widget(860, 23).setScrollPos(0, 0);
+	script_31(widget(860, 22), widget(860, 23), 792, 789, 790, 791, 773, 788);
+	return;
+}

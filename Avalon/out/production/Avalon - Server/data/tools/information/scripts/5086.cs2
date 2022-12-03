@@ -1,0 +1,25 @@
+void script_5086(Widget widget0, int arg1, int arg2) {
+	int int3;
+	if (arg1 == VARC[160]) {
+		arg2 = 255;
+	}
+	int3 = arg1 * 10;
+	if (ACTIVE.setChild(widget0, int3)) {
+		if (arg2 == 255) {
+			ACTIVE.setScriptCallOnGameloop(-1, "");
+			if (_ACTIVE.setChild(widget0, int3 + 4)) {
+				_ACTIVE.setTrans(255);
+			}
+			if (_ACTIVE.setChild(widget0, int3 + 6)) {
+				_ACTIVE.setTrans(255);
+			}
+			if (_ACTIVE.setChild(widget0, int3 + 8)) {
+				_ACTIVE.setTrans(255);
+			}
+		} else {
+			ACTIVE.setScriptCallOnGameloop(5087, CTX_WIDGET, CTX_WIDGET_CHILD, arg2, "Iii");
+			script_5088(widget0, arg2);
+		}
+	}
+	return;
+}

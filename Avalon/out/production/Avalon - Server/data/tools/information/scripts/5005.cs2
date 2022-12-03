@@ -1,0 +1,71 @@
+void script_5005() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int0 = VARPBIT[9550];
+	int1 = int0;
+	int2 = 1;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	int6 = 100;
+	if (citadelConfigsInitialized()) {
+		int3 = CLANBIT[2580];
+		int4 = 0;
+		while (int4 == 0 && int6 > 0) {
+			int6 = int6 - 1;
+			switch (int0) {
+				case 17:
+					int1 = 18;
+					int4 = 1;
+					break;
+				case 18:
+					int1 = 19;
+					int4 = 1;
+					break;
+				case 19:
+					int1 = 1;
+					int4 = 1;
+					break;
+				case 1:
+					int1 = 2;
+					break;
+				case 2:
+					int1 = 3;
+					break;
+				case 3:
+					int1 = 4;
+					break;
+				case 4:
+					int1 = 7;
+					break;
+				case 7:
+					int1 = 5;
+					break;
+				case 5:
+					int1 = 6;
+					break;
+				case 6:
+					int1 = 17;
+					int4 = 1;
+					break;
+			}
+			if (int4 == 0 && script_4979(int1) <= CLANBIT[2580]) {
+				int4 = 1;
+			}
+			int0 = int1;
+		}
+		if (int6 <= 0) {
+			return;
+		}
+		if (int4 == 1) {
+			VARPBIT[9550] = int1;
+			script_4988(VARPBIT[9550]);
+		}
+	}
+	return;
+}

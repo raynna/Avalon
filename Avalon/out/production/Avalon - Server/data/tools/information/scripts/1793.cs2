@@ -1,0 +1,19 @@
+void script_1793(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5) {
+	int int6;
+	script_1795(widget4, widget5);
+	if (VARPBIT[5279] == 1) {
+		widget0.setText("Free-for-all: Dangerous");
+		widget1.setText("This is a " + "<col=ff0000>" + "DANGEROUS" + "</col>" + " arena. When players fight each other in here, they drop " + "<col=ff0000>" + "ALL" + "</col>" + " their items on death. Gravestones do not appear." + "<br>" + "<br>" + "A non-combat zone exists at the southern end of the arena. This portal leads into that zone." + "<br>" + "<br>" + "You cannot teleport out of this arena unless you're standing in the non-combat zone.");
+		widget4.setScriptCallOnConfigChange(1794, widget4, widget5, 1147, 1046, "IIY");
+	} else {
+		widget0.setText("Free-for-all: Safe");
+		widget1.setText("This is a SAFE arena. Although players may fight each other in here, items are not dropped on death." + "<br>" + "<br>" + "You can teleport out of the arena at any time." + "<br>" + "<br>" + "A non-combat zone exists at the southern end of the arena. This portal leads into that zone.");
+		widget4.setScriptCallOnConfigChange(1794, widget4, widget5, 1147, 1045, "IIY");
+	}
+	int6 = getMaxLineWidth(widget0.getText(), widget0.getWidth(), 496);
+	int6 = (widget0.getWidth() - int6) / 2;
+	int6 = int6 - (widget2.getWidth() + 10);
+	widget2.setPosition(int6, widget2.getY(), 0, 0);
+	widget3.setPosition(int6, widget3.getY(), 2, 0);
+	return;
+}

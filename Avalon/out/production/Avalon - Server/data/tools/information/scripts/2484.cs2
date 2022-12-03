@@ -1,0 +1,46 @@
+void script_2484() {
+	int int0;
+	int0 = 1;
+	VARC[838] = VARPBIT[6347];
+	while (int0 <= 4 && datamap('i', 'I', (DataMap)2383, int0) != widget(655, 20)) {
+		if (int0 <= VARC[838]) {
+			datamap('i', 'I', (DataMap)2384, int0).setRGB(0xE1981F);
+			datamap('i', 'I', (DataMap)2383, int0).setContextMenuOption(1, "Select");
+			switch (int0) {
+				case 1:
+					datamap('i', 'I', (DataMap)2384, int0).setText("Conflict");
+					break;
+				case 2:
+					datamap('i', 'I', (DataMap)2384, int0).setText("Siege");
+					break;
+				case 3:
+					datamap('i', 'I', (DataMap)2384, int0).setText("Hoard");
+					break;
+				case 4:
+					datamap('i', 'I', (DataMap)2384, int0).setText("Rescue");
+					break;
+			}
+		} else {
+			datamap('i', 'I', (DataMap)2384, int0).setRGB(0x996600);
+			datamap('i', 'I', (DataMap)2383, int0).setContextMenuOption(1, "Select");
+			switch (int0) {
+				case 2:
+					datamap('i', 'I', (DataMap)2384, int0).setText("Siege" + "<br>" + "- Locked");
+					break;
+				case 3:
+					datamap('i', 'I', (DataMap)2384, int0).setText("Hoard" + "<br>" + "- Locked");
+					break;
+				case 4:
+					datamap('i', 'I', (DataMap)2384, int0).setText("Rescue" + "<br>" + "- Locked");
+					break;
+			}
+		}
+		int0 = int0 + 1;
+	}
+	widget(655, 42).setRGB(0x996600);
+	widget(655, 31).setRGB(0x996600);
+	widget(655, 38).setRGB(0x996600);
+	widget(655, 26).setRGB(0x996600);
+	script_2486();
+	return;
+}

@@ -1,0 +1,4 @@
+void script_1171() {
+	widget(601, 0).setSize(100, 90, 0, 0);
+	return;
+}

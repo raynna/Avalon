@@ -1,0 +1,45 @@
+void script_2475(Widget widget0, Widget widget1, int arg2, int arg3) {
+	DataMap datamap4;
+	int int5;
+	int int6;
+	datamap4 = (DataMap)1093;
+	if (IsFemale()) {
+		datamap4 = (DataMap)3872;
+	}
+	int5 = 0;
+	int6 = 0;
+	while (int5 <= datamapSize(datamap4)) {
+		ACTIVE.createChild(widget0, 4, int5);
+		if (int5 == 0 || int5 >= arg2 && int5 <= arg3) {
+			if (int5 == 0) {
+				ACTIVE.setText("No Prefix");
+			} else {
+				ACTIVE.setText(datamap('i', 's', datamap4, int5));
+			}
+			ACTIVE.setPosition(0, int6, 0, 0);
+			ACTIVE.setSize(165, 17, 0, 0);
+			ACTIVE.setTextAntiMacro(false);
+			ACTIVE.setFont(495);
+			ACTIVE.setTextAlignment(0, 1, 0);
+			ACTIVE.setContextMenuOption(1, "Select");
+			ACTIVE.setScriptCallOnClickContextMenu(2143, CTX_WIDGET, CTX_WIDGET_CHILD, "Ii");
+			if (script_2476(int5) == 1) {
+				ACTIVE.setRGB(0x11FF00);
+			} else {
+				ACTIVE.setRGB(0xFF1100);
+			}
+			int6 = int6 + 19;
+		} else {
+			ACTIVE.setHidden(true);
+		}
+		int5 = 1 + int5;
+	}
+	if (int6 > widget0.getHeight()) {
+		widget0.setScrollMax(0, 25 + int6);
+		widget1.setIsHidden(false);
+		script_31(widget1, widget0, 792, 789, 790, 791, 773, 788);
+	} else {
+		widget1.setIsHidden(true);
+	}
+	return;
+}

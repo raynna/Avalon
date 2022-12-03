@@ -1,0 +1,59 @@
+void script_5195() {
+	widget(1122, 67).setIsHidden(true);
+	widget(1122, 168).setIsHidden(true);
+	widget(1122, 169).setIsHidden(true);
+	widget(1122, 170).setIsHidden(true);
+	widget(1122, 69).setRGB(0xB59D69);
+	widget(1122, 155).setRGB(0x78664B);
+	widget(1122, 159).setRGB(0x78664B);
+	widget(1122, 163).setRGB(0x78664B);
+	widget(1122, 167).setRGB(0x78664B);
+	widget(1122, 31).setSprite(7653);
+	widget(1122, 153).setSprite(7652);
+	widget(1122, 157).setSprite(7652);
+	widget(1122, 161).setSprite(7652);
+	widget(1122, 165).setSprite(7652);
+	widget(1122, 32).setIsHidden(true);
+	widget(1122, 154).setIsHidden(true);
+	widget(1122, 158).setIsHidden(true);
+	widget(1122, 162).setIsHidden(true);
+	widget(1122, 166).setIsHidden(true);
+	if (VARC[1595] >= 1) {
+		widget(1122, 67).setIsHidden(false);
+		widget(1122, 153).setSprite(7653);
+		widget(1122, 155).setRGB(0xB59D69);
+	}
+	if (VARC[1595] >= 2) {
+		widget(1122, 168).setIsHidden(false);
+		widget(1122, 157).setSprite(7653);
+		widget(1122, 159).setRGB(0xB59D69);
+	}
+	if (VARC[1595] >= 3) {
+		widget(1122, 169).setIsHidden(false);
+		widget(1122, 161).setSprite(7653);
+		widget(1122, 163).setRGB(0xB59D69);
+	}
+	if (VARC[1595] >= 4) {
+		widget(1122, 170).setIsHidden(false);
+		widget(1122, 165).setSprite(7653);
+		widget(1122, 167).setRGB(0xB59D69);
+	}
+	switch (VARC[1595]) {
+		case 0:
+			widget(1122, 32).setIsHidden(false);
+			break;
+		case 1:
+			widget(1122, 154).setIsHidden(false);
+			break;
+		case 2:
+			widget(1122, 158).setIsHidden(false);
+			break;
+		case 3:
+			widget(1122, 162).setIsHidden(false);
+			break;
+		case 4:
+			widget(1122, 166).setIsHidden(false);
+			break;
+	}
+	return;
+}

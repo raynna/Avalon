@@ -1,0 +1,31 @@
+void script_2732(Widget widget0, int arg1, int arg2, int arg3) {
+	Sprite sprite4;
+	Sprite sprite5;
+	widget0.clearChildren();
+	ACTIVE.createChild(widget0, 3, 0);
+	ACTIVE.setSize(2, 2, 1, 1);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setFilled(true);
+	if (arg3 == 1) {
+		ACTIVE.setRGB(datamap('i', 'i', (DataMap)3724, arg1));
+	} else if (arg3 == 2) {
+		ACTIVE.setRGB(datamap('i', 'i', (DataMap)3723, arg1));
+	} else if (arg3 == 3) {
+		ACTIVE.setRGB(datamap('i', 'i', (DataMap)3726, arg1));
+	} else {
+		ACTIVE.setRGB(datamap('i', 'i', (DataMap)3056, arg1));
+	}
+	ACTIVE.createChild(widget0, 5, 1);
+	ACTIVE.setSize(20, 20, 0, 0);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	sprite4 = 2289;
+	sprite5 = 2288;
+	if (arg2 == arg1) {
+		ACTIVE.setSprite(sprite4);
+	} else {
+		ACTIVE.setSprite(sprite5);
+		widget0.setScriptCallOnMouseEntered(688, CTX_WIDGET, ACTIVE.getChildId(), sprite4, "Iid");
+		widget0.setScriptCallOnMouseExit(688, CTX_WIDGET, ACTIVE.getChildId(), sprite5, "Iid");
+	}
+	return;
+}

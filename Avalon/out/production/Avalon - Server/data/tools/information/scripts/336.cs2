@@ -1,0 +1,113 @@
+void script_336() {
+	int int0;
+	int int1;
+	int int2;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	if (VARC[1243] < getSkillXp(0)) {
+		int2 = getSkillXp(0) - VARC[1243];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1244] < getSkillXp(2)) {
+		int2 = getSkillXp(2) - VARC[1244];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1245] < getSkillXp(1)) {
+		int2 = getSkillXp(1) - VARC[1245];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1246] < getSkillXp(4)) {
+		int2 = getSkillXp(4) - VARC[1246];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1247] < getSkillXp(5)) {
+		int2 = getSkillXp(5) - VARC[1247];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1248] < getSkillXp(6)) {
+		int2 = getSkillXp(6) - VARC[1248];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1249] < getSkillXp(20)) {
+		int2 = getSkillXp(20) - VARC[1249];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1250] < getSkillXp(3)) {
+		int2 = getSkillXp(3) - VARC[1250];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1251] < getSkillXp(12)) {
+		int2 = getSkillXp(12) - VARC[1251];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1252] < getSkillXp(14)) {
+		int2 = getSkillXp(14) - VARC[1252];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1253] < getSkillXp(13)) {
+		int2 = getSkillXp(13) - VARC[1253];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1254] < getSkillXp(10)) {
+		int2 = getSkillXp(10) - VARC[1254];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1255] < getSkillXp(7)) {
+		int2 = getSkillXp(7) - VARC[1255];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1256] < getSkillXp(11)) {
+		int2 = getSkillXp(11) - VARC[1256];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1257] < getSkillXp(8)) {
+		int2 = getSkillXp(8) - VARC[1257];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1258] < getSkillXp(16)) {
+		int2 = getSkillXp(16) - VARC[1258];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1259] < getSkillXp(15)) {
+		int2 = getSkillXp(15) - VARC[1259];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1260] < getSkillXp(17)) {
+		int2 = getSkillXp(17) - VARC[1260];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1261] < getSkillXp(9)) {
+		int2 = getSkillXp(9) - VARC[1261];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1262] < getSkillXp(18)) {
+		int2 = getSkillXp(18) - VARC[1262];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1263] < getSkillXp(19)) {
+		int2 = getSkillXp(19) - VARC[1263];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1264] < getSkillXp(22)) {
+		int2 = getSkillXp(22) - VARC[1264];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1265] < getSkillXp(21)) {
+		int2 = getSkillXp(21) - VARC[1265];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1266] < getSkillXp(23)) {
+		int2 = getSkillXp(23) - VARC[1266];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (VARC[1267] < getSkillXp(24)) {
+		int2 = getSkillXp(24) - VARC[1267];
+		int0, int1 = script_335(int0, int1, int2, 0);
+	}
+	if (int0 == 0) {
+		return;
+	}
+	script_337(int0, int1, 0);
+	return;
+}

@@ -1,0 +1,34 @@
+void script_111() {
+	if (VARC[1413] == 0) {
+		return;
+	}
+	if (VARC[11] == 1) {
+		script_675();
+	}
+	if (getDisplayMode() >= 2) {
+		widget(746, 73).setIsHidden(false);
+	}
+	widget(752, 3).setIsHidden(false);
+	widget(752, 7).setIsHidden(true);
+	widget(752, 8).setIsHidden(true);
+	widget(752, 4).setText("Enter the player name whose channel you wish to join:");
+	VARC[5] = 10;
+	script_1564("");
+	widget(752, 3).setScriptCallOnMousePressed(-1, "");
+	script_2026();
+	widget(752, 5).setScriptCallOnKeyPress(112, KEY_TYPED, (char)KEY_PRESSED, "iz");
+	ACTIVE.createChild(widget(752, 3), 4, 0);
+	script_2752();
+	if (VARC[1027] == 1 && length(STRING[202]) > 0) {
+		ACTIVE.setText("Last name entered: " + STRING[202]);
+	} else {
+		STRING[202] = removeTags(cs2method5015());
+		VARC[1027] = 1;
+		ACTIVE.setText("Your name: " + STRING[202]);
+	}
+	ACTIVE.setContextMenuOption(1, "Use:");
+	ACTIVE.setOptionBase("<col=ff9040>" + removeTags(STRING[202]) + "</col>");
+	ACTIVE.setScriptCallOnClickContextMenu(2753, VARC[5], CTX_MENU_OPTION, CTX_WIDGET, CTX_WIDGET_CHILD, STRING[202], "iiIis");
+	script_1188();
+	return;
+}

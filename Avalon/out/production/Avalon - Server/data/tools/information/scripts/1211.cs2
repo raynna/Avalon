@@ -1,0 +1,5 @@
+void script_1211() {
+	widget(894, 5).setScriptCallOnGameloop(1213, "");
+	widget(894, 7).setIsHidden(false);
+	return;
+}

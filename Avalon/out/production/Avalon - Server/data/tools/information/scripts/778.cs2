@@ -1,0 +1,4 @@
+void script_778(Widget widget0) {
+	widget0.clearChildren();
+	return;
+}

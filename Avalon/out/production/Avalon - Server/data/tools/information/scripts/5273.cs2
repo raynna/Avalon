@@ -1,0 +1,8 @@
+void script_5273(int arg0, string string1) {
+	widget(1137, 7).setIsHidden(false);
+	widget(1137, 10).setText(string1);
+	if (ACTIVE.setChild(widget(1137, 7))) {
+		ACTIVE.setAttr(1103, arg0);
+	}
+	return;
+}

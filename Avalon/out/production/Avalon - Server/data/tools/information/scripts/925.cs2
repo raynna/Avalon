@@ -1,0 +1,15 @@
+int script_925(Item item0) {
+	if (script_929(item0) == 0) {
+		return 0;
+	}
+	if (script_930(item0) == 0) {
+		return 0;
+	}
+	if (script_933(item0) == 0) {
+		return 0;
+	}
+	if (script_1432() < itemAttribute(item0, 761)) {
+		return 0;
+	}
+	return 1;
+}
