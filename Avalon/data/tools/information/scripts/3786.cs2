@@ -1,4 +1,0 @@
-void script_3786(int arg0, int arg1) {
-	script_311("Stagnant water", arg0, arg1);
-	return;
-}

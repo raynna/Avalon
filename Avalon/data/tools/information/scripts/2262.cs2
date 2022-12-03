@@ -1,3 +1,0 @@
-int script_2262(Item item0) {
-	return getItemValue(item0) * 100 / itemAttribute(item0, 1046);
-}

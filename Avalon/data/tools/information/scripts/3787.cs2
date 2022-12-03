@@ -1,4 +1,0 @@
-void script_3787(int arg0, int arg1) {
-	script_311("Stonemason", arg0, arg1);
-	return;
-}

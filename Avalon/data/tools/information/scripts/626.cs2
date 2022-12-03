@@ -1,3 +1,0 @@
-Widget script_626(int arg0) {
-	return datamap('i', 'I', (DataMap)1074, arg0);
-}

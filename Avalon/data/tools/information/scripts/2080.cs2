@@ -1,4 +1,0 @@
-void script_2080() {
-	widget(836, 13).setText(str(VARC[644]));
-	return;
-}

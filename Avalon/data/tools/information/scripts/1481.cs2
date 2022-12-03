@@ -1,4 +1,0 @@
-void script_1481() {
-	msg("Please drag an item here to create a new tab.");
-	return;
-}

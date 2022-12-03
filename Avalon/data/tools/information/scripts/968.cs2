@@ -1,8 +1,0 @@
-void script_968(Widget widget0) {
-	if (script_970(widget0) == 1) {
-		widget0.setScriptCallOnGameloop(969, widget0, "I");
-	} else {
-		widget0.setScriptCallOnGameloop(-1, "");
-	}
-	return;
-}

@@ -1,4 +1,0 @@
-void script_2330(Widget widget0) {
-	widget0.setIsHidden(false);
-	return;
-}

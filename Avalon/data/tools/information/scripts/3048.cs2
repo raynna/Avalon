@@ -1,4 +1,0 @@
-void script_3048() {
-	script_3015("Add friend", "", 1, "", "");
-	return;
-}

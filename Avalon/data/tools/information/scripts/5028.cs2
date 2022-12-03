@@ -1,3 +1,0 @@
-Color script_5028(Color arg0) {
-	return arg0 / pow(2, 13);
-}

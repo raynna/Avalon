@@ -1,4 +1,0 @@
-void script_4402(Widget widget0) {
-	widget0.setRGB(getColorRelatedMethod4020(VARP[2095]));
-	return;
-}

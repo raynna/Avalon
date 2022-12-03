@@ -1,7 +1,0 @@
-void script_4290() {
-	if (cs2method3701()) {
-		script_4291();
-	}
-	script_4295();
-	return;
-}

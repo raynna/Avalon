@@ -1,6 +1,0 @@
-void script_710() {
-	if (VARC[41] == 5) {
-		script_84();
-	}
-	return;
-}

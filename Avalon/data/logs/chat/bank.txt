@@ -1,9 +1,0 @@
-[02 May 2019 at 04:06:46 CEST] - bank: na it works
-[02 May 2019 at 04:06:48 CEST] - bank: doesnt remove from this acc
-[02 May 2019 at 04:06:50 CEST] - bank: when i copy
-[02 May 2019 at 04:07:06 CEST] - bank: ye
-[02 May 2019 at 04:07:17 CEST] - bank: doesnt do it here
-[10 maj 2019 at 08:19:17 PDT] - bank: j
-[06 januari 2020 at 03:09:47 PST] - bank: test
-[06 januari 2020 at 03:16:54 PST] - bank: bitem 7458 1
-[17 februari 2020 at 01:38:24 PST] - bank: tyest

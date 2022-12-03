@@ -1,3 +1,0 @@
-int script_5027(Color arg0) {
-	return bitAnd(arg0 / pow(2, 8), 31);
-}

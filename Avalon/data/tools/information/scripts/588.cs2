@@ -1,6 +1,0 @@
-void script_588() {
-	VARC[82] = 0;
-	VARC[83] = 0;
-	script_621();
-	return;
-}

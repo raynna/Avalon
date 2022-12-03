@@ -1,4 +1,0 @@
-void script_3026(Widget widget0) {
-	widget0.setRGB(0xFFFFFF);
-	return;
-}

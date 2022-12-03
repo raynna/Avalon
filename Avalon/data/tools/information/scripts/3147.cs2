@@ -1,4 +1,0 @@
-void script_3147() {
-	widget(910, 6).setSprite(2655);
-	return;
-}

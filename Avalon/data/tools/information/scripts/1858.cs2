@@ -1,4 +1,0 @@
-void script_1858(int arg0) {
-	VARC[999] = arg0;
-	return;
-}

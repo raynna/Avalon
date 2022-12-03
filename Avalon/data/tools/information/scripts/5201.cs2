@@ -1,4 +1,0 @@
-void script_5201() {
-	script_5202(1);
-	return;
-}

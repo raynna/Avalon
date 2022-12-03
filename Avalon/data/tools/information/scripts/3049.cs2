@@ -1,4 +1,0 @@
-void script_3049() {
-	script_3015("Remove friend", "", 3, "", "");
-	return;
-}

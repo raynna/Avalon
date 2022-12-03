@@ -1,4 +1,0 @@
-void script_4682() {
-	cs2method5421("javadownload.ws", 1);
-	return;
-}

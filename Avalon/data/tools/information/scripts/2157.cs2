@@ -1,3 +1,0 @@
-int script_2157(int arg0, int arg1) {
-	return script_2158(arg0, 1, arg1);
-}

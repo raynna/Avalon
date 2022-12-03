@@ -1,4 +1,0 @@
-void script_1446(int arg0) {
-	script_1447(arg0);
-	return;
-}

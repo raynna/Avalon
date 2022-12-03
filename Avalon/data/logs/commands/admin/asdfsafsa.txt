@@ -1,6 +1,0 @@
-[12 juli 2018 at 03:35:06 CEST] - ::setlevel 2 90
-[12 juli 2018 at 06:34:58 CEST] - ::give black_dragon_head
-[12 juli 2018 at 06:35:02 CEST] - ::give kbd_head
-[12 juli 2018 at 06:35:05 CEST] - ::give kbds_head
-[12 juli 2018 at 06:35:10 CEST] - ::give kbd_head
-[12 juli 2018 at 06:35:37 CEST] - ::item 7980 1

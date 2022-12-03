@@ -1,4 +1,0 @@
-void script_1871(string string0) {
-	widget(906, 235).setText(string0);
-	return;
-}

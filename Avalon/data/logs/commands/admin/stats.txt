@@ -1,3 +1,0 @@
-[24 juli 2018 at 02:03:49 CEST] - ::heal 
-[24 juli 2018 at 02:04:02 CEST] - ::setlevel 2 99
-[24 juli 2018 at 02:04:54 CEST] - ::setlevel 4 90

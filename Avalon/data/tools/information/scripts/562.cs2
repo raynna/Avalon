@@ -1,6 +1,0 @@
-void script_562(Widget widget0) {
-	if (widget0.getSpriteId() == 5455) {
-		widget0.setSprite(5456);
-	}
-	return;
-}

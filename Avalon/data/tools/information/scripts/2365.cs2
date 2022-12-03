@@ -1,4 +1,0 @@
-void script_2365(Widget widget0) {
-	widget0.setAttr(1224, 0);
-	return;
-}

@@ -1,4 +1,0 @@
-void script_3286() {
-	VARC[10] = script_1305() + 100;
-	return;
-}

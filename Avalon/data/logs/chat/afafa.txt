@@ -1,7 +1,0 @@
-[27 April 2019 at 10:54:47 CEST] - afafa: uhm
-[27 April 2019 at 10:54:51 CEST] - afafa: wonder why it prints there now
-[27 April 2019 at 10:55:33 CEST] - afafa: ye i fixed it
-[27 April 2019 at 10:55:35 CEST] - afafa: i believe
-[27 April 2019 at 10:55:51 CEST] - afafa: hmm
-[27 April 2019 at 10:55:56 CEST] - afafa: how am i supposed to do then
-[27 April 2019 at 10:56:06 CEST] - afafa: also y does it print out top comp and bottomcomp

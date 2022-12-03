@@ -1,5 +1,0 @@
-void script_5084(Widget widget0) {
-	playSoundEffect2False(6185, 1, 0, 200);
-	script_5085(widget0);
-	return;
-}

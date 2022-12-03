@@ -1,4 +1,0 @@
-void script_1690() {
-	cameraUnlock();
-	return;
-}

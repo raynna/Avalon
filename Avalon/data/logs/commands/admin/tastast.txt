@@ -1,3 +1,0 @@
-[12 juli 2018 at 03:16:36 CEST] - ::setlevel 2 85
-[12 juli 2018 at 03:17:17 CEST] - ::setlevel 2 85
-[12 juli 2018 at 03:18:04 CEST] - ::setlevel 2 90

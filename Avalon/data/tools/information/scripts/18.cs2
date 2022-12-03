@@ -1,4 +1,0 @@
-void script_18(Widget widget0) {
-	widget0.setOutlineThickness(0);
-	return;
-}

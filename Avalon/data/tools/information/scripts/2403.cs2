@@ -1,4 +1,0 @@
-void script_2403(int arg0, int arg1) {
-	script_2010(arg0, arg1, "Level 62 Agility");
-	return;
-}

@@ -1,5 +1,0 @@
-void script_595() {
-	VARP[1113] = 1;
-	script_621();
-	return;
-}

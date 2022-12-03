@@ -1,6 +1,0 @@
-void script_2607(int arg0) {
-	if (ACTIVE.setChild(widget(88, 22), arg0)) {
-		ACTIVE.setAnimation(null);
-	}
-	return;
-}

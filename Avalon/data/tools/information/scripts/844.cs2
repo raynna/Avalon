@@ -1,4 +1,0 @@
-void script_844() {
-	script_846(VARPBIT[4398], 0);
-	return;
-}

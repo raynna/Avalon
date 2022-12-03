@@ -1,4 +1,0 @@
-void script_3050() {
-	script_3015("Add ignore", "", 2, "", "");
-	return;
-}

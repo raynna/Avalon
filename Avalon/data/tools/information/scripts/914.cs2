@@ -1,3 +1,0 @@
-string script_914() {
-	return script_2706((Item)VARC[741]);
-}

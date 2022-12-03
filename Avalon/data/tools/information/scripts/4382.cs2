@@ -1,4 +1,0 @@
-void script_4382() {
-	sendStringInput(removeTags(STRING[345]));
-	return;
-}
