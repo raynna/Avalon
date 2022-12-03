@@ -1,0 +1,21 @@
+int, int script_5175(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	AttrMap attrmap4;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	attrmap4 = null;
+	while (int1 <= 428) {
+		attrmap4 = datamap('i', 'J', (DataMap)3483, int1);
+		if (getAttributeMapValue(attrmap4, 1267) == arg0 && getAttributeMapValue(attrmap4, 1322) == 0) {
+			int3 = int3 + 1;
+			if (script_3227(int1) == 2) {
+				int2 = int2 + 1;
+			}
+		}
+		int1 = int1 + 1;
+	}
+	return int2, int3;
+}

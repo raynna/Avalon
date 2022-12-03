@@ -1,0 +1,6 @@
+void script_3187(Widget widget0, Widget widget1, boolean boolean2, Widget widget3, Widget widget4, Widget widget5, Widget widget6) {
+	int int7;
+	int7 = getTextWidth(widget1.getText(), 2710);
+	widget0.setScriptCallOnGameloop(3188, widget0, boolean2, int7, widget3, widget4, widget5, widget6, "I1iIIII");
+	return;
+}

@@ -1,0 +1,6 @@
+int script_4309() {
+	if (VARC[1500] != -1 && VARC[1501] != -1 && VARPBIT[9591] != -1 && VARPBIT[9593] != -1 && VARPBIT[9592] != -1 && VARPBIT[9594] != -1 && VARC[1568] != -1 && compare(STRING[347], "") != 0) {
+		return 1;
+	}
+	return 0;
+}

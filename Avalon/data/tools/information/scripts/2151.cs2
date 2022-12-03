@@ -1,0 +1,9 @@
+int script_2151(int arg0, int arg1) {
+	AttrMap attrmap2;
+	attrmap2 = datamap('i', 'J', (DataMap)169, arg0);
+	VARC[699] = datamap('i', 'J', getAttributeMapValue(attrmap2, 61), arg1);
+	if (script_1432() < getAttributeMapValue((AttrMap)VARC[699], 896)) {
+		return 0;
+	}
+	return 1;
+}

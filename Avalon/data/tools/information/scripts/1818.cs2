@@ -1,0 +1,16 @@
+void script_1818(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5) {
+	widget0.setText("Defeat!");
+	widget0.setPosition(64, 49, 0, 0);
+	widget1.setText("Your clan has been defeated.");
+	widget1.setPosition(41, 93, 0, 0);
+	widget2.setPosition(41, 179, 0, 0);
+	widget2.setSize(180, 125, 0, 0);
+	widget3.setPosition(38, 81, 0, 0);
+	widget0.setIsHidden(false);
+	widget1.setIsHidden(false);
+	widget2.setIsHidden(false);
+	widget3.setIsHidden(false);
+	widget4.setIsHidden(true);
+	widget5.setIsHidden(false);
+	return;
+}

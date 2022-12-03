@@ -1,0 +1,102 @@
+void script_2657() {
+	VARPBIT[6302] = 0;
+	if (VARPBIT[6290] == 0) {
+		widget(876, 4).setIsHidden(false);
+		widget(876, 5).setIsHidden(true);
+	}
+	if (VARPBIT[6290] == 1) {
+		widget(876, 4).setIsHidden(true);
+		cs2method5405(0, 2);
+		cs2method5405(1, 2);
+		cs2method5406(0, 0, location(3274, 10044, 0), 1450, location(3279, 10046, 0), 1385, 0);
+		cs2method5406(1, 0, location(3280, 10045, 0), 700, location(3280, 10045, 0), 700, 0);
+		cs2method5406(0, 1, location(3281, 10044, 0), 1125, location(3282, 10043, 0), 1000, 0);
+		cs2method5406(1, 1, location(3281, 10038, 0), 600, location(3281, 10038, 0), 600, 0);
+		cameraMethod5502(0, 0, 250, 350, 1, 0);
+	}
+	if (VARPBIT[6290] == 2) {
+		cs2method5405(0, 3);
+		cs2method5405(1, 3);
+		cs2method5406(0, 0, location(3283, 10045, 0), 1065, location(3283, 10046, 0), 1130, 0);
+		cs2method5406(1, 0, location(3282, 10038, 0), 600, location(3282, 10038, 0), 600, 0);
+		cs2method5406(0, 1, location(3285, 10044, 0), 1140, location(3288, 10045, 0), 1105, 0);
+		cs2method5406(1, 1, location(3290, 10043, 0), 600, location(3292, 10042, 0), 600, 0);
+		cs2method5406(0, 2, location(3289, 10043, 0), 825, location(3290, 10044, 0), 565, 0);
+		cs2method5406(1, 2, location(3289, 10039, 0), 600, location(3287, 10039, 0), 600, 0);
+		cameraMethod5502(0, 0, 250, 350, 1, 0);
+		widget(876, 0).setScriptCallOnMinimapRelatedSetting3(2658, "");
+	}
+	if (VARPBIT[6290] == 3) {
+		widget(876, 4).setIsHidden(true);
+		cs2method5405(0, 4);
+		cs2method5405(1, 4);
+		cs2method5406(0, 0, location(3358, 10032, 0), 805, location(3355, 10031, 0), 650, 0);
+		cs2method5406(1, 0, location(3358, 10025, 0), 620, location(3358, 10025, 0), 580, 0);
+		cs2method5406(0, 1, location(3359, 10026, 0), 725, location(3362, 10026, 0), 650, 0);
+		cs2method5406(1, 1, location(3363, 10022, 0), 555, location(3363, 10022, 0), 505, 0);
+		cs2method5406(0, 2, location(3368, 10023, 0), 800, location(3369, 10021, 0), 740, 0);
+		cs2method5406(1, 2, location(3369, 10019, 0), 525, location(3369, 10018, 0), 505, 0);
+		cs2method5406(0, 3, location(3370, 10018, 0), 745, location(3370, 10016, 0), 650, 0);
+		cs2method5406(1, 3, location(3370, 10012, 0), 600, location(3371, 10011, 0), 670, 0);
+		cameraMethod5502(0, 0, 300, 400, 1, 0);
+		widget(876, 0).setScriptCallOnMinimapRelatedSetting3(2658, "");
+	}
+	if (VARPBIT[6290] == 4) {
+		widget(876, 4).setIsHidden(true);
+		cs2method5405(0, 3);
+		cs2method5405(1, 3);
+		cs2method5406(0, 0, location(3282, 10039, 0), 1125, location(3283, 10038, 0), 1085, 0);
+		cs2method5406(1, 0, location(3282, 10034, 0), 750, location(3282, 10035, 0), 750, 0);
+		cs2method5406(0, 1, location(3283, 10031, 0), 1015, location(3282, 10030, 0), 865, 0);
+		cs2method5406(1, 1, location(3279, 10029, 0), 750, location(3279, 10031, 0), 750, 0);
+		cs2method5406(0, 2, location(3276, 10031, 0), 980, location(3274, 10031, 0), 865, 0);
+		cs2method5406(1, 2, location(3274, 10025, 0), 620, location(3274, 10024, 0), 540, 0);
+		cameraMethod5502(0, 0, 300, 400, 1, 0);
+		widget(876, 0).setScriptCallOnMinimapRelatedSetting3(2658, "");
+	}
+	if (VARPBIT[6290] == 5) {
+		widget(876, 5).setIsHidden(false);
+	}
+	if (VARPBIT[6290] == 6) {
+		cs2method5405(0, 6);
+		cs2method5405(0, 6);
+		cs2method5405(1, 6);
+		cs2method5406(0, 0, location(3276, 10031, 0), 980, location(3274, 10031, 0), 1185, 0);
+		cs2method5406(1, 0, location(3274, 10025, 0), 620, location(3274, 10024, 0), 540, 0);
+		cs2method5406(0, 1, location(3280, 10031, 0), 1190, location(3281, 10031, 0), 1165, 0);
+		cs2method5406(1, 1, location(3283, 10030, 0), 750, location(3286, 10030, 0), 750, 0);
+		cs2method5406(0, 2, location(3284, 10031, 0), 1220, location(3286, 10030, 0), 1190, 0);
+		cs2method5406(1, 2, location(3287, 10029, 0), 750, location(3288, 10028, 0), 750, 0);
+		cs2method5406(0, 3, location(3287, 10030, 0), 1160, location(3289, 10029, 0), 1135, 0);
+		cs2method5406(1, 3, location(3289, 10025, 0), 750, location(3290, 10023, 0), 750, 0);
+		cs2method5406(0, 4, location(3289, 10027, 0), 1045, location(3290, 10026, 0), 1005, 0);
+		cs2method5406(1, 4, location(3291, 10022, 0), 750, location(3292, 10021, 0), 750, 0);
+		cs2method5406(0, 5, location(3290, 10023, 0), 975, location(3290, 10024, 0), 920, 0);
+		cs2method5406(1, 5, location(3294, 10023, 0), 725, location(3294, 10024, 0), 725, 0);
+		cameraMethod5502(0, 0, 500, 600, 1, 0);
+		widget(876, 0).setScriptCallOnMinimapRelatedSetting3(2658, "");
+	}
+	if (VARPBIT[6290] == 7) {
+		widget(876, 5).setIsHidden(true);
+		cs2method5405(0, 2);
+		cs2method5405(1, 2);
+		cs2method5406(0, 0, location(3290, 10023, 0), 975, location(3291, 10023, 0), 1410, 0);
+		cs2method5406(1, 0, location(3294, 10023, 0), 725, location(3296, 10023, 0), 725, 0);
+		cs2method5406(0, 1, location(3294, 10023, 0), 915, location(3295, 10023, 0), 800, 0);
+		cs2method5406(1, 1, location(3299, 10023, 0), 650, location(3299, 10023, 0), 725, 0);
+		cameraMethod5502(0, 0, 400, 200, 1, 0);
+		widget(876, 0).setScriptCallOnMinimapRelatedSetting3(2658, "");
+	}
+	if (VARPBIT[6290] == 8) {
+		widget(876, 5).setIsHidden(true);
+		cs2method5405(0, 2);
+		cs2method5405(1, 2);
+		cs2method5406(0, 0, location(3294, 10023, 0), 915, location(3295, 10023, 0), 960, 0);
+		cs2method5406(1, 0, location(3299, 10023, 0), 650, location(3299, 10023, 0), 725, 0);
+		cs2method5406(0, 1, location(3301, 10022, 0), 985, location(3301, 10022, 0), 950, 0);
+		cs2method5406(1, 1, location(3304, 10023, 0), 800, location(3304, 10023, 0), 800, 0);
+		cameraMethod5502(0, 0, 400, 200, 1, 0);
+		widget(876, 0).setScriptCallOnMinimapRelatedSetting3(2658, "");
+	}
+	return;
+}

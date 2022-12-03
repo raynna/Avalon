@@ -1,0 +1,332 @@
+void script_3063(Widget widget0, int arg1) {
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	Sprite sprite10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	string str4;
+	string str5;
+	string str6;
+	string str7;
+	string str8;
+	int2 = getGameloginRC();
+	if (int2 == -3) {
+		script_3064(0);
+		script_3093(int2, 0, "Logging In - Please Wait", 1, null, 0, -1, "", "", 0, "", "");
+		VARC[1100] = -3;
+		return;
+	}
+	if (VARC[1100] == -3) {
+		script_3097();
+	}
+	int3 = 0;
+	str0 = "";
+	int4 = 0;
+	str1 = "";
+	int5 = 0;
+	str2 = "";
+	int6 = 0;
+	int7 = 0;
+	str3 = "";
+	if (int2 == 21) {
+		VARC[1100] = 21;
+		script_3064(0);
+		if (VARC[200] == 0) {
+			VARC[200] = getWorldswitchTimer();
+		}
+		VARC[200] = VARC[200] - 1;
+		if (VARC[200] <= 0) {
+			if (!cs2method6500()) {
+				VARC[200] = 1;
+				return;
+			}
+			if (arg1 > 0) {
+				int4, str1, int5, str2, int6, int7, str3 = cs2method6506(arg1);
+				if (setWorldHost(arg1, str3)) {
+					int4 = 0;
+				}
+			}
+			widget0.setScriptCallOnGameloop(-1, "");
+			script_3062(widget0);
+			return;
+		}
+		int3 = VARC[200] / 50;
+		if (int3 == 1) {
+			str0 = "You have only just left another world. Your profile will be transferred in" + "<br>" + "1 second.";
+		} else {
+			str0 = "You have only just left another world. Your profile will be transferred in" + "<br>" + str(int3) + " seconds.";
+		}
+		if (widget(906, 29).isHidden()) {
+			script_3093(int2, 0, str0, 0, 2611, 1, 1, "Abort Login", "Abort Login", 0, "", "");
+		} else {
+			script_1871(str0);
+		}
+		return;
+	}
+	if (int2 == 42) {
+		widget(906, 40).setIsHidden(false);
+		widget(906, 5).setText(str(arg1));
+		widget(906, 6).setText(str(getReturncode42ExtraData()));
+		if (VARC[1100] != 42) {
+			script_3093(int2, 1, "World " + str(arg1) + " is currently full." + "<br>" + "You have been added to the" + "<br>" + "queue for this world." + "<br>" + "You can track your progress in the" + "<br>" + "queue from lower left corner of this" + "<br>" + "screen.", 0, 2611, 0, 0, "", "", 1, "OK", "OK");
+		}
+		VARC[1100] = 42;
+		return;
+	}
+	if (int2 == 43) {
+		widget(906, 5).setText(str(arg1));
+		widget(906, 6).setText(str(getReturncode42ExtraData()));
+		VARC[1100] = 43;
+		return;
+	}
+	widget(906, 40).setIsHidden(true);
+	if (widget0 == widget(906, 23)) {
+		script_1299(1, 1);
+	}
+	script_3097();
+	script_3064(1);
+	widget0.setScriptCallOnGameloop(-1, "");
+	str4 = "";
+	int8 = 1;
+	int9 = 0;
+	sprite10 = 2608;
+	int11 = 0;
+	int12 = 0;
+	str5 = "";
+	str6 = "";
+	int13 = 1;
+	str7 = "Back";
+	str8 = "Back";
+	int14 = getDetailedRC();
+	int15 = getReturncodeExtraData();
+	switch (int2) {
+		case -2:
+			script_3097();
+			return;
+		case 29:
+			switch (int14) {
+				case 0:
+					str4 = "You must have a Combat Level of at least 20 (not including Summoning) to enter a PvP world.";
+					break;
+				case 1:
+					str4 = "You are currently carrying lent items and cannot enter a PvP world.";
+					break;
+				case 2:
+					str4 = "You must be standing in the Wilderness or Edgeville to enter this bounty world.";
+					break;
+				case 3:
+					str4 = "You must have a total skill level of 1,000 or greater to enter this world.";
+					break;
+				case 5:
+					str4 = "You must have a total skill level of 1,500 or greater to enter this world.";
+					break;
+				case 4:
+					str4 = "You must move to a safe area before you can log in to a PvP or bounty world.";
+					break;
+				default:
+					str4 = "Unexpected server response. Please try using a different world.";
+					break;
+			}
+			break;
+		case 46:
+			str4 = "This instance is marked for deletion/rebuild. Please try using a different world.";
+			break;
+		case 45:
+			switch (int15) {
+				case 0:
+					switch (int14) {
+						case 0:
+							str4 = "You must be near the TzHaar Fight Pits entrance to enter a global match.";
+							break;
+						default:
+							str4 = "Unable to log in. Please try using a different world.";
+							break;
+					}
+					break;
+				case 1:
+					switch (int14) {
+						case 1:
+							str4 = "There was an error connecting to your meeting room. Please try again.";
+							break;
+						case 2:
+							str4 = "You need a higher rank to enter that private tent.";
+							break;
+						case 3:
+							str4 = "You need an invitation to enter that private room.";
+							break;
+						default:
+							str4 = "Unable to log in. Please try using a different world.";
+							break;
+					}
+					break;
+				default:
+					str4 = "Unable to log in. Please try using a different world.";
+					break;
+			}
+			break;
+		case -5:
+			str4 = "Connection timed out. Please try using a different world.";
+			break;
+		case -4:
+			str4 = "Error connecting to server.";
+			break;
+		case -1:
+			str4 = "No response from server. Please try using a different world.";
+			break;
+		case 5:
+			str4 = "Your account has not logged out from its last session. Try again in a few minutes.";
+			break;
+		case 7:
+			str4 = "This world is full. Please use a different world.";
+			break;
+		case 8:
+			str4 = "Unable to connect: login server offline.";
+			break;
+		case 9:
+			str4 = "Login limit exceeded: too many connections from your address.";
+			break;
+		case 10:
+			str4 = "Unable to connect: bad session id.";
+			break;
+		case 13:
+			str4 = "Could not complete login. Please try using a different world.";
+			break;
+		case 16:
+			str4 = "Too many incorrect logins from your address. Please wait 5 minutes before trying again.";
+			break;
+		case 17:
+			str4 = "You are standing in a members-only area. To play on this world, move to a free area first.";
+			break;
+		case 20:
+			str4 = "Invalid loginserver requested. Please try using a different world.";
+			break;
+		case 22:
+			str4 = "Malformed login packet. Please try again.";
+			break;
+		case 23:
+			str4 = "No reply from login server. Please wait a minute and try again.";
+			break;
+		case 24:
+			str4 = "Error loading your profile. Please contact customer support.";
+			break;
+		case 25:
+			str4 = "Unexpected loginserver response. Please try using a different world.";
+			break;
+		case 26:
+			str4 = "This computer's address has been blocked, as it was used to break our rules.";
+			break;
+		case 27:
+			str4 = "Service unavailable.";
+			break;
+		case 3:
+			str4 = "Your password has been updated. Please leave the lobby and log in again.";
+			break;
+		case 36:
+			str4 = "Unable to connect: authentication server offline.";
+			break;
+		case 37:
+			str4 = "Your account is currently inaccessible. Please try again in a few minutes.";
+			break;
+		case 39:
+			str4 = "The instance you tried to join no longer exists. Please try using a different world.";
+			break;
+		case 41:
+			str4 = "The instance you tried to join is full. Please try back later or try using a different world.";
+			break;
+		case 44:
+			str4 = "Our systems are currently unavailable. Please try again in a few minutes.";
+			break;
+		case 35:
+			str4 = "Your session has expired. Please click 'Back' in your browser to renew it.";
+			str7 = "Close";
+			str8 = "Close";
+			break;
+		case 14:
+			int8 = 0;
+			sprite10 = 2610;
+			str4 = "The server is being updated. Please wait a few minutes and try again.";
+			break;
+		case 6:
+			int8 = 0;
+			sprite10 = 2610;
+			str4 = "RuneScape has been updated! Please reload this page.";
+			break;
+		case 4:
+			str4 = "Your account has been disabled. Check your Message Centre for details.";
+			int11 = 1;
+			str5 = "Message Centre";
+			str6 = "Message Centre";
+			break;
+		case 11:
+			str4 = "Your password is an extremely common choice, and is not secure. You must change it before you can log in.";
+			int11 = 1;
+			str5 = "Change Password";
+			str6 = "Change Password";
+			break;
+		case 18:
+			sprite10 = 2612;
+			str4 = "Your account has been locked. If you have not received an account recovery email, please select 'Recover Account'.";
+			int11 = 1;
+			str5 = "Recover Account";
+			str6 = "Recover Account";
+			break;
+		case 31:
+			str4 = "You must change your account's display name before you can log in.";
+			int11 = 1;
+			str5 = "Change Display Name";
+			str6 = "Change Display Name";
+			break;
+		case 30:
+			str4 = "This is not a member's account. Please choose a 'free' world from the website to play on this account.";
+			int11 = 1;
+			str5 = "Subscribe";
+			str6 = "Subscribe";
+			break;
+		case 19:
+			str4 = "Fullscreen is currently a members-only feature. To log in, either exit fullscreen via the options menu or use a member's account.";
+			int11 = 1;
+			str5 = "Subscribe";
+			str6 = "Subscribe";
+			break;
+		case 12:
+			int8 = 0;
+			sprite10 = 2607;
+			str4 = "You need a member's account to log in to this world. Please subscribe or use a different world.";
+			int11 = 1;
+			str5 = "Subscribe";
+			str6 = "Subscribe";
+			break;
+		case 40:
+			int8 = 0;
+			sprite10 = 2607;
+			str4 = "You need a member's account to log in to this instance. Please subscribe or use a different world.";
+			int11 = 1;
+			str5 = "Subscribe";
+			str6 = "Subscribe";
+			break;
+		case 32:
+			str4 = "Your account has negative membership credit. Please log into the billing system to add credit to your account.";
+			int11 = 1;
+			str5 = "Add Credit";
+			str6 = "Add Credit";
+			break;
+		default:
+			str4 = "Unexpected server response. Please try using a different world.";
+			break;
+	}
+	script_3093(int2, int8, str4, int9, sprite10, int11, int12, str5, str6, int13, str7, str8);
+	return;
+}

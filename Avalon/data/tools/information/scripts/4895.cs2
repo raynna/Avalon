@@ -1,0 +1,29 @@
+void script_4895() {
+	int int0;
+	int0 = 0;
+	if (citadelConfigsInitialized()) {
+		if (VARPBIT[9548] != CLANBIT[2074]) {
+			int0 = 1;
+		}
+		if (VARPBIT[9549] != CLANBIT[2075]) {
+			int0 = 1;
+		}
+		script_4896();
+		script_4897(VARPBIT[9548]);
+		if (VARPBIT[9549] == 0) {
+			widget(1092, 458).setIsHidden(true);
+			widget(1092, 450).setIsHidden(false);
+		} else {
+			widget(1092, 458).setIsHidden(false);
+			widget(1092, 450).setIsHidden(true);
+		}
+	}
+	if (int0 == 1) {
+		widget(1092, 419).setIsHidden(true);
+		widget(1092, 427).setIsHidden(true);
+	} else {
+		widget(1092, 419).setIsHidden(false);
+		widget(1092, 427).setIsHidden(false);
+	}
+	return;
+}

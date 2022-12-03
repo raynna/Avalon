@@ -1,0 +1,12 @@
+void script_5108(int arg0) {
+	if (arg0 == 1) {
+		widget(1116, 50).setSize(0, 20, 1, 1);
+		widget(1116, 40).setIsHidden(false);
+		script_5110(1);
+	} else {
+		widget(1116, 50).setSize(0, 0, 1, 1);
+		widget(1116, 40).setIsHidden(true);
+		script_5110(0);
+	}
+	return;
+}

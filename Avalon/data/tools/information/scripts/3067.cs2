@@ -1,0 +1,64 @@
+void script_3067(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	string str0;
+	string str1;
+	string str2;
+	if (!cs2method6500()) {
+		widget(906, 172).setScriptCallOnGameloop(3067, arg0, "i");
+		return;
+	}
+	widget(906, 172).setScriptCallOnGameloop(-1, "");
+	int1 = 0;
+	int2 = 0;
+	str0 = "";
+	int3 = 0;
+	str1 = "";
+	int4 = 0;
+	int5 = 0;
+	str2 = "";
+	int6 = -1;
+	if (arg0 == 1) {
+		int6 = VARC[998];
+	} else {
+		if (!(arg0 == 2)) {
+			return;
+		}
+		int6 = VARC[999];
+	}
+	int1, int2, str0, int3, str1, int4, int5, str2 = getFirstWorldData();
+	int7 = 0;
+	while (int1 != -1 && int7 == 0) {
+		if (int1 == int6) {
+			int7 = 1;
+		} else {
+			int1, int2, str0, int3, str1, int4, int5, str2 = getNextWorldData();
+		}
+	}
+	if (arg0 == 1) {
+		script_3382(widget(906, 176));
+	} else if (arg0 == 2) {
+		script_3382(widget(906, 177));
+	}
+	if (int1 > 0) {
+		if (getWorldId() != int1) {
+			if (setWorldHost(int1, str2)) {
+				VARC[547] = 0;
+				script_3062(widget(906, 171));
+			} else {
+				script_3064(1);
+				script_3093(-5, 1, "Could not connect you to the chosen world. Please choose another.", 0, 2608, 0, -1, "", "", 1, "Back", "Back");
+			}
+		} else {
+			script_3062(widget(906, 171));
+		}
+	} else {
+		script_3093(-5, 1, "World " + str(int6) + " is running in a different language or is unavailable.", 0, 2608, 0, -1, "", "", 1, "Back", "Back");
+	}
+	return;
+}

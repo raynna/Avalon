@@ -1,0 +1,62 @@
+void script_5227() {
+	Widget widget0;
+	int int1;
+	string str0;
+	script_5228(4);
+	script_5228(5);
+	script_5228(6);
+	script_5228(7);
+	script_5228(8);
+	script_5228(9);
+	script_5228(10);
+	script_5228(11);
+	script_5228(12);
+	script_5228(13);
+	script_5228(14);
+	script_5228(15);
+	widget0 = widget(1092, 928).getParentLayer();
+	if (widget0 == null) {
+		return;
+	}
+	int1 = 2;
+	if (widget(1092, 928).getY() > widget0.getHeight() / 2) {
+		int1 = 0;
+	}
+	str0 = "Teleport to the keep.";
+	widget(1092, 928).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 928), -1, str0, 120, 3793, 3793, 16777215, 13, 4, int1, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+	widget(1092, 928).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	widget(1092, 928).setContextMenuOption(1, "Teleport to keep");
+	int1 = 2;
+	if (widget(1092, 931).getY() > widget0.getHeight() / 2) {
+		int1 = 0;
+	}
+	str0 = "Teleport to the town square.";
+	widget(1092, 931).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 931), -1, str0, 120, 3793, 3793, 16777215, 13, 4, int1, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+	widget(1092, 931).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	widget(1092, 931).setContextMenuOption(1, "Teleport to town square");
+	int1 = 2;
+	if (widget(1092, 929).getY() > widget0.getHeight() / 2) {
+		int1 = 0;
+	}
+	str0 = "Teleport to the portal.";
+	widget(1092, 929).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 929), -1, str0, 120, 3793, 3793, 16777215, 13, 4, int1, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+	widget(1092, 929).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	widget(1092, 929).setContextMenuOption(1, "Teleport to portal");
+	int1 = 2;
+	if (widget(1092, 930).getY() > widget0.getHeight() / 2) {
+		int1 = 0;
+	}
+	str0 = "Teleport to the welcome area.";
+	widget(1092, 930).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 930), -1, str0, 120, 3793, 3793, 16777215, 13, 4, int1, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+	widget(1092, 930).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	widget(1092, 930).setContextMenuOption(1, "Teleport to welcome area");
+	int1 = 2;
+	if (widget(1092, 932).getY() > widget0.getHeight() / 2) {
+		int1 = 0;
+	}
+	str0 = "Teleport to the battlefield.";
+	widget(1092, 932).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 932), -1, str0, 120, 3793, 3793, 16777215, 13, 4, int1, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+	widget(1092, 932).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	widget(1092, 930).setContextMenuOption(1, "Teleport to welcome area");
+	return;
+}

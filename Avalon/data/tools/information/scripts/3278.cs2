@@ -1,0 +1,22 @@
+void script_3278(int arg0, int arg1, Sprite sprite2, int arg3) {
+	int int4;
+	int int5;
+	int4 = 0;
+	int5 = 0;
+	switch (arg3) {
+		case 1:
+			int4 = widget(942, 3).getWidth() / 4;
+			int5 = widget(942, 3).getHeight() / 4;
+			break;
+		case 2:
+			int4 = widget(942, 3).getWidth() / 4;
+			break;
+	}
+	ACTIVE.createChild(widget(942, 3), 5, VARC[1149]);
+	VARC[1149] = VARC[1149] + 1;
+	ACTIVE.setSize(32, 32, 0, 0);
+	ACTIVE.setSprite(sprite2);
+	ACTIVE.setPosition(arg0 * 32 + int4, arg1 * 32 + int5, 0, 2);
+	ACTIVE.setHidden(false);
+	return;
+}

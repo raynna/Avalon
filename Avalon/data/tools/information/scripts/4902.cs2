@@ -1,0 +1,12 @@
+void script_4902() {
+	int int0;
+	int int1;
+	int0 = 1;
+	int1 = 0;
+	if (citadelConfigsInitialized()) {
+		int0 = CLANBIT[2580];
+		int1 = CLANBIT[2598];
+		widget(1092, 153).setSprite(script_4904(1, int1, int0));
+	}
+	return;
+}

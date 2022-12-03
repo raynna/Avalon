@@ -1,0 +1,12 @@
+void script_3423() {
+	script_3425(widget(60, 85), widget(60, 86));
+	script_3425(widget(60, 81), widget(60, 82));
+	script_3425(widget(60, 77), widget(60, 78));
+	script_3425(widget(60, 52), widget(60, 53));
+	script_3425(widget(60, 73), widget(60, 74));
+	script_3425(widget(60, 69), widget(60, 70));
+	script_3425(widget(60, 65), widget(60, 66));
+	script_3425(widget(60, 61), widget(60, 62));
+	script_3425(widget(60, 266), widget(60, 267));
+	return;
+}

@@ -1,0 +1,11 @@
+int script_5193() {
+	switch (VARPBIT[9646]) {
+		case 1:
+			return VARPBIT[9647];
+		case 2:
+			return VARPBIT[9648];
+		case 3:
+			return VARPBIT[9649];
+	}
+	return -1;
+}

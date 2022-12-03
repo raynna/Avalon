@@ -1,0 +1,15 @@
+void script_647(Widget widget0, Widget widget1, int arg2, int arg3, string string4) {
+	int int4;
+	int4 = 0;
+	if (VARC[2] == 1) {
+		while (int4 < 6) {
+			script_41(script_626(int4));
+			int4 = int4 + 1;
+		}
+	}
+	if (widget(105, 17).isHidden()) {
+		return;
+	}
+	script_39(widget0, widget1, string4, arg2, arg3);
+	return;
+}

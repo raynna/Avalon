@@ -1,0 +1,17 @@
+void script_491(int arg0) {
+	switch (arg0) {
+		case 66519136:
+			widget(1015, 100).setRGB(0xFFFFFF);
+			break;
+		case 66519130:
+			widget(1015, 92).setRGB(0xFFFFFF);
+			break;
+		case 66519124:
+			widget(1015, 86).setRGB(0xFFFFFF);
+			break;
+		case 66519118:
+			widget(1015, 80).setRGB(0xFFFFFF);
+			break;
+	}
+	return;
+}

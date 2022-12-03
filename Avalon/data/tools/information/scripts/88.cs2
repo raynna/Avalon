@@ -1,0 +1,31 @@
+void script_88(int arg0, string string1, int arg2) {
+	string1 = removeTags(string1);
+	switch (arg0) {
+		case 7:
+			if (script_2709() == 0) {
+				msg("You cannot add a friend until you have entered your date of birth");
+				return;
+			}
+			if (isFriend(string1)) {
+				if (!mapQuickchat() && !cs2method6900()) {
+					VARC[1650] = 1;
+					STRING[23] = string1;
+					script_1558(false);
+					return;
+				}
+			} else {
+				cs2method3605(string1);
+			}
+			break;
+		case 8:
+			cs2method3607(string1);
+			break;
+		case 9:
+			script_1052(5, string1, cs2method5012(arg2));
+			break;
+		case 10:
+			STRING[24] = string1;
+			break;
+	}
+	return;
+}

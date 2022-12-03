@@ -1,0 +1,34 @@
+void script_5085(Widget widget0) {
+	int int1;
+	int int2;
+	widget(1114, 28).setIsHidden(true);
+	VARC[160] = -1;
+	widget(1114, 32).clearChildren();
+	int1 = 0;
+	int2 = datamapSize((DataMap)3921);
+	while (int1 < int2) {
+		if (VARC[1095] == 1) {
+			if (ACTIVE.setChild(widget0, int1 * 10 + 3)) {
+				ACTIVE.setSprite(6132);
+			}
+			if (ACTIVE.setChild(widget0, int1 * 10 + 5)) {
+				ACTIVE.setSprite(6131);
+			}
+			if (ACTIVE.setChild(widget0, int1 * 10 + 7)) {
+				ACTIVE.setSprite(6133);
+			}
+		} else {
+			if (ACTIVE.setChild(widget0, int1 * 10 + 3)) {
+				ACTIVE.setSprite(6141);
+			}
+			if (ACTIVE.setChild(widget0, int1 * 10 + 5)) {
+				ACTIVE.setSprite(6140);
+			}
+			if (ACTIVE.setChild(widget0, int1 * 10 + 7)) {
+				ACTIVE.setSprite(6142);
+			}
+		}
+		int1 = int1 + 1;
+	}
+	return;
+}

@@ -1,0 +1,27 @@
+void script_4253() {
+	if (VARPBIT[9030] == 1) {
+		widget(917, 169).setText("Tutorial is ON");
+	} else {
+		widget(917, 169).setText("Tutorial is OFF");
+	}
+	if (VARPBIT[9028] == datamapSize((DataMap)3656) || VARPBIT[8601] >= 60) {
+		widget(917, 165).setIsHidden(true);
+	} else {
+		widget(917, 165).setIsHidden(false);
+	}
+	switch (getLanguage()) {
+		case 0:
+			widget(917, 165).setSize(77, 18, 0, 0);
+			break;
+		case 2:
+			widget(917, 165).setSize(112, 18, 0, 0);
+			break;
+		case 1:
+			widget(917, 165).setSize(135, 18, 0, 0);
+			break;
+		case 3:
+			widget(917, 165).setSize(109, 18, 0, 0);
+			break;
+	}
+	return;
+}

@@ -1,0 +1,12 @@
+void script_2760(Widget widget0) {
+	if (VARC[173] == 1 || VARPBIT[542] == 1) {
+		widget0.setNoOptions();
+		widget0.setScriptCallOnClickContextMenu(-1, "");
+		widget0.setNoClickThrough(0);
+	} else {
+		widget0.setContextMenuOption(1, "Face North");
+		widget0.setScriptCallOnClickContextMenu(2757, CTX_MENU_OPTION, "i");
+		widget0.setNoClickThrough(1);
+	}
+	return;
+}

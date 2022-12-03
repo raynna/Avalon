@@ -1,0 +1,332 @@
+void script_4540(Widget widget0, Widget widget1, int arg2, string string3, int arg4, Sprite sprite5, Sprite sprite6, Color color7, int arg8, int arg9, int arg10, int arg11, int arg12) {
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	Widget widget20;
+	int int21;
+	int int22;
+	int int23;
+	int int24;
+	int int25;
+	int int26;
+	int int27;
+	widget0.setIsHidden(false);
+	widget0.clearChildren();
+	if (sprite5 == null || sprite6 == null) {
+		sprite5, sprite6 = 5631, 5631;
+	}
+	if (color7 == 0xFFFFFF) {
+		color7 = 0xFFFFFF;
+	}
+	int12 = min(getMaxLineWidth(string3, arg4, sprite5), arg4);
+	int13 = max(getLineCount(string3, int12, sprite5), 1) * arg8 + arg9;
+	int14 = int12 + 12;
+	int15 = int13 + 12;
+	switch (arg10) {
+		case 1:
+		case 3:
+			int14 = int14 + 23;
+			break;
+		case 0:
+			int15 = int15 + 22;
+			break;
+		case 2:
+			int15 = int15 + 23;
+			break;
+	}
+	int14, int15 = max(int14, 45), max(int15, 45);
+	widget0.setSize(int14, int15, 0, 0);
+	ACTIVE.createChild(widget0, 3, widget0.nextChild());
+	switch (arg10) {
+		case 3:
+			ACTIVE.setSize(25, 2, 1, 1);
+			ACTIVE.setPosition(1, 0, 0, 1);
+			break;
+		case 1:
+			ACTIVE.setSize(25, 2, 1, 1);
+			ACTIVE.setPosition(1, 0, 2, 1);
+			break;
+		case 0:
+			ACTIVE.setSize(2, 24, 1, 1);
+			ACTIVE.setPosition(0, 1, 1, 0);
+			break;
+		case 2:
+			ACTIVE.setSize(2, 25, 1, 1);
+			ACTIVE.setPosition(0, 1, 1, 2);
+			break;
+		default:
+			ACTIVE.setSize(2, 2, 1, 1);
+			ACTIVE.setPosition(0, 0, 1, 1);
+			break;
+	}
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.setFilled(true);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	switch (arg10) {
+		case 3:
+			ACTIVE.setSize(27, 10, 1, 0);
+			ACTIVE.setPosition(2, 0, 0, 0);
+			break;
+		case 1:
+			ACTIVE.setSize(27, 10, 1, 0);
+			ACTIVE.setPosition(2, 0, 2, 0);
+			break;
+		case 2:
+			ACTIVE.setSize(4, 10, 1, 0);
+			ACTIVE.setPosition(0, 23, 1, 0);
+			break;
+		default:
+			ACTIVE.setSize(4, 10, 1, 0);
+			ACTIVE.setPosition(0, 0, 1, 0);
+			break;
+	}
+	ACTIVE.setSprite(4649);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	switch (arg10) {
+		case 3:
+			ACTIVE.setSize(27, 10, 1, 0);
+			ACTIVE.setPosition(2, 0, 0, 2);
+			break;
+		case 1:
+			ACTIVE.setSize(27, 10, 1, 0);
+			ACTIVE.setPosition(2, 0, 2, 2);
+			break;
+		case 0:
+			ACTIVE.setSize(4, 10, 1, 0);
+			ACTIVE.setPosition(0, 22, 1, 2);
+			break;
+		default:
+			ACTIVE.setSize(4, 10, 1, 0);
+			ACTIVE.setPosition(0, 0, 1, 2);
+			break;
+	}
+	ACTIVE.setSprite(4649);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setVFlip(true);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	switch (arg10) {
+		case 1:
+			ACTIVE.setSize(10, 4, 0, 1);
+			ACTIVE.setPosition(23, 0, 0, 1);
+			break;
+		case 0:
+			ACTIVE.setSize(10, 26, 0, 1);
+			ACTIVE.setPosition(0, 2, 0, 0);
+			break;
+		case 2:
+			ACTIVE.setSize(10, 27, 0, 1);
+			ACTIVE.setPosition(0, 2, 0, 2);
+			break;
+		default:
+			ACTIVE.setSize(10, 4, 0, 1);
+			ACTIVE.setPosition(0, 0, 0, 1);
+			break;
+	}
+	ACTIVE.setSprite(4651);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setHFlip(true);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	switch (arg10) {
+		case 3:
+			ACTIVE.setSize(10, 4, 0, 1);
+			ACTIVE.setPosition(23, 0, 2, 1);
+			break;
+		case 0:
+			ACTIVE.setSize(10, 26, 0, 1);
+			ACTIVE.setPosition(0, 2, 2, 0);
+			break;
+		case 2:
+			ACTIVE.setSize(10, 27, 0, 1);
+			ACTIVE.setPosition(0, 2, 2, 2);
+			break;
+		default:
+			ACTIVE.setSize(10, 4, 0, 1);
+			ACTIVE.setPosition(0, 0, 2, 1);
+			break;
+	}
+	ACTIVE.setSprite(4651);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(10, 10, 0, 0);
+	switch (arg10) {
+		case 1:
+			ACTIVE.setPosition(23, 0, 0, 0);
+			break;
+		case 2:
+			ACTIVE.setPosition(0, 23, 0, 0);
+			break;
+		default:
+			ACTIVE.setPosition(0, 0, 0, 0);
+			break;
+	}
+	ACTIVE.setSprite(4650);
+	ACTIVE.setHFlip(true);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(10, 10, 0, 0);
+	switch (arg10) {
+		case 3:
+			ACTIVE.setPosition(23, 0, 2, 0);
+			break;
+		case 2:
+			ACTIVE.setPosition(0, 23, 2, 0);
+			break;
+		default:
+			ACTIVE.setPosition(0, 0, 2, 0);
+			break;
+	}
+	ACTIVE.setSprite(4650);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(10, 10, 0, 0);
+	switch (arg10) {
+		case 1:
+			ACTIVE.setPosition(23, 0, 0, 2);
+			break;
+		case 0:
+			ACTIVE.setPosition(0, 22, 0, 2);
+			break;
+		default:
+			ACTIVE.setPosition(0, 0, 0, 2);
+			break;
+	}
+	ACTIVE.setSprite(4650);
+	ACTIVE.setHFlip(true);
+	ACTIVE.setVFlip(true);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(10, 10, 0, 0);
+	switch (arg10) {
+		case 3:
+			ACTIVE.setPosition(23, 0, 2, 2);
+			break;
+		case 0:
+			ACTIVE.setPosition(0, 22, 2, 2);
+			break;
+		default:
+			ACTIVE.setPosition(0, 0, 2, 2);
+			break;
+	}
+	ACTIVE.setSprite(4650);
+	ACTIVE.setVFlip(true);
+	ACTIVE.createChild(widget0, 4, widget0.nextChild());
+	ACTIVE.setSize(int12, int13, 0, 0);
+	switch (arg10) {
+		case 3:
+			ACTIVE.setPosition(6, 0, 0, 1);
+			break;
+		case 1:
+			ACTIVE.setPosition(6, 0, 2, 1);
+			break;
+		case 0:
+			ACTIVE.setPosition(0, 6, 1, 0);
+			break;
+		case 2:
+			ACTIVE.setPosition(0, 6, 1, 2);
+			break;
+		default:
+			ACTIVE.setPosition(0, 0, 1, 1);
+			break;
+	}
+	ACTIVE.setRGB(color7);
+	ACTIVE.setFont(sprite6);
+	ACTIVE.setTextAlignment(1, 1, arg8);
+	ACTIVE.setText(string3);
+	_ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	_ACTIVE.setSprite(5613);
+	int16 = 0;
+	int17 = 0;
+	int18 = 0;
+	int19 = 0;
+	widget20 = widget0.getLayer();
+	if (widget20 != null) {
+		int16, int18 = script_3365(widget20), script_3366(widget20);
+		int17, int19 = int16 + widget20.getWidth(), int18 + widget20.getHeight();
+	} else if (widget20 != null) {
+		int17, int19 = widget20.getWidth(), widget20.getHeight();
+	} else {
+		int17, int19 = 765, 503;
+	}
+	int21 = 0;
+	int22 = 0;
+	int23 = 0;
+	int24 = 0;
+	int25 = 0;
+	int26 = 0;
+	int27 = 0;
+	if (ACTIVE.setChild(widget1, arg2) || arg2 == -1 && ACTIVE.setChild(widget1)) {
+		int21, int22, int23, int24 = script_1743(), script_1744(), ACTIVE.getWidth(), ACTIVE.getHeight();
+		switch (arg10) {
+			case 3:
+				int25, int26 = int21 - int14, int22 + arg12 - int15 / 2;
+				if (int26 < int18) {
+					int27 = int26 - int18;
+					int26 = int26 - int27;
+					int27 = max(int27, 0 - (int15 - 35) / 2);
+				} else if (int26 + int15 > int19) {
+					int27 = int26 + int15 - int19;
+					int26 = int26 - int27;
+					int27 = min(int27, (int15 - 35) / 2);
+				}
+				_ACTIVE.setSize(25, 24, 0, 0);
+				_ACTIVE.setPosition(0, int27, 2, 1);
+				break;
+			case 1:
+				int25, int26 = int21 + int23, int22 + arg12 - int15 / 2;
+				if (int26 < int18) {
+					int27 = int26 - int18;
+					int26 = int26 - int27;
+					int27 = max(int27, 0 - (int15 - 35) / 2);
+				} else if (int26 + int15 > int19) {
+					int27 = int26 + int15 - int19;
+					int26 = int26 - int27;
+					int27 = min(int27, (int15 - 35) / 2);
+				}
+				_ACTIVE.setSize(25, 24, 0, 0);
+				_ACTIVE.set2DAngle(32768);
+				_ACTIVE.setPosition(0, int27, 0, 1);
+				break;
+			case 0:
+				int25, int26 = int21 + arg11 - int14 / 2, int22 - int15;
+				if (int25 < int16) {
+					int27 = int25 - int16;
+					int25 = int25 - int27;
+					int27 = max(int27, 0 - (int14 - 35) / 2);
+				} else if (int25 + int14 > int17) {
+					int27 = int25 + int14 - int17;
+					int25 = int25 - int27;
+					int27 = min(int27, (int14 - 35) / 2);
+				}
+				_ACTIVE.setSize(24, 25, 0, 0);
+				_ACTIVE.set2DAngle(49152);
+				_ACTIVE.setPosition(int27, 0, 1, 2);
+				break;
+			case 2:
+				int25, int26 = int21 + arg11 - int14 / 2, int22 + int24;
+				if (int25 < int16) {
+					int27 = int25 - int16;
+					int25 = int25 - int27;
+					int27 = max(int27, 0 - (int14 - 35) / 2);
+				} else if (int25 + int14 > int17) {
+					int27 = int25 + int14 - int17;
+					int25 = int25 - int27;
+					int27 = min(int27, (int14 - 35) / 2);
+				}
+				_ACTIVE.setSize(24, 25, 0, 0);
+				_ACTIVE.set2DAngle(16384);
+				_ACTIVE.setPosition(int27, 0, 1, 0);
+				break;
+			default:
+				_ACTIVE.setHidden(true);
+				int25, int26 = arg11 - int14 / 2, arg12 - int15 / 2;
+				break;
+		}
+	} else {
+		widget0.setIsHidden(true);
+	}
+	widget0.setPosition(int25 - int16, int26 - int18, 0, 0);
+	return;
+}

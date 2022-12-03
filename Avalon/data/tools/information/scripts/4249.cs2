@@ -1,0 +1,70 @@
+void script_4249(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	string str0;
+	if (VARPBIT[9030] == 0) {
+		script_4248("", 0, 0, 0, 0x000000, 5631);
+		return;
+	}
+	if (VARPBIT[8587] == 419 && !widget(1056, 130).isHidden()) {
+		return;
+	}
+	str0 = "";
+	int1 = 0;
+	int2 = 0;
+	int3 = 1;
+	int4 = 0;
+	if (arg0 == 1) {
+		if (VARPBIT[8587] == 419 && widget(1056, 122).isHidden()) {
+			str0 = "Click on the first Task in the list for details of how to complete it.";
+		} else if (VARPBIT[8587] == 420 && widget(1056, 122).isHidden()) {
+			str0 = "Click on the Task which is now first in the list.";
+		}
+		if (getDisplayMode() >= 2) {
+			int1 = 180;
+			int2 = 165;
+			int4 = 1;
+			if (widget(746, 2).getWidth() < 997) {
+				int2 = int2 + 40;
+			}
+		} else {
+			int1 = 207;
+			int2 = 156;
+		}
+	} else {
+		script_4089();
+		if (VARPBIT[8587] == 419) {
+			str0 = "Click here to show the Task window.";
+		}
+		if (getDisplayMode() >= 2) {
+			if (widget(746, 2).getWidth() > 997) {
+				int1 = 288;
+				int2 = 39;
+				int3 = 2;
+				int4 = 1;
+			} else {
+				int1 = 51;
+				int2 = 77;
+				int3 = 2;
+				int4 = 1;
+			}
+		} else {
+			int1 = 210;
+			int2 = 254;
+		}
+	}
+	if (VARPBIT[9030] == 0) {
+		str0 = "";
+	}
+	if (hasChildOverlay(widget(548, 8), 1079) || hasChildOverlay(widget(746, 9), 1079)) {
+		str0 = "";
+	}
+	if (int4 == 0) {
+		script_4247(str0, int1, int2, int3, 0xFFFFFF, 5631);
+	} else {
+		script_4248(str0, int1, int2, int3, 0xFFFFFF, 5631);
+	}
+	return;
+}

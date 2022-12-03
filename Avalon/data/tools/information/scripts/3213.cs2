@@ -1,0 +1,117 @@
+void script_3213(string string0, Widget widget1) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	string str1;
+	string str2;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	str1 = "accountappeal";
+	str2 = "passwordchoice.ws";
+	switch (widget1) {
+		case widget(673, 94):
+			if (length(string0) > 0) {
+				widget(673, 94).setSprite(4061);
+				widget(673, 99).setIsHidden(false);
+				widget(673, 30).setText(string0);
+				widget(673, 137).setText(string0);
+			} else if (widget1.getSpriteId() == 4061) {
+				widget(673, 30).setText(widget(673, 137).getText());
+			} else if (widget1.getSpriteId() == 4059) {
+				widget(673, 30).setText("This email address is available for use.");
+			} else {
+				widget(673, 30).setText("Please enter your email address here.");
+			}
+			widget(673, 31).setSize(110, getLineCount(widget(673, 30).getText(), 110 - 20, 3793) * 12 + 10, 0, 0);
+			int2 = 99;
+			int4 = 450;
+			break;
+		case widget(673, 113):
+			if (length(string0) > 0) {
+				widget(673, 113).setSprite(4061);
+				widget(673, 118).setIsHidden(false);
+				widget(673, 30).setText(string0);
+				widget(673, 138).setText(string0);
+			} else if (widget1.getSpriteId() == 4061) {
+				widget(673, 30).setText(widget(673, 138).getText());
+			} else if (widget1.getSpriteId() == 4059) {
+				widget(673, 30).setText("Both email addresses match.");
+			} else {
+				widget(673, 30).setText("Please enter your email address again here.");
+			}
+			widget(673, 31).setSize(110, getLineCount(widget(673, 30).getText(), 110 - 20, 3793) * 12 + 10, 0, 0);
+			int2 = 128;
+			int4 = 450;
+			break;
+		case widget(673, 84):
+			if (length(string0) > 0) {
+				widget(673, 84).setSprite(4061);
+				widget(673, 89).setIsHidden(false);
+				widget(673, 30).setText(string0);
+				widget(673, 139).setText(string0);
+			} else if (widget1.getSpriteId() == 4061) {
+				widget(673, 30).setText(widget(673, 139).getText());
+			} else if (widget1.getSpriteId() == 4059) {
+				widget(673, 30).setText("You have entered your password.");
+			} else {
+				widget(673, 30).setText("Please enter your desired password here.");
+			}
+			widget(673, 31).setSize(110, getLineCount(widget(673, 30).getText(), 110 - 20, 3793) * 12 + 10, 0, 0);
+			int2 = 161;
+			int4 = 450;
+			break;
+		case widget(673, 74):
+			if (length(string0) > 0) {
+				widget(673, 74).setSprite(4061);
+				widget(673, 79).setIsHidden(false);
+				widget(673, 30).setText(string0);
+				widget(673, 140).setText(string0);
+			} else if (widget1.getSpriteId() == 4061) {
+				widget(673, 30).setText(widget(673, 140).getText());
+			} else if (widget1.getSpriteId() == 4059) {
+				widget(673, 30).setText("Both passwords match.");
+			} else {
+				widget(673, 30).setText("Please enter your desired password again here.");
+			}
+			widget(673, 31).setSize(110, getLineCount(widget(673, 30).getText(), 110 - 10 * 2, 3793) * 12 + 10, 0, 0);
+			int2 = 190;
+			int4 = 450;
+			break;
+		case widget(673, 49):
+			if (length(string0) > 0) {
+				widget(673, 49).setSprite(4061);
+				widget(673, 125).setIsHidden(false);
+				widget(673, 30).setText(string0);
+				widget(673, 141).setText(string0);
+			} else if (widget1.getSpriteId() == 4061) {
+				widget(673, 30).setText(widget(673, 141).getText());
+			} else if (widget1.getSpriteId() == 4059) {
+				widget(673, 30).setText("You have entered your age.");
+			} else {
+				widget(673, 30).setText("Please enter your age, in years, here.");
+			}
+			int5 = widget(673, 38).getWidth() - 277;
+			widget(673, 31).setSize(min(getMaxLineWidth(widget(673, 30).getText(), getTextWidth(widget(673, 30).getText(), 3793) / 4 * 3, 3793) + 10 * 2, int5), 30, 0, 0);
+			int2 = 223;
+			int4 = 277;
+			break;
+		default:
+			widget(673, 31).setIsHidden(true);
+			return;
+	}
+	int1 = widget(673, 31).getHeight() / 2;
+	int3 = int2 - int1;
+	widget(673, 31).setPosition(int4, int3, 0, 0);
+	widget(673, 31).setIsHidden(false);
+	if (compare(widget(673, 30).getText(), "Email already in use. Try a different email or click " + "<u=ebe0bc>" + "here" + "</u>" + " to recover this account.") == 0) {
+		widget(673, 32).setScriptCallOnMousePressed(2931, str1, str2, true, "ss1");
+	} else {
+		widget(673, 32).setScriptCallOnMousePressed(-1, "");
+	}
+	return;
+}

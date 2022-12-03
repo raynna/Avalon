@@ -1,0 +1,13 @@
+void script_3064(int arg0) {
+	if (arg0 == 1) {
+		widget(906, 184).setText("Play");
+		widget(906, 171).setContextMenuOption(1, "Play");
+		widget(906, 171).setScriptCallOnClickContextMenu(3061, widget(906, 171), "I");
+	} else {
+		widget(906, 184).setText("Entering game...");
+		widget(906, 171).setNoOptions();
+		widget(906, 171).setScriptCallOnClickContextMenu(-1, "");
+	}
+	script_3065(arg0);
+	return;
+}

@@ -1,0 +1,29 @@
+void script_4340(int arg0, int arg1, Widget widget2, Widget widget3) {
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	string str0;
+	string str1;
+	int4 = arg0 / 60 / 24;
+	int5 = arg0 - int4 * 24 * 60;
+	int6 = int5 / 60;
+	int7 = int5 % 60;
+	str0 = "";
+	if (int6 < 10) {
+		str0 = "0" + str(int6);
+	} else {
+		str0 = str(int6);
+	}
+	str1 = "";
+	if (int7 < 10) {
+		str1 = "0" + str(int7);
+	} else {
+		str1 = str(int7);
+	}
+	widget2.setText(str0 + ":" + str1);
+	widget2.setScriptCallOnGameloop(4342, int6, int7, arg1, widget2, widget3, "iiiII");
+	str0, str1 = script_4341(arg1, int6, int7);
+	widget3.setText(str0 + ":" + str1);
+	return;
+}

@@ -1,0 +1,25 @@
+void script_373(Widget widget0, int arg1, int arg2, int arg3, int arg4) {
+	Widget widget5;
+	widget5 = null;
+	if (arg1 == -1) {
+		widget5 = widget0.getLayer();
+	} else {
+		widget5 = widget0;
+	}
+	if (arg4 == 1) {
+		if (arg1 == -1 && ACTIVE.setChild(widget0) || ACTIVE.setChild(widget0, arg1)) {
+			_ACTIVE.createChild(widget5, 3, arg2);
+			_ACTIVE.setSize(ACTIVE.getWidth() - arg3 * 2, ACTIVE.getHeight() - arg3 * 2, 0, 0);
+			_ACTIVE.setPosition(ACTIVE.getX() + arg3, ACTIVE.getY() + arg3, 0, 0);
+			_ACTIVE.setRGB(0xFFFFFF);
+			_ACTIVE.setTrans(200);
+			_ACTIVE.setFilled(true);
+		}
+	} else {
+		if (ACTIVE.setChild(widget5, arg2)) {
+			ACTIVE.deleteChild();
+		}
+		script_383();
+	}
+	return;
+}

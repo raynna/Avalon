@@ -1,0 +1,49 @@
+void script_1369(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, Widget widget7, Widget widget8, Widget widget9) {
+	Map map10;
+	int int11;
+	int int12;
+	Location location13;
+	script_1088(widget0, 0);
+	map10 = null;
+	if (VARC[622] != -1) {
+		map10 = getDungeonmap(location(VARC[622]));
+		if (map10 == null) {
+			map10 = 28;
+		}
+	}
+	map10 = script_2785(map10);
+	if (dungeonmapContains(VARC[622], map10)) {
+		cs2method5227(map10, location(VARC[622]));
+	} else {
+		loadDungeonmap(map10);
+	}
+	VARC[172] = getMapDefaultZoom(map10);
+	script_1372();
+	script_1374(0);
+	script_1376(0, widget5, widget9);
+	script_291(0, widget6, widget7, widget8, widget4, widget5);
+	script_1839(VARPBIT[5367], widget1, widget2, widget3);
+	widget0.setScriptCallOnGlobalConfigChange(1369, widget0, widget1, widget2, widget3, widget4, widget5, widget6, widget7, widget8, widget9, 622, "IIIIIIIIIIY");
+	widget0.setScriptCallOnConfigChange(1404, widget1, widget2, widget3, widget5, widget0, VARPBIT[6175], 463, 1159, "IIIIIiY");
+	widget4.setScriptCallOnKeyPress(1382, KEY_TYPED, (char)KEY_PRESSED, widget4, null, "izIc");
+	STRING[31] = "";
+	int11 = 0;
+	int12 = 0;
+	location13 = location(VARC[622]);
+	if (location13 != null) {
+		int11, int12 = cs2method5224(location13);
+		if (int11 < 0 || int12 < 0) {
+			location13 = moveCoord(location(0, 0, 0), x(location13), script_686(z(location13) - 1, 4), y(location13));
+			int11, int12 = cs2method5224(location13);
+			if (int11 < 0 || int12 < 0) {
+				location13 = moveCoord(location(0, 0, 0), x(location13), script_686(z(location13) - 1, 4), y(location13));
+				int11, int12 = cs2method5224(location13);
+				if (int11 < 0 || int12 < 0) {
+					return;
+				}
+			}
+		}
+		widget0.setScriptCallOnGameloop(2054, getClientCycle() + 4, widget0, location13, "iIc");
+	}
+	return;
+}

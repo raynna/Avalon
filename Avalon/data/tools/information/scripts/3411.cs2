@@ -1,0 +1,16 @@
+void script_3411() {
+	VARC[1240] = 3;
+	VARC[1277] = 0;
+	if (hasSSKey()) {
+		script_1174(5);
+		if (VARC[1273] == 1) {
+			return;
+		}
+		widget(975, 44).setScriptCallOnGameloop(3381, widget(975, 44), 0, "Ii");
+	} else if (script_3487(3)) {
+		script_1174(7);
+	} else {
+		script_1174(11);
+	}
+	return;
+}

@@ -1,0 +1,71 @@
+int, int script_1692(Widget widget0, int arg1, int arg2) {
+	AttrMap attrmap3;
+	int int4;
+	int int5;
+	AttrMap attrmap6;
+	string str0;
+	string str1;
+	attrmap3 = datamap('i', 'J', (DataMap)845, arg2);
+	str0 = getAttributeMapValue(attrmap3, 925);
+	int4 = getLineCount(str0, widget0.getWidth() - 22, 495) * 12 + 5;
+	int5 = 32 + int4 + 10;
+	ACTIVE.setSize(0, int5, 1, 0);
+	ACTIVE.setPosition(0, arg1, 1, 0);
+	ACTIVE.setFilled(true);
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.setTrans(255);
+	ACTIVE.setScriptCallOnMouseEntered(2140, CTX_WIDGET, CTX_WIDGET_CHILD, 200, "Iii");
+	ACTIVE.setScriptCallOnMouseExit(2140, CTX_WIDGET, CTX_WIDGET_CHILD, 255, "Iii");
+	ACTIVE.setContextMenuOption(1, "Take");
+	ACTIVE.setContextMenuOption(10, "Examine");
+	ACTIVE.setOptionBase("<col=ff9040>" + getItemName(getAttributeMapValue(attrmap3, 813)));
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(36, 32, 0, 0);
+	ACTIVE.setPosition(2, arg1 + 4, 0, 0);
+	ACTIVE.setItemNoNum(getAttributeMapValue(attrmap3, 813), 1);
+	ACTIVE.setOutlineThickness(1);
+	ACTIVE.setShadowColor(0x302020);
+	ACTIVE.createChild(widget0, 4, widget0.nextChild());
+	ACTIVE.setPosition(2, arg1 + 4, 2, 0);
+	ACTIVE.setRGB(0xFFF08C);
+	ACTIVE.setTextAlignment(0, 1, 0);
+	ACTIVE.setTextAntiMacro(true);
+	_ACTIVE.createChild(widget0, 4, widget0.nextChild());
+	_ACTIVE.setSize(36 + 4, 12, 1, 0);
+	_ACTIVE.setPosition(2, arg1 + 4 + (32 - _ACTIVE.getHeight()), 2, 0);
+	_ACTIVE.setFont(494);
+	_ACTIVE.setRGB(0xFF981F);
+	_ACTIVE.setTextAlignment(0, 1, 0);
+	_ACTIVE.setTextAntiMacro(true);
+	attrmap6 = getAttributeMapValue(attrmap3, 923);
+	if (attrmap6 != null) {
+		ACTIVE.setSize(36 + 4, 32 - _ACTIVE.getHeight(), 1, 0);
+		_ACTIVE.setText(getAttributeMapValue(attrmap6, 845));
+	} else {
+		ACTIVE.setSize(36 + 4, 32, 1, 0);
+		_ACTIVE.setHidden(true);
+	}
+	str1 = getAttributeMapValue(attrmap3, 924);
+	if (getLineCount(str1, ACTIVE.getWidth(), 496) <= 1) {
+		ACTIVE.setFont(496);
+	} else if (getLineCount(str1, ACTIVE.getWidth(), 495) <= 1) {
+		ACTIVE.setFont(495);
+	} else {
+		ACTIVE.setFont(494);
+	}
+	ACTIVE.setText(str1);
+	ACTIVE.createChild(widget0, 4, widget0.nextChild());
+	ACTIVE.setSize(22, int4, 1, 0);
+	ACTIVE.setPosition(2, arg1 + 32 + 6, 0, 0);
+	ACTIVE.setFont(495);
+	ACTIVE.setRGB(0xFFF08C);
+	ACTIVE.setTextAlignment(0, 1, 0);
+	ACTIVE.setTextAntiMacro(true);
+	ACTIVE.setText(str0);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(0, 32, 1, 0);
+	ACTIVE.setPosition(0, arg1 + int5 - 16, 0, 0);
+	ACTIVE.setSprite(995);
+	ACTIVE.setSpriteTiling(true);
+	return arg1 + int5, ACTIVE.getChildId();
+}

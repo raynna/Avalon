@@ -1,0 +1,489 @@
+void script_4777(int arg0, int arg1, int arg2) {
+	Sprite sprite3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	int int23;
+	int int24;
+	int int25;
+	int int26;
+	int int27;
+	int int28;
+	int int29;
+	int int30;
+	int int31;
+	int int32;
+	int int33;
+	int int34;
+	int int35;
+	int int36;
+	int int37;
+	int int38;
+	int int39;
+	int int40;
+	int int41;
+	int int42;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	sprite3 = null;
+	str0 = "";
+	str1 = "";
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	int7 = CLAN[2724] / 100;
+	int8 = CLAN[2725] / 100;
+	int9 = CLAN[2728] / 100;
+	int10 = CLAN[2732] / 100;
+	int11 = CLAN[2731] / 100;
+	int12 = CLAN[2730] / 100;
+	int13 = CLAN[2733] / 100;
+	int14 = 0;
+	int15 = 0;
+	int16 = 0;
+	int17 = 0;
+	int18 = 0;
+	int19 = 0;
+	int20 = 0;
+	int21 = 0;
+	int22 = 0;
+	int23 = 0;
+	int24 = 0;
+	int25 = 0;
+	int26 = 0;
+	int27 = 0;
+	int28 = 0;
+	int29 = 0;
+	int30 = 0;
+	int31 = 0;
+	int32 = 0;
+	int33 = 0;
+	int34 = 0;
+	int35 = 0;
+	int36 = 0;
+	int37 = 0;
+	int38 = arg0;
+	int39 = 0;
+	int40 = 0;
+	int41 = 0;
+	str2 = "";
+	str3 = "";
+	int42 = widget(1115, 8).getWidth() - 2;
+	if (arg0 < 1 || arg0 > 900) {
+		return;
+	}
+	if (citadelConfigsInitialized()) {
+		script_41(widget(1115, 186));
+		widget(1115, 34).setIsHidden(false);
+		sprite3, str0, int4, int5, int6, int39, int40, int41 = script_4791(arg0);
+		int14, int15, int16, int17, int18, int19, int20, int21, int22, int23, int24, int25, int26, int27, int28, int29, int30, int31, int32, int33, int34, int35, int36, int37, int38 = script_4794(arg2, int7, int8, int9, int10, int11, int12, int13);
+		if (arg0 > 300 && arg0 < 600) {
+			int4 = int4 - int5;
+		}
+		if (int39 == 5) {
+			if (int4 == 1) {
+				str3 = "(Basic)";
+			} else if (int4 == 2) {
+				str3 = "(Medium)";
+			} else if (int4 == 3) {
+				str3 = "(Grand)";
+			}
+		} else {
+			str3 = "(Tier " + str(int4) + ")";
+		}
+		if (getLineCount(str0, widget(1115, 37).getWidth(), 3793) > 1) {
+			widget(1115, 37).setText(str0 + " " + str3);
+		} else {
+			widget(1115, 37).setText(str0 + "<br>" + str3);
+		}
+		widget(1115, 36).setSprite(sprite3);
+		if (arg0 > 600) {
+			str1 = "Upgrade";
+			widget(1115, 80).setIsHidden(true);
+			widget(1115, 42).setIsHidden(true);
+			widget(1115, 41).setIsHidden(false);
+			widget(1115, 119).setIsHidden(false);
+			if (int14 == 0) {
+				widget(1115, 8).setIsHidden(true);
+				widget(1115, 9).setIsHidden(false);
+			} else {
+				widget(1115, 8).setIsHidden(false);
+				widget(1115, 9).setIsHidden(true);
+			}
+			if (int15 == 0) {
+				widget(1115, 45).setIsHidden(true);
+				widget(1115, 46).setIsHidden(false);
+			} else {
+				widget(1115, 45).setIsHidden(false);
+				widget(1115, 46).setIsHidden(true);
+			}
+			if (int16 == 0) {
+				widget(1115, 82).setIsHidden(true);
+				widget(1115, 83).setIsHidden(false);
+			} else {
+				widget(1115, 82).setIsHidden(false);
+				widget(1115, 83).setIsHidden(true);
+			}
+			if (int17 == 0) {
+				widget(1115, 86).setIsHidden(true);
+				widget(1115, 87).setIsHidden(false);
+			} else {
+				widget(1115, 86).setIsHidden(false);
+				widget(1115, 87).setIsHidden(true);
+			}
+			if (int18 == 0) {
+				widget(1115, 90).setIsHidden(true);
+				widget(1115, 91).setIsHidden(false);
+			} else {
+				widget(1115, 90).setIsHidden(false);
+				widget(1115, 91).setIsHidden(true);
+			}
+			if (int19 == 0) {
+				widget(1115, 117).setIsHidden(true);
+				widget(1115, 118).setIsHidden(false);
+			} else {
+				widget(1115, 117).setIsHidden(false);
+				widget(1115, 118).setIsHidden(true);
+			}
+			widget(1115, 12).setSize(int20 * int42 / max(1, int14), widget(1115, 12).getHeight(), 0, 0);
+			str2 = str(int20) + "<br>" + "of" + "<br>" + str(int14);
+			widget(1115, 12).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 98).setSize(int21 * int42 / max(1, int15), widget(1115, 98).getHeight(), 0, 0);
+			str2 = str(int21) + "<br>" + "of" + "<br>" + str(int15);
+			widget(1115, 98).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 103).setSize(int22 * int42 / max(1, int16), widget(1115, 103).getHeight(), 0, 0);
+			str2 = str(int22) + "<br>" + "of" + "<br>" + str(int16);
+			widget(1115, 103).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 108).setSize(int23 * int42 / max(1, int17), widget(1115, 108).getHeight(), 0, 0);
+			str2 = str(int23) + "<br>" + "of" + "<br>" + str(int17);
+			widget(1115, 108).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 113).setSize(int24 * int42 / max(1, int18), widget(1115, 113).getHeight(), 0, 0);
+			str2 = str(int24) + "<br>" + "of" + "<br>" + str(int18);
+			widget(1115, 113).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 121).setSize(int25 * int42 / max(1, int19), widget(1115, 121).getHeight(), 0, 0);
+			str2 = str(int25) + "<br>" + "of" + "<br>" + str(int19);
+			widget(1115, 121).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 94).setPosition(widget(1115, 12).getX() + widget(1115, 12).getWidth() + 1, 0, 0, 1);
+			widget(1115, 99).setPosition(widget(1115, 98).getX() + widget(1115, 98).getWidth() + 1, 0, 0, 1);
+			widget(1115, 104).setPosition(widget(1115, 103).getX() + widget(1115, 103).getWidth() + 1, 0, 0, 1);
+			widget(1115, 109).setPosition(widget(1115, 108).getX() + widget(1115, 108).getWidth() + 1, 0, 0, 1);
+			widget(1115, 114).setPosition(widget(1115, 113).getX() + widget(1115, 113).getWidth() + 1, 0, 0, 1);
+			widget(1115, 122).setPosition(widget(1115, 121).getX() + widget(1115, 121).getWidth() + 1, 0, 0, 1);
+			widget(1115, 94).setSize(int26 * int42 / max(1, int14), widget(1115, 94).getHeight(), 0, 0);
+			str2 = str(int26) + "<br>" + "of" + "<br>" + str(int14);
+			widget(1115, 94).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 99).setSize(int27 * int42 / max(1, int15), widget(1115, 99).getHeight(), 0, 0);
+			str2 = str(int27) + "<br>" + "of" + "<br>" + str(int15);
+			widget(1115, 99).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 104).setSize(int28 * int42 / max(1, int16), widget(1115, 104).getHeight(), 0, 0);
+			str2 = str(int28) + "<br>" + "of" + "<br>" + str(int16);
+			widget(1115, 104).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 109).setSize(int29 * int42 / max(1, int17), widget(1115, 109).getHeight(), 0, 0);
+			str2 = str(int29) + "<br>" + "of" + "<br>" + str(int17);
+			widget(1115, 109).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 114).setSize(int30 * int42 / max(1, int18), widget(1115, 114).getHeight(), 0, 0);
+			str2 = str(int30) + "<br>" + "of" + "<br>" + str(int18);
+			widget(1115, 114).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 122).setSize(int31 * int42 / max(1, int19), widget(1115, 122).getHeight(), 0, 0);
+			str2 = str(int31) + "<br>" + "of" + "<br>" + str(int19);
+			widget(1115, 122).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 95).setPosition(widget(1115, 94).getX() + widget(1115, 94).getWidth() + 1, 0, 0, 1);
+			widget(1115, 100).setPosition(widget(1115, 99).getX() + widget(1115, 99).getWidth() + 1, 0, 0, 1);
+			widget(1115, 105).setPosition(widget(1115, 104).getX() + widget(1115, 104).getWidth() + 1, 0, 0, 1);
+			widget(1115, 110).setPosition(widget(1115, 109).getX() + widget(1115, 109).getWidth() + 1, 0, 0, 1);
+			widget(1115, 115).setPosition(widget(1115, 114).getX() + widget(1115, 114).getWidth() + 1, 0, 0, 1);
+			widget(1115, 123).setPosition(widget(1115, 122).getX() + widget(1115, 122).getWidth() + 1, 0, 0, 1);
+			widget(1115, 95).setSize(int32 * int42 / max(1, int14), widget(1115, 95).getHeight(), 0, 0);
+			str2 = str(int32) + "<br>" + "of" + "<br>" + str(int14) + "<br>" + "1:1 ratio";
+			widget(1115, 95).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 100).setSize(int33 * int42 / max(1, int15), widget(1115, 100).getHeight(), 0, 0);
+			str2 = str(int33) + "<br>" + "of" + "<br>" + str(int15) + "<br>" + "1:1 ratio";
+			widget(1115, 100).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 105).setSize(int34 * int42 / max(1, int16), widget(1115, 105).getHeight(), 0, 0);
+			str2 = str(int34) + "<br>" + "of" + "<br>" + str(int16) + "<br>" + "3:1 ratio";
+			widget(1115, 105).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 110).setSize(int35 * int42 / max(1, int17), widget(1115, 110).getHeight(), 0, 0);
+			str2 = str(int35) + "<br>" + "of" + "<br>" + str(int17) + "<br>" + "1:1 ratio";
+			widget(1115, 110).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 115).setSize(int36 * int42 / max(1, int18), widget(1115, 115).getHeight(), 0, 0);
+			str2 = str(int36) + "<br>" + "of" + "<br>" + str(int18) + "<br>" + "1:1 ratio";
+			widget(1115, 115).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 123).setSize(int37 * int42 / max(1, int19), widget(1115, 123).getHeight(), 0, 0);
+			str2 = str(int37) + "<br>" + "of" + "<br>" + str(int19) + "<br>" + "3:1 ratio";
+			widget(1115, 123).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 96).setPosition(widget(1115, 95).getX() + widget(1115, 95).getWidth() + 1, 0, 0, 1);
+			widget(1115, 101).setPosition(widget(1115, 100).getX() + widget(1115, 100).getWidth() + 1, 0, 0, 1);
+			widget(1115, 106).setPosition(widget(1115, 105).getX() + widget(1115, 105).getWidth() + 1, 0, 0, 1);
+			widget(1115, 111).setPosition(widget(1115, 110).getX() + widget(1115, 110).getWidth() + 1, 0, 0, 1);
+			widget(1115, 116).setPosition(widget(1115, 115).getX() + widget(1115, 115).getWidth() + 1, 0, 0, 1);
+			widget(1115, 124).setPosition(widget(1115, 123).getX() + widget(1115, 123).getWidth() + 1, 0, 0, 1);
+			widget(1115, 96).setSize(int42 - (widget(1115, 12).getWidth() + 1) - (widget(1115, 94).getWidth() + 1) - (widget(1115, 95).getWidth() + 1), widget(1115, 96).getHeight(), 0, 0);
+			str2 = str(int14 - (int20 + int26 + int32)) + "<br>" + "of" + "<br>" + str(int14);
+			widget(1115, 96).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 101).setSize(int42 - (widget(1115, 98).getWidth() + 1) - (widget(1115, 99).getWidth() + 1) - (widget(1115, 100).getWidth() + 1), widget(1115, 101).getHeight(), 0, 0);
+			str2 = str(int15 - (int21 + int27 + int33)) + "<br>" + "of" + "<br>" + str(int15);
+			widget(1115, 101).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 106).setSize(int42 - (widget(1115, 103).getWidth() + 1) - (widget(1115, 104).getWidth() + 1) - (widget(1115, 105).getWidth() + 1), widget(1115, 106).getHeight(), 0, 0);
+			str2 = str(int16 - (int22 + int28 + int34)) + "<br>" + "of" + "<br>" + str(int16);
+			widget(1115, 106).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 111).setSize(int42 - (widget(1115, 108).getWidth() + 1) - (widget(1115, 109).getWidth() + 1) - (widget(1115, 110).getWidth() + 1), widget(1115, 111).getHeight(), 0, 0);
+			str2 = str(int17 - (int23 + int29 + int35)) + "<br>" + "of" + "<br>" + str(int17);
+			widget(1115, 111).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 116).setSize(int42 - (widget(1115, 113).getWidth() + 1) - (widget(1115, 114).getWidth() + 1) - (widget(1115, 115).getWidth() + 1), widget(1115, 116).getHeight(), 0, 0);
+			str2 = str(int18 - (int24 + int30 + int36)) + "<br>" + "of" + "<br>" + str(int18);
+			widget(1115, 116).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 124).setSize(int42 - (widget(1115, 121).getWidth() + 1) - (widget(1115, 122).getWidth() + 1) - (widget(1115, 123).getWidth() + 1), widget(1115, 124).getHeight(), 0, 0);
+			str2 = str(int19 - (int25 + int31 + int37)) + "<br>" + "of" + "<br>" + str(int19);
+			widget(1115, 124).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			str2 = str(int20) + " paid" + "<br>" + str(int26) + " available" + "<br>" + str(int32) + " from wildcard" + "<br>" + str(int14 - (int20 + int26 + int32)) + " shortfall";
+			if (int14 == 0) {
+				widget(1115, 7).setScriptCallOnMouseOver(-1, "");
+			} else {
+				widget(1115, 7).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			}
+			str2 = str(int21) + " paid" + "<br>" + str(int27) + " available" + "<br>" + str(int33) + " from wildcard" + "<br>" + str(int15 - (int21 + int27 + int33)) + " shortfall";
+			if (int15 == 0) {
+				widget(1115, 44).setScriptCallOnMouseOver(-1, "");
+			} else {
+				widget(1115, 44).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			}
+			str2 = str(int22) + " paid" + "<br>" + str(int28) + " available" + "<br>" + str(int34) + " from wildcard" + "<br>" + str(int16 - (int22 + int28 + int34)) + " shortfall";
+			if (int16 == 0) {
+				widget(1115, 81).setScriptCallOnMouseOver(-1, "");
+			} else {
+				widget(1115, 81).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			}
+			str2 = str(int23) + " paid" + "<br>" + str(int29) + " available" + "<br>" + str(int35) + " from wildcard" + "<br>" + str(int17 - (int23 + int29 + int35)) + " shortfall";
+			if (int17 == 0) {
+				widget(1115, 85).setScriptCallOnMouseOver(-1, "");
+			} else {
+				widget(1115, 85).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			}
+			str2 = str(int24) + " paid" + "<br>" + str(int30) + " available" + "<br>" + str(int36) + " from wildcard" + "<br>" + str(int18 - (int24 + int30 + int36)) + " shortfall";
+			if (int18 == 0) {
+				widget(1115, 89).setScriptCallOnMouseOver(-1, "");
+			} else {
+				widget(1115, 89).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			}
+			str2 = str(int25) + " paid" + "<br>" + str(int31) + " available" + "<br>" + str(int37) + " from wildcard" + "<br>" + str(int19 - (int25 + int31 + int37)) + " shortfall";
+			if (int19 == 0) {
+				widget(1115, 93).setScriptCallOnMouseOver(-1, "");
+			} else {
+				widget(1115, 93).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			}
+		} else if (arg0 < 300) {
+			str1 = "Downgrade -" + str(int5);
+			widget(1115, 80).setIsHidden(false);
+			widget(1115, 42).setIsHidden(false);
+			widget(1115, 41).setIsHidden(true);
+			widget(1115, 119).setIsHidden(true);
+			widget(1115, 137).setText(str(int14));
+			widget(1115, 139).setText(str(int15));
+			widget(1115, 141).setText(str(int16));
+			widget(1115, 143).setText(str(int17));
+			widget(1115, 145).setText(str(int18));
+			widget(1115, 147).setText(str(int19));
+			int14, int15, int16, int17, int18, int19 = script_4792(arg0, max(int4 - int5, 0));
+			widget(1115, 138).setText(str(int14));
+			widget(1115, 140).setText(str(int15));
+			widget(1115, 142).setText(str(int16));
+			widget(1115, 144).setText(str(int17));
+			widget(1115, 146).setText(str(int18));
+			widget(1115, 148).setText(str(int19));
+		} else {
+			str1 = "Upkeep";
+			widget(1115, 80).setIsHidden(true);
+			widget(1115, 42).setIsHidden(true);
+			widget(1115, 41).setIsHidden(false);
+			widget(1115, 119).setIsHidden(true);
+			if (int14 == 0) {
+				widget(1115, 8).setIsHidden(true);
+				widget(1115, 9).setIsHidden(false);
+			} else {
+				widget(1115, 8).setIsHidden(false);
+				widget(1115, 9).setIsHidden(true);
+			}
+			if (int15 == 0) {
+				widget(1115, 45).setIsHidden(true);
+				widget(1115, 46).setIsHidden(false);
+			} else {
+				widget(1115, 45).setIsHidden(false);
+				widget(1115, 46).setIsHidden(true);
+			}
+			if (int16 == 0) {
+				widget(1115, 82).setIsHidden(true);
+				widget(1115, 83).setIsHidden(false);
+			} else {
+				widget(1115, 82).setIsHidden(false);
+				widget(1115, 83).setIsHidden(true);
+			}
+			if (int17 == 0) {
+				widget(1115, 86).setIsHidden(true);
+				widget(1115, 87).setIsHidden(false);
+			} else {
+				widget(1115, 86).setIsHidden(false);
+				widget(1115, 87).setIsHidden(true);
+			}
+			if (int18 == 0) {
+				widget(1115, 90).setIsHidden(true);
+				widget(1115, 91).setIsHidden(false);
+			} else {
+				widget(1115, 90).setIsHidden(false);
+				widget(1115, 91).setIsHidden(true);
+			}
+			if (int19 == 0) {
+				widget(1115, 117).setIsHidden(true);
+				widget(1115, 118).setIsHidden(false);
+			} else {
+				widget(1115, 117).setIsHidden(false);
+				widget(1115, 118).setIsHidden(true);
+			}
+			widget(1115, 12).setSize(int20 * int42 / max(1, int14), widget(1115, 12).getHeight(), 0, 0);
+			str2 = str(int20) + "<br>" + "of" + "<br>" + str(int14);
+			widget(1115, 12).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 98).setSize(int21 * int42 / max(1, int15), widget(1115, 98).getHeight(), 0, 0);
+			str2 = str(int21) + "<br>" + "of" + "<br>" + str(int15);
+			widget(1115, 98).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 103).setSize(int22 * int42 / max(1, int16), widget(1115, 103).getHeight(), 0, 0);
+			str2 = str(int22) + "<br>" + "of" + "<br>" + str(int16);
+			widget(1115, 103).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 108).setSize(int23 * int42 / max(1, int17), widget(1115, 108).getHeight(), 0, 0);
+			str2 = str(int23) + "<br>" + "of" + "<br>" + str(int17);
+			widget(1115, 108).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 113).setSize(int24 * int42 / max(1, int18), widget(1115, 113).getHeight(), 0, 0);
+			str2 = str(int24) + "<br>" + "of" + "<br>" + str(int18);
+			widget(1115, 113).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 121).setSize(int25 * int42 / max(1, int19), widget(1115, 121).getHeight(), 0, 0);
+			str2 = str(int25) + "<br>" + "of" + "<br>" + str(int19);
+			widget(1115, 121).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 94).setPosition(widget(1115, 12).getX() + widget(1115, 12).getWidth() + 1, 0, 0, 1);
+			widget(1115, 99).setPosition(widget(1115, 98).getX() + widget(1115, 98).getWidth() + 1, 0, 0, 1);
+			widget(1115, 104).setPosition(widget(1115, 103).getX() + widget(1115, 103).getWidth() + 1, 0, 0, 1);
+			widget(1115, 109).setPosition(widget(1115, 108).getX() + widget(1115, 108).getWidth() + 1, 0, 0, 1);
+			widget(1115, 114).setPosition(widget(1115, 113).getX() + widget(1115, 113).getWidth() + 1, 0, 0, 1);
+			widget(1115, 122).setPosition(widget(1115, 121).getX() + widget(1115, 121).getWidth() + 1, 0, 0, 1);
+			widget(1115, 94).setSize(int26 * int42 / max(1, int14), widget(1115, 94).getHeight(), 0, 0);
+			str2 = str(int26) + "<br>" + "of" + "<br>" + str(int14);
+			widget(1115, 94).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 99).setSize(int27 * int42 / max(1, int15), widget(1115, 99).getHeight(), 0, 0);
+			str2 = str(int27) + "<br>" + "of" + "<br>" + str(int15);
+			widget(1115, 99).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 104).setSize(int28 * int42 / max(1, int16), widget(1115, 104).getHeight(), 0, 0);
+			str2 = str(int28) + "<br>" + "of" + "<br>" + str(int16);
+			widget(1115, 104).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 109).setSize(int29 * int42 / max(1, int17), widget(1115, 109).getHeight(), 0, 0);
+			str2 = str(int29) + "<br>" + "of" + "<br>" + str(int17);
+			widget(1115, 109).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 114).setSize(int30 * int42 / max(1, int18), widget(1115, 114).getHeight(), 0, 0);
+			str2 = str(int30) + "<br>" + "of" + "<br>" + str(int18);
+			widget(1115, 114).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 122).setSize(int31 * int42 / max(1, int19), widget(1115, 122).getHeight(), 0, 0);
+			str2 = str(int31) + "<br>" + "of" + "<br>" + str(int19);
+			widget(1115, 122).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 95).setPosition(widget(1115, 94).getX() + widget(1115, 94).getWidth() + 1, 0, 0, 1);
+			widget(1115, 100).setPosition(widget(1115, 99).getX() + widget(1115, 99).getWidth() + 1, 0, 0, 1);
+			widget(1115, 105).setPosition(widget(1115, 104).getX() + widget(1115, 104).getWidth() + 1, 0, 0, 1);
+			widget(1115, 110).setPosition(widget(1115, 109).getX() + widget(1115, 109).getWidth() + 1, 0, 0, 1);
+			widget(1115, 115).setPosition(widget(1115, 114).getX() + widget(1115, 114).getWidth() + 1, 0, 0, 1);
+			widget(1115, 123).setPosition(widget(1115, 122).getX() + widget(1115, 122).getWidth() + 1, 0, 0, 1);
+			widget(1115, 95).setSize(int32 * int42 / max(1, int14), widget(1115, 95).getHeight(), 0, 0);
+			str2 = str(int32) + "<br>" + "of" + "<br>" + str(int14) + "<br>" + "1:1 ratio";
+			widget(1115, 95).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 100).setSize(int33 * int42 / max(1, int15), widget(1115, 100).getHeight(), 0, 0);
+			str2 = str(int33) + "<br>" + "of" + "<br>" + str(int15) + "<br>" + "1:1 ratio";
+			widget(1115, 100).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 105).setSize(int34 * int42 / max(1, int16), widget(1115, 105).getHeight(), 0, 0);
+			str2 = str(int34) + "<br>" + "of" + "<br>" + str(int16) + "<br>" + "3:1 ratio";
+			widget(1115, 105).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 110).setSize(int35 * int42 / max(1, int17), widget(1115, 110).getHeight(), 0, 0);
+			str2 = str(int35) + "<br>" + "of" + "<br>" + str(int17) + "<br>" + "1:1 ratio";
+			widget(1115, 110).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 115).setSize(int36 * int42 / max(1, int18), widget(1115, 115).getHeight(), 0, 0);
+			str2 = str(int36) + "<br>" + "of" + "<br>" + str(int18) + "<br>" + "1:1 ratio";
+			widget(1115, 115).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 123).setSize(int37 * int42 / max(1, int19), widget(1115, 123).getHeight(), 0, 0);
+			str2 = str(int37) + "<br>" + "of" + "<br>" + str(int19) + "<br>" + "3:1 ratio";
+			widget(1115, 123).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 96).setPosition(widget(1115, 95).getX() + widget(1115, 95).getWidth() + 1, 0, 0, 1);
+			widget(1115, 101).setPosition(widget(1115, 100).getX() + widget(1115, 100).getWidth() + 1, 0, 0, 1);
+			widget(1115, 106).setPosition(widget(1115, 105).getX() + widget(1115, 105).getWidth() + 1, 0, 0, 1);
+			widget(1115, 111).setPosition(widget(1115, 110).getX() + widget(1115, 110).getWidth() + 1, 0, 0, 1);
+			widget(1115, 116).setPosition(widget(1115, 115).getX() + widget(1115, 115).getWidth() + 1, 0, 0, 1);
+			widget(1115, 124).setPosition(widget(1115, 123).getX() + widget(1115, 123).getWidth() + 1, 0, 0, 1);
+			widget(1115, 96).setSize(int42 - (widget(1115, 12).getWidth() + 1) - (widget(1115, 94).getWidth() + 1) - (widget(1115, 95).getWidth() + 1), widget(1115, 96).getHeight(), 0, 0);
+			str2 = str(int14 - (int20 + int26 + int32)) + "<br>" + "of" + "<br>" + str(int14);
+			widget(1115, 96).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 101).setSize(int42 - (widget(1115, 98).getWidth() + 1) - (widget(1115, 99).getWidth() + 1) - (widget(1115, 100).getWidth() + 1), widget(1115, 101).getHeight(), 0, 0);
+			str2 = str(int15 - (int21 + int27 + int33)) + "<br>" + "of" + "<br>" + str(int15);
+			widget(1115, 101).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 106).setSize(int42 - (widget(1115, 103).getWidth() + 1) - (widget(1115, 104).getWidth() + 1) - (widget(1115, 105).getWidth() + 1), widget(1115, 106).getHeight(), 0, 0);
+			str2 = str(int16 - (int22 + int28 + int34)) + "<br>" + "of" + "<br>" + str(int16);
+			widget(1115, 106).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 111).setSize(int42 - (widget(1115, 108).getWidth() + 1) - (widget(1115, 109).getWidth() + 1) - (widget(1115, 110).getWidth() + 1), widget(1115, 111).getHeight(), 0, 0);
+			str2 = str(int17 - (int23 + int29 + int35)) + "<br>" + "of" + "<br>" + str(int17);
+			widget(1115, 111).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 116).setSize(int42 - (widget(1115, 113).getWidth() + 1) - (widget(1115, 114).getWidth() + 1) - (widget(1115, 115).getWidth() + 1), widget(1115, 116).getHeight(), 0, 0);
+			str2 = str(int18 - (int24 + int30 + int36)) + "<br>" + "of" + "<br>" + str(int18);
+			widget(1115, 116).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1115, 124).setSize(int42 - (widget(1115, 121).getWidth() + 1) - (widget(1115, 122).getWidth() + 1) - (widget(1115, 123).getWidth() + 1), widget(1115, 124).getHeight(), 0, 0);
+			str2 = str(int19 - (int25 + int31 + int37)) + "<br>" + "of" + "<br>" + str(int19);
+			widget(1115, 124).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			str2 = str(int26) + " available" + "<br>" + str(int32) + " from wildcard" + "<br>" + str(int14 - (int26 + int32)) + " shortfall";
+			if (int14 == 0) {
+				widget(1115, 7).setScriptCallOnMouseOver(-1, "");
+			} else {
+				widget(1115, 7).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			}
+			str2 = str(int27) + " available" + "<br>" + str(int33) + " from wildcard" + "<br>" + str(int15 - (int27 + int33)) + " shortfall";
+			if (int15 == 0) {
+				widget(1115, 44).setScriptCallOnMouseOver(-1, "");
+			} else {
+				widget(1115, 44).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			}
+			str2 = str(int28) + " available" + "<br>" + str(int34) + " from wildcard" + "<br>" + str(int16 - (int28 + int34)) + " shortfall";
+			if (int16 == 0) {
+				widget(1115, 81).setScriptCallOnMouseOver(-1, "");
+			} else {
+				widget(1115, 81).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			}
+			str2 = str(int29) + " available" + "<br>" + str(int35) + " from wildcard" + "<br>" + str(int17 - (int29 + int35)) + " shortfall";
+			if (int17 == 0) {
+				widget(1115, 85).setScriptCallOnMouseOver(-1, "");
+			} else {
+				widget(1115, 85).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			}
+			str2 = str(int30) + " available" + "<br>" + str(int36) + " from wildcard" + "<br>" + str(int18 - (int30 + int36)) + " shortfall";
+			if (int18 == 0) {
+				widget(1115, 89).setScriptCallOnMouseOver(-1, "");
+			} else {
+				widget(1115, 89).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			}
+			str2 = str(int31) + " available" + "<br>" + str(int37) + " from wildcard" + "<br>" + str(int19 - (int31 + int37)) + " shortfall";
+			if (int19 == 0) {
+				widget(1115, 93).setScriptCallOnMouseOver(-1, "");
+			} else {
+				widget(1115, 93).setScriptCallOnMouseOver(4538, widget(1115, 186), CTX_WIDGET, -1, str2, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			}
+		}
+		widget(1115, 79).setText(str1);
+	}
+	return;
+}

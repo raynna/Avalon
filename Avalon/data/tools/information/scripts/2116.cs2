@@ -1,0 +1,36 @@
+void script_2116(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4) {
+	int int5;
+	int int6;
+	int int7;
+	widget0.clearChildren();
+	widget3.clearChildren();
+	widget4.setText("");
+	int5 = 0;
+	int6 = 0;
+	int7 = (widget0.getWidth() - 320) / 3;
+	while (int5 < getItemContainerLength(307)) {
+		if (getItemAmtInSlot(307, int5) > 0) {
+			script_2117(int5, int6, int7, widget0, widget3, widget4);
+			int6 = int6 + 1;
+		} else {
+			script_2118(int5, widget0);
+		}
+		int5 = int5 + 1;
+	}
+	int5 = int7 + (int6 + 1) / 2 * (int7 + 64);
+	widget0.setScrollPos(0, 0);
+	if (int5 > widget0.getHeight()) {
+		widget0.setScrollMax(0, int5);
+		script_31(widget1, widget0, 792, 789, 790, 791, 773, 788);
+		widget4.setPosition(392, widget4.getY(), 0, 0);
+		widget3.setPosition(392, widget3.getY(), 0, 0);
+		widget2.setIsHidden(false);
+	} else {
+		widget0.setScrollMax(0, 0);
+		widget1.clearChildren();
+		widget3.setPosition(384, widget3.getY(), 0, 0);
+		widget4.setPosition(384, widget4.getY(), 0, 0);
+		widget2.setIsHidden(true);
+	}
+	return;
+}

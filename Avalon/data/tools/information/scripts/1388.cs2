@@ -1,0 +1,44 @@
+void script_1388(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	widget0.clearChildren();
+	widget(271, 6).clearChildren();
+	int1 = 5;
+	int2 = 15;
+	int3 = 15;
+	int4 = 0;
+	int5 = 6;
+	int6 = 28;
+	int7 = 30;
+	if (VARPBIT[6840] == 1) {
+		int7 = 20;
+	}
+	while (int4 < int7) {
+		ACTIVE.createChild(widget0, 5, int4);
+		ACTIVE.setSize(int2, int3, 0, 0);
+		ACTIVE.setSpriteTiling(true);
+		ACTIVE.setPosition(int5, int6, 0, 0);
+		if (script_2297(int4) == 0) {
+			ACTIVE.setContextMenuOption(1, "Select" + "<col=ff9040>");
+			ACTIVE.setSprite(180);
+		} else {
+			ACTIVE.setContextMenuOption(1, "Deselect" + "<col=ff9040>");
+			ACTIVE.setSprite(181);
+		}
+		ACTIVE.setScriptCallOnClickContextMenu(2290, CTX_WIDGET, CTX_WIDGET_CHILD, "Ii");
+		ACTIVE.setScriptCallOnConfigChange(2291, CTX_WIDGET, CTX_WIDGET_CHILD, 1397, 1587, "IiY");
+		int4 = int4 + 1;
+		if (int4 % int1 == 0) {
+			int5 = 6;
+			int6 = int6 + 35;
+		} else {
+			int5 = int5 + 37;
+		}
+	}
+	return;
+}

@@ -1,0 +1,60 @@
+void script_1693(int arg0, int arg1, int arg2) {
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	AttrMap attrmap8;
+	string str0;
+	string str1;
+	int3 = (arg1 + arg2) / 2;
+	int4 = ARRAY0[int3];
+	ARRAY0[int3] = ARRAY0[arg2];
+	ARRAY0[arg2] = int4;
+	int5 = arg1;
+	int6 = arg1;
+	int7 = 0;
+	str0 = "";
+	str1 = "";
+	attrmap8 = null;
+	while (int6 < arg2) {
+		attrmap8 = datamap('i', 'J', (DataMap)845, ARRAY0[int6]);
+		if (attrmap8 != null) {
+			attrmap8 = getAttributeMapValue(attrmap8, 923);
+			if (attrmap8 != null) {
+				str0 = getAttributeMapValue(attrmap8, 846);
+			} else {
+				str0 = "";
+			}
+		} else {
+			str0 = "";
+		}
+		attrmap8 = datamap('i', 'J', (DataMap)845, int4);
+		if (attrmap8 != null) {
+			attrmap8 = getAttributeMapValue(attrmap8, 923);
+			if (attrmap8 != null) {
+				str1 = getAttributeMapValue(attrmap8, 846);
+			} else {
+				str1 = "";
+			}
+		} else {
+			str1 = "";
+		}
+		if (compare(str0, str1) < bitAnd(int6, 1)) {
+			int7 = ARRAY0[int6];
+			ARRAY0[int6] = ARRAY0[int5];
+			ARRAY0[int5] = int7;
+			int5 = int5 + 1;
+		}
+		int6 = int6 + 1;
+	}
+	ARRAY0[arg2] = ARRAY0[int5];
+	ARRAY0[int5] = int4;
+	if (arg1 < int5 - 1) {
+		script_1693(0, arg1, int5 - 1);
+	}
+	if (int5 + 1 < arg2) {
+		script_1693(0, int5 + 1, arg2);
+	}
+	return;
+}

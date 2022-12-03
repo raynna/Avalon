@@ -1,0 +1,148 @@
+void script_4994() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	int int23;
+	int int24;
+	int int25;
+	int int26;
+	int int27;
+	int0 = -1;
+	int1 = -1;
+	int2 = -1;
+	int3 = -1;
+	int4 = -1;
+	int5 = -1;
+	int6 = -1;
+	int7 = -1;
+	int8 = -1;
+	int9 = -1;
+	int10 = -1;
+	int11 = -1;
+	int12 = -1;
+	int13 = -1;
+	int14 = -1;
+	int15 = -1;
+	int16 = -1;
+	int17 = -1;
+	int18 = -1;
+	int19 = -1;
+	int20 = -1;
+	int21 = -1;
+	int22 = -1;
+	int23 = -1;
+	int24 = -1;
+	int25 = -1;
+	int26 = -1;
+	int27 = -1;
+	if (citadelConfigsInitialized()) {
+		int0 = script_4948(1);
+		int1 = script_4948(2);
+		int2 = script_4948(3);
+		int3 = script_4948(4);
+		int4 = script_4948(7);
+		int5 = script_4948(6);
+		int6 = script_4948(5);
+		int7 = script_4959(int0);
+		int8 = script_4959(int1);
+		int9 = script_4959(int2);
+		int10 = script_4959(int3);
+		int11 = script_4959(int4);
+		int12 = script_4959(int5);
+		int13 = script_4959(int6);
+		int14 = script_4961(int0, 3);
+		int15 = script_4961(int1, 3);
+		int16 = script_4961(int2, 3);
+		int17 = script_4961(int3, 3);
+		int18 = script_4961(int4, 3);
+		int19 = script_4961(int5, 3);
+		int20 = script_4961(int6, 3);
+		int21 = script_4953(int14);
+		int22 = script_4953(int15);
+		int23 = script_4953(int16);
+		int24 = script_4953(int17);
+		int25 = script_4953(int18);
+		int26 = script_4953(int19);
+		int27 = script_4953(int20);
+		widget(1092, 741).setText("Tier " + str(CLANBIT[2580]));
+		widget(1092, 752).setText("Tier " + str(CLANBIT[2581]));
+		widget(1092, 763).setText("Tier " + str(CLANBIT[2582]));
+		widget(1092, 774).setText("Tier " + str(int7));
+		widget(1092, 785).setText("Tier " + str(int8));
+		widget(1092, 796).setText("Tier " + str(int9));
+		widget(1092, 807).setText("Tier " + str(int10));
+		widget(1092, 829).setText("Tier " + str(int11));
+		widget(1092, 818).setText("Tier " + str(int12));
+		widget(1092, 841).setText("Tier " + str(int13));
+		if (int7 == 0) {
+			if (int21 > 0) {
+				widget(1092, 774).setText("Building");
+			} else {
+				widget(1092, 774).setText("Buy");
+			}
+		}
+		if (int8 == 0) {
+			if (int22 > 0) {
+				widget(1092, 785).setText("Building");
+			} else {
+				widget(1092, 785).setText("Buy");
+			}
+		}
+		if (int9 == 0) {
+			if (int23 > 0) {
+				widget(1092, 796).setText("Building");
+			} else {
+				widget(1092, 796).setText("Buy");
+			}
+		}
+		if (int10 == 0) {
+			if (int24 > 0) {
+				widget(1092, 807).setText("Building");
+			} else {
+				widget(1092, 807).setText("Buy");
+			}
+		}
+		if (int11 == 0) {
+			if (int25 > 0) {
+				widget(1092, 829).setText("Building");
+			} else {
+				widget(1092, 829).setText("Buy");
+			}
+		}
+		if (int12 == 0) {
+			if (int26 > 0) {
+				widget(1092, 818).setText("Building");
+			} else {
+				widget(1092, 818).setText("Buy");
+			}
+		}
+		if (int13 == 0) {
+			if (int27 > 0) {
+				widget(1092, 841).setText("Building");
+			} else {
+				widget(1092, 841).setText("Buy");
+			}
+		}
+	}
+	return;
+}

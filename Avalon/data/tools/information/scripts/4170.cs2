@@ -1,0 +1,26 @@
+void script_4170(Widget widget0, Widget widget1, int arg2, string string3) {
+	widget0.clearChildren();
+	script_4178(1, arg2, 0);
+	ACTIVE.createChild(widget0, 5, 0);
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setSprite(170);
+	ACTIVE.setScriptCallOnMouseOver(1160, CTX_WIDGET, CTX_WIDGET_CHILD, widget1, string3, 25, 200, "IiIsii");
+	ACTIVE.setScriptCallOnMouseExit(40, widget1, "I");
+	ACTIVE.createChild(widget0, 5, 1);
+	script_4172(arg2);
+	ACTIVE.setScriptCallOnItemContainerUpdate(4171, CTX_WIDGET, CTX_WIDGET_CHILD, arg2, 94, "IiiY");
+	_ACTIVE.createChild(widget0, 5, 2);
+	_ACTIVE.setSize(0, 0, 1, 1);
+	_ACTIVE.setPosition(0, 0, 1, 1);
+	_ACTIVE.setSprite(1132);
+	script_4174(arg2);
+	ACTIVE.setScriptCallOnConfigChange(4173, CTX_WIDGET, _ACTIVE.getChildId(), arg2, 286, "IiiY");
+	_ACTIVE.createChild(widget0, 5, 3);
+	_ACTIVE.setSize(10, 32, 0, 0);
+	_ACTIVE.setPosition(0, 0, 1, 1);
+	_ACTIVE.setSprite(937);
+	_ACTIVE.setHidden(true);
+	ACTIVE.setScriptCallOnGameloop(4175, CTX_WIDGET, _ACTIVE.getChildId(), arg2, true, "Iii1");
+	return;
+}

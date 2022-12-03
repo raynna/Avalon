@@ -1,0 +1,4 @@
+void script_4578(int arg0, int arg1) {
+	script_311(getAttributeMapValue((AttrMap)1815, 596), arg0, arg1);
+	return;
+}

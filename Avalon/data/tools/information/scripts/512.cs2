@@ -1,0 +1,4 @@
+void script_512() {
+	VARC[50] = widget(605, 1).get3DDistance();
+	return;
+}

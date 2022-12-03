@@ -1,0 +1,70 @@
+void script_736(Widget widget0, int arg1, Widget widget2, int arg3) {
+	Widget widget4;
+	Widget widget5;
+	Widget widget6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	Widget widget11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	widget4 = widget(746, 81);
+	widget5 = widget(548, 189);
+	widget6 = widget(548, 202);
+	if (widget0 == null) {
+		widget4.setIsHidden(true);
+		widget4.setPosition(0, 0, 0, 0);
+		widget(746, 21).setScriptCallOnGameloop(-1, "");
+		widget5.setIsHidden(true);
+		widget6.setIsHidden(true);
+		widget5.setPosition(0, 0, 0, 0);
+		widget6.setPosition(0, 0, 0, 0);
+		widget(548, 116).setScriptCallOnGameloop(-1, "");
+		return;
+	}
+	widget4.setIsHidden(false);
+	script_2755(widget0, arg1, widget4);
+	widget(746, 21).setScriptCallOnGameloop(2754, widget0, arg1, widget4, "IiI");
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int10 = 0;
+	if (ACTIVE.setChild(widget2, arg3) || arg3 == -1 && ACTIVE.setChild(widget2)) {
+		int7, int8 = script_1743(), script_1744();
+		int9, int10 = ACTIVE.getWidth(), ACTIVE.getHeight();
+		widget11 = widget5.getLayer();
+		int12 = 0;
+		int13 = 0;
+		int14 = 0;
+		int15 = 0;
+		int16 = 0;
+		int17 = 0;
+		int12, int13 = script_3365(widget11), script_3366(widget11);
+		int14, int15 = widget11.getWidth(), widget11.getHeight();
+		int16, int17 = int12 + int14, int13 + int15;
+		int18 = 0;
+		int19 = 0;
+		if (int7 + int9 >= int12 && int7 <= int16 && int8 + int10 >= int13 && int8 <= int17) {
+			widget4 = widget5;
+		} else {
+			widget4 = widget6;
+			widget11 = widget6.getLayer();
+			int12, int13 = script_3365(widget11), script_3366(widget11);
+			int14, int15 = widget11.getWidth(), widget11.getHeight();
+			int16, int17 = int12 + int14, int13 + int15;
+		}
+		int18, int19 = int7 - int12, int8 - int13;
+		widget4.setIsHidden(false);
+		script_1176(widget4, int7, int8, int9, int10, int18, int19, int12, int13, int14, int15);
+		widget(548, 116).setScriptCallOnGameloop(836, widget4, int7, int8, int9, int10, int18, int19, int12, int13, int14, int15, "Iiiiiiiiiii");
+		return;
+	}
+	return;
+}

@@ -1,0 +1,10 @@
+void script_5192() {
+	VARC[1595] = script_5193();
+	VARC[1594] = script_5194();
+	VARC[1596] = -1;
+	script_5176();
+	script_5195();
+	script_5196();
+	script_5180(-1);
+	return;
+}

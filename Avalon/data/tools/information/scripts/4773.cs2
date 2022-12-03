@@ -1,0 +1,10 @@
+void script_4773(int arg0, int arg1, int arg2) {
+	if (citadelConfigsInitialized() && VARPBIT[9555] == arg0) {
+		if (VARC[1560] == 1) {
+			script_4768();
+			script_4777(arg0, arg1, arg2);
+		}
+		VARC[1560] = 0;
+	}
+	return;
+}

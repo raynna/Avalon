@@ -1,0 +1,6 @@
+void script_2053(int arg0, Widget widget1, Location location2) {
+	if (arg0 == 1) {
+		widget1.setScriptCallOnGameloop(2054, getClientCycle() + 3, widget1, location2, "iIc");
+	}
+	return;
+}

@@ -1,0 +1,47 @@
+int, int, int, int script_3269(int arg0, int arg1, int arg2, int arg3) {
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	if (arg0 == 0) {
+		arg2 = 48;
+		arg3 = 48;
+	}
+	int4 = arg1;
+	if (VARC[1198] == 1) {
+		int4 = int4 + 2;
+		if (arg0 == 1) {
+			int4 = int4 + arg3;
+		} else {
+			int4 = int4 + arg2;
+		}
+	}
+	int5 = int4;
+	if (VARC[1199] == 1) {
+		int5 = int5 + 2;
+		if (arg0 == 2) {
+			int5 = int5 + arg3;
+		} else {
+			int5 = int5 + arg2;
+		}
+	}
+	int6 = int5;
+	if (VARC[1200] == 1) {
+		int6 = int6 + 2;
+		if (arg0 == 3) {
+			int6 = int6 + arg3;
+		} else {
+			int6 = int6 + arg2;
+		}
+	}
+	int7 = int6;
+	if (VARC[1201] == 1) {
+		int7 = int7 + 2;
+		if (arg0 == 4) {
+			int7 = int7 + arg3;
+		} else {
+			int7 = int7 + arg2;
+		}
+	}
+	return int4, int5, int6, int7;
+}

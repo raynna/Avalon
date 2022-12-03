@@ -1,0 +1,19 @@
+void script_4033(int arg0, int arg1) {
+	Sprite sprite2;
+	sprite2 = null;
+	if (arg1 == 1) {
+		if (arg0 == 0) {
+			sprite2 = 4087;
+		} else {
+			sprite2 = 4086;
+			script_41(widget(917, 152));
+		}
+	} else if (arg0 == 0) {
+		sprite2 = 4085;
+	} else {
+		sprite2 = 4084;
+		script_41(widget(917, 152));
+	}
+	widget(917, 142).setSprite(sprite2);
+	return;
+}

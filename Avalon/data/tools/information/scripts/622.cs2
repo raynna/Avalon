@@ -1,0 +1,18 @@
+void script_622() {
+	if (VARP[1118] == 1) {
+		widget(105, 17).setIsHidden(false);
+		widget(105, 127).setIsHidden(false);
+		widget(105, 154).setIsHidden(false);
+		widget(105, 188).setIsHidden(false);
+		widget(105, 193).setIsHidden(false);
+		widget(105, 197).setIsHidden(false);
+	} else {
+		widget(105, 17).setIsHidden(true);
+		widget(105, 127).setIsHidden(true);
+		widget(105, 154).setIsHidden(true);
+		widget(105, 188).setIsHidden(true);
+		widget(105, 193).setIsHidden(true);
+		widget(105, 197).setIsHidden(true);
+	}
+	return;
+}

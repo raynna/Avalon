@@ -1,0 +1,75 @@
+void script_5371(int arg0, int arg1, int arg2) {
+	int int3;
+	int int4;
+	int int5;
+	if (arg0 < 1) {
+		widget(951, 53).setText("-");
+	}
+	if (arg0 < 2) {
+		widget(951, 55).setText("-");
+	}
+	if (arg0 < 3) {
+		widget(951, 57).setText("-");
+	}
+	if (arg0 < 4) {
+		widget(951, 59).setText("-");
+	}
+	if (arg0 < 5) {
+		widget(951, 61).setText("-");
+	}
+	if (arg0 < 6) {
+		widget(951, 63).setText("-");
+	}
+	switch (arg0) {
+		case 0:
+			widget(951, 25).setText(str(arg1));
+			break;
+		case 1:
+			widget(951, 53).setText(str(arg1));
+			break;
+		case 2:
+			widget(951, 55).setText(str(arg1));
+			break;
+		case 3:
+			widget(951, 57).setText(str(arg1));
+			break;
+		case 4:
+			widget(951, 59).setText(str(arg1));
+			break;
+		case 5:
+			widget(951, 61).setText(str(arg1));
+			break;
+		case 6:
+			widget(951, 63).setText(str(arg1));
+			break;
+	}
+	switch (arg0) {
+		case 0:
+			script_5373(widget(951, 53), arg2);
+			break;
+		case 1:
+			script_5373(widget(951, 55), arg2);
+			break;
+		case 2:
+			script_5373(widget(951, 57), arg2);
+			break;
+		case 3:
+			script_5373(widget(951, 59), arg2);
+			break;
+		case 4:
+			script_5373(widget(951, 61), arg2);
+			break;
+		case 5:
+			script_5373(widget(951, 63), arg2);
+			break;
+	}
+	int3 = 63 * arg0 - 189;
+	int4 = int3 + 63;
+	widget(951, 36).setScriptCallOnGameloop(5372, widget(951, 36), int3, "Ii");
+	widget(951, 34).setScriptCallOnGameloop(5372, widget(951, 34), int4, "Ii");
+	int5 = widget(951, 36).getX() + widget(951, 36).getWidth() / 2 - widget(951, 14).getWidth() / 2;
+	if (int5 < int3) {
+		playSoundEffect2False(7717, 1, 0, 180);
+	}
+	return;
+}

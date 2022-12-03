@@ -1,0 +1,28 @@
+void script_266() {
+	string str0;
+	ARRAY0 = new int[4];
+	ARRAY0[VARC[1104]] = ARRAY0[VARC[1104]] + 1;
+	ARRAY0[VARC[1105]] = ARRAY0[VARC[1105]] + 1;
+	ARRAY0[VARC[1106]] = ARRAY0[VARC[1106]] + 1;
+	ARRAY0[VARC[1107]] = ARRAY0[VARC[1107]] + 1;
+	ARRAY0[VARC[1108]] = ARRAY0[VARC[1108]] + 1;
+	widget(923, 53).setText("Small x " + str(ARRAY0[1]));
+	widget(923, 54).setText("Med. x " + str(ARRAY0[2]));
+	widget(923, 55).setText("Large x " + str(ARRAY0[3]));
+	str0 = "";
+	if (ARRAY0[1] > 0) {
+		str0 = "Remove-weight";
+	}
+	widget(923, 53).setContextMenuOption(1, str0);
+	str0 = "";
+	if (ARRAY0[2] > 0) {
+		str0 = "Remove-weight";
+	}
+	widget(923, 54).setContextMenuOption(1, str0);
+	str0 = "";
+	if (ARRAY0[3] > 0) {
+		str0 = "Remove-weight";
+	}
+	widget(923, 55).setContextMenuOption(1, str0);
+	return;
+}

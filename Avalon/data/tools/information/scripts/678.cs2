@@ -1,0 +1,9 @@
+void script_678() {
+	script_31(widget(647, 19), widget(647, 23), 792, 789, 790, 791, 773, 788);
+	widget(647, 19).setScrollPos(0, 0);
+	script_157(widget(647, 19), widget(647, 23), 0, 1);
+	script_31(widget(647, 20), widget(647, 24), 792, 789, 790, 791, 773, 788);
+	widget(647, 20).setScrollPos(0, 0);
+	script_157(widget(647, 20), widget(647, 24), 0, 1);
+	return;
+}

@@ -1,0 +1,33 @@
+void script_773(Widget widget0, Widget widget1, Sprite sprite2, Sprite sprite3, int arg4, Item item5, int arg6, Item item7, int arg8, Item item9, int arg10, Item item11, int arg12) {
+	if (!widget1.isHidden()) {
+		if (item5 != null && script_19(item5, widget0) < arg6) {
+			widget0.setSprite(sprite3);
+			return;
+		}
+		if (item7 != null && script_19(item7, widget0) < arg8) {
+			widget0.setSprite(sprite3);
+			return;
+		}
+		if (item9 != null && script_19(item9, widget0) < arg10) {
+			widget0.setSprite(sprite3);
+			return;
+		}
+		if (item11 != null && script_19(item11, widget0) < arg12) {
+			widget0.setSprite(sprite3);
+			return;
+		}
+		if (getSkillActualLvl(23) < arg4) {
+			if (!(VARPBIT[4089] == 1)) {
+				widget0.setSprite(sprite3);
+				return;
+			}
+			if (VARP[1092] < arg4 || datamap('I', 'i', (DataMap)1061, widget0) == 0) {
+				widget0.setSprite(sprite3);
+				return;
+			}
+		} else {
+			widget0.setSprite(sprite2);
+		}
+	}
+	return;
+}

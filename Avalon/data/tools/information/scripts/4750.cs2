@@ -1,0 +1,12 @@
+void script_4750() {
+	int int0;
+	int int1;
+	if (getDisplayMode() <= 1) {
+		widget(933, 1).setPosition(0, 0, 1, 1);
+		return;
+	}
+	int0 = (widget(933, 0).getWidth() - widget(933, 1).getWidth()) / 2;
+	int1 = (widget(933, 0).getHeight() - widget(933, 1).getHeight()) / 2;
+	widget(933, 1).setPosition(max(int0, 223), max(int1, 165), 2, 2);
+	return;
+}

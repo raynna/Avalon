@@ -1,0 +1,47 @@
+void script_2951() {
+	Widget widget0;
+	int int1;
+	widget0 = widget(596, 13);
+	if (hasSSKey()) {
+		widget0 = widget(975, 3);
+	}
+	int1 = script_2948();
+	if (int1 != -3 && int1 != 42 && int1 != 43) {
+		widget0.setScriptCallOnGameloop(-1, "");
+		return;
+	}
+	if (getClientCycle() < VARC[1092]) {
+		return;
+	}
+	VARC[1092] = getClientCycle() + 5;
+	switch (widget0.getSpriteId()) {
+		case 4107:
+			widget0.setSprite(4108);
+			break;
+		case 4108:
+			widget0.setSprite(4109);
+			break;
+		case 4109:
+			widget0.setSprite(4110);
+			break;
+		case 4110:
+			widget0.setSprite(4111);
+			break;
+		case 4111:
+			widget0.setSprite(4112);
+			break;
+		case 4112:
+			widget0.setSprite(4113);
+			break;
+		case 4113:
+			widget0.setSprite(4114);
+			break;
+		case 4114:
+			widget0.setSprite(4107);
+			break;
+		default:
+			widget0.setSprite(4107);
+			break;
+	}
+	return;
+}

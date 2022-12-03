@@ -1,0 +1,74 @@
+void script_652(int arg0, int arg1, int arg2, int arg3, int arg4, Widget widget5, int arg6, Widget widget7, int arg8) {
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	string str0;
+	ACTIVE.createChild(widget5, 3, arg6);
+	ACTIVE.setPosition(arg0, arg1, 0, 0);
+	ACTIVE.setSize(arg2, arg3, 0, 0);
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.setFilled(false);
+	str0 = "null";
+	if (!getGENotStarted(arg4)) {
+		if (getGEIsDone(arg4)) {
+			if (getGEItemAmtTransfered(arg4) == getGEItemAmt(arg4)) {
+				str0 = "Completed";
+			} else {
+				str0 = "Aborted";
+			}
+		} else {
+			str0 = "In progress";
+		}
+		if (widget7 != null) {
+			if (arg8 == 1) {
+				ACTIVE.setScriptCallOnMouseOver(648, widget5, arg6, widget7, str0, 25, 106, "IiIsii");
+			} else if (arg8 == 2) {
+				ACTIVE.setScriptCallOnMouseOver(649, widget5, widget7, str0, 25, 106, "IIsii");
+			} else {
+				ACTIVE.setScriptCallOnMouseOver(568, widget5, arg6, widget7, str0, 25, 106, "IiIsii");
+			}
+			ACTIVE.setScriptCallOnMouseExit(40, widget7, "I");
+		}
+	}
+	int9 = arg0 + 1;
+	int10 = arg1 + 1;
+	int11 = arg2 - 2;
+	int12 = arg3 - 2;
+	ACTIVE.createChild(widget5, 3, arg6 + 1);
+	ACTIVE.setPosition(int9, int10, 0, 0);
+	ACTIVE.setSize(int11, int12, 0, 0);
+	ACTIVE.setRGB(0x302520);
+	ACTIVE.setTrans(100);
+	ACTIVE.setFilled(true);
+	ACTIVE.createChild(widget5, 3, arg6 + 2);
+	if (!getGENotStarted(arg4)) {
+		ACTIVE.setPosition(arg0 + 1, arg1 + 1, 0, 0);
+		ACTIVE.setTrans(0);
+		ACTIVE.setFilled(true);
+		if (getGEIsDone(arg4)) {
+			ACTIVE.setSize(int11, int12, 0, 0);
+			if (getGEItemAmtTransfered(arg4) == getGEItemAmt(arg4)) {
+				ACTIVE.setRGB(0x3F821E);
+			} else {
+				ACTIVE.setRGB(0x8A0010);
+			}
+		} else {
+			ACTIVE.setSize(getGEItemAmtTransfered(arg4) * getGEItemAmt(arg4) / int11, int12, 0, 0);
+			ACTIVE.setRGB(0xC68B01);
+		}
+	}
+	ACTIVE.createChild(widget5, 3, arg6 + 3);
+	ACTIVE.setPosition(int9, int10, 0, 0);
+	ACTIVE.setSize(int11, 3, 0, 0);
+	ACTIVE.setFilled(true);
+	ACTIVE.setTrans(200);
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.createChild(widget5, 3, arg6 + 4);
+	ACTIVE.setPosition(int9, int10 + 3, 0, 0);
+	ACTIVE.setSize(3, int12 - 3, 0, 0);
+	ACTIVE.setFilled(true);
+	ACTIVE.setTrans(200);
+	ACTIVE.setRGB(0x000000);
+	return;
+}

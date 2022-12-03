@@ -1,0 +1,20 @@
+void script_2938() {
+	if (VARC[1199] == 1) {
+		widget(933, 267).setText(STRING[311]);
+		widget(933, 268).setText(datamap('i', 's', (DataMap)2857, VARC[1209]));
+		widget(933, 269).setText(datamap('i', 's', (DataMap)2857, VARC[1210]));
+		widget(933, 270).setText(datamap('i', 's', (DataMap)2857, VARC[1211]));
+		widget(933, 271).setText(datamap('i', 's', (DataMap)2857, VARC[1212]));
+		widget(933, 272).setText(datamap('i', 's', (DataMap)2857, VARC[1213]));
+		widget(933, 273).setText(datamap('i', 's', (DataMap)2857, VARC[1214]));
+	} else {
+		widget(933, 267).setText("");
+		widget(933, 268).setText("");
+		widget(933, 269).setText("");
+		widget(933, 270).setText("");
+		widget(933, 271).setText("");
+		widget(933, 272).setText("");
+		widget(933, 273).setText("");
+	}
+	return;
+}

@@ -1,0 +1,96 @@
+void script_381(string string0, Widget widget1, int arg2, int arg3) {
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int3 = getClientCycle() + 25;
+	if (VARC[1] < int3) {
+		VARC[1] = max(getClientCycle(), VARC[1] + 2);
+		return;
+	}
+	VARC[1] = int3;
+	if (!widget(1028, 125).isHidden()) {
+		return;
+	}
+	int4 = 0;
+	if (ACTIVE.setChild(widget1, arg2) || arg2 == -1 && ACTIVE.setChild(widget1)) {
+		VARC[2], VARC[773] = script_1743(), ACTIVE.getWidth();
+		arg3 = max(min(arg3, ACTIVE.getHeight()), 0);
+		int4 = script_1744() + arg3;
+		widget(1028, 125).setIsHidden(false);
+		widget(1028, 125).clearChildren();
+		int5 = getMaxLineWidth(string0, widget(1028, 29).getWidth(), 495);
+		int6 = getLineCount(string0, int5, 495) * 12 + 5;
+		int7 = int5 + 19;
+		int8 = max(int6 + 8, 17);
+		int9 = max(int7 - 25, 0);
+		int10 = max(int8 - 14, 0);
+		widget(1028, 125).setSize(int7, int8, 0, 0);
+		widget(1028, 125).setPosition(VARC[2] - int7, int4 - int8 / 2, 0, 0);
+		ACTIVE.createChild(widget(1028, 125), 3, widget(1028, 125).nextChild());
+		ACTIVE.setSize(int9, int10, 0, 0);
+		ACTIVE.setPosition(7, 0, 0, 1);
+		ACTIVE.setFilled(true);
+		ACTIVE.setRGB(0xE3E2E1);
+		ACTIVE.createChild(widget(1028, 125), 5, widget(1028, 125).nextChild());
+		ACTIVE.setSize(int9, 7, 0, 0);
+		ACTIVE.setPosition(7, 0, 0, 0);
+		ACTIVE.setSpriteTiling(true);
+		ACTIVE.setSprite(3476);
+		ACTIVE.createChild(widget(1028, 125), 5, widget(1028, 125).nextChild());
+		ACTIVE.setSize(int9, 7, 0, 0);
+		ACTIVE.setPosition(7, 0, 0, 2);
+		ACTIVE.setSpriteTiling(true);
+		ACTIVE.setVFlip(true);
+		ACTIVE.setSprite(3476);
+		ACTIVE.createChild(widget(1028, 125), 5, widget(1028, 125).nextChild());
+		ACTIVE.setSize(7, int10, 0, 0);
+		ACTIVE.setPosition(0, 0, 0, 1);
+		ACTIVE.setSpriteTiling(true);
+		ACTIVE.setSprite(3475);
+		ACTIVE.createChild(widget(1028, 125), 5, widget(1028, 125).nextChild());
+		ACTIVE.setSize(7, int10, 0, 0);
+		ACTIVE.setPosition(12, 0, 2, 1);
+		ACTIVE.setSpriteTiling(true);
+		ACTIVE.setHFlip(true);
+		ACTIVE.setSprite(3475);
+		ACTIVE.createChild(widget(1028, 125), 5, widget(1028, 125).nextChild());
+		ACTIVE.setSize(7, 7, 0, 0);
+		ACTIVE.setPosition(0, 0, 0, 0);
+		ACTIVE.setSprite(3474);
+		ACTIVE.createChild(widget(1028, 125), 5, widget(1028, 125).nextChild());
+		ACTIVE.setSize(7, 7, 0, 0);
+		ACTIVE.setPosition(12, 0, 2, 0);
+		ACTIVE.setHFlip(true);
+		ACTIVE.setSprite(3474);
+		ACTIVE.createChild(widget(1028, 125), 5, widget(1028, 125).nextChild());
+		ACTIVE.setSize(7, 7, 0, 0);
+		ACTIVE.setPosition(0, 0, 0, 2);
+		ACTIVE.setVFlip(true);
+		ACTIVE.setSprite(3474);
+		ACTIVE.createChild(widget(1028, 125), 5, widget(1028, 125).nextChild());
+		ACTIVE.setSize(7, 7, 0, 0);
+		ACTIVE.setPosition(12, 0, 2, 2);
+		ACTIVE.setHFlip(true);
+		ACTIVE.setVFlip(true);
+		ACTIVE.setSprite(3474);
+		ACTIVE.createChild(widget(1028, 125), 5, widget(1028, 125).nextChild());
+		ACTIVE.setSize(12, 11, 0, 0);
+		ACTIVE.setPosition(0, 0, 2, 1);
+		ACTIVE.setSprite(3473);
+		ACTIVE.set2DAngle(16384);
+		ACTIVE.createChild(widget(1028, 125), 4, widget(1028, 125).nextChild());
+		ACTIVE.setSize(int5, int6, 0, 0);
+		ACTIVE.setPosition(3, 0, 0, 1);
+		ACTIVE.setRGB(0x000000);
+		ACTIVE.setFont(3793);
+		ACTIVE.setTextAlignment(1, 0, 0);
+		ACTIVE.setText(string0);
+		return;
+	}
+	return;
+}

@@ -1,0 +1,11 @@
+void script_4624(Widget widget0, int arg1) {
+	if (widget0.getSpriteId() == 5936) {
+		return;
+	}
+	if (arg1 == VARP[2128]) {
+		widget0.setSprite(5935);
+	} else {
+		widget0.setSprite(5932);
+	}
+	return;
+}

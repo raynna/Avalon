@@ -1,0 +1,24 @@
+void script_5288() {
+	playSoundEffect2False(7513, 1, 0, 200, rndRelatedMethod4019(20, 20));
+	if (widget(555, 48).get2DAngle() == 0) {
+		widget(555, 49).set2DAngle(49152);
+		widget(555, 48).set2DAngle(49152);
+		return;
+	}
+	if (widget(555, 48).get2DAngle() == 49152) {
+		widget(555, 49).set2DAngle(32768);
+		widget(555, 48).set2DAngle(32768);
+		return;
+	}
+	if (widget(555, 48).get2DAngle() == 32768) {
+		widget(555, 49).set2DAngle(16384);
+		widget(555, 48).set2DAngle(16384);
+		return;
+	}
+	if (widget(555, 48).get2DAngle() == 16384) {
+		widget(555, 49).set2DAngle(0);
+		widget(555, 48).set2DAngle(0);
+		return;
+	}
+	return;
+}

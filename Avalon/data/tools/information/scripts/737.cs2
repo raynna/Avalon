@@ -1,0 +1,38 @@
+void script_737(int arg0) {
+	Model model1;
+	model1 = null;
+	if (VARC[99] == 0) {
+		VARC[99] = arg0;
+		return;
+	}
+	if (VARC[100] == 0) {
+		VARC[100] = arg0;
+		return;
+	}
+	if (VARC[101] == 0) {
+		VARC[101] = arg0;
+		if (script_739(VARC[99]) == script_739(VARC[100]) && script_739(VARC[99]) == script_739(VARC[101])) {
+			model1 = datamap('i', 'm', (DataMap)1152, script_739(VARC[99]));
+			datamap('i', 'I', (DataMap)1153, VARC[99]).setModel(model1);
+			datamap('i', 'I', (DataMap)1153, VARC[100]).setModel(model1);
+			datamap('i', 'I', (DataMap)1153, VARC[101]).setModel(model1);
+			VARC[104] = flagBit(VARC[104], script_739(VARC[99]));
+			VARC[99] = 0;
+			VARC[100] = 0;
+			VARC[101] = 0;
+			VARC[102] = VARC[102] + 1;
+			VARC[105] = VARC[105] - 1;
+			script_738();
+		}
+		return;
+	}
+	datamap('i', 'I', (DataMap)1153, VARC[99]).setModel(31025);
+	datamap('i', 'I', (DataMap)1153, VARC[100]).setModel(31025);
+	datamap('i', 'I', (DataMap)1153, VARC[101]).setModel(31025);
+	VARC[99] = arg0;
+	VARC[100] = 0;
+	VARC[101] = 0;
+	VARC[105] = VARC[105] - 1;
+	script_738();
+	return;
+}

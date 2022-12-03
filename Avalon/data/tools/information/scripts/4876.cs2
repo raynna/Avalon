@@ -1,0 +1,10 @@
+void script_4876(int arg0) {
+	int int1;
+	int1 = 0 + 1;
+	while (int1 <= 10) {
+		script_4872(int1).setIsHidden(true);
+		int1 = int1 + 1;
+	}
+	script_4872(arg0).setIsHidden(false);
+	return;
+}

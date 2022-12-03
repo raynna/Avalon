@@ -1,0 +1,18 @@
+void script_3439() {
+	widget(1128, 192).setIsHidden(false);
+	widget(1128, 88).setIsHidden(false);
+	widget(1128, 117).setIsHidden(false);
+	widget(1128, 155).setIsHidden(false);
+	widget(1128, 229).setIsHidden(false);
+	widget(1128, 266).setIsHidden(false);
+	widget(1128, 303).setIsHidden(false);
+	widget(1128, 9).setText(concat("20", "/" + str(20)));
+	widget(1128, 135).setText(concat("20", "/" + str(20)));
+	widget(1128, 173).setText(concat("30", "/" + str(20)));
+	widget(1128, 210).setText(concat("28", "/" + str(20)));
+	widget(1128, 247).setText(concat("24", "/" + str(20)));
+	widget(1128, 284).setText(concat("26", "/" + str(20)));
+	widget(1128, 321).setText(concat("200", "/" + str(200)));
+	widget(1128, 13).setText(str(VARPBIT[5505]));
+	return;
+}

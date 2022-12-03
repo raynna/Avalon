@@ -1,0 +1,5 @@
+void script_2293(Widget widget0, Widget widget1) {
+	widget1.setSprite(938);
+	widget0.setRGB(0xFF981F);
+	return;
+}

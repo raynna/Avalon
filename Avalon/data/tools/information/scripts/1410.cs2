@@ -1,0 +1,26 @@
+void script_1410(Widget widget0) {
+	int int1;
+	int int2;
+	int1 = 255;
+	int2 = 0;
+	if (VARC[814] < 256) {
+		int1 = 255 - VARC[814];
+	} else if (VARC[814] < 510) {
+		int1 = VARC[814] % 255;
+	} else {
+		int1 = 255;
+	}
+	if (VARC[119] == 4) {
+		int2 = 8;
+	} else if (VARC[119] == 3) {
+		int2 = 4;
+	} else {
+		int1 = 255;
+	}
+	widget0.setTrans(int1);
+	VARC[814] = VARC[814] + int2;
+	if (VARC[814] > 510) {
+		VARC[814] = 0;
+	}
+	return;
+}

@@ -1,0 +1,11 @@
+void script_1754(Widget widget0, Widget widget1) {
+	if (VARC[226] > 4) {
+		widget0.setModel(15690);
+		widget1.setRGB(0x33FF00);
+	} else {
+		widget0.setModel(15689);
+		widget1.setRGB(0x910000);
+	}
+	widget1.setText(str(VARC[226]));
+	return;
+}

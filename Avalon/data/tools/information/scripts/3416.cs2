@@ -1,0 +1,5 @@
+void script_3416(Widget widget0) {
+	widget0.setSprite(3153);
+	widget0.setScriptCallOnMousePressed(1242, CTX_WIDGET, "I");
+	return;
+}

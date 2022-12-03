@@ -1,0 +1,21 @@
+void script_2960(Widget widget0, Widget widget1, Widget widget2, Sprite sprite3, int arg4, string string5) {
+	if (widget0 != null) {
+		if (arg4 == 1) {
+			widget0.setSprite(2525);
+		} else {
+			widget0.setSprite(2524);
+		}
+	}
+	if (widget1 != null) {
+		if (arg4 == 1) {
+			widget0.setText(string5);
+			widget2.setRGB(0xFAD786);
+			widget1.setSize(getTextWidth(string5, sprite3) + 23, widget1.getHeight(), 0, 0);
+		} else {
+			widget2.setText(string5);
+			widget2.setRGB(0xE7AC24);
+			widget1.setSize(getTextWidth(string5, sprite3) + 23, widget1.getHeight(), 0, 0);
+		}
+	}
+	return;
+}

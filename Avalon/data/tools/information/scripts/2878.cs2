@@ -1,0 +1,34 @@
+void script_2878() {
+	int int0;
+	script_41(widget(187, 16));
+	VARC[1] = 0;
+	widget(187, 9).clearChildren();
+	while (widget(187, 9).nextChild() < 12) {
+		ACTIVE.createChild(widget(187, 9), 4, widget(187, 9).nextChild());
+	}
+	while (widget(187, 9).nextChild() < 24) {
+		ACTIVE.createChild(widget(187, 9), 5, widget(187, 9).nextChild());
+	}
+	int0 = 5;
+	int0 = script_2879(0, VARPBIT[7081], int0);
+	int0 = script_2879(1, VARPBIT[7082], int0);
+	int0 = script_2879(2, VARPBIT[7083], int0);
+	int0 = script_2879(3, VARPBIT[7084], int0);
+	int0 = script_2879(4, VARPBIT[7085], int0);
+	int0 = script_2879(5, VARPBIT[7086], int0);
+	int0 = script_2879(6, VARPBIT[7087], int0);
+	int0 = script_2879(7, VARPBIT[7088], int0);
+	int0 = script_2879(8, VARPBIT[7089], int0);
+	int0 = script_2879(9, VARPBIT[7090], int0);
+	int0 = script_2879(10, VARPBIT[7091], int0);
+	int0 = script_2879(11, VARPBIT[7092], int0);
+	if (VARPBIT[7081] == 32767 && VARC[1077] == 1) {
+		widget(187, 14).setIsHidden(false);
+	} else {
+		widget(187, 14).setIsHidden(true);
+	}
+	ACTIVE.createChild(widget(187, 9), 4, widget(187, 9).nextChild());
+	ACTIVE.setPosition(15, int0, 0, 0);
+	ACTIVE.setSize(150, int0, 0, 1);
+	return;
+}

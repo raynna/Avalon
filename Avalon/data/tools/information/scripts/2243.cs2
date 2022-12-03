@@ -1,0 +1,7 @@
+void script_2243(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8) {
+	widget(935, 80).setText(str(arg6));
+	widget(935, 85).setText(str(arg7));
+	widget(935, 101).setText(str(arg8 / 100) + "." + str(arg8 % 100));
+	widget(935, 0).setScriptCallOnGameloop(2244, 0, arg0, arg1, 0, arg2, arg3, 0, arg4, arg5, arg6, arg7, arg8, "iiiiiiiiiiii");
+	return;
+}

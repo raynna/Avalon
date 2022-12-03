@@ -1,0 +1,12 @@
+void script_4874(int arg0) {
+	int int1;
+	VARPBIT[9553] = arg0;
+	int1 = 0 + 1;
+	while (int1 <= 10) {
+		script_4871(int1).setIsHidden(true);
+		int1 = int1 + 1;
+	}
+	script_4871(arg0).setIsHidden(false);
+	script_4864();
+	return;
+}

@@ -1,0 +1,21 @@
+Date: 10th januari
+Category: hello
+Description: hello
+Combat: No
+Controler: No.
+Coords: 3088, 3492, 0 and 12342
+
+Date: 10th januari
+Category: problem
+Description: im shit
+Combat: No
+Controler: No.
+Coords: 3088, 3492, 0 and 12342
+
+Date: 10th januari
+Category: I dont know
+Description: not sure
+Combat: No
+Controler: com.rs.game.player.controlers.WildernessControler
+Coords: 3087, 3532, 0 and 12343
+

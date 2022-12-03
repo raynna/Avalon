@@ -1,0 +1,30 @@
+void script_199(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	string str0;
+	int1 = 0;
+	int2 = clanGetChatCount();
+	int3 = 2;
+	int4 = 100;
+	int5 = 19;
+	str0 = "";
+	if (int2 > 0) {
+		widget0.clearChildren();
+		while (int1 < int2) {
+			str0 = clanChatUsername(int1);
+			ACTIVE.createChild(widget0, 4, widget0.nextChild());
+			ACTIVE.setRGB(0xA4997D);
+			ACTIVE.setFont(3793);
+			ACTIVE.setTextAntiMacro(false);
+			ACTIVE.setPosition(0, int1 * int5, 0, 0);
+			ACTIVE.setSize(int4, int5, 0, 0);
+			ACTIVE.setText(str0);
+			int1 = int1 + 1;
+		}
+		widget0.setScriptCallOnClanChatDeltaStuff(198, CTX_WIDGET, "I");
+	}
+	return;
+}

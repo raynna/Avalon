@@ -1,0 +1,29 @@
+void script_5063(Widget widget0, int arg1, int arg2) {
+	int int3;
+	int3 = arg1 * 12;
+	if (arg2 == 1) {
+		if (ACTIVE.setChild(widget0, int3 + 5)) {
+			ACTIVE.setSprite(7552);
+		}
+		if (ACTIVE.setChild(widget0, int3 + 6)) {
+			ACTIVE.setSprite(7551);
+		}
+		if (ACTIVE.setChild(widget0, int3 + 7)) {
+			ACTIVE.setSprite(7553);
+		}
+	} else {
+		if (ACTIVE.setChild(widget0, int3 + 5)) {
+			ACTIVE.setSprite(7549);
+		}
+		if (ACTIVE.setChild(widget0, int3 + 6)) {
+			ACTIVE.setSprite(7548);
+		}
+		if (ACTIVE.setChild(widget0, int3 + 7)) {
+			ACTIVE.setSprite(7550);
+		}
+	}
+	if (ACTIVE.setChild(widget0, int3 + 10)) {
+		ACTIVE.setSprite(7409);
+	}
+	return;
+}

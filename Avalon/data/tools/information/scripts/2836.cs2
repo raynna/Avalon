@@ -1,0 +1,17 @@
+void script_2836() {
+	VARC[1068] = VARC[1068] + 1;
+	switch (VARC[1068]) {
+		case 2:
+			widget(384, 0).setScriptCallOnMinimapRelatedSetting3(2836, "");
+			cameraMethod5502(0, VARC[1068], 400, 0, 1, VARC[1068]);
+			break;
+		case 3:
+			widget(384, 0).setScriptCallOnMinimapRelatedSetting3(-1, "");
+			break;
+		default:
+			widget(384, 0).setScriptCallOnMinimapRelatedSetting3(2836, "");
+			cameraMethod5502(0, VARC[1068], 400, 400, 1, VARC[1068]);
+			break;
+	}
+	return;
+}

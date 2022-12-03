@@ -1,0 +1,24 @@
+string script_5094() {
+	int int0;
+	int int1;
+	int int2;
+	string str0;
+	string str1;
+	int0 = VARC[995] / 50;
+	int1 = int0 / 60;
+	int2 = int1 / 60;
+	int1, int0 = int1 % 60, int0 % 60;
+	str0 = "";
+	str1 = "";
+	if (int1 < 10) {
+		str1 = "0" + str(int1);
+	} else {
+		str1 = str(int1);
+	}
+	if (int0 < 10) {
+		str0 = "0" + str(int0);
+	} else {
+		str0 = str(int0);
+	}
+	return str(int2) + ":" + str1 + ":" + str0;
+}

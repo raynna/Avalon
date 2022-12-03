@@ -1,0 +1,77 @@
+void script_2779(int arg0, int arg1, string string2, int arg3, Sprite sprite4, int arg5, int arg6, string string7, string string8, int arg9, string string10, string string11, int arg12) {
+	int int8;
+	int int9;
+	int int10;
+	if (!widget(906, 29).isHidden()) {
+		return;
+	}
+	widget(906, 236).setNoOptions();
+	widget(906, 242).setNoOptions();
+	widget(906, 236).setScriptCallOnClickContextMenu(-1, "");
+	widget(906, 242).setScriptCallOnClickContextMenu(-1, "");
+	int8 = arg12;
+	if (arg5 == 1) {
+		int8 = max(arg12, getTextWidth(string7, 3793) + 26);
+		if (int8 % 2 == 0) {
+			int8 = int8 + 1;
+		}
+	}
+	widget(906, 29).setSize(int8, 154, 0, 0);
+	int9 = getLineCount(string2, widget(906, 235).getWidth(), 3793) * 16 + 5;
+	widget(906, 235).setSize(20, int9, 1, 0);
+	widget(906, 235).setText(string2);
+	if (arg3 == 1) {
+		VARC[1092] = getClientCycle() + 5;
+		widget(906, 234).setSprite(4107);
+		widget(906, 234).setSize(111, 111, 0, 0);
+		widget(906, 234).setPosition(0, 7, 1, 0);
+		widget(906, 235).setPosition(0, 112, 1, 0);
+		widget(906, 234).setScriptCallOnGameloop(3094, "");
+	} else {
+		VARC[1092] = 0;
+		widget(906, 234).setScriptCallOnGameloop(-1, "");
+		widget(906, 234).setSprite(sprite4);
+		widget(906, 234).setSize(76, 63, 0, 0);
+		widget(906, 234).setPosition(0, 18, 1, 0);
+		widget(906, 235).setPosition(0, 123, 1, 0);
+		int9 = int9 - 35;
+	}
+	int10 = 0;
+	int9 = widget(906, 235).getY() + int9;
+	if (arg5 == 0 && arg9 == 0) {
+		int10 = 12;
+		int9 = int9 + int10;
+		widget(906, 236).setIsHidden(true);
+		widget(906, 242).setIsHidden(true);
+	} else if (arg5 == 1 && arg9 == 0) {
+		int10 = 41;
+		int9 = int9 + int10;
+		widget(906, 236).setPosition(0, 8, 1, 2);
+		widget(906, 236).setIsHidden(false);
+		widget(906, 242).setIsHidden(true);
+		script_3098(string7, string8, widget(906, 236), widget(906, 238), widget(906, 239), widget(906, 240), arg6);
+	} else if (arg5 == 0 && arg9 == 1) {
+		int10 = 41;
+		int9 = int9 + int10;
+		widget(906, 242).setPosition(0, 8, 1, 2);
+		widget(906, 242).setIsHidden(false);
+		widget(906, 236).setIsHidden(true);
+		script_3099(string10, string11, widget(906, 242), widget(906, 244), widget(906, 245), widget(906, 246));
+	} else {
+		int10 = 70;
+		int9 = int9 + int10;
+		widget(906, 236).setPosition(0, 40, 1, 2);
+		widget(906, 242).setPosition(0, 10, 1, 2);
+		widget(906, 242).setIsHidden(false);
+		widget(906, 236).setIsHidden(false);
+		script_3098(string7, string8, widget(906, 236), widget(906, 238), widget(906, 239), widget(906, 240), arg6);
+		script_3099(string10, string11, widget(906, 242), widget(906, 244), widget(906, 245), widget(906, 246));
+	}
+	widget(906, 29).setSize(widget(906, 29).getWidth(), int9, 0, 0);
+	script_3095(widget(906, 236), widget(906, 242), arg0);
+	widget(906, 235).setPosition(0, int10, 1, 2);
+	widget(906, 44).setScriptCallOnKeyPress(3100, KEY_TYPED, "i");
+	widget(906, 44).setIsHidden(false);
+	widget(906, 29).setIsHidden(false);
+	return;
+}

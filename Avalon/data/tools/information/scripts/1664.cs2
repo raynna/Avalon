@@ -1,0 +1,45 @@
+void script_1664(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	if (getClientCycle() < arg0) {
+		return;
+	}
+	widget(762, 93).setScriptCallOnGameloop(-1, "");
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int5 = getItemContainerLength(95);
+	script_41(widget(762, 97));
+	int1, int2 = script_1467(VARPBIT[4893]);
+	while (int3 < int5) {
+		if (ACTIVE.setChild(widget(762, 93), int3)) {
+			ACTIVE.setHidden(true);
+			if (getItemIdInSlot(95, int3) != null) {
+				script_1453(int3);
+			} else {
+				ACTIVE.setItem(null, -1);
+				ACTIVE.setNoOptions();
+			}
+		}
+		int3 = int3 + 1;
+	}
+	if (VARPBIT[4893] == 0) {
+		if (VARC[5] == 11) {
+			STRING[138] = STRING[22];
+		}
+		_ = script_1479(STRING[138]);
+	} else if (VARPBIT[4893] == 1) {
+		script_1456();
+	} else {
+		script_1457((int, int)script_1467(VARPBIT[4893]));
+	}
+	if (VARPBIT[4893] != 0 && VARC[188] == 1) {
+		script_1474();
+	}
+	script_1459();
+	return;
+}

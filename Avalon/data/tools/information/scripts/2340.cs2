@@ -1,0 +1,6 @@
+void script_2340() {
+	VARC[770] = 2;
+	cameraMethod5502(0, VARC[770], 500, 900, 1, VARC[770]);
+	widget(558, 0).setScriptCallOnMinimapRelatedSetting3(2344, "");
+	return;
+}

@@ -1,0 +1,9 @@
+void script_5191(int arg0, int arg1) {
+	widget(1122, 74).setScrollPos(widget(1122, 74).getScrollX() + arg1, 0);
+	if (arg1 < 0 && widget(1122, 74).getScrollX() <= arg0 || arg1 > 0 && widget(1122, 74).getScrollX() >= arg0) {
+		widget(1122, 74).setScrollPos(arg0, 0);
+		widget(1122, 74).setScriptCallOnGameloop(-1, "");
+		widget(1122, 75).setIsHidden(true);
+	}
+	return;
+}

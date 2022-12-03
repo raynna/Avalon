@@ -1,0 +1,18 @@
+void script_2961(Widget widget0, Widget widget1, int arg2) {
+	if (arg2 == 1) {
+		if (VARC[986] == 1) {
+			widget0.setSprite(2702);
+		} else {
+			widget0.setSprite(2701);
+		}
+		widget1.setRGB(0xEBE0BC);
+	} else {
+		if (VARC[986] == 1) {
+			widget0.setSprite(2700);
+		} else {
+			widget0.setSprite(2703);
+		}
+		widget1.setRGB(0xB2AA9F);
+	}
+	return;
+}

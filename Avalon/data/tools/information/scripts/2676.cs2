@@ -1,0 +1,33 @@
+void script_2676(Widget widget0, int arg1) {
+	int int2;
+	int2 = 0;
+	switch (arg1) {
+		case 1:
+			int2 = VARP[1485];
+			break;
+		case 2:
+			int2 = VARP[1486];
+			break;
+		case 3:
+			int2 = VARP[1487];
+			break;
+		case 4:
+			int2 = VARP[1488];
+			break;
+		case 5:
+			int2 = VARP[1489];
+			break;
+		case 6:
+			int2 = VARP[1490];
+			break;
+		case 7:
+			int2 = VARP[1491];
+			break;
+	}
+	if (int2 == 1) {
+		widget0.setIsHidden(true);
+	} else {
+		widget0.setIsHidden(false);
+	}
+	return;
+}

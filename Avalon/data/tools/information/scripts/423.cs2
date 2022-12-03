@@ -1,0 +1,8 @@
+void script_423() {
+	if (VARC[1353] != -1) {
+		cameraMethod5511(location(VARC[1353]));
+	} else if (VARC[1354] != -1) {
+		cameraMethod5511(location(VARC[1354]));
+	}
+	return;
+}

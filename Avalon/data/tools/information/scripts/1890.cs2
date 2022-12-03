@@ -1,0 +1,4 @@
+void script_1890(string string0) {
+	message(11, 0, string0);
+	return;
+}

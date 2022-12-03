@@ -1,0 +1,227 @@
+void script_5133() {
+	int int0;
+	int int1;
+	string str0;
+	int0 = 0;
+	int1 = script_4293();
+	if (script_5131() == 1) {
+		widget(1096, 417).setIsHidden(true);
+		widget(1096, 425).setIsHidden(true);
+		widget(1096, 433).setIsHidden(true);
+		widget(1096, 441).setIsHidden(true);
+		widget(1096, 449).setIsHidden(true);
+		widget(1096, 457).setIsHidden(true);
+		widget(1096, 465).setIsHidden(true);
+		widget(1096, 473).setIsHidden(true);
+		widget(1096, 481).setIsHidden(true);
+		widget(1096, 489).setIsHidden(true);
+		widget(1096, 497).setIsHidden(true);
+		switch (VARC[1569]) {
+			case 0:
+				widget(1096, 417).setIsHidden(false);
+				if (int1 >= 100) {
+					int0 = 1;
+				}
+				break;
+			case 1:
+				widget(1096, 425).setIsHidden(false);
+				if (int1 >= 100) {
+					int0 = 1;
+				}
+				break;
+			case 2:
+				widget(1096, 433).setIsHidden(false);
+				if (int1 >= 100) {
+					int0 = 1;
+				}
+				break;
+			case 3:
+				widget(1096, 441).setIsHidden(false);
+				if (int1 >= 100) {
+					int0 = 1;
+				}
+				break;
+			case 4:
+				widget(1096, 449).setIsHidden(false);
+				if (int1 >= 100) {
+					int0 = 1;
+				}
+				break;
+			case 5:
+				widget(1096, 457).setIsHidden(false);
+				if (int1 >= 100) {
+					int0 = 1;
+				}
+				break;
+			case 100:
+				widget(1096, 465).setIsHidden(false);
+				if (int1 > VARC[1569]) {
+					int0 = 1;
+				}
+				break;
+			case 101:
+				widget(1096, 473).setIsHidden(false);
+				if (int1 > VARC[1569]) {
+					int0 = 1;
+				}
+				break;
+			case 102:
+				widget(1096, 481).setIsHidden(false);
+				if (int1 > VARC[1569]) {
+					int0 = 1;
+				}
+				break;
+			case 103:
+				widget(1096, 489).setIsHidden(false);
+				if (int1 > VARC[1569]) {
+					int0 = 1;
+				}
+				break;
+			case 125:
+				widget(1096, 497).setIsHidden(false);
+				if (int1 > VARC[1569]) {
+					int0 = 1;
+				}
+				break;
+			case 126:
+				int0 = 0;
+				break;
+			case 127:
+				int0 = 0;
+				break;
+			default:
+				if (int1 >= 100) {
+					int0 = 1;
+				}
+				break;
+		}
+	}
+	str0 = "";
+	widget(1096, 584).setIsHidden(false);
+	widget(1096, 596).setIsHidden(false);
+	widget(1096, 629).setIsHidden(false);
+	widget(1096, 640).setIsHidden(false);
+	widget(1096, 662).setIsHidden(false);
+	widget(1096, 509).setIsHidden(false);
+	widget(1096, 618).setIsHidden(false);
+	widget(1096, 607).setIsHidden(false);
+	widget(1096, 651).setIsHidden(false);
+	widget(1096, 573).setIsHidden(false);
+	widget(1096, 560).setIsHidden(false);
+	widget(1096, 778).setIsHidden(false);
+	widget(1096, 765).setIsHidden(false);
+	widget(1096, 674).setIsHidden(false);
+	widget(1096, 685).setIsHidden(false);
+	widget(1096, 697).setIsHidden(false);
+	widget(1096, 710).setIsHidden(false);
+	widget(1096, 722).setIsHidden(false);
+	widget(1096, 819).setIsHidden(false);
+	widget(1096, 734).setIsHidden(false);
+	widget(1096, 808).setIsHidden(false);
+	widget(1096, 746).setIsHidden(false);
+	if (int0 == 1) {
+		widget(1096, 584).setIsHidden(true);
+		widget(1096, 596).setIsHidden(true);
+		if (VARC[1569] >= 100) {
+			widget(1096, 629).setIsHidden(true);
+		} else {
+			str0 = "Only admins and above may upgrade the citadel.";
+			widget(1096, 629).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		}
+		if (VARC[1569] >= 100) {
+			widget(1096, 640).setIsHidden(true);
+		} else {
+			str0 = "Only admins and above may downgrade the citadel.";
+			widget(1096, 640).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		}
+		if (VARC[1569] >= 100) {
+			widget(1096, 662).setIsHidden(true);
+		}
+		widget(1096, 509).setIsHidden(true);
+		if (VARC[1569] >= 100) {
+			widget(1096, 618).setIsHidden(true);
+		} else {
+			str0 = "Only admins and above may change the noticeboard.";
+			widget(1096, 618).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		}
+		if (VARC[1569] >= 100) {
+			widget(1096, 607).setIsHidden(true);
+		} else {
+			str0 = "Only admins and above may change the signpost.";
+			widget(1096, 607).setScriptCallOnMouseOver(5139, str0, CTX_WIDGET, "sI");
+		}
+		widget(1096, 651).setIsHidden(true);
+		if (VARC[1569] >= 100) {
+			widget(1096, 573).setIsHidden(true);
+		} else {
+			str0 = "Only admins and above may change who may lock the citadel.";
+			widget(1096, 573).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		}
+		if (VARC[1569] >= 100) {
+			widget(1096, 560).setIsHidden(true);
+		} else {
+			str0 = "Only admins and above may change who may lock the keep.";
+			widget(1096, 560).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		}
+		if (script_5149(int1) == 1) {
+			widget(1096, 778).setIsHidden(true);
+		} else {
+			str0 = "Your rank does not have permission to change citadel access.";
+			widget(1096, 778).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		}
+		if (script_5148(int1) == 1) {
+			widget(1096, 765).setIsHidden(true);
+		} else {
+			str0 = "Your rank does not have permission to change keep access.";
+			widget(1096, 765).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		}
+		widget(1096, 674).setIsHidden(true);
+		widget(1096, 685).setIsHidden(true);
+		widget(1096, 697).setIsHidden(true);
+		widget(1096, 710).setIsHidden(true);
+		widget(1096, 722).setIsHidden(true);
+		widget(1096, 819).setIsHidden(true);
+		if (VARC[1569] >= 100) {
+			widget(1096, 734).setIsHidden(true);
+		} else {
+			str0 = "Only admins and above may set gathering goals.";
+			widget(1096, 734).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		}
+		if (VARC[1569] >= 103) {
+			widget(1096, 808).setIsHidden(true);
+		} else {
+			str0 = "Only overseers and above may set the citadel's language.";
+			widget(1096, 808).setScriptCallOnMouseOver(5139, str0, CTX_WIDGET, "sI");
+		}
+		if (VARC[1569] >= 103) {
+			widget(1096, 746).setIsHidden(true);
+		} else {
+			str0 = "Only overseers and above may move the build tick.";
+			widget(1096, 746).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		}
+	} else {
+		str0 = "Your rank is not high enough to alter this permission.";
+		widget(1096, 629).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		widget(1096, 640).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		widget(1096, 662).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		widget(1096, 509).setScriptCallOnMouseOver(5139, str0, CTX_WIDGET, "sI");
+		widget(1096, 618).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		widget(1096, 607).setScriptCallOnMouseOver(5139, str0, CTX_WIDGET, "sI");
+		widget(1096, 651).setScriptCallOnMouseOver(5139, str0, CTX_WIDGET, "sI");
+		widget(1096, 573).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		widget(1096, 560).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		widget(1096, 778).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		widget(1096, 765).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		widget(1096, 674).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		widget(1096, 685).setScriptCallOnMouseOver(5139, str0, CTX_WIDGET, "sI");
+		widget(1096, 697).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		widget(1096, 710).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		widget(1096, 722).setScriptCallOnMouseOver(5139, str0, CTX_WIDGET, "sI");
+		widget(1096, 819).setScriptCallOnMouseOver(5139, str0, CTX_WIDGET, "sI");
+		widget(1096, 734).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+		widget(1096, 808).setScriptCallOnMouseOver(5139, str0, CTX_WIDGET, "sI");
+		widget(1096, 746).setScriptCallOnMouseOver(5138, str0, CTX_WIDGET, "sI");
+	}
+	script_5135();
+	return;
+}

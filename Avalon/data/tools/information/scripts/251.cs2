@@ -1,0 +1,10 @@
+void script_251(Widget widget0) {
+	if (script_133(location(2624, 5184, 0), location(2687, 5247, 3), getMyLocation()) == 1 && cs2method6108()) {
+		if (widget0.isHidden()) {
+			widget0.setIsHidden(false);
+		}
+	} else if (!widget0.isHidden()) {
+		widget0.setIsHidden(true);
+	}
+	return;
+}

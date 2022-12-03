@@ -1,0 +1,41 @@
+boolean script_4733(int arg0) {
+	int int1;
+	int int2;
+	int1 = arg0 / 32;
+	int2 = arg0 % 32;
+	switch (int1) {
+		case 0:
+			return isBitFlagged(VARC[700], int2);
+		case 1:
+			return isBitFlagged(VARC[701], int2);
+		case 2:
+			return isBitFlagged(VARC[702], int2);
+		case 3:
+			return isBitFlagged(VARC[703], int2);
+		case 4:
+			return isBitFlagged(VARC[704], int2);
+		case 5:
+			return isBitFlagged(VARC[705], int2);
+		case 6:
+			return isBitFlagged(VARC[706], int2);
+		case 7:
+			return isBitFlagged(VARC[707], int2);
+		case 8:
+			return isBitFlagged(VARC[708], int2);
+		case 9:
+			return isBitFlagged(VARC[709], int2);
+		case 10:
+			return isBitFlagged(VARC[710], int2);
+		case 11:
+			return isBitFlagged(VARC[711], int2);
+		case 12:
+			return isBitFlagged(VARC[712], int2);
+		case 13:
+			return isBitFlagged(VARC[713], int2);
+		case 14:
+			return isBitFlagged(VARC[714], int2);
+		case 15:
+			return isBitFlagged(VARC[715], int2);
+	}
+	return false;
+}

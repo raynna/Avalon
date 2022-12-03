@@ -1,0 +1,125 @@
+int script_1502(Widget arg0) {
+	switch (arg0) {
+		case widget(1017, 166):
+			return 1;
+		case widget(1017, 167):
+			return 2;
+		case widget(1017, 168):
+			return 3;
+		case widget(1017, 169):
+			return 4;
+		case widget(1017, 170):
+			return 5;
+		case widget(1017, 171):
+			return 6;
+		case widget(1017, 172):
+			return 7;
+		case widget(1017, 173):
+			return 8;
+		case widget(1017, 174):
+			return 9;
+		case widget(1017, 175):
+			return 10;
+		case widget(1017, 176):
+			return 11;
+		case widget(1017, 177):
+			return 12;
+		case widget(1017, 178):
+			return 13;
+		case widget(1017, 179):
+			return 14;
+		case widget(1017, 180):
+			return 15;
+		case widget(1017, 181):
+			return 16;
+		case widget(1017, 182):
+			return 17;
+		case widget(1017, 183):
+			return 18;
+		case widget(1017, 184):
+			return 19;
+		case widget(1017, 185):
+			return 20;
+		case widget(1017, 186):
+			return 21;
+		case widget(1017, 187):
+			return 22;
+		case widget(1017, 188):
+			return 23;
+		case widget(1017, 189):
+			return 24;
+		case widget(1017, 190):
+			return 25;
+		case widget(1017, 191):
+			return 26;
+		case widget(1017, 192):
+			return 27;
+		case widget(1017, 193):
+			return 28;
+		case widget(1017, 194):
+			return 29;
+		case widget(1017, 195):
+			return 30;
+		case widget(1017, 196):
+			return 31;
+		case widget(1017, 197):
+			return 32;
+		case widget(1017, 198):
+			return 33;
+		case widget(1017, 199):
+			return 34;
+		case widget(1017, 200):
+			return 35;
+		case widget(1017, 201):
+			return 36;
+		case widget(1017, 202):
+			return 37;
+		case widget(1017, 203):
+			return 38;
+		case widget(1017, 204):
+			return 39;
+		case widget(1017, 205):
+			return 40;
+		case widget(1017, 206):
+			return 41;
+		case widget(1017, 207):
+			return 42;
+		case widget(1017, 208):
+			return 43;
+		case widget(1017, 209):
+			return 44;
+		case widget(1017, 210):
+			return 45;
+		case widget(1017, 211):
+			return 46;
+		case widget(1017, 212):
+			return 47;
+		case widget(1017, 213):
+			return 48;
+		case widget(1017, 214):
+			return 49;
+		case widget(1017, 215):
+			return 50;
+		case widget(1017, 216):
+			return 51;
+		case widget(1017, 217):
+			return 52;
+		case widget(1017, 218):
+			return 53;
+		case widget(1017, 219):
+			return 54;
+		case widget(1017, 220):
+			return 55;
+		case widget(1017, 221):
+			return 56;
+		case widget(1017, 222):
+			return 57;
+		case widget(1017, 223):
+			return 58;
+		case widget(1017, 224):
+			return 59;
+		case widget(1017, 225):
+			return 60;
+	}
+	return -1;
+}

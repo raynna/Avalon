@@ -1,0 +1,46 @@
+void script_3457(Widget widget0, int arg1) {
+	int int2;
+	int2 = getClientCycle() - arg1;
+	if (int2 < 100 && VARC[1281] > 0) {
+		cameraPointAt(location(VARC[1285]), VARC[1286], 3000, VARC[1282]);
+		cameraMoveTo(location(VARC[1283]), VARC[1284], 3000, VARC[1282]);
+		return;
+	}
+	if (int2 < 200 && VARC[1281] > 1) {
+		cameraPointAt(location(VARC[1289]), VARC[1290], 0, VARC[1282]);
+		cameraMoveTo(location(VARC[1287]), VARC[1288], 0, VARC[1282]);
+		return;
+	}
+	if (int2 < 300 && VARC[1281] > 2) {
+		cameraPointAt(location(VARC[1293]), VARC[1294], 0, VARC[1282]);
+		cameraMoveTo(location(VARC[1291]), VARC[1292], 0, VARC[1282]);
+		return;
+	}
+	if (int2 < 400 && VARC[1281] > 3) {
+		cameraPointAt(location(VARC[1297]), VARC[1298], 0, VARC[1282]);
+		cameraMoveTo(location(VARC[1295]), VARC[1296], 0, VARC[1282]);
+		return;
+	}
+	if (int2 < 500 && VARC[1281] > 4) {
+		cameraPointAt(location(VARC[1301]), VARC[1302], 0, VARC[1282]);
+		cameraMoveTo(location(VARC[1299]), VARC[1300], 0, VARC[1282]);
+		return;
+	}
+	if (int2 < 600 && VARC[1281] > 5) {
+		cameraPointAt(location(VARC[1305]), VARC[1306], 0, VARC[1282]);
+		cameraMoveTo(location(VARC[1303]), VARC[1304], 0, VARC[1282]);
+		return;
+	}
+	if (int2 < 700 && VARC[1281] > 6) {
+		cameraPointAt(location(VARC[1309]), VARC[1310], 0, VARC[1282]);
+		cameraMoveTo(location(VARC[1307]), VARC[1308], 0, VARC[1282]);
+		return;
+	}
+	if (int2 < 800 && VARC[1281] > 7) {
+		cameraPointAt(location(VARC[1313]), VARC[1314], 0, VARC[1282]);
+		cameraMoveTo(location(VARC[1311]), VARC[1312], 0, VARC[1282]);
+		return;
+	}
+	widget0.setScriptCallOnGameloop(-1, "");
+	return;
+}

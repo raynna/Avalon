@@ -1,0 +1,5 @@
+void script_3038(string string0, Widget widget1) {
+	script_2995(widget1, 0, 0, 0, 0, 0, string0, 0xFFFFFF, 494, 1, 1, 0, true);
+	ACTIVE.setSize(0, 0, 1, 1);
+	return;
+}

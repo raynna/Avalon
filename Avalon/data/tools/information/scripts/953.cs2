@@ -1,0 +1,14 @@
+void script_953() {
+	switch (VARC[1400]) {
+		case 0:
+			widget(933, 326).setRGB(0xFFB400);
+			break;
+		case 1:
+			widget(933, 326).setRGB(0x00FF00);
+			break;
+		case 2:
+			widget(933, 326).setRGB(0xFF0000);
+			break;
+	}
+	return;
+}

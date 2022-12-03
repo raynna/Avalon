@@ -1,0 +1,14 @@
+void script_2481() {
+	widget(855, 17).setTargetCursor(14, 15);
+	widget(855, 33).setTargetCursor(16, 17);
+	widget(855, 19).setTargetCursor(18, 19);
+	widget(855, 9).setTargetCursor(20, 21);
+	widget(855, 11).setTargetCursor(26, 27);
+	widget(855, 13).setTargetCursor(22, 23);
+	widget(855, 15).setTargetCursor(24, 25);
+	widget(855, 7).setTargetCursor(28, 29);
+	widget(855, 2).setTargetCursor(30, 31);
+	widget(855, 3).setTargetCursor(32, 33);
+	widget(855, 1).setTargetCursor(34, 35);
+	return;
+}

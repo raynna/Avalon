@@ -1,0 +1,69 @@
+void script_4350() {
+	DataMap datamap0;
+	int int1;
+	datamap0 = null;
+	int1 = 0;
+	switch (VARP[2128]) {
+		case 1:
+			int1 = VARPBIT[9091];
+			break;
+		case 2:
+			int1 = VARPBIT[9092];
+			break;
+		case 3:
+			int1 = VARPBIT[9093];
+			break;
+		case 4:
+			int1 = VARPBIT[9094];
+			break;
+		case 5:
+			int1 = VARPBIT[9095];
+			break;
+		case 6:
+			int1 = VARPBIT[9096];
+			break;
+		case 7:
+			int1 = VARPBIT[9097];
+			break;
+		case 8:
+			int1 = VARPBIT[9098];
+			break;
+	}
+	if (int1 > 0) {
+		datamap0 = datamap('i', 'g', (DataMap)3689, int1);
+		if (datamap0 != null) {
+			widget(1098, 135).setIsHidden(true);
+			widget(1098, 140).setScrollPos(0, 0);
+			switch (VARP[2128]) {
+				case 1:
+					script_4499(datamap0, 1, datamap('i', 's', datamap0, VARPBIT[9131]), datamapSize(datamap0), 4, widget(1098, 129), widget(1098, 139), widget(1098, 141), widget(1098, 140), widget(1098, 263));
+					break;
+				case 2:
+					script_4499(datamap0, 1, datamap('i', 's', datamap0, VARPBIT[9132]), datamapSize(datamap0), 4, widget(1098, 129), widget(1098, 139), widget(1098, 141), widget(1098, 140), widget(1098, 263));
+					break;
+				case 3:
+					script_4499(datamap0, 1, datamap('i', 's', datamap0, VARPBIT[9133]), datamapSize(datamap0), 4, widget(1098, 129), widget(1098, 139), widget(1098, 141), widget(1098, 140), widget(1098, 263));
+					break;
+				case 4:
+					script_4499(datamap0, 1, datamap('i', 's', datamap0, VARPBIT[9134]), datamapSize(datamap0), 4, widget(1098, 129), widget(1098, 139), widget(1098, 141), widget(1098, 140), widget(1098, 263));
+					break;
+				case 5:
+					script_4499(datamap0, 1, datamap('i', 's', datamap0, VARPBIT[9135]), datamapSize(datamap0), 4, widget(1098, 129), widget(1098, 139), widget(1098, 141), widget(1098, 140), widget(1098, 263));
+					break;
+				case 6:
+					script_4499(datamap0, 1, datamap('i', 's', datamap0, VARPBIT[9136]), datamapSize(datamap0), 4, widget(1098, 129), widget(1098, 139), widget(1098, 141), widget(1098, 140), widget(1098, 263));
+					break;
+				case 7:
+					script_4499(datamap0, 1, datamap('i', 's', datamap0, VARPBIT[9137]), datamapSize(datamap0), 4, widget(1098, 129), widget(1098, 139), widget(1098, 141), widget(1098, 140), widget(1098, 263));
+					break;
+				case 8:
+					script_4499(datamap0, 1, datamap('i', 's', datamap0, VARPBIT[9138]), datamapSize(datamap0), 4, widget(1098, 129), widget(1098, 139), widget(1098, 141), widget(1098, 140), widget(1098, 263));
+					break;
+			}
+			return;
+		}
+	}
+	script_4501(widget(1098, 129), "Select a sub-type");
+	widget(1098, 135).setIsHidden(false);
+	return;
+}

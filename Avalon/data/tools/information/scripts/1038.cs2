@@ -1,0 +1,113 @@
+void script_1038(int arg0, char char1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, QcPhrase qcphrase6, int arg7) {
+	int int8;
+	int int9;
+	int int10;
+	Item item11;
+	if (arg0 == 104) {
+		if (arg7 == 0) {
+			return;
+		}
+		if (VARC[128] <= 0) {
+			VARC[128] = arg7 - 1;
+		} else {
+			VARC[128] = VARC[128] - 1;
+		}
+		if (ACTIVE.setChild(widget4, VARC[128] + 1)) {
+			if (_ACTIVE.setChild(widget4, 0)) {
+				_ACTIVE.setPosition(ACTIVE.getX(), ACTIVE.getY(), 0, 0);
+				_ACTIVE.setSize(ACTIVE.getWidth(), ACTIVE.getHeight(), 0, 0);
+				_ACTIVE.setRGB(0x577E45);
+				_ACTIVE.setFilled(true);
+			}
+			if (ACTIVE.getY() < widget4.getScrollY()) {
+				script_72(widget5, widget4, widget4.getScrollY() - ACTIVE.getHeight());
+			} else if (ACTIVE.getY() + ACTIVE.getHeight() > widget4.getHeight() + widget4.getScrollY()) {
+				script_72(widget5, widget4, widget4.getScrollMaxV());
+			}
+		}
+		return;
+	}
+	if (arg0 == 105) {
+		if (arg7 == 0) {
+			return;
+		}
+		if (VARC[128] == arg7 - 1) {
+			VARC[128] = 0;
+		} else {
+			VARC[128] = VARC[128] + 1;
+		}
+		if (ACTIVE.setChild(widget4, VARC[128] + 1)) {
+			if (_ACTIVE.setChild(widget4, 0)) {
+				_ACTIVE.setPosition(ACTIVE.getX(), ACTIVE.getY(), 0, 0);
+				_ACTIVE.setSize(ACTIVE.getWidth(), ACTIVE.getHeight(), 0, 0);
+				_ACTIVE.setRGB(0x577E45);
+				_ACTIVE.setFilled(true);
+			}
+			if (ACTIVE.getY() + ACTIVE.getHeight() > widget4.getHeight() + widget4.getScrollY()) {
+				script_72(widget5, widget4, widget4.getScrollY() + ACTIVE.getHeight());
+			} else if (ACTIVE.getY() < widget4.getScrollY()) {
+				script_72(widget5, widget4, 0);
+			}
+		}
+		return;
+	}
+	if (arg0 == 102) {
+		script_1050(VARC[126], STRING[27]);
+		return;
+	}
+	if (arg0 == 13) {
+		script_1054();
+		return;
+	}
+	int8 = length(STRING[30]);
+	int9 = cs2method4210(STRING[30], VARC[161]);
+	int10 = 0;
+	item11 = null;
+	if (arg0 == 84) {
+		if (VARC[128] < 0) {
+			if (int8 > 0) {
+				VARC[129] = 0;
+				widget3.setScriptCallOnGameloop(-1, "");
+				script_1041(widget2, widget4, widget5, qcphrase6);
+			} else {
+				script_1054();
+			}
+		} else if (int9 > 0 && ACTIVE.setChild(widget4, VARC[128] + 1)) {
+			while (int10 < int9) {
+				item11 = nextSearchResult();
+				if (compare(ACTIVE.getText(), getItemName(item11)) == 0) {
+					script_1076(widget2, qcphrase6, item11);
+					return;
+				}
+				int10 = int10 + 1;
+			}
+		}
+		return;
+	}
+	if (arg0 == 85) {
+		if (int8 > 0) {
+			STRING[30] = substr(STRING[30], 0, int8 - 1);
+		} else {
+			if (!(VARC[127] == 0)) {
+				VARC[128] = -1;
+				widget(137, 7).setIsHidden(true);
+				widget(137, 9).setIsHidden(true);
+				widget(137, 13).setIsHidden(true);
+				widget(137, 17).setIsHidden(false);
+				widget(137, 1).setIsHidden(false);
+				widget(137, 3).setIsHidden(true);
+				return;
+			}
+			script_1054();
+		}
+	} else {
+		if (!(isValidChar(char1) && int8 < 80)) {
+			return;
+		}
+		STRING[30] = removeTags(concatChar(STRING[30], char1));
+	}
+	widget3.setText("Search for: " + STRING[30] + "*");
+	VARC[129] = 50;
+	widget3.setScriptCallOnGameloop(1040, widget2, widget3, widget4, widget5, qcphrase6, "IIIIe");
+	return;
+}

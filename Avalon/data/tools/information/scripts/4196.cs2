@@ -1,0 +1,47 @@
+void script_4196(int arg0) {
+	if (arg0 == 58392625 || arg0 == 58392626) {
+		if (ACTIVE.setChild(widget(891, 61))) {
+			ACTIVE.setHidden(true);
+		}
+		if (ACTIVE.setChild(widget(891, 49))) {
+			ACTIVE.setSprite(5413);
+		}
+		if (ACTIVE.setChild(widget(891, 50))) {
+			ACTIVE.setSprite(5413);
+		}
+	}
+	if (arg0 == 58392627 || arg0 == 58392629) {
+		if (ACTIVE.setChild(widget(891, 62))) {
+			ACTIVE.setHidden(true);
+		}
+		if (ACTIVE.setChild(widget(891, 51))) {
+			ACTIVE.setSprite(5413);
+		}
+		if (ACTIVE.setChild(widget(891, 53))) {
+			ACTIVE.setSprite(5413);
+		}
+	}
+	if (arg0 == 58392628) {
+		if (ACTIVE.setChild(widget(891, 63))) {
+			ACTIVE.setHidden(true);
+		}
+		if (ACTIVE.setChild(widget(891, 52))) {
+			ACTIVE.setSprite(5413);
+		}
+		if (ACTIVE.setChild(widget(891, 53))) {
+			ACTIVE.setSprite(5413);
+		}
+	}
+	if (arg0 == 58392630 || arg0 == 58392631) {
+		if (ACTIVE.setChild(widget(891, 64))) {
+			ACTIVE.setHidden(true);
+		}
+		if (ACTIVE.setChild(widget(891, 54))) {
+			ACTIVE.setSprite(5413);
+		}
+		if (ACTIVE.setChild(widget(891, 55))) {
+			ACTIVE.setSprite(5413);
+		}
+	}
+	return;
+}

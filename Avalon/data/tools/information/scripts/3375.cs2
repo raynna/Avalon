@@ -1,0 +1,5 @@
+void script_3375(int arg0, int arg1) {
+	widget(519, 3).setSize(arg0, arg1, 0, 0);
+	widget(519, 3).setPosition(16 + (64 - arg0) / 2, 16 + (64 - arg1) / 2, 0, 0);
+	return;
+}

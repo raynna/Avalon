@@ -1,0 +1,64 @@
+void script_1362() {
+	int int0;
+	int0 = 0;
+	widget(137, 56).setScriptCallOnKeyPress(73, KEY_TYPED, (char)KEY_PRESSED, "iz");
+	widget(751, 0).setScriptCallOnMessage(81, true, "1");
+	widget(751, 0).setScriptCallOnClanListChange(81, true, "1");
+	widget(751, 0).setScriptCallOnFriendListChange(81, false, "1");
+	widget(751, 0).setScriptCallOnGeneralDataChange(82, "");
+	widget(751, 0).setScriptCallOnGlobalStringChange(710, 0, "Y");
+	STRING[1] = "";
+	VARC[1028] = 0;
+	VARC[42] = -1;
+	VARC[41] = 0;
+	VARC[43] = cs2method5017();
+	VARC[3] = -1;
+	VARC[4] = 0;
+	STRING[2] = "";
+	STRING[3] = "";
+	STRING[4] = "";
+	STRING[5] = "";
+	STRING[6] = "";
+	STRING[7] = "";
+	STRING[8] = "";
+	STRING[9] = "";
+	STRING[10] = "";
+	STRING[11] = "";
+	STRING[12] = "";
+	STRING[13] = "";
+	STRING[14] = "";
+	STRING[15] = "";
+	STRING[16] = "";
+	STRING[17] = "";
+	STRING[18] = "";
+	STRING[19] = "";
+	STRING[20] = "";
+	STRING[21] = "";
+	STRING[276] = "";
+	script_1558(true);
+	widget(137, 56).setIsHidden(false);
+	if (getDisplayMode() >= 2) {
+		widget(752, 2).setIsHidden(true);
+		widget(752, 1).setSprite(1247);
+		widget(752, 1).setAlpha(true);
+		widget(752, 1).setIsHidden(false);
+		widget(137, 51).setIsHidden(true);
+		widget(137, 52).setIsHidden(false);
+		widget(137, 53).setIsHidden(false);
+		widget(137, 56).setTextAntiMacro(true);
+		widget(137, 56).setRGB(0xFFFFFF);
+	} else {
+		widget(752, 1).setSprite(1017);
+		widget(752, 1).setIsHidden(false);
+		widget(752, 2).setIsHidden(false);
+		widget(137, 51).setIsHidden(false);
+		widget(137, 52).setIsHidden(true);
+		widget(137, 53).setIsHidden(true);
+		widget(137, 56).setTextAntiMacro(false);
+		widget(137, 56).setRGB(0x000000);
+	}
+	VARC[7] = widget(137, 58).getHeight();
+	script_178();
+	STRING[0] = "";
+	return;
+}

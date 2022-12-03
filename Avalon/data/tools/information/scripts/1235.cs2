@@ -1,0 +1,27 @@
+void script_1235(Widget widget0) {
+	widget(181, 1).setIsHidden(false);
+	switch (VARC[180]) {
+		case 1:
+			widget0.set3DRotation(0, 0, 510, 762, 0, 410);
+			break;
+		case 2:
+			widget0.set3DRotation(0, 0, 514, 1241, 0, 410);
+			break;
+		case 3:
+			widget0.set3DRotation(0, 0, 512, 1536, 1250, 410);
+			break;
+		case 4:
+			widget0.set3DRotation(0, 0, 512, 0, 1250, 410);
+			break;
+		case 5:
+			widget0.set3DRotation(0, 0, 512, 512, 1250, 410);
+			break;
+		case 6:
+			widget0.set3DRotation(0, 0, 512, 1024, 1250, 410);
+			break;
+		default:
+			widget(181, 1).setIsHidden(true);
+			break;
+	}
+	return;
+}

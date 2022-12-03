@@ -1,0 +1,19 @@
+void script_2486() {
+	if (VARC[882] != -1) {
+		widget(655, 42).setText("Players: " + str(VARC[882]));
+	}
+	if (VARC[887] != -1) {
+		widget(655, 31).setText("Players: " + str(VARC[887]));
+	}
+	if (VARC[892] != -1) {
+		widget(655, 38).setText("Players: " + str(VARC[892]));
+	}
+	if (VARC[897] != -1) {
+		widget(655, 26).setText("Players: " + str(VARC[897]));
+	}
+	widget(655, 42).setRGB(0xE1981F);
+	widget(655, 31).setRGB(0xE1981F);
+	widget(655, 38).setRGB(0xE1981F);
+	widget(655, 26).setRGB(0xE1981F);
+	return;
+}

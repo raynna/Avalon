@@ -1,0 +1,46 @@
+int script_931(Item item0) {
+	Skill skill1;
+	skill1 = itemAttribute(item0, 770);
+	if (skill1 == null) {
+		return 1;
+	}
+	if (getSkillActualLvl(skill1) < itemAttribute(item0, 771)) {
+		return 0;
+	}
+	skill1 = itemAttribute(item0, 772);
+	if (skill1 == null) {
+		return 1;
+	}
+	if (getSkillActualLvl(skill1) < itemAttribute(item0, 773)) {
+		return 0;
+	}
+	skill1 = itemAttribute(item0, 774);
+	if (skill1 == null) {
+		return 1;
+	}
+	if (getSkillActualLvl(skill1) < itemAttribute(item0, 775)) {
+		return 0;
+	}
+	skill1 = itemAttribute(item0, 776);
+	if (skill1 == null) {
+		return 1;
+	}
+	if (getSkillActualLvl(skill1) < itemAttribute(item0, 777)) {
+		return 0;
+	}
+	skill1 = itemAttribute(item0, 778);
+	if (skill1 == null) {
+		return 1;
+	}
+	if (getSkillActualLvl(skill1) < itemAttribute(item0, 779)) {
+		return 0;
+	}
+	skill1 = itemAttribute(item0, 780);
+	if (skill1 == null) {
+		return 1;
+	}
+	if (getSkillActualLvl(skill1) < itemAttribute(item0, 781)) {
+		return 0;
+	}
+	return 1;
+}

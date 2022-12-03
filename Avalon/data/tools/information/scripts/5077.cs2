@@ -1,0 +1,52 @@
+void script_5077(Widget widget0, int arg1, string string2, int arg3, int arg4) {
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	if (!widget(1111, 21).isHidden() || widget(1111, 9).isHidden()) {
+		script_41(widget(1111, 131));
+		return;
+	}
+	if (script_4761(25) == 0) {
+		return;
+	}
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int10 = script_3365(widget(1111, 9));
+	int11 = script_3366(widget(1111, 9));
+	int12 = widget(1111, 9).getWidth();
+	int13 = widget(1111, 9).getHeight();
+	if (ACTIVE.setChild(widget0, arg1)) {
+		int4, int5 = script_1743(), script_1744();
+		int9, int6 = int4 - int10, int5 - int11;
+		int8, int7 = int9 + ACTIVE.getWidth(), int6 + ACTIVE.getHeight();
+		if (int13 - int7 > 150) {
+			script_4540(widget(1111, 131), widget0, arg1, string2, int12, 494, 494, 0xFFFFFF, 10, 2, 2, arg3, arg4);
+			return;
+		}
+		if (int6 > 125) {
+			script_4540(widget(1111, 131), widget0, arg1, string2, int12, 494, 494, 0xFFFFFF, 10, 2, 0, arg3, arg4);
+			return;
+		}
+		if (int12 - int8 > 150) {
+			script_4540(widget(1111, 131), widget0, arg1, string2, int12, 494, 494, 0xFFFFFF, 10, 2, 1, arg3, arg4);
+			return;
+		}
+		if (int9 > 225) {
+			script_4540(widget(1111, 131), widget0, arg1, string2, int12, 494, 494, 0xFFFFFF, 10, 2, 3, arg3, arg4);
+			return;
+		}
+		script_4540(widget(1111, 131), widget0, arg1, string2, int12, 494, 494, 0xFFFFFF, 10, 2, -1, int4 + arg3, int5 + arg4);
+	}
+	return;
+}

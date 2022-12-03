@@ -1,0 +1,57 @@
+void script_2573() {
+	Item item0;
+	item0 = null;
+	switch (VARC[929]) {
+		case 0:
+			item0 = getItemIdInSlot(93, VARC[930]);
+			break;
+		case 1:
+			item0 = getItemIdInSlot(93, VARC[931]);
+			break;
+		case 2:
+			item0 = getItemIdInSlot(93, VARC[932]);
+			break;
+		case 3:
+			item0 = getItemIdInSlot(93, VARC[933]);
+			break;
+		case 4:
+			item0 = getItemIdInSlot(93, VARC[934]);
+			break;
+		case 5:
+			item0 = getItemIdInSlot(93, VARC[935]);
+			break;
+		case 6:
+			item0 = getItemIdInSlot(93, VARC[936]);
+			break;
+		case 7:
+			item0 = getItemIdInSlot(93, VARC[937]);
+			break;
+		case 8:
+			item0 = getItemIdInSlot(93, VARC[938]);
+			break;
+		case 9:
+			item0 = getItemIdInSlot(93, VARC[939]);
+			break;
+	}
+	if (item0 == null || itemAttribute(item0, 802) != 1 && itemAttribute(item0, 803) != 1) {
+		return;
+	}
+	script_2575();
+	widget(292, 99).setText(getItemName(item0));
+	widget(292, 112).setItem(item0, -1);
+	if (itemAttribute(item0, 802) == 1) {
+		script_2578();
+		script_2584();
+		script_2585();
+		script_2588();
+		script_2591();
+	} else if (itemAttribute(item0, 803) == 1) {
+		script_2590();
+		script_2587();
+		script_2579();
+		script_2580();
+		script_2583();
+		script_2597();
+	}
+	return;
+}

@@ -1,0 +1,6 @@
+void script_1307(Widget widget0) {
+	if (VARPBIT[7912] == 0 || VARPBIT[7904] == 8 && VARPBIT[7921] == 1 && VARPBIT[7916] == 0) {
+		widget(986, 3).setModel(widget0.getModelId());
+	}
+	return;
+}

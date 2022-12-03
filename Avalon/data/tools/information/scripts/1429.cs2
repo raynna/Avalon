@@ -1,0 +1,21 @@
+void script_1429(Widget widget0, int arg1) {
+	int int2;
+	int2 = getClientCycle() % 32;
+	if (ACTIVE.setChild(widget0, arg1)) {
+		if (VARC[1024] == VARPBIT[6521] && VARC[1024] != 0) {
+			if (int2 < 8) {
+				ACTIVE.setTrans(0);
+			} else if (int2 < 16) {
+				ACTIVE.setTrans(85);
+			} else if (int2 < 24) {
+				ACTIVE.setTrans(255);
+			} else {
+				ACTIVE.setTrans(85);
+			}
+		} else {
+			ACTIVE.setScriptCallOnGameloop(-1, "");
+			ACTIVE.setTrans(0);
+		}
+	}
+	return;
+}

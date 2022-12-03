@@ -1,0 +1,14 @@
+void script_2927(Widget widget0, Widget widget1, string string2, Sprite sprite3, int arg4) {
+	if (widget0 != null) {
+		if (arg4 == 1) {
+			widget1.setText("<u=fafafa>" + string2 + "</u>");
+			widget1.setRGB(0xFAFAFA);
+			widget0.setSize(getTextWidth(string2, sprite3), widget0.getHeight(), 0, 0);
+		} else {
+			widget1.setText("<u=c8c8c8>" + string2 + "</u>");
+			widget1.setRGB(0xC8C8C8);
+			widget0.setSize(getTextWidth(string2, sprite3), widget0.getHeight(), 0, 0);
+		}
+	}
+	return;
+}

@@ -1,0 +1,9 @@
+void script_2603() {
+	playSoundEffect(6784, 1, 0);
+	widget(292, 130).setIsHidden(false);
+	widget(292, 132).setText("Are you sure you wish to resupply all defeated squads?");
+	widget(292, 135).setIsHidden(false);
+	widget(292, 134).setIsHidden(true);
+	widget(292, 137).setIsHidden(true);
+	return;
+}

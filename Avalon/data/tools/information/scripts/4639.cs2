@@ -1,0 +1,21 @@
+void script_4639() {
+	if (!isBitFlagged(VARP[2189], 1)) {
+		widget(153, 102).setIsHidden(false);
+	}
+	if (!isBitFlagged(VARP[2189], 2)) {
+		widget(153, 115).setIsHidden(false);
+	}
+	if (!isBitFlagged(VARP[2189], 3)) {
+		widget(153, 141).setIsHidden(false);
+	}
+	if (!isBitFlagged(VARP[2189], 4)) {
+		widget(153, 128).setIsHidden(false);
+	}
+	if (!isBitFlagged(VARP[2189], 5)) {
+		widget(153, 169).setIsHidden(false);
+	}
+	if (!isBitFlagged(VARP[2189], 6)) {
+		widget(153, 155).setIsHidden(false);
+	}
+	return;
+}

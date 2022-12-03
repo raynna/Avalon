@@ -1,0 +1,15 @@
+void script_1830(int arg0) {
+	if (!isMember()) {
+		return;
+	}
+	if (script_1820(arg0) == 0) {
+		return;
+	}
+	if (VARC[253] == 0) {
+		VARC[253] = 1;
+	} else {
+		VARC[253] = 0;
+	}
+	script_1778();
+	return;
+}

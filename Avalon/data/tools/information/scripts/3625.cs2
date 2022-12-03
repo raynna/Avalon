@@ -1,0 +1,35 @@
+void script_3625(DataMap datamap0, DataMap datamap1, DataMap datamap2, DataMap datamap3, int arg4, int arg5, int arg6) {
+	int int7;
+	int int8;
+	Widget widget9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int7 = 0;
+	int8 = datamapSize(datamap0);
+	widget9 = null;
+	int10 = 0;
+	int11 = 0;
+	int12 = 0;
+	int13 = 0;
+	playSoundEffect(9506, 1, 0);
+	while (int7 < int8) {
+		widget9 = datamap('i', 'I', datamap0, int7);
+		int10 = datamap('i', 'i', datamap3, (int7 + arg4) % int8);
+		int13 = (int10 + arg5) % datamapSize((DataMap)3170);
+		if (ACTIVE.setChild(widget9)) {
+			if (ACTIVE.getAttribute(1103) != ACTIVE.getAttribute(1104)) {
+				widget9.setItem(datamap('i', 'O', (DataMap)3170, ACTIVE.getAttribute(1104)), -1);
+			}
+			ACTIVE.setAttr(1103, int10);
+			ACTIVE.setAttr(1104, int13);
+			int11 = ACTIVE.getAttribute(1101);
+			int12 = ACTIVE.getAttribute(1102);
+			ACTIVE.setPosition(int11, int12, 0, 0);
+		}
+		widget9.setScriptCallOnGameloop(3627, widget9, int11, int12, 25 * datamap('i', 'i', datamap1, int7), 25 * datamap('i', 'i', datamap2, int7), datamap('i', 'O', (DataMap)3170, int13), int13, 0, arg6, "IiiiiOiii");
+		int7 = int7 + 1;
+	}
+	return;
+}

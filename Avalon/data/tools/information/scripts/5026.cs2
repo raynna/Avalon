@@ -1,0 +1,3 @@
+int script_5026(Color color0) {
+	return bitAnd(color0, 255);
+}

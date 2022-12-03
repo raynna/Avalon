@@ -1,0 +1,12 @@
+void script_1398(Widget widget0, Model model1) {
+	widget(282, 19).setModel(10111);
+	widget(282, 20).setModel(10113);
+	widget(282, 18).setModel(10109);
+	widget(282, 17).setModel(10107);
+	widget(282, 16).setModel(10105);
+	widget(282, 15).setModel(10103);
+	widget(282, 14).setModel(10101);
+	widget(282, 13).setModel(10099);
+	widget0.setModel(model1);
+	return;
+}

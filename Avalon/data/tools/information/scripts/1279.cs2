@@ -1,0 +1,19 @@
+void script_1279(Widget widget0, Container container1, int arg2, int arg3) {
+	int int4;
+	int int5;
+	int int6;
+	widget0.clearChildren();
+	int4 = 0;
+	int5 = 0;
+	int4 = (widget0.getWidth() - 36 * arg2) / (arg2 - 1);
+	int5 = (widget0.getHeight() - 32 * arg3) / (arg3 - 1);
+	int6 = 0;
+	while (int6 <= arg2 * arg3) {
+		ACTIVE.createChild(widget0, 5, int6);
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setPosition((36 + int4) * (int6 % arg2), int6 / arg2 * (32 + int5), 0, 0);
+		script_1280(container1, int6, widget0, int6);
+		int6 = int6 + 1;
+	}
+	return;
+}

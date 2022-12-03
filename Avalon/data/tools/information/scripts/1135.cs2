@@ -1,0 +1,78 @@
+void script_1135(Widget widget0) {
+	Location location1;
+	location1 = script_284(getMyLocation());
+	switch (VARC[1007]) {
+		case 1:
+			script_2766(0xFFFFFF, 50, widget0);
+			playSoundEffect(3641, 1, 0);
+			break;
+		case 2:
+			cs2method5405(0, 2);
+			cs2method5405(1, 2);
+			cs2method5406(0, 0, script_1145(25, 25, location1), 750, script_1145(25, 25, location1), 750, 0);
+			cs2method5406(0, 1, script_1145(25, 26, location1), 750, script_1145(25, 26, location1), 750, 0);
+			cs2method5406(1, 0, script_1145(25, 29, location1), 600, script_1145(25, 29, location1), 600, 0);
+			cs2method5406(1, 1, script_1145(25, 30, location1), 600, script_1145(25, 30, location1), 600, 0);
+			cameraMethod5502(0, 0, 100, 0, 1, 0);
+			script_2768(45, widget0);
+			playSoundEffect(3641, 1, 0);
+			break;
+		case 3:
+			cs2method5405(0, 7);
+			cs2method5405(1, 7);
+			cs2method5406(0, 0, script_1145(25, 26, location1), 750, script_1145(25, 26, location1), 1200, 0);
+			cs2method5406(0, 1, script_1145(16, 9, location1), 2175, script_1145(18, 11, location1), 2175, 0);
+			cs2method5406(0, 2, script_1145(31, 9, location1), 2275, script_1145(31, 9, location1), 2450, 0);
+			cs2method5406(0, 3, script_1145(39, 20, location1), 1950, script_1145(39, 20, location1), 1950, 0);
+			cs2method5406(0, 4, script_1145(40, 34, location1), 1550, script_1145(40, 34, location1), 1550, 0);
+			cs2method5406(0, 5, script_1145(31, 40, location1), 1125, script_1145(31, 40, location1), 1125, 0);
+			cs2method5406(0, 6, script_1145(24, 38, location1), 900, script_1145(24, 38, location1), 900, 0);
+			cs2method5406(1, 0, script_1145(25, 30, location1), 600, script_1145(25, 30, location1), 600, 0);
+			cs2method5406(1, 1, script_1145(25, 23, location1), 1150, script_1145(25, 23, location1), 1150, 0);
+			cs2method5406(1, 2, script_1145(25, 23, location1), 1150, script_1145(25, 23, location1), 1150, 0);
+			cs2method5406(1, 3, script_1145(25, 23, location1), 950, script_1145(25, 23, location1), 950, 0);
+			cs2method5406(1, 4, script_1145(25, 23, location1), 950, script_1145(25, 23, location1), 950, 0);
+			cs2method5406(1, 5, script_1145(25, 23, location1), 850, script_1145(25, 23, location1), 850, 0);
+			cs2method5406(1, 6, script_1145(26, 23, location1), 725, script_1145(26, 23, location1), 725, 0);
+			cameraMethod5502(0, 0, 800, 400, 1, 0);
+			break;
+		case 4:
+			if (cs2method5407(0) == 7) {
+				cameraMethod5502(0, 1, 400, 400, 1, 1);
+			} else {
+				cs2method5512();
+			}
+			break;
+		case 5:
+			if (cs2method5407(0) == 7) {
+				cameraMethod5502(0, 2, 400, 400, 1, 2);
+			} else {
+				cs2method5512();
+			}
+			break;
+		case 6:
+			if (cs2method5407(0) == 7) {
+				cameraMethod5502(0, 3, 400, 400, 1, 3);
+			} else {
+				cs2method5512();
+			}
+			break;
+		case 7:
+			if (cs2method5407(0) == 7) {
+				cameraMethod5502(0, 4, 400, 600, 1, 4);
+				widget0.setScriptCallOnMinimapRelatedSetting3(1144, widget0, "I");
+			} else {
+				cs2method5512();
+			}
+			break;
+		case 8:
+			script_2768(50, widget0);
+			playSoundEffect(3641, 1, 0);
+			break;
+		default:
+			widget0.clearChildren();
+			cs2method5512();
+			break;
+	}
+	return;
+}

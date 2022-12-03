@@ -1,0 +1,129 @@
+void script_2705(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+	int int6;
+	string str0;
+	if (arg2 == 1) {
+		close(widget(746, 83));
+		close(widget(548, 21));
+		widget(746, 83).setScriptCallOnGameloop(-1, "");
+		widget(548, 21).setScriptCallOnGameloop(-1, "");
+		widget(548, 191).setIsHidden(true);
+		widget(548, 69).setIsHidden(true);
+		widget(548, 194).setIsHidden(true);
+		widget(548, 203).setIsHidden(true);
+		widget(548, 163).setIsHidden(true);
+		widget(548, 115).setIsHidden(true);
+	} else if (arg2 == 2) {
+		widget(906, 23).setScriptCallOnGameloop(-1, "");
+	} else {
+		widget(744, 17).setScriptCallOnGameloop(-1, "");
+	}
+	int6 = 0;
+	if (arg0 == 1) {
+		cs2method6032(cs2method6131(), 1);
+		if (getDisplayMode() != 3) {
+			cs2method5309(getDisplayMode());
+		}
+		cs2method6024(cs2method6116());
+		if (isBitFlagged(arg1, 1)) {
+			VARC[994] = 2;
+		}
+		VARC[1240] = 3;
+		VARC[1277] = 0;
+	} else {
+		if (isBitFlagged(arg1, 0)) {
+			cs2method7006();
+			if (arg4 == 0) {
+				int6 = cs2method6132();
+				cs2method6031(int6);
+				script_2593(int6);
+			}
+		} else {
+			int6 = cs2method6131();
+		}
+		if (isBitFlagged(arg1, 1) && getDisplayMode() != cs2method5308()) {
+			cs2method5307(cs2method5308());
+		}
+		if (isBitFlagged(arg1, 2)) {
+			cs2method6016(cs2method6124());
+		}
+		if (isBitFlagged(arg1, 3)) {
+			cs2method6027(0);
+		}
+		if (arg2 == 3) {
+			script_1174(0);
+			script_3384(arg2);
+			return;
+		}
+		if (arg5 == 1) {
+			script_3387(int6, getDisplayMode(), (int, int)script_2692(int6), arg2);
+		} else if (isBitFlagged(arg1, 1) || arg4 == 1) {
+			script_2596(int6, getDisplayMode(), (int, int)script_2692(int6), arg2);
+		} else {
+			script_3387(int6, getDisplayMode(), (int, int)script_2692(int6), arg2);
+		}
+		if (arg2 == 1 && arg3 == 1) {
+			msg("The requested change has been cancelled.");
+		}
+	}
+	str0 = "kbase/view.ws?guid=controls_display_options";
+	if (arg2 != 1) {
+		int6 = cs2method6131();
+		if (arg2 == 2) {
+			widget(906, 42).setIsHidden(true);
+			if (arg5 == 1) {
+				script_3387(int6, getDisplayMode(), (int, int)script_2692(int6), arg2);
+			} else if (isBitFlagged(arg1, 1) || arg4 == 1) {
+				script_2596(int6, getDisplayMode(), (int, int)script_2692(int6), arg2);
+			} else {
+				script_3387(int6, getDisplayMode(), (int, int)script_2692(int6), arg2);
+			}
+			if (arg4 == 0 && arg3 == 1) {
+				script_2190("", "The change of detail mode has been cancelled." + "<br>" + "<br>" + "Perhaps different graphical settings would work better for you?", 0, -1, "", "Advanced info", 0);
+				widget(906, 153).setScriptCallOnMousePressed(702, str0, true, "s1");
+			}
+		} else if (arg2 == 3) {
+			if (hasSSKey()) {
+				script_1174(5);
+				if (VARC[1273] == 1) {
+					return;
+				}
+				widget(975, 44).setScriptCallOnGameloop(3381, widget(975, 44), 0, "Ii");
+			} else if (script_3487(3)) {
+				script_1174(7);
+			} else {
+				script_1174(11);
+			}
+		} else {
+			if (arg5 == 1) {
+				script_3387(int6, getDisplayMode(), (int, int)script_2692(int6), arg2);
+			} else if (isBitFlagged(arg1, 1) || arg4 == 1) {
+				script_2596(int6, getDisplayMode(), (int, int)script_2692(int6), arg2);
+			} else {
+				script_3387(int6, getDisplayMode(), (int, int)script_2692(int6), arg2);
+			}
+			if (arg4 == 0 && arg3 == 1) {
+				widget(744, 76).setText("The change of detail mode has been cancelled." + "<br>" + "<br>" + "Perhaps different graphical settings would work better for you?");
+				if (arg5 == 1) {
+					widget(744, 79).setScriptCallOnMousePressed(3452, 6, false, true, "i11");
+				} else if (isBitFlagged(arg1, 1) || arg4 == 1) {
+					widget(744, 79).setScriptCallOnMousePressed(1173, 6, "i");
+				} else {
+					widget(744, 79).setScriptCallOnMousePressed(3452, 6, false, true, "i11");
+				}
+				widget(744, 78).setText("Advanced info");
+				widget(744, 78).setScriptCallOnMousePressed(702, str0, true, "s1");
+				script_1174(9);
+			} else if (arg5 == 1) {
+				script_3239(6, 0, 1);
+			} else if (isBitFlagged(arg1, 1) || arg4 == 1) {
+				script_1174(6);
+			} else {
+				script_3239(6, 0, 1);
+			}
+		}
+	}
+	if (arg0 == 0 && arg4 == 1) {
+		script_3384(arg2);
+	}
+	return;
+}

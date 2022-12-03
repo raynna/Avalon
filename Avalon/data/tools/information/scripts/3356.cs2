@@ -1,0 +1,24 @@
+void script_3356(Widget widget0, int arg1, Container container2) {
+	Item item3;
+	item3 = getItemIdInInpsectingSlot(container2, arg1);
+	if (item3 == null) {
+		widget0.setItem(null, 0);
+		widget0.setSize(32, 32, 0, 0);
+		widget0.setPosition(0, 0, 1, 1);
+		widget0.setSprite(datamap('i', 'd', (DataMap)796, arg1));
+		widget0.setOutlineThickness(0);
+		widget0.setShadowColor(0x000000);
+		widget0.setScriptCallOnClickContextMenu(-1, "");
+		widget0.setNoOptions();
+		return;
+	}
+	widget0.setSize(36, 32, 0, 0);
+	widget0.setPosition(2, 0, 0, 1);
+	widget0.setItem(item3, getItemAmtInInspectingSlot(container2, arg1));
+	widget0.setOutlineThickness(1);
+	widget0.setShadowColor(0x302020);
+	widget0.setNoOptions();
+	widget0.setContextMenuOption(10, "Examine" + "<col=ff9040>");
+	widget0.setOptionBase("<col=ff9040>" + getItemName(item3));
+	return;
+}

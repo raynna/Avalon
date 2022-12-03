@@ -1,0 +1,30 @@
+int, string script_530(Widget arg0) {
+	if (arg0 == widget(301, 74)) {
+		return VARPBIT[4090], "Runecrafting";
+	}
+	if (arg0 == widget(301, 75)) {
+		return VARPBIT[4091], "Crafting";
+	}
+	if (arg0 == widget(301, 76)) {
+		return VARPBIT[4093], "Fletching";
+	}
+	if (arg0 == widget(301, 77)) {
+		return VARPBIT[4095], "Construction";
+	}
+	if (arg0 == widget(301, 78)) {
+		return VARPBIT[4096], "Farming";
+	}
+	if (arg0 == widget(301, 79)) {
+		return VARPBIT[4098], "Magic";
+	}
+	if (arg0 == widget(301, 80)) {
+		return VARPBIT[4100], "Smithing";
+	}
+	if (arg0 == widget(301, 81)) {
+		return VARPBIT[4101], "Cooking";
+	}
+	if (arg0 == widget(301, 82)) {
+		return VARPBIT[4102], "Herblore";
+	}
+	return 0, "";
+}

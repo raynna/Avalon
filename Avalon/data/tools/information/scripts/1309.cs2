@@ -1,0 +1,136 @@
+void script_1309(int arg0) {
+	int int1;
+	int1 = script_1305();
+	if (arg0 == 1) {
+		if (int1 != 0) {
+			widget(746, 39).setSprite(null);
+			widget(746, 132).setSprite(null);
+			widget(746, 133).setSprite(null);
+		}
+		if (int1 != 2) {
+			widget(746, 40).setSprite(null);
+			widget(746, 134).setSprite(null);
+			widget(746, 135).setSprite(null);
+		}
+		if (int1 != 3) {
+			widget(746, 41).setSprite(null);
+			widget(746, 136).setSprite(null);
+			widget(746, 137).setSprite(null);
+		}
+		if (int1 != 1) {
+			widget(746, 42).setSprite(null);
+			widget(746, 138).setSprite(null);
+			widget(746, 139).setSprite(null);
+		}
+		if (int1 != 4) {
+			widget(746, 43).setSprite(null);
+			widget(746, 140).setSprite(null);
+			widget(746, 141).setSprite(null);
+		}
+		if (int1 != 5) {
+			widget(746, 44).setSprite(null);
+			widget(746, 142).setSprite(null);
+			widget(746, 143).setSprite(null);
+		}
+		if (int1 != 6) {
+			widget(746, 45).setSprite(null);
+			widget(746, 144).setSprite(null);
+			widget(746, 145).setSprite(null);
+		}
+		if (int1 != 7) {
+			widget(746, 46).setSprite(null);
+			widget(746, 146).setSprite(null);
+			widget(746, 147).setSprite(null);
+		}
+		if (int1 != 8) {
+			widget(746, 47).setSprite(null);
+			widget(746, 148).setSprite(null);
+			widget(746, 149).setSprite(null);
+		}
+		if (int1 != 9) {
+			widget(746, 48).setSprite(null);
+			widget(746, 150).setSprite(null);
+			widget(746, 151).setSprite(null);
+		}
+		if (int1 != 10) {
+			widget(746, 49).setSprite(null);
+			widget(746, 152).setSprite(null);
+			widget(746, 153).setSprite(null);
+		}
+		if (int1 != 11) {
+			widget(746, 50).setSprite(null);
+			widget(746, 154).setSprite(null);
+			widget(746, 155).setSprite(null);
+		}
+		if (int1 != 12) {
+			widget(746, 51).setSprite(null);
+			widget(746, 156).setSprite(null);
+			widget(746, 157).setSprite(null);
+		}
+		if (int1 != 13) {
+			widget(746, 52).setSprite(null);
+			widget(746, 158).setSprite(null);
+			widget(746, 159).setSprite(null);
+		}
+		if (int1 != 14) {
+			widget(746, 53).setSprite(null);
+			widget(746, 160).setSprite(null);
+			widget(746, 161).setSprite(null);
+		}
+		if (int1 != 15) {
+			widget(746, 54).setSprite(null);
+			widget(746, 162).setSprite(null);
+			widget(746, 163).setSprite(null);
+		}
+	} else {
+		widget(746, 39).setSprite(null);
+		widget(746, 132).setSprite(null);
+		widget(746, 133).setSprite(null);
+		widget(746, 40).setSprite(null);
+		widget(746, 134).setSprite(null);
+		widget(746, 135).setSprite(null);
+		widget(746, 41).setSprite(null);
+		widget(746, 136).setSprite(null);
+		widget(746, 137).setSprite(null);
+		widget(746, 42).setSprite(null);
+		widget(746, 138).setSprite(null);
+		widget(746, 139).setSprite(null);
+		widget(746, 43).setSprite(null);
+		widget(746, 140).setSprite(null);
+		widget(746, 141).setSprite(null);
+		widget(746, 44).setSprite(null);
+		widget(746, 142).setSprite(null);
+		widget(746, 143).setSprite(null);
+		widget(746, 45).setSprite(null);
+		widget(746, 144).setSprite(null);
+		widget(746, 145).setSprite(null);
+		widget(746, 46).setSprite(null);
+		widget(746, 146).setSprite(null);
+		widget(746, 147).setSprite(null);
+		widget(746, 47).setSprite(null);
+		widget(746, 148).setSprite(null);
+		widget(746, 149).setSprite(null);
+		widget(746, 48).setSprite(null);
+		widget(746, 150).setSprite(null);
+		widget(746, 151).setSprite(null);
+		widget(746, 49).setSprite(null);
+		widget(746, 152).setSprite(null);
+		widget(746, 153).setSprite(null);
+		widget(746, 50).setSprite(null);
+		widget(746, 154).setSprite(null);
+		widget(746, 155).setSprite(null);
+		widget(746, 51).setSprite(null);
+		widget(746, 156).setSprite(null);
+		widget(746, 157).setSprite(null);
+		widget(746, 52).setSprite(null);
+		widget(746, 158).setSprite(null);
+		widget(746, 159).setSprite(null);
+		widget(746, 53).setSprite(null);
+		widget(746, 160).setSprite(null);
+		widget(746, 161).setSprite(null);
+		widget(746, 54).setSprite(null);
+		widget(746, 162).setSprite(null);
+		widget(746, 163).setSprite(null);
+	}
+	return;
+}

@@ -1,0 +1,40 @@
+void script_5245() {
+	int int0;
+	int int1;
+	int0 = 0;
+	int1 = 0;
+	if (widget(1128, 4).getSpriteId() == 6007) {
+		int0 = int0 + 20;
+		int1 = int1 + 20;
+	}
+	if (widget(1128, 104).getSpriteId() == 6007) {
+		int0 = int0 + 20;
+		int1 = int1 + 20;
+	}
+	if (widget(1128, 142).getSpriteId() == 6007) {
+		int0 = int0 + 30;
+		int1 = int1 + 20;
+	}
+	if (widget(1128, 179).getSpriteId() == 6007) {
+		int0 = int0 + 28;
+		int1 = int1 + 20;
+	}
+	if (widget(1128, 216).getSpriteId() == 6007) {
+		int0 = int0 + 24;
+		int1 = int1 + 20;
+	}
+	if (widget(1128, 253).getSpriteId() == 6007) {
+		int0 = int0 + 26;
+		int1 = int1 + 20;
+	}
+	if (widget(1128, 290).getSpriteId() == 6007) {
+		int0 = int0 + 200;
+		int1 = int1 + 200;
+	}
+	if (VARPBIT[5505] < int0 || VARPBIT[5505] < int1) {
+		widget(1128, 13).setRGB(0xFF0000);
+	} else {
+		widget(1128, 13).setRGB(0xA88D65);
+	}
+	return;
+}

@@ -1,0 +1,10 @@
+void script_4334(Widget widget0, Widget widget1) {
+	if (cs2method3709() >= 5) {
+		widget0.setRGB(getColorRelatedMethod4020(CLANDEF112[18]));
+		widget1.setRGB(getColorRelatedMethod4020(CLANDEF112[19]));
+	} else {
+		widget0.setRGB(getColorRelatedMethod4020(42550));
+		widget1.setRGB(getColorRelatedMethod4020(39382));
+	}
+	return;
+}

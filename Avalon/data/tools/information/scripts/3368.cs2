@@ -1,0 +1,7 @@
+void script_3368(int arg0) {
+	widget(548, 26).setText(formatNumber(arg0, 1) + "xp");
+	widget(746, 189).setText(formatNumber(arg0, 1) + "xp");
+	widget(548, 22).setScriptCallOnGameloop(3369, widget(548, 22), getClientCycle(), "Ii");
+	widget(746, 184).setScriptCallOnGameloop(3370, widget(746, 184), getClientCycle(), "Ii");
+	return;
+}

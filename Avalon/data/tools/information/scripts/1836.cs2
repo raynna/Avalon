@@ -1,0 +1,53 @@
+void script_1836() {
+	if (VARC[246] != VARPBIT[5280]) {
+		VARC[246] = VARPBIT[5280];
+		script_1770();
+	}
+	if (VARC[247] != VARPBIT[5281]) {
+		VARC[247] = VARPBIT[5281];
+		script_1771();
+	}
+	if (script_42(VARC[248]) != (boolean)VARPBIT[5282]) {
+		VARC[248] = script_734(VARPBIT[5282]);
+		script_1772();
+	}
+	if (script_42(VARC[249]) != (boolean)VARPBIT[5283]) {
+		VARC[249] = script_734(VARPBIT[5283]);
+		script_1773();
+	}
+	if (script_42(VARC[250]) != (boolean)VARPBIT[5284]) {
+		VARC[250] = script_734(VARPBIT[5284]);
+		script_1774();
+	}
+	if (VARC[252] != VARPBIT[5286]) {
+		VARC[252] = VARPBIT[5286];
+		script_1775();
+	}
+	if (script_42(VARC[251]) != (boolean)VARPBIT[5285]) {
+		VARC[251] = script_734(VARPBIT[5285]);
+		script_1776();
+	}
+	if (script_42(VARC[256]) != (boolean)VARPBIT[5290]) {
+		VARC[256] = script_734(VARPBIT[5290]);
+		script_1777();
+	}
+	if (script_42(VARC[253]) != (boolean)VARPBIT[5287]) {
+		VARC[253] = script_734(VARPBIT[5287]);
+		script_1778();
+	}
+	if (script_42(VARC[254]) != (boolean)VARPBIT[5288]) {
+		VARC[254] = script_734(VARPBIT[5288]);
+		script_1779();
+	}
+	if (script_42(VARC[255]) != (boolean)VARPBIT[5289]) {
+		VARC[255] = script_734(VARPBIT[5289]);
+		script_1780();
+	}
+	if (VARC[257] != VARPBIT[5292]) {
+		VARC[257] = VARPBIT[5292];
+		script_1781();
+	}
+	VARC[258] = script_734(VARPBIT[5293]);
+	script_1782();
+	return;
+}

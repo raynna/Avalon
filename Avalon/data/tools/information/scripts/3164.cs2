@@ -1,0 +1,14 @@
+void script_3164(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5) {
+	if (cs2method3751()) {
+		script_3165(widget0, widget1, widget2, widget3, widget4, widget5);
+		if (!widget(906, 189).isHidden()) {
+			script_3161(1);
+		} else {
+			script_3161(0);
+		}
+	} else {
+		script_4547(widget0, widget1, widget2, widget3, widget4, widget5);
+		script_3161(0);
+	}
+	return;
+}

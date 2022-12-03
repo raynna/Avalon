@@ -1,0 +1,111 @@
+void script_4697(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	string str4;
+	string str5;
+	int1 = getClientCycle();
+	str0 = "";
+	str1 = "";
+	str2 = "";
+	str3 = "";
+	str4 = "";
+	str5 = "";
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int5 = 1;
+	if (int1 >= arg0 + 200 || arg0 == 0) {
+		arg0 = int1;
+		if (VARC[1540] < 1) {
+			str0 = "Destroyed";
+		} else if (VARC[1540] < 5 / 2) {
+			str0 = "Under attack";
+		} else if (VARC[1540] < 5) {
+			str0 = "Unlit ammo";
+		} else {
+			str0 = "Fine";
+		}
+		if (VARC[1541] < 1) {
+			str1 = "Empty";
+		} else if (VARC[1541] < 10 / 2) {
+			str1 = "Low";
+		} else if (VARC[1541] < 10) {
+			str1 = "Almost full";
+		} else {
+			str1 = "Full";
+		}
+		if (VARC[1542] == 1) {
+			str2 = "1 broken";
+		} else if (VARC[1542] > 0) {
+			str2 = str(VARC[1542]) + " broken";
+		} else {
+			str2 = "Repaired";
+		}
+		if (VARC[1543] == 1) {
+			str3 = str(int5) + " broken";
+		} else if (VARC[1543] > 0) {
+			str3 = str(VARC[1543]) + " broken";
+		} else {
+			str3 = "Repaired";
+		}
+		int2 = VARC[1545] / 2;
+		widget(500, 12).setSize(int2 * 16384 / 100, widget(500, 12).getHeight(), 2, 0);
+		if (int2 < 97) {
+			widget(500, 13).setIsHidden(true);
+		}
+		str4 = str(VARC[1544] * 10);
+		widget(500, 29).setText(str(VARC[1546]) + " min");
+		if (VARC[1547] != 0) {
+			widget(500, 10).setIsHidden(false);
+			widget(500, 2).setSize(widget(500, 2).getWidth(), 253, 0, 0);
+			switch (VARC[1547]) {
+				case 1:
+					str5 = "Clobbering Time!";
+					break;
+				case 2:
+					str5 = "Slow-mo";
+					break;
+				case 3:
+					str5 = "No Well";
+					break;
+				case 4:
+					str5 = "Oil Spill";
+					break;
+				case 5:
+					str5 = "Fire in the Hole!";
+					break;
+				case 6:
+					str5 = "Armoured Trolls";
+					break;
+			}
+		} else {
+			widget(500, 10).setIsHidden(true);
+			widget(500, 2).setSize(widget(500, 2).getWidth(), 225, 0, 0);
+		}
+		int3 = script_4699(widget(500, 8), widget(500, 21), widget(500, 22), "Ballista", str0);
+		int4 = script_4699(widget(500, 5), widget(500, 19), widget(500, 20), "Oil", str1);
+		int3 = max(int3, int4);
+		int4 = script_4699(widget(500, 6), widget(500, 39), widget(500, 40), "Barricades", str2);
+		int3 = max(int3, int4);
+		int4 = script_4699(widget(500, 7), widget(500, 17), widget(500, 18), "Walls", str3);
+		int3 = max(int3, int4);
+		int4 = script_4699(widget(500, 9), widget(500, 41), widget(500, 42), "Trolls", str4);
+		int3 = max(int3, int4);
+		if (VARC[1547] != 0) {
+			int4 = script_4699(widget(500, 10), widget(500, 15), widget(500, 16), "Troll Attack", str5);
+			int3 = max(int3, int4);
+		}
+		if (int3 + 15 > widget(500, 2).getWidth()) {
+			widget(500, 2).setSize(int3 + 15, widget(500, 2).getHeight(), 0, 0);
+		}
+	}
+	widget(500, 8).setScriptCallOnGameloop(4697, arg0, "i");
+	return;
+}

@@ -1,0 +1,9 @@
+void script_3473(Widget widget0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+	if (arg1 < cs2method5407(0) - 1) {
+		cameraMethod5502(0, arg1, arg2, arg3, 1, arg1);
+		widget0.setScriptCallOnMinimapRelatedSetting3(3473, widget0, arg1 + 1, arg4, arg5, 0, 0, "Iiiiii");
+	} else {
+		widget0.setScriptCallOnMinimapRelatedSetting3(-1, "");
+	}
+	return;
+}

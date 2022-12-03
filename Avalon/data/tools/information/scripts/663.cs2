@@ -1,0 +1,22 @@
+void script_663(Widget widget0, Widget widget1) {
+	widget1.setFont(764);
+	widget1.setTextAlignment(1, 1, 0);
+	if (VARPBIT[4191] == 0) {
+		widget0.setModel(30184);
+		widget0.set3DRotation(0, 0, 0, 0, 0, 365);
+		widget0.setPosition(2, 84, 0, 0);
+		widget0.setSize(509, 156, 0, 0);
+		widget1.setPosition(15, 89, 0, 0);
+		widget1.setSize(487, 143, 0, 0);
+		widget1.setRGB(script_693(43, 26, 11));
+	} else if (VARPBIT[4191] == 1) {
+		widget0.setModel(30183);
+		widget0.set3DRotation(0, 0, 0, 0, 0, 344);
+		widget0.setPosition(3, 90, 0, 0);
+		widget0.setSize(509, 156, 0, 0);
+		widget1.setPosition(4, 88, 0, 0);
+		widget1.setSize(506, 139, 0, 0);
+		widget1.setRGB(script_693(85, 85, 65));
+	}
+	return;
+}

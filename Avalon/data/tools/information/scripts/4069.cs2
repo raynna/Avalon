@@ -1,0 +1,5 @@
+void script_4069() {
+	VARC[1431] = 1;
+	widget(1058, 68).setScriptCallOnGameloop(4070, getClientCycle(), "i");
+	return;
+}

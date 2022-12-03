@@ -1,0 +1,23 @@
+void script_4063() {
+	if (VARPBIT[8669] == 1) {
+		return;
+	}
+	switch (VARPBIT[8668]) {
+		case 1:
+			script_4065(widget(1058, 25));
+			break;
+		case 4:
+			script_4065(widget(1058, 24));
+			break;
+		case 5:
+			script_4065(widget(1058, 22));
+			break;
+		case 3:
+			script_4065(widget(1058, 23));
+			break;
+		case 2:
+			script_4065(widget(1058, 26));
+			break;
+	}
+	return;
+}

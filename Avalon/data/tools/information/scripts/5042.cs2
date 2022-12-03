@@ -1,0 +1,26 @@
+void script_5042(Widget widget0, int arg1) {
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int2 = getLastMouseY() - script_3365(widget(1111, 15));
+	int3 = getLastMouseX() - script_3366(widget(1111, 15));
+	int4 = widget(1111, 15).getWidth();
+	int5 = widget(1111, 15).getHeight();
+	if (int2 > int4 || int2 < 0 || int3 > int5 || int3 < 0) {
+		int2, int3 = int4 / 2, int5 / 2;
+	}
+	int2 = int2 + widget(1111, 15).getScrollX();
+	int3 = int3 + widget(1111, 15).getScrollY();
+	int6 = VARC[1396] * (112 + 2 + 2);
+	VARC[1396] = max(min(VARC[1396] - arg1, 21), 3);
+	int7 = VARC[1396] * (112 + 2 + 2);
+	int8 = int7 * int6 / int2 - int2;
+	int9 = int7 * int6 / int3 - int3;
+	script_5044(widget0, int8, int9);
+	return;
+}

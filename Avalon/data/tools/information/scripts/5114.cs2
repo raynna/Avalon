@@ -1,0 +1,52 @@
+void script_5114(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, int arg6) {
+	string str0;
+	widget(1116, 85).setIsHidden(true);
+	widget(1116, 600).setText(widget0.getText());
+	widget(1116, 602).setSprite(widget1.getSpriteId());
+	widget(1116, 615).setSprite(widget2.getSpriteId());
+	widget(1116, 602).setRGB(widget1.getRGB());
+	widget(1116, 615).setRGB(widget2.getRGB());
+	widget(1116, 611).setRGB(widget3.getRGB());
+	widget(1116, 612).setRGB(widget4.getRGB());
+	str0 = "";
+	switch (widget5.getSpriteId()) {
+		case 6194:
+			widget(1116, 591).setSprite(6199);
+			str0 = "This clan is flagged as a nemesis.";
+			break;
+		case 6195:
+			widget(1116, 591).setSprite(6200);
+			str0 = "This clan is flagged as an enemy.";
+			break;
+		case 6196:
+			widget(1116, 591).setSprite(6201);
+			str0 = "This clan is flagged as neutral.";
+			break;
+		case 6197:
+			widget(1116, 591).setSprite(6202);
+			str0 = "This clan is flagged as a friend.";
+			break;
+		case 6198:
+			widget(1116, 591).setSprite(6203);
+			str0 = "This clan is flagged as an ally.";
+			break;
+	}
+	widget(1116, 591).setScriptCallOnMouseOver(4538, widget(1116, 51), widget(1116, 591), -1, str0, 180, 3793, 3793, 16777215, 13, 4, 3, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+	widget(1116, 591).setScriptCallOnMouseExit(40, widget(1116, 51), "I");
+	script_5106();
+	if (arg6 == 1) {
+		if (widget(1116, 3).isHidden()) {
+			widget(1116, 4).setIsHidden(false);
+		} else {
+			widget(1116, 3).setIsHidden(false);
+		}
+		widget(1116, 115).setIsHidden(true);
+		widget(1116, 122).setIsHidden(true);
+		widget(1116, 108).setIsHidden(true);
+		widget(1116, 101).setIsHidden(true);
+		widget(1116, 94).setIsHidden(true);
+	} else {
+		widget(1116, 40).setIsHidden(false);
+	}
+	return;
+}

@@ -1,0 +1,24 @@
+int, int script_1247(int arg0) {
+	if (arg0 == 1) {
+		cs2method5405(0, 6);
+		cs2method5405(1, 6);
+		cs2method5406(0, 0, location(3207, 3429, 0), 900, location(3207, 3426, 0), 900, 0);
+		cs2method5406(1, 0, location(3213, 3429, 0), 300, location(3213, 3429, 0), 300, 0);
+		cs2method5406(0, 1, location(3213, 3423, 0), 900, location(3216, 3423, 0), 900, 0);
+		cs2method5406(1, 1, location(3213, 3429, 0), 300, location(3213, 3429, 0), 300, 0);
+		script_1899(0, 100, 150);
+		cs2method5406(0, 2, location(3219, 3429, 0), 900, location(3219, 3432, 0), 900, 0);
+		cs2method5406(1, 2, location(3213, 3429, 0), 300, location(3213, 3429, 0), 300, 0);
+		script_1899(1, 100, 150);
+		cs2method5406(0, 3, location(3213, 3435, 0), 900, location(3210, 3435, 0), 900, 0);
+		cs2method5406(1, 3, location(3213, 3429, 0), 300, location(3213, 3429, 0), 300, 0);
+		script_1899(2, 100, 150);
+		cs2method5406(0, 4, location(3207, 3429, 0), 900, location(3207, 3426, 0), 900, 0);
+		cs2method5406(1, 4, location(3213, 3429, 0), 300, location(3213, 3429, 0), 300, 0);
+		script_1899(3, 100, 150);
+		cs2method5406(0, 5, location(3213, 3423, 0), 900, location(3216, 3423, 0), 900, 0);
+		cs2method5406(1, 5, location(3213, 3429, 0), 300, location(3213, 3429, 0), 300, 0);
+		script_1899(4, 100, 150);
+	}
+	return 52890976, 1250324;
+}

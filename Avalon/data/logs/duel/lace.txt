@@ -1,0 +1,21 @@
+[02 May 2019 at 03:47:50 CEST] - lace staked lace items:
+Torva full helm x 21
+Virtus robe top x 21
+Pernix cowl x 21
+Virtus mask x 21
+Virtus robe legs x 15
+Torva platebody x 21
+Pernix body x 20
+Pernix chaps x 21
+Torva platelegs x 21
+for lace's:
+Virtus mask x 17
+Virtus robe top x 20
+Virtus robe legs x 19
+Pernix cowl x 17
+Pernix chaps x 23
+Torva full helm x 20
+Pernix body x 23
+Torva platebody x 18
+Torva platelegs x 19
+

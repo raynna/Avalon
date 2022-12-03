@@ -1,0 +1,38 @@
+void script_1623(int arg0) {
+	switch (arg0) {
+		case 21561344:
+			if (ACTIVE.setChild(widget(329, 2))) {
+				ACTIVE.setSprite(6355);
+			}
+			if (ACTIVE.setChild(widget(329, 3))) {
+				ACTIVE.setSprite(6356);
+			}
+			if (ACTIVE.setChild(widget(329, 4))) {
+				ACTIVE.setSprite(6357);
+			}
+			break;
+		case 33947660:
+			if (ACTIVE.setChild(widget(518, 0))) {
+				ACTIVE.setSprite(6355);
+			}
+			if (ACTIVE.setChild(widget(518, 1))) {
+				ACTIVE.setSprite(6356);
+			}
+			if (ACTIVE.setChild(widget(518, 2))) {
+				ACTIVE.setSprite(6357);
+			}
+			break;
+		case 21561345:
+			if (ACTIVE.setChild(widget(329, 40))) {
+				ACTIVE.setSprite(6355);
+			}
+			if (ACTIVE.setChild(widget(329, 41))) {
+				ACTIVE.setSprite(6356);
+			}
+			if (ACTIVE.setChild(widget(329, 42))) {
+				ACTIVE.setSprite(6357);
+			}
+			break;
+	}
+	return;
+}

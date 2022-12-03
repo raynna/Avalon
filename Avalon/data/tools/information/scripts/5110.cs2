@@ -1,0 +1,14 @@
+void script_5110(int arg0) {
+	if (arg0 == 1) {
+		widget(1116, 561).setIsHidden(false);
+		widget(1116, 553).setIsHidden(true);
+		widget(1116, 3).setIsHidden(false);
+		widget(1116, 4).setIsHidden(true);
+	} else {
+		widget(1116, 561).setIsHidden(true);
+		widget(1116, 553).setIsHidden(false);
+		widget(1116, 3).setIsHidden(true);
+		widget(1116, 4).setIsHidden(false);
+	}
+	return;
+}

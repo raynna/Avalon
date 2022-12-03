@@ -1,0 +1,6 @@
+void script_2724(Widget widget0, int arg1, boolean boolean2) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setHidden(boolean2);
+	}
+	return;
+}

@@ -1,0 +1,104 @@
+void script_4861() {
+	if (citadelConfigsInitialized()) {
+		widget(1092, 1371).setIsHidden(false);
+		widget(1092, 1364).setIsHidden(false);
+		widget(1092, 1357).setIsHidden(false);
+		if (CLANBIT[2553] > 0) {
+			widget(1092, 1273).setIsHidden(false);
+		}
+		if (CLANBIT[2553] > 0) {
+			widget(1092, 1273).setIsHidden(false);
+		}
+		if (CLANBIT[2554] > 0) {
+			widget(1092, 1280).setIsHidden(false);
+		}
+		if (CLANBIT[2555] > 0) {
+			widget(1092, 1287).setIsHidden(false);
+		}
+		if (CLANBIT[2556] > 0) {
+			widget(1092, 1294).setIsHidden(false);
+		}
+		if (CLANBIT[2557] > 0) {
+			widget(1092, 1301).setIsHidden(false);
+		}
+		if (CLANBIT[2558] > 0) {
+			widget(1092, 1308).setIsHidden(false);
+		}
+		if (CLANBIT[2560] > 0) {
+			widget(1092, 1315).setIsHidden(false);
+		}
+		if (CLANBIT[2561] > 0) {
+			widget(1092, 1322).setIsHidden(false);
+		}
+		if (CLANBIT[2562] > 0) {
+			widget(1092, 1329).setIsHidden(false);
+		}
+		if (CLANBIT[2563] > 0) {
+			widget(1092, 1336).setIsHidden(false);
+		}
+		if (CLANBIT[2564] > 0) {
+			widget(1092, 1343).setIsHidden(false);
+		}
+		if (CLANBIT[2565] > 0) {
+			widget(1092, 1350).setIsHidden(false);
+		}
+		if (CLANBIT[2330] > 0) {
+			widget(1092, 1378).setIsHidden(false);
+		}
+		if (CLANBIT[2340] > 0) {
+			widget(1092, 1384).setIsHidden(false);
+		}
+		if (CLANBIT[2350] > 0) {
+			widget(1092, 1390).setIsHidden(false);
+		}
+		if (CLANBIT[2360] > 0) {
+			widget(1092, 1396).setIsHidden(false);
+		}
+		if (CLANBIT[2370] > 0) {
+			widget(1092, 1402).setIsHidden(false);
+		}
+		if (CLANBIT[2380] > 0) {
+			widget(1092, 1408).setIsHidden(false);
+		}
+		if (CLANBIT[2390] > 0) {
+			widget(1092, 1415).setIsHidden(false);
+		}
+		if (CLANBIT[2400] > 0) {
+			widget(1092, 1421).setIsHidden(false);
+		}
+		if (CLANBIT[2460] > 0) {
+			widget(1092, 1427).setIsHidden(false);
+		}
+		if (CLANBIT[2470] > 0) {
+			widget(1092, 1433).setIsHidden(false);
+		}
+		if (CLANBIT[2480] > 0) {
+			widget(1092, 1439).setIsHidden(false);
+		}
+		if (CLANBIT[2490] > 0) {
+			widget(1092, 1445).setIsHidden(false);
+		}
+		if (CLANBIT[2500] > 0) {
+			widget(1092, 1451).setIsHidden(false);
+		}
+		if (CLANBIT[2410] > 0) {
+			widget(1092, 1457).setIsHidden(false);
+		}
+		if (CLANBIT[2420] > 0) {
+			widget(1092, 1463).setIsHidden(false);
+		}
+		if (CLANBIT[2430] > 0) {
+			widget(1092, 1469).setIsHidden(false);
+		}
+		if (CLANBIT[2440] > 0) {
+			widget(1092, 1475).setIsHidden(false);
+		}
+		if (CLANBIT[2450] > 0) {
+			widget(1092, 1481).setIsHidden(false);
+		}
+		if (CLANBIT[2510] > 0) {
+			widget(1092, 1487).setIsHidden(false);
+		}
+	}
+	return;
+}

@@ -1,0 +1,86 @@
+string script_1111() {
+	switch (VARC[754]) {
+		case 0:
+		case 9:
+			if (script_1103() == 1 && VARPBIT[8095] >= VARPBIT[8094]) {
+				return "Make All";
+			}
+			return "Make " + str(VARPBIT[8095]);
+		case 1:
+			if (VARPBIT[8095] == 1) {
+				return "Make 1 set";
+			}
+			return "Make " + str(VARPBIT[8095]) + " sets";
+		case 2:
+			if (script_1103() == 1 && VARPBIT[8095] >= VARPBIT[8094]) {
+				return "Cook All";
+			}
+			return "Cook " + str(VARPBIT[8095]);
+		case 3:
+			if (script_1103() == 1 && VARPBIT[8095] >= VARPBIT[8094]) {
+				return "Roast All";
+			}
+			return "Roast " + str(VARPBIT[8095]);
+		case 4:
+			if (script_1103() == 1 && VARPBIT[8095] >= VARPBIT[8094]) {
+				return "Offer All";
+			}
+			return "Offer " + str(VARPBIT[8095]);
+		case 5:
+			if (script_1103() == 1 && VARPBIT[8095] >= VARPBIT[8094]) {
+				return "Sell All";
+			}
+			return "Sell " + str(VARPBIT[8095]);
+		case 6:
+			if (script_1103() == 1 && VARPBIT[8095] >= VARPBIT[8094]) {
+				return "Bake All";
+			}
+			return "Bake " + str(VARPBIT[8095]);
+		case 7:
+			if (script_1103() == 1 && VARPBIT[8095] >= VARPBIT[8094]) {
+				return "Cut All";
+			}
+			return "Cut " + str(VARPBIT[8095]);
+		case 8:
+			if (script_1103() == 1 && VARPBIT[8095] >= VARPBIT[8094]) {
+				return "Deposit All";
+			}
+			return "Deposit " + str(VARPBIT[8095]);
+		case 10:
+			if (script_1103() == 1 && VARPBIT[8095] >= VARPBIT[8094]) {
+				return "Teleport All";
+			}
+			return "Teleport " + str(VARPBIT[8095]);
+		case 11:
+			if (script_1103() == 1 && VARPBIT[8095] >= VARPBIT[8094]) {
+				return "Select All";
+			}
+			break;
+		case 12:
+			if (VARPBIT[8095] == 1) {
+				return "Make 1 set";
+			}
+			return "Make " + str(VARPBIT[8095]) + " sets";
+		case 13:
+			if (script_1103() == 1 && VARPBIT[8095] >= VARPBIT[8094]) {
+				return "Take All";
+			}
+			return "Take " + str(VARPBIT[8095]);
+		case 14:
+			if (script_1103() == 1 && VARPBIT[8095] >= VARPBIT[8094]) {
+				return "Return All";
+			}
+			return "Return " + str(VARPBIT[8095]);
+		case 15:
+			if (script_1103() == 1 && VARPBIT[8095] >= VARPBIT[8094]) {
+				return "Heat All";
+			}
+			return "Heat " + str(VARPBIT[8095]);
+		case 16:
+			if (script_1103() == 1 && VARPBIT[8095] >= VARPBIT[8094]) {
+				return "Add All";
+			}
+			return "Add " + str(VARPBIT[8095]);
+	}
+	return "Select";
+}

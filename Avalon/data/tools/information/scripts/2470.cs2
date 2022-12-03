@@ -1,0 +1,7 @@
+void script_2470(Widget widget0, Widget widget1) {
+	widget1.setText("");
+	widget0.setIsHidden(true);
+	VARC[2] = 0;
+	VARC[1] = 0;
+	return;
+}

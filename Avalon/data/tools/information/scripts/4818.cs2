@@ -1,0 +1,156 @@
+int, int, int, int, int, int, int, int, int, int, int script_4818(int arg0, int arg1) {
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int2 = -1;
+	int3 = -1;
+	int4 = -1;
+	int5 = -1;
+	int6 = -1;
+	int7 = -1;
+	int8 = -1;
+	int9 = -1;
+	int10 = -1;
+	int11 = -1;
+	int12 = -1;
+	switch (arg0) {
+		case 1:
+			switch (arg1) {
+				case 1:
+					int2 = 71566492;
+					int3 = 71566503;
+					int4 = 71566502;
+					int5 = -1;
+					int6 = -1;
+					int7 = 71566501;
+					int8 = -1;
+					int9 = -1;
+					int10 = 71566500;
+					int11 = 71566494;
+					int12 = 71566465;
+					break;
+				case 2:
+					int2 = 71566480;
+					int3 = 71566491;
+					int4 = 71566490;
+					int5 = -1;
+					int6 = -1;
+					int7 = 71566489;
+					int8 = -1;
+					int9 = -1;
+					int10 = 71566488;
+					int11 = 71566482;
+					int12 = 71566466;
+					break;
+				case 3:
+					int2 = 71566468;
+					int3 = 71566479;
+					int4 = 71566478;
+					int5 = -1;
+					int6 = -1;
+					int7 = 71566477;
+					int8 = -1;
+					int9 = -1;
+					int10 = 71566476;
+					int11 = 71566470;
+					int12 = 71566467;
+					break;
+			}
+			break;
+		case 2:
+			switch (arg1) {
+				case 1:
+					int2 = 71566416;
+					int3 = 71566429;
+					int4 = 71566428;
+					int5 = 71566426;
+					int6 = -1;
+					int7 = 71566427;
+					int8 = 71566425;
+					int9 = -1;
+					int10 = 71566424;
+					int11 = 71566418;
+					int12 = 71566385;
+					break;
+				case 2:
+					int2 = 71566402;
+					int3 = 71566415;
+					int4 = 71566414;
+					int5 = 71566412;
+					int6 = -1;
+					int7 = 71566413;
+					int8 = 71566411;
+					int9 = -1;
+					int10 = 71566410;
+					int11 = 71566404;
+					int12 = 71566386;
+					break;
+				case 3:
+					int2 = 71566388;
+					int3 = 71566401;
+					int4 = 71566400;
+					int5 = 71566398;
+					int6 = -1;
+					int7 = 71566399;
+					int8 = 71566397;
+					int9 = -1;
+					int10 = 71566396;
+					int11 = 71566390;
+					int12 = 71566387;
+					break;
+			}
+			break;
+		case 3:
+			switch (arg1) {
+				case 1:
+					int2 = 71566334;
+					int3 = 71566349;
+					int4 = 71566348;
+					int5 = 71566346;
+					int6 = 71566344;
+					int7 = 71566347;
+					int8 = 71566345;
+					int9 = 71566343;
+					int10 = 71566342;
+					int11 = 71566336;
+					int12 = 71566299;
+					break;
+				case 2:
+					int2 = 71566318;
+					int3 = 71566333;
+					int4 = 71566332;
+					int5 = 71566330;
+					int6 = 71566328;
+					int7 = 71566331;
+					int8 = 71566329;
+					int9 = 71566327;
+					int10 = 71566326;
+					int11 = 71566320;
+					int12 = 71566300;
+					break;
+				case 3:
+					int2 = 71566302;
+					int3 = 71566317;
+					int4 = 71566316;
+					int5 = 71566314;
+					int6 = 71566312;
+					int7 = 71566315;
+					int8 = 71566313;
+					int9 = 71566311;
+					int10 = 71566310;
+					int11 = 71566304;
+					int12 = 71566301;
+					break;
+			}
+			break;
+	}
+	return int2, int3, int4, int5, int6, int7, int8, int9, int10, int11, int12;
+}

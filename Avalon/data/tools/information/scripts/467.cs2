@@ -1,0 +1,10 @@
+void script_467(Widget widget0) {
+	if (getSkillActualLvl(5) < 25) {
+		widget0.setText("<col=c80000>" + "A Prayer level of " + str(25) + " is required." + "</col>");
+	} else if (VARPBIT[2086] < 1) {
+		widget0.setText("<col=c80000>" + "1 Commendation required." + "</col>");
+	} else {
+		widget0.setText(str(pow(getSkillActualLvl(5), 2) / 600 * 18) + " XP per Commendation.");
+	}
+	return;
+}

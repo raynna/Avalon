@@ -1,0 +1,29 @@
+void script_5074(Widget widget0, int arg1) {
+	int int2;
+	int int3;
+	int int4;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	if (ACTIVE.setChild(widget0, arg1)) {
+		if (VARC[1065] == -1) {
+			ACTIVE.setHidden(true);
+			return;
+		}
+		int2, int3 = x(getMyLocation()) - x(location(VARC[1065])), y(getMyLocation()) - y(location(VARC[1065]));
+		if (int2 < 0 || int2 >= 112 || int3 < 0 || int3 >= 112) {
+			ACTIVE.setHidden(true);
+			return;
+		}
+		int4 = VARC[1396] + 1;
+		ACTIVE.setHidden(false);
+		ACTIVE.setPosition((int2 + 2) * VARC[1396] - 1, widget0.getScrollMaxV() - ((int3 + 2) * VARC[1396] + int4), 0, 0);
+		ACTIVE.setSize(int4, int4, 0, 0);
+		if (getClientCycle() % 40 < 20) {
+			ACTIVE.setRGB(0x8F8F8F);
+		} else {
+			ACTIVE.setRGB(0xDDDD00);
+		}
+	}
+	return;
+}

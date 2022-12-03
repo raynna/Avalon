@@ -1,0 +1,16 @@
+[13 April 2019 at 01:02:57 CEST] - newnew: nullerino
+[13 April 2019 at 01:03:38 CEST] - newnew: oh
+[13 April 2019 at 01:03:44 CEST] - newnew: but how do i remember all the attributes
+[13 April 2019 at 01:03:51 CEST] - newnew: and how big can this hashmap be
+[13 April 2019 at 01:03:54 CEST] - newnew: without being problems
+[13 April 2019 at 01:04:00 CEST] - newnew: 32k keys lol
+[13 April 2019 at 01:04:04 CEST] - newnew: not enough!
+[13 April 2019 at 01:04:07 CEST] - newnew: jk but
+[13 April 2019 at 01:04:08 CEST] - newnew: so
+[13 April 2019 at 01:04:11 CEST] - newnew: is there a way
+[13 April 2019 at 01:04:13 CEST] - newnew: to store it
+[13 April 2019 at 01:04:16 CEST] - newnew: maybe just print out
+[13 April 2019 at 01:04:19 CEST] - newnew: all attributes
+[13 April 2019 at 01:06:18 CEST] - newnew: ye thats better
+[13 April 2019 at 01:06:21 CEST] - newnew: coolio
+[13 April 2019 at 01:06:29 CEST] - newnew: and saves ye

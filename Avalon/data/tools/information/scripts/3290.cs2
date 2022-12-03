@@ -1,0 +1,76 @@
+void script_3290(Widget widget0, Widget widget1, Widget widget2, Sprite sprite3, Sprite sprite4, Sprite sprite5, Sprite sprite6, Sprite sprite7, Sprite sprite8) {
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int9 = widget1.getScrollMaxV();
+	int10 = widget0.getHeight();
+	int11 = int10 - 32;
+	int12 = 0;
+	if (int9 > 0) {
+		int12 = int10 * int9 / int11;
+	} else {
+		int12 = int11;
+	}
+	int12 = max(int12, 10);
+	int13 = widget1.getScrollY();
+	int14 = 0;
+	int15 = 0;
+	if (int13 > 0) {
+		int14 = int9 - widget1.getHeight();
+		if (int14 == 0) {
+			int14 = 1;
+		}
+		if (int13 > int14) {
+			widget1.setScrollPos(0, int14);
+			widget2.setScrollPos(0, int14);
+			int13 = int14;
+		}
+		int15 = int13 * int14 / (int11 - int12);
+		int15 = min(max(int15, 0), int11 - int12);
+	}
+	ACTIVE.createChild(widget0, 5, 0);
+	ACTIVE.setPosition(0, 16, 0, 0);
+	ACTIVE.setSize(16, 32, 0, 1);
+	ACTIVE.setSprite(sprite3);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setScriptCallOnMousePressed(3293, widget0, widget1, widget2, MOUSE_Y, "IIIi");
+	ACTIVE.createChild(widget0, 5, 1);
+	ACTIVE.setPosition(0, 16 + int15, 0, 0);
+	ACTIVE.setSprite(sprite5);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setDraggable(widget0, 0);
+	ACTIVE.setDragRenderBehaviour(1);
+	ACTIVE.setSize(16, int12, 0, 0);
+	ACTIVE.setScriptCallOnMouseDragged(3294, widget0, widget1, widget2, MOUSE_Y, false, "IIIi1");
+	ACTIVE.setScriptCallOnMouseDragReleased(3294, widget0, widget1, widget2, MOUSE_Y, true, "IIIi1");
+	ACTIVE.createChild(widget0, 5, 2);
+	ACTIVE.setPosition(0, 16 + int15, 0, 0);
+	ACTIVE.setSize(16, 5, 0, 0);
+	ACTIVE.setSprite(sprite4);
+	ACTIVE.setSpriteTiling(false);
+	ACTIVE.createChild(widget0, 5, 3);
+	ACTIVE.setPosition(0, 16 + int15 + int12 - 5, 0, 0);
+	ACTIVE.setSize(16, 5, 0, 0);
+	ACTIVE.setSprite(sprite6);
+	ACTIVE.setSpriteTiling(false);
+	ACTIVE.createChild(widget0, 5, 4);
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setSize(16, 16, 0, 0);
+	ACTIVE.setSprite(sprite7);
+	ACTIVE.setSpriteTiling(false);
+	ACTIVE.setScriptCallOnMouseDraggedOver(3291, widget0, widget1, widget2, "III");
+	ACTIVE.createChild(widget0, 5, 5);
+	ACTIVE.setPosition(0, 0, 0, 2);
+	ACTIVE.setSize(16, 16, 0, 0);
+	ACTIVE.setSprite(sprite8);
+	ACTIVE.setSpriteTiling(false);
+	ACTIVE.setScriptCallOnMouseDraggedOver(3292, widget0, widget1, widget2, "III");
+	widget0.setScriptCallOnMouseScroll(3295, widget0, widget1, widget2, MOUSE_Y, "IIIi");
+	widget1.setScriptCallOnMouseScroll(3295, widget0, widget1, widget2, MOUSE_Y, "IIIi");
+	widget2.setScriptCallOnMouseScroll(3295, widget0, widget1, widget2, MOUSE_Y, "IIIi");
+	return;
+}

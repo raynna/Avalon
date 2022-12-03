@@ -1,0 +1,7 @@
+void script_1735(Widget widget0, int arg1) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setHidden(false);
+		ACTIVE.setScriptCallOnGameloop(1736, widget0, arg1, "Ii");
+	}
+	return;
+}

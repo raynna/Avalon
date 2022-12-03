@@ -1,0 +1,10 @@
+void script_1303(int arg0) {
+	VARC[10] = 0;
+	script_1304(arg0);
+	if (VARC[168] == arg0) {
+		VARC[168] = -1;
+	} else {
+		VARC[168] = arg0;
+	}
+	return;
+}

@@ -1,0 +1,46 @@
+int script_1553(int arg0, int arg1, string string2) {
+	int int2;
+	int int3;
+	int int4;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	switch (arg0) {
+		case 96:
+			return max(arg1 - 1, 0);
+		case 97:
+			return min(arg1 + 1, length(string2));
+		case 98:
+			int2 = arg1 - 1;
+			if (arg1 > 0 && indexOf(string2, " ", int2) == int2) {
+				return int2;
+			}
+			int2 = -1;
+			int3 = -1;
+			while (int4 != 1) {
+				int2 = indexOf(string2, " ", int2 + 1);
+				if (int2 == -1 || int2 >= arg1 - 1) {
+					int4 = 1;
+				} else {
+					int3 = int2;
+				}
+			}
+			return min(int3 + 1, length(string2));
+		case 99:
+			if (indexOf(string2, " ", arg1) == arg1) {
+				return min(arg1 + 1, length(string2));
+			}
+			int2 = length(string2);
+			if (arg1 < int2) {
+				int3 = indexOf(string2, " ", arg1 + 1);
+				if (int3 != -1) {
+					return int3;
+				}
+				return int2;
+			}
+			break;
+		case 102:
+			return 0;
+	}
+	return length(string2);
+}

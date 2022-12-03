@@ -1,0 +1,12 @@
+void script_5142(Widget widget0) {
+	switch (widget0) {
+		case widget(1096, 593):
+			VARC[1570] = -1;
+			break;
+		case widget(1096, 581):
+			VARC[1571] = -1;
+			break;
+	}
+	widget0.setIsHidden(false);
+	return;
+}

@@ -1,0 +1,12 @@
+void script_740() {
+	VARC[106] = 0;
+	VARC[106] = 0;
+	VARC[99] = 0;
+	VARC[100] = 0;
+	VARC[101] = 0;
+	VARC[104] = 0;
+	VARC[102] = 0;
+	VARC[105] = 20;
+	script_738();
+	return;
+}

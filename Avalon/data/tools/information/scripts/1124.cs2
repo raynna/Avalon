@@ -1,0 +1,22 @@
+void script_1124(Widget widget0) {
+	int int1;
+	int1 = widget0.getShadeColor();
+	if (VARC[992] == 1) {
+		int1 = int1 + 1;
+		if (int1 >= 255) {
+			VARC[992] = 0;
+		}
+	} else {
+		int1 = int1 - 1;
+		if (int1 <= 0) {
+			VARC[992] = 1;
+		}
+	}
+	if (int1 > 255) {
+		int1 = 255;
+	} else if (int1 < 0) {
+		int1 = 0;
+	}
+	widget0.setTrans(int1);
+	return;
+}

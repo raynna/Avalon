@@ -1,0 +1,59 @@
+int script_4035() {
+	int int0;
+	int0 = 88;
+	if (VARPBIT[5387] == 250) {
+		int0 = int0 + 5;
+	}
+	if (VARPBIT[2561] >= 3) {
+		int0 = int0 + 5;
+	}
+	if (VARP[131] >= 9) {
+		int0 = int0 + 5;
+	}
+	if (VARPBIT[358] == 15) {
+		int0 = int0 + 10;
+	}
+	if (VARPBIT[6001] >= 45) {
+		int0 = int0 + 10;
+	}
+	if (VARP[150] >= 160) {
+		int0 = int0 + 5;
+	}
+	if (VARP[223] >= 9) {
+		int0 = int0 + 5;
+	}
+	if (VARPBIT[1990] >= 430) {
+		int0 = int0 + 5;
+	}
+	if (VARPBIT[1383] >= 4) {
+		int0 = int0 + 5;
+	}
+	if (VARPBIT[5075] == 20) {
+		int0 = int0 + 5;
+	}
+	if (VARP[14] >= 7) {
+		int0 = int0 + 5;
+	}
+	if (VARP[112] >= 7) {
+		int0 = int0 + 5;
+	}
+	if (VARP[302] >= 61) {
+		int0 = int0 + 5;
+	}
+	if (VARP[63] >= 6) {
+		int0 = int0 + 5;
+	}
+	if (VARP[145] >= 7 || VARP[146] >= 4) {
+		int0 = int0 + 5;
+	}
+	if (VARPBIT[1028] >= 70) {
+		int0 = int0 + 5;
+	}
+	if (VARP[26] >= 80) {
+		int0 = int0 + 5;
+	}
+	if (VARPBIT[3523] >= 150) {
+		int0 = int0 + 5;
+	}
+	return int0;
+}

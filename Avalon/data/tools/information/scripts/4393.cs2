@@ -1,0 +1,52 @@
+void script_4393(Widget widget0, Widget widget1, Widget widget2, Widget widget3, DataMap datamap4) {
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	widget0.clearChildren();
+	widget1.clearChildren();
+	int5 = 0;
+	int6 = 0;
+	int7 = 2;
+	int8 = 5;
+	int9 = 60;
+	int10 = 60;
+	int11 = 0;
+	int12 = 0;
+	int13 = (widget0.getWidth() - int7) / (int7 + int10);
+	int14 = 0;
+	int15 = datamapSize(datamap4);
+	while (int5 < int15) {
+		int11 = (int10 + int7) * (int5 - int6 * int13);
+		int12 = int6 * (int9 + int8);
+		ACTIVE.createChild(widget1, 5, int5);
+		ACTIVE.setSize(int10, int9, 0, 0);
+		ACTIVE.setPosition(int11, int12, 0, 0);
+		ACTIVE.setSprite(5523);
+		ACTIVE.setScriptCallOnConfigChange(4395, int15, 2093, "iY");
+		ACTIVE.setScriptCallOnMouseEntered(4396, CTX_WIDGET_CHILD, widget1, "iI");
+		ACTIVE.setScriptCallOnMouseExit(4397, CTX_WIDGET_CHILD, widget1, "iI");
+		int14 = ACTIVE.getY() + ACTIVE.getHeight() + int8;
+		ACTIVE.createChild(widget0, 5, int5);
+		ACTIVE.setSize(int10 - 10, int9 - 10, 0, 0);
+		ACTIVE.setPosition(int11 + 5, int12 + 5, 0, 0);
+		ACTIVE.setSprite(datamap('i', 'd', datamap4, int5 + 1));
+		ACTIVE.setContextMenuOption(1, "Select");
+		ACTIVE.setScriptCallOnClickContextMenu(4394, CTX_WIDGET_CHILD, widget1, int15, "iIi");
+		int5 = int5 + 1;
+		if (int5 % int13 == 0) {
+			int6 = int6 + 1;
+		}
+	}
+	widget2.setScrollPos(0, 0);
+	widget2.setScrollMax(0, int14);
+	script_31(widget3, widget2, 5666, 5663, 5664, 5665, 5686, 5685);
+	return;
+}

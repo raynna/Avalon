@@ -1,0 +1,63 @@
+void script_3945(int arg0, int arg1, int arg2) {
+	Widget widget3;
+	Widget widget4;
+	Widget widget5;
+	if (arg2 == 1) {
+		VARC[1412] = 1;
+	}
+	switch (arg0) {
+		case 1:
+			if (arg2 == 1) {
+				sendStringInput(STRING[331]);
+			}
+			STRING[330] = STRING[331];
+			break;
+		case 2:
+			if (arg2 == 1) {
+				sendStringInput(STRING[332]);
+			}
+			STRING[330] = STRING[332];
+			break;
+		case 3:
+			if (arg2 == 1) {
+				sendStringInput(STRING[333]);
+			}
+			STRING[330] = STRING[333];
+			break;
+		case 4:
+			if (arg2 == 1) {
+				sendStringInput(STRING[334]);
+			}
+			STRING[330] = STRING[334];
+			break;
+		case 5:
+			if (arg2 == 1) {
+				sendStringInput(STRING[335]);
+			}
+			STRING[330] = STRING[335];
+			break;
+		case 6:
+			if (arg2 == 1) {
+				sendStringInput(STRING[336]);
+			}
+			STRING[330] = STRING[336];
+			break;
+		default:
+			if (arg2 == 1) {
+				sendStringInput(STRING[330]);
+			}
+			break;
+	}
+	widget3 = widget(1028, 181);
+	widget4 = widget(1028, 182);
+	widget5 = widget(1028, 183);
+	if (arg1 == 0) {
+		widget3 = widget(890, 59);
+		widget4 = widget(890, 60);
+		widget5 = widget(890, 61);
+	}
+	widget4.setText(STRING[330]);
+	VARC[1099] = length(STRING[330]);
+	script_3218(widget3, widget4, widget5, STRING[330], 16);
+	return;
+}

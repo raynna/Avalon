@@ -1,0 +1,33 @@
+void script_1941() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int0 = VARP[1332] + VARP[1334] + VARP[1337] + 2 * (VARP[1333] - VARP[1335]);
+	widget(809, 17).setText("Score: " + str(int0));
+	if (VARC[556] == 0) {
+		return;
+	}
+	int1 = VARC[556] - getClientCycle();
+	int2 = int1 / 3000;
+	int3 = int1 / 50 % 60;
+	if (int2 < 0 || int3 < 0) {
+		widget(809, 15).setText("Game ending");
+		widget(809, 15).setTextAntiMacro(true);
+		script_1942();
+	} else if (int2 == 0 && int3 == 0) {
+		widget(809, 15).setText("Game ending");
+	} else if (int3 < 10) {
+		widget(809, 15).setText(str(int2) + ":0" + str(int3));
+	} else {
+		widget(809, 15).setText(str(int2) + ":" + str(int3));
+	}
+	if (int2 < 1) {
+		widget(809, 15).setRGB(0xFF0000);
+		widget(809, 15).setTextAntiMacro(true);
+		script_1942();
+	} else if (!widget(809, 18).isHidden()) {
+		widget(809, 18).setIsHidden(true);
+	}
+	return;
+}

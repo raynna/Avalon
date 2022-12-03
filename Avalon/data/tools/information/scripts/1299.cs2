@@ -1,0 +1,79 @@
+void script_1299(int arg0, int arg1) {
+	int int2;
+	string str0;
+	if (arg1 == 0) {
+		script_2710(widget(906, 24), widget(906, 25), widget(906, 26), widget(911, 16), widget(911, 22), widget(911, 21));
+	}
+	widget(906, 248).setSprite(4140);
+	widget(906, 249).setSprite(4139);
+	widget(906, 250).setSprite(4141);
+	widget(906, 251).setSprite(4142);
+	widget(906, 252).setSprite(4144);
+	widget(906, 253).setSprite(4143);
+	widget(906, 254).setSprite(4145);
+	widget(906, 255).setSprite(4146);
+	widget(906, 257).setSprite(4129);
+	widget(906, 259).setSprite(4129);
+	widget(906, 262).setSprite(4129);
+	widget(906, 226).setSprite(4065);
+	widget(906, 226).setVFlip(true);
+	widget(906, 226).setHFlip(true);
+	widget(906, 230).setSprite(4065);
+	widget(906, 230).setVFlip(true);
+	widget(906, 230).setHFlip(false);
+	widget(906, 227).setSprite(4065);
+	widget(906, 227).setVFlip(false);
+	widget(906, 227).setHFlip(true);
+	widget(906, 231).setSprite(4065);
+	widget(906, 231).setVFlip(false);
+	widget(906, 231).setHFlip(false);
+	widget(906, 23).setScriptCallOnWidgetResize(4040, "");
+	int2 = indexOf(STRING[32], "@", 0);
+	if (int2 == -1) {
+		VARC[1414] = 1;
+	} else {
+		VARC[1414] = 2;
+	}
+	if ((cs2method6912() == 0 || compare(substr(cs2method5020(), 0, 1), "#") == 0) && arg0 == 0) {
+		VARC[1322] = 1;
+		VARC[200] = 0;
+		script_3093(-3, 0, "Logging In - Please Wait", 1, null, 0, -1, "", "", 0, "", "");
+		VARC[1100] = -3;
+		if (arg1 < 50) {
+			arg1 = arg1 + 1;
+			widget(906, 23).setScriptCallOnGameloop(3057, false, arg1, "1i");
+			return;
+		}
+		if (!cs2method6500()) {
+			widget(906, 23).setScriptCallOnGameloop(3057, false, arg1, "1i");
+			return;
+		}
+		widget(906, 23).setScriptCallOnGameloop(-1, "");
+		cs2method5612(0);
+		widget(906, 23).setScriptCallOnGameloop(3063, widget(906, 23), getWorldId(), "Ii");
+		return;
+	}
+	widget(906, 27).setIsHidden(false);
+	widget(906, 41).setIsHidden(true);
+	script_3097();
+	script_3058();
+	script_3060(0);
+	script_3064(1);
+	STRING[277] = "";
+	VARC[547] = 0;
+	msg("Welcome to the RuneScape Lobby.");
+	message(43, 0, "Welcome to the RuneScape Lobby.");
+	if (cs2method6900()) {
+		msg("Users restricted to quick-chat cannot send messages from the Lobby.");
+		message(43, 0, "Users restricted to quick-chat cannot send messages from the Lobby.");
+	}
+	script_51();
+	widget(906, 23).setScriptCallOnKeyPress(1328, KEY_TYPED, "i");
+	str0 = script_2781();
+	if (length(str0) > 0) {
+		script_2779(-3000, 0, str0 + "<br>" + " ", 0, 2607, 1, 0, "Re-Subscribe Now", "Re-Subscribe Now", 1, "Close", "Close", 350);
+	}
+	widget(906, 28).setScriptCallOnGameloop(1868, widget(906, 28), "I");
+	script_4041();
+	return;
+}

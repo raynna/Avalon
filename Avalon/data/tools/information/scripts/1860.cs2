@@ -1,0 +1,6 @@
+void script_1860(int arg0, Animation animation1) {
+	if (ACTIVE.setChild(widget(88, 22), arg0)) {
+		ACTIVE.setAnimation(animation1);
+	}
+	return;
+}

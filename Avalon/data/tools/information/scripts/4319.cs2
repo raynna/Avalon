@@ -1,0 +1,52 @@
+void script_4319(int arg0, int arg1) {
+	int int2;
+	int int3;
+	Widget widget4;
+	Widget widget5;
+	Widget widget6;
+	Widget widget7;
+	Widget widget8;
+	int int9;
+	int2 = 0;
+	int3 = 0;
+	widget4 = widget(1096, 50);
+	widget5 = widget(1096, 49);
+	widget6 = widget(1096, 74);
+	widget7 = widget(1096, 156);
+	widget8 = widget(1096, 45);
+	int9 = 71827532;
+	if (arg0 > 0) {
+		int2 = arg0 - 1;
+	} else {
+		int2 = 0;
+		int3 = widget4.getHeight();
+		if (arg1 == 0) {
+			int3 = int3 + 6;
+			widget6.setVFlip(false);
+			widget7.setVFlip(false);
+			widget8.setContextMenuOption(1, "Hide");
+			widget8.setScriptCallOnClickContextMenu(4319, 0, 1, "ii");
+		} else {
+			widget(1096, 68).setIsHidden(true);
+			int3 = int3 - 6;
+			widget6.setVFlip(true);
+			widget7.setVFlip(true);
+			widget8.setContextMenuOption(1, "Show");
+			widget8.setScriptCallOnClickContextMenu(4319, 0, 0, "ii");
+		}
+		int3 = min(int3, 224);
+		int3 = max(int3, 115);
+		widget4.setSize(widget4.getWidth(), int3, 0, 0);
+		widget5.setSize(widget5.getWidth(), int3 - 62, 0, 1);
+		if (arg1 == 0 && int3 >= 224) {
+			widget(1096, 68).setIsHidden(false);
+			widget4.setScriptCallOnGameloop(-1, "");
+		} else if (arg1 == 1 && int3 <= 115) {
+			widget4.setScriptCallOnGameloop(-1, "");
+		} else {
+			widget4.setScriptCallOnGameloop(4319, int2, arg1, "ii");
+		}
+		script_4302();
+	}
+	return;
+}

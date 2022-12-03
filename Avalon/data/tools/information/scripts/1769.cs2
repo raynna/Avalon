@@ -1,0 +1,7 @@
+void script_1769(Widget widget0) {
+	widget0.setModel(getAttributeMapValue((AttrMap)VARC[269], 581));
+	widget0.set3DRotation(0, 160, getAttributeMapValue((AttrMap)VARC[269], 584), getAttributeMapValue((AttrMap)VARC[269], 585), getAttributeMapValue((AttrMap)VARC[269], 586), getAttributeMapValue((AttrMap)VARC[269], 583));
+	widget0.setAnimation(getAttributeMapValue((AttrMap)VARC[269], 582));
+	widget0.setPosition(0, getAttributeMapValue((AttrMap)VARC[269], 587), 1, 0);
+	return;
+}

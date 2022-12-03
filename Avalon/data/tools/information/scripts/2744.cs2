@@ -1,0 +1,71 @@
+void script_2744() {
+	int int0;
+	int0 = 0;
+	while (int0 < 31) {
+		ACTIVE.createChild(widget(204, 86), 4, int0);
+		ACTIVE.setSize(46, 20, 0, 0);
+		ACTIVE.setPosition(4, int0 * 20, 0, 0);
+		ACTIVE.setFont(496);
+		ACTIVE.setTextAlignment(1, 1, 0);
+		ACTIVE.setText(str(int0 + 1));
+		ACTIVE.setRGB(0xFFFFFF);
+		ACTIVE.setContextMenuOption(1, "Select");
+		ACTIVE.setScriptCallOnClickContextMenu(2748, int0, "i");
+		ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16723968, "Iii");
+		ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+		int0 = int0 + 1;
+	}
+	widget(204, 86).setScrollMax(0, int0 * 20);
+	script_31(widget(204, 87), widget(204, 86), 792, 789, 790, 791, 773, 788);
+	int0 = 0;
+	while (int0 < 12) {
+		ACTIVE.createChild(widget(204, 98), 4, int0);
+		ACTIVE.setSize(158, 20, 0, 0);
+		ACTIVE.setPosition(4, int0 * 20, 0, 0);
+		ACTIVE.setFont(496);
+		ACTIVE.setTextAlignment(1, 1, 0);
+		ACTIVE.setText(datamap('i', 's', (DataMap)950, int0));
+		ACTIVE.setRGB(0xFFFFFF);
+		ACTIVE.setContextMenuOption(1, "Select");
+		ACTIVE.setScriptCallOnClickContextMenu(2749, int0, "i");
+		ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16723968, "Iii");
+		ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+		int0 = int0 + 1;
+	}
+	widget(204, 98).setScrollMax(0, int0 * 20);
+	script_31(widget(204, 99), widget(204, 98), 792, 789, 790, 791, 773, 788);
+	int0 = 0;
+	while (int0 < 90) {
+		ACTIVE.createChild(widget(204, 110), 4, int0);
+		ACTIVE.setSize(70, 20, 0, 0);
+		ACTIVE.setPosition(6, int0 * 20 + 1, 0, 0);
+		ACTIVE.setFont(496);
+		ACTIVE.setTextAlignment(1, 1, 0);
+		ACTIVE.setText(str(2009 - int0));
+		ACTIVE.setRGB(0xFFFFFF);
+		ACTIVE.setContextMenuOption(1, "Select");
+		ACTIVE.setScriptCallOnClickContextMenu(2750, int0, "i");
+		ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16723968, "Iii");
+		ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+		int0 = int0 + 1;
+	}
+	widget(204, 110).setScrollMax(0, int0 * 20);
+	script_31(widget(204, 111), widget(204, 110), 792, 789, 790, 791, 773, 788);
+	widget(204, 86).setIsHidden(true);
+	widget(204, 77).setIsHidden(true);
+	widget(204, 87).setIsHidden(true);
+	widget(204, 98).setIsHidden(true);
+	widget(204, 89).setIsHidden(true);
+	widget(204, 99).setIsHidden(true);
+	widget(204, 110).setIsHidden(true);
+	widget(204, 111).setIsHidden(true);
+	widget(204, 101).setIsHidden(true);
+	widget(204, 26).setIsHidden(true);
+	widget(204, 27).setIsHidden(true);
+	widget(204, 28).setIsHidden(true);
+	widget(204, 29).setIsHidden(false);
+	widget(204, 45).setIsHidden(false);
+	widget(204, 61).setIsHidden(false);
+	widget(204, 113).setIsHidden(true);
+	return;
+}

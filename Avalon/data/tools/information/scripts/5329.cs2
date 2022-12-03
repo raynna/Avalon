@@ -1,0 +1,35 @@
+string script_5329(int arg0) {
+	switch (arg0) {
+		case 1:
+			return STRING[139];
+		case 2:
+			return STRING[141];
+		case 3:
+			return STRING[191];
+		case 4:
+			return STRING[192];
+		case 5:
+			return STRING[193];
+		case 6:
+			return STRING[289];
+		case 7:
+			return STRING[290];
+		case 8:
+			return STRING[291];
+		case 9:
+			return STRING[297];
+		case 10:
+			return STRING[298];
+		case 11:
+			return STRING[299];
+		case 12:
+			return STRING[300];
+		case 13:
+			return STRING[301];
+		case 14:
+			return STRING[302];
+		case 15:
+			return STRING[303];
+	}
+	return "";
+}

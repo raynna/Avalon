@@ -1,0 +1,45 @@
+void script_1183(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5) {
+	switch (VARC[808]) {
+		case 1:
+			widget3.setIsHidden(true);
+			widget4.setIsHidden(true);
+			widget5.setIsHidden(true);
+			widget2.setIsHidden(false);
+			widget0.setText("Draughts");
+			widget1.setText(str(VARP[354]));
+			break;
+		case 2:
+			widget2.setIsHidden(true);
+			widget4.setIsHidden(true);
+			widget5.setIsHidden(true);
+			widget3.setIsHidden(false);
+			widget0.setText("Runelink");
+			widget1.setText(str(VARP[353]));
+			break;
+		case 3:
+			widget2.setIsHidden(true);
+			widget3.setIsHidden(true);
+			widget5.setIsHidden(true);
+			widget4.setIsHidden(false);
+			widget0.setText("Runesquares");
+			widget1.setText(str(VARP[648]));
+			break;
+		case 4:
+			widget2.setIsHidden(true);
+			widget3.setIsHidden(true);
+			widget4.setIsHidden(true);
+			widget5.setIsHidden(false);
+			widget0.setText("Runeversi");
+			widget1.setText(str(VARP[649]));
+			break;
+		default:
+			widget3.setIsHidden(true);
+			widget4.setIsHidden(true);
+			widget5.setIsHidden(true);
+			widget2.setIsHidden(true);
+			widget0.setText("");
+			widget1.setText("");
+			break;
+	}
+	return;
+}

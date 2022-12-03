@@ -1,0 +1,34 @@
+void script_4917() {
+	widget(1092, 319).setScriptCallOnCitadelConfigChange(4918, "");
+	if (citadelConfigsInitialized()) {
+		VARPBIT[9548] = CLANBIT[2074];
+		VARPBIT[9549] = CLANBIT[2075];
+		script_4896();
+		switch (CLANBIT[2074]) {
+			case 0:
+			case 1:
+			case 2:
+			case 3:
+				script_4897(CLANBIT[2074]);
+				break;
+			default:
+				script_4897(CLANBIT[2598]);
+				break;
+		}
+		script_31(widget(1092, 220), widget(1092, 221), 5666, 5663, 5664, 5665, 5686, 5685);
+		script_4991();
+		script_4900();
+		script_4905();
+		script_4907();
+		script_5012();
+		script_4895();
+		script_4864();
+		script_4994();
+		script_4889();
+		script_4853();
+		script_4913();
+	} else {
+		msg("Clan stronghold information not yet available.");
+	}
+	return;
+}

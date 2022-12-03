@@ -1,0 +1,7 @@
+int script_4593(string string0, Widget widget1) {
+	int int1;
+	int1 = getLineCount(string0, widget1.getWidth(), 495) * 15 + 5;
+	widget1.setIsHidden(false);
+	widget1.setText(string0);
+	return int1;
+}

@@ -1,0 +1,6 @@
+void script_4416(Widget widget0, Widget widget1, Widget widget2) {
+	widget1.setSprite(5866);
+	widget2.setSprite(5866);
+	widget0.setSprite(5865);
+	return;
+}

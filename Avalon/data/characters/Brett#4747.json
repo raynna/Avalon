@@ -1,0 +1,17 @@
+{
+  "name": "Brett#4747",
+  "coins": 5000,
+  "hostedDiceType": "FIFTYFIVE_X_TWO",
+  "hostedGame": {
+    "account": {
+      "name": "Andreas#2849",
+      "coins": 3400,
+      "hostedDiceType": null,
+      "hostedGame": null,
+      "hostedBy": null,
+      "hostPot": 0
+    }
+  },
+  "hostedBy": "Andreas#2849",
+  "hostPot": 50
+}

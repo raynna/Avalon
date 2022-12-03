@@ -1,0 +1,5 @@
+void script_3419() {
+	widget(422, 11).setScrollMax(431, 1863);
+	script_31(widget(422, 14), widget(422, 11), 792, 789, 790, 791, 773, 788);
+	return;
+}

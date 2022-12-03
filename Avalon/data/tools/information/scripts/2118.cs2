@@ -1,0 +1,12 @@
+void script_2118(int arg0, Widget widget1) {
+	int int2;
+	int2 = 0;
+	while (int2 < 7) {
+		ACTIVE.createChild(widget1, 3, arg0 * 7 + int2);
+		ACTIVE.setSize(0, 0, 0, 0);
+		ACTIVE.setPosition(-1, -1, 0, 0);
+		ACTIVE.setHidden(true);
+		int2 = int2 + 1;
+	}
+	return;
+}

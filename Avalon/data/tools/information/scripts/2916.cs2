@@ -1,0 +1,6 @@
+int script_2916() {
+	if (VARC[1533] == 1) {
+		return max(getSkillCurrentLvl(3), 0) * 10;
+	}
+	return max(getSkillActualLvl(3), 1) * 10;
+}

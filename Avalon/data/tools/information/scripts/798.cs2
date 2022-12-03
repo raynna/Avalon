@@ -1,0 +1,89 @@
+void script_798(Widget widget0, int arg1, int arg2, string string3, string string4, string string5, string string6, string string7, int arg8, int arg9) {
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	Item item12;
+	Item item13;
+	int int14;
+	int int15;
+	string str5;
+	widget0.clearChildren();
+	int5 = 0;
+	int6 = 0;
+	widget0.setScrollMax(0, ((arg9 - arg8) / arg1 + 1) * 57);
+	int7 = 0;
+	int8 = 1;
+	int9 = 0;
+	int10 = 0;
+	int11 = -1;
+	item12 = null;
+	item13 = null;
+	str5 = "hello";
+	int14 = 0;
+	int15 = 0;
+	while (int7 <= arg9 - arg8) {
+		int5 = 16 + int7 % arg1 * 48 + int7 % arg1 * 5;
+		int6 = int7 / arg1 * 52 + int7 / arg1 * 5;
+		ACTIVE.createChild(widget0, 5, int15);
+		int15 = int15 + 1;
+		ACTIVE.setSize(48, 52, 0, 0);
+		ACTIVE.setPosition(int5, int6, 0, 0);
+		ACTIVE.setSprite(2205);
+		ACTIVE.setScriptCallOnMouseEntered(2724, CTX_WIDGET, int15, false, "Ii1");
+		ACTIVE.setScriptCallOnMouseExit(2724, CTX_WIDGET, int15, true, "Ii1");
+		ACTIVE.createChild(widget0, 5, int15);
+		int15 = int15 + 1;
+		ACTIVE.setSize(48, 52, 0, 0);
+		ACTIVE.setPosition(int5, int6, 0, 0);
+		ACTIVE.setSprite(2206);
+		ACTIVE.setHidden(true);
+		ACTIVE.createChild(widget0, 5, int15);
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setPosition(int5 + 6, int6 + 4, 0, 0);
+		item12 = datamap('i', 'o', (DataMap)1277, int8);
+		item13 = datamap('i', 'o', (DataMap)1188, int8);
+		if (int8 == 1) {
+			if (script_799(item13) == 1) {
+				script_760(item13, item13, widget0, int15, string3, string4, string5, string6, string7, "");
+			} else {
+				script_760(datamap('i', 'o', (DataMap)1184, int8), item13, widget0, int15, string3, string4, string5, string6, string7, "");
+			}
+		} else if (item13 == 12421) {
+			script_760(item13, item13, widget0, int15, string3, string4, string5, string6, string7, "");
+		} else {
+			script_760(datamap('i', 'o', (DataMap)1184, int8), item13, widget0, int15, string3, string4, string5, string6, string7, "");
+		}
+		str5 = datamap('o', 's', (DataMap)1187, item13);
+		int14 = datamap('o', 'i', (DataMap)1185, item12);
+		if (int8 == 1) {
+			ACTIVE.setScriptCallOnMouseOver(770, CTX_WIDGET_CHILD, widget(666, 23), widget(666, 16), int14, str5, 12526, 1, null, 0, null, 0, null, 0, null, 0, null, 0, null, 0, null, 0, null, 0, null, 0, "iIIisoioioioioioioioioioi");
+			ACTIVE.setScriptCallOnMouseExit(40, widget(666, 23), "I");
+		} else {
+			str5 = "You do not have access to this type of scroll.";
+			ACTIVE.setScriptCallOnMouseOver(800, CTX_WIDGET_CHILD, widget(666, 23), widget(666, 16), int14, str5, "iIIis");
+			ACTIVE.setScriptCallOnMouseExit(40, widget(666, 23), "I");
+		}
+		int15 = int15 + 1;
+		ACTIVE.createChild(widget0, 5, int15);
+		int15 = int15 + 1;
+		ACTIVE.setSize(12, 12, 0, 0);
+		ACTIVE.setPosition(int5 + 2, int6 + 38, 0, 0);
+		ACTIVE.setItemNoNum(item12, 1);
+		ACTIVE.createChild(widget0, 4, int15);
+		int15 = int15 + 1;
+		ACTIVE.setSize(31, 12, 0, 0);
+		ACTIVE.setPosition(int5 + 13, int6 + 39, 0, 0);
+		ACTIVE.setFont(494);
+		ACTIVE.setRGB(0xFFFFFF);
+		ACTIVE.setTextAlignment(2, 1, 0);
+		ACTIVE.setText("1");
+		ACTIVE.setTextAntiMacro(true);
+		int7 = int7 + 1;
+		int8 = int8 + 1;
+	}
+	return;
+}

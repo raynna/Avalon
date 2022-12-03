@@ -1,0 +1,5 @@
+int script_1416(Widget widget0, int arg1) {
+	widget0.setPosition(widget0.getX(), 225 - arg1 * widget0.getHeight(), 0, 0);
+	arg1 = arg1 + 1;
+	return arg1;
+}

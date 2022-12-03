@@ -1,0 +1,7 @@
+void script_4813() {
+	widget(1092, 1266).setSprite(null);
+	widget(1092, 1267).setText("");
+	widget(1092, 1255).setIsHidden(true);
+	VARC[2] = 0;
+	return;
+}

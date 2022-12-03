@@ -1,0 +1,61 @@
+void script_2480() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int2 = (widget(41, 15).getWidth() - 36 * 10) / (10 - 1);
+	int3 = (widget(41, 15).getHeight() - 128) / 3;
+	widget(41, 15).clearChildren();
+	widget(881, 0).clearChildren();
+	while (int4 == 0) {
+		if (datamap('i', 'O', (DataMap)VARC[875], int0) != 11760) {
+			ACTIVE.createChild(widget(41, 15), 5, int0);
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition((36 + int2) * (int0 % 10), int0 / 10 * (32 + int3), 0, 0);
+			ACTIVE.setItem(datamap('i', 'O', (DataMap)VARC[875], int0), -1);
+			ACTIVE.setOptionBase("<col=ff981f>" + getItemName(datamap('i', 'O', (DataMap)VARC[875], int0)));
+			ACTIVE.setContextMenuOption(1, "Value");
+			ACTIVE.setContextMenuOption(2, "Buy 1");
+			ACTIVE.setContextMenuOption(3, "Examine");
+			ACTIVE.setShadowColor(0x333333);
+			ACTIVE.setOutlineThickness(1);
+			ACTIVE.createChild(widget(881, 0), 5, int0);
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition(42 * (int0 % 4), int0 / 4 * 42, 0, 0);
+			ACTIVE.setItem(datamap('i', 'O', (DataMap)VARC[875], int0), getItemAmtInContainer(93, datamap('i', 'O', (DataMap)VARC[875], int0)));
+			ACTIVE.setOptionBase("<col=ff981f>" + getItemName(datamap('i', 'O', (DataMap)VARC[875], int0)));
+			ACTIVE.setContextMenuOption(1, "Value");
+			ACTIVE.setContextMenuOption(2, "Sell 1");
+			ACTIVE.setContextMenuOption(3, "Sell X");
+			ACTIVE.setContextMenuOption(4, "Examine");
+			ACTIVE.setShadowColor(0x333333);
+			ACTIVE.setOutlineThickness(1);
+			int0 = int0 + 1;
+		} else {
+			int4 = 1;
+		}
+	}
+	int1 = int0;
+	int0 = 0;
+	int4 = 0;
+	while (int4 == 0) {
+		if (datamap('i', 'O', (DataMap)VARC[875], int0) != 11760) {
+			ACTIVE.createChild(widget(41, 15), 5, int1);
+			ACTIVE.setSize(12, 6, 0, 0);
+			ACTIVE.setPosition((36 + int2) * (int0 % 10), int0 / 10 * (32 + int3), 0, 0);
+			ACTIVE.setSprite(1066);
+		} else {
+			int4 = 1;
+		}
+		int0 = int0 + 1;
+		int1 = int1 + 1;
+	}
+	widget(41, 17).setText(script_46(VARP[1448], ","));
+	return;
+}

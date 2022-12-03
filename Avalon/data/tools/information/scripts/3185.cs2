@@ -1,0 +1,32 @@
+void script_3185(int arg0, char char1, Widget widget2) {
+	switch (arg0) {
+		case 84:
+			script_3183();
+			return;
+		case 13:
+			script_3180();
+			return;
+		case 96:
+		case 97:
+		case 98:
+		case 99:
+		case 102:
+		case 103:
+			VARC[1097] = script_1553(arg0, VARC[1097], STRING[277]);
+			script_1879(widget(914, 27), widget(914, 28), STRING[277]);
+			return;
+		case -1:
+		case 85:
+		case 101:
+			if (isValidChar(char1) || arg0 == 85 || arg0 == 101) {
+				if (arg0 == -1 && length(removeTags(concatChar("", char1))) == 0) {
+					return;
+				}
+				STRING[277], VARC[1097] = script_802(VARC[1097], STRING[277], 2, arg0, char1);
+				widget2.setText(STRING[277]);
+				script_1879(widget(914, 27), widget(914, 28), STRING[277]);
+			}
+			break;
+	}
+	return;
+}

@@ -1,0 +1,11 @@
+void script_4109(int arg0, int arg1, Widget widget2, Widget widget3, Widget widget4, Widget widget5) {
+	int int6;
+	int int7;
+	int6 = widget5.getWidth();
+	arg0 = max(min(arg0, widget4.getWidth() - int6), 0);
+	int7 = widget4.getX();
+	widget2.setSize(int7 + arg0, 0, 0, 1);
+	widget3.setSize(int7 + arg0 + int6, 0, 1, 1);
+	widget5.setPosition(arg0, 0, 0, 1);
+	return;
+}

@@ -1,0 +1,16 @@
+void script_1104() {
+	if (cs2method5420() == 0) {
+		widget(182, 1).setText("When you have finished playing" + "<br>" + "RuneScape, always use a" + "<br>" + "button below to exit the game and logout safely.");
+		widget(182, 6).setText("Exit to Lobby");
+		widget(182, 6).setContextMenuOption(1, "Exit to Lobby");
+		widget(182, 7).setIsHidden(false);
+		widget(182, 13).setText("Exit to Login");
+		widget(182, 13).setContextMenuOption(1, "Exit to Login");
+	} else {
+		widget(182, 1).setText("When you have finished playing" + "<br>" + "RuneScape, always use the" + "<br>" + "button below to exit the game and logout safely.");
+		widget(182, 6).setText("Click here to log out");
+		widget(182, 6).setContextMenuOption(1, "Logout");
+		widget(182, 7).setIsHidden(true);
+	}
+	return;
+}

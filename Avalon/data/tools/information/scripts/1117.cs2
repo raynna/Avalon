@@ -1,0 +1,116 @@
+void script_1117(Widget widget0) {
+	Widget widget1;
+	string str0;
+	widget1 = null;
+	str0 = "";
+	switch (widget0) {
+		case widget(192, 7):
+			if (VARPBIT[6459] == 0) {
+				str0 = "Hide combat spells.";
+			} else {
+				str0 = "Show combat spells.";
+			}
+			widget1 = widget(192, 96);
+			break;
+		case widget(192, 9):
+			if (VARPBIT[6462] == 0) {
+				str0 = "Hide teleport spells.";
+			} else {
+				str0 = "Show teleport spells.";
+			}
+			widget1 = widget(192, 96);
+			break;
+		case widget(192, 11):
+			if (VARPBIT[6461] == 0) {
+				str0 = "Hide miscellaneous spells.";
+			} else {
+				str0 = "Show miscellaneous spells.";
+			}
+			widget1 = widget(192, 96);
+			break;
+		case widget(192, 13):
+			if (VARPBIT[6460] == 0) {
+				str0 = "Hide skill spells.";
+			} else {
+				str0 = "Show skill spells.";
+			}
+			widget1 = widget(192, 96);
+			break;
+		case widget(430, 5):
+			if (VARPBIT[6463] == 0) {
+				str0 = "Hide combat spells.";
+			} else {
+				str0 = "Show combat spells.";
+			}
+			widget1 = widget(430, 65);
+			break;
+		case widget(430, 9):
+			if (VARPBIT[6464] == 0) {
+				str0 = "Hide miscellaneous spells.";
+			} else {
+				str0 = "Show miscellaneous spells.";
+			}
+			widget1 = widget(430, 65);
+			break;
+		case widget(430, 7):
+			if (VARPBIT[6465] == 0) {
+				str0 = "Hide teleport spells.";
+			} else {
+				str0 = "Show teleport spells.";
+			}
+			widget1 = widget(430, 65);
+			break;
+		case widget(193, 5):
+			if (VARPBIT[6466] == 0) {
+				str0 = "Hide combat spells.";
+			} else {
+				str0 = "Show combat spells.";
+			}
+			widget1 = widget(193, 53);
+			break;
+		case widget(193, 7):
+			if (VARPBIT[6467] == 0) {
+				str0 = "Hide teleport spells.";
+			} else {
+				str0 = "Show teleport spells.";
+			}
+			widget1 = widget(193, 53);
+			break;
+		case widget(950, 7):
+			if (VARPBIT[7348] == 0) {
+				str0 = "Hide combat spells.";
+			} else {
+				str0 = "Show combat spells.";
+			}
+			widget1 = widget(950, 72);
+			break;
+		case widget(950, 9):
+			if (VARPBIT[7351] == 0) {
+				str0 = "Hide teleport spells.";
+			} else {
+				str0 = "Show teleport spells.";
+			}
+			widget1 = widget(950, 72);
+			break;
+		case widget(950, 11):
+			if (VARPBIT[7350] == 0) {
+				str0 = "Hide miscellaneous spells.";
+			} else {
+				str0 = "Show miscellaneous spells.";
+			}
+			widget1 = widget(950, 72);
+			break;
+		case widget(950, 13):
+			if (VARPBIT[7349] == 0) {
+				str0 = "Hide skill spells.";
+			} else {
+				str0 = "Show skill spells.";
+			}
+			widget1 = widget(950, 72);
+			break;
+		default:
+			return;
+	}
+	script_39(widget0, widget1, str0, 25, widget1.getLayer().getWidth());
+	return;
+}

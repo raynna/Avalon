@@ -1,0 +1,17 @@
+void script_833(int arg0, int arg1) {
+	if (arg0 == 2) {
+		script_3683();
+		if (arg1 < 500) {
+			if (script_837(arg1) == 1 && datamap('i', 'i', (DataMap)1350, arg1) == 0) {
+				msg("This track was unlocked " + datamap((DataMap)1349, arg1));
+			} else {
+				msg("This track unlocks " + datamap((DataMap)1349, arg1));
+			}
+		} else if (script_837(arg1) == 1 && datamap('i', 'i', (DataMap)1350, arg1) == 0) {
+			msg("This track was unlocked " + datamap((DataMap)952, arg1));
+		} else {
+			msg("This track unlocks " + datamap((DataMap)952, arg1));
+		}
+	}
+	return;
+}

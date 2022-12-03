@@ -1,0 +1,27 @@
+int script_2867(Location location0, Location location1) {
+	if (location0 == location1) {
+		return 0;
+	}
+	if (x(location0) - x(location1) > 2 * ((y(location0) - y(location1)) * -1)) {
+		if (x(location0) - x(location1) > 2 * (y(location0) - y(location1))) {
+			return 7;
+		}
+		if (2 * (x(location0) - x(location1)) > y(location0) - y(location1)) {
+			return 6;
+		}
+		if (2 * (x(location0) - x(location1)) > (y(location0) - y(location1)) * -1) {
+			return 5;
+		}
+		return 4;
+	}
+	if (x(location0) - x(location1) > 2 * (y(location0) - y(location1))) {
+		if (2 * (x(location0) - x(location1)) > y(location0) - y(location1)) {
+			if (2 * (x(location0) - x(location1)) > (y(location0) - y(location1)) * -1) {
+				return 8;
+			}
+			return 1;
+		}
+		return 2;
+	}
+	return 3;
+}

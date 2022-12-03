@@ -1,0 +1,99 @@
+boolean script_837(int arg0) {
+	if (arg0 < 32) {
+		return isBitFlagged(VARP[20], bitAnd(arg0, 31));
+	}
+	if (arg0 < 64) {
+		return isBitFlagged(VARP[21], bitAnd(arg0, 31));
+	}
+	if (arg0 < 96) {
+		return isBitFlagged(VARP[22], bitAnd(arg0, 31));
+	}
+	if (arg0 < 128) {
+		return isBitFlagged(VARP[23], bitAnd(arg0, 31));
+	}
+	if (arg0 < 160) {
+		return isBitFlagged(VARP[24], bitAnd(arg0, 31));
+	}
+	if (arg0 < 192) {
+		return isBitFlagged(VARP[25], bitAnd(arg0, 31));
+	}
+	if (arg0 < 224) {
+		return isBitFlagged(VARP[298], bitAnd(arg0, 31));
+	}
+	if (arg0 < 256) {
+		return isBitFlagged(VARP[311], bitAnd(arg0, 31));
+	}
+	if (arg0 < 288) {
+		return isBitFlagged(VARP[346], bitAnd(arg0, 31));
+	}
+	if (arg0 < 320) {
+		return isBitFlagged(VARP[414], bitAnd(arg0, 31));
+	}
+	if (arg0 < 352) {
+		return isBitFlagged(VARP[464], bitAnd(arg0, 31));
+	}
+	if (arg0 < 384) {
+		return isBitFlagged(VARP[598], bitAnd(arg0, 31));
+	}
+	if (arg0 < 416) {
+		return isBitFlagged(VARP[662], bitAnd(arg0, 31));
+	}
+	if (arg0 < 448) {
+		return isBitFlagged(VARP[721], bitAnd(arg0, 31));
+	}
+	if (arg0 < 480) {
+		return isBitFlagged(VARP[906], bitAnd(arg0, 31));
+	}
+	if (arg0 < 512) {
+		return isBitFlagged(VARP[1009], bitAnd(arg0, 31));
+	}
+	if (arg0 < 544) {
+		return isBitFlagged(VARP[1104], bitAnd(arg0, 31));
+	}
+	if (arg0 < 576) {
+		return isBitFlagged(VARP[1136], bitAnd(arg0, 31));
+	}
+	if (arg0 < 608) {
+		return isBitFlagged(VARP[1180], bitAnd(arg0, 31));
+	}
+	if (arg0 < 640) {
+		return isBitFlagged(VARP[1202], bitAnd(arg0, 31));
+	}
+	if (arg0 < 672) {
+		return isBitFlagged(VARP[1381], bitAnd(arg0, 31));
+	}
+	if (arg0 < 704) {
+		return isBitFlagged(VARP[1394], bitAnd(arg0, 31));
+	}
+	if (arg0 < 736) {
+		return isBitFlagged(VARP[1434], bitAnd(arg0, 31));
+	}
+	if (arg0 < 768) {
+		return isBitFlagged(VARP[1596], bitAnd(arg0, 31));
+	}
+	if (arg0 < 800) {
+		return isBitFlagged(VARP[1618], bitAnd(arg0, 31));
+	}
+	if (arg0 < 832) {
+		return isBitFlagged(VARP[1619], bitAnd(arg0, 31));
+	}
+	if (arg0 < 864) {
+		return isBitFlagged(VARP[1620], bitAnd(arg0, 31));
+	}
+	if (arg0 < 896) {
+		return true;
+	}
+	if (arg0 < 928) {
+		return isBitFlagged(VARP[1864], bitAnd(arg0, 31));
+	}
+	if (arg0 < 960) {
+		return isBitFlagged(VARP[1865], bitAnd(arg0, 31));
+	}
+	if (arg0 < 992) {
+		return isBitFlagged(VARP[2019], bitAnd(arg0, 31));
+	}
+	if (arg0 < 1024) {
+		return isBitFlagged(VARP[2246], bitAnd(arg0, 31));
+	}
+	return null;
+}

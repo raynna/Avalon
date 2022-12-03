@@ -1,0 +1,4 @@
+void script_456() {
+	widget(1019, 16).setContextMenuOption(1, "Exit Tutorial");
+	return;
+}

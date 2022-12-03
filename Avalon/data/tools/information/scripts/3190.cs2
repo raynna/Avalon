@@ -1,0 +1,30 @@
+void script_3190() {
+	open(widget(906, 72), 915);
+	widget(906, 55).setIsHidden(false);
+	if (!datamap('i', 'I', (DataMap)941, 5).isHidden()) {
+		script_3161(0);
+	}
+	if (length(STRING[279]) > 0) {
+		widget(915, 49).setText("Reporting: " + STRING[279]);
+	} else {
+		widget(915, 49).setText("Report Abuse");
+	}
+	if (hasMoreThen5Blackmarks() || getClientRights() > 0) {
+		if (VARC[6] == 0) {
+			widget(915, 46).setSprite(4084);
+		} else {
+			widget(915, 46).setSprite(4086);
+		}
+		if (getBlackmarks() == 5 || getBlackmarks() == 6) {
+			widget(915, 47).setText("Suggest to mute this player for 48 hours");
+		} else {
+			widget(915, 47).setText("Mute this player for 48 hours");
+		}
+		widget(915, 45).setSize(getTextWidth(widget(915, 47).getText(), 3793) + 18, widget(915, 45).getHeight(), 0, 0);
+		widget(915, 45).setIsHidden(false);
+	} else {
+		widget(915, 45).setIsHidden(true);
+	}
+	widget(915, 18).setScriptCallOnKeyPress(3201, KEY_TYPED, "i");
+	return;
+}

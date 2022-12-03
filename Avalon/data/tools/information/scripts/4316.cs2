@@ -1,0 +1,6 @@
+void script_4316() {
+	widget(1091, 6).setScrollMax(0, 0);
+	widget(1091, 6).setScrollPos(0, 0);
+	script_31(widget(1091, 5), widget(1091, 6), 5666, 5663, 5664, 5665, 5686, 5685);
+	return;
+}

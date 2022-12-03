@@ -1,0 +1,12 @@
+void script_2825(int arg0) {
+	if (VARC[1064] == cs2method5407(0) - 1) {
+		if (arg0 == 1) {
+			cs2method5512();
+		}
+		widget(89, 0).setScriptCallOnMinimapRelatedSetting3(-1, "");
+		return;
+	}
+	cameraMethod5502(0, VARC[1064], datamap('i', 'i', (DataMap)VARC[1067], VARC[1064]), datamap('i', 'i', (DataMap)VARC[1067], VARC[1064] + 1), 1, VARC[1064]);
+	VARC[1064] = VARC[1064] + 1;
+	return;
+}

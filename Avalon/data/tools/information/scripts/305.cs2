@@ -1,0 +1,9 @@
+void script_305(int arg0) {
+	if (arg0 == 1) {
+		widget(755, 14).setRGB(0xFF981F);
+	} else {
+		widget(755, 14).setRGB(0xFF0000);
+	}
+	widget(755, 14).setScriptCallOnGameloop(306, getClientCycle(), CTX_WIDGET, "iI");
+	return;
+}

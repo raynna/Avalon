@@ -1,0 +1,56 @@
+void script_4065(Widget widget0) {
+	script_4066();
+	switch (widget0) {
+		case widget(1058, 22):
+			widget(1058, 19).setSprite(4444);
+			widget(1058, 46).setText("Currently selected: Balance tokens - earned through the keg balancing minigame.");
+			widget0.setPosition(-160, 13, 1, 0);
+			if (VARPBIT[8666] < 200) {
+				script_4061();
+			} else {
+				script_4062();
+			}
+			break;
+		case widget(1058, 23):
+			widget(1058, 17).setSprite(4445);
+			widget(1058, 46).setText("Currently selected: Strength tokens - earned through the shot put minigame.");
+			widget0.setPosition(-80, 13, 1, 0);
+			if (VARPBIT[8662] < 200) {
+				script_4061();
+			} else {
+				script_4062();
+			}
+			break;
+		case widget(1058, 24):
+			widget(1058, 15).setSprite(4446);
+			widget(1058, 46).setText("Currently selected: Combat tokens - earned through the animator minigame.");
+			widget0.setPosition(0, 13, 1, 0);
+			if (VARPBIT[8665] < 200) {
+				script_4061();
+			} else {
+				script_4062();
+			}
+			break;
+		case widget(1058, 26):
+			widget(1058, 13).setSprite(4447);
+			widget(1058, 46).setText("Currently selected: Defence tokens - earned through the catapult minigame.");
+			widget0.setPosition(80, 13, 1, 0);
+			if (VARPBIT[8663] < 200) {
+				script_4061();
+			} else {
+				script_4062();
+			}
+			break;
+		case widget(1058, 25):
+			widget(1058, 11).setSprite(4448);
+			widget(1058, 46).setText("Currently selected: Attack tokens - earned through the dummy minigame.");
+			widget0.setPosition(160, 13, 1, 0);
+			if (VARPBIT[8664] < 200) {
+				script_4061();
+			} else {
+				script_4062();
+			}
+			break;
+	}
+	return;
+}

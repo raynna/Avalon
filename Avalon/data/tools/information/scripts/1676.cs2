@@ -1,0 +1,13 @@
+void script_1676(int arg0, int arg1, int arg2) {
+	if (arg0 != 1) {
+		return;
+	}
+	if (arg1 == arg2) {
+		return;
+	}
+	script_1675(arg1);
+	VARPBIT[6768] = arg1;
+	widget(84, 22).clearChildren();
+	_, _ = script_1674(arg1);
+	return;
+}

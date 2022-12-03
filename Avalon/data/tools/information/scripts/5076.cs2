@@ -1,0 +1,21 @@
+void script_5076(Widget widget0, int arg1) {
+	int int2;
+	int int3;
+	int2 = 0;
+	int3 = 0;
+	if (ACTIVE.setChild(widget0, arg1)) {
+		if (ACTIVE.isHidden()) {
+			int2 = (widget(1111, 15).getScrollMaxH() - widget(1111, 15).getWidth()) / 2;
+			int3 = int2;
+		} else {
+			int2 = ACTIVE.getX() + ACTIVE.getWidth() / 2 - widget(1111, 15).getWidth() / 2;
+			int3 = ACTIVE.getY() + ACTIVE.getHeight() / 2 - widget(1111, 15).getHeight() / 2;
+		}
+	} else {
+		int2 = (widget(1111, 15).getScrollMaxH() - widget(1111, 15).getWidth()) / 2;
+		int3 = int2;
+	}
+	widget(1111, 15).setScrollPos(int2, int3);
+	script_5053(0, 0);
+	return;
+}

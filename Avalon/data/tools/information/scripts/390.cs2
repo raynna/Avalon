@@ -1,0 +1,97 @@
+void script_390(int arg0) {
+	int int1;
+	Widget widget2;
+	int int3;
+	AttrMap attrmap4;
+	int int5;
+	AttrMap attrmap6;
+	int int7;
+	int int8;
+	int int9;
+	string str0;
+	int1 = datamapSize((DataMap)3281);
+	widget2 = null;
+	int3 = int1 - 1;
+	while (int3 >= 0) {
+		widget2 = datamap('i', 'I', (DataMap)3281, int3);
+		if (widget2 != null) {
+			widget2.setIsHidden(true);
+		}
+		int3 = int3 - 1;
+	}
+	widget(1028, 82).clearChildren();
+	attrmap4 = datamap('i', 'J', (DataMap)3278, VARC[197] - 1);
+	widget(1028, 71).clearChildren();
+	str0 = "Please choose your character." + "<br>" + "<br>" + "Your choice will not affect your abilities." + "<br>" + "You can modify features like your hair style and clothing once you have chosen your character.";
+	if (attrmap4 == null) {
+		int1 = widget(1028, 82).getWidth() - 16;
+		int1, int3 = getMaxLineWidth(str0, int1, 495), getLineCount(str0, int1, 495) * 20 + 3;
+		widget(1028, 71).setSize(int1 + 16, int3 + 50, 0, 0);
+		ACTIVE.createChild(widget(1028, 71), 4, widget(1028, 71).nextChild());
+		ACTIVE.setSize(int1, int3, 0, 0);
+		ACTIVE.setPosition(0, 22, 1, 0);
+		ACTIVE.setFont(3793);
+		ACTIVE.setRGB(0x000000);
+		ACTIVE.setTextAntiMacro(false);
+		ACTIVE.setTextAlignment(1, 1, 20);
+		ACTIVE.setText(str0);
+		widget(1028, 71).setIsHidden(false);
+		return;
+	}
+	widget(1028, 71).setIsHidden(true);
+	int5 = 0;
+	int3 = 0;
+	attrmap6 = script_384(0, attrmap4, arg0);
+	int7 = VARC[86] - 1;
+	widget2 = datamap('i', 'I', (DataMap)3281, 0);
+	while (attrmap6 != null && widget2 != null) {
+		widget2.setSize(98, 17, 0, 1);
+		if (int3 == int7) {
+			int5 = 1;
+		} else {
+			int5 = 0;
+		}
+		script_363(widget2, int7, (DataMap)3281, getAttributeMapValue(attrmap6, 1181), true, 85, 181, 1, "", int5, "");
+		widget2.setContextMenuOption(1, "Select outfit");
+		widget2.setScriptCallOnClickContextMenu(352, CTX_MENU_OPTION, int3 + 1, "ii");
+		int3 = int3 + 1;
+		attrmap6 = script_384(int3, attrmap4, arg0);
+		widget2 = datamap('i', 'I', (DataMap)3281, int3);
+	}
+	int8 = int3;
+	if (int8 <= 1) {
+		if (ACTIVE.setChild(widget(1028, 37), widget(1028, 37).nextChild() - 1)) {
+			ACTIVE.setHidden(false);
+		}
+		if (ACTIVE.setChild(widget(1028, 37), widget(1028, 37).nextChild() - 2)) {
+			ACTIVE.setHidden(true);
+		}
+		if (int8 <= 0) {
+			return;
+		}
+	} else {
+		if (ACTIVE.setChild(widget(1028, 37), widget(1028, 37).nextChild() - 1)) {
+			ACTIVE.setHidden(true);
+		}
+		if (ACTIVE.setChild(widget(1028, 37), widget(1028, 37).nextChild() - 2)) {
+			ACTIVE.setHidden(false);
+		}
+	}
+	int9 = min((390 - 98) / max(int8 - 1, 1), 33 * 40 / 89);
+	int3 = 0;
+	while (int3 < int8) {
+		widget2 = datamap('i', 'I', (DataMap)3281, int3);
+		if (int3 == int7) {
+			widget2.setPosition(int3 * int9, 0, 0, 0);
+		} else {
+			widget2.setPosition(int3 * int9, 0, 0, 2);
+		}
+		if (int3 <= int7) {
+			widget2.sendChildFront();
+		} else {
+			widget2.sendChildBack();
+		}
+		int3 = int3 + 1;
+	}
+	return;
+}

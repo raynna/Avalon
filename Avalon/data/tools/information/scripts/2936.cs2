@@ -1,0 +1,16 @@
+void script_2936(int arg0) {
+	if (cs2method5420() == 1) {
+		VARC[547] = arg0;
+		script_2940(11);
+		widget(744, 28).setIsHidden(true);
+		if (hasSSKey()) {
+			widget(744, 27).setIsHidden(false);
+		} else {
+			widget(744, 26).setIsHidden(false);
+		}
+		if (VARC[547] == 1) {
+			script_2945();
+		}
+	}
+	return;
+}

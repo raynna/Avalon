@@ -1,0 +1,25 @@
+void script_2940(int arg0) {
+	int int1;
+	int1 = script_2948();
+	if (int1 == -3 && arg0 != 13 || int1 == 21 || int1 == 1) {
+		return;
+	}
+	widget(596, 73).setText(STRING[32]);
+	widget(596, 79).setText(script_2949(STRING[33]));
+	if (length(STRING[32]) > 0) {
+		VARC[174] = 4;
+	} else {
+		VARC[174] = 3;
+	}
+	if (VARC[174] == 3) {
+		VARC[1099] = length(STRING[32]);
+		script_3237(widget(596, 72), widget(596, 73), widget(596, 74), STRING[32], 3);
+	} else {
+		VARC[1099] = length(script_2949(STRING[33]));
+		script_3237(widget(596, 78), widget(596, 79), widget(596, 80), script_2949(STRING[33]), 4);
+	}
+	widget(744, 26).setIsHidden(false);
+	widget(596, 6).setIsHidden(false);
+	script_3964();
+	return;
+}

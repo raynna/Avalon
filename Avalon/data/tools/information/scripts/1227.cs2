@@ -1,0 +1,22 @@
+void script_1227(Widget widget0, Widget widget1, Widget widget2) {
+	int int3;
+	if (VARPBIT[1549] < 1 || VARPBIT[1549] > 63) {
+		widget1.setIsHidden(true);
+		widget2.setIsHidden(true);
+		return;
+	}
+	if (VARPBIT[1549] == 63) {
+		widget2.setText("Final" + "<br>" + "Challenge");
+	} else {
+		widget2.setText("Wave " + str(VARPBIT[1549]));
+	}
+	int3 = 0 - widget0.getHeight();
+	widget1.setPosition(0, int3, 1, 1);
+	widget2.setPosition(0, int3, 1, 1);
+	widget1.setIsHidden(false);
+	widget2.setIsHidden(false);
+	widget0.setScriptCallOnGameloop(1228, widget0, widget1, widget2, getClientCycle(), "IIIi");
+	widget1.setContextMenuOption(1, "Dismiss");
+	widget1.setScriptCallOnClickContextMenu(1229, CTX_MENU_OPTION, widget0, widget1, widget2, "iIII");
+	return;
+}

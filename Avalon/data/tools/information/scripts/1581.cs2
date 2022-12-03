@@ -1,0 +1,92 @@
+void script_1581(Widget widget0) {
+	Sprite sprite1;
+	Widget widget2;
+	int int3;
+	string str0;
+	string str1;
+	str0 = "";
+	sprite1 = 494;
+	widget2 = widget(492, 49);
+	switch (widget0) {
+		case widget(492, 15):
+		case widget(488, 3):
+		case widget(493, 27):
+			str0 = STRING[212];
+			break;
+		case widget(488, 8):
+		case widget(493, 28):
+		case widget(492, 16):
+			str0 = STRING[213];
+			break;
+		case widget(488, 13):
+		case widget(493, 29):
+		case widget(492, 17):
+			str0 = STRING[214];
+			break;
+		case widget(493, 30):
+		case widget(488, 18):
+		case widget(492, 18):
+			str0 = STRING[215];
+			break;
+		case widget(493, 31):
+		case widget(492, 19):
+			str0 = STRING[216];
+			break;
+	}
+	switch (widget0) {
+		case widget(493, 29):
+		case widget(493, 28):
+		case widget(493, 31):
+		case widget(493, 30):
+		case widget(493, 27):
+			sprite1 = 495;
+			widget2 = widget(493, 56);
+			break;
+		case widget(488, 8):
+		case widget(488, 13):
+		case widget(488, 18):
+		case widget(488, 3):
+			sprite1 = 495;
+			widget2 = widget(488, 27);
+			break;
+	}
+	str1 = str0;
+	int3 = widget0.getWidth();
+	if (getMaxLineWidth(str1 + " ", 2147483647, sprite1) > int3) {
+		while (getMaxLineWidth(str1 + "... ", 2147483647, sprite1) > int3) {
+			str1 = substr(str1, 0, length(str1) - 1);
+		}
+		widget0.setScriptCallOnMouseOver(38, CTX_WIDGET, widget2, str0, 25, 5000, "IIsii");
+		widget0.setScriptCallOnMouseExit(40, widget2, "I");
+		str0 = str1 + "...";
+	} else {
+		widget0.setScriptCallOnMouseOver(-1, "");
+		widget0.setScriptCallOnMouseExit(-1, "");
+	}
+	switch (widget0) {
+		case widget(492, 15):
+		case widget(493, 29):
+		case widget(493, 28):
+		case widget(493, 31):
+		case widget(493, 30):
+		case widget(493, 27):
+		case widget(492, 16):
+		case widget(492, 17):
+		case widget(492, 18):
+		case widget(492, 19):
+			if (compare(str0, "") == 0 || compare(str0, "null") == 0) {
+				str0 = "none set";
+			}
+			break;
+		case widget(488, 8):
+		case widget(488, 13):
+		case widget(488, 3):
+		case widget(488, 18):
+			if (compare(str0, "") == 0 || compare(str0, "null") == 0) {
+				str0 = "---";
+			}
+			break;
+	}
+	widget0.setText(str0);
+	return;
+}

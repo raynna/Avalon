@@ -1,0 +1,7 @@
+void script_1192(Widget widget0, Widget widget1) {
+	widget0.setSize(getMaxLineWidth(widget1.getText(), 512, 495) + 34, widget0.getHeight(), 0, 0);
+	widget0.setScriptCallOnGlobalConfigChange(1193, true, 1002, "1Y");
+	widget0.setScriptCallOnGameloop(1193, false, "1");
+	script_1194();
+	return;
+}

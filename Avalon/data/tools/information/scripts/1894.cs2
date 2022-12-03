@@ -1,0 +1,35 @@
+void script_1894(int arg0, int arg1, Item item2, string string3, Widget widget4) {
+	int int4;
+	widget4.setSize(arg1, 76, 0, 0);
+	widget4.setPosition(arg0, 0, 0, 1);
+	int4 = (76 - 64) / 2;
+	script_333(widget4, 0x5D554A, 0x2E261B, 4, 4);
+	ACTIVE.createChild(widget4, 5, widget4.nextChild());
+	ACTIVE.setSize(36, 32, 0, 0);
+	ACTIVE.setPosition(0, 4 + int4, 1, 0);
+	ACTIVE.setShadowColor(0x302020);
+	ACTIVE.setOutlineThickness(1);
+	ACTIVE.setItemNoNum(item2, 1);
+	ACTIVE.createChild(widget4, 4, widget4.nextChild());
+	ACTIVE.setSize(4 * 2 + 70 - 56, 4 + int4 + 32 + int4 - 3, 1, 1);
+	ACTIVE.setPosition(0, int4, 1, 2);
+	ACTIVE.setFont(494);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setRGB(0xFF981F);
+	ACTIVE.setTextAntiMacro(true);
+	ACTIVE.setText(string3);
+	ACTIVE.createChild(widget4, 5, widget4.nextChild());
+	ACTIVE.setSize(58, 0, 1, 1);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setSprite(3875);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.createChild(widget4, 5, widget4.nextChild());
+	ACTIVE.setSize(30, 0, 0, 1);
+	ACTIVE.setPosition(0, 0, 0, 1);
+	ACTIVE.setSprite(3874);
+	ACTIVE.createChild(widget4, 5, widget4.nextChild());
+	ACTIVE.setSize(30, 0, 0, 1);
+	ACTIVE.setPosition(0, 0, 2, 1);
+	ACTIVE.setSprite(3876);
+	return;
+}

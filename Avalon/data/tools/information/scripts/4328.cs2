@@ -1,0 +1,8 @@
+void script_4328(Widget widget0) {
+	if (CLANDEF113[11] == 0) {
+		widget0.setSprite(datamap('i', 'd', (DataMap)3721, CLANDEF113[7]));
+	} else {
+		widget0.setSprite(datamap('i', 'd', (DataMap)3721, 0));
+	}
+	return;
+}

@@ -1,0 +1,50 @@
+void script_4212(Widget widget0, string string1, Sprite sprite2, Color color3, Color color4) {
+	int int4;
+	int int5;
+	Widget widget6;
+	if (widget0 == null) {
+		return;
+	}
+	int4 = widget0.getX();
+	int5 = widget0.getY();
+	widget6 = widget0.getLayer();
+	widget0.setText(string1);
+	widget0.setFont(sprite2);
+	widget6.clearChildren();
+	ACTIVE.createChild(widget6, 4, widget6.nextChild());
+	ACTIVE.setPosition(0, -1, 1, 1);
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setRGB(color4);
+	ACTIVE.setFont(sprite2);
+	ACTIVE.setText(string1);
+	ACTIVE.createChild(widget6, 4, widget6.nextChild());
+	ACTIVE.setPosition(0, 1, 1, 1);
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setRGB(color4);
+	ACTIVE.setFont(sprite2);
+	ACTIVE.setText(string1);
+	ACTIVE.createChild(widget6, 4, widget6.nextChild());
+	ACTIVE.setPosition(-1, 0, 1, 1);
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setRGB(color4);
+	ACTIVE.setFont(sprite2);
+	ACTIVE.setText(string1);
+	ACTIVE.createChild(widget6, 4, widget6.nextChild());
+	ACTIVE.setPosition(1, 0, 1, 1);
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setRGB(color4);
+	ACTIVE.setFont(sprite2);
+	ACTIVE.setText(string1);
+	ACTIVE.createChild(widget6, 4, widget6.nextChild());
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setRGB(color3);
+	ACTIVE.setFont(sprite2);
+	ACTIVE.setText(string1);
+	return;
+}

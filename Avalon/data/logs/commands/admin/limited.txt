@@ -1,0 +1,303 @@
+[20 mars 2018 at 11:04:53 CET] - ::claim 
+[20 mars 2018 at 11:05:32 CET] - ::master 
+[20 mars 2018 at 11:05:51 CET] - ::item 20769 5
+[20 mars 2018 at 11:08:54 CET] - ::item 995 214700000
+[20 mars 2018 at 11:10:23 CET] - ::lunar 
+[20 mars 2018 at 11:14:01 CET] - ::edge 
+[20 mars 2018 at 11:14:05 CET] - ::teletome andreas
+[20 mars 2018 at 11:14:15 CET] - ::home 
+[20 mars 2018 at 11:14:23 CET] - ::teletome andreas
+[20 mars 2018 at 11:25:20 CET] - ::claim 
+[20 mars 2018 at 11:25:40 CET] - ::master 
+[20 mars 2018 at 11:32:06 CET] - ::teleto andreas
+[20 mars 2018 at 11:33:01 CET] - ::bank 
+[20 mars 2018 at 11:33:21 CET] - ::item 951 5
+[20 mars 2018 at 11:33:24 CET] - ::item 989 5
+[20 mars 2018 at 11:33:39 CET] - ::item 989 55
+[20 mars 2018 at 02:26:39 CET] - ::item 995 247000000
+[20 mars 2018 at 02:26:46 CET] - ::item 995 10000000
+[20 mars 2018 at 02:26:55 CET] - ::item 995 1000000
+[20 mars 2018 at 02:27:00 CET] - ::item 995 100000000
+[20 mars 2018 at 02:27:09 CET] - ::item 995 1000000000
+[20 mars 2018 at 02:27:49 CET] - ::item 995 21470000000
+[20 mars 2018 at 02:27:53 CET] - ::item 995 2147000000
+[20 mars 2018 at 02:30:33 CET] - ::item 4708 5
+[20 mars 2018 at 02:31:03 CET] - ::item 13896 5
+[20 mars 2018 at 02:31:24 CET] - ::item 13870 5
+[20 mars 2018 at 02:31:41 CET] - ::wolp 
+[20 mars 2018 at 02:31:42 CET] - ::wolp 
+[20 mars 2018 at 02:32:13 CET] - ::savesetup 
+[20 mars 2018 at 02:32:28 CET] - ::curses 
+[20 mars 2018 at 02:32:30 CET] - ::ancient 
+[20 mars 2018 at 05:34:55 CET] - ::wolp 
+[20 mars 2018 at 05:35:17 CET] - ::edge 
+[20 mars 2018 at 05:35:26 CET] - ::teleto drew
+[20 mars 2018 at 05:35:30 CET] - ::teletome drew
+[20 mars 2018 at 05:38:00 CET] - ::master drew
+[20 mars 2018 at 05:38:27 CET] - ::item 20747 5
+[20 mars 2018 at 05:38:35 CET] - ::item 20767 2
+[20 mars 2018 at 05:39:12 CET] - ::edge 
+[20 mars 2018 at 05:41:49 CET] - ::edge 
+[20 mars 2018 at 05:47:32 CET] - ::edge 
+[20 mars 2018 at 05:52:41 CET] - ::item 10551 1
+[20 mars 2018 at 05:52:48 CET] - ::edge 
+[20 mars 2018 at 05:53:21 CET] - ::bank 
+[20 mars 2018 at 05:53:37 CET] - ::edge 
+[20 mars 2018 at 05:58:11 CET] - ::edge 
+[20 mars 2018 at 06:01:05 CET] - ::edge 
+[20 mars 2018 at 06:03:41 CET] - ::edge 
+[20 mars 2018 at 06:03:54 CET] - ::spec 
+[20 mars 2018 at 06:03:59 CET] - ::spec 
+[20 mars 2018 at 06:04:03 CET] - ::spec 
+[20 mars 2018 at 06:04:06 CET] - ::spec 
+[20 mars 2018 at 06:04:08 CET] - ::spec 
+[20 mars 2018 at 06:04:10 CET] - ::spec 
+[20 mars 2018 at 06:04:13 CET] - ::spec 
+[20 mars 2018 at 06:04:17 CET] - ::spec 
+[20 mars 2018 at 06:04:27 CET] - ::spec 
+[20 mars 2018 at 06:04:30 CET] - ::spec 
+[20 mars 2018 at 06:04:32 CET] - ::spec 
+[20 mars 2018 at 06:04:34 CET] - ::spec 
+[20 mars 2018 at 06:09:32 CET] - ::edge 
+[20 mars 2018 at 06:12:58 CET] - ::spec 
+[20 mars 2018 at 06:13:07 CET] - ::spec 
+[20 mars 2018 at 06:13:57 CET] - ::getsetup 
+[20 mars 2018 at 06:14:04 CET] - ::curses 
+[20 mars 2018 at 06:14:06 CET] - ::edge 
+[20 mars 2018 at 06:14:13 CET] - ::home 
+[20 mars 2018 at 06:14:18 CET] - ::getsetup 
+[20 mars 2018 at 06:14:33 CET] - ::edge 
+[20 mars 2018 at 06:14:50 CET] - ::wolp 
+[20 mars 2018 at 06:14:51 CET] - ::edge 
+[20 mars 2018 at 06:17:23 CET] - ::heal 
+[20 mars 2018 at 06:17:27 CET] - ::bank 
+[20 mars 2018 at 06:17:43 CET] - ::edge 
+[20 mars 2018 at 06:20:12 CET] - ::heal 
+[20 mars 2018 at 06:20:20 CET] - ::spec 
+[20 mars 2018 at 06:20:41 CET] - ::heal 
+[20 mars 2018 at 06:21:14 CET] - ::bank 
+[20 mars 2018 at 06:21:32 CET] - ::heal 
+[20 mars 2018 at 06:21:33 CET] - ::bank 
+[20 mars 2018 at 06:21:42 CET] - ::bank 
+[20 mars 2018 at 06:21:54 CET] - ::edge 
+[20 mars 2018 at 06:23:02 CET] - ::spec 
+[20 mars 2018 at 06:23:21 CET] - ::spec 
+[20 mars 2018 at 06:24:15 CET] - ::spec 
+[20 mars 2018 at 06:24:25 CET] - ::heal 
+[20 mars 2018 at 06:24:26 CET] - ::bank 
+[20 mars 2018 at 06:24:33 CET] - ::getsetup 
+[20 mars 2018 at 06:24:39 CET] - ::bank 
+[20 mars 2018 at 06:27:05 CET] - ::getsetupother 
+[20 mars 2018 at 06:27:18 CET] - ::getsetupother 
+[20 mars 2018 at 06:29:24 CET] - ::edge 
+[20 mars 2018 at 06:31:40 CET] - ::heal 
+[20 mars 2018 at 06:31:41 CET] - ::bank 
+[20 mars 2018 at 06:32:01 CET] - ::edge 
+[20 mars 2018 at 06:35:03 CET] - ::bank 
+[20 mars 2018 at 06:35:14 CET] - ::bank 
+[20 mars 2018 at 06:35:36 CET] - ::edge 
+[20 mars 2018 at 06:37:42 CET] - ::spec 
+[20 mars 2018 at 06:38:30 CET] - ::spec 
+[20 mars 2018 at 06:40:20 CET] - ::bank 
+[20 mars 2018 at 06:40:37 CET] - ::bank 
+[20 mars 2018 at 06:40:55 CET] - ::edge 
+[20 mars 2018 at 06:41:50 CET] - ::heal 
+[20 mars 2018 at 06:41:51 CET] - ::bank 
+[20 mars 2018 at 06:42:20 CET] - ::heal 
+[20 mars 2018 at 06:42:21 CET] - ::bank 
+[20 mars 2018 at 06:42:24 CET] - ::bank 
+[20 mars 2018 at 06:43:10 CET] - ::heal 
+[20 mars 2018 at 06:43:15 CET] - ::bank 
+[20 mars 2018 at 06:43:40 CET] - ::bank 
+[20 mars 2018 at 06:43:49 CET] - ::bank 
+[20 mars 2018 at 06:45:49 CET] - ::heal 
+[20 mars 2018 at 06:45:49 CET] - ::bank 
+[20 mars 2018 at 06:46:11 CET] - ::getsetupother 
+[20 mars 2018 at 06:46:17 CET] - ::bank 
+[20 mars 2018 at 06:46:27 CET] - ::item 14484 1
+[20 mars 2018 at 06:46:30 CET] - ::edge 
+[20 mars 2018 at 06:46:40 CET] - ::wolp 
+[20 mars 2018 at 06:47:16 CET] - ::heal 
+[20 mars 2018 at 06:47:33 CET] - ::edge 
+[20 mars 2018 at 06:47:36 CET] - ::home 
+[20 mars 2018 at 06:47:38 CET] - ::edge 
+[20 mars 2018 at 06:49:25 CET] - ::spec 
+[20 mars 2018 at 06:49:31 CET] - ::spec 
+[20 mars 2018 at 06:49:42 CET] - ::spec 
+[20 mars 2018 at 06:49:47 CET] - ::spec 
+[20 mars 2018 at 06:49:58 CET] - ::spec 
+[20 mars 2018 at 06:50:14 CET] - ::heal 
+[20 mars 2018 at 06:50:15 CET] - ::bank 
+[20 mars 2018 at 06:50:42 CET] - ::home 
+[20 mars 2018 at 06:50:47 CET] - ::normal 
+[20 mars 2018 at 06:50:49 CET] - ::bank 
+[20 mars 2018 at 06:51:00 CET] - ::bank 
+[20 mars 2018 at 06:51:10 CET] - ::bank 
+[20 mars 2018 at 06:51:12 CET] - ::bank 
+[20 mars 2018 at 06:51:30 CET] - ::getsetup 
+[20 mars 2018 at 06:51:34 CET] - ::bank 
+[20 mars 2018 at 06:51:51 CET] - ::bank 
+[20 mars 2018 at 06:52:06 CET] - ::bank 
+[20 mars 2018 at 06:52:40 CET] - ::item 6920 1
+[20 mars 2018 at 06:52:46 CET] - ::bank 
+[20 mars 2018 at 06:53:18 CET] - ::item 11732 1
+[20 mars 2018 at 06:53:30 CET] - ::normal 
+[20 mars 2018 at 06:54:37 CET] - ::bank 
+[20 mars 2018 at 06:54:48 CET] - ::bank 
+[20 mars 2018 at 06:54:53 CET] - ::bank 
+[20 mars 2018 at 06:55:09 CET] - ::edge 
+[20 mars 2018 at 06:56:50 CET] - ::bank 
+[20 mars 2018 at 08:02:00 CET] - ::savesetup 
+[21 mars 2018 at 12:27:07 CET] - ::bank 
+[21 mars 2018 at 12:27:21 CET] - ::bank 
+[21 mars 2018 at 12:27:30 CET] - ::wolp 
+[23 mars 2018 at 08:39:41 CET] - ::wolp 
+[23 mars 2018 at 08:39:48 CET] - ::savesetup 
+[23 mars 2018 at 08:40:11 CET] - ::getsetup 
+[23 mars 2018 at 08:40:20 CET] - ::bank 
+[23 mars 2018 at 08:40:30 CET] - ::bank 
+[23 mars 2018 at 08:40:49 CET] - ::bank 
+[23 mars 2018 at 08:40:55 CET] - ::bank 
+[23 mars 2018 at 08:40:59 CET] - ::bank 
+[23 mars 2018 at 08:41:16 CET] - ::bank 
+[23 mars 2018 at 08:41:41 CET] - ::item 11732 1
+[23 mars 2018 at 08:41:43 CET] - ::bank 
+[23 mars 2018 at 08:43:45 CET] - ::edge 
+[23 mars 2018 at 08:43:58 CET] - ::wolp 
+[23 mars 2018 at 08:46:16 CET] - ::bank 
+[23 mars 2018 at 08:46:39 CET] - ::bank 
+[23 mars 2018 at 08:48:30 CET] - ::yell message?
+[23 mars 2018 at 08:48:49 CET] - ::item 20767 1
+[23 mars 2018 at 08:48:55 CET] - ::edge 
+[23 mars 2018 at 08:50:53 CET] - ::wolp 
+[23 mars 2018 at 08:52:49 CET] - ::heal 
+[23 mars 2018 at 08:52:50 CET] - ::bank 
+[23 mars 2018 at 08:53:06 CET] - ::yell fy fan vad tiltad jag är asså
+[23 mars 2018 at 08:53:11 CET] - ::yell at jag inte har fått mina chars
+[23 mars 2018 at 08:55:14 CET] - ::yell glømde at den hittar flere enn 2 gonger
+[23 mars 2018 at 08:55:16 CET] - ::yell haha fyfan
+[23 mars 2018 at 08:55:18 CET] - ::bank 
+[23 mars 2018 at 08:55:23 CET] - ::bank 
+[23 mars 2018 at 08:55:31 CET] - ::edge 
+[23 mars 2018 at 08:55:34 CET] - ::yell insane trollwep imo
+[23 mars 2018 at 08:55:42 CET] - ::bank 
+[23 mars 2018 at 08:56:36 CET] - ::god 
+[23 mars 2018 at 08:56:54 CET] - ::wolp 
+[23 mars 2018 at 08:57:00 CET] - ::god 
+[23 mars 2018 at 08:57:02 CET] - ::yell lmfao
+[23 mars 2018 at 08:57:05 CET] - ::yell wooooooooooops
+[23 mars 2018 at 08:58:49 CET] - ::heal 
+[23 mars 2018 at 08:58:50 CET] - ::bank 
+[23 mars 2018 at 08:59:10 CET] - ::item 14484 1
+[23 mars 2018 at 08:59:14 CET] - ::home 
+[23 mars 2018 at 08:59:17 CET] - ::item 14484 1
+[23 mars 2018 at 08:59:18 CET] - ::edge 
+[23 mars 2018 at 09:01:28 CET] - ::heal 
+[23 mars 2018 at 09:01:29 CET] - ::bank 
+[23 mars 2018 at 09:04:56 CET] - ::bank 
+[23 mars 2018 at 09:05:01 CET] - ::yell lmao rly
+[23 mars 2018 at 09:05:33 CET] - ::bank 
+[23 mars 2018 at 09:05:47 CET] - ::item 4710 1
+[23 mars 2018 at 09:05:53 CET] - ::edge 
+[23 mars 2018 at 09:06:05 CET] - ::item 12437 55555
+[23 mars 2018 at 09:06:08 CET] - ::home 
+[23 mars 2018 at 09:06:11 CET] - ::item 12437 555555
+[23 mars 2018 at 09:06:14 CET] - ::bank 
+[23 mars 2018 at 09:06:25 CET] - ::bank 
+[23 mars 2018 at 09:06:31 CET] - ::bank 
+[23 mars 2018 at 09:06:38 CET] - ::bank 
+[23 mars 2018 at 09:06:51 CET] - ::item 6920 1
+[23 mars 2018 at 09:06:54 CET] - ::edge 
+[23 mars 2018 at 09:06:58 CET] - ::bank 
+[23 mars 2018 at 09:09:52 CET] - ::wolp 
+[23 mars 2018 at 09:14:59 CET] - ::bank 
+[23 mars 2018 at 09:15:21 CET] - ::heal 
+[23 mars 2018 at 09:23:19 CET] - ::heal 
+[23 mars 2018 at 09:23:33 CET] - ::heal 
+[23 mars 2018 at 09:23:46 CET] - ::spec 
+[23 mars 2018 at 09:24:02 CET] - ::spec 
+[23 mars 2018 at 09:24:13 CET] - ::spec 
+[23 mars 2018 at 09:24:25 CET] - ::spec 
+[23 mars 2018 at 09:24:38 CET] - ::spec 
+[23 mars 2018 at 09:24:49 CET] - ::spec 
+[23 mars 2018 at 09:25:04 CET] - ::spec 
+[23 mars 2018 at 09:25:15 CET] - ::bank 
+[23 mars 2018 at 09:26:02 CET] - ::spec 
+[23 mars 2018 at 09:26:53 CET] - ::edge 
+[23 mars 2018 at 09:27:02 CET] - ::wolp 
+[23 mars 2018 at 09:27:05 CET] - ::bank 
+[23 mars 2018 at 09:29:13 CET] - ::heal 
+[23 mars 2018 at 09:29:13 CET] - ::bank 
+[23 mars 2018 at 09:30:44 CET] - ::bank 
+[23 mars 2018 at 09:31:10 CET] - ::yell tror ahrims kan hitta typ 520+ atm
+[23 mars 2018 at 09:31:13 CET] - ::yell med 15%
+[23 mars 2018 at 09:43:29 CET] - ::getsetup 
+[23 mars 2018 at 09:43:33 CET] - ::ancient 
+[23 mars 2018 at 09:43:35 CET] - ::ancients 
+[23 mars 2018 at 09:43:39 CET] - ::home 
+[23 mars 2018 at 09:43:41 CET] - ::ancients 
+[23 mars 2018 at 09:43:42 CET] - ::edge 
+[23 mars 2018 at 09:46:39 CET] - ::heal 
+[23 mars 2018 at 09:46:40 CET] - ::bank 
+[23 mars 2018 at 09:47:32 CET] - ::spec 
+[23 mars 2018 at 09:47:40 CET] - ::spec 
+[23 mars 2018 at 09:48:21 CET] - ::curses 
+[23 mars 2018 at 09:48:22 CET] - ::edge 
+[23 mars 2018 at 09:48:25 CET] - ::yell x.d
+[23 mars 2018 at 09:48:28 CET] - ::bank 
+[23 mars 2018 at 09:48:38 CET] - ::spec 
+[23 mars 2018 at 09:48:45 CET] - ::spec 
+[23 mars 2018 at 09:48:52 CET] - ::spec 
+[23 mars 2018 at 09:49:05 CET] - ::spec 
+[23 mars 2018 at 09:49:34 CET] - ::spec 
+[23 mars 2018 at 09:49:41 CET] - ::edge 
+[23 mars 2018 at 09:49:53 CET] - ::spec 
+[23 mars 2018 at 09:49:55 CET] - ::bank 
+[23 mars 2018 at 09:50:01 CET] - ::yell x.d
+[23 mars 2018 at 09:50:16 CET] - ::spec 
+[23 mars 2018 at 09:50:37 CET] - ::wolp 
+[23 mars 2018 at 09:50:53 CET] - ::spec 
+[23 mars 2018 at 09:52:14 CET] - ::heal 
+[23 mars 2018 at 09:52:16 CET] - ::bank 
+[23 mars 2018 at 09:52:18 CET] - ::yell vilken
+[23 mars 2018 at 09:52:23 CET] - ::getsetupother 
+[23 mars 2018 at 09:53:54 CET] - ::yell lmao jag orkar ej det där
+[23 mars 2018 at 09:53:55 CET] - ::yell kek
+[23 mars 2018 at 09:53:59 CET] - ::yell supa?
+[23 mars 2018 at 09:54:01 CET] - ::yell vad är det
+[23 mars 2018 at 09:54:17 CET] - ::yell ah
+[23 mars 2018 at 09:54:34 CET] - ::yell har drickat osv for nesta 5 år senaste året
+[23 mars 2018 at 09:54:37 CET] - ::yell behøver en paus
+[23 mars 2018 at 09:54:57 CET] - ::yell hostar som fan atm också litt bg
+[29 mars 2018 at 06:28:20 CEST] - ::getsetup 
+[29 mars 2018 at 06:28:41 CEST] - ::getsetup 
+[29 mars 2018 at 06:28:45 CEST] - ::edge 
+[29 mars 2018 at 06:28:50 CEST] - ::wolp 
+[29 mars 2018 at 06:38:13 CEST] - ::god 
+[29 mars 2018 at 06:44:07 CEST] - ::bank 
+[29 mars 2018 at 06:44:30 CEST] - ::bank 
+[29 mars 2018 at 07:17:01 CEST] - ::heal drew
+[29 mars 2018 at 07:17:11 CEST] - ::healother drew
+[29 mars 2018 at 07:19:34 CEST] - ::heal 
+[29 mars 2018 at 07:20:08 CEST] - ::bank 
+[29 mars 2018 at 07:20:38 CEST] - ::edge 
+[29 mars 2018 at 07:20:43 CEST] - ::wolp 
+[29 mars 2018 at 07:23:07 CEST] - ::spec 
+[29 mars 2018 at 07:23:51 CEST] - ::bank 
+[29 mars 2018 at 07:24:35 CEST] - ::edge 
+[29 mars 2018 at 07:24:56 CEST] - ::spec 
+[29 mars 2018 at 07:24:58 CEST] - ::heal 
+[29 mars 2018 at 07:24:59 CEST] - ::wolp 
+[29 mars 2018 at 07:29:44 CEST] - ::spec 
+[29 mars 2018 at 07:29:55 CEST] - ::heal 
+[29 mars 2018 at 07:29:55 CEST] - ::bank 
+[29 mars 2018 at 07:30:08 CEST] - ::bank 
+[29 mars 2018 at 07:30:46 CEST] - ::bank 
+[29 mars 2018 at 07:30:51 CEST] - ::bank 
+[29 mars 2018 at 07:31:06 CEST] - ::bank 
+[29 mars 2018 at 07:31:16 CEST] - ::edge 
+[29 mars 2018 at 07:32:02 CEST] - ::bank 
+[29 mars 2018 at 07:34:53 CEST] - ::bank 
+[29 mars 2018 at 07:34:56 CEST] - ::bank 
+[29 mars 2018 at 07:39:03 CEST] - ::heal 
+[29 mars 2018 at 07:39:04 CEST] - ::bank 

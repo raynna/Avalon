@@ -1,0 +1,8 @@
+void script_4229(int arg0, string arg1) {
+	if ((getItemAmtInContainer(93, 2883) > 0 || getItemIdInSlot(94, 3) == 2883 || getItemAmtInContainer(93, 4827) > 0 || getItemIdInSlot(94, 3) == 4827) && VARP[294] >= arg0) {
+		_ACTIVE.setText(arg1 + "<br>" + "Kills: " + str(arg0));
+		return;
+	}
+	_ACTIVE.setText(arg1 + "<br>" + "<col=ff0000>" + "Kills: " + str(arg0));
+	return;
+}

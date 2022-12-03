@@ -1,0 +1,21 @@
+void script_1450() {
+	int int0;
+	int int1;
+	int0 = 0;
+	int1 = getItemContainerLength(95);
+	while (int0 < int1) {
+		ACTIVE.createChild(widget(762, 93), 5, int0);
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setPosition(0, 0, 0, 0);
+		ACTIVE.setHidden(true);
+		if (getItemIdInSlot(95, int0) != null) {
+			script_1453(int0);
+		}
+		ACTIVE.setOutlineThickness(1);
+		ACTIVE.setShadowColor(0x333333);
+		ACTIVE.setScriptCallOnMouseOver(1480, widget(762, 93), int0, "Ii");
+		ACTIVE.setScriptCallOnMouseExit(40, widget(762, 97), "I");
+		int0 = int0 + 1;
+	}
+	return;
+}

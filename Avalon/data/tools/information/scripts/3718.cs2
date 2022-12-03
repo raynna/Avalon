@@ -1,0 +1,4 @@
+void script_3718() {
+	script_304(location(2837, 10089, 2));
+	return;
+}

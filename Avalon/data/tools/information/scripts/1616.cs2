@@ -1,0 +1,37 @@
+void script_1616(Widget widget0, int arg1, Widget widget2, int arg3) {
+	int int4;
+	Item item5;
+	int int6;
+	if (widget0 != widget2) {
+		return;
+	}
+	int4 = getItemContainerLength(93);
+	arg1 = arg1 % int4;
+	arg3 = arg3 % int4;
+	item5 = null;
+	int6 = 0;
+	if (ACTIVE.setChild(widget0, arg1) && _ACTIVE.setChild(widget2, arg3)) {
+		item5, int6 = ACTIVE.getItemId(), ACTIVE.getItemAmt();
+		ACTIVE.setItem(_ACTIVE.getItemId(), _ACTIVE.getItemAmt());
+		_ACTIVE.setItem(item5, int6);
+		ACTIVE.setNoOptions();
+		_ACTIVE.setNoOptions();
+		if (ACTIVE.getItemId() != null) {
+			ACTIVE.setHidden(false);
+			script_2833(ACTIVE.getItemId());
+		} else {
+			ACTIVE.setScriptCallOnConfigChange(-1, "");
+			ACTIVE.setHidden(true);
+		}
+		if (ACTIVE.setChild(widget2, arg3)) {
+			if (ACTIVE.getItemId() != null) {
+				ACTIVE.setHidden(false);
+				script_2833(ACTIVE.getItemId());
+			} else {
+				ACTIVE.setScriptCallOnConfigChange(-1, "");
+				ACTIVE.setHidden(true);
+			}
+		}
+	}
+	return;
+}

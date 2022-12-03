@@ -1,0 +1,10 @@
+void script_2495() {
+	int int0;
+	int0 = 1;
+	VARC[837] = VARPBIT[6350];
+	script_2496();
+	if (VARC[837] > 0 && VARC[837] <= 9) {
+		script_2500(datamap('i', 'I', (DataMap)2400, VARC[837]));
+	}
+	return;
+}

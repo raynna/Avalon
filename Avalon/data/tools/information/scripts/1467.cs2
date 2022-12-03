@@ -1,0 +1,48 @@
+int, int script_1467(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	if (arg0 == 0) {
+		int1, int2 = script_1467(9);
+		int1 = int2;
+		int3, int2 = script_1467(1);
+		return int1, int2;
+	}
+	if (arg0 == 1) {
+		return 0, 516;
+	}
+	int1 = 0;
+	int2 = VARPBIT[4885];
+	if (arg0 >= 3) {
+		int1 = int2;
+		int2 = int1 + VARPBIT[4886];
+	}
+	if (arg0 >= 4) {
+		int1 = int2;
+		int2 = int1 + VARPBIT[4887];
+	}
+	if (arg0 >= 5) {
+		int1 = int2;
+		int2 = int1 + VARPBIT[4888];
+	}
+	if (arg0 >= 6) {
+		int1 = int2;
+		int2 = int1 + VARPBIT[4889];
+	}
+	if (arg0 >= 7) {
+		int1 = int2;
+		int2 = int1 + VARPBIT[4890];
+	}
+	if (arg0 >= 8) {
+		int1 = int2;
+		int2 = int1 + VARPBIT[4891];
+	}
+	if (arg0 >= 9) {
+		int1 = int2;
+		int2 = int1 + VARPBIT[4892];
+	}
+	return int1, int2;
+}

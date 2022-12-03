@@ -1,0 +1,77 @@
+void script_2247() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	DataMap datamap6;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	datamap6 = (DataMap)3016;
+	if (isMember()) {
+		datamap6 = (DataMap)3015;
+	}
+	if (datamapSize(datamap6) % 5 == 0) {
+		int3 = datamapSize(datamap6) / 5 * 67;
+	} else {
+		int3 = datamapSize(datamap6) / 5 * 67 + 67;
+	}
+	widget(940, 1).clearChildren();
+	widget(940, 1).setScrollMax(5 * 60, int3);
+	while (int0 < datamapSize(datamap6)) {
+		ACTIVE.createChild(widget(940, 2), 5, int4);
+		ACTIVE.setContextMenuOption(1, getItemName(getAttributeMapValue(datamap('i', 'J', datamap6, int0), 1070)));
+		ACTIVE.setScriptCallOnClickContextMenu(2250, int4, "i");
+		int5 = int4;
+		int4 = int4 + 1;
+		ACTIVE.setSprite(2206);
+		if (getSkillActualLvl(24) < getAttributeMapValue(datamap('i', 'J', datamap6, int0), 1071)) {
+			ACTIVE.setRGB(0xFF0000);
+		}
+		ACTIVE.setSize(52, 55, 0, 0);
+		ACTIVE.setPosition(int1 * 60, int2 * 67 - 1, 0, 0);
+		ACTIVE.setHidden(true);
+		ACTIVE.createChild(widget(940, 2), 5, int4);
+		int4 = int4 + 1;
+		ACTIVE.setSprite(2205);
+		ACTIVE.setSize(48, 52, 0, 0);
+		ACTIVE.setPosition(int1 * 60 + 2, int2 * 67 + 1, 0, 0);
+		ACTIVE.setScriptCallOnMouseOver(2248, int5, "i");
+		ACTIVE.setScriptCallOnMouseExit(2249, int5, "i");
+		ACTIVE.createChild(widget(940, 2), 5, int4);
+		int4 = int4 + 1;
+		ACTIVE.setSprite(2184);
+		ACTIVE.setRGB(0xC80000);
+		ACTIVE.setSize(12, 12, 0, 0);
+		ACTIVE.setPosition(int1 * 60 + 5, int2 * 67 + 40, 0, 0);
+		ACTIVE.createChild(widget(940, 2), 4, int4);
+		int4 = int4 + 1;
+		ACTIVE.setRGB(0xE2E2A2);
+		ACTIVE.setFont(494);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setTextAlignment(1, 1, 0);
+		ACTIVE.setText(script_940(getAttributeMapValue(datamap('i', 'J', datamap6, int0), 1072)));
+		ACTIVE.setSize(31, 12, 0, 0);
+		ACTIVE.setPosition(int1 * 60 + 18, int2 * 67 + 40, 0, 0);
+		ACTIVE.createChild(widget(940, 2), 5, int4);
+		int4 = int4 + 1;
+		ACTIVE.setItem(getAttributeMapValue(datamap('i', 'J', datamap6, (int4 - 5) / 5), 1070), -1);
+		ACTIVE.setSize(25, 25, 0, 0);
+		ACTIVE.setPosition(int1 * 60 + 13, int2 * 67 + 9, 0, 0);
+		int1 = int1 + 1;
+		if (int1 >= 5) {
+			int1 = 0;
+			int2 = int2 + 1;
+		}
+		int0 = int0 + 1;
+	}
+	if (widget(940, 1).getScrollY() == 0) {
+		script_31(widget(940, 35), widget(940, 1), 792, 789, 790, 791, 773, 788);
+	}
+	return;
+}

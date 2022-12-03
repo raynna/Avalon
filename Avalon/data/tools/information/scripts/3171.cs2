@@ -1,0 +1,9 @@
+void script_3171(Widget widget0) {
+	widget0.setScriptCallOnFriendListChange(3172, widget0, "I");
+	widget0.setScriptCallOnClanListChange(3172, widget0, "I");
+	widget0.setScriptCallOnMessage(3172, widget0, "I");
+	widget0.setScriptCallOnClanChatDeltaStuff(3172, widget0, "I");
+	widget0.setScriptCallOnClanChatSettingsStuff(3172, widget0, "I");
+	script_3173(widget0);
+	return;
+}

@@ -1,0 +1,5 @@
+void script_1219(boolean boolean0, Widget widget1, Widget widget2) {
+	cs2method6017(boolean0);
+	script_1220(widget1, widget2);
+	return;
+}

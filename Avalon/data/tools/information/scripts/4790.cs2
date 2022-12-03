@@ -1,0 +1,100 @@
+int script_4790(int arg0) {
+	int int1;
+	int1 = 0;
+	switch (arg0) {
+		case 1:
+			int1 = CLANBIT[2100];
+			break;
+		case 2:
+			int1 = CLANBIT[2101];
+			break;
+		case 3:
+			int1 = CLANBIT[2102];
+			break;
+		case 4:
+			int1 = CLANBIT[2103];
+			break;
+		case 5:
+			int1 = CLANBIT[2104];
+			break;
+		case 6:
+			int1 = CLANBIT[2105];
+			break;
+		case 7:
+			int1 = CLANBIT[2106];
+			break;
+		case 8:
+			int1 = CLANBIT[2107];
+			break;
+		case 9:
+			int1 = CLANBIT[2108];
+			break;
+		case 10:
+			int1 = CLANBIT[2109];
+			break;
+		case 11:
+			int1 = CLANBIT[2110];
+			break;
+		case 12:
+			int1 = CLANBIT[2111];
+			break;
+		case 13:
+			int1 = CLANBIT[2112];
+			break;
+		case 14:
+			int1 = CLANBIT[2113];
+			break;
+		case 15:
+			int1 = CLANBIT[2114];
+			break;
+		case 16:
+			int1 = CLANBIT[2115];
+			break;
+		case 17:
+			int1 = CLANBIT[2116];
+			break;
+		case 18:
+			int1 = CLANBIT[2117];
+			break;
+		case 19:
+			int1 = CLANBIT[2118];
+			break;
+		case 20:
+			int1 = CLANBIT[2119];
+			break;
+		case 21:
+			int1 = CLANBIT[2120];
+			break;
+		case 22:
+			int1 = CLANBIT[2121];
+			break;
+		case 23:
+			int1 = CLANBIT[2122];
+			break;
+		case 24:
+			int1 = CLANBIT[2123];
+			break;
+		case 25:
+			int1 = CLANBIT[2124];
+			break;
+		case 26:
+			int1 = CLANBIT[2125];
+			break;
+		case 27:
+			int1 = CLANBIT[2126];
+			break;
+		case 28:
+			int1 = CLANBIT[2127];
+			break;
+		case 29:
+			int1 = CLANBIT[2128];
+			break;
+		case 30:
+			int1 = CLANBIT[2129];
+			break;
+		case 31:
+			int1 = CLANBIT[2130];
+			break;
+	}
+	return int1;
+}

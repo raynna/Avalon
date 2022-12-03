@@ -1,0 +1,129 @@
+void script_2568() {
+	if (ACTIVE.setChild(widget(842, 17), 0)) {
+		if (VARC[857] == 0) {
+			ACTIVE.setTrans(190);
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	if (ACTIVE.setChild(widget(842, 17), 1)) {
+		if (VARC[858] == 0) {
+			ACTIVE.setTrans(190);
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	if (ACTIVE.setChild(widget(842, 17), 2)) {
+		if (VARC[859] == 0) {
+			ACTIVE.setTrans(190);
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	if (ACTIVE.setChild(widget(842, 17), 3)) {
+		if (VARC[860] == 0) {
+			ACTIVE.setTrans(190);
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	if (ACTIVE.setChild(widget(842, 17), 4)) {
+		if (VARC[861] == 0) {
+			ACTIVE.setTrans(190);
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	if (ACTIVE.setChild(widget(842, 17), 5)) {
+		if (VARC[862] == 0) {
+			ACTIVE.setTrans(190);
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	if (ACTIVE.setChild(widget(842, 17), 6)) {
+		if (VARC[863] == 0) {
+			ACTIVE.setTrans(190);
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	if (ACTIVE.setChild(widget(842, 17), 7)) {
+		if (VARC[864] == 0) {
+			ACTIVE.setTrans(190);
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	if (ACTIVE.setChild(widget(842, 17), 8)) {
+		if (VARC[865] == 0) {
+			ACTIVE.setTrans(190);
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	if (ACTIVE.setChild(widget(842, 17), 9)) {
+		if (VARC[866] == 0) {
+			ACTIVE.setTrans(190);
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	if (ACTIVE.setChild(widget(842, 17), 10)) {
+		if (VARC[867] == 0) {
+			ACTIVE.setTrans(190);
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	if (ACTIVE.setChild(widget(842, 17), 11)) {
+		if (VARC[868] == 0) {
+			ACTIVE.setTrans(190);
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	if (ACTIVE.setChild(widget(842, 17), 12)) {
+		if (VARC[869] == 0) {
+			ACTIVE.setTrans(190);
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	if (ACTIVE.setChild(widget(842, 17), 13)) {
+		if (VARC[870] == 0) {
+			ACTIVE.setTrans(190);
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	if (ACTIVE.setChild(widget(842, 17), 14)) {
+		if (VARC[871] == 0) {
+			ACTIVE.setTrans(190);
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	if (ACTIVE.setChild(widget(842, 17), 15)) {
+		if (VARC[872] == 0) {
+			ACTIVE.setTrans(190);
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	if (ACTIVE.setChild(widget(842, 17), 16)) {
+		if (VARC[873] == 0) {
+			ACTIVE.setTrans(190);
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	if (ACTIVE.setChild(widget(842, 17), 17)) {
+		if (VARC[874] == 0) {
+			ACTIVE.setTrans(190);
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	return;
+}

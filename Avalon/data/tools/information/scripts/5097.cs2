@@ -1,0 +1,63 @@
+void script_5097() {
+	switch (VARPBIT[9539]) {
+		case 1:
+			widget(1113, 4).setText("Unable to load your clan data.");
+			widget(1113, 6).setText("Sorry!");
+			widget(1113, 7).setSprite(7532);
+			widget(1113, 8).setText("Please try again later when the system is less busy.");
+			break;
+		case 2:
+			widget(1113, 4).setText("And the winner is:");
+			widget(1113, 6).setText("<col=ff7f7f>" + "Red Team!" + "</col>");
+			widget(1113, 7).setSprite(7531);
+			if (VARPBIT[9540] == 1) {
+				widget(1113, 8).setText("Congratulations, your team won!");
+			} else if (VARPBIT[9540] == 2) {
+				widget(1113, 8).setText("Oh dear, better luck next time.");
+			} else {
+				widget(1113, 8).setText("Better luck next time to the Blue Team.");
+			}
+			break;
+		case 3:
+			widget(1113, 4).setText("And the winner is:");
+			widget(1113, 6).setText("<col=7f7fff>" + "Blue Team!" + "</col>");
+			widget(1113, 7).setSprite(7530);
+			if (VARPBIT[9540] == 2) {
+				widget(1113, 8).setText("Congratulations, your team won!");
+			} else if (VARPBIT[9540] == 1) {
+				widget(1113, 8).setText("Oh dear, better luck next time.");
+			} else {
+				widget(1113, 8).setText("Better luck next time to the Red Team.");
+			}
+			break;
+		case 5:
+			widget(1113, 4).setText("And the result is:");
+			widget(1113, 6).setText("It's a draw!");
+			widget(1113, 7).setSprite(7532);
+			widget(1113, 8).setText("Well done, everyone!");
+			break;
+		case 4:
+			widget(1113, 4).setText("And the winner is:");
+			if (length(STRING[129]) > 0) {
+				widget(1113, 6).setText(STRING[129]);
+			} else {
+				widget(1113, 6).setText("... missing!");
+			}
+			widget(1113, 7).setSprite(7532);
+			widget(1113, 8).setText("Better luck next time to everyone else.");
+			break;
+		case 6:
+			widget(1113, 4).setText("And the winner is:");
+			widget(1113, 6).setText("YOU!");
+			widget(1113, 7).setSprite(7532);
+			widget(1113, 8).setText("Congratulations!");
+			break;
+		default:
+			widget(1113, 4).setText("");
+			widget(1113, 6).setText("");
+			widget(1113, 7).setSprite(null);
+			widget(1113, 8).setText("");
+			break;
+	}
+	return;
+}

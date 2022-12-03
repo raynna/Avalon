@@ -1,0 +1,37 @@
+void script_2020(int arg0, string string1, int arg2, Widget widget3) {
+	widget3.clearChildren();
+	ACTIVE.createChild(widget3, 5, 0);
+	ACTIVE.setSize(10, 0, 1, 1);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setSprite(3859);
+	ACTIVE.createChild(widget3, 5, 1);
+	ACTIVE.setSize(6, 0, 0, 1);
+	ACTIVE.setPosition(0, 0, 0, 1);
+	ACTIVE.setSprite(3857);
+	ACTIVE.createChild(widget3, 5, 2);
+	ACTIVE.setSize(6, 0, 0, 1);
+	ACTIVE.setPosition(0, 0, 2, 1);
+	ACTIVE.setSprite(3858);
+	ACTIVE.createChild(widget3, 4, 3);
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setFont(494);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setRGB(0xFF981F);
+	ACTIVE.setTextAntiMacro(true);
+	ACTIVE.setText(string1);
+	widget3.setSize(arg2, 26, 0, 0);
+	widget3.setIsHidden(false);
+	widget3.setScriptCallOnMouseEntered(2021, CTX_WIDGET, true, "I1");
+	widget3.setScriptCallOnMouseExit(2021, CTX_WIDGET, false, "I1");
+	if (arg0 == -1) {
+		widget3.setNoOptions();
+		widget3.cs2method2310(string1);
+		widget3.setScriptCallOnMousePressed(2022, 1, arg0, "ii");
+	} else {
+		widget3.setContextMenuOption(1, string1);
+		widget3.cs2method2310("");
+		widget3.setScriptCallOnClickContextMenu(2022, CTX_MENU_OPTION, arg0, "ii");
+	}
+	return;
+}

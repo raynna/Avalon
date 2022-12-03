@@ -1,0 +1,10 @@
+void script_3964() {
+	if (VARC[1414] == 1) {
+		widget(596, 39).setText("Username:");
+	} else if (VARC[1414] == 2) {
+		widget(596, 39).setText("Email:");
+	} else {
+		widget(596, 39).setText("Login:");
+	}
+	return;
+}

@@ -1,0 +1,19 @@
+void script_4277() {
+	int int0;
+	string str0;
+	string str1;
+	int0 = VARPBIT[9186] * 6 / 10;
+	str0 = str(int0 / 60);
+	str1 = str(int0 % 60);
+	if (length(str1) < 2) {
+		str1 = concat("0", str1);
+	}
+	if (VARPBIT[9187] == 0) {
+		widget(1088, 12).setText("Match Starts In:");
+		widget(1088, 13).setText(str0 + ":" + str1);
+	} else {
+		widget(1088, 12).setText("Time Remaining:");
+		widget(1088, 13).setText(str0 + ":" + str1);
+	}
+	return;
+}

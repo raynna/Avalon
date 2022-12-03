@@ -1,0 +1,8 @@
+void script_3633(Widget widget0) {
+	if (ACTIVE.setChild(widget0)) {
+		widget0.setRGB(0x88FF88);
+		widget0.setSize(31, 31, 0, 0);
+		widget0.setPosition(ACTIVE.getAttribute(1101) - 2, ACTIVE.getAttribute(1102) - 2, 0, 0);
+	}
+	return;
+}

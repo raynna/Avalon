@@ -1,0 +1,7 @@
+void script_4215() {
+	if (ACTIVE.setChild(widget(1071, 0))) {
+		ACTIVE.setSelfFull();
+		ACTIVE.setAnimation(41);
+	}
+	return;
+}

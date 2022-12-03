@@ -1,0 +1,32 @@
+void script_172() {
+	VARC[12] = 0;
+	VARC[13] = 0;
+	VARC[14] = 0;
+	VARC[15] = 0;
+	VARC[16] = 0;
+	VARC[17] = 0;
+	VARC[18] = 0;
+	VARC[19] = 0;
+	VARC[20] = 0;
+	VARC[21] = 0;
+	VARC[22] = 0;
+	VARC[23] = 0;
+	VARC[24] = 0;
+	VARC[25] = 0;
+	VARC[26] = 0;
+	VARC[27] = 0;
+	VARC[28] = 0;
+	VARC[29] = 0;
+	VARC[30] = 0;
+	VARC[31] = 0;
+	VARC[32] = 0;
+	VARC[33] = 0;
+	VARC[34] = 0;
+	VARC[35] = 0;
+	VARC[36] = 0;
+	VARC[37] = 0;
+	VARC[38] = 0;
+	VARC[39] = 0;
+	VARC[212] = 0;
+	return;
+}

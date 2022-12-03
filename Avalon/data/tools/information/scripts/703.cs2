@@ -1,0 +1,13 @@
+void script_703(Widget widget0, int arg1, Widget widget2, int arg3) {
+	int int4;
+	int int5;
+	int4 = 0;
+	int5 = 0;
+	if (ACTIVE.setChild(widget0, arg1) && _ACTIVE.setChild(widget2, arg3)) {
+		int4 = ACTIVE.getX();
+		int5 = ACTIVE.getY();
+		ACTIVE.setPosition(_ACTIVE.getX(), _ACTIVE.getY(), 0, 0);
+		_ACTIVE.setPosition(int4, int5, 0, 0);
+	}
+	return;
+}

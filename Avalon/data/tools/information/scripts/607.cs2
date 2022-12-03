@@ -1,0 +1,16 @@
+void script_607() {
+	int int0;
+	if (VARP[1109] == -1) {
+		VARC[85] = 1;
+		return;
+	}
+	int0 = VARP[1114];
+	if (int0 < 0) {
+		VARC[85] = 1;
+	} else {
+		VARC[85] = VARP[1114];
+	}
+	widget(105, 153).setText(formatNumber(VARC[85], 1) + " gp");
+	script_609();
+	return;
+}

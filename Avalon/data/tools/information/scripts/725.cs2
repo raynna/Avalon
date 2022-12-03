@@ -1,0 +1,5 @@
+void script_725(Widget widget0, Widget widget1) {
+	VARC[199] = -1;
+	widget0.setScriptCallOnGlobalConfigChange(726, widget0, widget1, 199, 213, "IIY");
+	return;
+}

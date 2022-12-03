@@ -1,0 +1,41 @@
+int script_5089(DataMap arg0) {
+	switch (arg0) {
+		case (DataMap)3922:
+			return VARPBIT[9537];
+		case (DataMap)3923:
+			return VARPBIT[9533];
+		case (DataMap)3924:
+			return VARPBIT[9534];
+		case (DataMap)3939:
+			return VARPBIT[9532];
+		case (DataMap)3925:
+			return VARPBIT[9520];
+		case (DataMap)3926:
+			return VARPBIT[9521];
+		case (DataMap)3927:
+			return VARPBIT[9522];
+		case (DataMap)3929:
+			return VARPBIT[9523];
+		case (DataMap)3931:
+			return VARPBIT[9524];
+		case (DataMap)3932:
+			return VARPBIT[9525];
+		case (DataMap)3933:
+			return VARPBIT[9526];
+		case (DataMap)3934:
+			return VARPBIT[9527];
+		case (DataMap)3935:
+			return VARPBIT[9528];
+		case (DataMap)3936:
+			return VARPBIT[9529];
+		case (DataMap)3937:
+			return VARPBIT[9530];
+		case (DataMap)3938:
+			return VARPBIT[9531];
+		case (DataMap)3941:
+			return VARPBIT[9535];
+		case (DataMap)3942:
+			return VARPBIT[9536];
+	}
+	return 0;
+}

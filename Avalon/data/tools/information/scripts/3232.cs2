@@ -1,0 +1,120 @@
+void script_3232(int arg0, int arg1, string string2, int arg3, Sprite sprite4, int arg5, int arg6, string string7, int arg8, string string9, int arg10) {
+	Widget widget8;
+	Widget widget9;
+	Widget widget10;
+	Widget widget11;
+	Widget widget12;
+	Widget widget13;
+	Widget widget14;
+	Widget widget15;
+	Widget widget16;
+	Widget widget17;
+	Widget widget18;
+	Widget widget19;
+	int int20;
+	int int21;
+	int int22;
+	widget8 = widget(596, 7);
+	widget9 = widget(596, 8);
+	widget10 = widget(596, 14);
+	widget11 = widget(596, 13);
+	widget12 = widget(596, 15);
+	widget13 = widget(596, 63);
+	widget14 = widget(596, 16);
+	widget15 = widget(596, 17);
+	widget16 = widget(596, 18);
+	widget17 = widget(596, 65);
+	widget18 = widget(596, 66);
+	widget19 = widget(596, 67);
+	if (hasSSKey()) {
+		widget8 = widget(975, 26);
+		widget9 = widget(975, 1);
+		widget10 = widget(975, 4);
+		widget11 = widget(975, 3);
+		widget12 = widget(975, 5);
+		widget13 = widget(975, 6);
+		widget14 = widget(975, 11);
+		widget15 = widget(975, 12);
+		widget16 = widget(975, 13);
+		widget17 = widget(975, 7);
+		widget18 = widget(975, 8);
+		widget19 = widget(975, 9);
+	}
+	if (!widget8.isHidden()) {
+		return;
+	}
+	if (VARC[174] != 5) {
+		VARC[1089] = VARC[174];
+	}
+	VARC[174] = 5;
+	int20 = 250;
+	if (arg5 == 1) {
+		int20 = max(250, getTextWidth(string7, 3793) + 36);
+		if (int20 % 2 > 0) {
+			int20 = int20 + 1;
+		}
+	}
+	widget9.setSize(int20, 154, 0, 0);
+	int21 = getLineCount(string2, widget10.getWidth(), 3793) * 16 + 5;
+	widget10.setSize(20, int21, 1, 0);
+	widget10.setText(string2);
+	if (arg3 == 1) {
+		VARC[1092] = getClientCycle() + 5;
+		widget11.setSprite(4107);
+		widget11.setSize(111, 111, 0, 0);
+		widget11.setPosition(0, 7, 1, 0);
+		widget10.setPosition(0, 112, 1, 0);
+		widget11.setScriptCallOnGameloop(2951, "");
+	} else {
+		VARC[1092] = 0;
+		widget11.setScriptCallOnGameloop(-1, "");
+		widget11.setSprite(sprite4);
+		widget11.setSize(76, 63, 0, 0);
+		widget11.setPosition(0, 18, 1, 0);
+		widget10.setPosition(0, 123, 1, 0);
+		int21 = int21 - 35;
+	}
+	int22 = 0;
+	int21 = widget10.getY() + int21;
+	if (arg5 == 0 && arg8 == 0) {
+		int22 = 12;
+		int21 = int21 + int22;
+		widget12.setIsHidden(true);
+		widget13.setIsHidden(true);
+	} else if (arg5 == 1 && arg8 == 0) {
+		int22 = 41;
+		int21 = int21 + int22;
+		widget12.setPosition(0, 8, 1, 2);
+		widget12.setIsHidden(false);
+		widget13.setIsHidden(true);
+		script_2955(string7, widget12, widget14, widget15, widget16, arg6);
+	} else if (arg5 == 0 && arg8 == 1) {
+		int22 = 41;
+		int21 = int21 + int22;
+		widget13.setPosition(0, 8, 1, 2);
+		widget13.setIsHidden(false);
+		widget12.setIsHidden(true);
+		script_2956(string9, widget13, widget17, widget18, widget19);
+	} else {
+		int22 = 70;
+		int21 = int21 + int22;
+		if (arg10 == 0) {
+			widget12.setPosition(0, 40, 1, 2);
+			widget13.setPosition(0, 10, 1, 2);
+		} else {
+			widget12.setPosition(0, 10, 1, 2);
+			widget13.setPosition(0, 40, 1, 2);
+		}
+		widget13.setIsHidden(false);
+		widget12.setIsHidden(false);
+		script_2955(string7, widget12, widget14, widget15, widget16, arg6);
+		script_2956(string9, widget13, widget17, widget18, widget19);
+	}
+	widget9.setSize(widget9.getWidth(), int21, 0, 0);
+	script_2952(widget12, widget13, arg0);
+	widget10.setPosition(0, int22, 1, 2);
+	widget8.setIsHidden(false);
+	widget9.setIsHidden(false);
+	widget(596, 6).setIsHidden(true);
+	return;
+}

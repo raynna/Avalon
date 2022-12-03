@@ -1,0 +1,27 @@
+void script_1182(int arg0) {
+	int int1;
+	int int2;
+	string str0;
+	string str1;
+	if (!cs2method6500()) {
+		widget(909, 14).setScriptCallOnGameloop(1181, arg0, "i");
+		return;
+	}
+	widget(909, 14).setScriptCallOnGameloop(-1, "");
+	int1 = 0;
+	str0 = "";
+	int2 = 0;
+	str1 = "";
+	int2, str0, int1, str0, int1, int1, str1 = cs2method6506(arg0);
+	if (int2 == -1) {
+		msg("Sorry, you can't join that person.");
+	} else if (setWorldHost(arg0, str1)) {
+		VARC[547] = 0;
+		script_3143(0, "Switched to game world " + str(arg0));
+		script_3062(widget(906, 171));
+	} else {
+		script_3143(1, "Sorry, we couldn't contact world " + str(arg0) + "." + "<br>" + "Please choose a different world.");
+		msg("Sorry, we couldn't contact world " + str(arg0) + ". Please choose a different world.");
+	}
+	return;
+}

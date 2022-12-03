@@ -1,0 +1,193 @@
+void script_2999() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	string str4;
+	string str5;
+	str0 = "";
+	str1 = "";
+	str2 = "";
+	str3 = "";
+	str0 = "email-register";
+	switch (cs2method6906()) {
+		case 0:
+			widget(907, 34).setSprite(2672);
+			script_3010((int, int, int, int, int, int, int)script_3011(0));
+			widget(907, 39).setText("Unregistered");
+			str2 = "You do not currently have an email address registered. Click " + "<col=0166ff>" + "<u=0166ff>" + "here" + "</u>" + "</col>" + " to register.";
+			str3 = "You do not currently have an email address registered. Click " + "<col=0296fe>" + "<u=0296fe>" + "here" + "</u>" + "</col>" + " to register.";
+			widget(907, 40).setText(str2);
+			widget(907, 40).setScriptCallOnMouseEntered(68, CTX_WIDGET, str3, "Is");
+			widget(907, 40).setScriptCallOnMouseExit(68, CTX_WIDGET, str2, "Is");
+			str1 = "set_address.ws";
+			break;
+		case 1:
+			widget(907, 34).setSprite(2672);
+			script_3010((int, int, int, int, int, int, int)script_3011(0));
+			widget(907, 39).setText("Pending Parental Confirmation");
+			str2 = "You have registered your email address. We are currently waiting for your parent to confirm their email address. Click " + "<col=0166ff>" + "<u=0166ff>" + "here" + "</u>" + "</col>" + " to submit a confirmation code.";
+			str3 = "You have registered your email address. We are currently waiting for your parent to confirm their email address. Click " + "<col=0296fe>" + "<u=0296fe>" + "here" + "</u>" + "</col>" + " to submit a confirmation code.";
+			widget(907, 40).setText(str2);
+			widget(907, 40).setScriptCallOnMouseEntered(68, CTX_WIDGET, str3, "Is");
+			widget(907, 40).setScriptCallOnMouseExit(68, CTX_WIDGET, str2, "Is");
+			str1 = "enter_code.ws";
+			break;
+		case 2:
+			widget(907, 34).setSprite(2672);
+			script_3010((int, int, int, int, int, int, int)script_3011(0));
+			widget(907, 39).setText("Pending Confirmation");
+			str2 = "Your email address is currently pending confirmation. Click " + "<col=0166ff>" + "<u=0166ff>" + "here" + "</u>" + "</col>" + " to submit a confirmation code.";
+			str3 = "Your email address is currently pending confirmation. Click " + "<col=0296fe>" + "<u=0296fe>" + "here" + "</u>" + "</col>" + " to submit a confirmation code.";
+			widget(907, 40).setText(str2);
+			widget(907, 40).setScriptCallOnMouseEntered(68, CTX_WIDGET, str3, "Is");
+			widget(907, 40).setScriptCallOnMouseExit(68, CTX_WIDGET, str2, "Is");
+			str1 = "enter_code.ws";
+			break;
+		case 3:
+			widget(907, 34).setSprite(2669);
+			script_3008((int, int, int, int, int, int, int)script_3011(0));
+			widget(907, 39).setText("Registered");
+			str2 = "Your email address is now registered. Click " + "<col=0166ff>" + "<u=0166ff>" + "here" + "</u>" + "</col>" + " to view or change your email preferences.";
+			str3 = "Your email address is now registered. Click " + "<col=0296fe>" + "<u=0296fe>" + "here" + "</u>" + "</col>" + " to view or change your email preferences.";
+			widget(907, 40).setText(str2);
+			widget(907, 40).setScriptCallOnMouseEntered(68, CTX_WIDGET, str3, "Is");
+			widget(907, 40).setScriptCallOnMouseExit(68, CTX_WIDGET, str2, "Is");
+			str1 = "change_settings.ws";
+			break;
+		case 4:
+			widget(907, 34).setSprite(2669);
+			script_3008((int, int, int, int, int, int, int)script_3011(0));
+			widget(907, 39).setText("No longer registered");
+			str2 = "Your account no longer has a registered email address. Click " + "<col=0166ff>" + "<u=0166ff>" + "here" + "</u>" + "</col>" + " to register again.";
+			str3 = "Your account no longer has a registered email address. Click " + "<col=0296fe>" + "<u=0296fe>" + "here" + "</u>" + "</col>" + " to register again.";
+			widget(907, 40).setText(str2);
+			widget(907, 40).setScriptCallOnMouseEntered(68, CTX_WIDGET, str3, "Is");
+			widget(907, 40).setScriptCallOnMouseExit(68, CTX_WIDGET, str2, "Is");
+			str1 = "set_address.ws";
+			break;
+	}
+	widget(907, 40).setScriptCallOnMousePressed(3088, str0, str1, true, "ss1");
+	script_3376(widget(907, 40));
+	int0 = getRecoveryQuestionsDate();
+	str0 = "recovery_questions";
+	if (int0 == 0) {
+		widget(907, 22).setSprite(2672);
+		script_3010((int, int, int, int, int, int, int)script_3011(1));
+		widget(907, 27).setText("Not Set");
+		str2 = "You do not have any recovery questions set. It will be more difficult to recover your password if it gets stolen or you forget it. Click " + "<col=0166ff>" + "<u=0166ff>" + "here" + "</u>" + "</col>" + " to set your recovery questions.";
+		str3 = "You do not have any recovery questions set. It will be more difficult to recover your password if it gets stolen or you forget it. Click " + "<col=0296fe>" + "<u=0296fe>" + "here" + "</u>" + "</col>" + " to set your recovery questions.";
+		widget(907, 28).setText(str2);
+		widget(907, 28).setScriptCallOnMouseEntered(68, CTX_WIDGET, str3, "Is");
+		widget(907, 28).setScriptCallOnMouseExit(68, CTX_WIDGET, str2, "Is");
+		str1 = "add_recoveries.ws";
+	} else if (int0 < getCurrentDaysSinceLaunch() + 1) {
+		widget(907, 22).setSprite(2669);
+		script_3008((int, int, int, int, int, int, int)script_3011(1));
+		widget(907, 27).setText("Set");
+		str2 = "Recovery questions last set: " + timeToStr(int0) + ". Click " + "<col=0166ff>" + "<u=0166ff>" + "here" + "</u>" + "</col>" + " to change your recovery questions.";
+		str3 = "Recovery questions last set: " + timeToStr(int0) + ". Click " + "<col=0296fe>" + "<u=0296fe>" + "here" + "</u>" + "</col>" + " to change your recovery questions.";
+		widget(907, 28).setText(str2);
+		widget(907, 28).setScriptCallOnMouseEntered(68, CTX_WIDGET, str3, "Is");
+		widget(907, 28).setScriptCallOnMouseExit(68, CTX_WIDGET, str2, "Is");
+		str1 = "add_recoveries.ws";
+	} else {
+		widget(907, 22).setSprite(2672);
+		script_3010((int, int, int, int, int, int, int)script_3011(1));
+		widget(907, 27).setText("Changed");
+		str2 = "Your new recovery questions will become active on " + timeToStr(int0) + ". If you didn't request this, cancel it and change your password immediately. Click " + "<col=0166ff>" + "<u=0166ff>" + "here" + "</u>" + "</col>" + " to cancel.";
+		str3 = "Your new recovery questions will become active on " + timeToStr(int0) + ". If you didn't request this, cancel it and change your password immediately. Click " + "<col=0296fe>" + "<u=0296fe>" + "here" + "</u>" + "</col>" + " to cancel.";
+		widget(907, 28).setText(str2);
+		widget(907, 28).setScriptCallOnMouseEntered(68, CTX_WIDGET, str3, "Is");
+		widget(907, 28).setScriptCallOnMouseExit(68, CTX_WIDGET, str2, "Is");
+		str1 = "cancel_recoveries.ws";
+	}
+	widget(907, 28).setScriptCallOnMousePressed(3088, str0, str1, true, "ss1");
+	script_3376(widget(907, 28));
+	int1 = cs2method6903();
+	if (int1 == 0) {
+		widget(907, 10).setSprite(2669);
+		script_3008((int, int, int, int, int, int, int)script_3011(2));
+		widget(907, 15).setText(str(int1) + " Unread");
+		str2 = "You have no unread messages. Click " + "<col=0166ff>" + "<u=0166ff>" + "here" + "</u>" + "</col>" + " to open your Message Centre.";
+		str3 = "You have no unread messages. Click " + "<col=0296fe>" + "<u=0296fe>" + "here" + "</u>" + "</col>" + " to open your Message Centre.";
+		widget(907, 16).setText(str2);
+		widget(907, 16).setScriptCallOnMouseEntered(68, CTX_WIDGET, str3, "Is");
+		widget(907, 16).setScriptCallOnMouseExit(68, CTX_WIDGET, str2, "Is");
+	} else {
+		widget(907, 10).setSprite(2672);
+		script_3010((int, int, int, int, int, int, int)script_3011(2));
+		widget(907, 15).setText(str(int1) + " Unread");
+		if (int1 == 1) {
+			str2 = "You have 1 unread message. Click " + "<col=0166ff>" + "<u=0166ff>" + "here" + "</u>" + "</col>" + " to open your Message Centre.";
+			str3 = "You have 1 unread message. Click " + "<col=0296fe>" + "<u=0296fe>" + "here" + "</u>" + "</col>" + " to open your Message Centre.";
+		} else {
+			str2 = "You have " + str(int1) + " unread messages. Click " + "<col=0166ff>" + "<u=0166ff>" + "here" + "</u>" + "</col>" + " to open your Message Centre.";
+			str3 = "You have " + str(int1) + " unread messages. Click " + "<col=0296fe>" + "<u=0296fe>" + "here" + "</u>" + "</col>" + " to open your Message Centre.";
+		}
+		widget(907, 16).setText(str2);
+		widget(907, 16).setScriptCallOnMouseEntered(68, CTX_WIDGET, str3, "Is");
+		widget(907, 16).setScriptCallOnMouseExit(68, CTX_WIDGET, str2, "Is");
+	}
+	script_3376(widget(907, 16));
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int3, int4, int2 = cs2method6901();
+	str4 = minutesToUtcTime(int3);
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	str5 = "";
+	if (int2 == 1) {
+		widget(907, 48).setSprite(2669);
+		script_3008((int, int, int, int, int, int, int)script_3011(3));
+		widget(907, 53).setText("Subscription Active");
+		str2 = "You have an active subscription. Click " + "<col=0166ff>" + "<u=0166ff>" + "here" + "</u>" + "</col>" + " to view your account information. Make sure you play on a members' world to enjoy all of your members' benefits.";
+		str3 = "You have an active subscription. Click " + "<col=0296fe>" + "<u=0296fe>" + "here" + "</u>" + "</col>" + " to view your account information. Make sure you play on a members' world to enjoy all of your members' benefits.";
+		widget(907, 54).setText(str2);
+		widget(907, 54).setScriptCallOnMouseEntered(68, CTX_WIDGET, str3, "Is");
+		widget(907, 54).setScriptCallOnMouseExit(68, CTX_WIDGET, str2, "Is");
+		str0 = "billing_core";
+		str1 = "userdetails.ws";
+	} else if (isSiteSettingsMembers()) {
+		int5 = int4 / 1440;
+		int6 = int4 % 1440 / 60;
+		int7 = int4 % 60;
+		if (int5 + int6 + int7 != 0) {
+			str5 = " (in " + script_4582(int5, int6, int7) + ")";
+		}
+		widget(907, 48).setSprite(2669);
+		script_3008((int, int, int, int, int, int, int)script_3011(3));
+		widget(907, 53).setText("Expires " + str4);
+		str2 = "Your membership will expire on " + str4 + str5 + ". Renew now to avoid losing member status. Click " + "<col=0166ff>" + "<u=0166ff>" + "here" + "</u>" + "</col>" + " to renew.";
+		str3 = "Your membership will expire on " + str4 + str5 + ". Renew now to avoid losing member status. Click " + "<col=0296fe>" + "<u=0296fe>" + "here" + "</u>" + "</col>" + " to renew.";
+		widget(907, 54).setText(str2);
+		widget(907, 54).setScriptCallOnMouseEntered(68, CTX_WIDGET, str3, "Is");
+		widget(907, 54).setScriptCallOnMouseExit(68, CTX_WIDGET, str2, "Is");
+		str0 = "dob";
+		str1 = "set_members_dob.ws";
+	} else {
+		widget(907, 48).setSprite(2672);
+		script_3010((int, int, int, int, int, int, int)script_3011(3));
+		widget(907, 53).setText("Not a Member");
+		str2 = "You are not a member. Members get loads of extra benefits and features. Click " + "<col=0166ff>" + "<u=0166ff>" + "here" + "</u>" + "</col>" + " to become a member.";
+		str3 = "You are not a member. Members get loads of extra benefits and features. Click " + "<col=0296fe>" + "<u=0296fe>" + "here" + "</u>" + "</col>" + " to become a member.";
+		widget(907, 54).setText(str2);
+		widget(907, 54).setScriptCallOnMouseEntered(68, CTX_WIDGET, str3, "Is");
+		widget(907, 54).setScriptCallOnMouseExit(68, CTX_WIDGET, str2, "Is");
+		str0 = "dob";
+		str1 = "set_members_dob.ws";
+	}
+	widget(907, 54).setScriptCallOnMousePressed(3088, str0, str1, true, "ss1");
+	script_3376(widget(907, 54));
+	return;
+}

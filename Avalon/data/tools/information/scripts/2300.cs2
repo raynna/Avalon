@@ -1,0 +1,15 @@
+void script_2300(int arg0) {
+	if (arg0 != 1) {
+		return;
+	}
+	if (VARP[1397] == 0) {
+		return;
+	}
+	if (script_42(VARC[182])) {
+		VARC[182] = 0;
+	} else {
+		VARC[182] = 1;
+	}
+	script_2303();
+	return;
+}

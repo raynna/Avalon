@@ -1,0 +1,22 @@
+void script_1301(Widget widget0, Widget widget1) {
+	int int2;
+	int2 = 0;
+	if (getDisplayMode() >= 2) {
+		script_31(widget0, widget1, 883, 802, 881, 882, 641, 642);
+		while (int2 < widget0.nextChild()) {
+			if (ACTIVE.setChild(widget0, int2)) {
+				ACTIVE.setAlpha(true);
+			}
+			int2 = int2 + 1;
+		}
+	} else {
+		script_31(widget0, widget1, 792, 789, 790, 791, 773, 788);
+		while (int2 < widget0.nextChild()) {
+			if (ACTIVE.setChild(widget0, int2)) {
+				ACTIVE.setAlpha(false);
+			}
+			int2 = int2 + 1;
+		}
+	}
+	return;
+}

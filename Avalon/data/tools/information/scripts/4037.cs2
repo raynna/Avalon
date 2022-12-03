@@ -1,0 +1,240 @@
+boolean, int, int script_4037(int arg0) {
+	int int1;
+	int int2;
+	boolean boolean3;
+	int1 = 0;
+	int2 = 0;
+	boolean3 = false;
+	switch (arg0) {
+		case 1:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 2:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 3:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 4:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 5:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 6:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 7:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 8:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 9:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 10:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 11:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 12:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 13:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 14:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 15:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 16:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 17:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 18:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 19:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 20:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 21:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 22:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 23:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 24:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+		case 25:
+			boolean3 = isBitFlagged(VARP[1968], arg0);
+			break;
+	}
+	switch (arg0) {
+		case 1:
+			int1 = VARP[1969];
+			break;
+		case 2:
+			int1 = VARP[1970];
+			break;
+		case 3:
+			int1 = VARP[1971];
+			break;
+		case 4:
+			int1 = VARP[1972];
+			break;
+		case 5:
+			int1 = VARP[1973];
+			break;
+		case 6:
+			int1 = VARP[1974];
+			break;
+		case 7:
+			int1 = VARP[1975];
+			break;
+		case 8:
+			int1 = VARP[1976];
+			break;
+		case 9:
+			int1 = VARP[1977];
+			break;
+		case 10:
+			int1 = VARP[1978];
+			break;
+		case 11:
+			int1 = VARP[1979];
+			break;
+		case 12:
+			int1 = VARP[1980];
+			break;
+		case 13:
+			int1 = VARP[1981];
+			break;
+		case 14:
+			int1 = VARP[1982];
+			break;
+		case 15:
+			int1 = VARP[1983];
+			break;
+		case 16:
+			int1 = VARP[1984];
+			break;
+		case 17:
+			int1 = VARP[1985];
+			break;
+		case 18:
+			int1 = VARP[1986];
+			break;
+		case 19:
+			int1 = VARP[1987];
+			break;
+		case 20:
+			int1 = VARP[1988];
+			break;
+		case 21:
+			int1 = VARP[1989];
+			break;
+		case 22:
+			int1 = VARP[1990];
+			break;
+		case 23:
+			int1 = VARP[1991];
+			break;
+		case 24:
+			int1 = VARP[1992];
+			break;
+		case 25:
+			int1 = VARP[1993];
+			break;
+	}
+	switch (arg0) {
+		case 1:
+			int2 = VARP[1994];
+			break;
+		case 2:
+			int2 = VARP[1995];
+			break;
+		case 3:
+			int2 = VARP[1996];
+			break;
+		case 4:
+			int2 = VARP[1997];
+			break;
+		case 5:
+			int2 = VARP[1998];
+			break;
+		case 6:
+			int2 = VARP[1999];
+			break;
+		case 7:
+			int2 = VARP[2000];
+			break;
+		case 8:
+			int2 = VARP[2001];
+			break;
+		case 9:
+			int2 = VARP[2002];
+			break;
+		case 10:
+			int2 = VARP[2003];
+			break;
+		case 11:
+			int2 = VARP[2004];
+			break;
+		case 12:
+			int2 = VARP[2005];
+			break;
+		case 13:
+			int2 = VARP[2006];
+			break;
+		case 14:
+			int2 = VARP[2007];
+			break;
+		case 15:
+			int2 = VARP[2008];
+			break;
+		case 16:
+			int2 = VARP[2009];
+			break;
+		case 17:
+			int2 = VARP[2010];
+			break;
+		case 18:
+			int2 = VARP[2011];
+			break;
+		case 19:
+			int2 = VARP[2012];
+			break;
+		case 20:
+			int2 = VARP[2013];
+			break;
+		case 21:
+			int2 = VARP[2014];
+			break;
+		case 22:
+			int2 = VARP[2015];
+			break;
+		case 23:
+			int2 = VARP[2016];
+			break;
+		case 24:
+			int2 = VARP[2017];
+			break;
+		case 25:
+			int2 = VARP[2018];
+			break;
+	}
+	return boolean3, int1, int2;
+}

@@ -1,0 +1,7 @@
+void script_3479(Widget widget0, Widget widget1, Widget widget2, boolean boolean3) {
+	widget1.setIsHidden(true);
+	widget2.setIsHidden(true);
+	playSoundEffect(2871, 1, 0);
+	widget0.setScriptCallOnGameloop(3480, widget0, widget1, widget2, boolean3, getClientCycle(), "III1i");
+	return;
+}

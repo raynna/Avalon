@@ -1,0 +1,68 @@
+void script_1367() {
+	widget(58, 0).setText("Zamorak = " + str(VARPBIT[155]));
+	widget(58, 1).setText(str(VARPBIT[145]) + " = Saradomin");
+	widget(58, 6).setText(str(VARP[380]) + " Min");
+	if (VARPBIT[136] == 0) {
+		widget(58, 9).setText("Health: " + str(VARPBIT[136]) + "%");
+		widget(58, 9).setRGB(0xFF0000);
+	} else {
+		widget(58, 9).setText("Health " + str(VARPBIT[136]) + "%");
+		widget(58, 9).setRGB(0x00FF00);
+	}
+	if (VARPBIT[143] == 0) {
+		widget(58, 2).setText("Safe");
+		widget(58, 2).setRGB(0x00FF00);
+	} else if (VARPBIT[143] == 1) {
+		widget(58, 2).setText("Taken");
+		widget(58, 2).setRGB(0xFF0000);
+	} else if (VARPBIT[143] == 2) {
+		widget(58, 2).setText("Dropped");
+		widget(58, 2).setRGB(0xFFFF00);
+	}
+	if (VARPBIT[153] == 0) {
+		widget(58, 3).setText("Safe");
+		widget(58, 3).setRGB(0x00FF00);
+	} else if (VARPBIT[153] == 1) {
+		widget(58, 3).setText("Taken");
+		widget(58, 3).setRGB(0xFF0000);
+	} else if (VARPBIT[153] == 2) {
+		widget(58, 3).setText("Dropped");
+		widget(58, 3).setRGB(0xFFFF00);
+	}
+	if (VARPBIT[137] == 1) {
+		widget(58, 10).setText("Unlocked");
+		widget(58, 10).setRGB(0xFF0000);
+	} else {
+		widget(58, 10).setText("Locked");
+		widget(58, 10).setRGB(0x00FF00);
+	}
+	if (VARPBIT[138] == 1) {
+		widget(58, 11).setText("Cleared");
+		widget(58, 11).setRGB(0xFF0000);
+	} else {
+		widget(58, 11).setText("Collapsed");
+		widget(58, 11).setRGB(0x00FF00);
+	}
+	if (VARPBIT[139] == 1) {
+		widget(58, 12).setText("Cleared");
+		widget(58, 12).setRGB(0xFF0000);
+	} else {
+		widget(58, 12).setText("Collapsed");
+		widget(58, 12).setRGB(0x00FF00);
+	}
+	if (VARPBIT[140] == 1) {
+		widget(58, 13).setText("Destroyed");
+		widget(58, 13).setRGB(0xFF0000);
+	} else {
+		widget(58, 13).setText("Operational");
+		widget(58, 13).setRGB(0x00FF00);
+	}
+	widget(58, 4).setItem(18748, -1);
+	widget(58, 5).setItem(18749, -1);
+	widget(58, 14).setItem(18750, -1);
+	widget(58, 15).setItem(18751, -1);
+	widget(58, 16).setItem(18752, -1);
+	widget(58, 17).setItem(18753, -1);
+	widget(58, 18).setItem(18754, -1);
+	return;
+}

@@ -1,0 +1,11 @@
+void script_3183() {
+	if (length(STRING[277]) <= 0) {
+		return;
+	}
+	STRING[279] = STRING[277];
+	script_3180();
+	if (length(STRING[279]) > 0) {
+		script_3190();
+	}
+	return;
+}

@@ -1,0 +1,14 @@
+void script_4325(int arg0, Widget widget1, int arg2) {
+	int int3;
+	int3 = 0;
+	while (int3 < arg2) {
+		if (ACTIVE.setChild(widget1, int3)) {
+			ACTIVE.setSprite(6036);
+		}
+		int3 = int3 + 1;
+	}
+	if (ACTIVE.setChild(widget1, arg0)) {
+		ACTIVE.setSprite(6039);
+	}
+	return;
+}

@@ -1,0 +1,4 @@
+[05 februari 2020 at 10:42:41 PST] - jsonacc: 10k
+[05 februari 2020 at 10:42:47 PST] - jsonacc: 5
+[05 februari 2020 at 10:43:02 PST] - jsonacc: see
+[05 februari 2020 at 10:43:03 PST] - jsonacc: now its double

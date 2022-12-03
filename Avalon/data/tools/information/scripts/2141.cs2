@@ -1,0 +1,29 @@
+void script_2141() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	string str0;
+	widget(864, 7).clearChildren();
+	if (VARP[1469] == -1) {
+		return;
+	}
+	int0 = 0;
+	int1 = 10;
+	int2 = 0;
+	int3 = 0;
+	str0 = "";
+	while (int2 != -1) {
+		int2, str0 = script_942(int3);
+		if (int2 == 1) {
+			int1 = int1 + script_2142(str0, int0, int1, int3);
+			int0 = int0 + 1;
+		}
+		int3 = int3 + 1;
+	}
+	widget(864, 7).setScrollMax(296, int1);
+	if (int1 > 240) {
+		script_31(widget(864, 8), widget(864, 7), 798, 795, 796, 797, 793, 794);
+	}
+	return;
+}

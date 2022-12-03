@@ -1,0 +1,6 @@
+void script_3426(Widget widget0) {
+	string str0;
+	str0 = datamap('I', 's', (DataMap)3063, widget0);
+	widget(60, 92).setText(str0);
+	return;
+}

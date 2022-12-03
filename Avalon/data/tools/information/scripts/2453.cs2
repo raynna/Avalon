@@ -1,0 +1,97 @@
+Color script_2453(int arg0) {
+	int int1;
+	int1 = 16777215;
+	switch (arg0) {
+		case 0:
+			int1 = script_2454(VARPBIT[6316]);
+			break;
+		case 1:
+			int1 = script_2454(VARPBIT[6317]);
+			break;
+		case 2:
+			int1 = script_2454(VARPBIT[6318]);
+			break;
+		case 3:
+			int1 = script_2454(VARPBIT[6319]);
+			break;
+		case 4:
+			int1 = script_2454(VARPBIT[6320]);
+			break;
+		case 5:
+			int1 = script_2454(VARPBIT[6321]);
+			break;
+		case 6:
+			int1 = script_2454(VARPBIT[6322]);
+			break;
+		case 7:
+			int1 = script_2454(VARPBIT[6323]);
+			break;
+		case 8:
+			int1 = script_2454(VARPBIT[6324]);
+			break;
+		case 9:
+			int1 = script_2454(VARPBIT[6325]);
+			break;
+		case 10:
+			int1 = script_2454(VARPBIT[6326]);
+			break;
+		case 11:
+			int1 = script_2454(VARPBIT[6327]);
+			break;
+		case 12:
+			int1 = script_2454(VARPBIT[6328]);
+			break;
+		case 13:
+			int1 = script_2454(VARPBIT[6329]);
+			break;
+		case 14:
+			int1 = script_2454(VARPBIT[6330]);
+			break;
+		case 15:
+			int1 = script_2454(VARPBIT[6331]);
+			break;
+		case 16:
+			int1 = script_2454(VARPBIT[6332]);
+			break;
+		case 17:
+			int1 = script_2454(VARPBIT[6333]);
+			break;
+		case 18:
+			int1 = script_2454(VARPBIT[6334]);
+			break;
+		case 19:
+			int1 = script_2454(VARPBIT[6335]);
+			break;
+		case 20:
+			int1 = script_2454(VARPBIT[6336]);
+			break;
+		case 21:
+			int1 = script_2454(VARPBIT[6337]);
+			break;
+		case 22:
+			int1 = script_2454(VARPBIT[6338]);
+			break;
+		case 23:
+			int1 = script_2454(VARPBIT[6339]);
+			break;
+		case 24:
+			int1 = script_2454(VARPBIT[6340]);
+			break;
+		case 25:
+			int1 = script_2454(VARPBIT[6341]);
+			break;
+		case 26:
+			int1 = script_2454(VARPBIT[6342]);
+			break;
+		case 27:
+			int1 = script_2454(VARPBIT[6343]);
+			break;
+		case 28:
+			int1 = script_2454(VARPBIT[6344]);
+			break;
+		case 29:
+			int1 = script_2454(VARPBIT[6345]);
+			break;
+	}
+	return color(int1);
+}

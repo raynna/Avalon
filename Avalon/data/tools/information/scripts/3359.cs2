@@ -1,0 +1,25 @@
+int, string, int script_3359() {
+	switch (VARP[448]) {
+		case 17945:
+			return 3, "Snaring Wave (Tier 1)", 18047;
+		case 17946:
+			return 13, "Snaring Wave (Tier 2)", 18048;
+		case 17947:
+			return 23, "Snaring Wave (Tier 3)", 18049;
+		case 17948:
+			return 33, "Snaring Wave (Tier 4)", 18050;
+		case 17949:
+			return 43, "Snaring Wave (Tier 5)", 18051;
+		case 17950:
+			return 53, "Snaring Wave (Tier 6)", 18052;
+		case 17951:
+			return 63, "Snaring Wave (Tier 7)", 18053;
+		case 17952:
+			return 73, "Snaring Wave (Tier 8)", 18054;
+		case 17953:
+			return 83, "Snaring Wave (Tier 9)", 18055;
+		case 17954:
+			return 93, "Snaring Wave (Tier 10)", 18056;
+	}
+	return 3, "Snaring Wave (Tier 1)", 18047;
+}

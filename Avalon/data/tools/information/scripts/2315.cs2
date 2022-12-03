@@ -1,0 +1,13 @@
+void script_2315() {
+	widget(137, 146).setVFlip(false);
+	widget(137, 75).setIsHidden(true);
+	widget(137, 74).setIsHidden(true);
+	widget(137, 76).setIsHidden(true);
+	widget(137, 68).setIsHidden(true);
+	widget(137, 131).setVFlip(false);
+	widget(137, 78).setIsHidden(true);
+	widget(137, 77).setIsHidden(true);
+	widget(137, 79).setIsHidden(true);
+	widget(137, 69).setIsHidden(true);
+	return;
+}

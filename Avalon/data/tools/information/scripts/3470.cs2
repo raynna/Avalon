@@ -1,0 +1,29 @@
+void script_3470(Widget widget0, Location location1) {
+	switch (VARC[1007]) {
+		case 1:
+			widget0.clearChildren();
+			script_2766(0x000000, 75, widget0);
+			break;
+		case 2:
+			cs2method5405(0, 5);
+			cs2method5405(1, 5);
+			cs2method5406(0, 0, script_3459(location(3785, 5706, 0), location1), 510, script_3459(location(3786, 5702, 0), location1), 715, 0);
+			cs2method5406(1, 0, script_3459(location(3791, 5711, 0), location1), 170, script_3459(location(3787, 5712, 0), location1), 170, 0);
+			cs2method5406(0, 1, script_3459(location(3824, 5704, 0), location1), 1035, script_3459(location(3831, 5711, 0), location1), 1430, 0);
+			cs2method5406(1, 1, script_3459(location(3816, 5711, 0), location1), 170, script_3459(location(3819, 5717, 0), location1), 170, 0);
+			cs2method5406(0, 2, script_3459(location(3816, 5738, 0), location1), 2095, script_3459(location(3806, 5745, 0), location1), 2095, 0);
+			cs2method5406(1, 2, script_3459(location(3807, 5726, 0), location1), 170, script_3459(location(3800, 5728, 0), location1), 170, 0);
+			cs2method5406(0, 3, script_3459(location(3786, 5736, 0), location1), 1565, script_3459(location(3779, 5729, 0), location1), 965, 0);
+			cs2method5406(1, 3, script_3459(location(3795, 5726, 0), location1), 170, script_3459(location(3790, 5724, 0), location1), 170, 0);
+			cs2method5406(0, 4, script_3459(location(3785, 5706, 0), location1), 470, script_3459(location(3787, 5698, 0), location1), 435, 0);
+			cs2method5406(1, 4, script_3459(location(3791, 5711, 0), location1), 170, script_3459(location(3792, 5708, 0), location1), 170, 0);
+			script_2768(150, widget0);
+			widget0.setScriptCallOnMinimapRelatedSetting3(3471, widget0, 1, "Ii");
+			cameraMethod5502(0, 0, 100, 700, 1, 0);
+			break;
+		default:
+			cs2method5512();
+			break;
+	}
+	return;
+}

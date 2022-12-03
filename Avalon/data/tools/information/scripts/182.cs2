@@ -1,0 +1,18 @@
+void script_182(int arg0) {
+	int int1;
+	int int2;
+	int1 = script_179(arg0);
+	int2 = 0;
+	if (int1 % 25 == 0) {
+		script_178();
+		int2 = int1 / 25;
+		if (int2 <= 1) {
+			datamap('i', 'I', (DataMap)683, arg0).setScriptCallOnGameloop(-1, "");
+		} else {
+			script_183(arg0, int1 - 1);
+		}
+	} else {
+		script_183(arg0, int1 - 1);
+	}
+	return;
+}

@@ -1,0 +1,34 @@
+[26 november 2019 at 10:30:22 PST] - ::kill phillip
+[26 november 2019 at 10:30:33 PST] - ::kill phillip
+[26 november 2019 at 10:30:44 PST] - ::healmode 
+[26 november 2019 at 10:30:47 PST] - ::kill phillip
+[26 november 2019 at 11:41:25 PST] - ::npc 2
+[26 november 2019 at 11:41:31 PST] - ::npc 1
+[26 november 2019 at 11:41:34 PST] - ::npc 3
+[26 november 2019 at 11:42:09 PST] - ::npc 9000
+[26 november 2019 at 11:42:17 PST] - ::killnpc 9000
+[26 november 2019 at 11:43:16 PST] - ::tele 0,48,54,28,46
+[26 november 2019 at 11:43:17 PST] - ::tele 0,48,54,30,46
+[26 november 2019 at 11:43:18 PST] - ::tele 0,48,54,28,44
+[26 november 2019 at 11:43:19 PST] - ::tele 0,48,54,30,43
+[26 november 2019 at 11:43:41 PST] - ::tele 0,48,55,29,4
+[26 november 2019 at 11:44:00 PST] - ::healmode 
+[26 november 2019 at 11:44:24 PST] - ::spec 
+[26 november 2019 at 11:44:45 PST] - ::spec 
+[26 november 2019 at 11:45:23 PST] - ::teleto andreas
+[26 november 2019 at 11:45:33 PST] - ::tele 0,48,55,28,1
+[26 november 2019 at 11:45:37 PST] - ::tele 0,48,54,26,62
+[26 november 2019 at 11:48:37 PST] - ::pos 
+[26 november 2019 at 11:48:39 PST] - ::tele 0,48,55,28,3
+[26 november 2019 at 11:48:42 PST] - ::pos 
+[26 november 2019 at 11:48:48 PST] - ::tele 0,48,55,28,4
+[26 november 2019 at 11:48:50 PST] - ::pos 
+[26 november 2019 at 11:49:12 PST] - ::tele 0,48,55,29,0
+[26 november 2019 at 11:51:31 PST] - ::ban phillip
+[26 november 2019 at 11:53:38 PST] - ::tele 0,48,55,28,3
+[26 november 2019 at 11:53:51 PST] - ::tele 0,48,55,28,0
+[26 november 2019 at 11:53:54 PST] - ::tele 0,48,55,28,0
+[26 november 2019 at 11:59:21 PST] - ::tele 0,46,55,50,10
+[26 november 2019 at 12:00:16 PST] - ::god 
+[26 november 2019 at 12:00:22 PST] - ::healmode 
+[26 november 2019 at 12:03:34 PST] - ::kick phillip

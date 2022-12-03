@@ -1,0 +1,69 @@
+void script_621() {
+	int int0;
+	string str0;
+	int0 = 0;
+	str0 = "null";
+	script_622();
+	if (VARP[1112] == -1 || getGENotStarted(VARP[1112]) && VARP[1113] == -1) {
+		script_41(widget(105, 210));
+		widget(105, 17).setIsHidden(false);
+		script_628();
+		widget(105, 197).setScriptCallOnItemContainerUpdate(-1, "");
+		VARC[83] = 0;
+		VARC[82] = 0;
+	} else {
+		while (int0 < 6) {
+			script_41(script_626(int0));
+			int0 = int0 + 1;
+		}
+		if (!getGENotStarted(VARP[1112])) {
+			widget(105, 127).setIsHidden(false);
+			widget(105, 197).setIsHidden(false);
+			script_594(getGEIsSelling(VARP[1112]), getGEItem(VARP[1112]), getGEItemAmt(VARP[1112]), getGEItemPrice(VARP[1112]));
+			script_593(VARP[1112]);
+			if (getGEIsSelling(VARP[1112]) == 0) {
+				str0 = "Maximum total cost of purchase";
+			} else {
+				str0 = "Minimum total value of sale";
+			}
+			widget(105, 185).setScriptCallOnMouseOver(649, widget(105, 185), widget(105, 210), str0, 25, 300, "IIsii");
+			str0 = formatNumber(getGEItemAmt(VARP[1112]) * getGEItemPrice(VARP[1112]), 1);
+			widget(105, 185).setText(str0 + " gp");
+		} else {
+			widget(105, 127).setIsHidden(false);
+			widget(105, 154).setIsHidden(false);
+			if (VARP[1113] == 0) {
+				widget(105, 188).setIsHidden(false);
+				if (VARP[1109] != -1) {
+					widget(105, 191).setIsHidden(true);
+					widget(105, 192).setIsHidden(true);
+				} else {
+					widget(105, 191).setIsHidden(false);
+					widget(105, 192).setIsHidden(false);
+				}
+				str0 = "Maximum total cost of purchase";
+			} else {
+				widget(105, 193).setIsHidden(false);
+				if (VARP[1109] != -1) {
+					widget(105, 195).setIsHidden(true);
+				} else {
+					widget(105, 195).setIsHidden(false);
+				}
+				str0 = "Minimum total value of sale";
+			}
+			widget(105, 185).setScriptCallOnMouseOver(649, widget(105, 185), widget(105, 210), str0, 25, 300, "IIsii");
+			if (VARP[1111] > 0) {
+				if (VARP[1110] > 2147483647 / VARP[1111]) {
+					widget(105, 185).setText("Too high!");
+				} else {
+					str0 = formatNumber(VARP[1110] * VARP[1111], 1);
+					widget(105, 185).setText(str0 + " gp");
+				}
+			} else {
+				widget(105, 185).setText("0 gp");
+			}
+			script_594(VARP[1113], (Item)VARP[1109], VARP[1110], VARP[1111]);
+		}
+	}
+	return;
+}

@@ -1,0 +1,5 @@
+void script_3412(Widget widget0, Widget widget1) {
+	widget0.setText("High-risk Wilderness World");
+	widget1.setText("Warning: This is a High-risk Wilderness world." + "<br>" + "<br>" + "While you are in the Wilderness on this world, you will not be permitted to use the Protect Item prayer or curse, so you may lose ALL your items when you die." + "<br>" + "<br>" + "You have been warned!");
+	return;
+}

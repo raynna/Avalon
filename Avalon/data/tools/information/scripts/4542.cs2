@@ -1,0 +1,12 @@
+void script_4542(int arg0, Widget widget1, Widget widget2) {
+	int int3;
+	arg0 = min(100, arg0);
+	arg0 = max(0, arg0);
+	if (widget1 == null) {
+		return;
+	}
+	int3 = arg0 * 16384 / 100;
+	widget1.setSize(int3, widget1.getHeight(), 2, 0);
+	script_4212(widget2, str(arg0) + "%", 3793, 0xD5D9D3, 0x000000);
+	return;
+}

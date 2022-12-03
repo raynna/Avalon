@@ -1,0 +1,8 @@
+void script_2418(Widget widget0) {
+	if (VARC[805] == 6) {
+		widget0.setContextMenuOption(1, "Fix");
+	} else {
+		widget0.setContextMenuOption(1, "Inspect");
+	}
+	return;
+}

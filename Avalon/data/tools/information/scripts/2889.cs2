@@ -1,0 +1,26 @@
+void script_2889() {
+	NpcDef npcdef0;
+	int int1;
+	int int2;
+	npcdef0 = datamap('i', 'n', (DataMap)927, VARPBIT[7099]);
+	int1 = -1;
+	int2 = -1;
+	if (npcdef0 != null) {
+		if (getNpcAttribute((int)npcdef0, 956) != null) {
+			widget(476, 45).setModel(datamap('n', 'm', (DataMap)934, getNpcAttribute((int)npcdef0, 956)));
+			widget(476, 45).setAnimation(datamap('n', 'A', (DataMap)935, getNpcAttribute((int)npcdef0, 956)));
+			widget(476, 49).setSprite(datamap('n', 'd', (DataMap)932, getNpcAttribute((int)npcdef0, 956)));
+			widget(476, 52).setText(datamap('n', 's', (DataMap)930, getNpcAttribute((int)npcdef0, 956)));
+		}
+		if (getNpcAttribute((int)npcdef0, 957) != null) {
+			widget(476, 46).setModel(datamap('n', 'm', (DataMap)934, getNpcAttribute((int)npcdef0, 957)));
+			widget(476, 46).setAnimation(datamap('n', 'A', (DataMap)935, getNpcAttribute((int)npcdef0, 957)));
+			widget(476, 50).setSprite(datamap('n', 'd', (DataMap)932, getNpcAttribute((int)npcdef0, 957)));
+			widget(476, 53).setText(datamap('n', 's', (DataMap)930, getNpcAttribute((int)npcdef0, 957)));
+		}
+		widget(476, 48).setSprite(datamap('n', 'd', (DataMap)933, npcdef0));
+		widget(476, 44).setModel(datamap('n', 'm', (DataMap)934, npcdef0));
+		widget(476, 44).setAnimation(datamap('n', 'A', (DataMap)935, npcdef0));
+	}
+	return;
+}

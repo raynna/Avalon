@@ -1,0 +1,22 @@
+void script_249() {
+	VARC[799] = VARC[799] + 1;
+	if (VARC[799] >= 30) {
+		VARC[799] = 0;
+		if (VARC[798] == 1) {
+			VARC[798] = 0;
+		} else {
+			VARC[798] = 1;
+		}
+	}
+	if (VARC[798] == 1) {
+		widget(594, 53).setText(escape(STRING[24]) + "<col=ffff00>" + " ");
+	} else {
+		widget(594, 53).setText(escape(STRING[24]) + "<col=ffff00>" + "|");
+	}
+	if (compare(STRING[24], "") == 0) {
+		widget(594, 58).setRGB(0xBBBBBB);
+	} else {
+		widget(594, 58).setRGB(0xFFFFFF);
+	}
+	return;
+}

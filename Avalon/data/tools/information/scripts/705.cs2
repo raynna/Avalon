@@ -1,0 +1,32 @@
+void script_705(int arg0, int arg1) {
+	switch (arg0) {
+		case 1:
+			VARC[203] = arg1;
+			break;
+		case 2:
+			VARC[204] = arg1;
+			break;
+		case 3:
+			VARC[205] = arg1;
+			break;
+		case 4:
+			VARC[206] = arg1;
+			break;
+		case 5:
+			VARC[207] = arg1;
+			break;
+		case 6:
+			VARC[208] = arg1;
+			break;
+		case 7:
+			VARC[209] = arg1;
+			break;
+		case 8:
+			VARC[210] = arg1;
+			break;
+		case 9:
+			VARC[211] = arg1;
+			break;
+	}
+	return;
+}

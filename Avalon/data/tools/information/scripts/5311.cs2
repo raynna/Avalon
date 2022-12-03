@@ -1,0 +1,51 @@
+void script_5311(Widget widget0, Widget widget1, Widget widget2, Widget widget3) {
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int4 = 0;
+	int5 = datamapSize((DataMap)5177);
+	int6 = datamapSize((DataMap)5176);
+	ARRAY0 = new int[min(int5, int6)];
+	int7 = 0;
+	while (int4 < min(int5, int6)) {
+		if (ACTIVE.setChild(widget1, int4) && length(ACTIVE.getText()) > 0) {
+			ARRAY0[int7] = int4;
+			int7 = int7 + 1;
+		}
+		int4 = int4 + 1;
+	}
+	if (int7 > 1) {
+		if (VARC[1607] == 1) {
+			script_4425(0, widget1, 0, int7 - 1);
+			VARC[1607] = -1;
+		} else {
+			script_4424(0, widget1, 0, int7 - 1);
+			VARC[1607] = 1;
+		}
+	}
+	int8 = 15;
+	int4 = 0;
+	while (int4 < int7) {
+		if (ACTIVE.setChild(widget1, ARRAY0[int4])) {
+			ACTIVE.setPosition(2, int8 * int4, 0, 0);
+			if (_ACTIVE.setChild(widget2, ARRAY0[int4])) {
+				_ACTIVE.setPosition(140, int8 * int4 + 1, 0, 0);
+			}
+			if (_ACTIVE.setChild(widget3, ARRAY0[int4])) {
+				_ACTIVE.setPosition(152, int8 * int4 + 1, 0, 0);
+			}
+			if (_ACTIVE.setChild(widget0, ARRAY0[int4])) {
+				_ACTIVE.setPosition(0, int8 * int4, 0, 0);
+				if (int4 % 2 == 0) {
+					_ACTIVE.setRGB(0x222222);
+				} else {
+					_ACTIVE.setRGB(0x111111);
+				}
+			}
+		}
+		int4 = int4 + 1;
+	}
+	return;
+}

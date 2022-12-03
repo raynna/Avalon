@@ -1,0 +1,14 @@
+void script_5234(int arg0) {
+	switch (arg0) {
+		case 73793656:
+			widget(1126, 121).setIsHidden(false);
+			break;
+		case 73793729:
+			widget(1126, 194).setIsHidden(false);
+			break;
+		case 73793731:
+			widget(1126, 196).setIsHidden(false);
+			break;
+	}
+	return;
+}

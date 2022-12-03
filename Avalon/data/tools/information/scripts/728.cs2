@@ -1,0 +1,16 @@
+void script_728() {
+	widget(780, 35).setIsHidden(true);
+	widget(780, 36).setIsHidden(true);
+	widget(780, 37).setIsHidden(true);
+	widget(780, 38).setIsHidden(true);
+	widget(780, 39).setIsHidden(true);
+	widget(780, 40).setIsHidden(true);
+	widget(780, 41).setIsHidden(true);
+	widget(780, 42).setIsHidden(true);
+	widget(780, 44).setIsHidden(true);
+	widget(780, 47).setIsHidden(true);
+	widget(780, 48).setIsHidden(true);
+	widget(780, 43).setIsHidden(true);
+	widget(780, 33).setText("Use a talisman to display the altar location.");
+	return;
+}

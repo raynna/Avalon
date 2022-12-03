@@ -1,0 +1,23 @@
+void script_3144(Widget widget0, Widget widget1, int arg2, int arg3, string arg4) {
+	if (ACTIVE.setChild(widget0, arg2)) {
+		widget(910, 65).setIsHidden(false);
+		widget(910, 66).setIsHidden(false);
+		widget(910, 65).setPosition(widget(910, 65).getX(), ACTIVE.getY(), 0, 0);
+		widget(910, 66).setPosition(widget(910, 66).getX(), ACTIVE.getY(), 0, 0);
+	}
+	if (ACTIVE.setChild(widget1, arg2)) {
+		if (ACTIVE.getSpriteId() == 1541) {
+			ACTIVE.setSprite(1542);
+		} else if (ACTIVE.getSpriteId() == 1545) {
+			ACTIVE.setSprite(1546);
+		}
+	}
+	if (arg3 == 1) {
+		widget(910, 65).setRGB(0x606060);
+		widget(910, 66).setRGB(0x404040);
+	} else {
+		widget(910, 66).setRGB(0x606060);
+		widget(910, 65).setRGB(0x404040);
+	}
+	return;
+}

@@ -1,0 +1,23 @@
+void script_1916(Widget widget0) {
+	if (widget0 == widget(813, 99) && VARC[583] > 0) {
+		widget0.setRGB(0xFFFFFF);
+		return;
+	}
+	if (widget0 == widget(813, 101) && VARC[584] > 0) {
+		widget0.setRGB(0xFFFFFF);
+		return;
+	}
+	if (widget0 == widget(813, 103) && VARC[585] > 0) {
+		widget0.setRGB(0xFFFFFF);
+		return;
+	}
+	if (widget0 == widget(813, 105) && VARC[586] > 0) {
+		widget0.setRGB(0xFFFFFF);
+		return;
+	}
+	if (widget0 == widget(813, 107) && VARC[587] > 0) {
+		widget0.setRGB(0xFFFFFF);
+		return;
+	}
+	return;
+}

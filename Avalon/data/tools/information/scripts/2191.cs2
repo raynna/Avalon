@@ -1,0 +1,22 @@
+void script_2191(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, Widget widget7, Widget widget8, Widget widget9, Widget widget10, Widget widget11) {
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int12 = getMaxLineWidth(widget1.getText(), 512, 494);
+	int13 = getMaxLineWidth(widget2.getText(), 512, 494);
+	int14 = getMaxLineWidth(widget3.getText(), 512, 494);
+	int15 = getMaxLineWidth(widget4.getText(), 512, 494);
+	int16 = getMaxLineWidth(widget5.getText(), 512, 494);
+	int17 = getMaxLineWidth(widget10.getText(), 512, 494);
+	script_2337(widget0);
+	widget0.setScriptCallOnGameloop(2336, widget0, getDisplayMode(), "Ii");
+	script_2335(widget0, widget2, widget3, widget4, widget5, int12, int13, int14, int15, int16, widget6, widget7, widget8, widget9, widget10, widget11, int17);
+	widget0.setScriptCallOnConfigChange(2333, widget0, widget2, widget3, widget4, widget5, int12, int13, int14, int15, int16, widget6, widget7, widget8, widget9, widget10, widget11, int17, 1048, 1058, 2040, "IIIIIiiiiiIIIIIIiY");
+	widget(601, 0).setSize(100, 75, 0, 0);
+	widget(601, 1).setTrans(255);
+	VARC[1435] = 255;
+	return;
+}

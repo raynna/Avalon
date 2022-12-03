@@ -1,0 +1,12 @@
+void script_4085() {
+	if (ACTIVE.setChild(widget(1061, 3))) {
+		ACTIVE.setSprite(4031);
+	}
+	if (ACTIVE.setChild(widget(1061, 4))) {
+		ACTIVE.setSprite(4034);
+	}
+	if (ACTIVE.setChild(widget(1061, 5))) {
+		ACTIVE.setSprite(4037);
+	}
+	return;
+}

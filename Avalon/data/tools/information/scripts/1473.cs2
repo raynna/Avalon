@@ -1,0 +1,9 @@
+void script_1473() {
+	widget(762, 18).setSprite(1424);
+	widget(762, 17).setSprite(1433);
+	script_1463(0);
+	script_1456();
+	script_1549();
+	VARC[188] = 1;
+	return;
+}

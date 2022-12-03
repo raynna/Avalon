@@ -1,0 +1,16 @@
+void script_4034() {
+	if (VARC[1429] == 0) {
+		VARC[1429] = 1;
+		widget(917, 142).setSprite(4086);
+		widget(917, 142).setScriptCallOnMouseEntered(4033, 0, 1, "ii");
+		widget(917, 142).setScriptCallOnMouseExit(4033, 1, 1, "ii");
+		widget(917, 142).setContextMenuOption(1, "Turn-on");
+	} else {
+		VARC[1429] = 0;
+		widget(917, 142).setSprite(4084);
+		widget(917, 142).setScriptCallOnMouseEntered(4033, 0, 0, "ii");
+		widget(917, 142).setScriptCallOnMouseExit(4033, 1, 0, "ii");
+		widget(917, 142).setContextMenuOption(1, "Turn-off");
+	}
+	return;
+}

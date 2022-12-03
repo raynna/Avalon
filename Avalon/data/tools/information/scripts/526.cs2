@@ -1,0 +1,9 @@
+void script_526(boolean boolean0, Widget widget1, Widget widget2) {
+	widget1.setIsHidden(boolean0);
+	if (boolean0) {
+		widget2.setFilled(false);
+	}
+	script_41(widget(301, 85));
+	VARC[1] = 0;
+	return;
+}

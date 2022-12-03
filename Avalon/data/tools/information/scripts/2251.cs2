@@ -1,0 +1,4 @@
+void script_2251(Widget widget0) {
+	widget0.setText("Deaths: " + str(VARPBIT[7554]));
+	return;
+}

@@ -1,0 +1,29 @@
+void script_965(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, Widget widget7, Widget widget8, Widget widget9, Widget widget10, Widget widget11, Widget widget12, Widget widget13, Widget widget14, Widget widget15, Widget widget16) {
+	script_966(widget0, VARC[122]);
+	script_966(widget1, VARC[122]);
+	script_966(widget2, VARC[122]);
+	script_966(widget3, VARC[122]);
+	script_966(widget4, VARC[122]);
+	script_966(widget5, VARC[123]);
+	script_966(widget6, VARC[123]);
+	script_966(widget7, VARC[123]);
+	script_966(widget8, VARC[123]);
+	script_966(widget9, VARC[123]);
+	script_966(widget10, VARC[124]);
+	script_966(widget11, VARC[124]);
+	script_966(widget12, VARC[124]);
+	script_966(widget13, VARC[124]);
+	script_966(widget14, VARC[124]);
+	if (VARC[125] < getClientCycle()) {
+		widget15.setIsHidden(false);
+		widget16.setIsHidden(true);
+	} else {
+		if (VARC[156] <= getClientCycle() && VARC[157] == 1) {
+			playSoundEffect2False(7540, 1, 0, 100, rndRelatedMethod4019(15, 15));
+			VARC[156] = getClientCycle() + 30;
+		}
+		widget15.setIsHidden(true);
+		widget16.setIsHidden(false);
+	}
+	return;
+}

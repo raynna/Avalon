@@ -1,0 +1,281 @@
+void script_759(Widget widget0, int arg1, int arg2, string string3, string string4, string string5, string string6, string string7, string string8, int arg9, int arg10) {
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	Item item11;
+	Item item12;
+	Item item13;
+	Item item14;
+	Item item15;
+	Item item16;
+	Item item17;
+	Item item18;
+	Item item19;
+	Item item20;
+	int int21;
+	int int22;
+	int int23;
+	int int24;
+	int int25;
+	int int26;
+	int int27;
+	int int28;
+	int int29;
+	int int30;
+	int int31;
+	Item item32;
+	int int33;
+	int int34;
+	int int35;
+	int int36;
+	string str6;
+	widget0.clearChildren();
+	widget0.setScrollMax(0, ((arg10 - arg9) / arg1 + 1) * 57);
+	int5 = 0;
+	int6 = arg9;
+	int7 = 0;
+	int8 = arg10;
+	int9 = 0;
+	int10 = -1;
+	item11 = null;
+	item12 = null;
+	item13 = null;
+	item14 = null;
+	item15 = null;
+	item16 = null;
+	item17 = null;
+	item18 = null;
+	item19 = null;
+	item20 = null;
+	int21 = 0;
+	int22 = 0;
+	int23 = 0;
+	int24 = 0;
+	int25 = 0;
+	int26 = 0;
+	int27 = 0;
+	int28 = 0;
+	int29 = 0;
+	int30 = 0;
+	str6 = "hello";
+	int31 = 0;
+	ARRAY0 = new Item[10];
+	item32 = null;
+	int33 = 0;
+	int34 = 0;
+	int35 = 0;
+	int36 = 1;
+	while (int5 <= arg10 - arg9) {
+		int36 = 1;
+		item32 = datamap('i', 'o', (DataMap)1182, int6);
+		if (VARPBIT[8701] == 1) {
+			if (itemAttribute(item32, 697) != null) {
+				switch (itemAttribute(item32, 697)) {
+					case 6287:
+						if (getItemAmtInContainer(93, 6287) + getItemAmtInContainer(93, 7801) < itemAttribute(item32, 698)) {
+							int36 = 0;
+						}
+						break;
+					case 6979:
+						if (getItemAmtInContainer(93, 6979) + getItemAmtInContainer(93, 6981) + getItemAmtInContainer(93, 6983) < itemAttribute(item32, 698)) {
+							int36 = 0;
+						}
+						break;
+					case 2462:
+						if (getItemAmtInContainer(93, 2462) + getItemAmtInContainer(93, 2460) + getItemAmtInContainer(93, 2464) + getItemAmtInContainer(93, 2466) + getItemAmtInContainer(93, 2468) + getItemAmtInContainer(93, 2470) + getItemAmtInContainer(93, 2472) < itemAttribute(item32, 698)) {
+							int36 = 0;
+						}
+						break;
+					default:
+						if (getItemAmtInContainer(93, itemAttribute(item32, 697)) < itemAttribute(item32, 698)) {
+							int36 = 0;
+						}
+						break;
+				}
+			}
+			if (itemAttribute(item32, 699) != null && int36 == 1) {
+				switch (itemAttribute(item32, 699)) {
+					case 6287:
+						if (getItemAmtInContainer(93, 6287) + getItemAmtInContainer(93, 7801) < itemAttribute(item32, 700)) {
+							int36 = 0;
+						}
+						break;
+					case 6979:
+						if (getItemAmtInContainer(93, 6979) + getItemAmtInContainer(93, 6981) + getItemAmtInContainer(93, 6983) < itemAttribute(item32, 700)) {
+							int36 = 0;
+						}
+						break;
+					case 2462:
+						if (getItemAmtInContainer(93, 2462) + getItemAmtInContainer(93, 2460) + getItemAmtInContainer(93, 2464) + getItemAmtInContainer(93, 2466) + getItemAmtInContainer(93, 2468) + getItemAmtInContainer(93, 2470) + getItemAmtInContainer(93, 2472) < itemAttribute(item32, 700)) {
+							int36 = 0;
+						}
+						break;
+					default:
+						if (getItemAmtInContainer(93, itemAttribute(item32, 699)) < itemAttribute(item32, 700)) {
+							int36 = 0;
+						}
+						break;
+				}
+			}
+			if (itemAttribute(item32, 701) != null && int36 == 1) {
+				switch (itemAttribute(item32, 701)) {
+					case 6287:
+						if (getItemAmtInContainer(93, 6287) + getItemAmtInContainer(93, 7801) < itemAttribute(item32, 702)) {
+							int36 = 0;
+						}
+						break;
+					case 6979:
+						if (getItemAmtInContainer(93, 6979) + getItemAmtInContainer(93, 6981) + getItemAmtInContainer(93, 6983) < itemAttribute(item32, 702)) {
+							int36 = 0;
+						}
+						break;
+					case 2462:
+						if (getItemAmtInContainer(93, 2462) + getItemAmtInContainer(93, 2460) + getItemAmtInContainer(93, 2464) + getItemAmtInContainer(93, 2466) + getItemAmtInContainer(93, 2468) + getItemAmtInContainer(93, 2470) + getItemAmtInContainer(93, 2472) < itemAttribute(item32, 702)) {
+							int36 = 0;
+						}
+						break;
+					default:
+						if (getItemAmtInContainer(93, itemAttribute(item32, 701)) < itemAttribute(item32, 702)) {
+							int36 = 0;
+						}
+						break;
+				}
+			}
+			if (itemAttribute(item32, 703) != null && int36 == 1) {
+				switch (itemAttribute(item32, 703)) {
+					case 6287:
+						if (getItemAmtInContainer(93, 6287) + getItemAmtInContainer(93, 7801) < itemAttribute(item32, 704)) {
+							int36 = 0;
+						}
+						break;
+					case 6979:
+						if (getItemAmtInContainer(93, 6979) + getItemAmtInContainer(93, 6981) + getItemAmtInContainer(93, 6983) < itemAttribute(item32, 704)) {
+							int36 = 0;
+						}
+						break;
+					case 2462:
+						if (getItemAmtInContainer(93, 2462) + getItemAmtInContainer(93, 2460) + getItemAmtInContainer(93, 2464) + getItemAmtInContainer(93, 2466) + getItemAmtInContainer(93, 2468) + getItemAmtInContainer(93, 2470) + getItemAmtInContainer(93, 2472) < itemAttribute(item32, 704)) {
+							int36 = 0;
+						}
+						break;
+					default:
+						if (getItemAmtInContainer(93, itemAttribute(item32, 703)) < itemAttribute(item32, 704)) {
+							int36 = 0;
+						}
+						break;
+				}
+			}
+			if (itemAttribute(item32, 705) != null && int36 == 1) {
+				switch (itemAttribute(item32, 705)) {
+					case 6287:
+						if (getItemAmtInContainer(93, 6287) + getItemAmtInContainer(93, 7801) < itemAttribute(item32, 706)) {
+							int36 = 0;
+						}
+						break;
+					case 6979:
+						if (getItemAmtInContainer(93, 6979) + getItemAmtInContainer(93, 6981) + getItemAmtInContainer(93, 6983) < itemAttribute(item32, 706)) {
+							int36 = 0;
+						}
+						break;
+					case 2462:
+						if (getItemAmtInContainer(93, 2462) + getItemAmtInContainer(93, 2460) + getItemAmtInContainer(93, 2464) + getItemAmtInContainer(93, 2466) + getItemAmtInContainer(93, 2468) + getItemAmtInContainer(93, 2470) + getItemAmtInContainer(93, 2472) < itemAttribute(item32, 706)) {
+							int36 = 0;
+						}
+						break;
+					default:
+						if (getItemAmtInContainer(93, itemAttribute(item32, 705)) < itemAttribute(item32, 706)) {
+							int36 = 0;
+						}
+						break;
+				}
+			}
+			if (itemAttribute(item32, 707) != null && int36 == 1) {
+				switch (itemAttribute(item32, 707)) {
+					case 6287:
+						if (getItemAmtInContainer(93, 6287) + getItemAmtInContainer(93, 7801) < itemAttribute(item32, 708)) {
+							int36 = 0;
+						}
+						break;
+					case 6979:
+						if (getItemAmtInContainer(93, 6979) + getItemAmtInContainer(93, 6981) + getItemAmtInContainer(93, 6983) < itemAttribute(item32, 708)) {
+							int36 = 0;
+						}
+						break;
+					case 2462:
+						if (getItemAmtInContainer(93, 2462) + getItemAmtInContainer(93, 2460) + getItemAmtInContainer(93, 2464) + getItemAmtInContainer(93, 2466) + getItemAmtInContainer(93, 2468) + getItemAmtInContainer(93, 2470) + getItemAmtInContainer(93, 2472) < itemAttribute(item32, 708)) {
+							int36 = 0;
+						}
+						break;
+					default:
+						if (getItemAmtInContainer(93, itemAttribute(item32, 707)) < itemAttribute(item32, 708)) {
+							int36 = 0;
+						}
+						break;
+				}
+			}
+		}
+		if (int36 == 1) {
+			int33 = 16 + int7 % arg1 * 48 + int7 % arg1 * 5;
+			int34 = int7 / arg1 * 52 + int7 / arg1 * 5;
+			ACTIVE.createChild(widget0, 5, int35);
+			int35 = int35 + 1;
+			ACTIVE.setSize(48, 52, 0, 0);
+			ACTIVE.setPosition(int33, int34, 0, 0);
+			ACTIVE.setSprite(2205);
+			ACTIVE.setScriptCallOnMouseEntered(2724, CTX_WIDGET, int35, false, "Ii1");
+			ACTIVE.setScriptCallOnMouseExit(2724, CTX_WIDGET, int35, true, "Ii1");
+			ACTIVE.createChild(widget0, 5, int35);
+			int35 = int35 + 1;
+			ACTIVE.setSize(48, 52, 0, 0);
+			ACTIVE.setPosition(int33, int34, 0, 0);
+			ACTIVE.setSprite(2206);
+			ACTIVE.setHidden(true);
+			ACTIVE.createChild(widget0, 5, int35);
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition(int33 + 6, int34 + 4, 0, 0);
+			if (item32 == 12292) {
+				script_760(item32, item32, widget0, int35, string3, string4, string5, string6, string7, string8);
+			} else if (script_766(item32) == 1 && getSkillActualLvl(23) >= datamap('o', 'i', (DataMap)1185, item32)) {
+				script_760(item32, item32, widget0, int35, string3, string4, string5, string6, string7, string8);
+			} else {
+				script_760(datamap('i', 'o', (DataMap)1183, int6), item32, widget0, int35, string3, string4, string5, string6, string7, string8);
+			}
+			if (item32 == 12292) {
+				ACTIVE.setScriptCallOnMouseOver(782, CTX_WIDGET_CHILD, widget(79, 31), widget(79, 16), int31, str6, "iIIis");
+				ACTIVE.setScriptCallOnMouseExit(40, widget(79, 31), "I");
+			} else {
+				str6 = datamap('o', 's', (DataMap)1187, item32);
+				int31 = datamap('o', 'i', (DataMap)1185, item32);
+				item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, int21, int22, int23, int24, int25, int26, int27, int28, int29, int30 = script_767(item32);
+				ACTIVE.setScriptCallOnMouseOver(770, CTX_WIDGET_CHILD, widget(79, 31), widget(79, 16), int31, str6, item11, 1, item12, int22, item13, int23, item14, int24, item15, int25, item16, int26, item17, int27, item18, int28, item19, int29, item20, int30, "iIIisoioioioioioioioioioi");
+				ACTIVE.setScriptCallOnMouseExit(40, widget(79, 31), "I");
+			}
+			int35 = int35 + 1;
+			ACTIVE.createChild(widget0, 5, int35);
+			int35 = int35 + 1;
+			ACTIVE.setSize(12, 12, 0, 0);
+			ACTIVE.setPosition(int33 + 2, int34 + 38, 0, 0);
+			ACTIVE.setItemNoNum(12183, 1);
+			ACTIVE.createChild(widget0, 4, int35);
+			int35 = int35 + 1;
+			ACTIVE.setSize(31, 12, 0, 0);
+			ACTIVE.setPosition(int33 + 13, int34 + 39, 0, 0);
+			ACTIVE.setFont(494);
+			ACTIVE.setRGB(0xFFFFFF);
+			ACTIVE.setTextAlignment(2, 1, 0);
+			if (itemAttribute(item32, 541) < 1) {
+				ACTIVE.setText("--");
+			} else {
+				ACTIVE.setText(script_940(itemAttribute(item32, 541)));
+			}
+			ACTIVE.setTextAntiMacro(true);
+			int7 = int7 + 1;
+		}
+		int5 = int5 + 1;
+		int6 = int6 + 1;
+	}
+	return;
+}

@@ -1,0 +1,80 @@
+void script_2606(int arg0) {
+	Item item1;
+	playSoundEffect(2277, 1, 0);
+	item1 = null;
+	switch (VARC[929]) {
+		case 0:
+			if (VARC[930] != -1) {
+				item1 = getItemIdInSlot(93, VARC[930]);
+			}
+			break;
+		case 1:
+			if (VARC[931] != -1) {
+				item1 = getItemIdInSlot(93, VARC[931]);
+			}
+			break;
+		case 2:
+			if (VARC[932] != -1) {
+				item1 = getItemIdInSlot(93, VARC[932]);
+			}
+			break;
+		case 3:
+			if (VARC[933] != -1) {
+				item1 = getItemIdInSlot(93, VARC[933]);
+			}
+			break;
+		case 4:
+			if (VARC[934] != -1) {
+				item1 = getItemIdInSlot(93, VARC[934]);
+			}
+			break;
+		case 5:
+			if (VARC[935] != -1) {
+				item1 = getItemIdInSlot(93, VARC[935]);
+			}
+			break;
+		case 6:
+			if (VARC[936] != -1) {
+				item1 = getItemIdInSlot(93, VARC[936]);
+			}
+			break;
+		case 7:
+			if (VARC[937] != -1) {
+				item1 = getItemIdInSlot(93, VARC[937]);
+			}
+			break;
+		case 8:
+			if (VARC[938] != -1) {
+				item1 = getItemIdInSlot(93, VARC[938]);
+			}
+			break;
+		case 9:
+			if (VARC[939] != -1) {
+				item1 = getItemIdInSlot(93, VARC[939]);
+			}
+			break;
+	}
+	switch (arg0) {
+		case 19136631:
+			if (getContainerIntAttrCountIgnoreStacks(93, 803) == 0) {
+				msg("You have no squads that need resupplying.");
+			} else {
+				msg("You do not have sufficient investment credits to resupply all your squads.");
+			}
+			break;
+		case 19136634:
+			msg("You do not have sufficient investment credits to apply the selected changes.");
+			break;
+		case 19136614:
+		case 19136615:
+		case 19136622:
+		case 19136623:
+		case 19136616:
+			msg("You must resupply this squad first.");
+			break;
+		case 19136625:
+			msg("This squad does not need resupplying.");
+			break;
+	}
+	return;
+}

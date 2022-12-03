@@ -1,0 +1,853 @@
+[08 juli 2018 at 04:05:17 CEST] - java100: sec
+[08 juli 2018 at 04:06:36 CEST] - java100: wats 10hits
+[08 juli 2018 at 04:07:10 CEST] - java100: o
+[08 juli 2018 at 04:08:40 CEST] - java100: wtf i teleed back ther
+[08 juli 2018 at 04:08:58 CEST] - java100: splashed
+[08 juli 2018 at 04:09:05 CEST] - java100: yh
+[08 juli 2018 at 04:13:46 CEST] - java100: lol
+[08 juli 2018 at 04:14:16 CEST] - java100: like combat following or regular following
+[08 juli 2018 at 04:14:30 CEST] - java100: i cant follow 
+[08 juli 2018 at 04:15:11 CEST] - java100: wot
+[08 juli 2018 at 04:15:30 CEST] - java100: oh
+[08 juli 2018 at 04:15:33 CEST] - java100: that wont work
+[08 juli 2018 at 04:15:39 CEST] - java100: coz on rs when u run you run 2 steps at a time
+[08 juli 2018 at 04:15:41 CEST] - java100: not 1
+[08 juli 2018 at 04:16:04 CEST] - java100: if u wana do it that way
+[08 juli 2018 at 04:16:13 CEST] - java100: final worldtile currenttile = tile.clone();
+[08 juli 2018 at 04:16:54 CEST] - java100: hmm didnt kno that
+[08 juli 2018 at 04:17:13 CEST] - java100: maybe its like
+[08 juli 2018 at 04:17:17 CEST] - java100: always follow from south
+[08 juli 2018 at 04:17:23 CEST] - java100: instead of always have distance == 1
+[08 juli 2018 at 04:17:54 CEST] - java100: lolol
+[08 juli 2018 at 04:18:07 CEST] - java100: can i try
+[08 juli 2018 at 04:18:25 CEST] - java100: i have it exactly like rs if u want
+[08 juli 2018 at 04:18:33 CEST] - java100: u gona stall animations
+[08 juli 2018 at 04:18:35 CEST] - java100: gota
+[08 juli 2018 at 04:20:25 CEST] - java100: these cx invys suck
+[08 juli 2018 at 04:21:25 CEST] - java100: wat does rs do there
+[08 juli 2018 at 04:21:45 CEST] - java100: can u tele if lower lvl
+[08 juli 2018 at 04:25:42 CEST] - java100: yh
+[08 juli 2018 at 04:28:58 CEST] - java100: lets sure the onyx one
+[08 juli 2018 at 04:29:11 CEST] - java100: coz this 1 kid wanted me to take dung from mx3 and add to his 718
+[08 juli 2018 at 04:29:15 CEST] - java100: it took soo long
+[08 juli 2018 at 04:29:50 CEST] - java100: ya, theres even more for dung
+[08 juli 2018 at 04:31:03 CEST] - java100: Select an Option
+[08 juli 2018 at 04:33:08 CEST] - java100: do u kno 423million andre
+[08 juli 2018 at 04:34:32 CEST] - java100: does the class exist
+[08 juli 2018 at 04:34:48 CEST] - java100: u know erik from exiled?
+[08 juli 2018 at 04:34:53 CEST] - java100: ask for his combat hell prob give u
+[08 juli 2018 at 04:35:14 CEST] - java100: i wana see it
+[08 juli 2018 at 04:35:52 CEST] - java100: he blocked me lol
+[08 juli 2018 at 04:36:03 CEST] - java100: hes a retard
+[08 juli 2018 at 04:36:09 CEST] - java100: no wonder he wanted to kill himself x.d
+[08 juli 2018 at 04:37:09 CEST] - java100: wats the familiar following? my wolp just teles to me
+[08 juli 2018 at 04:38:12 CEST] - java100: can u change ur skin/hair and stuff on here?
+[09 juli 2018 at 04:50:42 CEST] - java100: sup niga
+[09 juli 2018 at 04:55:21 CEST] - java100: want me 2 close gv
+[09 juli 2018 at 04:55:24 CEST] - java100: tv
+[09 juli 2018 at 04:55:58 CEST] - java100: wo
+[09 juli 2018 at 04:58:20 CEST] - java100: lol
+[09 juli 2018 at 04:59:39 CEST] - java100: aight
+[09 juli 2018 at 05:00:06 CEST] - java100: ill write it
+[09 juli 2018 at 05:01:28 CEST] - java100: wow terrorist
+[09 juli 2018 at 05:01:31 CEST] - java100: is hassan on ur tv
+[09 juli 2018 at 05:02:00 CEST] - java100: ok, ill write drop stuff
+[09 juli 2018 at 05:02:11 CEST] - java100: i looked at the onyx hosue stuff
+[09 juli 2018 at 05:02:13 CEST] - java100: its incomplete
+[09 juli 2018 at 05:02:30 CEST] - java100: rugs dont register when a new room is created
+[09 juli 2018 at 05:02:36 CEST] - java100: some rugs open "create trapdoor" inter
+[09 juli 2018 at 05:02:47 CEST] - java100: clipping errors
+[09 juli 2018 at 05:02:56 CEST] - java100: the house portal isnt in the centre of big green plce
+[09 juli 2018 at 05:03:13 CEST] - java100: ok cya
+[10 juli 2018 at 01:46:16 CEST] - java100: is it saying
+[10 juli 2018 at 01:46:18 CEST] - java100: back luck
+[10 juli 2018 at 01:47:17 CEST] - java100: go to corp file
+[11 juli 2018 at 04:11:27 CEST] - java100: i think combat followings a bit off lol
+[11 juli 2018 at 04:11:42 CEST] - java100: go clanwars
+[11 juli 2018 at 04:13:32 CEST] - java100: ops
+[11 juli 2018 at 04:18:14 CEST] - java100: wat
+[11 juli 2018 at 04:18:17 CEST] - java100: the bank one
+[11 juli 2018 at 04:19:48 CEST] - java100: lol
+[11 juli 2018 at 04:20:24 CEST] - java100: lol
+[11 juli 2018 at 04:21:20 CEST] - java100: theyll level while getting items tho
+[11 juli 2018 at 04:21:23 CEST] - java100: coz its not full spawn
+[11 juli 2018 at 04:22:04 CEST] - java100: how to copy ur gear
+[11 juli 2018 at 04:22:56 CEST] - java100: ahh
+[11 juli 2018 at 04:24:13 CEST] - java100: wa
+[29 juli 2018 at 10:46:06 CEST] - java100: y0
+[29 juli 2018 at 10:46:42 CEST] - java100: does copy work
+[29 juli 2018 at 10:48:45 CEST] - java100: nothing
+[29 juli 2018 at 10:49:04 CEST] - java100: its the old avalon 1
+[29 juli 2018 at 10:49:27 CEST] - java100: nope
+[29 juli 2018 at 10:49:47 CEST] - java100: l
+[29 juli 2018 at 10:51:08 CEST] - java100: this fountain lmao
+[29 juli 2018 at 10:51:12 CEST] - java100: frozen
+[29 juli 2018 at 10:52:12 CEST] - java100: no shows myn
+[29 juli 2018 at 10:52:18 CEST] - java100: my available
+[29 juli 2018 at 10:52:55 CEST] - java100: hybrid stab turmpure
+[29 juli 2018 at 10:53:46 CEST] - java100: ah
+[29 juli 2018 at 10:53:56 CEST] - java100: go turmpure not have veng
+[29 juli 2018 at 10:54:38 CEST] - java100: can i be a negro
+[29 juli 2018 at 10:54:45 CEST] - java100: where
+[29 juli 2018 at 10:55:02 CEST] - java100: whats shift click
+[29 juli 2018 at 10:55:23 CEST] - java100: uh i think u messed up shift click teleporting lol
+[29 juli 2018 at 10:55:29 CEST] - java100: or maybe outdated client
+[29 juli 2018 at 11:02:46 CEST] - java100: yh
+[29 juli 2018 at 11:04:23 CEST] - java100: which gear
+[29 juli 2018 at 11:04:53 CEST] - java100: ow
+[29 juli 2018 at 11:05:23 CEST] - java100: no uni no ss
+[29 juli 2018 at 11:05:25 CEST] - java100: u fag
+[29 juli 2018 at 11:06:00 CEST] - java100: my gmaul gave u cancer
+[29 juli 2018 at 11:10:06 CEST] - java100: zerk melee or hybrid
+[29 juli 2018 at 11:11:10 CEST] - java100: add the new tokhaar :D
+[29 juli 2018 at 11:11:32 CEST] - java100: in hd its sexy
+[29 juli 2018 at 11:11:52 CEST] - java100: it will automatically
+[29 juli 2018 at 11:12:29 CEST] - java100: mayb from corrupt cache
+[29 juli 2018 at 11:12:32 CEST] - java100: model
+[29 juli 2018 at 11:13:27 CEST] - java100: yh
+[29 juli 2018 at 11:13:45 CEST] - java100: make them drop maybe
+[29 juli 2018 at 11:13:48 CEST] - java100: like void did on osrs
+[29 juli 2018 at 11:13:58 CEST] - java100: yea
+[29 juli 2018 at 11:16:11 CEST] - java100: go d scim
+[29 juli 2018 at 11:16:43 CEST] - java100: does phoenix necklace work like rs
+[29 juli 2018 at 11:16:52 CEST] - java100: nulling hits 600ms after breaking
+[29 juli 2018 at 11:20:41 CEST] - java100: if ur hits are like matrix its in payer i tihnk
+[29 juli 2018 at 11:20:49 CEST] - java100: @override handleincominghit
+[29 juli 2018 at 11:21:02 CEST] - java100: for the null bit
+[29 juli 2018 at 11:21:13 CEST] - java100: when their neck brakes add 600ms timer
+[29 juli 2018 at 11:21:18 CEST] - java100: and every hit in those ms is nulled
+[29 juli 2018 at 11:21:47 CEST] - java100: i did on old server
+[29 juli 2018 at 11:21:52 CEST] - java100: it takes like 1 line of code tho lol
+[29 juli 2018 at 11:22:29 CEST] - java100: that will stall hits
+[29 juli 2018 at 11:23:08 CEST] - java100: do if (hitsplat == melee|range|mage|| timer >= utils.currnet + 600) {null hit}
+[29 juli 2018 at 11:23:29 CEST] - java100: this was my setup in 2011 lolol
+[29 juli 2018 at 11:23:48 CEST] - java100: with my trusty ring of life
+[29 juli 2018 at 11:24:36 CEST] - java100: i cant remember if it removes all hits tho
+[29 juli 2018 at 11:24:40 CEST] - java100: or only combat
+[29 juli 2018 at 11:25:30 CEST] - java100: out lol
+[29 juli 2018 at 11:25:39 CEST] - java100: lol
+[29 juli 2018 at 11:25:56 CEST] - java100: ohs hit didnt save
+[29 juli 2018 at 11:25:57 CEST] - java100: gg
+[29 juli 2018 at 11:26:15 CEST] - java100: wat is it atm
+[29 juli 2018 at 11:26:40 CEST] - java100: 1/5 is prob too high
+[29 juli 2018 at 11:27:57 CEST] - java100: oh only when specing?
+[29 juli 2018 at 11:28:13 CEST] - java100: thats way too high chance
+[29 juli 2018 at 11:28:23 CEST] - java100: i would just remove it
+[29 juli 2018 at 11:28:33 CEST] - java100: leave it for slayer helm or something
+[29 juli 2018 at 11:28:56 CEST] - java100: thats still 1/10
+[29 juli 2018 at 11:32:20 CEST] - java100: o
+[29 juli 2018 at 11:32:21 CEST] - java100: w
+[29 juli 2018 at 11:32:22 CEST] - java100: w
+[29 juli 2018 at 11:34:24 CEST] - java100: my gloves are 60k lol
+[29 juli 2018 at 11:34:43 CEST] - java100: lolol
+[29 juli 2018 at 11:35:31 CEST] - java100: my ags goes around the world b4 specing u
+[29 juli 2018 at 11:35:53 CEST] - java100: coz ur doing
+[29 juli 2018 at 11:36:02 CEST] - java100: java100.gloves == andreas.gloves
+[29 juli 2018 at 11:36:07 CEST] - java100: instead of == andreas.gloves.clone
+[29 juli 2018 at 11:36:19 CEST] - java100: coz ur doing item.setid(995)
+[29 juli 2018 at 11:36:24 CEST] - java100: never use set id
+[29 juli 2018 at 11:36:41 CEST] - java100: player.setgloves(new Item(995, 60k)
+[29 juli 2018 at 11:37:12 CEST] - java100: well the way matrixs death is that will work
+[29 juli 2018 at 11:37:29 CEST] - java100: yea
+[29 juli 2018 at 11:42:01 CEST] - java100: skype froze
+[29 juli 2018 at 11:42:09 CEST] - java100: u kno where its for (item item : items[1]
+[29 juli 2018 at 11:46:44 CEST] - java100: i got gloves
+[29 juli 2018 at 11:46:56 CEST] - java100: yea lol
+[29 juli 2018 at 11:47:03 CEST] - java100: nope
+[29 juli 2018 at 11:47:19 CEST] - java100: u sure i == 1 is dropped
+[29 juli 2018 at 11:49:50 CEST] - java100: 21371
+[29 juli 2018 at 11:50:43 CEST] - java100: but look
+[29 juli 2018 at 11:50:53 CEST] - java100: to g zerker
+[29 juli 2018 at 11:50:56 CEST] - java100: do g zerker*
+[29 juli 2018 at 11:51:05 CEST] - java100: spawn 21371
+[29 juli 2018 at 11:51:11 CEST] - java100: and replace ur current whip
+[29 juli 2018 at 11:51:16 CEST] - java100: and then save zerker2
+[29 juli 2018 at 11:51:49 CEST] - java100: u need more than 1 item or ull keep whip
+[29 juli 2018 at 11:53:23 CEST] - java100: coz ur doing set id
+[29 juli 2018 at 11:53:43 CEST] - java100: send me the whole class
+[29 juli 2018 at 11:54:39 CEST] - java100: where do i look
+[29 juli 2018 at 11:55:50 CEST] - java100: oh lol w8
+[29 juli 2018 at 11:56:12 CEST] - java100: when u change it
+[29 juli 2018 at 11:56:18 CEST] - java100: items[1][1]= new item
+[29 juli 2018 at 11:56:22 CEST] - java100: under that
+[29 juli 2018 at 11:56:34 CEST] - java100: item = items[1][i]
+[30 juli 2018 at 12:02:28 CEST] - java100: send ur code atm
+[30 juli 2018 at 12:26:49 CEST] - java100: lol
+[30 juli 2018 at 12:27:14 CEST] - java100: coins
+[30 juli 2018 at 12:27:25 CEST] - java100: brb piss
+[30 juli 2018 at 12:30:58 CEST] - java100: sad
+[30 juli 2018 at 12:31:13 CEST] - java100: yea
+[30 juli 2018 at 12:31:22 CEST] - java100: yep
+[30 juli 2018 at 12:32:00 CEST] - java100: coz u didnt resave
+[30 juli 2018 at 12:32:41 CEST] - java100: i mean resave ur setup
+[30 juli 2018 at 12:34:08 CEST] - java100: ;go andreas sfd
+[30 juli 2018 at 12:34:31 CEST] - java100: lets corp lol
+[30 juli 2018 at 12:35:05 CEST] - java100: sad
+[30 juli 2018 at 12:35:15 CEST] - java100: u had 1hp?
+[30 juli 2018 at 12:35:17 CEST] - java100: yea
+[30 juli 2018 at 12:35:25 CEST] - java100: coz on my screen the last hit i did was a 413 lol
+[30 juli 2018 at 12:35:41 CEST] - java100: oh right i remem
+[30 juli 2018 at 12:36:40 CEST] - java100: at u mean
+[30 juli 2018 at 12:36:41 CEST] - java100: wat
+[30 juli 2018 at 12:37:07 CEST] - java100: nah im 2 awesome to not get drop
+[30 juli 2018 at 12:37:45 CEST] - java100: wats stat ham coed
+[30 juli 2018 at 12:37:53 CEST] - java100: and spec restore
+[30 juli 2018 at 12:38:24 CEST] - java100: how u do ( with give command
+[30 juli 2018 at 12:38:42 CEST] - java100: no such item?
+[30 juli 2018 at 12:38:49 CEST] - java100: recover special (4)
+[30 juli 2018 at 12:40:12 CEST] - java100: how 2 check
+[30 juli 2018 at 12:40:27 CEST] - java100: 199
+[30 juli 2018 at 12:40:42 CEST] - java100: 199 now
+[30 juli 2018 at 12:41:15 CEST] - java100: 221
+[30 juli 2018 at 12:41:26 CEST] - java100: does core do anything lol
+[30 juli 2018 at 12:43:15 CEST] - java100: u sure the def didnt stay lowered from last kill
+[30 juli 2018 at 12:43:40 CEST] - java100: ya thats wat it ended with
+[30 juli 2018 at 12:43:41 CEST] - java100: last kill
+[30 juli 2018 at 12:43:55 CEST] - java100: yea
+[30 juli 2018 at 12:44:48 CEST] - java100: u making him twerk on me ffs
+[30 juli 2018 at 12:45:03 CEST] - java100: uncut d stone
+[30 juli 2018 at 12:45:12 CEST] - java100: i couldnt turn on coz was in combat
+[30 juli 2018 at 12:45:38 CEST] - java100: ya def now started 94
+[30 juli 2018 at 12:46:30 CEST] - java100: coz his def sucks
+[30 juli 2018 at 12:46:47 CEST] - java100: ya thats like rs
+[30 juli 2018 at 12:46:59 CEST] - java100: u could hit like 700s with zamy spear in 2012
+[30 juli 2018 at 12:47:22 CEST] - java100: 65 wtf
+[30 juli 2018 at 12:47:39 CEST] - java100: o lol
+[30 juli 2018 at 12:48:44 CEST] - java100: 0 def now lol
+[30 juli 2018 at 12:50:11 CEST] - java100: wats wrong
+[30 juli 2018 at 12:50:48 CEST] - java100: ftw
+[30 juli 2018 at 12:52:00 CEST] - java100: n0
+[30 juli 2018 at 12:53:02 CEST] - java100: i got msg saying u get charms
+[30 juli 2018 at 12:53:51 CEST] - java100: yh
+[30 juli 2018 at 12:54:08 CEST] - java100: says in red untradable drop now
+[30 juli 2018 at 12:54:11 CEST] - java100: is that right
+[30 juli 2018 at 12:54:26 CEST] - java100: and then clue scroll
+[30 juli 2018 at 12:54:29 CEST] - java100: isnt red as untradable
+[30 juli 2018 at 12:55:08 CEST] - java100: is kq coded
+[30 juli 2018 at 12:55:51 CEST] - java100: copy and paste switchitemslook
+[30 juli 2018 at 12:55:55 CEST] - java100: it sends 1 int value to client
+[30 juli 2018 at 12:56:08 CEST] - java100: encoder
+[02 augusti 2018 at 10:03:57 CEST] - java100: stray coon
+[02 augusti 2018 at 10:05:42 CEST] - java100: dont try it now
+[02 augusti 2018 at 10:05:49 CEST] - java100: ill loop through cs2 enum later
+[02 augusti 2018 at 10:05:53 CEST] - java100: it might be in cache already
+[02 augusti 2018 at 10:06:13 CEST] - java100: all the codes of ids
+[02 augusti 2018 at 10:06:27 CEST] - java100: could be
+[02 augusti 2018 at 10:07:14 CEST] - java100: is that sof
+[02 augusti 2018 at 10:07:54 CEST] - java100: rewards for killing in wildy?
+[02 augusti 2018 at 10:09:03 CEST] - java100: yh
+[02 augusti 2018 at 10:10:14 CEST] - java100: lol
+[02 augusti 2018 at 10:10:25 CEST] - java100: wolp
+[02 augusti 2018 at 10:10:25 CEST] - java100: scrols
+[02 augusti 2018 at 10:12:53 CEST] - java100: :(
+[02 augusti 2018 at 10:14:05 CEST] - java100: uwot
+[02 augusti 2018 at 10:15:50 CEST] - java100: so many fakes lolol
+[02 augusti 2018 at 10:17:35 CEST] - java100: i think u made a thread about it ages ago
+[02 augusti 2018 at 10:17:40 CEST] - java100: when u enable right click reporting
+[02 augusti 2018 at 10:26:19 CEST] - java100: lol
+[02 augusti 2018 at 10:28:58 CEST] - java100: ah
+[02 augusti 2018 at 10:29:51 CEST] - java100: how will u find players tho
+[02 augusti 2018 at 10:30:45 CEST] - java100: u should store player passwords lol
+[02 augusti 2018 at 10:30:53 CEST] - java100: so we can log onto their other rsps accounts for fun
+[02 augusti 2018 at 10:32:10 CEST] - java100: bank glitched
+[02 augusti 2018 at 10:32:19 CEST] - java100: equip screen 1
+[02 augusti 2018 at 10:32:27 CEST] - java100: yh
+[02 augusti 2018 at 10:33:56 CEST] - java100: sec
+[02 augusti 2018 at 10:34:03 CEST] - java100: whats the interface id
+[02 augusti 2018 at 10:34:18 CEST] - java100: i couldnt open bank
+[02 augusti 2018 at 10:34:24 CEST] - java100: bank inter was invisible
+[02 augusti 2018 at 10:36:52 CEST] - java100: ftw
+[02 augusti 2018 at 10:38:38 CEST] - java100: n0
+[02 augusti 2018 at 10:38:55 CEST] - java100: zerk is 2 op
+[02 augusti 2018 at 10:40:01 CEST] - java100: 3 crits wtf
+[02 augusti 2018 at 10:40:24 CEST] - java100: 3dds is too accurate as well
+[02 augusti 2018 at 10:40:38 CEST] - java100: u kno how matrix has that thing
+[02 augusti 2018 at 10:40:43 CEST] - java100: ags and claws = 2, dds = 1.5
+[02 augusti 2018 at 10:40:50 CEST] - java100: thats always 1 on rs
+[02 augusti 2018 at 10:41:21 CEST] - java100: it already has that on the combat formula
+[02 augusti 2018 at 10:41:52 CEST] - java100: in matrix it does it twice
+[02 augusti 2018 at 10:43:23 CEST] - java100: lol
+[02 augusti 2018 at 10:45:35 CEST] - java100: yh
+[02 augusti 2018 at 10:45:42 CEST] - java100: its good rates for a spawn server
+[02 augusti 2018 at 10:45:58 CEST] - java100: sad
+[02 augusti 2018 at 10:46:42 CEST] - java100: 150k
+[02 augusti 2018 at 10:47:08 CEST] - java100: is it per charge left on rs
+[02 augusti 2018 at 10:47:11 CEST] - java100: or fixed price
+[02 augusti 2018 at 10:47:23 CEST] - java100: ik on eoc its per charge
+[02 augusti 2018 at 10:48:10 CEST] - java100: oh didnt kno void was high alch
+[02 augusti 2018 at 10:49:25 CEST] - java100: ik the glvoes are like 300 coins
+[02 augusti 2018 at 10:49:35 CEST] - java100: i got like 288 on rs 2012
+[02 augusti 2018 at 10:49:37 CEST] - java100: for gloves
+[02 augusti 2018 at 12:16:41 CEST] - java100: for wat
+[02 augusti 2018 at 12:17:08 CEST] - java100: this the fire quest place
+[02 augusti 2018 at 12:17:13 CEST] - java100: go to the final boss area
+[02 augusti 2018 at 12:17:54 CEST] - java100: o_0
+[02 augusti 2018 at 12:18:00 CEST] - java100: oh
+[02 augusti 2018 at 12:20:09 CEST] - java100: wats that game called
+[02 augusti 2018 at 12:20:12 CEST] - java100: which dkk is making
+[02 augusti 2018 at 12:20:31 CEST] - java100: yh, they got a cool dz idea
+[02 augusti 2018 at 12:20:37 CEST] - java100: but it looks shit coz theres barely any players
+[02 augusti 2018 at 12:21:57 CEST] - java100: its house i think
+[02 augusti 2018 at 12:22:01 CEST] - java100: those green tiles heal u
+[02 augusti 2018 at 12:22:09 CEST] - java100: u can make this safe zone
+[02 augusti 2018 at 12:22:11 CEST] - java100: for f2p
+[02 augusti 2018 at 12:22:19 CEST] - java100: oh yh different
+[02 augusti 2018 at 12:23:20 CEST] - java100: demons
+[02 augusti 2018 at 12:23:36 CEST] - java100: idk
+[02 augusti 2018 at 12:23:44 CEST] - java100: leaf bladed ones?
+[02 augusti 2018 at 12:24:13 CEST] - java100: who comes up with those names
+[02 augusti 2018 at 12:24:17 CEST] - java100: they should hang themselves
+[02 augusti 2018 at 12:26:06 CEST] - java100: fog?
+[02 augusti 2018 at 12:26:15 CEST] - java100: yh
+[02 augusti 2018 at 12:27:49 CEST] - java100: lol with the arab commentator
+[02 augusti 2018 at 12:27:59 CEST] - java100: wrong one
+[02 augusti 2018 at 12:29:31 CEST] - java100: aight
+[02 augusti 2018 at 12:29:48 CEST] - java100: adios
+[03 augusti 2018 at 11:10:52 CEST] - java100: helo
+[03 augusti 2018 at 11:13:14 CEST] - java100: wana pk
+[03 augusti 2018 at 11:13:33 CEST] - java100: aight
+[03 augusti 2018 at 11:13:42 CEST] - java100: for wat
+[03 augusti 2018 at 11:14:12 CEST] - java100: lol i burnt my clutch today
+[03 augusti 2018 at 11:16:49 CEST] - java100: ops
+[03 augusti 2018 at 11:20:00 CEST] - java100: :(
+[03 augusti 2018 at 11:20:10 CEST] - java100: wat headphones u go
+[03 augusti 2018 at 11:20:27 CEST] - java100: sec my headphones died
+[03 augusti 2018 at 11:20:33 CEST] - java100: they use batteries -.-
+[03 augusti 2018 at 11:25:42 CEST] - java100: w0t
+[03 augusti 2018 at 11:25:52 CEST] - java100: y did 500 hitsplts hitme
+[03 augusti 2018 at 11:27:48 CEST] - java100: lol
+[02 november 2018 at 12:04:50 CET] - java100: aight
+[02 november 2018 at 12:05:12 CET] - java100: nice
+[02 november 2018 at 12:06:29 CET] - java100: gf
+[02 november 2018 at 12:07:06 CET] - java100: main
+[02 november 2018 at 12:08:16 CET] - java100: not good with tjis ll
+[02 november 2018 at 12:08:33 CET] - java100: lmao i suck in hybrid
+[02 november 2018 at 12:09:25 CET] - java100: (ye
+[02 november 2018 at 12:10:50 CET] - java100: gf
+[02 november 2018 at 12:12:22 CET] - java100: gg
+[02 november 2018 at 12:12:36 CET] - java100: f
+[02 november 2018 at 12:12:52 CET] - java100: but combat is pretty solid man
+[02 november 2018 at 12:12:59 CET] - java100: nice work
+[02 november 2018 at 12:14:00 CET] - java100: lol
+[02 november 2018 at 12:14:21 CET] - java100: lol
+[02 november 2018 at 12:14:32 CET] - java100: would be nice
+[02 november 2018 at 12:14:33 CET] - java100: ye
+[02 november 2018 at 12:14:42 CET] - java100: i will make sure to credit uyou
+[02 november 2018 at 12:14:43 CET] - java100: <3
+[02 november 2018 at 12:14:57 CET] - java100: sure
+[02 november 2018 at 12:15:14 CET] - java100: also do you knopw stuff about cache
+[02 november 2018 at 12:15:23 CET] - java100: oh okay
+[02 november 2018 at 12:15:30 CET] - java100: gotchu
+[02 november 2018 at 12:15:43 CET] - java100: ok thanks man
+[02 november 2018 at 12:15:51 CET] - java100: yea for sure
+[02 november 2018 at 12:15:55 CET] - java100: will do w3
+[02 november 2018 at 12:15:57 CET] - java100: <3
+[02 november 2018 at 12:16:01 CET] - java100: pce 
+[16 March 2019 at 01:13:22 CET] - java100: black screen dling cache
+[16 March 2019 at 01:14:14 CET] - java100: depends on how ur computer wants to dl cache sometimes it does screen first
+[16 March 2019 at 01:15:04 CET] - java100: ill try reload
+[16 March 2019 at 01:17:02 CET] - java100: jst change use_lobby to true in loader.j
+[16 March 2019 at 01:22:33 CET] - java100: they added gangnam style emote
+[16 March 2019 at 01:22:36 CET] - java100: to osrs
+[16 March 2019 at 01:22:50 CET] - java100: and the dance frm hotline bling lmao
+[16 March 2019 at 01:27:16 CET] - java100: wat u mean
+[16 March 2019 at 01:27:48 CET] - java100: if (distance <= 1) return before walking in npccombat mayb
+[16 March 2019 at 01:30:27 CET] - java100: sec
+[16 March 2019 at 01:30:55 CET] - java100: i got it exactly like 2012
+[16 March 2019 at 01:31:15 CET] - java100: ok
+[16 March 2019 at 01:33:32 CET] - java100: gmaul doesnt seem that bad
+[16 March 2019 at 01:33:45 CET] - java100: except xp dont stack
+[16 March 2019 at 01:34:01 CET] - java100: u mean get off 3 hits?
+[16 March 2019 at 01:36:20 CET] - java100: thats wrong btw
+[16 March 2019 at 01:36:31 CET] - java100: sec i got a good yt vid for gmaul
+[16 March 2019 at 01:37:09 CET] - java100: o u click specbar b4 him
+[16 March 2019 at 01:37:22 CET] - java100: u can que 3 hits
+[16 March 2019 at 01:39:11 CET] - java100: u should be able to 3hit without being fast
+[16 March 2019 at 01:39:50 CET] - java100: sec need arrwo slol
+[16 March 2019 at 01:40:31 CET] - java100: its abit weird
+[16 March 2019 at 01:40:36 CET] - java100: leme try gif my 1
+[16 March 2019 at 01:45:06 CET] - java100: ill try later some random glitch i cba to fix atm
+[16 March 2019 at 01:45:10 CET] - java100: send*
+[16 March 2019 at 01:45:46 CET] - java100: any presets
+[16 March 2019 at 01:46:26 CET] - java100: .
+[16 March 2019 at 01:46:34 CET] - java100: sec need to map number keys as f keys 
+[16 March 2019 at 01:46:58 CET] - java100: nvm fuck it
+[16 March 2019 at 01:49:24 CET] - java100: how 2 spawn wolp
+[16 March 2019 at 01:52:57 CET] - java100: wats sil command
+[16 March 2019 at 01:56:18 CET] - java100: :o
+[16 March 2019 at 01:58:17 CET] - java100: oof
+[16 March 2019 at 01:59:33 CET] - java100: i gtg sleep
+[16 March 2019 at 01:59:47 CET] - java100: ttyl
+[06 April 2019 at 08:43:21 CEST] - java100: tds
+[06 April 2019 at 08:43:55 CEST] - java100: does kiln work on here
+[06 April 2019 at 08:46:53 CEST] - java100: lol u see tht
+[06 April 2019 at 08:49:12 CEST] - java100: les do some nex
+[06 April 2019 at 08:49:15 CEST] - java100: never done matrix nex
+[06 April 2019 at 08:58:30 CEST] - java100: ill use this :D
+[06 April 2019 at 08:59:27 CEST] - java100: regular onyx bolts dnt wrk
+[06 April 2019 at 09:00:48 CEST] - java100: yh
+[06 April 2019 at 09:01:50 CEST] - java100: polypore dnt work
+[06 April 2019 at 09:03:09 CEST] - java100: i just did polypore like bow
+[06 April 2019 at 09:03:17 CEST] - java100: with arrow id of the spore
+[06 April 2019 at 09:03:53 CEST] - java100: just for attack anim/gfx stuf
+[06 April 2019 at 09:04:48 CEST] - java100: na
+[06 April 2019 at 09:05:06 CEST] - java100: it should, coz it does new npc(kq) every time
+[06 April 2019 at 09:05:26 CEST] - java100: hits seem the same ea kill
+[06 April 2019 at 09:08:17 CEST] - java100: ye def doesnt reset :o
+[06 April 2019 at 09:08:32 CEST] - java100: unless its def starts at 211 ea time
+[06 April 2019 at 09:12:12 CEST] - java100: does it do that in rs i dnt even remember
+[06 April 2019 at 09:12:50 CEST] - java100: i think it just halves dmg
+[06 April 2019 at 09:13:35 CEST] - java100: whered u get 100% acc
+[06 April 2019 at 09:14:18 CEST] - java100: maybe 100% before all the absorbtion checks ands stuff which decrease it
+[06 April 2019 at 09:15:16 CEST] - java100: might just be for def bonuses
+[06 April 2019 at 09:15:22 CEST] - java100: coz ik twisted bow wrecks both phases
+[06 April 2019 at 09:19:21 CEST] - java100: idk
+[06 April 2019 at 09:19:30 CEST] - java100: not if ur just changing ids
+[06 April 2019 at 09:19:50 CEST] - java100: the offset param is wrong
+[06 April 2019 at 09:24:16 CEST] - java100: on osrs?
+[06 April 2019 at 09:24:45 CEST] - java100: i think u could do that on runelite before they removed dev mode
+[06 April 2019 at 09:25:21 CEST] - java100: oh
+[06 April 2019 at 09:25:27 CEST] - java100: just dl runelite and host it on eclipse
+[06 April 2019 at 09:25:32 CEST] - java100: then u can print out everything
+[06 April 2019 at 09:27:35 CEST] - java100: ye only second phase does the sendDeath
+[06 April 2019 at 11:19:49 CEST] - java100: removed options from familiars? :o
+[06 April 2019 at 11:20:58 CEST] - java100: ;o
+[06 April 2019 at 11:28:47 CEST] - java100: the stairs at start is messed up
+[06 April 2019 at 11:29:57 CEST] - java100: i think theres supposed to be a force walk
+[06 April 2019 at 11:30:00 CEST] - java100: in the middle pane
+[06 April 2019 at 11:30:27 CEST] - java100: yea
+[06 April 2019 at 11:30:30 CEST] - java100: u tele here
+[06 April 2019 at 11:30:33 CEST] - java100: then walk
+[06 April 2019 at 11:31:21 CEST] - java100: moss
+[06 April 2019 at 11:31:40 CEST] - java100: here
+[06 April 2019 at 11:31:46 CEST] - java100: w8 where r we
+[06 April 2019 at 11:32:44 CEST] - java100: none here
+[06 April 2019 at 11:32:51 CEST] - java100: in this room
+[12 April 2019 at 09:56:46 CEST] - java100: wat cache is this
+[12 April 2019 at 09:56:50 CEST] - java100: 718 loading x
+[12 April 2019 at 09:57:31 CEST] - java100: ya but itll be with 723 interfaces/items or something
+[12 April 2019 at 09:57:43 CEST] - java100: pure 718 is smaller client
+[12 April 2019 at 09:58:07 CEST] - java100: ice cream cone hat is 732
+[12 April 2019 at 09:58:17 CEST] - java100: otherwise prob 728
+[12 April 2019 at 09:59:46 CEST] - java100: how u save gear
+[12 April 2019 at 10:01:47 CEST] - java100: cant wear whip D:
+[12 April 2019 at 10:02:20 CEST] - java100: load gear is glitched
+[12 April 2019 at 10:02:29 CEST] - java100: coz u doing item.setid
+[12 April 2019 at 10:02:36 CEST] - java100: instead of setinv(slot(new item
+[12 April 2019 at 10:02:45 CEST] - java100: for split vine whip
+[12 April 2019 at 10:03:37 CEST] - java100: !wolp
+[12 April 2019 at 10:07:01 CEST] - java100: lolol
+[12 April 2019 at 10:08:21 CEST] - java100: google w3 hex
+[12 April 2019 at 10:10:03 CEST] - java100: yh
+[12 April 2019 at 10:11:38 CEST] - java100: go u have seperate thread for timer in quest tab
+[12 April 2019 at 10:12:02 CEST] - java100: coz u goes up every 1 sec not every gametick
+[12 April 2019 at 10:12:07 CEST] - java100: it*
+[12 April 2019 at 10:12:42 CEST] - java100: that might be the problem for that thing not working in debug mode but works in 
+[12 April 2019 at 10:12:44 CEST] - java100: normal
+[12 April 2019 at 10:12:51 CEST] - java100: coz threads make lots of memory
+[12 April 2019 at 10:13:24 CEST] - java100: yea or per game tick
+[12 April 2019 at 10:13:31 CEST] - java100: i just have mine go up every 3 sec
+[12 April 2019 at 10:15:29 CEST] - java100: D:
+[12 April 2019 at 10:16:26 CEST] - java100: r u ;;healmode
+[12 April 2019 at 10:16:32 CEST] - java100: att
+[12 April 2019 at 10:16:45 CEST] - java100: hmm
+[12 April 2019 at 10:16:58 CEST] - java100: maybe u gota
+[12 April 2019 at 10:17:04 CEST] - java100: when i click walk, check if some1 atting me
+[12 April 2019 at 10:17:38 CEST] - java100: i remem fixing that
+[12 April 2019 at 10:17:44 CEST] - java100: leme check on mine
+[12 April 2019 at 10:17:56 CEST] - java100: go clw
+[12 April 2019 at 10:18:03 CEST] - java100: yh
+[12 April 2019 at 10:18:29 CEST] - java100: ur wolp does matrix walk
+[12 April 2019 at 10:18:34 CEST] - java100: matrix1
+[12 April 2019 at 10:18:39 CEST] - java100: if u make it do mx2 itll walkaround the rock
+[12 April 2019 at 10:18:43 CEST] - java100: to reach me
+[12 April 2019 at 10:18:58 CEST] - java100: yh but thatll get it closer to u
+[12 April 2019 at 10:19:02 CEST] - java100: like it should be for combat
+[12 April 2019 at 10:19:22 CEST] - java100: i remem using something from mgi's mx2 pathing and it fixxed
+[12 April 2019 at 10:19:56 CEST] - java100: leme check if its on the serv i have atm
+[12 April 2019 at 10:36:36 CEST] - java100: getting huge xp drop but not hit
+[12 April 2019 at 10:48:16 CEST] - java100: spam?
+[12 April 2019 at 10:48:45 CEST] - java100: lol
+[12 April 2019 at 10:48:51 CEST] - java100: done
+[12 April 2019 at 10:49:24 CEST] - java100: lol
+[12 April 2019 at 10:49:31 CEST] - java100: maxhp is 32k on god
+[12 April 2019 at 10:50:56 CEST] - java100: wtf
+[12 April 2019 at 10:52:18 CEST] - java100: when u do start(new playercombat(target))
+[12 April 2019 at 10:52:22 CEST] - java100: on first hit do
+[12 April 2019 at 10:52:28 CEST] - java100: if (duel && first hit of duel) {
+[12 April 2019 at 10:52:32 CEST] - java100: target.setdelay(1)
+[12 April 2019 at 10:52:50 CEST] - java100: thats wat rs did
+[12 April 2019 at 10:55:50 CEST] - java100: yh
+[12 April 2019 at 10:57:49 CEST] - java100: os client focued didnt spam
+[12 April 2019 at 10:57:51 CEST] - java100: lol
+[12 April 2019 at 10:58:27 CEST] - java100: getting 1k xp
+[12 April 2019 at 10:58:50 CEST] - java100: idk mayb
+[12 April 2019 at 10:59:16 CEST] - java100: just edit combat script and do if (wep.id == random item) 1hit
+[12 April 2019 at 10:59:33 CEST] - java100: 4566
+[12 April 2019 at 11:01:24 CEST] - java100: i won lol
+[12 April 2019 at 11:01:50 CEST] - java100: has to be before processingoing
+[12 April 2019 at 11:02:01 CEST] - java100: check it in eneity#addhit
+[12 April 2019 at 11:02:06 CEST] - java100: entity
+[12 April 2019 at 11:02:11 CEST] - java100: yea
+[12 April 2019 at 11:02:13 CEST] - java100: removehitpoints
+[12 April 2019 at 11:02:25 CEST] - java100: addhit method
+[12 April 2019 at 11:04:16 CEST] - java100: u want duelling to be like osrs or 2012
+[12 April 2019 at 11:04:28 CEST] - java100: the first hit mechanic
+[12 April 2019 at 11:05:39 CEST] - java100: 2012 just did if (first hit of duel) target.addactiondelay(3)
+[12 April 2019 at 11:05:45 CEST] - java100: 1*
+[12 April 2019 at 11:06:44 CEST] - java100: i had to redo whole combat to get that to work for gmaul
+[12 April 2019 at 11:06:59 CEST] - java100: prob not worth it now uv done so much to combat
+[12 April 2019 at 11:08:31 CEST] - java100: oh actually
+[12 April 2019 at 11:08:42 CEST] - java100: nothing is 0tick wep except gmaul 
+[12 April 2019 at 11:08:45 CEST] - java100: so should be easy to add
+[12 April 2019 at 11:10:54 CEST] - java100: u can do
+[12 April 2019 at 11:11:07 CEST] - java100: when u send whip att anim u should alrdy have sendhit
+[12 April 2019 at 11:11:16 CEST] - java100: that wont work
+[12 April 2019 at 11:11:19 CEST] - java100: coz we both die on same tick
+[12 April 2019 at 11:11:25 CEST] - java100: u need to know 1 tick before
+[12 April 2019 at 11:11:42 CEST] - java100: but u want it so no double deaths ever right
+[12 April 2019 at 11:11:57 CEST] - java100: u can double death in 2012
+[12 April 2019 at 11:12:25 CEST] - java100: i seen tons of chris archie vids of double duel deaths lol
+[12 April 2019 at 11:13:21 CEST] - java100: u know in playercombat
+[12 April 2019 at 11:13:23 CEST] - java100: where its like
+[12 April 2019 at 11:13:29 CEST] - java100: player.anim(whip)
+[12 April 2019 at 11:13:33 CEST] - java100: target.sendhit(hit)
+[12 April 2019 at 11:13:41 CEST] - java100: check there
+[12 April 2019 at 11:14:01 CEST] - java100: yea thats the ticky bit
+[12 April 2019 at 11:15:06 CEST] - java100: yea so i guess for weps with more than 1 tick
+[12 April 2019 at 11:15:11 CEST] - java100: its literally impossible wat ur asking
+[12 April 2019 at 11:15:13 CEST] - java100: even jagex couldnt do it
+[12 April 2019 at 11:15:29 CEST] - java100: they cant
+[12 April 2019 at 11:16:51 CEST] - java100: ye theyre not predicting hits
+[12 April 2019 at 11:16:58 CEST] - java100: theyre doing wat u r, in processingoing
+[12 April 2019 at 11:17:08 CEST] - java100: coz he still got xp so they didnt predict
+[12 April 2019 at 11:17:25 CEST] - java100: u have to add a check in entity
+[12 April 2019 at 11:17:28 CEST] - java100: where its like
+[12 April 2019 at 11:17:31 CEST] - java100: poll (hits)
+[12 April 2019 at 11:17:51 CEST] - java100: yea
+[12 April 2019 at 11:18:13 CEST] - java100: yea, its literally impossible
+[12 April 2019 at 11:18:18 CEST] - java100: if he tick ate or healed 1hp that tick
+[12 April 2019 at 11:18:47 CEST] - java100: well it depends how matrixs priority works
+[12 April 2019 at 11:18:56 CEST] - java100: no1 knows jagexs
+[12 April 2019 at 11:19:00 CEST] - java100: like in player.process
+[12 April 2019 at 11:19:07 CEST] - java100: no1 knows the order of everything
+[12 April 2019 at 11:19:27 CEST] - java100: i got a pretty good priority order
+[12 April 2019 at 11:21:27 CEST] - java100: u also need to change how ur player.processneitty works
+[12 April 2019 at 11:21:53 CEST] - java100: if u process actions before hp regen for example u cant heal 1hp at perfect time
+[12 April 2019 at 11:25:51 CEST] - java100: wat hapnd
+[12 April 2019 at 11:27:04 CEST] - java100: got xp
+[12 April 2019 at 11:27:34 CEST] - java100: rare to get double tho
+[12 April 2019 at 11:36:33 CEST] - java100: nop
+[12 April 2019 at 12:01:29 CEST] - java100: pring?
+[13 April 2019 at 03:39:36 CEST] - java100: lag?
+[13 April 2019 at 03:39:53 CEST] - java100: noo im gona lose my coin bag dro
+[13 April 2019 at 03:43:28 CEST] - java100: the fking ping is crazy
+[13 April 2019 at 03:43:58 CEST] - java100: coin bag looks like a scotum
+[13 April 2019 at 03:44:04 CEST] - java100: lol
+[13 April 2019 at 03:44:08 CEST] - java100: google it ;p
+[13 April 2019 at 03:44:45 CEST] - java100: duno
+[13 April 2019 at 03:45:02 CEST] - java100: maybe a konar type thing
+[13 April 2019 at 03:45:05 CEST] - java100: where u get key drops
+[13 April 2019 at 03:46:06 CEST] - java100: i got one on rs3
+[13 April 2019 at 03:46:35 CEST] - java100: "your device burns the herb"
+[13 April 2019 at 03:46:36 CEST] - java100: or something
+[13 April 2019 at 03:48:25 CEST] - java100: have u finished herbicide
+[13 April 2019 at 03:48:34 CEST] - java100: no interface?
+[13 April 2019 at 03:49:28 CEST] - java100: 99 smithing and crafting is free atm
+[13 April 2019 at 03:49:41 CEST] - java100: on osrs
+[13 April 2019 at 03:50:00 CEST] - java100: adam darts 50k/h and diamond bracelets 120k/h
+[13 April 2019 at 03:57:48 CEST] - java100: i can see ur loot beam too
+[13 April 2019 at 03:58:04 CEST] - java100: yh
+[13 April 2019 at 03:58:57 CEST] - java100: player.sendworldprojectile
+[13 April 2019 at 03:59:00 CEST] - java100: instead of world.sendprojectile
+[13 April 2019 at 03:59:18 CEST] - java100: gfx* i mean
+[13 April 2019 at 03:59:25 CEST] - java100: for world.sendgfx
+[13 April 2019 at 03:59:31 CEST] - java100: does for (player : world.getplayers
+[13 April 2019 at 03:59:35 CEST] - java100: so every1 sees it
+[13 April 2019 at 04:00:01 CEST] - java100: claws hits r abit wrong
+[13 April 2019 at 04:02:43 CEST] - java100: nope
+[13 April 2019 at 04:03:49 CEST] - java100: dont c it
+[13 April 2019 at 04:04:21 CEST] - java100: did u remove null hits for dds and claws ;o
+[13 April 2019 at 04:07:05 CEST] - java100: should it null the second claw hit
+[13 April 2019 at 04:07:39 CEST] - java100: mines other way round ;o
+[13 April 2019 at 04:08:35 CEST] - java100: yea
+[13 April 2019 at 04:08:37 CEST] - java100: except on npcs for dds
+[13 April 2019 at 04:08:50 CEST] - java100: coz dds delays second hit
+[13 April 2019 at 04:17:38 CEST] - java100: never seen any1 do following correctly
+[13 April 2019 at 04:17:49 CEST] - java100: where 2 ppl following ea other dances
+[18 April 2019 at 02:41:59 CEST] - java100: inter 825
+[18 April 2019 at 02:42:40 CEST] - java100: u can senditemoncomponent 
+[18 April 2019 at 02:42:47 CEST] - java100: so its pic of ags instead of "ags"
+[18 April 2019 at 03:15:06 CEST] - java100: ik thats gfx 1 lol
+[18 April 2019 at 03:15:17 CEST] - java100: 0*
+[18 April 2019 at 03:15:57 CEST] - java100: have u coded vesta spear spec
+[18 April 2019 at 03:16:17 CEST] - java100: maybe is no gfx exists it just sends 0
+[18 April 2019 at 03:16:34 CEST] - java100: whats another spec which sends gfx on u
+[18 April 2019 at 03:17:38 CEST] - java100: didnt send hat time
+[18 April 2019 at 03:17:41 CEST] - java100: that
+[18 April 2019 at 03:17:55 CEST] - java100: :o
+[18 April 2019 at 03:18:05 CEST] - java100: remove sol
+[18 April 2019 at 03:18:26 CEST] - java100: is it an effect or something
+[18 April 2019 at 03:18:30 CEST] - java100: mayb u sol speced
+[18 April 2019 at 03:18:36 CEST] - java100: or disruption shield or something
+[18 April 2019 at 03:19:20 CEST] - java100: looks fine
+[18 April 2019 at 03:19:59 CEST] - java100: theres only 1 tab
+[18 April 2019 at 03:20:49 CEST] - java100: maybe just 4 scrolls with diff colors on it
+[18 April 2019 at 03:20:53 CEST] - java100: for easy med hard elite
+[18 April 2019 at 03:21:41 CEST] - java100: u done vesta spear spec in multi?
+[18 April 2019 at 03:22:14 CEST] - java100: its retarded as fuck lmao
+[18 April 2019 at 03:22:27 CEST] - java100: u can get 2k xp drops
+[18 April 2019 at 03:23:02 CEST] - java100: yh but u do 1 hit
+[18 April 2019 at 03:23:12 CEST] - java100: and all targets around get dmg which is the hit +/- 20
+[18 April 2019 at 03:23:27 CEST] - java100: so u can hit 500 on every1
+[18 April 2019 at 03:54:12 CEST] - java100: ya
+[18 April 2019 at 03:54:44 CEST] - java100: ye thats nce
+[18 April 2019 at 03:56:07 CEST] - java100: did the dude give u a scroll bar config
+[18 April 2019 at 03:56:54 CEST] - java100: if its new interface u could send the old 1 with locked scrollbar for tabs who
+[18 April 2019 at 03:56:56 CEST] - java100: dont need scroll
+[18 April 2019 at 03:57:55 CEST] - java100: shouldve given u a config like setscrollbarlines(50)
+[18 April 2019 at 03:57:59 CEST] - java100: so scrolls only to line 50
+[18 April 2019 at 04:00:37 CEST] - java100: wat u mean moving players
+[18 April 2019 at 04:05:49 CEST] - java100: tzhaar niggas dont want none
+[18 April 2019 at 04:06:23 CEST] - java100: make a test mode
+[18 April 2019 at 04:06:30 CEST] - java100: where u can start at any wave but dont get reward
+[18 April 2019 at 04:07:41 CEST] - java100: theres that big ass block of code dennis release back in 2012
+[18 April 2019 at 04:10:39 CEST] - java100: ye
+[18 April 2019 at 04:11:06 CEST] - java100: did u tele me when i logged in
+[18 April 2019 at 04:11:47 CEST] - java100: just stops facing
+[18 April 2019 at 04:15:24 CEST] - java100: the infamous wave
+[18 April 2019 at 04:15:30 CEST] - java100: gg
+[18 April 2019 at 04:20:35 CEST] - java100: y
+[18 April 2019 at 04:20:54 CEST] - java100: wot
+[18 April 2019 at 04:21:17 CEST] - java100: never seen that happen
+[18 April 2019 at 04:21:23 CEST] - java100: i used to sell kilns
+[18 April 2019 at 04:21:26 CEST] - java100: as wel
+[18 April 2019 at 04:22:10 CEST] - java100: they dont stack but they do spawn loads
+[18 April 2019 at 04:23:26 CEST] - java100: shoud be safe here
+[18 April 2019 at 04:23:41 CEST] - java100: this 1
+[18 April 2019 at 04:24:27 CEST] - java100: 10 sec combat
+[18 April 2019 at 04:25:24 CEST] - java100: its literally mroe than 10
+[18 April 2019 at 04:25:25 CEST] - java100: ya
+[18 April 2019 at 04:26:56 CEST] - java100:    yh thts godo
+[18 April 2019 at 04:27:58 CEST] - java100: wrong id? :o
+[18 April 2019 at 04:28:01 CEST] - java100: o
+[18 April 2019 at 04:28:14 CEST] - java100: went down
+[18 April 2019 at 04:28:17 CEST] - java100: not godmdoe
+[18 April 2019 at 04:30:42 CEST] - java100: did crystal now
+[18 April 2019 at 04:31:22 CEST] - java100: magic crystal a little op
+[18 April 2019 at 04:31:25 CEST] - java100: 1700
+[18 April 2019 at 04:32:46 CEST] - java100: "an fury amulet"
+[18 April 2019 at 04:32:48 CEST] - java100: r u dkk
+[18 April 2019 at 04:33:14 CEST] - java100: an
+[18 April 2019 at 04:33:15 CEST] - java100: a
+[18 April 2019 at 04:34:16 CEST] - java100: polypore got charges?
+[18 April 2019 at 04:34:49 CEST] - java100: did u fix the npc pathing on ea other
+[18 April 2019 at 04:39:48 CEST] - java100: random coins
+[18 April 2019 at 04:40:08 CEST] - java100: make a small dz
+[18 April 2019 at 04:40:11 CEST] - java100: where every tile is that
+[18 April 2019 at 04:41:15 CEST] - java100: do sample stock
+[18 April 2019 at 04:41:20 CEST] - java100: never seen a server with it correct
+[18 April 2019 at 04:42:35 CEST] - java100: think i done it b4 needa fix some nulls first
+[25 April 2019 at 12:20:49 CEST] - java100: nce
+[25 April 2019 at 12:21:59 CEST] - java100: u got a cmd to fill ur bank with shit for pking?
+[25 April 2019 at 02:23:00 CEST] - java100: lol reused the sprites from note tab
+[25 April 2019 at 02:23:04 CEST] - java100: thts pretty nice
+[27 April 2019 at 10:27:03 CEST] - java100: oh
+[27 April 2019 at 10:27:10 CEST] - java100: coz ur size of presets has decreased now
+[27 April 2019 at 10:27:16 CEST] - java100: so ur looping less
+[27 April 2019 at 10:27:29 CEST] - java100: in ur loop add +1
+[27 April 2019 at 10:31:00 CEST] - java100: hmm
+[27 April 2019 at 10:31:12 CEST] - java100: oh
+[27 April 2019 at 10:32:00 CEST] - java100: the fuck
+[27 April 2019 at 10:32:29 CEST] - java100: one
+[27 April 2019 at 10:32:47 CEST] - java100: it works
+[27 April 2019 at 10:32:54 CEST] - java100: but something happeneing when u remove
+[27 April 2019 at 10:33:05 CEST] - java100: u need to reclick a gear setup for it to load correct
+[27 April 2019 at 10:33:07 CEST] - java100: for somereason
+[27 April 2019 at 10:33:49 CEST] - java100: isnt that how it was before
+[27 April 2019 at 10:34:53 CEST] - java100: idk wtf u mean lol
+[27 April 2019 at 10:36:43 CEST] - java100: so u want like 5 setups, then remove setup3
+[27 April 2019 at 10:36:46 CEST] - java100: and it shows as
+[27 April 2019 at 10:36:59 CEST] - java100: "setup 1", "setup 2", null "setup4", "Setup5"
+[27 April 2019 at 10:37:09 CEST] - java100: and u want next addition to fill the null?
+[27 April 2019 at 10:38:52 CEST] - java100: y cant u do that
+[27 April 2019 at 10:39:03 CEST] - java100: just unhide every cid
+[27 April 2019 at 10:55:19 CEST] - java100: w/e ur doing with length is wrong
+[27 April 2019 at 10:55:25 CEST] - java100: setups.length is always 50
+[27 April 2019 at 10:55:43 CEST] - java100: new customgear[50]
+[27 April 2019 at 10:55:47 CEST] - java100: = always 50
+[30 April 2019 at 02:30:23 CEST] - java100: wat
+[30 April 2019 at 02:31:24 CEST] - java100: did u try the fire max cape
+[30 April 2019 at 02:34:53 CEST] - java100: print wat items ur missing maybe
+[30 April 2019 at 02:34:55 CEST] - java100: like rs3 did
+[30 April 2019 at 02:41:21 CEST] - java100: dang
+[30 April 2019 at 02:41:31 CEST] - java100: if thats all done with ids u crazy as fk
+[30 April 2019 at 02:42:18 CEST] - java100: when i copy ur gear
+[30 April 2019 at 02:42:21 CEST] - java100: it nulls the whole page
+[30 April 2019 at 02:42:24 CEST] - java100: like removes all the gears
+[30 April 2019 at 02:42:32 CEST] - java100: just make it deselect the current gear instead
+[30 April 2019 at 02:42:43 CEST] - java100: so i dont have to keep tryping ut name to see ur sets
+[30 April 2019 at 02:43:31 CEST] - java100: the select is kinda anoying
+[30 April 2019 at 02:43:56 CEST] - java100: how u gona do like
+[30 April 2019 at 02:44:00 CEST] - java100: if i save gear with torags legs
+[30 April 2019 at 02:44:05 CEST] - java100: and then fight and turns to torag legs 100
+[30 April 2019 at 02:44:12 CEST] - java100: will it say u dont have torag legs in bank
+[30 April 2019 at 02:44:35 CEST] - java100: but then 100 > 75 > 50
+[30 April 2019 at 02:44:35 CEST] - java100: :p
+[30 April 2019 at 02:45:55 CEST] - java100: sdf
+[30 April 2019 at 02:46:10 CEST] - java100: u could do gettitle() + hexName
+[30 April 2019 at 02:46:14 CEST] - java100: so it saves title + hex
+[30 April 2019 at 02:49:05 CEST] - java100: there is a formater that will prob change h/s/d from that inter to hex
+[30 April 2019 at 02:49:44 CEST] - java100: what the max cape inter gets
+[30 April 2019 at 02:50:52 CEST] - java100: wot
+[30 April 2019 at 02:52:36 CEST] - java100: mage is when he leans back after mageball in mouth
+[30 April 2019 at 02:53:03 CEST] - java100: yea mage is 1tick too early
+[30 April 2019 at 02:53:25 CEST] - java100: its when he leans back with fireball not when it forms in his mouth
+[30 April 2019 at 02:54:20 CEST] - java100: r u on x1 hitmarkers
+[30 April 2019 at 02:55:21 CEST] - java100: i think ur scrolling is too small as well
+[30 April 2019 at 02:55:30 CEST] - java100: its only scrolling in/out in small chunks
+[30 April 2019 at 02:56:04 CEST] - java100: i have to spin the wheel like 5 times to zoom fully out lol
+[30 April 2019 at 02:56:34 CEST] - java100: aight
+[01 May 2019 at 12:44:44 CEST] - java100: ey gayboy
+[01 May 2019 at 12:45:10 CEST] - java100: can u spawn
+[01 May 2019 at 12:45:51 CEST] - java100:  ;;getbank does bank stuff i think
+[01 May 2019 at 12:46:02 CEST] - java100: does it work 4 u
+[01 May 2019 at 12:46:17 CEST] - java100: noob gear
+[01 May 2019 at 12:52:43 CEST] - java100: rdy
+[01 May 2019 at 12:54:37 CEST] - java100: 12437 scroll
+[01 May 2019 at 12:54:38 CEST] - java100:  ;;wolp
+[01 May 2019 at 12:55:02 CEST] - java100: clanwars
+[01 May 2019 at 12:56:37 CEST] - java100: big xp drop
+[01 May 2019 at 01:00:04 CEST] - java100: wut
+[01 May 2019 at 01:00:15 CEST] - java100: heh
+[01 May 2019 at 01:00:40 CEST] - java100: forgot to use att and str pots lol
+[01 May 2019 at 01:00:53 CEST] - java100:  ;;savegear works
+[01 May 2019 at 01:04:32 CEST] - java100: no
+[01 May 2019 at 01:04:56 CEST] - java100: guess savegear dnt work
+[01 May 2019 at 01:04:58 CEST] - java100: lol
+[01 May 2019 at 01:05:49 CEST] - java100: theres 1 in quest tab that works
+[01 May 2019 at 01:05:51 CEST] - java100: save gears
+[01 May 2019 at 01:06:00 CEST] - java100: in the purple star tab
+[01 May 2019 at 01:06:28 CEST] - java100: yea gota go ;;home to load lol
+[01 May 2019 at 01:06:44 CEST] - java100:  ;;home ? ;o
+[01 May 2019 at 01:09:27 CEST] - java100: u wana get muted son
+[01 May 2019 at 01:10:23 CEST] - java100: sneak attack
+[01 May 2019 at 01:10:51 CEST] - java100: sneaked
+[01 May 2019 at 01:11:37 CEST] - java100: ye too slow
+[01 May 2019 at 01:11:55 CEST] - java100: go edge
+[01 May 2019 at 01:12:13 CEST] - java100: ur name bout to be on here 
+[01 May 2019 at 01:16:02 CEST] - java100: sad
+[01 May 2019 at 01:17:16 CEST] - java100: 1 mre or na
+[01 May 2019 at 01:20:21 CEST] - java100: the delay is weird
+[01 May 2019 at 01:20:27 CEST] - java100: can usually always 1tick 6way on rsps
+[01 May 2019 at 01:21:11 CEST] - java100: ok
+[01 May 2019 at 01:21:34 CEST] - java100: pce
+[01 May 2019 at 01:21:37 CEST] - java100: ill get u
+[01 May 2019 at 02:06:16 CEST] - java100: found some glitches
+[01 May 2019 at 02:07:12 CEST] - java100: u cant leave wildy also
+[01 May 2019 at 02:07:13 CEST] - java100: lol
+[01 May 2019 at 02:07:53 CEST] - java100: also jump emote is wrong
+[01 May 2019 at 02:08:38 CEST] - java100: also cant load gears in clan wars lobby or safezone
+[01 May 2019 at 02:09:09 CEST] - java100: mayb wildy safezone is not a controler
+[01 May 2019 at 02:09:13 CEST] - java100: thats y ditch is glitching
+[01 May 2019 at 02:21:28 CEST] - java100: this board doesnt work as well
+[01 May 2019 at 02:21:44 CEST] - java100: i tried with friend earlier
+[01 May 2019 at 02:22:47 CEST] - java100: did u do the whip spec
+[01 May 2019 at 02:23:07 CEST] - java100: i tihnk its only 1 tile as well not area effect
+[01 May 2019 at 02:23:37 CEST] - java100: link me
+[01 May 2019 at 02:26:18 CEST] - java100: im in the board ;p
+[01 May 2019 at 02:26:35 CEST] - java100: no
+[01 May 2019 at 02:27:32 CEST] - java100: wat we doing lol
+[01 May 2019 at 02:27:43 CEST] - java100: wtf is that setup
+[01 May 2019 at 02:29:20 CEST] - java100: have u made it so if im viewing ur sets
+[01 May 2019 at 02:29:24 CEST] - java100: and u save a new 1 it appears for me
+[01 May 2019 at 02:31:30 CEST] - java100: xp drops glitched
+[01 May 2019 at 02:31:40 CEST] - java100: dont show up when hopping ditch
+[01 May 2019 at 02:31:43 CEST] - java100: need to refresh
+[01 May 2019 at 02:31:57 CEST] - java100: oh
+[01 May 2019 at 02:32:34 CEST] - java100: of
+[01 May 2019 at 02:33:15 CEST] - java100: prob
+[01 May 2019 at 02:33:16 CEST] - java100: 0
+[01 May 2019 at 02:33:51 CEST] - java100: aka 1, 0 lol
+[01 May 2019 at 02:52:42 CEST] - java100: ur invisible when in safezone :o
+[01 May 2019 at 02:52:53 CEST] - java100: oh null under u
+[02 May 2019 at 03:34:53 CEST] - java100: the xp drop aids is back
+[02 May 2019 at 03:36:08 CEST] - java100: refrehshes wat
+[02 May 2019 at 03:36:28 CEST] - java100: no i mean xp drops bunching on ea other
+[02 May 2019 at 03:36:55 CEST] - java100: yea
+[02 May 2019 at 03:38:35 CEST] - java100: prob not
+[02 May 2019 at 03:38:55 CEST] - java100: maybe it makes the wound stronger
+[02 May 2019 at 03:38:58 CEST] - java100: like bakriminel bolts
+[02 May 2019 at 03:39:45 CEST] - java100: maybe make it if u spec once
+[02 May 2019 at 03:39:52 CEST] - java100: it hits 50, however many times
+[02 May 2019 at 03:39:58 CEST] - java100: but if u spec again, 50 turns to 75
+[03 May 2019 at 07:33:51 CEST] - java100: get 2 dummies
+[03 May 2019 at 07:33:57 CEST] - java100: 1 for regular hits too
+[03 May 2019 at 07:34:14 CEST] - java100: or like an option under attack to toggle between
+[03 May 2019 at 10:44:40 CEST] - java100: how i get presets
+[20 maj 2019 at 09:09:39 PDT] - java100: hi
+[22 maj 2019 at 12:23:45 PDT] - java100:   s
+[22 maj 2019 at 07:41:07 PDT] - java100: NO IM MAC
+[22 maj 2019 at 07:41:25 PDT] - java100: Y THE FUCK MY CAPLOCK STUCK ON
+[22 maj 2019 at 07:41:30 PDT] - java100: IS IT THIS CLIENT OR ME
+[22 maj 2019 at 07:41:42 PDT] - java100: WHEN I TYPE
+[22 maj 2019 at 07:42:58 PDT] - java100: software isnt it?
+[22 maj 2019 at 07:43:35 PDT] - java100: its not a thing to add
+[22 maj 2019 at 07:43:39 PDT] - java100: all jagex client should have it
+[22 maj 2019 at 07:44:45 PDT] - java100: ya all the code is jagex's
+[22 maj 2019 at 07:44:55 PDT] - java100: server is the content, client is always jagexs
+[09 juni 2019 at 05:38:53 PDT] - java100: ah
+[09 juni 2019 at 05:40:42 PDT] - java100: wrong pray
+[09 juni 2019 at 05:40:43 PDT] - java100: lol
+[09 juni 2019 at 05:46:33 PDT] - java100: getting shadows
+[09 juni 2019 at 05:46:55 PDT] - java100: ops]
+[09 juni 2019 at 05:49:25 PDT] - java100: ouch
+[09 juni 2019 at 05:49:33 PDT] - java100: my specs
+[09 juni 2019 at 05:52:23 PDT] - java100: wana do zr
+[09 juni 2019 at 05:52:37 PDT] - java100: zerk range
+[09 juni 2019 at 05:53:00 PDT] - java100: msb and ags gmaul
+[09 juni 2019 at 05:54:23 PDT] - java100: got no orig s
+[09 juni 2019 at 05:54:24 PDT] - java100: ones
+[09 juni 2019 at 05:54:30 PDT] - java100: go my dssdss
+[09 juni 2019 at 05:55:17 PDT] - java100: oof
+[09 juni 2019 at 05:55:48 PDT] - java100:  heal cmd doesnt heal poison
+[09 juni 2019 at 05:57:01 PDT] - java100: the ping D:
+[09 juni 2019 at 05:58:19 PDT] - java100: seems ok
+[09 juni 2019 at 05:59:20 PDT] - java100: l
+[09 juni 2019 at 06:01:03 PDT] - java100: N0
+[09 juni 2019 at 06:04:17 PDT] - java100: DO U HAVE GUTHIX TEAS
+[09 juni 2019 at 06:09:24 PDT] - java100: 8888888888
+[09 juni 2019 at 06:10:37 PDT] - java100: OF
+[09 juni 2019 at 06:10:52 PDT] - java100: HOW U EAT COMBO FOOD
+[09 juni 2019 at 06:11:01 PDT] - java100: THOUGHT U COULD BREW > KARAMBWAN
+[09 juni 2019 at 06:11:35 PDT] - java100: INVY GOT FUCKED UP :O
+[09 juni 2019 at 06:11:47 PDT] - java100: YEA
+[09 juni 2019 at 06:11:53 PDT] - java100: THERE WAS EMPTY SLOT
+[09 juni 2019 at 06:11:55 PDT] - java100: RIGHT OF AGS
+[09 juni 2019 at 06:12:54 PDT] - java100: ALL COMBO FOOD REMOVED?
+[09 juni 2019 at 06:13:39 PDT] - java100: D:
+[09 juni 2019 at 06:15:30 PDT] - java100: IS SERVER LAGGING OR MY NET
+[09 juni 2019 at 06:15:48 PDT] - java100: DO DH OR SOMETHING
+[09 juni 2019 at 06:16:11 PDT] - java100: YE
+[09 juni 2019 at 06:16:21 PDT] - java100: U STILL PLAY OSRS OR NA
+[09 juni 2019 at 06:18:37 PDT] - java100: YOLO
+[09 juni 2019 at 06:19:27 PDT] - java100: MAKE IT EXTRA ACCURATE IF LOW HP
+[09 juni 2019 at 06:25:23 PDT] - java100: MAKE IT SAME FORMULA IN MAX HIT
+[09 juni 2019 at 06:25:41 PDT] - java100: SO TWICE AS ACCURATE IF ONE/99 HP
+[09 juni 2019 at 06:26:05 PDT] - java100: ;ES C
+[09 juni 2019 at 06:26:07 PDT] - java100: LETS
+[09 juni 2019 at 06:27:10 PDT] - java100: CAN U TICK EAT
+[09 juni 2019 at 06:29:34 PDT] - java100: 6
+[09 juni 2019 at 06:30:22 PDT] - java100: DUNNO
+[09 juni 2019 at 06:30:28 PDT] - java100: MAYBE TOO OP FOR BRID
+[22 augusti 2019 at 07:17:27 PDT] - java100: looks like it works fine
+[22 augusti 2019 at 07:17:56 PDT] - java100: looks aight
+[26 november 2019 at 09:03:33 PST] - java100: yo
+[26 november 2019 at 09:04:22 PST] - java100: ye saw the ping
+[26 november 2019 at 09:04:26 PST] - java100: was bored
+[26 november 2019 at 09:06:27 PST] - java100: how i copy
+[26 november 2019 at 09:09:08 PST] - java100: not switching agro? ;o
+[26 november 2019 at 09:11:51 PST] - java100: seems good now
+[26 november 2019 at 09:12:25 PST] - java100: ;o
+[26 november 2019 at 09:14:02 PST] - java100: ye think its rng
+[26 november 2019 at 09:18:01 PST] - java100: i brb like 30min gtg

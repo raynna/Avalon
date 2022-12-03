@@ -1,0 +1,13 @@
+void script_2584() {
+	widget(292, 117).setRGB(0xFF9935);
+	widget(292, 102).setContextMenuOption(1, "Select dwarf");
+	widget(292, 104).setContextMenuOption(1, "Select goblin");
+	widget(292, 103).setContextMenuOption(1, "Select elf");
+	widget(292, 102).setScriptCallOnClickContextMenu(2586, CTX_WIDGET, "I");
+	widget(292, 104).setScriptCallOnClickContextMenu(2586, CTX_WIDGET, "I");
+	widget(292, 103).setScriptCallOnClickContextMenu(2586, CTX_WIDGET, "I");
+	widget(292, 102).setScriptCallOnMousePressed(-1, "");
+	widget(292, 104).setScriptCallOnMousePressed(-1, "");
+	widget(292, 103).setScriptCallOnMousePressed(-1, "");
+	return;
+}

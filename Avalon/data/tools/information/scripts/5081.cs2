@@ -1,0 +1,76 @@
+void script_5081(Widget widget0, int arg1, DataMap datamap2, int arg3, int arg4, int arg5, int arg6) {
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	if (VARC[1095] == 0 || VARC[1095] == -1) {
+		script_5085(widget0);
+		return;
+	}
+	playSoundEffect2False(6185, 1, 0, 200);
+	widget(1114, 28).setIsHidden(false);
+	VARC[160] = arg1;
+	int7 = arg1 * 10;
+	if (ACTIVE.setChild(widget0, int7)) {
+		ACTIVE.setScriptCallOnGameloop(-1, "");
+	}
+	if (ACTIVE.setChild(widget0, int7 + 3)) {
+		ACTIVE.setSprite(6138);
+	}
+	if (ACTIVE.setChild(widget0, int7 + 5)) {
+		ACTIVE.setSprite(6137);
+	}
+	if (ACTIVE.setChild(widget0, int7 + 7)) {
+		ACTIVE.setSprite(6139);
+	}
+	if (ACTIVE.setChild(widget0, int7 + 4)) {
+		ACTIVE.setTrans(255);
+	}
+	if (ACTIVE.setChild(widget0, int7 + 6)) {
+		ACTIVE.setTrans(255);
+	}
+	if (ACTIVE.setChild(widget0, int7 + 8)) {
+		ACTIVE.setTrans(255);
+	}
+	widget(1114, 32).clearChildren();
+	int8 = 0;
+	while (int8 < arg3) {
+		ACTIVE.createChild(widget(1114, 32), 3, widget(1114, 32).nextChild());
+		ACTIVE.setHidden(true);
+		int8 = int8 + 1;
+	}
+	int9 = script_5089(datamap2);
+	int10 = 0;
+	int8 = 0;
+	while (int8 < arg4) {
+		if (int9 != int8) {
+			ACTIVE.createChild(widget(1114, 32), 4, widget(1114, 32).nextChild());
+			ACTIVE.setSize(0, 12, 1, 0);
+			ACTIVE.setPosition(0, int10, 0, 0);
+			ACTIVE.setFont(494);
+			ACTIVE.setTextAlignment(1, 1, 0);
+			ACTIVE.setRGB(0x251E14);
+			ACTIVE.setTextAntiMacro(false);
+			ACTIVE.setText(datamap('i', 's', datamap2, int8));
+			ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+			ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 2432532, "Iii");
+			ACTIVE.setContextMenuOption(1, "Select");
+			ACTIVE.setScriptCallOnClickContextMenu(5084, widget0, "I");
+			int10 = int10 + ACTIVE.getHeight();
+		} else {
+			ACTIVE.createChild(widget(1114, 32), 3, widget(1114, 32).nextChild());
+			ACTIVE.setHidden(true);
+		}
+		int8 = int8 + 1;
+	}
+	widget(1114, 29).setAttr(1476, arg6);
+	widget(1114, 29).setAttr(1477, int10);
+	widget(1114, 32).setScrollMax(0, int10);
+	script_5082(widget0);
+	if (arg4 > 4) {
+		script_31(widget(1114, 33), widget(1114, 32), 6507, 6504, 6505, 6506, 6499, 6498);
+	} else {
+		widget(1114, 33).clearChildren();
+	}
+	return;
+}

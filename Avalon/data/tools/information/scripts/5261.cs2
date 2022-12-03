@@ -1,0 +1,17 @@
+void script_5261(Widget widget0) {
+	switch (widget0) {
+		case widget(1132, 10):
+			widget(1132, 22).setIsHidden(false);
+			widget(1132, 23).setText("4");
+			widget(1132, 23).setIsHidden(false);
+			widget0.setScriptCallOnGameloop(5262, 4, 0, widget(1132, 10), "iiI");
+			break;
+		case widget(1132, 11):
+			widget(1132, 27).setIsHidden(false);
+			widget(1132, 28).setText("2");
+			widget(1132, 28).setIsHidden(false);
+			widget0.setScriptCallOnGameloop(5262, 2, 0, widget(1132, 11), "iiI");
+			break;
+	}
+	return;
+}

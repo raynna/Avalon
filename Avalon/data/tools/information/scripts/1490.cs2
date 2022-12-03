@@ -1,0 +1,16 @@
+void script_1490() {
+	string str0;
+	str0 = "";
+	if (VARP[304] == 0) {
+		widget(762, 15).setSprite(1431);
+		widget(762, 16).setSprite(1425);
+		str0 = "Switch to insert items mode";
+	} else {
+		widget(762, 15).setSprite(1433);
+		widget(762, 16).setSprite(1426);
+		str0 = "Switch to swap items mode";
+	}
+	widget(762, 15).setContextMenuOption(1, str0);
+	widget(762, 15).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(762, 119), str0, 25, 150, "IIsii");
+	return;
+}

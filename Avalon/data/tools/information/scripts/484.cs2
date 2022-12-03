@@ -1,0 +1,152 @@
+void script_484(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	string str0;
+	int1 = -1;
+	int2 = -1;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	str0 = "";
+	widget0.setRGB(0xFFFFFF);
+	switch (VARPBIT[7512]) {
+		case 1:
+			int1 = script_486(VARPBIT[7520]);
+			break;
+		case 2:
+			int1 = script_486(VARPBIT[7521]);
+			break;
+		case 3:
+			int1 = script_486(VARPBIT[7526]);
+			break;
+		case 4:
+			int1 = script_486(VARPBIT[7527]);
+			break;
+		case 5:
+			int1 = script_486(VARPBIT[7530]);
+			break;
+		case 6:
+			int1 = script_486(VARPBIT[7531]);
+			break;
+		case 7:
+			int1 = script_486(VARPBIT[7532]);
+			break;
+		case 8:
+			int1 = script_486(VARPBIT[7533]);
+			break;
+		case 9:
+			int1 = script_486(VARPBIT[7534]);
+			break;
+		case 10:
+			int1 = script_486(VARPBIT[7535]);
+			break;
+		default:
+			return;
+	}
+	switch (widget0) {
+		case widget(1015, 133):
+			int2 = script_486(0);
+			break;
+		case widget(1015, 119):
+			int2 = script_486(1);
+			break;
+		case widget(1015, 121):
+			int2 = script_486(2);
+			break;
+		case widget(1015, 123):
+			int2 = script_486(3);
+			break;
+		case widget(1015, 125):
+			int2 = script_486(4);
+			break;
+		case widget(1015, 127):
+			int2 = script_486(5);
+			break;
+		case widget(1015, 129):
+			int2 = script_486(6);
+			break;
+		case widget(1015, 131):
+			int2 = script_486(7);
+			break;
+		default:
+			return;
+	}
+	if (int1 == -1) {
+		widget(1015, 135).setIsHidden(true);
+		widget(1015, 115).setIsHidden(false);
+		widget(1015, 2).setSprite(getNpcAttribute(int2, 1148));
+		widget(1015, 0).setText(getNpcAttribute(int2, 1139));
+		widget(1015, 138).setText("Movement: " + str(getNpcAttribute(int2, 1134)));
+		widget(1015, 139).setText("Damage: " + str(getNpcAttribute(int2, 1135) * 100));
+		widget(1015, 140).setText("Health: " + str(getNpcAttribute(int2, 1136) * 100));
+		widget(1015, 141).setText("Range: " + str(getNpcAttribute(int2, 1137)));
+		widget(1015, 142).setText("Cost: " + str(getNpcAttribute(int2, 1138)));
+	} else if (int1 != int2) {
+		widget(1015, 2).setSprite(getNpcAttribute(int2, 1148));
+		widget(1015, 0).setText(concat(widget(1015, 0).getText(), " ~ " + getNpcAttribute(int2, 1139)));
+		int3 = getNpcAttribute(int1, 1134);
+		int4 = getNpcAttribute(int2, 1134);
+		if (int3 < int4) {
+			int5 = int4 - int3;
+			str0 = " ~ " + str(getNpcAttribute(int2, 1134)) + " (" + "<col=00c800>" + "+" + str(int5) + "</col>" + ")";
+		} else if (int3 > int4) {
+			int5 = int3 - int4;
+			str0 = " ~ " + str(getNpcAttribute(int2, 1134)) + " (" + "<col=c80000>" + "-" + str(int5) + "</col>" + ")";
+		} else {
+			str0 = " ~ " + str(getNpcAttribute(int2, 1134));
+		}
+		widget(1015, 138).setText(concat(widget(1015, 138).getText(), str0));
+		int3 = getNpcAttribute(int1, 1135);
+		int4 = getNpcAttribute(int2, 1135);
+		if (int3 < int4) {
+			int5 = int4 - int3;
+			str0 = " ~ " + str(getNpcAttribute(int2, 1135) * 100) + " (" + "<col=00c800>" + "+" + str(int5 * 100) + "</col>" + ")";
+		} else if (int3 > int4) {
+			int5 = int3 - int4;
+			str0 = " ~ " + str(getNpcAttribute(int2, 1135) * 100) + " (" + "<col=c80000>" + "-" + str(int5 * 100) + "</col>" + ")";
+		} else {
+			str0 = " ~ " + str(getNpcAttribute(int2, 1135) * 100);
+		}
+		widget(1015, 139).setText(concat(widget(1015, 139).getText(), str0));
+		int3 = getNpcAttribute(int1, 1136);
+		int4 = getNpcAttribute(int2, 1136);
+		if (int3 < int4) {
+			int5 = int4 - int3;
+			str0 = " ~ " + str(getNpcAttribute(int2, 1136) * 100) + " (" + "<col=00c800>" + "+" + str(int5 * 100) + "</col>" + ")";
+		} else if (int3 > int4) {
+			int5 = int3 - int4;
+			str0 = " ~ " + str(getNpcAttribute(int2, 1136) * 100) + " (" + "<col=c80000>" + "-" + str(int5 * 100) + "</col>" + ")";
+		} else {
+			str0 = " ~ " + str(getNpcAttribute(int2, 1136) * 100);
+		}
+		widget(1015, 140).setText(concat(widget(1015, 140).getText(), str0));
+		int3 = getNpcAttribute(int1, 1137);
+		int4 = getNpcAttribute(int2, 1137);
+		if (int3 < int4) {
+			int5 = int4 - int3;
+			str0 = " ~ " + str(getNpcAttribute(int2, 1137)) + " (" + "<col=00c800>" + "+" + str(int5) + "</col>" + ")";
+		} else if (int3 > int4) {
+			int5 = int3 - int4;
+			str0 = " ~ " + str(getNpcAttribute(int2, 1137)) + " (" + "<col=c80000>" + "-" + str(int5) + "</col>" + ")";
+		} else {
+			str0 = " ~ " + str(getNpcAttribute(int2, 1137));
+		}
+		widget(1015, 141).setText(concat(widget(1015, 141).getText(), str0));
+		int3 = getNpcAttribute(int1, 1138);
+		int4 = getNpcAttribute(int2, 1138);
+		if (int3 < int4) {
+			int5 = int4 - int3;
+			str0 = " ~ " + str(getNpcAttribute(int2, 1138)) + " (" + "<col=c80000>" + "+" + str(int5) + "</col>" + ")";
+		} else if (int3 > int4) {
+			int5 = int3 - int4;
+			str0 = " ~ " + str(getNpcAttribute(int2, 1138)) + " (" + "<col=00c800>" + "-" + str(int5) + "</col>" + ")";
+		} else {
+			str0 = " ~ " + str(getNpcAttribute(int2, 1138));
+		}
+		widget(1015, 142).setText(concat(widget(1015, 142).getText(), str0));
+	}
+	return;
+}

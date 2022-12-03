@@ -1,0 +1,11 @@
+void script_222() {
+	if (isFriend(STRING[24])) {
+		message(26, 0, "Sorry, you cannot ignore players in your Friends List.");
+	} else {
+		cs2method3630(STRING[24]);
+		message(26, 0, "You are ignoring " + STRING[24] + " until you log out.");
+	}
+	VARC[11] = 0;
+	script_675();
+	return;
+}

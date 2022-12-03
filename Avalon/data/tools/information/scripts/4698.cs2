@@ -1,0 +1,10 @@
+void script_4698() {
+	int int0;
+	int0 = 0;
+	int0 = VARC[1545] / 2;
+	widget(500, 12).setSize(int0 * 16384 / 100, widget(500, 12).getHeight(), 2, 0);
+	if (int0 < 97) {
+		widget(500, 13).setIsHidden(true);
+	}
+	return;
+}

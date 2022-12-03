@@ -1,0 +1,9 @@
+void script_966(Widget widget0, int arg1) {
+	int int2;
+	int2 = widget0.getRotateZ();
+	if (int2 != arg1) {
+		widget0.set3DRotation(0, 0, widget0.getRotateX(), widget0.getRotateY(), script_967(int2, arg1), widget0.get3DDistance());
+		VARC[125] = getClientCycle();
+	}
+	return;
+}

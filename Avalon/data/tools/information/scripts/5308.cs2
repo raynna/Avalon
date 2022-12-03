@@ -1,0 +1,78 @@
+void script_5308() {
+	int int0;
+	int int1;
+	AttrMap attrmap2;
+	int int3;
+	Sprite sprite4;
+	Sprite sprite5;
+	int int6;
+	int int7;
+	int int8;
+	string str0;
+	int0 = 0;
+	int1 = 0;
+	str0 = "";
+	attrmap2 = null;
+	int3 = 0;
+	sprite4 = 7287;
+	sprite5 = 7706;
+	int6 = 7289;
+	int7 = 2;
+	int8 = 54;
+	widget(823, 3).clearChildren();
+	widget(823, 4).clearChildren();
+	while (int0 < datamapSize((DataMap)840)) {
+		int3 = datamap('i', 'i', (DataMap)840, int0);
+		attrmap2 = datamap('i', 'J', (DataMap)5173, int3);
+		if (attrmap2 == null) {
+			return;
+		}
+		str0 = getAttributeMapValue(attrmap2, 1974) + "<br>" + getAttributeMapValue(attrmap2, 1975);
+		ACTIVE.createChild(widget(823, 3), 5, int0);
+		ACTIVE.setSprite(sprite4);
+		ACTIVE.setSize(int8, int8, 0, 0);
+		if (int0 % 3 == 0) {
+			ACTIVE.setPosition(int7, int7 + int1 * (54 + int7), 0, 0);
+		} else if (int0 % 3 == 1) {
+			ACTIVE.setPosition(int7 * 2 + int8, int7 + int1 * (54 + int7), 0, 0);
+		} else {
+			ACTIVE.setPosition(int7 * 3 + int8 * 2, int7 + int1 * (54 + int7), 0, 0);
+		}
+		if (int3 == 0) {
+			ACTIVE.setContextMenuOption(1, getAttributeMapValue(attrmap2, 1974));
+		} else {
+			ACTIVE.setScriptCallOnUse(5309, CTX_WIDGET_CHILD, "i");
+			ACTIVE.setScriptCallOnUseWith(44, CTX_WIDGET, sprite4, "Id");
+			if (int3 == 1) {
+				ACTIVE.setTargetVerb(getAttributeMapValue(attrmap2, 1974));
+			} else if (int3 == 2) {
+				ACTIVE.setTargetVerb(getAttributeMapValue(attrmap2, 1974));
+			} else {
+				ACTIVE.setTargetVerb("Place " + getAttributeMapValue(attrmap2, 1974));
+			}
+			ACTIVE.cs2method1308(176, -1);
+		}
+		ACTIVE.setScriptCallOnMouseEntered(44, CTX_WIDGET, sprite5, "Id");
+		ACTIVE.setScriptCallOnMouseOver(5334, widget(823, 3), int0, widget(823, 15), str0, 20, 200, "IiIsii");
+		ACTIVE.setScriptCallOnMouseExit(299, widget(823, 15), CTX_WIDGET, sprite4, "IId");
+		ACTIVE.createChild(widget(823, 4), 5, int0);
+		ACTIVE.setSprite(getAttributeMapValue(attrmap2, 1983));
+		ACTIVE.setSize(50, 50, 0, 0);
+		if (int0 % 3 == 0) {
+			ACTIVE.setPosition(int7 + 2, 2 + int7 + int1 * (54 + int7), 0, 0);
+		} else if (int0 % 3 == 1) {
+			ACTIVE.setPosition(2 + (int7 * 2 + int8), 2 + int7 + int1 * (54 + int7), 0, 0);
+		} else {
+			ACTIVE.setPosition(2 + (int7 * 3 + int8 * 2), 2 + int7 + int1 * (54 + int7), 0, 0);
+		}
+		if (int0 % 3 == 2) {
+			int1 = int1 + 1;
+		}
+		int0 = int0 + 1;
+	}
+	int1 = int1 + 1;
+	widget(823, 9).setScrollPos(0, 0);
+	widget(823, 9).setScrollMax(0, int7 + int1 * (54 + int7));
+	script_31(widget(823, 10), widget(823, 9), 6507, 6504, 6505, 6506, 6499, 6498);
+	return;
+}

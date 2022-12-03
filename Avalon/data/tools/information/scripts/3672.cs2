@@ -1,0 +1,44 @@
+void script_3672() {
+	Sprite sprite0;
+	Sprite sprite1;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	str0 = datamap('i', 's', (DataMap)3230, VARC[1327]);
+	str1 = datamap('i', 's', (DataMap)3230, VARC[1326]);
+	str2 = datamap('i', 's', (DataMap)3231, VARC[1330]);
+	str3 = str(VARC[1325]) + "%";
+	sprite0 = datamap('i', 'd', (DataMap)3233, VARC[1328]);
+	sprite1 = datamap('i', 'd', (DataMap)3233, VARC[1329]);
+	widget(1004, 72).setText(str0);
+	widget(1004, 72).setRGB(datamap('i', 'i', (DataMap)3234, VARC[1327]));
+	widget(1004, 71).setText(str1);
+	widget(1004, 71).setRGB(datamap('i', 'i', (DataMap)3234, VARC[1326]));
+	widget(1004, 68).setSprite(sprite0);
+	widget(1004, 69).setSprite(sprite1);
+	widget(1004, 70).setText(str2);
+	widget(1004, 70).setRGB(datamap('i', 'i', (DataMap)3235, VARC[1330]));
+	widget(1004, 73).setText(str3);
+	if (VARC[1327] != 3) {
+		widget(1004, 66).setIsHidden(false);
+	} else {
+		widget(1004, 66).setIsHidden(true);
+	}
+	if (VARC[1326] != 3) {
+		widget(1004, 63).setIsHidden(false);
+	} else {
+		widget(1004, 63).setIsHidden(true);
+	}
+	if (VARC[1331] == 1) {
+		widget(1004, 65).setIsHidden(false);
+	} else {
+		widget(1004, 65).setIsHidden(true);
+	}
+	if (VARC[1330] > 66) {
+		widget(1004, 64).setIsHidden(false);
+	} else {
+		widget(1004, 64).setIsHidden(true);
+	}
+	return;
+}

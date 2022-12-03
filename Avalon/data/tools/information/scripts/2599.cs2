@@ -1,0 +1,92 @@
+void script_2599() {
+	int int0;
+	int int1;
+	int int2;
+	Item item3;
+	int int4;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	item3 = null;
+	ARRAY0 = new Item[10];
+	ARRAY1 = new int[10];
+	ARRAY2 = new int[10];
+	int4 = 0;
+	while (int1 < 28 && int2 < 10) {
+		item3 = getItemIdInSlot(93, int1);
+		if (item3 != null && (itemAttribute(item3, 802) == 1 || itemAttribute(item3, 803) == 1)) {
+			ARRAY0[int2] = item3;
+			int2 = int2 + 1;
+		}
+		int1 = int1 + 1;
+	}
+	item3 = null;
+	ARRAY1[0] = VARPBIT[6405];
+	ARRAY1[1] = VARPBIT[6406];
+	ARRAY1[2] = VARPBIT[6407];
+	ARRAY1[3] = VARPBIT[6408];
+	ARRAY1[4] = VARPBIT[6409];
+	ARRAY1[5] = VARPBIT[6410];
+	ARRAY1[6] = VARPBIT[6411];
+	ARRAY1[7] = VARPBIT[6412];
+	ARRAY1[8] = VARPBIT[6413];
+	ARRAY1[9] = VARPBIT[6414];
+	int1 = 0;
+	while (int1 < 10) {
+		if (ARRAY0[int1] != -1) {
+			if (itemAttribute(item3, 803) == 1) {
+				ARRAY2[int1] = VARPBIT[6405] * 50;
+			}
+			if (itemAttribute((Item)ARRAY0[int1], 803) == 1 && ARRAY1[int1] == 1) {
+				ARRAY2[int1] = 50;
+				int4 = int4 + ARRAY2[int1];
+			}
+			datamap('i', 'I', (DataMap)2424, int1).setText("Cost: " + str(ARRAY2[int1]));
+		}
+		int1 = int1 + 1;
+	}
+	widget(292, 101).setText(str(ARRAY2[VARC[929]]));
+	VARC[928] = int4;
+	widget(292, 126).setText(str(VARC[928]));
+	widget(292, 128).setText("Remaining investment credits: " + str(VARPBIT[6351] - VARC[928]));
+	if (VARC[928] <= VARPBIT[6351]) {
+		widget(292, 123).setSprite(1870);
+		widget(292, 122).setScriptCallOnClickContextMenu(2605, "");
+		widget(292, 122).setContextMenuOption(1, "Apply changes");
+		widget(292, 122).setScriptCallOnMouseEntered(94, CTX_WIDGET, "I");
+		widget(292, 126).setRGB(0xFF9935);
+		widget(292, 122).setScriptCallOnMousePressed(-1, "");
+	} else {
+		widget(292, 123).setSprite(1871);
+		widget(292, 122).setScriptCallOnClickContextMenu(-1, "");
+		widget(292, 122).setNoOptions();
+		widget(292, 122).setScriptCallOnMouseEntered(-1, "");
+		widget(292, 126).setRGB(0xFF1111);
+		widget(292, 122).setScriptCallOnMousePressed(2606, CTX_WIDGET, "I");
+	}
+	int1 = 0;
+	while (int1 < 10) {
+		if (ARRAY0[int1] != -1 && itemAttribute((Item)ARRAY0[int1], 803) == 1) {
+			int0 = int0 + 50;
+		}
+		int1 = int1 + 1;
+	}
+	if (int0 > 0) {
+		widget(292, 124).setText("Resupply all" + "<br>" + "(" + str(int0) + ")");
+	}
+	if (VARPBIT[6351] >= int0 && int0 > 0) {
+		widget(292, 124).setRGB(0xFF9935);
+		widget(292, 119).setScriptCallOnClickContextMenu(2603, "");
+		widget(292, 119).setContextMenuOption(1, "Resupply all");
+		widget(292, 119).setScriptCallOnMouseEntered(94, CTX_WIDGET, "I");
+		widget(292, 119).setScriptCallOnMousePressed(-1, "");
+	} else {
+		widget(292, 124).setText("Resupply all");
+		widget(292, 124).setRGB(0x666666);
+		widget(292, 119).setScriptCallOnClickContextMenu(-1, "");
+		widget(292, 119).setNoOptions();
+		widget(292, 119).setScriptCallOnMouseEntered(-1, "");
+		widget(292, 119).setScriptCallOnMousePressed(2606, CTX_WIDGET, "I");
+	}
+	return;
+}

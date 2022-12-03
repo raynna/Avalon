@@ -1,0 +1,15 @@
+void script_2346() {
+	VARC[769] = VARC[769] + 1;
+	if (VARC[769] >= cs2method5407(0) - 1) {
+		VARC[769] = 0;
+		widget(582, 0).setScriptCallOnMinimapRelatedSetting3(-1, "");
+		return;
+	}
+	if (VARC[769] == cs2method5407(0) - 2) {
+		cameraMethod5502(0, VARC[769], 200, 75, 1, VARC[769]);
+	} else {
+		cameraMethod5502(0, VARC[769], 200, 200, 1, VARC[769]);
+	}
+	widget(582, 0).setScriptCallOnMinimapRelatedSetting3(2346, "");
+	return;
+}

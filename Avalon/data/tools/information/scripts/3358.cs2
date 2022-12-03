@@ -1,0 +1,25 @@
+int, string, int script_3358() {
+	switch (VARP[448]) {
+		case 17985:
+			return 2, "Poisonous Shot (Tier 1)", 18037;
+		case 17986:
+			return 12, "Poisonous Shot (Tier 2)", 18038;
+		case 17987:
+			return 22, "Poisonous Shot (Tier 3)", 18039;
+		case 17988:
+			return 32, "Poisonous Shot (Tier 4)", 18040;
+		case 17989:
+			return 42, "Poisonous Shot (Tier 5)", 18041;
+		case 17990:
+			return 52, "Poisonous Shot (Tier 6)", 18042;
+		case 17991:
+			return 62, "Poisonous Shot (Tier 7)", 18043;
+		case 17992:
+			return 72, "Poisonous Shot (Tier 8)", 18044;
+		case 17993:
+			return 82, "Poisonous Shot (Tier 9)", 18045;
+		case 17994:
+			return 92, "Poisonous Shot (Tier 10)", 18046;
+	}
+	return 2, "Poisonous Shot (Tier 1)", 18037;
+}

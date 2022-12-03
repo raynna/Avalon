@@ -1,0 +1,10 @@
+void script_3949(Widget widget0, int arg1) {
+	if (arg1 == 1) {
+		widget0.setRGB(0xFAFAFA);
+		widget0.setText(concat("<u=fafafa>", removeTags(widget0.getText())));
+	} else {
+		widget0.setRGB(0xEBE0BC);
+		widget0.setText(concat("<u=ebe0bc>", removeTags(widget0.getText())));
+	}
+	return;
+}

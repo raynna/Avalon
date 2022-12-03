@@ -1,0 +1,22 @@
+void script_3407(int arg0, Widget widget1, Widget widget2) {
+	if (!widget1.isHidden()) {
+		widget2.clearChildren();
+		widget2.setScriptCallOnGameloop(-1, "");
+		return;
+	}
+	if ((getClientCycle() - arg0) % 40 < 20) {
+		if (ACTIVE.setChild(widget2, 0)) {
+			ACTIVE.setHidden(false);
+		} else {
+			ACTIVE.createChild(widget2, 3, 0);
+			ACTIVE.setSize(4, 2, 1, 1);
+			ACTIVE.setPosition(0, 0, 1, 2);
+			ACTIVE.setFilled(true);
+			ACTIVE.setTrans(225);
+			ACTIVE.setRGB(0xFFFFFF);
+		}
+	} else if (ACTIVE.setChild(widget2, 0)) {
+		ACTIVE.setHidden(true);
+	}
+	return;
+}

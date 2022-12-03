@@ -1,0 +1,4 @@
+void script_2929(Widget widget0, boolean boolean1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, boolean boolean6, int arg7, int arg8, int arg9, int arg10) {
+	script_864(widget0, boolean1, widget2, widget3, widget4, widget5, boolean6, arg7, arg8, arg9, arg10);
+	return;
+}

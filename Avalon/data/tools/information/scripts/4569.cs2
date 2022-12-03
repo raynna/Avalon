@@ -1,0 +1,24 @@
+void script_4569(int arg0, string string1, string string2) {
+	switch (arg0) {
+		case 1:
+			if (!isFriend(removeTags(string2))) {
+				cs2method3605(removeTags(string2));
+			}
+			break;
+		case 2:
+			if (!isFriend(removeTags(string2))) {
+				cs2method3607(removeTags(string2));
+			}
+			break;
+		case 3:
+			script_3015("Send message to " + string1, "", 0, string2, "");
+			break;
+		case 5:
+			script_3177(string1, 0);
+			break;
+		case 10:
+			script_1633(removeTags(string2));
+			break;
+	}
+	return;
+}

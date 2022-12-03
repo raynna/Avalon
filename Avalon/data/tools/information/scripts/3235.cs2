@@ -1,0 +1,14 @@
+void script_3235() {
+	Widget widget0;
+	widget0 = widget(596, 45);
+	if (hasSSKey()) {
+		widget0 = widget(975, 44);
+	}
+	if (VARC[200] > 0) {
+		widget0.setScriptCallOnMousePressed(2944, "");
+		widget0.setScriptCallOnGameloop(-1, "");
+		resetRCs();
+		script_2954();
+	}
+	return;
+}

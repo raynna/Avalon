@@ -1,0 +1,31 @@
+int, int script_1239(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int1 = VARC[176] / 10;
+	if (int1 > 5) {
+		int1 = 1;
+		VARC[176] = int1 * 10;
+	}
+	int2 = -1;
+	int3 = 0;
+	switch (int1) {
+		case 0:
+		case 1:
+			int2, int3 = script_3415(arg0);
+			break;
+		case 2:
+			int2, int3 = script_3371(arg0);
+			break;
+		case 3:
+			int2, int3 = script_3372(arg0);
+			break;
+		case 4:
+			int2, int3 = script_3373(arg0);
+			break;
+		case 5:
+			int2, int3 = script_3374(arg0);
+			break;
+	}
+	return int2, int3;
+}

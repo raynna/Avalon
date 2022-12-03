@@ -1,0 +1,15 @@
+void script_1449() {
+	VARC[188] = 0;
+	script_1487();
+	script_1490();
+	script_1450();
+	script_1464();
+	script_1455();
+	script_1459();
+	script_1463(VARPBIT[4893]);
+	widget(762, 17).setScriptCallOnGlobalConfigChange(1472, 190, "Y");
+	widget(762, 21).setScriptCallOnGlobalConfigChange(1465, 192, 1038, 1324, "Y");
+	widget(762, 93).setScrollPos(0, script_704(VARPBIT[4893]));
+	script_157(widget(762, 114), widget(762, 93), widget(762, 93).getScrollY(), 1);
+	return;
+}

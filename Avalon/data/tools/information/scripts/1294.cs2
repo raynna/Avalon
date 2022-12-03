@@ -1,0 +1,59 @@
+void script_1294() {
+	if (isBitFlagged(VARP[383], 1)) {
+		widget(144, 134).setModel(4912);
+	}
+	if (isBitFlagged(VARP[383], 2)) {
+		widget(144, 135).setModel(4912);
+	}
+	if (isBitFlagged(VARP[383], 3)) {
+		widget(144, 136).setModel(4913);
+	}
+	if (isBitFlagged(VARP[383], 4)) {
+		widget(144, 137).setModel(4912);
+	}
+	if (isBitFlagged(VARP[383], 5)) {
+		widget(144, 138).setModel(4912);
+	}
+	if (isBitFlagged(VARP[383], 6)) {
+		widget(144, 139).setModel(4913);
+	}
+	if (isBitFlagged(VARP[383], 7)) {
+		widget(144, 140).setModel(4913);
+	}
+	if (isBitFlagged(VARP[383], 8)) {
+		widget(144, 141).setModel(4912);
+	}
+	if (VARP[383] > 8191) {
+		widget(144, 186).setIsHidden(true);
+		widget(144, 146).setSprite(296);
+	}
+	if (isBitFlagged(VARP[383], 14)) {
+		widget(144, 174).setModel(4910);
+		widget(144, 174).setAnimation(1456);
+	}
+	if (isBitFlagged(VARP[383], 15)) {
+		widget(144, 172).setModel(4910);
+		widget(144, 172).setAnimation(1456);
+	}
+	if (isBitFlagged(VARP[383], 16)) {
+		widget(144, 176).setModel(4910);
+		widget(144, 176).setAnimation(1456);
+	}
+	if (isBitFlagged(VARP[383], 17)) {
+		widget(144, 178).setModel(4910);
+		widget(144, 178).setAnimation(1455);
+	}
+	if (isBitFlagged(VARP[383], 18)) {
+		widget(144, 180).setModel(4910);
+		widget(144, 180).setAnimation(1455);
+	}
+	if (isBitFlagged(VARP[383], 19)) {
+		widget(144, 183).setModel(4910);
+		widget(144, 183).setAnimation(1453);
+	}
+	if (isBitFlagged(VARP[383], 20)) {
+		widget(144, 185).setModel(4910);
+		widget(144, 185).setAnimation(1453);
+	}
+	return;
+}

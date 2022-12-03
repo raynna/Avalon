@@ -1,0 +1,6 @@
+int script_1891() {
+	if (clanGetChatCount() > 0 && clanmethod3618() >= clanmethod3616()) {
+		return 1;
+	}
+	return 0;
+}

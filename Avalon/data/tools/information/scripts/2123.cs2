@@ -1,0 +1,57 @@
+void script_2123(int arg0, int arg1, Widget widget2, int arg3) {
+	Item item4;
+	ACTIVE.createChild(widget2, 5, arg0);
+	ACTIVE.setPosition(5 + (36 + 20) * arg1, arg3 + 22, 0, 0);
+	ACTIVE.setSize(36, 32, 0, 0);
+	item4 = datamap('i', 'O', (DataMap)2240, arg0);
+	if (item4 != null) {
+		ACTIVE.setOutlineThickness(1);
+		ACTIVE.setShadowColor(0x302020);
+		ACTIVE.setItem(item4, -1);
+		ACTIVE.setContextMenuOption(1, "Claim");
+		ACTIVE.setContextMenuOption(10, "Examine");
+		ACTIVE.setOptionBase("<col=ff9040>" + getItemName(item4) + "</col>");
+		if (getItemAmtInContainer(93, item4) + getItemAmtInContainer(94, item4) + getItemAmtInContainer(95, item4) + getItemAmtInContainer(530, item4) > 0) {
+			ACTIVE.setTrans(200);
+		} else if (arg0 / 10 == 1 / 10) {
+			if (VARPBIT[2698] > 0) {
+				ACTIVE.setTrans(200);
+			} else {
+				ACTIVE.setTrans(0);
+			}
+		} else if (arg0 == 11) {
+			if (VARPBIT[2776] > 0) {
+				ACTIVE.setTrans(200);
+			} else {
+				ACTIVE.setTrans(0);
+			}
+		} else if (arg0 / 10 == 11 / 10) {
+			if (VARPBIT[2699] > 0) {
+				ACTIVE.setTrans(200);
+			} else {
+				ACTIVE.setTrans(0);
+			}
+		} else if (arg0 / 10 == 21 / 10) {
+			if (VARPBIT[2700] > 0) {
+				ACTIVE.setTrans(200);
+			} else {
+				ACTIVE.setTrans(0);
+			}
+		} else if (arg0 / 10 == 31 / 10) {
+			if (VARPBIT[2701] > 0) {
+				ACTIVE.setTrans(200);
+			} else {
+				ACTIVE.setTrans(0);
+			}
+		} else if (arg0 / 10 == 41 / 10) {
+			if (VARPBIT[2702] > 0) {
+				ACTIVE.setTrans(200);
+			} else {
+				ACTIVE.setTrans(0);
+			}
+		} else {
+			ACTIVE.setTrans(0);
+		}
+	}
+	return;
+}

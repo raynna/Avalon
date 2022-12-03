@@ -1,0 +1,5 @@
+void script_420() {
+	cameraMethod5511(location(VARC[1353]));
+	widget(1013, 0).setScriptCallOnGameloop(421, VARC[1355], VARC[1356], 0, "iii");
+	return;
+}

@@ -1,0 +1,9 @@
+void script_5210(Widget widget0) {
+	if (VARPBIT[6448] == 1) {
+		script_5211(true);
+		return;
+	}
+	script_5211(false);
+	widget0.setScriptCallOnConfigChange(-1, "");
+	return;
+}

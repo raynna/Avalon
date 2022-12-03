@@ -1,0 +1,14 @@
+void script_1376(int arg0, Widget widget1, Widget widget2) {
+	if (arg0 == 1) {
+		widget(755, 47).setIsHidden(false);
+		widget(755, 5).setContextMenuOption(1, "Hide key");
+		widget1.setSize(widget(755, 47).getWidth(), 0, 1, 1);
+	} else {
+		widget(755, 47).setIsHidden(true);
+		widget(755, 5).setContextMenuOption(1, "Show key");
+		widget1.setSize(0, 0, 1, 1);
+	}
+	script_2046(widget1);
+	widget(755, 5).setScriptCallOnClickContextMenu(1375, widget1, widget2, "II");
+	return;
+}

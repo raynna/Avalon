@@ -1,0 +1,11 @@
+void script_1188() {
+	if (getDisplayMode() >= 2) {
+		widget(752, 1).setSprite(1017);
+		widget(752, 1).setAlpha(true);
+		widget(752, 1).setIsHidden(false);
+		widget(752, 2).setIsHidden(false);
+		script_1652(0);
+		widget(746, 75).setIsHidden(true);
+	}
+	return;
+}

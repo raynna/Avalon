@@ -1,0 +1,32 @@
+void script_3159(int arg0) {
+	widget(912, 49).setSize(widget(912, 38).getX() - widget(912, 36).getX(), 0, 0, 1);
+	widget(912, 51).setSize(widget(912, 45).getWidth() - widget(912, 49).getWidth() - 2, 0, 0, 1);
+	widget(912, 45).setScrollMax(0, 0);
+	widget(912, 45).setScrollPos(0, 0);
+	script_31(widget(912, 46), widget(912, 45), 792, 789, 790, 791, 773, 788);
+	widget(912, 20).setScrollMax(0, 0);
+	widget(912, 20).setScrollPos(0, 0);
+	script_31(widget(912, 21), widget(912, 20), 792, 789, 790, 791, 773, 788);
+	widget(912, 45).setScriptCallOnClanChatSettingsStuff(3164, widget(912, 49), widget(912, 50), widget(912, 51), widget(912, 47), widget(912, 45), widget(912, 46), "IIIIII");
+	widget(912, 45).setScriptCallOnClanChatDeltaStuff(3164, widget(912, 49), widget(912, 50), widget(912, 51), widget(912, 47), widget(912, 45), widget(912, 46), "IIIIII");
+	if (cs2method3751()) {
+		widget(912, 39).setIsHidden(true);
+		script_3165(widget(912, 49), widget(912, 50), widget(912, 51), widget(912, 47), widget(912, 45), widget(912, 46));
+		if (!widget(906, 189).isHidden()) {
+			script_3161(1);
+		} else {
+			script_3161(0);
+		}
+	} else {
+		widget(912, 39).setIsHidden(false);
+		script_3161(0);
+	}
+	STRING[278] = "";
+	script_3024(widget(912, 28));
+	script_3027(widget(912, 8));
+	VARC[1098] = length(STRING[278]);
+	widget(912, 24).setScriptCallOnMousePressed(1335, MOUSE_X, widget(912, 24), widget(912, 25), "iII");
+	script_1390(widget(912, 24), widget(912, 25), STRING[278]);
+	widget(912, 25).setIsHidden(true);
+	return;
+}

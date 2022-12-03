@@ -1,0 +1,41 @@
+void script_1500(int arg0, int arg1) {
+	if (script_706(arg1) > 0) {
+		if (arg0 == 1) {
+			if (VARC[188] == 1) {
+				script_1474();
+			}
+			script_1455();
+			script_1457((int, int)script_1467(arg1));
+			script_1463(arg1);
+			widget(762, 93).setScrollPos(0, script_704(arg1));
+			script_157(widget(762, 114), widget(762, 93), widget(762, 93).getScrollY(), 1);
+			VARPBIT[4893] = arg1;
+		} else if (arg0 == 2) {
+			if (arg1 == 2) {
+				VARC[204] = VARC[205];
+			}
+			if (arg1 <= 3) {
+				VARC[205] = VARC[206];
+			}
+			if (arg1 <= 4) {
+				VARC[206] = VARC[207];
+			}
+			if (arg1 <= 5) {
+				VARC[207] = VARC[208];
+			}
+			if (arg1 <= 6) {
+				VARC[208] = VARC[209];
+			}
+			if (arg1 <= 7) {
+				VARC[209] = VARC[210];
+			}
+			if (arg1 <= 8) {
+				VARC[210] = VARC[211];
+			}
+			if (arg1 <= 9) {
+				VARC[211] = 0;
+			}
+		}
+	}
+	return;
+}

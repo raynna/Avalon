@@ -1,0 +1,16 @@
+void script_3963(Widget widget0, Widget widget1, Sprite sprite2, int arg3) {
+	string str0;
+	str0 = removeTags(widget1.getText());
+	if (widget0 != null) {
+		if (arg3 == 1) {
+			widget1.setText("<u=fafafa>" + str0 + "</u>");
+			widget1.setRGB(0xFAFAFA);
+			widget0.setSize(getTextWidth(str0, sprite2), widget0.getHeight(), 0, 0);
+		} else {
+			widget1.setText("<u=c8c8c8>" + str0 + "</u>");
+			widget1.setRGB(0xC8C8C8);
+			widget0.setSize(getTextWidth(str0, sprite2), widget0.getHeight(), 0, 0);
+		}
+	}
+	return;
+}

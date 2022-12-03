@@ -1,0 +1,5 @@
+void script_2362() {
+	int int0;
+	int0 = 0;
+	return;
+}

@@ -1,0 +1,114 @@
+Color script_693(int arg0, int arg1, int arg2) {
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int10 = 0;
+	if (arg0 > 255) {
+		int3 = 255;
+	} else if (arg0 < 0) {
+		int3 = 0;
+	} else {
+		int3 = arg0;
+	}
+	if (arg1 > 255) {
+		int4 = 255;
+	} else if (arg1 < 0) {
+		int4 = 0;
+	} else {
+		int4 = arg1;
+	}
+	if (arg2 > 255) {
+		int5 = 255;
+	} else if (arg2 < 0) {
+		int5 = 0;
+	} else {
+		int5 = arg2;
+	}
+	if (isBitFlagged(int3, 0)) {
+		int6 = flagBit(int6, 16);
+	}
+	if (isBitFlagged(int3, 1)) {
+		int6 = flagBit(int6, 17);
+	}
+	if (isBitFlagged(int3, 2)) {
+		int6 = flagBit(int6, 18);
+	}
+	if (isBitFlagged(int3, 3)) {
+		int6 = flagBit(int6, 19);
+	}
+	if (isBitFlagged(int3, 4)) {
+		int6 = flagBit(int6, 20);
+	}
+	if (isBitFlagged(int3, 5)) {
+		int6 = flagBit(int6, 21);
+	}
+	if (isBitFlagged(int3, 6)) {
+		int6 = flagBit(int6, 22);
+	}
+	if (isBitFlagged(int3, 7)) {
+		int6 = flagBit(int6, 23);
+	}
+	if (isBitFlagged(int4, 0)) {
+		int7 = flagBit(int7, 8);
+	}
+	if (isBitFlagged(int4, 1)) {
+		int7 = flagBit(int7, 9);
+	}
+	if (isBitFlagged(int4, 2)) {
+		int7 = flagBit(int7, 10);
+	}
+	if (isBitFlagged(int4, 3)) {
+		int7 = flagBit(int7, 11);
+	}
+	if (isBitFlagged(int4, 4)) {
+		int7 = flagBit(int7, 12);
+	}
+	if (isBitFlagged(int4, 5)) {
+		int7 = flagBit(int7, 13);
+	}
+	if (isBitFlagged(int4, 6)) {
+		int7 = flagBit(int7, 14);
+	}
+	if (isBitFlagged(int4, 7)) {
+		int7 = flagBit(int7, 15);
+	}
+	if (isBitFlagged(int5, 0)) {
+		int8 = flagBit(int8, 0);
+	}
+	if (isBitFlagged(int5, 1)) {
+		int8 = flagBit(int8, 1);
+	}
+	if (isBitFlagged(int5, 2)) {
+		int8 = flagBit(int8, 2);
+	}
+	if (isBitFlagged(int5, 3)) {
+		int8 = flagBit(int8, 3);
+	}
+	if (isBitFlagged(int5, 4)) {
+		int8 = flagBit(int8, 4);
+	}
+	if (isBitFlagged(int5, 5)) {
+		int8 = flagBit(int8, 5);
+	}
+	if (isBitFlagged(int5, 6)) {
+		int8 = flagBit(int8, 6);
+	}
+	if (isBitFlagged(int5, 7)) {
+		int8 = flagBit(int8, 7);
+	}
+	int9 = bitOr(int6, int7);
+	int10 = bitOr(int9, int8);
+	return color(int10);
+}

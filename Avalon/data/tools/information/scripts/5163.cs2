@@ -1,0 +1,8 @@
+void script_5163(Widget widget0, int arg1, Widget widget2, int arg3, int arg4) {
+	if (VARC[1592] != arg3 || VARC[1593] != arg4) {
+		VARC[1592] = arg3;
+		VARC[1593] = arg4;
+		script_5164(widget0, arg1, widget2, arg3, arg4);
+	}
+	return;
+}

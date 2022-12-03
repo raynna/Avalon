@@ -1,0 +1,7 @@
+void script_650(Widget widget0, int arg1, Widget widget2, int arg3, int arg4, string string5) {
+	if (!widget(105, 17).isHidden()) {
+		return;
+	}
+	script_569(widget0, arg1, widget2, string5, arg3, arg4);
+	return;
+}

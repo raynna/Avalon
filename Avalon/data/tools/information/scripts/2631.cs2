@@ -1,0 +1,8 @@
+void script_2631(Widget widget0, Sprite sprite1, Sprite sprite2) {
+	if (getClientCycle() % 20 < 10) {
+		widget0.setSprite(sprite2);
+	} else {
+		widget0.setSprite(sprite1);
+	}
+	return;
+}

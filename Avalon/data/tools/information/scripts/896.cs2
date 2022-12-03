@@ -1,0 +1,13 @@
+void script_896() {
+	int int0;
+	int int1;
+	int int2;
+	int0 = 116 / 12;
+	int1 = int0 * VARPBIT[4527];
+	int2 = int0 * VARPBIT[4526];
+	widget(717, 8).setPosition(widget(717, 8).getX(), 122 + (116 - int1), 0, 0);
+	widget(717, 7).setPosition(widget(717, 7).getX(), 122 + (116 - int2), 0, 0);
+	widget(717, 8).setSize(27, int1, 0, 0);
+	widget(717, 7).setSize(27, int2, 0, 0);
+	return;
+}

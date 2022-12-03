@@ -1,0 +1,7 @@
+void script_1789(Widget widget0, int arg1, int arg2) {
+	int int3;
+	int3 = getClientCycle() - arg1;
+	VARC[265] = max(arg2 - int3 / 30, 0);
+	script_1790(widget0);
+	return;
+}

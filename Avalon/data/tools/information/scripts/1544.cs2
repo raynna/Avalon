@@ -1,0 +1,24 @@
+int script_1544() {
+	int int0;
+	int0 = 0;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	int0 = int0 + 1;
+	return int0;
+}

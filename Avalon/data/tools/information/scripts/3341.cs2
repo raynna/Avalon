@@ -1,0 +1,33 @@
+void script_3341(Widget widget0) {
+	Sprite sprite1;
+	Sprite sprite2;
+	Sprite sprite3;
+	sprite1 = null;
+	sprite2 = null;
+	sprite3 = null;
+	if (getLanguage() == 1) {
+		if (VARC[1177] == 0) {
+			sprite1 = 3068;
+			sprite2 = 3067;
+			sprite3 = 3069;
+		} else {
+			sprite1 = 3071;
+			sprite2 = 3070;
+			sprite3 = 3072;
+		}
+	} else if (VARC[1177] == 0) {
+		sprite1 = 3014;
+		sprite2 = 3013;
+		sprite3 = 3015;
+	} else {
+		sprite1 = 3017;
+		sprite2 = 3016;
+		sprite3 = 3018;
+	}
+	widget0.setSprite(sprite2);
+	widget0.setScriptCallOnMouseEntered(44, CTX_WIDGET, sprite1, "Id");
+	widget0.setScriptCallOnMouseExit(44, CTX_WIDGET, sprite2, "Id");
+	widget0.setScriptCallOnMousePressed(44, CTX_WIDGET, sprite3, "Id");
+	script_41(widget(939, 114));
+	return;
+}

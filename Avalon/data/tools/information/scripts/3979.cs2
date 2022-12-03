@@ -1,0 +1,36 @@
+void script_3979(int arg0, Widget widget1) {
+	AttrMap attrmap2;
+	string str0;
+	VARPBIT[8576] = arg0;
+	attrmap2 = datamap('i', 'J', (DataMap)3483, arg0);
+	str0 = " -" + "<br>";
+	str0 = concat(getAttributeMapValue(attrmap2, 1266), str0);
+	str0 = concat(str0, getAttributeMapValue(attrmap2, 1273));
+	if (script_3999(arg0) == 0) {
+		widget1.setScriptCallOnMouseOver(3981, widget1, str0, "Is");
+	} else {
+		widget1.setScriptCallOnMouseOver(-1, "");
+	}
+	switch (widget1) {
+		case widget(1056, 64):
+			VARPBIT[8577] = 1;
+			break;
+		case widget(1056, 144):
+			VARPBIT[8577] = 2;
+			break;
+		case widget(1056, 149):
+			VARPBIT[8577] = 3;
+			break;
+		case widget(1056, 154):
+			VARPBIT[8577] = 4;
+			break;
+		case widget(1056, 159):
+			VARPBIT[8577] = 5;
+			break;
+		case widget(1056, 165):
+			VARPBIT[8577] = 6;
+			break;
+	}
+	script_3975();
+	return;
+}

@@ -1,0 +1,8 @@
+void script_2029(Widget widget0, int arg1) {
+	if (VARP[330] > arg1) {
+		widget0.setRGB(0x00FF00);
+	} else {
+		widget0.setRGB(0x000000);
+	}
+	return;
+}

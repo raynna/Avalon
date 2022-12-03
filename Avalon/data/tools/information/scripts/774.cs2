@@ -1,0 +1,5 @@
+void script_774(Widget widget0, Widget widget1) {
+	widget0.setItemOnWidgetMethod2205((Item)VARP[851], 1);
+	widget1.setItemOnWidgetMethod2205((Item)VARP[852], 1);
+	return;
+}

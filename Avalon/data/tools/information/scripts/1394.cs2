@@ -1,0 +1,53 @@
+void script_1394() {
+	int int0;
+	int int1;
+	int int2;
+	string str0;
+	str0 = "";
+	int0 = 0;
+	int1 = 0;
+	if (VARPBIT[457] == 1) {
+		str0 = concat(str0, "Ahrim" + "<br>");
+		int0 = int0 + 1;
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[458] == 1) {
+		str0 = concat(str0, "Dharok" + "<br>");
+		int0 = int0 + 1;
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[459] == 1) {
+		str0 = concat(str0, "Guthan" + "<br>");
+		int0 = int0 + 1;
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[460] == 1) {
+		str0 = concat(str0, "Karil" + "<br>");
+		int0 = int0 + 1;
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[461] == 1) {
+		str0 = concat(str0, "Torag" + "<br>");
+		int0 = int0 + 1;
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[462] == 1) {
+		str0 = concat(str0, "Verac" + "<br>");
+		int0 = int0 + 1;
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[9873] == 1) {
+		str0 = concat(str0, "Akrisae" + "<br>");
+		int0 = int0 + 1;
+		int1 = int1 + 1;
+	}
+	if (compare(str0, "") == 0) {
+		str0 = "None";
+		int0 = 1;
+	}
+	int2 = 52 + int0 * 12;
+	widget(24, 1).setSize(widget(24, 1).getWidth(), int2, 0, 0);
+	widget(24, 3).setText(str0);
+	widget(24, 6).setText(str(max(0, VARPBIT[464] - int1)));
+	return;
+}

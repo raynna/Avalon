@@ -1,0 +1,33 @@
+void script_2496() {
+	int int0;
+	int int1;
+	Widget widget2;
+	Widget widget3;
+	int0 = 1;
+	int1 = script_2497();
+	widget2 = null;
+	widget3 = null;
+	while (int0 <= 9 || datamap('i', 'I', (DataMap)2400, int0) != widget(45, 25)) {
+		if (int0 <= int1) {
+			widget2 = datamap('i', 'I', (DataMap)2400, int0);
+			widget3 = datamap('i', 'I', (DataMap)2402, int0);
+			widget2.setScriptCallOnMousePressed(2499, CTX_WIDGET, "I");
+			widget3.setScriptCallOnMousePressed(2499, widget2, "I");
+			widget3.setRGB(0xE1981F);
+			widget2.setContextMenuOption(1, "Select");
+			widget3.setContextMenuOption(1, "Select");
+			widget3.setText(datamap('i', 's', (DataMap)2403, int0));
+		} else {
+			widget2 = datamap('i', 'I', (DataMap)2400, int0);
+			widget3 = datamap('i', 'I', (DataMap)2402, int0);
+			widget2.setScriptCallOnMousePressed(-1, "");
+			widget3.setScriptCallOnMousePressed(-1, "");
+			widget3.setRGB(0x996600);
+			widget2.setNoOptions();
+			widget3.setNoOptions();
+			widget3.setText(datamap('i', 's', (DataMap)2403, int0) + " - Locked");
+		}
+		int0 = int0 + 1;
+	}
+	return;
+}

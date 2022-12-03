@@ -1,0 +1,205 @@
+void script_4301() {
+	Widget widget0;
+	Widget widget1;
+	Widget widget2;
+	Widget widget3;
+	int int4;
+	int int5;
+	Widget widget6;
+	Widget widget7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	int int23;
+	int int24;
+	int int25;
+	int int26;
+	int int27;
+	int int28;
+	int int29;
+	int int30;
+	int int31;
+	int int32;
+	int int33;
+	int int34;
+	int int35;
+	int int36;
+	int int37;
+	int int38;
+	int int39;
+	string str0;
+	string str1;
+	widget0 = widget(1096, 36);
+	widget1 = widget(1096, 37);
+	widget2 = widget(1096, 38);
+	widget3 = widget(1096, 39);
+	int4 = 71827531;
+	int5 = 71827532;
+	widget6 = widget(1096, 361);
+	widget7 = widget(1096, 784);
+	int8 = 218;
+	int9 = 16384 / 2;
+	int10 = 3;
+	int11 = 4;
+	int12 = 200;
+	int13 = 3;
+	int14 = 16;
+	int15 = 23;
+	int16 = 177;
+	int17 = 4;
+	int18 = 157;
+	int19 = 4;
+	int20 = 137;
+	int21 = 4;
+	int22 = 15;
+	int23 = 15;
+	int24 = 0;
+	int25 = 0;
+	int26 = 0;
+	int27 = 0;
+	str0 = "0";
+	int28 = 9;
+	int29 = 23;
+	int30 = 0;
+	int31 = widget0.getHeight() / int15;
+	int32 = int31 * 2;
+	int33 = -1;
+	int34 = -1;
+	int35 = 0;
+	int36 = 0;
+	widget0.clearChildren();
+	widget1.clearChildren();
+	widget2.clearChildren();
+	widget3.clearChildren();
+	widget6.clearChildren();
+	widget7.clearChildren();
+	str1 = "";
+	int37 = -1;
+	int27 = cs2method3709();
+	while (int26 < int27) {
+		int25 = int37 / 2 * int15;
+		str0 = cs2method3710(int26);
+		int34 = cs2method3711(int26);
+		if (VARC[1516] - 1 != int34) {
+			int36 = 1;
+			if (VARC[1516] == 0 || VARC[1516] == -1) {
+				int36 = 0;
+			}
+		} else {
+			int36 = 0;
+		}
+		ACTIVE.createChild(widget0, 4, int26);
+		if (int36 == 0) {
+			ACTIVE.setFont(3793);
+			ACTIVE.setSize(int9, int15, 2, 0);
+			int33 = -1;
+			if (cs2method3751() && cs2method3760(str0) > -1) {
+				int33 = cs2method3758(cs2method3760(str0));
+			}
+			if (int33 == getWorldId()) {
+				ACTIVE.setRGB(0x3CB71E);
+			} else if (int33 > 0) {
+				ACTIVE.setRGB(0xFFFF64);
+			} else {
+				ACTIVE.setRGB(0xBEB28C);
+			}
+			ACTIVE.setTextAntiMacro(true);
+			ACTIVE.setText(str0);
+		}
+		ACTIVE.createChild(widget2, 5, int26);
+		if (int36 == 0) {
+			ACTIVE.setSize(int22, int23, 0, 0);
+			ACTIVE.setSprite(datamap('i', 'd', (DataMap)3712, int34));
+			str1 = datamap('i', 's', (DataMap)3714, int34);
+			ACTIVE.setScriptCallOnMouseOver(4538, widget(1096, 104), widget2, int26, str1, 120, 3793, 3793, 16777215, 13, 4, 3, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			ACTIVE.setScriptCallOnMouseExit(40, widget(1096, 104), "I");
+		}
+		ACTIVE.createChild(widget6, 5, int26);
+		if (int36 == 0) {
+			ACTIVE.setSize(int22, int23, 0, 0);
+			switch (int34) {
+				case 0:
+					int35 = CLANDEF113[178];
+					break;
+				case 1:
+					int35 = CLANDEF113[179];
+					break;
+				case 2:
+					int35 = CLANDEF113[180];
+					break;
+				case 3:
+					int35 = CLANDEF113[181];
+					break;
+				case 4:
+					int35 = CLANDEF113[182];
+					break;
+				case 5:
+					int35 = CLANDEF113[183];
+					break;
+			}
+			if (int35 == 1 || int34 >= 100) {
+				ACTIVE.setSprite(6235);
+				str1 = "Rated Clan" + "<br>" + "Wars Leader";
+				ACTIVE.setScriptCallOnMouseOver(4538, widget(1096, 104), widget6, int26, str1, 120, 3793, 3793, 16777215, 13, 4, 3, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+				ACTIVE.setScriptCallOnMouseExit(40, widget(1096, 104), "I");
+			}
+		}
+		ACTIVE.createChild(widget7, 5, int26);
+		if (int36 == 0) {
+			ACTIVE.setSize(int22, int23, 0, 0);
+		}
+		ACTIVE.createChild(widget3, 5, int26);
+		if (int36 == 0) {
+			ACTIVE.setSize(int28, int29, 0, 0);
+			ACTIVE.setSprite(6034);
+			ACTIVE.setContextMenuOption(1, "Show details");
+			ACTIVE.setScriptCallOnClickContextMenu(4303, "");
+		}
+		int26 = int26 + 1;
+	}
+	int38 = 0;
+	int26 = 0;
+	int39 = 0;
+	while (int26 < int27) {
+		cs2method3718();
+		int39 = int26;
+		if (ACTIVE.setChild(widget0, int39) && compare(ACTIVE.getText(), "") != 0) {
+			if (int38 % 2 != 0) {
+				int24 = int8;
+			} else {
+				int24 = 0;
+			}
+			int25 = int38 / 2 * int15;
+			ACTIVE.setPosition(int10 + int24, int11 + int25, 0, 0);
+			if (ACTIVE.setChild(widget2, int39)) {
+				ACTIVE.setPosition(int16 + int24, int17 + int25, 0, 0);
+			}
+			if (ACTIVE.setChild(widget3, int39)) {
+				ACTIVE.setPosition(int12 + int24, int25, 0, 0);
+			}
+			if (ACTIVE.setChild(widget6, int39)) {
+				ACTIVE.setPosition(int18 + int24, int19 + int25, 0, 0);
+			}
+			if (ACTIVE.setChild(widget7, int39)) {
+				ACTIVE.setPosition(int20 + int24, int21 + int25, 0, 0);
+			}
+			int38 = int38 + 1;
+		}
+		int26 = int26 + 1;
+	}
+	VARC[1517] = int38;
+	script_4318();
+	return;
+}

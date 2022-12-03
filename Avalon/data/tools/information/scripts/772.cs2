@@ -1,0 +1,5 @@
+void script_772(Widget widget0) {
+	script_1184(widget0);
+	widget0.setScriptCallOnGeneralDataChange(838, widget0, "I");
+	return;
+}

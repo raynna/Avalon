@@ -1,0 +1,18 @@
+void script_3418(Widget widget0, int arg1, int arg2) {
+	Sprite sprite3;
+	Sprite sprite4;
+	sprite3 = 2289;
+	sprite4 = 2288;
+	if (arg2 == arg1) {
+		if (ACTIVE.setChild(widget0, 1)) {
+			ACTIVE.setSprite(sprite3);
+			widget0.setScriptCallOnMouseEntered(-1, "");
+			widget0.setScriptCallOnMouseExit(-1, "");
+		}
+	} else if (ACTIVE.setChild(widget0, 1)) {
+		ACTIVE.setSprite(sprite4);
+		widget0.setScriptCallOnMouseEntered(688, CTX_WIDGET, ACTIVE.getChildId(), sprite3, "Iid");
+		widget0.setScriptCallOnMouseExit(688, CTX_WIDGET, ACTIVE.getChildId(), sprite4, "Iid");
+	}
+	return;
+}

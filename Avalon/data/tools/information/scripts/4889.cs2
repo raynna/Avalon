@@ -1,0 +1,108 @@
+void script_4889() {
+	string str0;
+	str0 = "";
+	widget(1092, 1493).setIsHidden(true);
+	widget(1092, 1509).setIsHidden(true);
+	widget(1092, 1501).setIsHidden(true);
+	widget(1092, 1517).setIsHidden(true);
+	widget(1092, 1525).setIsHidden(true);
+	widget(1092, 1533).setIsHidden(true);
+	widget(1092, 1541).setIsHidden(true);
+	widget(1092, 1549).setIsHidden(true);
+	widget(1092, 1557).setIsHidden(true);
+	widget(1092, 1565).setIsHidden(true);
+	widget(1092, 1573).setIsHidden(true);
+	widget(1092, 1581).setIsHidden(true);
+	widget(1092, 1589).setIsHidden(true);
+	if (CLANBIT[2580] > 1) {
+		widget(1092, 1565).setIsHidden(false);
+		widget(1092, 1517).setIsHidden(false);
+		widget(1092, 1567).setIsHidden(true);
+		widget(1092, 1519).setIsHidden(true);
+	} else {
+		widget(1092, 1567).setIsHidden(false);
+		widget(1092, 1519).setIsHidden(false);
+		str0 = "You need at least a tier 2 citadel to customise the keep fireplace.";
+		widget(1092, 1567).setScriptCallOnMouseOver(4538, widget(1092, 300), widget(1092, 1567), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 1, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 1567).setScriptCallOnMouseExit(40, widget(1092, 300), "I");
+		str0 = "You need at least a tier 2 citadel to customise the potted plants.";
+		widget(1092, 1519).setScriptCallOnMouseOver(4538, widget(1092, 300), widget(1092, 1519), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 1, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 1519).setScriptCallOnMouseExit(40, widget(1092, 300), "I");
+	}
+	if (CLANBIT[2580] > 2) {
+		widget(1092, 1493).setIsHidden(false);
+		widget(1092, 1509).setIsHidden(false);
+		widget(1092, 1525).setIsHidden(false);
+		widget(1092, 1541).setIsHidden(false);
+		widget(1092, 1549).setIsHidden(false);
+		widget(1092, 1589).setIsHidden(false);
+		widget(1092, 1495).setIsHidden(true);
+		widget(1092, 1511).setIsHidden(true);
+		widget(1092, 1527).setIsHidden(true);
+		widget(1092, 1535).setIsHidden(true);
+		widget(1092, 1543).setIsHidden(true);
+		widget(1092, 1551).setIsHidden(true);
+		widget(1092, 1591).setIsHidden(true);
+	} else {
+		widget(1092, 1495).setIsHidden(false);
+		widget(1092, 1511).setIsHidden(false);
+		widget(1092, 1527).setIsHidden(false);
+		widget(1092, 1543).setIsHidden(false);
+		widget(1092, 1551).setIsHidden(false);
+		widget(1092, 1591).setIsHidden(false);
+		str0 = "You need at least a tier 3 citadel to customise the party room chairs.";
+		widget(1092, 1495).setScriptCallOnMouseOver(4538, widget(1092, 300), widget(1092, 1495), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 1, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 1495).setScriptCallOnMouseExit(40, widget(1092, 300), "I");
+		str0 = "You need at least a tier 3 citadel to customise the party room tables.";
+		widget(1092, 1511).setScriptCallOnMouseOver(4538, widget(1092, 300), widget(1092, 1511), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 1, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 1511).setScriptCallOnMouseExit(40, widget(1092, 300), "I");
+		str0 = "You need at least a tier 3 citadel to customise the sundials.";
+		widget(1092, 1527).setScriptCallOnMouseOver(4538, widget(1092, 300), widget(1092, 1527), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 1, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 1527).setScriptCallOnMouseExit(40, widget(1092, 300), "I");
+		str0 = "You need at least a tier 3 citadel to customise the keep tapestry.";
+		widget(1092, 1543).setScriptCallOnMouseOver(4538, widget(1092, 300), widget(1092, 1543), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 1, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 1543).setScriptCallOnMouseExit(40, widget(1092, 300), "I");
+		str0 = "You need at least a tier 3 citadel to customise the keep banners.";
+		widget(1092, 1551).setScriptCallOnMouseOver(4538, widget(1092, 300), widget(1092, 1551), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 1, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 1551).setScriptCallOnMouseExit(40, widget(1092, 300), "I");
+		str0 = "You need at least a tier 3 citadel to customise the keep door.";
+		widget(1092, 1591).setScriptCallOnMouseOver(4538, widget(1092, 300), widget(1092, 1591), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 1, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 1591).setScriptCallOnMouseExit(40, widget(1092, 300), "I");
+	}
+	if (CLANBIT[2580] > 3) {
+		widget(1092, 1573).setIsHidden(false);
+		widget(1092, 1581).setIsHidden(false);
+		widget(1092, 1501).setIsHidden(false);
+		widget(1092, 1557).setIsHidden(false);
+		widget(1092, 1575).setIsHidden(true);
+		widget(1092, 1583).setIsHidden(true);
+		widget(1092, 1503).setIsHidden(true);
+		widget(1092, 1559).setIsHidden(true);
+	} else {
+		widget(1092, 1575).setIsHidden(false);
+		widget(1092, 1583).setIsHidden(false);
+		widget(1092, 1503).setIsHidden(false);
+		widget(1092, 1559).setIsHidden(false);
+		str0 = "You need at least a tier 4 citadel to customise the keep lower windows.";
+		widget(1092, 1575).setScriptCallOnMouseOver(4538, widget(1092, 300), widget(1092, 1575), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 1, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 1575).setScriptCallOnMouseExit(40, widget(1092, 300), "I");
+		str0 = "You need at least a tier 4 citadel to customise the keep upper windows.";
+		widget(1092, 1583).setScriptCallOnMouseOver(4538, widget(1092, 300), widget(1092, 1583), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 1, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 1583).setScriptCallOnMouseExit(40, widget(1092, 300), "I");
+		str0 = "You need at least a tier 4 citadel to customise the citadel flags.";
+		widget(1092, 1503).setScriptCallOnMouseOver(4538, widget(1092, 300), widget(1092, 1503), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 1, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 1503).setScriptCallOnMouseExit(40, widget(1092, 300), "I");
+		str0 = "You need at least a tier 4 citadel to customise the keep shields.";
+		widget(1092, 1559).setScriptCallOnMouseOver(4538, widget(1092, 300), widget(1092, 1559), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 1, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 1559).setScriptCallOnMouseExit(40, widget(1092, 300), "I");
+	}
+	if (CLANBIT[2580] > 4) {
+		widget(1092, 1533).setIsHidden(false);
+	} else {
+		widget(1092, 1535).setIsHidden(false);
+		str0 = "You need at least a tier 5 citadel to customise the keep flag.";
+		widget(1092, 1535).setScriptCallOnMouseOver(4538, widget(1092, 300), widget(1092, 1535), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 1, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 1535).setScriptCallOnMouseExit(40, widget(1092, 300), "I");
+	}
+	return;
+}

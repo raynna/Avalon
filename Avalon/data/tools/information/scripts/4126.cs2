@@ -1,0 +1,109 @@
+string script_4126(Color color0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	string str0;
+	string str1;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 1;
+	str0 = "";
+	str1 = "";
+	int1, int2, int3 = script_2413(color0);
+	int1, int2, int3 = script_4127(int1, int2, int3);
+	if (int3 == 0) {
+		return "Black";
+	}
+	if (int3 == 255) {
+		return "White";
+	}
+	if (int3 < 97) {
+		str0 = "Dark ";
+	} else if (int3 == 127 && int2 >= 240) {
+		str0 = "Vivid ";
+	} else if (int3 > 157) {
+		str0 = "Light ";
+	} else {
+		int4 = 0;
+	}
+	switch (color0) {
+		case 0x00FF00:
+		case 0xFF00FF:
+		case 0xFF0000:
+		case 0xFF8000:
+		case 0xFFFF00:
+		case 0x00FFFF:
+		case 0x0000FF:
+		case 0x4000FF:
+		case 0x8000FF:
+			str0 = "Pure ";
+			int4 = 1;
+			break;
+	}
+	if (int4 == 1) {
+		if (int2 == 0) {
+			str1 = "grey";
+		}
+		if (int1 < 10) {
+			str1 = "red";
+		} else if (int1 < 45) {
+			str1 = "orange";
+		} else if (int1 < 75) {
+			str1 = "yellow";
+		} else if (int1 < 140) {
+			str1 = "green";
+		} else if (int1 < 160) {
+			str1 = "turquoise";
+		} else if (int1 < 195) {
+			str1 = "cyan";
+		} else if (int1 < 250) {
+			str1 = "blue";
+		} else if (int1 < 265) {
+			str1 = "indigo";
+		} else if (int1 < 280) {
+			str1 = "violet";
+		} else if (int1 < 290) {
+			str1 = "purple";
+		} else if (int1 < 305) {
+			str1 = "magenta";
+		} else if (int1 < 345) {
+			str1 = "pink";
+		} else {
+			str1 = "red";
+		}
+	} else {
+		if (int2 == 0) {
+			str1 = "Grey";
+		}
+		if (int1 < 10) {
+			str1 = "Red";
+		} else if (int1 < 45) {
+			str1 = "Orange";
+		} else if (int1 < 75) {
+			str1 = "Yellow";
+		} else if (int1 < 140) {
+			str1 = "Green";
+		} else if (int1 < 160) {
+			str1 = "Turquoise";
+		} else if (int1 < 195) {
+			str1 = "Cyan";
+		} else if (int1 < 250) {
+			str1 = "Blue";
+		} else if (int1 < 265) {
+			str1 = "Indigo";
+		} else if (int1 < 280) {
+			str1 = "Violet";
+		} else if (int1 < 290) {
+			str1 = "Purple";
+		} else if (int1 < 305) {
+			str1 = "Magenta";
+		} else if (int1 < 345) {
+			str1 = "Pink";
+		} else {
+			str1 = "Red";
+		}
+	}
+	return str0 + str1 + ".";
+}

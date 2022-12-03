@@ -1,0 +1,201 @@
+void script_5092() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	string str4;
+	string str5;
+	string str6;
+	string str7;
+	widget(1112, 4).clearChildren();
+	str0 = "";
+	str1 = "";
+	str2 = "";
+	str3 = "";
+	str4 = "";
+	str5 = "";
+	str6 = "";
+	str7 = "";
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	int8 = 0;
+	if (VARPBIT[9540] != 3) {
+		if (VARPBIT[9520] > 0) {
+			str0 = "<br>" + "Members:" + "<br>" + "Score:";
+			str3 = str0;
+			str1 = "<br>" + formatNumber(bitAnd(color(VARC[788]), 1023), 1);
+			str4 = "<br>" + formatNumber(bitAnd(color(VARC[788] / pow(2, 10)), 1023), 1);
+			str1 = str1 + "<br>" + formatNumber(bitAnd(color(VARC[786]), 65535), 1);
+			int8 = VARC[786] / pow(2, 16);
+			if (int8 < 0) {
+				int8 = pow(2, 16) + int8;
+			}
+			str4 = str4 + "<br>" + formatNumber(int8, 1);
+			int8 = datamap('i', 'i', (DataMap)3928, VARPBIT[9521]);
+			if (int8 < 2147483647) {
+				str1 = str1 + " / " + formatNumber(int8, 1);
+				str4 = str4 + " / " + formatNumber(int8, 1);
+			}
+			if (VARPBIT[9520] < 2) {
+				str6 = "<br>" + "<br>" + "<br>" + "Neutral players:";
+				str7 = "<br>" + "<br>" + "<br>" + formatNumber(VARC[788] / pow(2, 20), 1);
+			} else {
+				str6, str7 = "<br>" + "<br>" + "<br>", "<br>" + "<br>" + "<br>";
+			}
+			if (VARPBIT[9540] == 1) {
+				str2, str5 = "Your team:", "Blue team:";
+			} else if (VARPBIT[9540] == 2) {
+				str2, str5 = "Red team:", "Your team:";
+			} else {
+				str2, str5 = "Red team:", "Blue team:";
+				if (VARPBIT[9520] < 2) {
+					str6 = str6 + "<br>" + "Your score:";
+					str7 = str7 + "<br>" + formatNumber(VARPBIT[9541], 1);
+					int8 = datamap('i', 'i', (DataMap)3928, VARPBIT[9522]);
+					if (int8 < 2147483647) {
+						str7 = str7 + " / " + formatNumber(int8, 1);
+					}
+				}
+			}
+		} else {
+			str6, str7 = "Score:", formatNumber(VARPBIT[9541], 1);
+		}
+		int8 = datamap('i', 'i', (DataMap)3940, VARPBIT[9532]);
+		if (int8 != 0) {
+			str6 = str6 + "<br>" + "Reward for pking:";
+			if (int8 > 0) {
+				str7 = str7 + "<br>" + str(int8);
+			} else {
+				str7 = str7 + "<br>" + "A key";
+			}
+		}
+		if (VARC[787] < 0) {
+			str6 = str6 + "<br>" + "Scoring begins in:";
+			if (VARC[787] <= -2147483648) {
+				str7 = str7 + "<br>" + "-";
+			} else {
+				int6 = 0 - VARC[787];
+			}
+		}
+		if (VARPBIT[9523] > 0 && VARC[787] > 0) {
+			str6 = str6 + "<br>" + "Time remaining:";
+			int6 = VARC[787];
+		}
+		int5 = getLineCount(str6, 2147483647, 494) * 10 + 2;
+		int0 = getMaxLineWidth(str0, 2147483647, 494) + 3 + getMaxLineWidth(str1, 2147483647, 494);
+		int0 = max(int0, getMaxLineWidth(str2, 2147483647, 494));
+		int1 = getMaxLineWidth(str3, 2147483647, 494) + 3 + getMaxLineWidth(str4, 2147483647, 494);
+		int1 = max(int1, getMaxLineWidth(str5, 2147483647, 494));
+		int3 = getMaxLineWidth(str6, 2147483647, 494) + 3 + max(getMaxLineWidth(str7, 2147483647, 494), 40);
+		int2 = int0 + 5 + int1;
+		int4 = max(int3, int2);
+		int2 = (int4 - int2) / 2;
+		int0, int1 = int0 + int2, int1 + int2;
+		widget(1112, 1).setSize(int4 + 8, int5 + 8, 0, 0);
+		ACTIVE.createChild(widget(1112, 4), 4, widget(1112, 4).nextChild());
+		_ACTIVE.createChild(widget(1112, 4), 4, widget(1112, 4).nextChild());
+		ACTIVE.setSize(int0, 0, 0, 1);
+		_ACTIVE.setSize(int0, 0, 0, 1);
+		ACTIVE.setPosition(0, 0, 0, 1);
+		_ACTIVE.setPosition(0, 0, 0, 1);
+		ACTIVE.setFont(494);
+		_ACTIVE.setFont(494);
+		ACTIVE.setTextAntiMacro(true);
+		_ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setTextAlignment(0, 0, 0);
+		_ACTIVE.setTextAlignment(2, 0, 0);
+		ACTIVE.setRGB(0xFF0000);
+		_ACTIVE.setRGB(0xFF0000);
+		ACTIVE.setText(str0);
+		_ACTIVE.setText(str1);
+		ACTIVE.createChild(widget(1112, 4), 4, widget(1112, 4).nextChild());
+		ACTIVE.setSize(int0, 0, 0, 1);
+		ACTIVE.setPosition(0, 0, 0, 1);
+		ACTIVE.setFont(494);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setTextAlignment(1, 0, 0);
+		ACTIVE.setRGB(0xFF0000);
+		ACTIVE.setText(str2);
+		ACTIVE.createChild(widget(1112, 4), 4, widget(1112, 4).nextChild());
+		_ACTIVE.createChild(widget(1112, 4), 4, widget(1112, 4).nextChild());
+		ACTIVE.setSize(int1, 0, 0, 1);
+		_ACTIVE.setSize(int1, 0, 0, 1);
+		ACTIVE.setPosition(0, 0, 2, 1);
+		_ACTIVE.setPosition(0, 0, 2, 1);
+		ACTIVE.setFont(494);
+		_ACTIVE.setFont(494);
+		ACTIVE.setTextAntiMacro(true);
+		_ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setTextAlignment(0, 0, 0);
+		_ACTIVE.setTextAlignment(2, 0, 0);
+		ACTIVE.setRGB(0x7F7FFF);
+		_ACTIVE.setRGB(0x7F7FFF);
+		ACTIVE.setText(str3);
+		_ACTIVE.setText(str4);
+		ACTIVE.createChild(widget(1112, 4), 4, widget(1112, 4).nextChild());
+		ACTIVE.setSize(int1, 0, 0, 1);
+		ACTIVE.setPosition(0, 0, 2, 1);
+		ACTIVE.setFont(494);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setTextAlignment(1, 0, 0);
+		ACTIVE.setRGB(0x7F7FFF);
+		ACTIVE.setText(str5);
+		if (length(str0) > 0) {
+			ACTIVE.createChild(widget(1112, 4), 9, widget(1112, 4).nextChild());
+			_ACTIVE.createChild(widget(1112, 4), 9, widget(1112, 4).nextChild());
+			ACTIVE.setSize(0, 27, 0, 0);
+			_ACTIVE.setSize(0, 27, 0, 0);
+			ACTIVE.setPosition(int0 + 2, 3, 0, 0);
+			_ACTIVE.setPosition(ACTIVE.getX() + 1, ACTIVE.getY() + 1, 0, 0);
+			ACTIVE.setRGB(0x7F7F7F);
+			_ACTIVE.setRGB(0x3F3F3F);
+		}
+		ACTIVE.createChild(widget(1112, 4), 4, widget(1112, 4).nextChild());
+		_ACTIVE.createChild(widget(1112, 4), 4, widget(1112, 4).nextChild());
+		ACTIVE.setSize(int3, 0, 0, 1);
+		_ACTIVE.setSize(int3, 0, 0, 1);
+		ACTIVE.setPosition(0, 0, 1, 1);
+		_ACTIVE.setPosition(0, 0, 1, 1);
+		ACTIVE.setFont(494);
+		_ACTIVE.setFont(494);
+		ACTIVE.setTextAntiMacro(true);
+		_ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setTextAlignment(0, 0, 0);
+		_ACTIVE.setTextAlignment(2, 0, 0);
+		ACTIVE.setRGB(0xCFCFCF);
+		_ACTIVE.setRGB(0xCFCFCF);
+		ACTIVE.setText(str6);
+		_ACTIVE.setText(str7);
+		if (int6 > 0) {
+			ACTIVE.createChild(widget(1112, 4), 4, widget(1112, 4).nextChild());
+			ACTIVE.setSize(int3, 12, 0, 0);
+			ACTIVE.setPosition(max(int4 - int3, 0) / 2, 0, 2, 2);
+			ACTIVE.setFont(494);
+			ACTIVE.setTextAntiMacro(true);
+			ACTIVE.setTextAlignment(2, 0, 0);
+			ACTIVE.setRGB(0xCFCFCF);
+			int7 = int6 * 30;
+			if (int7 > VARC[995] || int7 + 29 < VARC[995]) {
+				VARC[995] = int7 + 15;
+			}
+			ACTIVE.setText(script_5094());
+			ACTIVE.setScriptCallOnGameloop(5093, CTX_WIDGET, CTX_WIDGET_CHILD, "Ii");
+		}
+	}
+	return;
+}

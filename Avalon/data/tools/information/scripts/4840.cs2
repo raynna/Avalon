@@ -1,0 +1,96 @@
+void script_4840() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	Widget widget7;
+	Widget widget8;
+	Widget widget9;
+	Sprite sprite10;
+	Sprite sprite11;
+	Sprite sprite12;
+	int0 = 0;
+	switch (VARPBIT[9558]) {
+		case 1:
+			int0 = VARPBIT[9563];
+			break;
+		case 2:
+			int0 = VARPBIT[9572];
+			break;
+		case 3:
+			int0 = VARPBIT[9581];
+			break;
+	}
+	if (int0 == 0) {
+		return;
+	}
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	widget7 = null;
+	widget8 = null;
+	widget9 = null;
+	int1, int2, int3, int4, int5, int6 = script_4841(VARPBIT[9558]);
+	sprite10 = datamap('i', 'd', (DataMap)4286, int1);
+	sprite11 = datamap('i', 'd', (DataMap)4286, int3);
+	sprite12 = datamap('i', 'd', (DataMap)4286, int5);
+	switch (int0) {
+		case 1:
+			if (int2 > 0) {
+				widget(1092, 47).setText(str(int2));
+			} else {
+				widget(1092, 47).setText("");
+			}
+			widget7 = widget(1092, 44);
+			widget8 = widget(1092, 45);
+			widget9 = widget(1092, 46);
+			break;
+		case 2:
+			if (int2 > 0) {
+				widget(1092, 56).setText(str(int2));
+			} else {
+				widget(1092, 56).setText("");
+			}
+			if (int4 > 0) {
+				widget(1092, 57).setText(str(int4));
+			} else {
+				widget(1092, 57).setText("");
+			}
+			widget7 = widget(1092, 53);
+			widget8 = widget(1092, 54);
+			widget9 = widget(1092, 55);
+			break;
+		case 3:
+			if (int2 > 0) {
+				widget(1092, 65).setText(str(int2));
+			} else {
+				widget(1092, 65).setText("");
+			}
+			if (int4 > 0) {
+				widget(1092, 67).setText(str(int4));
+			} else {
+				widget(1092, 67).setText("");
+			}
+			if (int6 > 0) {
+				widget(1092, 66).setText(str(int6));
+			} else {
+				widget(1092, 66).setText("");
+			}
+			widget7 = widget(1092, 62);
+			widget8 = widget(1092, 63);
+			widget9 = widget(1092, 64);
+			break;
+		default:
+			return;
+	}
+	widget7.setSprite(sprite10);
+	widget8.setSprite(sprite11);
+	widget9.setSprite(sprite12);
+	return;
+}

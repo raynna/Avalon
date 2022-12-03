@@ -1,0 +1,71 @@
+string, string, string, string, string, string, string, string script_4729() {
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	string str4;
+	string str5;
+	string str6;
+	string str7;
+	str0 = "";
+	str1 = "";
+	str2 = "";
+	str3 = "";
+	str4 = "";
+	str5 = "";
+	str6 = "";
+	str7 = "";
+	switch (getLanguage()) {
+		case 1:
+			str0 = "/a";
+			str1 = "/c";
+			str2 = "/f";
+			str3 = "/g";
+			str4 = "\\a";
+			str5 = "\\c";
+			str6 = "\\f";
+			str7 = "\\g";
+			break;
+		case 2:
+			str0 = "/p";
+			str1 = "/c";
+			str2 = "/a";
+			str3 = "/i";
+			str4 = "\\p";
+			str5 = "\\c";
+			str6 = "\\a";
+			str7 = "\\i";
+			break;
+		case 3:
+			str0 = "/p";
+			str1 = "/c";
+			str2 = "/f";
+			str3 = "/g";
+			str4 = "\\p";
+			str5 = "\\c";
+			str6 = "\\f";
+			str7 = "\\g";
+			break;
+		case 4:
+			str0 = "/p";
+			str1 = "/c";
+			str2 = "/f";
+			str3 = "/g";
+			str4 = "\\p";
+			str5 = "\\c";
+			str6 = "\\f";
+			str7 = "\\g";
+			break;
+		default:
+			str0 = "/p";
+			str1 = "/c";
+			str2 = "/f";
+			str3 = "/g";
+			str4 = "\\p";
+			str5 = "\\c";
+			str6 = "\\f";
+			str7 = "\\g";
+			break;
+	}
+	return str0, str4, str1, str5, str2, str6, str3, str7;
+}

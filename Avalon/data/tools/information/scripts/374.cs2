@@ -1,0 +1,11 @@
+void script_374(Widget widget0, string string1, int arg2) {
+	ACTIVE.createChild(widget0, 4, widget0.nextChild());
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setPosition(1, 1, 1, 1);
+	ACTIVE.setFont(3793);
+	ACTIVE.setRGB(0xCDBE9A);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setTextAlignment(1, 1, arg2);
+	ACTIVE.setText(string1);
+	return;
+}

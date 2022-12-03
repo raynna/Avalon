@@ -1,0 +1,112 @@
+void script_565() {
+	int int0;
+	int int1;
+	string str0;
+	int0 = 50;
+	int1 = 45;
+	str0 = script_20(VARPBIT[4138]);
+	if (VARPBIT[4140] > 0) {
+		widget(635, 33).setIsHidden(false);
+		widget(635, 35).setText(str(VARPBIT[4140]));
+		widget(635, 32).setText(str(VARPBIT[4143]));
+		widget(635, 30).setText(str0 + " Coins");
+		if (VARPBIT[4144] == 0) {
+			widget(635, 15).setSprite(223);
+			widget(635, 15).setPosition(int0, int1, 0, 0);
+			widget(635, 2).setIsHidden(false);
+			int1 = int1 + 29;
+		} else {
+			widget(635, 2).setIsHidden(true);
+		}
+		if (VARPBIT[4145] == 0) {
+			widget(635, 16).setSprite(225);
+			widget(635, 16).setPosition(int0, int1, 0, 0);
+			widget(635, 3).setIsHidden(false);
+			int1 = int1 + 29;
+		} else {
+			widget(635, 3).setIsHidden(true);
+		}
+		if (VARPBIT[4146] == 0) {
+			widget(635, 17).setSprite(201);
+			widget(635, 17).setPosition(int0, int1, 0, 0);
+			widget(635, 4).setIsHidden(false);
+			int1 = int1 + 29;
+		} else {
+			widget(635, 4).setIsHidden(true);
+		}
+		if (VARPBIT[4147] == 0) {
+			widget(635, 18).setSprite(226);
+			widget(635, 18).setPosition(int0, int1, 0, 0);
+			widget(635, 5).setIsHidden(false);
+			int1 = int1 + 29;
+		} else {
+			widget(635, 5).setIsHidden(true);
+		}
+		if (VARPBIT[4151] == 0) {
+			widget(635, 20).setSprite(203);
+			widget(635, 20).setPosition(int0, int1, 0, 0);
+			widget(635, 7).setIsHidden(false);
+			int1 = int1 + 29;
+		} else {
+			widget(635, 7).setIsHidden(true);
+		}
+		if (VARPBIT[4152] == 1) {
+			widget(635, 21).setSprite(227);
+			widget(635, 21).setPosition(int0, int1, 0, 0);
+			widget(635, 8).setIsHidden(false);
+			int1 = int1 + 29;
+		} else {
+			widget(635, 8).setIsHidden(true);
+		}
+		if (VARPBIT[4276] == 1) {
+			widget(635, 19).setSprite(222);
+			widget(635, 19).setPosition(int0, int1, 0, 0);
+			widget(635, 6).setIsHidden(false);
+			int1 = int1 + 29;
+		} else {
+			widget(635, 6).setIsHidden(true);
+		}
+		int0 = 8;
+		int1 = 45;
+		if (VARPBIT[4148] == 0) {
+			widget(635, 22).setSprite(200);
+			widget(635, 22).setPosition(int0, int1, 0, 0);
+			widget(635, 9).setIsHidden(false);
+			int1 = int1 + 29;
+		} else {
+			widget(635, 9).setIsHidden(true);
+		}
+		if (VARPBIT[4149] == 0) {
+			widget(635, 23).setSprite(197);
+			widget(635, 23).setPosition(int0, int1, 0, 0);
+			widget(635, 10).setIsHidden(false);
+			int1 = int1 + 29;
+		} else {
+			widget(635, 10).setIsHidden(true);
+		}
+		if (VARPBIT[4150] == 0) {
+			widget(635, 24).setSprite(202);
+			widget(635, 24).setPosition(int0, int1, 0, 0);
+			widget(635, 11).setIsHidden(false);
+			int1 = int1 + 29;
+		} else {
+			widget(635, 11).setIsHidden(true);
+		}
+	} else {
+		widget(635, 15).setSprite(null);
+		widget(635, 16).setSprite(null);
+		widget(635, 17).setSprite(null);
+		widget(635, 18).setSprite(null);
+		widget(635, 20).setSprite(null);
+		widget(635, 21).setSprite(null);
+		widget(635, 22).setSprite(null);
+		widget(635, 24).setSprite(null);
+		widget(635, 23).setSprite(null);
+		widget(635, 19).setSprite(null);
+		widget(635, 32).setText(" ");
+		widget(635, 30).setText(" ");
+		widget(635, 26).setText(" ");
+		widget(635, 33).setIsHidden(true);
+	}
+	return;
+}

@@ -1,0 +1,76 @@
+void script_5315(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4) {
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	Sprite sprite10;
+	int5 = 0;
+	int6 = 15;
+	int7 = datamapSize((DataMap)5177);
+	int8 = datamapSize((DataMap)5176);
+	int9 = 0;
+	sprite10 = null;
+	widget1.clearChildren();
+	widget2.clearChildren();
+	widget3.clearChildren();
+	widget4.clearChildren();
+	while (int5 < 40) {
+		int9 = script_5319(int5) - 1;
+		ACTIVE.createChild(widget1, 3, int5);
+		ACTIVE.setSize(widget0.getWidth(), int6, 0, 0);
+		ACTIVE.setPosition(0, int5 * int6, 0, 0);
+		if (int5 % 2 == 0) {
+			ACTIVE.setRGB(0x222222);
+		} else {
+			ACTIVE.setRGB(0x111111);
+		}
+		ACTIVE.setFilled(true);
+		ACTIVE.createChild(widget3, 5, int5);
+		ACTIVE.setSprite(7712);
+		ACTIVE.setContextMenuOption(1, "Play");
+		ACTIVE.setSize(12, 13, 0, 0);
+		ACTIVE.setPosition(138, 1 + int5 * int6, 0, 0);
+		sprite10 = 7713;
+		ACTIVE.setScriptCallOnMouseEntered(5336, CTX_WIDGET, CTX_WIDGET_CHILD, sprite10, "Iid");
+		sprite10 = 7712;
+		ACTIVE.setScriptCallOnMouseExit(5336, CTX_WIDGET, CTX_WIDGET_CHILD, sprite10, "Iid");
+		if (int9 < 0) {
+			ACTIVE.setHidden(true);
+		}
+		ACTIVE.createChild(widget4, 5, int5);
+		ACTIVE.setSprite(7718);
+		ACTIVE.setContextMenuOption(1, "Remove");
+		ACTIVE.setSize(12, 13, 0, 0);
+		ACTIVE.setPosition(151, 1 + int5 * int6, 0, 0);
+		sprite10 = 7719;
+		ACTIVE.setScriptCallOnMouseEntered(5336, CTX_WIDGET, CTX_WIDGET_CHILD, sprite10, "Iid");
+		sprite10 = 7718;
+		ACTIVE.setScriptCallOnMouseExit(5336, CTX_WIDGET, CTX_WIDGET_CHILD, sprite10, "Iid");
+		if (int9 < 0) {
+			ACTIVE.setHidden(true);
+		}
+		ACTIVE.createChild(widget2, 4, int5);
+		ACTIVE.setFont(494);
+		ACTIVE.setPosition(2, int5 * int6, 0, 0);
+		ACTIVE.setSize(widget0.getWidth() - 24, 15, 0, 0);
+		ACTIVE.setRGB(0xDDDDDD);
+		ACTIVE.setTextAlignment(0, 1, 0);
+		ACTIVE.setTextAntiMacro(false);
+		if (int9 >= 0) {
+			ACTIVE.setText(datamap('i', 's', (DataMap)5177, int9));
+		} else {
+			ACTIVE.setText("");
+		}
+		ACTIVE.setDraggable(widget2, -1);
+		ACTIVE.setDragRenderBehaviour(1);
+		ACTIVE.setDragDeadZone(3);
+		ACTIVE.setDragDeadTime(20);
+		ACTIVE.setScriptCallOnMouseDragReleased(5316, CTX_WIDGET, CTX_WIDGET_CHILD, DRAG_WIDGET_CHILD, "Iii");
+		int5 = int5 + 1;
+	}
+	widget0.setScrollPos(0, 0);
+	widget0.setScrollMax(0, 2 + int5 * int6);
+	script_31(widget(319, 9), widget0, 792, 789, 790, 791, 773, 788);
+	return;
+}

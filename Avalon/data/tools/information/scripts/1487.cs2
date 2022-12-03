@@ -1,0 +1,16 @@
+void script_1487() {
+	string str0;
+	str0 = "";
+	if (VARP[115] == 0) {
+		widget(762, 19).setSprite(1431);
+		widget(762, 20).setSprite(1427);
+		str0 = "Switch to note withdrawal mode";
+	} else {
+		widget(762, 19).setSprite(1433);
+		widget(762, 20).setSprite(1428);
+		str0 = "Switch to item withdrawal mode";
+	}
+	widget(762, 19).setContextMenuOption(1, str0);
+	widget(762, 19).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(762, 119), str0, 25, 150, "IIsii");
+	return;
+}

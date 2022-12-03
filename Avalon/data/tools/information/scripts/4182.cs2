@@ -1,0 +1,8 @@
+void script_4182() {
+	widget(1072, 53).setText(str(VARPBIT[8857]) + "/" + str(4000));
+	widget(1072, 57).setText(str(VARPBIT[8859]) + "/" + str(4000));
+	widget(1072, 61).setText(str(VARPBIT[8862]) + "/" + str(4000));
+	widget(1072, 65).setText(str(VARPBIT[8863]) + "/" + str(4000));
+	widget(1072, 49).setText(str(VARPBIT[8865]) + "/" + str(8000));
+	return;
+}

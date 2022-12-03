@@ -1,0 +1,9 @@
+void script_1350(Widget widget0, Widget widget1, Widget widget2, Widget widget3, int arg4, int arg5, string string6, Color color7) {
+	if (ACTIVE.setChild(widget3, arg4)) {
+		ACTIVE.setText(string6);
+		ACTIVE.setRGB(color7);
+		ACTIVE.setScriptCallOnMouseExit(1354, widget3, arg4, color7, "Iii");
+	}
+	script_1349(widget3, widget0, widget1, widget2, arg5);
+	return;
+}

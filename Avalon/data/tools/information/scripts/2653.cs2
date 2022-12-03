@@ -1,0 +1,4 @@
+void script_2653() {
+	widget(918, 7).setText(str(VARP[1652]) + " " + datamap('i', 's', (DataMap)950, VARP[1653]) + " " + str(VARP[1654]));
+	return;
+}

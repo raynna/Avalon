@@ -1,0 +1,5 @@
+void script_5044(Widget widget0, int arg1, int arg2) {
+	script_5045(widget0, arg1, arg2);
+	script_5048();
+	return;
+}

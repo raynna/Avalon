@@ -1,0 +1,30 @@
+void script_1126(Widget widget0) {
+	VARC[993] = 0;
+	switch (widget0) {
+		case widget(192, 2):
+			script_41(widget(192, 96));
+			if (VARPBIT[2668] == 0) {
+				widget0.setSprite(1701);
+			}
+			break;
+		case widget(193, 18):
+			script_41(widget(193, 53));
+			if (VARPBIT[2668] == 0) {
+				widget0.setSprite(1701);
+			}
+			break;
+		case widget(430, 20):
+			script_41(widget(430, 65));
+			if (VARPBIT[2668] == 0) {
+				widget0.setSprite(1701);
+			}
+			break;
+		case widget(950, 2):
+			script_41(widget(950, 72));
+			if (VARPBIT[2668] == 0) {
+				widget0.setSprite(1701);
+			}
+			break;
+	}
+	return;
+}

@@ -1,0 +1,36 @@
+void script_2958(Widget widget0, Item item1, int arg2, Widget widget3) {
+	Widget widget4;
+	int int5;
+	widget4 = widget0.getLayer();
+	int5 = 0;
+	switch (item1) {
+		case 20024:
+			int5 = VARPBIT[8399];
+			widget3.setText(getItemName(item1) + "<br>" + "(" + str(int5) + "/" + str(arg2) + ")");
+			break;
+		case 20012:
+			int5 = VARPBIT[8400];
+			widget3.setText(getItemName(item1) + "<br>" + "(" + str(int5) + "/" + str(arg2) + ")");
+			break;
+		case 20032:
+			int5 = VARPBIT[8403];
+			widget3.setText(getItemName(item1) + "<br>" + "(" + str(int5) + "/" + str(arg2) + ")");
+			break;
+		case 20036:
+			int5 = VARPBIT[8402];
+			widget3.setText(getItemName(item1) + "<br>" + "(" + str(int5) + "/" + str(arg2) + ")");
+			break;
+		case 20040:
+			int5 = VARPBIT[8404];
+			widget3.setText(getItemName(item1) + "<br>" + "(" + str(int5) + "/" + str(arg2) + ")");
+			break;
+		case 20028:
+			int5 = VARPBIT[8401];
+			widget3.setText(getItemName(item1) + "<br>" + "(" + str(int5) + "/" + str(arg2) + ")");
+			break;
+	}
+	widget0.setItemOnWidgetMethod2205(item1, -1);
+	widget0.setOutlineThickness(1);
+	widget3.cs2method2314(171);
+	return;
+}

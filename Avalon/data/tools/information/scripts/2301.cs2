@@ -1,0 +1,4 @@
+void script_2301(Widget widget0) {
+	script_2308(widget0, script_42(VARC[182]));
+	return;
+}

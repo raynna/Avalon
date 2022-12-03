@@ -1,0 +1,46 @@
+void script_5040() {
+	int int0;
+	int int1;
+	AttrMap attrmap2;
+	int int3;
+	int int4;
+	Color color5;
+	int int6;
+	widget(1111, 18).clearChildren();
+	int0 = 0;
+	int1 = 0;
+	attrmap2 = null;
+	int3 = -1;
+	int4 = -1;
+	color5 = null;
+	int6 = 200;
+	if (citadelConfigsInitialized()) {
+		while (int0 < 200) {
+			ACTIVE.createChild(widget(1111, 18), 5, int0);
+			int1, int3, int4, color5 = script_5019(int0);
+			if (int1 != 0) {
+				attrmap2 = datamap('i', 'J', (DataMap)3943, int1);
+				if (attrmap2 != null) {
+					ACTIVE.setSprite(getAttributeMapValue(attrmap2, 1465));
+					if (getAttributeMapValue(attrmap2, 1466) == 1) {
+						ACTIVE.setSpriteTiling(true);
+					} else {
+						ACTIVE.setSpriteTiling(false);
+					}
+					script_5041(attrmap2, int3, int4, color5);
+					int6 = int6 - 1;
+				} else {
+					ACTIVE.setHidden(true);
+				}
+			} else {
+				ACTIVE.setHidden(true);
+			}
+			int0 = int0 + 1;
+		}
+		widget(1111, 93).setText(str(int6));
+	} else {
+		widget(1111, 93).setText("...");
+	}
+	script_41(widget(1111, 131));
+	return;
+}

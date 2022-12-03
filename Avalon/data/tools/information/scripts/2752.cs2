@@ -1,0 +1,11 @@
+void script_2752() {
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setFont(495);
+	ACTIVE.setRGB(0x0000FF);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setSize(0, ACTIVE.getLayer().getHeight() - (widget(752, 5).getY() + widget(752, 5).getHeight()), 1, 0);
+	ACTIVE.setPosition(0, 0, 1, 2);
+	ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+	ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 255, "Iii");
+	return;
+}

@@ -1,0 +1,8 @@
+void script_3155(Widget widget0) {
+	script_2994(widget0, 0, 16, 16, 0, 0, 1547, false, false, false, 0);
+	ACTIVE.setScriptCallOnMouseEntered(3156, widget0, "I");
+	ACTIVE.setScriptCallOnMouseExit(3157, widget0, "I");
+	script_2994(widget0, 1, 16, 16, 0, 0, 1548, false, false, false, 0);
+	ACTIVE.setHidden(true);
+	return;
+}

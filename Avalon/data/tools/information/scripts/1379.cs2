@@ -1,0 +1,35 @@
+void script_1379() {
+	switch (VARPBIT[5389]) {
+		case 1:
+			widget(796, 10).setAnimation(10439);
+			break;
+		case 2:
+			widget(796, 11).setIsHidden(true);
+			widget(796, 7).setIsHidden(false);
+			break;
+		case 3:
+			widget(796, 6).setAnimation(10439);
+			break;
+		case 4:
+			widget(796, 7).setIsHidden(true);
+			widget(796, 9).setIsHidden(false);
+			break;
+		case 5:
+			widget(796, 8).setAnimation(10443);
+			break;
+		case 6:
+			widget(796, 9).setIsHidden(true);
+			widget(796, 5).setIsHidden(false);
+			break;
+		case 7:
+			widget(796, 4).setAnimation(10437);
+			break;
+		case 8:
+			widget(796, 5).setIsHidden(true);
+			widget(796, 3).setIsHidden(true);
+			widget(796, 30).setIsHidden(false);
+			widget(796, 1).setIsHidden(false);
+			break;
+	}
+	return;
+}

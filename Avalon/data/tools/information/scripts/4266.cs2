@@ -1,0 +1,21 @@
+void script_4266() {
+	script_4267();
+	script_4274();
+	widget(1083, 85).setText("");
+	widget(1083, 87).setText("Select a reward for more information.");
+	widget(1083, 89).setText("");
+	widget(1083, 90).setIsHidden(true);
+	widget(1083, 164).setIsHidden(true);
+	widget(1083, 159).setIsHidden(true);
+	widget(1083, 157).setIsHidden(false);
+	widget(1083, 158).setIsHidden(false);
+	widget(1083, 165).setIsHidden(false);
+	if (VARPBIT[9067] < 11) {
+		script_4270();
+		widget(1083, 85).setText("Spells");
+	} else {
+		script_4272();
+		widget(1083, 85).setText("Wishes");
+	}
+	return;
+}

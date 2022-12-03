@@ -1,0 +1,248 @@
+void script_4814() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	string str0;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	str0 = "";
+	widget(1092, 1212).setText("");
+	widget(1092, 1138).setText("");
+	widget(1092, 1058).setText("");
+	widget(1092, 1210).setIsHidden(false);
+	widget(1092, 1136).setIsHidden(false);
+	widget(1092, 1056).setIsHidden(false);
+	widget(1092, 1212).setIsHidden(true);
+	widget(1092, 1138).setIsHidden(true);
+	widget(1092, 1058).setIsHidden(true);
+	widget(1092, 1223).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	widget(1092, 1149).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	widget(1092, 1069).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	widget(1092, 1207).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	widget(1092, 1133).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	widget(1092, 1053).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	widget(1092, 1220).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	widget(1092, 1146).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	widget(1092, 1066).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	widget(1092, 1204).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	widget(1092, 1130).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	widget(1092, 1050).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	if (citadelConfigsInitialized()) {
+		if (script_5008() == 0 || script_5144(-1) == 0) {
+			widget(1092, 1223).setIsHidden(false);
+			widget(1092, 1149).setIsHidden(false);
+			widget(1092, 1069).setIsHidden(false);
+			widget(1092, 1207).setIsHidden(false);
+			widget(1092, 1133).setIsHidden(false);
+			widget(1092, 1053).setIsHidden(false);
+			str0 = "Your rank may not currently make alterations to this item";
+			widget(1092, 1223).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1223), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1092, 1149).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1149), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1092, 1069).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1069), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1092, 1207).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1207), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1092, 1133).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1133), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1092, 1053).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1053), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		} else {
+			switch (VARPBIT[9558]) {
+				case 1:
+					int0 = VARPBIT[9563];
+					break;
+				case 2:
+					int0 = VARPBIT[9572];
+					break;
+				case 3:
+					int0 = VARPBIT[9581];
+					break;
+			}
+			switch (script_4829(VARPBIT[9558])) {
+				case 1:
+					str0 = "You may submit this customisation to the build queue.";
+					switch (int0) {
+						case 1:
+							widget(1092, 1212).setIsHidden(true);
+							widget(1092, 1210).setIsHidden(false);
+							widget(1092, 1223).setIsHidden(true);
+							widget(1092, 1220).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1220), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							break;
+						case 2:
+							widget(1092, 1138).setIsHidden(true);
+							widget(1092, 1136).setIsHidden(false);
+							widget(1092, 1149).setIsHidden(true);
+							widget(1092, 1146).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1146), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							break;
+						case 3:
+							widget(1092, 1058).setIsHidden(true);
+							widget(1092, 1056).setIsHidden(false);
+							widget(1092, 1069).setIsHidden(true);
+							widget(1092, 1066).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1066), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							break;
+					}
+					break;
+				case 2:
+					switch (int0) {
+						case 1:
+							str0 = "Your citadel can not produce the resouces with which to purchase this customisation.";
+							widget(1092, 1212).setText(str0);
+							widget(1092, 1223).setIsHidden(false);
+							widget(1092, 1212).setIsHidden(false);
+							widget(1092, 1210).setIsHidden(true);
+							widget(1092, 1223).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1223), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You may cancel this customisation from the build queue but you will lose any resources already spent.";
+							widget(1092, 1204).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1204), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You do not have the rank to cancel this job.";
+							widget(1092, 1207).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1207), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							break;
+						case 2:
+							str0 = "Your citadel can not produce the resouces with which to purchase this customisation.";
+							widget(1092, 1138).setText(str0);
+							widget(1092, 1149).setIsHidden(false);
+							widget(1092, 1138).setIsHidden(false);
+							widget(1092, 1136).setIsHidden(true);
+							widget(1092, 1149).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1149), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You may cancel this customisation from the build queue but you will lose any resources already spent.";
+							widget(1092, 1130).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1130), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You do not have the rank to cancel this job.";
+							widget(1092, 1133).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1133), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							break;
+						case 3:
+							str0 = "Your citadel can not produce the resouces with which to purchase this customisation.";
+							widget(1092, 1058).setText(str0);
+							widget(1092, 1069).setIsHidden(false);
+							widget(1092, 1058).setIsHidden(false);
+							widget(1092, 1056).setIsHidden(true);
+							widget(1092, 1069).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1069), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You may cancel this customisation from the build queue but you will lose any resources already spent.";
+							widget(1092, 1050).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1050), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You do not have the rank to cancel this job.";
+							widget(1092, 1053).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1053), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							break;
+					}
+					break;
+				case 3:
+					switch (int0) {
+						case 1:
+							str0 = "Select valid options for each part of the customisation before adding to the build queue.";
+							widget(1092, 1212).setText(str0);
+							widget(1092, 1223).setIsHidden(false);
+							widget(1092, 1212).setIsHidden(false);
+							widget(1092, 1210).setIsHidden(true);
+							widget(1092, 1223).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1223), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You may cancel this customisation from the build queue but you will lose any resources already spent.";
+							widget(1092, 1204).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1204), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You do not have the rank to cancel this job.";
+							widget(1092, 1207).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1207), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							break;
+						case 2:
+							str0 = "You must select valid options for each part of the customisation before you can add it to the build queue.";
+							widget(1092, 1138).setText(str0);
+							widget(1092, 1149).setIsHidden(false);
+							widget(1092, 1138).setIsHidden(false);
+							widget(1092, 1136).setIsHidden(true);
+							widget(1092, 1149).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1149), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You may cancel this customisation from the build queue but you will lose any resources already spent.";
+							widget(1092, 1130).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1130), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You do not have the rank to cancel this job.";
+							widget(1092, 1133).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1133), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							break;
+						case 3:
+							str0 = "You must select valid options for each part of the customisation before you can add it to the build queue.";
+							widget(1092, 1058).setText(str0);
+							widget(1092, 1069).setIsHidden(false);
+							widget(1092, 1058).setIsHidden(false);
+							widget(1092, 1056).setIsHidden(true);
+							widget(1092, 1069).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1069), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You may cancel this customisation from the build queue but you will lose any resources already spent.";
+							widget(1092, 1050).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1050), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You do not have the rank to cancel this job.";
+							widget(1092, 1053).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1053), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							break;
+					}
+					break;
+				case 4:
+					switch (int0) {
+						case 1:
+							str0 = "The selection you have chosen is already built in the citadel.";
+							widget(1092, 1212).setText(str0);
+							widget(1092, 1223).setIsHidden(false);
+							widget(1092, 1212).setIsHidden(false);
+							widget(1092, 1210).setIsHidden(true);
+							widget(1092, 1223).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1223), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You may cancel this customisation from the build queue but you will lose any resources already spent.";
+							widget(1092, 1204).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1204), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You do not have the rank to cancel this job.";
+							widget(1092, 1207).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1207), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							break;
+						case 2:
+							str0 = "The selection you have chosen is already built in the citadel.";
+							widget(1092, 1138).setText(str0);
+							widget(1092, 1149).setIsHidden(false);
+							widget(1092, 1138).setIsHidden(false);
+							widget(1092, 1136).setIsHidden(true);
+							widget(1092, 1149).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1149), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You may cancel this customisation from the build queue but you will lose any resources already spent.";
+							widget(1092, 1130).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1130), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You do not have the rank to cancel this job.";
+							widget(1092, 1133).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1133), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							break;
+						case 3:
+							str0 = "The selection you have chosen is already built in the citadel.";
+							widget(1092, 1058).setText(str0);
+							widget(1092, 1069).setIsHidden(false);
+							widget(1092, 1058).setIsHidden(false);
+							widget(1092, 1056).setIsHidden(true);
+							widget(1092, 1069).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1069), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You may cancel this customisation from the build queue but you will lose any resources already spent.";
+							widget(1092, 1050).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1050), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You do not have the rank to cancel this job.";
+							widget(1092, 1053).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1053), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							break;
+					}
+					break;
+				case 5:
+					switch (int0) {
+						case 1:
+							str0 = "This hotspot is currently queued to be reset, you may cancel this reset at no cost.";
+							widget(1092, 1212).setText(str0);
+							widget(1092, 1223).setIsHidden(false);
+							widget(1092, 1212).setIsHidden(false);
+							widget(1092, 1210).setIsHidden(true);
+							widget(1092, 1223).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1149), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "This hotspot is currently queued to be reset, you may cancel this reset at no cost.";
+							widget(1092, 1204).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1204), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You do not have the rank to cancel this job.";
+							widget(1092, 1207).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1207), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							break;
+						case 2:
+							str0 = "This hotspot is currently queued to be reset, you may cancel this reset at no cost.";
+							widget(1092, 1138).setText(str0);
+							widget(1092, 1149).setIsHidden(false);
+							widget(1092, 1138).setIsHidden(false);
+							widget(1092, 1136).setIsHidden(true);
+							widget(1092, 1149).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1149), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "This hotspot is currently queued to be reset, you may cancel this reset at no cost.";
+							widget(1092, 1130).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1130), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You do not have the rank to cancel this job.";
+							widget(1092, 1133).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1133), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							break;
+						case 3:
+							str0 = "This hotspot is currently queued to be reset, you may cancel this reset at no cost.";
+							widget(1092, 1058).setText(str0);
+							widget(1092, 1069).setIsHidden(false);
+							widget(1092, 1058).setIsHidden(false);
+							widget(1092, 1056).setIsHidden(true);
+							widget(1092, 1069).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1069), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "This hotspot is currently queued to be reset, you may cancel this reset at no cost.";
+							widget(1092, 1050).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1050), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							str0 = "You do not have the rank to cancel this job.";
+							widget(1092, 1053).setScriptCallOnMouseOver(4538, widget(1092, 327), widget(1092, 1053), -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+							break;
+					}
+					break;
+			}
+		}
+	}
+	return;
+}

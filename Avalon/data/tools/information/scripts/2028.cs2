@@ -1,0 +1,30 @@
+void script_2028(Widget widget0) {
+	if (isBitFlagged(VARP[331], 13)) {
+		widget0.set3DRotation(0, 0, 512, 1536, 0, 400);
+	} else if (isBitFlagged(VARP[331], 14)) {
+		widget0.set3DRotation(0, 0, 512, 1664, 0, 400);
+	} else if (isBitFlagged(VARP[331], 15)) {
+		widget0.set3DRotation(0, 0, 512, 1792, 0, 400);
+	} else if (isBitFlagged(VARP[331], 16)) {
+		widget0.set3DRotation(0, 0, 512, 1920, 0, 400);
+	} else if (isBitFlagged(VARP[331], 17)) {
+		widget0.set3DRotation(0, 0, 512, 0, 0, 400);
+	} else if (isBitFlagged(VARP[331], 18)) {
+		widget0.set3DRotation(0, 0, 512, 128, 0, 400);
+	} else if (isBitFlagged(VARP[331], 19)) {
+		widget0.set3DRotation(0, 0, 512, 256, 0, 400);
+	} else if (isBitFlagged(VARP[331], 20)) {
+		widget0.set3DRotation(0, 0, 512, 384, 0, 400);
+	} else if (isBitFlagged(VARP[331], 21)) {
+		widget0.set3DRotation(0, 0, 512, 512, 0, 400);
+	} else if (isBitFlagged(VARP[331], 22)) {
+		widget0.set3DRotation(0, 0, 512, 640, 0, 400);
+	} else if (isBitFlagged(VARP[331], 23)) {
+		widget0.set3DRotation(0, 0, 512, 768, 0, 400);
+	} else if (isBitFlagged(VARP[331], 24)) {
+		widget0.set3DRotation(0, 0, 512, 896, 0, 400);
+	} else if (isBitFlagged(VARP[331], 25)) {
+		widget0.set3DRotation(0, 0, 512, 1024, 0, 400);
+	}
+	return;
+}

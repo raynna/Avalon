@@ -1,0 +1,16 @@
+void script_1809(Widget widget0, Widget widget1, Widget widget2) {
+	string str0;
+	str0 = "";
+	if (length(STRING[38]) > 0) {
+		str0 = script_1814(STRING[38]);
+		widget1.setText(str0);
+		widget1.setSize(getMaxLineWidth(str0, 512, 496), 15, 0, 0);
+	} else {
+		widget1.setText("");
+		widget1.setSize(0, 15, 0, 0);
+	}
+	VARC[267] = -1;
+	STRING[39] = "";
+	script_1811(widget0, widget1, widget2);
+	return;
+}

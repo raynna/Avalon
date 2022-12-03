@@ -1,0 +1,23 @@
+void script_2276(int arg0, int arg1, Widget widget2) {
+	int int3;
+	string str0;
+	string str1;
+	str0 = datamap('i', 's', (DataMap)2857, arg1);
+	int3 = datamap('i', 'i', (DataMap)2858, arg1);
+	str1 = datamap('i', 's', (DataMap)2859, arg1);
+	if (arg0 == 1) {
+		widget2.setText(str0);
+		if (int3 == 2) {
+			widget2.setRGB(0x00A000);
+		} else if (int3 == 1) {
+			widget2.setRGB(0x909000);
+		} else if (int3 == 0) {
+			widget2.setRGB(0xA00000);
+		}
+		widget2.setScriptCallOnMouseOver(38, CTX_WIDGET, widget(933, 254), str1, 25, 200, "IIsii");
+		widget2.setScriptCallOnMouseExit(40, widget(933, 254), "I");
+	} else {
+		widget2.setText("");
+	}
+	return;
+}

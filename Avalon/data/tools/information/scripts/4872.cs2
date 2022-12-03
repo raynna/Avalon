@@ -1,0 +1,25 @@
+Widget script_4872(int arg0) {
+	switch (arg0) {
+		case 1:
+			return widget(1092, 88);
+		case 2:
+			return widget(1092, 1818);
+		case 3:
+			return widget(1092, 1819);
+		case 4:
+			return widget(1092, 1820);
+		case 5:
+			return widget(1092, 1821);
+		case 6:
+			return widget(1092, 1824);
+		case 7:
+			return widget(1092, 1825);
+		case 8:
+			return widget(1092, 1823);
+		case 9:
+			return widget(1092, 1822);
+		case 10:
+			return widget(1092, 1826);
+	}
+	return null;
+}

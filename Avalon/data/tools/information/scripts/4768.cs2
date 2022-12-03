@@ -1,0 +1,34 @@
+void script_4768() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int0 = 1;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	if (citadelConfigsInitialized()) {
+		int1 = CLAN[2724] / 100;
+		int2 = CLAN[2725] / 100;
+		int3 = CLAN[2728] / 100;
+		int4 = CLAN[2732] / 100;
+		int5 = CLAN[2731] / 100;
+		int6 = CLAN[2730] / 100;
+		int7 = CLAN[2733] / 100;
+		widget(1115, 67).clearChildren();
+		widget(1115, 65).clearChildren();
+		widget(1115, 63).clearChildren();
+		int0, int1, int2, int3, int4, int5, int6, int7 = script_4769(1, int0, int1, int2, int3, int4, int5, int6, int7);
+		int0, int1, int2, int3, int4, int5, int6, int7 = script_4769(2, int0, int1, int2, int3, int4, int5, int6, int7);
+		int0, int1, int2, int3, int4, int5, int6, int7 = script_4769(3, int0, int1, int2, int3, int4, int5, int6, int7);
+	}
+	return;
+}

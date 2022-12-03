@@ -1,0 +1,32 @@
+void script_4203(Widget widget0, AttrMap attrmap1) {
+	int int2;
+	if (widget0 == null || attrmap1 == null) {
+		return;
+	}
+	int2 = getAttributeMapValue(attrmap1, 1346);
+	if (int2 == 2) {
+		widget0.setScriptCallOnMouseEntered(4159, CTX_WIDGET, 0, 0, "Iii");
+		widget0.setScriptCallOnMouseExit(4159, CTX_WIDGET, 1, 0, "Iii");
+	} else if (int2 == 3) {
+		widget0.setScriptCallOnMousePressed(4162, CTX_WIDGET, "I");
+		widget0.setScriptCallOnMouseReleased(4163, CTX_WIDGET, "I");
+		widget0.setScriptCallOnMouseExit(4163, CTX_WIDGET, "I");
+	}
+	if (int2 == 5) {
+		widget0.clearChildren();
+		ACTIVE.createChild(widget0, 3, widget0.nextChild());
+		ACTIVE.setSize(0, 0, 1, 1);
+		ACTIVE.setPosition(0, 0, 0, 0);
+		ACTIVE.setRGB(0x000000);
+		ACTIVE.setTrans(128);
+		ACTIVE.setFilled(true);
+		widget0.setIsHidden(true);
+		widget0.setNoClickThrough(1);
+	} else {
+		script_4204(widget0, attrmap1);
+	}
+	if (int2 == 4) {
+		script_4161(widget0, 0);
+	}
+	return;
+}

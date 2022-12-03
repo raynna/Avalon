@@ -1,0 +1,6 @@
+string script_1889() {
+	if (script_1431() == 1) {
+		return "World " + str(getWorldId()) + " (PvP)";
+	}
+	return "World " + str(getWorldId());
+}

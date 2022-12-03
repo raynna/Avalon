@@ -1,0 +1,120 @@
+void script_444() {
+	int int0;
+	int int1;
+	Item item2;
+	int int3;
+	int int4;
+	int int5;
+	string str0;
+	string str1;
+	int0 = 0;
+	int1 = 0;
+	item2 = null;
+	str0 = "";
+	str1 = "";
+	ARRAY0 = new Item[getItemContainerLength(583)];
+	ARRAY1 = new int[getItemContainerLength(583)];
+	int3 = 0;
+	int4 = 99;
+	int5 = 0;
+	while (int0 < getItemContainerLength(583)) {
+		item2 = getItemIdInSlot(583, int0);
+		int1 = getItemAmtInSlot(583, int0);
+		if (item2 != null) {
+			int4 = 99;
+			int5 = 0;
+			while (int5 < getItemContainerLength(583)) {
+				if (ARRAY0[int5] != -1) {
+					if ((Item)ARRAY0[int5] == item2) {
+						int4 = int5;
+						int5 = getItemContainerLength(583);
+					}
+					int5 = int5 + 1;
+				} else {
+					int5 = getItemContainerLength(583);
+				}
+			}
+			if (int4 == 99) {
+				ARRAY0[int3] = item2;
+				ARRAY1[int3] = int1;
+				int3 = int3 + 1;
+			} else {
+				ARRAY1[int4] = ARRAY1[int4] + int1;
+			}
+		}
+		int0 = int0 + 1;
+	}
+	int3 = 0;
+	while (int3 < getItemContainerLength(583)) {
+		item2 = (Item)ARRAY0[int3];
+		if (item2 != null) {
+			int1 = ARRAY1[int3];
+			str0 = concat(str0, script_446(int1, item2));
+		} else {
+			int3 = getItemContainerLength(583);
+		}
+		int3 = int3 + 1;
+	}
+	int0 = 0;
+	int3 = 0;
+	while (int3 < getItemContainerLength(583)) {
+		ARRAY0[int3] = -1;
+		ARRAY1[int3] = 0;
+		int3 = int3 + 1;
+	}
+	int3 = 0;
+	int5 = 0;
+	while (int0 < getItemContainerLength(583)) {
+		item2 = getItemIdInInpsectingSlot(583, int0);
+		int1 = getItemAmtInInspectingSlot(583, int0);
+		if (item2 != null) {
+			int4 = 99;
+			int5 = 0;
+			while (int5 < getItemContainerLength(583)) {
+				if (ARRAY0[int5] != -1) {
+					if ((Item)ARRAY0[int5] == item2) {
+						int4 = int5;
+						int5 = getItemContainerLength(583);
+					}
+					int5 = int5 + 1;
+				} else {
+					int5 = getItemContainerLength(583);
+				}
+			}
+			if (int4 == 99) {
+				ARRAY0[int3] = item2;
+				ARRAY1[int3] = int1;
+				int3 = int3 + 1;
+			} else {
+				ARRAY1[int4] = ARRAY1[int4] + int1;
+			}
+		}
+		int0 = int0 + 1;
+	}
+	int3 = 0;
+	while (int3 < getItemContainerLength(583)) {
+		item2 = (Item)ARRAY0[int3];
+		if (item2 != null) {
+			int1 = ARRAY1[int3];
+			str1 = concat(str1, script_446(int1, item2));
+		} else {
+			int3 = getItemContainerLength(583);
+		}
+		int3 = int3 + 1;
+	}
+	if (length(str0) > 0) {
+		widget(1023, 14).setText(str0);
+		script_447(widget(1023, 15), widget(1023, 13), widget(1023, 14));
+		widget(1023, 12).setIsHidden(true);
+	} else {
+		widget(1023, 12).setIsHidden(false);
+	}
+	if (length(str1) > 0) {
+		widget(1023, 21).setText(str1);
+		script_447(widget(1023, 22), widget(1023, 20), widget(1023, 21));
+		widget(1023, 19).setIsHidden(true);
+	} else {
+		widget(1023, 19).setIsHidden(false);
+	}
+	return;
+}

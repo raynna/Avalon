@@ -1,0 +1,8 @@
+void script_5285() {
+	if (widget(555, 48).getY() < 170) {
+		playSoundEffect2False(7557, 1, 0, 200, rndRelatedMethod4019(20, 20));
+		widget(555, 48).setPosition(widget(555, 48).getX(), widget(555, 48).getY() + 10, 0, 0);
+		widget(555, 49).setPosition(widget(555, 49).getX(), widget(555, 49).getY() + 10, 0, 0);
+	}
+	return;
+}

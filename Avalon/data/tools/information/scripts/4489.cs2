@@ -1,0 +1,4 @@
+void script_4489(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, Widget widget7, Widget widget8, Widget widget9, Widget widget10, Widget widget11, Widget widget12, Widget widget13, Widget widget14, Widget widget15, Widget widget16, Widget widget17, Widget widget18, Widget widget19, Widget widget20, Widget widget21, Widget widget22, Widget widget23, Widget widget24, Widget widget25) {
+	script_4490(widget0, widget1, widget2, widget3, widget4, widget5, widget6, widget7, widget8, widget9, widget10, widget11, widget12, widget13, widget14, widget15, widget16, widget17, widget18, widget19, widget20, widget21, widget22, widget23, widget24, widget25);
+	return;
+}

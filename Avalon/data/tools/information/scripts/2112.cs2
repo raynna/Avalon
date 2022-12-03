@@ -1,0 +1,33 @@
+void script_2112(Widget widget0, Widget widget1, Widget widget2, Widget widget3, int arg4, int arg5) {
+	widget0.set3DRotation(0, 0, widget0.getRotateX(), widget0.getRotateY(), widget0.getRotateZ(), 395 + arg5 + arg5);
+	widget1.set3DRotation(0, 0, widget1.getRotateX(), widget1.getRotateY(), widget1.getRotateZ(), 395 + arg5 + arg5);
+	widget2.set3DRotation(0, 0, widget2.getRotateX(), widget2.getRotateY(), widget2.getRotateZ(), 395 + arg5 + arg5);
+	widget3.set3DRotation(0, 0, widget3.getRotateX(), widget3.getRotateY(), widget3.getRotateZ(), 395 + arg5 + arg5);
+	switch (arg4) {
+		case 0:
+			widget0.setPosition(0, 43, 1, 0);
+			widget1.setPosition(0, 126, 1, 0);
+			widget2.setPosition(0, 210, 1, 0);
+			widget3.setPosition(0, -70, 1, 0);
+			break;
+		case 1:
+			widget1.setPosition(0, 43, 1, 0);
+			widget2.setPosition(0, 126, 1, 0);
+			widget3.setPosition(0, 210, 1, 0);
+			widget0.setPosition(0, -70, 1, 0);
+			break;
+		case 2:
+			widget2.setPosition(0, 43, 1, 0);
+			widget3.setPosition(0, 126, 1, 0);
+			widget0.setPosition(0, 210, 1, 0);
+			widget1.setPosition(0, -70, 1, 0);
+			break;
+		default:
+			widget3.setPosition(0, 43, 1, 0);
+			widget0.setPosition(0, 126, 1, 0);
+			widget1.setPosition(0, 210, 1, 0);
+			widget2.setPosition(0, -70, 1, 0);
+			break;
+	}
+	return;
+}

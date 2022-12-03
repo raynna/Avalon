@@ -1,0 +1,7 @@
+void script_872(Widget widget0) {
+	widget0.setModel(32408);
+	widget0.setScriptCallOnMouseExit(-1, "");
+	widget(697, 4).setIsHidden(true);
+	widget(697, 5).setIsHidden(true);
+	return;
+}

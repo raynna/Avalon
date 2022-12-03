@@ -1,0 +1,76 @@
+void script_2726(Widget widget0, Container container1) {
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	Item item6;
+	int int7;
+	widget(620, 26).setIsHidden(false);
+	widget0.clearChildren();
+	int2 = 0;
+	int3 = getItemContainerLength(container1);
+	int4 = 0;
+	int5 = 0;
+	item6 = null;
+	int7 = 0;
+	while (int2 < int3) {
+		item6 = getItemIdInSlot(container1, int2);
+		if (item6 != null) {
+			int5 = int2 % 9 * 48 + int2 % 9 * 4;
+			ACTIVE.createChild(widget0, 5, int4);
+			int4 = int4 + 1;
+			ACTIVE.setSize(48, 52, 0, 0);
+			ACTIVE.setPosition(int5, 0, 0, 0);
+			ACTIVE.setSprite(2205);
+			ACTIVE.setOptionBase("<col=ff981f>" + getItemName(item6) + "</col>");
+			ACTIVE.setContextMenuOption(1, "Info");
+			ACTIVE.setContextMenuOption(2, "Take 1");
+			ACTIVE.setContextMenuOption(3, "Take 5");
+			ACTIVE.setContextMenuOption(4, "Take 10");
+			ACTIVE.setContextMenuOption(5, "Take 50");
+			ACTIVE.setContextMenuOption(10, "Examine");
+			ACTIVE.setScriptCallOnMouseEntered(2724, CTX_WIDGET, int4, false, "Ii1");
+			ACTIVE.setScriptCallOnMouseExit(2724, CTX_WIDGET, int4, true, "Ii1");
+			ACTIVE.createChild(widget0, 5, int4);
+			int4 = int4 + 1;
+			ACTIVE.setSize(48, 52, 0, 0);
+			ACTIVE.setPosition(int5, 0, 0, 0);
+			ACTIVE.setSprite(2206);
+			ACTIVE.setHidden(true);
+			ACTIVE.createChild(widget0, 5, int4);
+			int4 = int4 + 1;
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition(int5 + 6, 4, 0, 0);
+			ACTIVE.setItemAlwaysNum(item6, getItemAmtInSlot(container1, int2));
+			ACTIVE.setShadowColor(0x302020);
+			ACTIVE.setOutlineThickness(1);
+			ACTIVE.createChild(widget0, 4, int4);
+			int4 = int4 + 1;
+			ACTIVE.setSize(32, 12, 0, 0);
+			ACTIVE.setPosition(int5 + 13, 39, 0, 0);
+			ACTIVE.setFont(494);
+			ACTIVE.setRGB(0xFFFF00);
+			ACTIVE.setText("Free");
+			ACTIVE.setTextAlignment(2, 1, 0);
+			ACTIVE.setTextAntiMacro(true);
+		} else {
+			int7 = 0;
+			while (int7 < 4) {
+				ACTIVE.createChild(widget0, 3, int4);
+				ACTIVE.setHidden(true);
+				int4 = int4 + 1;
+				int7 = int7 + 1;
+			}
+		}
+		int2 = int2 + 1;
+	}
+	widget(620, 27).setIsHidden(false);
+	widget(620, 28).setIsHidden(false);
+	widget(620, 29).setIsHidden(false);
+	widget(620, 30).setIsHidden(false);
+	widget(620, 31).setIsHidden(false);
+	widget(620, 23).setIsHidden(false);
+	widget(620, 28).setItemOnWidgetMethod2205(1931, 1);
+	widget(620, 29).setSprite(datamap('o', 'd', (DataMap)200, (Item)VARP[532]));
+	return;
+}

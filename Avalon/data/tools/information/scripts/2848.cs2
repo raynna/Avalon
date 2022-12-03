@@ -1,0 +1,42 @@
+void script_2848(Widget widget0, int arg1, Widget widget2, int arg3, int arg4, int arg5) {
+	int int6;
+	int int7;
+	int6 = 0;
+	int7 = 0;
+	if (widget2 != null) {
+		if (arg3 == -1) {
+			if (ACTIVE.setChild(widget2) && widget2 == widget(474, 11)) {
+				int6 = arg4;
+				int7 = arg5;
+				if (_ACTIVE.setChild(widget0, arg1)) {
+					_ACTIVE.setPosition(datamap('i', 'i', (DataMap)905, arg1), datamap('i', 'i', (DataMap)906, arg1), 0, 0);
+				}
+			}
+		} else {
+			if (arg3 < 9) {
+				return;
+			}
+			if (script_2849(arg3 - 9) == 0) {
+				if (ACTIVE.setChild(widget2, arg3)) {
+					int6 = ACTIVE.getX();
+					int7 = ACTIVE.getY();
+				}
+				if (_ACTIVE.setChild(widget0, arg1)) {
+					switch (rnd(2)) {
+						case 0:
+							playSoundEffect(8502, 1, 0);
+							break;
+						case 1:
+							playSoundEffect(8518, 1, 0);
+							break;
+						case 2:
+							playSoundEffect(8515, 1, 0);
+							break;
+					}
+					_ACTIVE.setPosition(int6, int7, 0, 0);
+				}
+			}
+		}
+	}
+	return;
+}

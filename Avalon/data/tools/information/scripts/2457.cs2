@@ -1,0 +1,16 @@
+void script_2457(int arg0, int arg1) {
+	if (widget(746, 87).hasChild()) {
+		return;
+	}
+	if (!script_8(95).hasChild()) {
+		return;
+	}
+	VARC[10] = 0;
+	script_1304(arg0);
+	if (VARC[168] == arg0) {
+		VARC[168] = -1;
+	} else {
+		VARC[168] = arg0;
+	}
+	return;
+}

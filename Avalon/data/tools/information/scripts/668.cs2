@@ -1,0 +1,17 @@
+void script_668(int arg0, Widget widget1, int arg2) {
+	int int3;
+	int int4;
+	int3 = 0;
+	int4 = 0;
+	if (ACTIVE.setChild(widget1, arg2)) {
+		int3 = arg0 - getClientCycle();
+		if (int3 <= 0) {
+			ACTIVE.setScriptCallOnGameloop(-1, "");
+			ACTIVE.deleteChild();
+			return;
+		}
+		int4 = 255 - ACTIVE.getShadeColor();
+		ACTIVE.setTrans(min(ACTIVE.getShadeColor() + int4 / int3, 254));
+	}
+	return;
+}

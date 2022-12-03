@@ -1,0 +1,13 @@
+void script_1471() {
+	widget(762, 17).setNoOptions();
+	widget(762, 17).setScriptCallOnClickContextMenu(-1, "");
+	VARC[190] = 0;
+	if (VARC[188] == 0) {
+		VARPBIT[4893] = 0;
+		script_1473();
+	} else {
+		VARPBIT[4893] = 1;
+		script_1474();
+	}
+	return;
+}

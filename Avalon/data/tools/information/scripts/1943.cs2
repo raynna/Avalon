@@ -1,0 +1,6 @@
+void script_1943() {
+	widget(802, 19).setIsHidden(false);
+	widget(802, 16).setText(STRING[43]);
+	VARC[581] = 1;
+	return;
+}

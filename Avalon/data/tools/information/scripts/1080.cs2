@@ -1,0 +1,7 @@
+void script_1080(Widget widget0, int arg1) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setHidden(false);
+		ACTIVE.setRGB(0x577E45);
+	}
+	return;
+}

@@ -1,0 +1,29 @@
+void script_126(int arg0, string string1, int arg2) {
+	string str1;
+	if (VARC[1413] == 0) {
+		return;
+	}
+	str1 = removeTags(string1);
+	switch (arg0) {
+		case 1:
+			VARC[1650] = 1;
+			STRING[23] = str1;
+			script_1558(false);
+			return;
+		case 2:
+			if (cs2method3627(arg2)) {
+				script_1050(1, str1);
+			} else {
+				script_1050(3, str1);
+			}
+			break;
+		case 3:
+		case 4:
+			msg("That player is currently offline.");
+			break;
+		case 5:
+			cs2method3606(str1);
+			break;
+	}
+	return;
+}

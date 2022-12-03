@@ -1,0 +1,9 @@
+void script_326() {
+	widget(725, 86).setIsHidden(false);
+	widget(725, 85).setIsHidden(true);
+	widget(725, 87).setSprite(1057);
+	widget(725, 88).setSprite(1049);
+	VARC[783] = 1;
+	script_328(widget(725, 86));
+	return;
+}

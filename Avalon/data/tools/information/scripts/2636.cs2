@@ -1,0 +1,12 @@
+void script_2636() {
+	if (VARPBIT[6357] == 2) {
+		widget(859, 16).setTargetVerb("Attack wall");
+		widget(859, 17).setTargetVerb("Collect");
+	} else if (VARPBIT[6357] == 4) {
+		widget(859, 16).setTargetVerb("Rescue");
+		widget(859, 17).setTargetVerb("Steal");
+	} else if (VARPBIT[6357] == 3) {
+		widget(859, 16).setTargetVerb("Collect gold");
+	}
+	return;
+}

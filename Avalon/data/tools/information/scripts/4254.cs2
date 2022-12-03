@@ -1,0 +1,4 @@
+void script_4254(Widget widget0, Sprite sprite1, Color color2, Color color3, string string4) {
+	script_4212(widget0, string4, sprite1, color2, color3);
+	return;
+}

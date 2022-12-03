@@ -1,0 +1,6 @@
+void script_1915() {
+	widget(813, 75).setIsHidden(true);
+	VARC[582] = 0;
+	widget(813, 27).setScriptCallOnGlobalConfigChange(1918, 583, 584, 585, 586, 587, "Y");
+	return;
+}

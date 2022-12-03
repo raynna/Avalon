@@ -1,0 +1,303 @@
+void script_59(int arg0) {
+	int int1;
+	Item item2;
+	Sprite sprite3;
+	Sprite sprite4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	int int23;
+	string str0;
+	string str1;
+	if (VARPBIT[9227] > 1) {
+		widget(18, 12).setText("Select " + str(VARPBIT[9227]) + " items to keep. The rest will be dropped.");
+	} else if (VARPBIT[9227] == 1) {
+		widget(18, 12).setText("Select an item to keep. The rest will be dropped.");
+	} else {
+		widget(18, 12).setText("These items will be dropped.");
+	}
+	ARRAY0 = new Item[4];
+	ARRAY0[0] = script_750(VARPBIT[9222]);
+	ARRAY0[1] = script_750(VARPBIT[9223]);
+	ARRAY0[2] = script_750(VARPBIT[9224]);
+	ARRAY0[3] = script_750(VARPBIT[9225]);
+	widget(18, 9).clearChildren();
+	widget(18, 8).clearChildren();
+	int1 = 15;
+	item2 = null;
+	sprite3 = 6014;
+	sprite4 = 6015;
+	int5 = -1;
+	while (int5 < VARPBIT[9227] && int5 < 4) {
+		int5 = max(int5, 0);
+		ACTIVE.createChild(widget(18, 8), 5, widget(18, 8).nextChild());
+		ACTIVE.setSize(36, 36, 0, 0);
+		ACTIVE.setPosition(int1, 0, 0, 1);
+		ACTIVE.setSprite(sprite3);
+		item2 = (Item)ARRAY0[int5];
+		_ACTIVE.createChild(widget(18, 9), 5, widget(18, 9).nextChild());
+		if (VARPBIT[9227] == 0) {
+			_ACTIVE.setSize(36, 36, 0, 0);
+			_ACTIVE.setPosition(int1, 0, 0, 1);
+			_ACTIVE.setSprite(1132);
+		} else {
+			_ACTIVE.setSize(36, 32, 0, 0);
+			_ACTIVE.setPosition(int1 + 2, 0, 0, 1);
+			if (item2 != null) {
+				_ACTIVE.setItemNoNum(item2, 1);
+				_ACTIVE.setContextMenuOption(1, "Unprotect");
+				_ACTIVE.setContextMenuOption(10, "Examine");
+				_ACTIVE.setShadowColor(0x302020);
+				_ACTIVE.setOutlineThickness(1);
+				_ACTIVE.setOptionBase("<col=ff9040>" + getItemName(item2) + "</col>");
+				_ACTIVE.setDraggable(widget(18, 2), -1);
+				_ACTIVE.setDragRenderBehaviour(2);
+				_ACTIVE.setDragDeadZone(5);
+				_ACTIVE.setDragDeadTime(5);
+				_ACTIVE.setScriptCallOnClickContextMenu(1620, CTX_WIDGET, CTX_WIDGET_CHILD, 100, 0, 8, "Iiiii");
+				_ACTIVE.setScriptCallOnMouseDragReleased(744, CTX_WIDGET, CTX_WIDGET_CHILD, DRAG_WIDGET, DRAG_WIDGET_CHILD, arg0, "IiIii");
+			}
+			ACTIVE.setScriptCallOnMouseEntered(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite4, "Iid");
+			ACTIVE.setScriptCallOnMouseExit(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite3, "Iid");
+		}
+		int1 = int1 + max(ACTIVE.getWidth(), _ACTIVE.getWidth()) + 10;
+		int5 = int5 + 1;
+	}
+	int1 = int1 + 9;
+	widget(18, 3).setSize(int1, widget(18, 3).getHeight(), 0, 0);
+	widget(18, 16).clearChildren();
+	widget(18, 17).clearChildren();
+	widget(18, 24).clearChildren();
+	widget(18, 25).clearChildren();
+	int6 = 0;
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int10 = 0;
+	int11 = 0;
+	int12 = widget(18, 2).getWidth();
+	int13 = int12 - (max(widget(18, 18).getWidth(), widget(18, 26).getWidth()) + 4);
+	int14 = max(int13 / 36, 1);
+	int15 = (int13 - 36 * int14) / max(int14 - 1, 1);
+	int16 = max(int15 / 2, 4);
+	int17 = getItemContainerLength(93) + getItemContainerLength(94);
+	int18 = 0;
+	int19 = 0;
+	int5 = 0;
+	while (int5 <= int17) {
+		item2 = script_750(int5);
+		ACTIVE.createChild(widget(18, 17), 5, int5);
+		_ACTIVE.createChild(widget(18, 25), 5, int5);
+		if (item2 != null) {
+			int18 = script_1393(int5);
+			int19 = 0;
+			while (int19 < 4 && int18 > 0) {
+				if ((Item)ARRAY0[int19] == item2) {
+					int18 = int18 - 1;
+					ARRAY0[int19] = -1;
+				}
+				int19 = int19 + 1;
+			}
+			if (int18 > 0) {
+				if (itemAttribute(getRealItem(item2), 1397) == 1) {
+					_ACTIVE.setSize(36, 32, 0, 0);
+					_ACTIVE.setItem(item2, int18);
+					_ACTIVE.setShadowColor(0x302020);
+					_ACTIVE.setOutlineThickness(1);
+					_ACTIVE.setContextMenuOption(10, "Examine");
+					_ACTIVE.setOptionBase("<col=ff9040>" + getItemName(item2) + "</col>");
+					int10 = int8 * (36 + int15);
+					int11 = int9 * (32 + int16);
+					_ACTIVE.setPosition(int10 + 2, int11 + 2, 0, 0);
+					int8 = int8 + 1;
+					if (int8 >= int14) {
+						int8, int9 = 0, int9 + 1;
+					}
+					ACTIVE.setHidden(true);
+					ACTIVE.createChild(widget(18, 24), 5, widget(18, 24).nextChild());
+					ACTIVE.setSize(36, 36, 0, 0);
+					ACTIVE.setPosition(int10, int11, 0, 0);
+					ACTIVE.setSprite(6016);
+				} else {
+					ACTIVE.setSize(36, 32, 0, 0);
+					ACTIVE.setItem(item2, int18);
+					ACTIVE.setShadowColor(0x302020);
+					ACTIVE.setOutlineThickness(1);
+					ACTIVE.setContextMenuOption(1, "Protect");
+					ACTIVE.setContextMenuOption(10, "Examine");
+					ACTIVE.setOptionBase("<col=ff9040>" + getItemName(item2) + "</col>");
+					int10 = int6 * (36 + int15);
+					int11 = int7 * (32 + int16);
+					ACTIVE.setPosition(int10 + 2, int11 + 2, 0, 0);
+					ACTIVE.setDraggable(widget(18, 2), -1);
+					ACTIVE.setDragRenderBehaviour(2);
+					ACTIVE.setDragDeadZone(5);
+					ACTIVE.setDragDeadTime(5);
+					ACTIVE.setScriptCallOnClickContextMenu(1620, CTX_WIDGET, CTX_WIDGET_CHILD, 100, 0, 8, "Iiiii");
+					ACTIVE.setScriptCallOnMouseDragReleased(744, CTX_WIDGET, CTX_WIDGET_CHILD, DRAG_WIDGET, DRAG_WIDGET_CHILD, arg0, "IiIii");
+					int6 = int6 + 1;
+					if (int6 >= int14) {
+						int6, int7 = 0, int7 + 1;
+					}
+					_ACTIVE.setHidden(true);
+					_ACTIVE.createChild(widget(18, 16), 5, widget(18, 16).nextChild());
+					_ACTIVE.setSize(36, 36, 0, 0);
+					_ACTIVE.setPosition(int10, int11, 0, 0);
+					_ACTIVE.setSprite(sprite3);
+					_ACTIVE.setScriptCallOnMouseEntered(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite4, "Iid");
+					_ACTIVE.setScriptCallOnMouseExit(688, CTX_WIDGET, CTX_WIDGET_CHILD, sprite3, "Iid");
+				}
+			} else {
+				ACTIVE.setHidden(true);
+				_ACTIVE.setHidden(true);
+			}
+		} else {
+			ACTIVE.setHidden(true);
+			_ACTIVE.setHidden(true);
+		}
+		int5 = int5 + 1;
+	}
+	if (int6 <= 0) {
+		int7 = max(int7 - 1, 0);
+	}
+	if (int8 <= 0) {
+		int9 = max(int9 - 1, 0);
+	}
+	int20 = (int7 + 1) * (32 + int16);
+	int21 = (int9 + 1) * (32 + int16);
+	if (int7 < 2 && int7 <= int9) {
+		widget(18, 11).setSize(0, int20 + widget(18, 12).getHeight() + 6, 1, 0);
+		widget(18, 19).setSize(0, widget(18, 11).getHeight() + 3, 1, 1);
+	} else if (int9 < 2 && int9 <= int7) {
+		widget(18, 19).setSize(0, int21 + widget(18, 20).getHeight() + 6, 1, 0);
+		widget(18, 11).setSize(0, widget(18, 19).getHeight() + 3, 1, 1);
+	}
+	if (int6 <= 0 && int7 <= 0) {
+		ACTIVE.createChild(widget(18, 17), 4, widget(18, 17).nextChild());
+		ACTIVE.setSize(0, 0, 1, 1);
+		ACTIVE.setPosition(0, 0, 1, 0);
+		ACTIVE.setRGB(0xFFFFFF);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setFont(495);
+		ACTIVE.setTextAlignment(1, 1, 0);
+		ACTIVE.setText("You haven't got any more items to choose.");
+	}
+	if (int20 > widget(18, 15).getHeight()) {
+		widget(18, 15).setScrollMax(0, int20);
+		widget(18, 17).setSize(0, int20, 1, 0);
+		widget(18, 16).setSize(0, int20, 1, 0);
+		script_31(widget(18, 18), widget(18, 15), 6507, 6504, 6505, 6506, 6499, 6498);
+		widget(18, 18).setIsHidden(false);
+		widget(18, 15).setPosition(2, 0, 0, 1);
+	} else {
+		widget(18, 15).setScrollMax(0, 0);
+		widget(18, 17).setSize(0, 0, 1, 1);
+		widget(18, 16).setSize(0, 0, 1, 1);
+		widget(18, 15).setScrollPos(0, 0);
+		widget(18, 18).clearChildren();
+		widget(18, 18).setIsHidden(true);
+		widget(18, 15).setPosition(0, 0, 1, 1);
+	}
+	if (int21 > widget(18, 23).getHeight()) {
+		widget(18, 23).setScrollMax(0, int21);
+		widget(18, 25).setSize(0, int21, 1, 0);
+		widget(18, 24).setSize(0, int21, 1, 0);
+		script_31(widget(18, 26), widget(18, 23), 6507, 6504, 6505, 6506, 6499, 6498);
+		widget(18, 26).setIsHidden(false);
+		widget(18, 23).setPosition(2, 0, 0, 1);
+	} else {
+		widget(18, 23).setScrollMax(0, 0);
+		widget(18, 25).setSize(0, 0, 1, 1);
+		widget(18, 24).setSize(0, 0, 1, 1);
+		widget(18, 23).setScrollPos(0, 0);
+		widget(18, 26).clearChildren();
+		widget(18, 26).setIsHidden(true);
+		widget(18, 23).setPosition(0, 0, 1, 1);
+	}
+	widget(18, 45).clearChildren();
+	if (VARP[105] != -1) {
+		widget(18, 27).setIsHidden(true);
+		widget(18, 42).setIsHidden(true);
+		widget(18, 3).setPosition(0, 0, 1, 0);
+		return;
+	}
+	widget(18, 27).setIsHidden(false);
+	str0 = "Your hub (" + datamap('i', 's', (DataMap)3792, VARPBIT[9231]) + ")";
+	str1 = "";
+	int22 = 0;
+	int5 = -1;
+	int17 = datamapSize((DataMap)3796);
+	int7 = 2;
+	int23 = 0;
+	while (int5 <= int17) {
+		ACTIVE.createChild(widget(18, 45), 4, int5 + 1);
+		int23 = 0;
+		switch (int5) {
+			case 0:
+			case -1:
+				int23 = 1;
+				break;
+			case 1:
+				if (VARPBIT[668] == 1 && isMember()) {
+					int23 = 1;
+				}
+				break;
+			case 2:
+				if (VARPBIT[3910] == 1 && isMember()) {
+					int23 = 1;
+				}
+				break;
+			case 3:
+				if (VARPBIT[6982] == 1 && isMember()) {
+					int23 = 1;
+				}
+				break;
+		}
+		if (int23 == 1) {
+			if (int5 == -1) {
+				str1 = str0;
+			} else {
+				str1 = datamap('i', 's', (DataMap)3796, int5);
+			}
+			int22 = max(int22, getTextWidth(str1, 494));
+			if (VARPBIT[9228] - 1 != int5) {
+				ACTIVE.setSize(0, 15, 1, 0);
+				ACTIVE.setPosition(0, int7, 1, 0);
+				ACTIVE.setFont(494);
+				ACTIVE.setTextAlignment(1, 1, 0);
+				ACTIVE.setRGB(0xEBE0BC);
+				ACTIVE.setScriptCallOnMouseEntered(743, CTX_WIDGET, CTX_WIDGET_CHILD, true, "Ii1");
+				ACTIVE.setScriptCallOnMouseExit(743, CTX_WIDGET, CTX_WIDGET_CHILD, false, "Ii1");
+				ACTIVE.setText(str1);
+				ACTIVE.setContextMenuOption(1, "Select");
+				ACTIVE.setScriptCallOnClickContextMenu(747, CTX_MENU_OPTION, str1, arg0, "isi");
+				int7 = int7 + ACTIVE.getHeight();
+			} else if (_ACTIVE.setChild(widget(18, 29), arg0)) {
+				_ACTIVE.setText(str1);
+			}
+		} else {
+			ACTIVE.setHidden(true);
+		}
+		int5 = int5 + 1;
+	}
+	int22 = int22 + 28;
+	widget(18, 27).setSize(int22, widget(18, 27).getHeight(), 0, 0);
+	widget(18, 43).setSize(int22, int7 + 6, 0, 0);
+	widget(18, 3).setPosition(max(int22 + 1 - (int12 - int1) / 2, 0), 0, 1, 0);
+	return;
+}

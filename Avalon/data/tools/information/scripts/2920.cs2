@@ -1,0 +1,43 @@
+void script_2920(string string0, int arg1, int arg2) {
+	open(widget(906, 80), 914);
+	script_3181();
+	if (length(string0) > 0) {
+		STRING[277] = removeTags(string0);
+	} else {
+		STRING[277] = "";
+	}
+	widget(914, 27).setText(STRING[277]);
+	if (!datamap('i', 'I', (DataMap)941, 5).isHidden()) {
+		script_3161(0);
+	}
+	widget(914, 27).setScriptCallOnKeyPress(3185, KEY_TYPED, (char)KEY_PRESSED, CTX_WIDGET, "izI");
+	widget(914, 16).setScriptCallOnClickContextMenu(3182, "");
+	VARC[1097] = length(STRING[277]);
+	widget(914, 27).setScriptCallOnMousePressed(1878, MOUSE_X, widget(914, 27), widget(914, 28), "iII");
+	script_1879(widget(914, 27), widget(914, 28), STRING[277]);
+	widget(914, 28).setIsHidden(true);
+	if (arg1 == 1) {
+		if (VARC[6] == 0) {
+			widget(914, 23).setSprite(4084);
+		} else {
+			widget(914, 23).setSprite(4086);
+		}
+		if (arg2 == 5 || arg2 == 6) {
+			widget(914, 22).setText("Suggest to mute this player for 48 hours");
+		} else {
+			widget(914, 22).setText("Mute this player for 48 hours");
+		}
+		widget(914, 21).setSize(getTextWidth(widget(914, 22).getText(), 3793) + 18, widget(914, 21).getHeight(), 0, 0);
+		widget(914, 14).setPosition(16, 32, 0, 0);
+		widget(914, 15).setPosition(21, 62, 0, 0);
+		widget(914, 16).setPosition(299, 60, 0, 0);
+		widget(914, 21).setIsHidden(false);
+	} else {
+		widget(914, 14).setPosition(16, 42, 0, 0);
+		widget(914, 15).setPosition(21, 82, 0, 0);
+		widget(914, 16).setPosition(299, 80, 0, 0);
+		widget(914, 21).setIsHidden(true);
+	}
+	widget(906, 45).setIsHidden(false);
+	return;
+}

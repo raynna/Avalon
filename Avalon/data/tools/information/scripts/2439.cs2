@@ -1,0 +1,10 @@
+void script_2439() {
+	if (VARC[818] == 1) {
+		widget(15, 16).setText("Net: Ripped!");
+		widget(15, 16).setRGB(0xE12323);
+	} else {
+		widget(15, 16).setText("Net: OK");
+		widget(15, 16).setRGB(0xFF9900);
+	}
+	return;
+}

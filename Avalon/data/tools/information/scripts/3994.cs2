@@ -1,0 +1,10 @@
+int script_3994(int arg0) {
+	AttrMap attrmap1;
+	int int2;
+	attrmap1 = datamap('i', 'J', (DataMap)3483, arg0);
+	int2 = getAttributeMapValue(attrmap1, 1268);
+	if (int2 == VARPBIT[8576]) {
+		return 1;
+	}
+	return 0;
+}

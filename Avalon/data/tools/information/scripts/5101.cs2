@@ -1,0 +1,32 @@
+void script_5101(int arg0) {
+	switch (arg0) {
+		case 1:
+			script_5102(widget(1116, 52), widget(1116, 53), widget(1116, 90));
+			break;
+		case 2:
+			script_5102(widget(1116, 203), widget(1116, 205), widget(1116, 206));
+			break;
+		case 3:
+			script_5102(widget(1116, 252), widget(1116, 254), widget(1116, 255));
+			break;
+		case 4:
+			script_5102(widget(1116, 301), widget(1116, 303), widget(1116, 304));
+			break;
+		case 5:
+			script_5102(widget(1116, 350), widget(1116, 352), widget(1116, 353));
+			break;
+		case 6:
+			script_5102(widget(1116, 399), widget(1116, 401), widget(1116, 402));
+			break;
+		case 7:
+			script_5102(widget(1116, 448), widget(1116, 450), widget(1116, 451));
+			break;
+		case 8:
+			script_5102(widget(1116, 497), widget(1116, 499), widget(1116, 500));
+			break;
+		case 9:
+			script_5102(widget(1116, 546), widget(1116, 548), widget(1116, 549));
+			break;
+	}
+	return;
+}

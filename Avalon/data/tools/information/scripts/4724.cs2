@@ -1,0 +1,459 @@
+int, int, int, int, int, int script_4724(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	int int23;
+	int int24;
+	int int25;
+	DataMap datamap26;
+	AttrMap attrmap27;
+	DataMap datamap28;
+	DataMap datamap29;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int10 = 0;
+	int11 = 0;
+	int12 = 0;
+	if (citadelConfigsInitialized()) {
+		switch (arg0) {
+			case 1:
+				int3 = CLANBIT[2148];
+				int1 = CLANBIT[2139];
+				int2 = CLANBIT[2140];
+				int4 = CLANBIT[2145];
+				int5 = CLANBIT[2146];
+				int6 = CLANBIT[2147];
+				break;
+			case 2:
+				int3 = CLANBIT[2165];
+				int1 = CLANBIT[2156];
+				int2 = CLANBIT[2157];
+				int4 = CLANBIT[2162];
+				int5 = CLANBIT[2163];
+				int6 = CLANBIT[2164];
+				break;
+			case 3:
+				int3 = CLANBIT[2182];
+				int1 = CLANBIT[2173];
+				int2 = CLANBIT[2174];
+				int4 = CLANBIT[2179];
+				int5 = CLANBIT[2180];
+				int6 = CLANBIT[2181];
+				break;
+		}
+		switch (int3) {
+			case 21:
+				int7 = CLANBIT[2330];
+				int8 = CLANBIT[2331];
+				int10 = CLANBIT[2336];
+				int11 = CLANBIT[2337];
+				int12 = CLANBIT[2338];
+				break;
+			case 22:
+				int7 = CLANBIT[2340];
+				int8 = CLANBIT[2341];
+				int10 = CLANBIT[2346];
+				int11 = CLANBIT[2347];
+				int12 = CLANBIT[2348];
+				break;
+			case 23:
+				int7 = CLANBIT[2350];
+				int8 = CLANBIT[2351];
+				int10 = CLANBIT[2356];
+				int11 = CLANBIT[2357];
+				int12 = CLANBIT[2358];
+				break;
+			case 24:
+				int7 = CLANBIT[2360];
+				int8 = CLANBIT[2361];
+				int10 = CLANBIT[2366];
+				int11 = CLANBIT[2367];
+				int12 = CLANBIT[2368];
+				break;
+			case 25:
+				int7 = CLANBIT[2370];
+				int8 = CLANBIT[2371];
+				int10 = CLANBIT[2376];
+				int11 = CLANBIT[2377];
+				int12 = CLANBIT[2378];
+				break;
+			case 26:
+				int7 = CLANBIT[2380];
+				int8 = CLANBIT[2381];
+				int10 = CLANBIT[2386];
+				int11 = CLANBIT[2387];
+				int12 = CLANBIT[2388];
+				break;
+			case 27:
+				int7 = CLANBIT[2390];
+				int8 = CLANBIT[2391];
+				int10 = CLANBIT[2396];
+				int11 = CLANBIT[2397];
+				int12 = CLANBIT[2398];
+				break;
+			case 28:
+				int7 = CLANBIT[2400];
+				int8 = CLANBIT[2401];
+				int10 = CLANBIT[2406];
+				int11 = CLANBIT[2407];
+				int12 = CLANBIT[2408];
+				break;
+			case 31:
+				int7 = CLANBIT[2460];
+				int8 = CLANBIT[2461];
+				int10 = CLANBIT[2466];
+				int11 = CLANBIT[2467];
+				int12 = CLANBIT[2468];
+				break;
+			case 32:
+				int7 = CLANBIT[2470];
+				int8 = CLANBIT[2471];
+				int10 = CLANBIT[2476];
+				int11 = CLANBIT[2477];
+				int12 = CLANBIT[2478];
+				break;
+			case 33:
+				int7 = CLANBIT[2480];
+				int8 = CLANBIT[2481];
+				int10 = CLANBIT[2486];
+				int11 = CLANBIT[2487];
+				int12 = CLANBIT[2488];
+				break;
+			case 34:
+				int7 = CLANBIT[2490];
+				int8 = CLANBIT[2491];
+				int10 = CLANBIT[2496];
+				int11 = CLANBIT[2497];
+				int12 = CLANBIT[2498];
+				break;
+			case 35:
+				int7 = CLANBIT[2500];
+				int8 = CLANBIT[2501];
+				int10 = CLANBIT[2506];
+				int11 = CLANBIT[2507];
+				int12 = CLANBIT[2508];
+				break;
+			case 41:
+				int7 = CLANBIT[2410];
+				int8 = CLANBIT[2411];
+				int10 = CLANBIT[2416];
+				int11 = CLANBIT[2417];
+				int12 = CLANBIT[2418];
+				break;
+			case 42:
+				int7 = CLANBIT[2420];
+				int8 = CLANBIT[2421];
+				int10 = CLANBIT[2426];
+				int11 = CLANBIT[2427];
+				int12 = CLANBIT[2428];
+				break;
+			case 43:
+				int7 = CLANBIT[2430];
+				int8 = CLANBIT[2431];
+				int10 = CLANBIT[2436];
+				int11 = CLANBIT[2437];
+				int12 = CLANBIT[2438];
+				break;
+			case 44:
+				int7 = CLANBIT[2440];
+				int8 = CLANBIT[2441];
+				int10 = CLANBIT[2446];
+				int11 = CLANBIT[2447];
+				int12 = CLANBIT[2448];
+				break;
+			case 45:
+				int7 = CLANBIT[2450];
+				int8 = CLANBIT[2451];
+				int10 = CLANBIT[2456];
+				int11 = CLANBIT[2457];
+				int12 = CLANBIT[2458];
+				break;
+			case 51:
+				int7 = CLANBIT[2510];
+				int8 = CLANBIT[2511];
+				int10 = CLANBIT[2516];
+				int11 = CLANBIT[2517];
+				int12 = CLANBIT[2518];
+				break;
+			case 100:
+				int7 = CLANBIT[2210];
+				int8 = CLANBIT[2211];
+				int10 = CLANBIT[2216];
+				int11 = CLANBIT[2217];
+				int12 = CLANBIT[2218];
+				break;
+			case 101:
+				int7 = CLANBIT[2220];
+				int8 = CLANBIT[2221];
+				int10 = CLANBIT[2226];
+				int11 = CLANBIT[2227];
+				int12 = CLANBIT[2228];
+				break;
+			case 102:
+				int7 = CLANBIT[2240];
+				int8 = CLANBIT[2241];
+				int10 = CLANBIT[2246];
+				int11 = CLANBIT[2247];
+				int12 = CLANBIT[2248];
+				break;
+			case 103:
+				int7 = CLANBIT[2190];
+				int8 = CLANBIT[2191];
+				int10 = CLANBIT[2196];
+				int11 = CLANBIT[2197];
+				int12 = CLANBIT[2198];
+				break;
+			case 104:
+				int7 = CLANBIT[2230];
+				int8 = CLANBIT[2231];
+				int10 = CLANBIT[2236];
+				int11 = CLANBIT[2237];
+				int12 = CLANBIT[2238];
+				break;
+			case 105:
+				int7 = CLANBIT[2200];
+				int8 = CLANBIT[2201];
+				int10 = CLANBIT[2206];
+				int11 = CLANBIT[2207];
+				int12 = CLANBIT[2208];
+				break;
+			case 106:
+				int7 = CLANBIT[2260];
+				int8 = CLANBIT[2261];
+				int10 = CLANBIT[2266];
+				int11 = CLANBIT[2267];
+				int12 = CLANBIT[2268];
+				break;
+			case 107:
+				int7 = CLANBIT[2270];
+				int8 = CLANBIT[2271];
+				int10 = CLANBIT[2276];
+				int11 = CLANBIT[2277];
+				int12 = CLANBIT[2278];
+				break;
+			case 108:
+				int7 = CLANBIT[2280];
+				int8 = CLANBIT[2281];
+				int10 = CLANBIT[2286];
+				int11 = CLANBIT[2287];
+				int12 = CLANBIT[2288];
+				break;
+			case 109:
+				int7 = CLANBIT[2250];
+				int8 = CLANBIT[2251];
+				int10 = CLANBIT[2256];
+				int11 = CLANBIT[2257];
+				int12 = CLANBIT[2258];
+				break;
+			case 110:
+				int7 = CLANBIT[2290];
+				int8 = CLANBIT[2291];
+				int10 = CLANBIT[2296];
+				int11 = CLANBIT[2297];
+				int12 = CLANBIT[2298];
+				break;
+			case 111:
+				int7 = CLANBIT[2300];
+				int8 = CLANBIT[2301];
+				int10 = CLANBIT[2306];
+				int11 = CLANBIT[2307];
+				int12 = CLANBIT[2308];
+				break;
+			case 112:
+				int7 = CLANBIT[2310];
+				int8 = CLANBIT[2311];
+				int10 = CLANBIT[2316];
+				int11 = CLANBIT[2317];
+				int12 = CLANBIT[2318];
+				break;
+			case 113:
+				int7 = CLANBIT[2320];
+				int8 = CLANBIT[2321];
+				int10 = CLANBIT[2326];
+				int11 = CLANBIT[2327];
+				int12 = CLANBIT[2328];
+				break;
+		}
+	}
+	int13 = 1;
+	int14 = 0;
+	int15 = 0;
+	int16 = 0;
+	int17 = 0;
+	int18 = 0;
+	int19 = 0;
+	int20 = 0;
+	int21 = 0;
+	int22 = 0;
+	int23 = 0;
+	int24 = 0;
+	int25 = 0;
+	datamap26 = null;
+	attrmap27 = null;
+	datamap28 = null;
+	datamap29 = null;
+	datamap28 = datamap('i', 'g', (DataMap)4043, int1);
+	if (datamap28 == null) {
+		return 0, 0, 0, 0, 0, 0;
+	}
+	datamap29 = datamap('i', 'g', datamap28, int2);
+	if (datamap29 == null) {
+		return 0, 0, 0, 0, 0, 0;
+	}
+	while (int13 <= 3) {
+		datamap26 = datamap('i', 'g', datamap29, int13);
+		if (datamap26 != null) {
+			switch (int13) {
+				case 1:
+					attrmap27 = datamap('i', 'J', datamap26, int4);
+					break;
+				case 2:
+					attrmap27 = datamap('i', 'J', datamap26, int5);
+					break;
+				case 3:
+					attrmap27 = datamap('i', 'J', datamap26, int6);
+					break;
+			}
+			if (attrmap27 != null) {
+				if (getAttributeMapValue(attrmap27, 1571) == 1) {
+					int14 = int14 + getAttributeMapValue(attrmap27, 1573);
+				} else if (getAttributeMapValue(attrmap27, 1571) == 2) {
+					int15 = int15 + getAttributeMapValue(attrmap27, 1573);
+				} else if (getAttributeMapValue(attrmap27, 1571) == 5) {
+					int16 = int16 + getAttributeMapValue(attrmap27, 1573);
+				} else if (getAttributeMapValue(attrmap27, 1571) == 9) {
+					int17 = int17 + getAttributeMapValue(attrmap27, 1573);
+				} else if (getAttributeMapValue(attrmap27, 1571) == 8) {
+					int18 = int18 + getAttributeMapValue(attrmap27, 1573);
+				} else if (getAttributeMapValue(attrmap27, 1571) == 7) {
+					int19 = int19 + getAttributeMapValue(attrmap27, 1573);
+				}
+				if (getAttributeMapValue(attrmap27, 1575) == 1) {
+					int14 = int14 + getAttributeMapValue(attrmap27, 1577);
+				} else if (getAttributeMapValue(attrmap27, 1575) == 2) {
+					int15 = int15 + getAttributeMapValue(attrmap27, 1577);
+				} else if (getAttributeMapValue(attrmap27, 1575) == 5) {
+					int16 = int16 + getAttributeMapValue(attrmap27, 1577);
+				} else if (getAttributeMapValue(attrmap27, 1575) == 9) {
+					int17 = int17 + getAttributeMapValue(attrmap27, 1577);
+				} else if (getAttributeMapValue(attrmap27, 1575) == 8) {
+					int18 = int18 + getAttributeMapValue(attrmap27, 1577);
+				} else if (getAttributeMapValue(attrmap27, 1575) == 7) {
+					int19 = int19 + getAttributeMapValue(attrmap27, 1577);
+				}
+				if (getAttributeMapValue(attrmap27, 1579) == 1) {
+					int14 = int14 + getAttributeMapValue(attrmap27, 1581);
+				} else if (getAttributeMapValue(attrmap27, 1579) == 2) {
+					int15 = int15 + getAttributeMapValue(attrmap27, 1581);
+				} else if (getAttributeMapValue(attrmap27, 1579) == 5) {
+					int16 = int16 + getAttributeMapValue(attrmap27, 1581);
+				} else if (getAttributeMapValue(attrmap27, 1579) == 9) {
+					int17 = int17 + getAttributeMapValue(attrmap27, 1581);
+				} else if (getAttributeMapValue(attrmap27, 1579) == 8) {
+					int18 = int18 + getAttributeMapValue(attrmap27, 1581);
+				} else if (getAttributeMapValue(attrmap27, 1579) == 7) {
+					int19 = int19 + getAttributeMapValue(attrmap27, 1581);
+				}
+			}
+		}
+		datamap26 = null;
+		int13 = int13 + 1;
+	}
+	int13 = 1;
+	if (int7 == int1 && int8 == int2) {
+		datamap28 = datamap('i', 'g', (DataMap)4043, int7);
+		datamap29 = datamap('i', 'g', datamap28, int8);
+		while (int13 <= 3) {
+			datamap26 = datamap('i', 'g', datamap29, int13);
+			if (datamap26 != null) {
+				switch (int13) {
+					case 1:
+						attrmap27 = datamap('i', 'J', datamap26, int10);
+						break;
+					case 2:
+						attrmap27 = datamap('i', 'J', datamap26, int11);
+						break;
+					case 3:
+						attrmap27 = datamap('i', 'J', datamap26, int12);
+						break;
+				}
+				if (attrmap27 != null) {
+					if (getAttributeMapValue(attrmap27, 1571) == 1) {
+						int20 = int20 + getAttributeMapValue(attrmap27, 1573);
+					} else if (getAttributeMapValue(attrmap27, 1571) == 2) {
+						int21 = int21 + getAttributeMapValue(attrmap27, 1573);
+					} else if (getAttributeMapValue(attrmap27, 1571) == 5) {
+						int22 = int22 + getAttributeMapValue(attrmap27, 1573);
+					} else if (getAttributeMapValue(attrmap27, 1571) == 9) {
+						int23 = int23 + getAttributeMapValue(attrmap27, 1573);
+					} else if (getAttributeMapValue(attrmap27, 1571) == 8) {
+						int24 = int24 + getAttributeMapValue(attrmap27, 1573);
+					} else if (getAttributeMapValue(attrmap27, 1571) == 7) {
+						int25 = int25 + getAttributeMapValue(attrmap27, 1573);
+					}
+					if (getAttributeMapValue(attrmap27, 1575) == 1) {
+						int20 = int20 + getAttributeMapValue(attrmap27, 1577);
+					} else if (getAttributeMapValue(attrmap27, 1575) == 2) {
+						int21 = int21 + getAttributeMapValue(attrmap27, 1577);
+					} else if (getAttributeMapValue(attrmap27, 1575) == 5) {
+						int22 = int22 + getAttributeMapValue(attrmap27, 1577);
+					} else if (getAttributeMapValue(attrmap27, 1575) == 9) {
+						int23 = int23 + getAttributeMapValue(attrmap27, 1577);
+					} else if (getAttributeMapValue(attrmap27, 1575) == 8) {
+						int24 = int24 + getAttributeMapValue(attrmap27, 1577);
+					} else if (getAttributeMapValue(attrmap27, 1575) == 7) {
+						int25 = int25 + getAttributeMapValue(attrmap27, 1577);
+					}
+					if (getAttributeMapValue(attrmap27, 1579) == 1) {
+						int20 = int20 + getAttributeMapValue(attrmap27, 1581);
+					} else if (getAttributeMapValue(attrmap27, 1579) == 2) {
+						int21 = int21 + getAttributeMapValue(attrmap27, 1581);
+					} else if (getAttributeMapValue(attrmap27, 1579) == 5) {
+						int22 = int22 + getAttributeMapValue(attrmap27, 1581);
+					} else if (getAttributeMapValue(attrmap27, 1579) == 9) {
+						int23 = int23 + getAttributeMapValue(attrmap27, 1581);
+					} else if (getAttributeMapValue(attrmap27, 1579) == 8) {
+						int24 = int24 + getAttributeMapValue(attrmap27, 1581);
+					} else if (getAttributeMapValue(attrmap27, 1579) == 7) {
+						int25 = int25 + getAttributeMapValue(attrmap27, 1581);
+					}
+				}
+			}
+			datamap26 = null;
+			int13 = int13 + 1;
+		}
+	}
+	int14 = max(0, int14 - int20);
+	int15 = max(0, int15 - int21);
+	int16 = max(0, int16 - int22);
+	int17 = max(0, int17 - int23);
+	int18 = max(0, int18 - int24);
+	int19 = max(0, int19 - int25);
+	return int14, int15, int16, int17, int18, int19;
+}

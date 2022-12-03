@@ -1,0 +1,57 @@
+void script_5002(Widget widget0) {
+	int int1;
+	int int2;
+	script_4408(widget0);
+	widget0.clearChildren();
+	ACTIVE.createChild(widget0, 3, 0);
+	ACTIVE.setSize(20, 20, 0, 0);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setRGB(0x553333);
+	ACTIVE.setFilled(true);
+	ACTIVE.setTrans(155);
+	ACTIVE.createChild(widget0, 3, 1);
+	ACTIVE.setSize(20, 20, 0, 0);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setRGB(0xEECCEE);
+	ACTIVE.createChild(widget0, 5, 2);
+	ACTIVE.setSize(18, 18, 0, 0);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	int1 = script_4964(widget0);
+	int2 = 0;
+	if (citadelConfigsInitialized()) {
+		int2 = script_4949(int1);
+		switch (int2) {
+			case 17:
+				ACTIVE.setSprite(7431);
+				break;
+			case 18:
+				ACTIVE.setSprite(7430);
+				break;
+			case 19:
+				ACTIVE.setSprite(7433);
+				break;
+			case 1:
+				ACTIVE.setSprite(7422);
+				break;
+			case 2:
+				ACTIVE.setSprite(7423);
+				break;
+			case 3:
+				ACTIVE.setSprite(7424);
+				break;
+			case 4:
+				ACTIVE.setSprite(7425);
+				break;
+			case 5:
+				ACTIVE.setSprite(7426);
+				break;
+			case 6:
+				ACTIVE.setSprite(7427);
+				break;
+			case 7:
+				ACTIVE.setSprite(7428);
+				break;
+		}
+	}
+	return;
+}

@@ -1,0 +1,30 @@
+void script_681(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5) {
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	widget0.clearChildren();
+	widget0.setScrollPos(0, 0);
+	widget1.clearChildren();
+	widget2.clearChildren();
+	widget4.setText("Gravestones");
+	widget5.setText("Please make your selection from the list.");
+	widget3.setText("");
+	script_682(widget0, 0, 0, widget2, widget3, widget4, widget5);
+	int6 = 1;
+	int7 = 0;
+	while (int7 <= 26) {
+		if (isBitFlagged(VARPBIT[4191], int7)) {
+			script_682(widget0, int7 + 1, int6, widget2, widget3, widget4, widget5);
+			int6 = int6 + 1;
+		}
+		int7 = int7 + 1;
+	}
+	int8 = (widget0.getWidth() - 164) / 2;
+	int9 = int8 + (146 + int8) * int6;
+	if (int9 > widget0.getHeight()) {
+		widget0.setScrollMax(0, int9);
+		script_31(widget1, widget0, 792, 789, 790, 791, 773, 788);
+	}
+	return;
+}

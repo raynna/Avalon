@@ -1,0 +1,73 @@
+int script_166(int arg0) {
+	switch (arg0) {
+		case 1:
+			return VARPBIT[3851];
+		case 2:
+			return VARPBIT[3852];
+		case 3:
+			return VARPBIT[3853];
+		case 4:
+			return VARPBIT[3854];
+		case 5:
+			return VARPBIT[3855];
+		case 6:
+			return VARPBIT[3856];
+		case 7:
+			return VARPBIT[3857];
+		case 8:
+			return VARPBIT[3858];
+		case 9:
+			return VARPBIT[3859];
+		case 10:
+			return VARPBIT[3860];
+		case 11:
+			return VARPBIT[3861];
+		case 12:
+			return VARPBIT[3862];
+		case 13:
+			return VARPBIT[3863];
+		case 14:
+			return VARPBIT[3864];
+		case 15:
+			return VARPBIT[3865];
+		case 16:
+			return VARPBIT[3866];
+		case 17:
+			return VARPBIT[3867];
+		case 18:
+			return VARPBIT[3868];
+		case 19:
+			return VARPBIT[3869];
+		case 20:
+			return VARPBIT[3870];
+		case 22:
+			if (VARPBIT[5294] == 1) {
+				return 7;
+			}
+			return 0;
+		case 23:
+			return VARPBIT[3871];
+		case 24:
+			return VARPBIT[3872];
+		case 25:
+			return VARPBIT[3946];
+		case 26:
+			return VARPBIT[4132];
+		case 27:
+			return VARPBIT[4307];
+		case 28:
+			return VARPBIT[4308];
+		case 29:
+			return VARPBIT[4309];
+		case 30:
+			return VARPBIT[5366];
+		case 31:
+			if (VARPBIT[5295] == 1) {
+				return 7;
+			}
+			return 0;
+		case 33:
+			return VARPBIT[6500];
+	}
+	return 0;
+}

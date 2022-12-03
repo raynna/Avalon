@@ -1,0 +1,5 @@
+void script_4702() {
+	cancelLogin();
+	VARC[1100] = -1;
+	return;
+}

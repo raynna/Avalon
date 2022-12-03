@@ -1,0 +1,9 @@
+void script_2874() {
+	if (VARPBIT[7078] == 1) {
+		widget(187, 10).setSprite(2434);
+	} else {
+		widget(187, 10).setSprite(2433);
+	}
+	VARC[2] = 0;
+	return;
+}

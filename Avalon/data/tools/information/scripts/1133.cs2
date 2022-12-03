@@ -1,0 +1,10 @@
+void script_1133(Widget widget0) {
+	Item item1;
+	item1 = getItemIdInSlot(94, 3);
+	if (item1 != null && (!isMembersItem(item1) || isMember())) {
+		widget0.setText(getItemName(item1));
+	} else {
+		widget0.setText("Unarmed");
+	}
+	return;
+}

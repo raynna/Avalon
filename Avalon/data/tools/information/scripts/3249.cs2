@@ -1,0 +1,6 @@
+void script_3249() {
+	if (VARC[1201] == 1) {
+		widget(933, 287).setText(STRING[313]);
+	}
+	return;
+}

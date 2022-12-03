@@ -1,0 +1,6 @@
+void script_4378(Widget widget0, Widget widget1, Widget widget2) {
+	widget0.setScriptCallOnKeyPress(4379, widget0, widget1, (char)KEY_PRESSED, KEY_TYPED, widget2, "IIziI");
+	widget0.setScriptCallOnMousePressed(4380, widget0, widget2, MOUSE_X, "IIi");
+	widget0.setScriptCallOnGameloop(1400, getClientCycle(), widget2, "iI");
+	return;
+}

@@ -1,0 +1,33 @@
+void script_351(int arg0, int arg1) {
+	boolean boolean2;
+	DataMap datamap3;
+	AttrMap attrmap4;
+	AttrMap attrmap5;
+	if (arg1 == VARC[197] || arg0 != 1) {
+		return;
+	}
+	boolean2 = script_734(VARC[196]);
+	playSoundEffect(9830, 1, 0);
+	datamap3 = (DataMap)3278;
+	attrmap4 = datamap('i', 'J', datamap3, arg1 - 1);
+	if (attrmap4 == null) {
+		VARC[197] = 1;
+		VARPBIT[8089] = 1;
+		attrmap4 = datamap('i', 'J', datamap3, 0);
+	} else {
+		VARC[197] = arg1;
+		VARPBIT[8089] = arg1;
+	}
+	attrmap5 = script_384(0, attrmap4, script_734(IsFemale()));
+	if (attrmap5 == null) {
+		VARC[86] = 0;
+		VARPBIT[8090] = 0;
+	} else {
+		VARC[86] = 1;
+		VARPBIT[8090] = 1;
+		script_359(attrmap5, boolean2);
+	}
+	script_387(boolean2);
+	script_390(boolean2);
+	return;
+}

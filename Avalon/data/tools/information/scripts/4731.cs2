@@ -1,0 +1,19 @@
+void script_4731(int arg0, int arg1) {
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int2, int3, int4 = getPressedMouseButtons();
+	int5 = cameraGetHrot() + (VARC[1653] - arg0) * 2;
+	int6 = cameraGetVrot() - (VARC[1654] - arg1);
+	if (int3 == 1 && VARC[173] != 1 && VARPBIT[542] != 1 && minimapSettingIs1()) {
+		cameraMethod5504(int6, int5);
+	}
+	VARC[1653] = arg0;
+	VARC[1654] = arg1;
+	return;
+}

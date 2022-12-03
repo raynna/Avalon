@@ -1,0 +1,6 @@
+void script_302(int arg0, Location location1, int arg2) {
+	if (arg0 == 1 && location1 != null) {
+		script_303(location1, arg2);
+	}
+	return;
+}

@@ -1,0 +1,25 @@
+void script_4589() {
+	string str0;
+	widget(1110, 14).clearChildren();
+	widget(1110, 12).clearChildren();
+	widget(1110, 15).clearChildren();
+	widget(1110, 17).clearChildren();
+	widget(1110, 18).clearChildren();
+	widget(1110, 16).clearChildren();
+	widget(1110, 27).setIsHidden(true);
+	widget(1110, 67).setIsHidden(false);
+	widget(1110, 62).setText("You are not currently in a Clan Chat channel.");
+	widget(1110, 29).setIsHidden(true);
+	widget(1110, 22).setIsHidden(false);
+	script_4469();
+	widget(1110, 86).setSprite(6256);
+	widget(1110, 13).setIsHidden(true);
+	widget(1110, 20).setSize(1, 19, 0, 0);
+	VARC[1518] = -1;
+	STRING[126] = "";
+	widget(1110, 26).setText("");
+	str0 = "Join your clan chat channel.";
+	widget(1110, 85).setScriptCallOnMouseOver(4538, widget(1110, 60), CTX_WIDGET, -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+	widget(1110, 85).setContextMenuOption(1, "Join Clan Chat channel");
+	return;
+}

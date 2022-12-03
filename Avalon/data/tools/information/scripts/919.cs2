@@ -1,0 +1,40 @@
+void script_919() {
+	int int0;
+	int int1;
+	string str0;
+	int0 = getItemAmtInContainer(93, (Item)VARC[743]);
+	str0 = "Cost:";
+	int1 = -1;
+	if (VARC[744] == 0) {
+		str0 = "None available";
+	} else if (VARC[744] == -1) {
+		str0 = "Free sample!";
+	} else {
+		int1 = VARC[744];
+	}
+	widget(449, 24).setText(str0);
+	if (int1 > int0) {
+		widget(449, 25).setRGB(0xFF0000);
+	} else {
+		widget(449, 25).setRGB(color(VARC[1241]));
+	}
+	if (int1 > -1) {
+		widget(449, 23).setItemNum((Item)VARC[743], int1);
+	} else {
+		widget(449, 23).setItemOnWidgetMethod2205(null, -1);
+	}
+	if (VARC[744] == -1) {
+		widget(449, 22).setText("Take");
+		widget(449, 21).setContextMenuOption(1, "Take 1");
+		widget(449, 21).setContextMenuOption(2, "Take 5");
+		widget(449, 21).setContextMenuOption(3, "Take 10");
+		widget(449, 21).setContextMenuOption(4, "Take 50");
+	} else {
+		widget(449, 22).setText("Buy");
+		widget(449, 21).setContextMenuOption(1, "Buy 1");
+		widget(449, 21).setContextMenuOption(2, "Buy 5");
+		widget(449, 21).setContextMenuOption(3, "Buy 10");
+		widget(449, 21).setContextMenuOption(4, "Buy 50");
+	}
+	return;
+}

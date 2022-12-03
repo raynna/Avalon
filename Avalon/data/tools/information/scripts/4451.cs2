@@ -1,0 +1,4 @@
+void script_4451() {
+	script_4436(widget(1110, 14), widget(1110, 27).getX());
+	return;
+}

@@ -1,0 +1,11 @@
+void script_1779() {
+	if (VARC[254] == 0) {
+		widget(791, 135).setSprite(699);
+		widget(791, 134).setTrans(0);
+	} else {
+		widget(791, 135).setSprite(698);
+		widget(791, 134).setTrans(225);
+	}
+	script_1784();
+	return;
+}

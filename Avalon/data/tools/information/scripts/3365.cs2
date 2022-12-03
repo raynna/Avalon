@@ -1,0 +1,11 @@
+int script_3365(Widget widget0) {
+	int int1;
+	Widget widget2;
+	int1 = widget0.getX();
+	widget2 = widget0.getLayer();
+	while (widget2 != null) {
+		int1 = int1 + widget2.getX() - widget2.getScrollX();
+		widget2 = widget2.getLayer();
+	}
+	return int1;
+}

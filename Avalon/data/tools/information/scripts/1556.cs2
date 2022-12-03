@@ -1,0 +1,5 @@
+void script_1556(int arg0, Widget widget1, int arg2) {
+	VARC[1029] = script_1504(arg0, STRING[22], 496, widget1, arg2);
+	script_1557();
+	return;
+}

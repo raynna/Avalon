@@ -1,0 +1,22 @@
+void script_509(Widget widget0) {
+	string str0;
+	str0 = "";
+	if (widget0 == widget(613, 9)) {
+		str0 = getItemName((Item)VARP[1065]);
+		if (VARP[1065] == -1) {
+			str0 = "Empty";
+		}
+	} else if (widget0 == widget(613, 10)) {
+		str0 = getItemName((Item)VARP[1066]);
+		if (VARP[1066] == -1) {
+			str0 = "Empty";
+		}
+	} else if (widget0 == widget(613, 11)) {
+		str0 = getItemName((Item)VARP[1067]);
+		if (VARP[1067] == -1) {
+			str0 = "Empty";
+		}
+	}
+	script_39(widget0, widget(613, 24), str0, 25, 199);
+	return;
+}

@@ -1,0 +1,89 @@
+int script_2194(int arg0) {
+	switch (arg0) {
+		case 79:
+			if (VARPBIT[888] == 0) {
+				return 0;
+			}
+			break;
+		case 144:
+			if (VARPBIT[5394] == 0) {
+				return 0;
+			}
+			break;
+		case 145:
+			if (VARPBIT[4310] < 10) {
+				return 0;
+			}
+			break;
+		case 35:
+			if (VARPBIT[0] == 0) {
+				return 0;
+			}
+			break;
+		case 120:
+			if (VARPBIT[1895] < 110) {
+				return 0;
+			}
+			break;
+		case 157:
+			if (VARPBIT[3637] < 125) {
+				return 0;
+			}
+			break;
+		case 156:
+			if (script_2656() < 100) {
+				return 0;
+			}
+			break;
+		case 162:
+			if (VARPBIT[3909] < 8) {
+				return 0;
+			}
+			if (VARPBIT[5834] == 0) {
+				return 0;
+			}
+			if (VARPBIT[5830] == 0) {
+				return 0;
+			}
+			break;
+		case 163:
+			if (VARPBIT[5686] == 0) {
+				return 0;
+			}
+			break;
+		case 168:
+			if (VARPBIT[1910] < 20) {
+				return 0;
+			}
+			break;
+		case 171:
+			if (VARPBIT[7973] == 0) {
+				return 0;
+			}
+			break;
+		case 174:
+			if (VARPBIT[7544] == 0) {
+				return 0;
+			}
+			break;
+		case 179:
+			if (script_2656() < 100) {
+				return 0;
+			}
+			if (VARPBIT[1914] < 50) {
+				return 0;
+			}
+			if (VARPBIT[8494] < 5) {
+				return 0;
+			}
+			break;
+		case 148:
+			if (VARPBIT[8601] < 6) {
+				return 0;
+			}
+			break;
+		default:
+			return 1;
+	}
+	return 1;
+}

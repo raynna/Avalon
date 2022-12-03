@@ -1,0 +1,58 @@
+void script_2241() {
+	widget(929, 106).setText("+ " + str(VARP[1693]) + " ( " + str(VARP[1687]) + " )" + "<br>" + "+ " + str(VARP[1692]) + " ( " + str(VARP[1686]) + " )" + "<br>" + "+ " + str(VARP[1694]) + " ( " + str(VARP[1688]) + " )" + "<br>");
+	widget(929, 108).setText("+ " + str(VARP[1695]) + " ( " + str(VARP[1689]) + " )" + "<br>" + "+ " + str(VARP[1697]) + " ( " + str(VARP[1690]) + " )" + "<br>" + "+ " + str(VARP[1696]) + " ( " + str(VARP[1691]) + " )" + "<br>");
+	if (VARPBIT[7324] == 1) {
+		widget(929, 113).setText("WORKING");
+		widget(929, 113).setRGB(0x00FF00);
+	} else {
+		playSoundEffect(8723, 10, 0);
+		widget(929, 113).setText("NEEDS REPAIR");
+		widget(929, 113).setRGB(0xFF0000);
+	}
+	if (VARPBIT[7326] == 1) {
+		widget(929, 112).setText("WORKING");
+		widget(929, 112).setRGB(0x00FF00);
+	} else {
+		playSoundEffect(8723, 10, 1);
+		widget(929, 112).setText("NEEDS REPAIR");
+		widget(929, 112).setRGB(0xFF0000);
+	}
+	if (VARPBIT[7325] == 1) {
+		widget(929, 114).setText("WORKING");
+		widget(929, 114).setRGB(0x00FF00);
+	} else {
+		playSoundEffect(8723, 10, 2);
+		widget(929, 114).setText("NEEDS REPAIR");
+		widget(929, 114).setRGB(0xFF0000);
+	}
+	widget(929, 102).setText(str(VARC[1135] / 5));
+	switch (VARP[1698]) {
+		case 5:
+			widget(929, 104).setText("Your workers uncover a hidden stash and you receive");
+			widget(929, 105).setText("3 extra resources.");
+			playSoundEffect(8728, 1, 0);
+			break;
+		case 6:
+			widget(929, 104).setText("An accident at work has taken place. As a result you have");
+			widget(929, 105).setText("lost 3 resources.");
+			playSoundEffect(8723, 10, 0);
+			break;
+		case 7:
+			widget(929, 104).setText("The paint machine is out of glaze and requires a repair to work at full efficiency.");
+			widget(929, 105).setText("Painter needs repair.");
+			break;
+		case 8:
+			widget(929, 104).setText("The conveyor team needs re-training in order to work at full efficiency.");
+			widget(929, 105).setText("Conveyor needs repair.");
+			break;
+		case 9:
+			widget(929, 104).setText("The oven is coated in soot. It requires a repair to work at full efficiency.");
+			widget(929, 105).setText("Oven needs repair.");
+			break;
+		default:
+			widget(929, 104).setText("");
+			widget(929, 105).setText("Nothing unusual happened.");
+			break;
+	}
+	return;
+}

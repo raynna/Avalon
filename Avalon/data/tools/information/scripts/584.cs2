@@ -1,0 +1,40 @@
+void script_584(Widget widget0, string string1) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int1 = widget0.getWidth();
+	int2 = widget0.getHeight();
+	int3 = int1 - 32;
+	int4 = int2 - 32;
+	int5 = int1 - 64;
+	int6 = int2 - 64;
+	if (int5 < 0) {
+		int5 = 0;
+	}
+	if (int6 < 0) {
+		int6 = 0;
+	}
+	int7 = widget0.nextChild();
+	script_98(widget0, int7, 856, 0, 0, 32, 32);
+	script_98(widget0, int7 + 1, 857, int3, 0, 32, 32);
+	script_98(widget0, int7 + 2, 858, 0, int4, 32, 32);
+	script_98(widget0, int7 + 3, 859, int3, int4, 32, 32);
+	script_98(widget0, int7 + 4, 1121, 32, 0, int5, 3);
+	script_98(widget0, int7 + 5, 1121, 32, int2 - 3, int5, 3);
+	script_98(widget0, int7 + 6, 1122, 0, 32, 3, int6);
+	script_98(widget0, int7 + 7, 1122, int1 - 3, 32, 3, int6);
+	script_98(widget0, int7 + 8, 1121, 2, 22, int1 - 5, 3);
+	ACTIVE.createChild(widget0, 4, int7 + 9);
+	ACTIVE.setPosition(3, 3, 0, 0);
+	ACTIVE.setSize(int1 - 6, 15, 0, 0);
+	ACTIVE.setText(string1);
+	ACTIVE.setFont(496);
+	ACTIVE.setTextAntiMacro(true);
+	ACTIVE.setRGB(0xCC9900);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	return;
+}

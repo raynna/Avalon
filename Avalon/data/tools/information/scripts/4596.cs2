@@ -1,0 +1,6 @@
+void script_4596(Widget widget0, int arg1) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setText(STRING[351]);
+	}
+	return;
+}

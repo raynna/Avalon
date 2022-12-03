@@ -1,0 +1,19 @@
+void script_1781() {
+	int int0;
+	int0 = 0;
+	while (int0 <= 4) {
+		if (ACTIVE.setChild(widget(791, 141), int0 * 4)) {
+			if (VARC[257] == int0) {
+				ACTIVE.setSprite(699);
+				script_1783(widget(791, 141), widget(791, 142), widget(791, 141), int0 * 4 + 3);
+			} else if (!isMember() && getAttributeMapValue(datamap('i', 'J', (DataMap)1604, int0), 557)) {
+				ACTIVE.setSprite(698);
+			} else {
+				ACTIVE.setSprite(697);
+			}
+		}
+		int0 = int0 + 1;
+	}
+	script_1784();
+	return;
+}

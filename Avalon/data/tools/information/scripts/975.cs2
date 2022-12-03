@@ -1,0 +1,13 @@
+int script_975(int arg0, int arg1) {
+	ACTIVE.setPosition(50, arg0, 0, 0);
+	ACTIVE.setTextAlignment(0, 0, 16);
+	ACTIVE.setRGB(0x46320A);
+	ACTIVE.setFont(495);
+	ACTIVE.setTextAntiMacro(false);
+	if (arg1 * 16 < 32) {
+		arg0 = arg0 + 32;
+	} else {
+		arg0 = arg0 + (arg1 * 16 + 5);
+	}
+	return arg0;
+}

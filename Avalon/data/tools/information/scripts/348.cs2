@@ -1,0 +1,20 @@
+void script_348(Widget widget0, Widget widget1, int arg2) {
+	int int3;
+	Sprite sprite4;
+	int3 = script_166(arg2);
+	sprite4 = 941;
+	if (int3 >= 7) {
+		widget0.setIsHidden(false);
+		widget1.setSprite(942);
+		widget0.setScriptCallOnMousePressed(44, widget1, sprite4, "Id");
+	} else if (int3 == 6) {
+		widget0.setIsHidden(false);
+		widget1.setSprite(941);
+		sprite4 = 942;
+		widget0.setScriptCallOnMousePressed(44, widget1, sprite4, "Id");
+	} else {
+		widget0.setIsHidden(true);
+		widget0.setScriptCallOnMousePressed(-1, "");
+	}
+	return;
+}

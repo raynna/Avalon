@@ -1,0 +1,7 @@
+void script_201() {
+	if (VARC[1034] == 1 && VARC[1027] == 1 && length(STRING[202]) > 0) {
+		sendUnknownFriendPacketMethod3619(STRING[202]);
+		VARC[1034] = 2;
+	}
+	return;
+}

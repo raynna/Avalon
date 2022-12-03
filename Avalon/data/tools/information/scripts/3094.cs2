@@ -1,0 +1,45 @@
+void script_3094() {
+	int int0;
+	int0 = getGameloginRC();
+	if (int0 != -3 && VARC[1322] == 0) {
+		widget(906, 234).setScriptCallOnGameloop(-1, "");
+		return;
+	}
+	if (VARC[1322] == 1 && int0 == -3) {
+		VARC[1322] = 0;
+	}
+	if (getClientCycle() < VARC[1092]) {
+		return;
+	}
+	VARC[1092] = getClientCycle() + 5;
+	switch (widget(906, 234).getSpriteId()) {
+		case 4107:
+			widget(906, 234).setSprite(4108);
+			break;
+		case 4108:
+			widget(906, 234).setSprite(4109);
+			break;
+		case 4109:
+			widget(906, 234).setSprite(4110);
+			break;
+		case 4110:
+			widget(906, 234).setSprite(4111);
+			break;
+		case 4111:
+			widget(906, 234).setSprite(4112);
+			break;
+		case 4112:
+			widget(906, 234).setSprite(4113);
+			break;
+		case 4113:
+			widget(906, 234).setSprite(4114);
+			break;
+		case 4114:
+			widget(906, 234).setSprite(4107);
+			break;
+		default:
+			widget(906, 234).setSprite(4107);
+			break;
+	}
+	return;
+}

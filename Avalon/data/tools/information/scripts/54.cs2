@@ -1,0 +1,14 @@
+void script_54(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int1 = y(getMyLocation());
+	int2 = (int1 - 9920) / 8 + 1;
+	int3 = (int1 - 3520) / 8 + 1;
+	if (int1 > 6400) {
+		widget0.setText("Level: " + str(int2));
+	} else {
+		widget0.setText("Level: " + str(int3));
+	}
+	return;
+}

@@ -1,0 +1,24 @@
+void script_2753(int arg0, int arg1, Widget widget2, int arg3, string string4) {
+	if (arg1 != 1) {
+		return;
+	}
+	if (ACTIVE.setChild(widget2, arg3)) {
+		ACTIVE.deleteChild();
+	}
+	if (VARC[5] != arg0 || length(string4) <= 0) {
+		return;
+	}
+	STRING[22] = removeTags(string4);
+	widget(752, 5).setText(escape(STRING[22]));
+	if (VARC[5] == 8) {
+		sendNameInput(STRING[22]);
+		script_1548(0);
+	} else if (VARC[5] == 9) {
+		sendStringInput(STRING[22]);
+		script_1548(0);
+	} else if (VARC[5] == 10) {
+		sendUnknownFriendPacketMethod3619(STRING[22]);
+		script_1548(0);
+	}
+	return;
+}

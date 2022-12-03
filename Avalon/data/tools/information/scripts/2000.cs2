@@ -1,0 +1,4 @@
+void script_2000(Widget widget0, Container container1) {
+	script_2001(widget0, container1);
+	return;
+}

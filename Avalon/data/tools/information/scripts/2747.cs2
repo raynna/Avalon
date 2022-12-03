@@ -1,0 +1,27 @@
+void script_2747() {
+	if (widget(204, 110).isHidden()) {
+		widget(204, 76).setVFlip(true);
+		widget(204, 110).setIsHidden(false);
+		widget(204, 101).setIsHidden(false);
+		widget(204, 111).setIsHidden(false);
+		widget(204, 28).setIsHidden(false);
+	} else {
+		widget(204, 76).setVFlip(false);
+		widget(204, 110).setIsHidden(true);
+		widget(204, 101).setIsHidden(true);
+		widget(204, 111).setIsHidden(true);
+		widget(204, 28).setIsHidden(true);
+	}
+	widget(204, 44).setVFlip(false);
+	widget(204, 86).setIsHidden(true);
+	widget(204, 77).setIsHidden(true);
+	widget(204, 87).setIsHidden(true);
+	widget(204, 26).setIsHidden(true);
+	widget(204, 60).setVFlip(false);
+	widget(204, 98).setIsHidden(true);
+	widget(204, 89).setIsHidden(true);
+	widget(204, 99).setIsHidden(true);
+	widget(204, 27).setIsHidden(true);
+	widget(204, 113).setIsHidden(true);
+	return;
+}

@@ -1,0 +1,6 @@
+void script_688(Widget widget0, int arg1, Sprite sprite2) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setSprite(sprite2);
+	}
+	return;
+}

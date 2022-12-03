@@ -1,0 +1,19 @@
+void script_4757(Widget widget0) {
+	int int1;
+	int1 = 16384 * 1600 / VARP[2245];
+	int1 = min(max(int1, 0), 16384);
+	widget(642, 123).setSize(int1, 0, 2, 1);
+	widget0.setText(str(VARP[2245]));
+	if (VARP[2245] <= 300) {
+		widget(642, 124).setRGB(0xFF2266);
+		widget(642, 126).setRGB(0xFF2266);
+		widget(642, 125).setRGB(0xFF2266);
+		widget(642, 104).setAnimation(2601);
+	} else {
+		widget(642, 124).setRGB(0xFFFFFF);
+		widget(642, 126).setRGB(0xFFFFFF);
+		widget(642, 125).setRGB(0xFFFFFF);
+		widget(642, 104).setAnimation(9804);
+	}
+	return;
+}

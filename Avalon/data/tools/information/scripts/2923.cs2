@@ -1,0 +1,37 @@
+void script_2923(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5) {
+	int int6;
+	if (VARP[102] > 0) {
+		widget2.setSprite(1801);
+		widget3.setSprite(1801);
+		widget0.setIsHidden(true);
+		widget1.setIsHidden(false);
+		widget1.setContextMenuOption(1, "Use cure (p)");
+	} else if (VARP[456] > 0) {
+		widget2.setSprite(1800);
+		widget3.setSprite(1800);
+		widget0.setIsHidden(true);
+		widget1.setIsHidden(false);
+		widget1.setContextMenuOption(1, "Use cure (d)");
+	} else {
+		widget2.setSprite(1208);
+		widget3.setSprite(1208);
+		widget0.setIsHidden(false);
+		widget1.setIsHidden(true);
+		widget1.setNoOptions();
+	}
+	widget3.setSize(0, 16384 - max(min(VARPBIT[7198] * script_2916() / 16384, 16384), 0), 1, 2);
+	widget4.setSize(0, 16384 - max(min(script_2915() * script_2916() / 16384, 16384), 0), 1, 2);
+	widget5.setText(str(VARPBIT[7198]));
+	int6 = VARPBIT[7198] * script_2916() / 100;
+	if (int6 > 75) {
+		widget5.setRGB(0x00FF00);
+	} else if (int6 > 50) {
+		widget5.setRGB(0xFFFF00);
+	} else if (int6 > 25) {
+		widget5.setRGB(0xFF981F);
+	} else {
+		widget5.setRGB(0xFF0000);
+	}
+	script_2654();
+	return;
+}

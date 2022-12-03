@@ -1,0 +1,16 @@
+void script_3943() {
+	widget(1028, 90).setIsHidden(false);
+	widget(1028, 35).setIsHidden(true);
+	widget(1028, 115).setIsHidden(true);
+	widget(1028, 117).setIsHidden(true);
+	widget(1028, 116).setIsHidden(true);
+	widget(1028, 89).setIsHidden(true);
+	script_383();
+	widget(1028, 177).setScriptCallOnKeyPress(3944, KEY_TYPED, (char)KEY_PRESSED, true, "iz1");
+	widget(1028, 182).setScriptCallOnMousePressed(3217, MOUSE_X, widget(1028, 181), widget(1028, 182), widget(1028, 183), 16, "iIIIi");
+	VARC[1099] = 0;
+	STRING[330] = "";
+	VARC[1412] = 0;
+	script_3218(widget(1028, 181), widget(1028, 182), widget(1028, 183), STRING[330], 16);
+	return;
+}

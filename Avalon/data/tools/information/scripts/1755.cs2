@@ -1,0 +1,19 @@
+void script_1755(Widget widget0, Widget widget1) {
+	if (VARC[227] > 2) {
+		if (getItemIdInSlot(94, 0) == 8950) {
+			widget0.setModel(15700);
+		} else {
+			widget0.setModel(15674);
+		}
+		widget1.setRGB(0x33FF00);
+	} else {
+		if (getItemIdInSlot(94, 0) == 8950) {
+			widget0.setModel(15699);
+		} else {
+			widget0.setModel(15673);
+		}
+		widget1.setRGB(0x910000);
+	}
+	widget1.setText(str(VARC[227]));
+	return;
+}

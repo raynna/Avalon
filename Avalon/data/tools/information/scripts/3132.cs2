@@ -1,0 +1,12 @@
+void script_3132(Widget widget0, int arg1, int arg2) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		if (VARC[998] == arg2 || VARC[999] == arg2) {
+			ACTIVE.setSprite(1541);
+		} else {
+			ACTIVE.setSprite(1545);
+		}
+	}
+	widget(910, 65).setIsHidden(true);
+	widget(910, 66).setIsHidden(true);
+	return;
+}

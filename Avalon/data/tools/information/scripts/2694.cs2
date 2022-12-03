@@ -1,0 +1,37 @@
+void script_2694(int arg0, int arg1, string string2, string string3, string string4) {
+	int int2;
+	int2 = 0;
+	if (arg0 == 1) {
+		if (length(string2) > 0) {
+			int2 = indexOf(string2, "<br>", 0);
+			if (int2 == -1) {
+				msg(string2);
+				return;
+			}
+			msg(substr(string2, 0, int2));
+		}
+		return;
+	}
+	if (arg0 == 2) {
+		widget(978, 7).setText(script_400(string2, "<br>", " "));
+		script_2190("", string2, 0, -1, "", string3, 0);
+		if (length(string3) > 0) {
+			widget(906, 153).setScriptCallOnMousePressed(702, string4, true, "s1");
+		} else {
+			widget(906, 153).setScriptCallOnMousePressed(-1, "");
+		}
+		return;
+	}
+	widget(978, 7).setText(script_400(string2, "<br>", " "));
+	widget(744, 76).setText(string2);
+	widget(744, 79).setScriptCallOnMousePressed(3452, 6, false, true, "i11");
+	if (length(string3) > 0) {
+		widget(744, 78).setText(string3);
+		widget(744, 78).setScriptCallOnMousePressed(702, string4, true, "s1");
+	} else {
+		widget(744, 78).setText("");
+		widget(744, 77).setScriptCallOnMousePressed(-1, "");
+	}
+	script_1174(9);
+	return;
+}

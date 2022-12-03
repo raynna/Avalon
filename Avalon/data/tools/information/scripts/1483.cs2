@@ -1,0 +1,7 @@
+void script_1483(int arg0, Widget widget1) {
+	if (getClientCycle() >= arg0) {
+		widget1.setScriptCallOnGameloop(-1, "");
+		script_1463(VARPBIT[4893]);
+	}
+	return;
+}

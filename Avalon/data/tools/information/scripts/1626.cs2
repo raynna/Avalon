@@ -1,0 +1,18 @@
+void script_1626() {
+	string str0;
+	string str1;
+	str0 = "Curtsy";
+	str1 = "Bow";
+	if (IsFemale() > false) {
+		widget(464, 4).setSprite(2317);
+		widget(464, 4).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(464, 54), str0, 50, 150, "IIsii");
+		widget(464, 4).setContextMenuOption(1, str0);
+		widget(464, 4).setContextMenuOption(2, str1);
+	} else {
+		widget(464, 4).setSprite(703);
+		widget(464, 4).setScriptCallOnMouseOver(38, CTX_WIDGET, widget(464, 54), str1, 50, 150, "IIsii");
+		widget(464, 4).setContextMenuOption(2, str0);
+		widget(464, 4).setContextMenuOption(1, str1);
+	}
+	return;
+}

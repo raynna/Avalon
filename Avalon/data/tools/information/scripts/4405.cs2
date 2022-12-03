@@ -1,0 +1,11 @@
+int script_4405() {
+	int int0;
+	Widget widget1;
+	int0 = _ACTIVE.getY();
+	widget1 = _ACTIVE.getLayer();
+	while (widget1 != null) {
+		int0 = int0 + widget1.getY() - widget1.getScrollY();
+		widget1 = widget1.getLayer();
+	}
+	return int0;
+}

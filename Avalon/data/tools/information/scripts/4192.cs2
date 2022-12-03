@@ -1,0 +1,24 @@
+void script_4192() {
+	if (ACTIVE.setChild(widget(1074, 80))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1074, 81))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1074, 82))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1074, 83))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1074, 84))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1074, 85))) {
+		ACTIVE.setVFlip(true);
+	}
+	if (ACTIVE.setChild(widget(1074, 86))) {
+		ACTIVE.setVFlip(true);
+	}
+	return;
+}

@@ -1,0 +1,10 @@
+void script_2369(Widget widget0, Sprite sprite1, int arg2) {
+	int int3;
+	int3 = widget(905, 13).getScrollX();
+	widget(905, 13).setScrollPos(widget(905, 13).getScrollX() + arg2, 0);
+	if (int3 != widget(905, 13).getScrollX()) {
+		widget0.setSprite(sprite1);
+	}
+	script_2370();
+	return;
+}

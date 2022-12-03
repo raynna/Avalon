@@ -1,0 +1,21 @@
+void script_3018() {
+	widget(906, 149).setText("");
+	widget(906, 151).setText("");
+	widget(906, 151).setScriptCallOnKeyPress(-1, "");
+	widget(906, 155).setScriptCallOnClickContextMenu(-1, "");
+	widget(906, 159).setText("Ok");
+	widget(906, 159).setContextMenuOption(1, "Ok");
+	widget(906, 161).setText("Close");
+	widget(906, 161).setContextMenuOption(1, "Close");
+	widget(906, 147).setSize(265, 136, 0, 0);
+	widget(906, 151).setSize(0, 0, 1, 1);
+	widget(906, 155).setSize(8034, 0, 2, 1);
+	widget(906, 159).setSize(8034, 0, 2, 1);
+	widget(906, 160).setSize(8034, 0, 2, 1);
+	widget(906, 161).setSize(8034, 0, 2, 1);
+	widget(906, 160).setIsHidden(false);
+	widget(906, 161).setIsHidden(false);
+	STRING[277] = "";
+	VARC[1650] = 0;
+	return;
+}

@@ -1,0 +1,27 @@
+void script_4554(int arg0) {
+	widget(589, 55).setSize(widget(589, 45).getX() - widget(589, 43).getX(), 0, 0, 1);
+	widget(589, 57).setSize(widget(589, 51).getWidth() - widget(589, 55).getWidth() - 2, 0, 0, 1);
+	widget(589, 51).setScrollMax(0, 0);
+	widget(589, 51).setScrollPos(0, 0);
+	script_31(widget(589, 52), widget(589, 51), 792, 789, 790, 791, 773, 788);
+	widget(589, 23).setScrollMax(0, 0);
+	widget(589, 23).setScrollPos(0, 0);
+	script_31(widget(589, 24), widget(589, 23), 792, 789, 790, 791, 773, 788);
+	widget(589, 51).setScriptCallOnClanListChange(4558, widget(589, 55), widget(589, 56), widget(589, 57), widget(589, 53), widget(589, 51), widget(589, 52), "IIIIII");
+	widget(589, 51).setScriptCallOnFriendListChange(4558, widget(589, 55), widget(589, 56), widget(589, 57), widget(589, 53), widget(589, 51), widget(589, 52), "IIIIII");
+	script_4559(widget(589, 55), widget(589, 56), widget(589, 57), widget(589, 53), widget(589, 51), widget(589, 52));
+	if (clanGetChatCount() > 0) {
+		widget(589, 41).setText("Leave chat channel");
+		widget(589, 39).setContextMenuOption(1, "Leave chat channel");
+	} else {
+		widget(589, 41).setText("Join chat channel");
+		widget(589, 39).setContextMenuOption(1, "Join chat channel");
+	}
+	STRING[349] = "";
+	script_3024(widget(589, 31));
+	VARC[1507] = length(STRING[349]);
+	widget(589, 27).setScriptCallOnMousePressed(4570, MOUSE_X, widget(589, 27), widget(589, 28), "iII");
+	script_4571(widget(589, 27), widget(589, 28), STRING[349]);
+	widget(589, 28).setIsHidden(true);
+	return;
+}

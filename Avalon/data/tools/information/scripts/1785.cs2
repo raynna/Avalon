@@ -1,0 +1,16 @@
+int, int script_1785(string string0, int arg1, int arg2, int arg3, int arg4) {
+	ACTIVE.createChild(widget(792, 3), 4, arg2);
+	ACTIVE.setPosition(0, arg1, 0, 0);
+	ACTIVE.setFont(495);
+	ACTIVE.setTextAntiMacro(true);
+	ACTIVE.setSize(arg3, getLineCount(string0, arg3, 495) * 12 + 5, 0, 0);
+	ACTIVE.setText(string0);
+	if (arg4 == 1) {
+		ACTIVE.setTextAlignment(1, 0, 0);
+		ACTIVE.setRGB(0xFF981F);
+		return arg1 + ACTIVE.getHeight() + 12, arg2 + 1;
+	}
+	ACTIVE.setTextAlignment(0, 0, 0);
+	ACTIVE.setRGB(0xC8AA64);
+	return arg1 + ACTIVE.getHeight() + 5, arg2 + 1;
+}

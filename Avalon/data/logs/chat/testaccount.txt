@@ -1,0 +1,9 @@
+[18 mars 2018 at 10:31:34 CET] - testaccount: its still right click
+[18 mars 2018 at 10:31:38 CET] - testaccount: but ids are set to -2
+[18 mars 2018 at 10:31:44 CET] - testaccount: hmm
+[18 mars 2018 at 10:31:47 CET] - testaccount: i wonder wher eit checks
+[18 mars 2018 at 10:31:48 CET] - testaccount: for team id
+[18 mars 2018 at 10:31:50 CET] - testaccount: to be rightclick
+[18 mars 2018 at 10:31:51 CET] - testaccount: lol
+[18 mars 2018 at 10:31:52 CET] - testaccount: like
+[18 mars 2018 at 10:32:00 CET] - testaccount: if (teamid == target.teamid

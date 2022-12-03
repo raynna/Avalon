@@ -1,0 +1,6 @@
+void script_405(Widget widget0) {
+	widget0.setTrans(255);
+	widget0.setScriptCallOnGameloop(406, CTX_WIDGET, "I");
+	widget0.setText("Conquest Ranking: " + str(VARP[1875]));
+	return;
+}

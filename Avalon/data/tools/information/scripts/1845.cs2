@@ -1,0 +1,7 @@
+void script_1845() {
+	widget(893, 9).setText(STRING[197]);
+	widget(893, 10).setText(STRING[198]);
+	widget(893, 11).setText(STRING[199]);
+	widget(893, 12).setText(STRING[200]);
+	return;
+}

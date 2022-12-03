@@ -1,0 +1,17 @@
+void script_2821() {
+	cs2method5405(0, 3);
+	cs2method5405(1, 3);
+	cs2method5406(0, 0, script_2808(location(VARC[1065]), location(1952, 4384, 3), location(1975, 4399, 0)), 2385, script_2808(location(VARC[1065]), location(1952, 4384, 3), location(1973, 4399, 0)), 2370, 0);
+	cs2method5406(1, 0, script_2808(location(VARC[1065]), location(1952, 4384, 3), location(1976, 4407, 0)), 2265, script_2808(location(VARC[1065]), location(1952, 4384, 3), location(1977, 4408, 0)), 2260, 0);
+	cs2method5406(0, 1, script_2808(location(VARC[1065]), location(1952, 4384, 3), location(1971, 4400, 0)), 2420, script_2808(location(VARC[1065]), location(1952, 4384, 3), location(1969, 4401, 0)), 2355, 0);
+	cs2method5406(1, 1, script_2808(location(VARC[1065]), location(1952, 4384, 3), location(1976, 4409, 0)), 2285, script_2808(location(VARC[1065]), location(1952, 4384, 3), location(1975, 4409, 0)), 2235, 0);
+	cs2method5406(0, 2, script_2808(location(VARC[1065]), location(1952, 4384, 3), location(1969, 4403, 0)), 2395, script_2808(location(VARC[1065]), location(1952, 4384, 3), location(1968, 4405, 0)), 2380, 0);
+	cs2method5406(1, 2, script_2808(location(VARC[1065]), location(1952, 4384, 3), location(1974, 4408, 0)), 2270, script_2808(location(VARC[1065]), location(1952, 4384, 3), location(1973, 4408, 0)), 2250, 0);
+	VARC[1065] = -1;
+	VARC[1064] = 0;
+	VARC[1067] = 878;
+	script_2825(0);
+	script_2810(5832706);
+	widget(89, 0).setScriptCallOnMinimapRelatedSetting3(2824, 0, "i");
+	return;
+}

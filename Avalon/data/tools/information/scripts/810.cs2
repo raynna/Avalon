@@ -1,0 +1,21 @@
+void script_810() {
+	if (isMember() && VARPBIT[4280] == 1) {
+		widget(747, 2).setIsHidden(false);
+		widget(747, 3).setIsHidden(false);
+		widget(747, 6).setIsHidden(false);
+		widget(747, 4).setIsHidden(false);
+		widget(747, 7).setIsHidden(false);
+		script_817(23);
+		widget(747, 5).setIsHidden(false);
+		widget(747, 5).setRGB(script_805(23));
+		widget(747, 5).setText(str(getSkillCurrentLvl(23)));
+	} else {
+		widget(747, 2).setIsHidden(true);
+		widget(747, 3).setIsHidden(true);
+		widget(747, 5).setIsHidden(true);
+		widget(747, 6).setIsHidden(true);
+		widget(747, 4).setIsHidden(true);
+		widget(747, 7).setIsHidden(true);
+	}
+	return;
+}

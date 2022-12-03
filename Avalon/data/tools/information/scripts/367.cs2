@@ -1,0 +1,22 @@
+void script_367(Widget widget0, int arg1, int arg2) {
+	int int3;
+	int int4;
+	int3 = 0;
+	if (arg2 == 1) {
+		int3 = arg1 + 17;
+	} else {
+		int3 = arg1;
+	}
+	int4 = widget0.getHeight();
+	if (int4 < int3) {
+		widget0.setSize(widget0.getWidth(), min(int4 + 2, int3), 0, 0);
+		if (int4 % arg1 == 0) {
+			playSoundEffect(9840, 1, 0);
+		}
+	} else if (int4 > int3) {
+		widget0.setSize(widget0.getWidth(), max(int4 - 2, int3), 0, 0);
+	} else {
+		widget0.setScriptCallOnGameloop(-1, "");
+	}
+	return;
+}

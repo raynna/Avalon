@@ -1,0 +1,6 @@
+void script_3414(Widget widget0) {
+	if (VARPBIT[7868] == 2) {
+		widget0.setModel(57477);
+	}
+	return;
+}

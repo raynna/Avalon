@@ -1,0 +1,6 @@
+void script_4922(int arg0) {
+	if (VARPBIT[9570] != arg0 && VARPBIT[9579] != arg0 && VARPBIT[9588] != arg0) {
+		script_4942();
+	}
+	return;
+}

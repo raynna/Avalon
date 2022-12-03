@@ -1,0 +1,9 @@
+void script_2749(int arg0) {
+	widget(204, 46).setText(datamap('i', 's', (DataMap)950, arg0));
+	widget(204, 60).setVFlip(false);
+	widget(204, 98).setIsHidden(true);
+	widget(204, 99).setIsHidden(true);
+	widget(204, 89).setIsHidden(true);
+	widget(204, 27).setIsHidden(true);
+	return;
+}

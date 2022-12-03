@@ -1,0 +1,52 @@
+void script_1799(Widget widget0, Widget widget1) {
+	int int2;
+	int int3;
+	AttrMap attrmap4;
+	int2 = 0;
+	int3 = 0;
+	attrmap4 = null;
+	while (int2 <= 4) {
+		attrmap4 = datamap('i', 'J', (DataMap)1604, int2);
+		ACTIVE.createChild(widget0, 5, int2 * 4);
+		ACTIVE.setPosition(4, int3, 0, 0);
+		ACTIVE.setSize(17, 17, 0, 0);
+		if (!isMember() && getAttributeMapValue(attrmap4, 557)) {
+			ACTIVE.setSprite(698);
+		} else if (int2 == 0) {
+			ACTIVE.setSprite(699);
+		} else {
+			ACTIVE.setSprite(697);
+		}
+		ACTIVE.createChild(widget0, 4, int2 * 4 + 1);
+		ACTIVE.setPosition(25, int3, 0, 0);
+		ACTIVE.setSize(25, 17, 1, 0);
+		ACTIVE.setText(getAttributeMapValue(attrmap4, 555));
+		ACTIVE.setFont(495);
+		ACTIVE.setTextAlignment(0, 0, 0);
+		ACTIVE.setRGB(0xC8AA64);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.createChild(widget0, 4, int2 * 4 + 2);
+		ACTIVE.setPosition(4, int3 + 17, 0, 0);
+		ACTIVE.setSize(8, getLineCount(getAttributeMapValue(attrmap4, 556), widget0.getWidth() - 8, 494) * 10 + 3, 1, 0);
+		ACTIVE.setText(getAttributeMapValue(attrmap4, 556));
+		ACTIVE.setFont(494);
+		ACTIVE.setTextAlignment(0, 0, 0);
+		ACTIVE.setRGB(0xC8AA64);
+		ACTIVE.setTextAntiMacro(true);
+		_ACTIVE.createChild(widget0, 3, int2 * 4 + 3);
+		_ACTIVE.setPosition(4, int3, 0, 0);
+		_ACTIVE.setSize(8, 17 + ACTIVE.getHeight(), 1, 0);
+		_ACTIVE.setTrans(255);
+		_ACTIVE.setContextMenuOption(1, getAttributeMapValue(attrmap4, 555));
+		_ACTIVE.setScriptCallOnClickContextMenu(1833, CTX_MENU_OPTION, int2, "ii");
+		int3 = int3 + _ACTIVE.getHeight();
+		if (int2 < 4) {
+			int3 = int3 + 3;
+		}
+		int2 = int2 + 1;
+	}
+	widget0.setScrollMax(0, int3);
+	widget0.setScrollPos(0, 0);
+	script_31(widget1, widget0, 792, 789, 790, 791, 773, 788);
+	return;
+}

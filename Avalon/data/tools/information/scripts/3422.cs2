@@ -1,0 +1,23 @@
+void script_3422() {
+	script_3425(widget(60, 176), widget(60, 177));
+	script_3425(widget(60, 181), widget(60, 182));
+	script_3425(widget(60, 186), widget(60, 187));
+	script_3425(widget(60, 191), widget(60, 192));
+	script_3425(widget(60, 196), widget(60, 197));
+	script_3425(widget(60, 201), widget(60, 202));
+	script_3425(widget(60, 206), widget(60, 207));
+	script_3425(widget(60, 211), widget(60, 212));
+	script_3425(widget(60, 216), widget(60, 217));
+	script_3425(widget(60, 221), widget(60, 222));
+	script_3425(widget(60, 261), widget(60, 262));
+	script_3425(widget(60, 257), widget(60, 258));
+	script_3425(widget(60, 253), widget(60, 254));
+	script_3425(widget(60, 249), widget(60, 250));
+	script_3425(widget(60, 245), widget(60, 246));
+	script_3425(widget(60, 241), widget(60, 242));
+	script_3425(widget(60, 237), widget(60, 238));
+	script_3425(widget(60, 233), widget(60, 234));
+	script_3425(widget(60, 229), widget(60, 230));
+	script_3425(widget(60, 225), widget(60, 226));
+	return;
+}

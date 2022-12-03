@@ -1,0 +1,22 @@
+void script_4857() {
+	if (citadelConfigsInitialized()) {
+		script_4854();
+		if (CLANBIT[2580] < 7) {
+			widget(1092, 18).setIsHidden(true);
+			widget(1092, 17).setIsHidden(true);
+			widget(1092, 6).setIsHidden(true);
+			widget(1092, 7).setIsHidden(true);
+		}
+		if (CLANBIT[2580] < 5) {
+			widget(1092, 15).setIsHidden(true);
+			widget(1092, 16).setIsHidden(true);
+			widget(1092, 4).setIsHidden(true);
+			widget(1092, 5).setIsHidden(true);
+		}
+		if (CLANBIT[2580] < 3) {
+			widget(1092, 2).setIsHidden(true);
+			widget(1092, 3).setIsHidden(true);
+		}
+	}
+	return;
+}

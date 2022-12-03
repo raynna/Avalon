@@ -1,0 +1,69 @@
+void script_4859() {
+	AttrMap attrmap0;
+	attrmap0 = null;
+	if (citadelConfigsInitialized()) {
+		script_4855();
+		attrmap0 = script_5116(CLANBIT[2598], CLANBIT[2580]);
+		if (attrmap0 == null) {
+			return;
+		}
+		if (getAttributeMapValue(attrmap0, 1723) != location(0, 0, 0)) {
+			widget(1092, 0).setIsHidden(false);
+		}
+		if (getAttributeMapValue(attrmap0, 1726) != location(0, 0, 0)) {
+			widget(1092, 1).setIsHidden(false);
+		}
+		if (getAttributeMapValue(attrmap0, 1729) != location(0, 0, 0)) {
+			widget(1092, 2).setIsHidden(false);
+		}
+		if (getAttributeMapValue(attrmap0, 1732) != location(0, 0, 0)) {
+			widget(1092, 3).setIsHidden(false);
+		}
+		if (getAttributeMapValue(attrmap0, 1735) != location(0, 0, 0)) {
+			widget(1092, 4).setIsHidden(false);
+		}
+		if (getAttributeMapValue(attrmap0, 1738) != location(0, 0, 0)) {
+			widget(1092, 5).setIsHidden(false);
+		}
+		if (getAttributeMapValue(attrmap0, 1741) != location(0, 0, 0)) {
+			widget(1092, 6).setIsHidden(false);
+		}
+		if (getAttributeMapValue(attrmap0, 1744) != location(0, 0, 0)) {
+			widget(1092, 7).setIsHidden(false);
+		}
+		if (getAttributeMapValue(attrmap0, 1747) != location(0, 0, 0)) {
+			widget(1092, 8).setIsHidden(false);
+		}
+		if (getAttributeMapValue(attrmap0, 1750) != location(0, 0, 0)) {
+			widget(1092, 10).setIsHidden(false);
+		}
+		if (getAttributeMapValue(attrmap0, 1753) != location(0, 0, 0)) {
+			widget(1092, 11).setIsHidden(false);
+		}
+		if (getAttributeMapValue(attrmap0, 1756) != location(0, 0, 0)) {
+			widget(1092, 12).setIsHidden(false);
+		}
+		if (getAttributeMapValue(attrmap0, 1759) != location(0, 0, 0)) {
+			widget(1092, 12).setIsHidden(false);
+		}
+		if (getAttributeMapValue(attrmap0, 1762) != location(0, 0, 0)) {
+			widget(1092, 13).setIsHidden(false);
+		}
+		if (getAttributeMapValue(attrmap0, 1765) != location(0, 0, 0)) {
+			widget(1092, 14).setIsHidden(false);
+		}
+		if (getAttributeMapValue(attrmap0, 1768) != location(0, 0, 0)) {
+			widget(1092, 15).setIsHidden(false);
+		}
+		if (getAttributeMapValue(attrmap0, 1771) != location(0, 0, 0)) {
+			widget(1092, 16).setIsHidden(false);
+		}
+		if (getAttributeMapValue(attrmap0, 1772) != location(0, 0, 0)) {
+			widget(1092, 17).setIsHidden(false);
+		}
+		if (getAttributeMapValue(attrmap0, 1775) != location(0, 0, 0)) {
+			widget(1092, 18).setIsHidden(false);
+		}
+	}
+	return;
+}

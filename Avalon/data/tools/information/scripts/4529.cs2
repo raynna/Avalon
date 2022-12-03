@@ -1,0 +1,48 @@
+void script_4529(Widget widget0, Widget widget1, AttrMap attrmap2) {
+	int int3;
+	Sprite sprite4;
+	Sprite sprite5;
+	Sprite sprite6;
+	Sprite sprite7;
+	Sprite sprite8;
+	Sprite sprite9;
+	if (widget0 == null || attrmap2 == null) {
+		return;
+	}
+	int3 = getAttributeMapValue(attrmap2, 1346);
+	sprite4 = getAttributeMapValue(attrmap2, 1388);
+	sprite5 = getAttributeMapValue(attrmap2, 1389);
+	sprite6 = null;
+	sprite7 = null;
+	sprite8 = null;
+	sprite9 = null;
+	if (int3 == 1) {
+		sprite6 = getAttributeMapValue(attrmap2, 1393);
+		sprite7 = getAttributeMapValue(attrmap2, 1394);
+		sprite8 = getAttributeMapValue(attrmap2, 1395);
+		sprite9 = getAttributeMapValue(attrmap2, 1396);
+		script_31(widget0, widget1, sprite6, sprite7, sprite8, sprite9, sprite4, sprite5);
+	} else if (int3 == 2 || int3 == 3) {
+		widget0.clearChildren();
+		ACTIVE.createChild(widget0, 5, widget0.nextChild());
+		ACTIVE.setPosition(0, 0, 1, 0);
+		ACTIVE.setSize(16, 16, 0, 0);
+		ACTIVE.setSprite(sprite4);
+		ACTIVE.setTrans(255);
+		ACTIVE.createChild(widget0, 5, widget0.nextChild());
+		ACTIVE.setPosition(0, 0, 1, 2);
+		ACTIVE.setSize(16, 16, 0, 0);
+		ACTIVE.setSprite(sprite5);
+		ACTIVE.setTrans(255);
+		if (int3 == 2) {
+			widget0.setScriptCallOnMouseEntered(4159, CTX_WIDGET, 0, 0, "Iii");
+			widget0.setScriptCallOnMouseExit(4159, CTX_WIDGET, 1, 0, "Iii");
+		} else if (int3 == 3) {
+			widget0.setScriptCallOnMousePressed(4162, CTX_WIDGET, "I");
+			widget0.setScriptCallOnMouseDragged(4162, CTX_WIDGET, "I");
+			widget0.setScriptCallOnMouseReleased(4163, CTX_WIDGET, "I");
+			widget0.setScriptCallOnMouseDragReleased(4163, CTX_WIDGET, "I");
+		}
+	}
+	return;
+}

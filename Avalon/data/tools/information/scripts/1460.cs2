@@ -1,0 +1,20 @@
+void script_1460(int arg0, int arg1) {
+	Widget widget2;
+	Widget widget3;
+	string str0;
+	widget2 = datamap('i', 'I', (DataMap)1614, arg0);
+	widget3 = datamap('i', 'I', (DataMap)1615, arg0);
+	widget2.setIsHidden(false);
+	widget3.setIsHidden(false);
+	widget3.setItemOnWidgetMethod2205(getItemIdInSlot(95, arg1), getItemAmtInSlot(95, arg1));
+	widget3.setOutlineThickness(1);
+	widget3.setShadowColor(0x333333);
+	widget2.setNoOptions();
+	widget2.setContextMenuOption(1, "View tab " + str(arg0));
+	widget2.setContextMenuOption(2, "Collapse tab " + str(arg0));
+	widget2.setScriptCallOnMousePressed(-1, "");
+	str0 = "Click here to select tab " + str(arg0);
+	widget2.setScriptCallOnMouseOver(38, CTX_WIDGET, widget(762, 119), str0, 25, 150, "IIsii");
+	widget2.setScriptCallOnMouseExit(40, widget(762, 119), "I");
+	return;
+}

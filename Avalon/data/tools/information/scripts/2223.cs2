@@ -1,0 +1,61 @@
+void script_2223() {
+	int int0;
+	int int1;
+	int int2;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	open(widget(744, 49), 669);
+	widget(669, 27).setSprite(4088);
+	widget(669, 28).setSprite(4063);
+	widget(669, 28).setVFlip(false);
+	widget(669, 28).setHFlip(true);
+	widget(669, 29).setSprite(4063);
+	widget(669, 29).setVFlip(false);
+	widget(669, 29).setHFlip(false);
+	widget(669, 21).setSprite(4065);
+	widget(669, 21).setVFlip(false);
+	widget(669, 21).setHFlip(true);
+	widget(669, 26).setSprite(4065);
+	widget(669, 26).setVFlip(false);
+	widget(669, 26).setHFlip(false);
+	str0 = "";
+	int0 = getTextWidth(widget(669, 48).getText(), 3793);
+	widget(669, 7).setSize(int0, widget(669, 7).getHeight(), 0, 0);
+	int1 = getTextWidth(widget(669, 49).getText(), 3793);
+	widget(669, 9).setSize(int1, widget(669, 9).getHeight(), 0, 0);
+	int2 = getTextWidth(widget(669, 8).getText(), 3793);
+	widget(669, 8).setSize(int2, widget(669, 8).getHeight(), 0, 0);
+	str1 = widget(669, 8).getText();
+	widget(669, 8).setText(concat(concat(widget(669, 48).getText(), concat(" ", concat(widget(669, 8).getText(), " "))), widget(669, 49).getText()));
+	widget(669, 8).setPosition(0, widget(669, 8).getY(), 1, 0);
+	widget(669, 8).setSize(getTextWidth(widget(669, 8).getText(), 3793), widget(669, 8).getHeight(), 0, 0);
+	widget(669, 7).setPosition(widget(669, 8).getX(), widget(669, 7).getY(), 0, 0);
+	widget(669, 8).setText(str1);
+	widget(669, 8).setSize(int2, widget(669, 8).getHeight(), 0, 0);
+	widget(669, 8).setPosition(widget(669, 7).getX() + widget(669, 7).getWidth() + getTextWidth(" ", 3793), widget(669, 8).getY(), 0, 0);
+	widget(669, 9).setPosition(widget(669, 8).getX() + widget(669, 8).getWidth() + getTextWidth(" ", 3793), widget(669, 9).getY(), 0, 0);
+	if (VARC[1407] < 13) {
+		widget(669, 14).setIsHidden(true);
+		widget(669, 27).setIsHidden(true);
+		widget(669, 13).setIsHidden(false);
+		widget(669, 18).setText("Congratulations, your account has been created successfully!");
+	} else {
+		widget(669, 14).setIsHidden(false);
+		widget(669, 27).setIsHidden(false);
+		widget(669, 13).setIsHidden(true);
+		widget(669, 18).setText("Congratulations, your account has been successfully created!");
+	}
+	str2 = "dob";
+	str3 = "set_members_dob.ws";
+	if (VARC[1088] == 1) {
+		str0 = "Continue To Buy";
+		widget(669, 40).setScriptCallOnMousePressed(2931, str2, str3, false, "ss1");
+	} else {
+		str0 = "Continue";
+		widget(669, 40).setScriptCallOnMousePressed(1173, 12, "i");
+	}
+	script_1174(8);
+	return;
+}

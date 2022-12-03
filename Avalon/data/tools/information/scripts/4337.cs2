@@ -1,0 +1,23 @@
+string script_4337(int arg0) {
+	int int1;
+	int int2;
+	string str0;
+	string str1;
+	string str2;
+	str0 = "+";
+	if (arg0 < 0) {
+		str0 = "-";
+		arg0 = 0 - arg0;
+	}
+	int1 = arg0 / 60;
+	int2 = arg0 % 60;
+	str1 = str(int1);
+	if (int1 < 10) {
+		str1 = "0" + str(int1);
+	}
+	str2 = str(int2);
+	if (int2 < 10) {
+		str2 = "0" + str(int2);
+	}
+	return str0 + str1 + ":" + str2;
+}

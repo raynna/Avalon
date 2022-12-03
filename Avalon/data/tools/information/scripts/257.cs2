@@ -1,0 +1,114 @@
+void script_257() {
+	int int0;
+	int int1;
+	Item item2;
+	string str0;
+	if (VARC[1111] == 0 || VARC[1112] == 0 || VARC[1113] == 0 || VARC[1114] == 0 || VARC[1115] == 0 || VARC[1116] == 0 || VARC[1117] == -1) {
+		return;
+	}
+	int0 = widget(919, 7).nextChild() * (18 + 4);
+	int1 = (widget(919, 7).nextChild() + 1) * (18 + 4);
+	widget(919, 6).setScrollMax(widget(919, 6).getScrollMaxH(), int1);
+	widget(919, 8).setSize(widget(919, 8).getWidth(), int1, 0, 0);
+	ACTIVE.createChild(widget(919, 8), 4, widget(919, 8).nextChild());
+	ACTIVE.setRGB(0xA4A467);
+	ACTIVE.setSize(16384, 18, 2, 0);
+	ACTIVE.setPosition(0, int0, 0, 2);
+	ACTIVE.setFont(494);
+	ACTIVE.setText(script_1668(VARC[1111]));
+	ACTIVE.setTextAlignment(1, 1, 0);
+	widget(919, 7).setSize(widget(919, 7).getWidth(), int1, 0, 0);
+	ACTIVE.createChild(widget(919, 7), 4, widget(919, 7).nextChild());
+	ACTIVE.setRGB(0xA4A467);
+	ACTIVE.setSize(16384, 18, 2, 0);
+	ACTIVE.setPosition(0, int0, 0, 2);
+	ACTIVE.setFont(494);
+	ACTIVE.setText(script_276(VARC[1113]));
+	ACTIVE.setTextAlignment(1, 1, 0);
+	widget(919, 9).setSize(widget(919, 9).getWidth(), int1, 0, 0);
+	ACTIVE.createChild(widget(919, 9), 4, widget(919, 9).nextChild());
+	ACTIVE.setRGB(0xA4A467);
+	ACTIVE.setSize(16384, 18, 2, 0);
+	ACTIVE.setPosition(0, int0, 0, 2);
+	ACTIVE.setFont(494);
+	ACTIVE.setText(str(VARC[1112]));
+	ACTIVE.setTextAlignment(1, 1, 0);
+	widget(919, 10).setSize(widget(919, 10).getWidth(), int1, 0, 0);
+	ACTIVE.createChild(widget(919, 10), 5, widget(919, 10).nextChild());
+	ACTIVE.setSize(20, 20, 0, 0);
+	ACTIVE.setPosition(0, int0 + 2, 1, 2);
+	str0 = "";
+	item2 = null;
+	switch (VARC[1114]) {
+		case 1:
+			item2 = 15658;
+			str0 = "Worm";
+			break;
+		case 2:
+			item2 = 15659;
+			str0 = "Maggot";
+			break;
+		case 3:
+			item2 = 15662;
+			str0 = "Cricket";
+			break;
+		case 4:
+			item2 = 15663;
+			str0 = "Locust";
+			break;
+		case 5:
+			item2 = 15661;
+			str0 = "Crayfish";
+			break;
+		case 6:
+			item2 = 15660;
+			str0 = "Shrimp";
+			break;
+		case 7:
+			item2 = 15664;
+			str0 = "Green moth";
+			break;
+		case 8:
+			item2 = 15665;
+			str0 = "Grey moth";
+			break;
+	}
+	ACTIVE.setItemNoNum(item2, 0);
+	ACTIVE.setScriptCallOnMouseOver(38, CTX_WIDGET, widget(919, 20), str0, 25, 128, "IIsii");
+	ACTIVE.setScriptCallOnMouseExit(40, widget(919, 20), "I");
+	widget(919, 11).setSize(widget(919, 11).getWidth(), int1, 0, 0);
+	ACTIVE.createChild(widget(919, 11), 4, widget(919, 11).nextChild());
+	ACTIVE.setRGB(0xA4A467);
+	ACTIVE.setSize(16384, 18, 2, 0);
+	ACTIVE.setPosition(0, int0, 0, 2);
+	ACTIVE.setFont(494);
+	ACTIVE.setText(script_278(VARC[1115]));
+	ACTIVE.setTextAlignment(1, 1, 0);
+	widget(919, 12).setSize(widget(919, 12).getWidth(), int1, 0, 0);
+	ACTIVE.createChild(widget(919, 12), 4, widget(919, 12).nextChild());
+	ACTIVE.setRGB(0xA4A467);
+	ACTIVE.setSize(16384, 18, 2, 0);
+	ACTIVE.setPosition(0, int0, 0, 2);
+	ACTIVE.setFont(494);
+	ACTIVE.setText(str(VARC[1116]));
+	ACTIVE.setTextAlignment(1, 1, 0);
+	widget(919, 13).setSize(widget(919, 13).getWidth(), int1, 0, 0);
+	ACTIVE.createChild(widget(919, 13), 4, widget(919, 13).nextChild());
+	ACTIVE.setRGB(0xA4A467);
+	ACTIVE.setSize(16384, 18, 2, 0);
+	ACTIVE.setPosition(0, int0, 0, 2);
+	ACTIVE.setFont(494);
+	ACTIVE.setText(str(VARC[1117]) + "%");
+	ACTIVE.setTextAlignment(1, 1, 0);
+	if (widget(919, 1).getHeight() == 185) {
+		script_31(widget(919, 5), widget(919, 6), 792, 789, 790, 791, 773, 788);
+	}
+	VARC[1111] = 0;
+	VARC[1112] = 0;
+	VARC[1113] = 0;
+	VARC[1114] = 0;
+	VARC[1115] = 0;
+	VARC[1116] = 0;
+	VARC[1117] = -1;
+	return;
+}

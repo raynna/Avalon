@@ -1,0 +1,4 @@
+void script_2800(Widget widget0, int arg1, Color color2) {
+	script_2801(widget0, arg1, color2);
+	return;
+}

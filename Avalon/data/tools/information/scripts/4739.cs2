@@ -1,0 +1,19 @@
+void script_4739(int arg0, int arg1, int arg2) {
+	int int3;
+	Item item4;
+	Container container5;
+	int3 = 0;
+	item4 = null;
+	container5 = null;
+	if (VARPBIT[9903] != 0) {
+		container5 = datamap('i', 'v', (DataMap)3879, VARPBIT[9903]);
+		if (arg2 == 1 && ACTIVE.setChild(widget(1144, 0), arg1)) {
+			item4 = getItemIdInSlot(container5, arg1);
+			if (item4 != null) {
+				VARPBIT[9904] = arg1;
+				script_4741();
+			}
+		}
+	}
+	return;
+}

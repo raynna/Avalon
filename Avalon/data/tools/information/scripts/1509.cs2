@@ -1,0 +1,35 @@
+void script_1509() {
+	string str0;
+	widget(729, 1).clearChildren();
+	script_1088(widget(729, 1), 22);
+	widget(729, 11).clearChildren();
+	script_333(widget(729, 11), 0x483F33, 0x302922, 0, 0);
+	script_2647(widget(729, 11));
+	widget(729, 14).clearChildren();
+	script_333(widget(729, 14), 0x483F33, 0x302922, 0, 0);
+	script_1516(widget(729, 14), 380, 100);
+	script_2647(widget(729, 14));
+	widget(729, 16).clearChildren();
+	script_2647(widget(729, 16));
+	VARC[778] = VARPBIT[6091];
+	script_1513();
+	widget(729, 1).setScriptCallOnConfigChange(1510, 1057, "Y");
+	widget(729, 1).setScriptCallOnGlobalConfigChange(1511, 1010, 1011, 1012, 1013, 1016, 1017, "Y");
+	widget(729, 6).setScriptCallOnClickContextMenu(1512, CTX_MENU_OPTION, 0, "ii");
+	widget(729, 7).setScriptCallOnClickContextMenu(1512, CTX_MENU_OPTION, 1, "ii");
+	widget(729, 8).setScriptCallOnClickContextMenu(1512, CTX_MENU_OPTION, 2, "ii");
+	widget(729, 9).setScriptCallOnClickContextMenu(1512, CTX_MENU_OPTION, 3, "ii");
+	str0 = "Choose a top";
+	widget(729, 6).setScriptCallOnMouseOver(1160, CTX_WIDGET, -1, widget(729, 23), str0, 25, 512, "IiIsii");
+	widget(729, 6).setScriptCallOnMouseExit(40, widget(729, 23), "I");
+	str0 = "Choose some sleeves";
+	widget(729, 7).setScriptCallOnMouseOver(1160, CTX_WIDGET, -1, widget(729, 23), str0, 25, 512, "IiIsii");
+	widget(729, 7).setScriptCallOnMouseExit(40, widget(729, 23), "I");
+	str0 = "Decorate your wrists";
+	widget(729, 8).setScriptCallOnMouseOver(1160, CTX_WIDGET, -1, widget(729, 23), str0, 25, 512, "IiIsii");
+	widget(729, 8).setScriptCallOnMouseExit(40, widget(729, 23), "I");
+	str0 = "Choose some leggings";
+	widget(729, 9).setScriptCallOnMouseOver(1160, CTX_WIDGET, -1, widget(729, 23), str0, 25, 512, "IiIsii");
+	widget(729, 9).setScriptCallOnMouseExit(40, widget(729, 23), "I");
+	return;
+}

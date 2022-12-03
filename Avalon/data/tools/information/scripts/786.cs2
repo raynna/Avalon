@@ -1,0 +1,18 @@
+void script_786(int arg0) {
+	if (arg0 == 70254793) {
+		widget(1072, 53).setRGB(0xFFFFFF);
+	} else if (arg0 == 70254805) {
+		widget(1072, 53).setRGB(0xFFFFFF);
+		widget(1072, 49).setRGB(0xFFFFFF);
+	} else if (arg0 == 70254817) {
+		widget(1072, 57).setRGB(0xFFFFFF);
+		widget(1072, 49).setRGB(0xFFFFFF);
+	} else if (arg0 == 70254829) {
+		widget(1072, 61).setRGB(0xFFFFFF);
+		widget(1072, 49).setRGB(0xFFFFFF);
+	} else if (arg0 == 70254841) {
+		widget(1072, 65).setRGB(0xFFFFFF);
+		widget(1072, 49).setRGB(0xFFFFFF);
+	}
+	return;
+}

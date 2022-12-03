@@ -1,0 +1,14 @@
+void script_4039(int arg0, int arg1) {
+	if (ACTIVE.setChild(widget(190, 18), arg0)) {
+		if (arg1 == 1) {
+			ACTIVE.setRGB(0x00FFFF);
+		} else if (script_2193(arg0) == 2) {
+			ACTIVE.setRGB(0x00FF00);
+		} else if (script_2193(arg0) == 1) {
+			ACTIVE.setRGB(0xFFFF00);
+		} else {
+			ACTIVE.setRGB(0xFF0000);
+		}
+	}
+	return;
+}

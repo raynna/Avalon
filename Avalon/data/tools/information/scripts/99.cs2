@@ -1,0 +1,42 @@
+void script_99() {
+	int int0;
+	int int1;
+	int int2;
+	int0 = 5;
+	int1 = 5;
+	int2 = 0;
+	while (int0 < 125) {
+		while (int1 < 120) {
+			ACTIVE.createChild(widget(631, 47), 5, int2);
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition(int1, int0, 0, 0);
+			if (getItemIdInSlot(134, int2) != null) {
+				ACTIVE.setItem(getItemIdInSlot(134, int2), getItemAmtInSlot(134, int2));
+				ACTIVE.setOptionBase("<col=ff981f>" + getItemName(getItemIdInSlot(134, int2)));
+				ACTIVE.setContextMenuOption(1, "Remove 1");
+				ACTIVE.setContextMenuOption(2, "Remove 5");
+				ACTIVE.setContextMenuOption(3, "Remove 10");
+				ACTIVE.setContextMenuOption(4, "Remove All");
+				ACTIVE.setContextMenuOption(5, "Remove X");
+				ACTIVE.setContextMenuOption(10, "Examine");
+				ACTIVE.setShadowColor(0x302020);
+				ACTIVE.setOutlineThickness(1);
+			}
+			ACTIVE.createChild(widget(631, 49), 5, int2);
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition(int1, int0, 0, 0);
+			if (getItemIdInInpsectingSlot(134, int2) != null) {
+				ACTIVE.setItem(getItemIdInInpsectingSlot(134, int2), getItemAmtInInspectingSlot(134, int2));
+				ACTIVE.setOptionBase("<col=ff981f>" + getItemName(getItemIdInInpsectingSlot(134, int2)));
+				ACTIVE.setContextMenuOption(1, "Examine");
+				ACTIVE.setShadowColor(0x302020);
+				ACTIVE.setOutlineThickness(1);
+			}
+			int1 = int1 + 40;
+			int2 = int2 + 1;
+		}
+		int0 = int0 + 42;
+		int1 = 5;
+	}
+	return;
+}

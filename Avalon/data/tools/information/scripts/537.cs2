@@ -1,0 +1,29 @@
+void script_537(int arg0, int arg1) {
+	int int2;
+	int int3;
+	int int4;
+	int2 = 0;
+	int3 = arg1 + 25;
+	int4 = getClientCycle() - arg0;
+	if (getClientCycle() >= arg1) {
+		if (getClientCycle() < int3) {
+			int2 = 255 / (int3 - arg1);
+			int2 = 255 - int2 * (getClientCycle() - arg1);
+			widget(745, 2).setTrans(int2);
+			return;
+		}
+		widget(745, 2).setScriptCallOnGameloop(-1, "");
+		widget(745, 2).setTrans(0);
+		return;
+	}
+	if (int4 <= 5) {
+		widget(745, 2).setTrans(0);
+	} else if (int4 <= 10) {
+		widget(745, 2).setTrans(85);
+	} else if (int4 <= 15) {
+		widget(745, 2).setTrans(200);
+	} else {
+		widget(745, 2).setTrans(85);
+	}
+	return;
+}

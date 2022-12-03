@@ -1,0 +1,15 @@
+string, int script_987(int arg0) {
+	switch (arg0) {
+		case 0:
+			return "Equipment", 1;
+		case 1:
+			return "Monsters", 1;
+		case 2:
+			return "Slayer Masters", 1;
+		case 3:
+			return "Dungeoneering", 1;
+		case 4:
+			return "Milestones", 1;
+	}
+	return "", -1;
+}

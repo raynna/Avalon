@@ -1,0 +1,139 @@
+[29 juni 2018 at 10:32:25 CEST] - ::master 
+[29 juni 2018 at 10:32:46 CEST] - ::gearother peppe
+[29 juni 2018 at 10:33:14 CEST] - ::item 1038 1
+[29 juni 2018 at 10:33:32 CEST] - ::gearother 
+[29 juni 2018 at 10:34:05 CEST] - ::gearother 
+[29 juni 2018 at 10:34:15 CEST] - ::edge 
+[29 juni 2018 at 10:36:59 CEST] - ::gearother 
+[29 juni 2018 at 10:37:08 CEST] - ::edge 
+[29 juni 2018 at 10:39:06 CEST] - ::gearother 
+[29 juni 2018 at 10:39:15 CEST] - ::edge 
+[29 juni 2018 at 10:39:54 CEST] - ::gearother 
+[29 juni 2018 at 10:40:47 CEST] - ::gearother 
+[29 juni 2018 at 10:41:53 CEST] - ::yell gg
+[29 juni 2018 at 10:43:41 CEST] - ::tele 0,48,55,10,25
+[29 juni 2018 at 10:43:43 CEST] - ::tele 0,48,55,8,28
+[29 juni 2018 at 10:43:49 CEST] - ::tele 0,48,55,7,26
+[29 juni 2018 at 10:44:00 CEST] - ::teleto peppe
+[29 juni 2018 at 10:44:08 CEST] - ::gearother pepp
+[29 juni 2018 at 10:44:25 CEST] - ::tele 0,48,55,11,26
+[29 juni 2018 at 10:44:26 CEST] - ::tele 0,48,55,12,25
+[29 juni 2018 at 10:44:27 CEST] - ::tele 0,48,55,10,28
+[29 juni 2018 at 10:44:39 CEST] - ::anim 4
+[29 juni 2018 at 10:44:48 CEST] - ::anim -1
+[29 juni 2018 at 10:46:04 CEST] - ::vengrunes 
+[29 juni 2018 at 10:46:12 CEST] - ::vengrunes 
+[29 juni 2018 at 10:46:48 CEST] - ::vengrunes 
+[29 juni 2018 at 10:47:51 CEST] - ::give item astral rune 5000
+[29 juni 2018 at 10:48:32 CEST] - ::gearother 
+[29 juni 2018 at 10:48:43 CEST] - ::teleto peppe
+[29 juni 2018 at 10:50:24 CEST] - ::spec 
+[29 juni 2018 at 10:50:36 CEST] - ::spec 
+[29 juni 2018 at 10:51:26 CEST] - ::spec 
+[29 juni 2018 at 10:51:34 CEST] - ::spec 
+[29 juni 2018 at 10:51:52 CEST] - ::teleto peppe
+[29 juni 2018 at 10:52:05 CEST] - ::yell hax
+[29 juni 2018 at 10:52:23 CEST] - ::item 3597 10
+[29 juni 2018 at 10:52:34 CEST] - ::spawn item 3597 10
+[29 juni 2018 at 10:52:42 CEST] - ::spawn 3597 10
+[29 juni 2018 at 10:53:19 CEST] - ::give casket
+[29 juni 2018 at 10:53:43 CEST] - ::teleto peppe
+[29 juni 2018 at 10:53:53 CEST] - ::heal 
+[29 juni 2018 at 10:54:06 CEST] - ::spec 
+[29 juni 2018 at 10:54:07 CEST] - ::god 
+[29 juni 2018 at 10:54:21 CEST] - ::edge 
+[29 juni 2018 at 10:54:27 CEST] - ::tele 0,48,55,24,30
+[29 juni 2018 at 10:55:12 CEST] - ::heal 
+[29 juni 2018 at 10:56:00 CEST] - ::god 
+[29 juni 2018 at 10:56:05 CEST] - ::spec 
+[29 juni 2018 at 10:56:10 CEST] - ::spec 
+[29 juni 2018 at 10:56:53 CEST] - ::spec 
+[29 juni 2018 at 10:57:19 CEST] - ::spec 
+[29 juni 2018 at 10:57:32 CEST] - ::spec 
+[29 juni 2018 at 10:57:37 CEST] - ::spec 
+[29 juni 2018 at 10:57:52 CEST] - ::zoom 25
+[29 juni 2018 at 10:58:08 CEST] - ::resetzoom 
+[29 juni 2018 at 10:58:28 CEST] - ::zoom 2500
+[29 juni 2018 at 10:58:42 CEST] - ::resetzoom 
+[29 juni 2018 at 10:59:06 CEST] - ::healmode 
+[29 juni 2018 at 10:59:21 CEST] - ::spec 
+[29 juni 2018 at 11:00:30 CEST] - ::tonpc 10
+[29 juni 2018 at 11:01:06 CEST] - ::teleto v2
+[29 juni 2018 at 11:01:26 CEST] - ::tonpc 4
+[29 juni 2018 at 11:01:55 CEST] - ::tele 0,48,55,19,23
+[29 juni 2018 at 11:01:56 CEST] - ::tele 0,48,55,16,20
+[29 juni 2018 at 11:01:57 CEST] - ::tele 0,48,55,13,22
+[29 juni 2018 at 11:01:58 CEST] - ::tele 0,48,55,12,23
+[29 juni 2018 at 11:02:04 CEST] - ::teleto peppe
+[29 juni 2018 at 11:02:32 CEST] - ::tonpc -1
+[29 juni 2018 at 11:03:25 CEST] - ::healmode 
+[29 juni 2018 at 11:03:32 CEST] - ::teleto peppe
+[29 juni 2018 at 11:04:12 CEST] - ::teletome v2
+[29 juni 2018 at 11:06:12 CEST] - ::tele 0,50,50,22,18
+[29 juni 2018 at 11:06:14 CEST] - ::tele 0,50,50,21,20
+[29 juni 2018 at 11:07:06 CEST] - ::tele 0,51,50,2,27
+[29 juni 2018 at 11:07:06 CEST] - ::tele 1,51,50,2,28
+[29 juni 2018 at 11:07:10 CEST] - ::tele 1,51,50,3,27
+[29 juni 2018 at 11:07:15 CEST] - ::teleto peppe
+[29 juni 2018 at 11:07:42 CEST] - ::yell wherze yall at
+[29 juni 2018 at 11:07:45 CEST] - ::teleto peppe
+[29 juni 2018 at 11:11:20 CEST] - ::yell ty for blue phat
+[29 juni 2018 at 11:11:29 CEST] - ::teleto andreas
+[29 juni 2018 at 11:11:32 CEST] - ::tele 0,52,51,54,5
+[29 juni 2018 at 11:11:59 CEST] - ::yell brb
+[29 juni 2018 at 11:28:20 CEST] - ::checkoffers 
+[29 juni 2018 at 11:29:03 CEST] - ::checkoffers 
+[29 juni 2018 at 11:29:43 CEST] - ::tele 0,29,81,2,49
+[29 juni 2018 at 11:29:44 CEST] - ::tele 0,29,81,5,45
+[29 juni 2018 at 11:29:52 CEST] - ::tele 0,29,81,17,37
+[29 juni 2018 at 11:29:54 CEST] - ::tele 0,29,81,30,38
+[29 juni 2018 at 11:30:01 CEST] - ::tele 0,29,81,45,39
+[29 juni 2018 at 11:30:02 CEST] - ::tele 0,29,81,50,38
+[29 juni 2018 at 11:30:17 CEST] - ::tele 0,31,81,52,52
+[29 juni 2018 at 11:30:17 CEST] - ::tele 0,31,81,49,44
+[29 juni 2018 at 11:30:18 CEST] - ::tele 0,31,81,43,39
+[29 juni 2018 at 11:30:19 CEST] - ::tele 0,31,81,38,35
+[29 juni 2018 at 11:30:26 CEST] - ::tele 0,33,82,11,6
+[29 juni 2018 at 11:30:27 CEST] - ::tele 0,33,82,18,11
+[29 juni 2018 at 11:30:27 CEST] - ::tele 0,33,82,19,18
+[29 juni 2018 at 11:30:28 CEST] - ::tele 0,33,82,27,30
+[29 juni 2018 at 11:30:28 CEST] - ::tele 0,33,82,35,42
+[29 juni 2018 at 11:30:30 CEST] - ::tele 0,33,82,33,34
+[29 juni 2018 at 11:30:38 CEST] - ::tele 0,36,81,38,31
+[29 juni 2018 at 11:33:00 CEST] - ::tele 2,49,66,8,18
+[29 juni 2018 at 11:33:28 CEST] - ::tele 2,49,66,38,15
+[29 juni 2018 at 11:33:32 CEST] - ::tele 2,49,66,40,20
+[29 juni 2018 at 11:33:39 CEST] - ::yell never been here in rs lol
+[29 juni 2018 at 11:35:03 CEST] - ::tele 0,49,66,28,32
+[29 juni 2018 at 11:35:05 CEST] - ::tele 0,49,66,26,34
+[29 juni 2018 at 11:36:45 CEST] - ::youtube avalonpl
+[29 juni 2018 at 11:38:11 CEST] - ::showlist 
+[29 juni 2018 at 11:39:58 CEST] - ::give onyx 1
+[29 juni 2018 at 11:40:02 CEST] - ::empty 
+[29 juni 2018 at 11:40:16 CEST] - ::give onyx 9999
+[29 juni 2018 at 11:40:57 CEST] - ::matchaccounts aryjaey andreas
+[29 juni 2018 at 11:41:32 CEST] - ::bank 
+[29 juni 2018 at 11:41:34 CEST] - ::bank peppe
+[29 juni 2018 at 11:41:40 CEST] - ::checkbank peppe
+[29 juni 2018 at 11:41:52 CEST] - ::checkbank andreas
+[29 juni 2018 at 11:42:33 CEST] - ::forcemovement 
+[29 juni 2018 at 11:42:44 CEST] - ::pkpshop 
+[29 juni 2018 at 11:43:39 CEST] - ::spawn 24201
+[29 juni 2018 at 11:44:51 CEST] - ::modern 
+[29 juni 2018 at 11:44:58 CEST] - ::god 
+[29 juni 2018 at 11:45:11 CEST] - ::give fire rune 1000000
+[29 juni 2018 at 11:45:19 CEST] - ::give fire_rune 999999
+[29 juni 2018 at 11:45:25 CEST] - ::item fire_rune 99999999
+[29 juni 2018 at 11:45:33 CEST] - ::item 554 111111111
+[29 juni 2018 at 11:45:48 CEST] - ::give earth_rune
+[29 juni 2018 at 11:45:58 CEST] - ::item 557 1111111111111111111
+[29 juni 2018 at 11:46:06 CEST] - ::item 557 1000000
+[29 juni 2018 at 11:46:21 CEST] - ::give air_rune
+[29 juni 2018 at 11:46:29 CEST] - ::item 556 111111
+[29 juni 2018 at 11:46:34 CEST] - ::give blood_rune
+[29 juni 2018 at 11:46:38 CEST] - ::item 565 11111111
+[29 juni 2018 at 11:46:44 CEST] - ::give death_rune
+[29 juni 2018 at 11:46:49 CEST] - ::item 560 1111111
+[29 juni 2018 at 11:52:38 CEST] - ::playerlist 
+[29 juni 2018 at 11:54:56 CEST] - ::skull 
+[29 juni 2018 at 11:54:59 CEST] - ::skull 

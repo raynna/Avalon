@@ -1,0 +1,27 @@
+void script_4400(int arg0) {
+	widget(1105, 64).setIsHidden(true);
+	widget(1105, 67).setIsHidden(true);
+	widget(1105, 68).setIsHidden(true);
+	widget(1105, 69).setIsHidden(true);
+	widget(1105, 70).setIsHidden(true);
+	widget(1105, 167).setIsHidden(true);
+	widget(1105, 179).setIsHidden(true);
+	widget(1105, 191).setIsHidden(true);
+	switch (arg0) {
+		case 72417450:
+			widget(1105, 64).setIsHidden(false);
+			widget(1105, 67).setIsHidden(false);
+			widget(1105, 167).setIsHidden(false);
+			break;
+		case 72417462:
+			widget(1105, 68).setIsHidden(false);
+			widget(1105, 69).setIsHidden(false);
+			widget(1105, 179).setIsHidden(false);
+			break;
+		case 72417474:
+			widget(1105, 70).setIsHidden(false);
+			widget(1105, 191).setIsHidden(false);
+			break;
+	}
+	return;
+}

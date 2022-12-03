@@ -1,0 +1,14 @@
+void script_2026() {
+	widget(752, 4).setFont(496);
+	widget(752, 5).setFont(496);
+	widget(752, 4).setSize(20, 40, 1, 0);
+	widget(752, 5).setSize(20, 20, 1, 0);
+	widget(752, 4).setPosition(0, 20, 1, 0);
+	widget(752, 5).setPosition(0, 60, 1, 0);
+	widget(752, 5).setScriptCallOnMouseOver(-1, "");
+	widget(752, 5).setScriptCallOnMouseExit(-1, "");
+	widget(752, 5).setScriptCallOnAnyWidgetOpenAndClose(-1, "");
+	widget(752, 5).setRGB(0x000080);
+	widget(752, 3).clearChildren();
+	return;
+}

@@ -1,0 +1,31 @@
+void script_1032(DataMap datamap0, int arg1, int arg2) {
+	int int3;
+	int int4;
+	widget(157, 25).setScrollPos(0, 0);
+	widget(157, 24).clearChildren();
+	widget(157, 17).setIsHidden(false);
+	widget(157, 35).setIsHidden(false);
+	widget(157, 30).setScriptCallOnMousePressed(1028, "");
+	widget(157, 30).setText("Shortcut keys");
+	widget(157, 23).clearChildren();
+	widget(157, 25).clearChildren();
+	script_1033(datamap('i', 's', datamap0, arg1));
+	widget(157, 20).setText("Page " + str(arg1 + 1) + " of " + str(arg2));
+	int3 = arg1 + 1;
+	int4 = arg1 - 1;
+	if (arg1 != arg2 - 1) {
+		widget(157, 21).setScriptCallOnMousePressed(784, datamap0, int3, arg2, "gii");
+		widget(157, 21).setTrans(0);
+	} else {
+		widget(157, 21).setScriptCallOnMousePressed(-1, "");
+		widget(157, 21).setTrans(200);
+	}
+	if (arg1 != 0) {
+		widget(157, 22).setScriptCallOnMousePressed(784, datamap0, int4, arg2, "gii");
+		widget(157, 22).setTrans(0);
+	} else {
+		widget(157, 22).setScriptCallOnMousePressed(-1, "");
+		widget(157, 22).setTrans(200);
+	}
+	return;
+}

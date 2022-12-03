@@ -1,0 +1,40 @@
+void script_2421() {
+	widget(674, 13).setModel(46997);
+	widget(674, 15).setModel(46976);
+	widget(674, 14).setModel(46974);
+	widget(674, 16).setModel(46995);
+	widget(674, 17).setModel(46986);
+	if (VARC[737] == 1) {
+		widget(674, 13).setModel(46982);
+		playSoundEffect(6691, 1, 0);
+		widget(674, 10).setIsHidden(true);
+	} else if (VARC[737] == 2) {
+		widget(674, 15).setModel(46979);
+		playSoundEffect(6694, 1, 0);
+		widget(674, 6).setModel(46964);
+	} else if (VARC[737] == 3) {
+		widget(674, 14).setModel(46989);
+		widget(674, 6).setModel(46956);
+	} else if (VARC[737] == 4) {
+		widget(674, 16).setModel(46981);
+		playSoundEffect(6695, 1, 0);
+		widget(674, 6).setModel(46965);
+	} else if (VARC[737] == 5) {
+		widget(674, 17).setModel(46996);
+		playSoundEffect(6690, 1, 0);
+		widget(674, 5).setIsHidden(false);
+	} else if (VARC[737] == 6) {
+		widget(674, 9).setAnimation(11761);
+	} else if (VARC[737] == 7) {
+		widget(674, 9).setAnimation(11760);
+	} else if (VARC[737] == 8) {
+		widget(674, 9).setAnimation(11759);
+	} else if (VARC[737] == 9) {
+		widget(674, 9).setAnimation(11763);
+	} else if (VARC[737] == 10) {
+		widget(674, 9).setAnimation(11764);
+	} else if (VARC[737] == 11) {
+		widget(674, 9).setAnimation(11765);
+	}
+	return;
+}

@@ -1,0 +1,44 @@
+void script_868(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, Widget widget7, Widget widget8, Widget widget9, Widget widget10, Widget widget11, Widget widget12, Widget widget13) {
+	Color color14;
+	Color color15;
+	Color color16;
+	int int17;
+	color14 = script_718(VARC[1441]);
+	color15 = script_718(VARC[1442]);
+	color16 = color(script_715(color14, VARC[1443], color15, VARC[1444]));
+	if (ACTIVE.setChild(widget0)) {
+		ACTIVE.setAttr(718, script_4126(color16));
+		ACTIVE.setRGB(color16);
+	}
+	if (ACTIVE.setChild(widget8)) {
+		ACTIVE.setAttr(718, script_4126(color16));
+		ACTIVE.setRGB(color16);
+	}
+	if (ACTIVE.setChild(widget1)) {
+		ACTIVE.setAttr(718, script_4126(color14));
+		ACTIVE.setRGB(color14);
+	}
+	if (ACTIVE.setChild(widget2)) {
+		ACTIVE.setAttr(718, script_4126(color15));
+		ACTIVE.setRGB(color15);
+	}
+	widget10.setModel(datamap('i', 'm', (DataMap)1595, VARC[1450] / 10));
+	widget11.setModel(datamap('i', 'm', (DataMap)1595, VARC[1450] % 10));
+	int17 = VARC[1441] * VARC[1443] + VARC[1442] * VARC[1444];
+	if (VARC[1450] < int17) {
+		widget13.setSprite(4567);
+	} else if (VARC[1450] > int17) {
+		widget13.setSprite(4568);
+	} else {
+		widget13.setSprite(4565);
+		playSoundEffect2False(3559, 1, 0, 255);
+	}
+	if (color16 == 0xFF00FF) {
+		widget12.setSprite(4565);
+		playSoundEffect2False(3559, 1, 10, 255);
+	} else {
+		widget12.setSprite(4566);
+	}
+	script_2472(widget3, widget4, widget5, widget6, widget7, widget9, (Item)VARP[851], (Item)VARP[852], (DataMap)1109);
+	return;
+}

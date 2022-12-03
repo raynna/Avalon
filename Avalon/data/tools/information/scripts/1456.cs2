@@ -1,0 +1,70 @@
+void script_1456() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	int3 = 8;
+	int4 = 5;
+	int5 = 0;
+	int6 = getItemContainerLength(95);
+	script_1464();
+	int1, int2 = script_1467(int5);
+	while (int5 <= 9) {
+		int0 = int1;
+		if (int5 != 0) {
+			datamap('i', 'I', (DataMap)1611, int5).setIsHidden(false);
+			datamap('i', 'I', (DataMap)1611, int5).setPosition(int3 - 2, int4 - 2, 0, 0);
+		}
+		while (int0 < int2) {
+			if (ACTIVE.setChild(widget(762, 93), int0)) {
+				if (getItemAmtInSlot(95, int0) != 0) {
+					ACTIVE.setPosition(int3, int4, 0, 0);
+					ACTIVE.setHidden(false);
+					int3 = int3 + 44;
+					if (int3 >= 44 * 10) {
+						int3 = 8;
+						int4 = int4 + 44;
+					}
+				} else {
+					int0 = 1000;
+				}
+			}
+			int0 = int0 + 1;
+		}
+		if (int3 != 8) {
+			datamap('i', 'I', (DataMap)1612, int5).setPosition(int3, int4, 0, 0);
+			datamap('i', 'I', (DataMap)1612, int5).setSize(44 * 10 - int3, 32, 0, 0);
+			datamap('i', 'I', (DataMap)1612, int5).setIsHidden(false);
+			int4 = int4 + 44;
+		}
+		if (int5 == 0) {
+			int5 = 2;
+		} else {
+			int5 = int5 + 1;
+		}
+		int1, int2 = script_1467(int5);
+		if (int1 == int2) {
+			int5 = 100;
+		}
+		if (datamap('i', 'I', (DataMap)1610, int5) != null) {
+			datamap('i', 'I', (DataMap)1610, int5).setIsHidden(false);
+			datamap('i', 'I', (DataMap)1610, int5).setPosition(0, int4, 0, 0);
+			int4 = int4 + 15;
+			int3 = 0;
+		}
+	}
+	widget(762, 93).setScrollMax(widget(762, 93).getWidth(), int4);
+	widget(762, 93).setScrollPos(0, VARC[203]);
+	widget(762, 114).clearChildren();
+	if (int4 > widget(762, 93).getHeight()) {
+		script_31(widget(762, 114), widget(762, 93), 792, 789, 790, 791, 773, 788);
+		script_157(widget(762, 114), widget(762, 93), widget(762, 93).getScrollY(), 1);
+	}
+	return;
+}

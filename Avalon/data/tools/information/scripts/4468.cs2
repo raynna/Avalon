@@ -1,0 +1,14 @@
+int script_4468() {
+	int int0;
+	int int1;
+	int0 = -1;
+	int1 = -1;
+	int1 = cs2method3760(removeTags(cs2method5020()));
+	if (int1 >= 0) {
+		int0 = cs2method3757(int1);
+		if (int0 >= cs2method3753()) {
+			return 1;
+		}
+	}
+	return 0;
+}

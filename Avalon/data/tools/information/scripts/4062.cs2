@@ -1,0 +1,5 @@
+void script_4062() {
+	widget(1058, 45).setText("Accept Token Options");
+	widget(1058, 45).setRGB(0x0D0000);
+	return;
+}

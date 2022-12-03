@@ -1,0 +1,6 @@
+void script_1945() {
+	int int0;
+	int0 = VARP[1332] + VARP[1334] + VARP[1337] + 2 * (VARP[1333] - VARP[1335]);
+	widget(802, 8).setText("Score: " + str(int0));
+	return;
+}

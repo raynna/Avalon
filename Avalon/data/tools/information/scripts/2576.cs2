@@ -1,0 +1,26 @@
+void script_2576(Widget widget0, Widget widget1) {
+	string str0;
+	str0 = "";
+	switch (widget0) {
+		case widget(781, 42):
+		case widget(781, 33):
+			str0 = "How much time is left for this round.";
+			break;
+		case widget(781, 43):
+		case widget(781, 34):
+			str0 = "How many orbs the green team have captured this round.";
+			break;
+		case widget(781, 44):
+		case widget(781, 35):
+			str0 = "How many orbs the yellow team have captured this round.";
+			break;
+		case widget(781, 46):
+		case widget(781, 37):
+			str0 = "How active you have been during this round.";
+			break;
+		default:
+			return;
+	}
+	script_39(widget0, widget1, str0, 25, widget1.getLayer().getWidth());
+	return;
+}

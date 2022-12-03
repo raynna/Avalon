@@ -1,0 +1,5 @@
+void script_137(Widget widget0, Widget widget1) {
+	widget0.setScriptCallOnGameloop(250, widget1, "I");
+	script_251(widget1);
+	return;
+}

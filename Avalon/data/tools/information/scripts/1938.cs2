@@ -1,0 +1,9 @@
+void script_1938() {
+	VARC[556] = getClientCycle() + 2000 * 30;
+	VARC[559] = 255;
+	VARC[560] = 0;
+	VARC[561] = 0;
+	VARC[562] = 0;
+	widget(809, 15).setTextAntiMacro(false);
+	return;
+}

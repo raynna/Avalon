@@ -1,0 +1,12 @@
+void script_2983(Widget arg0) {
+	Location location1;
+	location1 = script_284(getMyLocation());
+	cs2method5405(0, 2);
+	cs2method5405(1, 2);
+	cs2method5406(0, 0, moveCoord(location1, 26, 0, 23), 500, moveCoord(location1, 26, 0, 23), 500, 0);
+	cs2method5406(1, 0, moveCoord(location1, 12, 0, 30), 400, moveCoord(location1, 12, 0, 30), 400, 0);
+	cs2method5406(0, 1, moveCoord(location1, 30, 0, 25), 900, moveCoord(location1, 30, 0, 25), 900, 0);
+	cs2method5406(1, 1, moveCoord(location1, 30, 0, 33), 500, moveCoord(location1, 30, 0, 33), 500, 0);
+	cameraMethod5502(0, 0, 450, 950, 1, 0);
+	return;
+}

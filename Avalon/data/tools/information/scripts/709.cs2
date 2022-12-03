@@ -1,0 +1,8 @@
+void script_709(Widget widget0) {
+	if (getDisplayMode() >= 2) {
+		widget0.setSize(widget(746, 9).getWidth(), widget(746, 9).getHeight(), 0, 0);
+	} else {
+		widget0.setSize(widget(548, 8).getWidth(), widget(548, 8).getHeight(), 0, 0);
+	}
+	return;
+}

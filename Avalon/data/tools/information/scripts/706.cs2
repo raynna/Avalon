@@ -1,0 +1,26 @@
+int script_706(int arg0) {
+	if (arg0 < 1 || arg0 > 9) {
+		return 0;
+	}
+	switch (arg0) {
+		case 1:
+			return 516 - VARPBIT[4885] - VARPBIT[4886] - VARPBIT[4887] - VARPBIT[4888] - VARPBIT[4889] - VARPBIT[4890] - VARPBIT[4891] - VARPBIT[4892];
+		case 2:
+			return VARPBIT[4885];
+		case 3:
+			return VARPBIT[4886];
+		case 4:
+			return VARPBIT[4887];
+		case 5:
+			return VARPBIT[4888];
+		case 6:
+			return VARPBIT[4889];
+		case 7:
+			return VARPBIT[4890];
+		case 8:
+			return VARPBIT[4891];
+		case 9:
+			return VARPBIT[4892];
+	}
+	return 0;
+}

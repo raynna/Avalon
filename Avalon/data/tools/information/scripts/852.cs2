@@ -1,0 +1,36 @@
+int script_852(int arg0) {
+	if (arg0 == 10) {
+		return 0;
+	}
+	if (arg0 == 0) {
+		return VARPBIT[4401];
+	}
+	if (arg0 == 1) {
+		return VARPBIT[4405];
+	}
+	if (arg0 == 2) {
+		return VARPBIT[4409];
+	}
+	if (arg0 == 3) {
+		return VARPBIT[4413];
+	}
+	if (arg0 == 4) {
+		return VARPBIT[4417];
+	}
+	if (arg0 == 5) {
+		return VARPBIT[4421];
+	}
+	if (arg0 == 6) {
+		return VARPBIT[4425];
+	}
+	if (arg0 == 7) {
+		return VARPBIT[4431];
+	}
+	if (arg0 == 8) {
+		return VARPBIT[4433];
+	}
+	if (arg0 == 9) {
+		return VARPBIT[4437];
+	}
+	return 0;
+}

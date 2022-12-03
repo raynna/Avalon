@@ -1,0 +1,83 @@
+void script_4688() {
+	int int0;
+	int int1;
+	Widget widget2;
+	Widget widget3;
+	Widget widget4;
+	Widget widget5;
+	Widget widget6;
+	int int7;
+	int0 = 0;
+	int1 = 0;
+	widget2 = null;
+	widget3 = null;
+	widget4 = null;
+	widget5 = null;
+	widget6 = null;
+	int7 = 1;
+	while (int7 < 5) {
+		switch (int7) {
+			case 1:
+				widget6 = widget(551, 18);
+				int0 = VARC[1549];
+				int1 = datamap('i', 'i', (DataMap)3856, int7);
+				widget2 = widget(551, 17);
+				widget3 = widget(551, 19);
+				widget4 = widget(551, 15);
+				widget5 = widget(551, 16);
+				break;
+			case 2:
+				widget6 = widget(551, 44);
+				int0 = VARC[1550];
+				int1 = datamap('i', 'i', (DataMap)3856, int7);
+				widget2 = widget(551, 43);
+				widget3 = widget(551, 45);
+				widget4 = widget(551, 41);
+				widget5 = widget(551, 42);
+				break;
+			case 3:
+				widget6 = widget(551, 58);
+				int0 = VARC[1551];
+				int1 = datamap('i', 'i', (DataMap)3856, int7);
+				widget2 = widget(551, 57);
+				widget3 = widget(551, 59);
+				widget4 = widget(551, 55);
+				widget5 = widget(551, 56);
+				break;
+			case 4:
+				widget6 = widget(551, 72);
+				int0 = VARC[1552];
+				int1 = datamap('i', 'i', (DataMap)3856, int7);
+				widget2 = widget(551, 71);
+				widget3 = widget(551, 73);
+				widget4 = widget(551, 69);
+				widget5 = widget(551, 70);
+				break;
+			default:
+				return;
+		}
+		if (ACTIVE.setChild(widget6)) {
+			if (int0 > 0) {
+				ACTIVE.setHidden(false);
+				ACTIVE.setFilled(true);
+				ACTIVE.setSize(ACTIVE.getWidth(), int0 * 26 / 100, 0, 0);
+			} else {
+				ACTIVE.setHidden(true);
+				ACTIVE.setFilled(false);
+				ACTIVE.setSize(ACTIVE.getWidth(), 26, 0, 0);
+			}
+		}
+		if (int0 > 0 || VARPBIT[9465] < int1) {
+			widget3.setIsHidden(false);
+			widget4.setRGB(0x7D7D7D);
+			widget5.setRGB(0x7D7D7D);
+		} else {
+			widget2.setRGB(0x000000);
+			widget3.setIsHidden(true);
+			widget4.setRGB(0xEBE0BC);
+			widget5.setRGB(0xEBE0BC);
+		}
+		int7 = int7 + 1;
+	}
+	return;
+}

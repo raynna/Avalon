@@ -1,0 +1,12 @@
+int script_807(Skill skill0) {
+	int int1;
+	int1 = 0;
+	if (getSkillActualLvl(skill0) > 0) {
+		if (skill0 == 5) {
+			int1 = 100 * VARPBIT[9816] / script_5255();
+		} else {
+			int1 = 100 * getSkillCurrentLvl(skill0) / getSkillActualLvl(skill0);
+		}
+	}
+	return int1;
+}

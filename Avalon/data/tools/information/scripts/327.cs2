@@ -1,0 +1,6 @@
+void script_327(Widget widget0) {
+	VARC[783] = 0;
+	widget(725, 83).setModel(null);
+	script_328(widget0);
+	return;
+}

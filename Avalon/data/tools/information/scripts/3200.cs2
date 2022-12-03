@@ -1,0 +1,18 @@
+void script_3200(int arg0) {
+	if (length(STRING[279]) > 0) {
+		cs2method5002(STRING[279], arg0, VARC[6], "");
+	}
+	script_3194();
+	if (length(STRING[279]) > 0 && !cs2method3623(STRING[279]) && compare(STRING[279], cs2method5015()) != 0) {
+		if (arg0 == 5) {
+			VARC[1094] = 1;
+		}
+		script_3203();
+	} else {
+		VARC[1094] = 0;
+		if (arg0 == 5) {
+			script_2190("", "Open a bug report form?" + "<br>" + "(opens a new window)", 0, 6, "", "", 1);
+		}
+	}
+	return;
+}

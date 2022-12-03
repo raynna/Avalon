@@ -1,0 +1,67 @@
+void script_1442() {
+	switch (VARP[75]) {
+		case 0:
+			return;
+		case 1:
+			widget(299, 55).setIsHidden(false);
+			widget(299, 54).setAnimation(632);
+			break;
+		case 2:
+			widget(299, 47).setIsHidden(false);
+			widget(299, 53).setAnimation(633);
+			break;
+		case 3:
+			widget(299, 45).setIsHidden(false);
+			widget(299, 56).setAnimation(630);
+			break;
+		case 5:
+			widget(299, 44).setIsHidden(false);
+			widget(299, 58).setAnimation(634);
+			break;
+		case 6:
+			widget(299, 43).setIsHidden(false);
+			widget(299, 59).setAnimation(635);
+			break;
+		case 7:
+			widget(299, 42).setIsHidden(false);
+			widget(299, 60).setAnimation(636);
+			break;
+		case 8:
+			widget(299, 41).setIsHidden(false);
+			widget(299, 61).setAnimation(637);
+			break;
+		case 10:
+			widget(299, 39).setIsHidden(false);
+			widget(299, 63).setAnimation(638);
+			break;
+		case 11:
+			widget(299, 38).setIsHidden(false);
+			widget(299, 64).setAnimation(639);
+			break;
+		case 12:
+			widget(299, 37).setIsHidden(false);
+			widget(299, 65).setAnimation(640);
+			break;
+		case 13:
+			widget(299, 36).setIsHidden(false);
+			widget(299, 66).setAnimation(641);
+			break;
+		case 14:
+			widget(299, 35).setIsHidden(false);
+			widget(299, 67).setAnimation(3545);
+			break;
+		case 15:
+			widget(299, 34).setIsHidden(false);
+			widget(299, 68).setAnimation(3546);
+			break;
+		case 16:
+			widget(299, 33).setIsHidden(false);
+			widget(299, 69).setAnimation(3476);
+			break;
+		case 17:
+			widget(299, 32).setIsHidden(false);
+			widget(299, 52).setAnimation(3477);
+			break;
+	}
+	return;
+}

@@ -1,0 +1,8 @@
+void script_2074() {
+	if (VARC[632] == 0) {
+		widget(837, 8).setText("Players needed");
+	} else {
+		widget(837, 8).setText("Players in game");
+	}
+	return;
+}

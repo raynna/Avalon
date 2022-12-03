@@ -1,0 +1,9 @@
+int script_1530() {
+	int int0;
+	int0 = 0;
+	int0 = VARPBIT[3600] + VARPBIT[3601] + VARPBIT[3602] + VARPBIT[3603] + VARPBIT[3604] + VARPBIT[3605] + VARPBIT[3606] + VARPBIT[3608] + VARPBIT[3609];
+	if (VARPBIT[3607] == 5) {
+		int0 = int0 + 1;
+	}
+	return int0;
+}

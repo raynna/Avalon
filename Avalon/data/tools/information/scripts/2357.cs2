@@ -1,0 +1,18 @@
+void script_2357(Widget widget0) {
+	Widget widget1;
+	int int2;
+	int int3;
+	widget0.sendChildFront();
+	if (VARP[1893] == -1) {
+		return;
+	}
+	widget1 = datamap('I', 'I', (DataMap)1592, widget(VARP[1893]));
+	int2 = widget0.getX();
+	int3 = widget0.getY();
+	if (widget0 == widget(1053, 82)) {
+		int2 = int2 + widget0.getWidth() / 2 - widget1.getWidth() / 2;
+		int3 = int3 + widget0.getHeight() / 2 - widget1.getHeight() / 2;
+	}
+	widget1.setPosition(int2, int3, 0, 0);
+	return;
+}

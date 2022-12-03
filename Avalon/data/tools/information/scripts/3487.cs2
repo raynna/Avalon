@@ -1,0 +1,14 @@
+boolean script_3487(int arg0) {
+	int int1;
+	int int2;
+	if (arg0 < 0 || arg0 > 63) {
+		return false;
+	}
+	int1 = 0;
+	int2 = 0;
+	int2, int1 = getUserflowParam();
+	if (arg0 < 32) {
+		return script_734(isBitFlagged(int1, arg0));
+	}
+	return script_734(isBitFlagged(int2, arg0 - 32));
+}

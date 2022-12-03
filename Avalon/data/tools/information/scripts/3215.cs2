@@ -1,0 +1,10 @@
+void script_3215(int arg0) {
+	if (arg0 == 1) {
+		widget(548, 99).setContextMenuOption(1, "Microtutorial");
+		widget(746, 47).setContextMenuOption(1, "Microtutorial");
+	} else {
+		widget(548, 99).setContextMenuOption(1, "");
+		widget(746, 47).setContextMenuOption(1, "");
+	}
+	return;
+}

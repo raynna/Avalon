@@ -1,0 +1,17 @@
+void script_608() {
+	if (ACTIVE.setChild(widget(662, 74), 0)) {
+		ACTIVE.setOptionBase("<col=00ff00>" + STRING[204]);
+		ACTIVE.setTargetVerb("Cast");
+		if (VARC[1436] == 1) {
+			ACTIVE.setContextMenuOption(1, "Cast");
+		}
+	}
+	if (ACTIVE.setChild(widget(747, 17), 0)) {
+		ACTIVE.setOptionBase("<col=00ff00>" + STRING[204]);
+		ACTIVE.setTargetVerb("Cast");
+		if (VARC[1436] == 1) {
+			ACTIVE.setContextMenuOption(1, "Cast");
+		}
+	}
+	return;
+}

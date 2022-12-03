@@ -1,0 +1,16 @@
+void script_1359(Widget widget0) {
+	if (VARC[1024] == VARPBIT[6521] && VARC[1024] != 0) {
+		if (widget0 == widget(192, 25) || widget0 == widget(192, 98)) {
+			if (VARC[1024] == 28) {
+				widget(192, 98).setScriptCallOnGameloop(1427, widget0, "I");
+			} else {
+				widget(192, 25).setScriptCallOnGameloop(1427, widget0, "I");
+			}
+		} else {
+			widget0.setScriptCallOnGameloop(1427, widget0, "I");
+		}
+	} else {
+		widget0.setScriptCallOnGameloop(-1, "");
+	}
+	return;
+}

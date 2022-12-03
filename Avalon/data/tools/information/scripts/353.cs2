@@ -1,0 +1,10 @@
+void script_353(int arg0) {
+	playSoundEffect(9824, 1, 0);
+	if (arg0 == 1 && VARPBIT[8246] == 1) {
+		VARPBIT[8247] = 1;
+		widget(1028, 117).setIsHidden(false);
+		script_2741();
+	}
+	script_386(arg0);
+	return;
+}

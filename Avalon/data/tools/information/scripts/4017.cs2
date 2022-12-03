@@ -1,0 +1,33 @@
+void script_4017(int arg0) {
+	string str0;
+	string str1;
+	widget(917, 121).setText(datamap('i', 's', (DataMap)3487, arg0));
+	str0 = "Click to hide completed Tasks.";
+	str1 = "Click to hide Tasks which are not in a set.";
+	if (VARPBIT[8579] == 1) {
+		widget(917, 106).setScriptCallOnClickContextMenu(3983, 999, 0, 999, "iii");
+		str0 = "Click to show completed Tasks.";
+	} else {
+		widget(917, 106).setScriptCallOnClickContextMenu(3983, 999, 1, 999, "iii");
+	}
+	widget(917, 106).setScriptCallOnMouseOver(38, widget(917, 94), widget(917, 97), str0, 45, 150, "IIsii");
+	if (VARPBIT[8580] == 1) {
+		widget(917, 114).setScriptCallOnClickContextMenu(3983, 999, 999, 0, "iii");
+		str1 = "Click to show Tasks which are not in a set.";
+	} else {
+		widget(917, 114).setScriptCallOnClickContextMenu(3983, 999, 999, 1, "iii");
+	}
+	widget(917, 114).setScriptCallOnMouseOver(38, widget(917, 94), widget(917, 97), str1, 45, 150, "IIsii");
+	if (VARC[1429] == 1) {
+		widget(917, 142).setSprite(4086);
+		widget(917, 142).setScriptCallOnMouseEntered(4033, 0, 1, "ii");
+		widget(917, 142).setScriptCallOnMouseExit(4033, 1, 1, "ii");
+		widget(917, 142).setContextMenuOption(1, "Turn-on");
+	} else {
+		widget(917, 142).setSprite(4084);
+		widget(917, 142).setScriptCallOnMouseEntered(4033, 0, 0, "ii");
+		widget(917, 142).setScriptCallOnMouseExit(4033, 1, 0, "ii");
+		widget(917, 142).setContextMenuOption(1, "Turn-off");
+	}
+	return;
+}

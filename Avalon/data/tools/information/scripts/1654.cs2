@@ -1,0 +1,7 @@
+void script_1654() {
+	if (VARC[193] <= getClientCycle()) {
+		VARC[193] = getClientCycle() + 10;
+		widget(762, 93).setScriptCallOnGameloop(1452, VARC[193], "i");
+	}
+	return;
+}

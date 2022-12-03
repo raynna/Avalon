@@ -1,0 +1,8 @@
+void script_3659(Widget widget0) {
+	if (script_3666(10) == script_3668(10)) {
+		script_3633(widget0);
+	} else {
+		script_3634(widget0);
+	}
+	return;
+}

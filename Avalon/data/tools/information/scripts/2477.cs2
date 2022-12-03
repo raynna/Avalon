@@ -1,0 +1,36 @@
+void script_2477() {
+	if (VARPBIT[6348] == 28) {
+		widget(854, 1).setRGB(0xFFFF33);
+	} else {
+		widget(854, 1).setRGB(0x00FF00);
+	}
+	if (VARPBIT[6348] < 30) {
+		widget(854, 2).setRGB(0xFF0000);
+	} else if (VARPBIT[6348] == 30) {
+		widget(854, 2).setRGB(0xFFFF33);
+	} else {
+		widget(854, 2).setRGB(0x00FF00);
+	}
+	if (VARPBIT[6348] < 32) {
+		widget(854, 3).setRGB(0xFF0000);
+	} else if (VARPBIT[6348] == 32) {
+		widget(854, 3).setRGB(0xFFFF33);
+	} else {
+		widget(854, 3).setRGB(0x00FF00);
+	}
+	if (VARPBIT[6348] < 34) {
+		widget(854, 4).setRGB(0xFF0000);
+	} else if (VARPBIT[6348] == 34) {
+		widget(854, 4).setRGB(0xFFFF33);
+	} else {
+		widget(854, 4).setRGB(0x00FF00);
+	}
+	if (VARPBIT[6348] < 36) {
+		widget(854, 5).setRGB(0xFF0000);
+	} else if (VARPBIT[6348] == 36) {
+		widget(854, 5).setRGB(0xFFFF33);
+	} else {
+		widget(854, 5).setRGB(0x00FF00);
+	}
+	return;
+}

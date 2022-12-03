@@ -1,0 +1,23 @@
+int script_704(int arg0) {
+	switch (arg0) {
+		case 1:
+			return VARC[203];
+		case 2:
+			return VARC[204];
+		case 3:
+			return VARC[205];
+		case 4:
+			return VARC[206];
+		case 5:
+			return VARC[207];
+		case 6:
+			return VARC[208];
+		case 7:
+			return VARC[209];
+		case 8:
+			return VARC[210];
+		case 9:
+			return VARC[211];
+	}
+	return 0;
+}

@@ -1,0 +1,11 @@
+string script_821() {
+	string str0;
+	str0 = "";
+	str0 = script_822(VARPBIT[1043], 1, str0);
+	str0 = script_822(VARPBIT[1044], 0, str0);
+	str0 = script_822(VARPBIT[1045], 0, str0);
+	str0 = script_822(VARPBIT[1046], 0, str0);
+	str0 = script_822(VARPBIT[1047], 0, str0);
+	str0 = script_822(VARPBIT[1048], 0, str0);
+	return str0;
+}

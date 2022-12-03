@@ -1,0 +1,4 @@
+void script_4687() {
+	widget(551, 22).setText("Morale: " + str(VARPBIT[9465]));
+	return;
+}

@@ -1,0 +1,10 @@
+void script_1621(Widget widget0, int arg1, int arg2, int arg3) {
+	if (getClientCycle() < arg3) {
+		return;
+	}
+	if (ACTIVE.setChild(widget0, arg1) || arg1 == -1 && ACTIVE.setChild(widget0)) {
+		ACTIVE.setTrans(arg2);
+		ACTIVE.setScriptCallOnGameloop(-1, "");
+	}
+	return;
+}

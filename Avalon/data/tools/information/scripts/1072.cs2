@@ -1,0 +1,30 @@
+void script_1072(Widget arg0, QcPhrase qcphrase1) {
+	int int2;
+	int int3;
+	int2 = cs2method5066(qcphrase1);
+	int3 = 0;
+	if (int2 > 0) {
+		while (VARC[134] < int2 && VARC[134] < 10) {
+			int3 = cs2method5067(qcphrase1, VARC[134]);
+			if (int3 == 0) {
+				script_1044(qcphrase1);
+				return;
+			}
+			if (int3 == 1) {
+				script_1037(qcphrase1, 0);
+				return;
+			}
+			if (int3 == 10) {
+				script_1037(qcphrase1, 1);
+				return;
+			}
+			if (int3 == 2) {
+				script_1047(qcphrase1);
+				return;
+			}
+			VARC[134] = VARC[134] + 1;
+		}
+	}
+	script_1077(qcphrase1);
+	return;
+}

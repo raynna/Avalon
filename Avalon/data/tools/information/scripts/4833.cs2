@@ -1,0 +1,38 @@
+void script_4833(int arg0) {
+	Widget widget1;
+	widget1 = null;
+	switch (arg0) {
+		case 71566495:
+			widget1 = widget(1092, 1188);
+			break;
+		case 71566419:
+			widget1 = widget(1092, 1112);
+			break;
+		case 71566337:
+			widget1 = widget(1092, 1030);
+			break;
+		case 71566483:
+			widget1 = widget(1092, 1176);
+			break;
+		case 71566405:
+			widget1 = widget(1092, 1098);
+			break;
+		case 71566321:
+			widget1 = widget(1092, 1014);
+			break;
+		case 71566471:
+			widget1 = widget(1092, 1164);
+			break;
+		case 71566391:
+			widget1 = widget(1092, 1084);
+			break;
+		case 71566305:
+			widget1 = widget(1092, 998);
+			break;
+	}
+	script_4834(widget1);
+	script_4838();
+	script_4810();
+	script_4814();
+	return;
+}

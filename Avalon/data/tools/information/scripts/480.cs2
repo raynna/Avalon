@@ -1,0 +1,63 @@
+void script_480() {
+	widget(1015, 144).setText(script_483(VARPBIT[7520]));
+	if (VARPBIT[7520] > 0) {
+		widget(1015, 144).setRGB(0xE6CA98);
+	} else {
+		widget(1015, 144).setRGB(0x585042);
+	}
+	widget(1015, 146).setText(script_483(VARPBIT[7521]));
+	if (VARPBIT[7521] > 0) {
+		widget(1015, 146).setRGB(0xE6CA98);
+	} else {
+		widget(1015, 146).setRGB(0x585042);
+	}
+	widget(1015, 148).setText(script_483(VARPBIT[7526]));
+	if (VARPBIT[7526] > 0) {
+		widget(1015, 148).setRGB(0xE6CA98);
+	} else {
+		widget(1015, 148).setRGB(0x585042);
+	}
+	widget(1015, 150).setText(script_483(VARPBIT[7527]));
+	if (VARPBIT[7527] > 0) {
+		widget(1015, 150).setRGB(0xE6CA98);
+	} else {
+		widget(1015, 150).setRGB(0x585042);
+	}
+	widget(1015, 152).setText(script_483(VARPBIT[7530]));
+	if (VARPBIT[7530] > 0) {
+		widget(1015, 152).setRGB(0xE6CA98);
+	} else {
+		widget(1015, 152).setRGB(0x585042);
+	}
+	widget(1015, 154).setText(script_483(VARPBIT[7531]));
+	if (VARPBIT[7531] > 0) {
+		widget(1015, 154).setRGB(0xE6CA98);
+	} else {
+		widget(1015, 154).setRGB(0x585042);
+	}
+	widget(1015, 156).setText(script_483(VARPBIT[7532]));
+	if (VARPBIT[7532] > 0) {
+		widget(1015, 156).setRGB(0xE6CA98);
+	} else {
+		widget(1015, 156).setRGB(0x585042);
+	}
+	widget(1015, 158).setText(script_483(VARPBIT[7533]));
+	if (VARPBIT[7533] > 0) {
+		widget(1015, 158).setRGB(0xE6CA98);
+	} else {
+		widget(1015, 158).setRGB(0x585042);
+	}
+	widget(1015, 160).setText(script_483(VARPBIT[7534]));
+	if (VARPBIT[7534] > 0) {
+		widget(1015, 160).setRGB(0xE6CA98);
+	} else {
+		widget(1015, 160).setRGB(0x585042);
+	}
+	widget(1015, 162).setText(script_483(VARPBIT[7535]));
+	if (VARPBIT[7535] > 0) {
+		widget(1015, 162).setRGB(0xE6CA98);
+	} else {
+		widget(1015, 162).setRGB(0x585042);
+	}
+	return;
+}

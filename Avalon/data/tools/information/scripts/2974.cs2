@@ -1,0 +1,23 @@
+void script_2974(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int1 = widget0.getRotateY();
+	int2 = widget0.getRotateX();
+	int3 = widget0.getRotateZ();
+	int4 = widget0.get3DDistance();
+	int5 = widget0.getModelXOffset();
+	int6 = widget0.getModelYOffset();
+	int7 = 0;
+	if (int1 == 2047) {
+		int7 = 0;
+	} else {
+		int7 = int1 + 1;
+	}
+	widget0.set3DRotation(int5, int6, int2, int7, int3, int4);
+	return;
+}

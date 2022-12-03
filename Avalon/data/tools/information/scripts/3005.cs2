@@ -1,0 +1,126 @@
+void script_3005(int arg0, int arg1) {
+	Widget widget2;
+	int int3;
+	int int4;
+	Widget widget5;
+	widget2 = widget(script_3012(arg1));
+	int3 = widget2.getHeight();
+	int4 = int3 - 3;
+	if (int3 > 30) {
+		if (int4 < 30) {
+			widget2.setSize(0, 30, 1, 0);
+		} else {
+			widget2.setSize(0, int4, 1, 0);
+		}
+		switch (arg1) {
+			case 0:
+				int4 = widget(907, 4).getY() - 3;
+				if (int4 < 30) {
+					widget(907, 4).setPosition(0, 30, 0, 0);
+				} else {
+					widget(907, 4).setPosition(0, int4, 0, 0);
+				}
+				int4 = widget(907, 5).getY() - 3;
+				if (int4 < 30 * 2) {
+					widget(907, 5).setPosition(0, 30 * 2, 0, 0);
+				} else {
+					widget(907, 5).setPosition(0, int4, 0, 0);
+				}
+				int4 = widget(907, 43).getY() - 3;
+				if (int4 < 30 * 3) {
+					widget(907, 43).setPosition(0, 30 * 3, 0, 0);
+				} else {
+					widget(907, 43).setPosition(0, int4, 0, 0);
+				}
+				break;
+			case 1:
+				int4 = widget(907, 5).getY() - 3;
+				if (int4 < 30 * 2) {
+					widget(907, 5).setPosition(0, 30 * 2, 0, 0);
+				} else {
+					widget(907, 5).setPosition(0, int4, 0, 0);
+				}
+				int4 = widget(907, 43).getY() - 3;
+				if (int4 < 30 * 3) {
+					widget(907, 43).setPosition(0, 30 * 3, 0, 0);
+				} else {
+					widget(907, 43).setPosition(0, int4, 0, 0);
+				}
+				break;
+			case 2:
+				int4 = widget(907, 43).getY() - 3;
+				if (int4 < 30 * 3) {
+					widget(907, 43).setPosition(0, 30 * 3, 0, 0);
+				} else {
+					widget(907, 43).setPosition(0, int4, 0, 0);
+				}
+				break;
+		}
+	}
+	widget5 = widget(script_3012(arg0));
+	int3 = widget5.getHeight();
+	int4 = int3 + 3;
+	if (int3 < 88) {
+		if (int4 > 88) {
+			widget5.setSize(0, 88, 1, 0);
+		} else {
+			widget5.setSize(0, int4, 1, 0);
+		}
+		switch (arg0) {
+			case 0:
+				int4 = widget(907, 4).getY() + 3;
+				if (int4 > 88) {
+					widget(907, 4).setPosition(0, 88, 0, 0);
+				} else {
+					widget(907, 4).setPosition(0, int4, 0, 0);
+				}
+				int4 = widget(907, 5).getY() + 3;
+				if (int4 > 88 + 30) {
+					widget(907, 5).setPosition(0, 88 + 30, 0, 0);
+				} else {
+					widget(907, 5).setPosition(0, int4, 0, 0);
+				}
+				int4 = widget(907, 43).getY() + 3;
+				if (int4 > 88 + 30 * 2) {
+					widget(907, 43).setPosition(0, 88 + 30 * 2, 0, 0);
+				} else {
+					widget(907, 43).setPosition(0, int4, 0, 0);
+				}
+				break;
+			case 1:
+				int4 = widget(907, 5).getY() + 3;
+				if (int4 > 88 + 30) {
+					widget(907, 5).setPosition(0, 88 + 30, 0, 0);
+				} else {
+					widget(907, 5).setPosition(0, int4, 0, 0);
+				}
+				int4 = widget(907, 43).getY() + 3;
+				if (int4 > 88 + 30 * 2) {
+					widget(907, 43).setPosition(0, 88 + 30 * 2, 0, 0);
+				} else {
+					widget(907, 43).setPosition(0, int4, 0, 0);
+				}
+				break;
+			case 2:
+				int4 = widget(907, 43).getY() + 3;
+				if (int4 > 88 + 30 * 2) {
+					widget(907, 43).setPosition(0, 88 + 30 * 2, 0, 0);
+				} else {
+					widget(907, 43).setPosition(0, int4, 0, 0);
+				}
+				break;
+		}
+	} else {
+		widget(907, 2).setScriptCallOnGameloop(-1, "");
+		if (script_3013(arg1).getSpriteId() == 2669) {
+			script_3008((int, int, int, int, int, int, int)script_3011(arg1));
+		} else {
+			script_3010((int, int, int, int, int, int, int)script_3011(arg1));
+		}
+		widget(907, 55).setScriptCallOnMousePressed(3002, 3, "i");
+		widget(907, 17).setScriptCallOnMousePressed(3002, 2, "i");
+		widget(907, 29).setScriptCallOnMousePressed(3002, 1, "i");
+		widget(907, 41).setScriptCallOnMousePressed(3002, 0, "i");
+	}
+	return;
+}

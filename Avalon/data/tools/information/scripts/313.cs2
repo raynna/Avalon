@@ -1,0 +1,33 @@
+void script_313(Widget widget0) {
+	string str0;
+	script_333(widget(1028, 30), 0x746242, 0xE6E0BA, 0, 0);
+	script_333(widget(1028, 33), 0xC6B68F, 0xE6E0BA, 0, 0);
+	widget(1028, 118).setSprite(4129);
+	widget(1028, 120).setSprite(4129);
+	script_2741();
+	widget(1028, 115).setScriptCallOnClickContextMenu(353, true, "1");
+	widget(1028, 116).setScriptCallOnClickContextMenu(353, false, "1");
+	widget(1028, 38).setScriptCallOnClickContextMenu(350, CTX_MENU_OPTION, false, "i1");
+	widget(1028, 39).setScriptCallOnClickContextMenu(350, CTX_MENU_OPTION, true, "i1");
+	script_385(null);
+	str0 = widget(1028, 102).getOption(1);
+	script_368(widget(1028, 102), str0, getTextWidth(str0, 495) + 30, "");
+	widget(1028, 102).setScriptCallOnClickContextMenu(358, CTX_MENU_OPTION, "i");
+	widget(1028, 95).setScriptCallOnClickContextMenu(354, CTX_MENU_OPTION, 0, "ii");
+	widget(1028, 96).setScriptCallOnClickContextMenu(354, CTX_MENU_OPTION, 1, "ii");
+	widget(1028, 100).setScriptCallOnClickContextMenu(354, CTX_MENU_OPTION, 2, "ii");
+	widget(1028, 97).setScriptCallOnClickContextMenu(354, CTX_MENU_OPTION, 3, "ii");
+	widget(1028, 98).setScriptCallOnClickContextMenu(354, CTX_MENU_OPTION, 6, "ii");
+	widget(1028, 99).setScriptCallOnClickContextMenu(354, CTX_MENU_OPTION, 7, "ii");
+	widget(1028, 112).setSelfFull();
+	widget(1028, 112).set3DRotation(-30, 135, 18, 4, 0, 325);
+	widget(1028, 113).set3DRotation(-30, 135, 18, 4, 0, 325);
+	VARC[196] = VARPBIT[8093];
+	VARC[197] = VARPBIT[8089];
+	VARC[86] = VARPBIT[8090];
+	VARC[1020] = VARPBIT[6501];
+	script_386(0);
+	widget0.setScriptCallOnConfigChange(315, 1158, 1363, "Y");
+	widget0.setScriptCallOnGlobalConfigChange(349, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, "Y");
+	return;
+}

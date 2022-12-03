@@ -1,0 +1,25 @@
+void script_4097(Widget widget0, int arg1, string string2) {
+	widget0.clearChildren();
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(8, arg1, 0, 0);
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setSprite(4514);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(8, arg1, 0, 0);
+	ACTIVE.setPosition(0, 0, 2, 0);
+	ACTIVE.setSprite(4516);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(16, arg1, 1, 0);
+	ACTIVE.setPosition(0, 0, 1, 0);
+	ACTIVE.setSprite(4515);
+	ACTIVE.createChild(widget0, 4, widget0.nextChild());
+	ACTIVE.setSize(20, arg1, 1, 0);
+	ACTIVE.setPosition(0, 1, 1, 0);
+	ACTIVE.setFont(494);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setText(string2);
+	widget0.setIsHidden(false);
+	return;
+}

@@ -1,0 +1,34 @@
+void script_3929(Widget widget0, int arg1, int arg2) {
+	if (arg2 == 1) {
+		if (ACTIVE.setChild(widget0, 0)) {
+			ACTIVE.setSprite(4038);
+		}
+		if (ACTIVE.setChild(widget0, 1)) {
+			ACTIVE.setSprite(4032);
+		}
+		if (ACTIVE.setChild(widget0, 2)) {
+			ACTIVE.setSprite(4035);
+		}
+	} else if (cs2method7007() == arg1) {
+		if (ACTIVE.setChild(widget0, 0)) {
+			ACTIVE.setSprite(4039);
+		}
+		if (ACTIVE.setChild(widget0, 1)) {
+			ACTIVE.setSprite(4033);
+		}
+		if (ACTIVE.setChild(widget0, 2)) {
+			ACTIVE.setSprite(4036);
+		}
+	} else {
+		if (ACTIVE.setChild(widget0, 0)) {
+			ACTIVE.setSprite(4037);
+		}
+		if (ACTIVE.setChild(widget0, 1)) {
+			ACTIVE.setSprite(4031);
+		}
+		if (ACTIVE.setChild(widget0, 2)) {
+			ACTIVE.setSprite(4034);
+		}
+	}
+	return;
+}

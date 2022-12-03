@@ -1,0 +1,7 @@
+Sprite script_4904(int arg0, int arg1, int arg2) {
+	DataMap datamap3;
+	DataMap datamap4;
+	datamap3 = datamap('i', 'g', (DataMap)3997, arg0);
+	datamap4 = datamap('i', 'g', datamap3, arg1);
+	return datamap('i', 'd', datamap4, arg2);
+}

@@ -1,0 +1,12 @@
+void script_5348(Widget widget0) {
+	string str0;
+	str0 = "";
+	if (VARC[1648] > 0) {
+		str0 = formatNumber(VARC[1648], 1);
+	} else {
+		VARC[1648] = 0;
+		str0 = "0";
+	}
+	widget0.setText(str0);
+	return;
+}

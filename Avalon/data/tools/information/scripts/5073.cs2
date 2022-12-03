@@ -1,0 +1,9 @@
+void script_5073(boolean boolean0) {
+	widget(1111, 21).setIsHidden(boolean0);
+	if (boolean0) {
+		widget(1111, 120).setIsHidden(false);
+	} else {
+		widget(1111, 120).setIsHidden(true);
+	}
+	return;
+}

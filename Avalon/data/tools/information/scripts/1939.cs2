@@ -1,0 +1,4 @@
+void script_1939() {
+	VARC[556] = getClientCycle() + VARC[558] * 30;
+	return;
+}

@@ -1,0 +1,87 @@
+void script_5067() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	AttrMap attrmap4;
+	DataMap datamap5;
+	string str0;
+	int0 = 0;
+	int1 = datamapSize((DataMap)3943);
+	int2 = 0;
+	while (int0 < int1) {
+		if (VARPBIT[9516] == int0) {
+			int2 = 1;
+		} else {
+			int2 = 0;
+		}
+		if (datamapContainsValue('i', (DataMap)3944, int0)) {
+			script_5059(widget(1111, 57), int0, int2);
+		}
+		if (datamapContainsValue('i', (DataMap)3945, int0)) {
+			script_5059(widget(1111, 60), int0, int2);
+		}
+		if (datamapContainsValue('i', (DataMap)3946, int0)) {
+			script_5059(widget(1111, 63), int0, int2);
+		}
+		if (datamapContainsValue('i', (DataMap)3947, int0)) {
+			script_5059(widget(1111, 66), int0, int2);
+		}
+		int0 = int0 + 1;
+	}
+	widget(1111, 30).clearChildren();
+	widget(1111, 31).clearChildren();
+	widget(1111, 32).clearChildren();
+	widget(1111, 33).clearChildren();
+	int3 = 0;
+	attrmap4 = datamap('i', 'J', (DataMap)3943, VARPBIT[9516]);
+	str0 = "";
+	datamap5 = null;
+	if (attrmap4 != null) {
+		widget(1111, 29).setText(getAttributeMapValue(attrmap4, 1463));
+		widget(1111, 27).setSprite(getAttributeMapValue(attrmap4, 1465));
+		str0 = getAttributeMapValue(attrmap4, 1464);
+		if (getAttributeMapValue(attrmap4, 1466) == 1 && attrmap4 != (AttrMap)1918) {
+			str0 = concat(str0, "<br>" + "<br>" + "Drag your mouse over the grid to fill an area with this element.");
+		}
+		int3 = int3 + script_5068(str0, int3);
+		datamap5 = getAttributeMapValue(attrmap4, 1470);
+		if (datamap5 != null) {
+			int3 = int3 + 5;
+			int3 = int3 + script_5068(datamap('i', 's', datamap5, -1), int3);
+			widget(1111, 31).setPosition(0, int3, 1, 0);
+			int3 = int3 + script_5069(datamap5, widget(1111, 31), 1, VARPBIT[9517]);
+		} else {
+			widget(1111, 31).setSize(0, 0, 1, 0);
+		}
+		datamap5 = getAttributeMapValue(attrmap4, 1471);
+		if (datamap5 != null) {
+			int3 = int3 + 5;
+			int3 = int3 + script_5068(datamap('i', 's', datamap5, -1), int3);
+			widget(1111, 32).setPosition(0, int3, 1, 0);
+			int3 = int3 + script_5069(datamap5, widget(1111, 32), 2, VARPBIT[9518]);
+		} else {
+			widget(1111, 32).setSize(0, 0, 1, 0);
+		}
+		datamap5 = getAttributeMapValue(attrmap4, 1472);
+		if (datamap5 != null) {
+			int3 = int3 + 5;
+			int3 = int3 + script_5068(datamap('i', 's', datamap5, -1), int3);
+			widget(1111, 33).setPosition(0, int3, 1, 0);
+			int3 = int3 + script_5069(datamap5, widget(1111, 33), 3, VARPBIT[9519]);
+		} else {
+			widget(1111, 33).setSize(0, 0, 1, 0);
+		}
+	} else {
+		widget(1111, 29).setText("");
+		widget(1111, 27).setSprite(null);
+	}
+	if (int3 > widget(1111, 30).getHeight()) {
+		widget(1111, 30).setScrollMax(0, int3);
+	} else {
+		widget(1111, 30).setScrollMax(0, 0);
+	}
+	widget(1111, 30).setScrollPos(0, min(widget(1111, 30).getScrollY(), int3));
+	script_31(widget(1111, 34), widget(1111, 30), 6507, 6504, 6505, 6506, 6499, 6498);
+	return;
+}

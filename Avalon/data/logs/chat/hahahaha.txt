@@ -1,0 +1,24 @@
+[27 April 2019 at 12:11:40 CEST] - hahahaha: huh
+[27 April 2019 at 12:15:21 CEST] - hahahaha: something happend
+[27 April 2019 at 12:15:23 CEST] - hahahaha: with spellbook tho
+[27 April 2019 at 12:15:25 CEST] - hahahaha: when i loaded it
+[27 April 2019 at 12:16:25 CEST] - hahahaha: w8 who u
+[27 April 2019 at 12:16:37 CEST] - hahahaha: o
+[27 April 2019 at 12:16:47 CEST] - hahahaha: well im just using matrix switching atm
+[27 April 2019 at 12:16:52 CEST] - hahahaha: i could add that one who dennis did
+[27 April 2019 at 12:17:18 CEST] - hahahaha: ye but spellbok
+[27 April 2019 at 12:17:23 CEST] - hahahaha: gets unused
+[27 April 2019 at 12:17:24 CEST] - hahahaha: like
+[27 April 2019 at 12:17:30 CEST] - hahahaha: lunar spellbook is all messed up
+[27 April 2019 at 12:17:33 CEST] - hahahaha: after used an setup
+[27 April 2019 at 12:17:37 CEST] - hahahaha: or loaded
+[27 April 2019 at 12:17:52 CEST] - hahahaha: sec
+[27 April 2019 at 12:17:54 CEST] - hahahaha: gonna try with ancients
+[27 April 2019 at 12:18:02 CEST] - hahahaha: also
+[27 April 2019 at 12:18:03 CEST] - hahahaha: one thing
+[27 April 2019 at 12:18:06 CEST] - hahahaha: it adds the new setup
+[27 April 2019 at 12:18:08 CEST] - hahahaha: inbetween the setups
+[27 April 2019 at 12:18:11 CEST] - hahahaha: not first or last
+[27 April 2019 at 12:18:31 CEST] - hahahaha: na
+[27 April 2019 at 12:18:34 CEST] - hahahaha: spellbook saving isnt correct
+[27 April 2019 at 12:21:29 CEST] - hahahaha: fixed

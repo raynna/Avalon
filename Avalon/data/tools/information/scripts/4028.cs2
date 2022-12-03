@@ -1,0 +1,22 @@
+void script_4028(int arg0, int arg1) {
+	if (arg0 == 0) {
+		if (arg1 == 1) {
+			widget(917, 106).setSprite(4302);
+			widget(917, 106).setScriptCallOnMouseEntered(4029, 0, "i");
+			widget(917, 106).setScriptCallOnMouseExit(4029, 1, "i");
+		} else {
+			widget(917, 106).setSprite(4300);
+			widget(917, 106).setScriptCallOnMouseEntered(4030, 0, "i");
+			widget(917, 106).setScriptCallOnMouseExit(4030, 1, "i");
+		}
+	} else if (arg1 == 1) {
+		widget(917, 114).setSprite(4299);
+		widget(917, 114).setScriptCallOnMouseEntered(4031, 0, "i");
+		widget(917, 114).setScriptCallOnMouseExit(4031, 1, "i");
+	} else {
+		widget(917, 114).setSprite(4297);
+		widget(917, 114).setScriptCallOnMouseEntered(4032, 0, "i");
+		widget(917, 114).setScriptCallOnMouseExit(4032, 1, "i");
+	}
+	return;
+}

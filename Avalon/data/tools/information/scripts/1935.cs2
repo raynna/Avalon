@@ -1,0 +1,6 @@
+void script_1935() {
+	widget(811, 3).setIsHidden(true);
+	widget(811, 30).setRGB(0xC8AA64);
+	script_41(widget(811, 35));
+	return;
+}

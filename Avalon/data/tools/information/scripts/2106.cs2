@@ -1,0 +1,7 @@
+void script_2106(Widget widget0, Widget widget1, int arg2, int arg3, int arg4, int arg5) {
+	arg4 = max(min(arg4 + rnd(1) - rnd(1), 5), -5);
+	arg5 = max(min(arg5 + rnd(1) - rnd(1), 5), -5);
+	widget1.setPosition(arg2 + arg4, arg3 + arg5, 0, 0);
+	widget0.setScriptCallOnGameloop(2106, widget0, widget1, arg2, arg3, arg4, arg5, "IIiiii");
+	return;
+}

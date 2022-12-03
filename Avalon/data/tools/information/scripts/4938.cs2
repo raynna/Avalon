@@ -1,0 +1,30 @@
+void script_4938(int arg0) {
+	int int1;
+	int int2;
+	Widget widget3;
+	int1 = 0;
+	int2 = 0;
+	widget3 = widget(1092, 208);
+	if (arg0 == 0 && VARPBIT[9552] == 1) {
+		int1 = widget3.getX() + 12;
+		int2 = 0;
+		int1 = min(int1, int2);
+		if (widget(1092, 260).isHidden()) {
+			int1 = max(int1, -226);
+		}
+	} else {
+		int1 = widget3.getX() - 12;
+		if (!widget(1092, 260).isHidden()) {
+			int2 = -295;
+		} else {
+			int2 = -226;
+		}
+		int1 = max(int1, int2);
+	}
+	widget3.setPosition(int1, widget3.getY(), 0, 0);
+	if (int1 == int2) {
+		widget3.setScriptCallOnGameloop(-1, "");
+		script_5220();
+	}
+	return;
+}

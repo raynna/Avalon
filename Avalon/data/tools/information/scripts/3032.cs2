@@ -1,0 +1,19 @@
+void script_3032(Widget widget0, int arg1, int arg2) {
+	Widget widget3;
+	widget3 = null;
+	if (arg2 == 1) {
+		widget3 = widget(909, 43);
+	} else if (arg2 == 0) {
+		widget3 = widget(909, 85);
+	}
+	if (ACTIVE.setChild(widget0, arg1)) {
+		widget3.setIsHidden(false);
+		widget3.setPosition(widget3.getX(), ACTIVE.getY(), 0, 0);
+	}
+	if (arg2 == 1) {
+		script_2470(widget(909, 32), widget(909, 35));
+	} else {
+		script_2470(widget(909, 80), widget(909, 83));
+	}
+	return;
+}

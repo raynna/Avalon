@@ -1,0 +1,63 @@
+void script_2444() {
+	int int0;
+	int int1;
+	int int2;
+	string str0;
+	if (VARP[1437] == 0) {
+		return;
+	}
+	if (!widget(34, 10).isHidden()) {
+		widget(34, 9).setScriptCallOnGameloop(2443, "");
+		return;
+	}
+	widget(34, 9).setScriptCallOnGameloop(-1, "");
+	script_1548(13);
+	widget(34, 16).setIsHidden(true);
+	VARC[821] = 0;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	str0 = "";
+	widget(34, 9).clearChildren();
+	if (cs2method6900()) {
+		widget(34, 13).setText("The notes system is not available for users restricted to quick-chat.");
+		widget(34, 13).setIsHidden(false);
+		return;
+	}
+	widget(34, 13).setText("");
+	widget(34, 13).setIsHidden(true);
+	while (int1 < 30) {
+		str0 = script_2452(int1);
+		if (compare(str0, "") != 0) {
+			int0 = script_2445(str0, int0, int2, script_2453(int1));
+			int2 = int2 + 1;
+		}
+		int1 = int1 + 1;
+	}
+	if (int2 <= 0) {
+		widget(34, 13).setText("No notes");
+		widget(34, 13).setIsHidden(false);
+		widget(34, 1).setText("Notes");
+	} else if (int2 > 0 && int2 <= 30) {
+		widget(34, 1).setText("Notes (" + str(int2) + "/" + "30" + ")");
+	} else {
+		widget(34, 1).setText("Notes");
+	}
+	if (int0 > 0 && int0 < 13) {
+		if (ACTIVE.setChild(widget(34, 9), int2 - 1)) {
+			widget(34, 12).setSize(ACTIVE.getWidth(), widget(34, 9).getHeight() - (ACTIVE.getY() + ACTIVE.getHeight()), 0, 0);
+			widget(34, 12).setPosition(ACTIVE.getX(), ACTIVE.getY() + ACTIVE.getHeight(), 0, 0);
+			widget(34, 12).setIsHidden(false);
+		}
+	} else {
+		widget(34, 12).setIsHidden(true);
+	}
+	if (int0 < 1) {
+		widget(34, 9).setScrollMax(0, 0);
+	} else {
+		widget(34, 9).setScrollMax(0, int0 * 15 + 10);
+	}
+	script_72(widget(34, 15), widget(34, 9), widget(34, 9).getScrollY());
+	widget(34, 44).setIsHidden(true);
+	return;
+}

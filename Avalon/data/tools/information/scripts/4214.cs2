@@ -1,0 +1,31 @@
+void script_4214(Widget widget0, int arg1, int arg2) {
+	int int3;
+	int int4;
+	int3 = widget0.getShadeColor();
+	int4 = 0;
+	if (widget0 == null) {
+		return;
+	}
+	if (arg2 == 0) {
+		if (arg1 == 1) {
+			int4 = int3 + 22;
+		} else {
+			if (!(arg1 == 0)) {
+				widget0.setScriptCallOnGameloop(-1, "");
+				return;
+			}
+			int4 = int3 - 22;
+		}
+		int4 = max(int4, 0);
+		int4 = min(int4, 255);
+		widget0.setTrans(int4);
+		if (arg1 == 1 && int4 == 255 || arg1 == 0 && int4 == 0) {
+			widget0.setScriptCallOnGameloop(-1, "");
+		} else {
+			widget0.setScriptCallOnGameloop(4214, widget0, arg1, 0, "Iii");
+		}
+	} else {
+		widget0.setScriptCallOnGameloop(4214, widget0, arg1, arg2 - 1, "Iii");
+	}
+	return;
+}

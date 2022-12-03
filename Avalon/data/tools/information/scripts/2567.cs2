@@ -1,0 +1,42 @@
+void script_2567() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	DataMap datamap4;
+	int int5;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	datamap4 = null;
+	int5 = 5;
+	int1 = (widget(842, 17).getWidth() - 36 * int5) / (int5 - 1);
+	int2 = (widget(842, 17).getHeight() - 128) / 3;
+	if (getItemAmtInContainer(93, 15001) > 0) {
+		datamap4 = (DataMap)1991;
+	} else if (getItemAmtInContainer(93, 15002) > 0) {
+		datamap4 = (DataMap)1995;
+	} else if (getItemAmtInContainer(93, 15003) > 0) {
+		datamap4 = (DataMap)1998;
+	} else if (getItemAmtInContainer(93, 15004) > 0) {
+		datamap4 = (DataMap)1999;
+	}
+	while (int3 == 0) {
+		if (datamap('i', 'O', datamap4, int0) != 1511) {
+			ACTIVE.createChild(widget(842, 17), 5, int0);
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition((36 + int1) * (int0 % int5), int0 / int5 * (32 + int2), 0, 0);
+			ACTIVE.setItem(datamap('i', 'O', datamap4, int0), -1);
+			ACTIVE.setOptionBase("<col=ff981f>" + getItemName(datamap('i', 'O', datamap4, int0)));
+			ACTIVE.setContextMenuOption(1, "Withdraw");
+			ACTIVE.setContextMenuOption(2, "Examine");
+			ACTIVE.setShadowColor(0x333333);
+			ACTIVE.setOutlineThickness(1);
+			int0 = int0 + 1;
+		} else {
+			int3 = 1;
+		}
+	}
+	return;
+}

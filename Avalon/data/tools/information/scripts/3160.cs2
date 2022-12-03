@@ -1,0 +1,40 @@
+void script_3160(int arg0, char char1) {
+	if (cs2method6900() || script_5280() == 1) {
+		return;
+	}
+	switch (arg0) {
+		case 84:
+			if (cs2method3751()) {
+				if (length(STRING[278]) > 0) {
+					cs2method5006(2);
+					cs2method5008(STRING[278]);
+				}
+			} else {
+				message(43, 0, "You are not in a Clan.");
+			}
+			STRING[278] = "";
+			widget(912, 24).setText(escape(STRING[278]));
+			VARC[1098] = length(STRING[278]);
+			script_1390(widget(912, 24), widget(912, 25), STRING[278]);
+			break;
+		case 96:
+		case 97:
+		case 98:
+		case 99:
+		case 102:
+		case 103:
+			VARC[1098] = script_1553(arg0, VARC[1098], STRING[278]);
+			script_1390(widget(912, 24), widget(912, 25), STRING[278]);
+			break;
+		case -1:
+		case 85:
+		case 101:
+			if (isValidChar(char1) || arg0 == 85 || arg0 == 101) {
+				STRING[278], VARC[1098] = script_802(VARC[1098], STRING[278], 0, arg0, char1);
+				widget(912, 24).setText(escape(STRING[278]));
+				script_1390(widget(912, 24), widget(912, 25), STRING[278]);
+			}
+			break;
+	}
+	return;
+}

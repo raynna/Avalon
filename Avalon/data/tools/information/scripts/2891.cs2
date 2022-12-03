@@ -1,0 +1,8 @@
+void script_2891(int arg0, Widget widget1) {
+	if (getClientCycle() >= arg0) {
+		script_1728(widget(476, 17));
+		widget(476, 17).setIsHidden(true);
+		widget1.setScriptCallOnGameloop(-1, "");
+	}
+	return;
+}

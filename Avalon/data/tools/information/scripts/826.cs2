@@ -1,0 +1,7 @@
+void script_826() {
+	int int0;
+	int0 = getClientCycle();
+	widget(465, 2).setScriptCallOnGameloop(827, int0, "i");
+	playSoundEffect(4437, 1, 58);
+	return;
+}

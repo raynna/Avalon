@@ -1,0 +1,18 @@
+void script_2089() {
+	int int0;
+	int int1;
+	int0 = 0;
+	int1 = 0;
+	int0 = datamap('i', 'i', (DataMap)723, VARC[647]);
+	int1 = datamap('i', 'i', (DataMap)2196, VARC[647]);
+	if (VARC[647] < 15) {
+		widget(836, 68).setRGB(0x3366FF);
+	} else if (VARC[647] > 15) {
+		widget(836, 68).setRGB(0xE12323);
+	} else {
+		widget(836, 68).setRGB(0x666666);
+	}
+	widget(836, 68).setPosition(int0, 66, 2, 0);
+	widget(836, 68).setSize(int1, 8, 0, 0);
+	return;
+}

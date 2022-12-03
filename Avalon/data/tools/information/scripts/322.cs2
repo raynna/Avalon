@@ -1,0 +1,78 @@
+void script_322(Widget widget0, int arg1, int arg2, string string3, string string4, string string5, string string6, string string7, string string8, int arg9, int arg10) {
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	Item item12;
+	Item item13;
+	int int14;
+	int int15;
+	int int16;
+	string str6;
+	widget0.clearChildren();
+	int5 = 0;
+	int6 = 0;
+	widget0.setScrollMax(0, ((arg10 - arg9) / arg1 + 1) * 57);
+	int7 = 0;
+	int8 = 1;
+	int9 = 0;
+	int10 = 0;
+	int11 = -1;
+	item12 = null;
+	item13 = null;
+	str6 = "hello";
+	int14 = 0;
+	int15 = 0;
+	int16 = 0;
+	while (int7 < 78) {
+		int5 = 16 + int7 % arg1 * 48 + int7 % arg1 * 5;
+		int6 = int7 / arg1 * 52 + int7 / arg1 * 5;
+		ACTIVE.createChild(widget0, 5, int16);
+		int16 = int16 + 1;
+		ACTIVE.setSize(48, 52, 0, 0);
+		ACTIVE.setPosition(int5, int6, 0, 0);
+		ACTIVE.setSprite(2205);
+		ACTIVE.setScriptCallOnMouseEntered(2724, CTX_WIDGET, int16, false, "Ii1");
+		ACTIVE.setScriptCallOnMouseExit(2724, CTX_WIDGET, int16, true, "Ii1");
+		ACTIVE.createChild(widget0, 5, int16);
+		int16 = int16 + 1;
+		ACTIVE.setSize(48, 52, 0, 0);
+		ACTIVE.setPosition(int5, int6, 0, 0);
+		ACTIVE.setSprite(2206);
+		ACTIVE.setHidden(true);
+		ACTIVE.createChild(widget0, 5, int16);
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setPosition(int5 + 6, int6 + 4, 0, 0);
+		item12 = datamap('i', 'o', (DataMap)1277, int8);
+		item13 = datamap('i', 'o', (DataMap)1188, int8);
+		int15 = datamap('o', 'i', (DataMap)1185, getRealItem(item12));
+		if (item13 == 12421) {
+			script_1670(item13, item13, widget0, int16, string3, string4, string5, string6, string7, string8);
+		} else if (getItemAmtInContainer(93, getRealItem(item13)) > 0 && getItemAmtInContainer(93, getRealItem(item13)) >= itemAttribute(getRealItem(item13), 599) && getSkillActualLvl(23) >= datamap('i', 'i', (DataMap)1472, int15)) {
+			script_1670(item13, item13, widget0, int16, string3, string4, string5, string6, string7, string8);
+		} else {
+			script_1670(datamap('i', 'o', (DataMap)1184, int8), item13, widget0, int16, string3, string4, string5, string6, string7, string8);
+		}
+		int16 = int16 + 1;
+		ACTIVE.createChild(widget0, 5, int16);
+		int16 = int16 + 1;
+		ACTIVE.setSize(12, 12, 0, 0);
+		ACTIVE.setPosition(int5 + 2, int6 + 38, 0, 0);
+		ACTIVE.setItemNoNum(12183, 1);
+		ACTIVE.createChild(widget0, 4, int16);
+		int16 = int16 + 1;
+		ACTIVE.setSize(31, 12, 0, 0);
+		ACTIVE.setPosition(int5 + 13, int6 + 39, 0, 0);
+		ACTIVE.setFont(494);
+		ACTIVE.setRGB(0xFFFFFF);
+		ACTIVE.setTextAlignment(2, 1, 0);
+		ACTIVE.setText(str(max(1, itemAttribute(item13, 457))));
+		ACTIVE.setTextAntiMacro(true);
+		int7 = int7 + 1;
+		int8 = int8 + 1;
+	}
+	return;
+}

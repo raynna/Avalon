@@ -1,0 +1,8 @@
+void script_2168() {
+	if (!isMember()) {
+		msg("More advanced sorting options are available on a members' world.");
+	} else if (VARP[281] < 1000) {
+		msg("More advanced sorting options are available after the Tutorial.");
+	}
+	return;
+}

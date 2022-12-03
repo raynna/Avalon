@@ -1,0 +1,20 @@
+void script_2354(Widget widget0) {
+	if (VARC[772] == 1) {
+		widget0.setText("Saving your game and loading QuestHelp");
+		VARC[772] = VARC[772] + 1;
+	} else if (VARC[772] == 20) {
+		widget0.setText("Saving your game and loading QuestHelp.");
+		VARC[772] = VARC[772] + 1;
+	} else if (VARC[772] == 40) {
+		widget0.setText("Saving your game and loading QuestHelp..");
+		VARC[772] = VARC[772] + 1;
+	} else if (VARC[772] == 60) {
+		widget0.setText("Saving your game and loading QuestHelp.");
+		VARC[772] = VARC[772] + 1;
+	} else if (VARC[772] == 80) {
+		VARC[772] = 1;
+	} else {
+		VARC[772] = VARC[772] + 1;
+	}
+	return;
+}

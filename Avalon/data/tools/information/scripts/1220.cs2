@@ -1,0 +1,10 @@
+void script_1220(Widget widget0, Widget widget1) {
+	if (cs2method6117()) {
+		widget1.setSprite(4086);
+		widget0.setSprite(4084);
+	} else {
+		widget0.setSprite(4086);
+		widget1.setSprite(4084);
+	}
+	return;
+}

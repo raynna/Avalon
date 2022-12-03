@@ -1,0 +1,6 @@
+int script_4550(int arg0) {
+	if (hasChildModal(widget(753, 4), arg0) || hasChildModal(widget(746, 12), arg0) || hasChildModal(widget(548, 19), arg0)) {
+		return 1;
+	}
+	return 0;
+}

@@ -1,0 +1,38 @@
+int script_739(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	arg0 = arg0 - 1;
+	int1 = 1;
+	int2 = 1;
+	int3 = 0;
+	ARRAY0 = new int[36];
+	int4 = 0;
+	if (VARC[103] != VARPBIT[4227]) {
+		VARC[103] = VARPBIT[4227];
+	}
+	int3 = VARC[103];
+	while (int1 <= 12) {
+		while (int2 <= 3) {
+			int4 = int3 % 36;
+			while (ARRAY0[int4] != 0) {
+				int4 = int4 + 1;
+				if (int4 == 36) {
+					int4 = 0;
+				}
+			}
+			if (int4 == arg0) {
+				return int1;
+			}
+			ARRAY0[int4] = int1;
+			int3 = int3 * int3;
+			int3 = int3 - int3 / 1000000 * 1000000;
+			int3 = int3 / 100;
+			int2 = int2 + 1;
+		}
+		int1 = int1 + 1;
+		int2 = 1;
+	}
+	return 0;
+}

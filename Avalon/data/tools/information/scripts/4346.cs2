@@ -1,0 +1,13 @@
+void script_4346() {
+	script_4586(widget(1097, 77), widget(1097, 177), VARPBIT[9155], VARPBIT[9156]);
+	script_4586(widget(1097, 88), widget(1097, 188), VARPBIT[9157], VARPBIT[9158]);
+	script_4586(widget(1097, 99), widget(1097, 189), VARPBIT[9159], VARPBIT[9160]);
+	script_4586(widget(1097, 110), widget(1097, 190), VARPBIT[9161], VARPBIT[9162]);
+	script_4586(widget(1097, 121), widget(1097, 191), VARPBIT[9163], VARPBIT[9164]);
+	script_4586(widget(1097, 132), widget(1097, 192), VARPBIT[9165], VARPBIT[9166]);
+	script_4586(widget(1097, 143), widget(1097, 193), VARPBIT[9167], VARPBIT[9168]);
+	script_4586(widget(1097, 154), widget(1097, 194), VARPBIT[9169], VARPBIT[9170]);
+	script_4586(widget(1097, 165), widget(1097, 195), VARPBIT[9171], VARPBIT[9172]);
+	script_4586(widget(1097, 187), widget(1097, 196), VARPBIT[9173], VARPBIT[9174]);
+	return;
+}

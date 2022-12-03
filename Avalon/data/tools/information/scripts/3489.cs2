@@ -1,0 +1,175 @@
+void script_3489() {
+	DataMap datamap0;
+	int int1;
+	datamap0 = datamap('i', 'g', (DataMap)3088, VARC[1184]);
+	int1 = 0;
+	if (VARC[1186] < 17) {
+		switch (VARC[1184]) {
+			case 1:
+				if (VARPBIT[8053] == 10) {
+					widget(993, 139).setIsHidden(true);
+				} else {
+					widget(993, 139).setIsHidden(false);
+				}
+				if (VARPBIT[8054] == 10) {
+					widget(993, 46).setIsHidden(true);
+				} else {
+					widget(993, 46).setIsHidden(false);
+				}
+				if (VARPBIT[8055] == 10) {
+					widget(993, 88).setIsHidden(true);
+				} else {
+					widget(993, 88).setIsHidden(false);
+				}
+				break;
+			case 2:
+				if (VARPBIT[8056] == 10) {
+					widget(993, 139).setIsHidden(true);
+				} else {
+					widget(993, 139).setIsHidden(false);
+				}
+				if (VARPBIT[8057] == 10) {
+					widget(993, 46).setIsHidden(true);
+				} else {
+					widget(993, 46).setIsHidden(false);
+				}
+				if (VARPBIT[8058] == 10) {
+					widget(993, 88).setIsHidden(true);
+				} else {
+					widget(993, 88).setIsHidden(false);
+				}
+				break;
+			case 3:
+				if (VARPBIT[8059] == 10) {
+					widget(993, 139).setIsHidden(true);
+				} else {
+					widget(993, 139).setIsHidden(false);
+				}
+				if (VARPBIT[8060] == 10) {
+					widget(993, 46).setIsHidden(true);
+				} else {
+					widget(993, 46).setIsHidden(false);
+				}
+				if (VARPBIT[8061] == 10) {
+					widget(993, 88).setIsHidden(true);
+				} else {
+					widget(993, 88).setIsHidden(false);
+				}
+				break;
+			case 4:
+				if (VARPBIT[8062] == 10) {
+					widget(993, 139).setIsHidden(true);
+				} else {
+					widget(993, 139).setIsHidden(false);
+				}
+				if (VARPBIT[8063] == 10) {
+					widget(993, 46).setIsHidden(true);
+				} else {
+					widget(993, 46).setIsHidden(false);
+				}
+				if (VARPBIT[8064] == 10) {
+					widget(993, 88).setIsHidden(true);
+				} else {
+					widget(993, 88).setIsHidden(false);
+				}
+				break;
+		}
+		widget(993, 112).setPosition(widget(993, 112).getX(), widget(993, 112).getY() + 4, 0, 0);
+		widget(993, 27).setPosition(widget(993, 27).getX(), widget(993, 27).getY() + 4, 0, 0);
+		widget(993, 26).setPosition(widget(993, 26).getX(), widget(993, 26).getY() + 4, 0, 0);
+		VARC[1186] = 1 + VARC[1186];
+	} else if (VARC[1186] < 33) {
+		widget(993, 27).setPosition(widget(993, 27).getX(), widget(993, 27).getY() + 4, 0, 0);
+		widget(993, 26).setPosition(widget(993, 26).getX(), widget(993, 26).getY() + 4, 0, 0);
+		VARC[1186] = 1 + VARC[1186];
+	} else if (VARC[1186] < 49) {
+		widget(993, 26).setPosition(widget(993, 26).getX(), widget(993, 26).getY() + 4, 0, 0);
+		VARC[1186] = 1 + VARC[1186];
+	} else if (VARC[1186] < 69) {
+		int1 = (VARC[1186] - 48) * 20 / 100;
+		switch (VARC[1184]) {
+			case 1:
+				widget(993, 160).setSize(16384 * 100 / (VARPBIT[8053] * 10) * 100 / int1, 16384, 2, 2);
+				if (VARPBIT[8053] == 10) {
+					widget(993, 139).setIsHidden(true);
+				} else {
+					widget(993, 139).setIsHidden(false);
+				}
+				widget(993, 67).setSize(16384 * 100 / (VARPBIT[8054] * 10) * 100 / int1, 16384, 2, 2);
+				if (VARPBIT[8054] == 10) {
+					widget(993, 46).setIsHidden(true);
+				} else {
+					widget(993, 46).setIsHidden(false);
+				}
+				widget(993, 109).setSize(16384 * 100 / (VARPBIT[8055] * 10) * 100 / int1, 16384, 2, 2);
+				if (VARPBIT[8055] == 10) {
+					widget(993, 88).setIsHidden(true);
+				} else {
+					widget(993, 88).setIsHidden(false);
+				}
+				break;
+			case 2:
+				widget(993, 160).setSize(16384 * 100 / (VARPBIT[8056] * 10) * 100 / int1, 16384, 2, 2);
+				if (VARPBIT[8056] == 10) {
+					widget(993, 139).setIsHidden(true);
+				} else {
+					widget(993, 139).setIsHidden(false);
+				}
+				widget(993, 67).setSize(16384 * 100 / (VARPBIT[8057] * 10) * 100 / int1, 16384, 2, 2);
+				if (VARPBIT[8057] == 10) {
+					widget(993, 46).setIsHidden(true);
+				} else {
+					widget(993, 46).setIsHidden(false);
+				}
+				widget(993, 109).setSize(16384 * 100 / (VARPBIT[8058] * 10) * 100 / int1, 16384, 2, 2);
+				if (VARPBIT[8058] == 10) {
+					widget(993, 88).setIsHidden(true);
+				} else {
+					widget(993, 88).setIsHidden(false);
+				}
+				break;
+			case 3:
+				widget(993, 160).setSize(16384 * 100 / (VARPBIT[8059] * 10) * 100 / int1, 16384, 2, 2);
+				if (VARPBIT[8059] == 10) {
+					widget(993, 139).setIsHidden(true);
+				} else {
+					widget(993, 139).setIsHidden(false);
+				}
+				widget(993, 67).setSize(16384 * 100 / (VARPBIT[8060] * 10) * 100 / int1, 16384, 2, 2);
+				if (VARPBIT[8060] == 10) {
+					widget(993, 46).setIsHidden(true);
+				} else {
+					widget(993, 46).setIsHidden(false);
+				}
+				widget(993, 109).setSize(16384 * 100 / (VARPBIT[8061] * 10) * 100 / int1, 16384, 2, 2);
+				if (VARPBIT[8061] == 10) {
+					widget(993, 88).setIsHidden(true);
+				} else {
+					widget(993, 88).setIsHidden(false);
+				}
+				break;
+			case 4:
+				widget(993, 160).setSize(16384 * 100 / (VARPBIT[8062] * 10) * 100 / int1, 16384, 2, 2);
+				if (VARPBIT[8062] == 10) {
+					widget(993, 139).setIsHidden(true);
+				} else {
+					widget(993, 139).setIsHidden(false);
+				}
+				widget(993, 67).setSize(16384 * 100 / (VARPBIT[8063] * 10) * 100 / int1, 16384, 2, 2);
+				if (VARPBIT[8063] == 10) {
+					widget(993, 46).setIsHidden(true);
+				} else {
+					widget(993, 46).setIsHidden(false);
+				}
+				widget(993, 109).setSize(16384 * 100 / (VARPBIT[8064] * 10) * 100 / int1, 16384, 2, 2);
+				if (VARPBIT[8064] == 10) {
+					widget(993, 88).setIsHidden(true);
+				} else {
+					widget(993, 88).setIsHidden(false);
+				}
+				break;
+		}
+		VARC[1186] = 1 + VARC[1186];
+	}
+	return;
+}

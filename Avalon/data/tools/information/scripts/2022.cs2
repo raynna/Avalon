@@ -1,0 +1,14 @@
+void script_2022(int arg0, int arg1) {
+	if (arg0 != 1) {
+		return;
+	}
+	if (arg1 <= -1) {
+		widget(916, 17).setText("");
+		return;
+	}
+	VARPBIT[8095] = min(arg1, VARPBIT[8094]);
+	script_2047();
+	widget(905, 28).setScriptCallOnGameloop(2024, getClientCycle() + 15, "i");
+	widget(905, 28).setIsHidden(false);
+	return;
+}

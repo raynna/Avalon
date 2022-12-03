@@ -1,0 +1,9 @@
+void script_801(Widget widget0, Skill skill1) {
+	widget0.setRGB(script_805(skill1));
+	if (skill1 == 5) {
+		widget0.setText(str(VARPBIT[9816]));
+	} else {
+		widget0.setText(str(getSkillCurrentLvl(skill1)));
+	}
+	return;
+}

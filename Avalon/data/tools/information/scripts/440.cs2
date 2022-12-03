@@ -1,0 +1,29 @@
+void script_440() {
+	widget(1016, 24).setSprite(1134);
+	widget(1016, 25).setSprite(1134);
+	widget(1016, 26).setSprite(1134);
+	widget(1016, 27).setSprite(1134);
+	widget(1016, 28).setSprite(1134);
+	widget(1016, 29).setSprite(1134);
+	switch (VARPBIT[8087]) {
+		case 0:
+			widget(1016, 24).setSprite(1135);
+			break;
+		case 1:
+			widget(1016, 25).setSprite(1135);
+			break;
+		case 2:
+			widget(1016, 26).setSprite(1135);
+			break;
+		case 3:
+			widget(1016, 27).setSprite(1135);
+			break;
+		case 4:
+			widget(1016, 28).setSprite(1135);
+			break;
+		case 5:
+			widget(1016, 29).setSprite(1135);
+			break;
+	}
+	return;
+}

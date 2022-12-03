@@ -1,0 +1,82 @@
+void script_4000(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	string str0;
+	str0 = "";
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	switch (arg0) {
+		case 0:
+			widget(1056, 92).setIsHidden(true);
+			widget(1056, 94).setIsHidden(true);
+			widget(1056, 125).setIsHidden(false);
+			if (compare(widget(1056, 91).getText(), getAttributeMapValue((AttrMap)1753, 1266)) == 0 || compare(widget(1056, 91).getText(), getAttributeMapValue((AttrMap)1752, 1266)) == 0 && VARP[281] == 1000) {
+				str0 = "Click on the Hints tab for more on how to complete this Task.";
+			} else if (compare(widget(1056, 91).getText(), getAttributeMapValue((AttrMap)1754, 1266)) == 0 || compare(widget(1056, 91).getText(), getAttributeMapValue((AttrMap)1518, 1266)) == 0) {
+				str0 = "Remember, the Hints tab provides more details about a Task.";
+			}
+			if (getDisplayMode() >= 2) {
+				int1 = 196;
+				int2 = 183;
+				int3 = 1;
+				if (widget(746, 2).getWidth() < 997) {
+					int2 = int2 + 40;
+				}
+			} else {
+				int1 = 217;
+				int2 = 177;
+			}
+			break;
+		case 1:
+			widget(1056, 92).setIsHidden(true);
+			widget(1056, 94).setIsHidden(false);
+			widget(1056, 125).setIsHidden(true);
+			if (compare(widget(1056, 91).getText(), getAttributeMapValue((AttrMap)1753, 1266)) == 0 || compare(widget(1056, 91).getText(), getAttributeMapValue((AttrMap)1752, 1266)) == 0 && VARP[281] == 1000) {
+				str0 = "Click on the Hints tab for more on how to complete this Task.";
+			} else if (compare(widget(1056, 91).getText(), getAttributeMapValue((AttrMap)1754, 1266)) == 0 || compare(widget(1056, 91).getText(), getAttributeMapValue((AttrMap)1518, 1266)) == 0) {
+				str0 = "Remember, the Hints tab provides more details about a Task.";
+			}
+			if (getDisplayMode() >= 2) {
+				int1 = 196;
+				int2 = 183;
+				int3 = 1;
+				if (widget(746, 2).getWidth() < 997) {
+					int2 = int2 + 40;
+				}
+			} else {
+				int1 = 217;
+				int2 = 177;
+			}
+			break;
+		case 2:
+			widget(1056, 92).setIsHidden(false);
+			widget(1056, 94).setIsHidden(true);
+			widget(1056, 125).setIsHidden(true);
+			if (compare(widget(1056, 91).getText(), getAttributeMapValue((AttrMap)1753, 1266)) == 0 || compare(widget(1056, 91).getText(), getAttributeMapValue((AttrMap)1754, 1266)) == 0) {
+				str0 = "The '?' icon will add an arrow to the screen which points to your destination.";
+			}
+			if (getDisplayMode() >= 2) {
+				int1 = 196;
+				int2 = 87;
+				int3 = 1;
+				if (widget(746, 2).getWidth() < 997) {
+					int2 = int2 + 40;
+				}
+			} else {
+				int1 = 208;
+				int2 = 78;
+			}
+			break;
+	}
+	if (VARPBIT[9030] == 0) {
+		str0 = "";
+	}
+	if (int3 == 0) {
+		script_4247(str0, int1, int2, 1, 0xFFFFFF, 5631);
+	} else {
+		script_4248(str0, int1, int2, 1, 0xFFFFFF, 5631);
+	}
+	return;
+}

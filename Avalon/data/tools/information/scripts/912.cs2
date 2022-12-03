@@ -1,0 +1,24 @@
+string script_912(Item item0) {
+	string str0;
+	str0 = datamap('o', 's', (DataMap)1440, item0);
+	if (compare(str0, "") != 0) {
+		return "<br>" + str0;
+	}
+	switch (VARC[746]) {
+		case 0:
+			if (itemAttribute(item0, 1047) != 1) {
+				return "<br>" + datamap('i', 's', (DataMap)1437, itemAttribute(item0, 23));
+			}
+			break;
+		case 1:
+			return "<br>" + datamap('i', 's', (DataMap)1439, itemAttribute(item0, 23));
+		case 2:
+		case 5:
+			return "<br>" + datamap('i', 's', (DataMap)1436, itemAttribute(item0, 23));
+		case 3:
+			return "<br>" + datamap('i', 's', (DataMap)1438, itemAttribute(item0, 23));
+		case 4:
+			return "<br>" + "Requires an ogre composite bow.";
+	}
+	return "";
+}

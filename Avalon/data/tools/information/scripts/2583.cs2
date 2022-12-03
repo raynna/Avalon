@@ -1,0 +1,7 @@
+void script_2583() {
+	widget(292, 114).setRGB(0xFF9935);
+	widget(292, 113).setContextMenuOption(1, "Resupply");
+	widget(292, 113).setScriptCallOnClickContextMenu(2592, CTX_WIDGET, "I");
+	widget(292, 113).setScriptCallOnMousePressed(-1, "");
+	return;
+}

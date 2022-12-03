@@ -1,0 +1,46 @@
+void script_2132(Widget widget0, int arg1, int arg2, Widget widget3, int arg4) {
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int5 = widget0.getX() + arg1;
+	int6 = widget0.getY() + arg2;
+	if (widget3.getX() >= int5 && widget3.getX() < int5 + widget0.getWidth()) {
+		if (widget3.getY() >= int6 && widget3.getY() < int6 + widget0.getHeight()) {
+			int5 = int5 - (rndExcl(3) + 2);
+			int6 = int6 - (rndExcl(3) + 2);
+			if (arg4 <= getClientCycle()) {
+				playSoundEffect(819, 1, 0);
+				arg4 = getClientCycle() + 20 + rndExcl(40);
+			}
+		}
+	} else if (int5 >= widget3.getX() && int5 < widget3.getX() + widget3.getWidth() && int6 >= widget3.getY() && int6 < widget3.getY() + widget3.getHeight()) {
+		int5 = int5 + rndExcl(3) + 2;
+		int6 = int6 + rndExcl(3) + 2;
+		if (arg4 <= getClientCycle()) {
+			playSoundEffect(819, 1, 0);
+			arg4 = getClientCycle() + 20 + rndExcl(40);
+		}
+	}
+	int5 = max(int5, 0);
+	int6 = max(int6, 0);
+	int7 = widget0.getLayer().getWidth() - widget0.getWidth();
+	int5 = min(int5, int7);
+	int8 = widget0.getLayer().getHeight() - widget0.getHeight();
+	int6 = min(int6, int8);
+	if (int5 <= 0 && arg1 < 0 || int5 >= int7 && arg1 > 0) {
+		arg1 = 0 - arg1;
+	}
+	if (int6 <= 0 && arg2 < 0 || int6 >= int8 && arg2 > 0) {
+		arg2 = 0 - arg2;
+	}
+	if (arg1 == 0) {
+		arg1 = rndExcl(3) + 1;
+	}
+	if (arg2 == 0) {
+		arg2 = rndExcl(3) + 1;
+	}
+	widget0.setPosition(int5, int6, 0, 0);
+	widget0.setScriptCallOnGameloop(2132, widget0, arg1, arg2, widget3, arg4, "IiiIi");
+	return;
+}

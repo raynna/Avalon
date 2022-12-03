@@ -1,0 +1,22 @@
+void script_3168(Widget widget0, int arg1, int arg2, string string3, int arg4, int arg5) {
+	int int5;
+	int int6;
+	int5 = 0;
+	int6 = 0;
+	if (getClientCycle() > arg2 && ACTIVE.setChild(widget0, arg1)) {
+		widget(912, 30).setIsHidden(false);
+		widget(912, 34).setText(string3);
+		widget(912, 30).setSize(widget(912, 34).getX() * 2 + getTextWidth(string3, 495), widget(912, 30).getHeight(), 0, 0);
+		int5 = ACTIVE.getX() + arg4 + 3 - widget0.getScrollX();
+		int6 = ACTIVE.getY() + arg5 + widget(912, 36).getY() + widget(912, 45).getY() - 3 - widget(912, 30).getHeight() - widget(912, 45).getScrollY();
+		if (int5 + widget(912, 30).getWidth() > widget(912, 29).getWidth()) {
+			int5 = widget(912, 29).getWidth() - widget(912, 30).getWidth();
+		}
+		if (int6 < 0) {
+			int6 = 0;
+		}
+		widget(912, 30).setPosition(int5, int6, 0, 0);
+		ACTIVE.setScriptCallOnMouseOver(-1, "");
+	}
+	return;
+}

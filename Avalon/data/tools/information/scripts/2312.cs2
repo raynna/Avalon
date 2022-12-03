@@ -1,0 +1,53 @@
+void script_2312() {
+	int int0;
+	int0 = 0;
+	while (int0 < 31) {
+		ACTIVE.createChild(widget(137, 75), 4, int0);
+		ACTIVE.setSize(46, 20, 0, 0);
+		ACTIVE.setPosition(4, int0 * 20, 0, 0);
+		ACTIVE.setFont(496);
+		ACTIVE.setTextAlignment(1, 1, 0);
+		ACTIVE.setText(str(int0 + 1));
+		ACTIVE.setRGB(0xFFFFFF);
+		ACTIVE.setContextMenuOption(1, "Select");
+		ACTIVE.setScriptCallOnClickContextMenu(2316, int0, "i");
+		ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 65280, "Iii");
+		ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+		int0 = int0 + 1;
+	}
+	widget(137, 75).setScrollMax(0, int0 * 20);
+	script_31(widget(137, 76), widget(137, 75), 792, 789, 790, 791, 773, 788);
+	int0 = 0;
+	while (int0 < 12) {
+		ACTIVE.createChild(widget(137, 78), 4, int0);
+		ACTIVE.setSize(158, 20, 0, 0);
+		ACTIVE.setPosition(4, int0 * 20, 0, 0);
+		ACTIVE.setFont(496);
+		ACTIVE.setTextAlignment(1, 1, 0);
+		ACTIVE.setText(datamap('i', 's', (DataMap)950, int0));
+		ACTIVE.setRGB(0xFFFFFF);
+		ACTIVE.setContextMenuOption(1, "Select");
+		ACTIVE.setScriptCallOnClickContextMenu(2334, int0, "i");
+		ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 65280, "Iii");
+		ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+		int0 = int0 + 1;
+	}
+	widget(137, 78).setScrollMax(0, int0 * 20);
+	script_31(widget(137, 79), widget(137, 78), 792, 789, 790, 791, 773, 788);
+	widget(137, 75).setIsHidden(true);
+	widget(137, 74).setIsHidden(true);
+	widget(137, 76).setIsHidden(true);
+	widget(137, 78).setIsHidden(true);
+	widget(137, 77).setIsHidden(true);
+	widget(137, 79).setIsHidden(true);
+	widget(137, 81).setIsHidden(true);
+	widget(137, 82).setIsHidden(true);
+	widget(137, 80).setIsHidden(true);
+	widget(137, 68).setIsHidden(true);
+	widget(137, 69).setIsHidden(true);
+	widget(137, 70).setIsHidden(true);
+	widget(137, 71).setIsHidden(false);
+	widget(137, 72).setIsHidden(false);
+	widget(137, 73).setIsHidden(false);
+	return;
+}

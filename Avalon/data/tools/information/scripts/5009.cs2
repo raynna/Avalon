@@ -1,0 +1,18 @@
+void script_5009() {
+	script_4407(widget(1092, 1370), 1, 180);
+	script_4407(widget(1092, 1363), 1, 180);
+	script_4407(widget(1092, 1356), 1, 180);
+	script_4407(widget(1092, 1272), 1, 180);
+	script_4407(widget(1092, 1279), 1, 180);
+	script_4407(widget(1092, 1286), 1, 180);
+	script_4407(widget(1092, 1293), 1, 180);
+	script_4407(widget(1092, 1300), 1, 180);
+	script_4407(widget(1092, 1307), 1, 180);
+	script_4407(widget(1092, 1314), 1, 180);
+	script_4407(widget(1092, 1321), 1, 180);
+	script_4407(widget(1092, 1328), 1, 180);
+	script_4407(widget(1092, 1335), 1, 180);
+	script_4407(widget(1092, 1342), 1, 180);
+	script_4407(widget(1092, 1349), 1, 180);
+	return;
+}

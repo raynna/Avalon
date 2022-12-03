@@ -1,0 +1,12 @@
+void script_527() {
+	script_528(VARPBIT[4090], 215, 1103, widget(301, 63), widget(301, 14));
+	script_528(VARPBIT[4091], 207, 1095, widget(301, 64), widget(301, 16));
+	script_528(VARPBIT[4093], 208, 1096, widget(301, 65), widget(301, 18));
+	script_528(VARPBIT[4095], 221, 1109, widget(301, 66), widget(301, 20));
+	script_528(VARPBIT[4096], 217, 1105, widget(301, 67), widget(301, 22));
+	script_528(VARPBIT[4098], 202, 1090, widget(301, 68), widget(301, 24));
+	script_528(VARPBIT[4100], 210, 1098, widget(301, 69), widget(301, 26));
+	script_528(VARPBIT[4101], 212, 1100, widget(301, 70), widget(301, 28));
+	script_528(VARPBIT[4102], 205, 1093, widget(301, 71), widget(301, 30));
+	return;
+}

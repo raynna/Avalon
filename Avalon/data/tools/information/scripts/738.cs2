@@ -1,0 +1,9 @@
+void script_738() {
+	string str0;
+	string str1;
+	str0 = str(VARC[105] / 10);
+	str1 = str(VARC[105] % 10);
+	widget(269, 48).setText(str0);
+	widget(269, 49).setText(str1);
+	return;
+}

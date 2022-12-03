@@ -1,0 +1,60 @@
+void script_1186() {
+	boolean boolean0;
+	if (getDisplayMode() >= 2) {
+		if (widget(752, 13).hasChild()) {
+			widget(752, 1).setIsHidden(false);
+			widget(752, 1).setAlpha(true);
+			if (VARPBIT[542] == 0) {
+				widget(752, 1).setSprite(1204);
+				widget(752, 2).setIsHidden(false);
+			} else {
+				widget(752, 1).setSprite(1205);
+				widget(752, 2).setIsHidden(true);
+			}
+		} else if (widget(752, 12).hasChild()) {
+			widget(752, 1).setIsHidden(false);
+			widget(752, 1).setAlpha(true);
+			if (VARPBIT[542] == 0) {
+				widget(752, 1).setSprite(1204);
+				widget(752, 2).setIsHidden(false);
+			} else {
+				widget(752, 1).setSprite(1205);
+				widget(752, 2).setIsHidden(true);
+			}
+		} else if (widget(752, 11).hasChild()) {
+			widget(752, 1).setIsHidden(false);
+			widget(752, 1).setAlpha(true);
+			if (VARPBIT[542] == 0) {
+				widget(752, 1).setSprite(1204);
+				widget(752, 2).setIsHidden(false);
+			} else {
+				widget(752, 1).setSprite(1205);
+				widget(752, 2).setIsHidden(true);
+			}
+		} else if (widget(752, 10).hasChild()) {
+			widget(752, 1).setIsHidden(false);
+			widget(752, 1).setAlpha(true);
+			if (VARPBIT[542] == 0) {
+				widget(752, 1).setSprite(1204);
+				widget(752, 2).setIsHidden(false);
+			} else {
+				widget(752, 1).setSprite(1205);
+				widget(752, 2).setIsHidden(true);
+			}
+		}
+	}
+	boolean0 = script_734(VARPBIT[6448]);
+	widget(548, 15).setIsHidden(boolean0);
+	widget(548, 10).setIsHidden(boolean0);
+	widget(746, 15).setIsHidden(boolean0);
+	widget(746, 17).setIsHidden(boolean0);
+	if (script_1569() == 0) {
+		widget(746, 71).setIsHidden(boolean0);
+		widget(746, 79).setIsHidden(boolean0);
+	} else {
+		widget(746, 71).setIsHidden(true);
+		widget(746, 79).setIsHidden(false);
+	}
+	widget(746, 20).setIsHidden(boolean0);
+	return;
+}

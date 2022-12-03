@@ -1,0 +1,17 @@
+void script_6(Widget widget0, Widget widget1, Sprite sprite2, Sprite sprite3, int arg4, boolean boolean5, Item item6, int arg7, Item item8, int arg9, Item item10, int arg11, Item item12, int arg13, string string14, string string15) {
+	if (!isMember() && (widget0 == widget(193, 48) || widget0 == widget(430, 39))) {
+		string14 = "Lumbridge Home Teleport";
+	}
+	widget0.setOptionBase("<col=00ff00>" + string14);
+	script_21(widget0, sprite2, sprite3, arg4, boolean5, item6, arg7, item8, arg9, item10, arg11, item12, arg13);
+	widget0.bindMouseToSpriteShape(false);
+	widget0.setScriptCallOnMouseOver(10, widget0, widget1, arg4, string14, string15, item6, arg7, item8, arg9, item10, arg11, item12, arg13, "IIissoioioioi");
+	widget0.setScriptCallOnMouseExit(11, widget1, "I");
+	if (widget0.getTargetMask() != 0) {
+		widget0.setScriptCallOnUse(17, widget0, "I");
+		widget0.setScriptCallOnUseWith(18, widget0, "I");
+	}
+	widget0.setScriptCallOnItemContainerUpdate(16, widget0, sprite2, sprite3, arg4, boolean5, item6, arg7, item8, arg9, item10, arg11, item12, arg13, 93, "Iddi1oioioioiY");
+	widget0.setScriptCallOnSkillChange(16, widget0, sprite2, sprite3, arg4, boolean5, item6, arg7, item8, arg9, item10, arg11, item12, arg13, 6, "Iddi1oioioioiY");
+	return;
+}

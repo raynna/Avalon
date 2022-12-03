@@ -1,0 +1,53 @@
+void script_3454(int arg0, int arg1, int arg2, Location arg3, int arg4) {
+	switch (arg0) {
+		case 1:
+			VARC[1283] = arg1;
+			VARC[1284] = arg2;
+			VARC[1285] = arg3;
+			VARC[1286] = arg4;
+			break;
+		case 2:
+			VARC[1287] = arg1;
+			VARC[1288] = arg2;
+			VARC[1289] = arg3;
+			VARC[1290] = arg4;
+			break;
+		case 3:
+			VARC[1291] = arg1;
+			VARC[1292] = arg2;
+			VARC[1293] = arg3;
+			VARC[1294] = arg4;
+			break;
+		case 4:
+			VARC[1295] = arg1;
+			VARC[1296] = arg2;
+			VARC[1297] = arg3;
+			VARC[1298] = arg4;
+			break;
+		case 5:
+			VARC[1299] = arg1;
+			VARC[1300] = arg2;
+			VARC[1301] = arg3;
+			VARC[1302] = arg4;
+			break;
+		case 6:
+			VARC[1303] = arg1;
+			VARC[1304] = arg2;
+			VARC[1305] = arg3;
+			VARC[1306] = arg4;
+			break;
+		case 7:
+			VARC[1307] = arg1;
+			VARC[1308] = arg2;
+			VARC[1309] = arg3;
+			VARC[1310] = arg4;
+			break;
+		case 8:
+			VARC[1311] = arg1;
+			VARC[1312] = arg2;
+			VARC[1313] = arg3;
+			VARC[1314] = arg4;
+			break;
+	}
+	return;
+}

@@ -1,0 +1,28 @@
+void script_744(Widget widget0, int arg1, Widget widget2, int arg3, int arg4) {
+	Item item5;
+	Item item6;
+	item5 = null;
+	item6 = null;
+	if (widget0 == widget(18, 9)) {
+		if (widget2 == widget(18, 9)) {
+			if (ACTIVE.setChild(widget0, arg1) && _ACTIVE.setChild(widget2, arg3)) {
+				item5, item6 = ACTIVE.getItemId(), _ACTIVE.getItemId();
+				ACTIVE.setItemNoNum(item6, 1);
+				_ACTIVE.setItemNoNum(item5, 1);
+				ACTIVE.setOptionBase("<col=ff9040>" + getItemName(item6) + "</col>");
+				_ACTIVE.setOptionBase("<col=ff9040>" + getItemName(item5) + "</col>");
+			}
+			return;
+		}
+		if (widget2 == widget(18, 17)) {
+			script_1535(arg1, 0);
+			script_59(arg4);
+		}
+		return;
+	}
+	if (widget0 == widget(18, 17) && widget2 == widget(18, 9)) {
+		script_1535(arg3, arg1);
+		script_59(arg4);
+	}
+	return;
+}

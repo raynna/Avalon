@@ -1,0 +1,23 @@
+int script_4180(int arg0, Widget widget1, string string2, int arg3) {
+	int int3;
+	int int4;
+	int3 = getLineCount(string2, widget1.getWidth(), 494) * 10 + 2;
+	int4 = getClientCycle() - arg3;
+	if (arg3 > 0 && int4 < 255) {
+		ACTIVE.createChild(widget1, 3, widget1.nextChild());
+		ACTIVE.setSize(0, int3, 1, 0);
+		ACTIVE.setPosition(0, arg0, 1, 0);
+		ACTIVE.setFilled(true);
+		ACTIVE.setRGB(0xFF0000);
+		ACTIVE.setTrans(max(int4, 0));
+		ACTIVE.setScriptCallOnGameloop(4181, CTX_WIDGET, CTX_WIDGET_CHILD, "Ii");
+	}
+	ACTIVE.createChild(widget1, 4, widget1.nextChild());
+	ACTIVE.setSize(0, int3, 1, 0);
+	ACTIVE.setPosition(0, arg0, 1, 0);
+	ACTIVE.setRGB(0xAAAAAA);
+	ACTIVE.setFont(494);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setText(string2);
+	return arg0 + int3 + 2;
+}

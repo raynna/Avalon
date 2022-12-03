@@ -1,0 +1,39 @@
+void script_5262(int arg0, int arg1, Widget widget2) {
+	if (arg1 == 50) {
+		if (arg0 == 1) {
+			switch (widget2) {
+				case widget(1132, 10):
+					widget(1132, 22).setIsHidden(true);
+					widget(1132, 23).setIsHidden(true);
+					widget2.setScriptCallOnGameloop(-1, "");
+					break;
+				case widget(1132, 11):
+					widget(1132, 27).setIsHidden(true);
+					widget(1132, 28).setIsHidden(true);
+					widget2.setScriptCallOnGameloop(-1, "");
+					break;
+			}
+		} else {
+			switch (widget2) {
+				case widget(1132, 10):
+					widget(1132, 23).setText(str(arg0 - 1));
+					widget2.setScriptCallOnGameloop(5262, arg0 - 1, 0, widget2, "iiI");
+					break;
+				case widget(1132, 11):
+					widget(1132, 28).setText(str(arg0 - 1));
+					widget2.setScriptCallOnGameloop(5262, arg0 - 1, 0, widget2, "iiI");
+					break;
+			}
+		}
+	} else {
+		switch (widget2) {
+			case widget(1132, 10):
+				widget2.setScriptCallOnGameloop(5262, arg0, arg1 + 1, widget(1132, 10), "iiI");
+				break;
+			case widget(1132, 11):
+				widget2.setScriptCallOnGameloop(5262, arg0, arg1 + 1, widget(1132, 11), "iiI");
+				break;
+		}
+	}
+	return;
+}

@@ -1,0 +1,27 @@
+void script_1796(Widget widget0) {
+	VARC[246] = 0;
+	VARC[247] = 0;
+	VARC[248] = 0;
+	VARC[249] = 0;
+	VARC[250] = 0;
+	VARC[251] = 0;
+	if (!isMember()) {
+		VARC[252] = 1;
+		VARC[253] = 0;
+		script_1775();
+		script_1778();
+	} else {
+		VARC[252] = 0;
+		VARC[253] = 0;
+	}
+	VARC[254] = 0;
+	VARC[255] = 0;
+	VARC[256] = 0;
+	VARC[257] = 0;
+	VARC[258] = 0;
+	VARC[259] = 0;
+	widget0.setScriptCallOnConfigChange(1836, 1305, 1149, "Y");
+	widget0.setScriptCallOnGlobalConfigChange(1837, 259, "Y");
+	widget0.setScriptCallOnGlobalStringChange(1838, widget0, 37, "IY");
+	return;
+}

@@ -1,0 +1,6 @@
+void script_5159(Widget widget0, Widget widget1, Widget widget2, int arg3, int arg4) {
+	VARC[1592] = arg3;
+	VARC[1593] = arg4;
+	script_5161(widget0, widget1, widget2, arg3, arg4);
+	return;
+}

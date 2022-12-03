@@ -1,0 +1,34 @@
+void script_1223() {
+	if (IsFemale()) {
+		widget(308, 20).setIsHidden(false);
+		widget(308, 22).setIsHidden(false);
+		widget(308, 24).setIsHidden(false);
+		widget(308, 26).setIsHidden(false);
+		widget(308, 28).setIsHidden(false);
+		widget(308, 30).setIsHidden(false);
+		widget(308, 32).setIsHidden(false);
+		widget(308, 19).setIsHidden(true);
+		widget(308, 21).setIsHidden(true);
+		widget(308, 23).setIsHidden(true);
+		widget(308, 25).setIsHidden(true);
+		widget(308, 27).setIsHidden(true);
+		widget(308, 29).setIsHidden(true);
+		widget(308, 31).setIsHidden(true);
+	} else {
+		widget(308, 20).setIsHidden(true);
+		widget(308, 22).setIsHidden(true);
+		widget(308, 24).setIsHidden(true);
+		widget(308, 26).setIsHidden(true);
+		widget(308, 28).setIsHidden(true);
+		widget(308, 30).setIsHidden(true);
+		widget(308, 32).setIsHidden(true);
+		widget(308, 19).setIsHidden(false);
+		widget(308, 21).setIsHidden(false);
+		widget(308, 23).setIsHidden(false);
+		widget(308, 25).setIsHidden(false);
+		widget(308, 27).setIsHidden(false);
+		widget(308, 29).setIsHidden(false);
+		widget(308, 31).setIsHidden(false);
+	}
+	return;
+}

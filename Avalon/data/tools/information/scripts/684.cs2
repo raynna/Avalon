@@ -1,0 +1,4 @@
+void script_684(int arg0, int arg1) {
+	ACTIVE.setPosition(ACTIVE.getX() + arg0, ACTIVE.getY() + arg1, 0, 0);
+	return;
+}

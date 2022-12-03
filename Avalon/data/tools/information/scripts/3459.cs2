@@ -1,0 +1,3 @@
+Location script_3459(Location location0, Location location1) {
+	return moveCoord(location1, 24 + x(location0) - x(location(3776, 5696, 0)), 0, 24 + y(location0) - y(location(3776, 5696, 0)));
+}

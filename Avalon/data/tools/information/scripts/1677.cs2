@@ -1,0 +1,15 @@
+void script_1677() {
+	widget(85, 0).setScriptCallOnGameloop(1688, "");
+	VARC[1046] = 0;
+	VARC[1045] = 0;
+	VARC[1051] = 0;
+	VARC[1048] = 0;
+	VARC[1049] = 255;
+	VARC[1044] = 0;
+	cs2method5405(0, 0);
+	cs2method5405(1, 0);
+	script_1678();
+	cameraMethod5502(0, 0, 200, 200, 1, 0);
+	widget(85, 0).setScriptCallOnMinimapRelatedSetting3(1679, "");
+	return;
+}

@@ -1,0 +1,45 @@
+void script_2632(Widget widget0) {
+	if (widget0 != widget(859, 0)) {
+		script_1360(widget0);
+	}
+	switch (widget0) {
+		case widget(859, 0):
+			widget(859, 28).setText("Go to");
+			widget(859, 29).setText("Click to view this squad.");
+			break;
+		case widget(859, 13):
+			widget(859, 28).setText("Attack");
+			widget(859, 29).setText("Select the enemy squad you wish to attack.");
+			break;
+		case widget(859, 14):
+			widget(859, 28).setText("Move");
+			widget(859, 29).setText("Select the destination for your squad.");
+			break;
+		case widget(859, 15):
+			widget(859, 28).setText("Explore");
+			widget(859, 29).setText("Send the unit to explore for treasure.");
+			break;
+		case widget(859, 16):
+			if (VARPBIT[6357] == 2) {
+				widget(859, 28).setText("Attack wall/catapult");
+				widget(859, 29).setText("Select the wall or catapult you want your squad to attack.");
+			} else if (VARPBIT[6357] == 3) {
+				widget(859, 28).setText("Collect gold");
+				widget(859, 29).setText("Select the cave entrance from which your squad should gather gold.");
+			} else if (VARPBIT[6357] == 4) {
+				widget(859, 28).setText("Rescue");
+				widget(859, 29).setText("Select the fissure from which your squad should rescue TzHaar.");
+			}
+			break;
+		case widget(859, 17):
+			if (VARPBIT[6357] == 2) {
+				widget(859, 28).setText("Collect");
+				widget(859, 29).setText("Select a resource for your squad to collect.");
+			} else if (VARPBIT[6357] == 4) {
+				widget(859, 28).setText("Steal");
+				widget(859, 29).setText("Select a lander to steal TzHaar from.");
+			}
+			break;
+	}
+	return;
+}

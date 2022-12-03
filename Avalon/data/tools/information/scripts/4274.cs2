@@ -1,0 +1,24 @@
+void script_4274() {
+	widget(1083, 137).setText(script_46(datamap('i', 'i', (DataMap)3674, 0) * 10, ","));
+	widget(1083, 133).setText(script_46(datamap('i', 'i', (DataMap)3674, 1) * 10, ","));
+	widget(1083, 129).setText(script_46(datamap('i', 'i', (DataMap)3674, 2) * 10, ","));
+	widget(1083, 125).setText(script_46(datamap('i', 'i', (DataMap)3674, 3) * 10, ","));
+	widget(1083, 121).setText(script_46(datamap('i', 'i', (DataMap)3674, 4) * 10, ","));
+	widget(1083, 117).setText(script_46(datamap('i', 'i', (DataMap)3674, 5) * 10, ","));
+	widget(1083, 113).setText(script_46(datamap('i', 'i', (DataMap)3674, 6) * 10, ","));
+	widget(1083, 109).setText(script_46(datamap('i', 'i', (DataMap)3674, 7) * 10, ","));
+	widget(1083, 223).setText(script_46(550 * 10, ","));
+	widget(1083, 219).setText(script_46(1800 * 10, ","));
+	widget(1083, 215).setText(script_46(1800 * 10, ","));
+	widget(1083, 227).setText(script_46(550 * 10, ","));
+	widget(1083, 235).setText(script_46(1800 * 10, ","));
+	widget(1083, 231).setText(script_46(1800 * 10, ","));
+	widget(1083, 435).setText(script_46(datamap('i', 'i', (DataMap)3674, 8) * 10, ","));
+	widget(1083, 446).setText(script_46(datamap('i', 'i', (DataMap)3674, 9) * 10, ","));
+	widget(1083, 457).setText(script_46(datamap('i', 'i', (DataMap)3674, 10) * 10, ","));
+	widget(1083, 497).setText(script_46(5500 * 10, ","));
+	widget(1083, 506).setText(script_46(1800 * 10, ","));
+	widget(1083, 516).setText(script_46(1800 * 10, ","));
+	widget(1083, 556).setText(script_46(3700 * 10, ","));
+	return;
+}

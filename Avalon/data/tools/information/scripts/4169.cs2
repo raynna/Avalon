@@ -1,0 +1,8 @@
+void script_4169(int arg0) {
+	if (isBitFlagged(VARP[286], arg0)) {
+		ACTIVE.setSprite(1135);
+	} else {
+		ACTIVE.setSprite(1134);
+	}
+	return;
+}

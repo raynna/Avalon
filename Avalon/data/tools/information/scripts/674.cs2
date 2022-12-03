@@ -1,0 +1,51 @@
+void script_674(int arg0, int arg1, int arg2, int arg3, int arg4, Widget widget5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11) {
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	ACTIVE.createChild(widget5, 3, arg6);
+	ACTIVE.setPosition(arg0, arg1, 0, 0);
+	ACTIVE.setSize(arg2, arg3, 0, 0);
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.setFilled(false);
+	int12 = arg0 + 1;
+	int13 = arg1 + 1;
+	int14 = arg2 - 2;
+	int15 = arg3 - 2;
+	ACTIVE.createChild(widget5, 3, arg6 + 1);
+	ACTIVE.setPosition(int12, int13, 0, 0);
+	ACTIVE.setSize(int14, int15, 0, 0);
+	ACTIVE.setRGB(0x302520);
+	ACTIVE.setTrans(100);
+	ACTIVE.setFilled(true);
+	ACTIVE.createChild(widget5, 3, arg6 + 2);
+	if (arg8 == 0) {
+		ACTIVE.setPosition(arg0 + 1, arg1 + 1, 0, 0);
+		ACTIVE.setTrans(0);
+		ACTIVE.setFilled(true);
+		if (arg9 == 1) {
+			ACTIVE.setSize(int14, int15, 0, 0);
+			if (arg11 == arg10) {
+				ACTIVE.setRGB(0x3F821E);
+			} else {
+				ACTIVE.setRGB(0x8A0010);
+			}
+		} else {
+			ACTIVE.setSize(arg11 * arg10 / int14, int15, 0, 0);
+			ACTIVE.setRGB(0xC68B01);
+		}
+	}
+	ACTIVE.createChild(widget5, 3, arg6 + 3);
+	ACTIVE.setPosition(int12, int13, 0, 0);
+	ACTIVE.setSize(int14, 3, 0, 0);
+	ACTIVE.setFilled(true);
+	ACTIVE.setTrans(200);
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.createChild(widget5, 3, arg6 + 4);
+	ACTIVE.setPosition(int12, int13 + 3, 0, 0);
+	ACTIVE.setSize(3, int15 - 3, 0, 0);
+	ACTIVE.setFilled(true);
+	ACTIVE.setTrans(200);
+	ACTIVE.setRGB(0x000000);
+	return;
+}

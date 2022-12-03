@@ -1,0 +1,8 @@
+void script_1536(Widget widget0) {
+	widget0.setScriptCallOnConfigChange(1537, 1747, "Y");
+	widget0.setScriptCallOnItemContainerUpdate(1538, 93, 94, 530, "Y");
+	widget0.setScriptCallOnGlobalStringChange(1539, 352, "Y");
+	script_4592();
+	script_4597();
+	return;
+}

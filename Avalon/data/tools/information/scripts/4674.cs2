@@ -1,0 +1,105 @@
+void script_4674() {
+	int int0;
+	int0 = VARPBIT[9306];
+	if (VARC[1526] >= 20 && VARC[1527] >= 30 && VARC[1528] >= 40 && VARC[1529] >= 50) {
+		return;
+	}
+	if (VARC[1526] < 20) {
+		VARC[1526] = VARC[1526] + 1;
+	}
+	if (VARC[1527] < 30) {
+		VARC[1527] = VARC[1527] + 1;
+	}
+	if (VARC[1528] < 40) {
+		VARC[1528] = VARC[1528] + 1;
+	}
+	if (VARC[1529] < 50) {
+		VARC[1529] = VARC[1529] + 1;
+	}
+	switch (int0) {
+		case 1:
+			if (VARC[1526] >= 20) {
+				if (VARPBIT[9320] == 1) {
+					widget(102, 150).setSprite(5917);
+				} else {
+					widget(102, 150).setSprite(5921);
+				}
+			}
+			if (VARC[1527] >= 30) {
+				if (VARPBIT[9321] == 1) {
+					widget(102, 151).setSprite(5917);
+				} else {
+					widget(102, 151).setSprite(5921);
+				}
+			}
+			if (VARC[1528] >= 40) {
+				if (VARPBIT[9322] == 1) {
+					widget(102, 152).setSprite(5917);
+				} else {
+					widget(102, 152).setSprite(5921);
+				}
+			}
+			if (VARC[1529] >= 50) {
+				if (VARPBIT[9323] == 1) {
+					widget(102, 153).setSprite(5917);
+				} else {
+					widget(102, 153).setSprite(5921);
+				}
+			}
+			break;
+		case 4:
+			if (VARC[1526] >= 20) {
+				if (VARPBIT[9324] == 1) {
+					widget(102, 150).setSprite(5917);
+				} else {
+					widget(102, 150).setSprite(5921);
+				}
+			}
+			if (VARC[1527] >= 30) {
+				if (VARPBIT[9325] == 1) {
+					widget(102, 151).setSprite(5917);
+				} else {
+					widget(102, 151).setSprite(5921);
+				}
+			}
+			if (VARC[1528] >= 40) {
+				if (VARPBIT[9326] == 1) {
+					widget(102, 152).setSprite(5917);
+				} else {
+					widget(102, 152).setSprite(5921);
+				}
+			}
+			if (VARC[1529] >= 50) {
+				if (VARPBIT[9327] == 1) {
+					widget(102, 153).setSprite(5917);
+				} else {
+					widget(102, 153).setSprite(5921);
+				}
+			}
+			break;
+		case 2:
+			if (VARC[1526] >= 20) {
+				if (VARPBIT[9331] == 1) {
+					widget(102, 64).setSprite(5917);
+				} else {
+					widget(102, 64).setSprite(5921);
+				}
+			}
+			if (VARC[1527] >= 30) {
+				if (VARPBIT[9333] == 1) {
+					widget(102, 148).setSprite(5917);
+				} else {
+					widget(102, 148).setSprite(5921);
+				}
+			}
+			if (VARC[1528] >= 40) {
+				if (VARPBIT[9332] == 1) {
+					widget(102, 149).setSprite(5917);
+				} else {
+					widget(102, 149).setSprite(5921);
+				}
+			}
+			break;
+	}
+	return;
+}

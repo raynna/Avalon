@@ -1,0 +1,11 @@
+void script_579(int arg0, Item item1) {
+	if (ACTIVE.setChild(widget(389, 4), 0)) {
+		ACTIVE.setPosition(0, 15 * (arg0 - 1), 0, 0);
+		ACTIVE.setSize(widget(389, 4).getWidth(), 15, 0, 0);
+		ACTIVE.setRGB(0x000000);
+		ACTIVE.setTrans(220);
+		ACTIVE.setFilled(true);
+	}
+	widget(389, 15).setItem(item1, -1);
+	return;
+}

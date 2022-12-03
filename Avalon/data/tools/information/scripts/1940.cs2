@@ -1,0 +1,8 @@
+void script_1940() {
+	int int0;
+	int0 = getClientCycle() + VARC[557] * 3000;
+	if (int0 < VARC[556]) {
+		VARC[556] = int0;
+	}
+	return;
+}

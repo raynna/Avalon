@@ -1,0 +1,122 @@
+void script_5359(Widget widget0, int arg1, AttrMap attrmap2, int arg3) {
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	Item item9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	string str4;
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	int8 = 4;
+	item9 = getAttributeMapValue(attrmap2, 1935);
+	int10 = 0;
+	int11 = 0;
+	int12 = 0;
+	str0 = "";
+	str1 = "";
+	str2 = "";
+	str3 = "";
+	str4 = "";
+	int13 = 0;
+	int14 = 0;
+	if (arg3 == 1 && getAttributeMapValue(attrmap2, 1937) != 2 && ACTIVE.setChild(widget0, arg1)) {
+		int4 = ACTIVE.getX();
+		int5 = ACTIVE.getY();
+		int6 = ACTIVE.getWidth();
+		int4 = int4 + int6;
+		int5 = int5 + int8;
+		widget(1143, 62).setPosition(int4, int5, 0, 0);
+		widget(1143, 130).setText(getAttributeMapValue(attrmap2, 1931));
+		if (getAttributeMapValue(attrmap2, 1937) == 1) {
+			int10 = itemAttribute(item9, 1430) / 100;
+			str0 = "Duration: " + str(int10) + " mins.";
+			int11 = itemAttribute(item9, 1429) / 100;
+			str1 = "Recharge: " + str(int11) + " mins.";
+			if (int10 > 60) {
+				int12 = int10 % 60;
+				int10 = int10 / 60;
+				if (int12 > 0) {
+					if (int10 > 1) {
+						str0 = "Duration: " + str(int10) + " hours, " + str(int12) + " mins.";
+					} else {
+						str0 = "Duration: 1 hour, " + str(int12) + " mins.";
+					}
+				} else if (int10 > 1) {
+					str0 = "Duration: " + str(int10) + " hours.";
+				} else {
+					str0 = "Duration: 1 hour.";
+				}
+			}
+			if (int11 > 60) {
+				int12 = int11 % 60;
+				int11 = int11 / 60;
+				if (int12 > 0) {
+					if (int11 > 1) {
+						str1 = "Recharge: " + str(int11) + " hours, " + str(int12) + " mins.";
+					} else {
+						str1 = "Recharge: 1 hour, " + str(int12) + " mins.";
+					}
+				} else if (int11 > 1) {
+					str1 = "Recharge: " + str(int11) + " hours.";
+				} else {
+					str1 = "Recharge: 1 hour.";
+				}
+			}
+			str2 = "<br>" + "<br>" + str0 + "<br>" + str1;
+			widget(1143, 130).setText(concat(widget(1143, 130).getText(), str2));
+		} else if (getAttributeMapValue(attrmap2, 1937) == 4) {
+			while (int13 < datamapSize((DataMap)5184) && int14 == 0) {
+				if (datamap('i', 'J', (DataMap)5184, int13) == attrmap2) {
+					str4 = datamap('i', 's', (DataMap)5187, int13);
+					str3 = datamap('i', 's', (DataMap)5186, int13);
+					int14 = 1;
+				}
+				int13 = int13 + 1;
+			}
+			str3 = concat("Male Title: ", str3);
+			str4 = concat("Female Title: ", str4);
+			widget(1143, 130).setText(str3 + "<br>" + str4);
+		}
+		int7 = getLineCount(widget(1143, 130).getText(), widget(1143, 130).getWidth(), widget(1143, 130).getFont());
+		int7 = int7 * 13 + int8 * 2;
+		widget(1143, 62).setSize(widget(1143, 62).getWidth(), int7, 0, 0);
+		widget(1143, 62).setIsHidden(false);
+		if (widget(1143, 62).getWidth() + widget(1143, 62).getX() > widget(1143, 126).getWidth()) {
+			int4 = ACTIVE.getX() - widget(1143, 62).getWidth() + 2;
+			widget(1143, 62).setPosition(int4, int5, 0, 0);
+			widget(1143, 12).setPosition(12, widget(1143, 12).getY(), 2, 0);
+			widget(1143, 127).setPosition(10, widget(1143, 127).getY(), 2, 0);
+			widget(1143, 128).setPosition(11, widget(1143, 128).getY(), 2, 0);
+			widget(1143, 130).setPosition(14, widget(1143, 130).getY(), 2, 0);
+			widget(1143, 129).setPosition(0, 10, 2, 0);
+			widget(1143, 129).setHFlip(true);
+		} else {
+			widget(1143, 12).setPosition(12, widget(1143, 12).getY(), 0, 0);
+			widget(1143, 127).setPosition(10, widget(1143, 127).getY(), 0, 0);
+			widget(1143, 128).setPosition(11, widget(1143, 128).getY(), 0, 0);
+			widget(1143, 130).setPosition(14, widget(1143, 130).getY(), 0, 0);
+			widget(1143, 129).setPosition(0, 10, 0, 0);
+			widget(1143, 129).setHFlip(false);
+		}
+		if (widget(1143, 62).getHeight() < widget(1143, 129).getHeight() + 40) {
+			widget(1143, 129).setPosition(widget(1143, 129).getX(), 0, 0, 1);
+		} else {
+			widget(1143, 129).setPosition(widget(1143, 129).getX(), 10, 0, 0);
+		}
+		return;
+	}
+	widget(1143, 62).setIsHidden(true);
+	return;
+}

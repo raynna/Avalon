@@ -1,0 +1,24 @@
+void script_107(string arg0) {
+	if (VARC[1413] == 0) {
+		return;
+	}
+	if (VARC[11] == 1) {
+		msg("You can't do that while you're reporting abuse.");
+		return;
+	}
+	if (getDisplayMode() >= 2) {
+		widget(746, 73).setIsHidden(false);
+	}
+	STRING[23] = arg0;
+	widget(752, 3).setIsHidden(false);
+	widget(752, 7).setIsHidden(true);
+	widget(752, 8).setIsHidden(true);
+	widget(752, 4).setText("Enter message to send to " + STRING[23]);
+	VARC[5] = 6;
+	script_1564("");
+	widget(752, 3).setScriptCallOnMousePressed(-1, "");
+	script_2026();
+	widget(752, 5).setScriptCallOnKeyPress(112, KEY_TYPED, (char)KEY_PRESSED, "iz");
+	script_1188();
+	return;
+}

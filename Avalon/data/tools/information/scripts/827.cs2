@@ -1,0 +1,16 @@
+void script_827(int arg0) {
+	int int1;
+	int1 = 0;
+	if (getClientCycle() >= arg0 + 32 && getClientCycle() < arg0 + 140) {
+		widget(465, 2).setText("Varrock Herald");
+		widget(465, 3).setText("Covering all of Misthalin and beyond.");
+		widget(465, 4).setText("1 gp");
+		widget(465, 5).setText("Oo'glog Ogresses Open Health Spa!");
+	} else {
+		widget(465, 2).setText(" ");
+		widget(465, 3).setText(" ");
+		widget(465, 4).setText(" ");
+		widget(465, 5).setText(" ");
+	}
+	return;
+}

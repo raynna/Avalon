@@ -1,0 +1,182 @@
+void script_427(int arg0) {
+	int int1;
+	int int2;
+	AttrMap attrmap3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int1 = 0;
+	int2 = 0;
+	attrmap3 = null;
+	int4 = VARPBIT[7539];
+	int5 = VARPBIT[7540];
+	int6 = VARPBIT[7541];
+	int7 = VARPBIT[7542];
+	if (arg0 == 1) {
+		int4 = 1;
+		int5 = 3;
+		int6 = 5;
+		int7 = 6;
+	}
+	if (int4 == 0) {
+		widget(1024, 8).setIsHidden(true);
+		int1 = int1 + 1;
+	} else {
+		attrmap3 = script_488(int4);
+		if (attrmap3 != null) {
+			widget(1024, 8).setIsHidden(false);
+			widget(1024, 8).setOptionBase(getAttributeMapValue(attrmap3, 1150));
+			widget(1024, 75).setText(getAttributeMapValue(attrmap3, 1150));
+			widget(1024, 77).setSprite(getAttributeMapValue(attrmap3, 1153));
+			widget(1024, 76).setText(str(getAttributeMapValue(attrmap3, 1154)));
+		}
+		if (int4 == 9) {
+			widget(1024, 8).setContextMenuOption(1, "Cast");
+		}
+	}
+	if (int5 == 0) {
+		widget(1024, 9).setIsHidden(true);
+		int1 = int1 + 1;
+	} else {
+		attrmap3 = script_488(int5);
+		if (attrmap3 != null) {
+			widget(1024, 9).setIsHidden(false);
+			widget(1024, 9).setOptionBase(getAttributeMapValue(attrmap3, 1150));
+			widget(1024, 58).setText(getAttributeMapValue(attrmap3, 1150));
+			widget(1024, 60).setSprite(getAttributeMapValue(attrmap3, 1153));
+			widget(1024, 59).setText(str(getAttributeMapValue(attrmap3, 1154)));
+		}
+		if (int5 == 9) {
+			widget(1024, 9).setContextMenuOption(1, "Cast");
+		}
+	}
+	if (int6 == 0) {
+		widget(1024, 10).setIsHidden(true);
+		int1 = int1 + 1;
+	} else {
+		attrmap3 = script_488(int6);
+		if (attrmap3 != null) {
+			widget(1024, 10).setIsHidden(false);
+			widget(1024, 10).setOptionBase(getAttributeMapValue(attrmap3, 1150));
+			widget(1024, 41).setText(getAttributeMapValue(attrmap3, 1150));
+			widget(1024, 43).setSprite(getAttributeMapValue(attrmap3, 1153));
+			widget(1024, 42).setText(str(getAttributeMapValue(attrmap3, 1154)));
+		}
+		if (int6 == 9) {
+			widget(1024, 10).setContextMenuOption(1, "Cast");
+		}
+	}
+	if (int7 == 0) {
+		widget(1024, 11).setIsHidden(true);
+		int1 = int1 + 1;
+	} else {
+		attrmap3 = script_488(int7);
+		if (attrmap3 != null) {
+			widget(1024, 11).setIsHidden(false);
+			widget(1024, 11).setOptionBase(getAttributeMapValue(attrmap3, 1150));
+			widget(1024, 24).setText(getAttributeMapValue(attrmap3, 1150));
+			widget(1024, 26).setSprite(getAttributeMapValue(attrmap3, 1153));
+			widget(1024, 25).setText(str(getAttributeMapValue(attrmap3, 1154)));
+		}
+		if (int7 == 9) {
+			widget(1024, 11).setContextMenuOption(1, "Cast");
+		}
+	}
+	if (int1 == 4) {
+		widget(1024, 1).setIsHidden(true);
+		widget(1024, 2).setIsHidden(false);
+	} else if (int1 == 3) {
+		widget(1024, 1).setIsHidden(false);
+		widget(1024, 2).setIsHidden(true);
+		if (int4 != 0) {
+			widget(1024, 8).setPosition(widget(1024, 8).getX(), 102, 0, 0);
+			widget(1024, 65).setScriptCallOnMouseOver(432, CTX_WIDGET, 6, "Ii");
+		} else if (int5 != 0) {
+			widget(1024, 9).setPosition(widget(1024, 9).getX(), 102, 0, 0);
+			widget(1024, 48).setScriptCallOnMouseOver(432, CTX_WIDGET, 6, "Ii");
+		} else if (int6 != 0) {
+			widget(1024, 10).setPosition(widget(1024, 10).getX(), 102, 0, 0);
+			widget(1024, 31).setScriptCallOnMouseOver(432, CTX_WIDGET, 6, "Ii");
+		} else if (int7 != 0) {
+			widget(1024, 11).setPosition(widget(1024, 11).getX(), 102, 0, 0);
+			widget(1024, 14).setScriptCallOnMouseOver(432, CTX_WIDGET, 6, "Ii");
+		}
+	} else if (int1 == 2) {
+		widget(1024, 1).setIsHidden(false);
+		widget(1024, 2).setIsHidden(true);
+		if (int4 != 0) {
+			widget(1024, 8).setPosition(widget(1024, 8).getX(), 60, 0, 0);
+			widget(1024, 65).setScriptCallOnMouseOver(432, CTX_WIDGET, 111, "Ii");
+			int2 = int2 + 1;
+		}
+		if (int5 != 0) {
+			if (int2 == 0) {
+				widget(1024, 9).setPosition(widget(1024, 9).getX(), 60, 0, 0);
+				widget(1024, 48).setScriptCallOnMouseOver(432, CTX_WIDGET, 111, "Ii");
+			} else {
+				widget(1024, 9).setPosition(widget(1024, 9).getX(), 145, 0, 0);
+				widget(1024, 48).setScriptCallOnMouseOver(432, CTX_WIDGET, 49, "Ii");
+			}
+			int2 = int2 + 1;
+		}
+		if (int6 != 0) {
+			if (int2 == 0) {
+				widget(1024, 10).setPosition(widget(1024, 10).getX(), 60, 0, 0);
+				widget(1024, 31).setScriptCallOnMouseOver(432, CTX_WIDGET, 111, "Ii");
+			} else {
+				widget(1024, 10).setPosition(widget(1024, 10).getX(), 145, 0, 0);
+				widget(1024, 31).setScriptCallOnMouseOver(432, CTX_WIDGET, 49, "Ii");
+			}
+			int2 = int2 + 1;
+		}
+		if (int7 != 0) {
+			widget(1024, 11).setPosition(widget(1024, 11).getX(), 145, 0, 0);
+			widget(1024, 14).setScriptCallOnMouseOver(432, CTX_WIDGET, 49, "Ii");
+		}
+	} else if (int1 == 1) {
+		widget(1024, 1).setIsHidden(false);
+		widget(1024, 2).setIsHidden(true);
+		if (int4 != 0) {
+			widget(1024, 8).setPosition(widget(1024, 8).getX(), 41, 0, 0);
+			widget(1024, 65).setScriptCallOnMouseOver(432, CTX_WIDGET, 92, "Ii");
+			int2 = int2 + 1;
+		}
+		if (int5 != 0) {
+			if (int2 == 0) {
+				widget(1024, 9).setPosition(widget(1024, 9).getX(), 41, 0, 0);
+				widget(1024, 48).setScriptCallOnMouseOver(432, CTX_WIDGET, 92, "Ii");
+			} else {
+				widget(1024, 9).setPosition(widget(1024, 9).getX(), 102, 0, 0);
+				widget(1024, 48).setScriptCallOnMouseOver(432, CTX_WIDGET, 6, "Ii");
+			}
+			int2 = int2 + 1;
+		}
+		if (int6 != 0) {
+			if (int2 == 1) {
+				widget(1024, 10).setPosition(widget(1024, 10).getX(), 102, 0, 0);
+				widget(1024, 31).setScriptCallOnMouseOver(432, CTX_WIDGET, 6, "Ii");
+			} else {
+				widget(1024, 10).setPosition(widget(1024, 10).getX(), 163, 0, 0);
+				widget(1024, 31).setScriptCallOnMouseOver(432, CTX_WIDGET, 67, "Ii");
+			}
+			int2 = int2 + 1;
+		}
+		if (int7 != 0) {
+			widget(1024, 11).setPosition(widget(1024, 11).getX(), 163, 0, 0);
+			widget(1024, 31).setScriptCallOnMouseOver(432, CTX_WIDGET, 67, "Ii");
+		}
+	} else {
+		widget(1024, 1).setIsHidden(false);
+		widget(1024, 2).setIsHidden(true);
+		widget(1024, 8).setPosition(widget(1024, 8).getX(), 29, 0, 0);
+		widget(1024, 65).setScriptCallOnMouseOver(432, CTX_WIDGET, 80, "Ii");
+		widget(1024, 9).setPosition(widget(1024, 9).getX(), 78, 0, 0);
+		widget(1024, 48).setScriptCallOnMouseOver(432, CTX_WIDGET, 129, "Ii");
+		widget(1024, 10).setPosition(widget(1024, 10).getX(), 127, 0, 0);
+		widget(1024, 31).setScriptCallOnMouseOver(432, CTX_WIDGET, 31, "Ii");
+		widget(1024, 11).setPosition(widget(1024, 11).getX(), 176, 0, 0);
+		widget(1024, 14).setScriptCallOnMouseOver(432, CTX_WIDGET, 80, "Ii");
+	}
+	return;
+}

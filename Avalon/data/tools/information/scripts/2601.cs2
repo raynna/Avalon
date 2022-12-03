@@ -1,0 +1,15 @@
+int script_2601(string string0, int arg1, int arg2, Widget widget3) {
+	ACTIVE.createChild(widget3, 4, widget3.nextChild());
+	ACTIVE.setSize(211, 16, 0, 0);
+	if (arg1 == 1) {
+		ACTIVE.setPosition(6, arg2, 2, 0);
+	} else {
+		ACTIVE.setPosition(0, arg2, 0, 0);
+	}
+	ACTIVE.setFont(495);
+	ACTIVE.setTextAlignment(0, 1, 0);
+	ACTIVE.setRGB(0xEBE0BC);
+	ACTIVE.setTextAntiMacro(true);
+	ACTIVE.setText(string0);
+	return ACTIVE.getChildId();
+}

@@ -1,0 +1,9 @@
+void script_2592(Widget widget0) {
+	playSoundEffect(6784, 1, 0);
+	if (widget0.getSpriteId() == 941) {
+		widget0.setSprite(942);
+	} else {
+		widget0.setSprite(941);
+	}
+	return;
+}

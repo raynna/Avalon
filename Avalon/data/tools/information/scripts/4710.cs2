@@ -1,0 +1,36 @@
+int, int script_4710(DataMap datamap0, int arg1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Sprite sprite6, Sprite sprite7, Sprite sprite8, Color color9, int arg10, Sprite sprite11) {
+	int int12;
+	int int13;
+	widget2.clearChildren();
+	ACTIVE.createChild(widget2, 5, 0);
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setSize(widget2.getWidth(), widget2.getHeight(), 0, 0);
+	ACTIVE.setSprite(sprite6);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.createChild(widget2, 3, widget2.nextChild());
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setSize(widget2.getWidth(), widget2.getHeight(), 0, 0);
+	ACTIVE.setRGB(0x000000);
+	int12 = 1;
+	ACTIVE.createChild(widget2, 5, int12);
+	ACTIVE.setPosition(widget2.getWidth() - 16, 0, 0, 0);
+	ACTIVE.setSize(16, widget2.getHeight(), 0, 0);
+	ACTIVE.setSprite(sprite7);
+	ACTIVE.setSpriteTiling(false);
+	ACTIVE.setScriptCallOnMouseEntered(1351, widget2, int12, sprite8, "Iid");
+	ACTIVE.setScriptCallOnMouseExit(1352, widget2, int12, sprite7, "Iid");
+	int13 = widget2.nextChild();
+	ACTIVE.setScriptCallOnMousePressed(4711, widget2, widget3, widget4, widget5, int12, "IIIIi");
+	ACTIVE.createChild(widget2, 4, int13);
+	ACTIVE.setText(datamap('i', 's', datamap0, arg1));
+	ACTIVE.setPosition(5, 0, 0, 0);
+	ACTIVE.setSize(widget2.getWidth() - 22, widget2.getHeight(), 0, 0);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setFont(sprite11);
+	ACTIVE.setTextAlignment(0, 1, 0);
+	ACTIVE.setRGB(color9);
+	ACTIVE.setScriptCallOnMouseExit(1354, widget2, int13, color9, "Iii");
+	ACTIVE.setScriptCallOnMouseEntered(1353, widget2, int13, arg10, "Iii");
+	ACTIVE.setScriptCallOnMousePressed(4711, widget2, widget3, widget4, widget5, int12, "IIIIi");
+	return int12, int13;
+}

@@ -1,0 +1,13 @@
+DataMap script_3592(int arg0) {
+	switch (arg0) {
+		case 2:
+			return (DataMap)3144;
+		case 3:
+			return (DataMap)3147;
+		case 4:
+			return (DataMap)3150;
+		case 5:
+			return (DataMap)3153;
+	}
+	return (DataMap)3141;
+}

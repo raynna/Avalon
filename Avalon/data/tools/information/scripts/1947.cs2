@@ -1,0 +1,11 @@
+void script_1947() {
+	if (VARC[600] < 1 && VARC[603] < 1) {
+		msg("The awards tab is not available for this scoring.");
+	} else {
+		widget(810, 84).setIsHidden(true);
+		widget(810, 85).setIsHidden(false);
+		widget(810, 86).setIsHidden(true);
+		widget(810, 144).setIsHidden(false);
+	}
+	return;
+}

@@ -1,0 +1,17 @@
+void script_2244(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11) {
+	int int12;
+	arg0 = script_2245(arg1, arg2, arg0, widget(935, 54), widget(935, 49));
+	arg3 = script_2245(arg4, arg5, arg3, widget(935, 64), widget(935, 59));
+	arg6 = script_2245(arg7, arg8, arg6, widget(935, 74), widget(935, 69));
+	int12 = arg0 + arg3 + arg6;
+	widget(935, 95).setSize(1 + 223 * int12 / (arg2 + arg5 + arg8), 10, 0, 0);
+	int12 = int12 + arg9 + arg10;
+	widget(935, 90).setText(str(int12));
+	widget(935, 107).setText(str(int12 * arg11 / 100));
+	if (arg0 == arg1 && arg3 == arg4 && arg6 == arg7) {
+		widget(935, 0).setScriptCallOnGameloop(-1, "");
+	} else {
+		widget(935, 0).setScriptCallOnGameloop(2244, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, "iiiiiiiiiiii");
+	}
+	return;
+}

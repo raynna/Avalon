@@ -1,0 +1,13 @@
+void script_2860() {
+	if (VARC[1074] == 0) {
+		VARC[1073] = VARC[1073] + 25;
+		if (VARC[1073] > VARC[1069]) {
+			VARC[1073] = VARC[1069];
+		}
+	} else if (VARC[1074] == 1) {
+		VARC[1072] = moveCoord(location(VARC[1072]), 0, 0, 1);
+	} else {
+		cs2method5507();
+	}
+	return;
+}

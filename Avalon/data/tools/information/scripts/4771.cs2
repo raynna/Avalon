@@ -1,0 +1,29 @@
+int script_4771(Widget widget0, int arg1) {
+	int int2;
+	int int3;
+	Sprite sprite4;
+	int int5;
+	int2 = 38;
+	int3 = arg1 / 8;
+	sprite4 = 5470;
+	ACTIVE.createChild(widget0, 3, arg1);
+	ACTIVE.setPosition(2, int2 * int3, 0, 0);
+	ACTIVE.setSize(4, 10, 1, 0);
+	if (int3 % 2 == 0) {
+		ACTIVE.setRGB(0x181715);
+	} else {
+		ACTIVE.setRGB(0x211F1C);
+	}
+	ACTIVE.setFilled(true);
+	int5 = arg1 + 1;
+	ACTIVE.setScriptCallOnMouseEntered(4779, widget0, int5, 1, "Iii");
+	ACTIVE.setScriptCallOnMouseExit(4779, widget0, int5, 0, "Iii");
+	arg1 = arg1 + 1;
+	ACTIVE.createChild(widget0, 5, arg1);
+	ACTIVE.setSprite(sprite4);
+	ACTIVE.setSize(4, 10, 1, 0);
+	ACTIVE.setPosition(2, int2 * int3, 0, 0);
+	ACTIVE.setHidden(true);
+	arg1 = arg1 + 1;
+	return arg1;
+}

@@ -1,0 +1,109 @@
+void script_1288() {
+	widget(128, 37).setText(str(VARPBIT[861]));
+	widget(128, 38).setText(str(VARPBIT[862]));
+	if (VARPBIT[842] == 2) {
+		widget(128, 1).setModel(8398);
+		widget(128, 2).setModel(8399);
+		widget(128, 19).setModel(8430);
+	} else if (VARPBIT[842] == 1) {
+		widget(128, 1).setModel(8397);
+		widget(128, 2).setModel(8400);
+		widget(128, 19).setModel(8429);
+	} else {
+		widget(128, 19).setModel(null);
+		widget(128, 1).setModel(8398);
+		widget(128, 2).setModel(8400);
+	}
+	if (VARPBIT[843] == 2) {
+		widget(128, 3).setModel(8402);
+		widget(128, 4).setModel(8403);
+		widget(128, 20).setModel(8430);
+	} else if (VARPBIT[843] == 1) {
+		widget(128, 3).setModel(8401);
+		widget(128, 4).setModel(8404);
+		widget(128, 20).setModel(8429);
+	} else {
+		widget(128, 20).setModel(null);
+		widget(128, 3).setModel(8402);
+		widget(128, 4).setModel(8404);
+	}
+	if (VARPBIT[844] == 2) {
+		widget(128, 5).setModel(8406);
+		widget(128, 6).setModel(8407);
+		widget(128, 21).setModel(8430);
+	} else if (VARPBIT[844] == 1) {
+		widget(128, 5).setModel(8405);
+		widget(128, 6).setModel(8408);
+		widget(128, 21).setModel(8429);
+	} else {
+		widget(128, 21).setModel(null);
+		widget(128, 5).setModel(8406);
+		widget(128, 6).setModel(8408);
+	}
+	if (VARPBIT[845] == 2) {
+		widget(128, 7).setModel(8410);
+		widget(128, 8).setModel(8411);
+		widget(128, 22).setModel(8430);
+	} else if (VARPBIT[845] == 1) {
+		widget(128, 7).setModel(8409);
+		widget(128, 8).setModel(8412);
+		widget(128, 22).setModel(8429);
+	} else {
+		widget(128, 22).setModel(null);
+		widget(128, 7).setModel(8410);
+		widget(128, 8).setModel(8412);
+	}
+	if (VARPBIT[846] == 2) {
+		widget(128, 9).setModel(8414);
+		widget(128, 10).setModel(8415);
+		widget(128, 23).setModel(8430);
+	} else if (VARPBIT[846] == 1) {
+		widget(128, 9).setModel(8413);
+		widget(128, 10).setModel(8416);
+		widget(128, 23).setModel(8429);
+	} else {
+		widget(128, 23).setModel(null);
+		widget(128, 9).setModel(8414);
+		widget(128, 10).setModel(8416);
+	}
+	if (VARPBIT[847] == 2) {
+		widget(128, 11).setModel(8418);
+		widget(128, 12).setModel(8419);
+		widget(128, 24).setModel(8430);
+	} else if (VARPBIT[847] == 1) {
+		widget(128, 11).setModel(8417);
+		widget(128, 12).setModel(8420);
+		widget(128, 24).setModel(8429);
+	} else {
+		widget(128, 24).setModel(null);
+		widget(128, 11).setModel(8418);
+		widget(128, 12).setModel(8420);
+	}
+	if (VARPBIT[848] == 2) {
+		widget(128, 13).setModel(8422);
+		widget(128, 14).setModel(8423);
+		widget(128, 25).setModel(8430);
+	} else if (VARPBIT[848] == 1) {
+		widget(128, 13).setModel(8421);
+		widget(128, 14).setModel(8424);
+		widget(128, 25).setModel(8429);
+	} else {
+		widget(128, 25).setModel(null);
+		widget(128, 13).setModel(8422);
+		widget(128, 14).setModel(8424);
+	}
+	if (VARPBIT[849] == 2) {
+		widget(128, 15).setModel(8426);
+		widget(128, 16).setModel(8427);
+		widget(128, 26).setModel(8430);
+	} else if (VARPBIT[849] == 1) {
+		widget(128, 15).setModel(8425);
+		widget(128, 16).setModel(8428);
+		widget(128, 26).setModel(8429);
+	} else {
+		widget(128, 26).setModel(null);
+		widget(128, 15).setModel(8426);
+		widget(128, 16).setModel(8428);
+	}
+	return;
+}

@@ -1,0 +1,44 @@
+void script_3462(Widget widget0, Widget widget1, Widget widget2, Widget widget3) {
+	switch (VARC[1007]) {
+		case 21:
+			widget1.setIsHidden(true);
+			widget0.clearChildren();
+			script_2766(0x000000, 75, widget0);
+			break;
+		case 22:
+			widget1.setIsHidden(false);
+			widget1.clearChildren();
+			script_1088(widget1, 0);
+			widget2.clearChildren();
+			ACTIVE.createChild(widget2, 6, 0);
+			ACTIVE.setSize(0, 85, 1, 0);
+			ACTIVE.setPosition(0, 0, 1, 0);
+			ACTIVE.setSelfFull();
+			ACTIVE.set3DRotation(0, 30, 0, 0, 0, 850);
+			ACTIVE.setAnimation(14230);
+			ACTIVE.setScriptCallOnGameloop(3464, CTX_WIDGET, CTX_WIDGET_CHILD, "Ii");
+			script_2647(widget2);
+			widget2.setSize(widget2.getWidth(), getLineCount(widget3.getText(), widget3.getWidth(), 494) * 10 + 75, 0, 0);
+			cameraMoveTo(moveCoord(getMyLocation(), 0, 0, -3), 1500, 1000, 100);
+			cameraPointAt(getMyLocation(), 0, 1000, 100);
+			script_2768(75, widget0);
+			widget0.setScriptCallOnGameloop(3463, CTX_WIDGET, getMyLocation(), "Ic");
+			break;
+		case 23:
+			widget0.setScriptCallOnGameloop(-1, "");
+			script_2766(0x000000, 25, widget0);
+			break;
+		case 24:
+			cs2method5512();
+			widget1.clearChildren();
+			widget2.clearChildren();
+			widget1.setIsHidden(true);
+			script_2768(25, widget0);
+			break;
+		default:
+			widget1.setIsHidden(true);
+			cs2method5512();
+			break;
+	}
+	return;
+}

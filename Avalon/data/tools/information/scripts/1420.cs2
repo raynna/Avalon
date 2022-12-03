@@ -1,0 +1,15 @@
+void script_1420() {
+	Widget widget0;
+	widget0 = script_121(VARPBIT[3756] - 1);
+	if (widget0 != null) {
+		if (getClientCycle() % 40 > 20) {
+			widget0.setIsHidden(false);
+			if (getClientCycle() % 40 == 21) {
+				playSoundEffect(5009, 1, 0);
+			}
+		} else {
+			widget0.setIsHidden(true);
+		}
+	}
+	return;
+}

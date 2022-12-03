@@ -1,0 +1,14 @@
+void script_1515(int arg0, int arg1, int arg2) {
+	if (arg0 != 1) {
+		return;
+	}
+	if (arg2 == 1) {
+		setBaseColor(1, arg1);
+		VARC[1016] = arg1;
+	} else if (arg2 == 2) {
+		setBaseColor(2, arg1);
+		VARC[1017] = arg1;
+	}
+	script_1513();
+	return;
+}

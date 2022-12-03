@@ -1,0 +1,39 @@
+void script_3965(Widget widget0, string string1, int arg2, string string3) {
+	widget0.clearChildren();
+	widget0.setSize(arg2, 27, 0, 0);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(6, 25, 1, 0);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(25, 25, 0, 0);
+	ACTIVE.setPosition(0, 0, 0, 1);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(25, 25, 0, 0);
+	ACTIVE.setPosition(3, 0, 2, 1);
+	ACTIVE.setHFlip(true);
+	ACTIVE.createChild(widget0, 4, widget0.nextChild());
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setPosition(1, 1, 1, 1);
+	ACTIVE.setFont(3793);
+	ACTIVE.setRGB(0xC0B154);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setText(string1);
+	ACTIVE.createChild(widget0, 4, widget0.nextChild());
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setFont(3793);
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setText(string1);
+	script_3967(widget0, 0);
+	widget0.setContextMenuOption(1, string1);
+	widget0.setScriptCallOnMouseEntered(3966, widget0, true, "I1");
+	if (length(string3) > 0) {
+		widget0.setScriptCallOnMouseOver(378, string3, CTX_WIDGET, -1, MOUSE_X, "sIii");
+	}
+	widget0.setScriptCallOnMouseExit(3966, widget0, false, "I1");
+	return;
+}

@@ -1,0 +1,241 @@
+int script_4718(AttrMap arg0) {
+	switch (arg0) {
+		case (AttrMap)1817:
+			if (VARPBIT[1368] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1818:
+			if (VARPBIT[1369] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1819:
+			if (VARPBIT[1370] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1806:
+			if (VARPBIT[1367] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1832:
+			if (VARPBIT[1371] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1837:
+			if (VARPBIT[2310] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1839:
+			if (VARPBIT[2312] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1836:
+			if (VARPBIT[2309] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1838:
+			if (VARPBIT[2311] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1834:
+			if (VARPBIT[1921] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1833:
+			if (VARPBIT[1920] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1840:
+			if (VARPBIT[2055] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1855:
+			if (VARPBIT[2787] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1835:
+			if (VARPBIT[4075] != 12) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1841:
+			if (VARPBIT[4202] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1842:
+			if (VARPBIT[4394] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1843:
+			if (VARPBIT[4476] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1844:
+			if (VARPBIT[4884] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1845:
+			if (VARPBIT[5490] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1846:
+			if (VARPBIT[5732] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1847:
+			if (VARPBIT[5641] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1849:
+			if (VARPBIT[6936] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1850:
+			if (VARPBIT[6095] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1851:
+			if (VARPBIT[8300] != 20) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1852:
+			if (VARPBIT[8688] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1853:
+			if (VARPBIT[8601] != 428) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1830:
+		case (AttrMap)1831:
+			if (VARPBIT[532] < 7) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1848:
+			if (VARPBIT[6014] < 85 && VARPBIT[7322] < 18 && VARPBIT[9194] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)1854:
+			if (VARPBIT[9194] == 0) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)2658:
+			if (!isBitFlagged(VARP[2230], 0)) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)2654:
+			if (!isBitFlagged(VARP[2230], 1)) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)2651:
+			if (!isBitFlagged(VARP[2230], 2)) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)2652:
+			if (!isBitFlagged(VARP[2230], 3)) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)2657:
+			if (!isBitFlagged(VARP[2230], 4)) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)2661:
+			if (!isBitFlagged(VARP[2230], 5)) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)2653:
+			if (!isBitFlagged(VARP[2230], 6)) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)2650:
+			if (!isBitFlagged(VARP[2230], 7)) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)2659:
+			if (!isBitFlagged(VARP[2230], 8)) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)2660:
+			if (!isBitFlagged(VARP[2230], 9)) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)2655:
+			if (!isBitFlagged(VARP[2230], 10)) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)2656:
+			if (!isBitFlagged(VARP[2230], 11)) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)2662:
+			if (!isBitFlagged(VARP[2230], 12)) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)2663:
+			if (!isBitFlagged(VARP[2230], 13)) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)2664:
+			if (!isBitFlagged(VARP[2230], 14)) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)2665:
+			if (!isBitFlagged(VARP[2230], 15)) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)2666:
+			if (!isBitFlagged(VARP[2230], 16)) {
+				return 0;
+			}
+			return 1;
+		case (AttrMap)2667:
+			if (!isBitFlagged(VARP[2230], 17)) {
+				return 0;
+			}
+			return 1;
+	}
+	return 1;
+}

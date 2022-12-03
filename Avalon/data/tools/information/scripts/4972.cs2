@@ -1,0 +1,101 @@
+Widget script_4972(int arg0) {
+	switch (arg0) {
+		case 1:
+			return widget(1092, 1370);
+		case 2:
+			return widget(1092, 1363);
+		case 3:
+			return widget(1092, 1356);
+		case 4:
+			return widget(1092, 1272);
+		case 5:
+			return widget(1092, 1279);
+		case 6:
+			return widget(1092, 1286);
+		case 7:
+			return widget(1092, 1293);
+		case 8:
+			return widget(1092, 1300);
+		case 9:
+			return widget(1092, 1307);
+		case 10:
+			return widget(1092, 1314);
+		case 11:
+			return widget(1092, 1321);
+		case 12:
+			return widget(1092, 1328);
+		case 13:
+			return widget(1092, 1335);
+		case 14:
+			return widget(1092, 1342);
+		case 15:
+			return widget(1092, 1349);
+		case 16:
+			return widget(1092, 1377);
+		case 17:
+			return widget(1092, 1383);
+		case 18:
+			return widget(1092, 1389);
+		case 19:
+			return widget(1092, 1395);
+		case 20:
+			return widget(1092, 1401);
+		case 21:
+			return widget(1092, 1407);
+		case 22:
+			return widget(1092, 1414);
+		case 23:
+			return widget(1092, 1420);
+		case 24:
+			return widget(1092, 1426);
+		case 25:
+			return widget(1092, 1432);
+		case 26:
+			return widget(1092, 1438);
+		case 27:
+			return widget(1092, 1444);
+		case 28:
+			return widget(1092, 1450);
+		case 29:
+			return widget(1092, 1456);
+		case 30:
+			return widget(1092, 1462);
+		case 31:
+			return widget(1092, 1468);
+		case 32:
+			return widget(1092, 1474);
+		case 33:
+			return widget(1092, 1480);
+		case 34:
+			return widget(1092, 1486);
+		case 35:
+			return widget(1092, 1493);
+		case 36:
+			return widget(1092, 1509);
+		case 37:
+			return widget(1092, 1501);
+		case 38:
+			return widget(1092, 1517);
+		case 39:
+			return widget(1092, 1525);
+		case 40:
+			return widget(1092, 1533);
+		case 41:
+			return widget(1092, 1541);
+		case 42:
+			return widget(1092, 1549);
+		case 43:
+			return widget(1092, 1557);
+		case 44:
+			return widget(1092, 1565);
+		case 45:
+			return widget(1092, 1573);
+		case 46:
+			return widget(1092, 1581);
+		case 47:
+			return widget(1092, 1589);
+		case 48:
+			return widget(1092, 1597);
+	}
+	return null;
+}

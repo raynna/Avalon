@@ -1,0 +1,10 @@
+void script_4450() {
+	if (cs2method5428(widget(1110, 14), -1)) {
+		return;
+	}
+	widget(1110, 14).setScriptCallOnGameloop(-1, "");
+	if (cs2method3751()) {
+		script_4451();
+	}
+	return;
+}

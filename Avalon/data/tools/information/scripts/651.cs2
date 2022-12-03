@@ -1,0 +1,153 @@
+void script_651(int arg0) {
+	Widget widget1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	Item item7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	Widget widget12;
+	Widget widget13;
+	Widget widget14;
+	int int15;
+	int int16;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	widget1 = script_623(arg0);
+	widget1.clearChildren();
+	int2 = widget1.getWidth();
+	int3 = widget1.getHeight();
+	int4 = getGEIsSelling(arg0);
+	int5 = getGEItemAmt(arg0);
+	int6 = getGEItemAmtTransfered(arg0);
+	item7 = getGEItem(arg0);
+	int8 = getGEItemPrice(arg0);
+	str0 = "";
+	if (getGENotStarted(arg0)) {
+		str0 = "Empty";
+	} else if (getGEIsSelling(arg0) == 0) {
+		str0 = "Buy";
+	} else {
+		str0 = "Sell";
+	}
+	ACTIVE.createChild(widget1, 3, 0);
+	ACTIVE.setSize(int2, int3, 0, 0);
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setFilled(true);
+	ACTIVE.setRGB(0xFFFFFF);
+	ACTIVE.setTrans(255);
+	script_584(widget1, str0);
+	int9 = widget1.nextChild();
+	widget1.setScriptCallOnMouseEntered(629, arg0, "i");
+	widget1.setScriptCallOnMouseExit(631, arg0, "i");
+	if (getGENotStarted(arg0)) {
+		widget1.setScriptCallOnClickContextMenu(-1, "");
+		widget1.setContextMenuOption(1, "");
+		widget1.setContextMenuOption(2, "");
+		if (arg0 >= 2) {
+			if (isSiteSettingsMembers()) {
+				script_624(arg0).setIsHidden(true);
+			} else {
+				script_624(arg0).setIsHidden(false);
+			}
+		}
+	} else {
+		widget1.setContextMenuOption(1, "View Offer");
+		if (!getGEIsDone(arg0)) {
+			widget1.setContextMenuOption(2, "Abort Offer");
+		} else {
+			widget1.setContextMenuOption(2, "");
+		}
+	}
+	str1 = formatNumber(int5, 1);
+	str2 = formatNumber(int8, 1);
+	int10 = 0;
+	int11 = 0;
+	widget12 = script_627(arg0);
+	widget12.setIsHidden(true);
+	widget13 = script_626(arg0);
+	widget14 = script_625(arg0);
+	str3 = "";
+	int15 = 0;
+	int16 = 0;
+	if (getGENotStarted(arg0)) {
+		if (arg0 < 2 || isSiteSettingsMembers()) {
+			widget12.setIsHidden(false);
+		}
+	} else {
+		int10 = 7;
+		int11 = int3 - 30;
+		if (getGEIsStatus1(arg0)) {
+			int9 = widget1.nextChild();
+			_ACTIVE.createChild(widget1, 4, int9);
+			_ACTIVE.setPosition(int10, int11, 0, 0);
+			_ACTIVE.setSize(int2 - 14, 15, 0, 0);
+			_ACTIVE.setFont(494);
+			_ACTIVE.setRGB(0xDBD884);
+			_ACTIVE.setText("Submitting...");
+			_ACTIVE.setTextAlignment(1, 1, 0);
+		} else {
+			script_652(int10, int11, int2 - 14, 15, arg0, widget1, int9, widget13, 1);
+		}
+		int9 = widget1.nextChild();
+		ACTIVE.createChild(widget1, 5, int9);
+		int9 = int9 + 1;
+		ACTIVE.setPosition(6, 30, 0, 0);
+		ACTIVE.setSize(40, 36, 0, 0);
+		ACTIVE.setSprite(1137);
+		ACTIVE.createChild(widget1, 5, int9);
+		ACTIVE.setPosition(8, 32, 0, 0);
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setItem(item7, int5);
+		ACTIVE.setShadowColor(0x000000);
+		str0 = formatNumber(int5, 1);
+		ACTIVE.setScriptCallOnMouseOver(648, widget1, int9, widget13, str0, 25, 106, "IiIsii");
+		ACTIVE.setScriptCallOnMouseExit(40, widget13, "I");
+		int9 = int9 + 1;
+		ACTIVE.createChild(widget1, 4, int9);
+		ACTIVE.setPosition(48, 30, 0, 0);
+		str0 = getItemName(item7);
+		int16 = int2 - 53;
+		int15 = getMaxLineWidth(str0, int16, 494);
+		if (int15 > int16) {
+			int10 = length(str0);
+			while (int15 > int16 && int10 > 0) {
+				int10 = int10 - 1;
+				str0 = substr(str0, 0, int10) + "...";
+				int15 = getMaxLineWidth(str0, int16, 494);
+			}
+		}
+		int9 = int9 + 1;
+		int3 = getLineCount(str0, int16, 494) * 11;
+		if (int3 < 22) {
+			int3 = 22;
+		}
+		ACTIVE.setSize(int16, int3, 0, 0);
+		ACTIVE.setRGB(0xCC9900);
+		ACTIVE.setFont(494);
+		ACTIVE.setTextAlignment(0, 0, 0);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setText(str0);
+		ACTIVE.createChild(widget1, 4, int9);
+		int9 = int9 + 1;
+		ACTIVE.setPosition(48, 32 + int3, 0, 0);
+		ACTIVE.setSize(int2 - 53, 15, 0, 0);
+		ACTIVE.setRGB(0xBDBB5B);
+		ACTIVE.setFont(494);
+		ACTIVE.setTextAlignment(0, 0, 15);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setText(str2 + " gp");
+		ACTIVE.createChild(widget1, 5, int9);
+		ACTIVE.setPosition(4, 2, 2, 0);
+		ACTIVE.setSize(20, 20, 0, 0);
+		ACTIVE.setSprite(null);
+		int9 = int9 + 1;
+	}
+	return;
+}

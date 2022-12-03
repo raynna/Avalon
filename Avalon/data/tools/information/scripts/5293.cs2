@@ -1,0 +1,13 @@
+void script_5293(int arg0, int arg1, int arg2) {
+	if (arg0 != 1) {
+		return;
+	}
+	playSoundEffect2False(6185, 1, 0, 200);
+	if (arg2 == 1) {
+		VARPBIT[9896] = arg1;
+	} else {
+		VARPBIT[9887] = arg1;
+	}
+	script_5291();
+	return;
+}

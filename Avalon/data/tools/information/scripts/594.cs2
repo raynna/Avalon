@@ -1,0 +1,119 @@
+void script_594(int arg0, Item item1, int arg2, int arg3) {
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	string str0;
+	string str1;
+	string str2;
+	widget(105, 139).setItem(item1, -1);
+	str0 = "null";
+	str1 = "null";
+	str2 = "null";
+	if (arg0 == 0) {
+		widget(105, 134).setText("Buy Offer");
+		widget(105, 135).setSprite(1157);
+		widget(105, 160).setText("+1");
+		widget(105, 160).setContextMenuOption(1, "Add 1");
+		str2 = "Add 1 to quantity";
+		widget(105, 160).setScriptCallOnMouseOver(649, CTX_WIDGET, widget(105, 210), str2, 25, 300, "IIsii");
+		widget(105, 162).setText("+10");
+		widget(105, 162).setContextMenuOption(1, "Add 10");
+		str2 = "Add 10 to quantity";
+		widget(105, 162).setScriptCallOnMouseOver(649, CTX_WIDGET, widget(105, 210), str2, 25, 300, "IIsii");
+		widget(105, 164).setText("+100");
+		widget(105, 164).setContextMenuOption(1, "Add 100");
+		str2 = "Add 100 to quantity";
+		widget(105, 164).setScriptCallOnMouseOver(649, CTX_WIDGET, widget(105, 210), str2, 25, 300, "IIsii");
+		widget(105, 166).setText("+1K");
+		widget(105, 166).setContextMenuOption(1, "Add 1000");
+		str2 = "Add 1,000 to quantity";
+		widget(105, 166).setScriptCallOnMouseOver(649, CTX_WIDGET, widget(105, 210), str2, 25, 300, "IIsii");
+	} else {
+		widget(105, 134).setText("Sell Offer");
+		widget(105, 135).setSprite(1156);
+		widget(105, 160).setText("1");
+		widget(105, 160).setContextMenuOption(1, "Sell 1");
+		str2 = "Sell 1";
+		widget(105, 160).setScriptCallOnMouseOver(649, CTX_WIDGET, widget(105, 210), str2, 25, 300, "IIsii");
+		widget(105, 162).setText("10");
+		widget(105, 162).setContextMenuOption(1, "Sell 10");
+		str2 = "Sell 10";
+		widget(105, 162).setScriptCallOnMouseOver(649, CTX_WIDGET, widget(105, 210), str2, 25, 300, "IIsii");
+		widget(105, 164).setText("100");
+		widget(105, 164).setContextMenuOption(1, "Sell 100");
+		str2 = "Sell 100";
+		widget(105, 164).setScriptCallOnMouseOver(649, CTX_WIDGET, widget(105, 210), str2, 25, 300, "IIsii");
+		widget(105, 166).setText("ALL");
+		widget(105, 166).setContextMenuOption(1, "Sell All");
+		str2 = "Sell all";
+		widget(105, 166).setScriptCallOnMouseOver(649, CTX_WIDGET, widget(105, 210), str2, 25, 300, "IIsii");
+	}
+	if (item1 == null) {
+		widget(105, 142).setText("Choose an item to exchange");
+		widget(105, 141).setText("N/A");
+		widget(105, 143).setText("");
+		if (VARP[1113] == 0) {
+			if (widget(105, 138).getShadeColor() == 255) {
+				widget(105, 138).setScriptCallOnGameloop(634, widget(105, 138), 0, 255, 5, "Iiii");
+			}
+		} else if (VARP[1113] == 1) {
+			widget(107, 0).setIsHidden(false);
+			widget(105, 138).setTrans(255);
+			widget(105, 138).setScriptCallOnGameloop(-1, "");
+			if (widget(107, 1).getShadeColor() == 245) {
+				widget(107, 1).setScriptCallOnGameloop(634, widget(107, 1), 155, 255, 2, "Iiii");
+				widget(107, 2).setScriptCallOnGameloop(634, widget(107, 2), 155, 255, 2, "Iiii");
+				widget(107, 3).setScriptCallOnGameloop(634, widget(107, 3), 155, 255, 2, "Iiii");
+				widget(107, 4).setScriptCallOnGameloop(634, widget(107, 4), 155, 255, 2, "Iiii");
+				widget(107, 5).setScriptCallOnGameloop(634, widget(107, 5), 145, 245, 2, "Iiii");
+				widget(107, 6).setScriptCallOnGameloop(634, widget(107, 6), 145, 245, 2, "Iiii");
+				widget(107, 7).setScriptCallOnGameloop(634, widget(107, 7), 145, 245, 2, "Iiii");
+				widget(107, 8).setScriptCallOnGameloop(634, widget(107, 8), 135, 235, 2, "Iiii");
+				widget(107, 9).setScriptCallOnGameloop(634, widget(107, 9), 135, 235, 2, "Iiii");
+				widget(107, 10).setScriptCallOnGameloop(634, widget(107, 10), 135, 235, 2, "Iiii");
+				widget(107, 11).setScriptCallOnGameloop(634, widget(107, 11), 125, 225, 2, "Iiii");
+				widget(107, 12).setScriptCallOnGameloop(634, widget(107, 12), 125, 225, 2, "Iiii");
+				widget(107, 13).setScriptCallOnGameloop(634, widget(107, 13), 125, 225, 2, "Iiii");
+				widget(107, 14).setScriptCallOnGameloop(634, widget(107, 14), 115, 215, 2, "Iiii");
+				widget(107, 15).setScriptCallOnGameloop(634, widget(107, 15), 115, 215, 2, "Iiii");
+				widget(107, 16).setScriptCallOnGameloop(634, widget(107, 16), 115, 215, 2, "Iiii");
+				widget(107, 17).setScriptCallOnGameloop(634, widget(107, 17), 110, 210, 2, "Iiii");
+			}
+		}
+	} else {
+		widget(105, 142).setText(getItemName(item1));
+		if (VARP[1109] != -1) {
+			str0 = formatNumber(VARP[1114], 1);
+			widget(105, 141).setText(str0 + " gp");
+		} else {
+			widget(105, 143).setText("Retrieving details...");
+			widget(105, 141).setText("N/A");
+		}
+		widget(105, 138).setTrans(255);
+		widget(105, 138).setScriptCallOnGameloop(-1, "");
+		widget(107, 0).setIsHidden(true);
+	}
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	if (ACTIVE.setChild(widget(105, 141)) && _ACTIVE.setChild(widget(105, 140))) {
+		int5 = ACTIVE.getWidth();
+		int6 = getMaxLineWidth(ACTIVE.getText(), int5, 494);
+		int7 = _ACTIVE.getWidth();
+		int4 = 52 + (int5 - int6) / 2 - (int7 - 5);
+		_ACTIVE.setPosition(int4, _ACTIVE.getY(), 0, 0);
+	}
+	if (VARC[82] <= 0) {
+		str0 = formatNumber(arg2, 1);
+		widget(105, 148).setText(str0);
+		VARC[84] = VARP[1110];
+	}
+	if (VARC[83] <= 0) {
+		str0 = formatNumber(arg3, 1);
+		widget(105, 153).setText(str0 + " gp");
+		VARC[85] = VARP[1111];
+	}
+	return;
+}

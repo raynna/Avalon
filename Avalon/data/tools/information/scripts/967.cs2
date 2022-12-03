@@ -1,0 +1,18 @@
+int script_967(int arg0, int arg1) {
+	if (arg1 > arg0) {
+		if (arg1 - arg0 <= 1024) {
+			return min(arg0 + 6, arg1);
+		}
+		if (arg0 >= 6) {
+			return arg0 - 6;
+		}
+		return max(script_686(arg0 - 6, 2048), arg1);
+	}
+	if (arg0 - arg1 <= 1024) {
+		return max(arg0 - 6, arg1);
+	}
+	if (arg0 < 2048 - 6) {
+		return arg0 + 6;
+	}
+	return min((arg0 + 6) % 2048, arg1);
+}

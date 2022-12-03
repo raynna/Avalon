@@ -1,0 +1,136 @@
+void script_1312(int arg0) {
+	int int1;
+	int1 = script_1305();
+	if (arg0 == 1) {
+		if (int1 != 0) {
+			widget(548, 129).setSprite(null);
+			widget(548, 147).setSprite(null);
+			widget(548, 148).setSprite(null);
+		}
+		if (int1 != 2) {
+			widget(548, 130).setSprite(null);
+			widget(548, 149).setSprite(null);
+			widget(548, 150).setSprite(null);
+		}
+		if (int1 != 3) {
+			widget(548, 131).setSprite(null);
+			widget(548, 151).setSprite(null);
+			widget(548, 152).setSprite(null);
+		}
+		if (int1 != 1) {
+			widget(548, 132).setSprite(null);
+			widget(548, 153).setSprite(null);
+			widget(548, 154).setSprite(null);
+		}
+		if (int1 != 4) {
+			widget(548, 133).setSprite(null);
+			widget(548, 155).setSprite(null);
+			widget(548, 156).setSprite(null);
+		}
+		if (int1 != 5) {
+			widget(548, 134).setSprite(null);
+			widget(548, 157).setSprite(null);
+			widget(548, 158).setSprite(null);
+		}
+		if (int1 != 6) {
+			widget(548, 135).setSprite(null);
+			widget(548, 159).setSprite(null);
+			widget(548, 160).setSprite(null);
+		}
+		if (int1 != 7) {
+			widget(548, 136).setSprite(null);
+			widget(548, 161).setSprite(null);
+			widget(548, 162).setSprite(null);
+		}
+		if (int1 != 8) {
+			widget(548, 99).setSprite(null);
+			widget(548, 83).setSprite(null);
+			widget(548, 84).setSprite(null);
+		}
+		if (int1 != 9) {
+			widget(548, 100).setSprite(null);
+			widget(548, 85).setSprite(null);
+			widget(548, 86).setSprite(null);
+		}
+		if (int1 != 10) {
+			widget(548, 101).setSprite(null);
+			widget(548, 87).setSprite(null);
+			widget(548, 88).setSprite(null);
+		}
+		if (int1 != 11) {
+			widget(548, 102).setSprite(null);
+			widget(548, 89).setSprite(null);
+			widget(548, 90).setSprite(null);
+		}
+		if (int1 != 12) {
+			widget(548, 103).setSprite(null);
+			widget(548, 91).setSprite(null);
+			widget(548, 92).setSprite(null);
+		}
+		if (int1 != 13) {
+			widget(548, 104).setSprite(null);
+			widget(548, 93).setSprite(null);
+			widget(548, 94).setSprite(null);
+		}
+		if (int1 != 14) {
+			widget(548, 105).setSprite(null);
+			widget(548, 95).setSprite(null);
+			widget(548, 96).setSprite(null);
+		}
+		if (int1 != 15) {
+			widget(548, 106).setSprite(null);
+			widget(548, 97).setSprite(null);
+			widget(548, 98).setSprite(null);
+		}
+	} else {
+		widget(548, 129).setSprite(null);
+		widget(548, 147).setSprite(null);
+		widget(548, 148).setSprite(null);
+		widget(548, 130).setSprite(null);
+		widget(548, 149).setSprite(null);
+		widget(548, 150).setSprite(null);
+		widget(548, 131).setSprite(null);
+		widget(548, 151).setSprite(null);
+		widget(548, 152).setSprite(null);
+		widget(548, 132).setSprite(null);
+		widget(548, 153).setSprite(null);
+		widget(548, 154).setSprite(null);
+		widget(548, 133).setSprite(null);
+		widget(548, 155).setSprite(null);
+		widget(548, 156).setSprite(null);
+		widget(548, 134).setSprite(null);
+		widget(548, 157).setSprite(null);
+		widget(548, 158).setSprite(null);
+		widget(548, 135).setSprite(null);
+		widget(548, 159).setSprite(null);
+		widget(548, 160).setSprite(null);
+		widget(548, 136).setSprite(null);
+		widget(548, 161).setSprite(null);
+		widget(548, 162).setSprite(null);
+		widget(548, 99).setSprite(null);
+		widget(548, 83).setSprite(null);
+		widget(548, 84).setSprite(null);
+		widget(548, 100).setSprite(null);
+		widget(548, 85).setSprite(null);
+		widget(548, 86).setSprite(null);
+		widget(548, 101).setSprite(null);
+		widget(548, 87).setSprite(null);
+		widget(548, 88).setSprite(null);
+		widget(548, 102).setSprite(null);
+		widget(548, 89).setSprite(null);
+		widget(548, 90).setSprite(null);
+		widget(548, 103).setSprite(null);
+		widget(548, 91).setSprite(null);
+		widget(548, 92).setSprite(null);
+		widget(548, 104).setSprite(null);
+		widget(548, 93).setSprite(null);
+		widget(548, 94).setSprite(null);
+		widget(548, 105).setSprite(null);
+		widget(548, 95).setSprite(null);
+		widget(548, 96).setSprite(null);
+		widget(548, 106).setSprite(null);
+		widget(548, 97).setSprite(null);
+		widget(548, 98).setSprite(null);
+	}
+	return;
+}

@@ -1,0 +1,8 @@
+void script_4232(Widget widget0) {
+	if (ACTIVE.setChild(widget0)) {
+		ACTIVE.setScriptCallOnMouseEntered(4209, widget0, 0, "Ii");
+		ACTIVE.setScriptCallOnMouseExit(4209, widget0, 1, "Ii");
+		ACTIVE.setTrans(255);
+	}
+	return;
+}

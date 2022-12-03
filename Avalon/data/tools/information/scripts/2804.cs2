@@ -1,0 +1,6 @@
+void script_2804(Widget widget0, int arg1, int arg2, int arg3, int arg4, Color color5) {
+	widget0.setRGB(color5);
+	widget0.setTrans(arg4);
+	widget0.setScriptCallOnGameloop(2805, widget0, 0 - arg2, arg1, arg3, arg4, "Iiiii");
+	return;
+}

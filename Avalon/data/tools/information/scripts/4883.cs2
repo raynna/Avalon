@@ -1,0 +1,134 @@
+void script_4883(Widget widget0, string string1, int arg2) {
+	int int2;
+	int int3;
+	Widget widget4;
+	Widget widget5;
+	Widget widget6;
+	int int7;
+	string str1;
+	int2 = script_4964(widget0);
+	int3 = script_4971(int2);
+	widget4 = widget0.getParentLayer();
+	widget5 = widget4.getParentLayer();
+	widget6 = script_5216(int2);
+	if (widget6 == null) {
+		widget6 = widget0;
+	}
+	str1 = "";
+	int7 = 0;
+	if (citadelConfigsInitialized()) {
+		switch (widget0) {
+			case widget(1092, 1493):
+				arg2 = 1;
+				string1 = "Build a new party room chair customisation.";
+				if (CLANBIT[2210] > 0) {
+					int7 = 1;
+				}
+				break;
+			case widget(1092, 1509):
+				arg2 = 1;
+				string1 = "Build a new party room table customisation.";
+				if (CLANBIT[2220] > 0) {
+					int7 = 1;
+				}
+				break;
+			case widget(1092, 1501):
+				arg2 = 1;
+				string1 = "Build a new flag customisation.";
+				if (CLANBIT[2240] > 0) {
+					int7 = 1;
+				}
+				break;
+			case widget(1092, 1517):
+				arg2 = 1;
+				string1 = "Build a new potted plant customisation.";
+				if (CLANBIT[2190] > 0) {
+					int7 = 1;
+				}
+				break;
+			case widget(1092, 1525):
+				arg2 = 1;
+				string1 = "Build a new sundial customisation.";
+				if (CLANBIT[2230] > 0) {
+					int7 = 1;
+				}
+				break;
+			case widget(1092, 1533):
+				arg2 = 1;
+				string1 = "Build a new keep flag customisation.";
+				if (CLANBIT[2200] > 0) {
+					int7 = 1;
+				}
+				break;
+			case widget(1092, 1541):
+				arg2 = 1;
+				string1 = "Build a new keep tapestry customisation.";
+				if (CLANBIT[2260] > 0) {
+					int7 = 1;
+				}
+				break;
+			case widget(1092, 1549):
+				arg2 = 1;
+				string1 = "Build a new keep banner customisation.";
+				if (CLANBIT[2270] > 0) {
+					int7 = 1;
+				}
+				break;
+			case widget(1092, 1557):
+				arg2 = 1;
+				string1 = "Build a new keep shield customisation.";
+				if (CLANBIT[2280] > 0) {
+					int7 = 1;
+				}
+				break;
+			case widget(1092, 1565):
+				arg2 = 1;
+				string1 = "Build a new keep fireplace customisation.";
+				if (CLANBIT[2250] > 0) {
+					int7 = 1;
+				}
+				break;
+			case widget(1092, 1573):
+				arg2 = 1;
+				string1 = "Build a new keep lower window customisation.";
+				if (CLANBIT[2290] > 0) {
+					int7 = 1;
+				}
+				break;
+			case widget(1092, 1581):
+				arg2 = 1;
+				string1 = "Build a new keep upper window customisation.";
+				if (CLANBIT[2300] > 0) {
+					int7 = 1;
+				}
+				break;
+			case widget(1092, 1589):
+				arg2 = 1;
+				string1 = "Build a new keep door customisation.";
+				if (CLANBIT[2310] > 0) {
+					int7 = 1;
+				}
+				break;
+			case widget(1092, 1597):
+				arg2 = 1;
+				string1 = "Build a new keep wall pattern customisation.";
+				if (CLANBIT[2320] > 0) {
+					int7 = 1;
+				}
+				break;
+			default:
+				string1 = "Build over: " + script_4914(int3);
+				break;
+		}
+		if (int7 == 1) {
+			string1 = "Build over " + script_4914(int3);
+		}
+		if (widget4.getX() < widget5.getWidth() / 2 - 30) {
+			arg2 = 1;
+		}
+	}
+	widget0.setScriptCallOnMouseOver(4538, widget(1092, 300), widget0, -1, string1, 120, 3793, 3793, 16777215, 13, 4, arg2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+	widget6.setScriptCallOnMouseOver(4538, widget(1092, 300), widget0, -1, string1, 120, 3793, 3793, 16777215, 13, 4, arg2, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+	widget0.setScriptCallOnMouseExit(40, widget(1092, 300), "I");
+	return;
+}

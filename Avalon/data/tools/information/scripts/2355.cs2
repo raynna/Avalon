@@ -1,0 +1,11 @@
+void script_2355(int arg0, int arg1) {
+	VARC[92] = arg0;
+	if (arg0 == 1) {
+		widget(916, 21).setScriptCallOnGameloop(2356, arg1, "i");
+		script_2192(0, arg1);
+	} else {
+		widget(916, 21).setScriptCallOnGameloop(2356, 0, "i");
+		script_2192(1, arg1);
+	}
+	return;
+}

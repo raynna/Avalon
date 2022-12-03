@@ -1,0 +1,17 @@
+void script_4445() {
+	string str0;
+	widget(1110, 5).clearChildren();
+	widget(1110, 8).clearChildren();
+	widget(1110, 6).clearChildren();
+	widget(1110, 7).clearChildren();
+	widget(1110, 4).clearChildren();
+	widget(1110, 95).setContextMenuOption(1, "Join chat");
+	widget(1110, 96).setSprite(6256);
+	widget(1110, 38).setIsHidden(true);
+	widget(1110, 64).setIsHidden(false);
+	widget(1110, 65).setText("");
+	str0 = "Join another" + "<br>" + "clan's clanchat.";
+	widget(1110, 95).setScriptCallOnMouseOver(4538, widget(1110, 60), CTX_WIDGET, -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+	widget(1110, 95).setContextMenuOption(1, "Join Clan Chat channel");
+	return;
+}

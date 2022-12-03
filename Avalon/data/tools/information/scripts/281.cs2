@@ -1,0 +1,111 @@
+void script_281() {
+	widget(925, 67).setItem((Item)VARC[1118], VARC[1119]);
+	widget(925, 67).setOptionBase(getItemName((Item)VARC[1118]));
+	widget(925, 68).setItem((Item)VARC[1120], VARC[1121]);
+	widget(925, 68).setOptionBase(getItemName((Item)VARC[1120]));
+	widget(925, 77).setText(str(VARPBIT[7295]));
+	switch (VARC[1118]) {
+		case 384:
+			widget(925, 52).setText("Shark");
+			break;
+		case 372:
+			widget(925, 52).setText("Swordfish");
+			break;
+		case 378:
+			widget(925, 52).setText("Lobster");
+			break;
+		case 360:
+			widget(925, 52).setText("Tuna");
+			break;
+		case 332:
+			widget(925, 52).setText("Salmon");
+			break;
+		case 350:
+			widget(925, 52).setText("Pike");
+			break;
+		case 336:
+			widget(925, 52).setText("Trout");
+			break;
+		case 346:
+			widget(925, 52).setText("Herring");
+			break;
+		case 328:
+			widget(925, 52).setText("Sardine");
+			break;
+		case 318:
+			widget(925, 52).setText("Shrimp");
+			break;
+		default:
+			widget(925, 52).setText("");
+			break;
+	}
+	switch (VARC[1120]) {
+		case 384:
+			widget(925, 53).setText("Shark");
+			break;
+		case 372:
+			widget(925, 53).setText("Swordfish");
+			break;
+		case 378:
+			widget(925, 53).setText("Lobster");
+			break;
+		case 360:
+			widget(925, 53).setText("Tuna");
+			break;
+		case 332:
+			widget(925, 53).setText("Salmon");
+			break;
+		case 350:
+			widget(925, 53).setText("Pike");
+			break;
+		case 336:
+			widget(925, 53).setText("Trout");
+			break;
+		case 346:
+			widget(925, 53).setText("Herring");
+			break;
+		case 328:
+			widget(925, 53).setText("Sardine");
+			break;
+		case 318:
+			widget(925, 53).setText("Shrimp");
+			break;
+		default:
+			widget(925, 53).setText("");
+			break;
+	}
+	switch (VARPBIT[7306]) {
+		case 0:
+			widget(925, 25).setText("Cost: " + str(110) + " tokens");
+			widget(925, 26).setText("(Requires " + str(20) + " medals)");
+			widget(925, 41).setItem(15666, -1);
+			break;
+		case 1:
+			widget(925, 25).setText("Cost: " + str(230) + " tokens");
+			widget(925, 26).setText("(Requires " + str(50) + " medals)");
+			widget(925, 41).setItem(15667, -1);
+			break;
+		case 2:
+			widget(925, 25).setText("Cost: " + str(470) + " tokens");
+			widget(925, 26).setText("(Requires " + str(110) + " medals)");
+			widget(925, 41).setItem(15668, -1);
+			break;
+		case 3:
+			widget(925, 25).setText("Cost: " + str(900) + " tokens");
+			widget(925, 26).setText("(Requires " + str(230) + " medals)");
+			widget(925, 41).setItem(15669, -1);
+			break;
+		case 4:
+			widget(925, 25).setText("Cost: " + str(1860) + " tokens");
+			widget(925, 26).setText("(Requires " + str(500) + " medals)");
+			widget(925, 41).setItem(15669, -1);
+			break;
+		case 5:
+			widget(925, 25).setText("You already own the best tackle box available.");
+			widget(925, 26).setText("(Unavailable)");
+			widget(925, 41).setItem(null, -1);
+			break;
+	}
+	widget(925, 41).set3DRotation(0, 0, 250, 1666, 0, 1440);
+	return;
+}

@@ -1,0 +1,341 @@
+void script_5350(int arg0, Widget widget1) {
+	DataMap datamap2;
+	int int3;
+	Widget widget4;
+	int int5;
+	Widget widget6;
+	Widget widget7;
+	Widget widget8;
+	Widget widget9;
+	Widget widget10;
+	Widget widget11;
+	Widget widget12;
+	Widget widget13;
+	Widget widget14;
+	Widget widget15;
+	Widget widget16;
+	Widget widget17;
+	Widget widget18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	int int23;
+	AttrMap attrmap24;
+	Sprite sprite25;
+	Sprite sprite26;
+	Sprite sprite27;
+	int int28;
+	int int29;
+	int int30;
+	int int31;
+	int int32;
+	Widget widget33;
+	int int34;
+	int int35;
+	int int36;
+	string str0;
+	string str1;
+	string str2;
+	datamap2 = (DataMap)5181;
+	str0 = "Home";
+	int3 = 0;
+	if (VARPBIT[9487] == 1) {
+		datamap2 = (DataMap)5182;
+		str0 = "Auras";
+		int3 = 1;
+	} else if (VARPBIT[9487] == 2) {
+		datamap2 = (DataMap)3875;
+		str0 = "Emotes";
+		int3 = 2;
+	} else if (VARPBIT[9487] == 3) {
+		if (!IsFemale()) {
+			datamap2 = (DataMap)5189;
+		} else {
+			datamap2 = (DataMap)5188;
+		}
+		str0 = "Costumes";
+		int3 = 3;
+	} else if (VARPBIT[9487] == 4) {
+		datamap2 = (DataMap)5184;
+		str0 = "Titles";
+		int3 = 4;
+	} else if (VARPBIT[9487] == 5) {
+		datamap2 = (DataMap)5183;
+		str0 = "Re-colour";
+		int3 = 5;
+	} else if (VARPBIT[9487] == 6) {
+		str0 = "Special Offers";
+		int3 = 6;
+	} else if (VARPBIT[9487] == 7) {
+		str0 = "Limited Edition";
+		int3 = 7;
+	} else if (VARPBIT[9487] == 8) {
+		str0 = "My Favourites";
+		int3 = 8;
+	}
+	widget4 = widget(1143, 126);
+	int5 = widget4.getScrollY();
+	widget6 = widget(1143, 60);
+	widget7 = widget(1143, 61);
+	widget8 = widget(1143, 59);
+	widget9 = widget(1143, 45);
+	widget10 = widget(1143, 46);
+	widget11 = widget(1143, 47);
+	widget12 = widget(1143, 48);
+	widget13 = widget(1143, 49);
+	widget14 = widget(1143, 40);
+	widget15 = widget(1143, 41);
+	widget16 = widget(1143, 42);
+	widget17 = widget(1143, 43);
+	widget18 = widget(1143, 44);
+	widget4.clearChildren();
+	widget6.clearChildren();
+	widget7.clearChildren();
+	widget8.clearChildren();
+	widget9.clearChildren();
+	widget10.clearChildren();
+	widget11.clearChildren();
+	widget12.clearChildren();
+	widget13.clearChildren();
+	widget14.clearChildren();
+	widget15.clearChildren();
+	widget16.clearChildren();
+	widget17.clearChildren();
+	widget18.clearChildren();
+	widget(1143, 62).setIsHidden(true);
+	widget(1143, 63).setText(concat("Now Viewing: ", str0));
+	int19 = 0;
+	int20 = 6;
+	int21 = int20;
+	int22 = int20;
+	int23 = 0;
+	attrmap24 = null;
+	sprite25 = 7835;
+	sprite26 = 7836;
+	sprite27 = 7837;
+	int28 = 0;
+	int29 = 0;
+	int30 = 0;
+	int31 = 0;
+	int32 = 0;
+	str1 = "";
+	widget33 = null;
+	int34 = 0;
+	int35 = 0;
+	str2 = "See More";
+	int36 = 0;
+	if (int3 == 0) {
+		sprite25 = 7826;
+		sprite26 = 7827;
+		sprite27 = 7828;
+		int20 = 20;
+		int21 = 0;
+		int22 = int20;
+		ACTIVE.createChild(widget8, 5, int19);
+		int19 = int19 + 1;
+		ACTIVE.setPosition(17, 24, 0, 0);
+		ACTIVE.setSprite(7803);
+		int34 = 311;
+		int35 = 311;
+		ACTIVE.setSize(int34, int35, 0, 0);
+		ACTIVE.setContextMenuOption(1, str2);
+		ACTIVE.createChild(widget8, 5, int19);
+		int19 = int19 + 1;
+		ACTIVE.setSprite(7805);
+		ACTIVE.setSize(141, 219, 0, 0);
+		ACTIVE.setPosition(17, 24, 0, 0);
+		ACTIVE.setPosition(ACTIVE.getX() + (int34 - ACTIVE.getWidth()) / 2, ACTIVE.getY() + 20 + (int35 - ACTIVE.getHeight()) / 2, 0, 0);
+		ACTIVE.createChild(widget8, 5, int19);
+		int19 = int19 + 1;
+		ACTIVE.setPosition(0, 62, 0, 0);
+		ACTIVE.setSize(348, 34, 0, 0);
+		switch (getLanguage()) {
+			case 1:
+				ACTIVE.setSprite(7808);
+				break;
+			case 2:
+				ACTIVE.setSprite(7807);
+				break;
+			case 3:
+				ACTIVE.setSprite(7809);
+				break;
+			default:
+				ACTIVE.setSprite(7806);
+				break;
+		}
+		ACTIVE.createChild(widget8, 4, int19);
+		int19 = int19 + 1;
+		ACTIVE.setPosition(165, 275, 0, 0);
+		ACTIVE.setText(str2);
+		ACTIVE.setFont(4040);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setRGB(0xE5BD59);
+		ACTIVE.setTextAlignment(2, 1, 13);
+		ACTIVE.setSize(122, 24, 0, 0);
+		while (int36 < datamapSize(datamap2)) {
+			attrmap24 = datamap('i', 'J', datamap2, int36);
+			ACTIVE.createChild(widget8, 5, int19);
+			int19 = int19 + 1;
+			ACTIVE.setPosition(int21, int22, 2, 0);
+			ACTIVE.setSprite(sprite27);
+			int28 = 68;
+			int29 = 92;
+			int21 = int21 + int28;
+			ACTIVE.setSize(int28, int29, 0, 0);
+			switch (getAttributeMapValue(attrmap24, 1937)) {
+				case 1:
+					widget33 = widget9;
+					break;
+				case 2:
+					widget33 = widget10;
+					break;
+				case 3:
+					widget33 = widget11;
+					break;
+				case 4:
+					widget33 = widget12;
+					break;
+				case 5:
+					widget33 = widget13;
+					break;
+			}
+			ACTIVE.createChild(widget33, 4, widget33.nextChild());
+			ACTIVE.setPosition(int21 - int28, int22, 2, 0);
+			ACTIVE.setSize(int28 * 3, int29, 0, 0);
+			ACTIVE.setContextMenuOption(1, str2);
+			ACTIVE.setScriptCallOnMouseEntered(5360, widget8, int19 + 1, int19, int19 - 1, true, "Iiii1");
+			ACTIVE.setScriptCallOnMouseExit(5360, widget8, int19 + 1, int19, int19 - 1, false, "Iiii1");
+			ACTIVE.createChild(widget8, 5, int19);
+			int19 = int19 + 1;
+			ACTIVE.setPosition(int21, int22, 2, 0);
+			int21 = int21 + int28;
+			ACTIVE.setSprite(sprite26);
+			ACTIVE.setSize(int28, int29, 0, 0);
+			ACTIVE.createChild(widget8, 5, int19);
+			int19 = int19 + 1;
+			ACTIVE.setPosition(int21, int22, 2, 0);
+			int21 = int21 + int28;
+			ACTIVE.setSprite(sprite25);
+			ACTIVE.setSize(int28, int29, 0, 0);
+			ACTIVE.createChild(widget8, 5, int19);
+			int19 = int19 + 1;
+			if (getAttributeMapValue(attrmap24, 1937) == 1) {
+				ACTIVE.setItem(getAttributeMapValue(attrmap24, 1935), -1);
+				ACTIVE.setSize(36, 32, 0, 0);
+				ACTIVE.setPosition(int21 - 63, int22 + 29, 2, 0);
+			} else if (getAttributeMapValue(attrmap24, 1937) == 2) {
+				ACTIVE.setSprite(getAttributeMapValue(attrmap24, 1420));
+				ACTIVE.setSize(48, 48, 0, 0);
+				ACTIVE.setPosition(int21 - 65, int22 + 21, 2, 0);
+			} else if (getAttributeMapValue(attrmap24, 1937) == 3) {
+				ACTIVE.setSprite(getAttributeMapValue(attrmap24, 1441));
+				ACTIVE.setSize(40, 50, 0, 0);
+				ACTIVE.setPosition(int21 - 61, int22 + 20, 2, 0);
+			} else if (getAttributeMapValue(attrmap24, 1937) == 4) {
+				ACTIVE.setSprite(7883);
+				ACTIVE.setSize(42, 42, 0, 0);
+				ACTIVE.setPosition(int21 - 63, int22 + 25, 2, 0);
+			} else if (getAttributeMapValue(attrmap24, 1937) == 5) {
+				ACTIVE.setItem(getAttributeMapValue(attrmap24, 1935), -1);
+				ACTIVE.setSize(36, 32, 0, 0);
+				ACTIVE.setPosition(int21 - 62, int22 + 29, 2, 0);
+			}
+			if (getAttributeMapValue(attrmap24, 1933) > 0) {
+				ACTIVE.createChild(widget8, 5, int19);
+				int19 = int19 + 1;
+				ACTIVE.setPosition(int21 - 44, int22 + 4, 2, 0);
+				ACTIVE.setSprite(6348);
+				ACTIVE.setSize(40, 34, 0, 0);
+			}
+			ACTIVE.createChild(widget8, 4, int19);
+			int19 = int19 + 1;
+			ACTIVE.setPosition(13, int22 + 13, 2, 0);
+			if (getAttributeMapValue(attrmap24, 1937) == 4) {
+				int32 = datamap('J', 'i', (DataMap)5185, attrmap24);
+				if (!IsFemale()) {
+					ACTIVE.setText(datamap('i', 's', (DataMap)3886, int32));
+				} else {
+					ACTIVE.setText(datamap('i', 's', (DataMap)3887, int32));
+				}
+				ACTIVE.setText(substr(ACTIVE.getText(), 0, length(ACTIVE.getText()) - 1));
+			} else {
+				ACTIVE.setText(getAttributeMapValue(attrmap24, 1930));
+			}
+			if (getAttributeMapValue(attrmap24, 1933) > 0) {
+				ACTIVE.setText(concat(ACTIVE.getText(), "<br>" + formatNumber(getAttributeMapValue(attrmap24, 1933), 1) + " Points"));
+			} else {
+				ACTIVE.setText(concat(ACTIVE.getText(), "<br>" + formatNumber(getAttributeMapValue(attrmap24, 1932), 1) + " Points"));
+			}
+			ACTIVE.setFont(4040);
+			ACTIVE.setTextAntiMacro(true);
+			ACTIVE.setRGB(0xE6BE78);
+			ACTIVE.setTextAlignment(1, 1, 13);
+			ACTIVE.setSize(122, 60, 0, 0);
+			ACTIVE.createChild(widget8, 4, int19);
+			int19 = int19 + 1;
+			ACTIVE.setPosition(13, int22 + 13 + 24 + 24, 2, 0);
+			ACTIVE.setText(str2);
+			ACTIVE.setFont(3793);
+			ACTIVE.setTextAntiMacro(true);
+			ACTIVE.setRGB(0xE6BE78);
+			ACTIVE.setTextAlignment(2, 1, 12);
+			ACTIVE.setSize(122, 24, 0, 0);
+			int22 = int22 + int29 + int20;
+			int21 = 0;
+			int36 = int36 + 1;
+		}
+	} else if (int3 == 6) {
+		int30, int21, int22, int29, int19 = script_5352(int30, int21, int22, int29, int20, int19, int31, sprite25, sprite26, sprite27);
+		str1 = "There Are No Items Currently On Special Offer";
+		int23 = int22 + int29 + int20;
+	} else if (int3 == 7) {
+		int30, int21, int22, int29, int19 = script_5353(int30, int21, int22, int29, int20, int19, int31, sprite25, sprite26, sprite27);
+		str1 = "There Are No Limited Edition Items Currently Available";
+		int23 = int22 + int29 + int20;
+	} else if (int3 == 8) {
+		int30, int21, int22, int29, int19 = script_4727(int30, int21, int22, int29, int20, int19, int31, sprite25, sprite26, sprite27);
+		str1 = "Your Favourites List Is Currently Empty";
+		int23 = int22 + int29 + int20;
+	} else if (int3 == 1) {
+		int30, int21, int22, int29, int19 = script_4344(int30, int21, int22, int29, int20, int19, int31, sprite25, sprite26, sprite27);
+		str1 = "There Are No Items Currently Available In This Category";
+		int23 = int22 + int29 + int20;
+	} else {
+		int30, int21, int22, int29, int19 = script_4726(datamap2, int30, int21, int22, int29, int20, int19, int31, sprite25, sprite26, sprite27);
+		str1 = "There Are No Items Currently Available In This Category";
+		int23 = int22 + int29 + int20;
+	}
+	if (int19 == 0) {
+		ACTIVE.createChild(widget8, 4, int19);
+		int19 = int19 + 1;
+		ACTIVE.setPosition(0, 0, 1, 1);
+		ACTIVE.setText(str1);
+		ACTIVE.setFont(4040);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setRGB(0xE6BE78);
+		ACTIVE.setTextAlignment(1, 1, 13);
+		ACTIVE.setSize(0, 0, 1, 1);
+	}
+	if (int23 > widget4.getHeight()) {
+		widget4.setScrollMax(widget4.getWidth(), int23);
+		if (VARPBIT[9487] == arg0) {
+			widget4.setScrollPos(0, int5);
+		} else {
+			widget4.setScrollPos(0, 0);
+		}
+		widget6.setSize(widget4.getWidth(), int23, 0, 0);
+		widget7.setSize(widget4.getWidth(), int23, 0, 0);
+		widget8.setSize(widget4.getWidth(), int23, 0, 0);
+		script_31(widget(1143, 131), widget4, 7900, 7897, 7898, 7899, 7902, 7901);
+	} else {
+		widget4.setScrollMax(widget4.getWidth(), widget4.getHeight());
+		widget4.setScrollPos(0, 0);
+		widget6.setSize(widget4.getWidth(), widget4.getHeight(), 0, 0);
+		widget7.setSize(widget4.getWidth(), widget4.getHeight(), 0, 0);
+		widget8.setSize(widget4.getWidth(), widget4.getHeight(), 0, 0);
+		widget(1143, 131).clearChildren();
+	}
+	widget1.setScriptCallOnConfigChange(5349, int3, widget1, 2226, 2391, 2392, 2393, 2394, "iIY");
+	return;
+}

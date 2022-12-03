@@ -1,0 +1,3 @@
+int script_5255() {
+	return max(getSkillActualLvl(5), 1) * 10;
+}

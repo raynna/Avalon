@@ -1,0 +1,56 @@
+void script_947(int arg0, int arg1, Widget widget2, Sprite sprite3, Widget widget4, Widget widget5, Widget widget6, Color color7, Color color8, int arg9, Sprite sprite10, int arg11, int arg12, Sprite sprite13, Sprite sprite14, Sprite sprite15, Sprite sprite16, Sprite sprite17, Sprite sprite18) {
+	int int19;
+	int int20;
+	DataMap datamap21;
+	string str0;
+	if (ACTIVE.setChild(widget6, arg12)) {
+		ACTIVE.setVFlip(true);
+	}
+	ACTIVE.createChild(widget2, 5, widget2.nextChild());
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setSize(widget2.getWidth(), widget2.getHeight(), 0, 0);
+	ACTIVE.setSprite(sprite3);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.createChild(widget2, 3, widget2.nextChild());
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setSize(widget2.getWidth(), widget2.getHeight(), 0, 0);
+	ACTIVE.setRGB(0x000000);
+	widget4.setScrollMax(widget4.getWidth(), arg1 * 15);
+	int19 = 0;
+	int20 = -1;
+	str0 = "";
+	datamap21 = getAttributeMapValue(datamap('i', 'J', (DataMap)169, arg0), 782);
+	while (int19 <= arg1) {
+		int20 = widget4.nextChild();
+		str0 = datamap('i', 's', datamap21, int19);
+		ACTIVE.createChild(widget4, 4, int20);
+		ACTIVE.setOptionBase(str0);
+		if (int20 == VARC[693] && VARC[694] == 0) {
+			str0 = concat(str0, " (r)");
+		}
+		ACTIVE.setText(str0);
+		ACTIVE.setTextAlignment(0, 1, 0);
+		ACTIVE.setPosition(5, int19 * 15, 0, 0);
+		ACTIVE.setSize(widget4.getWidth() - 16, 15, 0, 0);
+		ACTIVE.setTextAntiMacro(false);
+		ACTIVE.setFont(sprite10);
+		ACTIVE.setContextMenuOption(1, "Select");
+		ACTIVE.setScriptCallOnClickContextMenu(943, arg0, CTX_WIDGET_CHILD, CTX_MENU_OPTION, color7, "iiii");
+		if (int19 >= arg1) {
+			ACTIVE.setRGB(color8);
+			ACTIVE.setScriptCallOnMouseExit(1354, widget4, int20, color8, "Iii");
+		} else {
+			ACTIVE.setRGB(color7);
+			ACTIVE.setScriptCallOnMouseExit(1354, widget4, int20, color7, "Iii");
+		}
+		ACTIVE.setScriptCallOnMouseEntered(1353, widget4, int20, arg9, "Iii");
+		int19 = int19 + 1;
+	}
+	if (widget5 != null) {
+		script_31(widget5, widget4, sprite13, sprite14, sprite15, sprite16, sprite17, sprite18);
+		widget5.setIsHidden(false);
+	}
+	widget2.setIsHidden(false);
+	widget4.setIsHidden(false);
+	return;
+}

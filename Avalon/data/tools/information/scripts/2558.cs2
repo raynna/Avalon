@@ -1,0 +1,10 @@
+void script_2558(Widget widget0) {
+	if (widget0.getSpriteId() == 1946) {
+		widget0.setSprite(1951);
+	} else if (widget0.getSpriteId() == 1947) {
+		widget0.setSprite(1952);
+	} else if (widget0.getSpriteId() == 1949) {
+		widget0.setSprite(1954);
+	}
+	return;
+}

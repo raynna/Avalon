@@ -1,0 +1,29 @@
+void script_4805(int arg0, int arg1) {
+	Widget widget2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	widget2 = null;
+	int3 = -1;
+	int4 = -1;
+	int5 = -1;
+	int6 = -1;
+	int7 = -1;
+	int8 = -1;
+	int9 = -1;
+	int10 = -1;
+	int11 = -1;
+	int12 = -1;
+	widget2, int3, int4, int5, int6, int7, int8, int9, int10, int11, int12 = script_4818(arg0, arg1);
+	widget2.setSize(0, 0, 1, 0);
+	widget2.setAttr(1564, 0);
+	widget2.setIsHidden(true);
+	return;
+}

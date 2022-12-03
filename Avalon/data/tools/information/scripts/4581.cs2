@@ -1,0 +1,16 @@
+void script_4581(int arg0) {
+	int int1;
+	int int2;
+	int1 = -1;
+	int2 = -1;
+	if (cs2method3751() && cs2method3701()) {
+		int1 = cs2method3760(removeTags(cs2method5020()));
+		if (int1 >= 0) {
+			int2 = cs2method3757(int1);
+			if (int2 >= 100) {
+				STRING[350] = cs2method3713(arg0);
+			}
+		}
+	}
+	return;
+}

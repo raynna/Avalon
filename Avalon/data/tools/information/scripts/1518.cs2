@@ -1,0 +1,27 @@
+void script_1518(Widget widget0, int arg1, int arg2) {
+	int int3;
+	int int4;
+	int3 = 0;
+	int4 = 0;
+	if (ACTIVE.setChild(widget0, arg1)) {
+		if (arg2 > 0) {
+			ACTIVE.set3DRotation(ACTIVE.getModelXOffset(), ACTIVE.getModelYOffset(), ACTIVE.getRotateX(), script_686(ACTIVE.getRotateY() - 10, 2048), ACTIVE.getRotateZ(), ACTIVE.get3DDistance());
+		} else if (arg2 < 0) {
+			ACTIVE.set3DRotation(ACTIVE.getModelXOffset(), ACTIVE.getModelYOffset(), ACTIVE.getRotateX(), (ACTIVE.getRotateY() + 10) % 2048, ACTIVE.getRotateZ(), ACTIVE.get3DDistance());
+		} else {
+			int3 = ACTIVE.getRotateY();
+			if (int3 > 1024) {
+				int4 = int3 + 15;
+				if (int4 >= 2048) {
+					int4 = 0;
+				}
+				ACTIVE.set3DRotation(ACTIVE.getModelXOffset(), ACTIVE.getModelYOffset(), ACTIVE.getRotateX(), int4, ACTIVE.getRotateZ(), ACTIVE.get3DDistance());
+			} else if (int3 > 0) {
+				ACTIVE.set3DRotation(ACTIVE.getModelXOffset(), ACTIVE.getModelYOffset(), ACTIVE.getRotateX(), max(int3 - 15, 0), ACTIVE.getRotateZ(), ACTIVE.get3DDistance());
+			} else {
+				ACTIVE.setScriptCallOnGameloop(-1, "");
+			}
+		}
+	}
+	return;
+}

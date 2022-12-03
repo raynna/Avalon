@@ -1,0 +1,8 @@
+void script_4336(Widget widget0) {
+	if (CLANDEF113[9] == 0 && cs2method3709() >= 5) {
+		widget0.setText(removeTags(CLANDEF_STRING115[1]));
+		return;
+	}
+	widget0.setText("");
+	return;
+}

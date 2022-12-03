@@ -1,0 +1,6 @@
+int script_2465(int arg0) {
+	if (script_8(arg0).hasChild()) {
+		return 1;
+	}
+	return 0;
+}

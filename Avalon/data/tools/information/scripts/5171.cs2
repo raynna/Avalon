@@ -1,0 +1,120 @@
+Sprite script_5171(int arg0) {
+	DataMap datamap1;
+	Sprite sprite2;
+	int int3;
+	datamap1 = (DataMap)script_4827(arg0);
+	if (datamap1 == null) {
+		return null;
+	}
+	sprite2 = null;
+	int3 = 0;
+	switch (arg0) {
+		case 21:
+			int3 = CLANBIT[2330];
+			break;
+		case 22:
+			int3 = CLANBIT[2340];
+			break;
+		case 23:
+			int3 = CLANBIT[2350];
+			break;
+		case 24:
+			int3 = CLANBIT[2360];
+			break;
+		case 25:
+			int3 = CLANBIT[2370];
+			break;
+		case 26:
+			int3 = CLANBIT[2380];
+			break;
+		case 27:
+			int3 = CLANBIT[2390];
+			break;
+		case 28:
+			int3 = CLANBIT[2400];
+			break;
+		case 31:
+			int3 = CLANBIT[2460];
+			break;
+		case 32:
+			int3 = CLANBIT[2470];
+			break;
+		case 33:
+			int3 = CLANBIT[2480];
+			break;
+		case 34:
+			int3 = CLANBIT[2490];
+			break;
+		case 35:
+			int3 = CLANBIT[2500];
+			break;
+		case 41:
+			int3 = CLANBIT[2410];
+			break;
+		case 42:
+			int3 = CLANBIT[2420];
+			break;
+		case 43:
+			int3 = CLANBIT[2430];
+			break;
+		case 44:
+			int3 = CLANBIT[2440];
+			break;
+		case 45:
+			int3 = CLANBIT[2450];
+			break;
+		case 51:
+			int3 = CLANBIT[2510];
+			break;
+		case 100:
+			int3 = CLANBIT[2210];
+			break;
+		case 101:
+			int3 = CLANBIT[2220];
+			break;
+		case 102:
+			int3 = CLANBIT[2240];
+			break;
+		case 103:
+			int3 = CLANBIT[2190];
+			break;
+		case 104:
+			int3 = CLANBIT[2230];
+			break;
+		case 105:
+			int3 = CLANBIT[2200];
+			break;
+		case 106:
+			int3 = CLANBIT[2260];
+			break;
+		case 107:
+			int3 = CLANBIT[2270];
+			break;
+		case 108:
+			int3 = CLANBIT[2280];
+			break;
+		case 109:
+			int3 = CLANBIT[2250];
+			break;
+		case 110:
+			int3 = CLANBIT[2290];
+			break;
+		case 111:
+			int3 = CLANBIT[2300];
+			break;
+		case 112:
+			int3 = CLANBIT[2310];
+			break;
+		case 113:
+			int3 = CLANBIT[2320];
+			break;
+	}
+	if (int3 <= 0) {
+		return null;
+	}
+	if (datamap1 == null) {
+		return null;
+	}
+	sprite2 = datamap('i', 'd', datamap1, int3);
+	return sprite2;
+}

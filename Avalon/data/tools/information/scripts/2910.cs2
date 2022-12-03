@@ -1,0 +1,12 @@
+void script_2910(Widget widget0, Widget widget1) {
+	if (compare(widget1.getText(), "Hide") == 0) {
+		widget0.setScriptCallOnGameloop(2911, false, 24, widget0.getLayer().getHeight() - 24, 0, widget0, "1iiiI");
+		widget1.setText("Show");
+		widget1.setContextMenuOption(1, "Show");
+	} else {
+		widget0.setScriptCallOnGameloop(2911, true, 24, widget0.getLayer().getHeight() - 24, 0, widget0, "1iiiI");
+		widget1.setText("Hide");
+		widget1.setContextMenuOption(1, "Hide");
+	}
+	return;
+}

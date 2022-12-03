@@ -1,0 +1,28 @@
+void script_4508(Widget widget0, int arg1) {
+	int int2;
+	int int3;
+	int int4;
+	int2 = 0;
+	ARRAY0 = new int[arg1];
+	int3 = 0;
+	int4 = 5;
+	while (int2 <= arg1) {
+		if (ACTIVE.setChild(widget0, int2) && length(ACTIVE.getText()) > 0) {
+			ARRAY0[int3] = int2;
+			int3 = int3 + 1;
+		}
+		int2 = int2 + 1;
+	}
+	if (int3 > 1) {
+		script_4424(0, widget0, 0, int3 - 1);
+	}
+	int2 = 0;
+	while (int2 < int3) {
+		if (ACTIVE.setChild(widget0, ARRAY0[int2])) {
+			ACTIVE.setPosition(5, int4, 0, 0);
+			int4 = int4 + ACTIVE.getHeight();
+		}
+		int2 = int2 + 1;
+	}
+	return;
+}

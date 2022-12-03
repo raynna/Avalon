@@ -1,0 +1,4 @@
+void script_247(int arg0, char char1) {
+	STRING[24] = script_74(STRING[24], 2, arg0, char1);
+	return;
+}

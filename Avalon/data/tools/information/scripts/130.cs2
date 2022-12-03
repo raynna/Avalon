@@ -1,0 +1,4 @@
+void script_130(string string0) {
+	cs2method3608(removeTags(string0));
+	return;
+}

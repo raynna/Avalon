@@ -1,0 +1,18 @@
+int script_2149() {
+	if (script_2155() == 0) {
+		return 0;
+	}
+	if (VARP[101] < getAttributeMapValue((AttrMap)VARC[699], 895)) {
+		return 0;
+	}
+	if (VARC[698] < getAttributeMapValue((AttrMap)VARC[699], 896)) {
+		return 0;
+	}
+	if (script_2153() == 0) {
+		return 0;
+	}
+	if (getAttributeMapValue((AttrMap)VARC[699], 898) == 1 && script_2194(getAttributeMapValue((AttrMap)VARC[699], 847)) == 0) {
+		return 0;
+	}
+	return 1;
+}

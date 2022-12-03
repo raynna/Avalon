@@ -1,0 +1,78 @@
+int script_970(Widget arg0) {
+	if (arg0 == widget(320, 195) && VARPBIT[4732] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 6) && VARPBIT[4733] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 23) && VARPBIT[4734] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 47) && VARPBIT[4735] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 71) && VARPBIT[4736] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 88) && VARPBIT[4737] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 188) && VARPBIT[4738] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 14) && VARPBIT[4739] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 31) && VARPBIT[4740] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 55) && VARPBIT[4741] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 79) && VARPBIT[4742] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 96) && VARPBIT[4743] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 181) && VARPBIT[4744] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 174) && VARPBIT[4745] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 39) && VARPBIT[4746] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 63) && VARPBIT[4747] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 167) && VARPBIT[4748] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 160) && VARPBIT[4749] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 105) && VARPBIT[4750] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 113) && VARPBIT[4751] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 121) && VARPBIT[4752] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 129) && VARPBIT[4753] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 137) && VARPBIT[4754] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 145) && VARPBIT[4755] == 1) {
+		return 1;
+	}
+	if (arg0 == widget(320, 153) && VARPBIT[7756] == 1) {
+		return 1;
+	}
+	return 0;
+}

@@ -1,0 +1,37 @@
+void script_4860() {
+	widget(1092, 1371).setIsHidden(true);
+	widget(1092, 1364).setIsHidden(true);
+	widget(1092, 1357).setIsHidden(true);
+	widget(1092, 1273).setIsHidden(true);
+	widget(1092, 1280).setIsHidden(true);
+	widget(1092, 1287).setIsHidden(true);
+	widget(1092, 1294).setIsHidden(true);
+	widget(1092, 1301).setIsHidden(true);
+	widget(1092, 1308).setIsHidden(true);
+	widget(1092, 1315).setIsHidden(true);
+	widget(1092, 1322).setIsHidden(true);
+	widget(1092, 1329).setIsHidden(true);
+	widget(1092, 1336).setIsHidden(true);
+	widget(1092, 1343).setIsHidden(true);
+	widget(1092, 1350).setIsHidden(true);
+	widget(1092, 1378).setIsHidden(true);
+	widget(1092, 1384).setIsHidden(true);
+	widget(1092, 1390).setIsHidden(true);
+	widget(1092, 1396).setIsHidden(true);
+	widget(1092, 1402).setIsHidden(true);
+	widget(1092, 1408).setIsHidden(true);
+	widget(1092, 1415).setIsHidden(true);
+	widget(1092, 1421).setIsHidden(true);
+	widget(1092, 1427).setIsHidden(true);
+	widget(1092, 1433).setIsHidden(true);
+	widget(1092, 1439).setIsHidden(true);
+	widget(1092, 1445).setIsHidden(true);
+	widget(1092, 1451).setIsHidden(true);
+	widget(1092, 1457).setIsHidden(true);
+	widget(1092, 1463).setIsHidden(true);
+	widget(1092, 1469).setIsHidden(true);
+	widget(1092, 1475).setIsHidden(true);
+	widget(1092, 1481).setIsHidden(true);
+	widget(1092, 1487).setIsHidden(true);
+	return;
+}

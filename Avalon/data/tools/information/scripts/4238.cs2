@@ -1,0 +1,21 @@
+void script_4238(int arg0, Widget widget1, Widget widget2) {
+	int int3;
+	int3 = 0;
+	if (VARC[1495] != 0) {
+		int3 = max(0, 120 - (getClientCycle() - VARC[1495]));
+	}
+	if (int3 >= 60 && int3 <= 120) {
+		widget2.set2DAngle(min(int3 * 545, 65353));
+		widget1.set2DAngle(0);
+	} else if (int3 > 0 && int3 < 60) {
+		widget2.set2DAngle(32768);
+		widget1.set2DAngle(min(32768 + int3 * 545, 65353));
+	} else {
+		widget2.set2DAngle(32768);
+		widget1.set2DAngle(32768);
+		if (VARC[1495] != 0) {
+			VARC[1495] = 0;
+		}
+	}
+	return;
+}

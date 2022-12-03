@@ -1,0 +1,97 @@
+string script_2452(int arg0) {
+	string str0;
+	str0 = "";
+	switch (arg0) {
+		case 0:
+			str0 = STRING[149];
+			break;
+		case 1:
+			str0 = STRING[150];
+			break;
+		case 2:
+			str0 = STRING[151];
+			break;
+		case 3:
+			str0 = STRING[152];
+			break;
+		case 4:
+			str0 = STRING[153];
+			break;
+		case 5:
+			str0 = STRING[154];
+			break;
+		case 6:
+			str0 = STRING[155];
+			break;
+		case 7:
+			str0 = STRING[156];
+			break;
+		case 8:
+			str0 = STRING[157];
+			break;
+		case 9:
+			str0 = STRING[158];
+			break;
+		case 10:
+			str0 = STRING[159];
+			break;
+		case 11:
+			str0 = STRING[160];
+			break;
+		case 12:
+			str0 = STRING[161];
+			break;
+		case 13:
+			str0 = STRING[162];
+			break;
+		case 14:
+			str0 = STRING[163];
+			break;
+		case 15:
+			str0 = STRING[164];
+			break;
+		case 16:
+			str0 = STRING[165];
+			break;
+		case 17:
+			str0 = STRING[166];
+			break;
+		case 18:
+			str0 = STRING[167];
+			break;
+		case 19:
+			str0 = STRING[168];
+			break;
+		case 20:
+			str0 = STRING[169];
+			break;
+		case 21:
+			str0 = STRING[170];
+			break;
+		case 22:
+			str0 = STRING[171];
+			break;
+		case 23:
+			str0 = STRING[172];
+			break;
+		case 24:
+			str0 = STRING[173];
+			break;
+		case 25:
+			str0 = STRING[174];
+			break;
+		case 26:
+			str0 = STRING[175];
+			break;
+		case 27:
+			str0 = STRING[176];
+			break;
+		case 28:
+			str0 = STRING[177];
+			break;
+		case 29:
+			str0 = STRING[178];
+			break;
+	}
+	return str0;
+}

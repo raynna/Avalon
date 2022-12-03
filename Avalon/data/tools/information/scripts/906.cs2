@@ -1,0 +1,4 @@
+void script_906() {
+	VARC[116] = 1;
+	return;
+}

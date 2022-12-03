@@ -1,0 +1,87 @@
+void script_785(Widget widget0) {
+	VARC[988] = 0;
+	VARC[989] = 0;
+	VARC[990] = 0;
+	VARC[991] = 0;
+	switch (widget0) {
+		case widget(192, 7):
+			VARC[988] = 1;
+			if (VARPBIT[6459] == 1) {
+				widget0.setSprite(1702);
+			}
+			break;
+		case widget(192, 9):
+			VARC[989] = 1;
+			if (VARPBIT[6462] == 1) {
+				widget0.setSprite(1702);
+			}
+			break;
+		case widget(192, 11):
+			VARC[990] = 1;
+			if (VARPBIT[6461] == 1) {
+				widget0.setSprite(1702);
+			}
+			break;
+		case widget(192, 13):
+			VARC[991] = 1;
+			if (VARPBIT[6460] == 1) {
+				widget0.setSprite(1702);
+			}
+			break;
+		case widget(430, 5):
+			VARC[988] = 1;
+			if (VARPBIT[6463] == 1) {
+				widget0.setSprite(1702);
+			}
+			break;
+		case widget(430, 9):
+			VARC[990] = 1;
+			if (VARPBIT[6464] == 1) {
+				widget0.setSprite(1702);
+			}
+			break;
+		case widget(430, 7):
+			VARC[989] = 1;
+			if (VARPBIT[6465] == 1) {
+				widget0.setSprite(1702);
+			}
+			break;
+		case widget(193, 5):
+			VARC[988] = 1;
+			if (VARPBIT[6466] == 1) {
+				widget0.setSprite(1702);
+			}
+			break;
+		case widget(193, 7):
+			VARC[989] = 1;
+			if (VARPBIT[6467] == 1) {
+				widget0.setSprite(1702);
+			}
+			break;
+		case widget(950, 7):
+			VARC[988] = 1;
+			if (VARPBIT[7348] == 1) {
+				widget0.setSprite(1702);
+			}
+			break;
+		case widget(950, 9):
+			VARC[989] = 1;
+			if (VARPBIT[7351] == 1) {
+				widget0.setSprite(1702);
+			}
+			break;
+		case widget(950, 11):
+			VARC[990] = 1;
+			if (VARPBIT[7350] == 1) {
+				widget0.setSprite(1702);
+			}
+			break;
+		case widget(950, 13):
+			VARC[991] = 1;
+			if (VARPBIT[7349] == 1) {
+				widget0.setSprite(1702);
+			}
+			break;
+	}
+	return;
+}

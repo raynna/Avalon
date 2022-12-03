@@ -1,0 +1,31 @@
+void script_1942() {
+	if (VARC[560] == 0) {
+		VARC[559] = min(255, VARC[559] + 6);
+		if (VARC[559] == 255) {
+			VARC[560] = 1;
+		}
+	} else if (VARC[560] == 1) {
+		VARC[559] = max(60, VARC[559] - 6);
+		if (VARC[559] == 60) {
+			VARC[560] = 0;
+		}
+	}
+	widget(809, 14).setTrans(VARC[559]);
+	if (VARC[561] < 4) {
+		if (widget(809, 18).isHidden()) {
+			VARC[562] = min(20, VARC[562] + 1);
+			if (VARC[562] == 20) {
+				VARC[562] = 0;
+				widget(809, 18).setIsHidden(false);
+			}
+		} else {
+			VARC[562] = min(35, VARC[562] + 1);
+			if (VARC[562] == 35) {
+				VARC[562] = 0;
+				widget(809, 18).setIsHidden(true);
+				VARC[561] = min(4, VARC[561] + 1);
+			}
+		}
+	}
+	return;
+}

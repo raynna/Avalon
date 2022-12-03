@@ -1,0 +1,22 @@
+void script_1234(int arg0) {
+	if (isHoldingCtrl()) {
+		return;
+	}
+	if (VARC[173] != 1) {
+		switch (arg0) {
+			case 1:
+				cs2method5507();
+				break;
+			case 2:
+				cs2method5508();
+				break;
+			case 3:
+				cs2method5509();
+				break;
+			case 4:
+				cs2method5510();
+				break;
+		}
+	}
+	return;
+}

@@ -1,0 +1,4 @@
+void script_1588() {
+	script_1592(widget(401, 6), widget(401, 24), STRING[220]);
+	return;
+}

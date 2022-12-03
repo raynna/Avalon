@@ -1,0 +1,62 @@
+void script_5202(int arg0) {
+	if (arg0 == 1) {
+		VARC[1597] = VARPBIT[9671];
+		VARC[1598] = VARPBIT[9672];
+		VARC[1599] = VARPBIT[9673];
+		VARC[1600] = VARPBIT[9674];
+		VARC[1601] = VARPBIT[9675];
+	}
+	switch (VARC[1600]) {
+		case 0:
+			widget(1122, 80).setModel(43803);
+			break;
+		case 1:
+			widget(1122, 80).setModel(43796);
+			break;
+		case 2:
+			widget(1122, 80).setModel(43790);
+			break;
+		case 3:
+			widget(1122, 80).setModel(43779);
+			break;
+		case 4:
+			widget(1122, 80).setModel(43795);
+			break;
+	}
+	switch (VARPBIT[9646]) {
+		case 1:
+			widget(1122, 80).replaceTextures(2, 1303, 1298);
+			break;
+		case 2:
+			widget(1122, 80).replaceTextures(2, 1303, 1303);
+			break;
+		case 3:
+			widget(1122, 80).replaceTextures(2, 1303, 1301);
+			break;
+	}
+	switch (VARC[1601]) {
+		case 0:
+			widget(1122, 80).replaceTextures(1, 1304, 1299);
+			break;
+		case 1:
+			widget(1122, 80).replaceTextures(1, 1304, 1304);
+			break;
+		case 2:
+			widget(1122, 80).replaceTextures(1, 1304, 1300);
+			break;
+		case 3:
+			widget(1122, 80).replaceTextures(1, 1304, 1296);
+			break;
+		case 4:
+			widget(1122, 80).replaceTextures(1, 1304, 1302);
+			break;
+		case 5:
+			widget(1122, 80).replaceTextures(1, 1304, 1297);
+			break;
+	}
+	widget(1122, 80).replaceColors(0, 41506, VARC[1597]);
+	widget(1122, 80).replaceColors(1, 41497, script_5183(VARC[1597], 0, 0, -9));
+	widget(1122, 80).replaceColors(2, 13434, VARC[1598]);
+	widget(1122, 80).replaceColors(3, 7102, VARC[1599]);
+	return;
+}

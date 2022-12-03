@@ -1,0 +1,21 @@
+void script_2741() {
+	int int0;
+	string str0;
+	string str1;
+	str0 = "Confirm";
+	str1 = "Continue";
+	int0 = getTextWidth(str0, 495) + 30;
+	script_3965(widget(1028, 117), str0, int0, "");
+	script_368(widget(1028, 115), str1, getTextWidth(str1, 495) + 30, "");
+	str1 = "Back";
+	int0 = int0 + 55;
+	script_368(widget(1028, 116), str1, getTextWidth(str1, 495) + 30, "");
+	if (VARPBIT[8246] == 1 && VARPBIT[8247] == 0) {
+		widget(1028, 115).setPosition(20, 0, 2, 2);
+		widget(1028, 116).setPosition(0, 0, 2, 2);
+	} else {
+		widget(1028, 115).setPosition(int0, 0, 2, 2);
+		widget(1028, 116).setPosition(int0, 0, 2, 2);
+	}
+	return;
+}

@@ -1,0 +1,26 @@
+void script_3010(Widget widget0, Widget widget1, Widget widget2, Widget widget3, int arg4, Widget widget5, Widget widget6) {
+	Sprite sprite7;
+	Sprite sprite8;
+	Sprite sprite9;
+	Sprite sprite10;
+	sprite7 = 4677;
+	sprite8 = 4678;
+	sprite9 = 4679;
+	sprite10 = 4680;
+	widget1.setSize(13, 30, 0, 0);
+	widget1.setSprite(sprite7);
+	widget2.setSize(26, 30, 1, 0);
+	widget2.setSprite(sprite8);
+	widget3.setSize(13, 30, 0, 0);
+	widget3.setSprite(sprite10);
+	widget5.setSprite(2673);
+	widget6.setSize(13, 30, 0, 0);
+	widget6.setSprite(4679);
+	widget0.setScriptCallOnMouseExit(4164, widget1, sprite7, widget2, sprite8, widget6, sprite9, widget3, sprite10, "IdIdIdId");
+	sprite7 = 4673;
+	sprite8 = 4674;
+	sprite9 = 4675;
+	sprite10 = 4676;
+	widget0.setScriptCallOnMouseEntered(4164, widget1, sprite7, widget2, sprite8, widget6, sprite9, widget3, sprite10, "IdIdIdId");
+	return;
+}

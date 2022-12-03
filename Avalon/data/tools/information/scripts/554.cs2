@@ -1,0 +1,13 @@
+void script_554() {
+	int int0;
+	if (VARPBIT[4111] == 0) {
+		playSoundEffect(4020, 1, 0);
+		return;
+	}
+	VARPBIT[4111] = VARPBIT[4111] - 1;
+	int0 = (15 - VARPBIT[4111]) * 6;
+	widget(624, 19).setPosition(0, int0, 0, 0);
+	widget(624, 72).setText(str(VARPBIT[4111]));
+	playSoundEffect(4026, 1, 0);
+	return;
+}

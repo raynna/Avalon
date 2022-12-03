@@ -1,0 +1,44 @@
+void script_3678(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	widget0.clearChildren();
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 6;
+	int5 = 5;
+	if (int4 > 1) {
+		if (widget0.getScrollMaxH() > 0) {
+			int2 = (widget0.getScrollMaxH() - 36 * int4) / (int4 - 1);
+		} else {
+			int2 = (widget0.getWidth() - 36 * int4) / (int4 - 1);
+		}
+	}
+	if (int5 > 1) {
+		if (widget0.getScrollMaxV() > 0) {
+			int3 = (widget0.getScrollMaxV() - 32 * int5) / (int5 - 1);
+		} else {
+			int3 = (widget0.getHeight() - 32 * int5) / (int5 - 1);
+		}
+	}
+	while (int1 < 30) {
+		ACTIVE.createChild(widget0, 5, int1);
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setPosition((36 + int2) * (int1 % int4), int1 / int4 * (32 + int3), 0, 0);
+		ACTIVE.setItemAlwaysNum(datamap('i', 'O', (DataMap)3272, int1), isBitFlagged(VARC[1352], int1));
+		if (isBitFlagged(VARC[1352], int1)) {
+			ACTIVE.setContextMenuOption(1, "Take" + "<col=ff9040>");
+			ACTIVE.setOutlineThickness(2);
+		} else {
+			ACTIVE.setTrans(100);
+		}
+		ACTIVE.setContextMenuOption(5, "Examine" + "<col=ff9040>");
+		ACTIVE.setOptionBase("<col=ff981f>" + datamap('i', 's', (DataMap)3274, int1) + " Piece");
+		ACTIVE.setScriptCallOnClickContextMenu(3679, CTX_WIDGET, int1, "Ii");
+		int1 = int1 + 1;
+	}
+	return;
+}

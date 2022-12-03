@@ -1,0 +1,18 @@
+void script_2299(Widget widget0) {
+	if (VARC[181] == 1) {
+		if (VARPBIT[6840] == 1) {
+			widget0.setContextMenuOption(2, "Finish quick curse selection");
+			widget(271, 46).setText("Select your quick curses:");
+		} else {
+			widget0.setContextMenuOption(2, "Finish quick prayer selection");
+			widget(271, 46).setText("Select your quick prayers:");
+		}
+	} else if (VARPBIT[6840] == 1) {
+		widget0.setContextMenuOption(2, "Select quick curses");
+	} else {
+		widget0.setContextMenuOption(2, "Select quick prayers");
+	}
+	script_817(5);
+	script_2303();
+	return;
+}

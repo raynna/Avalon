@@ -1,0 +1,6 @@
+void script_4090(Widget widget0, Widget widget1, Widget widget2) {
+	widget0.setScriptCallOnSkillChange(4091, widget0, widget1, widget2, "III");
+	widget0.setScriptCallOnAnyWidgetOpenAndClose(4091, widget0, widget1, widget2, "III");
+	script_4092(widget0, widget1, widget2);
+	return;
+}

@@ -1,0 +1,34 @@
+void script_3458(Widget widget0, Location location1) {
+	switch (VARC[1007]) {
+		case 31:
+			cs2method5405(0, 3);
+			cs2method5405(1, 3);
+			cs2method5406(0, 0, script_3459(location(3806, 5726, 0), location1), 500, script_3459(location(3806, 5726, 0), location1), 500, 0);
+			cs2method5406(1, 0, script_3459(location(3802, 5722, 0), location1), 350, script_3459(location(3802, 5722, 0), location1), 350, 0);
+			cs2method5406(0, 1, script_3459(location(3806, 5725, 0), location1), 450, script_3459(location(3806, 5725, 0), location1), 450, 0);
+			cs2method5406(1, 1, script_3459(location(3803, 5723, 0), location1), 350, script_3459(location(3803, 5723, 0), location1), 350, 0);
+			cs2method5406(0, 2, script_3459(location(3804, 5723, 0), location1), 550, script_3459(location(3804, 5723, 0), location1), 550, 0);
+			cs2method5406(1, 2, script_3459(location(3804, 5728, 0), location1), 350, script_3459(location(3801, 5726, 0), location1), 350, 0);
+			cameraMethod5502(0, 0, 50, 10, 1, 0);
+			break;
+		case 32:
+			cameraMethod5502(0, 1, 500, 500, 1, 1);
+			break;
+		case 33:
+			script_2766(0x000000, 50, widget0);
+			break;
+		case 34:
+			script_2768(25, widget0);
+			break;
+		case 35:
+			script_2766(0x000000, 25, widget0);
+			break;
+		case 36:
+			script_2768(50, widget0);
+			break;
+		default:
+			cs2method5512();
+			break;
+	}
+	return;
+}

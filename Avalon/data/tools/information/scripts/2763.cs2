@@ -1,0 +1,39 @@
+void script_2763(Widget widget0, Location location1) {
+	switch (VARC[1007]) {
+		case 201:
+			cs2method5405(0, 2);
+			cs2method5406(0, 0, script_2764(location(3681, 4963, 0), location1), 600, script_2764(location(3682, 4963, 0), location1), 600, 0);
+			cs2method5406(0, 1, script_2764(location(3684, 4963, 0), location1), 550, script_2764(location(3684, 4963, 0), location1), 600, 0);
+			cs2method5405(1, 2);
+			cs2method5406(1, 0, script_2764(location(3666, 4963, 0), location1), 200, script_2764(location(3666, 4963, 0), location1), 200, 0);
+			cs2method5406(1, 1, script_2764(location(3666, 4963, 0), location1), 200, script_2764(location(3666, 4963, 0), location1), 200, 0);
+			cameraMethod5502(0, 0, 200, 75, 1, 0);
+			break;
+		case 202:
+			script_2766(0x000000, 10, widget0);
+			break;
+		case 203:
+			cs2method5405(0, 2);
+			cs2method5406(0, 0, script_2764(location(3684, 4963, 0), location1), 550, script_2764(location(3684, 4963, 0), location1), 550, 0);
+			cs2method5406(0, 1, script_2764(location(3683, 4963, 0), location1), 750, script_2764(location(3683, 4963, 0), location1), 750, 0);
+			cs2method5405(1, 2);
+			cs2method5406(1, 0, script_2764(location(3666, 4963, 0), location1), 200, script_2764(location(3666, 4963, 0), location1), 200, 0);
+			cs2method5406(1, 1, script_2764(location(3666, 4963, 0), location1), 200, script_2764(location(3666, 4963, 0), location1), 200, 0);
+			cameraMethod5502(0, 0, 50, 25, 1, 0);
+			script_2768(75, widget0);
+			break;
+		case 204:
+			cs2method5405(0, 2);
+			cs2method5406(0, 0, script_2764(location(3679, 4966, 0), location1), 550, script_2764(location(3680, 4966, 0), location1), 550, 0);
+			cs2method5406(0, 1, script_2764(location(3682, 4967, 0), location1), 550, script_2764(location(3681, 4967, 0), location1), 550, 0);
+			cs2method5405(1, 2);
+			cs2method5406(1, 0, script_2764(location(3685, 4958, 0), location1), 400, script_2764(location(3684, 4958, 0), location1), 400, 0);
+			cs2method5406(1, 1, script_2764(location(3673, 4962, 0), location1), 400, script_2764(location(3674, 4961, 0), location1), 400, 0);
+			cameraMethod5502(0, 0, 150, 220, 1, 0);
+			break;
+		default:
+			cs2method5512();
+			break;
+	}
+	return;
+}

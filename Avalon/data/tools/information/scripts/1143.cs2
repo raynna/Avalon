@@ -1,0 +1,54 @@
+void script_1143(string string0, Sprite sprite1, string string2, string string3, Sprite sprite4, string string5, string string6, Sprite sprite7, string string8, string string9, Sprite sprite10, string string11) {
+	string str8;
+	if (compare(string0, "") != 0 && sprite1 != null) {
+		widget(884, 30).setSprite(sprite1);
+		widget(884, 31).setText(string0);
+		widget(884, 11).setIsHidden(false);
+		widget(884, 11).setContextMenuOption(1, string0);
+		widget(884, 11).setScriptCallOnMouseOver(38, widget(884, 11), widget(884, 19), string2, 25, 190, "IIsii");
+		widget(884, 11).setScriptCallOnMouseExit(40, widget(884, 19), "I");
+	} else {
+		widget(884, 11).setNoOptions();
+		widget(884, 11).setIsHidden(true);
+	}
+	if (compare(string3, "") != 0 && sprite4 != null) {
+		widget(884, 28).setSprite(sprite4);
+		widget(884, 27).setText(string3);
+		widget(884, 12).setIsHidden(false);
+		widget(884, 12).setContextMenuOption(1, string3);
+		widget(884, 12).setScriptCallOnMouseOver(38, widget(884, 12), widget(884, 19), string5, 25, 190, "IIsii");
+		widget(884, 12).setScriptCallOnMouseExit(40, widget(884, 19), "I");
+	} else {
+		widget(884, 12).setNoOptions();
+		widget(884, 12).setIsHidden(true);
+	}
+	if (compare(string6, "") != 0 && sprite7 != null) {
+		widget(884, 24).setSprite(sprite7);
+		widget(884, 25).setText(string6);
+		widget(884, 13).setIsHidden(false);
+		widget(884, 13).setContextMenuOption(1, string6);
+		widget(884, 13).setScriptCallOnMouseOver(38, widget(884, 13), widget(884, 19), string8, 25, 190, "IIsii");
+		widget(884, 13).setScriptCallOnMouseExit(40, widget(884, 19), "I");
+	} else {
+		widget(884, 13).setNoOptions();
+		widget(884, 13).setIsHidden(true);
+	}
+	if (compare(string9, "") != 0 && sprite10 != null) {
+		widget(884, 21).setSprite(sprite10);
+		widget(884, 22).setText(string9);
+		widget(884, 14).setIsHidden(false);
+		widget(884, 14).setContextMenuOption(1, string9);
+		widget(884, 14).setScriptCallOnMouseOver(38, widget(884, 14), widget(884, 19), string11, 25, 190, "IIsii");
+		widget(884, 14).setScriptCallOnMouseExit(40, widget(884, 19), "I");
+	} else {
+		widget(884, 14).setNoOptions();
+		widget(884, 14).setIsHidden(true);
+	}
+	str8 = "When active, you will automatically fight back if attacked.";
+	widget(884, 15).setScriptCallOnMouseOver(38, widget(884, 15), widget(884, 19), str8, 25, 190, "IIsii");
+	widget(884, 15).setScriptCallOnMouseExit(40, widget(884, 19), "I");
+	str8 = "Select to perform a special attack.";
+	widget(884, 3).setScriptCallOnMouseOver(38, widget(884, 3), widget(884, 19), str8, 25, 190, "IIsii");
+	widget(884, 3).setScriptCallOnMouseExit(40, widget(884, 19), "I");
+	return;
+}

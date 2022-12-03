@@ -1,0 +1,15 @@
+void script_1317() {
+	widget(262, 0).setModel(18789);
+	widget(262, 28).setModel(18813);
+	widget(262, 29).setModel(18814);
+	if (VARPBIT[4835] < 1) {
+		widget(262, 29).setModel(null);
+	}
+	if (VARPBIT[4835] < 2) {
+		widget(262, 28).setModel(null);
+	}
+	if (VARPBIT[4835] < 3) {
+		widget(262, 0).setModel(null);
+	}
+	return;
+}

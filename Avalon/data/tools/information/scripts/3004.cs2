@@ -1,0 +1,13 @@
+void script_3004(int arg0, int arg1) {
+	widget(907, 41).setScriptCallOnMousePressed(-1, "");
+	widget(907, 29).setScriptCallOnMousePressed(-1, "");
+	widget(907, 17).setScriptCallOnMousePressed(-1, "");
+	widget(907, 55).setScriptCallOnMousePressed(-1, "");
+	if (script_3013(arg1).getSpriteId() == 2669) {
+		script_3007((int, int, int, int, int, int, int)script_3011(arg1));
+	} else {
+		script_3009((int, int, int, int, int, int, int)script_3011(arg1));
+	}
+	widget(907, 2).setScriptCallOnGameloop(3005, arg1, arg0, "ii");
+	return;
+}

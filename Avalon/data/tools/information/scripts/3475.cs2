@@ -1,0 +1,19 @@
+void script_3475(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5) {
+	script_1088(widget0, 0);
+	script_680(widget3);
+	script_680(widget5);
+	widget2.setScriptCallOnMouseEntered(95, widget3, "I");
+	widget4.setScriptCallOnMouseEntered(95, widget5, "I");
+	widget2.setScriptCallOnMouseExit(93, widget3, "I");
+	widget4.setScriptCallOnMouseExit(93, widget5, "I");
+	widget1.setScrollPos(0, 300);
+	widget1.setScriptCallOnGameloop(-1, "");
+	widget2.setIsHidden(false);
+	widget4.setIsHidden(false);
+	widget2.setScriptCallOnClickContextMenu(3479, widget1, widget2, widget4, true, "III1");
+	widget4.setScriptCallOnClickContextMenu(3479, widget1, widget2, widget4, false, "III1");
+	widget0.setScriptCallOnConfigChange(3476, 1506, 1507, 1508, "Y");
+	widget0.setScriptCallOnGlobalConfigChange(3476, 1317, 1318, "Y");
+	script_3477();
+	return;
+}

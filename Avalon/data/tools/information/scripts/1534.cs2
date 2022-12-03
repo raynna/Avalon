@@ -1,0 +1,15 @@
+void script_1534(Widget widget0, int arg1) {
+	if (arg1 != 1) {
+		return;
+	}
+	if (VARC[1413] == 0) {
+		return;
+	}
+	if (VARC[119] == 1) {
+		VARC[119] = 0;
+	} else {
+		VARC[119] = 1;
+	}
+	script_1741(widget0);
+	return;
+}

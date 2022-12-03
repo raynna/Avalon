@@ -1,0 +1,10 @@
+void script_1041(Widget widget0, Widget widget1, Widget widget2, QcPhrase qcphrase3) {
+	widget1.clearChildren();
+	if (length(STRING[30]) > 0) {
+		script_1039(widget0, widget1, widget2, qcphrase3);
+	} else {
+		widget1.setScrollMax(0, 0);
+		script_1042(widget1, widget2);
+	}
+	return;
+}

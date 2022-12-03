@@ -1,0 +1,9 @@
+int script_1526() {
+	int int0;
+	int0 = 0;
+	int0 = VARPBIT[5706] + VARPBIT[5707] + VARPBIT[5723] + VARPBIT[5710] + VARPBIT[5711] + VARPBIT[5712] + VARPBIT[5713] + VARPBIT[5714] + VARPBIT[5715] + VARPBIT[5716] + VARPBIT[5717];
+	if (VARPBIT[5709] == 3) {
+		int0 = int0 + 1;
+	}
+	return int0;
+}

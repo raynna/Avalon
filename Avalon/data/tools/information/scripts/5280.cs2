@@ -1,0 +1,15 @@
+int script_5280() {
+	if (widget(906, 80).hasChild()) {
+		return 1;
+	}
+	if (widget(906, 54).hasChild()) {
+		return 1;
+	}
+	if (widget(906, 72).hasChild()) {
+		return 1;
+	}
+	if (widget(906, 64).hasChild()) {
+		return 1;
+	}
+	return 0;
+}

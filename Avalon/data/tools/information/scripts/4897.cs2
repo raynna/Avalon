@@ -1,0 +1,19 @@
+void script_4897(int arg0) {
+	switch (arg0) {
+		case 0:
+			widget(1092, 557).setIsHidden(false);
+			break;
+		case 1:
+			widget(1092, 564).setIsHidden(false);
+			break;
+		case 2:
+			widget(1092, 578).setIsHidden(false);
+			break;
+		case 3:
+			widget(1092, 571).setIsHidden(false);
+			break;
+		default:
+			return;
+	}
+	return;
+}

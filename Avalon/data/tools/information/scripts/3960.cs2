@@ -1,0 +1,18 @@
+void script_3960(Widget widget0) {
+	Sprite sprite1;
+	sprite1 = widget0.getSpriteId();
+	switch (sprite1) {
+		case 4122:
+			widget0.setSprite(4117);
+			break;
+		case 4123:
+			widget0.setSprite(4118);
+			break;
+		case 4124:
+			widget0.setSprite(4119);
+			break;
+		default:
+			return;
+	}
+	return;
+}

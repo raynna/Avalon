@@ -1,0 +1,8 @@
+void script_120(Widget widget0) {
+	int int1;
+	int int2;
+	int1 = rnd(25) + 10;
+	int2 = rnd(25) + 20;
+	widget0.setScriptCallOnGameloop(66, int1, int2, 0, widget0, "iiiI");
+	return;
+}

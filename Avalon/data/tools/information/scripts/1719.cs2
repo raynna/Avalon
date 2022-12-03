@@ -1,0 +1,14 @@
+int script_1719() {
+	int int0;
+	int0 = 0;
+	int0 = int0 + VARPBIT[8136];
+	int0 = int0 + VARPBIT[8137];
+	int0 = int0 + VARPBIT[8138];
+	int0 = int0 + VARPBIT[8139];
+	int0 = int0 + VARPBIT[8140];
+	int0 = int0 + VARPBIT[8141];
+	int0 = int0 + VARPBIT[8145];
+	int0 = int0 + VARPBIT[8146];
+	int0 = int0 + VARPBIT[8148];
+	return int0;
+}

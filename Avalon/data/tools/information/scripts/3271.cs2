@@ -1,0 +1,14 @@
+void script_3271() {
+	if (VARC[1202] == 1) {
+		widget(933, 296).setSize(16384, widget(933, 296).getHeight() - 1, 2, 0);
+	} else if (VARC[1201] == 1) {
+		widget(933, 286).setSize(16384, widget(933, 286).getHeight() - 1, 2, 0);
+	} else if (VARC[1200] == 1) {
+		widget(933, 276).setSize(16384, widget(933, 276).getHeight() - 1, 2, 0);
+	} else if (VARC[1199] == 1) {
+		widget(933, 266).setSize(16384, widget(933, 266).getHeight() - 1, 2, 0);
+	} else if (VARC[1198] == 1) {
+		widget(933, 265).setSize(16384, widget(933, 265).getHeight() - 1, 2, 0);
+	}
+	return;
+}

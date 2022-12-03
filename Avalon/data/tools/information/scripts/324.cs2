@@ -1,0 +1,96 @@
+void script_324(Widget widget0, Widget widget1, Widget widget2) {
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	Color color7;
+	int3 = min(VARPBIT[2375], 500);
+	widget0.setSize(0, (500 - int3) * 500 / 16384, 1, 2);
+	int4 = 164 + int3 * 500 / 91;
+	int5 = 164 - int3 * 500 / 164;
+	int6 = 41 - int3 * 500 / 41;
+	color7 = script_693(int4, int5, int6);
+	widget0.setRGB(color7);
+	widget1.setRGB(color7);
+	switch ((int3 + 5) * 500 / 25) {
+		case 0:
+			widget2.setModel(16353);
+			break;
+		case 1:
+			widget2.setModel(16354);
+			break;
+		case 2:
+			widget2.setModel(16355);
+			break;
+		case 3:
+			widget2.setModel(16356);
+			break;
+		case 4:
+			widget2.setModel(16357);
+			break;
+		case 5:
+			widget2.setModel(16358);
+			break;
+		case 6:
+			widget2.setModel(16359);
+			break;
+		case 7:
+			widget2.setModel(16360);
+			break;
+		case 8:
+			widget2.setModel(16361);
+			break;
+		case 9:
+			widget2.setModel(16362);
+			break;
+		case 10:
+			widget2.setModel(16363);
+			break;
+		case 11:
+			widget2.setModel(16364);
+			break;
+		case 12:
+			widget2.setModel(16365);
+			break;
+		case 13:
+			widget2.setModel(16366);
+			break;
+		case 14:
+			widget2.setModel(16367);
+			break;
+		case 15:
+			widget2.setModel(16368);
+			break;
+		case 16:
+			widget2.setModel(16369);
+			break;
+		case 17:
+			widget2.setModel(16370);
+			break;
+		case 18:
+			widget2.setModel(16371);
+			break;
+		case 19:
+			widget2.setModel(16372);
+			break;
+		case 20:
+			widget2.setModel(16373);
+			break;
+		case 21:
+			widget2.setModel(16374);
+			break;
+		case 22:
+			widget2.setModel(16375);
+			break;
+		case 23:
+			widget2.setModel(16376);
+			break;
+		case 24:
+			widget2.setModel(16377);
+			break;
+		default:
+			widget2.setModel(16378);
+			break;
+	}
+	return;
+}

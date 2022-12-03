@@ -1,0 +1,23 @@
+void script_2007(Widget widget0, Widget widget1, int arg2, int arg3) {
+	int int4;
+	int int5;
+	widget1.setDraggable(widget0, -1);
+	int4 = widget0.getWidth() - widget1.getWidth();
+	int5 = cs2method6143() * 255 / int4;
+	widget1.setPosition(int5, 0, 0, 0);
+	if (cs2method6143() > 0) {
+		if (arg3 == 1) {
+			widget(744, 108).setSprite(4123);
+		} else {
+			widget(744, 108).setSprite(4118);
+		}
+	} else if (arg3 == 1) {
+		widget(744, 108).setSprite(4124);
+	} else {
+		widget(744, 108).setSprite(4119);
+	}
+	if (arg2 == 1) {
+		VARC[1394] = cs2method6143();
+	}
+	return;
+}

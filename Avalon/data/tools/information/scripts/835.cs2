@@ -1,0 +1,8 @@
+void script_835(boolean boolean0) {
+	widget(475, 55).setIsHidden(boolean0);
+	widget(475, 57).setIsHidden(boolean0);
+	widget(475, 56).setIsHidden(boolean0);
+	script_84();
+	script_89();
+	return;
+}

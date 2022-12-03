@@ -1,0 +1,100 @@
+void script_3060(int arg0) {
+	if (datamap('i', 'I', (DataMap)941, arg0) == null) {
+		return;
+	}
+	if (!datamap('i', 'I', (DataMap)941, arg0).isHidden()) {
+		return;
+	}
+	datamap('i', 'I', (DataMap)941, 0).setIsHidden(true);
+	datamap('i', 'I', (DataMap)941, 1).setIsHidden(true);
+	datamap('i', 'I', (DataMap)941, 2).setIsHidden(true);
+	datamap('i', 'I', (DataMap)941, 5).setIsHidden(true);
+	datamap('i', 'I', (DataMap)941, 3).setIsHidden(true);
+	datamap('i', 'I', (DataMap)941, 4).setIsHidden(true);
+	widget(906, 216).setRGB(0xEBE0BC);
+	widget(906, 213).setRGB(0xEBE0BC);
+	widget(906, 211).setRGB(0xEBE0BC);
+	widget(906, 209).setRGB(0xEBE0BC);
+	widget(906, 266).setRGB(0xEBE0BC);
+	widget(906, 207).setRGB(0xEBE0BC);
+	widget(906, 215).setSprite(4672);
+	widget(906, 22).setSprite(4672);
+	widget(906, 21).setSprite(4672);
+	widget(906, 20).setSprite(4672);
+	widget(906, 265).setSprite(4672);
+	widget(906, 19).setSprite(4672);
+	widget(906, 199).setScriptCallOnMouseEntered(45, widget(906, 216), 16448250, "Ii");
+	widget(906, 200).setScriptCallOnMouseEntered(45, widget(906, 213), 16448250, "Ii");
+	widget(906, 201).setScriptCallOnMouseEntered(45, widget(906, 211), 16448250, "Ii");
+	widget(906, 203).setScriptCallOnMouseEntered(45, widget(906, 209), 16448250, "Ii");
+	widget(906, 202).setScriptCallOnMouseEntered(45, widget(906, 266), 16448250, "Ii");
+	widget(906, 204).setScriptCallOnMouseEntered(45, widget(906, 207), 16448250, "Ii");
+	widget(906, 199).setScriptCallOnMouseExit(45, widget(906, 216), 15458492, "Ii");
+	widget(906, 200).setScriptCallOnMouseExit(45, widget(906, 213), 15458492, "Ii");
+	widget(906, 201).setScriptCallOnMouseExit(45, widget(906, 211), 15458492, "Ii");
+	widget(906, 203).setScriptCallOnMouseExit(45, widget(906, 209), 15458492, "Ii");
+	widget(906, 202).setScriptCallOnMouseExit(45, widget(906, 266), 15458492, "Ii");
+	widget(906, 204).setScriptCallOnMouseExit(45, widget(906, 207), 15458492, "Ii");
+	if (arg0 != 5) {
+		script_3161(0);
+	}
+	if (arg0 != 3) {
+		script_4556(0);
+	}
+	if (arg0 == 1) {
+		widget(906, 28).setPosition(0, 3, 1, 2);
+		widget(906, 27).setSize(655, 26, 0, 1);
+		cs2method6509(true);
+	} else {
+		widget(906, 28).setPosition(0, 241, 1, 1);
+		widget(906, 27).setSize(655, 477, 0, 0);
+		cs2method6509(false);
+	}
+	if (arg0 == 4) {
+		widget(906, 39).setIsHidden(true);
+	} else {
+		widget(906, 39).setIsHidden(false);
+	}
+	datamap('i', 'I', (DataMap)941, arg0).setIsHidden(false);
+	switch (arg0) {
+		case 0:
+			widget(906, 215).setSprite(4671);
+			widget(906, 199).setScriptCallOnMouseEntered(-1, "");
+			widget(906, 199).setScriptCallOnMouseExit(-1, "");
+			widget(906, 199).clearChildren();
+			break;
+		case 1:
+			widget(906, 22).setSprite(4671);
+			widget(906, 200).setScriptCallOnMouseEntered(-1, "");
+			widget(906, 200).setScriptCallOnMouseExit(-1, "");
+			widget(906, 200).clearChildren();
+			break;
+		case 2:
+			widget(906, 21).setSprite(4671);
+			widget(906, 201).setScriptCallOnMouseEntered(-1, "");
+			widget(906, 201).setScriptCallOnMouseExit(-1, "");
+			widget(906, 201).clearChildren();
+			break;
+		case 5:
+			widget(906, 20).setSprite(4671);
+			widget(906, 203).setScriptCallOnMouseEntered(-1, "");
+			widget(906, 203).setScriptCallOnMouseExit(-1, "");
+			widget(906, 203).clearChildren();
+			script_3161(1);
+			break;
+		case 3:
+			widget(906, 265).setSprite(4671);
+			widget(906, 202).setScriptCallOnMouseEntered(-1, "");
+			widget(906, 202).setScriptCallOnMouseExit(-1, "");
+			widget(906, 202).clearChildren();
+			script_4556(1);
+			break;
+		case 4:
+			widget(906, 19).setSprite(4671);
+			widget(906, 204).setScriptCallOnMouseEntered(-1, "");
+			widget(906, 204).setScriptCallOnMouseExit(-1, "");
+			widget(906, 204).clearChildren();
+			break;
+	}
+	return;
+}

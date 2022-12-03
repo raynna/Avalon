@@ -1,0 +1,22 @@
+void script_2771(Widget widget0, int arg1) {
+	int int2;
+	int2 = getClientCycle() - arg1;
+	if (int2 >= 181 || VARC[1007] != 1) {
+		widget0.setScriptCallOnGameloop(-1, "");
+		return;
+	}
+	if (int2 % 25 == 0) {
+		switch (rnd(2)) {
+			case 0:
+				playSoundEffect(6645, 1, 0);
+				break;
+			case 1:
+				playSoundEffect(6644, 1, 0);
+				break;
+			case 2:
+				playSoundEffect(6643, 1, 0);
+				break;
+		}
+	}
+	return;
+}

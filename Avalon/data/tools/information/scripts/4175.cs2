@@ -1,0 +1,19 @@
+void script_4175(Widget widget0, int arg1, int arg2, int arg3) {
+	int int4;
+	int4 = getClientCycle() - script_4176(arg3, arg2);
+	if (int4 >= 255 || int4 < 0) {
+		if (_ACTIVE.setChild(widget0, arg1)) {
+			_ACTIVE.setHidden(true);
+		}
+		return;
+	}
+	if (_ACTIVE.setChild(widget0, arg1)) {
+		_ACTIVE.setHidden(false);
+		if (int4 % 40 > 20) {
+			_ACTIVE.setTrans(255);
+		} else {
+			_ACTIVE.setTrans(int4);
+		}
+	}
+	return;
+}

@@ -1,0 +1,63 @@
+void script_4019(int arg0) {
+	switch (arg0) {
+		case 0:
+			widget(917, 83).setIsHidden(false);
+			widget(917, 84).setIsHidden(true);
+			widget(917, 82).setIsHidden(true);
+			widget(917, 86).setIsHidden(true);
+			widget(917, 26).setSprite(4320);
+			widget(917, 28).setSprite(4320);
+			widget(917, 27).setSprite(4321);
+			break;
+		case 1:
+			widget(917, 83).setIsHidden(true);
+			widget(917, 84).setIsHidden(false);
+			widget(917, 82).setIsHidden(true);
+			widget(917, 86).setIsHidden(true);
+			widget(917, 22).setSprite(4320);
+			widget(917, 24).setSprite(4320);
+			widget(917, 23).setSprite(4321);
+			widget(917, 85).setScrollMax(0, max(VARC[1419], widget(917, 85).getHeight()));
+			script_31(widget(917, 143), widget(917, 85), 4343, 4340, 4341, 4342, 4337, 4336);
+			if (VARC[1419] > widget(917, 85).getHeight()) {
+				widget(917, 143).setIsHidden(false);
+			} else {
+				widget(917, 143).setIsHidden(true);
+			}
+			break;
+		case 2:
+			widget(917, 83).setIsHidden(true);
+			widget(917, 84).setIsHidden(true);
+			widget(917, 82).setIsHidden(false);
+			widget(917, 86).setIsHidden(true);
+			widget(917, 18).setSprite(4320);
+			widget(917, 20).setSprite(4320);
+			widget(917, 19).setSprite(4321);
+			widget(917, 61).setScrollMax(0, max(VARC[1418], widget(917, 61).getHeight()));
+			script_31(widget(917, 62), widget(917, 61), 4343, 4340, 4341, 4342, 4337, 4336);
+			if (VARC[1418] > widget(917, 61).getHeight()) {
+				widget(917, 62).setIsHidden(false);
+			} else {
+				widget(917, 62).setIsHidden(true);
+			}
+			break;
+		case 3:
+			widget(917, 83).setIsHidden(true);
+			widget(917, 84).setIsHidden(true);
+			widget(917, 82).setIsHidden(true);
+			widget(917, 86).setIsHidden(false);
+			widget(917, 14).setSprite(4320);
+			widget(917, 16).setSprite(4320);
+			widget(917, 15).setSprite(4321);
+			widget(917, 88).setScrollMax(0, max(VARC[1420], widget(917, 88).getHeight()));
+			script_31(widget(917, 89), widget(917, 88), 4343, 4340, 4341, 4342, 4337, 4336);
+			if (VARC[1420] > widget(917, 88).getHeight()) {
+				widget(917, 89).setIsHidden(false);
+			} else {
+				widget(917, 89).setIsHidden(true);
+			}
+			break;
+	}
+	script_4026(0);
+	return;
+}

@@ -1,0 +1,14 @@
+void script_4060() {
+	if (VARPBIT[8669] == 1) {
+		if (VARPBIT[8662] < 30 || VARPBIT[8663] < 30 || VARPBIT[8664] < 30 || VARPBIT[8665] < 30 || VARPBIT[8666] < 30) {
+			script_4061();
+		} else {
+			script_4062();
+		}
+	} else if (VARPBIT[8662] < 200 && VARPBIT[8663] < 200 && VARPBIT[8664] < 200 && VARPBIT[8665] < 200 && VARPBIT[8666] < 200) {
+		script_4061();
+	} else {
+		script_4062();
+	}
+	return;
+}

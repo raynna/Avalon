@@ -1,0 +1,88 @@
+void script_2190(string string0, string string1, int arg2, int arg3, string string4, string string5, int arg6) {
+	int int3;
+	int int4;
+	if (arg3 != -1 && arg3 != 6 && length(string0) <= 0) {
+		return;
+	}
+	script_3018();
+	widget(906, 149).setText(string0);
+	if (compare(string1, "") != 0) {
+		if (arg3 != -1 && arg3 != 6) {
+			STRING[277] = string1;
+		} else {
+			STRING[277] = string1;
+		}
+		if (arg2 == 1) {
+			widget(906, 151).setText(escape(STRING[277]));
+		} else {
+			widget(906, 151).setText(STRING[277]);
+		}
+	}
+	if (arg3 == 6 || arg3 == 10) {
+		widget(906, 159).setText("Yes");
+		widget(906, 159).setContextMenuOption(1, "Yes");
+		widget(906, 161).setText("No");
+		widget(906, 161).setContextMenuOption(1, "No");
+	} else if (arg3 == 0) {
+		widget(906, 147).setSize(386, 136, 0, 0);
+		widget(906, 151).setSize(0, 12, 1, 0);
+		VARC[1650] = 1;
+	}
+	if (arg6 == 0) {
+		widget(906, 155).setSize(0, 0, 1, 1);
+		widget(906, 159).setSize(0, 0, 1, 1);
+		widget(906, 160).setIsHidden(true);
+		widget(906, 161).setIsHidden(true);
+	}
+	widget(906, 41).setIsHidden(false);
+	int3 = 0;
+	switch (arg3) {
+		case 0:
+			int3 = 0;
+			break;
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 7:
+		case 9:
+			int3 = 2;
+			break;
+	}
+	if (!datamap('i', 'I', (DataMap)941, 5).isHidden()) {
+		script_3161(0);
+	} else if (!datamap('i', 'I', (DataMap)941, 3).isHidden()) {
+		script_4556(0);
+	}
+	widget(906, 151).setScriptCallOnKeyPress(3022, KEY_TYPED, (char)KEY_PRESSED, CTX_WIDGET, int3, arg3, string4, "izIiis");
+	widget(906, 155).setScriptCallOnClickContextMenu(3019, arg3, string4, "is");
+	int4 = 0;
+	if (arg3 != -1 && arg3 != 6) {
+		VARC[1097] = length(STRING[277]);
+		widget(906, 151).setScriptCallOnMousePressed(1874, MOUSE_X, widget(906, 151), widget(906, 152), "iII");
+		script_1875(widget(906, 151), widget(906, 152), STRING[277]);
+		widget(906, 152).setIsHidden(true);
+		widget(906, 147).setSize(widget(906, 147).getWidth(), 136, 0, 0);
+		widget(906, 153).setScriptCallOnMousePressed(-1, "");
+		widget(906, 153).setScriptCallOnMouseEntered(-1, "");
+		widget(906, 153).setScriptCallOnMouseExit(-1, "");
+		widget(906, 153).setIsHidden(true);
+	} else {
+		VARC[1097] = 0;
+		widget(906, 152).setIsHidden(true);
+		if (length(string5) > 0 && length(STRING[277]) > 0) {
+			int4 = max(44, getLineCount(STRING[277], widget(906, 150).getWidth(), 494) * 13);
+			widget(906, 150).setSize(widget(906, 150).getWidth(), int4, 0, 0);
+			widget(906, 147).setSize(widget(906, 147).getWidth(), int4 + 95, 0, 0);
+			widget(906, 153).setPosition(widget(906, 153).getX(), widget(906, 150).getY() + int4 + 5, 0, 0);
+			widget(906, 153).setSize(widget(906, 153).getWidth(), 13, 0, 0);
+			widget(906, 153).setText("<u=2c6ff8>" + string5 + "</u>");
+			widget(906, 153).setRGB(0x2C6FF8);
+			widget(906, 153).setScriptCallOnMouseEntered(1333, widget(906, 153), string5, true, "Is1");
+			widget(906, 153).setScriptCallOnMouseExit(1333, widget(906, 153), string5, false, "Is1");
+			widget(906, 153).setIsHidden(false);
+		}
+	}
+	return;
+}

@@ -1,0 +1,34 @@
+void script_3385() {
+	string str0;
+	open(widget(744, 24), 976);
+	str0 = "";
+	if (cs2method6144()) {
+		str0 = "There was a problem with your current graphic settings, so you have been given default settings for safety. Click below to auto-choose best graphics settings.";
+		widget(976, 4).setText(str0);
+		widget(976, 2).setSize(widget(976, 2).getWidth(), 22 * getLineCount(str0, widget(976, 4).getWidth(), 3793) + 86, 0, 0);
+		widget(976, 6).setSize(getTextWidth(widget(976, 6).getText(), 3793), widget(976, 6).getHeight(), 0, 0);
+	} else if (VARC[1277] == 1 && VARC[1240] == -1) {
+		str0 = "This is your first time playing. Click below to auto-choose best graphics settings. Choose 'Leave Alone' to continue with default settings.";
+		widget(976, 4).setText(str0);
+		widget(976, 2).setSize(widget(976, 2).getWidth(), 22 * getLineCount(str0, widget(976, 4).getWidth(), 3793) + 86, 0, 0);
+		widget(976, 6).setSize(getTextWidth(widget(976, 6).getText(), 3793), widget(976, 6).getHeight(), 0, 0);
+	} else if (VARC[1240] == -1) {
+		str0 = "This is your first time playing, click below to auto choose best graphics settings.";
+		widget(976, 4).setText(str0);
+		widget(976, 4).setPosition(0, 10, 1, 0);
+		widget(976, 4).setSize(widget(976, 4).getWidth(), 68, 0, 1);
+		widget(976, 5).setPosition(0, 17, 1, 2);
+		widget(976, 2).setSize(widget(976, 2).getWidth(), 22 * getLineCount(str0, widget(976, 4).getWidth(), 3793) + 68, 0, 0);
+		widget(976, 6).setIsHidden(true);
+	} else {
+		str0 = "Available graphics options have changed. Click below to auto choose best graphics settings.";
+		if (VARC[1277] == 1) {
+			str0 = "Available graphics options have changed. Click below to auto-choose best graphics settings. Choose 'Leave Alone' to continue with your current settings.";
+		}
+		widget(976, 4).setText(str0);
+		widget(976, 2).setSize(widget(976, 2).getWidth(), 22 * getLineCount(str0, widget(976, 4).getWidth(), 3793) + 86, 0, 0);
+		widget(976, 6).setSize(getTextWidth(widget(976, 6).getText(), 3793), widget(976, 6).getHeight(), 0, 0);
+	}
+	VARC[1277] = 1;
+	return;
+}

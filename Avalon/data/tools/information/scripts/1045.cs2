@@ -1,0 +1,12 @@
+void script_1045(int arg0, Widget widget1, int arg2) {
+	if (ACTIVE.setChild(widget1, arg0)) {
+		VARC[128] = arg2;
+		if (_ACTIVE.setChild(widget1, 0)) {
+			_ACTIVE.setPosition(ACTIVE.getX(), ACTIVE.getY(), 0, 0);
+			_ACTIVE.setSize(ACTIVE.getWidth(), ACTIVE.getHeight(), 0, 0);
+			_ACTIVE.setRGB(0x577E45);
+			_ACTIVE.setFilled(true);
+		}
+	}
+	return;
+}

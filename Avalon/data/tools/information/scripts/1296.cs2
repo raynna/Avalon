@@ -1,0 +1,7 @@
+void script_1296() {
+	if (getDisplayMode() >= 2) {
+		widget(584, 2).set3DRotation(0, 0, 89, 67, 0, 300);
+		widget(584, 1).set3DRotation(0, 0, 89, 67, 0, 300);
+	}
+	return;
+}

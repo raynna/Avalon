@@ -1,0 +1,78 @@
+void script_4462() {
+	int int0;
+	int int1;
+	int int2;
+	Widget widget3;
+	Widget widget4;
+	Widget widget5;
+	Widget widget6;
+	int int7;
+	int int8;
+	int int9;
+	string str0;
+	int0 = 0;
+	int1 = 0;
+	int2 = 19;
+	str0 = "";
+	widget3 = widget(1110, 11);
+	widget4 = widget(1110, 41);
+	widget5 = widget(1110, 40);
+	widget6 = widget(1110, 10);
+	int7 = widget4.getHeight() / 19;
+	int8 = 0;
+	widget3.clearChildren();
+	widget6.clearChildren();
+	if (cs2method3701()) {
+		widget(1110, 72).setText("");
+		widget(1110, 42).setIsHidden(true);
+		int1 = cs2method3712();
+		while (int0 < int1) {
+			int8 = int0 * 19;
+			str0 = cs2method3713(int0);
+			ACTIVE.createChild(widget3, 4, widget3.nextChild());
+			ACTIVE.setText(str0);
+			ACTIVE.setPosition(0, int0 * int2, 0, 0);
+			ACTIVE.setSize(16384, int2, 2, 0);
+			ACTIVE.setRGB(0xA4997D);
+			ACTIVE.setFont(3793);
+			ACTIVE.setTextAntiMacro(true);
+			ACTIVE.setOptionBase("<col=ffffff>" + str0);
+			ACTIVE.setContextMenuOption(1, "Remove ban");
+			ACTIVE.setScriptCallOnClickContextMenu(4580, "");
+			ACTIVE.setTextAlignment(0, 0, 0);
+			if (int0 % 2 != 0) {
+				ACTIVE.createChild(widget6, 3, widget6.nextChild());
+				ACTIVE.setSize(16384, int2, 2, 0);
+				ACTIVE.setPosition(0, int0 * int2, 0, 0);
+				ACTIVE.setRGB(0x232220);
+				ACTIVE.setFilled(true);
+				ACTIVE.setTrans(128);
+			}
+			int0 = int0 + 1;
+		}
+		while (int0 < int7) {
+			int8 = int0 * int2;
+			if (int0 % 2 != 0) {
+				ACTIVE.createChild(widget6, 3, widget6.nextChild());
+				ACTIVE.setSize(16384, int2, 2, 0);
+				ACTIVE.setPosition(0, int8, 0, 0);
+				ACTIVE.setRGB(0x232220);
+				ACTIVE.setFilled(true);
+				ACTIVE.setTrans(128);
+			}
+			int0 = int0 + 1;
+		}
+	} else {
+		widget(1110, 42).setIsHidden(false);
+		widget(1110, 72).setText("You must be part of a clan to" + "<br>" + "view the ban list.");
+		widget3.clearChildren();
+		widget6.clearChildren();
+	}
+	widget5.setIsHidden(false);
+	int9 = widget(1110, 41).getScrollY();
+	widget(1110, 41).setScrollMax(widget(1110, 41).getWidth(), int2 * max(int1, int7));
+	int9 = min(int9, widget(1110, 41).getScrollMaxV());
+	widget(1110, 41).setScrollPos(0, int9);
+	script_31(widget(1110, 40), widget(1110, 41), 5666, 5663, 5664, 5665, 5686, 5685);
+	return;
+}

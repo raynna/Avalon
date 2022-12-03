@@ -1,0 +1,91 @@
+int script_2153() {
+	Skill skill0;
+	skill0 = getAttributeMapValue((AttrMap)VARC[699], 871);
+	if (getAttributeMapValue((AttrMap)VARC[699], 897) == 1 && getSkillActualLvl(0) + getSkillActualLvl(2) < 130) {
+		return 0;
+	}
+	if (skill0 == null) {
+		return 1;
+	}
+	if (getSkillActualLvl(skill0) < getAttributeMapValue((AttrMap)VARC[699], 872)) {
+		return 0;
+	}
+	skill0 = getAttributeMapValue((AttrMap)VARC[699], 873);
+	if (skill0 == null) {
+		return 1;
+	}
+	if (getSkillActualLvl(skill0) < getAttributeMapValue((AttrMap)VARC[699], 874)) {
+		return 0;
+	}
+	skill0 = getAttributeMapValue((AttrMap)VARC[699], 875);
+	if (skill0 == null) {
+		return 1;
+	}
+	if (getSkillActualLvl(skill0) < getAttributeMapValue((AttrMap)VARC[699], 876)) {
+		return 0;
+	}
+	skill0 = getAttributeMapValue((AttrMap)VARC[699], 877);
+	if (skill0 == null) {
+		return 1;
+	}
+	if (getSkillActualLvl(skill0) < getAttributeMapValue((AttrMap)VARC[699], 878)) {
+		return 0;
+	}
+	skill0 = getAttributeMapValue((AttrMap)VARC[699], 879);
+	if (skill0 == null) {
+		return 1;
+	}
+	if (getSkillActualLvl(skill0) < getAttributeMapValue((AttrMap)VARC[699], 880)) {
+		return 0;
+	}
+	skill0 = getAttributeMapValue((AttrMap)VARC[699], 881);
+	if (skill0 == null) {
+		return 1;
+	}
+	if (getSkillActualLvl(skill0) < getAttributeMapValue((AttrMap)VARC[699], 882)) {
+		return 0;
+	}
+	skill0 = getAttributeMapValue((AttrMap)VARC[699], 883);
+	if (skill0 == null) {
+		return 1;
+	}
+	if (getSkillActualLvl(skill0) < getAttributeMapValue((AttrMap)VARC[699], 884)) {
+		return 0;
+	}
+	skill0 = getAttributeMapValue((AttrMap)VARC[699], 885);
+	if (skill0 == null) {
+		return 1;
+	}
+	if (getSkillActualLvl(skill0) < getAttributeMapValue((AttrMap)VARC[699], 886)) {
+		return 0;
+	}
+	skill0 = getAttributeMapValue((AttrMap)VARC[699], 887);
+	if (skill0 == null) {
+		return 1;
+	}
+	if (getSkillActualLvl(skill0) < getAttributeMapValue((AttrMap)VARC[699], 888)) {
+		return 0;
+	}
+	skill0 = getAttributeMapValue((AttrMap)VARC[699], 889);
+	if (skill0 == null) {
+		return 1;
+	}
+	if (getSkillActualLvl(skill0) < getAttributeMapValue((AttrMap)VARC[699], 890)) {
+		return 0;
+	}
+	skill0 = getAttributeMapValue((AttrMap)VARC[699], 891);
+	if (skill0 == null) {
+		return 1;
+	}
+	if (getSkillActualLvl(skill0) < getAttributeMapValue((AttrMap)VARC[699], 892)) {
+		return 0;
+	}
+	skill0 = getAttributeMapValue((AttrMap)VARC[699], 893);
+	if (skill0 == null) {
+		return 1;
+	}
+	if (getSkillActualLvl(skill0) < getAttributeMapValue((AttrMap)VARC[699], 894)) {
+		return 0;
+	}
+	return 1;
+}

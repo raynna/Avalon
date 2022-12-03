@@ -1,0 +1,64 @@
+void script_2284(int arg0, int arg1) {
+	int int2;
+	string str0;
+	string str1;
+	int2 = getAccountCreateRC();
+	if (int2 == -3) {
+		return;
+	}
+	widget(673, 20).setScriptCallOnGameloop(-1, "");
+	script_3208(0);
+	if (int2 == 2) {
+		widget(673, 94).setSprite(4059);
+		widget(673, 99).setIsHidden(true);
+		widget(673, 31).setIsHidden(true);
+		if (arg1 == 1 && length(STRING[326]) > 0) {
+			script_3953(0);
+		}
+		if (length(STRING[124]) > 0) {
+			_ = script_3228(7, 1, 0);
+			if (length(STRING[125]) > 0) {
+				_ = script_3228(8, 1, 0);
+			}
+		}
+		if (arg0 == 1) {
+			script_2714(14, 1);
+		}
+		return;
+	}
+	str0 = "accountappeal";
+	str1 = "passwordchoice.ws";
+	switch (int2) {
+		case -1:
+		case -4:
+		case 3:
+			script_3213("Error contacting server.", widget(673, 94));
+			break;
+		case -5:
+			script_3213("No response from server.", widget(673, 94));
+			break;
+		case 7:
+			script_3213("The server is currently very busy. Please try again shortly.", widget(673, 94));
+			break;
+		case 38:
+		case 9:
+			script_3213("You cannot create an account at this time. Please try again later.", widget(673, 94));
+			break;
+		case 20:
+			script_3213("Email already in use. Try a different email or click " + "<u=ebe0bc>" + "here" + "</u>" + " to recover this account.", widget(673, 94));
+			break;
+		case 21:
+			script_3213("Please enter a valid Email address.", widget(673, 94));
+			break;
+		case 37:
+			script_3213("RuneScape has been updated. Please reload this page.", widget(673, 94));
+			break;
+		default:
+			script_3213("Unexpected server response.", widget(673, 94));
+			break;
+	}
+	if (arg1 == 1 && length(STRING[326]) > 0) {
+		script_3953(0);
+	}
+	return;
+}

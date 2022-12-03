@@ -1,0 +1,6 @@
+void script_1193(int arg0) {
+	if (arg0 == 1 || getClientCycle() % 50 == 0) {
+		script_1194();
+	}
+	return;
+}

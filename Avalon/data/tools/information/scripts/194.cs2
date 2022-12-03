@@ -1,0 +1,10 @@
+void script_194(int arg0) {
+	if (arg0 == 1) {
+		if (clanGetChatCount() > 0) {
+			sendUnknownVarByteEmptyFriendPacketMethod3620();
+		} else {
+			script_111();
+		}
+	}
+	return;
+}

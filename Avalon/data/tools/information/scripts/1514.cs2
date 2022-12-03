@@ -1,0 +1,74 @@
+void script_1514(int arg0, Identikit identikit1, int arg2) {
+	AttrMap attrmap3;
+	int int4;
+	int int5;
+	int int6;
+	Identikit identikit7;
+	if (arg0 != 1) {
+		return;
+	}
+	attrmap3 = null;
+	int4 = 2;
+	int5 = 3;
+	int6 = 4;
+	if (IsFemale()) {
+		int4, int5, int6 = 9, 10, 11;
+	}
+	identikit7 = null;
+	switch (arg2) {
+		case 2:
+		case 9:
+			attrmap3 = (AttrMap)script_361(identikit1, 3);
+			if (attrmap3 != null) {
+				VARC[1010] = getAttributeMapValue(attrmap3, 1182);
+				setBaseIdkit(int4, (Identikit)VARC[1010]);
+				VARC[1011] = getAttributeMapValue(attrmap3, 1183);
+				setBaseIdkit(int5, (Identikit)VARC[1011]);
+				VARC[1012] = getAttributeMapValue(attrmap3, 1184);
+				setBaseIdkit(int6, (Identikit)VARC[1012]);
+			} else {
+				setBaseIdkit(arg2, identikit1);
+				VARC[1010] = identikit1;
+				if (VARC[1011] == -1 || script_361((Identikit)VARC[1011], 4) != -1) {
+					if (IsFemale()) {
+						identikit7 = 61;
+					} else {
+						identikit7 = 26;
+					}
+					setBaseIdkit(int5, identikit7);
+					VARC[1011] = identikit7;
+				}
+				if (VARC[1012] == -1 || script_361((Identikit)VARC[1012], 5) != -1) {
+					if (IsFemale()) {
+						identikit7 = 68;
+					} else {
+						identikit7 = 34;
+					}
+					setBaseIdkit(int6, identikit7);
+					VARC[1012] = identikit7;
+				}
+			}
+			break;
+		case 3:
+		case 10:
+			if (script_361((Identikit)VARC[1010], 3) == -1) {
+				setBaseIdkit(arg2, identikit1);
+				VARC[1011] = identikit1;
+			}
+			break;
+		case 4:
+		case 11:
+			if (script_361((Identikit)VARC[1010], 3) == -1) {
+				setBaseIdkit(arg2, identikit1);
+				VARC[1012] = identikit1;
+			}
+			break;
+		case 5:
+		case 12:
+			setBaseIdkit(arg2, identikit1);
+			VARC[1013] = identikit1;
+			break;
+	}
+	script_1513();
+	return;
+}

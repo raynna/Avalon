@@ -1,0 +1,11 @@
+void script_677(int arg0) {
+	if (arg0 <= 9) {
+		widget(156, 2).setScrollMax(358, 225);
+		widget(156, 1).setIsHidden(true);
+	} else {
+		widget(156, 1).setIsHidden(false);
+		widget(156, 2).setScrollMax(358, arg0 * 20 + 30);
+		script_72(widget(156, 1), widget(156, 2), 0);
+	}
+	return;
+}

@@ -1,0 +1,45 @@
+void script_4803(int arg0) {
+	DataMap datamap1;
+	int int2;
+	int int3;
+	datamap1 = (DataMap)script_4819(VARPBIT[9558]);
+	int2 = datamap('i', 'i', datamap1, arg0);
+	switch (VARPBIT[9558]) {
+		case 1:
+			if (int2 != VARPBIT[9562]) {
+				VARPBIT[9562] = int2;
+				VARPBIT[9563] = 1;
+				VARPBIT[9567] = 0;
+				VARPBIT[9568] = 0;
+				VARPBIT[9569] = 0;
+			}
+			break;
+		case 2:
+			if (int2 != VARPBIT[9571]) {
+				VARPBIT[9571] = int2;
+				VARPBIT[9572] = 1;
+				VARPBIT[9576] = 0;
+				VARPBIT[9577] = 0;
+				VARPBIT[9578] = 0;
+			}
+			break;
+		case 3:
+			if (int2 != VARPBIT[9580]) {
+				VARPBIT[9580] = int2;
+				VARPBIT[9581] = 1;
+				VARPBIT[9585] = 0;
+				VARPBIT[9586] = 0;
+				VARPBIT[9587] = 0;
+			}
+			break;
+	}
+	int3 = 0;
+	if (script_4828(VARPBIT[9558]) == 0) {
+		int3 = 28 * (arg0 - 1);
+		widget(1092, 938).setIsHidden(false);
+		widget(1092, 938).setPosition(0, int3, 0, 0);
+	}
+	script_4846(1);
+	script_4804();
+	return;
+}

@@ -1,0 +1,7 @@
+void script_1608() {
+	Animation animation0;
+	animation0 = getRenderEmoteMaxSomethingMethod4600(itemAttribute(getItemIdInSlot(94, 3), 644));
+	widget(549, 82).setAnimation(animation0);
+	widget(549, 82).setSelfFull();
+	return;
+}

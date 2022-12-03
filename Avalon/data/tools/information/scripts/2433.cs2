@@ -1,0 +1,11 @@
+void script_2433() {
+	if (script_1431() == 0 || compare(STRING[148], "null") == 0) {
+		return;
+	}
+	if (getDisplayMode() < 2) {
+		widget(548, 11).setText(STRING[148]);
+	} else {
+		widget(746, 164).setText(STRING[148]);
+	}
+	return;
+}

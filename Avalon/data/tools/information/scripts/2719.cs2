@@ -1,0 +1,7 @@
+void script_2719(Widget widget0, Widget widget1) {
+	widget0.setPosition(widget0.getX(), 46, 0, 0);
+	widget0.setSize(464, 255, 0, 0);
+	widget1.setPosition(474, 46, 0, 0);
+	widget1.setSize(16, 255, 0, 0);
+	return;
+}

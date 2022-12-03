@@ -1,0 +1,15 @@
+void script_2075() {
+	int int0;
+	int0 = 0;
+	if (VARC[632] == 0) {
+		if (10 - VARC[633] > 0) {
+			int0 = 10 - VARC[633];
+		} else {
+			int0 = 0;
+		}
+		widget(837, 3).setText(str(int0));
+	} else {
+		widget(837, 3).setText(str(VARC[637]));
+	}
+	return;
+}

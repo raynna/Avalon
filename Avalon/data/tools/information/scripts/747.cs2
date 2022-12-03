@@ -1,0 +1,9 @@
+void script_747(int arg0, string string1, int arg2) {
+	if (arg0 != 1) {
+		return;
+	}
+	if (ACTIVE.setChild(widget(18, 29), arg2)) {
+		ACTIVE.setText(string1);
+	}
+	return;
+}

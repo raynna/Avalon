@@ -1,0 +1,79 @@
+void script_2708(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5) {
+	cs2method3115(0, 0, 4, 3, 135, 30, 3791, 3792, 297, 16777215, 3793);
+	widget(744, 23).setSize(278, 90, 0, 0);
+	widget(744, 23).setSprite(2498);
+	widget(744, 8).setSprite(4140);
+	widget(744, 9).setSprite(4139);
+	widget(744, 10).setSprite(4141);
+	widget(744, 11).setSprite(4142);
+	widget(744, 12).setSprite(4144);
+	widget(744, 13).setSprite(4143);
+	widget(744, 14).setSprite(4145);
+	widget(744, 15).setSprite(4146);
+	widget(744, 22).setSprite(4129);
+	widget(744, 97).setSprite(4129);
+	widget(744, 100).setSprite(4129);
+	widget(744, 70).setSprite(4067);
+	widget(744, 70).setHFlip(true);
+	widget(744, 70).setVFlip(true);
+	widget(744, 74).setSprite(4067);
+	widget(744, 74).setHFlip(false);
+	widget(744, 74).setVFlip(true);
+	widget(744, 4).setSprite(4067);
+	widget(744, 6).setSprite(4067);
+	cs2method6039(rndExcl(18));
+	if (VARC[176] <= 0) {
+		VARC[176] = (rndExcl(5) + 1) * 10;
+	}
+	widget(744, 17).setScriptCallOnWidgetResize(3229, "");
+	script_3964();
+	STRING[32] = "";
+	STRING[33] = "";
+	VARC[547] = 0;
+	VARC[1093] = 0;
+	open(widget(744, 50), 882);
+	script_2595(0);
+	widget(882, 20).setScriptCallOnMousePressed(1173, 11, "i");
+	widget(744, 17).setScriptCallOnKeyPress(1221, KEY_TYPED, (char)KEY_PRESSED, "iz");
+	script_2710(widget0, widget1, widget2, widget3, widget4, widget5);
+	script_1129();
+	if (isFromBilling()) {
+		VARC[1090] = 11;
+		VARC[1091] = 11;
+		script_3239(11, 1, 0);
+	} else {
+		if (VARC[1240] == 2 && cs2method6131() != 0) {
+			VARC[1240] = 3;
+		}
+		if (cs2method5420() == 1) {
+			VARC[1240] = 3;
+		}
+		if (!cs2method6148() && cs2method5420() == 0 && (VARC[1240] < 3 || cs2method6144() || cs2method6132() == 0)) {
+			VARC[1090] = 0;
+			VARC[1091] = 0;
+			script_3239(0, 1, 0);
+		} else if (hasSSKey()) {
+			VARC[1090] = 5;
+			VARC[1091] = 5;
+			script_3239(5, 1, 0);
+			if (VARC[1273] == 1) {
+				return;
+			}
+			widget(975, 44).setScriptCallOnGameloop(3381, widget(975, 44), 0, "Ii");
+		} else if (script_3487(3)) {
+			VARC[1090] = 7;
+			VARC[1091] = 7;
+			script_3239(7, 1, 0);
+		} else {
+			VARC[1090] = 11;
+			VARC[1091] = 11;
+			script_3239(11, 1, 0);
+		}
+	}
+	script_3230();
+	if (!cs2method5436()) {
+		open(widget(744, 116), 405);
+		widget(744, 116).setNoClickThrough(1);
+	}
+	return;
+}

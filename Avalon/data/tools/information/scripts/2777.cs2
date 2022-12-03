@@ -1,0 +1,7 @@
+void script_2777(int arg0, Widget widget1, Widget widget2) {
+	int int3;
+	int3 = 255 - script_1210(200, 75, arg0, 0);
+	widget1.setTrans(int3);
+	widget2.setTrans(int3);
+	return;
+}

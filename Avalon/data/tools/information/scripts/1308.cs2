@@ -1,0 +1,23 @@
+void script_1308() {
+	widget(746, 90).setIsHidden(true);
+	widget(746, 91).setIsHidden(true);
+	widget(746, 92).setIsHidden(true);
+	widget(746, 93).setIsHidden(true);
+	widget(746, 94).setIsHidden(true);
+	widget(746, 95).setIsHidden(true);
+	widget(746, 96).setIsHidden(true);
+	widget(746, 97).setIsHidden(true);
+	widget(746, 98).setIsHidden(true);
+	widget(746, 99).setIsHidden(true);
+	widget(746, 100).setIsHidden(true);
+	widget(746, 101).setIsHidden(true);
+	widget(746, 102).setIsHidden(true);
+	widget(746, 103).setIsHidden(true);
+	widget(746, 104).setIsHidden(true);
+	widget(746, 105).setIsHidden(true);
+	widget(746, 107).setIsHidden(true);
+	widget(746, 108).setIsHidden(true);
+	widget(746, 86).setIsHidden(true);
+	widget(746, 88).setIsHidden(true);
+	return;
+}

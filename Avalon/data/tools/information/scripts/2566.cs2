@@ -1,0 +1,18 @@
+void script_2566() {
+	widget(843, 7).setText(STRING[182]);
+	widget(843, 8).setText(STRING[183]);
+	if (VARC[945] == 0) {
+		widget(843, 18).setModel(47798);
+	} else if (VARC[945] == 1) {
+		widget(843, 18).setModel(47794);
+	} else if (VARC[945] == 2) {
+		widget(843, 18).setModel(47792);
+	} else if (VARC[945] == 3) {
+		widget(843, 18).setModel(47786);
+	} else if (VARC[945] == 4) {
+		widget(843, 18).setModel(47787);
+	} else if (VARC[945] == 5) {
+		widget(843, 18).setModel(47796);
+	}
+	return;
+}

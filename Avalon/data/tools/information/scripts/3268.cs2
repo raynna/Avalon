@@ -1,0 +1,330 @@
+void script_3268() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int0 = 1;
+	int1 = 18;
+	int2 = 255;
+	int3 = VARC[1198] + VARC[1199] + VARC[1200] + VARC[1201] + VARC[1202];
+	int4 = int2 - int3 * int1;
+	int4 = min(int4, 105);
+	int5 = 4;
+	int6 = 0;
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int6, int7, int8, int9 = script_3269(VARC[1184], int5, int1, int4);
+	switch (VARC[1184]) {
+		case 0:
+			widget(933, 265).setPosition(int0, script_3270(widget(933, 265).getY(), int5), 0, 0);
+			if (VARC[1198] == 1) {
+				widget(933, 265).setIsHidden(false);
+				widget(933, 265).setContextMenuOption(1, "Expand");
+				widget(933, 317).setSprite(2851);
+			} else {
+				widget(933, 265).setIsHidden(true);
+				widget(933, 265).setContextMenuOption(1, "");
+			}
+			widget(933, 266).setPosition(int0, script_3270(widget(933, 266).getY(), int6), 0, 0);
+			if (VARC[1199] == 1) {
+				widget(933, 266).setIsHidden(false);
+				widget(933, 266).setContextMenuOption(1, "Expand");
+				widget(933, 275).setSprite(2851);
+			} else {
+				widget(933, 266).setIsHidden(true);
+				widget(933, 316).setIsHidden(true);
+				widget(933, 266).setContextMenuOption(1, "");
+			}
+			widget(933, 276).setPosition(int0, script_3270(widget(933, 276).getY(), int7), 0, 0);
+			if (VARC[1200] == 1) {
+				widget(933, 276).setIsHidden(false);
+				widget(933, 276).setContextMenuOption(1, "Expand");
+				widget(933, 285).setSprite(2851);
+			} else {
+				widget(933, 276).setIsHidden(true);
+				widget(933, 274).setIsHidden(true);
+				widget(933, 276).setContextMenuOption(1, "");
+			}
+			widget(933, 286).setPosition(int0, script_3270(widget(933, 286).getY(), int8), 0, 0);
+			if (VARC[1201] == 1) {
+				widget(933, 286).setIsHidden(false);
+				widget(933, 286).setContextMenuOption(1, "Expand");
+				widget(933, 295).setSprite(2851);
+			} else {
+				widget(933, 286).setIsHidden(true);
+				widget(933, 284).setIsHidden(true);
+				widget(933, 286).setContextMenuOption(1, "");
+			}
+			widget(933, 296).setPosition(int0, script_3270(widget(933, 296).getY(), int9), 0, 0);
+			if (VARC[1202] == 1) {
+				widget(933, 296).setIsHidden(false);
+				widget(933, 296).setContextMenuOption(1, "Expand");
+				widget(933, 308).setSprite(2851);
+			} else {
+				widget(933, 296).setIsHidden(true);
+				widget(933, 294).setIsHidden(true);
+				widget(933, 296).setContextMenuOption(1, "");
+			}
+			widget(933, 265).setSize(16384, script_3270(widget(933, 265).getHeight(), widget(933, 266).getY() - widget(933, 265).getY() - 5), 2, 0);
+			widget(933, 266).setSize(16384, script_3270(widget(933, 266).getHeight(), widget(933, 276).getY() - widget(933, 266).getY() - 5), 2, 0);
+			widget(933, 276).setSize(16384, script_3270(widget(933, 276).getHeight(), widget(933, 286).getY() - widget(933, 276).getY() - 5), 2, 0);
+			widget(933, 286).setSize(16384, script_3270(widget(933, 286).getHeight(), widget(933, 296).getY() - widget(933, 286).getY() - 5), 2, 0);
+			widget(933, 296).setSize(16384, script_3270(widget(933, 296).getHeight(), int2 - widget(933, 296).getY() - 5), 2, 0);
+			break;
+		case 1:
+			widget(933, 265).setPosition(int0, script_3270(widget(933, 265).getY(), int5), 0, 0);
+			widget(933, 265).setContextMenuOption(1, "Shrink");
+			widget(933, 317).setSprite(2852);
+			widget(933, 266).setPosition(int0, script_3270(widget(933, 266).getY(), int6), 0, 0);
+			if (VARC[1199] == 1) {
+				widget(933, 266).setIsHidden(false);
+				widget(933, 266).setContextMenuOption(1, "Expand");
+				widget(933, 275).setSprite(2851);
+			} else {
+				widget(933, 266).setIsHidden(true);
+				widget(933, 316).setIsHidden(true);
+				widget(933, 266).setContextMenuOption(1, "");
+			}
+			widget(933, 276).setPosition(int0, script_3270(widget(933, 276).getY(), int7), 0, 0);
+			if (VARC[1200] == 1) {
+				widget(933, 276).setIsHidden(false);
+				widget(933, 276).setContextMenuOption(1, "Expand");
+				widget(933, 285).setSprite(2851);
+			} else {
+				widget(933, 276).setIsHidden(true);
+				widget(933, 274).setIsHidden(true);
+				widget(933, 276).setContextMenuOption(1, "");
+			}
+			widget(933, 286).setPosition(int0, script_3270(widget(933, 286).getY(), int8), 0, 0);
+			if (VARC[1201] == 1) {
+				widget(933, 286).setIsHidden(false);
+				widget(933, 286).setContextMenuOption(1, "Expand");
+				widget(933, 295).setSprite(2851);
+			} else {
+				widget(933, 286).setIsHidden(true);
+				widget(933, 284).setIsHidden(true);
+				widget(933, 286).setContextMenuOption(1, "");
+			}
+			widget(933, 296).setPosition(int0, script_3270(widget(933, 296).getY(), int9), 0, 0);
+			if (VARC[1202] == 1) {
+				widget(933, 296).setIsHidden(false);
+				widget(933, 296).setContextMenuOption(1, "Expand");
+				widget(933, 308).setSprite(2851);
+			} else {
+				widget(933, 296).setIsHidden(true);
+				widget(933, 294).setIsHidden(true);
+				widget(933, 296).setContextMenuOption(1, "");
+			}
+			widget(933, 265).setSize(16384, script_3270(widget(933, 265).getHeight(), widget(933, 266).getY() - widget(933, 265).getY() - 2), 2, 0);
+			widget(933, 266).setSize(16384, script_3270(widget(933, 266).getHeight(), widget(933, 276).getY() - widget(933, 266).getY() - 2), 2, 0);
+			widget(933, 276).setSize(16384, script_3270(widget(933, 276).getHeight(), widget(933, 286).getY() - widget(933, 276).getY() - 2), 2, 0);
+			widget(933, 286).setSize(16384, script_3270(widget(933, 286).getHeight(), widget(933, 296).getY() - widget(933, 286).getY() - 2), 2, 0);
+			widget(933, 296).setSize(16384, script_3270(widget(933, 296).getHeight(), int2 - widget(933, 296).getY() - 2), 2, 0);
+			break;
+		case 2:
+			widget(933, 265).setPosition(int0, script_3270(widget(933, 265).getY(), int5), 0, 0);
+			if (VARC[1198] == 1) {
+				widget(933, 265).setIsHidden(false);
+				widget(933, 265).setContextMenuOption(1, "Expand");
+				widget(933, 317).setSprite(2851);
+			} else {
+				widget(933, 265).setIsHidden(true);
+				widget(933, 265).setContextMenuOption(1, "");
+			}
+			widget(933, 266).setPosition(int0, script_3270(widget(933, 266).getY(), int6), 0, 0);
+			widget(933, 266).setContextMenuOption(1, "Shrink");
+			widget(933, 275).setSprite(2852);
+			widget(933, 276).setPosition(int0, script_3270(widget(933, 276).getY(), int7), 0, 0);
+			if (VARC[1200] == 1) {
+				widget(933, 276).setIsHidden(false);
+				widget(933, 276).setContextMenuOption(1, "Expand");
+				widget(933, 285).setSprite(2851);
+			} else {
+				widget(933, 276).setIsHidden(true);
+				widget(933, 274).setIsHidden(true);
+				widget(933, 276).setContextMenuOption(1, "");
+			}
+			widget(933, 286).setPosition(int0, script_3270(widget(933, 286).getY(), int8), 0, 0);
+			if (VARC[1201] == 1) {
+				widget(933, 286).setIsHidden(false);
+				widget(933, 286).setContextMenuOption(1, "Expand");
+				widget(933, 295).setSprite(2851);
+			} else {
+				widget(933, 286).setIsHidden(true);
+				widget(933, 284).setIsHidden(true);
+				widget(933, 286).setContextMenuOption(1, "");
+			}
+			widget(933, 296).setPosition(int0, script_3270(widget(933, 296).getY(), int9), 0, 0);
+			if (VARC[1202] == 1) {
+				widget(933, 296).setIsHidden(false);
+				widget(933, 296).setContextMenuOption(1, "Expand");
+				widget(933, 308).setSprite(2851);
+			} else {
+				widget(933, 296).setIsHidden(true);
+				widget(933, 294).setIsHidden(true);
+				widget(933, 296).setContextMenuOption(1, "");
+			}
+			widget(933, 265).setSize(16384, script_3270(widget(933, 265).getHeight(), widget(933, 266).getY() - widget(933, 265).getY() - 2), 2, 0);
+			widget(933, 266).setSize(16384, script_3270(widget(933, 266).getHeight(), widget(933, 276).getY() - widget(933, 266).getY() - 2), 2, 0);
+			widget(933, 276).setSize(16384, script_3270(widget(933, 276).getHeight(), widget(933, 286).getY() - widget(933, 276).getY() - 2), 2, 0);
+			widget(933, 286).setSize(16384, script_3270(widget(933, 286).getHeight(), widget(933, 296).getY() - widget(933, 286).getY() - 2), 2, 0);
+			widget(933, 296).setSize(16384, script_3270(widget(933, 296).getHeight(), int2 - widget(933, 296).getY() - 2), 2, 0);
+			break;
+		case 3:
+			widget(933, 265).setPosition(int0, script_3270(widget(933, 265).getY(), int5), 0, 0);
+			if (VARC[1198] == 1) {
+				widget(933, 265).setIsHidden(false);
+				widget(933, 265).setContextMenuOption(1, "Expand");
+				widget(933, 317).setSprite(2851);
+			} else {
+				widget(933, 265).setIsHidden(true);
+				widget(933, 265).setContextMenuOption(1, "");
+			}
+			widget(933, 266).setPosition(int0, script_3270(widget(933, 266).getY(), int6), 0, 0);
+			if (VARC[1199] == 1) {
+				widget(933, 266).setIsHidden(false);
+				widget(933, 266).setContextMenuOption(1, "Expand");
+				widget(933, 275).setSprite(2851);
+			} else {
+				widget(933, 266).setIsHidden(true);
+				widget(933, 316).setIsHidden(true);
+				widget(933, 266).setContextMenuOption(1, "");
+			}
+			widget(933, 276).setPosition(int0, script_3270(widget(933, 276).getY(), int7), 0, 0);
+			widget(933, 276).setContextMenuOption(1, "Shrink");
+			widget(933, 285).setSprite(2852);
+			widget(933, 286).setPosition(int0, script_3270(widget(933, 286).getY(), int8), 0, 0);
+			if (VARC[1201] == 1) {
+				widget(933, 286).setIsHidden(false);
+				widget(933, 286).setContextMenuOption(1, "Expand");
+				widget(933, 295).setSprite(2851);
+			} else {
+				widget(933, 286).setIsHidden(true);
+				widget(933, 284).setIsHidden(true);
+				widget(933, 286).setContextMenuOption(1, "");
+			}
+			widget(933, 296).setPosition(int0, script_3270(widget(933, 296).getY(), int9), 0, 0);
+			if (VARC[1202] == 1) {
+				widget(933, 296).setIsHidden(false);
+				widget(933, 296).setContextMenuOption(1, "Expand");
+				widget(933, 308).setSprite(2851);
+			} else {
+				widget(933, 296).setIsHidden(true);
+				widget(933, 294).setIsHidden(true);
+				widget(933, 296).setContextMenuOption(1, "");
+			}
+			widget(933, 265).setSize(16384, script_3270(widget(933, 265).getHeight(), widget(933, 266).getY() - widget(933, 265).getY() - 2), 2, 0);
+			widget(933, 266).setSize(16384, script_3270(widget(933, 266).getHeight(), widget(933, 276).getY() - widget(933, 266).getY() - 2), 2, 0);
+			widget(933, 276).setSize(16384, script_3270(widget(933, 276).getHeight(), widget(933, 286).getY() - widget(933, 276).getY() - 2), 2, 0);
+			widget(933, 286).setSize(16384, script_3270(widget(933, 286).getHeight(), widget(933, 296).getY() - widget(933, 286).getY() - 2), 2, 0);
+			widget(933, 296).setSize(16384, script_3270(widget(933, 296).getHeight(), int2 - widget(933, 296).getY() - 2), 2, 0);
+			break;
+		case 4:
+			widget(933, 265).setPosition(int0, script_3270(widget(933, 265).getY(), int5), 0, 0);
+			if (VARC[1198] == 1) {
+				widget(933, 265).setIsHidden(false);
+				widget(933, 265).setContextMenuOption(1, "Expand");
+				widget(933, 317).setSprite(2851);
+			} else {
+				widget(933, 265).setIsHidden(true);
+				widget(933, 265).setContextMenuOption(1, "");
+			}
+			widget(933, 266).setPosition(int0, script_3270(widget(933, 266).getY(), int6), 0, 0);
+			if (VARC[1199] == 1) {
+				widget(933, 266).setIsHidden(false);
+				widget(933, 266).setContextMenuOption(1, "Expand");
+				widget(933, 275).setSprite(2851);
+			} else {
+				widget(933, 266).setIsHidden(true);
+				widget(933, 316).setIsHidden(true);
+				widget(933, 266).setContextMenuOption(1, "");
+			}
+			widget(933, 276).setPosition(int0, script_3270(widget(933, 276).getY(), int7), 0, 0);
+			if (VARC[1200] == 1) {
+				widget(933, 276).setIsHidden(false);
+				widget(933, 276).setContextMenuOption(1, "Expand");
+				widget(933, 285).setSprite(2851);
+			} else {
+				widget(933, 276).setIsHidden(true);
+				widget(933, 274).setIsHidden(true);
+				widget(933, 276).setContextMenuOption(1, "");
+			}
+			widget(933, 286).setPosition(int0, script_3270(widget(933, 286).getY(), int8), 0, 0);
+			widget(933, 286).setContextMenuOption(1, "Shrink");
+			widget(933, 295).setSprite(2852);
+			widget(933, 296).setPosition(int0, script_3270(widget(933, 296).getY(), int9), 0, 0);
+			if (VARC[1202] == 1) {
+				widget(933, 296).setIsHidden(false);
+				widget(933, 296).setContextMenuOption(1, "Expand");
+				widget(933, 308).setSprite(2851);
+			} else {
+				widget(933, 296).setIsHidden(true);
+				widget(933, 294).setIsHidden(true);
+				widget(933, 296).setContextMenuOption(1, "");
+			}
+			widget(933, 265).setSize(16384, script_3270(widget(933, 265).getHeight(), widget(933, 266).getY() - widget(933, 265).getY() - 2), 2, 0);
+			widget(933, 266).setSize(16384, script_3270(widget(933, 266).getHeight(), widget(933, 276).getY() - widget(933, 266).getY() - 2), 2, 0);
+			widget(933, 276).setSize(16384, script_3270(widget(933, 276).getHeight(), widget(933, 286).getY() - widget(933, 276).getY() - 2), 2, 0);
+			widget(933, 286).setSize(16384, script_3270(widget(933, 286).getHeight(), widget(933, 296).getY() - widget(933, 286).getY() - 2), 2, 0);
+			widget(933, 296).setSize(16384, script_3270(widget(933, 296).getHeight(), int2 - widget(933, 296).getY() - 2), 2, 0);
+			break;
+		case 5:
+			widget(933, 265).setPosition(int0, script_3270(widget(933, 265).getY(), int5), 0, 0);
+			if (VARC[1198] == 1) {
+				widget(933, 265).setIsHidden(false);
+				widget(933, 265).setContextMenuOption(1, "Expand");
+				widget(933, 317).setSprite(2851);
+			} else {
+				widget(933, 265).setIsHidden(true);
+				widget(933, 265).setContextMenuOption(1, "");
+			}
+			widget(933, 266).setPosition(int0, script_3270(widget(933, 266).getY(), int6), 0, 0);
+			if (VARC[1199] == 1) {
+				widget(933, 266).setIsHidden(false);
+				widget(933, 266).setContextMenuOption(1, "Expand");
+				widget(933, 275).setSprite(2851);
+			} else {
+				widget(933, 266).setIsHidden(true);
+				widget(933, 316).setIsHidden(true);
+				widget(933, 266).setContextMenuOption(1, "");
+			}
+			widget(933, 276).setPosition(int0, script_3270(widget(933, 276).getY(), int7), 0, 0);
+			if (VARC[1200] == 1) {
+				widget(933, 276).setIsHidden(false);
+				widget(933, 276).setContextMenuOption(1, "Expand");
+				widget(933, 285).setSprite(2851);
+			} else {
+				widget(933, 276).setIsHidden(true);
+				widget(933, 274).setIsHidden(true);
+				widget(933, 276).setContextMenuOption(1, "");
+			}
+			widget(933, 286).setPosition(int0, script_3270(widget(933, 286).getY(), int8), 0, 0);
+			if (VARC[1201] == 1) {
+				widget(933, 286).setIsHidden(false);
+				widget(933, 286).setContextMenuOption(1, "Expand");
+				widget(933, 295).setSprite(2851);
+			} else {
+				widget(933, 286).setIsHidden(true);
+				widget(933, 284).setIsHidden(true);
+				widget(933, 286).setContextMenuOption(1, "");
+			}
+			widget(933, 296).setPosition(int0, script_3270(widget(933, 296).getY(), int9), 0, 0);
+			widget(933, 296).setContextMenuOption(1, "Shrink");
+			widget(933, 308).setSprite(2852);
+			widget(933, 265).setSize(16384, script_3270(widget(933, 265).getHeight(), widget(933, 266).getY() - widget(933, 265).getY() - 2), 2, 0);
+			widget(933, 266).setSize(16384, script_3270(widget(933, 266).getHeight(), widget(933, 276).getY() - widget(933, 266).getY() - 2), 2, 0);
+			widget(933, 276).setSize(16384, script_3270(widget(933, 276).getHeight(), widget(933, 286).getY() - widget(933, 276).getY() - 2), 2, 0);
+			widget(933, 286).setSize(16384, script_3270(widget(933, 286).getHeight(), widget(933, 296).getY() - widget(933, 286).getY() - 2), 2, 0);
+			widget(933, 296).setSize(16384, script_3270(widget(933, 296).getHeight(), int2 - widget(933, 296).getY() - 2), 2, 0);
+			break;
+	}
+	script_3271();
+	return;
+}

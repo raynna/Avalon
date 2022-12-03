@@ -1,0 +1,331 @@
+void script_1364() {
+	int int0;
+	int0 = 0;
+	if (getDisplayMode() >= 2) {
+		if (widget(752, 8).isHidden() && (!widget(752, 3).isHidden() || !widget(752, 7).isHidden())) {
+			widget(746, 73).setIsHidden(false);
+			widget(752, 1).setSprite(1017);
+			widget(752, 1).setIsHidden(false);
+			widget(752, 2).setIsHidden(false);
+			widget(752, 1).setAlpha(false);
+		} else if (widget(752, 13).hasChild()) {
+			widget(746, 73).setIsHidden(false);
+			widget(752, 13).setIsHidden(false);
+			widget(752, 12).setIsHidden(true);
+			widget(752, 11).setIsHidden(true);
+			widget(752, 10).setIsHidden(true);
+			widget(752, 9).setIsHidden(true);
+			widget(752, 1).setIsHidden(false);
+			widget(752, 1).setAlpha(true);
+			if (VARPBIT[542] == 0) {
+				widget(752, 1).setSprite(1204);
+				widget(752, 2).setIsHidden(false);
+			} else {
+				widget(752, 1).setSprite(1205);
+				widget(752, 2).setIsHidden(true);
+			}
+		} else if (widget(752, 12).hasChild()) {
+			widget(746, 73).setIsHidden(false);
+			widget(752, 13).setIsHidden(true);
+			widget(752, 12).setIsHidden(false);
+			widget(752, 11).setIsHidden(true);
+			widget(752, 10).setIsHidden(true);
+			widget(752, 9).setIsHidden(true);
+			widget(752, 1).setIsHidden(false);
+			widget(752, 1).setAlpha(true);
+			if (VARPBIT[542] == 0) {
+				widget(752, 1).setSprite(1204);
+				widget(752, 2).setIsHidden(false);
+			} else {
+				widget(752, 1).setSprite(1205);
+				widget(752, 2).setIsHidden(true);
+			}
+		} else if (widget(752, 11).hasChild()) {
+			widget(746, 73).setIsHidden(false);
+			widget(752, 13).setIsHidden(true);
+			widget(752, 12).setIsHidden(true);
+			widget(752, 11).setIsHidden(false);
+			widget(752, 10).setIsHidden(true);
+			widget(752, 9).setIsHidden(true);
+			widget(752, 1).setIsHidden(false);
+			widget(752, 1).setAlpha(true);
+			if (VARPBIT[542] == 0) {
+				widget(752, 1).setSprite(1204);
+				widget(752, 2).setIsHidden(false);
+			} else {
+				widget(752, 1).setSprite(1205);
+				widget(752, 2).setIsHidden(true);
+			}
+		} else if (widget(752, 10).hasChild()) {
+			widget(746, 73).setIsHidden(false);
+			widget(752, 13).setIsHidden(true);
+			widget(752, 12).setIsHidden(true);
+			widget(752, 11).setIsHidden(true);
+			widget(752, 10).setIsHidden(false);
+			widget(752, 9).setIsHidden(true);
+			widget(752, 1).setIsHidden(false);
+			widget(752, 1).setAlpha(true);
+			if (VARPBIT[542] == 0) {
+				widget(752, 1).setSprite(1204);
+				widget(752, 2).setIsHidden(false);
+			} else {
+				widget(752, 1).setSprite(1205);
+				widget(752, 2).setIsHidden(true);
+			}
+		} else if (widget(752, 9).hasChild()) {
+			if (VARC[41] == -1) {
+				widget(746, 73).setIsHidden(true);
+				widget(746, 75).setIsHidden(true);
+			} else {
+				widget(746, 73).setIsHidden(false);
+				widget(746, 75).setIsHidden(false);
+			}
+			widget(752, 13).setIsHidden(true);
+			widget(752, 12).setIsHidden(true);
+			widget(752, 11).setIsHidden(true);
+			widget(752, 10).setIsHidden(true);
+			widget(752, 9).setIsHidden(false);
+			widget(752, 1).setIsHidden(false);
+			if (!widget(137, 0).isHidden()) {
+				widget(752, 1).setSprite(1017);
+				widget(752, 1).setAlpha(false);
+				widget(752, 2).setIsHidden(false);
+			} else {
+				widget(752, 2).setIsHidden(true);
+				widget(752, 1).setSprite(1247);
+				widget(752, 1).setAlpha(true);
+				widget(752, 1).setSpriteTiling(false);
+				widget(137, 51).setIsHidden(true);
+				widget(137, 52).setIsHidden(false);
+				widget(137, 53).setIsHidden(false);
+				script_1301(widget(137, 59), widget(137, 58));
+				widget(137, 56).setTextAntiMacro(true);
+				widget(137, 56).setRGB(0xFFFFFF);
+				script_1558(false);
+				script_84();
+			}
+		}
+		if (widget(746, 87).hasChild()) {
+			widget(746, 22).setIsHidden(true);
+			widget(746, 23).setIsHidden(true);
+			widget(746, 71).setIsHidden(true);
+			widget(746, 87).setIsHidden(false);
+			widget(746, 88).setIsHidden(true);
+			widget(746, 86).setIsHidden(false);
+			widget(746, 89).setIsHidden(true);
+			widget(746, 176).setIsHidden(true);
+		} else {
+			widget(746, 22).setIsHidden(false);
+			widget(746, 23).setIsHidden(false);
+			if (VARPBIT[6448] == 0) {
+				widget(746, 71).setIsHidden(false);
+			}
+			widget(746, 89).setIsHidden(false);
+			widget(746, 176).setIsHidden(false);
+			if (!widget(746, 88).hasChild()) {
+				widget(746, 87).setIsHidden(true);
+			}
+			script_71(VARC[168]);
+			if (!widget(746, 90).isHidden() || !widget(746, 91).isHidden() || !widget(746, 92).isHidden() || !widget(746, 93).isHidden() || !widget(746, 94).isHidden() || !widget(746, 95).isHidden() || !widget(746, 96).isHidden() || !widget(746, 97).isHidden() || !widget(746, 98).isHidden() || !widget(746, 99).isHidden() || !widget(746, 100).isHidden() || !widget(746, 101).isHidden() || !widget(746, 102).isHidden() || !widget(746, 103).isHidden() || !widget(746, 104).isHidden() || !widget(746, 105).isHidden() || !widget(746, 107).isHidden() || !widget(746, 108).isHidden()) {
+				widget(746, 86).setIsHidden(false);
+			} else {
+				widget(746, 86).setIsHidden(true);
+			}
+			widget(746, 73).setScriptCallOnGameloop(2464, getClientCycle(), CTX_WIDGET, "iI");
+		}
+		widget(548, 200).setIsHidden(true);
+		int0 = 0;
+		while (int0 <= 15) {
+			if (script_8(int0).hasChild()) {
+				script_121(int0).setIsHidden(false);
+				script_2458(int0).setIsHidden(false);
+			} else {
+				script_121(int0).setIsHidden(true);
+				script_2458(int0).setIsHidden(true);
+			}
+			int0 = int0 + 1;
+		}
+		if (script_8(95).hasChild() && VARPBIT[4280] == 1) {
+			widget(747, 8).setIsHidden(false);
+		} else {
+			widget(747, 8).setIsHidden(true);
+		}
+		int0 = 0;
+		if (widget(746, 23).isHidden()) {
+			while (int0 <= 15) {
+				script_2459(int0).setScriptCallOnMouseEntered(-1, "");
+				script_2459(int0).setScriptCallOnMouseExit(-1, "");
+				script_2459(int0).setSprite(1835);
+				int0 = int0 + 1;
+			}
+		} else {
+			while (int0 <= 15) {
+				if (script_121(int0).isHidden()) {
+					script_2459(int0).setScriptCallOnMouseEntered(-1, "");
+					script_2459(int0).setScriptCallOnMouseExit(-1, "");
+					script_2459(int0).setSprite(1835);
+				} else {
+					script_2459(int0).setScriptCallOnMouseEntered(2462, CTX_WIDGET, true, "I1");
+					script_2459(int0).setScriptCallOnMouseExit(2462, CTX_WIDGET, false, "I1");
+				}
+				int0 = int0 + 1;
+			}
+		}
+		script_1313();
+		widget(745, 0).setPosition(0, 0, 0, 0);
+		widget(745, 0).setSize(115, 35, 0, 0);
+		widget(745, 1).setPosition(80, 0, 0, 0);
+		widget(745, 2).setPosition(40, 0, 0, 0);
+		widget(745, 3).setPosition(0, 0, 0, 0);
+		widget(745, 4).setPosition(0, 0, 0, 0);
+		widget(745, 5).setPosition(0, 0, 0, 0);
+		widget(745, 6).setPosition(0, 0, 0, 0);
+		widget(745, 1).setSize(35, 35, 0, 0);
+		widget(745, 2).setSize(35, 35, 0, 0);
+		widget(745, 3).setSize(35, 35, 0, 0);
+		widget(745, 4).setSize(35, 35, 0, 0);
+		widget(745, 5).setSize(35, 35, 0, 0);
+		widget(745, 6).setSize(35, 35, 0, 0);
+		widget(745, 1).setSprite(1563);
+		widget(745, 2).setSprite(1562);
+		widget(745, 3).setSprite(1579);
+		widget(745, 4).setSprite(1580);
+		widget(745, 6).setSprite(1581);
+	} else {
+		if (VARC[41] == -1 && VARP[281] >= 1000) {
+			VARC[41] = 0;
+			script_181(0);
+			script_178();
+			script_84();
+			script_89();
+		}
+		widget(752, 1).setSprite(1017);
+		widget(752, 1).setIsHidden(false);
+		widget(752, 2).setIsHidden(false);
+		widget(752, 1).setAlpha(false);
+		widget(752, 1).setSpriteTiling(true);
+		if (widget(752, 13).hasChild()) {
+			widget(752, 13).setIsHidden(false);
+			widget(752, 12).setIsHidden(true);
+			widget(752, 11).setIsHidden(true);
+			widget(752, 10).setIsHidden(true);
+			widget(752, 9).setIsHidden(true);
+		} else if (widget(752, 12).hasChild()) {
+			widget(752, 13).setIsHidden(true);
+			widget(752, 12).setIsHidden(false);
+			widget(752, 11).setIsHidden(true);
+			widget(752, 10).setIsHidden(true);
+			widget(752, 9).setIsHidden(true);
+		} else if (widget(752, 11).hasChild()) {
+			widget(752, 13).setIsHidden(true);
+			widget(752, 12).setIsHidden(true);
+			widget(752, 11).setIsHidden(false);
+			widget(752, 10).setIsHidden(true);
+			widget(752, 9).setIsHidden(true);
+		} else if (widget(752, 10).hasChild()) {
+			widget(752, 13).setIsHidden(true);
+			widget(752, 12).setIsHidden(true);
+			widget(752, 11).setIsHidden(true);
+			widget(752, 10).setIsHidden(false);
+			widget(752, 9).setIsHidden(true);
+		} else if (widget(752, 9).hasChild()) {
+			widget(752, 13).setIsHidden(true);
+			widget(752, 12).setIsHidden(true);
+			widget(752, 11).setIsHidden(true);
+			widget(752, 10).setIsHidden(true);
+			widget(752, 9).setIsHidden(false);
+			widget(137, 51).setIsHidden(false);
+			widget(137, 52).setIsHidden(true);
+			widget(137, 53).setIsHidden(true);
+			script_1301(widget(137, 59), widget(137, 58));
+			widget(137, 56).setTextAntiMacro(false);
+			widget(137, 56).setRGB(0x000000);
+			script_1558(false);
+			script_84();
+		}
+		if (widget(548, 199).hasChild()) {
+			widget(548, 81).setIsHidden(true);
+			widget(548, 82).setIsHidden(true);
+			widget(548, 128).setIsHidden(true);
+			widget(548, 146).setIsHidden(true);
+			widget(548, 199).setIsHidden(false);
+			widget(548, 200).setIsHidden(true);
+			widget(548, 201).setIsHidden(true);
+			widget(548, 182).setIsHidden(true);
+		} else {
+			widget(548, 81).setIsHidden(false);
+			widget(548, 82).setIsHidden(false);
+			widget(548, 128).setIsHidden(false);
+			widget(548, 146).setIsHidden(false);
+			widget(548, 201).setIsHidden(false);
+			widget(548, 182).setIsHidden(false);
+			widget(746, 87).setIsHidden(true);
+			if (!widget(548, 200).hasChild()) {
+				widget(548, 200).setIsHidden(true);
+			}
+			script_71(VARC[168]);
+			widget(548, 193).setScriptCallOnGameloop(2464, getClientCycle(), CTX_WIDGET, "iI");
+		}
+		int0 = 0;
+		while (int0 <= 15) {
+			if (script_8(int0).hasChild()) {
+				script_121(int0).setIsHidden(false);
+				script_2458(int0).setIsHidden(false);
+			} else {
+				script_121(int0).setIsHidden(true);
+				script_2458(int0).setIsHidden(true);
+			}
+			int0 = int0 + 1;
+		}
+		if (script_8(95).hasChild() && VARPBIT[4280] == 1) {
+			widget(747, 8).setIsHidden(false);
+		} else {
+			widget(747, 8).setIsHidden(true);
+		}
+		int0 = 0;
+		if (widget(548, 81).isHidden() && widget(548, 128).isHidden()) {
+			while (int0 <= 15) {
+				script_2459(int0).setScriptCallOnMouseEntered(-1, "");
+				script_2459(int0).setScriptCallOnMouseExit(-1, "");
+				script_2459(int0).setSprite(1835);
+				int0 = int0 + 1;
+			}
+		} else {
+			while (int0 <= 15) {
+				if (script_121(int0).isHidden()) {
+					script_2459(int0).setScriptCallOnMouseEntered(-1, "");
+					script_2459(int0).setScriptCallOnMouseExit(-1, "");
+					script_2459(int0).setSprite(1835);
+				} else {
+					script_2459(int0).setScriptCallOnMouseEntered(2462, CTX_WIDGET, true, "I1");
+					script_2459(int0).setScriptCallOnMouseExit(2462, CTX_WIDGET, false, "I1");
+				}
+				int0 = int0 + 1;
+			}
+		}
+		script_1658();
+		script_1337();
+		widget(745, 0).setPosition(0, 0, 0, 0);
+		widget(745, 0).setSize(82, 25, 0, 0);
+		widget(745, 1).setPosition(57, 0, 0, 0);
+		widget(745, 2).setPosition(28, 0, 0, 0);
+		widget(745, 3).setPosition(0, 0, 0, 0);
+		widget(745, 4).setPosition(0, 0, 0, 0);
+		widget(745, 5).setPosition(0, 0, 0, 0);
+		widget(745, 6).setPosition(0, 0, 0, 0);
+		widget(745, 1).setSize(25, 25, 0, 0);
+		widget(745, 2).setSize(25, 25, 0, 0);
+		widget(745, 3).setSize(25, 25, 0, 0);
+		widget(745, 4).setSize(25, 25, 0, 0);
+		widget(745, 5).setSize(25, 25, 0, 0);
+		widget(745, 6).setSize(25, 25, 0, 0);
+		widget(745, 1).setSprite(442);
+		widget(745, 2).setSprite(1073);
+		widget(745, 3).setSprite(1576);
+		widget(745, 4).setSprite(1578);
+		widget(745, 6).setSprite(1577);
+	}
+	script_5341();
+	script_722();
+	return;
+}

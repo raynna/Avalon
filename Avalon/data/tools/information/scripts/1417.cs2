@@ -1,0 +1,48 @@
+void script_1417(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	if (VARC[1387] == 1) {
+		return;
+	}
+	int1 = script_1502(widget0);
+	int2 = -1;
+	int3 = widget0.getX();
+	int4 = widget0.getY();
+	if (VARPBIT[7516] == int1) {
+		int2 = script_486(VARPBIT[7520]);
+	} else if (VARPBIT[7517] == int1) {
+		int2 = script_486(VARPBIT[7521]);
+	} else if (VARPBIT[7518] == int1) {
+		int2 = script_486(VARPBIT[7526]);
+	} else if (VARPBIT[7519] == int1) {
+		int2 = script_486(VARPBIT[7527]);
+	} else if (VARPBIT[7522] == int1) {
+		int2 = script_486(VARPBIT[7530]);
+	} else if (VARPBIT[7523] == int1) {
+		int2 = script_486(VARPBIT[7531]);
+	} else if (VARPBIT[7524] == int1) {
+		int2 = script_486(VARPBIT[7532]);
+	} else if (VARPBIT[7525] == int1) {
+		int2 = script_486(VARPBIT[7533]);
+	} else if (VARPBIT[7528] == int1) {
+		int2 = script_486(VARPBIT[7534]);
+	} else if (VARPBIT[7529] == int1) {
+		int2 = script_486(VARPBIT[7535]);
+	}
+	if (int2 != -1) {
+		widget(1017, 241).setText(getNpcAttribute(int2, 1139));
+		widget(1017, 226).setSize(getTextWidth(getNpcAttribute(int2, 1139), 2710) + 10, widget(1017, 226).getHeight(), 0, 0);
+		int3 = int3 + widget0.getWidth() - 3;
+		int4 = int4 - widget0.getHeight();
+		if (int3 + widget(1017, 226).getWidth() >= widget(1017, 31).getX() + widget(1017, 31).getWidth()) {
+			int3 = widget0.getX() - widget(1017, 226).getWidth() + 3;
+		}
+		widget(1017, 226).setPosition(int3, int4, 0, 0);
+		widget(1017, 226).setIsHidden(false);
+	} else {
+		widget(1017, 226).setIsHidden(true);
+	}
+	return;
+}

@@ -1,0 +1,49 @@
+void script_4690(int arg0, int arg1) {
+	Color color2;
+	int int3;
+	Widget widget4;
+	int int5;
+	int int6;
+	int int7;
+	color2 = 0xEBE0BC;
+	int3 = 0;
+	widget4 = null;
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	switch (arg0) {
+		case 36110345:
+			int3 = VARC[1549];
+			widget4 = widget(551, 15);
+			int6 = VARC[1549];
+			int7 = datamap('i', 'i', (DataMap)3856, 1);
+			break;
+		case 36110369:
+			int3 = VARC[1550];
+			widget4 = widget(551, 41);
+			int6 = VARC[1550];
+			int7 = datamap('i', 'i', (DataMap)3856, 2);
+			break;
+		case 36110383:
+			int3 = VARC[1551];
+			widget4 = widget(551, 55);
+			int6 = VARC[1551];
+			int7 = datamap('i', 'i', (DataMap)3856, 3);
+			break;
+		case 36110397:
+			int3 = VARC[1552];
+			widget4 = widget(551, 69);
+			int6 = VARC[1552];
+			int7 = datamap('i', 'i', (DataMap)3856, 4);
+			break;
+		default:
+			return;
+	}
+	if (int6 == 0 && VARPBIT[9465] >= int7) {
+		if (arg1 == 1) {
+			color2 = 0xFFFFFF;
+		}
+		widget4.setRGB(color2);
+	}
+	return;
+}

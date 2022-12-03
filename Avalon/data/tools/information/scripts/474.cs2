@@ -1,0 +1,12 @@
+void script_474(Widget widget0, int arg1) {
+	if (VARPBIT[4302] < 110) {
+		widget0.setText("<col=c80000>" + "Completion of Wolf Whistle required." + "</col>");
+		return;
+	}
+	if (VARPBIT[2086] < arg1) {
+		widget0.setText("<col=c80000>" + str(arg1) + " Commendations required." + "</col>");
+	} else {
+		widget0.setText(str(arg1) + " Commendations.");
+	}
+	return;
+}

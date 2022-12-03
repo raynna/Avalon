@@ -1,0 +1,13 @@
+void script_5354(Widget widget0, int arg1, Sprite sprite2, Sprite sprite3, Sprite sprite4, Sprite sprite5, Sprite sprite6) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setSprite(sprite2);
+		if (sprite2 == sprite3) {
+			ACTIVE.setScriptCallOnMouseEntered(5343, widget0, arg1, sprite3, "Iid");
+			ACTIVE.setScriptCallOnMouseExit(5343, widget0, arg1, sprite4, "Iid");
+		} else {
+			ACTIVE.setScriptCallOnMouseEntered(5343, widget0, arg1, sprite5, "Iid");
+			ACTIVE.setScriptCallOnMouseExit(5343, widget0, arg1, sprite6, "Iid");
+		}
+	}
+	return;
+}

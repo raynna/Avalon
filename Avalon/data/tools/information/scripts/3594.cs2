@@ -1,0 +1,9 @@
+void script_3594() {
+	widget(1002, 161).setItem(datamap('i', 'O', (DataMap)3170, (script_3619(9) + VARPBIT[7387]) % datamapSize((DataMap)3170)), -1);
+	widget(1002, 162).setItem(datamap('i', 'O', (DataMap)3170, (script_3621(6) + VARPBIT[7387]) % datamapSize((DataMap)3170)), -1);
+	widget(1002, 163).setItem(datamap('i', 'O', (DataMap)3170, (script_3619(14) + VARPBIT[7387]) % datamapSize((DataMap)3170)), -1);
+	widget(1002, 164).setItem(datamap('i', 'O', (DataMap)3170, (script_3620(1) + VARPBIT[7387]) % datamapSize((DataMap)3170)), -1);
+	widget(1002, 165).setItem(datamap('i', 'O', (DataMap)3170, (script_3620(9) + VARPBIT[7387]) % datamapSize((DataMap)3170)), -1);
+	widget(1002, 166).setItem(datamap('i', 'O', (DataMap)3170, (script_3621(1) + VARPBIT[7387]) % datamapSize((DataMap)3170)), -1);
+	return;
+}

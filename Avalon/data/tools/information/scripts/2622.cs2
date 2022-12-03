@@ -1,0 +1,31 @@
+void script_2622() {
+	int int0;
+	int int1;
+	int0 = -1;
+	int1 = 1;
+	if (compare(STRING[179], "") == 0 || compare(STRING[179], "null") == 0) {
+		return;
+	}
+	widget(850, 44).setText(widget(850, 43).getText());
+	widget(850, 43).setText(widget(850, 42).getText());
+	widget(850, 42).setText(widget(850, 41).getText());
+	widget(850, 41).setText(widget(850, 40).getText());
+	widget(850, 40).setText(widget(850, 39).getText());
+	widget(850, 39).setText(widget(850, 38).getText());
+	widget(850, 38).setText(widget(850, 37).getText());
+	widget(850, 37).setText(widget(850, 36).getText());
+	widget(850, 36).setText(widget(850, 35).getText());
+	widget(850, 35).setText(widget(850, 34).getText());
+	widget(850, 34).setText(widget(850, 33).getText());
+	widget(850, 33).setText(widget(850, 32).getText());
+	widget(850, 32).setText(widget(850, 31).getText());
+	widget(850, 31).setText(widget(850, 30).getText());
+	widget(850, 30).setText(widget(850, 29).getText());
+	widget(850, 29).setText(widget(850, 28).getText());
+	widget(850, 28).setText(widget(850, 27).getText());
+	widget(850, 27).setText(widget(850, 26).getText());
+	widget(850, 26).setText(widget(850, 25).getText());
+	widget(850, 25).setText(STRING[179]);
+	script_157(widget(850, 45), widget(850, 46), widget(850, 46).getScrollMaxV(), 1);
+	return;
+}

@@ -1,0 +1,18 @@
+void script_3077(Widget widget0, Sprite sprite1, Sprite sprite2, Sprite sprite3, Sprite sprite4) {
+	script_2994(widget0, 0, 16, 32, 0, 0, sprite1, false, false, false, 0);
+	script_2994(widget0, 1, 32, 32, 16, 0, sprite2, false, false, false, 0);
+	ACTIVE.setSize(32, 32, 1, 0);
+	script_2994(widget0, 2, 16, 32, 0, 0, sprite1, true, false, false, 0);
+	ACTIVE.setPosition(0, 0, 2, 0);
+	script_2994(widget0, 3, 16, 32, 0, 0, sprite3, false, false, false, 0);
+	ACTIVE.setHidden(true);
+	script_2994(widget0, 4, 32, 32, 16, 0, sprite4, false, false, false, 0);
+	ACTIVE.setSize(32, 32, 1, 0);
+	ACTIVE.setHidden(true);
+	script_2994(widget0, 5, 16, 32, 0, 0, sprite3, true, false, false, 0);
+	ACTIVE.setPosition(0, 0, 2, 0);
+	ACTIVE.setHidden(true);
+	widget0.setScriptCallOnMouseEntered(3078, widget0, "I");
+	widget0.setScriptCallOnMouseExit(3080, widget0, "I");
+	return;
+}

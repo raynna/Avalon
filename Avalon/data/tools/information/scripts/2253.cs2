@@ -1,0 +1,12 @@
+void script_2253() {
+	int int0;
+	widget(945, 14).setText(STRING[315]);
+	if (VARC[1233] > 200) {
+		VARC[1233] = 200;
+	}
+	int0 = VARC[1233];
+	int0 = int0 * 37 / 40 + 14;
+	widget(945, 16).setSize(int0, 18, 1, 0);
+	widget(945, 17).setPosition(int0 + 1, 15, 0, 0);
+	return;
+}

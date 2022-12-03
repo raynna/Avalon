@@ -1,0 +1,94 @@
+void script_192() {
+	int int0;
+	int int1;
+	if (VARP[281] < 1000) {
+		return;
+	}
+	int0 = cs2method5017();
+	int1 = 0;
+	if (int0 > VARC[43]) {
+		if (VARC[41] == 0) {
+			VARC[43] = int0;
+			return;
+		}
+		int0 = int0 - VARC[43] - 1;
+		if (int0 >= 100) {
+			int0 = 99;
+		}
+		while (int0 >= 0) {
+			int1 = cs2method5004(int0);
+			if (script_90(int0, 0) == 1 && script_506(int0) == 0) {
+				switch (int1) {
+					case 0:
+					case 4:
+					case 26:
+					case 27:
+					case 28:
+					case 29:
+					case 109:
+					case 110:
+					case 117:
+						script_180(1);
+						break;
+					case 1:
+					case 2:
+					case 17:
+					case 116:
+						script_180(2);
+						break;
+					case 3:
+					case 5:
+					case 6:
+					case 7:
+					case 18:
+					case 19:
+					case 30:
+					case 31:
+						script_180(3);
+						break;
+					case 9:
+					case 11:
+					case 20:
+					case 107:
+						script_180(4);
+						break;
+					case 100:
+					case 101:
+					case 103:
+					case 105:
+					case 106:
+					case 108:
+					case 111:
+					case 112:
+					case 113:
+					case 114:
+					case 118:
+						script_180(5);
+						break;
+					case 102:
+					case 104:
+						script_180(6);
+						break;
+					case 41:
+					case 42:
+					case 43:
+						script_180(7);
+						break;
+					case 44:
+					case 45:
+					case 46:
+						script_180(7);
+						break;
+					case 115:
+						if (length(cs2method5003(int0)) > 1) {
+							script_180(1);
+						}
+						break;
+				}
+			}
+			int0 = int0 - 1;
+		}
+		VARC[43] = cs2method5017();
+	}
+	return;
+}

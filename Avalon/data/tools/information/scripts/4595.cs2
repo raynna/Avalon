@@ -1,0 +1,19 @@
+void script_4595() {
+	widget(17, 17).setIsHidden(true);
+	widget(17, 16).setIsHidden(true);
+	widget(17, 20).setIsHidden(true);
+	widget(17, 19).setIsHidden(true);
+	widget(17, 22).setIsHidden(true);
+	widget(17, 21).setIsHidden(true);
+	widget(17, 24).setIsHidden(true);
+	widget(17, 15).setScrollMax(0, 0);
+	widget(17, 15).setPosition(0, 0, 1, 1);
+	widget(17, 15).setScrollPos(0, 0);
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setFont(495);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setRGB(0xFF981F);
+	ACTIVE.setTextAntiMacro(true);
+	return;
+}

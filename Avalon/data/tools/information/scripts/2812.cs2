@@ -1,0 +1,11 @@
+void script_2812(int arg0, Widget widget1) {
+	int int2;
+	int int3;
+	int2 = widget1.getShadeColor();
+	int3 = min(max(int2 + arg0 * 1, 225), 255);
+	if (int3 == 225 || int3 == 255) {
+		widget1.setScriptCallOnGameloop(2812, 0 - arg0, widget1, "iI");
+	}
+	widget1.setTrans(int3);
+	return;
+}

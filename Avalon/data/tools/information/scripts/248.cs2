@@ -1,0 +1,8 @@
+void script_248(int arg0) {
+	if (length(STRING[24]) > 0) {
+		cs2method5002(STRING[24], arg0, VARC[6], "");
+	}
+	script_675();
+	VARC[11] = 0;
+	return;
+}

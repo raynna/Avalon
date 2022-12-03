@@ -1,0 +1,19 @@
+void script_2129(Widget widget0, Widget widget1, Widget widget2) {
+	switch (widget1) {
+		case widget(420, 16):
+		case widget(420, 17):
+		case widget(420, 18):
+		case widget(420, 19):
+		case widget(420, 12):
+		case widget(420, 13):
+		case widget(420, 14):
+		case widget(420, 15):
+			widget0.setPosition(widget1.getX(), widget1.getY(), 0, 0);
+			playSoundEffect(5507, 1, 0);
+			break;
+		default:
+			widget0.setPosition(widget2.getX(), widget2.getY(), 0, 0);
+			break;
+	}
+	return;
+}

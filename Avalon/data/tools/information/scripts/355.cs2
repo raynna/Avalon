@@ -1,0 +1,97 @@
+void script_355(int arg0, Identikit identikit1, int arg2) {
+	AttrMap attrmap3;
+	int int4;
+	if (arg0 != 1) {
+		return;
+	}
+	attrmap3 = null;
+	int4 = -1;
+	switch (arg2) {
+		case 0:
+		case 7:
+			VARC[1008] = identikit1;
+			setBaseIdkit(arg2, identikit1);
+			playSoundEffect(9860, 1, 0);
+			break;
+		case 1:
+		case 8:
+			VARC[1009] = identikit1;
+			setBaseIdkit(arg2, identikit1);
+			playSoundEffect(9860, 1, 0);
+			break;
+		case 2:
+		case 3:
+		case 4:
+		case 9:
+		case 10:
+		case 11:
+			VARC[86] = 0;
+			setBaseItem(2, 19713);
+			setBaseItem(3, -1);
+			setBaseItem(5, -1);
+			playSoundEffect(9819, 1, 0);
+			switch (arg2) {
+				case 9:
+				case 2:
+					VARC[1010], int4 = identikit1, 3;
+					break;
+				case 10:
+				case 3:
+					VARC[1011], int4 = identikit1, 4;
+					break;
+				case 11:
+				case 4:
+					VARC[1012], int4 = identikit1, 5;
+					break;
+			}
+			attrmap3 = (AttrMap)script_361(identikit1, int4);
+			if (attrmap3 != null) {
+				if (IsFemale()) {
+					VARC[1010] = getAttributeMapValue(attrmap3, 1182);
+					setBaseIdkit(9, (Identikit)VARC[1010]);
+					VARC[1011] = getAttributeMapValue(attrmap3, 1183);
+					setBaseIdkit(10, (Identikit)VARC[1011]);
+					VARC[1012] = getAttributeMapValue(attrmap3, 1184);
+					setBaseIdkit(11, (Identikit)VARC[1012]);
+					script_392(null, 1);
+				} else {
+					VARC[1010] = getAttributeMapValue(attrmap3, 1182);
+					setBaseIdkit(2, (Identikit)VARC[1010]);
+					VARC[1011] = getAttributeMapValue(attrmap3, 1183);
+					setBaseIdkit(3, (Identikit)VARC[1011]);
+					VARC[1012] = getAttributeMapValue(attrmap3, 1184);
+					setBaseIdkit(4, (Identikit)VARC[1012]);
+					script_392(null, 0);
+				}
+			} else {
+				setBaseIdkit(arg2, identikit1);
+			}
+			break;
+		case 5:
+		case 12:
+			VARC[86] = 0;
+			setBaseItem(2, 19713);
+			setBaseItem(3, -1);
+			setBaseItem(5, -1);
+			script_392(null, script_734(IsFemale()));
+			setBaseIdkit(arg2, identikit1);
+			VARC[1013] = identikit1;
+			playSoundEffect(9819, 1, 0);
+			break;
+		case 6:
+		case 13:
+			VARC[86] = 0;
+			setBaseItem(2, 19713);
+			setBaseItem(3, -1);
+			setBaseItem(5, -1);
+			script_392(null, script_734(IsFemale()));
+			setBaseIdkit(arg2, identikit1);
+			VARC[1014] = identikit1;
+			playSoundEffect(9819, 1, 0);
+			break;
+		default:
+			return;
+	}
+	script_391();
+	return;
+}

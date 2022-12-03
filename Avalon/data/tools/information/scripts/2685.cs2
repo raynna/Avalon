@@ -1,0 +1,18 @@
+void script_2685(int arg0) {
+	if (arg0 == 0) {
+		widget(398, 31).setSprite(178);
+		widget(398, 32).setSprite(177);
+		widget(398, 33).setSprite(184);
+		widget(398, 7).setSprite(176);
+		widget(398, 8).setSprite(174);
+		widget(398, 23).setSprite(183);
+	} else {
+		widget(398, 31).setSprite(176);
+		widget(398, 32).setSprite(174);
+		widget(398, 33).setSprite(183);
+		widget(398, 7).setSprite(178);
+		widget(398, 8).setSprite(177);
+		widget(398, 23).setSprite(184);
+	}
+	return;
+}

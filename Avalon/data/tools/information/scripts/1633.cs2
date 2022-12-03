@@ -1,0 +1,59 @@
+void script_1633(string string0) {
+	int int0;
+	int int1;
+	string str1;
+	string0 = lower(removeTags(string0));
+	int0 = length(string0);
+	int1 = 0;
+	string0 = script_2332(string0, "_", " ");
+	string0 = script_2332(string0, "-", " ");
+	string0 = script_2332(string0, " ", " ");
+	while (indexOf(string0, " ", 0) == 0 && int0 > 0) {
+		string0 = substr(string0, 1, int0);
+		int0 = length(string0);
+	}
+	while (indexOf(string0, " ", int0 - 1) == int0 - 1 && int0 > 0) {
+		string0 = substr(string0, 0, int0 - 1);
+		int0 = length(string0);
+	}
+	while (indexOf(string0, " ", 0) == 0 && int0 > 0) {
+		string0 = substr(string0, 1, int0);
+		int0 = length(string0);
+	}
+	while (indexOf(string0, " ", int0 - 1) == int0 - 1 && int0 > 0) {
+		string0 = substr(string0, 0, int0 - 1);
+		int0 = length(string0);
+	}
+	str1 = lower(removeTags(cs2method5020()));
+	int0 = length(str1);
+	str1 = script_2332(str1, "_", " ");
+	str1 = script_2332(str1, "-", " ");
+	str1 = script_2332(str1, " ", " ");
+	while (indexOf(str1, " ", 0) == 0 && int0 > 0) {
+		str1 = substr(str1, 1, int0);
+		int0 = length(str1);
+	}
+	while (indexOf(string0, " ", int0 - 1) == int0 - 1 && int0 > 0) {
+		str1 = substr(str1, 0, int0 - 1);
+		int0 = length(str1);
+	}
+	while (indexOf(str1, " ", 0) == 0 && int0 > 0) {
+		str1 = substr(str1, 1, int0);
+		int0 = length(str1);
+	}
+	while (indexOf(str1, " ", int0 - 1) == int0 - 1 && int0 > 0) {
+		str1 = substr(str1, 0, int0 - 1);
+		int0 = length(str1);
+	}
+	if (compare(string0, "") != 0) {
+		if (compare(string0, str1) == 0) {
+			script_1890("You cannot kick or ban yourself.");
+			return;
+		}
+		clanmethod3617(string0);
+		string0 = script_1814(string0);
+		cs2method5006(1);
+		cs2method5008("[Attempting to kick/ban " + string0 + " from this Friends Chat.]");
+	}
+	return;
+}

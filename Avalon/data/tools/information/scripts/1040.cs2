@@ -1,0 +1,9 @@
+void script_1040(Widget widget0, Widget widget1, Widget widget2, Widget widget3, QcPhrase qcphrase4) {
+	VARC[129] = VARC[129] - 1;
+	if (VARC[129] > 0) {
+		return;
+	}
+	widget1.setScriptCallOnGameloop(-1, "");
+	script_1041(widget0, widget2, widget3, qcphrase4);
+	return;
+}

@@ -1,0 +1,5 @@
+void script_2374(Widget widget0, NpcDef npcdef1) {
+	widget0.setNpcHead(npcdef1);
+	widget0.setAnimation(9806);
+	return;
+}

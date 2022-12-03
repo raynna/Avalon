@@ -1,0 +1,29 @@
+void script_817(Skill skill0) {
+	int int1;
+	int int2;
+	int int3;
+	int1 = 31;
+	int2 = 0;
+	int3 = 31;
+	if (skill0 == 5) {
+		if (VARPBIT[9816] >= script_5255()) {
+			int2 = 0;
+		} else if (getSkillActualLvl(skill0) == 0 || getSkillActualLvl(skill0) == -1) {
+			int2 = 0;
+		} else {
+			int2 = int1 - int1 * VARPBIT[9816] / script_5255();
+		}
+	} else if (getSkillCurrentLvl(skill0) >= getSkillActualLvl(skill0)) {
+		int2 = 0;
+	} else if (getSkillActualLvl(skill0) == 0 || getSkillActualLvl(skill0) == -1) {
+		int2 = 0;
+	} else {
+		int2 = int1 - int1 * getSkillCurrentLvl(skill0) / getSkillActualLvl(skill0);
+	}
+	if (skill0 == 5) {
+		widget(749, 3).setSize(int3, int2, 0, 0);
+	} else if (skill0 == 23) {
+		widget(747, 4).setSize(int3, int2, 0, 0);
+	}
+	return;
+}

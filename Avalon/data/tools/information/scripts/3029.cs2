@@ -1,0 +1,145 @@
+void script_3029(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5) {
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	Color color14;
+	int int15;
+	int int16;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	if (cs2method5428(widget3, -1)) {
+		widget4.setScriptCallOnGameloop(3028, widget0, widget1, widget2, widget3, widget4, widget5, "IIIIII");
+		return;
+	}
+	widget4.setScriptCallOnGameloop(-1, "");
+	widget0.clearChildren();
+	widget1.clearChildren();
+	widget2.clearChildren();
+	widget3.clearChildren();
+	int6 = getFriendCount();
+	int7 = 0;
+	int8 = 0;
+	str0 = "";
+	str1 = "";
+	str2 = "";
+	int9 = 0;
+	int10 = 0;
+	int11 = 15;
+	int12 = 0;
+	int13 = 5;
+	color14 = 0x000000;
+	int15 = 0;
+	int16 = 0;
+	str3 = "";
+	if (int6 == -2) {
+		widget(909, 38).setText("Name");
+		script_3038("Loading Friends List." + "<br>" + "<br>" + "Please wait.", widget3);
+		widget(909, 31).setSize(widget(909, 31).getWidth(), widget(909, 36).getHeight(), 0, 0);
+	} else if (int6 == -1) {
+		widget(909, 38).setText("Name");
+		script_3038("Connecting to server." + "<br>" + "<br>" + "Please wait.", widget3);
+		widget(909, 31).setSize(widget(909, 31).getWidth(), widget(909, 36).getHeight(), 0, 0);
+	} else if (int6 > 0) {
+		widget(909, 38).setText("Name (" + str(int6) + "/200)");
+		widget(909, 31).setSize(widget(909, 31).getWidth(), 4, 0, 1);
+		while (int7 < int6) {
+			str0, str1 = getFriendName(int7);
+			int9 = getFriendWorld(int7);
+			script_2996(widget3, int7, widget3.getWidth(), int11, 0, int8, 0x000000, true, 0);
+			if (int7 % 2 == 0) {
+				ACTIVE.setRGB(0x201911);
+			} else {
+				ACTIVE.setRGB(0x292016);
+			}
+			ACTIVE.setScriptCallOnMouseEntered(3030, widget3, int7, "Ii");
+			ACTIVE.setScriptCallOnMouseExit(3035, "");
+			if (length(str1) > 0) {
+				int16 = getTextWidth("Last known as: " + str1, 494) + 8;
+				if (int16 > widget(909, 19).getWidth()) {
+					str3 = "Last known as:" + "<br>" + str1;
+				} else {
+					str3 = "Last known as: " + str1;
+				}
+				ACTIVE.setScriptCallOnMouseOver(2467, CTX_WIDGET, CTX_WIDGET_CHILD, str3, MOUSE_X, MOUSE_Y, widget(909, 41), widget(909, 32), widget(909, 35), 494, "IisiiIIIf");
+			}
+			ACTIVE.setOptionBase(str0);
+			if (int9 > 0) {
+				ACTIVE.setContextMenuOption(1, "Message");
+				ACTIVE.setContextMenuOption(2, "Join");
+			} else {
+				ACTIVE.setContextMenuOption(3, "Message");
+				ACTIVE.setContextMenuOption(4, "Join");
+			}
+			ACTIVE.setContextMenuOption(10, "Delete");
+			ACTIVE.setScriptCallOnClickContextMenu(3039, CTX_MENU_OPTION, int9, str0, int7, "iisi");
+			script_2994(widget1, int7, 14, 14, 5, int8 + 1, null, false, false, false, 0);
+			if (compare(str1, "") != 0) {
+				ACTIVE.setSprite(2313);
+				int13 = 20;
+			} else {
+				ACTIVE.setSprite(null);
+				int13 = 5;
+			}
+			str2 = str0;
+			script_2995(widget0, int7, 0, int11, int13, int8, str2, 0xFFFFFF, 494, 0, 1, 0, true);
+			ACTIVE.setSize(int13, int11, 1, 0);
+			ACTIVE.setMaxLines(1);
+			if (int9 == 0) {
+				str2 = "Offline";
+				color14 = 0xFF0000;
+			} else {
+				str2 = getFriendWorldName(int7);
+				if (int9 == getWorldId()) {
+					color14 = 0x00FF00;
+				} else {
+					color14 = 0xFFFF00;
+				}
+			}
+			script_2995(widget2, int7, 0, int11, 5, int8, str2, color14, 494, 0, 1, 0, true);
+			ACTIVE.setSize(5, int11, 1, 0);
+			ACTIVE.setMaxLines(1);
+			int8 = int8 + int11;
+			int7 = int7 + 1;
+		}
+		int10 = widget4.getHeight() / int11 + 1;
+		if (int10 > int6) {
+			while (int7 < int10) {
+				script_2996(widget3, int7, widget3.getWidth(), int11, 0, int8, 0x000000, true, 0);
+				if (int7 % 2 == 0) {
+					ACTIVE.setRGB(0x201911);
+				} else {
+					ACTIVE.setRGB(0x292016);
+				}
+				int8 = int8 + int11;
+				int7 = int7 + 1;
+			}
+			int12 = widget4.getHeight();
+		} else {
+			int12 = int8;
+		}
+		if (int10 <= int6) {
+			int15 = widget(909, 41).getScrollY();
+			widget(909, 41).setScrollMax(0, int12);
+			if (int15 > int12) {
+				int15 = int12;
+			}
+			script_72(widget(909, 47), widget(909, 41), int15);
+		} else {
+			widget(909, 41).setScrollMax(0, 0);
+			widget(909, 41).setScrollPos(0, 0);
+			script_72(widget(909, 47), widget(909, 41), 0);
+		}
+	} else if (int6 == 0) {
+		widget(909, 38).setText("Name");
+		script_3038("You have not added any friends to your list.", widget3);
+		widget(909, 31).setSize(widget(909, 31).getWidth(), widget(909, 36).getHeight(), 0, 0);
+	}
+	return;
+}

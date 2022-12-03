@@ -1,0 +1,4 @@
+void script_1652(int arg0) {
+	script_1651(widget(746, 3).getHeight() - 259, arg0);
+	return;
+}

@@ -1,0 +1,97 @@
+void script_1147(int arg0, int arg1, int arg2, Widget widget3, Widget widget4, int arg5) {
+	Sprite sprite6;
+	Sprite sprite7;
+	sprite6 = null;
+	sprite7 = null;
+	if (arg1 == arg0) {
+		widget3.setSize(106, 27, 0, 0);
+		switch (arg0) {
+			case 0:
+				sprite6 = 3095;
+				break;
+			case 2:
+				switch (getLanguage()) {
+					case 1:
+						sprite6 = 3104;
+						break;
+					case 2:
+						sprite6 = 3110;
+						break;
+					case 3:
+						sprite6 = 3098;
+						break;
+					default:
+						sprite6 = 3098;
+						break;
+				}
+				break;
+			case 1:
+				sprite6 = 3119;
+				break;
+			case 3:
+				sprite6 = 3122;
+				break;
+		}
+		widget4.setSprite(sprite6);
+		widget3.setScriptCallOnMouseEntered(-1, "");
+		widget3.setScriptCallOnMouseExit(-1, "");
+		widget3.setScriptCallOnMousePressed(-1, "");
+	} else {
+		widget3.setSize(106, 27, 0, 0);
+		switch (arg0) {
+			case 0:
+				switch (getLanguage()) {
+					case 1:
+						sprite6 = 3099;
+						sprite7 = 3100;
+						break;
+					case 2:
+						sprite6 = 3105;
+						sprite7 = 3106;
+						break;
+					case 3:
+						sprite6 = 3111;
+						sprite7 = 3112;
+						break;
+					default:
+						sprite6 = 3093;
+						sprite7 = 3094;
+						break;
+				}
+				break;
+			case 2:
+				switch (getLanguage()) {
+					case 1:
+						sprite6 = 3102;
+						sprite7 = 3103;
+						break;
+					case 2:
+						sprite6 = 3108;
+						sprite7 = 3109;
+						break;
+					case 3:
+						sprite6 = 3096;
+						sprite7 = 3097;
+						break;
+					default:
+						sprite6 = 3096;
+						sprite7 = 3097;
+						break;
+				}
+				break;
+			case 1:
+				sprite6 = 3117;
+				sprite7 = 3118;
+				break;
+			case 3:
+				sprite6 = 3120;
+				sprite7 = 3121;
+				break;
+		}
+		widget4.setSprite(sprite6);
+		widget3.setScriptCallOnMouseEntered(1148, arg0, widget4, sprite6, sprite7, true, "iIdd1");
+		widget3.setScriptCallOnMouseExit(1148, arg0, widget4, sprite6, sprite7, false, "iIdd1");
+		widget3.setScriptCallOnMousePressed(2697, arg0, arg5, "ii");
+	}
+	return;
+}

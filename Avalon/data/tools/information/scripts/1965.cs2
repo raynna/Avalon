@@ -1,0 +1,8 @@
+void script_1965(Widget widget0) {
+	if (VARP[261] > 0) {
+		widget0.setTrans(255);
+	} else {
+		widget0.setTrans(200);
+	}
+	return;
+}

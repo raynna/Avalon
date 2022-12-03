@@ -1,0 +1,8 @@
+void script_3291(Widget widget0, Widget widget1, Widget widget2) {
+	int int3;
+	int3 = widget1.getScrollY() - 4;
+	if (ACTIVE.setChild(widget0, 1)) {
+		script_3296(widget0, widget1, widget2, int3, 1);
+	}
+	return;
+}

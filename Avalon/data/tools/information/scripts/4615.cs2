@@ -1,0 +1,41 @@
+void script_4615(Widget widget0) {
+	switch (widget0) {
+		case widget(20, 15):
+			widget0.setRGB(getColorRelatedMethod4020(VARPBIT[9255]));
+			break;
+		case widget(20, 155):
+			widget0.setRGB(getColorRelatedMethod4020(VARPBIT[9254]));
+			break;
+		case widget(20, 169):
+			widget0.setRGB(getColorRelatedMethod4020(VARPBIT[9254]));
+			break;
+		case widget(20, 183):
+			widget0.setRGB(getColorRelatedMethod4020(VARPBIT[9254]));
+			break;
+		case widget(20, 17):
+			widget0.setRGB(getColorRelatedMethod4020(VARPBIT[9256]));
+			break;
+		case widget(20, 157):
+			widget0.setRGB(getColorRelatedMethod4020(VARPBIT[9256]));
+			break;
+		case widget(20, 171):
+			widget0.setRGB(getColorRelatedMethod4020(VARPBIT[9255]));
+			break;
+		case widget(20, 185):
+			widget0.setRGB(getColorRelatedMethod4020(VARPBIT[9255]));
+			break;
+		case widget(20, 19):
+			widget0.setRGB(getColorRelatedMethod4020(VARPBIT[9257]));
+			break;
+		case widget(20, 159):
+			widget0.setRGB(getColorRelatedMethod4020(VARPBIT[9257]));
+			break;
+		case widget(20, 173):
+			widget0.setRGB(getColorRelatedMethod4020(VARPBIT[9257]));
+			break;
+		case widget(20, 187):
+			widget0.setRGB(getColorRelatedMethod4020(VARPBIT[9256]));
+			break;
+	}
+	return;
+}

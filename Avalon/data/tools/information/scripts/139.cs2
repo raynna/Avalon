@@ -1,0 +1,5 @@
+void script_139(Widget widget0) {
+	widget0.setScriptCallOnAnyWidgetOpenAndClose(140, "");
+	script_1364();
+	return;
+}

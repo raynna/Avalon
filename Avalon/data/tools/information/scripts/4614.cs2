@@ -1,0 +1,17 @@
+void script_4614(Widget widget0) {
+	switch (widget0) {
+		case widget(20, 2):
+			widget0.setRGB(getColorRelatedMethod4020(VARPBIT[9254]));
+			break;
+		case widget(20, 8):
+			widget0.setRGB(getColorRelatedMethod4020(VARPBIT[9255]));
+			break;
+		case widget(20, 11):
+			widget0.setRGB(getColorRelatedMethod4020(VARPBIT[9256]));
+			break;
+		case widget(20, 5):
+			widget0.setRGB(getColorRelatedMethod4020(VARPBIT[9257]));
+			break;
+	}
+	return;
+}

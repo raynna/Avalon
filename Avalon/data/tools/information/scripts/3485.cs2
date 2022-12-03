@@ -1,0 +1,71 @@
+int script_3485(int arg0) {
+	int int1;
+	int1 = 0;
+	if (VARPBIT[8023] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8024] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8025] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8026] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8027] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8028] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8029] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8030] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8031] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8032] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8033] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8034] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8035] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8036] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8037] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8038] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8039] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8040] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8041] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8042] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8043] == arg0) {
+		int1 = int1 + 1;
+	}
+	if (VARPBIT[8044] == arg0) {
+		int1 = int1 + 1;
+	}
+	return int1;
+}

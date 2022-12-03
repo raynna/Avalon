@@ -1,0 +1,12 @@
+void script_3408(Widget widget0, string arg1) {
+	string str1;
+	string str2;
+	str1 = "<u=88ffff>" + arg1 + "</u>";
+	str2 = "<u=64c8fa>" + arg1 + "</u>";
+	widget0.setContextMenuOption(1, "Open link");
+	widget0.setScriptCallOnClickContextMenu(1897, "");
+	widget0.cs2method2309(1, 146);
+	widget0.setScriptCallOnMouseEntered(2381, widget0, 8978431, str1, "Iis");
+	widget0.setScriptCallOnMouseExit(2381, widget0, 6605050, str2, "Iis");
+	return;
+}

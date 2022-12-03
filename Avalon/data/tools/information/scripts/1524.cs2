@@ -1,0 +1,7 @@
+void script_1524() {
+	if (ACTIVE.setChild(widget(275, 9), 0)) {
+		widget(275, 9).clearChildren();
+		widget(275, 9).setContextMenuOption(1, "null");
+	}
+	return;
+}

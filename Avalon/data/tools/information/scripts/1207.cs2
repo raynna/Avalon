@@ -1,0 +1,14 @@
+void script_1207(int arg0, int arg1) {
+	if (arg0 <= 11) {
+		widget(275, 6).setScrollMax(404, 215);
+		script_72(widget(275, 7), widget(275, 6), 0);
+	} else {
+		widget(275, 6).setScrollMax(404, arg0 * 20);
+		if (arg1 == 1) {
+			script_72(widget(275, 7), widget(275, 6), 0);
+		} else {
+			script_72(widget(275, 7), widget(275, 6), arg0 * 20 - 180);
+		}
+	}
+	return;
+}

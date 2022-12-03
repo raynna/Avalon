@@ -1,0 +1,13 @@
+void script_425() {
+	if (VARC[1366] == 1) {
+		widget(1019, 16).setContextMenuOption(1, "Accept Victory");
+		widget(1019, 16).setText("Accept Victory");
+		widget(1019, 0).setText("Your opponent has logged out. You may end the Conquest now and be declared the winner.");
+	} else {
+		widget(1019, 16).setContextMenuOption(1, "Resign");
+		widget(1019, 16).setText("Resign");
+		widget(1019, 0).setText("If you resign, the Conquest will end immediately.");
+		sendCloseWidgetPacket();
+	}
+	return;
+}

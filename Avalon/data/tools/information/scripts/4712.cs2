@@ -1,0 +1,11 @@
+void script_4712(Widget widget0, Widget widget1, Widget widget2, Widget widget3, int arg4) {
+	if (ACTIVE.setChild(widget0, arg4)) {
+		ACTIVE.setVFlip(true);
+	}
+	if (widget3 != null) {
+		widget3.setIsHidden(false);
+	}
+	widget1.setIsHidden(false);
+	widget2.setIsHidden(false);
+	return;
+}

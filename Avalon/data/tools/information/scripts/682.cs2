@@ -1,0 +1,46 @@
+void script_682(Widget widget0, int arg1, int arg2, Widget widget3, Widget widget4, Widget widget5, Widget widget6) {
+	int int7;
+	int int8;
+	int7 = (widget0.getWidth() - 164) / 2;
+	int8 = int7 + (146 + int7) * arg2;
+	ACTIVE.createChild(widget0, 3, arg2 * 6);
+	ACTIVE.setSize(164, 146, 0, 0);
+	ACTIVE.setPosition(int7, int8, 0, 0);
+	if (VARPBIT[4190] == arg1) {
+		ACTIVE.setRGB(0x7F0000);
+	} else {
+		ACTIVE.setRGB(0x000000);
+	}
+	ACTIVE.setTrans(200);
+	ACTIVE.setFilled(true);
+	ACTIVE.setContextMenuOption(1, "Choose");
+	ACTIVE.setOptionBase("<col=ff9040>" + datamap('i', 's', (DataMap)1099, arg1) + "</col>");
+	ACTIVE.setScriptCallOnClickContextMenu(687, arg1, widget0, CTX_WIDGET_CHILD, widget3, widget4, widget5, widget6, "iIiIIII");
+	ACTIVE.createChild(widget0, 6, arg2 * 6 + 1);
+	ACTIVE.setSize(164, 146, 0, 0);
+	ACTIVE.setPosition(int7, int8, 0, 0);
+	script_683(arg1);
+	ACTIVE.createChild(widget0, 5, arg2 * 6 + 2);
+	ACTIVE.setSize(165, 32, 0, 0);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setSprite(1074);
+	ACTIVE.setPosition(int7, int8 - 17, 0, 0);
+	ACTIVE.createChild(widget0, 5, arg2 * 6 + 3);
+	ACTIVE.setSize(165, 32, 0, 0);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setVFlip(true);
+	ACTIVE.setSprite(1074);
+	ACTIVE.setPosition(int7, int8 + 130, 0, 0);
+	ACTIVE.createChild(widget0, 5, arg2 * 6 + 4);
+	ACTIVE.setSize(32, 144, 0, 0);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setSprite(1075);
+	ACTIVE.setPosition(int7 - 14, int8 + 1, 0, 0);
+	ACTIVE.createChild(widget0, 5, arg2 * 6 + 5);
+	ACTIVE.setSize(32, 144, 0, 0);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setHFlip(true);
+	ACTIVE.setSprite(1075);
+	ACTIVE.setPosition(int7 + 147, int8 + 1, 0, 0);
+	return;
+}

@@ -1,0 +1,50 @@
+boolean script_2581(AttrMap arg0) {
+	switch (arg0) {
+		case (AttrMap)830:
+			if (cs2method6102() || cs2method6131() != 0) {
+				return script_42(cs2method6103());
+			}
+			return null;
+		case (AttrMap)831:
+			return script_42(cs2method6105());
+		case (AttrMap)833:
+			return (boolean)cs2method6129();
+		case (AttrMap)834:
+			return script_42(cs2method6108());
+		case (AttrMap)836:
+			return script_42(cs2method6110());
+		case (AttrMap)837:
+			return (boolean)cs2method6111();
+		case (AttrMap)838:
+			return script_42(cs2method6112());
+		case (AttrMap)839:
+			return script_42(cs2method6114());
+		case (AttrMap)840:
+			return script_42(cs2method6115());
+		case (AttrMap)841:
+			return (boolean)cs2method6116();
+		case (AttrMap)842:
+			return (boolean)cs2method6123();
+		case (AttrMap)843:
+			return script_42(cs2method6130());
+		case (AttrMap)844:
+			if (cs2method6133()) {
+				return script_42(VARC[987]);
+			}
+			return null;
+		case (AttrMap)845:
+			return (boolean)VARC[178];
+		case (AttrMap)908:
+			return (boolean)cs2method6135();
+		case (AttrMap)963:
+			return script_42(cs2method6136());
+		case (AttrMap)1009:
+			return (boolean)cs2method6139();
+		case (AttrMap)2430:
+			if (cs2method7215()) {
+				return (boolean)cs2method6149();
+			}
+			return null;
+	}
+	return null;
+}

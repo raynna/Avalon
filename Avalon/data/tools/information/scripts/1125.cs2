@@ -1,0 +1,7 @@
+void script_1125(Widget widget0) {
+	VARC[993] = 1;
+	if (VARPBIT[2668] == 0) {
+		widget0.setSprite(1702);
+	}
+	return;
+}

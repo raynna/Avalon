@@ -1,0 +1,113 @@
+//use: Object type rotation - x y plane boolean clip
+//house portal
+15478 10 1 - 3083 3487 0 true
+//see text file below
+5085 10 0 - 3090 3520 0 true
+//rune essence mine portals
+7272 10 0 - 2890 4812 0 true
+7272 10 0 - 2914 4832 0 true
+7272 10 0 - 2893 4842 0 true
+7272 10 0 - 2930 4854 0 true
+7272 10 0 - 2923 4818 0 true
+//Tin ore rocks spawned by andreas
+11934 10 0 - 3080 3417 0 true
+//Tin ore rocks spawned by andreas
+11934 10 0 - 3081 3417 0 true
+//Altar spawned by andreas
+18254 10 0 - 3082 3494 0 true
+//Altar spawned by andreas
+18254 10 2 - 3090 3495 0 true
+//null spawned by andreas
+0 10 0 - 3082 3495 0 true
+//null spawned by andreas
+0 10 0 - 3082 3496 0 true
+//Anvil spawned by andreas
+2783 10 0 - 3109 3497 0 true
+//Anvil spawned by andreas
+2783 10 0 - 3107 3497 0 true
+//Loom spawned by andreas
+8717 10 0 - 3079 3488 0 true
+//Spinning wheel spawned by andreas
+25824 10 0 - 3081 3488 0 true
+//Flax spawned by andreas
+2646 10 0 - 3078 3480 0 true
+//Flax spawned by andreas
+2646 10 0 - 3079 3481 0 true
+//Flax spawned by andreas
+2646 10 0 - 3078 3482 0 true
+//Flax spawned by andreas
+2646 10 0 - 3080 3485 0 true
+//Flax spawned by andreas
+2646 10 0 - 3080 3480 0 true
+//Flax spawned by andreas
+2646 10 0 - 3080 3478 0 true
+//Flax spawned by andreas
+2646 10 0 - 3082 3477 0 true
+//Pottery Wheel spawned by andreas
+2642 10 0 - 3105 3497 0 true
+//Closed chest spawned by andreas
+172 10 2 - 3089 3504 0 true
+//Obelisk spawned by andreas
+28716 10 0 - 3098 3485 0 true
+//Inert obelisk spawned by andreas
+28717 10 0 - 3100 3484 0 true
+//Inert obelisk spawned by andreas
+28717 10 0 - 3095 3486 0 true
+//Inert obelisk spawned by andreas
+28717 10 0 - 3100 3486 0 true
+//Well spawned by andreas
+54639 10 0 - 3083 3500 0 true
+//null spawned by andreas
+0 10 0 - 3106 3501 0 true
+//Pottery Oven spawned by andreas
+11601 10 0 - 3106 3501 0 true
+//Baker's stall spawned by andreas
+34384 10 0 - 3091 3505 0 true
+//null spawned by andreas
+0 10 0 - 3094 3506 0 true
+//null spawned by andreas
+0 10 0 - 3093 3506 0 true
+//Silk stall spawned by andreas
+34383 10 0 - 3095 3505 0 true
+//null spawned by andreas
+0 10 0 - 3098 3506 0 true
+//Gem stall spawned by andreas
+34385 10 0 - 3098 3505 0 true
+//Barrel spawned by andreas
+42382 10 0 - 3090 3505 0 true
+//Barrel spawned by andreas
+42382 10 0 - 3089 3505 0 true
+//Portal spawned by andreas
+2468 10 0 - 3089 3493 0 true
+//Portal spawned by andreas
+2465 10 0 - 83 80 0 true
+//null spawned by andreas
+2562 10 2 - 3088 3483 0 true
+//Armour repair stand spawned by andreas
+13715 10 3 - 83 81 0 true
+//null spawned by andreas
+0 10 0 - 83 83 0 true
+//Plant spawned by andreas
+1392 10 0 - 3099 3487 0 true
+//null spawned by andreas
+24397 0 2 - 3095 3492 0 true
+//null spawned by andreas
+24397 0 2 - 3095 3491 0 true
+//null spawned by andreas
+24397 0 2 - 3095 3490 0 true
+//null spawned by andreas
+24397 0 2 - 3095 3489 0 true
+//null spawned by andreas
+24397 0 2 - 3095 3488 0 true
+//null spawned by andreas
+24397 0 2 - 3095 3493 0 true
+//null spawned by andreas
+24397 0 2 - 3095 3494 0 true
+//null spawned by andreas
+24397 0 3 - 3096 3495 0 true
+//null spawned by andreas
+24397 0 3 - 3097 3495 0 true
+//null spawned by andreas
+24397 0 3 - 3098 3495 0 true
+//null spawned by andreas
+39639 22 2 - 3092 3488 0 true

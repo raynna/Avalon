@@ -1,0 +1,24 @@
+void script_943(int arg0, int arg1, int arg2, Color color3) {
+	DataMap datamap4;
+	datamap4 = getAttributeMapValue(datamap('i', 'J', (DataMap)169, arg0), 782);
+	if (!isMember()) {
+		msg("More advanced grouping options are available on a members' world.");
+	} else if (VARP[281] < 1000) {
+		msg("More advanced grouping options will be available when you've finished the Tutorial.");
+	} else {
+		if (VARC[693] == arg1) {
+			VARC[694] = (1 + VARC[694]) % 2;
+		} else {
+			VARC[693] = arg1;
+			VARC[694] = 0;
+		}
+		script_2162(arg0, VARC[693], VARC[694], VARC[692], VARC[1103]);
+		script_1349(widget(190, 16), widget(190, 14), widget(190, 15), null, 1);
+		if (ACTIVE.setChild(widget(190, 16), 2)) {
+			ACTIVE.setText(datamap('i', 's', datamap4, arg1));
+			ACTIVE.setRGB(color3);
+			ACTIVE.setScriptCallOnMouseExit(1354, widget(190, 16), 2, color3, "Iii");
+		}
+	}
+	return;
+}

@@ -1,0 +1,13 @@
+void script_114() {
+	widget(548, 195).setScriptCallOnGlobalConfigChange(1302, 168, 747, "Y");
+	widget(746, 79).setScriptCallOnGlobalConfigChange(1302, 168, 747, "Y");
+	if (getDisplayMode() >= 2) {
+		widget(746, 22).setScriptCallOnConfigChange(117, 1021, "Y");
+		script_1309(1);
+	} else {
+		widget(548, 128).setScriptCallOnConfigChange(117, 1021, "Y");
+		script_2756();
+		script_1312(1);
+	}
+	return;
+}

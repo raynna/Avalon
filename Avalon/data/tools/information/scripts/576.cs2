@@ -1,0 +1,13 @@
+void script_576() {
+	widget(389, 15).setItem(null, -1);
+	widget(389, 4).clearChildren();
+	if (length(STRING[22]) > 0) {
+		widget(389, 5).setIsHidden(true);
+		script_577(STRING[22]);
+	} else {
+		widget(389, 5).setIsHidden(false);
+		widget(389, 4).setScrollMax(0, 15);
+		script_578();
+	}
+	return;
+}

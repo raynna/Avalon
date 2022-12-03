@@ -1,0 +1,12 @@
+void script_3081(Widget widget0) {
+	if (ACTIVE.setChild(widget0, 3)) {
+		ACTIVE.setHidden(true);
+	}
+	if (ACTIVE.setChild(widget0, 4)) {
+		ACTIVE.setHidden(true);
+	}
+	if (ACTIVE.setChild(widget0, 5)) {
+		ACTIVE.setHidden(true);
+	}
+	return;
+}

@@ -1,0 +1,15 @@
+int script_2520() {
+	int int0;
+	int0 = 0;
+	int0 = int0 + VARC[847];
+	int0 = int0 + VARC[852];
+	int0 = int0 + VARC[848];
+	int0 = int0 + VARC[853];
+	int0 = int0 + VARC[849];
+	int0 = int0 + VARC[854];
+	int0 = int0 + VARC[850];
+	int0 = int0 + VARC[855];
+	int0 = int0 + VARC[851];
+	int0 = int0 + VARC[856];
+	return int0;
+}

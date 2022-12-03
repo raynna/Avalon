@@ -1,0 +1,4 @@
+void script_845() {
+	script_846(VARPBIT[4398], 1);
+	return;
+}

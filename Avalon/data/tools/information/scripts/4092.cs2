@@ -1,0 +1,16 @@
+void script_4092(Widget widget0, Widget widget1, Widget widget2) {
+	if (script_2728() == 1) {
+		if (widget1 != null && widget1.nextChild() <= 0) {
+			script_4093(widget0, widget1);
+		}
+		script_4089();
+	} else {
+		if (widget1 != null && widget1.nextChild() > 0) {
+			widget1.clearChildren();
+			widget0.setScriptCallOnGameloop(-1, "");
+			widget1.setIsHidden(true);
+		}
+		widget2.setIsHidden(true);
+	}
+	return;
+}

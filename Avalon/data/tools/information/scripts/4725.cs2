@@ -1,0 +1,86 @@
+void script_4725() {
+	int int0;
+	int int1;
+	Widget widget2;
+	int int3;
+	Widget widget4;
+	Widget widget5;
+	Widget widget6;
+	int int7;
+	int int8;
+	int int9;
+	Sprite sprite10;
+	Sprite sprite11;
+	string str0;
+	int0 = 20316177;
+	int1 = 20316179;
+	widget2 = widget(310, 11);
+	int3 = 20316172;
+	widget4 = widget(310, 14);
+	widget5 = widget(310, 13);
+	widget6 = widget(310, 18);
+	str0 = "";
+	widget2.clearChildren();
+	widget5.clearChildren();
+	int7 = 15;
+	int8 = 1;
+	int9 = 0;
+	sprite10 = null;
+	sprite11 = null;
+	while (int8 <= 15) {
+		int9 = widget2.nextChild();
+		ACTIVE.createChild(widget2, 4, int9);
+		ACTIVE.setSize(5, int7, 1, 0);
+		ACTIVE.setPosition(5, int9 * int7, 0, 0);
+		ACTIVE.setText(script_5329(int8));
+		ACTIVE.setFont(3793);
+		ACTIVE.setRGB(0xBEB28C);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setTextAlignment(0, 1, 0);
+		sprite10 = 7715;
+		sprite11 = 7716;
+		ACTIVE.createChild(widget5, 5, int9);
+		ACTIVE.setSprite(sprite10);
+		ACTIVE.setContextMenuOption(1, "Target");
+		ACTIVE.setSize(12, 13, 0, 0);
+		ACTIVE.setPosition(18, 1 + int9 * int7, 2, 0);
+		ACTIVE.setScriptCallOnMouseEntered(5336, CTX_WIDGET, CTX_WIDGET_CHILD, sprite11, "Iid");
+		ACTIVE.setScriptCallOnMouseExit(5336, CTX_WIDGET, CTX_WIDGET_CHILD, sprite10, "Iid");
+		ACTIVE.setTargetVerb("Add Actor");
+		ACTIVE.cs2method1308(176, -1);
+		ACTIVE.createChild(widget6, 3, widget6.nextChild());
+		ACTIVE.setSize(12, 13, 0, 0);
+		ACTIVE.setPosition(18, 1 + int9 * int7, 2, 0);
+		str0 = "Add someone to the actor list. Click this, then click on the person you would like to add.";
+		ACTIVE.setScriptCallOnMouseOver(4538, widget(310, 26), CTX_WIDGET, CTX_WIDGET_CHILD, str0, 90, 3793, 3793, 16777215, 13, 4, 3, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		ACTIVE.setScriptCallOnMouseExit(40, widget(310, 26), "I");
+		sprite10 = 7718;
+		sprite11 = 7719;
+		ACTIVE.createChild(widget4, 5, int9);
+		ACTIVE.setSprite(sprite10);
+		ACTIVE.setContextMenuOption(1, "Remove");
+		ACTIVE.setSize(12, 13, 0, 0);
+		ACTIVE.setPosition(3, 1 + int9 * int7, 2, 0);
+		ACTIVE.setScriptCallOnMouseEntered(5336, CTX_WIDGET, CTX_WIDGET_CHILD, sprite11, "Iid");
+		ACTIVE.setScriptCallOnMouseExit(5336, CTX_WIDGET, CTX_WIDGET_CHILD, sprite10, "Iid");
+		ACTIVE.createChild(widget6, 3, widget6.nextChild());
+		ACTIVE.setSize(12, 13, 0, 0);
+		ACTIVE.setPosition(3, 1 + int9 * int7, 2, 0);
+		str0 = "Add someone to the actor list. Click this, then click on the person you would like to add.";
+		str0 = "Remove this person from the actor list.";
+		ACTIVE.setScriptCallOnMouseOver(4538, widget(310, 26), CTX_WIDGET, CTX_WIDGET_CHILD, str0, 90, 3793, 3793, 16777215, 13, 4, 3, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		ACTIVE.setScriptCallOnMouseExit(40, widget(310, 26), "I");
+		int8 = int8 + 1;
+	}
+	if (VARC[1606] == 0) {
+		sprite10 = 6009;
+		sprite11 = 6010;
+	} else {
+		sprite10 = 6004;
+		sprite11 = 6005;
+	}
+	widget(310, 20).setSprite(sprite10);
+	widget(310, 20).setScriptCallOnMouseEntered(44, CTX_WIDGET, sprite11, "Id");
+	widget(310, 20).setScriptCallOnMouseExit(44, CTX_WIDGET, sprite10, "Id");
+	return;
+}

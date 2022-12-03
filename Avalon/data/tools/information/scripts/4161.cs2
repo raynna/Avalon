@@ -1,0 +1,11 @@
+void script_4161(Widget widget0, int arg1) {
+	int int2;
+	int2 = 0;
+	while (int2 < widget0.nextChild()) {
+		if (ACTIVE.setChild(widget0, int2)) {
+			ACTIVE.setTrans(arg1);
+		}
+		int2 = int2 + 1;
+	}
+	return;
+}

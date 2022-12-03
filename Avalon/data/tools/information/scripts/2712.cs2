@@ -1,0 +1,15 @@
+void script_2712(Widget widget0, Widget widget1, Widget widget2) {
+	int int3;
+	if (getClientCycle() < VARC[177]) {
+		return;
+	}
+	VARC[176] = VARC[176] + 2;
+	int3 = VARC[176] % 10;
+	if (int3 != 2) {
+		VARC[176] = VARC[176] - int3 + 2;
+	}
+	widget0.setIsHidden(false);
+	widget0.setScriptCallOnGameloop(1249, widget0, widget1, widget2, "III");
+	widget1.setScriptCallOnGameloop(-1, "");
+	return;
+}

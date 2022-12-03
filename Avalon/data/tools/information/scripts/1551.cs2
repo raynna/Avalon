@@ -1,0 +1,8 @@
+int script_1551(int arg0, string string1, Sprite sprite2, int arg3) {
+	string1 = script_1602(string1);
+	arg0 = min(length(string1), arg0);
+	if (arg0 <= 0) {
+		return arg3;
+	}
+	return getTextWidth(substr(string1, 0, arg0), sprite2) + arg3;
+}

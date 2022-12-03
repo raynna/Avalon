@@ -1,0 +1,32 @@
+void script_263() {
+	string str0;
+	str0 = "None";
+	switch (VARC[1109]) {
+		case 1:
+			str0 = "Worm";
+			break;
+		case 2:
+			str0 = "Maggot";
+			break;
+		case 4:
+			str0 = "Locust";
+			break;
+		case 3:
+			str0 = "Cricket";
+			break;
+		case 5:
+			str0 = "Cray";
+			break;
+		case 6:
+			str0 = "Shrimp";
+			break;
+		case 7:
+			str0 = "Green moth";
+			break;
+		case 8:
+			str0 = "Grey moth";
+			break;
+	}
+	widget(923, 51).setText(str0);
+	return;
+}

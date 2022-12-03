@@ -1,0 +1,9 @@
+void script_2411(Item item0) {
+	if (VARPBIT[995] == 0) {
+		script_2410(getItemOption(item0, 1), getItemDefOpcode129Or130Method4209(item0, 1), getItemOption(item0, 2), getItemDefOpcode129Or130Method4209(item0, 2), "", -1, getItemOption(item0, 4), getItemDefOpcode129Or130Method4209(item0, 4), getItemOption(item0, 5), getItemDefOpcode129Or130Method4209(item0, 5), getItemName(item0));
+	} else {
+		script_2410("Lletya", getItemDefOpcode129Or130Method4209(item0, 1), getItemOption(item0, 2), getItemDefOpcode129Or130Method4209(item0, 2), "Temple", getItemDefOpcode129Or130Method4209(item0, 1), getItemOption(item0, 4), getItemDefOpcode129Or130Method4209(item0, 4), getItemOption(item0, 5), getItemDefOpcode129Or130Method4209(item0, 5), getItemName(item0));
+	}
+	ACTIVE.setScriptCallOnConfigChange(2412, CTX_WIDGET, CTX_WIDGET_CHILD, item0, 1560, "IioY");
+	return;
+}

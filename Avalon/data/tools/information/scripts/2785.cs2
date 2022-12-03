@@ -1,0 +1,15 @@
+Map script_2785(Map arg0) {
+	switch (arg0) {
+		case 32:
+		case 33:
+		case 34:
+			if (VARP[281] < 93) {
+				return 32;
+			}
+			if (VARP[281] < 120) {
+				return 33;
+			}
+			return 34;
+	}
+	return arg0;
+}

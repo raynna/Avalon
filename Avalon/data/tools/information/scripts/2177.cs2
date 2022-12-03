@@ -1,0 +1,6 @@
+void script_2177(int arg0) {
+	if (ACTIVE.setChild(widget(190, 18), arg0)) {
+		ACTIVE.setScriptCallOnGameloop(2178, arg0, ACTIVE.getText(), "is");
+	}
+	return;
+}

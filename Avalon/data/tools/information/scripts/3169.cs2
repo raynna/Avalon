@@ -1,0 +1,8 @@
+void script_3169(Widget widget0, int arg1) {
+	widget(912, 48).setIsHidden(true);
+	widget(912, 30).setIsHidden(true);
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setScriptCallOnMouseOver(-1, "");
+	}
+	return;
+}

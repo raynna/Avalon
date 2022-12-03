@@ -1,0 +1,5 @@
+void script_3630(Widget widget0, Widget widget1, Color color2) {
+	widget0.setIsHidden(true);
+	widget1.setRGB(color2);
+	return;
+}

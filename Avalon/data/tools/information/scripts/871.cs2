@@ -1,0 +1,24 @@
+void script_871() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int0 = 20 - 0;
+	int1 = 80 - 0;
+	int2 = int1 / int0;
+	int3 = VARPBIT[4523] * int2;
+	int4 = 1024 / int1;
+	VARC[111] = int3;
+	int5 = VARC[111] * int4;
+	int5 = int5 + 512;
+	int5 = 2048 - int5;
+	widget(717, 4).set3DRotation(0, 0, 0, 0, int5, 388);
+	script_896();
+	int6 = datamap('i', 'i', (DataMap)1422, VARPBIT[4519]) * (1024 / int0);
+	int6 = int6 + 512;
+	widget(717, 3).set3DRotation(0, 0, 0, 0, int6, 365);
+	return;
+}

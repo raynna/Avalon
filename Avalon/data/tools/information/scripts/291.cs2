@@ -1,0 +1,77 @@
+void script_291(int arg0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5) {
+	int int6;
+	int int7;
+	Map map8;
+	int int9;
+	int int10;
+	widget(755, 20).setText(getDungeonMapName(cs2method5235()));
+	widget2.clearChildren();
+	widget3.clearChildren();
+	if (arg0 == 0) {
+		widget1.setIsHidden(true);
+		widget(755, 21).setSprite(773);
+		widget(755, 21).setScriptCallOnMousePressed(290, true, widget1, widget2, widget3, widget4, widget5, "1IIIII");
+		widget(755, 20).setScriptCallOnMousePressed(290, true, widget1, widget2, widget3, widget4, widget5, "1IIIII");
+		return;
+	}
+	widget1.setIsHidden(false);
+	widget(755, 21).setSprite(788);
+	widget(755, 21).setScriptCallOnMousePressed(290, false, widget1, widget2, widget3, widget4, widget5, "1IIIII");
+	widget(755, 20).setScriptCallOnMousePressed(290, false, widget1, widget2, widget3, widget4, widget5, "1IIIII");
+	ARRAY0 = new int[41 + 1];
+	ARRAY0[0] = 0;
+	int6 = 1;
+	int7 = 1;
+	map8 = null;
+	while (int6 <= 41) {
+		map8 = datamap('i', '`', (DataMap)708, int6);
+		if (map8 != null) {
+			ARRAY0[int7] = int6;
+			int7 = int7 + 1;
+		}
+		int6 = int6 + 1;
+	}
+	script_293(0, 1, int7 - 1);
+	ACTIVE.createChild(widget2, 4, widget2.nextChild());
+	ACTIVE.setPosition(0, 0, 1, 0);
+	ACTIVE.setSize(0, 20, 1, 0);
+	ACTIVE.setFont(496);
+	ACTIVE.setTextAlignment(0, 1, 0);
+	ACTIVE.setRGB(0xFFFFFF);
+	ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 11513775, "Iii");
+	ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+	map8 = datamap('i', '`', (DataMap)708, ARRAY0[0]);
+	ACTIVE.setText(getDungeonMapName(map8));
+	ACTIVE.setScriptCallOnMousePressed(294, map8, widget1, widget2, widget3, widget4, widget5, "`IIIII");
+	script_309(map8, widget2, 0);
+	int9 = ACTIVE.getHeight();
+	int10 = 0;
+	int6 = 1;
+	while (int6 < int7) {
+		ACTIVE.createChild(widget2, 4, widget2.nextChild());
+		ACTIVE.setPosition(0, int9, 1, 0);
+		ACTIVE.setSize(0, 20, 1, 0);
+		ACTIVE.setFont(495);
+		ACTIVE.setTextAlignment(0, 1, 0);
+		ACTIVE.setRGB(0xFFFFFF);
+		ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 11513775, "Iii");
+		ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+		map8 = datamap('i', '`', (DataMap)708, ARRAY0[int6]);
+		ACTIVE.setText(getDungeonMapName(map8));
+		ACTIVE.setScriptCallOnMousePressed(294, map8, widget1, widget2, widget3, widget4, widget5, "`IIIII");
+		if (map8 == cs2method5235()) {
+			int10 = int9;
+		}
+		script_309(map8, widget2, int9);
+		int9 = int9 + ACTIVE.getHeight();
+		int6 = int6 + 1;
+	}
+	widget2.setScrollMax(0, int9);
+	int9 = max(int9, 20);
+	int9 = int9 + 3;
+	int9 = min(int9, 150);
+	widget1.setSize(widget1.getWidth(), int9, 0, 0);
+	script_31(widget3, widget2, 792, 789, 790, 791, 773, 788);
+	script_157(widget3, widget2, int10, 1);
+	return;
+}

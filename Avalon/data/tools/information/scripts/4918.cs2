@@ -1,0 +1,17 @@
+void script_4918() {
+	if (citadelConfigsInitialized()) {
+		script_4919();
+		script_4900();
+		script_4905();
+		script_4907();
+		script_5012();
+		script_4895();
+		script_4864();
+		script_4994();
+		script_4889();
+		script_4853();
+	} else {
+		script_675();
+	}
+	return;
+}

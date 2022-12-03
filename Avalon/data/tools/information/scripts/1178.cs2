@@ -1,0 +1,8 @@
+void script_1178() {
+	VARC[548] = max(0, VARC[548] - 1);
+	widget(745, 5).setText(str(VARC[548] * 2 / 100));
+	if (VARC[548] <= 0) {
+		widget(745, 5).setScriptCallOnGameloop(-1, "");
+	}
+	return;
+}

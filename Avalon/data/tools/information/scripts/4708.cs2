@@ -1,0 +1,4 @@
+void script_4708(DataMap datamap0, DataMap datamap1, int arg2, int arg3, int arg4, Widget widget5, Widget widget6, Widget widget7, Widget widget8) {
+	script_4709(datamap0, datamap1, arg2, arg3, arg4, widget5, widget6, widget7, widget8, 897, 788, 788, 1040, 0xFFFFFF, 0xFF0000, 16776960, 494, 792, 789, 790, 791, 773, 788);
+	return;
+}

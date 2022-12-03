@@ -1,0 +1,14 @@
+void script_2377(int arg0, Widget widget1, Widget widget2) {
+	if (arg0 == 0) {
+		widget1.setRGB(0xFFFFFF);
+		widget1.setTextAntiMacro(true);
+		widget2.setRGB(0x000000);
+		widget2.setTextAntiMacro(false);
+	} else {
+		widget2.setRGB(0xFFFFFF);
+		widget2.setTextAntiMacro(true);
+		widget1.setRGB(0x000000);
+		widget1.setTextAntiMacro(false);
+	}
+	return;
+}

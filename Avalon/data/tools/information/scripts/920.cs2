@@ -1,0 +1,53 @@
+int script_920(int arg0) {
+	int int1;
+	string str0;
+	VARC[742] = 0;
+	str0 = "";
+	int1 = 0;
+	if (VARC[741] != -1) {
+		if (compare(getItemOption((Item)VARC[741], 2), "Wear") == 0 || compare(getItemOption((Item)VARC[741], 2), "Wield") == 0) {
+			int1 = 1;
+		}
+		widget(449, 13).setItemOnWidgetMethod2205((Item)VARC[741], -1);
+		widget(449, 14).setItemOnWidgetMethod2205((Item)VARC[741], -1);
+		if (!isMember() && isMembersItem((Item)VARC[741])) {
+			script_922("This is a members item. Additional information is not available on this world.", 1, arg0);
+		} else {
+			str0 = script_914();
+			if (compare(str0, "") != 0) {
+				script_922(str0, 1, arg0);
+				VARC[742] = VARC[742] + 1;
+			}
+			script_921(STRING[25], 1, arg0);
+			if (compare(itemAttribute((Item)VARC[741], 690), "") != 0) {
+				script_921(" ", 1, arg0);
+				script_921(itemAttribute((Item)VARC[741], 690), 1, arg0);
+			}
+			if (itemAttribute((Item)VARC[741], 740) % 2 == 1) {
+				if (compare(STRING[26], "") != 0 && int1 == 1) {
+					script_921(STRING[26], 0, arg0);
+				}
+				if (compare(STRING[34], "") != 0) {
+					script_921(STRING[34], 0, arg0);
+				}
+			} else {
+				if (compare(STRING[34], "") != 0) {
+					script_921(STRING[34], 0, arg0);
+				}
+				if (compare(STRING[26], "") != 0 && int1 == 1) {
+					script_921(STRING[26], 0, arg0);
+				}
+			}
+			str0 = script_912((Item)VARC[741]);
+			if (compare(str0, "") != 0) {
+				script_921(str0, 0, arg0);
+			}
+			if (compare(STRING[35], "") != 0 && int1 == 1) {
+				script_923(STRING[35], STRING[36], STRING[52], arg0);
+			}
+		}
+	} else {
+		script_921("Select an item to see its information.", 1, arg0);
+	}
+	return 6 * 2 + VARC[742] * 11;
+}

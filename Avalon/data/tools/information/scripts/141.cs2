@@ -1,0 +1,9 @@
+void script_141() {
+	if (VARP[1042] == 1) {
+		widget(335, 39).setIsHidden(false);
+	}
+	if (VARP[1043] == 1) {
+		widget(335, 40).setIsHidden(false);
+	}
+	return;
+}

@@ -1,0 +1,13 @@
+void script_4547(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget arg4, Widget arg5) {
+	widget0.clearChildren();
+	widget1.clearChildren();
+	widget2.clearChildren();
+	widget3.clearChildren();
+	widget(912, 39).setIsHidden(false);
+	widget(912, 17).setText("Not in chat");
+	widget(912, 38).setSize(widget(912, 38).getWidth(), widget(912, 37).getHeight(), 0, 0);
+	widget(912, 45).setScrollMax(0, 0);
+	widget(912, 45).setScrollPos(0, 0);
+	script_72(widget(912, 46), widget(912, 45), 0);
+	return;
+}

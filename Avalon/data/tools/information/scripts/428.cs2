@@ -1,0 +1,4 @@
+void script_428() {
+	widget(1024, 5).setText("Command Points: " + str(VARPBIT[7514]));
+	return;
+}

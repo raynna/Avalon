@@ -1,0 +1,128 @@
+void script_1787(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, Widget widget7, Widget widget8, Widget widget9, Widget widget10, Widget widget11, Widget widget12, Widget widget13, Widget widget14, Widget widget15, Widget widget16) {
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	int int23;
+	int int24;
+	string str0;
+	str0 = "";
+	int17 = 0;
+	int18 = 0;
+	int19 = 0;
+	if (VARC[271] == 1) {
+		widget3.setText(clanChatDisplayName() + ":");
+	} else {
+		widget3.setText("This clan:");
+	}
+	widget5.setText(str(VARC[261]));
+	widget11.setText(str(VARC[262]));
+	if (VARPBIT[5280] > 0) {
+		if (VARC[263] < 65535) {
+			widget7.setText(script_46(VARC[263], ","));
+		} else {
+			widget7.setText("<col=ff0000>" + "You rock!" + "</col>");
+		}
+		if (VARC[264] < 65535) {
+			widget13.setText(script_46(VARC[264], ","));
+		} else {
+			widget13.setText("<col=ff0000>" + "They rock!" + "</col>");
+		}
+		widget6.setIsHidden(false);
+		widget12.setIsHidden(false);
+		widget7.setIsHidden(false);
+		widget13.setIsHidden(false);
+		int17 = 1;
+		if (VARPBIT[5280] < 15) {
+			str0 = "/ " + script_46(datamap('i', 'i', (DataMap)1605, VARPBIT[5280]), ",");
+			widget8.setText(str0);
+			widget14.setText(str0);
+			widget8.setIsHidden(false);
+			widget14.setIsHidden(false);
+			int18 = 1;
+		} else {
+			widget8.setIsHidden(true);
+			widget14.setIsHidden(true);
+		}
+	} else {
+		widget6.setIsHidden(true);
+		widget12.setIsHidden(true);
+		widget7.setIsHidden(true);
+		widget13.setIsHidden(true);
+		widget8.setIsHidden(true);
+		widget14.setIsHidden(true);
+	}
+	if (VARC[260] == 1) {
+		widget16.setScriptCallOnGameloop(-1, "");
+		if (VARPBIT[5281] > 0) {
+			widget15.setText("Time remaining:");
+			if (VARC[270] > 60) {
+				script_1791(widget16);
+			} else if (VARC[270] > 1) {
+				widget16.setText(str(VARC[270]) + " minutes");
+			} else if (VARC[270] == 1) {
+				widget16.setText("<col=ff0000>" + "1 minute" + "</col>");
+			} else {
+				widget16.setText("<col=ff0000>" + "Not much!" + "</col>");
+			}
+			widget15.setIsHidden(false);
+			widget16.setIsHidden(false);
+			int19 = 1;
+		} else {
+			widget15.setIsHidden(true);
+			widget16.setIsHidden(true);
+		}
+	} else {
+		widget15.setText("Countdown to battle:");
+		if (VARC[265] != VARC[270]) {
+			VARC[265] = VARC[270];
+			script_1790(widget16);
+			widget16.setScriptCallOnGameloop(1789, widget16, getClientCycle(), VARC[270], "Iii");
+		}
+		widget15.setIsHidden(false);
+		widget16.setIsHidden(false);
+		int19 = 1;
+	}
+	int20 = getMaxLineWidth(widget3.getText(), 512, 494);
+	int21 = getMaxLineWidth(widget9.getText(), 512, 494);
+	int20 = max(getMaxLineWidth(widget4.getText(), 512, 494) + 10 + getMaxLineWidth(widget5.getText(), 512, 494), int20);
+	int21 = max(getMaxLineWidth(widget10.getText(), 512, 494) + 10 + getMaxLineWidth(widget11.getText(), 512, 494), int21);
+	int22 = widget3.getHeight() + widget4.getHeight();
+	if (int17 == 1) {
+		int20 = max(getMaxLineWidth(widget6.getText(), 512, 494) + 10 + getMaxLineWidth(widget7.getText(), 512, 494), int20);
+		int21 = max(getMaxLineWidth(widget12.getText(), 512, 494) + 10 + getMaxLineWidth(widget13.getText(), 512, 494), int21);
+		int22 = int22 + widget6.getHeight();
+		if (int18 == 1) {
+			int20 = max(getMaxLineWidth(widget8.getText(), 512, 494), int20);
+			int21 = max(getMaxLineWidth(widget14.getText(), 512, 494), int21);
+			int22 = int22 + widget8.getHeight();
+		}
+	}
+	int23 = int20 + 10 + int21;
+	if (int19 == 0) {
+		widget0.setSize(int23 + 8, int22 + 8, 0, 0);
+		widget1.setSize(widget0.getWidth(), widget0.getHeight(), 0, 0);
+		script_1788(int20, widget3, widget4, widget5, widget6, widget7, widget8, int21, widget9, widget10, widget11, widget12, widget13, widget14, int23);
+		widget2.setPosition(4 + int20 + 5, 4, 0, 0);
+		widget2.setSize(0, int22, 0, 0);
+		script_1086(widget0, 0, 0, 0);
+		return;
+	}
+	int24 = int22;
+	int22 = int22 + 10 + widget15.getHeight() + widget16.getHeight();
+	int23 = max(getMaxLineWidth(widget15.getText(), 512, 494), int23);
+	int23 = max(getMaxLineWidth(widget16.getText(), 512, 494), int23);
+	widget0.setSize(int23 + 8, int22 + 8, 0, 0);
+	widget1.setSize(widget0.getWidth(), widget0.getHeight(), 0, 0);
+	script_1788(int20, widget3, widget4, widget5, widget6, widget7, widget8, int21, widget9, widget10, widget11, widget12, widget13, widget14, int23);
+	widget2.setPosition(4 + int20 + (int23 - (int20 + int21)) / 2, 4, 0, 0);
+	widget2.setSize(0, int24, 0, 0);
+	widget15.setSize(int23, widget15.getHeight(), 0, 0);
+	widget16.setSize(int23, widget16.getHeight(), 0, 0);
+	widget15.setPosition(4, 4 + int24 + 10, 0, 0);
+	widget16.setPosition(4, 4 + int24 + 10 + widget15.getHeight(), 0, 0);
+	script_1086(widget0, 4 + int24 + 5, 0, 0);
+	return;
+}

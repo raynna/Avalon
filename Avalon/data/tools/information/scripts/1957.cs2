@@ -1,0 +1,11 @@
+void script_1957(Widget widget0, Item item1, int arg2) {
+	int int3;
+	int3 = getItemAmtInContainer(93, item1);
+	widget0.setText(str(int3) + "/" + str(arg2));
+	if (int3 >= arg2) {
+		widget0.setRGB(0x00FF00);
+	} else {
+		widget0.setRGB(0xFF0000);
+	}
+	return;
+}

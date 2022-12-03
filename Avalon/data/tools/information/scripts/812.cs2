@@ -1,0 +1,32 @@
+void script_812(Item item0) {
+	ACTIVE.setHidden(true);
+	if (item0 == null) {
+		return;
+	}
+	if (itemAttribute(item0, 740) > 1) {
+		if (script_925(item0) == 1 && script_926(item0) == 1) {
+			return;
+		}
+		ACTIVE.setHidden(false);
+		return;
+	}
+	if (itemAttribute(item0, 740) == 1) {
+		if (script_925(item0) == 1) {
+			return;
+		}
+		ACTIVE.setHidden(false);
+		return;
+	}
+	if (script_928(item0) == 1) {
+		if (script_926(item0) == 1) {
+			return;
+		}
+		ACTIVE.setHidden(false);
+		return;
+	}
+	if (script_925(item0) == 1) {
+		return;
+	}
+	ACTIVE.setHidden(false);
+	return;
+}

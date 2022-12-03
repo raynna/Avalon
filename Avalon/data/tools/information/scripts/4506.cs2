@@ -1,0 +1,32 @@
+void script_4506(Widget widget0, Widget widget1, Widget widget2) {
+	Widget widget3;
+	Widget widget4;
+	Widget widget5;
+	int int6;
+	widget3 = widget0.getLayer();
+	if (widget3 == null) {
+		return;
+	}
+	widget4 = widget3.getLayer();
+	if (widget4 == null) {
+		return;
+	}
+	widget5 = widget1.getLayer();
+	if (widget5 == null) {
+		return;
+	}
+	widget3.setIsHidden(false);
+	widget3.setNoClickThrough(1);
+	if (widget2 != null) {
+		widget2.setIsHidden(false);
+	}
+	int6 = widget0.nextChild() - 1;
+	while (int6 >= 0) {
+		if (ACTIVE.setChild(widget0, int6) && length(ACTIVE.getText()) > 0) {
+			ACTIVE.setContextMenuOption(1, "Select");
+			ACTIVE.setScriptCallOnClickContextMenu(4507, CTX_WIDGET_CHILD, widget0, widget1, "iII");
+		}
+		int6 = int6 - 1;
+	}
+	return;
+}

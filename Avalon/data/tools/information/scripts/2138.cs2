@@ -1,0 +1,53 @@
+void script_2138(Widget widget0, int arg1, int arg2) {
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int3 = VARPBIT[5861] + 95;
+	int4 = VARPBIT[5859] + 85;
+	int5 = VARPBIT[5855] + 29;
+	int6 = 0;
+	int7 = 0;
+	if (ACTIVE.setChild(widget0, arg1)) {
+		if (arg2 < 150) {
+			arg2 = arg2 + 10;
+			ACTIVE.setTrans(arg2);
+			ACTIVE.setScriptCallOnGameloop(2138, CTX_WIDGET, CTX_WIDGET_CHILD, arg2, "Iii");
+		} else if (arg2 <= 225) {
+			arg2 = arg2 + 2;
+			ACTIVE.setTrans(arg2);
+			ACTIVE.setScriptCallOnGameloop(2138, CTX_WIDGET, CTX_WIDGET_CHILD, arg2, "Iii");
+		} else if (arg2 < 300) {
+			arg2 = arg2 + 2;
+			ACTIVE.setTrans(450 - arg2);
+			ACTIVE.setScriptCallOnGameloop(2138, CTX_WIDGET, CTX_WIDGET_CHILD, arg2, "Iii");
+		} else {
+			arg2 = 150;
+			ACTIVE.setTrans(150);
+			ACTIVE.setScriptCallOnGameloop(2138, CTX_WIDGET, CTX_WIDGET_CHILD, arg2, "Iii");
+		}
+		int6 = ACTIVE.getShadeColor() * 255 / 100;
+		int7 = int6 / 2;
+		switch (VARPBIT[5863]) {
+			case 0:
+				int4 = int4 + int6;
+				int3 = int3 + int7;
+				break;
+			case 1:
+				int5 = int5 + int6;
+				int3 = int3 + int7;
+				break;
+			case 2:
+				int5 = int5 + int6;
+				int4 = int4 + int7;
+				break;
+			default:
+				int4 = int4 + int6;
+				int5 = int5 + int7;
+				break;
+		}
+		ACTIVE.setRGB(script_693(int3, int4, int5));
+	}
+	return;
+}

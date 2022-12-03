@@ -1,0 +1,10 @@
+void script_727(Widget widget0, Widget widget1) {
+	if (widget1.hasChild() && VARC[199] != -1) {
+		return;
+	}
+	widget0.clearChildren();
+	VARC[199] = -1;
+	widget0.setScriptCallOnGameloop(-1, "");
+	widget0.setScriptCallOnWidgetResize(-1, "");
+	return;
+}

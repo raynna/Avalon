@@ -1,0 +1,26 @@
+void script_134() {
+	if (getBlackmarks() == 5 || getBlackmarks() == 6) {
+		widget(594, 83).setText("Suggest to mute this player for 48 hours");
+		widget(594, 10).setText("Suggest to mute this player for 48 hours");
+		widget(594, 60).setText("Suggest to mute this player for 48 hours");
+	} else {
+		widget(594, 83).setText("Mute this player for 48 hours");
+		widget(594, 10).setText("Mute this player for 48 hours");
+		widget(594, 60).setText("Mute this player for 48 hours");
+	}
+	if (VARC[6] == 1) {
+		VARC[6] = 0;
+	} else {
+		VARC[6] = 1;
+	}
+	if (VARC[6] == 0) {
+		widget(594, 82).setSprite(1768);
+		widget(594, 9).setSprite(1768);
+		widget(594, 59).setSprite(1768);
+	} else {
+		widget(594, 82).setSprite(1770);
+		widget(594, 9).setSprite(1770);
+		widget(594, 59).setSprite(1770);
+	}
+	return;
+}

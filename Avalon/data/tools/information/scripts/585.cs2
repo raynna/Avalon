@@ -1,0 +1,6 @@
+void script_585() {
+	widget(105, 127).setScriptCallOnConfigChange(588, 1109, "Y");
+	widget(105, 15).setScriptCallOnGrandExchangeUpdate(586, "");
+	script_621();
+	return;
+}

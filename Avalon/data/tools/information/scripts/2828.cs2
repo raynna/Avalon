@@ -1,0 +1,20 @@
+void script_2828(string string0) {
+	int int0;
+	int0 = 0;
+	int0 = getLineCount(string0, 346, 495) * 15;
+	if (int0 > 48) {
+		int0 = getLineCount(string0, 328, 495) * 15;
+	}
+	if (int0 > 48) {
+		widget(178, 58).setScrollMax(0, int0);
+		script_31(widget(178, 4), widget(178, 58), 792, 789, 790, 791, 773, 788);
+		widget(178, 58).setSize(334, 48, 0, 0);
+		widget(178, 7).setSize(16384, int0, 2, 0);
+		widget(178, 8).setSize(16384, int0, 2, 0);
+		widget(178, 59).setTextAlignment(0, 0, 0);
+	} else {
+		widget(178, 58).setSize(354, 48, 0, 0);
+		widget(178, 59).setTextAlignment(0, 1, 0);
+	}
+	return;
+}

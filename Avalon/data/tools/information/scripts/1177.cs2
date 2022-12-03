@@ -1,0 +1,9 @@
+void script_1177() {
+	if (VARP[1414] == 0) {
+		return;
+	}
+	VARC[548] = 540;
+	widget(745, 5).setText("10");
+	widget(745, 5).setScriptCallOnGameloop(1178, "");
+	return;
+}

@@ -1,0 +1,22 @@
+void script_113(Widget widget0) {
+	int int1;
+	int int2;
+	int1 = 0;
+	int2 = 0;
+	if (rndExcl(2) == 0) {
+		int1 = 5 + rndExcl(12);
+	} else {
+		int1 = -5 - rndExcl(12);
+	}
+	if (rndExcl(2) == 0) {
+		int2 = 5 + rndExcl(12);
+	} else {
+		int2 = -5 - rndExcl(12);
+	}
+	if (rndExcl(2) == 0) {
+		widget0.setScriptCallOnGameloop(66, int1, int2, 0, widget0, "iiiI");
+	} else {
+		widget0.setScriptCallOnGameloop(66, int1, 0, int2, widget0, "iiiI");
+	}
+	return;
+}

@@ -1,0 +1,9 @@
+void script_2996(Widget widget0, int arg1, int arg2, int arg3, int arg4, int arg5, Color color6, boolean boolean7, int arg8) {
+	ACTIVE.createChild(widget0, 3, arg1);
+	ACTIVE.setSize(arg2, arg3, 0, 0);
+	ACTIVE.setPosition(arg4, arg5, 0, 0);
+	ACTIVE.setRGB(color6);
+	ACTIVE.setFilled(boolean7);
+	ACTIVE.setTrans(arg8);
+	return;
+}

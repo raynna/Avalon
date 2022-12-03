@@ -1,0 +1,10 @@
+void script_2585() {
+	widget(292, 116).setRGB(0xFF9935);
+	widget(292, 110).setContextMenuOption(1, "Select light");
+	widget(292, 111).setContextMenuOption(1, "Select heavy");
+	widget(292, 110).setScriptCallOnClickContextMenu(2589, CTX_WIDGET, "I");
+	widget(292, 111).setScriptCallOnClickContextMenu(2589, CTX_WIDGET, "I");
+	widget(292, 110).setScriptCallOnMousePressed(-1, "");
+	widget(292, 111).setScriptCallOnMousePressed(-1, "");
+	return;
+}

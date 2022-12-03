@@ -1,0 +1,7 @@
+void script_4656(int arg0) {
+	switch (VARC[1532]) {
+		
+	}
+	cameraUnlock();
+	return;
+}

@@ -1,0 +1,19 @@
+int script_2454(int arg0) {
+	int int1;
+	int1 = 16777215;
+	switch (arg0) {
+		case 0:
+			int1 = 16777215;
+			break;
+		case 1:
+			int1 = 65280;
+			break;
+		case 2:
+			int1 = 14064640;
+			break;
+		case 3:
+			int1 = 16727871;
+			break;
+	}
+	return int1;
+}

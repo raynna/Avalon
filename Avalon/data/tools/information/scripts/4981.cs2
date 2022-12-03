@@ -1,0 +1,283 @@
+void script_4981(int arg0, int arg1, AttrMap attrmap2, AttrMap attrmap3, int arg4) {
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	AttrMap attrmap10;
+	int int11;
+	int int12;
+	AttrMap attrmap13;
+	int int14;
+	int int15;
+	AttrMap attrmap16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	int int23;
+	int int24;
+	int int25;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	string str4;
+	string str5;
+	string str6;
+	string str7;
+	if (attrmap2 == null) {
+		return;
+	}
+	if (attrmap3 == null) {
+		return;
+	}
+	if (arg1 < 0 || arg1 > 7) {
+		return;
+	}
+	int5 = 0;
+	switch (arg0) {
+		case 17:
+		case 1:
+		case 18:
+		case 19:
+			int5 = 1;
+			break;
+	}
+	int6 = script_5169(arg0);
+	int7 = -1;
+	int8 = -1;
+	int9 = -1;
+	attrmap10 = null;
+	int11 = -1;
+	int12 = -1;
+	attrmap13 = null;
+	int14 = -1;
+	int15 = -1;
+	attrmap16 = null;
+	int17 = 0;
+	int18 = -1;
+	int19 = -1;
+	int20 = 0;
+	str0 = "";
+	int21 = 1;
+	str1 = "";
+	int22 = 0;
+	int23 = 0;
+	int24 = 0;
+	int25 = 0;
+	str2 = "This building cannot be upgraded.";
+	str3 = "This building cannot be downgraded.";
+	str4 = "There is no upgrade to cancel.";
+	str5 = "There is no downgrade to cancel.";
+	str6 = "This building is already marked to be moved.";
+	str7 = "There is no move order to cancel.";
+	widget(1092, 879).setIsHidden(true);
+	widget(1092, 891).setIsHidden(true);
+	widget(1092, 903).setIsHidden(true);
+	widget(1092, 915).setIsHidden(true);
+	widget(1092, 1804).setIsHidden(true);
+	widget(1092, 1816).setIsHidden(true);
+	if (citadelConfigsInitialized() && cs2method3701()) {
+		int18 = cs2method3717(cs2method5020());
+		if (int18 < 0) {
+			return;
+		}
+		int19 = cs2method3711(int18);
+		int22 = CLAN[2132] - getMinute();
+		if (int22 < 360 && int19 < 126) {
+			int23 = 1;
+		}
+		widget(1092, 239).setText("");
+		if (arg0 == 17) {
+			widget(1092, 295).setText("Citadel");
+		} else if (arg0 == 18) {
+			widget(1092, 295).setText("Storehouse");
+		} else if (arg0 == 19) {
+			widget(1092, 295).setText("Battlefield");
+		} else {
+			widget(1092, 295).setText(datamap('i', 's', (DataMap)4287, arg0));
+		}
+		if (arg4 == 4) {
+			widget(1092, 553).setText("Dilapidated");
+		} else if (arg4 == 3) {
+			widget(1092, 553).setText("Working");
+		} else {
+			widget(1092, 553).setText("Not built");
+		}
+		widget(1092, 294).setSprite(script_4974(arg0));
+		int7 = script_4948(arg0);
+		int17 = script_4952(int7);
+		script_4982(attrmap2, attrmap3, arg1, int6, int17);
+		widget(1092, 891).setIsHidden(false);
+		if (int7 > 0) {
+			script_4152(widget(1092, 878), "Upgrade");
+			int14 = script_4961(int7, 1);
+			int9 = script_4961(int7, 2);
+			int11 = script_4961(int7, 3);
+			if (script_4798(int11) == 1) {
+				int24 = 0;
+			} else {
+				int24 = 1;
+			}
+			int15 = script_4953(int14);
+			int12 = script_4953(int11);
+			attrmap16 = datamap('i', 'J', (DataMap)4009, int14);
+			attrmap10 = datamap('i', 'J', (DataMap)4009, int9);
+			attrmap13 = datamap('i', 'J', (DataMap)4009, int11);
+			widget(1092, 879).setIsHidden(false);
+			script_4152(widget(1092, 878), "Upgrade");
+			if (int12 <= 0 && int15 <= 0) {
+				if (arg1 < 7) {
+					if (int24 == 1) {
+						widget(1092, 879).setIsHidden(true);
+					} else {
+						widget(1092, 879).setIsHidden(false);
+						if (int11 == 602) {
+							str2 = "You must cancel the storehouse upgrade to be able to upgrade this.";
+						} else if (int11 == 603) {
+							str2 = "You must cancel the battlefield upgrade to be able to upgrade this.";
+						} else {
+							str2 = "You must cancel another skill plot upgrade to be able to upgrade this.";
+						}
+					}
+				}
+				if (arg1 == 0) {
+					script_4152(widget(1092, 878), "Buy");
+				}
+			}
+			widget(1092, 891).setIsHidden(false);
+			if (int12 > 0) {
+				widget(1092, 891).setIsHidden(true);
+			}
+			widget(1092, 903).setIsHidden(false);
+			if (int12 <= 0 && arg1 - int5 > int17) {
+				int20, str0 = script_4723(arg0, arg1 - (int17 + 1));
+				if (int20 == 1) {
+					widget(1092, 903).setIsHidden(true);
+				} else {
+					str3 = str0;
+				}
+			}
+			widget(1092, 915).setIsHidden(false);
+			if (int17 > 0) {
+				widget(1092, 915).setIsHidden(true);
+				script_4211(widget(1092, 878), 4040, 0x0E0D11, 0xAE9861);
+			}
+			widget(1092, 1804).setIsHidden(true);
+			widget(1092, 1816).setIsHidden(true);
+			if (int7 == 1 || int7 == 2 || int7 == 3) {
+				widget(1092, 1804).setIsHidden(false);
+				widget(1092, 1816).setIsHidden(false);
+				str6 = "This building cannot be moved to another position.";
+			}
+			int8 = script_4978(int7);
+			if (int8 < 4) {
+				int8 = int7;
+			}
+			if (int8 != int7) {
+				widget(1092, 1804).setIsHidden(false);
+				str6 = "This building is already marked to be moved. You can view next week's map to see its new position.";
+			}
+			if (int7 == 1 || int7 == 2 || int7 == 3) {
+				widget(1092, 1816).setIsHidden(false);
+				str6 = "This building cannot be moved to another position.";
+			}
+			if (int8 == int7) {
+				widget(1092, 1816).setIsHidden(false);
+			} else {
+				msg("Building marked to move to hotspot id: " + str(int8));
+			}
+			if (int12 > 0) {
+				if (arg1 == 0) {
+					widget(1092, 239).setText("This building is marked to" + "<br>" + "be built.");
+				} else {
+					widget(1092, 239).setText("This building is marked to" + "<br>" + "be upgraded.");
+				}
+				str2 = "This building is already marked for upgrade.";
+			} else if (int17 == 1) {
+				widget(1092, 239).setText("This building is marked to be downgraded by 1 tier.");
+			} else if (int17 > 1) {
+				widget(1092, 239).setText("This building is marked to be downgraded by " + str(int17) + " tiers.");
+			} else if (arg1 == 7) {
+				widget(1092, 239).setText("This building has reached its top tier.");
+			} else if (arg1 == 0) {
+				widget(1092, 239).setText("This building has not yet been bought.");
+			}
+		} else {
+			widget(1092, 1804).setIsHidden(false);
+			widget(1092, 1816).setIsHidden(false);
+			str6 = "You have not yet bought this building.";
+			int25 = script_4799();
+			if (int25 >= 2) {
+				int24 = 0;
+				str2 = "You must cancel another skill plot upgrade to be able to upgrade this.";
+				widget(1092, 879).setIsHidden(false);
+			} else {
+				int24 = 1;
+				script_4152(widget(1092, 878), "Buy");
+				widget(1092, 879).setIsHidden(true);
+				widget(1092, 239).setText("Clan builders can buy this" + "<br>" + "in the 'Upgrade' side tab.");
+			}
+			widget(1092, 891).setIsHidden(false);
+			widget(1092, 903).setIsHidden(false);
+			widget(1092, 915).setIsHidden(false);
+		}
+		if (int23 == 1) {
+			str2 = "The build orders will be executed in less than six hours, so only the owner can make this change.";
+			str3 = str2;
+			str4 = str2;
+			str5 = str2;
+			str6 = str2;
+			str7 = str2;
+			widget(1092, 879).setIsHidden(false);
+			widget(1092, 891).setIsHidden(false);
+			widget(1092, 903).setIsHidden(false);
+			widget(1092, 915).setIsHidden(false);
+			widget(1092, 1804).setIsHidden(false);
+			widget(1092, 1816).setIsHidden(false);
+		}
+		int21, str1 = script_4722(arg0, arg1 + 1);
+		if (int21 == 0) {
+			str2 = "This cannot be upgraded because: " + str1;
+			widget(1092, 879).setIsHidden(false);
+		}
+		if (script_5145(-1) == 0) {
+			str2 = "You do not have permission from your clan to do that.";
+			str4 = "You do not have permission from your clan to do that.";
+			widget(1092, 879).setIsHidden(false);
+			widget(1092, 891).setIsHidden(false);
+			if (script_5147(-1) == 0) {
+				widget(1092, 1804).setIsHidden(false);
+				widget(1092, 1816).setIsHidden(false);
+				widget(1092, 1816).setIsHidden(false);
+				widget(1092, 1804).setIsHidden(false);
+				str6 = "You do not have permission from your clan to do that.";
+				str7 = "You do not have permission from your clan to do that.";
+				str6 = "You do not have permission from your clan to do that.";
+				str7 = "You do not have permission from your clan to do that.";
+			}
+		}
+		if (script_5147(-1) == 0) {
+			str3 = "You do not have permission from your clan to do that.";
+			str5 = "You do not have permission from your clan to do that.";
+			widget(1092, 903).setIsHidden(false);
+			widget(1092, 915).setIsHidden(false);
+		}
+		widget(1092, 879).setScriptCallOnMouseOver(4538, widget(1092, 243), CTX_WIDGET, -1, str2, 180, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 891).setScriptCallOnMouseOver(4538, widget(1092, 243), CTX_WIDGET, -1, str4, 180, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 903).setScriptCallOnMouseOver(4538, widget(1092, 243), CTX_WIDGET, -1, str3, 180, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 915).setScriptCallOnMouseOver(4538, widget(1092, 243), CTX_WIDGET, -1, str5, 180, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 1804).setScriptCallOnMouseOver(4538, widget(1092, 243), CTX_WIDGET, -1, str6, 180, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 1816).setScriptCallOnMouseOver(4538, widget(1092, 243), CTX_WIDGET, -1, str7, 180, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+		widget(1092, 879).setScriptCallOnMouseExit(40, widget(1092, 243), "I");
+		widget(1092, 891).setScriptCallOnMouseExit(40, widget(1092, 243), "I");
+		widget(1092, 903).setScriptCallOnMouseExit(40, widget(1092, 243), "I");
+		widget(1092, 915).setScriptCallOnMouseExit(40, widget(1092, 243), "I");
+		widget(1092, 1804).setScriptCallOnMouseExit(40, widget(1092, 243), "I");
+		widget(1092, 1816).setScriptCallOnMouseExit(40, widget(1092, 243), "I");
+	}
+	return;
+}

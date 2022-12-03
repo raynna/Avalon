@@ -1,0 +1,30 @@
+void script_80(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	while (int1 < getItemContainerLength(140)) {
+		ACTIVE.createChild(widget0, 6, int1);
+		ACTIVE.setSize(49, 49, 0, 0);
+		ACTIVE.setPosition(56 * int2, 56 * int3, 0, 0);
+		if (getItemIdInSlot(140, int1) != null) {
+			ACTIVE.setItem(getItemIdInSlot(140, int1), getItemAmtInSlot(140, int1));
+			ACTIVE.set3DRotation(0, 0, 512, 0, 0, 1340);
+			ACTIVE.setModelOrthog(1);
+			ACTIVE.setOptionBase(getItemName(getItemIdInSlot(140, int1)));
+			ACTIVE.setContextMenuOption(1, "Move");
+			ACTIVE.setScriptCallOnClickContextMenu(106, CTX_WIDGET, int1, CTX_MENU_OPTION, "Iii");
+		} else {
+			ACTIVE.setHidden(true);
+		}
+		int1 = int1 + 1;
+		int2 = int2 + 1;
+		if (int2 == 5) {
+			int2 = 0;
+			int3 = int3 + 1;
+		}
+	}
+	return;
+}

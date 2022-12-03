@@ -1,0 +1,7 @@
+void script_174(int arg0) {
+	if (VARC[42] == arg0) {
+		VARC[42] = -1;
+		script_178();
+	}
+	return;
+}

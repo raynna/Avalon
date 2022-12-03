@@ -1,0 +1,8 @@
+void script_708(Widget widget0) {
+	if (VARPBIT[5032] < 80) {
+		widget0.setScriptCallOnGameloop(709, widget0, "I");
+	} else if (VARPBIT[5331] < 35) {
+		widget0.setScriptCallOnGameloop(709, widget0, "I");
+	}
+	return;
+}

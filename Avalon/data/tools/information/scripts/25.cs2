@@ -1,0 +1,94 @@
+void script_25() {
+	int int0;
+	int int1;
+	int0 = 0;
+	int1 = 0;
+	if (int0 != 0) {
+		if (isBitFlagged(int0, 0)) {
+			int1 = flagBit(int1, 0);
+		}
+		if (isBitFlagged(int0, 1)) {
+			int1 = flagBit(int1, 1);
+		}
+		if (isBitFlagged(int0, 2)) {
+			int1 = flagBit(int1, 2);
+		}
+		if (isBitFlagged(int0, 3)) {
+			int1 = flagBit(int1, 3);
+		}
+		VARC[996] = int1;
+		int1 = 0;
+		if (isBitFlagged(int0, 4)) {
+			int1 = flagBit(int1, 0);
+		}
+		if (isBitFlagged(int0, 5)) {
+			int1 = flagBit(int1, 1);
+		}
+		if (isBitFlagged(int0, 6)) {
+			int1 = flagBit(int1, 2);
+		}
+		if (isBitFlagged(int0, 7)) {
+			int1 = flagBit(int1, 3);
+		}
+		VARC[997] = int1;
+		int1 = 0;
+		if (isBitFlagged(int0, 14)) {
+			int1 = flagBit(int1, 0);
+		}
+		if (isBitFlagged(int0, 15)) {
+			int1 = flagBit(int1, 1);
+		}
+		if (isBitFlagged(int0, 16)) {
+			int1 = flagBit(int1, 2);
+		}
+		if (isBitFlagged(int0, 17)) {
+			int1 = flagBit(int1, 3);
+		}
+		if (isBitFlagged(int0, 18)) {
+			int1 = flagBit(int1, 4);
+		}
+		if (isBitFlagged(int0, 19)) {
+			int1 = flagBit(int1, 5);
+		}
+		if (isBitFlagged(int0, 20)) {
+			int1 = flagBit(int1, 6);
+		}
+		if (isBitFlagged(int0, 21)) {
+			int1 = flagBit(int1, 7);
+		}
+		if (isBitFlagged(int0, 22)) {
+			int1 = flagBit(int1, 8);
+		}
+		VARC[998] = int1;
+		int1 = 0;
+		if (isBitFlagged(int0, 23)) {
+			int1 = flagBit(int1, 0);
+		}
+		if (isBitFlagged(int0, 24)) {
+			int1 = flagBit(int1, 1);
+		}
+		if (isBitFlagged(int0, 25)) {
+			int1 = flagBit(int1, 2);
+		}
+		if (isBitFlagged(int0, 26)) {
+			int1 = flagBit(int1, 3);
+		}
+		if (isBitFlagged(int0, 27)) {
+			int1 = flagBit(int1, 4);
+		}
+		if (isBitFlagged(int0, 28)) {
+			int1 = flagBit(int1, 5);
+		}
+		if (isBitFlagged(int0, 29)) {
+			int1 = flagBit(int1, 6);
+		}
+		if (isBitFlagged(int0, 30)) {
+			int1 = flagBit(int1, 7);
+		}
+		if (isBitFlagged(int0, 31)) {
+			int1 = flagBit(int1, 8);
+		}
+		VARC[999] = int1;
+	}
+	return;
+}

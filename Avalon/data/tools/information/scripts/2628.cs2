@@ -1,0 +1,64 @@
+void script_2628() {
+	if (VARC[906] == 0) {
+		widget(859, 25).setSprite(1868);
+		widget(859, 11).setText("Idle");
+	} else if (VARC[906] == 2) {
+		widget(859, 25).setSprite(1867);
+		switch (VARC[907]) {
+			case 0:
+				VARC[906] = 0;
+				widget(859, 25).setSprite(1868);
+				widget(859, 11).setText("Idle");
+				break;
+			case 1:
+			case 2:
+				widget(859, 11).setText("Exploring");
+				break;
+			case 3:
+			case 4:
+				widget(859, 11).setText("Attacking wall");
+				break;
+			case 5:
+			case 6:
+			case 7:
+				widget(859, 11).setText("Rescuing TzHaar");
+				break;
+			case 8:
+			case 9:
+				widget(859, 11).setText("Collecting gold");
+				break;
+			case 10:
+			case 11:
+			case 12:
+				widget(859, 11).setText("Stealing TzHaar");
+				break;
+			case 13:
+			case 14:
+			case 15:
+				widget(859, 11).setText("Collecting parts");
+				break;
+			case 16:
+			case 17:
+			case 18:
+				widget(859, 11).setText("Collecting Rocks");
+				break;
+			case 19:
+			case 20:
+				widget(859, 11).setText("Attacking catapult");
+				break;
+			case 21:
+				widget(859, 11).setText("Retaliating");
+				break;
+			case 22:
+				widget(859, 11).setText("Moving to destination");
+				break;
+			case 23:
+				widget(859, 11).setText("Attacking");
+				break;
+			default:
+				widget(859, 11).setText("Busy");
+				break;
+		}
+	}
+	return;
+}

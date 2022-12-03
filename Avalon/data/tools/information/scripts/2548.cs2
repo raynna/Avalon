@@ -1,0 +1,12 @@
+void script_2548() {
+	if (VARC[918] == 1) {
+		widget(39, 71).setSprite(1908);
+	} else if (VARC[918] == 2) {
+		widget(39, 71).setSprite(1910);
+	} else if (VARC[918] == 3) {
+		widget(39, 71).setSprite(1911);
+	} else if (VARC[918] == 4) {
+		widget(39, 71).setSprite(1909);
+	}
+	return;
+}

@@ -1,0 +1,40 @@
+int script_1479(string string0) {
+	int int0;
+	int int1;
+	int int2;
+	string0 = escape(string0);
+	script_41(widget(762, 97));
+	VARC[1] = 0;
+	script_1464();
+	widget(762, 115).setIsHidden(true);
+	if (length(string0) == 0) {
+		widget(762, 45).setText("Bank of RuneScape (no search entered)");
+		widget(762, 116).setIsHidden(false);
+		script_1455();
+		return 0;
+	}
+	widget(762, 45).setText("Bank of RuneScape (search: '" + string0 + "')");
+	widget(762, 116).setIsHidden(true);
+	int0 = getItemContainerLength(95);
+	int1 = 0;
+	int2 = 0;
+	widget(762, 93).setScrollPos(0, 0);
+	while (int1 < int0) {
+		if (indexOf(lower(getItemName(getItemIdInSlot(95, int1))), lower(string0), 0) != -1) {
+			if (ACTIVE.setChild(widget(762, 93), int1)) {
+				ACTIVE.setPosition(44 * (int2 % 10) + 8, int2 / 10 * 44 + 5, 0, 0);
+				ACTIVE.setHidden(false);
+				int2 = int2 + 1;
+			}
+		} else if (ACTIVE.setChild(widget(762, 93), int1)) {
+			ACTIVE.setPosition(0, 0, 0, 0);
+			ACTIVE.setHidden(true);
+		}
+		int1 = int1 + 1;
+	}
+	if (int2 == 0) {
+		widget(762, 115).setIsHidden(false);
+	}
+	script_1458(int2);
+	return int2;
+}

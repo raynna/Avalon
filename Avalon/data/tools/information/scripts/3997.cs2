@@ -1,0 +1,11 @@
+void script_3997() {
+	int int0;
+	widget(917, 112).setText(str(VARC[1423]));
+	widget(917, 110).setText(str(VARC[1424]));
+	widget(917, 150).setText(str(428));
+	widget(917, 148).setText(str(VARPBIT[8601]));
+	widget(917, 113).setText("Progress:");
+	int0 = VARC[1424] * (widget(917, 105).getWidth() - 4) / max(VARC[1423], 1);
+	widget(917, 109).setSize(int0, 16, 0, 0);
+	return;
+}

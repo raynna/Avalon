@@ -1,0 +1,4 @@
+void script_132() {
+	widget(137, 56).setScriptCallOnKeyPress(73, KEY_TYPED, (char)KEY_PRESSED, "iz");
+	return;
+}

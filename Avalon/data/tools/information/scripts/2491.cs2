@@ -1,0 +1,4 @@
+void script_2491() {
+	widget(862, 8).setText(script_46(VARPBIT[6380], ","));
+	return;
+}

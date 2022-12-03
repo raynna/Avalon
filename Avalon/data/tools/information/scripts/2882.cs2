@@ -1,0 +1,11 @@
+void script_2882() {
+	if (VARPBIT[4393] == 1 || VARPBIT[542] == 1) {
+		return;
+	}
+	if (VARPBIT[7078] == 0) {
+		script_39(widget(187, 10), widget(187, 16), "Playlist on", 25, 189);
+	} else {
+		script_39(widget(187, 10), widget(187, 16), "Playlist off", 25, 189);
+	}
+	return;
+}

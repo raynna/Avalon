@@ -1,0 +1,18 @@
+Texture, Texture script_4383(int arg0, int arg1, int arg2) {
+	Texture texture3;
+	Texture texture4;
+	texture3 = datamap('i', 'x', (DataMap)3685, arg0);
+	texture4 = datamap('i', 'x', (DataMap)3685, arg1);
+	if (arg2 == 1 && (CLANDEF113[10] == 1 || cs2method3709() < 5)) {
+		texture3 = 1080;
+		texture4 = 1017;
+	} else {
+		if (texture3 == null) {
+			texture3 = 1080;
+		}
+		if (texture4 == null) {
+			texture4 = 1017;
+		}
+	}
+	return texture3, texture4;
+}

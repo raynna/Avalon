@@ -1,0 +1,9 @@
+int script_2869(Location location0) {
+	if (script_2868(location0, location(2190, 3280, 0), location(2285, 3375, 0)) == 1) {
+		return 1;
+	}
+	if (script_2868(location0, location(3205, 2764, 0), location(3259, 2807, 0)) == 1) {
+		return 1;
+	}
+	return 0;
+}

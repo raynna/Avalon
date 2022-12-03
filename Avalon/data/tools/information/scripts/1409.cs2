@@ -1,0 +1,40 @@
+void script_1409() {
+	widget(756, 36).setSprite(180);
+	widget(756, 37).setSprite(180);
+	widget(756, 38).setSprite(180);
+	widget(756, 39).setSprite(180);
+	widget(756, 40).setSprite(180);
+	widget(756, 41).setSprite(180);
+	widget(756, 42).setSprite(180);
+	widget(756, 43).setSprite(180);
+	widget(756, 44).setSprite(180);
+	widget(756, 45).setSprite(180);
+	widget(756, 46).setSprite(180);
+	widget(756, 47).setSprite(180);
+	if (VARPBIT[50] == 1) {
+		widget(756, 36).setSprite(181);
+	} else if (VARPBIT[50] == 2) {
+		widget(756, 37).setSprite(181);
+	} else if (VARPBIT[50] == 3) {
+		widget(756, 38).setSprite(181);
+	} else if (VARPBIT[50] == 4) {
+		widget(756, 39).setSprite(181);
+	} else if (VARPBIT[50] == 5) {
+		widget(756, 40).setSprite(181);
+	} else if (VARPBIT[50] == 6) {
+		widget(756, 41).setSprite(181);
+	} else if (VARPBIT[50] == 7) {
+		widget(756, 42).setSprite(181);
+	} else if (VARPBIT[50] == 8) {
+		widget(756, 43).setSprite(181);
+	} else if (VARPBIT[50] == 9) {
+		widget(756, 44).setSprite(181);
+	} else if (VARPBIT[50] == 10) {
+		widget(756, 45).setSprite(181);
+	} else if (VARPBIT[50] == 11) {
+		widget(756, 46).setSprite(181);
+	} else if (VARPBIT[50] == 12) {
+		widget(756, 47).setSprite(181);
+	}
+	return;
+}

@@ -1,0 +1,83 @@
+void script_4908(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	Widget widget11;
+	AttrMap attrmap12;
+	Sprite sprite13;
+	int int14;
+	int1 = -1;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	int6 = script_4950(arg0);
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int10 = 0;
+	widget11 = null;
+	attrmap12 = null;
+	sprite13 = null;
+	int14 = 1;
+	if (citadelConfigsInitialized()) {
+		if (!widget(1092, 209).isHidden()) {
+			int14 = 0;
+		}
+		if (int14 == 1) {
+			attrmap12 = script_5116(CLANBIT[2598], CLANBIT[2580]);
+		} else {
+			attrmap12 = script_5116(CLANBIT[2074], CLANBIT[2580]);
+		}
+		if (attrmap12 == null) {
+			return;
+		}
+		if (int6 == 6 || int6 == 5) {
+			int5 = script_4971(arg0);
+			sprite13 = script_5171(int5);
+		} else {
+			sprite13 = script_4973(arg0);
+		}
+		int4 = script_4949(arg0);
+		int7 = script_4961(arg0, 1);
+		int8 = script_4953(int7);
+		if (int8 > 0) {
+			sprite13 = 7432;
+		}
+		int9 = script_4961(arg0, 3);
+		int10 = script_4953(int9);
+		if ((int6 == 6 || int6 == 6 || int6 == 5) && (CLANBIT[2148] == int5 || CLANBIT[2165] == int5 || CLANBIT[2182] == int5)) {
+			sprite13 = 7432;
+		}
+		if (int10 > 0) {
+			sprite13 = 7432;
+		}
+		if (int6 == 5) {
+			if (CLANBIT[2148] == int5 || CLANBIT[2165] == int5 || CLANBIT[2182] == int5) {
+				script_5216(arg0).setSprite(7659);
+				script_4972(arg0).setContextMenuOption(2, "");
+			} else if (int4 > 0) {
+				script_5216(arg0).setSprite(7657);
+				script_4972(arg0).setContextMenuOption(2, "Reset hotspot to its default state");
+			} else {
+				script_5216(arg0).setSprite(7658);
+				script_4972(arg0).setContextMenuOption(2, "");
+			}
+		}
+		widget11 = script_4972(arg0);
+		if (widget11 == null) {
+			return;
+		}
+		if (ACTIVE.setChild(widget11, 2)) {
+			ACTIVE.setSprite(sprite13);
+		}
+	}
+	return;
+}

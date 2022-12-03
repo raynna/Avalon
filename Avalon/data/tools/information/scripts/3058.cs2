@@ -1,0 +1,21 @@
+void script_3058() {
+	open(widget(906, 185), 907);
+	script_2998();
+	open(widget(906, 186), 910);
+	script_3103();
+	open(widget(906, 187), 909);
+	script_3023();
+	script_3052(widget(909, 49));
+	script_3043(widget(909, 66));
+	open(widget(906, 189), 912);
+	script_3159(59768841);
+	script_3171(widget(912, 10));
+	open(widget(906, 188), 589);
+	script_4554(38600715);
+	script_4565(widget(589, 12));
+	open(widget(906, 190), 911);
+	script_3158();
+	widget(906, 23).setScriptCallOnMessage(3405, widget(909, 49), widget(912, 10), widget(589, 12), "III");
+	VARC[1275], VARC[1276], VARC[1510] = script_3406();
+	return;
+}

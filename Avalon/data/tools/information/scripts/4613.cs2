@@ -1,0 +1,10 @@
+void script_4613(Widget widget0) {
+	if (VARPBIT[9254] == 0 && VARPBIT[9255] == 0 && VARPBIT[9256] == 0 && VARPBIT[9257] == 0) {
+		return;
+	}
+	widget0.replaceColors(0, 65214, VARPBIT[9254]);
+	widget0.replaceColors(1, 65200, VARPBIT[9255]);
+	widget0.replaceColors(3, 65186, VARPBIT[9256]);
+	widget0.replaceColors(4, 62995, VARPBIT[9257]);
+	return;
+}

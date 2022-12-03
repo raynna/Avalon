@@ -1,0 +1,11 @@
+void script_4556(int arg0) {
+	if (arg0 == 1 && !cs2method6900()) {
+		widget(589, 26).setScriptCallOnKeyPress(4555, KEY_TYPED, (char)KEY_PRESSED, "iz");
+		widget(589, 27).setScriptCallOnGameloop(4572, getClientCycle(), widget(589, 28), "iI");
+	} else {
+		widget(589, 26).setScriptCallOnKeyPress(-1, "");
+		widget(589, 27).setScriptCallOnGameloop(-1, "");
+		widget(589, 27).setText(escape(STRING[349]));
+	}
+	return;
+}

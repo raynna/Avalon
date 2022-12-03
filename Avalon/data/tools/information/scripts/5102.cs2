@@ -1,0 +1,6 @@
+void script_5102(Widget widget0, Widget widget1, Widget widget2) {
+	widget1.setIsHidden(false);
+	widget2.setText("Clan settings prevent viewing this relationship");
+	widget0.setIsHidden(false);
+	return;
+}

@@ -1,0 +1,11 @@
+int script_4823(int arg0) {
+	switch (arg0) {
+		case 1:
+			return script_4824(CLANBIT[2148]);
+		case 2:
+			return script_4824(CLANBIT[2165]);
+		case 3:
+			return script_4824(CLANBIT[2182]);
+	}
+	return -1;
+}

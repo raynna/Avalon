@@ -1,0 +1,174 @@
+void script_729() {
+	script_730(1438, widget(779, 17), widget(779, 16));
+	script_730(1448, widget(779, 31), widget(779, 30));
+	script_730(1444, widget(779, 35), widget(779, 34));
+	script_730(1440, widget(779, 25), widget(779, 24));
+	script_730(1442, widget(779, 27), widget(779, 26));
+	script_730(1446, widget(779, 19), widget(779, 18));
+	script_730(1452, widget(779, 21), widget(779, 20));
+	script_730(1458, widget(779, 29), widget(779, 28));
+	script_730(1462, widget(779, 33), widget(779, 32));
+	script_730(1454, widget(779, 23), widget(779, 22));
+	script_730(13625, widget(779, 53), widget(779, 52));
+	script_730(13624, widget(779, 59), widget(779, 58));
+	script_730(13627, widget(779, 65), widget(779, 64));
+	script_730(13628, widget(779, 71), widget(779, 70));
+	script_730(13615, widget(779, 55), widget(779, 54));
+	script_730(13614, widget(779, 61), widget(779, 60));
+	script_730(13617, widget(779, 67), widget(779, 66));
+	script_730(13618, widget(779, 73), widget(779, 72));
+	script_730(13620, widget(779, 57), widget(779, 56));
+	script_730(13619, widget(779, 63), widget(779, 62));
+	script_730(13622, widget(779, 69), widget(779, 68));
+	script_730(13623, widget(779, 75), widget(779, 74));
+	script_730(13599, widget(779, 91), widget(779, 90));
+	script_730(13602, widget(779, 101), widget(779, 100));
+	script_730(13601, widget(779, 113), widget(779, 112));
+	script_730(13603, widget(779, 103), widget(779, 102));
+	script_730(13600, widget(779, 107), widget(779, 106));
+	script_730(13604, widget(779, 93), widget(779, 92));
+	script_730(13608, widget(779, 105), widget(779, 104));
+	script_730(13606, widget(779, 95), widget(779, 94));
+	script_730(13605, widget(779, 97), widget(779, 96));
+	script_730(13607, widget(779, 109), widget(779, 108));
+	script_730(13609, widget(779, 99), widget(779, 98));
+	script_730(13610, widget(779, 115), widget(779, 114));
+	script_730(13598, widget(779, 117), widget(779, 116));
+	script_730(13611, widget(779, 111), widget(779, 110));
+	script_730(13629, widget(779, 121), widget(779, 120));
+	script_730(1437, widget(779, 123), widget(779, 122));
+	widget(779, 123).setText("1 token each");
+	script_730(21517, widget(779, 170), widget(779, 169));
+	script_730(21516, widget(779, 172), widget(779, 171));
+	script_730(21518, widget(779, 174), widget(779, 173));
+	script_730(21519, widget(779, 176), widget(779, 175));
+	switch (VARP[1278]) {
+		case 1438:
+			widget(779, 16).setRGB(0xFFFFFF);
+			break;
+		case 1440:
+			widget(779, 24).setRGB(0xFFFFFF);
+			break;
+		case 1442:
+			widget(779, 26).setRGB(0xFFFFFF);
+			break;
+		case 1444:
+			widget(779, 34).setRGB(0xFFFFFF);
+			break;
+		case 1448:
+			widget(779, 30).setRGB(0xFFFFFF);
+			break;
+		case 1446:
+			widget(779, 18).setRGB(0xFFFFFF);
+			break;
+		case 1458:
+			widget(779, 28).setRGB(0xFFFFFF);
+			break;
+		case 1452:
+			widget(779, 20).setRGB(0xFFFFFF);
+			break;
+		case 1462:
+			widget(779, 32).setRGB(0xFFFFFF);
+			break;
+		case 1454:
+			widget(779, 22).setRGB(0xFFFFFF);
+			break;
+		case 13625:
+			widget(779, 52).setRGB(0xFFFFFF);
+			break;
+		case 13624:
+			widget(779, 58).setRGB(0xFFFFFF);
+			break;
+		case 13627:
+			widget(779, 64).setRGB(0xFFFFFF);
+			break;
+		case 13628:
+			widget(779, 70).setRGB(0xFFFFFF);
+			break;
+		case 13615:
+			widget(779, 54).setRGB(0xFFFFFF);
+			break;
+		case 13614:
+			widget(779, 60).setRGB(0xFFFFFF);
+			break;
+		case 13617:
+			widget(779, 66).setRGB(0xFFFFFF);
+			break;
+		case 13618:
+			widget(779, 72).setRGB(0xFFFFFF);
+			break;
+		case 13620:
+			widget(779, 56).setRGB(0xFFFFFF);
+			break;
+		case 13619:
+			widget(779, 62).setRGB(0xFFFFFF);
+			break;
+		case 13622:
+			widget(779, 68).setRGB(0xFFFFFF);
+			break;
+		case 13623:
+			widget(779, 74).setRGB(0xFFFFFF);
+			break;
+		case 13599:
+			widget(779, 90).setRGB(0xFFFFFF);
+			break;
+		case 13601:
+			widget(779, 112).setRGB(0xFFFFFF);
+			break;
+		case 13602:
+			widget(779, 100).setRGB(0xFFFFFF);
+			break;
+		case 13603:
+			widget(779, 102).setRGB(0xFFFFFF);
+			break;
+		case 13600:
+			widget(779, 106).setRGB(0xFFFFFF);
+			break;
+		case 13604:
+			widget(779, 92).setRGB(0xFFFFFF);
+			break;
+		case 13608:
+			widget(779, 104).setRGB(0xFFFFFF);
+			break;
+		case 13606:
+			widget(779, 94).setRGB(0xFFFFFF);
+			break;
+		case 13607:
+			widget(779, 108).setRGB(0xFFFFFF);
+			break;
+		case 13605:
+			widget(779, 96).setRGB(0xFFFFFF);
+			break;
+		case 13609:
+			widget(779, 98).setRGB(0xFFFFFF);
+			break;
+		case 13610:
+			widget(779, 114).setRGB(0xFFFFFF);
+			break;
+		case 13598:
+			widget(779, 116).setRGB(0xFFFFFF);
+			break;
+		case 13611:
+			widget(779, 110).setRGB(0xFFFFFF);
+			break;
+		case 13629:
+			widget(779, 120).setRGB(0xFFFFFF);
+			break;
+		case 1437:
+			widget(779, 122).setRGB(0xFFFFFF);
+			break;
+		case 21517:
+			widget(779, 169).setRGB(0xFFFFFF);
+			break;
+		case 21516:
+			widget(779, 171).setRGB(0xFFFFFF);
+			break;
+		case 21518:
+			widget(779, 173).setRGB(0xFFFFFF);
+			break;
+		case 21519:
+			widget(779, 175).setRGB(0xFFFFFF);
+			break;
+	}
+	return;
+}

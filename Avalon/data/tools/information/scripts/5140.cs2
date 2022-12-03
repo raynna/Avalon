@@ -1,0 +1,66 @@
+void script_5140(Widget widget0) {
+	switch (widget0) {
+		case widget(1096, 507):
+			VARC[1576] = -1;
+			break;
+		case widget(1096, 557):
+			VARC[1572] = -1;
+			break;
+		case widget(1096, 570):
+			VARC[1574] = -1;
+			break;
+		case widget(1096, 762):
+			VARC[1573] = -1;
+			break;
+		case widget(1096, 775):
+			VARC[1575] = -1;
+			break;
+		case widget(1096, 671):
+			VARC[1577] = -1;
+			break;
+		case widget(1096, 682):
+			VARC[1578] = -1;
+			break;
+		case widget(1096, 694):
+			VARC[1579] = -1;
+			break;
+		case widget(1096, 707):
+			VARC[1580] = -1;
+			break;
+		case widget(1096, 719):
+			VARC[1581] = -1;
+			break;
+		case widget(1096, 816):
+			VARC[1582] = -1;
+			break;
+		case widget(1096, 615):
+			VARC[1583] = -1;
+			break;
+		case widget(1096, 604):
+			VARC[1584] = -1;
+			break;
+		case widget(1096, 648):
+			VARC[1585] = -1;
+			break;
+		case widget(1096, 626):
+			VARC[1586] = -1;
+			break;
+		case widget(1096, 637):
+			VARC[1587] = -1;
+			break;
+		case widget(1096, 659):
+			VARC[1588] = -1;
+			break;
+		case widget(1096, 731):
+			VARC[1589] = -1;
+			break;
+		case widget(1096, 805):
+			VARC[1649] = -1;
+			break;
+		case widget(1096, 743):
+			VARC[1590] = -1;
+			break;
+	}
+	script_5141(widget0);
+	return;
+}

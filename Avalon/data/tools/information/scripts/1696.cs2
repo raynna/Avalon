@@ -1,0 +1,45 @@
+int script_1696(int arg0) {
+	switch (arg0) {
+		case 0:
+			if (VARPBIT[6830] > 0) {
+				return 4;
+			}
+			if (VARPBIT[6821] > 0) {
+				return 1;
+			}
+			return 0;
+		case 2:
+			if (VARPBIT[6834] > 0) {
+				return 4;
+			}
+			if (VARPBIT[6821] > 0) {
+				return 1;
+			}
+			return 0;
+		case 1:
+			if (VARPBIT[6833] > 0) {
+				return 4;
+			}
+			if (VARPBIT[6821] > 0 || VARPBIT[6822] > 0 || VARPBIT[6823] > 0) {
+				return 1;
+			}
+			return 0;
+		case 4:
+			if (VARPBIT[6831] > 0) {
+				return 4;
+			}
+			if (VARPBIT[6822] > 0) {
+				return 1;
+			}
+			return 0;
+		case 6:
+			if (VARPBIT[6832] > 0) {
+				return 4;
+			}
+			if (VARPBIT[6823] > 0) {
+				return 1;
+			}
+			return 0;
+	}
+	return 0;
+}

@@ -1,0 +1,13 @@
+void script_4812(string string0, Sprite sprite1, int arg2, int arg3) {
+	if (script_4761(arg3) == 0) {
+		return;
+	}
+	if (VARC[2] != 1) {
+		string0 = string0 + "<br>" + "Requires tier " + str(arg2) + " resources.";
+		widget(1092, 1266).setSprite(sprite1);
+		widget(1092, 1267).setText(string0);
+		widget(1092, 1255).setIsHidden(false);
+		VARC[2] = 1;
+	}
+	return;
+}

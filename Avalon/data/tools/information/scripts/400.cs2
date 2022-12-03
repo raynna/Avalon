@@ -1,0 +1,31 @@
+string script_400(string string0, string string1, string arg2) {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	string str3;
+	string str4;
+	int0 = 0;
+	int1 = 0;
+	str3 = "";
+	str4 = "";
+	int2 = length(string0);
+	int3 = length(string1);
+	if (int2 > 0) {
+		int1 = indexOf(string0, string1, int1);
+		while (int1 != -1) {
+			str4 = substr(string0, int0, int1);
+			if (compare(str4, "") != 0) {
+				str3 = str3 + str4 + arg2;
+			}
+			int1 = int1 + int3;
+			int0 = int1;
+			int1 = indexOf(string0, string1, int1);
+		}
+		str4 = substr(string0, int0, int2);
+		if (compare(str4, "") != 0) {
+			str3 = str3 + str4;
+		}
+	}
+	return str3;
+}

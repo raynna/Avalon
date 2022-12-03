@@ -1,0 +1,81 @@
+void script_2472(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Item item6, Item item7, DataMap datamap8) {
+	int int9;
+	int int10;
+	int int11;
+	Item item12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	if (item7 == null) {
+		if (item6 == null) {
+			widget0.setIsHidden(true);
+			widget2.setIsHidden(true);
+			widget5.setIsHidden(true);
+			widget4.setPosition(datamap('i', 'I', datamap8, 0).getX() - 10, datamap('i', 'I', datamap8, 0).getY() - 10, 0, 0);
+			return;
+		}
+		item7 = 20210;
+	} else if (item6 == null) {
+		item6 = 20210;
+	}
+	widget0.setIsHidden(false);
+	widget2.setIsHidden(false);
+	widget5.setIsHidden(false);
+	int9 = datamap('i', 'I', datamap8, itemAttribute(item6, 359)).getX();
+	int10 = datamap('i', 'I', datamap8, itemAttribute(item7, 359)).getX();
+	int11 = 0;
+	item12 = null;
+	if (int9 > int10) {
+		item12 = item7;
+		item7 = item6;
+		item6 = item12;
+		int11 = int10;
+		int10 = int9;
+		int9 = int11;
+	}
+	int13 = datamap('i', 'I', datamap8, itemAttribute(item6, 359)).getY();
+	int14 = datamap('i', 'I', datamap8, itemAttribute(item7, 359)).getY();
+	int15 = int10 - int9;
+	int16 = 0;
+	widget0.setPosition(int9 - 10, int13 - 10, 0, 0);
+	widget2.setPosition(int10 - 10, int14 - 10, 0, 0);
+	if (ACTIVE.setChild(widget1)) {
+		ACTIVE.setAttr(718, script_4126(script_718(itemAttribute(item6, 359))));
+		ACTIVE.setRGB(script_718(itemAttribute(item6, 359)));
+	}
+	if (ACTIVE.setChild(widget3)) {
+		ACTIVE.setAttr(718, script_4126(script_718(itemAttribute(item7, 359))));
+		ACTIVE.setRGB(script_718(itemAttribute(item7, 359)));
+	}
+	int17 = 0;
+	int18 = 0;
+	int19 = itemAttribute(item6, 358) + itemAttribute(item7, 358);
+	if (int13 < int14) {
+		int16 = int14 - int13;
+		widget5.setPosition(int9, int13, 0, 0);
+		widget5.setLineDirection(0);
+		int11 = 1;
+	} else {
+		int16 = int13 - int14;
+		widget5.setPosition(int9, int14, 0, 0);
+		widget5.setLineDirection(1);
+		int11 = -1;
+	}
+	widget5.setSize(int15, int16, 0, 0);
+	if (item6 == 20210) {
+		int17 = int9 + int15 * itemAttribute(item7, 358) / (2 * int19) - 10;
+		int18 = int13 + int11 * (int16 * itemAttribute(item7, 358) / (2 * int19)) - 10;
+	} else if (item7 == 20210) {
+		int17 = int9 + int15 * (2 * itemAttribute(item7, 358) + itemAttribute(item6, 358)) / (2 * int19) - 10;
+		int18 = int13 + int11 * (int16 * (2 * itemAttribute(item7, 358) + itemAttribute(item6, 358)) / (2 * int19)) - 10;
+	} else {
+		int17 = int9 + int15 * itemAttribute(item7, 358) / int19 - 10;
+		int18 = int13 + int11 * (int16 * itemAttribute(item7, 358) / int19) - 10;
+	}
+	widget4.setPosition(int17, int18, 0, 0);
+	return;
+}

@@ -1,0 +1,14 @@
+void script_746(int arg0) {
+	if (arg0 == 1) {
+		widget(18, 42).setIsHidden(false);
+		widget(18, 29).setScriptCallOnMouseEntered(-1, "");
+		widget(18, 29).setScriptCallOnMouseExit(-1, "");
+	} else {
+		widget(18, 42).setIsHidden(true);
+		widget(18, 29).setScriptCallOnMouseEntered(748, true, "1");
+		widget(18, 29).setScriptCallOnMouseExit(748, false, "1");
+	}
+	script_749(0);
+	script_41(widget(18, 41));
+	return;
+}

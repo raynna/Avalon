@@ -1,0 +1,15 @@
+void script_2626() {
+	widget(859, 13).setTargetCursor(0, 1);
+	widget(859, 14).setTargetCursor(2, 3);
+	if (VARPBIT[6357] == 2) {
+		widget(859, 16).setTargetCursor(4, 5);
+		widget(859, 17).setTargetCursor(12, 13);
+	} else if (VARPBIT[6357] == 3) {
+		widget(859, 16).setTargetCursor(6, 7);
+	} else if (VARPBIT[6357] == 4) {
+		widget(859, 16).setTargetCursor(10, 11);
+		widget(859, 17).setTargetCursor(8, 9);
+	}
+	script_2628();
+	return;
+}

@@ -1,0 +1,11 @@
+void script_416(Widget widget0) {
+	int int1;
+	int1 = widget0.getShadeColor();
+	int1 = int1 + 2;
+	if (int1 < 255) {
+		widget0.setTrans(int1);
+	} else {
+		widget0.setIsHidden(true);
+	}
+	return;
+}

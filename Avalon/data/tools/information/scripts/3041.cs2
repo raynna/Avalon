@@ -1,0 +1,118 @@
+void script_3041(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4) {
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	if (cs2method5428(widget2, -1)) {
+		widget3.setScriptCallOnGameloop(3040, widget0, widget1, widget2, widget3, widget4, "IIIII");
+		return;
+	}
+	widget3.setScriptCallOnGameloop(-1, "");
+	widget0.clearChildren();
+	widget1.clearChildren();
+	widget2.clearChildren();
+	int5 = getIgnoreCount();
+	int6 = 0;
+	int7 = 0;
+	str0 = "";
+	str1 = "";
+	str2 = "";
+	int8 = 0;
+	int9 = 0;
+	int10 = 15;
+	int11 = 0;
+	int12 = 5;
+	int13 = 0;
+	int14 = 0;
+	int15 = 0;
+	str3 = "";
+	if (int5 == -2) {
+		widget(909, 89).setText("Name");
+		script_3038("Loading Ignore List." + "<br>" + "<br>" + "Please wait.", widget2);
+	} else if (int5 == -1) {
+		widget(909, 89).setText("Name");
+		script_3038("Connecting to server." + "<br>" + "<br>" + "Please wait.", widget2);
+	} else if (int5 > 0) {
+		widget(909, 89).setText("Name (" + str(int5) + "/100)");
+		while (int6 < int5) {
+			str0, str1 = getIgnoreName(int6);
+			script_2996(widget2, int6, widget2.getWidth(), int10, 0, int7, 0x000000, true, 0);
+			if (int6 % 2 == 0) {
+				ACTIVE.setRGB(0x201911);
+			} else {
+				ACTIVE.setRGB(0x292016);
+			}
+			ACTIVE.setScriptCallOnMouseEntered(3031, widget2, int6, "Ii");
+			ACTIVE.setScriptCallOnMouseExit(3036, "");
+			if (length(str1) > 0) {
+				int15 = getTextWidth("Last known as: " + str1, 494) + 8;
+				if (int15 > widget(909, 76).getWidth()) {
+					str3 = "Last known as:" + "<br>" + str1;
+				} else {
+					str3 = "Last known as: " + str1;
+				}
+				ACTIVE.setScriptCallOnMouseOver(2467, CTX_WIDGET, CTX_WIDGET_CHILD, str3, MOUSE_X, MOUSE_Y, widget(909, 78), widget(909, 80), widget(909, 83), 494, "IisiiIIIf");
+			}
+			ACTIVE.setOptionBase(str0);
+			ACTIVE.setContextMenuOption(1, "Delete");
+			ACTIVE.setScriptCallOnClickContextMenu(3042, CTX_MENU_OPTION, str0, "is");
+			script_2994(widget1, int6, 14, 14, 5, int7 + 1, null, false, false, false, 0);
+			if (compare(str1, "") != 0) {
+				ACTIVE.setSprite(2313);
+				int12 = 20;
+			} else {
+				ACTIVE.setSprite(null);
+				int12 = 5;
+			}
+			str2 = str0;
+			script_2995(widget0, int6, 0, int10, int12, int7, str2, 0xFFFFFF, 494, 0, 1, 0, true);
+			ACTIVE.setSize(int12, int10, 1, 0);
+			ACTIVE.setMaxLines(1);
+			int7 = int7 + int10;
+			int6 = int6 + 1;
+		}
+		int9 = widget3.getHeight() / int10 + 1;
+		if (int9 > int5) {
+			while (int6 < int9) {
+				script_2996(widget2, int6, widget2.getWidth(), int10, 0, int7, 0x000000, true, 0);
+				if (int6 % 2 == 0) {
+					ACTIVE.setRGB(0x201911);
+				} else {
+					ACTIVE.setRGB(0x292016);
+				}
+				int7 = int7 + int10;
+				int6 = int6 + 1;
+			}
+			int11 = widget3.getHeight();
+		} else {
+			int11 = int7;
+		}
+		if (int9 <= int5) {
+			int14 = widget(909, 78).getScrollY();
+			widget(909, 78).setScrollMax(0, int11);
+			if (int14 > int11) {
+				int14 = int11;
+			}
+			script_72(widget(909, 79), widget(909, 78), int14);
+		} else {
+			widget(909, 78).setScrollMax(0, 0);
+			widget(909, 78).setScrollPos(0, 0);
+			script_72(widget(909, 79), widget(909, 78), 0);
+		}
+	} else if (int5 == 0) {
+		widget(909, 89).setText("Name");
+		script_3038("You are not ignoring any players.", widget2);
+	}
+	return;
+}

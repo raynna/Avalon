@@ -1,0 +1,26 @@
+void script_811(int arg0) {
+	boolean boolean1;
+	boolean1 = false;
+	if (arg0 > 1) {
+		return;
+	}
+	if (getDisplayMode() >= 2) {
+		boolean1 = widget(746, 184).isHidden();
+	} else {
+		boolean1 = widget(548, 22).isHidden();
+	}
+	if (boolean1) {
+		script_3337();
+		widget(548, 24).setIsHidden(true);
+		widget(548, 22).setScriptCallOnGameloop(-1, "");
+		widget(746, 187).setIsHidden(true);
+		widget(746, 184).setScriptCallOnGameloop(-1, "");
+		widget(746, 184).setIsHidden(false);
+		widget(548, 22).setIsHidden(false);
+	} else {
+		widget(746, 184).setIsHidden(true);
+		widget(548, 22).setIsHidden(true);
+	}
+	script_776();
+	return;
+}

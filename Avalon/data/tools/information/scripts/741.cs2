@@ -1,0 +1,27 @@
+void script_741() {
+	int int0;
+	int int1;
+	Model model2;
+	int0 = VARP[1163];
+	if (int0 == 0) {
+		return;
+	}
+	int1 = script_739(int0);
+	model2 = datamap('i', 'm', (DataMap)1151, int1);
+	if (isBitFlagged(VARC[104], int1)) {
+		return;
+	}
+	if (int0 == VARC[99] || int0 == VARC[100] || int0 == VARC[101]) {
+		return;
+	}
+	datamap('i', 'I', (DataMap)1153, int0).setModel(model2);
+	script_737(int0);
+	if (VARC[102] == 12) {
+		
+	}
+	if (VARC[105] == 0) {
+		msg("The mechanism issues forth a whine and shuts down.");
+		script_675();
+	}
+	return;
+}

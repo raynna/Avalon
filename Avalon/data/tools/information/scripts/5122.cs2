@@ -1,0 +1,9 @@
+void script_5122(Widget widget0, int arg1, Sprite sprite2, Color color3) {
+	if (ACTIVE.setChild(widget0, arg1 + 1)) {
+		ACTIVE.setSprite(sprite2);
+	}
+	if (ACTIVE.setChild(widget0, arg1 + 2)) {
+		ACTIVE.setRGB(color3);
+	}
+	return;
+}

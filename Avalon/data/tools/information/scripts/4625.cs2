@@ -1,0 +1,8 @@
+void script_4625() {
+	if (compare(STRING[353], "") != 0 && compare(STRING[353], "null") != 0) {
+		STRING[354] = STRING[353];
+	} else {
+		STRING[354] = "";
+	}
+	return;
+}

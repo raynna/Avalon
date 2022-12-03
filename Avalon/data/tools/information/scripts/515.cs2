@@ -1,0 +1,6 @@
+void script_515() {
+	VARC[51] = 300;
+	VARC[50] = 0;
+	VARC[52] = 0;
+	return;
+}

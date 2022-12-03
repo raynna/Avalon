@@ -1,0 +1,115 @@
+void script_1271(int arg0) {
+	boolean boolean1;
+	boolean boolean2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	boolean1 = true;
+	boolean2 = false;
+	switch (VARPBIT[1010]) {
+		case 0:
+			widget(13, 28).setText("First click the FIRST digit.");
+			widget(13, 1).setText("?");
+			widget(13, 2).setText("?");
+			widget(13, 3).setText("?");
+			widget(13, 4).setText("?");
+			break;
+		case 1:
+			widget(13, 28).setText("Now click the SECOND digit.");
+			widget(13, 1).setText("*");
+			widget(13, 2).setText("?");
+			widget(13, 3).setText("?");
+			widget(13, 4).setText("?");
+			break;
+		case 2:
+			widget(13, 28).setText("Time for the THIRD digit.");
+			widget(13, 1).setText("*");
+			widget(13, 2).setText("*");
+			widget(13, 3).setText("?");
+			widget(13, 4).setText("?");
+			break;
+		case 3:
+			widget(13, 28).setText("Finally, the FOURTH digit.");
+			widget(13, 1).setText("*");
+			widget(13, 2).setText("*");
+			widget(13, 3).setText("*");
+			widget(13, 4).setText("?");
+			boolean1, boolean2 = 0, 1;
+			break;
+		default:
+			widget(13, 28).setText("Please wait...");
+			widget(13, 1).setText("*");
+			widget(13, 2).setText("*");
+			widget(13, 3).setText("*");
+			widget(13, 4).setText("*");
+			boolean1, boolean2 = 1, 1;
+			break;
+	}
+	int3 = 0;
+	if (arg0 == 0) {
+		while (int3 < 10) {
+			datamap('i', 'I', (DataMap)3555, int3).setIsHidden(boolean1);
+			datamap('i', 'I', (DataMap)3554, int3).setIsHidden(boolean2);
+			int3 = int3 + 1;
+		}
+		return;
+	}
+	int4 = rndExcl(10);
+	ARRAY0 = new int[10];
+	ARRAY0[0] = int4;
+	ARRAY0[1] = (int4 + 1) % 10;
+	ARRAY0[2] = (int4 + 2) % 10;
+	ARRAY0[3] = (int4 + 3) % 10;
+	ARRAY0[4] = (int4 + 4) % 10;
+	ARRAY0[5] = (int4 + 5) % 10;
+	ARRAY0[6] = (int4 + 6) % 10;
+	ARRAY0[7] = (int4 + 7) % 10;
+	ARRAY0[8] = (int4 + 8) % 10;
+	ARRAY0[9] = (int4 + 9) % 10;
+	int5 = 0;
+	while (int3 < 10) {
+		int5 = rndExcl(9);
+		int4 = ARRAY0[9];
+		ARRAY0[9] = ARRAY0[int5];
+		ARRAY0[int5] = int4;
+		datamap('i', 'I', (DataMap)3557, int3).setPosition(25 - rnd(50), 20 - rnd(40), 1, 1);
+		datamap('i', 'I', (DataMap)3555, int3).setIsHidden(boolean1);
+		datamap('i', 'I', (DataMap)3554, int3).setIsHidden(boolean2);
+		int3 = int3 + 1;
+	}
+	int6 = widget(13, 6).getWidth();
+	int7 = widget(13, 6).getHeight();
+	int8 = (widget(13, 5).getWidth() - int6) / 3;
+	int9 = (widget(13, 5).getHeight() - int7) / 2;
+	int10 = int8 * 2;
+	int11 = int9 * 2;
+	int12 = int8 * 3;
+	datamap('i', 'I', (DataMap)3556, ARRAY0[0]).setPosition(0, 0, 0, 0);
+	datamap('i', 'I', (DataMap)3555, ARRAY0[0]).setPosition(0, 0, 0, 0);
+	datamap('i', 'I', (DataMap)3556, ARRAY0[1]).setPosition(int8, 0, 0, 0);
+	datamap('i', 'I', (DataMap)3555, ARRAY0[1]).setPosition(int8, 0, 0, 0);
+	datamap('i', 'I', (DataMap)3556, ARRAY0[2]).setPosition(int10, 0, 0, 0);
+	datamap('i', 'I', (DataMap)3555, ARRAY0[2]).setPosition(int10, 0, 0, 0);
+	datamap('i', 'I', (DataMap)3556, ARRAY0[3]).setPosition(int12, 0, 0, 0);
+	datamap('i', 'I', (DataMap)3555, ARRAY0[3]).setPosition(int12, 0, 0, 0);
+	datamap('i', 'I', (DataMap)3556, ARRAY0[4]).setPosition(0, int9, 0, 0);
+	datamap('i', 'I', (DataMap)3555, ARRAY0[4]).setPosition(0, int9, 0, 0);
+	datamap('i', 'I', (DataMap)3556, ARRAY0[5]).setPosition(int8, int9, 0, 0);
+	datamap('i', 'I', (DataMap)3555, ARRAY0[5]).setPosition(int8, int9, 0, 0);
+	datamap('i', 'I', (DataMap)3556, ARRAY0[6]).setPosition(int10, int9, 0, 0);
+	datamap('i', 'I', (DataMap)3555, ARRAY0[6]).setPosition(int10, int9, 0, 0);
+	datamap('i', 'I', (DataMap)3556, ARRAY0[7]).setPosition(0, int11, 0, 0);
+	datamap('i', 'I', (DataMap)3555, ARRAY0[7]).setPosition(0, int11, 0, 0);
+	datamap('i', 'I', (DataMap)3556, ARRAY0[8]).setPosition(int8, int11, 0, 0);
+	datamap('i', 'I', (DataMap)3555, ARRAY0[8]).setPosition(int8, int11, 0, 0);
+	datamap('i', 'I', (DataMap)3556, ARRAY0[9]).setPosition(int10, int11, 0, 0);
+	datamap('i', 'I', (DataMap)3555, ARRAY0[9]).setPosition(int10, int11, 0, 0);
+	return;
+}

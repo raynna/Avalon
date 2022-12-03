@@ -1,0 +1,10 @@
+void script_911() {
+	if (VARPBIT[4532] == 1 && VARC[118] < 253) {
+		VARC[118] = VARC[118] + 3;
+		widget(721, 3).setTrans(255 - VARC[118]);
+	} else if (VARPBIT[4532] == 0 && VARC[118] > 3) {
+		VARC[118] = VARC[118] - 3;
+		widget(721, 3).setTrans(255 - VARC[118]);
+	}
+	return;
+}

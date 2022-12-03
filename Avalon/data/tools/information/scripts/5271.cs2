@@ -1,0 +1,36 @@
+int script_5271(Widget widget0, string arg1, Location location2, int arg3, int arg4) {
+	string str1;
+	string str2;
+	string str3;
+	str1 = "";
+	if (location2 == null) {
+		str1 = "Your coord";
+	} else if (location2 == location(16383, 16382, -1)) {
+		str1 = "Safe Clanwars";
+	} else {
+		str1 = script_2055(location2);
+	}
+	str2 = " - ";
+	if (widget0.getWidth() < 260) {
+		str2 = "<br>";
+	}
+	str3 = "max";
+	if (arg3 >= 0) {
+		str3 = str(arg3);
+	}
+	ACTIVE.createChild(widget0, 4, arg4);
+	ACTIVE.setText(arg1 + str2 + "@ " + str1 + " - Max: " + str3);
+	ACTIVE.setTextAntiMacro(true);
+	ACTIVE.setRGB(0xCCCCCC);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+	ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 13421772, "Iii");
+	ACTIVE.setContextMenuOption(1, "Spawn");
+	ACTIVE.setContextMenuOption(2, "Pick spawn number");
+	ACTIVE.setContextMenuOption(3, "Kill");
+	ACTIVE.createChild(widget0, 3, arg4 + 1);
+	ACTIVE.setRGB(0xFFFFFF);
+	ACTIVE.setTrans(226);
+	ACTIVE.setFilled(true);
+	return arg4 + 2;
+}

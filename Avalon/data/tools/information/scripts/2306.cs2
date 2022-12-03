@@ -1,0 +1,15 @@
+void script_2306() {
+	int int0;
+	int int1;
+	int int2;
+	int0 = 31;
+	int1 = 0;
+	int2 = 31;
+	if (getRunEnergy() >= 100) {
+		int1 = 0;
+	} else {
+		int1 = int0 - int0 * getRunEnergy() / 100;
+	}
+	widget(750, 4).setSize(int2, int1, 0, 0);
+	return;
+}

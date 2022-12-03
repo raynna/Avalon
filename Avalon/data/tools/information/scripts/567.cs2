@@ -1,0 +1,175 @@
+void script_567(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	if (arg0 == 70254793) {
+		switch (VARPBIT[8876]) {
+			case 0:
+				int1 = 1;
+				break;
+			case 1:
+				int1 = 9;
+				break;
+			case 2:
+				int1 = 12;
+				break;
+			case 3:
+				int1 = 75;
+				break;
+		}
+		int3 = int1 * VARPBIT[8877];
+		if (VARPBIT[8857] - int3 > 0) {
+			widget(1072, 53).setRGB(0x00FF00);
+			int3 = VARPBIT[8857] - int3;
+		} else {
+			widget(1072, 53).setRGB(0xFF0000);
+			int3 = 0;
+		}
+	} else if (arg0 == 70254805) {
+		switch (VARPBIT[8876]) {
+			case 0:
+				int1 = 1;
+				int2 = 2;
+				break;
+			case 1:
+				int1 = 4;
+				int2 = 7;
+				break;
+			case 2:
+				int1 = 9;
+				int2 = 17;
+				break;
+			case 3:
+				int1 = 40;
+				int2 = 80;
+				break;
+		}
+		int3 = int1 * VARPBIT[8877];
+		if (VARPBIT[8857] - int3 > 0) {
+			widget(1072, 53).setRGB(0x00FF00);
+			int3 = VARPBIT[8857] - int3;
+		} else {
+			widget(1072, 53).setRGB(0xFF0000);
+			int3 = 0;
+		}
+		int4 = int2 * VARPBIT[8877];
+		if (VARPBIT[8865] - int4 > 0) {
+			widget(1072, 49).setRGB(0x00FF00);
+			int4 = VARPBIT[8865] - int4;
+		} else {
+			widget(1072, 49).setRGB(0xFF0000);
+			int4 = 0;
+		}
+	} else if (arg0 == 70254817) {
+		switch (VARPBIT[8876]) {
+			case 0:
+				int1 = 1;
+				int2 = 4;
+				break;
+			case 1:
+				int1 = 3;
+				int2 = 12;
+				break;
+			case 2:
+				int1 = 6;
+				int2 = 24;
+				break;
+			case 3:
+				int1 = 30;
+				int2 = 120;
+				break;
+		}
+		int3 = int1 * VARPBIT[8877];
+		if (VARPBIT[8859] - int3 > 0) {
+			widget(1072, 57).setRGB(0x00FF00);
+			int3 = VARPBIT[8859] - int3;
+		} else {
+			widget(1072, 57).setRGB(0xFF0000);
+			int3 = 0;
+		}
+		int4 = int2 * VARPBIT[8877];
+		if (VARPBIT[8865] - int4 > 0) {
+			widget(1072, 49).setRGB(0x00FF00);
+			int4 = VARPBIT[8865] - int4;
+		} else {
+			widget(1072, 49).setRGB(0xFF0000);
+			int4 = 0;
+		}
+	} else if (arg0 == 70254829) {
+		switch (VARPBIT[8876]) {
+			case 0:
+				int1 = 1;
+				int2 = 6;
+				break;
+			case 1:
+				int1 = 3;
+				int2 = 14;
+				break;
+			case 2:
+				int1 = 4;
+				int2 = 22;
+				break;
+			case 3:
+				int1 = 25;
+				int2 = 150;
+				break;
+		}
+		int3 = int1 * VARPBIT[8877];
+		if (VARPBIT[8862] - int3 > 0) {
+			widget(1072, 61).setRGB(0x00FF00);
+			int3 = VARPBIT[8862] - int3;
+		} else {
+			widget(1072, 61).setRGB(0xFF0000);
+			int3 = 0;
+		}
+		int4 = int2 * VARPBIT[8877];
+		if (VARPBIT[8865] - int4 > 0) {
+			widget(1072, 49).setRGB(0x00FF00);
+			int4 = VARPBIT[8865] - int4;
+		} else {
+			widget(1072, 49).setRGB(0xFF0000);
+			int4 = 0;
+		}
+	} else if (arg0 == 70254841) {
+		switch (VARPBIT[8876]) {
+			case 0:
+				int1 = 1;
+				int2 = 8;
+				break;
+			case 1:
+				int1 = 2;
+				int2 = 16;
+				break;
+			case 2:
+				int1 = 4;
+				int2 = 30;
+				break;
+			case 3:
+				int1 = 18;
+				int2 = 144;
+				break;
+		}
+		int3 = int1 * VARPBIT[8877];
+		if (VARPBIT[8863] - int3 > 0) {
+			widget(1072, 65).setRGB(0x00FF00);
+			int3 = VARPBIT[8863] - int3;
+		} else {
+			widget(1072, 65).setRGB(0xFF0000);
+			int3 = 0;
+		}
+		int4 = int2 * VARPBIT[8877];
+		if (VARPBIT[8865] - int4 > 0) {
+			widget(1072, 49).setRGB(0x00FF00);
+			int4 = VARPBIT[8865] - int4;
+		} else {
+			widget(1072, 49).setRGB(0xFF0000);
+			int4 = 0;
+		}
+	}
+	return;
+}

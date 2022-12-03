@@ -1,0 +1,11 @@
+void script_5306() {
+	widget(824, 8).setIsHidden(true);
+	widget(824, 74).setSprite(6168);
+	widget(824, 9).setIsHidden(true);
+	widget(824, 127).setSprite(6168);
+	widget(824, 10).setIsHidden(true);
+	widget(824, 180).setSprite(6168);
+	widget(824, 11).setIsHidden(true);
+	widget(824, 217).setSprite(6168);
+	return;
+}

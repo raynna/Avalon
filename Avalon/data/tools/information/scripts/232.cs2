@@ -1,0 +1,16 @@
+void script_232() {
+	widget(594, 62).setIsHidden(true);
+	widget(594, 117).setIsHidden(true);
+	widget(594, 121).setIsHidden(true);
+	widget(594, 34).setIsHidden(true);
+	if (!widget(594, 61).isHidden()) {
+		widget(594, 62).setIsHidden(false);
+	} else if (!widget(594, 104).isHidden()) {
+		widget(594, 117).setIsHidden(false);
+	} else if (!widget(594, 120).isHidden()) {
+		widget(594, 121).setIsHidden(false);
+	} else if (!widget(594, 33).isHidden()) {
+		widget(594, 34).setIsHidden(false);
+	}
+	return;
+}

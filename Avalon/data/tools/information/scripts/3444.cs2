@@ -1,0 +1,4 @@
+void script_3444(Widget widget0) {
+	widget0.set3DViewDistance(2000);
+	return;
+}

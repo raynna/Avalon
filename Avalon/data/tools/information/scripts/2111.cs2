@@ -1,0 +1,22 @@
+void script_2111(int arg0, int arg1, int arg2, Widget widget3, Widget widget4, Widget widget5, Widget widget6) {
+	int int7;
+	int int8;
+	if (arg0 != 1) {
+		return;
+	}
+	int7 = 0;
+	int8 = 0;
+	playSoundEffect(4911, 1, 0);
+	if (arg1 == 1) {
+		int7 = script_686((VARPBIT[693] + arg2) % 4, 4);
+		int8 = VARPBIT[5851];
+	} else if (arg1 == 2) {
+		int7 = script_686((VARPBIT[694] + arg2) % 4, 4);
+		int8 = VARPBIT[5852];
+	} else {
+		int7 = script_686((VARPBIT[695] + arg2) % 4, 4);
+		int8 = VARPBIT[5853];
+	}
+	script_2112(widget3, widget4, widget5, widget6, int7, int8);
+	return;
+}

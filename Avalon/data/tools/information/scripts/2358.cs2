@@ -1,0 +1,31 @@
+void script_2358(Widget widget0) {
+	int int1;
+	int int2;
+	boolean boolean3;
+	AttrMap attrmap4;
+	int int5;
+	int int6;
+	Widget widget7;
+	int1 = datamap('I', 'i', (DataMap)2125, widget0);
+	int2 = datamap('I', 'i', (DataMap)2124, widget0);
+	boolean3 = true;
+	if (VARP[1893] == -1) {
+		if (int2 == 1) {
+			boolean3 = isBitFlagged(VARP[1890], int1);
+		} else if (int2 == 2) {
+			boolean3 = isBitFlagged(VARP[1891], int1);
+		} else {
+			boolean3 = isBitFlagged(VARP[1892], int1);
+		}
+		if (!boolean3) {
+			widget0.sendChildBack();
+		}
+		return;
+	}
+	attrmap4 = datamap('I', 'J', (DataMap)704, widget(VARP[1893]));
+	int5 = getAttributeMapValue(attrmap4, 1222);
+	int6 = getAttributeMapValue(attrmap4, 1223);
+	widget7 = datamap('I', 'I', (DataMap)1592, widget(VARP[1893]));
+	widget7.setPosition(int5, int6, 0, 0);
+	return;
+}

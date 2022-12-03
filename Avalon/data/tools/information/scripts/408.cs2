@@ -1,0 +1,22 @@
+void script_408(int arg0) {
+	if (VARC[1363] == arg0) {
+		return;
+	}
+	widget(1013, 1).setScriptCallOnGlobalConfigChange(408, VARC[1363], 1363, "iY");
+	VARC[1389] = 0;
+	if (VARC[1363] == VARPBIT[7510]) {
+		widget(1010, 33).setIsHidden(false);
+		widget(1010, 32).setIsHidden(true);
+		widget(1010, 24).setIsHidden(true);
+		widget(1013, 26).setText("Your Turn");
+		playSoundEffect2False(3439, 1, 0, 255);
+	} else {
+		widget(1010, 33).setIsHidden(true);
+		widget(1010, 24).setIsHidden(true);
+		widget(1013, 26).setText("Opponent's Turn");
+		if (widget(1010, 7).isHidden()) {
+			widget(1010, 32).setIsHidden(false);
+		}
+	}
+	return;
+}

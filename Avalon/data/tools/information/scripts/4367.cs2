@@ -1,0 +1,12 @@
+void script_4367() {
+	string str0;
+	str0 = escape(cs2method5432());
+	if (length(str0) <= 13) {
+		STRING[346] = str0;
+		VARC[1498] = length(STRING[346]);
+		VARC[1498] = script_1552(VARC[1498], STRING[346], 5631, widget(1100, 38), -1);
+		widget(1100, 39).setPosition(VARC[1498], widget(1100, 39).getY(), 0, 0);
+		widget(1100, 38).setText(STRING[346]);
+	}
+	return;
+}

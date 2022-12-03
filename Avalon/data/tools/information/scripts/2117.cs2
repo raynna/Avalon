@@ -1,0 +1,84 @@
+void script_2117(int arg0, int arg1, int arg2, Widget widget3, Widget widget4, Widget widget5) {
+	int int6;
+	int int7;
+	int6 = arg2 + arg1 / 2 * (64 + arg2);
+	int7 = arg2 + arg1 % 2 * (160 + arg2);
+	ACTIVE.createChild(widget3, 3, arg0 * 7);
+	ACTIVE.setSize(160, 64, 0, 0);
+	ACTIVE.setPosition(int7, int6, 0, 0);
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.setTrans(200);
+	ACTIVE.setFilled(true);
+	ACTIVE.setContextMenuOption(1, "Choose");
+	if (arg0 == 26) {
+		ACTIVE.setContextMenuOption(10, "Explain");
+		ACTIVE.setOptionBase("<col=ff9040>" + "Emote" + "</col>");
+	} else if (arg0 == 27) {
+		ACTIVE.setContextMenuOption(10, "Explain");
+		ACTIVE.setOptionBase("<col=ff9040>" + "Costume point" + "</col>");
+	} else {
+		ACTIVE.setContextMenuOption(10, "Examine");
+		ACTIVE.setOptionBase("<col=ff9040>" + getItemName(getItemIdInSlot(307, arg0)) + "</col>");
+	}
+	ACTIVE.setScriptCallOnClickContextMenu(2120, CTX_MENU_OPTION, widget3, arg0, widget4, widget5, "iIiII");
+	ACTIVE.createChild(widget3, 5, arg0 * 7 + 1);
+	ACTIVE.setSize(159, 32, 0, 0);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setSprite(1074);
+	ACTIVE.setPosition(int7, int6 - 17, 0, 0);
+	ACTIVE.createChild(widget3, 5, arg0 * 7 + 2);
+	ACTIVE.setSize(160, 32, 0, 0);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setSprite(1074);
+	ACTIVE.setVFlip(true);
+	ACTIVE.setPosition(int7, int6 + 49, 0, 0);
+	ACTIVE.createChild(widget3, 5, arg0 * 7 + 3);
+	ACTIVE.setSize(32, 63, 0, 0);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setSprite(1075);
+	ACTIVE.setPosition(int7 - 14, int6, 0, 0);
+	ACTIVE.createChild(widget3, 5, arg0 * 7 + 4);
+	ACTIVE.setSize(32, 63, 0, 0);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setSprite(1075);
+	ACTIVE.setHFlip(true);
+	ACTIVE.setPosition(int7 + 142, int6, 0, 0);
+	ACTIVE.createChild(widget3, 5, arg0 * 7 + 5);
+	if (arg0 == 26) {
+		ACTIVE.setSize(22, 22, 0, 0);
+		ACTIVE.setPosition(int7 + 15, int6 + 20, 0, 0);
+		ACTIVE.setOutlineThickness(0);
+		ACTIVE.setSprite(1830);
+	} else if (arg0 == 27) {
+		ACTIVE.setSize(42, 42, 0, 0);
+		ACTIVE.setPosition(int7 + 5, int6 + 12, 0, 0);
+		ACTIVE.setOutlineThickness(0);
+		ACTIVE.setSprite(1044);
+	} else {
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setPosition(int7 + 8, int6 + 16, 0, 0);
+		ACTIVE.setOutlineThickness(1);
+		ACTIVE.setShadowColor(0x302020);
+		if (getItemAmtInSlot(307, arg0) > 1 && itemIsStackable(getItemIdInSlot(307, arg0))) {
+			ACTIVE.setItem(getItemIdInSlot(307, arg0), getItemAmtInSlot(307, arg0));
+		} else {
+			ACTIVE.setItem(getItemIdInSlot(307, arg0), -1);
+		}
+	}
+	_ACTIVE.createChild(widget3, 4, arg0 * 7 + 6);
+	_ACTIVE.setFont(496);
+	_ACTIVE.setRGB(0xFF981F);
+	_ACTIVE.setTextAlignment(1, 1, 0);
+	_ACTIVE.setSize(160 - (ACTIVE.getX() - int7 + ACTIVE.getWidth() + 4), 64, 0, 0);
+	_ACTIVE.setPosition(int7 + 160 - _ACTIVE.getWidth() - 2, int6, 0, 0);
+	if (arg0 == 26) {
+		_ACTIVE.setText("Unlock emote!");
+	} else if (arg0 == 27) {
+		_ACTIVE.setText("Save up for a costume!");
+	} else if (getItemAmtInSlot(307, arg0) == 1) {
+		_ACTIVE.setText(datamap('i', 's', (DataMap)2238, arg0) + ":" + "<br>" + getItemName(getItemIdInSlot(307, arg0)));
+	} else {
+		_ACTIVE.setText(datamap('i', 's', (DataMap)2238, arg0) + ":" + "<br>" + str(getItemAmtInSlot(307, arg0)) + " x " + getItemName(getItemIdInSlot(307, arg0)));
+	}
+	return;
+}

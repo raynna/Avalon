@@ -1,0 +1,10 @@
+void script_2488() {
+	widget(844, 10).setIsHidden(false);
+	widget(844, 11).setIsHidden(true);
+	widget(844, 51).setSprite(1420);
+	widget(844, 49).setSprite(1421);
+	widget(844, 52).setItemOnWidgetMethod2205(436, 1);
+	widget(844, 50).setItemOnWidgetMethod2205(1511, 1);
+	script_2490();
+	return;
+}

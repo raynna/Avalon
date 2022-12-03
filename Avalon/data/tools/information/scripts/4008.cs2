@@ -1,0 +1,5 @@
+void script_4008(int arg0, Widget widget1) {
+	widget1.setScriptCallOnMouseEntered(4009, 0, arg0, widget1, "iiI");
+	widget1.setScriptCallOnMouseExit(4009, 1, arg0, widget1, "iiI");
+	return;
+}

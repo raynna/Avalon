@@ -1,0 +1,367 @@
+void script_3115() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	Widget widget4;
+	Widget widget5;
+	Widget widget6;
+	Widget widget7;
+	Widget widget8;
+	Widget widget9;
+	Widget widget10;
+	Widget widget11;
+	Widget widget12;
+	Widget widget13;
+	Widget widget14;
+	Widget widget15;
+	Widget widget16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	Sprite sprite22;
+	int int23;
+	int int24;
+	Sprite sprite25;
+	Color color26;
+	Color color27;
+	Sprite sprite28;
+	Sprite sprite29;
+	int int30;
+	int int31;
+	int int32;
+	int int33;
+	int int34;
+	int int35;
+	int int36;
+	int int37;
+	int int38;
+	int int39;
+	int int40;
+	int int41;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	string str4;
+	string str5;
+	string str6;
+	int0 = script_1851();
+	int1 = script_1852();
+	if (int1 == int0 && int1 != 0) {
+		int1 = 0;
+		script_1856(0);
+	}
+	switch (int0) {
+		case 4:
+			int0 = int0 + 2;
+			break;
+		case 5:
+			int0 = int0 + 2;
+			break;
+		case 6:
+			int0 = int0 + 2;
+			break;
+		case 7:
+			int0 = int0 + 2;
+			break;
+		case 8:
+			int0 = int0 + 6;
+			break;
+		case 9:
+			int0 = int0 + 6;
+			break;
+		case 10:
+			int0 = int0 + 6;
+			break;
+		case 11:
+			int0 = int0 + 6;
+			break;
+	}
+	switch (int1) {
+		case 4:
+			int1 = int1 + 2;
+			break;
+		case 5:
+			int1 = int1 + 2;
+			break;
+		case 6:
+			int1 = int1 + 2;
+			break;
+		case 7:
+			int1 = int1 + 2;
+			break;
+		case 8:
+			int1 = int1 + 6;
+			break;
+		case 9:
+			int1 = int1 + 6;
+			break;
+		case 10:
+			int1 = int1 + 6;
+			break;
+		case 11:
+			int1 = int1 + 6;
+			break;
+	}
+	cs2method6507(int0 / 2, script_734(int0 % 2), int1 / 2, script_734(int1 % 2));
+	int2 = 0;
+	if (!cs2method6500()) {
+		return;
+	}
+	widget(910, 0).setScriptCallOnGameloop(3114, getClientCycle() + 500, "i");
+	int3 = 0;
+	if (VARC[998] > 0) {
+		int3 = widget(910, 21).getHeight();
+	}
+	if (VARC[999] > 0) {
+		int3 = int3 + widget(910, 22).getHeight();
+	}
+	if (int3 == 0) {
+		widget(910, 24).setIsHidden(true);
+		widget(910, 18).setIsHidden(true);
+		widget(910, 23).setIsHidden(true);
+	} else {
+		widget(910, 23).setSize(widget(910, 23).getWidth(), int3, 0, 0);
+		widget(910, 24).setIsHidden(false);
+		widget(910, 18).setIsHidden(false);
+		widget(910, 23).setIsHidden(false);
+		int3 = int3 + widget(910, 18).getHeight();
+		widget(910, 24).setPosition(0, int3, 0, 0);
+		int3 = int3 + widget(910, 24).getHeight();
+	}
+	widget(910, 25).setPosition(0, int3, 0, 0);
+	int3 = int3 + widget(910, 25).getHeight();
+	widget(910, 62).setSize(16, int3, 1, 1);
+	widget(910, 62).setPosition(0, int3, 0, 0);
+	widget(910, 86).setSize(16, int3, 0, 1);
+	widget(910, 86).setPosition(0, int3, 2, 0);
+	widget4 = widget(910, 64);
+	widget5 = widget(910, 68);
+	widget6 = widget(910, 69);
+	widget7 = widget(910, 70);
+	widget8 = widget(910, 71);
+	widget9 = widget(910, 72);
+	widget10 = widget(910, 73);
+	widget11 = widget(910, 74);
+	widget12 = widget(910, 75);
+	widget13 = widget(910, 76);
+	widget14 = widget(910, 77);
+	widget15 = widget(910, 78);
+	widget16 = widget(910, 86);
+	widget4.clearChildren();
+	widget5.clearChildren();
+	widget6.clearChildren();
+	widget7.clearChildren();
+	widget8.clearChildren();
+	widget9.clearChildren();
+	widget10.clearChildren();
+	widget11.clearChildren();
+	widget12.clearChildren();
+	widget13.clearChildren();
+	widget14.clearChildren();
+	widget15.clearChildren();
+	int17 = 0;
+	int18 = 0;
+	str0 = "";
+	int19 = 0;
+	str1 = "";
+	int20 = 0;
+	int21 = 0;
+	sprite22 = null;
+	int23 = -1;
+	int24 = -1;
+	sprite25 = null;
+	color26 = 0x000000;
+	color27 = 0x000000;
+	str2 = "";
+	str3 = "";
+	sprite28 = null;
+	sprite29 = null;
+	int30 = 0;
+	int31 = 0;
+	int32 = 0;
+	int33 = 0;
+	int34 = 0;
+	str4 = "";
+	str5 = "";
+	int35 = -1;
+	int36 = -1;
+	int17, int18, str0, int19, str1, int20, int21, str2 = getFirstWorldData();
+	if (int17 == -1) {
+		script_3143(1, "Unable to load list.");
+		widget(910, 1).setText("The world list could not be loaded." + "<br>" + "<br>" + "Please accept our apologies for the" + "<br>" + "inconvenience, and try again later.");
+		return;
+	}
+	int37 = 0;
+	int38 = 0;
+	int39 = 0;
+	str6 = "";
+	int40 = 0;
+	int41 = 0;
+	int2 = 0;
+	while (int2 == 0) {
+		if (int17 == -1) {
+			int2 = 1;
+		} else if (int17 >= 170 && int20 < 0) {
+			int17, int18, str0, int19, str1, int20, int21, str2 = getNextWorldData();
+		} else if (isBitFlagged(int18, 12)) {
+			int17, int18, str0, int19, str1, int20, int21, str2 = getNextWorldData();
+		} else {
+			sprite28, str3, sprite22, color27, sprite29, color26, sprite25, str4, str5 = script_3117(int17, int18, int37, str0, str1, int20, int19);
+			if (int17 == VARC[998]) {
+				int40 = 1;
+			} else if (int17 == VARC[999]) {
+				int41 = 1;
+			}
+			script_2996(widget4, int37, widget4.getWidth(), 20, 0, int38, color26, true, 0);
+			script_2994(widget5, int37, 13, 12, 0, int38 + 4, sprite25, false, false, false, 0);
+			ACTIVE.setPosition(0, int38 + 4, 1, 0);
+			script_2994(widget7, int37, 19, 18, 2, int38 + 1, sprite22, false, false, false, 0);
+			script_2995(widget6, int37, widget6.getWidth() - 25, 20, 25, int38, str(int17), color27, 494, 0, 1, 0, true);
+			script_2995(widget8, int37, widget8.getWidth() - 6, 20, 3, int38, str5, color27, 494, 0, 1, 0, true);
+			script_2994(widget10, int37, 24, 12, 4, int38 + 4, sprite28, false, false, false, 0);
+			script_2995(widget9, int37, 30, 20, 30, int38, str3, color27, 494, 0, 1, 0, true);
+			ACTIVE.setSize(30, 20, 1, 0);
+			script_2995(widget11, int37, widget11.getWidth() - 10, 20, 5, int38, str4, color27, 494, 0, 1, 0, true);
+			script_2994(widget12, int37, 17, 17, 0, int38 + 1, sprite29, false, false, false, 0);
+			ACTIVE.setPosition(0, int38 + 1, 1, 0);
+			if (int21 == -1) {
+				str6 = "-";
+			} else if (int21 >= 1000) {
+				str6 = "N/A";
+			} else {
+				str6 = str(int21);
+			}
+			script_2995(widget13, int37, widget13.getWidth() - 10, 20, 5, int38, str6, color27, 494, 0, 1, 0, true);
+			script_2995(widget14, int37, widget14.getWidth(), 20, 0, int38, "", 0x000000, 494, 0, 1, 0, true);
+			ACTIVE.setScriptCallOnMouseEntered(3131, widget14, int37, int17, "Iii");
+			ACTIVE.setScriptCallOnMouseExit(3133, "");
+			ACTIVE.setContextMenuOption(1, "Select");
+			ACTIVE.setOptionBase("World " + str(int17));
+			ACTIVE.setScriptCallOnClickContextMenu(3129, CTX_MENU_OPTION, int37, int17, str2, "iiis");
+			script_2995(widget15, int37, widget15.getWidth(), 20, 0, int38, "", 0x000000, 494, 0, 1, 0, true);
+			ACTIVE.setScriptCallOnMouseEntered(3130, widget5, widget15, int37, int17, "IIii");
+			ACTIVE.setScriptCallOnMouseExit(3132, widget5, int37, int17, "Iii");
+			ACTIVE.setContextMenuOption(1, "Alter");
+			ACTIVE.setOptionBase("Favourite");
+			ACTIVE.setScriptCallOnClickContextMenu(3128, CTX_MENU_OPTION, int37, int17, "iii");
+			if (int17 == getWorldId()) {
+				widget(910, 67).setIsHidden(false);
+				widget(910, 67).setPosition(0, int38, 0, 0);
+			}
+			if (int17 == VARC[998]) {
+				int35 = int37;
+			}
+			if (int17 == VARC[999]) {
+				int36 = int37;
+			}
+			int17, int18, str0, int19, str1, int20, int21, str2 = getNextWorldData();
+			int38 = int38 + 20;
+			int39 = int39 + 1;
+			int37 = int37 + 1;
+		}
+	}
+	widget(910, 62).setScrollMax(0, int38 + widget(910, 63).getY());
+	script_31(widget16, widget(910, 62), 792, 789, 790, 791, 773, 788);
+	if (VARC[998] > 0) {
+		script_3118(VARC[998], widget(910, 21), int35, int40);
+	} else {
+		script_3119(widget(910, 21), 1);
+	}
+	if (VARC[999] > 0) {
+		script_3118(VARC[999], widget(910, 22), int36, int41);
+	} else {
+		script_3119(widget(910, 22), 0);
+	}
+	if (VARC[998] > 0 && VARC[999] > 0) {
+		if (int40 == 0 && int41 == 0) {
+			widget(910, 23).setIsHidden(true);
+		} else if (int40 == 1 && int41 == 0) {
+			widget(910, 56).setPosition(widget(910, 56).getX(), 0, 0, 0);
+			widget(910, 57).setPosition(widget(910, 57).getX(), 0, 0, 0);
+			widget(910, 58).setPosition(widget(910, 58).getX(), 0, 0, 0);
+			widget(910, 59).setPosition(widget(910, 59).getX(), 0, 0, 0);
+			widget(910, 60).setPosition(widget(910, 60).getX(), 0, 0, 0);
+			widget(910, 61).setPosition(widget(910, 61).getX(), 0, 0, 0);
+			widget(910, 56).setSize(widget(910, 56).getWidth(), 20, 0, 0);
+			widget(910, 57).setSize(widget(910, 57).getWidth(), 20, 0, 0);
+			widget(910, 58).setSize(widget(910, 58).getWidth(), 20, 0, 0);
+			widget(910, 59).setSize(widget(910, 59).getWidth(), 20, 0, 0);
+			widget(910, 60).setSize(widget(910, 60).getWidth(), 20, 0, 0);
+			widget(910, 61).setSize(widget(910, 61).getWidth(), 20, 0, 0);
+			widget(910, 23).setIsHidden(false);
+		} else if (int40 == 0 && int41 == 1) {
+			widget(910, 56).setPosition(widget(910, 56).getX(), 20, 0, 0);
+			widget(910, 57).setPosition(widget(910, 57).getX(), 20, 0, 0);
+			widget(910, 58).setPosition(widget(910, 58).getX(), 20, 0, 0);
+			widget(910, 59).setPosition(widget(910, 59).getX(), 20, 0, 0);
+			widget(910, 60).setPosition(widget(910, 60).getX(), 20, 0, 0);
+			widget(910, 61).setPosition(widget(910, 61).getX(), 20, 0, 0);
+			widget(910, 56).setSize(widget(910, 56).getWidth(), 20, 0, 0);
+			widget(910, 57).setSize(widget(910, 57).getWidth(), 20, 0, 0);
+			widget(910, 58).setSize(widget(910, 58).getWidth(), 20, 0, 0);
+			widget(910, 59).setSize(widget(910, 59).getWidth(), 20, 0, 0);
+			widget(910, 60).setSize(widget(910, 60).getWidth(), 20, 0, 0);
+			widget(910, 61).setSize(widget(910, 61).getWidth(), 20, 0, 0);
+			widget(910, 23).setIsHidden(false);
+		} else {
+			widget(910, 56).setPosition(widget(910, 56).getX(), 0, 0, 0);
+			widget(910, 57).setPosition(widget(910, 57).getX(), 0, 0, 0);
+			widget(910, 58).setPosition(widget(910, 58).getX(), 0, 0, 0);
+			widget(910, 59).setPosition(widget(910, 59).getX(), 0, 0, 0);
+			widget(910, 60).setPosition(widget(910, 60).getX(), 0, 0, 0);
+			widget(910, 61).setPosition(widget(910, 61).getX(), 0, 0, 0);
+			widget(910, 56).setSize(widget(910, 56).getWidth(), 0, 0, 1);
+			widget(910, 57).setSize(widget(910, 57).getWidth(), 0, 0, 1);
+			widget(910, 58).setSize(widget(910, 58).getWidth(), 0, 0, 1);
+			widget(910, 59).setSize(widget(910, 59).getWidth(), 0, 0, 1);
+			widget(910, 60).setSize(widget(910, 60).getWidth(), 0, 0, 1);
+			widget(910, 61).setSize(widget(910, 61).getWidth(), 0, 0, 1);
+			widget(910, 23).setIsHidden(false);
+		}
+	} else if (VARC[998] > 0 && VARC[999] <= 0) {
+		if (int40 == 0) {
+			widget(910, 23).setIsHidden(true);
+		} else {
+			widget(910, 56).setPosition(widget(910, 56).getX(), 0, 0, 0);
+			widget(910, 57).setPosition(widget(910, 57).getX(), 0, 0, 0);
+			widget(910, 58).setPosition(widget(910, 58).getX(), 0, 0, 0);
+			widget(910, 59).setPosition(widget(910, 59).getX(), 0, 0, 0);
+			widget(910, 60).setPosition(widget(910, 60).getX(), 0, 0, 0);
+			widget(910, 61).setPosition(widget(910, 61).getX(), 0, 0, 0);
+			widget(910, 56).setSize(widget(910, 56).getWidth(), 0, 0, 1);
+			widget(910, 57).setSize(widget(910, 57).getWidth(), 0, 0, 1);
+			widget(910, 58).setSize(widget(910, 58).getWidth(), 0, 0, 1);
+			widget(910, 59).setSize(widget(910, 59).getWidth(), 0, 0, 1);
+			widget(910, 60).setSize(widget(910, 60).getWidth(), 0, 0, 1);
+			widget(910, 61).setSize(widget(910, 61).getWidth(), 0, 0, 1);
+			widget(910, 23).setIsHidden(false);
+		}
+	} else if (VARC[998] <= 0 && VARC[999] > 0) {
+		if (int41 == 0) {
+			widget(910, 23).setIsHidden(true);
+		} else {
+			widget(910, 56).setPosition(widget(910, 56).getX(), 0, 0, 0);
+			widget(910, 57).setPosition(widget(910, 57).getX(), 0, 0, 0);
+			widget(910, 58).setPosition(widget(910, 58).getX(), 0, 0, 0);
+			widget(910, 59).setPosition(widget(910, 59).getX(), 0, 0, 0);
+			widget(910, 60).setPosition(widget(910, 60).getX(), 0, 0, 0);
+			widget(910, 61).setPosition(widget(910, 61).getX(), 0, 0, 0);
+			widget(910, 56).setSize(widget(910, 56).getWidth(), 0, 0, 1);
+			widget(910, 57).setSize(widget(910, 57).getWidth(), 0, 0, 1);
+			widget(910, 58).setSize(widget(910, 58).getWidth(), 0, 0, 1);
+			widget(910, 59).setSize(widget(910, 59).getWidth(), 0, 0, 1);
+			widget(910, 60).setSize(widget(910, 60).getWidth(), 0, 0, 1);
+			widget(910, 61).setSize(widget(910, 61).getWidth(), 0, 0, 1);
+			widget(910, 23).setIsHidden(false);
+		}
+	} else {
+		widget(910, 23).setIsHidden(true);
+	}
+	widget(910, 1).setIsHidden(true);
+	widget(910, 13).setIsHidden(false);
+	return;
+}

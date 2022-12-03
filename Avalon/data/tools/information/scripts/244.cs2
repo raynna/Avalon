@@ -1,0 +1,6 @@
+void script_244() {
+	script_132();
+	VARC[11] = 0;
+	STRING[24] = "";
+	return;
+}

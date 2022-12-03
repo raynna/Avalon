@@ -1,0 +1,245 @@
+void script_4436(Widget widget0, int arg1) {
+	Widget widget2;
+	Widget widget3;
+	Widget widget4;
+	Widget widget5;
+	Widget widget6;
+	Widget widget7;
+	Widget widget8;
+	Widget widget9;
+	Widget widget10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	int int23;
+	int int24;
+	int int25;
+	int int26;
+	int int27;
+	int int28;
+	int int29;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	string str4;
+	if (VARC[1512] != 1) {
+		VARC[1512] = 1;
+	}
+	widget2 = widget(1110, 14);
+	widget3 = widget(1110, 15);
+	widget4 = widget(1110, 17);
+	widget5 = widget(1110, 18);
+	widget6 = widget(1110, 27);
+	widget7 = widget(1110, 19);
+	widget8 = widget(1110, 25);
+	widget9 = widget(1110, 29);
+	widget10 = widget(1110, 16);
+	int11 = widget6.getWidth();
+	if (arg1 <= -1) {
+		arg1 = widget6.getX();
+	}
+	arg1 = max(min(arg1, widget7.getWidth() - int11), 0);
+	VARC[1035] = arg1;
+	widget6.setPosition(arg1, 0, 0, 1);
+	widget6.cs2method2314(149);
+	widget6.setIsHidden(false);
+	widget2.clearChildren();
+	widget3.clearChildren();
+	widget4.clearChildren();
+	widget5.clearChildren();
+	widget10.clearChildren();
+	widget(1110, 86).setSprite(6255);
+	widget(1110, 22).setIsHidden(false);
+	script_4470();
+	str0 = "Leave your clan chat channel.";
+	widget(1110, 85).setScriptCallOnMouseOver(4538, widget(1110, 60), CTX_WIDGET, -1, str0, 120, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+	widget(1110, 85).setContextMenuOption(1, "Leave Clan Chat channel");
+	int12 = 0;
+	int13 = 0;
+	int14 = 0;
+	str1 = "";
+	int15 = 19;
+	int16 = widget8.getHeight() / int15;
+	str2 = "";
+	int17 = 0;
+	str3 = "";
+	int18 = 0;
+	int19 = 0;
+	str4 = "";
+	int20 = 0;
+	int21 = script_3365(widget7);
+	int22 = arg1 + int21 - script_3365(widget2);
+	int23 = widget4.getWidth() - (arg1 + (int21 - script_3365(widget4)) + int11);
+	widget4.setSize(int23, 0, 0, 1);
+	widget5.setSize(int23, 0, 0, 1);
+	widget9.setIsHidden(false);
+	widget0.setScriptCallOnClanChatDeltaStuff(4435, -1, "i");
+	widget(1110, 26).setText(cs2method3752());
+	widget(1110, 62).setText("");
+	widget(1110, 67).setIsHidden(true);
+	int24 = cs2method3760(removeTags(cs2method5020()));
+	if (int24 == -1) {
+		return;
+	}
+	int25 = cs2method3757(int24);
+	int14 = cs2method3755();
+	int12 = 0;
+	while (int12 < int14) {
+		int13 = int12 * int15;
+		str2 = removeTags(cs2method3756(int12));
+		int20 = cs2method3757(int12);
+		ACTIVE.createChild(widget2, 4, widget2.nextChild());
+		ACTIVE.setTextAlignment(0, 1, 0);
+		ACTIVE.setPosition(0, int13, 0, 0);
+		ACTIVE.setSize(int22, int15, 0, 0);
+		ACTIVE.setRGB(0xA4997D);
+		ACTIVE.setFont(3793);
+		ACTIVE.setTextAntiMacro(true);
+		if (compare(str2, removeTags(cs2method5020())) != 0) {
+			ACTIVE.setOptionBase(str2);
+			if (isFriend(str2)) {
+				ACTIVE.setContextMenuOption(1, "Message");
+				ACTIVE.setContextMenuOption(7, "Remove friend");
+			} else if (cs2method3623(str2)) {
+				ACTIVE.setContextMenuOption(8, "Remove ignore");
+			} else {
+				ACTIVE.setContextMenuOption(5, "Add friend");
+				ACTIVE.setContextMenuOption(6, "Add ignore");
+			}
+			if (int25 >= 100) {
+				ACTIVE.setContextMenuOption(9, "Temp-ban");
+			}
+			ACTIVE.setScriptCallOnClickContextMenu(4472, str2, CTX_MENU_OPTION, int12, "sii");
+		}
+		str1 = "   " + str2;
+		if (getTextWidth(str1, 3793) > int22) {
+			while (getTextWidth(str1 + "...", 3793) > int22 && length(str1) > 0) {
+				str1 = substr(str1, 0, length(str1) - 1);
+			}
+			str1 = str1 + "...";
+			ACTIVE.setScriptCallOnMouseOver(1594, widget(1110, 60), CTX_WIDGET, CTX_WIDGET_CHILD, str2, MOUSE_X, MOUSE_Y, "IIisii");
+			ACTIVE.setScriptCallOnMouseExit(40, widget(1110, 60), "I");
+		}
+		ACTIVE.setText(str1);
+		ACTIVE.setTextAntiMacro(true);
+		int17 = cs2method3758(int12);
+		if (int17 >= 1100 && int17 < 5001) {
+			str3 = "Lobby";
+			str4 = "Lobby";
+			int18 = 0;
+		} else if (int17 >= 5001 && int17 < 6000) {
+			str3 = "Classic " + str(int17 - 5000);
+			str4 = "Classic " + str(int17 - 5000);
+			int18 = 0;
+		} else {
+			str3 = str(int17);
+			str4 = "World " + str(int17);
+			int18 = 2 + 24 + 2;
+		}
+		int19 = getTextWidth(str3, 3793);
+		ACTIVE.createChild(widget5, 5, widget5.nextChild());
+		if (int23 >= int19 + int18) {
+			if (int18 > 0) {
+				ACTIVE.setSprite(2173);
+				ACTIVE.setSize(24, 12, 0, 0);
+				ACTIVE.setPosition(2, int13 + 1, 0, 0);
+				ACTIVE.setScriptCallOnMouseOver(1594, widget(1110, 60), CTX_WIDGET, CTX_WIDGET_CHILD, str4, MOUSE_X, MOUSE_Y, "IIisii");
+				ACTIVE.setScriptCallOnMouseExit(40, widget(1110, 60), "I");
+			}
+		} else {
+			int18 = 0;
+		}
+		if (!(int23 >= int19)) {
+			ACTIVE.setScriptCallOnMouseOver(1594, widget(1110, 60), CTX_WIDGET, CTX_WIDGET_CHILD, str4, MOUSE_X, MOUSE_Y, "IIisii");
+			ACTIVE.setScriptCallOnMouseExit(40, widget(1110, 60), "I");
+			str3 = "...";
+		}
+		ACTIVE.createChild(widget4, 4, widget4.nextChild());
+		ACTIVE.setSize(int23, int15, 0, 0);
+		ACTIVE.setPosition(int18 + 2, int13, 0, 0);
+		ACTIVE.setFont(3793);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setTextAlignment(0, 1, 0);
+		ACTIVE.setText(str3);
+		if (int17 == getWorldId()) {
+			ACTIVE.setRGB(0x3CB71E);
+		} else {
+			ACTIVE.setRGB(0xFFFF64);
+		}
+		ACTIVE.setScriptCallOnMouseOver(1594, widget(1110, 60), CTX_WIDGET, CTX_WIDGET_CHILD, str4, MOUSE_X, MOUSE_Y, "IIisii");
+		ACTIVE.setScriptCallOnMouseExit(40, widget(1110, 60), "I");
+		ACTIVE.createChild(widget3, 5, widget3.nextChild());
+		if (int20 == 127) {
+			ACTIVE.setPosition(3, 3, 0, 0);
+			ACTIVE.setSize(9, 9, 0, 0);
+		} else {
+			ACTIVE.setPosition(0, 0, 0, 0);
+			ACTIVE.setSize(15, 15, 0, 0);
+		}
+		ACTIVE.setSprite(datamap('i', 'd', (DataMap)3712, int20));
+		ACTIVE.createChild(widget10, 5, widget10.nextChild());
+		ACTIVE.setPosition(0, 0, 2, 0);
+		ACTIVE.setSize(9, int15, 0, 0);
+		ACTIVE.setSprite(6032);
+		ACTIVE.setScriptCallOnClickContextMenu(4317, CTX_WIDGET, CTX_WIDGET_CHILD, "Ii");
+		ACTIVE.setContextMenuOption(1, "Show options");
+		int12 = int12 + 1;
+	}
+	int12 = 0;
+	int26 = 0;
+	while (int12 < int14) {
+		cs2method3761();
+		int26 = int12;
+		if (ACTIVE.setChild(widget2, int26) && compare(ACTIVE.getText(), "") != 0) {
+			int13 = int12 * int15;
+			ACTIVE.setPosition(ACTIVE.getX(), int13, 0, 0);
+			if (ACTIVE.setChild(widget3, int26)) {
+				ACTIVE.setPosition(ACTIVE.getX(), ACTIVE.getY() + int13 + 3, 0, 0);
+			}
+			if (ACTIVE.setChild(widget4, int26)) {
+				ACTIVE.setPosition(ACTIVE.getX(), int13, 0, 0);
+			}
+			if (ACTIVE.setChild(widget5, int26)) {
+				ACTIVE.setPosition(ACTIVE.getX(), int13 + 5, 0, 0);
+			}
+			if (ACTIVE.setChild(widget10, int26)) {
+				ACTIVE.setPosition(ACTIVE.getX(), int13 + 2, 0, 0);
+			}
+		}
+		int12 = int12 + 1;
+	}
+	int27 = 0;
+	int28 = -1;
+	if (VARC[1518] >= 0) {
+		int28 = cs2method3760(STRING[126]);
+		if (int28 >= 0) {
+			VARC[1518] = int28;
+			if (ACTIVE.setChild(widget10, VARC[1518])) {
+				int27 = ACTIVE.getY();
+				widget(1110, 20).setPosition(0, int27, 2, 0);
+				widget(1110, 13).setPosition(0, int27, 2, 0);
+			}
+		} else {
+			VARC[1518] = -1;
+			STRING[126] = "";
+			widget(1110, 13).setIsHidden(false);
+			script_4628();
+		}
+	}
+	int29 = widget8.getScrollY();
+	widget8.setScrollMax(widget8.getWidth(), int15 * max(int14, int16));
+	int29 = min(int29, widget8.getScrollMaxV());
+	widget8.setScrollPos(0, int29);
+	script_31(widget(1110, 29), widget8, 5666, 5663, 5664, 5665, 5686, 5685);
+	return;
+}

@@ -1,0 +1,10 @@
+void script_4072(int arg0) {
+	if (arg0 == 69337132) {
+		widget(1058, 31).setIsHidden(true);
+	} else if (arg0 == 69337090) {
+		widget(1058, 39).setIsHidden(true);
+	} else if (arg0 == 69337091) {
+		widget(1058, 35).setIsHidden(true);
+	}
+	return;
+}

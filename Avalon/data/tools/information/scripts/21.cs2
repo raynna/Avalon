@@ -1,0 +1,34 @@
+void script_21(Widget widget0, Sprite sprite1, Sprite sprite2, int arg3, int arg4, Item item5, int arg6, Item item7, int arg8, Item item9, int arg10, Item item11, int arg12) {
+	if (getSkillCurrentLvl(6) < arg3 && (arg4 == 0 || getSkillActualLvl(6) < arg3) && (VARPBIT[9071] == 0 || widget0 != widget(430, 24) && widget0 != widget(430, 27) && widget0 != widget(430, 33) && widget0 != widget(430, 45) && widget0 != widget(430, 42))) {
+		if (!(VARPBIT[4089] == 1)) {
+			widget0.setSprite(sprite2);
+			return;
+		}
+		if (VARP[1092] < arg3 || datamap('I', 'i', (DataMap)1061, widget0) == 0) {
+			widget0.setSprite(sprite2);
+			return;
+		}
+	}
+	if (item5 != null && script_19(item5, widget0) < arg6) {
+		widget0.setSprite(sprite2);
+		return;
+	}
+	if (item7 != null && script_19(item7, widget0) < arg8) {
+		widget0.setSprite(sprite2);
+		return;
+	}
+	if (item9 != null && script_19(item9, widget0) < arg10) {
+		widget0.setSprite(sprite2);
+		return;
+	}
+	if (item11 != null && script_19(item11, widget0) < arg12) {
+		widget0.setSprite(sprite2);
+		return;
+	}
+	if (widget0 == widget(192, 27) && !isMember()) {
+		widget0.setSprite(sprite2);
+		return;
+	}
+	widget0.setSprite(sprite1);
+	return;
+}

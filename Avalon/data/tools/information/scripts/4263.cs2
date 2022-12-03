@@ -1,0 +1,5 @@
+void script_4263(Widget widget0, int arg1, int arg2) {
+	widget0.setPosition(arg1, arg2, 0, 0);
+	widget0.setIsHidden(false);
+	return;
+}

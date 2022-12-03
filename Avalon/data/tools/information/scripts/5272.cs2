@@ -1,0 +1,55 @@
+int script_5272(Widget widget0, int arg1, int arg2) {
+	int int3;
+	int int4;
+	int int5;
+	int3 = 0;
+	arg2 = arg2 / 2;
+	int4 = arg2;
+	int5 = widget0.getHeight();
+	if (ACTIVE.setChild(widget0, arg1)) {
+		if (widget0.getWidth() < 260) {
+			if (arg2 == 4) {
+				ACTIVE.setFont(494);
+			} else if (arg2 == 1) {
+				ACTIVE.setFont(496);
+			} else {
+				ACTIVE.setFont(495);
+			}
+		} else if (arg2 >= 7) {
+			ACTIVE.setFont(494);
+		} else if (arg2 <= 4) {
+			ACTIVE.setFont(496);
+		} else {
+			ACTIVE.setFont(495);
+		}
+		if (arg2 > 4) {
+			int4 = script_5276(arg2, 2);
+			int3 = arg1 / 4 * int5 / int4;
+			if (arg1 / 2 % 2 == 0) {
+				ACTIVE.setPosition(2, int3, 0, 0);
+			} else {
+				ACTIVE.setPosition(2, int3, 2, 0);
+			}
+			ACTIVE.setSize(widget0.getWidth() / 2 - 4, int5 / int4, 0, 0);
+		} else {
+			int3 = arg1 / 2 * int5 / arg2;
+			ACTIVE.setPosition(2, int3, 0, 0);
+			ACTIVE.setSize(6, int5 / arg2, 1, 0);
+		}
+	}
+	arg1 = arg1 + 1;
+	if (ACTIVE.setChild(widget0, arg1)) {
+		if (arg2 > 4) {
+			if (arg1 / 2 % 2 == 0) {
+				ACTIVE.setPosition(2, int3 + 1, 0, 0);
+			} else {
+				ACTIVE.setPosition(2, int3 + 1, 2, 0);
+			}
+			ACTIVE.setSize(widget0.getWidth() / 2 - 4, int5 / int4 - 2, 0, 0);
+		} else {
+			ACTIVE.setPosition(2, int3 + 1, 0, 0);
+			ACTIVE.setSize(4, int5 / arg2 - 2, 1, 0);
+		}
+	}
+	return arg1 + 1;
+}

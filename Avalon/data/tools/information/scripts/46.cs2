@@ -1,0 +1,20 @@
+string script_46(int arg0, string arg1) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int1 = arg0 / 1000000000;
+	int2 = (arg0 - int1 * 1000000000) / 1000000;
+	int3 = (arg0 - (int1 * 1000000000 + int2 * 1000000)) / 1000;
+	int4 = arg0 - (int1 * 1000000000 + int2 * 1000000 + int3 * 1000);
+	if (int1 > 0) {
+		return str(int1) + arg1 + script_47(int2) + arg1 + script_47(int3) + arg1 + script_47(int4);
+	}
+	if (int2 > 0) {
+		return str(int2) + arg1 + script_47(int3) + arg1 + script_47(int4);
+	}
+	if (int3 > 0) {
+		return str(int3) + arg1 + script_47(int4);
+	}
+	return str(arg0);
+}

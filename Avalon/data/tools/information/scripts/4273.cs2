@@ -1,0 +1,56 @@
+void script_4273() {
+	widget(1083, 161).setIsHidden(true);
+	widget(1083, 160).setIsHidden(true);
+	widget(1083, 162).setIsHidden(true);
+	widget(1083, 164).setIsHidden(false);
+	widget(1083, 157).setIsHidden(true);
+	widget(1083, 158).setIsHidden(true);
+	widget(1083, 159).setIsHidden(false);
+	widget(1083, 243).setIsHidden(true);
+	widget(1083, 253).setIsHidden(true);
+	widget(1083, 394).setIsHidden(false);
+	widget(1083, 165).setIsHidden(true);
+	widget(1083, 415).setText(str(2 * 10));
+	if (getSkillActualLvl(6) < 83) {
+		widget(1083, 416).setText(str(2 / 2 * 10) + " (halved)");
+	} else {
+		widget(1083, 416).setText(str(2 * 10));
+	}
+	if (getSkillActualLvl(6) < 80) {
+		widget(1083, 417).setText(str(12 / 2 * 10) + " (halved)");
+	} else {
+		widget(1083, 417).setText(str(12 * 10));
+	}
+	if (getSkillActualLvl(6) < 86) {
+		widget(1083, 418).setText(str(2 / 2 * 10) + " (halved)");
+	} else {
+		widget(1083, 418).setText(str(2 * 10));
+	}
+	if (getSkillActualLvl(6) < 91) {
+		widget(1083, 419).setText(str(10 / 2 * 10) + " (halved)");
+	} else {
+		widget(1083, 419).setText(str(10 * 10));
+	}
+	widget(1083, 420).setText("Magic and Farming");
+	if (getSkillActualLvl(6) < 83) {
+		widget(1083, 421).setText("Farming (no Magic)");
+	} else {
+		widget(1083, 421).setText("Magic and Farming");
+	}
+	if (getSkillActualLvl(6) < 80) {
+		widget(1083, 422).setText("Crafting (no Magic)");
+	} else {
+		widget(1083, 422).setText("Magic and Crafting");
+	}
+	if (getSkillActualLvl(6) < 86) {
+		widget(1083, 423).setText("Construction (no Magic)");
+	} else {
+		widget(1083, 423).setText("Magic and Construction");
+	}
+	if (getSkillActualLvl(6) < 91) {
+		widget(1083, 424).setText("Agility (no Magic)");
+	} else {
+		widget(1083, 424).setText("Magic and Agility");
+	}
+	return;
+}

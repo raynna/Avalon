@@ -1,0 +1,38 @@
+void script_956() {
+	widget(732, 2).setOptionBase("<col=ff981f>" + "Druidic Mage Top" + "</col>");
+	widget(732, 7).setOptionBase("<col=ff981f>" + "Druidic Mage Bottom" + "</col>");
+	widget(732, 12).setOptionBase("<col=ff981f>" + "Druidic Mage Hood" + "</col>");
+	widget(732, 19).setOptionBase("<col=ff981f>" + "Combat Robe Top" + "</col>");
+	widget(732, 24).setOptionBase("<col=ff981f>" + "Combat Robe Bottom" + "</col>");
+	widget(732, 29).setOptionBase("<col=ff981f>" + "Combat Hood" + "</col>");
+	widget(732, 36).setOptionBase("<col=ff981f>" + "Battle Robe Top" + "</col>");
+	widget(732, 41).setOptionBase("<col=ff981f>" + "Battle Robe Bottom" + "</col>");
+	widget(732, 46).setOptionBase("<col=ff981f>" + "Battle Hood" + "</col>");
+	widget(732, 53).setOptionBase("<col=ff981f>" + "Green D'Hide Coif" + "</col>");
+	widget(732, 58).setOptionBase("<col=ff981f>" + "Blue D'Hide Coif" + "</col>");
+	widget(732, 63).setOptionBase("<col=ff981f>" + "Red D'Hide Coif" + "</col>");
+	widget(732, 68).setOptionBase("<col=ff981f>" + "Black D'Hide Coif" + "</col>");
+	widget(732, 75).setOptionBase("<col=ff981f>" + "Bronze Gauntlets" + "</col>");
+	widget(732, 80).setOptionBase("<col=ff981f>" + "Iron Gauntlets" + "</col>");
+	widget(732, 85).setOptionBase("<col=ff981f>" + "Steel Gauntlets" + "</col>");
+	widget(732, 90).setOptionBase("<col=ff981f>" + "Black Gauntlets" + "</col>");
+	widget(732, 95).setOptionBase("<col=ff981f>" + "Mithril Gauntlets" + "</col>");
+	widget(732, 100).setOptionBase("<col=ff981f>" + "Adamant Gauntlets" + "</col>");
+	widget(732, 105).setOptionBase("<col=ff981f>" + "Rune Gauntlets" + "</col>");
+	widget(732, 110).setOptionBase("<col=ff981f>" + "Dragon Gauntlets" + "</col>");
+	widget(732, 117).setOptionBase("<col=ff981f>" + "Adamant Spikeshield" + "</col>");
+	widget(732, 122).setOptionBase("<col=ff981f>" + "Adamant Berserker Shield" + "</col>");
+	widget(732, 127).setOptionBase("<col=ff981f>" + "Rune Spikeshield" + "</col>");
+	widget(732, 132).setOptionBase("<col=ff981f>" + "Rune Berserker Shield" + "</col>");
+	widget(732, 139).setOptionBase("<col=ff981f>" + "Irit Gloves" + "</col>");
+	widget(732, 144).setOptionBase("<col=ff981f>" + "Avantoe Gloves" + "</col>");
+	widget(732, 149).setOptionBase("<col=ff981f>" + "Kwuarm Gloves" + "</col>");
+	widget(732, 154).setOptionBase("<col=ff981f>" + "Cadantine Gloves" + "</col>");
+	widget(732, 161).setOptionBase("<col=ff981f>" + "Swordfish Gloves" + "</col>");
+	widget(732, 166).setOptionBase("<col=ff981f>" + "Shark Gloves" + "</col>");
+	widget(732, 171).setOptionBase("<col=ff981f>" + "Dragon Slayer Gloves" + "</col>");
+	widget(732, 176).setOptionBase("<col=ff981f>" + "Air Runecrafting Gloves" + "</col>");
+	widget(732, 181).setOptionBase("<col=ff981f>" + "Water Runecrafting Gloves" + "</col>");
+	widget(732, 186).setOptionBase("<col=ff981f>" + "Earth Runecrafting Gloves" + "</col>");
+	return;
+}

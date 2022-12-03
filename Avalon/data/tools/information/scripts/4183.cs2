@@ -1,0 +1,80 @@
+void script_4183(int arg0) {
+	if (arg0 == 70254730) {
+		widget(1072, 135).setIsHidden(false);
+		widget(1072, 147).setIsHidden(true);
+		widget(1072, 159).setIsHidden(true);
+		widget(1072, 171).setIsHidden(true);
+		widget(1072, 48).setModel(63848);
+		widget(1072, 74).setModel(63838);
+		widget(1072, 80).setModel(63824);
+		widget(1072, 88).setModel(63837);
+		widget(1072, 93).setModel(63823);
+		widget(1072, 46).setText(str(1));
+		widget(1072, 71).setText(str(1));
+		widget(1072, 72).setText(str(2));
+		widget(1072, 12).setText(str(1));
+		widget(1072, 13).setText(str(4));
+		widget(1072, 6).setText(str(1));
+		widget(1072, 7).setText(str(6));
+		widget(1072, 2).setText(str(1));
+		widget(1072, 3).setText(str(8));
+	} else if (arg0 == 70254742) {
+		widget(1072, 135).setIsHidden(true);
+		widget(1072, 147).setIsHidden(false);
+		widget(1072, 159).setIsHidden(true);
+		widget(1072, 171).setIsHidden(true);
+		widget(1072, 48).setModel(63835);
+		widget(1072, 74).setModel(63825);
+		widget(1072, 80).setModel(63845);
+		widget(1072, 88).setModel(63828);
+		widget(1072, 93).setModel(63841);
+		widget(1072, 46).setText(str(9));
+		widget(1072, 71).setText(str(4));
+		widget(1072, 72).setText(str(7));
+		widget(1072, 12).setText(str(3));
+		widget(1072, 13).setText(str(12));
+		widget(1072, 6).setText(str(3));
+		widget(1072, 7).setText(str(14));
+		widget(1072, 2).setText(str(2));
+		widget(1072, 3).setText(str(16));
+	} else if (arg0 == 70254754) {
+		widget(1072, 135).setIsHidden(true);
+		widget(1072, 147).setIsHidden(true);
+		widget(1072, 159).setIsHidden(false);
+		widget(1072, 171).setIsHidden(true);
+		widget(1072, 48).setModel(63827);
+		widget(1072, 74).setModel(63833);
+		widget(1072, 80).setModel(63831);
+		widget(1072, 88).setModel(63842);
+		widget(1072, 93).setModel(63856);
+		widget(1072, 46).setText(str(12));
+		widget(1072, 71).setText(str(9));
+		widget(1072, 72).setText(str(17));
+		widget(1072, 12).setText(str(6));
+		widget(1072, 13).setText(str(24));
+		widget(1072, 6).setText(str(4));
+		widget(1072, 7).setText(str(22));
+		widget(1072, 2).setText(str(4));
+		widget(1072, 3).setText(str(30));
+	} else if (arg0 == 70254766) {
+		widget(1072, 135).setIsHidden(true);
+		widget(1072, 147).setIsHidden(true);
+		widget(1072, 159).setIsHidden(true);
+		widget(1072, 171).setIsHidden(false);
+		widget(1072, 48).setModel(63836);
+		widget(1072, 74).setModel(63851);
+		widget(1072, 80).setModel(63855);
+		widget(1072, 88).setModel(63832);
+		widget(1072, 93).setModel(63834);
+		widget(1072, 46).setText(str(75));
+		widget(1072, 71).setText(str(40));
+		widget(1072, 72).setText(str(80));
+		widget(1072, 12).setText(str(30));
+		widget(1072, 13).setText(str(120));
+		widget(1072, 6).setText(str(25));
+		widget(1072, 7).setText(str(150));
+		widget(1072, 2).setText(str(18));
+		widget(1072, 3).setText(str(144));
+	}
+	return;
+}

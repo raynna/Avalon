@@ -1,0 +1,63 @@
+void script_849(int arg0, int arg1) {
+	Widget widget2;
+	Widget widget3;
+	Widget widget4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	widget2 = datamap('i', 'I', (DataMap)1354, arg0);
+	widget3 = datamap('i', 'I', (DataMap)1355, arg0);
+	widget4 = datamap('i', 'I', (DataMap)1358, arg0);
+	int5 = script_853(arg0);
+	int6 = script_854(arg0);
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int10 = 0;
+	int11 = widget2.getX();
+	int12 = widget2.getY();
+	int13 = widget3.getX();
+	int14 = widget3.getY();
+	int15 = widget2.getRotateY();
+	if (arg0 != 10) {
+		playSoundEffect(4503, 1, 0);
+		if (arg1 == 0) {
+			int15 = int15 + 512;
+			if (int15 >= 2047) {
+				int15 = 0;
+			}
+		} else {
+			int15 = int15 - 512;
+			if (int15 < 0) {
+				int15 = 2047;
+			}
+		}
+		widget2.set3DRotation(0, 0, 512, int15, 0, 3500);
+		widget3.set3DRotation(0, 0, 512, int15, 0, 3500);
+		widget4.set3DRotation(0, 0, 512, int15, 0, 3500);
+		if (script_850(int5) != script_850(int6)) {
+			if (int15 == 512 || int15 == 1536) {
+				int9 = 9;
+				int10 = 9;
+			} else {
+				int9 = -9;
+				int10 = -9;
+			}
+			int11 = int11 + int9 + int7;
+			int12 = int12 + int10 + int8;
+			int13 = int13 + int9 + int7;
+			int14 = int14 + int10 + int8;
+		}
+		widget2.setPosition(int11, int12, 0, 0);
+		widget3.setPosition(int13, int14, 0, 0);
+	}
+	return;
+}

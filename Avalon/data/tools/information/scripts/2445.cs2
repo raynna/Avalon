@@ -1,0 +1,27 @@
+int script_2445(string string0, int arg1, int arg2, Color color3) {
+	int int3;
+	int int4;
+	int3 = widget(34, 9).getWidth();
+	string0 = escape(script_2446(string0));
+	ACTIVE.createChild(widget(34, 9), 4, arg2);
+	ACTIVE.setPosition(0, arg1 * 15 + 5, 0, 0);
+	int4 = getLineCount(string0, int3, 494);
+	ACTIVE.setSize(0, int4 * 14, 1, 0);
+	ACTIVE.setRGB(color3);
+	ACTIVE.setText(string0);
+	ACTIVE.setFont(494);
+	ACTIVE.setTextAlignment(0, 1, 14);
+	ACTIVE.setTextAntiMacro(true);
+	ACTIVE.setScriptCallOnMouseDragged(2450, CTX_WIDGET, CTX_WIDGET_CHILD, MOUSE_Y, "Iii");
+	ACTIVE.setScriptCallOnMouseDragReleased(2451, DRAG_WIDGET, "I");
+	if (VARP[1439] == arg2) {
+		ACTIVE.setContextMenuOption(1, "Unselect");
+	} else {
+		ACTIVE.setContextMenuOption(1, "Select");
+	}
+	ACTIVE.setContextMenuOption(2, "Edit");
+	ACTIVE.setContextMenuOption(3, "Colour");
+	ACTIVE.setContextMenuOption(4, "Delete");
+	ACTIVE.setDragDeadZone(14);
+	return arg1 + int4;
+}

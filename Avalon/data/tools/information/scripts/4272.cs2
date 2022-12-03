@@ -1,0 +1,31 @@
+void script_4272() {
+	widget(1083, 161).setIsHidden(true);
+	widget(1083, 162).setIsHidden(false);
+	widget(1083, 243).setIsHidden(true);
+	widget(1083, 253).setIsHidden(false);
+	widget(1083, 85).setText("Wishes");
+	widget(1083, 87).setText("Select a reward for more information.");
+	widget(1083, 89).setText("");
+	widget(1083, 90).setIsHidden(true);
+	widget(1083, 94).setIsHidden(true);
+	widget(1083, 95).setIsHidden(true);
+	widget(1083, 96).setIsHidden(true);
+	widget(1083, 97).setIsHidden(true);
+	widget(1083, 98).setIsHidden(true);
+	widget(1083, 99).setIsHidden(true);
+	widget(1083, 100).setIsHidden(true);
+	widget(1083, 101).setIsHidden(true);
+	widget(1083, 102).setIsHidden(true);
+	widget(1083, 103).setIsHidden(true);
+	widget(1083, 104).setIsHidden(true);
+	widget(1083, 105).setIsHidden(true);
+	widget(1083, 106).setIsHidden(true);
+	widget(1083, 107).setIsHidden(true);
+	widget(1083, 164).setIsHidden(true);
+	widget(1083, 159).setIsHidden(true);
+	widget(1083, 157).setIsHidden(false);
+	widget(1083, 158).setIsHidden(false);
+	widget(1083, 165).setIsHidden(false);
+	widget(1083, 160).setIsHidden(true);
+	return;
+}

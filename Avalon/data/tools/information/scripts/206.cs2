@@ -1,0 +1,110 @@
+void script_206() {
+	int int0;
+	int int1;
+	Item item2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	string str0;
+	string str1;
+	int0 = 0;
+	int1 = 0;
+	item2 = null;
+	str0 = "";
+	str1 = "";
+	int3 = getItemContainerLength(134);
+	ARRAY0 = new Item[int3];
+	ARRAY1 = new int[int3];
+	int4 = 0;
+	int5 = 99;
+	int6 = 0;
+	while (int0 < int3) {
+		item2 = getItemIdInSlot(134, int0);
+		int1 = getItemAmtInSlot(134, int0);
+		if (item2 != null) {
+			int5 = 99;
+			int6 = 0;
+			while (int6 < int3) {
+				if (ARRAY0[int6] != -1) {
+					if ((Item)ARRAY0[int6] == item2) {
+						int5 = int6;
+						int6 = int3;
+					}
+					int6 = int6 + 1;
+				} else {
+					int6 = int3;
+				}
+			}
+			if (int5 == 99) {
+				ARRAY0[int4] = item2;
+				ARRAY1[int4] = int1;
+				int4 = int4 + 1;
+			} else {
+				ARRAY1[int5] = ARRAY1[int5] + int1;
+			}
+		}
+		int0 = int0 + 1;
+	}
+	int4 = 0;
+	while (int4 < int3) {
+		item2 = (Item)ARRAY0[int4];
+		if (item2 != null) {
+			int1 = ARRAY1[int4];
+			str0 = concat(str0, script_207(2, int1, item2));
+		} else {
+			int4 = int3;
+		}
+		int4 = int4 + 1;
+	}
+	int0 = 0;
+	int4 = 0;
+	while (int4 < int3) {
+		ARRAY0[int4] = -1;
+		ARRAY1[int4] = 0;
+		int4 = int4 + 1;
+	}
+	int4 = 0;
+	int6 = 0;
+	while (int0 < int3) {
+		item2 = getItemIdInInpsectingSlot(134, int0);
+		int1 = getItemAmtInInspectingSlot(134, int0);
+		if (item2 != null) {
+			int5 = 99;
+			int6 = 0;
+			while (int6 < int3) {
+				if (ARRAY0[int6] != -1) {
+					if ((Item)ARRAY0[int6] == item2) {
+						int5 = int6;
+						int6 = int3;
+					}
+					int6 = int6 + 1;
+				} else {
+					int6 = int3;
+				}
+			}
+			if (int5 == 99) {
+				ARRAY0[int4] = item2;
+				ARRAY1[int4] = int1;
+				int4 = int4 + 1;
+			} else {
+				ARRAY1[int5] = ARRAY1[int5] + int1;
+			}
+		}
+		int0 = int0 + 1;
+	}
+	int4 = 0;
+	while (int4 < int3) {
+		item2 = (Item)ARRAY0[int4];
+		if (item2 != null) {
+			int1 = ARRAY1[int4];
+			str1 = concat(str1, script_207(2, int1, item2));
+		} else {
+			int4 = int3;
+		}
+		int4 = int4 + 1;
+	}
+	widget(626, 36).setText(str0);
+	widget(626, 37).setText(str1);
+	return;
+}

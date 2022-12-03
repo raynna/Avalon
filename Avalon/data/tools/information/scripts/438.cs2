@@ -1,0 +1,29 @@
+void script_438(int arg0) {
+	widget(1022, 42).setSprite(1134);
+	widget(1022, 43).setSprite(1134);
+	widget(1022, 44).setSprite(1134);
+	widget(1022, 45).setSprite(1134);
+	widget(1022, 46).setSprite(1134);
+	widget(1022, 47).setSprite(1134);
+	switch (arg0) {
+		case 66977840:
+			widget(1022, 42).setSprite(1135);
+			break;
+		case 66977841:
+			widget(1022, 43).setSprite(1135);
+			break;
+		case 66977842:
+			widget(1022, 44).setSprite(1135);
+			break;
+		case 66977843:
+			widget(1022, 45).setSprite(1135);
+			break;
+		case 66977844:
+			widget(1022, 46).setSprite(1135);
+			break;
+		case 66977845:
+			widget(1022, 47).setSprite(1135);
+			break;
+	}
+	return;
+}

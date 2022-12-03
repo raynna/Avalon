@@ -1,0 +1,4 @@
+void script_4044(Widget widget0) {
+	widget0.setText(str(VARPBIT[8662]));
+	return;
+}

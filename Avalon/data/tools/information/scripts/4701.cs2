@@ -1,0 +1,32 @@
+void script_4701(int arg0, int arg1, int arg2, string string3) {
+	VARC[1553] = arg1;
+	VARC[1554] = arg2;
+	STRING[128] = string3;
+	if (arg0 == 1) {
+		if (VARC[1100] == 43 || VARC[1100] == 42) {
+			script_2190("Leave queue", "Are you sure you wish to leave the queue, you will lose your position if you do.", 0, 12, "", "", 1);
+			return;
+		}
+		script_3141(arg2, string3);
+		if (arg1 > -1 && ACTIVE.setChild(widget(910, 64), arg1)) {
+			widget(910, 67).setIsHidden(false);
+			widget(910, 67).setPosition(0, ACTIVE.getY(), 0, 0);
+		}
+		if (getWorldId() == VARC[998]) {
+			if (ACTIVE.setChild(widget(910, 21), 3)) {
+				ACTIVE.setHidden(false);
+			}
+		} else if (ACTIVE.setChild(widget(910, 21), 3)) {
+			ACTIVE.setHidden(true);
+		}
+		if (getWorldId() == VARC[999]) {
+			if (ACTIVE.setChild(widget(910, 22), 3)) {
+				ACTIVE.setHidden(false);
+			}
+		} else if (ACTIVE.setChild(widget(910, 22), 3)) {
+			ACTIVE.setHidden(true);
+		}
+		script_3064(1);
+	}
+	return;
+}

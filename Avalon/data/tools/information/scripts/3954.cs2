@@ -1,0 +1,18 @@
+int script_3954(int arg0) {
+	VARC[1408] = VARC[1407];
+	if (VARC[1407] < 1) {
+		script_3213("Please enter your age, in years, here.", widget(673, 49));
+		return 0;
+	}
+	if (VARC[1407] > 120) {
+		script_3213("Please check the age entered and try again.", widget(673, 49));
+		return 0;
+	}
+	widget(673, 49).setSprite(4059);
+	widget(673, 125).setIsHidden(true);
+	widget(673, 31).setIsHidden(true);
+	if (arg0 == 1) {
+		script_2714(6, 1);
+	}
+	return 1;
+}

@@ -1,0 +1,7 @@
+void script_2054(int arg0, Widget widget1, Location location2) {
+	if (getClientCycle() >= arg0) {
+		setPositionInMap(location2);
+		widget1.setScriptCallOnGameloop(-1, "");
+	}
+	return;
+}

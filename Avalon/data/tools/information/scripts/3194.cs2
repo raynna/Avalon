@@ -1,0 +1,10 @@
+void script_3194() {
+	close(widget(906, 72));
+	widget(906, 55).setIsHidden(true);
+	widget(915, 18).setScriptCallOnKeyPress(-1, "");
+	VARC[1094] = 0;
+	if (!datamap('i', 'I', (DataMap)941, 5).isHidden()) {
+		script_3161(1);
+	}
+	return;
+}

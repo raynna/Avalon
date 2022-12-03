@@ -1,0 +1,219 @@
+void script_4592() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	Item item6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	widget(17, 17).clearChildren();
+	widget(17, 20).clearChildren();
+	widget(17, 22).clearChildren();
+	widget(17, 15).clearChildren();
+	if (VARPBIT[9226] == 1) {
+		widget(17, 12).setText("If you die in the Wilderness...");
+	} else {
+		widget(17, 12).setText("Items kept on death");
+	}
+	if (VARPBIT[9226] == 2) {
+		ACTIVE.createChild(widget(17, 15), 4, 0);
+		script_4595();
+		ACTIVE.setText(STRING[351]);
+		ACTIVE.setScriptCallOnGlobalStringChange(4596, CTX_WIDGET, CTX_WIDGET_CHILD, 351, "IiY");
+		return;
+	}
+	if (getContainerFreeSlots(93) >= getItemContainerLength(93) && getContainerFreeSlots(94) >= getItemContainerLength(94) && (getContainerFreeSlots(530) >= getItemContainerLength(530) || !isMember())) {
+		ACTIVE.createChild(widget(17, 15), 4, 0);
+		script_4595();
+		ACTIVE.setText("You have no items to lose.");
+		return;
+	}
+	int0 = widget(17, 15).getWidth();
+	int1 = max(int0 / 36, 1);
+	int2 = max((int0 - 36 * int1) / max(int1 - 1, 1), 2);
+	int3 = max(int2 / 2, 36 - 32 + 1);
+	ARRAY0 = new int[4];
+	ARRAY1 = new int[3];
+	ARRAY2 = new int[3];
+	ARRAY3 = new int[3];
+	if (VARPBIT[9227] > 0) {
+		if (VARPBIT[9226] == 0) {
+			if (VARPBIT[9229] == 1) {
+				ARRAY0[0] = script_4593("You may choose " + str(VARPBIT[9227]) + " of the following items to keep, and all others will be dropped." + "<br>" + "The " + "<col=bebe00>" + "highlighted" + "</col>" + " items will be chosen by default.", widget(17, 16));
+			} else {
+				ARRAY0[0] = script_4593("You may choose " + str(VARPBIT[9227]) + " of the following items to keep, unless you become skulled, and all others will be dropped." + "<br>" + "The " + "<col=bebe00>" + "highlighted" + "</col>" + " items are chosen by default.", widget(17, 16));
+			}
+		} else if (VARPBIT[9229] == 1) {
+			ARRAY0[0] = script_4593("You will keep the following items:", widget(17, 16));
+		} else {
+			ARRAY0[0] = script_4593("You will keep the following items, unless you become skulled:", widget(17, 16));
+		}
+	} else {
+		ARRAY0[0] = script_4593("You will drop the following items:", widget(17, 16));
+	}
+	if (VARPBIT[9226] == 0) {
+		ARRAY0[1] = script_4593("You will keep the following items automatically:", widget(17, 19));
+	} else {
+		ARRAY0[1] = script_4593("You will drop the following items:", widget(17, 19));
+	}
+	ARRAY0[2] = script_4593("The following items are always lost:", widget(17, 21));
+	ARRAY4 = new Item[4];
+	ARRAY4[0] = script_750(VARPBIT[9222]);
+	ARRAY4[1] = script_750(VARPBIT[9223]);
+	ARRAY4[2] = script_750(VARPBIT[9224]);
+	ARRAY4[3] = script_750(VARPBIT[9225]);
+	int4 = getItemContainerLength(93) + getItemContainerLength(94);
+	widget(17, 18).clearChildren();
+	int5 = 0;
+	while (int5 < VARPBIT[9227] && int5 < 4) {
+		if (ARRAY4[int5] != -1) {
+			ACTIVE.createChild(widget(17, 18), 3, widget(17, 18).nextChild());
+			_ACTIVE.createChild(widget(17, 18), 3, widget(17, 18).nextChild());
+			ACTIVE.setSize(36, 36, 0, 0);
+			_ACTIVE.setSize(36, 36, 0, 0);
+			ACTIVE.setPosition(ARRAY1[0] + 1, ARRAY2[0] + 1, 0, 0);
+			_ACTIVE.setPosition(ARRAY1[0], ARRAY2[0], 0, 0);
+			ACTIVE.setRGB(0x808000);
+			_ACTIVE.setRGB(0xBEBE00);
+			ACTIVE.setFilled(false);
+			_ACTIVE.setFilled(false);
+			ACTIVE.setTrans(150);
+			_ACTIVE.setTrans(0);
+			script_4594((Item)ARRAY4[int5], -1, ARRAY1[0], ARRAY2[0], widget(17, 18));
+			ARRAY1[0] = ARRAY1[0] + 36 + int2;
+			if (ARRAY1[0] + 36 >= int0) {
+				ARRAY1[0] = 0;
+				ARRAY2[0] = ARRAY2[0] + 32 + int3;
+			}
+			ARRAY3[0] = ARRAY3[0] + 1;
+		} else {
+			ACTIVE.createChild(widget(17, 18), 3, widget(17, 18).nextChild());
+			ACTIVE.setHidden(true);
+			ACTIVE.createChild(widget(17, 18), 3, widget(17, 18).nextChild());
+			ACTIVE.setHidden(true);
+			ACTIVE.createChild(widget(17, 18), 3, widget(17, 18).nextChild());
+			ACTIVE.setHidden(true);
+		}
+		int5 = int5 + 1;
+	}
+	int5 = 0;
+	item6 = null;
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	while (int5 <= int4) {
+		item6 = script_750(int5);
+		if (item6 != null) {
+			int7 = script_1393(int5);
+			int8 = 0;
+			while (int8 < 4 && int7 > 0) {
+				if ((Item)ARRAY4[int8] == item6) {
+					int7 = int7 - 1;
+					ARRAY4[int8] = -1;
+				}
+				int8 = int8 + 1;
+			}
+			if (int7 > 0) {
+				int9 = itemAttribute(getRealItem(item6), 1397);
+				if (int9 == -1) {
+					script_4594(null, -1, -1, -1, widget(17, 17));
+					script_4594(null, -1, -1, -1, widget(17, 20));
+					script_4594(item6, int7, ARRAY1[2], ARRAY2[2], widget(17, 22));
+					ARRAY1[2] = ARRAY1[2] + 36 + int2;
+					if (ARRAY1[2] + 36 >= int0) {
+						ARRAY1[2] = 0;
+						ARRAY2[2] = ARRAY2[2] + 32 + int3;
+					}
+					ARRAY3[2] = ARRAY3[2] + 1;
+				} else if (int9 == 1 || VARPBIT[9226] != 0) {
+					script_4594(null, -1, -1, -1, widget(17, 17));
+					script_4594(item6, int7, ARRAY1[1], ARRAY2[1], widget(17, 20));
+					script_4594(null, -1, -1, -1, widget(17, 22));
+					ARRAY1[1] = ARRAY1[1] + 36 + int2;
+					if (ARRAY1[1] + 36 >= int0) {
+						ARRAY1[1] = 0;
+						ARRAY2[1] = ARRAY2[1] + 32 + int3;
+					}
+					ARRAY3[1] = ARRAY3[1] + 1;
+				} else {
+					script_4594(item6, int7, ARRAY1[0], ARRAY2[0], widget(17, 17));
+					script_4594(null, -1, -1, -1, widget(17, 20));
+					script_4594(null, -1, -1, -1, widget(17, 22));
+					ARRAY1[0] = ARRAY1[0] + 36 + int2;
+					if (ARRAY1[0] + 36 >= int0) {
+						ARRAY1[0] = 0;
+						ARRAY2[0] = ARRAY2[0] + 32 + int3;
+					}
+					ARRAY3[0] = ARRAY3[0] + 1;
+				}
+			} else {
+				script_4594(null, -1, -1, -1, widget(17, 17));
+				script_4594(null, -1, -1, -1, widget(17, 20));
+				script_4594(null, -1, -1, -1, widget(17, 22));
+			}
+		} else {
+			script_4594(null, -1, -1, -1, widget(17, 17));
+			script_4594(null, -1, -1, -1, widget(17, 20));
+			script_4594(null, -1, -1, -1, widget(17, 22));
+		}
+		int5 = int5 + 1;
+	}
+	if (ARRAY1[0] > 0) {
+		ARRAY2[0] = ARRAY2[0] + 32 + int3;
+	} else if (ARRAY3[0] <= 0) {
+		ARRAY0[0] = 0;
+		ARRAY2[0] = 0;
+	}
+	if (ARRAY1[1] > 0) {
+		ARRAY2[1] = ARRAY2[1] + 32 + int3;
+	} else if (ARRAY3[1] <= 0) {
+		ARRAY0[1] = 0;
+		ARRAY2[1] = 0;
+	}
+	if (ARRAY1[2] > 0) {
+		ARRAY2[2] = ARRAY2[2] + 32 + int3;
+	} else if (ARRAY3[2] <= 0) {
+		ARRAY0[2] = 0;
+		ARRAY2[2] = 0;
+	}
+	int10 = 0;
+	widget(17, 16).setSize(0, ARRAY0[0], 1, 0);
+	widget(17, 16).setPosition(0, int10, 1, 0);
+	int10 = int10 + ARRAY0[0];
+	widget(17, 17).setSize(0, ARRAY2[0], 1, 0);
+	widget(17, 17).setPosition(0, int10, 1, 0);
+	int10 = int10 + ARRAY2[0] + 5;
+	widget(17, 19).setSize(0, ARRAY0[1], 1, 0);
+	widget(17, 19).setPosition(0, int10, 1, 0);
+	int10 = int10 + ARRAY0[1];
+	widget(17, 20).setSize(0, ARRAY2[1], 1, 0);
+	widget(17, 20).setPosition(0, int10, 1, 0);
+	int10 = int10 + ARRAY2[1] + 5;
+	widget(17, 21).setSize(0, ARRAY0[2], 1, 0);
+	widget(17, 21).setPosition(0, int10, 1, 0);
+	int10 = int10 + ARRAY0[2];
+	widget(17, 22).setSize(0, ARRAY2[2], 1, 0);
+	widget(17, 22).setPosition(0, int10, 1, 0);
+	int10 = int10 + ARRAY2[2];
+	if (getContainerFreeSlots(530) < getItemContainerLength(530) && isMember()) {
+		ARRAY0[3] = script_4593("You have items stored on your " + "<col=ffff00>" + "beast of burden" + "</col>" + " that will be dropped if either of you dies.", widget(17, 23));
+	}
+	widget(17, 23).setSize(0, ARRAY0[3], 1, 0);
+	widget(17, 23).setPosition(0, int10, 1, 0);
+	int10 = int10 + ARRAY0[3];
+	widget(17, 15).setScrollMax(0, int10);
+	if (int10 > widget(17, 15).getHeight()) {
+		script_31(widget(17, 24), widget(17, 15), 792, 789, 790, 791, 773, 788);
+		widget(17, 24).setIsHidden(false);
+		widget(17, 15).setPosition(0, 0, 0, 1);
+	} else {
+		widget(17, 24).setIsHidden(true);
+		widget(17, 15).setPosition(0, 0, 1, 1);
+		widget(17, 15).setScrollPos(0, 0);
+	}
+	return;
+}

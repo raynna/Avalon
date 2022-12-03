@@ -1,0 +1,23 @@
+void script_1967() {
+	int int0;
+	Item item1;
+	Widget widget2;
+	int0 = 1;
+	item1 = null;
+	widget2 = null;
+	while (int0 <= datamapSize((DataMap)2120)) {
+		datamap('i', 'I', (DataMap)2118, int0).setText(datamap('i', 's', (DataMap)2023, int0));
+		item1 = datamap('i', 'o', (DataMap)2019, int0);
+		widget2 = datamap('i', 'I', (DataMap)2120, int0);
+		datamap('i', 'I', (DataMap)2117, int0).setItem(item1, 1);
+		widget2.setOptionBase(datamap('i', 's', (DataMap)2023, int0));
+		if (getItemAmtInContainer(93, item1) > 0) {
+			datamap('i', 'I', (DataMap)2118, int0).setRGB(0x00FF00);
+		} else {
+			datamap('i', 'I', (DataMap)2118, int0).setRGB(0xFF0000);
+		}
+		int0 = int0 + 1;
+	}
+	script_1969();
+	return;
+}

@@ -1,0 +1,16 @@
+void script_2423(Widget widget0) {
+	Animation animation1;
+	animation1 = null;
+	if (VARC[811] == 0) {
+		animation1 = 1358;
+	} else if (VARC[811] == 1) {
+		animation1 = 1359;
+	} else if (VARC[811] == 2) {
+		animation1 = 1360;
+	} else if (VARC[811] == 3) {
+		animation1 = 1361;
+	}
+	widget0.setAnimation(null);
+	widget0.setAnimation(animation1);
+	return;
+}

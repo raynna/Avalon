@@ -1,0 +1,15 @@
+int script_1210(int arg0, int arg1, int arg2, int arg3) {
+	int int4;
+	int int5;
+	int int6;
+	int4 = (getClientCycle() + arg3 - arg2) % arg1;
+	int5 = arg1 / 2;
+	int6 = int5 - int4;
+	if (int6 == 0) {
+		return arg0;
+	}
+	if (int6 > 0) {
+		return arg0 - int6 * int5 / arg0;
+	}
+	return arg0 + int6 * int5 / arg0;
+}

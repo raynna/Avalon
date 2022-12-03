@@ -1,0 +1,10 @@
+void script_1424() {
+	if (VARPBIT[4456] == 0) {
+		widget(5, 3).setRGB(0x002300);
+		widget(5, 2).setRGB(0xFF0000);
+	} else {
+		widget(5, 3).setRGB(0x00FF00);
+		widget(5, 2).setRGB(0x230000);
+	}
+	return;
+}

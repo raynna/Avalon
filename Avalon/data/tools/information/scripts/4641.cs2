@@ -1,0 +1,25 @@
+void script_4641() {
+	script_4639();
+	if (isBitFlagged(VARP[2189], 1)) {
+		widget(153, 15).setSprite(6268);
+		widget(153, 98).setScriptCallOnClickContextMenu(4637, 1, "i");
+		script_4645(1);
+	} else {
+		widget(153, 15).setSprite(6271);
+	}
+	if (isBitFlagged(VARP[2189], 2)) {
+		widget(153, 12).setSprite(6270);
+		widget(153, 111).setScriptCallOnClickContextMenu(4637, 2, "i");
+		script_4645(2);
+	} else {
+		widget(153, 12).setSprite(6271);
+	}
+	if (isBitFlagged(VARP[2189], 4)) {
+		widget(153, 9).setSprite(6269);
+		widget(153, 124).setScriptCallOnClickContextMenu(4637, 4, "i");
+		script_4645(4);
+	} else {
+		widget(153, 9).setSprite(6271);
+	}
+	return;
+}

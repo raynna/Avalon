@@ -1,0 +1,110 @@
+void script_2596(int arg0, int arg1, int arg2, int arg3, int arg4) {
+	Widget widget5;
+	Widget widget6;
+	Widget widget7;
+	int int8;
+	widget5 = null;
+	widget6 = null;
+	switch (arg4) {
+		case 1:
+			widget(742, 19).setText("Graphics Options");
+			open(widget(742, 6), 978);
+			widget5 = widget(742, 4);
+			widget6 = widget(742, 20);
+			widget(978, 5).setSize(0, 0, 1, 1);
+			widget(742, 4).setSize(widget(742, 4).getWidth(), 304, 0, 0);
+			widget(742, 18).setScriptCallOnMousePressed(29, "");
+			widget(742, 18).setContextMenuOption(1, "Close");
+			break;
+		case 0:
+			open(widget(882, 28), 978);
+			widget(882, 11).setSprite(4129);
+			widget(882, 12).setSprite(4129);
+			widget(882, 14).setSprite(4129);
+			widget5 = widget(882, 4);
+			widget6 = widget(882, 5);
+			script_1217(widget(882, 56), widget(882, 57));
+			script_1216(widget(882, 49), widget(882, 50));
+			script_1218(widget(882, 63), widget(882, 64));
+			script_1220(widget(882, 82), widget(882, 80));
+			widget(978, 0).setPosition(0, 5, 1, 0);
+			widget(978, 5).setPosition(0, 5, 1, 0);
+			widget(882, 28).setSize(widget(882, 28).getWidth(), widget(978, 0).getY() + widget(978, 8).getY() + widget(978, 0).getHeight() + 5 + widget(882, 29).getHeight(), 0, 0);
+			widget(882, 22).setSize(widget(882, 28).getWidth(), widget(882, 28).getHeight(), 0, 0);
+			widget(882, 8).setSize(widget(882, 8).getWidth(), widget(882, 22).getHeight() + 47, 0, 0);
+			widget(882, 22).setPosition(0, widget(882, 8).getY() + 33, 1, 0);
+			widget(882, 28).setPosition(0, 0, 1, 1);
+			widget(882, 29).setPosition(0, 100, 1, 1);
+			widget(978, 2).setPosition(0, -5, 1, 1);
+			widget(882, 29).setIsHidden(false);
+			widget(882, 23).setIsHidden(true);
+			script_2918(0);
+			widget(882, 4).setScriptCallOnWidgetResize(2917, false, "1");
+			widget(744, 50).setScriptCallOnWidgetResize(2919, false, arg4, "1i");
+			break;
+		case 2:
+			open(widget(911, 2), 978);
+			widget5 = widget(911, 0);
+			widget6 = widget(911, 59);
+			widget(978, 0).setPosition(0, 5, 1, 0);
+			widget(978, 5).setPosition(0, 0, 1, 0);
+			widget(911, 2).setSize(widget(911, 2).getWidth(), widget(978, 0).getY() + widget(978, 8).getY() + widget(978, 0).getHeight() + 5 + widget(911, 5).getHeight(), 0, 0);
+			widget(911, 5).setIsHidden(false);
+			widget(911, 3).setIsHidden(true);
+			widget(906, 23).setScriptCallOnWidgetResize(2919, false, arg4, "1i");
+			script_4041();
+			break;
+	}
+	widget(978, 1).setScriptCallOnMousePressed(3383, arg4, "i");
+	script_1149(1, arg1, widget(978, 12), widget(978, 21), widget(978, 22), arg2, arg3, arg0, arg4);
+	script_1149(2, arg1, widget(978, 13), widget(978, 19), widget(978, 20), arg2, arg3, arg0, arg4);
+	script_1149(3, arg1, widget(978, 14), widget(978, 17), widget(978, 18), arg2, arg3, arg0, arg4);
+	widget6.setIsHidden(true);
+	widget5.setScriptCallOnMousePressed(-1, "");
+	if (VARC[178] < 0) {
+		VARC[178] = max(cs2method5305(), 0);
+	}
+	if (VARC[178] >= cs2method5302()) {
+		VARC[178] = 0;
+	}
+	widget7 = widget(978, 16);
+	widget7.clearChildren();
+	ACTIVE.createChild(widget7, 3, widget7.nextChild());
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setFilled(true);
+	ACTIVE.setRGB(0x2E2B26);
+	_ACTIVE.createChild(widget7, 3, widget7.nextChild());
+	_ACTIVE.setSize(0, 0, 1, 1);
+	_ACTIVE.setPosition(0, 0, 1, 0);
+	_ACTIVE.setFilled(false);
+	_ACTIVE.setRGB(0x5F5B52);
+	int8 = _ACTIVE.getChildId();
+	_ACTIVE.createChild(widget7, 4, widget7.nextChild());
+	_ACTIVE.setFont(494);
+	_ACTIVE.setTextAlignment(1, 1, 0);
+	if (cs2method5302() <= 0) {
+		_ACTIVE.setSize(0, 0, 1, 1);
+		_ACTIVE.setPosition(0, 0, 1, 1);
+		_ACTIVE.setRGB(0xEBE0BC);
+		_ACTIVE.setText("N/A");
+	} else {
+		_ACTIVE.setSize(21, 0, 1, 1);
+		_ACTIVE.setPosition(2, 0, 0, 1);
+		if (VARC[178] < cs2method5302() - 1) {
+			_ACTIVE.setRGB(0xEBE0BC);
+		} else {
+			_ACTIVE.setRGB(0x00B1E1);
+		}
+		_ACTIVE.setText(script_2693(VARC[178]));
+		_ACTIVE.createChild(widget7, 5, widget7.nextChild());
+		_ACTIVE.setSize(16, 16, 0, 0);
+		_ACTIVE.setPosition(1, 0, 2, 1);
+		_ACTIVE.setSprite(2554);
+		ACTIVE.setScriptCallOnMouseEntered(2691, CTX_WIDGET, _ACTIVE.getChildId(), true, int8, 8419437, true, "Ii1ii1");
+		ACTIVE.setScriptCallOnMouseExit(2691, CTX_WIDGET, _ACTIVE.getChildId(), false, int8, 6249298, true, "Ii1ii1");
+		ACTIVE.setScriptCallOnMousePressed(2695, CTX_WIDGET, CTX_WIDGET_CHILD, _ACTIVE.getChildId(), int8, -1, (AttrMap)845, arg2, arg3, arg0, arg1, arg4, "IiiiiJiiiii");
+	}
+	script_3451(arg4, false);
+	return;
+}

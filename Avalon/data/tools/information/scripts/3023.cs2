@@ -1,0 +1,22 @@
+void script_3023() {
+	widget(909, 45).setSize(widget(909, 31).getX() - widget(909, 30).getX(), 0, 0, 1);
+	widget(909, 46).setSize(widget(909, 41).getWidth() - widget(909, 45).getWidth() - 2, 0, 0, 1);
+	widget(909, 41).setScrollMax(0, 0);
+	widget(909, 41).setScrollPos(0, 0);
+	script_31(widget(909, 47), widget(909, 41), 792, 789, 790, 791, 773, 788);
+	widget(909, 78).setScrollMax(0, 0);
+	widget(909, 78).setScrollPos(0, 0);
+	script_31(widget(909, 79), widget(909, 78), 792, 789, 790, 791, 773, 788);
+	widget(909, 52).setScrollMax(0, 0);
+	widget(909, 52).setScrollPos(0, 0);
+	script_31(widget(909, 53), widget(909, 52), 792, 789, 790, 791, 773, 788);
+	VARC[1122] = widget(909, 52).getHeight();
+	script_3029(widget(909, 45), widget(909, 44), widget(909, 46), widget(909, 42), widget(909, 41), widget(909, 47));
+	widget(909, 41).setScriptCallOnFriendListChange(3028, widget(909, 45), widget(909, 44), widget(909, 46), widget(909, 42), widget(909, 41), widget(909, 47), "IIIIII");
+	script_3041(widget(909, 87), widget(909, 86), widget(909, 84), widget(909, 78), widget(909, 79));
+	widget(909, 78).setScriptCallOnFriendListChange(3040, widget(909, 87), widget(909, 86), widget(909, 84), widget(909, 78), widget(909, 79), "IIIII");
+	script_3024(widget(909, 56));
+	STRING[276] = "";
+	script_3401();
+	return;
+}

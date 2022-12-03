@@ -1,0 +1,14 @@
+void script_666(int arg0, Widget widget1, int arg2) {
+	int int3;
+	int3 = 0;
+	if (ACTIVE.setChild(widget1, arg2)) {
+		int3 = arg0 - getClientCycle();
+		if (int3 <= 0) {
+			ACTIVE.setTrans(0);
+			ACTIVE.setScriptCallOnGameloop(-1, "");
+			return;
+		}
+		ACTIVE.setTrans(max(ACTIVE.getShadeColor() - ACTIVE.getShadeColor() / int3, 1));
+	}
+	return;
+}

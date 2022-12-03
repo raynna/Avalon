@@ -1,0 +1,24 @@
+void script_268(int arg0) {
+	int int1;
+	ARRAY0 = new int[5];
+	ARRAY0[0] = VARC[1104];
+	ARRAY0[1] = VARC[1105];
+	ARRAY0[2] = VARC[1106];
+	ARRAY0[3] = VARC[1107];
+	ARRAY0[4] = VARC[1108];
+	int1 = 0;
+	if (ARRAY0[arg0] != 0) {
+		int1 = arg0;
+		while (int1 < 5 - 1) {
+			ARRAY0[int1] = ARRAY0[int1 + 1];
+		}
+		ARRAY0[5 - 1] = 0;
+	}
+	VARC[1104] = ARRAY0[0];
+	VARC[1105] = ARRAY0[1];
+	VARC[1106] = ARRAY0[2];
+	VARC[1107] = ARRAY0[3];
+	VARC[1108] = ARRAY0[4];
+	script_261();
+	return;
+}

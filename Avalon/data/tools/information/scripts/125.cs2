@@ -1,0 +1,246 @@
+void script_125(int arg0) {
+	Widget widget1;
+	Widget widget2;
+	Widget widget3;
+	Widget widget4;
+	Widget widget5;
+	Widget widget6;
+	Widget widget7;
+	Widget widget8;
+	Widget widget9;
+	Widget widget10;
+	Widget widget11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	int int23;
+	int int24;
+	Color color25;
+	int int26;
+	int int27;
+	int int28;
+	int int29;
+	int int30;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	string str4;
+	string str5;
+	widget1 = widget(550, 6);
+	widget2 = widget(550, 53);
+	widget3 = widget(550, 5);
+	widget4 = widget(550, 1);
+	widget5 = widget(550, 11);
+	widget6 = widget(550, 12);
+	widget7 = widget(550, 18);
+	widget8 = widget(550, 46);
+	widget9 = widget(550, 14);
+	widget10 = widget(550, 13);
+	widget11 = widget(550, 0);
+	int12 = widget9.getWidth();
+	if (arg0 <= -1) {
+		arg0 = widget9.getX();
+	}
+	arg0 = max(min(arg0, widget10.getWidth() - int12), 0);
+	VARC[1036] = arg0;
+	widget9.setPosition(arg0, 0, 0, 1);
+	widget1.clearChildren();
+	widget2.clearChildren();
+	widget3.clearChildren();
+	widget4.clearChildren();
+	int13 = getFriendCount();
+	if (int13 == -2) {
+		widget8.setText("Loading Friends List." + "<br>" + "Please wait.");
+		widget8.setIsHidden(false);
+		widget9.setIsHidden(true);
+		widget7.setIsHidden(true);
+		return;
+	}
+	if (int13 == -1) {
+		widget8.setText("Connecting to Friend Server." + "<br>" + "Please wait.");
+		widget8.setIsHidden(false);
+		widget9.setIsHidden(true);
+		widget7.setIsHidden(true);
+		return;
+	}
+	widget9.setIsHidden(false);
+	widget9.cs2method2314(149);
+	widget8.setText("");
+	widget8.setIsHidden(true);
+	widget7.setIsHidden(false);
+	widget7.setText(str(int13) + " / " + str(200));
+	int14 = 0;
+	int15 = widget1.getWidth();
+	int16 = arg0 + (script_3365(widget10) - script_3365(widget1));
+	int17 = int15 - (int16 + int12);
+	str0 = "";
+	str1 = "";
+	str2 = "";
+	int18 = 0;
+	str3 = "";
+	int19 = 0;
+	int20 = 0;
+	str4 = "";
+	int21 = 0;
+	int22 = 0;
+	int23 = 15;
+	int24 = 5;
+	color25 = 0xA4997D;
+	int26 = 0;
+	int27 = 0;
+	int28 = 0;
+	int29 = 0;
+	str5 = "";
+	while (int14 < int13) {
+		int21 = int14 * int23 + int24;
+		str0, str3 = getFriendName(int14);
+		if (compare(str3, "") != 0) {
+			int19 = 1;
+		} else {
+			int19 = 0;
+		}
+		if (int19 == 1) {
+			str1 = "     " + str0;
+		} else {
+			str1 = str0;
+		}
+		int20 = getFriendWorld(int14);
+		if (cs2method3634(int14)) {
+			color25 = 0x88BCF3;
+			ACTIVE.createChild(widget1, 5, widget1.nextChild());
+			ACTIVE.setSize(9, 9, 0, 0);
+			ACTIVE.setPosition(93, int21 + 3, 0, 0);
+			ACTIVE.setSprite(6980);
+		} else {
+			color25 = 0xA4997D;
+		}
+		ACTIVE.createChild(widget1, 4, widget1.nextChild());
+		ACTIVE.setSize(int16, int23, 0, 0);
+		ACTIVE.setPosition(0, int21, 0, 0);
+		ACTIVE.setRGB(color25);
+		ACTIVE.setFont(3793);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setOptionBase("<col=ffffff>" + str0);
+		ACTIVE.setTextAlignment(0, 0, 0);
+		if (int20 != 0) {
+			if (!mapQuickchat() && !cs2method6900()) {
+				ACTIVE.setContextMenuOption(1, "Message");
+			}
+			ACTIVE.setContextMenuOption(2, "Quick Message");
+		} else {
+			if (!mapQuickchat() && !cs2method6900()) {
+				ACTIVE.setContextMenuOption(3, "Message");
+			}
+			ACTIVE.setContextMenuOption(4, "Quick Message");
+		}
+		ACTIVE.setContextMenuOption(5, "Delete");
+		ACTIVE.setScriptCallOnClickContextMenu(126, CTX_MENU_OPTION, "event_opbase", int14, "isi");
+		if (getTextWidth(str1, 3793) > int16) {
+			while (getTextWidth(str1 + "...", 3793) > int16 && length(str1) > 0) {
+				str1 = substr(str1, 0, length(str1) - 1);
+			}
+			ACTIVE.setText(str1 + "...");
+			if (int19 == 1) {
+				if (getLineCount("Last known as: " + str3, int15 - 8, 3793) > 1) {
+					str2 = str0 + "<br>" + "Last known as:" + "<br>" + str3;
+				} else {
+					str2 = str0 + "<br>" + "Last known as: " + str3;
+				}
+			} else {
+				str2 = str0;
+			}
+			ACTIVE.setScriptCallOnMouseOver(1594, widget(550, 52), CTX_WIDGET, CTX_WIDGET_CHILD, str2, MOUSE_X, MOUSE_Y, "IIisii");
+			ACTIVE.setScriptCallOnMouseExit(40, widget(550, 52), "I");
+		} else {
+			ACTIVE.setText(str1);
+			if (int19 == 1) {
+				if (getLineCount("Last known as: " + str3, int15 - 8, 3793) > 1) {
+					str2 = "Last known as:" + "<br>" + str3;
+				} else {
+					str2 = "Last known as: " + str3;
+				}
+				ACTIVE.setScriptCallOnMouseOver(1594, widget(550, 52), CTX_WIDGET, CTX_WIDGET_CHILD, str2, MOUSE_X, MOUSE_Y, "IIisii");
+				ACTIVE.setScriptCallOnMouseExit(40, widget(550, 52), "I");
+			}
+		}
+		ACTIVE.createChild(widget2, 5, widget2.nextChild());
+		ACTIVE.setSprite(2313);
+		ACTIVE.setSize(14, 14, 0, 0);
+		ACTIVE.setPosition(0, int21, 0, 0);
+		if (int19 == 0) {
+			ACTIVE.setHidden(true);
+		}
+		widget3.setSize(int17, 0, 0, 1);
+		widget4.setSize(int17, 0, 0, 1);
+		if (int20 == 0) {
+			str4 = "Offline";
+			str5 = "Offline";
+			int29 = 0;
+		} else if (indexOf(getFriendWorldName(int14), "RuneScape", 0) != -1) {
+			str4 = str(int20);
+			str5 = getFriendWorldName(int14);
+			int29 = 2 + 24 + 2;
+		} else {
+			str4 = getFriendWorldName(int14);
+			str5 = str4;
+			int29 = 0;
+		}
+		int26 = getTextWidth(str4, 3793);
+		if (int17 >= int26 + int29) {
+			if (int29 > 0) {
+				ACTIVE.createChild(widget4, 5, widget4.nextChild());
+				ACTIVE.setSprite(2173);
+				ACTIVE.setSize(24, 12, 0, 0);
+				ACTIVE.setPosition(2, int21 + 1, 0, 0);
+				int27 = 0;
+			}
+		} else {
+			int27 = 1;
+			int29 = 0;
+		}
+		if (!(int17 >= int26)) {
+			ACTIVE.setScriptCallOnMouseOver(1594, widget(550, 52), CTX_WIDGET, CTX_WIDGET_CHILD, str5, MOUSE_X, MOUSE_Y, "IIisii");
+			ACTIVE.setScriptCallOnMouseExit(40, widget(550, 52), "I");
+			str4 = "...";
+		}
+		ACTIVE.createChild(widget3, 4, widget3.nextChild());
+		ACTIVE.setSize(int17, int23, 0, 0);
+		ACTIVE.setPosition(int29 + 2, int21, 0, 0);
+		ACTIVE.setFont(3793);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setTextAlignment(0, 0, 0);
+		ACTIVE.setText(str4);
+		if (int20 == 0) {
+			ACTIVE.setRGB(0xDD5C3E);
+		} else if (int20 == getWorldId()) {
+			ACTIVE.setRGB(0x3CB71E);
+		} else {
+			ACTIVE.setRGB(0xFFFF64);
+		}
+		ACTIVE.setScriptCallOnMouseOver(1594, widget(550, 52), CTX_WIDGET, CTX_WIDGET_CHILD, str5, MOUSE_X, MOUSE_Y, "IIisii");
+		ACTIVE.setScriptCallOnMouseExit(40, widget(550, 52), "I");
+		int14 = int14 + 1;
+	}
+	int21 = int21 + 15 + 5;
+	int30 = 0;
+	if (int21 > widget5.getHeight()) {
+		int30 = min(widget5.getScrollY(), int21);
+		widget5.setScrollMax(widget5.getWidth(), int21);
+		script_72(widget6, widget5, int30);
+	} else {
+		widget5.setScrollMax(0, 0);
+		widget11.setSize(0, 0, 1, 1);
+		widget5.setScrollPos(0, 0);
+		script_72(widget6, widget5, 0);
+	}
+	return;
+}

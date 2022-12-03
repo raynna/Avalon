@@ -1,0 +1,66 @@
+void script_1797(Widget widget0, Widget widget1) {
+	int int2;
+	int int3;
+	int2 = 0;
+	int3 = 0;
+	while (int2 < 10) {
+		switch (int2) {
+			case 0:
+				widget(791, 23).setPosition(25, int3, 0, 0);
+				widget(791, 24).setPosition(4, int3, 0, 0);
+				widget(791, 25).setPosition(0, int3, 0, 0);
+				break;
+			case 1:
+				widget(791, 26).setPosition(25, int3, 0, 0);
+				widget(791, 27).setPosition(4, int3, 0, 0);
+				widget(791, 28).setPosition(0, int3, 0, 0);
+				break;
+			case 2:
+				widget(791, 29).setPosition(25, int3, 0, 0);
+				widget(791, 30).setPosition(4, int3, 0, 0);
+				widget(791, 31).setPosition(0, int3, 0, 0);
+				break;
+			case 3:
+				widget(791, 32).setPosition(25, int3, 0, 0);
+				widget(791, 33).setPosition(4, int3, 0, 0);
+				widget(791, 34).setPosition(0, int3, 0, 0);
+				break;
+			case 4:
+				widget(791, 35).setPosition(25, int3, 0, 0);
+				widget(791, 36).setPosition(4, int3, 0, 0);
+				widget(791, 37).setPosition(0, int3, 0, 0);
+				break;
+			case 5:
+				widget(791, 38).setPosition(25, int3, 0, 0);
+				widget(791, 39).setPosition(4, int3, 0, 0);
+				widget(791, 40).setPosition(0, int3, 0, 0);
+				break;
+			case 6:
+				widget(791, 41).setPosition(25, int3, 0, 0);
+				widget(791, 42).setPosition(4, int3, 0, 0);
+				widget(791, 43).setPosition(0, int3, 0, 0);
+				break;
+			case 7:
+				widget(791, 44).setPosition(25, int3, 0, 0);
+				widget(791, 45).setPosition(4, int3, 0, 0);
+				widget(791, 46).setPosition(0, int3, 0, 0);
+				break;
+			case 8:
+				widget(791, 47).setPosition(25, int3, 0, 0);
+				widget(791, 48).setPosition(4, int3, 0, 0);
+				widget(791, 49).setPosition(0, int3, 0, 0);
+				break;
+			case 9:
+				widget(791, 50).setPosition(25, int3, 0, 0);
+				widget(791, 51).setPosition(4, int3, 0, 0);
+				widget(791, 52).setPosition(0, int3, 0, 0);
+				break;
+		}
+		int3 = int3 + 17;
+		int2 = int2 + 1;
+	}
+	widget0.setScrollMax(0, int3);
+	widget0.setScrollPos(0, 0);
+	script_31(widget1, widget0, 792, 789, 790, 791, 773, 788);
+	return;
+}

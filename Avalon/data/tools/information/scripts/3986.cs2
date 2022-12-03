@@ -1,0 +1,9 @@
+void script_3986() {
+	int int0;
+	int0 = 0;
+	if (VARPBIT[8580] == 0) {
+		int0 = 1;
+	}
+	script_3987(999, 999, int0);
+	return;
+}

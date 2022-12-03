@@ -1,0 +1,82 @@
+void script_1771() {
+	if (VARC[247] == 0) {
+		widget(791, 99).setSprite(699);
+		script_1783(widget(791, 96), widget(791, 97), null, -1);
+	} else {
+		widget(791, 99).setSprite(697);
+	}
+	if (VARC[247] == 1) {
+		widget(791, 59).setSprite(699);
+		script_1783(widget(791, 96), widget(791, 97), widget(791, 59), -1);
+	} else {
+		widget(791, 59).setSprite(697);
+	}
+	if (VARC[247] == 2) {
+		widget(791, 62).setSprite(699);
+		script_1783(widget(791, 96), widget(791, 97), widget(791, 62), -1);
+	} else {
+		widget(791, 62).setSprite(697);
+	}
+	if (VARC[247] == 3) {
+		widget(791, 65).setSprite(699);
+		script_1783(widget(791, 96), widget(791, 97), widget(791, 65), -1);
+	} else {
+		widget(791, 65).setSprite(697);
+	}
+	if (VARC[247] == 4) {
+		widget(791, 68).setSprite(699);
+		script_1783(widget(791, 96), widget(791, 97), widget(791, 68), -1);
+	} else {
+		widget(791, 68).setSprite(697);
+	}
+	if (VARC[247] == 5) {
+		widget(791, 71).setSprite(699);
+		script_1783(widget(791, 96), widget(791, 97), widget(791, 71), -1);
+	} else {
+		widget(791, 71).setSprite(697);
+	}
+	if (VARC[247] == 6) {
+		widget(791, 74).setSprite(699);
+		script_1783(widget(791, 96), widget(791, 97), widget(791, 74), -1);
+	} else {
+		widget(791, 74).setSprite(697);
+	}
+	if (VARC[247] == 7) {
+		widget(791, 77).setSprite(699);
+		script_1783(widget(791, 96), widget(791, 97), widget(791, 77), -1);
+	} else {
+		widget(791, 77).setSprite(697);
+	}
+	if (VARC[247] == 8) {
+		widget(791, 80).setSprite(699);
+		script_1783(widget(791, 96), widget(791, 97), widget(791, 80), -1);
+	} else {
+		widget(791, 80).setSprite(697);
+	}
+	if (VARC[247] == 9) {
+		widget(791, 83).setSprite(699);
+		script_1783(widget(791, 96), widget(791, 97), widget(791, 83), -1);
+	} else {
+		widget(791, 83).setSprite(697);
+	}
+	if (VARC[247] == 10) {
+		widget(791, 86).setSprite(699);
+		script_1783(widget(791, 96), widget(791, 97), widget(791, 86), -1);
+	} else {
+		widget(791, 86).setSprite(697);
+	}
+	if (VARC[247] == 11) {
+		widget(791, 89).setSprite(699);
+		script_1783(widget(791, 96), widget(791, 97), widget(791, 89), -1);
+	} else {
+		widget(791, 89).setSprite(697);
+	}
+	if (VARC[247] == 12) {
+		widget(791, 92).setSprite(699);
+		script_1783(widget(791, 96), widget(791, 97), widget(791, 92), -1);
+	} else {
+		widget(791, 92).setSprite(697);
+	}
+	script_1784();
+	return;
+}

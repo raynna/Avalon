@@ -1,0 +1,12 @@
+void script_4391(Widget widget0) {
+	int int1;
+	int int2;
+	int1 = -1;
+	int2 = -1;
+	if (cs2method3701()) {
+		int1, int2 = script_4383(VARPBIT[9086], VARPBIT[9087], 0);
+		widget0.replaceTextures(0, 1024, int1);
+		widget0.replaceTextures(1, 1057, int2);
+	}
+	return;
+}

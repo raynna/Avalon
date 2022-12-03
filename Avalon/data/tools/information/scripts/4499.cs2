@@ -1,0 +1,85 @@
+void script_4499(DataMap datamap0, int arg1, string string2, int arg3, int arg4, Widget widget5, Widget widget6, Widget widget7, Widget widget8, Widget widget9) {
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	Widget widget14;
+	Widget widget15;
+	Widget widget16;
+	if (arg3 == -1) {
+		arg3 = datamapSize(datamap0) - 1;
+	} else {
+		arg3 = arg3;
+	}
+	widget8.clearChildren();
+	int9 = 0;
+	int10 = 5;
+	int11 = 0;
+	while (int9 <= arg3) {
+		ACTIVE.createChild(widget8, 4, int9);
+		ACTIVE.setText(datamap('i', 's', datamap0, int9));
+		if (length(datamap('i', 's', datamap0, int9)) == 0) {
+			ACTIVE.setPosition(5, int10, 0, 0);
+			ACTIVE.setSize(5, 0, 1, 0);
+			ACTIVE.setHidden(true);
+		} else {
+			ACTIVE.setPosition(5, int10, 0, 0);
+			ACTIVE.setSize(5, 15, 1, 0);
+			ACTIVE.setFont(3793);
+			ACTIVE.setRGB(0x6F634F);
+			ACTIVE.setTextAntiMacro(true);
+			ACTIVE.setScriptCallOnMouseEntered(4502, widget7, widget8, CTX_WIDGET_CHILD, "IIi");
+			int11 = int11 + 1;
+		}
+		int10 = int10 + ACTIVE.getHeight();
+		int9 = 1 + int9;
+	}
+	if (arg1 == 1) {
+		script_4508(widget8, int9 - 1);
+	}
+	arg4 = min(int11, arg4);
+	arg4 = max(arg4, 1);
+	int12 = 15 * arg4;
+	int13 = int12 + 5 * 2;
+	widget14 = widget8.getLayer();
+	if (widget14 == null) {
+		return;
+	}
+	widget15 = widget14.getLayer();
+	if (widget15 == null) {
+		return;
+	}
+	widget16 = widget15.getLayer();
+	if (widget16 == null) {
+		return;
+	}
+	widget15.setSize(widget15.getWidth(), int13 + widget5.getHeight(), 0, 0);
+	widget14.setSize(widget15.getWidth(), int13, 0, 0);
+	if (widget15.getLayer() == null) {
+		return;
+	}
+	if (widget16.getHeight() < widget15.getHeight()) {
+		return;
+	}
+	if (widget16.getHeight() < widget15.getY() + widget15.getHeight() && widget15.getY() + widget5.getHeight() - widget15.getHeight() < 0) {
+		return;
+	}
+	if (widget15.getY() + int13 > widget15.getLayer().getHeight()) {
+		widget15.setPosition(widget15.getX(), widget15.getY() - (widget15.getHeight() - widget5.getHeight()), 0, 0);
+		widget14.setPosition(0, 0, 0, 0);
+		widget5.setPosition(0, 0, 0, 2);
+	} else {
+		widget5.setPosition(0, 0, 0, 0);
+		widget14.setPosition(0, 0, 0, 2);
+	}
+	widget14.setIsHidden(true);
+	widget5.setScriptCallOnMousePressed(4505, widget8, widget5, widget9, "III");
+	widget7.setSize(0, 15, 1, 0);
+	widget7.setIsHidden(true);
+	widget8.setScrollMax(0, int10 + 5);
+	widget6.clearChildren();
+	script_31(widget6, widget8, 5666, 5663, 5664, 5665, 5686, 5685);
+	script_4501(widget5, string2);
+	return;
+}

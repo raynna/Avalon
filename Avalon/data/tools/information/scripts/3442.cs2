@@ -1,0 +1,8 @@
+void script_3442(Widget widget0, Widget widget1, int arg2) {
+	if (script_3441() == 1) {
+		script_569(widget0, -1, widget1, script_3443(arg2), 50, 150);
+	} else {
+		script_569(widget0, -1, widget1, "A member of the Jury.", 50, 150);
+	}
+	return;
+}

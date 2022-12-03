@@ -1,0 +1,14 @@
+void script_4437() {
+	widget(1110, 27).setIsHidden(true);
+	widget(1110, 27).setNoOptions();
+	widget(1110, 25).setScrollPos(0, 0);
+	widget(1110, 29).setIsHidden(false);
+	script_31(widget(1110, 29), widget(1110, 25), 5666, 5663, 5664, 5665, 5686, 5685);
+	widget(1110, 86).setSprite(6256);
+	widget(1110, 13).setIsHidden(true);
+	widget(1110, 20).setSize(1, 19, 0, 0);
+	VARC[1518] = -1;
+	STRING[126] = "";
+	widget(1110, 26).setText("");
+	return;
+}

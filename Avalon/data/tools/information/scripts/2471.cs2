@@ -1,0 +1,6 @@
+void script_2471() {
+	datamap('n', 'I', (DataMap)1092, (NpcDef)VARP[1174]).setIsHidden(true);
+	widget(747, 3).setSprite(1244);
+	widget(747, 8).setIsHidden(true);
+	return;
+}

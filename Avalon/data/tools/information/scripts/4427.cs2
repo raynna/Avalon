@@ -1,0 +1,12 @@
+void script_4427(int arg0, int arg1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, Widget widget7) {
+	if (arg0 != 1) {
+		return;
+	}
+	if (VARPBIT[9188] == arg1) {
+		return;
+	}
+	VARPBIT[9188] = arg1;
+	playSoundEffect(2266, 1, 0);
+	script_2735(widget2, widget3, widget4, widget5, widget6, widget7);
+	return;
+}

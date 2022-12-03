@@ -1,0 +1,66 @@
+[27 april 2018 at 10:34:58 CEST] - tristam: wow thanks
+[27 april 2018 at 10:35:10 CEST] - tristam: ooo
+[27 april 2018 at 10:35:11 CEST] - tristam: sick
+[27 april 2018 at 10:35:14 CEST] - tristam: try walk under it
+[27 april 2018 at 10:35:46 CEST] - tristam: no no
+[27 april 2018 at 10:35:46 CEST] - tristam: u
+[27 april 2018 at 10:35:54 CEST] - tristam: yeah
+[27 april 2018 at 10:35:55 CEST] - tristam: now my turn
+[27 april 2018 at 10:36:06 CEST] - tristam: yeah
+[27 april 2018 at 10:36:07 CEST] - tristam: good itmes
+[27 april 2018 at 10:36:11 CEST] - tristam: ;)
+[27 april 2018 at 10:36:20 CEST] - tristam: you spawned 1x members object
+[27 april 2018 at 10:38:52 CEST] - tristam: sorry was afk
+[27 april 2018 at 10:39:09 CEST] - tristam: isnt there like a method
+[27 april 2018 at 10:39:11 CEST] - tristam: to close a door by id
+[27 april 2018 at 10:40:34 CEST] - tristam: are u planning to host this
+[27 april 2018 at 10:40:36 CEST] - tristam: or just for fun
+[17 maj 2018 at 11:22:41 CEST] - tristam: does copy work
+[17 maj 2018 at 11:23:34 CEST] - tristam: sec
+[17 maj 2018 at 11:24:34 CEST] - tristam: can u do x10 hp as wel
+[17 maj 2018 at 11:28:22 CEST] - tristam: gg
+[17 maj 2018 at 11:28:39 CEST] - tristam: lets do dh
+[17 maj 2018 at 11:28:44 CEST] - tristam: ahrim dh
+[17 maj 2018 at 11:28:47 CEST] - tristam: mystic dh
+[17 maj 2018 at 11:29:11 CEST] - tristam: want me to give u a big array
+[17 maj 2018 at 11:29:17 CEST] - tristam: then just do bankcontent = array
+[17 maj 2018 at 11:29:25 CEST] - tristam: its like a bank preset
+[17 maj 2018 at 11:29:27 CEST] - tristam: shitton of itesm
+[17 maj 2018 at 11:30:22 CEST] - tristam: only dmg
+[17 maj 2018 at 11:31:33 CEST] - tristam: ow wat
+[17 maj 2018 at 11:31:40 CEST] - tristam: !
+[17 maj 2018 at 11:33:00 CEST] - tristam: noo
+[17 maj 2018 at 11:35:27 CEST] - tristam: wa
+[17 maj 2018 at 11:36:13 CEST] - tristam: does itemn work
+[17 maj 2018 at 11:37:50 CEST] - tristam: lol
+[17 maj 2018 at 11:39:07 CEST] - tristam: theres a bunch of
+[17 maj 2018 at 11:39:16 CEST] - tristam: hit > target.hp ? hit = hp
+[17 maj 2018 at 11:39:20 CEST] - tristam: playercombat and entity
+[17 maj 2018 at 11:41:48 CEST] - tristam: lol 
+[17 maj 2018 at 11:44:53 CEST] - tristam: ok cool
+[17 maj 2018 at 11:45:44 CEST] - tristam: 32
+[17 maj 2018 at 11:49:04 CEST] - tristam: ;wolp
+[17 maj 2018 at 11:52:25 CEST] - tristam: ow
+[17 maj 2018 at 11:52:50 CEST] - tristam: a;;ban
+[17 maj 2018 at 11:55:05 CEST] - tristam: osht
+[17 maj 2018 at 11:57:39 CEST] - tristam: idk how 2 nh
+[17 maj 2018 at 12:02:56 CEST] - tristam: i forgot how to
+[17 maj 2018 at 12:03:49 CEST] - tristam: maybe send sprites to different components
+[17 maj 2018 at 12:04:32 CEST] - tristam: or instead of (if componetid == 40)
+[17 maj 2018 at 12:04:44 CEST] - tristam: do if (componentid == playersmeleleespritelocation)
+[17 maj 2018 at 12:05:55 CEST] - tristam: its pro rlly easy but i havnt done anything like that b4
+[17 maj 2018 at 12:07:36 CEST] - tristam: do all spells and stuff work
+[17 maj 2018 at 12:07:40 CEST] - tristam: like soa
+[17 maj 2018 at 12:08:21 CEST] - tristam: want to do fight kiln
+[17 maj 2018 at 12:08:53 CEST] - tristam: o
+[17 maj 2018 at 12:09:09 CEST] - tristam: u mean its fucked up like matrix
+[17 maj 2018 at 12:09:11 CEST] - tristam: or worse
+[17 maj 2018 at 12:09:26 CEST] - tristam: thats not so bad
+[17 maj 2018 at 12:11:37 CEST] - tristam: is the prays sending at the right time
+[17 maj 2018 at 12:11:57 CEST] - tristam: its not protecting me tho
+[17 maj 2018 at 12:12:39 CEST] - tristam: its 1 sec after his anim u rptoect
+[17 maj 2018 at 12:13:19 CEST] - tristam: when the hit is seen on chara?
+[17 maj 2018 at 12:13:54 CEST] - tristam: so it should protect when im clicking ;o
+[17 maj 2018 at 12:13:59 CEST] - tristam: i have worldthread as well
+[17 maj 2018 at 12:14:58 CEST] - tristam: i think its lag or something
+[17 maj 2018 at 12:15:09 CEST] - tristam: idk

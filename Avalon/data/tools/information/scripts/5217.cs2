@@ -1,0 +1,8 @@
+void script_5217(Widget widget0, AttrMap attrmap1, Widget widget2, Widget widget3) {
+	script_4526(widget0, attrmap1);
+	widget0.setScriptCallOnMouseEntered(-1, "");
+	widget3.setScriptCallOnMouseEntered(-1, "");
+	widget2.setScriptCallOnMouseEntered(5218, widget0, widget3, 0, 0, widget2, "IIiiI");
+	widget0.setScriptCallOnMouseExit(5218, widget0, widget3, 1, 0, widget2, "IIiiI");
+	return;
+}

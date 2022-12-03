@@ -1,0 +1,18 @@
+void script_4172(int arg0) {
+	Item item1;
+	item1 = getItemIdInSlot(94, arg0);
+	if (item1 != null) {
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setItem(item1, getItemAmtInSlot(94, arg0));
+		ACTIVE.setShadowColor(0x302020);
+		ACTIVE.setOutlineThickness(1);
+		ACTIVE.setPosition(2, 0, 1, 1);
+	} else {
+		ACTIVE.setSize(32, 32, 0, 0);
+		ACTIVE.setSprite(datamap('i', 'd', (DataMap)796, arg0));
+		ACTIVE.setShadowColor(0x000000);
+		ACTIVE.setOutlineThickness(0);
+		ACTIVE.setPosition(0, 0, 1, 1);
+	}
+	return;
+}

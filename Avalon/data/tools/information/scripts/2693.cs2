@@ -1,0 +1,8 @@
+string script_2693(int arg0) {
+	int int1;
+	int int2;
+	int1 = 0;
+	int2 = 0;
+	int1, int2 = cs2method5303(arg0);
+	return str(int1) + "x" + str(int2);
+}

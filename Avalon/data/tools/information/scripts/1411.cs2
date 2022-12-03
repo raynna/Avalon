@@ -1,0 +1,11 @@
+void script_1411() {
+	Widget widget0;
+	widget0 = widget(306, 6);
+	VARC[761] = datamap('i', 'm', (DataMap)208, rndExcl(datamapSize((DataMap)208)));
+	if (VARC[761] != -1) {
+		widget0.setModel((Model)VARC[761]);
+	}
+	widget0.setPosition(0 - widget0.getWidth(), 120, 0, 0);
+	widget(306, 19).setScriptCallOnGameloop(-1, "");
+	return;
+}

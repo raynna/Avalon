@@ -1,0 +1,20 @@
+void script_2765(Widget widget0) {
+	if (VARC[1007] <= 0) {
+		cs2method5512();
+		return;
+	}
+	if (VARC[1007] <= 100) {
+		script_2770(widget0, script_284(getMyLocation()));
+		return;
+	}
+	if (VARC[1007] <= 200) {
+		script_2762(widget0, script_284(getMyLocation()));
+		return;
+	}
+	if (VARC[1007] <= 300) {
+		script_2763(widget0, script_284(getMyLocation()));
+		return;
+	}
+	script_2826(widget0, script_284(getMyLocation()));
+	return;
+}

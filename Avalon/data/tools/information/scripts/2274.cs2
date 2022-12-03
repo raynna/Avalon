@@ -1,0 +1,74 @@
+void script_2274(Widget widget0, Widget widget1, int arg2, string arg3, string string4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12) {
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	widget1.clearChildren();
+	int11 = 2 + 13 * getLineCount("Level " + str(arg2) + ": " + arg3, 177, 495);
+	int12 = 2 + 13 * getLineCount(string4, 177, 494);
+	int13 = 2 + int11 + int12 + 32 + 14 + 2;
+	if (arg5 == -1) {
+		int13 = int13 - 32 - 14;
+	}
+	int14 = 5;
+	if (widget0.getY() < 130) {
+		int14 = 261 - int13 - 5;
+	}
+	ACTIVE.createChild(widget1, 3, 0);
+	ACTIVE.setPosition(5, int14, 0, 0);
+	ACTIVE.setSize(180, int13, 0, 0);
+	ACTIVE.setFilled(true);
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.setTrans(42);
+	ACTIVE.createChild(widget1, 3, 1);
+	ACTIVE.setPosition(6, int14 + 1, 0, 0);
+	ACTIVE.setSize(179, int13 - 1, 0, 0);
+	ACTIVE.setFilled(false);
+	ACTIVE.setRGB(0x2E2B23);
+	ACTIVE.createChild(widget1, 3, 2);
+	ACTIVE.setPosition(5, int14, 0, 0);
+	ACTIVE.setSize(179, int13 - 1, 0, 0);
+	ACTIVE.setFilled(false);
+	ACTIVE.setRGB(0x726451);
+	ACTIVE.createChild(widget1, 4, 3);
+	ACTIVE.setPosition(7, int14 + 2, 0, 0);
+	ACTIVE.setSize(177, int11, 0, 0);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setFont(495);
+	ACTIVE.setRGB(0xFF981F);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setText("Level " + str(arg2) + ": " + arg3);
+	ACTIVE.createChild(widget1, 4, 4);
+	ACTIVE.setPosition(7, int14 + 2 + int11, 0, 0);
+	ACTIVE.setSize(177, int12, 0, 0);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setFont(494);
+	ACTIVE.setRGB(0xAF6A1A);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setText(string4);
+	int15 = 1;
+	int16 = (190 - int15 * 35) / (int15 + 1);
+	ACTIVE.createChild(widget1, 5, 5);
+	ACTIVE.setPosition(int16, int14 + 2 + int11 + int12, 0, 0);
+	ACTIVE.setSize(35, 32, 0, 0);
+	ACTIVE.setItem(17489, -1);
+	ACTIVE.createChild(widget1, 4, 6);
+	ACTIVE.setPosition(int16, int14 + 2 + int11 + int12 + 32, 0, 0);
+	ACTIVE.setSize(35, 14, 0, 0);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setFont(494);
+	if (VARP[1795] != -1) {
+		ACTIVE.setRGB(0x00FF00);
+	} else {
+		ACTIVE.setRGB(0xFF0000);
+	}
+	ACTIVE.setTextAntiMacro(false);
+	if (VARP[1795] != -1) {
+		ACTIVE.setText("1/1");
+	} else {
+		ACTIVE.setText("0/1");
+	}
+	return;
+}

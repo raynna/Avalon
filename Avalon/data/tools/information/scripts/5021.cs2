@@ -1,0 +1,3 @@
+int script_5021(Color arg0) {
+	return max(bitAnd(arg0 / pow(2, 7), 127), 1);
+}

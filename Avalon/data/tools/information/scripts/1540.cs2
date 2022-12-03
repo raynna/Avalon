@@ -1,0 +1,49 @@
+void script_1540(Widget widget0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	Item item5;
+	int int6;
+	string str0;
+	string str1;
+	widget0.clearChildren();
+	int1 = 0;
+	int2 = 0;
+	int1 = (widget0.getWidth() - 36 * 4) / 3;
+	int2 = (widget0.getHeight() - 32 * 7) / 6;
+	int3 = 0;
+	int4 = getItemContainerLength(93);
+	item5 = null;
+	int6 = 0;
+	str0 = "";
+	str1 = "";
+	while (int3 < int4) {
+		ACTIVE.createChild(widget0, 5, int3);
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setPosition((36 + int1) * (int3 % 4), int3 / 4 * (32 + int2), 0, 0);
+		item5 = getItemIdInSlot(93, int3);
+		if (item5 != null) {
+			int6 = getItemAmtInContainer(93, item5);
+			str0, str1 = itemAttribute(item5, 1264), itemAttribute(item5, 1265);
+			if (length(str0) <= 0) {
+				if (isBitFlagged(VARC[96], int3)) {
+					str0 = getItemOption(item5, 2);
+				} else if (isBitFlagged(VARC[95], int3)) {
+					str0 = "Eat";
+				}
+			}
+		} else {
+			int6, str0, str1 = 0, "", "";
+		}
+		if (int6 > 5) {
+			script_154(93, int3, widget0, int3, 1, null, "Deposit-1", "Deposit-5", "Deposit-10", "Deposit-" + str(VARP[1249]), "Deposit-X", "Deposit-All", "", str0, str1);
+		} else if (int6 > 1) {
+			script_154(93, int3, widget0, int3, 1, null, "Deposit-1", "Deposit-5", "", "Deposit-" + str(VARP[1249]), "Deposit-X", "Deposit-All", "", str0, str1);
+		} else {
+			script_154(93, int3, widget0, int3, 1, null, "Deposit", "", "", "", "", "", "", str0, str1);
+		}
+		int3 = int3 + 1;
+	}
+	return;
+}

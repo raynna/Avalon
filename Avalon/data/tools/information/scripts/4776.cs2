@@ -1,0 +1,7 @@
+void script_4776(int arg0, int arg1, int arg2) {
+	if (citadelConfigsInitialized()) {
+		script_4777(arg0, arg1, arg2);
+		VARC[1560] = 0;
+	}
+	return;
+}

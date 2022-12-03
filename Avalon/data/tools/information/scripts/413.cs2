@@ -1,0 +1,7 @@
+void script_413() {
+	cameraMethod5511(getMyLocation());
+	VARC[1353] = getMyLocation();
+	VARC[1359] = 0;
+	VARC[1360] = 0;
+	return;
+}

@@ -1,0 +1,14 @@
+void script_3463(Widget widget0, int arg1) {
+	if (VARC[1007] != 22) {
+		widget0.setScriptCallOnGameloop(-1, "");
+		return;
+	}
+	if (getMyLocation() == location(arg1)) {
+		return;
+	}
+	playSoundEffect(4874, 1, 0);
+	cameraMoveTo(moveCoord(getMyLocation(), 0, 0, -3), 1500, 1, 75);
+	cameraPointAt(getMyLocation(), 0, 1, 15);
+	widget0.setScriptCallOnGameloop(3463, CTX_WIDGET, getMyLocation(), "Ic");
+	return;
+}

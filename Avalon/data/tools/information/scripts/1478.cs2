@@ -1,0 +1,13 @@
+void script_1478() {
+	int int0;
+	STRING[138] = STRING[22];
+	int0 = script_1479(STRING[138]);
+	if (int0 > 1) {
+		msg("Search for '" + escape(STRING[138]) + "' returned " + str(int0) + " results.");
+	} else if (int0 == 1) {
+		msg("Search for '" + escape(STRING[138]) + "' returned " + str(int0) + " result.");
+	} else {
+		msg("Search for '" + escape(STRING[138]) + "' returned 0 results.");
+	}
+	return;
+}

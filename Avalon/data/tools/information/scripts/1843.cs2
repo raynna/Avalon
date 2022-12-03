@@ -1,0 +1,38 @@
+void script_1843(int arg0, int arg1, int arg2) {
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	AttrMap attrmap8;
+	AttrMap attrmap9;
+	int3 = (arg1 + arg2) / 2;
+	int4 = ARRAY0[int3];
+	ARRAY0[int3] = ARRAY0[arg2];
+	ARRAY0[arg2] = int4;
+	int5 = arg1;
+	int6 = arg1;
+	int7 = 0;
+	attrmap8 = null;
+	attrmap9 = null;
+	while (int6 < arg2) {
+		attrmap8 = datamap('i', 'J', (DataMap)1805, ARRAY0[int6]);
+		attrmap9 = datamap('i', 'J', (DataMap)1805, int4);
+		if (getAttributeMapValue(attrmap8, 597) < getAttributeMapValue(attrmap9, 597)) {
+			int7 = ARRAY0[int6];
+			ARRAY0[int6] = ARRAY0[int5];
+			ARRAY0[int5] = int7;
+			int5 = int5 + 1;
+		}
+		int6 = int6 + 1;
+	}
+	ARRAY0[arg2] = ARRAY0[int5];
+	ARRAY0[int5] = int4;
+	if (arg1 < int5 - 1) {
+		script_1843(0, arg1, int5 - 1);
+	}
+	if (int5 + 1 < arg2) {
+		script_1843(0, int5 + 1, arg2);
+	}
+	return;
+}

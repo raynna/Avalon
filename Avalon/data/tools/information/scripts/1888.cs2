@@ -1,0 +1,19 @@
+void script_1888() {
+	if (VARC[1025] == 1) {
+		return;
+	}
+	if (script_2728() == 1 && VARPBIT[6521] == 0 && VARP[281] >= 1000) {
+		if (VARC[94] > getClientCycle()) {
+			return;
+		}
+		VARC[94] = getClientCycle() + 1500;
+		if (VARP[1647] == 1) {
+			msg("Your health is low! Run away from your attacker and speak to Xenia.");
+		} else {
+			msg("Your health is low! Find a safe place away from your attacker");
+			msg("or eat some food to heal yourself.");
+		}
+	}
+	VARC[1025] = 1;
+	return;
+}

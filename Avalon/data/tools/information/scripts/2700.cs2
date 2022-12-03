@@ -1,0 +1,20 @@
+void script_2700(int arg0, int arg1, boolean boolean2, boolean boolean3) {
+	int int4;
+	int4 = getClientCycle() + 750;
+	if (arg1 == 1) {
+		widget(746, 83).setScriptCallOnGameloop(2703, int4, arg0, arg1, boolean2, boolean3, "iii11");
+		widget(548, 21).setScriptCallOnGameloop(2703, int4, arg0, arg1, boolean2, boolean3, "iii11");
+		script_2701(arg0, boolean2, boolean3);
+	} else if (arg1 == 2) {
+		widget(906, 23).setScriptCallOnGameloop(2703, int4, arg0, arg1, boolean2, boolean3, "iii11");
+		script_3090();
+		widget(906, 127).setScriptCallOnClickContextMenu(2704, true, arg0, arg1, boolean2, boolean3, "1ii11");
+		widget(906, 129).setScriptCallOnClickContextMenu(2704, false, arg0, arg1, boolean2, boolean3, "1ii11");
+	} else {
+		widget(744, 17).setScriptCallOnGameloop(2703, int4, arg0, arg1, boolean2, boolean3, "iii11");
+		script_1174(10);
+		widget(744, 56).setScriptCallOnMousePressed(2704, true, arg0, arg1, boolean2, boolean3, "1ii11");
+		widget(744, 57).setScriptCallOnMousePressed(2704, false, arg0, arg1, boolean2, boolean3, "1ii11");
+	}
+	return;
+}

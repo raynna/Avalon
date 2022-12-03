@@ -1,0 +1,7 @@
+void script_4916() {
+	if (citadelConfigsInitialized()) {
+		widget(1092, 319).setScriptCallOnGameloop(-1, "");
+		script_4917();
+	}
+	return;
+}

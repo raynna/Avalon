@@ -1,0 +1,18 @@
+void script_5247() {
+	widget(1128, 97).setIsHidden(true);
+	widget(1128, 4).setSprite(6009);
+	widget(1128, 127).setIsHidden(true);
+	widget(1128, 104).setSprite(6009);
+	widget(1128, 165).setIsHidden(true);
+	widget(1128, 142).setSprite(6009);
+	widget(1128, 202).setIsHidden(true);
+	widget(1128, 179).setSprite(6009);
+	widget(1128, 239).setIsHidden(true);
+	widget(1128, 216).setSprite(6009);
+	widget(1128, 276).setIsHidden(true);
+	widget(1128, 253).setSprite(6009);
+	widget(1128, 313).setIsHidden(true);
+	widget(1128, 290).setSprite(6009);
+	widget(1128, 13).setText(str(VARPBIT[5505]));
+	return;
+}

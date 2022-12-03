@@ -1,0 +1,11 @@
+void script_4985() {
+	int int0;
+	int0 = -1;
+	if (citadelConfigsInitialized() && VARPBIT[9550] > 0) {
+		int0 = script_4948(VARPBIT[9550]);
+		if (int0 <= 0) {
+			script_4899(4);
+		}
+	}
+	return;
+}

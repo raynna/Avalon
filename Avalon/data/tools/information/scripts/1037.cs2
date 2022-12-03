@@ -1,0 +1,43 @@
+void script_1037(QcPhrase qcphrase0, int arg1) {
+	string str0;
+	VARC[161] = arg1;
+	VARC[128] = -1;
+	VARC[129] = 0;
+	STRING[30] = "";
+	str0 = cs2method5055(qcphrase0);
+	if (VARC[126] == 1) {
+		str0 = "To " + STRING[27] + ": " + "<col=800000>" + str0;
+	} else if (VARC[126] == 2) {
+		str0 = "[" + "<col=0000ff>" + clanChatDisplayName() + "<col=000000>" + "]: " + "<col=800000>" + str0;
+	} else if (VARC[126] == 8) {
+		if (cs2method3751()) {
+			str0 = "[" + "<col=0000ff>" + cs2method3752() + "<col=000000>" + "]: " + "<col=800000>" + str0;
+		}
+	} else if (VARC[126] == 10) {
+		if (cs2method3750()) {
+			str0 = "[" + "<col=0000ff>" + cs2method3752() + "<col=000000>" + "]: " + "<col=800000>" + str0;
+		}
+	} else {
+		str0 = "<col=0000ff>" + str0;
+	}
+	widget(137, 50).setIsHidden(true);
+	widget(137, 56).setScriptCallOnKeyPress(-1, "");
+	widget(137, 0).setIsHidden(false);
+	widget(137, 7).setIsHidden(true);
+	widget(137, 9).setIsHidden(true);
+	widget(137, 13).setIsHidden(false);
+	widget(137, 17).setIsHidden(true);
+	widget(137, 1).setIsHidden(true);
+	widget(137, 3).setIsHidden(false);
+	widget(137, 3).setRGB(0x000000);
+	widget(137, 3).setFont(495);
+	widget(137, 3).setTextAlignment(0, 1, 0);
+	widget(137, 3).setText(str0);
+	widget(137, 3).setTextAntiMacro(false);
+	widget(137, 16).clearChildren();
+	widget(137, 14).setText("Search for: *");
+	widget(137, 13).setScriptCallOnKeyPress(1038, KEY_TYPED, (char)KEY_PRESSED, widget(137, 1), widget(137, 14), widget(137, 16), widget(137, 15), qcphrase0, 0, "izIIIIei");
+	widget(137, 16).setScrollMax(0, 0);
+	script_72(widget(137, 15), widget(137, 16), 0);
+	return;
+}

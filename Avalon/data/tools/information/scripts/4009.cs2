@@ -1,0 +1,16 @@
+void script_4009(int arg0, int arg1, Widget widget2) {
+	if (arg1 == 1) {
+		if (arg0 == 0) {
+			widget2.setSprite(5624);
+		} else {
+			widget2.setSprite(5623);
+			script_41(widget(1056, 136));
+		}
+	} else if (arg0 == 0) {
+		widget2.setSprite(5622);
+	} else {
+		widget2.setSprite(5621);
+		script_41(widget(1056, 136));
+	}
+	return;
+}

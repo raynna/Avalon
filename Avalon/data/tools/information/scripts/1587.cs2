@@ -1,0 +1,19 @@
+void script_1587(string string0, Widget widget1, Widget widget2, Sprite sprite3) {
+	int int3;
+	string str1;
+	str1 = string0;
+	int3 = widget1.getWidth();
+	if (getMaxLineWidth(str1 + " ", int3, sprite3) > int3) {
+		while (getMaxLineWidth(str1 + "... ", 2147483647, sprite3) > int3) {
+			str1 = substr(str1, 0, length(str1) - 1);
+		}
+		str1 = str1 + "...";
+		widget1.setScriptCallOnMouseOver(38, CTX_WIDGET, widget2, string0, 25, 5000, "IIsii");
+		widget1.setScriptCallOnMouseExit(40, widget2, "I");
+	} else {
+		widget1.setScriptCallOnMouseOver(-1, "");
+		widget1.setScriptCallOnMouseExit(-1, "");
+	}
+	widget1.setText(str1);
+	return;
+}

@@ -1,0 +1,22 @@
+void script_377(Widget widget0, int arg1) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.deleteChild();
+	}
+	if (ACTIVE.setChild(widget0, arg1 + 1)) {
+		ACTIVE.deleteChild();
+	}
+	if (ACTIVE.setChild(widget0, arg1 + 2)) {
+		ACTIVE.deleteChild();
+	}
+	if (ACTIVE.setChild(widget0, arg1 + 3)) {
+		ACTIVE.deleteChild();
+	}
+	if (ACTIVE.setChild(widget0, arg1 + 4)) {
+		ACTIVE.deleteChild();
+	}
+	if (ACTIVE.setChild(widget0, arg1 + 5)) {
+		ACTIVE.deleteChild();
+	}
+	script_383();
+	return;
+}

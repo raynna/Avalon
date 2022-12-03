@@ -1,0 +1,15 @@
+void script_165(Widget widget0, int arg1) {
+	int int2;
+	int2 = script_166(arg1);
+	if (int2 == 7) {
+		widget0.setSprite(833);
+		datamap('i', 'I', (DataMap)688, arg1).setRGB(0xFF0000);
+	} else if (int2 == 6) {
+		widget0.setSprite(834);
+		datamap('i', 'I', (DataMap)688, arg1).setRGB(0x00FF00);
+	} else {
+		widget0.setSprite(943);
+		datamap('i', 'I', (DataMap)688, arg1).setRGB(0xCCCCCC);
+	}
+	return;
+}

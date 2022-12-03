@@ -1,0 +1,13 @@
+void script_4094(Widget widget0, Widget widget1, int arg2, int arg3, int arg4, int arg5) {
+	int int6;
+	int int7;
+	boolean boolean8;
+	int6 = script_3365(widget(746, 130));
+	int7 = script_3366(widget(746, 130));
+	boolean8 = widget(746, 86).isHidden();
+	if ((int6 != arg3 || int7 != arg4 || script_42(boolean8) != script_42(arg5)) && ACTIVE.setChild(widget1, arg2)) {
+		script_4095(widget0, widget1, int6, int7, boolean8);
+	}
+	script_4096(widget1);
+	return;
+}

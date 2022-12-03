@@ -1,0 +1,23 @@
+void script_1280(Container container0, int arg1, Widget widget2, int arg3) {
+	string str0;
+	str0 = "";
+	if (ACTIVE.setChild(widget2, arg3)) {
+		if (getItemIdInSlot(container0, arg1) != null) {
+			str0 = "<col=ff981f>" + getItemName(getItemIdInSlot(container0, arg1));
+			ACTIVE.setItem(getItemIdInSlot(container0, arg1), getItemAmtInSlot(container0, arg1));
+			ACTIVE.setOptionBase(str0);
+			ACTIVE.setContextMenuOption(10, "Examine" + "<col=ff9040>");
+			ACTIVE.setDragDeadZone(5);
+			ACTIVE.setDragDeadTime(10);
+			ACTIVE.setShadowColor(0x333333);
+			ACTIVE.setOutlineThickness(1);
+		} else {
+			ACTIVE.setModel(null);
+			ACTIVE.setNoOptions();
+			ACTIVE.setDragDeadZone(0);
+			ACTIVE.setDragDeadTime(0);
+			ACTIVE.setScriptCallOnMouseDragReleased(-1, "");
+		}
+	}
+	return;
+}

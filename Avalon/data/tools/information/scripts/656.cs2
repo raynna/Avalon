@@ -1,0 +1,9 @@
+void script_656() {
+	if (ACTIVE.setChild(widget(662, 74), 0)) {
+		ACTIVE.deleteChild();
+	}
+	if (ACTIVE.setChild(widget(747, 17), 0)) {
+		ACTIVE.deleteChild();
+	}
+	return;
+}

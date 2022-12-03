@@ -1,0 +1,9 @@
+void script_4250() {
+	int int0;
+	int0 = widget(548, 2).getWidth();
+	if (getDisplayMode() >= 2) {
+		int0 = widget(746, 2).getWidth();
+	}
+	msg(str(int0) + ".");
+	return;
+}

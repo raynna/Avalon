@@ -1,0 +1,10 @@
+void script_2192(int arg0, int arg1) {
+	if (arg0 == 1) {
+		widget(916, 21).setScriptCallOnMousePressed(2355, true, arg1, "1i");
+		widget(916, 22).setHFlip(false);
+	} else {
+		widget(916, 21).setScriptCallOnMousePressed(2355, false, arg1, "1i");
+		widget(916, 22).setHFlip(true);
+	}
+	return;
+}

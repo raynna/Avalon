@@ -1,0 +1,6 @@
+void script_4124(Widget widget0, int arg1, Widget widget2) {
+	if (VARP[854] != -1) {
+		script_1163(widget0, arg1, widget2, getItemName((Item)VARP[854]), 0, 180);
+	}
+	return;
+}

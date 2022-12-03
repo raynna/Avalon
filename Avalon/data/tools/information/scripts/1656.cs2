@@ -1,0 +1,11 @@
+void script_1656() {
+	if (VARPBIT[6673] == 0) {
+		widget(767, 10).setScriptCallOnClickContextMenu(29, "");
+		widget(767, 54).setIsHidden(true);
+	} else {
+		widget(767, 10).setScriptCallOnClickContextMenu(-1, "");
+		widget(767, 54).setIsHidden(false);
+		script_679(widget(767, 55));
+	}
+	return;
+}

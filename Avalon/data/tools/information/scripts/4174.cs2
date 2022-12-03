@@ -1,0 +1,8 @@
+void script_4174(int arg0) {
+	if (isBitFlagged(VARPBIT[642], arg0)) {
+		_ACTIVE.setHidden(false);
+	} else {
+		_ACTIVE.setHidden(true);
+	}
+	return;
+}

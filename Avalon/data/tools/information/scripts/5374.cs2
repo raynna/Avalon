@@ -1,0 +1,4 @@
+void script_5374(int arg0) {
+	VARC[1656] = arg0 * 10 * 50 / (6 * 8);
+	return;
+}

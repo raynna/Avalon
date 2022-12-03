@@ -1,0 +1,21 @@
+void script_863() {
+	if (VARPBIT[7912] == 1 && VARPBIT[7921] == 0) {
+		widget(986, 3).setModel(datamap('i', 'm', (DataMap)5079, VARPBIT[7919]));
+		widget(986, 16).setIsHidden(true);
+		if (VARPBIT[7920] != 0) {
+			widget(986, 5).setIsHidden(false);
+		}
+		if (VARPBIT[7920] == 1) {
+			widget(986, 5).setPosition(30, 205, 0, 0);
+		} else if (VARPBIT[7920] == 2) {
+			widget(986, 5).setPosition(112, 205, 0, 0);
+		} else if (VARPBIT[7920] == 3) {
+			widget(986, 5).setPosition(196, 205, 0, 0);
+		} else {
+			widget(986, 5).setIsHidden(true);
+		}
+	} else {
+		widget(986, 3).setModel(null);
+	}
+	return;
+}

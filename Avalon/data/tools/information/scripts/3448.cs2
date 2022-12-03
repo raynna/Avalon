@@ -1,0 +1,30 @@
+void script_3448() {
+	if (VARPBIT[7933] != 0) {
+		widget(987, 30).setIsHidden(false);
+	} else {
+		widget(987, 30).setIsHidden(true);
+	}
+	switch (VARPBIT[7933]) {
+		case 1:
+			widget(987, 30).setPosition(16, 28, 0, 0);
+			break;
+		case 7:
+			widget(987, 30).setPosition(16, 161, 0, 0);
+			break;
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+			widget(987, 30).setPosition(16 + (VARPBIT[7933] - 1) * 79, 28, 0, 0);
+			break;
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+			widget(987, 30).setPosition(16 + (VARPBIT[7933] - 7) * 79, 161, 0, 0);
+			break;
+	}
+	return;
+}

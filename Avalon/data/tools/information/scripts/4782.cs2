@@ -1,0 +1,31 @@
+void script_4782(Widget widget0, int arg1, int arg2) {
+	Sprite sprite3;
+	Sprite sprite4;
+	sprite3 = null;
+	sprite4 = null;
+	switch (arg1) {
+		case 1:
+			sprite3 = 7541;
+			sprite4 = 7537;
+			break;
+		case 2:
+			sprite3 = 7540;
+			sprite4 = 7536;
+			break;
+		case 3:
+			sprite3 = 7539;
+			sprite4 = 7535;
+			break;
+		case 4:
+			sprite3 = 7538;
+			sprite4 = 7534;
+			break;
+	}
+	if (arg2 == 1) {
+		widget0.setSprite(sprite3);
+	} else {
+		widget0.setSprite(sprite4);
+		script_41(widget(1115, 186));
+	}
+	return;
+}

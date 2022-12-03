@@ -1,0 +1,6 @@
+void script_5139(string string0, Widget widget1) {
+	int int1;
+	int1 = widget1.getX() + widget1.getWidth() / 2;
+	script_4539(widget(1096, 104), widget1, -1, string0, 150, null, null, 0xFFFFFF, 13, 4, 0, int1, widget1.getY());
+	return;
+}

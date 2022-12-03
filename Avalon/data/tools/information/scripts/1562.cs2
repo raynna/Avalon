@@ -1,0 +1,8 @@
+void script_1562() {
+	if (cs2method5428(widget(754, 0), -1)) {
+		return;
+	}
+	widget(754, 0).setScriptCallOnGameloop(-1, "");
+	script_89();
+	return;
+}

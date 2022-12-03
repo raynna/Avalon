@@ -1,0 +1,13 @@
+void script_2560() {
+	widget(845, 10).setText(datamap('i', 's', (DataMap)2385, 1));
+	widget(845, 14).setText(datamap('i', 's', (DataMap)2385, 2));
+	widget(845, 18).setText(datamap('i', 's', (DataMap)2385, 3));
+	widget(845, 22).setText(datamap('i', 's', (DataMap)2385, 4));
+	widget(845, 26).setText(datamap('i', 's', (DataMap)2385, 5));
+	widget(845, 9).setText("x " + str(VARC[828]));
+	widget(845, 13).setText("x " + str(VARC[829]));
+	widget(845, 17).setText("x " + str(VARC[830]));
+	widget(845, 21).setText("x " + str(VARC[831]));
+	widget(845, 25).setText("x " + str(VARC[832]));
+	return;
+}

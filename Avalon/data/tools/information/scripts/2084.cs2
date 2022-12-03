@@ -1,0 +1,8 @@
+void script_2084() {
+	if (VARC[640] > 0) {
+		widget(836, 15).setText(str(VARC[640]) + "%");
+	} else {
+		widget(836, 15).setText("---");
+	}
+	return;
+}

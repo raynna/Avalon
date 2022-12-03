@@ -1,0 +1,39 @@
+void script_4428() {
+	Widget widget0;
+	int int1;
+	int int2;
+	widget0 = widget(1110, 53);
+	widget0.setScriptCallOnGameloop(4431, CTX_WIDGET, "I");
+	if (cs2method3751()) {
+		VARC[53] = 0;
+		widget0.setScriptCallOnClanListChange(4449, CTX_WIDGET, "I");
+		widget0.setScriptCallOnFriendListChange(4449, CTX_WIDGET, "I");
+		widget0.setScrollMax(0, 0);
+		widget0.setScrollPos(0, 0);
+		widget(1110, 27).cs2method2314(149);
+		widget(1110, 22).setIsHidden(false);
+		script_4470();
+		script_4436(widget0, VARC[1035]);
+		script_4447();
+	}
+	widget(1110, 12).clearChildren();
+	widget(1110, 4).clearChildren();
+	int1 = 0;
+	int2 = (500 + 100) / 2;
+	while (int1 < int2) {
+		ACTIVE.createChild(widget(1110, 12), 3, int1);
+		_ACTIVE.createChild(widget(1110, 4), 3, int1);
+		ACTIVE.setSize(0, 19, 1, 0);
+		_ACTIVE.setSize(0, 19, 1, 0);
+		ACTIVE.setPosition(0, int1 * 2 * 19, 1, 0);
+		_ACTIVE.setPosition(0, ACTIVE.getY(), 1, 0);
+		ACTIVE.setRGB(0x232220);
+		_ACTIVE.setRGB(0x232220);
+		ACTIVE.setFilled(true);
+		_ACTIVE.setFilled(true);
+		ACTIVE.setTrans(128);
+		_ACTIVE.setTrans(128);
+		int1 = int1 + 1;
+	}
+	return;
+}

@@ -1,0 +1,9 @@
+void script_4231(Widget widget0) {
+	if (ACTIVE.setChild(widget0)) {
+		ACTIVE.setScriptCallOnMousePressed(4209, widget0, 0, "Ii");
+		ACTIVE.setScriptCallOnMouseDraggedOver(4209, widget0, 0, "Ii");
+		ACTIVE.setScriptCallOnMouseReleased(4209, widget0, 1, "Ii");
+		ACTIVE.setTrans(255);
+	}
+	return;
+}

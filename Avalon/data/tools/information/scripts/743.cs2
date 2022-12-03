@@ -1,0 +1,12 @@
+void script_743(Widget widget0, int arg1, int arg2) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		if (arg2 == 1) {
+			widget(18, 46).setPosition(ACTIVE.getX(), ACTIVE.getY(), 0, 0);
+			widget(18, 46).setSize(ACTIVE.getWidth(), ACTIVE.getHeight(), 0, 0);
+			widget(18, 46).setIsHidden(false);
+		} else {
+			widget(18, 46).setIsHidden(true);
+		}
+	}
+	return;
+}

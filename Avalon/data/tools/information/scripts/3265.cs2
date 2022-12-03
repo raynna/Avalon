@@ -1,0 +1,14 @@
+int script_3265() {
+	int int0;
+	int int1;
+	int int2;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	while (int0 < min(VARPBIT[7554], 15)) {
+		int1 = int1 + (22 - int2);
+		int2 = min(int2 + 3, 19);
+		int0 = int0 + 1;
+	}
+	return int1;
+}

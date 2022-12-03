@@ -1,0 +1,10 @@
+void script_2892(int arg0, int arg1) {
+	if (getClientCycle() - arg1 >= 180) {
+		VARC[1086] = 1;
+	}
+	if (getClientCycle() - arg1 >= 1000) {
+		widget(476, 24).setScriptCallOnGameloop(-1, "");
+		widget(476, 24).setIsHidden(true);
+	}
+	return;
+}

@@ -1,0 +1,5 @@
+void script_2731(Widget widget0, int arg1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, Widget widget7) {
+	script_2732(widget0, arg1, VARPBIT[3612], 1);
+	widget0.setScriptCallOnClickContextMenu(2733, CTX_MENU_OPTION, arg1, widget2, widget3, widget4, widget5, widget6, widget7, "iiIIIIII");
+	return;
+}

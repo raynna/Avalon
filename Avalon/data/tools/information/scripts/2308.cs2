@@ -1,0 +1,8 @@
+void script_2308(Widget widget0, int arg1) {
+	if (getDisplayMode() >= 2) {
+		widget0.setSprite(1127);
+	} else {
+		widget0.setSprite(784);
+	}
+	return;
+}

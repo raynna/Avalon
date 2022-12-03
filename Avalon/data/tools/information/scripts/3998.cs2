@@ -1,0 +1,71 @@
+void script_3998(int arg0, string string1) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	Widget widget9;
+	int1 = 0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	int6 = 210;
+	int7 = 0;
+	int8 = 2;
+	widget9 = null;
+	if (arg0 == -1 && ACTIVE.setChild(widget(917, 98)) || ACTIVE.setChild(widget(917, 98), arg0)) {
+		if (VARC[1] < getClientCycle() + int8) {
+			if (VARC[1] < getClientCycle()) {
+				VARC[1] = getClientCycle();
+			}
+			VARC[1] = VARC[1] + 2;
+			return;
+		}
+		VARC[1] = getClientCycle() + int8 + 10;
+		if (VARC[2] != 1) {
+			widget9 = widget(917, 101).getLayer();
+			if (widget9 != null && int6 >= widget9.getWidth() - widget(917, 100).getWidth() - 30) {
+				int6 = widget9.getWidth() - widget(917, 100).getWidth() - 30;
+			}
+			int5 = 4 + getMaxLineWidth(string1, int6 - 4, 495);
+			int7 = 4 + 16 * getLineCount(string1, int6 - 4, 495);
+			if (widget9 != null) {
+				int1 = ACTIVE.getX() + 5;
+				if (int1 + int5 + 5 > widget(917, 98).getWidth()) {
+					int1 = widget(917, 98).getWidth() - int5 - 5;
+				}
+				int2 = ACTIVE.getY() + ACTIVE.getHeight() + 5 - widget(917, 98).getScrollY();
+			}
+			if (int2 < 0) {
+				int2 = widget(917, 98).getScrollY();
+			} else if (int2 > widget9.getHeight() - int7 - 25) {
+				int2 = widget9.getHeight() - int7 - 25;
+			}
+			widget(917, 101).setSize(int5, int7, 0, 0);
+			widget(917, 101).setPosition(int1, int2, 0, 0);
+			widget(917, 101).clearChildren();
+			ACTIVE.createChild(widget(917, 101), 3, 0);
+			ACTIVE.setSize(widget(917, 101).getWidth(), widget(917, 101).getHeight(), 0, 0);
+			ACTIVE.setFilled(true);
+			ACTIVE.setRGB(0x000000);
+			ACTIVE.setTrans(90);
+			ACTIVE.createChild(widget(917, 101), 3, 1);
+			ACTIVE.setSize(widget(917, 101).getWidth(), widget(917, 101).getHeight(), 0, 0);
+			ACTIVE.setFilled(false);
+			ACTIVE.setRGB(0x000000);
+			ACTIVE.createChild(widget(917, 101), 4, 2);
+			ACTIVE.setSize(int6 - 4, widget(917, 101).getHeight(), 0, 0);
+			ACTIVE.setPosition(2, 0, 0, 0);
+			ACTIVE.setText(string1);
+			ACTIVE.setTextAlignment(0, 1, 16);
+			ACTIVE.setFont(495);
+			ACTIVE.setRGB(0xEEEEEE);
+			VARC[2] = 1;
+		}
+	}
+	return;
+}

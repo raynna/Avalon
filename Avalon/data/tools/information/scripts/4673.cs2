@@ -1,0 +1,12 @@
+void script_4673(int arg0) {
+	if (arg0 != 2) {
+		widget(102, 60).setIsHidden(true);
+		widget(102, 61).setIsHidden(false);
+		widget(102, 61).setScriptCallOnGameloop(4674, "");
+	} else {
+		widget(102, 61).setIsHidden(true);
+		widget(102, 60).setIsHidden(false);
+		widget(102, 60).setScriptCallOnGameloop(4674, "");
+	}
+	return;
+}

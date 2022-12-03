@@ -1,0 +1,4 @@
+void script_2101(Widget widget0) {
+	widget0.setItem((Item)VARP[856], 1);
+	return;
+}

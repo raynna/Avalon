@@ -1,0 +1,8 @@
+void script_5181(int arg0) {
+	if (widget(1122, 88).getScrollMaxH() == 0) {
+		return;
+	}
+	widget(1122, 88).setScrollPos(widget(1122, 88).getScrollX() + 8 * arg0, 0);
+	script_5182();
+	return;
+}

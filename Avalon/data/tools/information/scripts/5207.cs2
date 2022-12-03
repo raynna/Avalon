@@ -1,0 +1,23 @@
+void script_5207(Widget widget0, int arg1, int arg2) {
+	int int3;
+	Sprite sprite4;
+	Sprite sprite5;
+	int3 = 0;
+	sprite4 = 5526;
+	sprite5 = 5523;
+	while (int3 < widget0.nextChild()) {
+		if (ACTIVE.setChild(widget0, int3) && ACTIVE.getSpriteId() == sprite4) {
+			ACTIVE.removeAllEventListeners();
+			ACTIVE.setSprite(sprite5);
+		}
+		int3 = int3 + 1;
+	}
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.removeAllEventListeners();
+		ACTIVE.setSprite(sprite4);
+	}
+	VARC[1601] = int3;
+	script_5202(0);
+	script_5204();
+	return;
+}

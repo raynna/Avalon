@@ -1,0 +1,11 @@
+void script_1257() {
+	if (VARPBIT[305] == 1) {
+		return;
+	}
+	if (VARP[263] == 0) {
+		widget(114, 26).setSprite(180);
+	} else {
+		widget(114, 26).setSprite(181);
+	}
+	return;
+}

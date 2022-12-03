@@ -1,0 +1,8 @@
+void script_3377() {
+	if (!widget(744, 48).isHidden() || !widget(744, 49).isHidden()) {
+		script_2206();
+	} else {
+		cs2method5411();
+	}
+	return;
+}

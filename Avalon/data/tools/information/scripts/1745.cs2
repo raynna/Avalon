@@ -1,0 +1,16 @@
+void script_1745() {
+	if (VARC[217] < 1) {
+		VARC[217] = VARC[217] + 1;
+		return;
+	}
+	VARC[217] = 0;
+	if (VARC[216] == 1) {
+		VARC[215] = VARC[215] - 9;
+	} else {
+		VARC[215] = VARC[215] + 9;
+	}
+	VARC[215] = min(VARC[215], 255);
+	VARC[215] = max(VARC[215], 0);
+	widget(680, 2).setTrans(VARC[215]);
+	return;
+}

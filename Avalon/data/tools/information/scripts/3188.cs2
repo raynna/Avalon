@@ -1,0 +1,28 @@
+void script_3188(Widget widget0, int arg1, int arg2, Widget widget3, Widget widget4, Widget widget5, Widget widget6) {
+	int int7;
+	int7 = widget0.getWidth();
+	if (arg1 == 1) {
+		if (int7 - arg2 < 55) {
+			widget0.setSize(min(int7 + 5, 55 + arg2), 31, 0, 0);
+		} else {
+			widget0.setScriptCallOnGameloop(-1, "");
+			widget0.setSize(55 + arg2, 31, 0, 0);
+		}
+		widget3.setSprite(2569);
+		widget4.setSprite(2568);
+		widget5.setSprite(2568);
+		widget6.setSprite(2614);
+	} else {
+		if (int7 > 38) {
+			widget0.setSize(max(int7 - 5, 38), 31, 0, 0);
+		} else {
+			widget0.setScriptCallOnGameloop(-1, "");
+			widget0.setSize(38, 31, 0, 0);
+		}
+		widget3.setSprite(2567);
+		widget4.setSprite(2566);
+		widget5.setSprite(2566);
+		widget6.setSprite(2613);
+	}
+	return;
+}

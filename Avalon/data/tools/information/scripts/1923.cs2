@@ -1,0 +1,28 @@
+void script_1923() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int0 = VARC[550];
+	int1 = VARC[554];
+	int2 = VARC[555];
+	int3 = 0;
+	if (int0 == 0) {
+		int1 = max(0, min(5 - int1, 5));
+		int2 = max(0, min(5 - int2, 5));
+		widget(804, 34).setText(str(int1));
+		widget(804, 33).setText(str(int2));
+		widget(804, 2).setIsHidden(false);
+	} else {
+		widget(804, 2).setIsHidden(true);
+		if (int0 % 100 != 0) {
+			int3 = 1;
+		}
+		int0 = int0 * 60 / 100 / 60;
+		if (int3 == 1) {
+			int0 = int0 + 1;
+		}
+		widget(804, 1).setText("Game start : " + str(int0) + " mins");
+	}
+	return;
+}

@@ -1,0 +1,7 @@
+void script_2376(int arg0, int arg1, Widget widget2, Widget widget3) {
+	if (arg0 != 1) {
+		return;
+	}
+	script_2377(arg1, widget2, widget3);
+	return;
+}

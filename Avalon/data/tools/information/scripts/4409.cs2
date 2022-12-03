@@ -1,0 +1,128 @@
+void script_4409(Widget widget0) {
+	Location location1;
+	location1 = script_284(getMyLocation());
+	switch (VARC[1007]) {
+		case 1:
+			script_2766(0x000000, 50, widget0);
+			break;
+		case 11:
+			if (getDisplayMode() >= 2) {
+				widget(746, 7).setScriptCallOnConfigChange(5210, CTX_WIDGET, 466, "IY");
+				script_5211(true);
+			}
+			script_2768(50, widget0);
+			cs2method5405(0, 2);
+			cs2method5405(1, 2);
+			cs2method5406(0, 0, moveCoord(location1, 28, 0, 27), 900, moveCoord(location1, 28, 0, 27), 900, 0);
+			cs2method5406(0, 1, moveCoord(location1, 28, 0, 27), 750, moveCoord(location1, 28, 0, 27), 750, 0);
+			cs2method5406(1, 0, moveCoord(location1, 23, 0, 8), 200, moveCoord(location1, 23, 0, 8), 200, 0);
+			cs2method5406(1, 1, moveCoord(location1, 23, 0, 8), 250, moveCoord(location1, 23, 0, 8), 250, 0);
+			cameraMethod5502(0, 0, 50, 0, 1, 0);
+			break;
+		case 12:
+			script_2766(0x000000, 50, widget0);
+			break;
+		case 21:
+			script_2768(50, widget0);
+			cs2method5405(0, 2);
+			cs2method5405(1, 2);
+			cs2method5406(0, 0, moveCoord(location1, 16, 0, 26), 900, moveCoord(location1, 16, 0, 26), 900, 0);
+			cs2method5406(0, 1, moveCoord(location1, 16, 0, 26), 900, moveCoord(location1, 16, 0, 26), 900, 0);
+			cs2method5406(1, 0, moveCoord(location1, 24, 0, 37), 500, moveCoord(location1, 24, 0, 37), 500, 0);
+			cs2method5406(1, 1, moveCoord(location1, 24, 0, 37), 500, moveCoord(location1, 24, 0, 37), 500, 0);
+			cameraMethod5502(0, 0, 100, 0, 1, 0);
+			break;
+		case 22:
+			script_2766(0x000000, 50, widget0);
+			break;
+		case 31:
+			script_2768(50, widget0);
+			cs2method5405(0, 2);
+			cs2method5405(1, 2);
+			cs2method5406(0, 0, moveCoord(location1, 31, 0, 11), 700, moveCoord(location1, 31, 0, 11), 700, 0);
+			cs2method5406(0, 1, moveCoord(location1, 24, 0, 11), 800, moveCoord(location1, 24, 0, 11), 800, 0);
+			cs2method5406(1, 0, moveCoord(location1, 28, 0, 19), 350, moveCoord(location1, 28, 0, 19), 350, 0);
+			cs2method5406(1, 1, moveCoord(location1, 28, 0, 19), 350, moveCoord(location1, 28, 0, 19), 350, 0);
+			cameraMethod5502(0, 0, 50, 0, 1, 0);
+			break;
+		case 32:
+			script_2766(0x000000, 50, widget0);
+			break;
+		case 41:
+			script_2768(50, widget0);
+			cs2method5405(0, 2);
+			cs2method5405(1, 2);
+			cs2method5406(0, 0, moveCoord(location1, 37, 0, 41), 1200, moveCoord(location1, 37, 0, 41), 1200, 0);
+			cs2method5406(0, 1, moveCoord(location1, 37, 0, 41), 800, moveCoord(location1, 37, 0, 41), 800, 0);
+			cs2method5406(1, 0, moveCoord(location1, 27, 0, 49), 700, moveCoord(location1, 27, 0, 49), 700, 0);
+			cs2method5406(1, 1, moveCoord(location1, 27, 0, 49), 650, moveCoord(location1, 27, 0, 49), 650, 0);
+			cameraMethod5502(0, 0, 50, 0, 1, 0);
+			break;
+		case 42:
+			script_2766(0x000000, 50, widget0);
+			break;
+		case 51:
+			script_2768(50, widget0);
+			cs2method5405(0, 2);
+			cs2method5405(1, 2);
+			cs2method5406(0, 0, moveCoord(location1, 37, 0, 9), 1300, moveCoord(location1, 37, 0, 9), 1300, 0);
+			cs2method5406(0, 1, moveCoord(location1, 37, 0, 9), 1300, moveCoord(location1, 37, 0, 9), 1300, 0);
+			cs2method5406(1, 0, moveCoord(location1, 27, 0, 17), 700, moveCoord(location1, 27, 0, 17), 700, 0);
+			cs2method5406(1, 1, moveCoord(location1, 27, 0, 17), 700, moveCoord(location1, 27, 0, 17), 700, 0);
+			cameraMethod5502(0, 0, 50, 0, 1, 0);
+			break;
+		case 52:
+			script_2766(0x000000, 50, widget0);
+			break;
+		case 61:
+			script_2768(50, widget0);
+			cs2method5405(0, 2);
+			cs2method5405(1, 2);
+			cs2method5406(0, 0, moveCoord(location1, 33, 0, 30), 600, moveCoord(location1, 33, 0, 30), 600, 0);
+			cs2method5406(0, 1, moveCoord(location1, 33, 0, 30), 550, moveCoord(location1, 33, 0, 30), 550, 0);
+			cs2method5406(1, 0, moveCoord(location1, 24, 0, 33), 180, moveCoord(location1, 24, 0, 33), 180, 0);
+			cs2method5406(1, 1, moveCoord(location1, 24, 0, 33), 180, moveCoord(location1, 24, 0, 33), 180, 0);
+			cameraMethod5502(0, 0, 30, 0, 1, 0);
+			break;
+		case 62:
+			script_2766(0x000000, 50, widget0);
+			break;
+		case 71:
+			script_2768(50, widget0);
+			cs2method5405(0, 2);
+			cs2method5405(1, 2);
+			cs2method5406(0, 0, moveCoord(location1, 18, 1, 34), 1000, moveCoord(location1, 18, 1, 34), 1000, 0);
+			cs2method5406(0, 1, moveCoord(location1, 18, 1, 44), 1000, moveCoord(location1, 18, 1, 44), 1000, 0);
+			cs2method5406(1, 0, moveCoord(location1, 24, 1, 39), 800, moveCoord(location1, 24, 1, 39), 800, 0);
+			cs2method5406(1, 1, moveCoord(location1, 24, 1, 39), 700, moveCoord(location1, 24, 1, 39), 700, 0);
+			cameraMethod5502(0, 0, 80, 0, 1, 0);
+			break;
+		case 72:
+			script_2766(0x000000, 50, widget0);
+			break;
+		case 81:
+			script_2768(50, widget0);
+			cs2method5405(0, 2);
+			cs2method5405(1, 2);
+			cs2method5406(0, 0, moveCoord(location1, 15, 1, 18), 700, moveCoord(location1, 15, 1, 18), 700, 0);
+			cs2method5406(0, 1, moveCoord(location1, 15, 1, 18), 700, moveCoord(location1, 15, 1, 18), 700, 0);
+			cs2method5406(1, 0, moveCoord(location1, 24, 1, 30), 300, moveCoord(location1, 24, 1, 30), 300, 0);
+			cs2method5406(1, 1, moveCoord(location1, 24, 1, 12), 600, moveCoord(location1, 24, 1, 12), 600, 0);
+			cameraMethod5502(0, 0, 300, 0, 1, 0);
+			break;
+		case 82:
+			script_2766(0x000000, 50, widget0);
+			break;
+		case 999:
+			script_2766(0x000000, 50, widget0);
+			break;
+		case 1000:
+			cs2method5512();
+			script_2768(50, widget0);
+			break;
+		default:
+			cs2method5512();
+			break;
+	}
+	return;
+}

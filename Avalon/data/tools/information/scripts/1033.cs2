@@ -1,0 +1,30 @@
+void script_1033(string string0) {
+	int int0;
+	int int1;
+	int int2;
+	string str1;
+	str1 = "";
+	int0 = 0;
+	int0 = indexOf(string0, "|", 0);
+	if (int0 != -1) {
+		str1 = substr(string0, int0 + 1, length(string0));
+	} else {
+		str1 = string0;
+	}
+	widget(157, 14).setText(substr(string0, 0, int0));
+	int1 = 0;
+	int2 = 0;
+	int1 = getLineCount(str1, 400, 495) * 12;
+	int2 = widget(157, 25).getHeight();
+	int2 = widget(157, 25).getHeight() / 2 - int1 / 2;
+	script_1034(0, 35, int2, 400, 100, str1, 0xFFFFFF);
+	ACTIVE.createChild(widget(157, 25), 5, 1);
+	ACTIVE.setSprite(1074);
+	ACTIVE.setPosition(35, int2 - 25, 0, 0);
+	ACTIVE.setSize(400, 32, 0, 0);
+	ACTIVE.createChild(widget(157, 25), 5, 2);
+	ACTIVE.setSprite(1074);
+	ACTIVE.setPosition(35, int2 + int1, 0, 0);
+	ACTIVE.setSize(400, 32, 0, 0);
+	return;
+}

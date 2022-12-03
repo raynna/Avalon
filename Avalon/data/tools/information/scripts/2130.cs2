@@ -1,0 +1,4 @@
+void script_2130(Widget widget0, Widget widget1) {
+	widget0.setPosition(widget1.getX(), widget1.getY(), 0, 0);
+	return;
+}

@@ -1,0 +1,309 @@
+void script_4864() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	int int23;
+	int int24;
+	int int25;
+	Sprite sprite26;
+	int int27;
+	int int28;
+	int int29;
+	int int30;
+	int int31;
+	int int32;
+	int int33;
+	int int34;
+	int int35;
+	int int36;
+	int int37;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	string str4;
+	string str5;
+	script_4865();
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	int3 = 1;
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int10 = 0;
+	int11 = 0;
+	int12 = 0;
+	int13 = 0;
+	int14 = 0;
+	int15 = 0;
+	int16 = 0;
+	int17 = 0;
+	int18 = 0;
+	int19 = 0;
+	int20 = 0;
+	int21 = 0;
+	int22 = 0;
+	int23 = 0;
+	int24 = 0;
+	int25 = 0;
+	sprite26 = null;
+	str0 = "";
+	int27 = 0;
+	int28 = 0;
+	int29 = 0;
+	int30 = 0;
+	int31 = 0;
+	int32 = 0;
+	int33 = 0;
+	int34 = 0;
+	str1 = "";
+	str2 = "You do not have permission from your clan to set the primary resource target.";
+	str3 = "Toggle whether this resource is the primary resource target.";
+	str4 = "You do not have permission from your clan to set resource target amounts.";
+	str5 = "Set a target amount of this resource to be collected.";
+	int35 = -1;
+	ARRAY0 = new int[10];
+	int36 = 0;
+	int37 = 0;
+	if (citadelConfigsInitialized()) {
+		int12, int13, int14, int17, int16, int15 = script_4797();
+		while (int3 <= 31) {
+			int4 = script_4790(int3);
+			if (int4 > 0) {
+				sprite26, str0, int27, int28, int29, int30, int31, int32 = script_4791(int4);
+				int6, int7, int8, int10, int11, int9 = script_4792(int4, int27);
+				int5 = script_4975(int4);
+				if (int5 == 3) {
+					int18 = int18 + int6;
+					int19 = int19 + int7;
+					int20 = int20 + int8;
+					int23 = int23 + int11;
+					int22 = int22 + int10;
+					int21 = int21 + int9;
+				}
+			}
+			int3 = int3 + 1;
+		}
+		int33 = CLAN[2744];
+		if (int33 > 0) {
+			switch (CLAN[2744]) {
+				case 1:
+					int24 = CLAN[2734];
+					break;
+				case 2:
+					int24 = CLAN[2735];
+					break;
+				case 3:
+					int24 = CLAN[2736];
+					break;
+				case 4:
+					int24 = CLAN[2737];
+					break;
+				case 5:
+					int24 = CLAN[2738];
+					break;
+				case 6:
+					int24 = CLAN[2739];
+					break;
+				case 7:
+					int24 = CLAN[2740];
+					break;
+				case 9:
+					int24 = CLAN[2742];
+					break;
+				case 8:
+					int24 = CLAN[2741];
+					break;
+				case 10:
+					int24 = CLAN[2743];
+					break;
+			}
+			str1 = str(int24) + " " + datamap('i', 's', (DataMap)4285, int33);
+		} else {
+			str1 = "No target set";
+		}
+		ARRAY0[0] = max(CLAN[2724] / 100, int12 + int18);
+		ARRAY0[1] = max(CLAN[2725] / 100, int13 + int19);
+		ARRAY0[2] = max(CLAN[2728] / 100, int14 + int20);
+		ARRAY0[3] = max(CLAN[2730] / 100, int15 + int21);
+		ARRAY0[4] = max(CLAN[2732] / 100, int16 + int22);
+		ARRAY0[5] = max(CLAN[2731] / 100, int17 + int23);
+		ARRAY0[6] = max(CLAN[2726] / 100, CLAN[2736]);
+		ARRAY0[7] = max(CLAN[2727] / 100, CLAN[2737]);
+		ARRAY0[8] = max(CLAN[2729] / 100, CLAN[2739]);
+		ARRAY0[9] = max(CLAN[2733] / 100, CLAN[2743]);
+		while (int36 < 10) {
+			if (ARRAY0[int36] > int37) {
+				int37 = ARRAY0[int36];
+			}
+			int36 = int36 + 1;
+		}
+		script_4866(1, CLAN[2724], int12, int18, int37);
+		script_4866(2, CLAN[2725], int13, int19, int37);
+		script_4866(3, CLAN[2726], 0, 0, int37);
+		script_4866(4, CLAN[2727], 0, 0, int37);
+		script_4866(5, CLAN[2728], int14, int20, int37);
+		script_4866(6, CLAN[2729], 0, 0, int37);
+		script_4866(7, CLAN[2730], int15, int21, int37);
+		script_4866(8, CLAN[2731], int17, int23, int37);
+		script_4866(9, CLAN[2732], int16, int22, int37);
+		script_4866(10, CLAN[2733], 0, 0, int37);
+		widget(1092, 1759).setText(str1);
+		switch (VARPBIT[9553]) {
+			case 1:
+				widget(1092, 1781).setSprite(7381);
+				break;
+			case 2:
+				widget(1092, 1781).setSprite(7380);
+				break;
+			case 3:
+				widget(1092, 1781).setSprite(7384);
+				break;
+			case 4:
+				widget(1092, 1781).setSprite(7378);
+				break;
+			case 5:
+				widget(1092, 1781).setSprite(7377);
+				break;
+			case 6:
+				widget(1092, 1781).setSprite(7379);
+				break;
+			case 7:
+				widget(1092, 1781).setSprite(7376);
+				break;
+			case 8:
+				widget(1092, 1781).setSprite(7383);
+				break;
+			case 9:
+				widget(1092, 1781).setSprite(7382);
+				break;
+			case 10:
+				widget(1092, 1781).setSprite(7385);
+				break;
+			default:
+				widget(1092, 1781).setSprite(null);
+				break;
+		}
+		switch (VARPBIT[9553]) {
+			case 1:
+				int34 = CLAN[2734];
+				break;
+			case 2:
+				int34 = CLAN[2735];
+				break;
+			case 3:
+				int34 = CLAN[2736];
+				break;
+			case 4:
+				int34 = CLAN[2737];
+				break;
+			case 5:
+				int34 = CLAN[2738];
+				break;
+			case 6:
+				int34 = CLAN[2739];
+				break;
+			case 7:
+				int34 = CLAN[2740];
+				break;
+			case 8:
+				int34 = CLAN[2741];
+				break;
+			case 9:
+				int34 = CLAN[2742];
+				break;
+			case 10:
+				int34 = CLAN[2743];
+				break;
+		}
+		if (int34 > 0) {
+			str1 = str(int34);
+		} else {
+			str1 = "No target set";
+		}
+		if (VARPBIT[9553] > 0) {
+			widget(1092, 150).setText(datamap('i', 's', (DataMap)4285, VARPBIT[9553]));
+			widget(1092, 1777).setText(str1);
+			if (CLAN[2744] == VARPBIT[9553]) {
+				if (script_5224(-1) == 1) {
+					widget(1092, 152).setSprite(5916);
+					str3 = "Toggle whether this resource is the primary resource target.";
+					widget(1092, 152).setContextMenuOption(1, "Select Primary Target");
+				} else {
+					widget(1092, 152).setSprite(5919);
+					str3 = "You do not have permission from your clan to set the primary resource target.";
+					widget(1092, 152).setContextMenuOption(1, "");
+				}
+			} else if (script_5224(-1) == 1) {
+				if (script_5214(VARPBIT[9553]) <= CLANBIT[2580]) {
+					widget(1092, 152).setSprite(5920);
+					str3 = "Toggle whether this resource is the primary resource target.";
+					widget(1092, 152).setContextMenuOption(1, "Select Primary Target");
+				} else {
+					widget(1092, 152).setSprite(5923);
+					str3 = "This resource will become available at citadel tier " + str(script_5214(VARPBIT[9553])) + ".";
+					widget(1092, 152).setContextMenuOption(1, "");
+				}
+			} else {
+				widget(1092, 152).setSprite(5923);
+				str3 = "You do not have permission from your clan to set the primary resource target.";
+				widget(1092, 152).setContextMenuOption(1, "");
+			}
+			widget(1092, 152).setScriptCallOnMouseOver(4538, widget(1092, 327), CTX_WIDGET, -1, str3, 180, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1092, 152).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+			widget(1092, 1772).setIsHidden(false);
+			widget(1092, 1769).setScriptCallOnMouseOver(4538, widget(1092, 327), CTX_WIDGET, -1, str5, 180, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1092, 1769).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+			if (script_5224(-1) == 1) {
+				if (script_5214(VARPBIT[9553]) <= CLANBIT[2580]) {
+					widget(1092, 1772).setIsHidden(true);
+				} else {
+					widget(1092, 1772).setIsHidden(false);
+					str4 = "This resource will become available at citadel tier " + str(script_5214(VARPBIT[9553])) + ".";
+				}
+			} else {
+				widget(1092, 1772).setIsHidden(false);
+				str4 = "You do not have permission from your clan to set resource targets.";
+			}
+			widget(1092, 1772).setScriptCallOnMouseOver(4538, widget(1092, 327), CTX_WIDGET, -1, str4, 180, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1092, 1772).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+		} else {
+			widget(1092, 150).setText("Select a resource for more information.");
+			widget(1092, 152).setSprite(5921);
+			widget(1092, 1772).setIsHidden(false);
+			str4 = "Please select a resource from the left to view options.";
+			widget(1092, 1772).setScriptCallOnMouseOver(4538, widget(1092, 327), CTX_WIDGET, -1, str4, 180, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1092, 1772).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+			widget(1092, 152).setSprite(5923);
+			str3 = "Please select a resource from the left to view options.";
+			widget(1092, 152).setContextMenuOption(1, "");
+			widget(1092, 152).setScriptCallOnMouseOver(4538, widget(1092, 327), CTX_WIDGET, -1, str3, 180, 3793, 3793, 16777215, 13, 4, 0, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+			widget(1092, 152).setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+		}
+	}
+	return;
+}

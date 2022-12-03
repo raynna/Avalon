@@ -1,0 +1,11 @@
+void script_516() {
+	if (VARC[52] < 300) {
+		VARC[52] = VARC[52] + 1;
+	}
+	if (VARC[51] > 0 && VARC[52] % 3 == 0) {
+		VARC[51] = VARC[51] - 3;
+		VARC[50] = VARC[50] + 1;
+		widget(615, 0).set3DRotation(0, VARC[50], 0, 0, 0, VARC[51]);
+	}
+	return;
+}

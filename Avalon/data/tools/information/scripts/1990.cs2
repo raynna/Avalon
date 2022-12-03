@@ -1,0 +1,18 @@
+int script_1990() {
+	int int0;
+	int0 = 0;
+	int0 = VARPBIT[5783] + VARPBIT[5785] + VARPBIT[5786] + VARPBIT[5790] + VARPBIT[5791] + VARPBIT[5793] + VARPBIT[5792] + VARPBIT[5784];
+	if (VARPBIT[5782] == 5) {
+		int0 = int0 + 1;
+	}
+	if (VARPBIT[5787] == 5) {
+		int0 = int0 + 1;
+	}
+	if (VARPBIT[5788] == 5) {
+		int0 = int0 + 1;
+	}
+	if (VARPBIT[5789] == 5) {
+		int0 = int0 + 1;
+	}
+	return int0;
+}

@@ -1,0 +1,4 @@
+void script_2681() {
+	widget(398, 18).setText("Number of rooms: " + str(VARC[944]));
+	return;
+}

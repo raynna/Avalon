@@ -1,0 +1,56 @@
+void script_2250(int arg0) {
+	int int1;
+	DataMap datamap2;
+	int1 = arg0 / 5;
+	datamap2 = (DataMap)3016;
+	if (isMember()) {
+		datamap2 = (DataMap)3015;
+	}
+	if (isMember() && int1 == 41 || !isMember() && int1 == 17) {
+		widget(940, 42).setIsHidden(true);
+		widget(940, 40).setText(getAttributeMapValue(datamap('i', 'J', datamap2, int1), 1078));
+		widget(940, 43).setIsHidden(false);
+		widget(940, 43).setText(getItemName(getAttributeMapValue(datamap('i', 'J', datamap2, int1), 1070)));
+		widget(940, 44).setIsHidden(false);
+		widget(940, 44).setItem(getAttributeMapValue(datamap('i', 'J', datamap2, int1), 1070), -1);
+		widget(940, 41).setIsHidden(false);
+		widget(940, 66).setIsHidden(false);
+		widget(940, 64).setIsHidden(false);
+		widget(940, 62).setIsHidden(false);
+		widget(940, 63).setIsHidden(false);
+		widget(940, 67).setIsHidden(true);
+		widget(940, 68).setIsHidden(true);
+		widget(940, 62).setText("1 : 1xp");
+	} else if (getSkillActualLvl(24) < getAttributeMapValue(datamap('i', 'J', datamap2, int1), 1071)) {
+		widget(940, 42).setIsHidden(true);
+		widget(940, 40).setText(getAttributeMapValue(datamap('i', 'J', datamap2, int1), 1078));
+		widget(940, 43).setIsHidden(false);
+		widget(940, 43).setText(getItemName(getAttributeMapValue(datamap('i', 'J', datamap2, int1), 1070)));
+		widget(940, 44).setIsHidden(false);
+		widget(940, 44).setItem(getAttributeMapValue(datamap('i', 'J', datamap2, int1), 1070), -1);
+		widget(940, 41).setIsHidden(false);
+		widget(940, 66).setIsHidden(true);
+		widget(940, 64).setIsHidden(true);
+		widget(940, 62).setIsHidden(true);
+		widget(940, 63).setIsHidden(true);
+		widget(940, 67).setIsHidden(false);
+		widget(940, 68).setIsHidden(false);
+		widget(940, 68).setText("Dungeoneering " + str(getAttributeMapValue(datamap('i', 'J', datamap2, int1), 1071)) + " required");
+	} else {
+		widget(940, 42).setIsHidden(true);
+		widget(940, 40).setText(getAttributeMapValue(datamap('i', 'J', datamap2, int1), 1078));
+		widget(940, 43).setIsHidden(false);
+		widget(940, 43).setText(getItemName(getAttributeMapValue(datamap('i', 'J', datamap2, int1), 1070)));
+		widget(940, 44).setIsHidden(false);
+		widget(940, 44).setItem(getAttributeMapValue(datamap('i', 'J', datamap2, int1), 1070), -1);
+		widget(940, 41).setIsHidden(false);
+		widget(940, 66).setIsHidden(false);
+		widget(940, 64).setIsHidden(false);
+		widget(940, 62).setIsHidden(false);
+		widget(940, 63).setIsHidden(false);
+		widget(940, 67).setIsHidden(true);
+		widget(940, 68).setIsHidden(true);
+		widget(940, 62).setText(str(getAttributeMapValue(datamap('i', 'J', datamap2, int1), 1072)));
+	}
+	return;
+}

@@ -1,0 +1,41 @@
+void script_4285(Widget widget0, Widget widget1, char char2, int arg3, Widget widget4) {
+	STRING[348] = widget0.getText();
+	switch (arg3) {
+		case 84:
+			if (compare("", STRING[348]) != 0) {
+				script_4288();
+			}
+			break;
+		case 96:
+		case 97:
+		case 98:
+		case 99:
+		case 102:
+		case 103:
+			if (!isHoldingCtrl()) {
+				return;
+			}
+			_ = script_1553(arg3, VARC[1504], STRING[348]);
+			break;
+		case 85:
+			if (length(STRING[348]) > 0) {
+				STRING[348] = substr(STRING[348], 0, length(STRING[348]) - 1);
+			}
+			break;
+		default:
+			if (length(STRING[348]) < 20) {
+				STRING[348] = script_74(STRING[348], 0, arg3, char2);
+			}
+			break;
+	}
+	VARC[1504] = script_1552(VARC[1504], STRING[348], 5631, widget0, -1);
+	widget4.setPosition(VARC[1504], widget4.getY(), 0, 0);
+	widget1.setText(str(length(STRING[348])) + "/20");
+	if (length(STRING[348]) >= 15) {
+		widget1.setRGB(0xDD0000);
+	} else {
+		widget1.setRGB(0x1F1D19);
+	}
+	widget0.setText(STRING[348]);
+	return;
+}

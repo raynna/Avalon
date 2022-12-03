@@ -1,0 +1,7 @@
+void script_2412(Widget widget0, int arg1, Item item2) {
+	if (ACTIVE.setChild(widget0, arg1)) {
+		ACTIVE.setNoOptions();
+		script_2411(item2);
+	}
+	return;
+}

@@ -1,0 +1,7 @@
+void script_5270(int arg0, int arg1, int arg2) {
+	widget(1137, 48).setText(str(arg0));
+	widget(1137, 39).setText(str(arg1 + arg2));
+	widget(1137, 67).setText(str(arg1));
+	widget(1137, 73).setText(str(arg2));
+	return;
+}

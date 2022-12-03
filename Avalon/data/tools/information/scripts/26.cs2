@@ -1,0 +1,47 @@
+void script_26() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int0 = 0;
+	int1 = 0;
+	int2 = 25;
+	int3 = 20;
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	int4 = (widget(197, 16).getWidth() - int2) / (int2 + 36);
+	while (int0 <= getItemContainerLength(347)) {
+		ACTIVE.createChild(widget(197, 16), 5, int0);
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setPosition(int2 + (36 + int2) * (int0 - int1 * int4), int3 + int1 * (32 + int3), 0, 0);
+		int5 = int2 + (36 + int2) * (int0 - int1 * int4);
+		int6 = int3 + int1 * (32 + int3);
+		if (getItemIdInSlot(347, int0) != null) {
+			if (getItemIdInSlot(347, int0) == 6910) {
+				widget(197, 12).setPosition(int5 - 8, int6 + 94, 0, 0);
+			}
+			if (getItemIdInSlot(347, int0) == 6912) {
+				widget(197, 14).setPosition(int5 - 8, int6 + 94, 0, 0);
+			}
+			if (getItemIdInSlot(347, int0) == 6914) {
+				widget(197, 13).setPosition(int5 - 8, int6 + 94, 0, 0);
+			}
+			ACTIVE.setItem(getItemIdInSlot(347, int0), getItemAmtInSlot(347, int0));
+			ACTIVE.setShadowColor(0x000000);
+			ACTIVE.setOptionBase("<col=ff9040>" + getItemName(getItemIdInSlot(347, int0)));
+			ACTIVE.setOutlineThickness(1);
+			ACTIVE.setContextMenuOption(1, "Value");
+			ACTIVE.setContextMenuOption(2, "Buy");
+			ACTIVE.setContextMenuOption(10, "Examine");
+		}
+		int0 = int0 + 1;
+		if (int0 % int4 == 0) {
+			int1 = int1 + 1;
+		}
+	}
+	return;
+}

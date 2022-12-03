@@ -1,0 +1,34 @@
+void script_4093(Widget widget0, Widget widget1) {
+	string str0;
+	widget1.clearChildren();
+	ACTIVE.createChild(widget1, 5, widget1.nextChild());
+	ACTIVE.setSize(8, 23, 0, 0);
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setSprite(4514);
+	ACTIVE.createChild(widget1, 5, widget1.nextChild());
+	ACTIVE.setSize(8, 23, 0, 0);
+	ACTIVE.setPosition(0, 0, 2, 0);
+	ACTIVE.setSprite(4516);
+	ACTIVE.createChild(widget1, 5, widget1.nextChild());
+	ACTIVE.setSize(16, 23, 1, 0);
+	ACTIVE.setPosition(0, 0, 1, 0);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setSprite(4515);
+	ACTIVE.createChild(widget1, 4, widget1.nextChild());
+	ACTIVE.setSize(0, 23, 1, 0);
+	ACTIVE.setPosition(0, 0, 1, 0);
+	ACTIVE.setFont(494);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.setTextAntiMacro(false);
+	str0 = "Task List";
+	ACTIVE.setText(str0);
+	widget1.setSize(getTextWidth(str0, 494) + 10, 32, 0, 0);
+	ACTIVE.createChild(widget1, 5, widget1.nextChild());
+	ACTIVE.setSize(21, 11, 0, 0);
+	ACTIVE.setPosition(0, 0, 1, 2);
+	ACTIVE.setSprite(4517);
+	script_4096(widget1);
+	script_4095(widget0, widget1, script_3365(widget(746, 130)), script_3366(widget(746, 130)), widget(746, 86).isHidden());
+	return;
+}

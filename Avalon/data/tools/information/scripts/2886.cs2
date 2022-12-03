@@ -1,0 +1,11 @@
+void script_2886() {
+	int int0;
+	VARC[1078] = VARPBIT[7189];
+	VARC[1086] = 0;
+	int0 = getClientCycle();
+	widget(476, 24).setScriptCallOnGameloop(2892, widget(476, 24), int0, "Ii");
+	playSoundEffect(8641, 1, 0);
+	widget(476, 0).setScriptCallOnWidgetResize(2887, "");
+	script_2888();
+	return;
+}

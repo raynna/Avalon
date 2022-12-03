@@ -1,0 +1,10 @@
+void script_958(Widget widget0, Widget widget1, Widget widget2) {
+	if (VARPBIT[4618] == 0) {
+		script_959(widget0, widget1, 1);
+		widget2.setSprite(1157);
+	} else {
+		script_959(widget0, widget1, 0);
+		widget2.setSprite(1156);
+	}
+	return;
+}

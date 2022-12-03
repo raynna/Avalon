@@ -1,0 +1,10 @@
+void script_2104(int arg0) {
+	if (arg0 == 1) {
+		widget(297, 23).setIsHidden(false);
+		widget(297, 9).setIsHidden(true);
+	} else {
+		widget(297, 23).setIsHidden(true);
+		widget(297, 9).setIsHidden(false);
+	}
+	return;
+}

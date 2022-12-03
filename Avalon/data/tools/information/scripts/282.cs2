@@ -1,0 +1,18 @@
+void script_282() {
+	int int0;
+	int int1;
+	int int2;
+	int0 = 0;
+	int1 = 0;
+	int2 = VARP[1380] * 1000 / 100;
+	int0 = datamap('i', 'i', (DataMap)706, int2);
+	int1 = datamap('i', 'i', (DataMap)707, int2);
+	widget(836, 56).setPosition(15, int0, 2, 0);
+	widget(836, 56).setSize(14, int1, 0, 0);
+	if (int2 < 25) {
+		widget(836, 56).setRGB(0xFF9623);
+	} else {
+		widget(836, 56).setRGB(0x048306);
+	}
+	return;
+}

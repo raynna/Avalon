@@ -1,0 +1,32 @@
+void script_4901() {
+	Sprite sprite0;
+	Sprite sprite1;
+	Sprite sprite2;
+	Sprite sprite3;
+	int int4;
+	sprite0 = null;
+	sprite1 = null;
+	sprite2 = null;
+	sprite3 = null;
+	int4 = 1;
+	if (citadelConfigsInitialized()) {
+		int4 = CLANBIT[2580];
+		sprite0 = script_4904(0, 0, int4);
+		if (sprite0 != null) {
+			widget(1092, 275).setSprite(sprite0);
+		}
+		sprite1 = script_4904(0, 1, int4);
+		if (sprite1 != null) {
+			widget(1092, 274).setSprite(sprite1);
+		}
+		sprite2 = script_4904(0, 2, int4);
+		if (sprite2 != null) {
+			widget(1092, 273).setSprite(sprite2);
+		}
+		sprite3 = script_4904(0, 3, int4);
+		if (sprite3 != null) {
+			widget(1092, 272).setSprite(sprite3);
+		}
+	}
+	return;
+}

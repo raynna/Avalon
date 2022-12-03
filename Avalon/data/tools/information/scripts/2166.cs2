@@ -1,0 +1,4 @@
+void script_2166() {
+	widget(190, 2).setText("Quest Points: " + str(VARP[101]) + " / " + str(VARP[904]));
+	return;
+}

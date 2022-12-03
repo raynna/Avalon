@@ -1,0 +1,114 @@
+void script_2003() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	Item item6;
+	int int7;
+	int int8;
+	int int9;
+	int0 = 0;
+	if (getSkillActualLvl(19) >= 40) {
+		int0 = VARPBIT[4449];
+	} else {
+		int0 = VARPBIT[4449] * datamap('i', 'i', (DataMap)1369, getSkillActualLvl(19)) / 100;
+	}
+	if (VARPBIT[4449] == 1) {
+		widget(686, 13).setText("Trade one point" + "<br>" + "for " + formatNumber(int0, 1) + " XP?");
+	} else {
+		widget(686, 13).setText("Trade " + formatNumber(VARPBIT[4449], 1) + " points" + "<br>" + "for " + formatNumber(int0, 1) + " XP?");
+	}
+	widget(686, 6).clearChildren();
+	int1 = datamapSize((DataMap)1589);
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	item6 = null;
+	int7 = 0;
+	int8 = 0;
+	while (int8 < int1) {
+		item6 = datamap('i', 'O', (DataMap)1589, int8);
+		int7 = datamap('o', 'i', (DataMap)1365, item6);
+		int2 = int8 % 9 * 50;
+		int3 = int8 / 9 * 54;
+		int4, int5 = max(int4, int2), max(int5, int3);
+		ACTIVE.createChild(widget(686, 6), 5, widget(686, 6).nextChild());
+		ACTIVE.setSize(48, 52, 0, 0);
+		ACTIVE.setPosition(int2, int3, 0, 0);
+		ACTIVE.setSprite(2205);
+		if (item6 == 11209) {
+			ACTIVE.setContextMenuOption(1, "Trade points for XP");
+			ACTIVE.setScriptCallOnClickContextMenu(69, false, widget(686, 9), "1I");
+		} else {
+			ACTIVE.setOptionBase("<col=ff981f>" + getItemName(item6) + "</col>");
+			ACTIVE.setContextMenuOption(1, "Value");
+			ACTIVE.setContextMenuOption(2, "Buy 1");
+			ACTIVE.setContextMenuOption(3, "Buy 5");
+			ACTIVE.setContextMenuOption(4, "Buy 10");
+			if (item6 != 12625) {
+				ACTIVE.setContextMenuOption(5, "Buy X");
+			}
+			ACTIVE.setContextMenuOption(10, "Examine");
+		}
+		ACTIVE.setScriptCallOnMouseEntered(2140, CTX_WIDGET, ACTIVE.getChildId() + 1, 0, "Iii");
+		ACTIVE.setScriptCallOnMouseExit(2140, CTX_WIDGET, ACTIVE.getChildId() + 1, 255, "Iii");
+		ACTIVE.createChild(widget(686, 6), 5, widget(686, 6).nextChild());
+		ACTIVE.setSize(48, 52, 0, 0);
+		ACTIVE.setPosition(int2, int3, 0, 0);
+		ACTIVE.setSprite(2206);
+		ACTIVE.setTrans(255);
+		ACTIVE.createChild(widget(686, 6), 5, widget(686, 6).nextChild());
+		if (item6 == 11209) {
+			ACTIVE.setSize(34, 34, 0, 0);
+			ACTIVE.setPosition(int2 + 7, int3 + 2, 0, 0);
+			if (getLanguage() == 1) {
+				ACTIVE.setSprite(2714);
+			} else {
+				ACTIVE.setSprite(2730);
+			}
+		} else {
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition(int2 + 6, int3 + 4, 0, 0);
+			ACTIVE.setItemNoNum(item6, 5);
+			ACTIVE.setOutlineThickness(1);
+		}
+		ACTIVE.setShadowColor(0x302020);
+		ACTIVE.createChild(widget(686, 6), 5, widget(686, 6).nextChild());
+		ACTIVE.setSize(12, 12, 0, 0);
+		ACTIVE.setPosition(int2 + 2, int3 + 38, 0, 0);
+		ACTIVE.setItemNoNum(12625, 1);
+		ACTIVE.createChild(widget(686, 6), 4, widget(686, 6).nextChild());
+		ACTIVE.setSize(31, 12, 0, 0);
+		ACTIVE.setPosition(int2 + 13, int3 + 39, 0, 0);
+		ACTIVE.setFont(494);
+		ACTIVE.setTextAlignment(2, 1, 0);
+		if (int7 == -1) {
+			ACTIVE.setText("N/A");
+		} else {
+			ACTIVE.setText(script_940(int7));
+		}
+		if (int7 <= VARPBIT[4449]) {
+			ACTIVE.setRGB(0xFFFF00);
+		} else {
+			ACTIVE.setRGB(0xFF0000);
+		}
+		ACTIVE.setTextAntiMacro(true);
+		int8 = int8 + 1;
+	}
+	int4, int5 = int4 + 48, int5 + 52;
+	int9 = widget(686, 6).getHeight();
+	widget(686, 6).setSize(int4, int9, 0, 0);
+	if (int5 > int9) {
+		widget(686, 6).setPosition((widget(686, 5).getWidth() - widget(686, 7).getWidth() - int4) / 2, 0, 0, 1);
+		widget(686, 7).setIsHidden(false);
+		widget(686, 6).setScrollMax(0, int5);
+		script_31(widget(686, 7), widget(686, 6), 792, 789, 790, 791, 773, 788);
+	} else {
+		widget(686, 6).setPosition(0, 0, 1, 1);
+		widget(686, 7).setIsHidden(true);
+	}
+	return;
+}

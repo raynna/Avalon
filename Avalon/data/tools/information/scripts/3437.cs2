@@ -1,0 +1,61 @@
+void script_3437() {
+	Model model0;
+	model0 = null;
+	if (VARPBIT[7912] == 0 || VARPBIT[7904] == 8 && VARPBIT[7921] == 1 && VARPBIT[7916] == 0) {
+		if (VARPBIT[7919] < 3) {
+			if (VARPBIT[7920] == 1) {
+				model0 = datamap('i', 'm', (DataMap)5079, VARPBIT[7919]);
+			}
+			if (VARPBIT[7920] == 2) {
+				model0 = datamap('i', 'm', (DataMap)5080, VARPBIT[7919]);
+			}
+			if (VARPBIT[7920] == 3) {
+				model0 = datamap('i', 'm', (DataMap)5081, VARPBIT[7919]);
+			}
+		} else if (VARPBIT[7919] < 6) {
+			if (VARPBIT[7920] == 1) {
+				model0 = datamap('i', 'm', (DataMap)5080, VARPBIT[7919]);
+			}
+			if (VARPBIT[7920] == 2) {
+				model0 = datamap('i', 'm', (DataMap)5081, VARPBIT[7919]);
+			}
+			if (VARPBIT[7920] == 3) {
+				model0 = datamap('i', 'm', (DataMap)5079, VARPBIT[7919]);
+			}
+		} else if (VARPBIT[7919] == 10) {
+			if (VARPBIT[7920] == 3) {
+				model0 = datamap('i', 'm', (DataMap)5080, VARPBIT[7919]);
+			}
+			if (VARPBIT[7920] == 2) {
+				model0 = datamap('i', 'm', (DataMap)5081, VARPBIT[7919]);
+			}
+			if (VARPBIT[7920] == 1) {
+				model0 = datamap('i', 'm', (DataMap)5079, VARPBIT[7919]);
+			}
+		} else {
+			if (VARPBIT[7920] == 1) {
+				model0 = datamap('i', 'm', (DataMap)5081, VARPBIT[7919]);
+			}
+			if (VARPBIT[7920] == 2) {
+				model0 = datamap('i', 'm', (DataMap)5079, VARPBIT[7919]);
+			}
+			if (VARPBIT[7920] == 3) {
+				model0 = datamap('i', 'm', (DataMap)5080, VARPBIT[7919]);
+			}
+		}
+		widget(986, 3).setModel(model0);
+		if (VARPBIT[7920] != 0) {
+			widget(986, 5).setIsHidden(false);
+		}
+		if (VARPBIT[7920] == 1) {
+			widget(986, 5).setPosition(30, 205, 0, 0);
+		} else if (VARPBIT[7920] == 2) {
+			widget(986, 5).setPosition(112, 205, 0, 0);
+		} else if (VARPBIT[7920] == 3) {
+			widget(986, 5).setPosition(196, 205, 0, 0);
+		} else {
+			widget(986, 5).setIsHidden(true);
+		}
+	}
+	return;
+}

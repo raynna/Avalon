@@ -1,0 +1,10 @@
+void script_707() {
+	if (getDisplayMode() >= 2) {
+		widget(680, 19).setPosition(220, 11, 2, 0);
+	} else {
+		widget(680, 19).setPosition(12, 11, 2, 0);
+	}
+	VARC[215] = 255;
+	VARC[216] = 0;
+	return;
+}

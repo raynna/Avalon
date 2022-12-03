@@ -1,0 +1,35 @@
+void script_1899(int arg0, int arg1, int arg2) {
+	switch (arg0) {
+		case 0:
+			VARC[523], VARC[533] = arg1, arg2;
+			break;
+		case 1:
+			VARC[524], VARC[534] = arg1, arg2;
+			break;
+		case 2:
+			VARC[525], VARC[535] = arg1, arg2;
+			break;
+		case 3:
+			VARC[526], VARC[536] = arg1, arg2;
+			break;
+		case 4:
+			VARC[527], VARC[537] = arg1, arg2;
+			break;
+		case 5:
+			VARC[528], VARC[538] = arg1, arg2;
+			break;
+		case 6:
+			VARC[529], VARC[539] = arg1, arg2;
+			break;
+		case 7:
+			VARC[530], VARC[540] = arg1, arg2;
+			break;
+		case 8:
+			VARC[531], VARC[541] = arg1, arg2;
+			break;
+		case 9:
+			VARC[532], VARC[542] = arg1, arg2;
+			break;
+	}
+	return;
+}

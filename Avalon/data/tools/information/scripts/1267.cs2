@@ -1,0 +1,47 @@
+void script_1267() {
+	string str0;
+	widget(309, 1).clearChildren();
+	script_1088(widget(309, 1), 22);
+	widget(309, 9).clearChildren();
+	script_333(widget(309, 9), 0x483F33, 0x302922, 0, 0);
+	script_2647(widget(309, 9));
+	widget(309, 12).clearChildren();
+	script_333(widget(309, 12), 0x483F33, 0x302922, 0, 0);
+	script_1516(widget(309, 12), 380, 100);
+	script_2647(widget(309, 12));
+	str0 = "Choose a hairstyle";
+	if (IsFemale()) {
+		widget(309, 13).setSize(widget(309, 8).getWidth(), widget(309, 13).getHeight(), 0, 0);
+		widget(309, 5).setIsHidden(true);
+		widget(309, 1).setScriptCallOnGlobalConfigChange(2789, 1008, 1015, "Y");
+		widget(309, 1).setScriptCallOnConfigChange(-1, "");
+	} else {
+		widget(309, 13).setSize(widget(309, 8).getWidth() - (widget(309, 5).getWidth() + 5), widget(309, 13).getHeight(), 0, 0);
+		widget(309, 5).setIsHidden(false);
+		VARC[774] = script_734(VARPBIT[6084]);
+		widget(309, 6).setSprite(1048);
+		widget(309, 7).setSprite(1055);
+		widget(309, 6).setScriptCallOnClickContextMenu(2830, CTX_MENU_OPTION, false, "i1");
+		widget(309, 7).setScriptCallOnClickContextMenu(2830, CTX_MENU_OPTION, true, "i1");
+		widget(309, 6).setScriptCallOnMouseOver(1160, CTX_WIDGET, -1, widget(309, 22), str0, 25, 512, "IiIsii");
+		widget(309, 6).setScriptCallOnMouseExit(40, widget(309, 22), "I");
+		str0 = "Choose your facial hair";
+		widget(309, 7).setScriptCallOnMouseOver(1160, CTX_WIDGET, -1, widget(309, 22), str0, 25, 512, "IiIsii");
+		widget(309, 7).setScriptCallOnMouseExit(40, widget(309, 22), "I");
+		widget(309, 1).setScriptCallOnGlobalConfigChange(2789, 1008, 1009, 1015, "Y");
+		widget(309, 1).setScriptCallOnConfigChange(2736, 1057, "Y");
+	}
+	widget(309, 13).clearChildren();
+	script_333(widget(309, 13), 0x483F33, 0x302922, 0, 0);
+	ACTIVE.createChild(widget(309, 13), 6, widget(309, 13).nextChild());
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.cs2method1202();
+	ACTIVE.set3DRotation(5, 15, 40, 1870, 0, 2400);
+	ACTIVE.setAnimation(9804);
+	script_2647(widget(309, 13));
+	widget(309, 15).clearChildren();
+	script_2647(widget(309, 15));
+	script_2790();
+	return;
+}

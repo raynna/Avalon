@@ -1,0 +1,31 @@
+void script_1447(int arg0) {
+	int int1;
+	Widget widget2;
+	int1 = 0;
+	widget2 = datamap('i', 'I', (DataMap)1617, int1);
+	while (widget2 != null) {
+		if (int1 == arg0) {
+			widget2.setIsHidden(false);
+		} else {
+			widget2.setIsHidden(true);
+		}
+		int1 = int1 + 1;
+		widget2 = datamap('i', 'I', (DataMap)1617, int1);
+	}
+	if (arg0 > 0) {
+		widget(767, 64).setScriptCallOnClickContextMenu(1446, arg0 - 1, "i");
+		widget(767, 64).setTrans(0);
+	} else {
+		widget(767, 64).setScriptCallOnClickContextMenu(-1, "");
+		widget(767, 64).setTrans(200);
+	}
+	if (arg0 < int1 - 1) {
+		widget(767, 63).setScriptCallOnClickContextMenu(1446, arg0 + 1, "i");
+		widget(767, 63).setTrans(0);
+	} else {
+		widget(767, 63).setScriptCallOnClickContextMenu(-1, "");
+		widget(767, 63).setTrans(200);
+	}
+	widget(767, 62).setText("Page " + str(arg0 + 1) + " of " + str(int1));
+	return;
+}

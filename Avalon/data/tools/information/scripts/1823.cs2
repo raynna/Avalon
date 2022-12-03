@@ -1,0 +1,10 @@
+void script_1823(int arg0) {
+	if (script_1820(arg0) == 0) {
+		return;
+	}
+	if (VARC[248] == 1) {
+		VARC[248] = 0;
+		script_1772();
+	}
+	return;
+}

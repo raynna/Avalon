@@ -1,0 +1,4 @@
+void script_2427(Widget widget0) {
+	widget0.setItem(datamap('i', 'o', (DataMap)172, VARC[809]), 72);
+	return;
+}

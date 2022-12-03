@@ -1,0 +1,53 @@
+void script_503() {
+	if (VARPBIT[7516] == 0) {
+		widget(1017, 156).setIsHidden(false);
+	} else {
+		widget(1017, 156).setIsHidden(true);
+	}
+	if (VARPBIT[7517] == 0) {
+		widget(1017, 157).setIsHidden(false);
+	} else {
+		widget(1017, 157).setIsHidden(true);
+	}
+	if (VARPBIT[7518] == 0) {
+		widget(1017, 158).setIsHidden(false);
+	} else {
+		widget(1017, 158).setIsHidden(true);
+	}
+	if (VARPBIT[7519] == 0) {
+		widget(1017, 159).setIsHidden(false);
+	} else {
+		widget(1017, 159).setIsHidden(true);
+	}
+	if (VARPBIT[7522] == 0) {
+		widget(1017, 160).setIsHidden(false);
+	} else {
+		widget(1017, 160).setIsHidden(true);
+	}
+	if (VARPBIT[7523] == 0) {
+		widget(1017, 161).setIsHidden(false);
+	} else {
+		widget(1017, 161).setIsHidden(true);
+	}
+	if (VARPBIT[7524] == 0) {
+		widget(1017, 162).setIsHidden(false);
+	} else {
+		widget(1017, 162).setIsHidden(true);
+	}
+	if (VARPBIT[7525] == 0) {
+		widget(1017, 163).setIsHidden(false);
+	} else {
+		widget(1017, 163).setIsHidden(true);
+	}
+	if (VARPBIT[7528] == 0) {
+		widget(1017, 164).setIsHidden(false);
+	} else {
+		widget(1017, 164).setIsHidden(true);
+	}
+	if (VARPBIT[7529] == 0) {
+		widget(1017, 165).setIsHidden(false);
+	} else {
+		widget(1017, 165).setIsHidden(true);
+	}
+	return;
+}

@@ -1,0 +1,9 @@
+void script_714(Widget widget0) {
+	ACTIVE.createChild(widget0, 5, 4);
+	ACTIVE.setSprite(937);
+	ACTIVE.setSize(10, 32, 0, 0);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setHidden(false);
+	ACTIVE.setScriptCallOnGameloop(144, widget0, 4, getClientCycle(), getClientCycle() + 750, "Iiii");
+	return;
+}

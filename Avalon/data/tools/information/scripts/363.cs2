@@ -1,0 +1,156 @@
+void script_363(Widget widget0, int arg1, DataMap datamap2, Sprite sprite3, boolean boolean4, int arg5, int arg6, int arg7, string string8, int arg9, string string10) {
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	widget0.clearChildren();
+	if (sprite3 == null && length(string8) <= 0) {
+		widget0.setIsHidden(true);
+		widget0.setNoOptions();
+		return;
+	}
+	widget0.setIsHidden(false);
+	int9 = widget0.getHeight();
+	int10 = int9 - 10;
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(10, int10, 1, 0);
+	ACTIVE.setPosition(0, 5, 1, 0);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setSprite(3413);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(10, 14, 1, 0);
+	ACTIVE.setPosition(0, 0, 1, 0);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setSprite(3412);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(10, 14, 1, 0);
+	ACTIVE.setPosition(0, int9 - ACTIVE.getHeight(), 1, 0);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setSprite(3411);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(14, int10, 0, 0);
+	ACTIVE.setPosition(0, 5, 0, 0);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setSprite(3409);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(14, int10, 0, 0);
+	ACTIVE.setPosition(0, 5, 2, 0);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.setSprite(3410);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(14, 14, 0, 0);
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setSprite(3405);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(14, 14, 0, 0);
+	ACTIVE.setPosition(0, 0, 2, 0);
+	ACTIVE.setSprite(3406);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(14, 14, 0, 0);
+	ACTIVE.setPosition(0, int9 - ACTIVE.getHeight(), 0, 0);
+	ACTIVE.setSprite(3407);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(14, 14, 0, 0);
+	ACTIVE.setPosition(0, int9 - ACTIVE.getHeight(), 2, 0);
+	ACTIVE.setSprite(3408);
+	int11 = 0;
+	if (sprite3 != null) {
+		ACTIVE.createChild(widget0, 5, widget0.nextChild());
+		ACTIVE.setSize(arg5, arg6, 0, 0);
+		if (arg7 == 2) {
+			int11 = int9 - (arg6 + 2);
+		} else {
+			int11 = (int9 - arg6) / 2;
+		}
+		ACTIVE.setPosition(0, int11, 1, 0);
+		ACTIVE.setSpriteTiling(false);
+		ACTIVE.setSprite(sprite3);
+		if (length(string8) > 0) {
+			widget0.setContextMenuOption(1, string8);
+			ACTIVE.createChild(widget0, 4, widget0.nextChild());
+			_ACTIVE.createChild(widget0, 4, widget0.nextChild());
+			if (getLineCount(string8, widget0.getWidth() - 6, 3793) * 12 + 5 <= int11) {
+				ACTIVE.setSize(6, int11, 1, 0);
+				_ACTIVE.setSize(6, int11, 1, 0);
+				ACTIVE.setTextAlignment(1, 1, 12);
+				_ACTIVE.setTextAlignment(1, 1, 12);
+				ACTIVE.setPosition(1, 1, 1, 0);
+				_ACTIVE.setPosition(0, 0, 1, 0);
+			} else {
+				ACTIVE.setSize(6, 10, 1, 1);
+				_ACTIVE.setSize(6, 10, 1, 1);
+				ACTIVE.setTextAlignment(1, 0, 12);
+				_ACTIVE.setTextAlignment(1, 0, 12);
+				ACTIVE.setPosition(1, 1, 1, 1);
+				_ACTIVE.setPosition(0, 0, 1, 1);
+			}
+			ACTIVE.setFont(3793);
+			_ACTIVE.setFont(3793);
+			ACTIVE.setRGB(0xFFFFFF);
+			_ACTIVE.setRGB(0x3F1010);
+			ACTIVE.setTextAntiMacro(false);
+			_ACTIVE.setTextAntiMacro(false);
+			ACTIVE.setText(string8);
+			_ACTIVE.setText(string8);
+		}
+	} else {
+		ACTIVE.createChild(widget0, 4, widget0.nextChild());
+		_ACTIVE.createChild(widget0, 4, widget0.nextChild());
+		ACTIVE.setSize(0, 0, 1, 1);
+		_ACTIVE.setSize(0, 0, 1, 1);
+		ACTIVE.setPosition(1, 1, 1, 1);
+		_ACTIVE.setPosition(0, 0, 1, 1);
+		ACTIVE.setTextAlignment(1, 1, 0);
+		_ACTIVE.setTextAlignment(1, 1, 0);
+		ACTIVE.setFont(3793);
+		_ACTIVE.setFont(3793);
+		ACTIVE.setRGB(0xFFFFFF);
+		_ACTIVE.setRGB(0x3F1010);
+		ACTIVE.setTextAntiMacro(false);
+		_ACTIVE.setTextAntiMacro(false);
+		ACTIVE.setText(string8);
+		_ACTIVE.setText(string8);
+	}
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(10, 4, 1, 0);
+	ACTIVE.setPosition(0, 0, 1, 0);
+	int12 = ACTIVE.getChildId();
+	ACTIVE.setVFlip(true);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(10, 4, 1, 0);
+	ACTIVE.setPosition(0, int9 - ACTIVE.getHeight(), 1, 0);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(3, int10, 0, 0);
+	ACTIVE.setPosition(0, 5, 0, 0);
+	ACTIVE.setHFlip(true);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(3, int10, 0, 0);
+	ACTIVE.setPosition(0, 5, 2, 0);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(16, 16, 0, 0);
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setHFlip(true);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(16, 16, 0, 0);
+	ACTIVE.setPosition(0, 0, 2, 0);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(16, 16, 0, 0);
+	ACTIVE.setPosition(0, int9 - ACTIVE.getHeight(), 0, 0);
+	ACTIVE.setHFlip(true);
+	ACTIVE.setVFlip(true);
+	ACTIVE.createChild(widget0, 5, widget0.nextChild());
+	ACTIVE.setSize(16, 16, 0, 0);
+	ACTIVE.setPosition(0, int9 - ACTIVE.getHeight(), 2, 0);
+	ACTIVE.setVFlip(true);
+	if (arg9 == 1) {
+		script_365(widget0, int12, 2);
+		widget0.setScriptCallOnMouseOver(366, null, arg1, datamap2, int12, int9, true, boolean4, CTX_WIDGET, string10, MOUSE_X, "Iigii11Isi");
+		widget0.setScriptCallOnMouseExit(366, null, arg1, datamap2, int12, int9, false, boolean4, CTX_WIDGET, string10, -1, "Iigii11Isi");
+		widget0.setScriptCallOnGameloop(-1, "");
+	} else {
+		script_365(widget0, int12, 0);
+		widget0.setScriptCallOnMouseOver(366, widget0, arg1, datamap2, int12, int9, true, boolean4, CTX_WIDGET, string10, MOUSE_X, "Iigii11Isi");
+		widget0.setScriptCallOnMouseExit(366, widget0, arg1, datamap2, int12, int9, false, boolean4, CTX_WIDGET, string10, -1, "Iigii11Isi");
+	}
+	return;
+}

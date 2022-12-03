@@ -1,0 +1,19 @@
+int, int, int script_360(AttrMap attrmap0) {
+	switch (VARPBIT[8091]) {
+		case 1:
+			return getAttributeMapValue(attrmap0, 1190), getAttributeMapValue(attrmap0, 1191), getAttributeMapValue(attrmap0, 1192);
+		case 2:
+			return getAttributeMapValue(attrmap0, 1193), getAttributeMapValue(attrmap0, 1194), getAttributeMapValue(attrmap0, 1195);
+		case 3:
+			return getAttributeMapValue(attrmap0, 1196), getAttributeMapValue(attrmap0, 1197), getAttributeMapValue(attrmap0, 1198);
+		case 4:
+			return getAttributeMapValue(attrmap0, 1199), getAttributeMapValue(attrmap0, 1200), getAttributeMapValue(attrmap0, 1201);
+		case 5:
+			return getAttributeMapValue(attrmap0, 1202), getAttributeMapValue(attrmap0, 1203), getAttributeMapValue(attrmap0, 1204);
+		case 6:
+			return getAttributeMapValue(attrmap0, 1205), getAttributeMapValue(attrmap0, 1206), getAttributeMapValue(attrmap0, 1207);
+		case 7:
+			return getAttributeMapValue(attrmap0, 1208), getAttributeMapValue(attrmap0, 1209), getAttributeMapValue(attrmap0, 1210);
+	}
+	return getAttributeMapValue(attrmap0, 1187), getAttributeMapValue(attrmap0, 1188), getAttributeMapValue(attrmap0, 1189);
+}

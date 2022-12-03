@@ -1,0 +1,13 @@
+void script_730(Item item0, Widget widget1, Widget widget2) {
+	int int3;
+	int int4;
+	int3 = getItemAmtInContainer(93, 13650);
+	int4 = datamap('o', 'i', (DataMap)1680, item0);
+	widget1.setText(str(int4) + " tokens");
+	if (int4 > int3 || isMembersItem(item0) && !isMember()) {
+		widget2.setRGB(0xFF0000);
+	} else {
+		widget2.setRGB(0x01B801);
+	}
+	return;
+}

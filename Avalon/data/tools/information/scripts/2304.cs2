@@ -1,0 +1,5 @@
+void script_2304() {
+	widget(750, 1).setScriptCallOnGeneralDataChange(2305, "");
+	script_2306();
+	return;
+}

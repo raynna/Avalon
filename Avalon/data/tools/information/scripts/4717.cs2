@@ -1,0 +1,71 @@
+void script_4717(Widget widget0, int arg1, Widget widget2, DataMap datamap3) {
+	int int4;
+	int int5;
+	int int6;
+	AttrMap attrmap7;
+	Sprite sprite8;
+	int int9;
+	int int10;
+	DataMap datamap11;
+	int int12;
+	string str0;
+	string str1;
+	widget0.clearChildren();
+	int4 = 48;
+	int5 = 48;
+	int6 = 0;
+	attrmap7 = null;
+	sprite8 = null;
+	int9 = -1;
+	str0 = "";
+	str1 = "";
+	int10 = 1;
+	datamap11 = null;
+	int12 = 0;
+	widget(590, 20).setText("1");
+	switch (datamap3) {
+		case (DataMap)3874:
+			datamap11 = (DataMap)3873;
+			break;
+		default:
+			datamap11 = (DataMap)3873;
+			break;
+	}
+	while (int6 < datamapSize(datamap3)) {
+		attrmap7 = datamap('i', 'J', datamap3, int6);
+		sprite8 = getAttributeMapValue(attrmap7, 1420);
+		int10 = script_4718(attrmap7);
+		str0 = getAttributeMapValue(attrmap7, 1419);
+		ACTIVE.createChild(widget0, 5, int6);
+		ACTIVE.setSize(int4, int5, 0, 0);
+		ACTIVE.setPosition(0, 0, 0, 0);
+		if (int10 == 0) {
+			sprite8 = getAttributeMapValue(attrmap7, 1421);
+		}
+		if (attrmap7 == (AttrMap)1783) {
+			if (IsFemale() > false) {
+				attrmap7 = (AttrMap)1789;
+				sprite8 = getAttributeMapValue(attrmap7, 1420);
+				str0 = getAttributeMapValue(attrmap7, 1419);
+				str1 = "Curtsy";
+				ACTIVE.setContextMenuOption(1, "Curtsy");
+				ACTIVE.setContextMenuOption(2, "Bow");
+				ACTIVE.setScriptCallOnMouseOver(568, CTX_WIDGET, CTX_WIDGET_CHILD, widget2, str1, 25, 190, "IiIsii");
+			} else {
+				ACTIVE.setContextMenuOption(1, "Bow");
+				ACTIVE.setContextMenuOption(2, "Curtsy");
+				str1 = "Bow";
+				ACTIVE.setScriptCallOnMouseOver(568, CTX_WIDGET, CTX_WIDGET_CHILD, widget2, str1, 25, 190, "IiIsii");
+			}
+		} else {
+			ACTIVE.setContextMenuOption(1, str0);
+			ACTIVE.setScriptCallOnMouseOver(568, CTX_WIDGET, CTX_WIDGET_CHILD, widget2, str0, 25, 190, "IiIsii");
+		}
+		ACTIVE.setSprite(sprite8);
+		ACTIVE.setScriptCallOnMouseExit(40, widget2, "I");
+		int6 = int6 + 1;
+	}
+	script_4716(widget(590, 8), widget(590, 7), datamap3, -5, 10, int12);
+	script_4709(datamap3, datamap11, int12, 0, datamapSize(datamap11), widget(590, 14), widget(590, 12), widget(590, 13), widget(590, 15), 897, 788, 788, 1040, 0xFFFFFF, 0xFF0000, 16776960, 494, 792, 789, 790, 791, 773, 788);
+	return;
+}

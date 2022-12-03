@@ -1,0 +1,20 @@
+void script_5367(int arg0, int arg1) {
+	if (ACTIVE.setChild(widget(951, 24), arg0)) {
+		switch (arg1) {
+			case 0:
+				ACTIVE.setHidden(true);
+				ACTIVE.setScriptCallOnGameloop(-1, "");
+				break;
+			case 1:
+				ACTIVE.setHidden(false);
+				ACTIVE.setScriptCallOnGameloop(5368, CTX_WIDGET_CHILD, "i");
+				break;
+			case 2:
+				ACTIVE.setHidden(false);
+				ACTIVE.setScriptCallOnGameloop(-1, "");
+				ACTIVE.setTrans(0);
+				break;
+		}
+	}
+	return;
+}

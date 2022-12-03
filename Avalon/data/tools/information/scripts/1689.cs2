@@ -1,0 +1,29 @@
+void script_1689() {
+	VARC[1047] = VARC[1047] + 1;
+	if (VARC[1047] >= 2 - 1) {
+		VARC[1047] = 0;
+		if (VARC[1045] == 0) {
+			VARC[1046] = min(VARC[1046] + 2, 255);
+		} else if (VARC[1045] == 1) {
+			VARC[1046] = max(VARC[1046] - 2, 0);
+		}
+		widget(85, 2).setTrans(VARC[1046]);
+	}
+	VARC[1050] = VARC[1050] + 1;
+	if (VARC[1050] >= 6 - 1) {
+		VARC[1050] = 0;
+		if (VARC[1048] == 0) {
+			VARC[1049] = min(VARC[1049] + 1, 255);
+			if (VARC[1049] >= 255) {
+				VARC[1048] = 1;
+			}
+		} else if (VARC[1048] == 1 && VARC[1051] == 1) {
+			VARC[1049] = max(VARC[1049] - 3, 192);
+			if (VARC[1049] <= 192) {
+				VARC[1048] = 0;
+			}
+		}
+		widget(85, 1).setTrans(VARC[1049]);
+	}
+	return;
+}

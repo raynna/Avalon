@@ -1,0 +1,95 @@
+void script_1142() {
+	Item item0;
+	int int1;
+	item0 = getItemIdInSlot(94, 3);
+	if (item0 == null || isMembersItem(item0) && !isMember()) {
+		script_1143("Punch", 247, "Accurate" + "<br>" + "Crush" + "<br>" + "Attack XP", "Kick", 248, "Aggressive" + "<br>" + "Crush" + "<br>" + "Strength XP", "Block", 249, "Defensive" + "<br>" + "Crush" + "<br>" + "Defence XP", "", null, "");
+		return;
+	}
+	int1 = itemAttribute(item0, 686);
+	switch (int1) {
+		case 1:
+			script_1143("Bash", 266, "Accurate" + "<br>" + "Crush" + "<br>" + "Attack XP", "Pound", 267, "Aggressive" + "<br>" + "Crush" + "<br>" + "Strength XP", "Focus", 252, "Defensive" + "<br>" + "Crush" + "<br>" + "Defence XP", "", null, "");
+			break;
+		case 23:
+			script_1143("Slash", 266, "Accurate" + "<br>" + "Slash" + "<br>" + "Attack XP", "Crush", 267, "Aggressive" + "<br>" + "Crush" + "<br>" + "Strength XP", "Slash", 252, "Defensive" + "<br>" + "Slash" + "<br>" + "Defence XP", "", null, "");
+			break;
+		case 2:
+			script_1143("Chop", 234, "Accurate" + "<br>" + "Slash" + "<br>" + "Attack XP", "Hack", 235, "Aggressive" + "<br>" + "Slash" + "<br>" + "Strength XP", "Smash", 236, "Aggressive" + "<br>" + "Crush" + "<br>" + "Strength XP", "Block", 233, "Defensive" + "<br>" + "Slash" + "<br>" + "Defence XP");
+			break;
+		case 3:
+			script_1143("Bash", 266, "Accurate" + "<br>" + "Crush" + "<br>" + "Attack XP", "Pound", 267, "Aggressive" + "<br>" + "Crush" + "<br>" + "Strength XP", "Block", 252, "Defensive" + "<br>" + "Crush" + "<br>" + "Defence XP", "", null, "");
+			break;
+		case 4:
+			script_1143("Spike", 274, "Accurate" + "<br>" + "Stab" + "<br>" + "Attack XP", "Impale", 276, "Aggressive" + "<br>" + "Stab" + "<br>" + "Strength XP", "Smash", 275, "Aggressive" + "<br>" + "Crush" + "<br>" + "Strength XP", "Block", 273, "Defensive" + "<br>" + "Stab" + "<br>" + "Defence XP");
+			break;
+		case 5:
+			script_1143("Stab", 240, "Accurate" + "<br>" + "Stab" + "<br>" + "Attack XP", "Lunge", 239, "Aggressive" + "<br>" + "Stab" + "<br>" + "Strength XP", "Slash", 238, "Aggressive" + "<br>" + "Slash" + "<br>" + "Strength XP", "Block", 237, "Defensive" + "<br>" + "Stab" + "<br>" + "Defence XP");
+			break;
+		case 6:
+			script_1143("Chop", 239, "Accurate" + "<br>" + "Slash" + "<br>" + "Attack XP", "Slash", 238, "Aggressive" + "<br>" + "Slash" + "<br>" + "Strength XP", "Lunge", 240, "Controlled" + "<br>" + "Stab" + "<br>" + "Shared XP", "Block", 237, "Defensive" + "<br>" + "Slash" + "<br>" + "Defence XP");
+			break;
+		case 7:
+			script_1143("Chop", 239, "Accurate" + "<br>" + "Slash" + "<br>" + "Attack XP", "Slash", 238, "Aggressive" + "<br>" + "Slash" + "<br>" + "Strength XP", "Smash", 238, "Aggressive" + "<br>" + "Crush" + "<br>" + "Strength XP", "Block", 237, "Defensive" + "<br>" + "Slash" + "<br>" + "Defence XP");
+			break;
+		case 8:
+			script_1143("Pound", 246, "Accurate" + "<br>" + "Crush" + "<br>" + "Attack XP", "Pummel", 244, "Aggressive" + "<br>" + "Crush" + "<br>" + "Strength XP", "Spike", 245, "Controlled" + "<br>" + "Stab" + "<br>" + "Shared XP", "Block", 243, "Defensive" + "<br>" + "Crush" + "<br>" + "Defence XP");
+			break;
+		case 9:
+			script_1143("Chop", 279, "Accurate" + "<br>" + "Slash" + "<br>" + "Attack XP", "Slash", 278, "Aggressive" + "<br>" + "Slash" + "<br>" + "Strength XP", "Lunge", 277, "Controlled" + "<br>" + "Stab" + "<br>" + "Shared XP", "Block", 280, "Defensive" + "<br>" + "Slash" + "<br>" + "Defence XP");
+			break;
+		case 10:
+			script_1143("Pound", 255, "Accurate" + "<br>" + "Crush" + "<br>" + "Attack XP", "Pummel", 256, "Aggressive" + "<br>" + "Crush" + "<br>" + "Strength XP", "Block", 253, "Defensive" + "<br>" + "Crush" + "<br>" + "Defence XP", "", null, "");
+			break;
+		case 11:
+			script_1143("Flick", 286, "Accurate" + "<br>" + "Slash" + "<br>" + "Attack XP", "Lash", 287, "Controlled" + "<br>" + "Slash" + "<br>" + "Shared XP", "Deflect", 286, "Defensive" + "<br>" + "Slash" + "<br>" + "Defence XP", "", null, "");
+			break;
+		case 12:
+			script_1143("Pound", 255, "Accurate" + "<br>" + "Crush" + "<br>" + "Attack XP", "Pummel", 256, "Aggressive" + "<br>" + "Crush" + "<br>" + "Strength XP", "Block", 253, "Defensive" + "<br>" + "Crush" + "<br>" + "Defence XP", "", null, "");
+			break;
+		case 13:
+			script_1143("Accurate", 263, "Accurate" + "<br>" + "Ranged XP", "Rapid", 264, "Rapid" + "<br>" + "Ranged XP", "Long range", 265, "Long range" + "<br>" + "Ranged XP" + "<br>" + "Defence XP", "", null, "");
+			break;
+		case 14:
+			script_1143("Lunge", 241, "Controlled" + "<br>" + "Stab" + "<br>" + "Shared XP", "Swipe", 251, "Controlled" + "<br>" + "Slash" + "<br>" + "Shared XP", "Pound", 242, "Controlled" + "<br>" + "Crush" + "<br>" + "Shared XP", "Block", 250, "Defensive" + "<br>" + "Stab" + "<br>" + "Defence XP");
+			break;
+		case 15:
+			script_1143("Jab", 284, "Controlled" + "<br>" + "Stab" + "<br>" + "Shared XP", "Swipe", 285, "Aggressive" + "<br>" + "Slash" + "<br>" + "Strength XP", "Fend", 283, "Defensive" + "<br>" + "Stab" + "<br>" + "Defence XP", "", null, "");
+			break;
+		case 16:
+			script_1143("Accurate", 268, "Accurate" + "<br>" + "Ranged XP", "Rapid", 269, "Rapid" + "<br>" + "Ranged XP", "Long range", 270, "Long range" + "<br>" + "Ranged XP" + "<br>" + "Defence XP", "", null, "");
+			break;
+		case 17:
+			script_1143("Accurate", 258, "Accurate" + "<br>" + "Ranged XP", "Rapid", 259, "Rapid" + "<br>" + "Ranged XP", "Long range", 260, "Long range" + "<br>" + "Ranged XP" + "<br>" + "Defence XP", "", null, "");
+			break;
+		case 18:
+			script_1143("Accurate", 263, "Accurate" + "<br>" + "Ranged XP", "Rapid", 264, "Rapid" + "<br>" + "Ranged XP", "Long range", 265, "Long range" + "<br>" + "Ranged XP" + "<br>" + "Defence XP", "", null, "");
+			break;
+		case 19:
+			script_1143("Short fuse", 288, "Short fuse" + "<br>" + "Ranged XP", "Medium fuse", 282, "Medium fuse" + "<br>" + "Ranged XP", "Long fuse", 281, "Long fuse" + "<br>" + "Ranged XP" + "<br>" + "Defence XP", "", null, "");
+			break;
+		case 20:
+			script_1143("Aim and fire", 128, "Aim and fire", "Kick", 248, "Aggressive" + "<br>" + "Crush" + "<br>" + "Strength XP", "", null, "", "", null, "");
+			break;
+		case 21:
+			script_1143("Scorch", 289, "Aggressive" + "<br>" + "Slash" + "<br>" + "Strength XP", "Flare", 290, "Accurate" + "<br>" + "Ranged" + "<br>" + "Ranged XP", "Blaze", 291, "Defensive" + "<br>" + "Magic" + "<br>" + "Magic XP", "", null, "");
+			break;
+		case 22:
+			script_1143("Reap", 272, "Accurate" + "<br>" + "Slash" + "<br>" + "Attack XP", "Chop", 262, "Aggressive" + "<br>" + "Stab" + "<br>" + "Strength XP", "Jab", 271, "Aggressive" + "<br>" + "Crush" + "<br>" + "Strength XP", "Block", 261, "Defensive" + "<br>" + "Slash" + "<br>" + "Defence XP");
+			break;
+		case 24:
+			script_1143("Sling", 263, "Accurate" + "<br>" + "Ranged XP", "Chuck", 264, "Rapid" + "<br>" + "Ranged XP", "Lob", 265, "Long range" + "<br>" + "Ranged XP" + "<br>" + "Defence XP", "", null, "");
+			break;
+		case 25:
+		case 26:
+			script_1143("Jab", 266, "Accurate" + "<br>" + "Stab" + "<br>" + "Attack XP", "Swipe", 267, "Aggressive" + "<br>" + "Slash" + "<br>" + "Strength XP", "Fend", 252, "Defensive" + "<br>" + "Crush" + "<br>" + "Defence XP", "", null, "");
+			break;
+		case 27:
+			script_1143("Hack!", 234, "Controlled" + "<br>" + "Slash" + "<br>" + "Shared XP", "Gouge!", 235, "Controlled" + "<br>" + "Stab" + "<br>" + "Shared XP", "Smash!", 236, "Controlled" + "<br>" + "Crush" + "<br>" + "Shared XP", "", null, "");
+			break;
+		default:
+			script_1143("Punch", 247, "Accurate" + "<br>" + "Crush" + "<br>" + "Attack XP", "Kick", 248, "Aggressive" + "<br>" + "Crush" + "<br>" + "Strength XP", "Block", 249, "Defensive" + "<br>" + "Crush" + "<br>" + "Defence XP", "", null, "");
+			break;
+	}
+	return;
+}

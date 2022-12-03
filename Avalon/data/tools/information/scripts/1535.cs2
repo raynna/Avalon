@@ -1,0 +1,17 @@
+void script_1535(int arg0, int arg1) {
+	switch (arg0) {
+		case 0:
+			VARPBIT[9222] = arg1;
+			break;
+		case 1:
+			VARPBIT[9223] = arg1;
+			break;
+		case 2:
+			VARPBIT[9224] = arg1;
+			break;
+		case 3:
+			VARPBIT[9225] = arg1;
+			break;
+	}
+	return;
+}

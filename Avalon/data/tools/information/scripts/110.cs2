@@ -1,0 +1,37 @@
+void script_110(string string0) {
+	if (getDisplayMode() >= 2) {
+		widget(746, 73).setIsHidden(false);
+	}
+	widget(752, 3).setIsHidden(false);
+	widget(752, 7).setIsHidden(true);
+	widget(752, 8).setIsHidden(true);
+	widget(752, 4).setText(string0);
+	VARC[5] = 9;
+	if (compare("null", STRING[350]) == 0) {
+		STRING[350] = "";
+	}
+	if (compare("", STRING[350]) != 0) {
+		script_1564(STRING[350]);
+		STRING[350] = "";
+	} else {
+		script_1564("");
+	}
+	if (compare("null", STRING[354]) == 0) {
+		STRING[354] = "";
+	}
+	widget(752, 3).setScriptCallOnMousePressed(-1, "");
+	script_2026();
+	widget(752, 5).setScriptCallOnKeyPress(112, KEY_TYPED, (char)KEY_PRESSED, "iz");
+	widget(752, 5).setScriptCallOnDialogAbort(138, "");
+	if (compare(STRING[354], "") != 0) {
+		ACTIVE.createChild(widget(752, 3), 4, 0);
+		script_2752();
+		ACTIVE.setText("Last entered: " + STRING[354]);
+		ACTIVE.setContextMenuOption(1, "Use:");
+		ACTIVE.setOptionBase("<col=ff9040>" + removeTags(STRING[354]) + "</col>");
+		ACTIVE.setScriptCallOnClickContextMenu(2753, VARC[5], CTX_MENU_OPTION, CTX_WIDGET, CTX_WIDGET_CHILD, STRING[354], "iiIis");
+		STRING[354] = "";
+	}
+	script_1188();
+	return;
+}

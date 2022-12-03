@@ -1,0 +1,25 @@
+int, string, int script_3362() {
+	switch (VARP[448]) {
+		case 17965:
+			return 9, "Glimmer of Light (Tier 1)", 18077;
+		case 17966:
+			return 19, "Glimmer of Light (Tier 2)", 18078;
+		case 17967:
+			return 29, "Glimmer of Light (Tier 3)", 18079;
+		case 17968:
+			return 39, "Glimmer of Light (Tier 4)", 18080;
+		case 17969:
+			return 49, "Glimmer of Light (Tier 5)", 18081;
+		case 17970:
+			return 59, "Glimmer of Light (Tier 6)", 18082;
+		case 17971:
+			return 69, "Glimmer of Light (Tier 7)", 18083;
+		case 17972:
+			return 79, "Glimmer of Light (Tier 8)", 18084;
+		case 17973:
+			return 89, "Glimmer of Light (Tier 9)", 18085;
+		case 17974:
+			return 99, "Glimmer of Light (Tier 10)", 18086;
+	}
+	return 9, "Glimmer of Light (Tier 1)", 18077;
+}

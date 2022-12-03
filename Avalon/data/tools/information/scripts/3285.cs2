@@ -1,0 +1,8 @@
+void script_3285(int arg0) {
+	widget(947, 36).setScrollMax(0, arg0);
+	widget(947, 38).setScrollMax(0, arg0);
+	if (widget(947, 36).getScrollMaxV() < widget(947, 36).getHeight()) {
+		widget(947, 47).setIsHidden(true);
+	}
+	return;
+}

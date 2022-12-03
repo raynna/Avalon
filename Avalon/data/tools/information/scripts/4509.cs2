@@ -1,0 +1,11 @@
+void script_4509(Widget widget0) {
+	Sprite sprite1;
+	Sprite sprite2;
+	sprite1 = 535;
+	sprite2 = 536;
+	widget0.setSprite(sprite1);
+	widget0.setScriptCallOnMouseEntered(44, CTX_WIDGET, sprite2, "Id");
+	widget0.setScriptCallOnMouseExit(44, CTX_WIDGET, sprite1, "Id");
+	widget0.setScriptCallOnClickContextMenu(29, "");
+	return;
+}

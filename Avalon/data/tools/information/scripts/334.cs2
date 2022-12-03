@@ -1,0 +1,29 @@
+void script_334(Widget widget0) {
+	Sprite sprite1;
+	sprite1 = 1777;
+	if (VARPBIT[6090] == 2) {
+		widget0.setSprite(7435);
+		widget0.setScriptCallOnMouseEntered(5115, CTX_WIDGET, 1, "Ii");
+		widget0.setScriptCallOnMouseExit(5115, CTX_WIDGET, 0, "Ii");
+		widget0.setContextMenuOption(1, "Citadel Interface");
+	} else if (VARPBIT[6090] == 1) {
+		widget0.setSprite(3046);
+		sprite1 = 3047;
+		widget0.setScriptCallOnMouseEntered(44, CTX_WIDGET, sprite1, "Id");
+		sprite1 = 3046;
+		widget0.setScriptCallOnMouseExit(44, CTX_WIDGET, sprite1, "Id");
+		widget0.setNoOptions();
+		widget0.setContextMenuOption(1, "Daemonheim Map");
+	} else {
+		widget0.setSprite(1776);
+		widget0.setScriptCallOnMouseEntered(44, CTX_WIDGET, sprite1, "Id");
+		sprite1 = 1776;
+		widget0.setScriptCallOnMouseExit(44, CTX_WIDGET, sprite1, "Id");
+		widget0.setNoOptions();
+		widget0.setContextMenuOption(1, "World Map");
+		if (VARP[1159] != -1 && VARP[1159] != 0) {
+			widget0.setContextMenuOption(2, "Clear your marker");
+		}
+	}
+	return;
+}

@@ -1,0 +1,33 @@
+void script_2669() {
+	if (VARPBIT[6304] == 0) {
+		widget(866, 64).setModel(48047);
+	}
+	if (VARPBIT[6304] == 1) {
+		widget(866, 64).setModel(48028);
+	}
+	if (VARPBIT[6304] == 2) {
+		widget(866, 64).setModel(48038);
+	}
+	if (VARPBIT[6304] == 3) {
+		widget(866, 64).setModel(48027);
+	}
+	if (VARPBIT[6304] == 4) {
+		widget(866, 64).setModel(48030);
+	}
+	if (VARPBIT[6304] == 5) {
+		widget(866, 64).setModel(48052);
+	}
+	if (VARPBIT[6304] == 6) {
+		widget(866, 64).setModel(48051);
+	}
+	if (VARPBIT[6304] == 7) {
+		widget(866, 64).setModel(48050);
+	}
+	if (VARPBIT[6304] == 8) {
+		widget(866, 64).setModel(48015);
+	}
+	if (VARPBIT[6304] == 9) {
+		widget(866, 64).setModel(48029);
+	}
+	return;
+}

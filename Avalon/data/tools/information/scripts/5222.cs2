@@ -1,0 +1,41 @@
+void script_5222(int arg0) {
+	int int1;
+	int int2;
+	Widget widget3;
+	Widget widget4;
+	Widget widget5;
+	int int6;
+	string str0;
+	string str1;
+	int1 = script_4949(arg0);
+	int2 = script_4959(arg0);
+	widget3 = script_4972(arg0);
+	if (widget3 == null) {
+		return;
+	}
+	widget4 = widget3.getParentLayer();
+	widget5 = widget4.getParentLayer();
+	str0 = "";
+	str1 = "Empty skill plot";
+	int6 = 3;
+	if (arg0 == 1) {
+		str0 = "Citadel : Tier " + str(int2);
+	} else if (arg0 == 2) {
+		str0 = "Storehouse : Tier " + str(int2);
+	} else if (arg0 == 3) {
+		str0 = "Battlefield : Tier " + str(int2);
+	} else {
+		str1 = datamap('i', 's', (DataMap)4287, int1);
+		if (int2 > 0) {
+			str0 = str1 + " : Tier " + str(int2);
+		} else {
+			str0 = "Empty skill plot";
+		}
+	}
+	if (widget4.getX() < widget5.getWidth() / 2 - 50) {
+		int6 = 1;
+	}
+	widget3.setScriptCallOnMouseOver(4538, widget(1092, 327), widget3, -1, str0, 120, 3793, 3793, 16777215, 13, 4, int6, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+	widget3.setScriptCallOnMouseExit(40, widget(1092, 327), "I");
+	return;
+}

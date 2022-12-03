@@ -1,0 +1,26 @@
+Color script_715(Color color0, int arg1, Color color2, int arg3) {
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int4, int5, int6 = script_2413(color0);
+	int7, int8, int9 = script_2413(color2);
+	int4 = int4 * arg1 + int7 * arg3;
+	int5 = int5 * arg1 + int8 * arg3;
+	int6 = int6 * arg1 + int9 * arg3;
+	int10 = max(int4, max(int5, int6));
+	int7 = script_669(255, int10, int4);
+	int8 = script_669(255, int10, int5);
+	int9 = script_669(255, int10, int6);
+	int4, int5, int6 = script_4127(int7, int8, int9);
+	return script_693(int7, int8, int9);
+}

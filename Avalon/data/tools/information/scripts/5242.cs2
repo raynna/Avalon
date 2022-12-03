@@ -1,0 +1,23 @@
+void script_5242(int arg0) {
+	playSoundEffect2False(6185, 1, 0, 127);
+	if (arg0 == 73793723) {
+		widget(1126, 192).setRGB(0x99917A);
+		widget(1126, 187).setRGB(0xEBE0BC);
+		widget(1126, 189).setSprite(459);
+		widget(1126, 190).setSprite(460);
+		widget(1126, 191).setSprite(459);
+		widget(1126, 0).setSprite(454);
+		widget(1126, 1).setSprite(456);
+		widget(1126, 186).setSprite(454);
+	} else {
+		widget(1126, 187).setRGB(0x99917A);
+		widget(1126, 192).setRGB(0xEBE0BC);
+		widget(1126, 189).setSprite(454);
+		widget(1126, 190).setSprite(456);
+		widget(1126, 191).setSprite(454);
+		widget(1126, 0).setSprite(459);
+		widget(1126, 1).setSprite(460);
+		widget(1126, 186).setSprite(459);
+	}
+	return;
+}

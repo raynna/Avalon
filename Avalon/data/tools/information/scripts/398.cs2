@@ -1,0 +1,44 @@
+void script_398() {
+	widget(306, 29).setNoOptions();
+	VARC[767] = 0;
+	VARC[761] = -1;
+	VARC[762] = -1;
+	VARC[763] = -1;
+	VARC[764] = -1;
+	VARC[765] = 0;
+	VARC[766] = 0;
+	widget(306, 19).setScriptCallOnGameloop(-1, "");
+	widget(306, 20).setScriptCallOnGameloop(-1, "");
+	widget(306, 21).setScriptCallOnGameloop(-1, "");
+	widget(306, 22).setScriptCallOnGameloop(-1, "");
+	widget(306, 10).setScriptCallOnGameloop(-1, "");
+	widget(306, 25).setScriptCallOnGameloop(-1, "");
+	widget(306, 3).setText("Correct: " + str(VARC[767]) + "/" + str(10));
+	VARC[761] = datamap('i', 'm', (DataMap)208, 1);
+	if (VARC[761] != -1) {
+		widget(306, 6).setModel((Model)VARC[761]);
+		widget(306, 6).set3DRotation(0, 0, 512, 0, 0, 800);
+	}
+	VARC[762] = datamap('i', 'm', (DataMap)208, 2);
+	if (VARC[762] != -1) {
+		widget(306, 7).setModel((Model)VARC[762]);
+		widget(306, 7).set3DRotation(0, 0, 512, 0, 0, 800);
+	}
+	VARC[763] = datamap('i', 'm', (DataMap)208, 3);
+	if (VARC[763] != -1) {
+		widget(306, 8).setModel((Model)VARC[763]);
+		widget(306, 8).set3DRotation(0, 0, 512, 0, 0, 800);
+	}
+	VARC[764] = datamap('i', 'm', (DataMap)208, 4);
+	if (VARC[764] != -1) {
+		widget(306, 9).setModel((Model)VARC[764]);
+		widget(306, 9).set3DRotation(0, 0, 512, 0, 0, 800);
+	}
+	widget(306, 6).setPosition(0 - widget(306, 6).getWidth(), widget(306, 6).getY(), 0, 0);
+	widget(306, 7).setPosition(0 - widget(306, 7).getWidth(), widget(306, 7).getY(), 0, 0);
+	widget(306, 8).setPosition(0 - widget(306, 8).getWidth(), widget(306, 8).getY(), 0, 0);
+	widget(306, 9).setPosition(0 - widget(306, 9).getWidth(), widget(306, 9).getY(), 0, 0);
+	widget(306, 10).setPosition(widget(306, 5).getX(), 200, 0, 0);
+	widget(306, 19).setScriptCallOnGameloop(399, widget(306, 6), "I");
+	return;
+}

@@ -1,0 +1,153 @@
+void script_5355(AttrMap attrmap0, int arg1) {
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	AttrMap attrmap11;
+	string str0;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	int6 = 0;
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int10 = 0;
+	attrmap11 = null;
+	str0 = getAttributeMapValue(attrmap0, 1930);
+	if (getAttributeMapValue(attrmap0, 1937) == 4) {
+		while (int9 < datamapSize((DataMap)5184) && int10 == 0) {
+			if (datamap('i', 'J', (DataMap)5184, int9) == attrmap0) {
+				if (IsFemale()) {
+					str0 = datamap('i', 's', (DataMap)5187, int9);
+				} else {
+					str0 = datamap('i', 's', (DataMap)5186, int9);
+				}
+				int10 = 1;
+			}
+			int9 = int9 + 1;
+		}
+	}
+	widget(1143, 25).setText(str0);
+	if (arg1 == 1) {
+		widget(1143, 26).setIsHidden(true);
+		widget(1143, 27).setIsHidden(true);
+		widget(1143, 19).setIsHidden(true);
+		widget(1143, 28).setPosition(0, 186, 1, 0);
+		widget(1143, 32).setPosition(0, 228, 1, 0);
+		widget(1143, 186).setText("Reclaim");
+		widget(1143, 186).setContextMenuOption(1, "Reclaim");
+	} else {
+		widget(1143, 26).setIsHidden(false);
+		widget(1143, 27).setIsHidden(false);
+		widget(1143, 19).setIsHidden(false);
+		widget(1143, 28).setPosition(0, 239, 1, 0);
+		widget(1143, 32).setPosition(0, 266, 1, 0);
+		widget(1143, 186).setText("Buy");
+		widget(1143, 186).setContextMenuOption(1, "Buy");
+		widget(1143, 26).setText(concat("My Points: ", formatNumber(VARC[1648], 1)));
+		if (getAttributeMapValue(attrmap0, 1933) > 0) {
+			widget(1143, 27).setText(concat("Item Cost: ", formatNumber(getAttributeMapValue(attrmap0, 1933), 1)));
+		} else {
+			widget(1143, 27).setText(concat("Item Cost: ", formatNumber(getAttributeMapValue(attrmap0, 1932), 1)));
+		}
+	}
+	widget(1143, 28).setIsHidden(false);
+	widget(1143, 29).setIsHidden(false);
+	if (getAttributeMapValue(attrmap0, 1950) != null) {
+		int2 = 5;
+	} else if (getAttributeMapValue(attrmap0, 1949) != null) {
+		int2 = 4;
+	} else if (getAttributeMapValue(attrmap0, 1948) != null) {
+		int2 = 3;
+	} else if (getAttributeMapValue(attrmap0, 1947) != null) {
+		int2 = 2;
+	} else {
+		int2 = 1;
+		widget(1143, 28).setIsHidden(true);
+		widget(1143, 29).setIsHidden(true);
+		widget(1143, 32).setPosition(0, 260, 1, 0);
+	}
+	int6 = 63;
+	int7 = 57;
+	int5 = (widget(1143, 32).getWidth() - int2 * int6) / (int2 + 1);
+	int8 = int5;
+	widget(1143, 32).clearChildren();
+	widget(1143, 20).clearChildren();
+	int9 = 0;
+	while (int9 < int2) {
+		switch (int9) {
+			case 0:
+				attrmap11 = attrmap0;
+				break;
+			case 1:
+				attrmap11 = getAttributeMapValue(attrmap0, 1947);
+				break;
+			case 2:
+				attrmap11 = getAttributeMapValue(attrmap0, 1948);
+				break;
+			case 3:
+				attrmap11 = getAttributeMapValue(attrmap0, 1949);
+				break;
+			case 4:
+				attrmap11 = getAttributeMapValue(attrmap0, 1950);
+				break;
+		}
+		ACTIVE.createChild(widget(1143, 32), 3, int3);
+		int3 = int3 + 1;
+		ACTIVE.setRGB(0x000000);
+		ACTIVE.setSize(int6, int7, 0, 0);
+		ACTIVE.setPosition(int8, 0, 0, 0);
+		ACTIVE.setTrans(100);
+		ACTIVE.setFilled(true);
+		if (int2 > 1) {
+			ACTIVE.createChild(widget(1143, 20), 4, int4);
+			ACTIVE.setSize(int6, int7, 0, 0);
+			ACTIVE.setPosition(int8, 0, 0, 0);
+			ACTIVE.setContextMenuOption(1, "Select");
+			ACTIVE.setScriptCallOnClickContextMenu(5358, int4, widget(1143, 32), "iI");
+			int4 = int4 + 1;
+		}
+		ACTIVE.createChild(widget(1143, 32), 5, int3);
+		ACTIVE.setSprite(7766);
+		ACTIVE.setSize(int6, int7, 0, 0);
+		ACTIVE.setPosition(int8, 0, 0, 0);
+		if (int2 > 1) {
+			ACTIVE.setScriptCallOnMouseEntered(5356, int3, widget(1143, 32), attrmap11, "iIJ");
+			ACTIVE.setScriptCallOnMouseExit(5357, int3, widget(1143, 32), "iI");
+		}
+		int3 = int3 + 1;
+		ACTIVE.createChild(widget(1143, 32), 5, int3);
+		int3 = int3 + 1;
+		if (getAttributeMapValue(attrmap11, 1937) == 1) {
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition(int8 + (int6 - ACTIVE.getWidth()) / 2 + 2, (int7 - ACTIVE.getHeight()) / 2 + 1, 0, 0);
+			ACTIVE.setItem(getAttributeMapValue(attrmap11, 1935), -1);
+		} else if (getAttributeMapValue(attrmap11, 1937) == 2) {
+			ACTIVE.setSprite(getAttributeMapValue(attrmap11, 1420));
+			ACTIVE.setSize(48, 48, 0, 0);
+			ACTIVE.setPosition(int8 + (int6 - ACTIVE.getWidth()) / 2, (int7 - ACTIVE.getHeight()) / 2, 0, 0);
+		} else if (getAttributeMapValue(attrmap11, 1937) == 3) {
+			ACTIVE.setSprite(getAttributeMapValue(attrmap11, 1441));
+			ACTIVE.setSize(40, 50, 0, 0);
+			ACTIVE.setPosition(int8 + (int6 - ACTIVE.getWidth()) / 2, (int7 - ACTIVE.getHeight()) / 2, 0, 0);
+		} else if (getAttributeMapValue(attrmap11, 1937) == 4) {
+			ACTIVE.setSprite(7883);
+			ACTIVE.setSize(42, 42, 0, 0);
+			ACTIVE.setPosition(int8 + (int6 - ACTIVE.getWidth()) / 2 + 1, (int7 - ACTIVE.getHeight()) / 2 + 1, 0, 0);
+		} else if (getAttributeMapValue(attrmap11, 1937) == 5) {
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition(int8 + (int6 - ACTIVE.getWidth()) / 2, (int7 - ACTIVE.getHeight()) / 2, 0, 0);
+			ACTIVE.setItem(getAttributeMapValue(attrmap11, 1935), -1);
+		}
+		int8 = int8 + int6 + int5;
+		int9 = int9 + 1;
+	}
+	return;
+}

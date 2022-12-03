@@ -1,0 +1,9 @@
+void script_1084(int arg0, Widget widget1, int arg2) {
+	if (datamap('i', 'I', (DataMap)1550, arg0 + 1).isHidden()) {
+		return;
+	}
+	if (ACTIVE.setChild(widget1, arg2)) {
+		ACTIVE.setHidden(true);
+	}
+	return;
+}

@@ -1,0 +1,113 @@
+int script_2296(int arg0) {
+	AttrMap attrmap1;
+	attrmap1 = datamap('i', 'J', (DataMap)2279, arg0);
+	if (VARPBIT[6840] == 1) {
+		attrmap1 = datamap('i', 'J', (DataMap)863, arg0);
+		switch (attrmap1) {
+			case (AttrMap)888:
+				return VARPBIT[6820];
+			case (AttrMap)889:
+				return VARPBIT[6821];
+			case (AttrMap)890:
+				return VARPBIT[6822];
+			case (AttrMap)891:
+				return VARPBIT[6823];
+			case (AttrMap)892:
+				return VARPBIT[6824];
+			case (AttrMap)893:
+				return VARPBIT[6825];
+			case (AttrMap)894:
+				return VARPBIT[6826];
+			case (AttrMap)895:
+				return VARPBIT[6827];
+			case (AttrMap)896:
+				return VARPBIT[6828];
+			case (AttrMap)897:
+				return VARPBIT[6829];
+			case (AttrMap)898:
+				return VARPBIT[6830];
+			case (AttrMap)899:
+				return VARPBIT[6831];
+			case (AttrMap)900:
+				return VARPBIT[6832];
+			case (AttrMap)901:
+				return VARPBIT[6833];
+			case (AttrMap)902:
+				return VARPBIT[6834];
+			case (AttrMap)903:
+				return VARPBIT[6835];
+			case (AttrMap)904:
+				return VARPBIT[6836];
+			case (AttrMap)905:
+				return VARPBIT[6837];
+			case (AttrMap)906:
+				return VARPBIT[6838];
+			case (AttrMap)907:
+				return VARPBIT[6839];
+		}
+		return 0;
+	}
+	switch (attrmap1) {
+		case (AttrMap)660:
+			return VARPBIT[5942];
+		case (AttrMap)661:
+			return VARPBIT[5943];
+		case (AttrMap)662:
+			return VARPBIT[5944];
+		case (AttrMap)663:
+			return VARPBIT[5945];
+		case (AttrMap)664:
+			return VARPBIT[5946];
+		case (AttrMap)665:
+			return VARPBIT[5947];
+		case (AttrMap)666:
+			return VARPBIT[5948];
+		case (AttrMap)667:
+			return VARPBIT[5949];
+		case (AttrMap)668:
+			return VARPBIT[5950];
+		case (AttrMap)669:
+			return VARPBIT[5951];
+		case (AttrMap)670:
+			return VARPBIT[5952];
+		case (AttrMap)671:
+			return VARPBIT[5953];
+		case (AttrMap)672:
+			return VARPBIT[5954];
+		case (AttrMap)673:
+			return VARPBIT[5955];
+		case (AttrMap)674:
+			return VARPBIT[5956];
+		case (AttrMap)675:
+			return VARPBIT[5957];
+		case (AttrMap)676:
+			return VARPBIT[5958];
+		case (AttrMap)677:
+			return VARPBIT[5959];
+		case (AttrMap)678:
+			return VARPBIT[5960];
+		case (AttrMap)679:
+			return VARPBIT[5961];
+		case (AttrMap)680:
+			return VARPBIT[5962];
+		case (AttrMap)681:
+			return VARPBIT[5963];
+		case (AttrMap)682:
+			return VARPBIT[5964];
+		case (AttrMap)683:
+			return VARPBIT[5965];
+		case (AttrMap)684:
+			return VARPBIT[5966];
+		case (AttrMap)685:
+			return VARPBIT[5967];
+		case (AttrMap)1005:
+			return VARPBIT[7768];
+		case (AttrMap)686:
+			return VARPBIT[5968];
+		case (AttrMap)1006:
+			return VARPBIT[7769];
+		case (AttrMap)1029:
+			return VARPBIT[7381];
+	}
+	return 0;
+}

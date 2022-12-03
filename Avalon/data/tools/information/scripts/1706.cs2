@@ -1,0 +1,42 @@
+void script_1706() {
+	int int0;
+	int int1;
+	int int2;
+	int0 = 0;
+	int1 = 0;
+	int2 = 10;
+	while (int0 != -1 && int2 > 0) {
+		int1 = script_1708(int0);
+		if (ACTIVE.setChild(script_1707(int0))) {
+			if (int1 > 0) {
+				ACTIVE.setRGB(0x32FF32);
+				ACTIVE.setText(concat(concat("+", int1), "%"));
+			} else if (int1 < 0) {
+				ACTIVE.setRGB(0xFF3232);
+				ACTIVE.setText(concat(str(int1), "%"));
+			} else {
+				ACTIVE.setRGB(0xFF981F);
+				ACTIVE.setText(concat(str(int1), "%"));
+			}
+		}
+		switch (int0) {
+			case 0:
+				int0 = 2;
+				break;
+			case 2:
+				int0 = 1;
+				break;
+			case 1:
+				int0 = 4;
+				break;
+			case 4:
+				int0 = 6;
+				break;
+			case 6:
+				int0 = -1;
+				break;
+		}
+		int2 = int2 - 1;
+	}
+	return;
+}

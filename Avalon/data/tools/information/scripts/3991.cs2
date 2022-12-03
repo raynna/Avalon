@@ -1,0 +1,232 @@
+void script_3991(int arg0) {
+	AttrMap attrmap1;
+	int int2;
+	AttrMap attrmap3;
+	Sprite sprite4;
+	Sprite sprite5;
+	Sprite sprite6;
+	int int7;
+	int int8;
+	int int9;
+	Color color10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	string str4;
+	string str5;
+	string str6;
+	attrmap1 = null;
+	int2 = 0;
+	attrmap3 = null;
+	if (arg0 == 4095) {
+		arg0 = 4094;
+	}
+	str0 = "";
+	str1 = "";
+	str2 = "";
+	sprite4 = null;
+	str3 = "";
+	sprite5 = null;
+	str4 = "";
+	sprite6 = null;
+	int7 = 0;
+	int8 = 0;
+	attrmap1 = datamap('i', 'J', (DataMap)3483, arg0);
+	if (attrmap1 != null) {
+		str0 = getAttributeMapValue(attrmap1, 1266);
+		str1 = getAttributeMapValue(attrmap1, 1273);
+		int8 = getAttributeMapValue(attrmap1, 1293);
+		int7 = script_3227(arg0);
+		int2 = (getAttributeMapValue(attrmap1, 1293) - 1) * 5 + getAttributeMapValue(attrmap1, 1272);
+		attrmap3 = datamap('i', 'J', (DataMap)3494, int2);
+		sprite5 = datamap('i', 'd', (DataMap)3491, getAttributeMapValue(attrmap1, 1267));
+		sprite4 = datamap('i', 'd', (DataMap)3492, getAttributeMapValue(attrmap1, 1272));
+		str3 = concat("Difficulty : ", datamap('i', 's', (DataMap)3488, getAttributeMapValue(attrmap1, 1272)));
+		str4 = concat("Area : ", datamap('i', 's', (DataMap)3487, getAttributeMapValue(attrmap1, 1267)));
+		if (getAttributeMapValue(attrmap1, 1270) != 4094) {
+			sprite6 = getAttributeMapValue(datamap('i', 'J', (DataMap)2252, getAttributeMapValue(attrmap1, 1270)), 952);
+			str2 = getAttributeMapValue(datamap('i', 'J', (DataMap)2252, getAttributeMapValue(attrmap1, 1270)), 951);
+		} else {
+			sprite6 = getAttributeMapValue(attrmap1, 1271);
+			str2 = getAttributeMapValue(attrmap1, 1292);
+		}
+	} else {
+		str0 = "Couldn't find the Task's struct.";
+		str1 = "Couldn't find the Task's struct.";
+		str2 = "Couldn't find the Task's struct.";
+	}
+	widget(917, 34).setText(str0);
+	widget(917, 63).setText(str1);
+	str5 = "";
+	if (compare(str2, "") == 0) {
+		if (VARPBIT[8601] < 10) {
+			str5 = "ten";
+		} else if (VARPBIT[8601] < 25) {
+			str5 = "forty";
+		} else if (VARPBIT[8601] < 50) {
+			str5 = "160";
+		} else if (VARPBIT[8601] < 100) {
+			str5 = "640";
+		} else {
+			str5 = "2560";
+		}
+		str2 = "Completing this Task will earn you " + str5 + " coins.";
+	}
+	widget(917, 50).setText(str2);
+	widget(917, 50).setFont(495);
+	widget(917, 50).setTextAlignment(0, 1, 0);
+	widget(917, 50).setSize(widget(917, 50).getWidth(), getLineCount(str1, widget(917, 50).getWidth(), 495), 0, 0);
+	widget(917, 37).setSprite(sprite6);
+	widget(917, 39).setSprite(sprite5);
+	widget(917, 36).setSprite(sprite4);
+	widget(917, 35).setText(str3);
+	widget(917, 38).setText(str4);
+	widget(917, 155).setIsHidden(true);
+	widget(917, 156).setIsHidden(true);
+	widget(917, 157).setIsHidden(true);
+	widget(917, 158).setIsHidden(true);
+	widget(917, 159).setIsHidden(true);
+	widget(917, 160).setIsHidden(true);
+	widget(917, 161).setIsHidden(true);
+	widget(917, 162).setIsHidden(true);
+	widget(917, 163).setIsHidden(true);
+	widget(917, 164).setIsHidden(true);
+	int9 = 0;
+	str6 = "";
+	color10 = 0x000000;
+	int9, str6, color10 = script_3995(arg0);
+	widget(917, 1).setText(str6);
+	widget(917, 1).setRGB(color10);
+	widget(917, 1).setSize(widget(917, 1).getWidth(), getLineCount(str1, widget(917, 1).getWidth(), 495), 0, 0);
+	widget(917, 1).setPosition(9, 16, 0, 0);
+	if (int9 == 1 && script_3227(arg0) != 2) {
+		widget(917, 41).setIsHidden(false);
+	} else {
+		widget(917, 41).setIsHidden(true);
+	}
+	int11 = 34;
+	int12 = int11;
+	int13 = 0;
+	while (int13 < 10) {
+		int12 = script_3222(int11, arg0, int13, datamap('i', 'I', (DataMap)3493, int13));
+		if (int12 == int11) {
+			int13 = 10;
+		} else {
+			int13 = int13 + 1;
+			int11 = int12;
+		}
+	}
+	VARC[1420] = int11 + 3;
+	int14 = 4094;
+	widget(917, 2).setIsHidden(true);
+	widget(917, 3).setIsHidden(true);
+	widget(917, 4).setIsHidden(true);
+	widget(917, 5).setIsHidden(true);
+	widget(917, 6).setIsHidden(true);
+	widget(917, 7).setIsHidden(true);
+	widget(917, 8).setIsHidden(true);
+	widget(917, 9).setIsHidden(true);
+	widget(917, 10).setIsHidden(true);
+	widget(917, 11).setIsHidden(true);
+	widget(917, 12).setIsHidden(true);
+	widget(917, 13).setIsHidden(true);
+	int11 = 10;
+	if (compare(getAttributeMapValue(attrmap1, 1274), "") != 0 && arg0 != 4095) {
+		if (getAttributeMapValue(attrmap1, 1282) != null) {
+			int14 = arg0;
+		}
+		int11 = script_3992(1, int11, getAttributeMapValue(attrmap1, 1274), widget(917, 2), int14, widget(917, 3), widget(917, 81));
+	}
+	int14 = 4094;
+	if (compare(getAttributeMapValue(attrmap1, 1275), "") != 0 && arg0 != 4095) {
+		if (getAttributeMapValue(attrmap1, 1283) != null) {
+			int14 = arg0;
+		}
+		int11 = script_3992(2, int11, getAttributeMapValue(attrmap1, 1275), widget(917, 4), int14, widget(917, 5), widget(917, 81));
+	}
+	int14 = 4094;
+	if (compare(getAttributeMapValue(attrmap1, 1276), "") != 0 && arg0 != 4095) {
+		if (getAttributeMapValue(attrmap1, 1284) != null) {
+			int14 = arg0;
+		}
+		int11 = script_3992(3, int11, getAttributeMapValue(attrmap1, 1276), widget(917, 6), int14, widget(917, 7), widget(917, 81));
+	}
+	int14 = 4094;
+	if (compare(getAttributeMapValue(attrmap1, 1277), "") != 0 && arg0 != 4095) {
+		if (getAttributeMapValue(attrmap1, 1285) != null) {
+			int14 = arg0;
+		}
+		int11 = script_3992(4, int11, getAttributeMapValue(attrmap1, 1277), widget(917, 8), int14, widget(917, 9), widget(917, 81));
+	}
+	int14 = 4094;
+	if (compare(getAttributeMapValue(attrmap1, 1278), "") != 0 && arg0 != 4095) {
+		if (getAttributeMapValue(attrmap1, 1286) != null) {
+			int14 = arg0;
+		}
+		int11 = script_3992(5, int11, getAttributeMapValue(attrmap1, 1278), widget(917, 10), int14, widget(917, 11), widget(917, 81));
+	}
+	int14 = 4094;
+	if (compare(getAttributeMapValue(attrmap1, 1279), "") != 0 && arg0 != 4095) {
+		if (getAttributeMapValue(attrmap1, 1287) != null) {
+			int14 = arg0;
+		}
+		int11 = script_3992(6, int11, getAttributeMapValue(attrmap1, 1279), widget(917, 12), int14, widget(917, 13), widget(917, 81));
+	}
+	VARC[1418] = int11 + 3;
+	widget(917, 51).setIsHidden(true);
+	widget(917, 52).setIsHidden(true);
+	widget(917, 53).setIsHidden(true);
+	widget(917, 54).setIsHidden(true);
+	widget(917, 55).setIsHidden(true);
+	widget(917, 56).setIsHidden(true);
+	widget(917, 57).setIsHidden(true);
+	widget(917, 58).setIsHidden(true);
+	int11 = 10;
+	int11 = script_3992(0, int11, str2, widget(917, 50), 4094, null, widget(917, 85));
+	if (attrmap3 != null && attrmap3 != (AttrMap)1645) {
+		int11 = script_3992(0, int11, getAttributeMapValue(attrmap3, 1273), widget(917, 51), 4094, null, widget(917, 85));
+		int11 = script_3992(0, int11, getAttributeMapValue(attrmap3, 1292), widget(917, 52), 4094, null, widget(917, 85));
+		if (compare(getAttributeMapValue(attrmap3, 1274), "") != 0) {
+			int11 = script_3992(0, int11, getAttributeMapValue(attrmap3, 1274), widget(917, 53), 4094, null, widget(917, 85));
+		}
+		if (compare(getAttributeMapValue(attrmap3, 1275), "") != 0) {
+			int11 = script_3992(0, int11, getAttributeMapValue(attrmap3, 1275), widget(917, 54), 4094, null, widget(917, 85));
+		}
+		if (compare(getAttributeMapValue(attrmap3, 1276), "") != 0) {
+			int11 = script_3992(0, int11, getAttributeMapValue(attrmap3, 1276), widget(917, 55), 4094, null, widget(917, 85));
+		}
+		if (compare(getAttributeMapValue(attrmap3, 1277), "") != 0) {
+			int11 = script_3992(0, int11, getAttributeMapValue(attrmap3, 1277), widget(917, 56), 4094, null, widget(917, 85));
+		}
+		if (compare(getAttributeMapValue(attrmap3, 1278), "") != 0) {
+			int11 = script_3992(0, int11, getAttributeMapValue(attrmap3, 1278), widget(917, 57), 4094, null, widget(917, 85));
+		}
+		if (compare(getAttributeMapValue(attrmap3, 1279), "") != 0) {
+			int11 = script_3992(0, int11, getAttributeMapValue(attrmap3, 1279), widget(917, 58), 4094, null, widget(917, 85));
+		}
+	} else if (VARPBIT[8601] > VARPBIT[8602]) {
+		str2 = "You're already owed a reward! You may claim it from Explorer Jack or any other taskmaster, or increase it by completing more Tasks. ";
+		if (VARP[1959] > 0) {
+			str2 = concat(str2, "You are also owed one or more items.");
+		}
+		int11 = script_3992(0, int11, str2, widget(917, 52), 4094, null, widget(917, 85));
+	}
+	VARC[1419] = int11;
+	if (script_3999(arg0) == 0) {
+		script_4019(0);
+		widget(917, 92).setIsHidden(false);
+		widget(917, 83).setIsHidden(false);
+		widget(917, 26).setSprite(4320);
+		widget(917, 28).setSprite(4320);
+		widget(917, 27).setSprite(4321);
+		widget(917, 84).setIsHidden(true);
+		widget(917, 82).setIsHidden(true);
+		widget(917, 86).setIsHidden(true);
+	}
+	return;
+}

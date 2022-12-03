@@ -1,0 +1,8 @@
+void script_4087(Widget widget0) {
+	if (VARPBIT[8701] == 1) {
+		widget0.setSprite(3012);
+	} else {
+		widget0.setSprite(3010);
+	}
+	return;
+}

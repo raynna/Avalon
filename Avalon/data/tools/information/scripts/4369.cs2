@@ -1,0 +1,37 @@
+void script_4369(Widget widget0, char char1, int arg2, Widget widget3) {
+	STRING[346] = widget0.getText();
+	switch (arg2) {
+		case 84:
+			script_4372(1);
+			break;
+		case 96:
+		case 97:
+		case 98:
+		case 99:
+		case 102:
+		case 103:
+			if (!isHoldingCtrl()) {
+				return;
+			}
+			_ = script_1553(arg2, VARC[1498], STRING[346]);
+			break;
+		case 85:
+			if (length(STRING[346]) > 0) {
+				STRING[346] = substr(STRING[346], 0, length(STRING[346]) - 1);
+			}
+			break;
+		default:
+			if (arg2 == 67 && isHoldingShift()) {
+				script_4367();
+				return;
+			}
+			if (length(STRING[346]) < 13) {
+				STRING[346] = script_74(STRING[346], 0, arg2, char1);
+			}
+			break;
+	}
+	VARC[1498] = script_1552(VARC[1498], STRING[346], 5631, widget0, -1);
+	widget3.setPosition(VARC[1498], widget3.getY(), 0, 0);
+	widget0.setText(STRING[346]);
+	return;
+}

@@ -1,0 +1,274 @@
+void script_4(Widget widget0, Location location1, string string2, AttrMap attrmap3, Widget widget4, int arg5, int arg6, int arg7, int arg8) {
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	int int22;
+	int int23;
+	int int24;
+	int int25;
+	int int26;
+	Sprite sprite27;
+	Sprite sprite28;
+	Sprite sprite29;
+	int int30;
+	int int31;
+	int int32;
+	string str1;
+	string str2;
+	if (location1 == null || location1 == location(0, 0, 0)) {
+		widget0.clearChildren();
+		widget0.setIsHidden(true);
+		return;
+	}
+	int8 = 0;
+	int9 = 0;
+	int8, int9 = cs2method5224(location1);
+	if (int8 < 0 || int9 < 0) {
+		location1 = moveCoord(location(0, 0, 0), x(location1), script_686(z(location1) - 1, 4), y(location1));
+		int8, int9 = cs2method5224(location1);
+		if (int8 < 0 || int9 < 0) {
+			location1 = moveCoord(location(0, 0, 0), x(location1), script_686(z(location1) - 1, 4), y(location1));
+			int8, int9 = cs2method5224(location1);
+			if (int8 < 0 || int9 < 0) {
+				location1 = moveCoord(location(0, 0, 0), x(location1), script_686(z(location1) - 1, 4), y(location1));
+				int8, int9 = cs2method5224(location1);
+				if (int8 < 0 || int9 < 0) {
+					widget0.clearChildren();
+					widget0.setIsHidden(true);
+					return;
+				}
+			}
+		}
+	}
+	widget0.setIsHidden(false);
+	int10 = widget4.getWidth();
+	int11 = widget4.getHeight();
+	if (attrmap3 == null) {
+		attrmap3 = (AttrMap)280;
+	}
+	int8 = int10 * (arg7 - arg8) / (int8 - arg8);
+	int9 = int11 * (arg5 - arg6) / (int9 - arg6);
+	int8 = max(min(int8, int10), 0);
+	int9 = max(min(int9, int11), 0);
+	int8 = int8 - int10 / 2;
+	int9 = int11 / 2 - int9;
+	widget0.setPosition(int8, int9, 1, 1);
+	int12 = getAttributeMapValue(attrmap3, 132);
+	int13 = getAttributeMapValue(attrmap3, 133);
+	int14 = -1;
+	if (int8 <= 0 - int10 / 2) {
+		if (int9 <= 0 - int11 / 2) {
+			int14 = 3;
+		} else if (int9 >= int11 / 2) {
+			int14 = 1;
+		} else {
+			int14 = 2;
+		}
+	} else if (int8 >= int10 / 2) {
+		if (int9 <= 0 - int11 / 2) {
+			int14 = 5;
+		} else if (int9 >= int11 / 2) {
+			int14 = 7;
+		} else {
+			int14 = 6;
+		}
+	} else if (int9 <= 0 - int11 / 2) {
+		int14 = 4;
+	} else if (int9 >= int11 / 2) {
+		int14 = 0;
+	}
+	int15 = 0;
+	int16 = 0;
+	int17 = 0;
+	int18 = 0;
+	str1 = "Scroll map";
+	str2 = "";
+	if (length(string2) > 0) {
+		if (widget0 == widget(755, 36)) {
+			str2 = "Your position";
+		} else {
+			str2 = removeTags(script_2332(string2, "<br>", " "));
+		}
+		str1 = "Scroll map:";
+	}
+	if (int14 == -1) {
+		script_2048(widget0, 0, getAttributeMapValue(attrmap3, 130), int12, int13, 0, 0, 0, false, false, false, 0, str2, str1, location1);
+		int15 = int13 / 2;
+		int16 = int13 / 2;
+		int17 = int12 / 2;
+		int18 = int12 / 2;
+		script_2048(widget0, 1, getAttributeMapValue(attrmap3, 131), int12, int13, 0, 0, 0, false, false, false, 1, "", "", null);
+	} else {
+		int12 = getAttributeMapValue(attrmap3, 136);
+		int13 = getAttributeMapValue(attrmap3, 645);
+		switch (int14) {
+			case 0:
+				script_2048(widget0, 0, getAttributeMapValue(attrmap3, 134), int12, int13, 0, 0 - int13 / 2, 49152, false, false, false, 0, str2, str1, location1);
+				int15 = int13;
+				int16 = 0;
+				int17 = int12 / 2;
+				int18 = int12 / 2;
+				break;
+			case 1:
+				script_2048(widget0, 0, getAttributeMapValue(attrmap3, 135), int12, int13, int12 / 2, 0 - int13 / 2, 32768, false, false, false, 0, str2, str1, location1);
+				int15 = int13;
+				int16 = 0;
+				int17 = 0;
+				int18 = int12;
+				break;
+			case 2:
+				script_2048(widget0, 0, getAttributeMapValue(attrmap3, 134), int12, int13, int12 / 2, 0, 32768, false, false, false, 0, str2, str1, location1);
+				int15 = int13 / 2;
+				int16 = int13 / 2;
+				int17 = 0;
+				int18 = int12;
+				break;
+			case 3:
+				script_2048(widget0, 0, getAttributeMapValue(attrmap3, 135), int12, int13, int12 / 2, int13 / 2, 16384, false, false, false, 0, str2, str1, location1);
+				int15 = 0;
+				int16 = int13;
+				int17 = 0;
+				int18 = int12;
+				break;
+			case 4:
+				script_2048(widget0, 0, getAttributeMapValue(attrmap3, 134), int12, int13, 0, int13 / 2, 16384, false, false, false, 0, str2, str1, location1);
+				int15 = 0;
+				int16 = int13;
+				int17 = int12 / 2;
+				int18 = int12 / 2;
+				break;
+			case 5:
+				script_2048(widget0, 0, getAttributeMapValue(attrmap3, 135), int12, int13, 0 - int12 / 2, int13 / 2, 0, false, false, false, 0, str2, str1, location1);
+				int15 = 0;
+				int16 = int13;
+				int17 = int12;
+				int18 = 0;
+				break;
+			case 6:
+				script_2048(widget0, 0, getAttributeMapValue(attrmap3, 134), int12, int13, 0 - int12 / 2, 0, 0, false, false, false, 0, str2, str1, location1);
+				int15 = int13 / 2;
+				int16 = int13 / 2;
+				int17 = int12;
+				int18 = 0;
+				break;
+			case 7:
+				script_2048(widget0, 0, getAttributeMapValue(attrmap3, 135), int12, int13, 0 - int12 / 2, 0 - int13 / 2, 49152, false, false, false, 0, str2, str1, location1);
+				int15 = int13;
+				int16 = 0;
+				int17 = int12;
+				int18 = 0;
+				break;
+		}
+		script_2050(widget0, 1);
+	}
+	int19 = 0;
+	int20 = 0;
+	int21 = 0;
+	int22 = 0;
+	int23 = 0;
+	int24 = 0;
+	int25 = 0;
+	int26 = 0;
+	sprite27 = null;
+	sprite28 = null;
+	sprite29 = null;
+	int30 = 0;
+	if (length(string2) > 0) {
+		int23 = getAttributeMapValue(attrmap3, 650);
+		int24 = getAttributeMapValue(attrmap3, 651);
+		sprite27 = getAttributeMapValue(attrmap3, 647);
+		sprite28 = getAttributeMapValue(attrmap3, 648);
+		sprite29 = getAttributeMapValue(attrmap3, 649);
+		int19 = getMaxLineWidth(string2, int10, 591) + int23 + int23;
+		int20 = getLineCount(string2, int19, 591) * 13 + 2 + int24 + int24;
+		if (int15 + int20 < int9 + int11 / 2) {
+			int22 = 0 - (int15 + int20 / 2);
+		} else {
+			int22 = int16 + int20 / 2;
+		}
+		int30 = int8 + int10 / 2 - int19 / 2;
+		if (int30 <= 0) {
+			int21 = 0 - int30;
+		} else {
+			int30 = int8 + int10 / 2 + int19 / 2;
+			if (int30 >= int10) {
+				int21 = int10 - int30;
+			}
+		}
+		int25 = (int19 - int23) / 2;
+		int26 = (int20 - int24) / 2;
+		script_2048(widget0, 2, getAttributeMapValue(attrmap3, 646), int19 - int23 * 2, int20 - int24 * 2, int21, int22, 0, true, false, false, 0, "", "", null);
+		script_2048(widget0, 3, sprite28, int19 - int23 * 2, int24, int21, int22 - int26, 0, true, false, false, 0, "", "", null);
+		script_2048(widget0, 4, sprite28, int19 - int23 * 2, int24, int21, int22 + int26, 0, true, false, true, 0, "", "", null);
+		script_2048(widget0, 5, sprite29, int23, int20 - int24 * 2, int21 - int25, int22, 0, true, false, false, 0, "", "", null);
+		script_2048(widget0, 6, sprite29, int23, int20 - int24 * 2, int21 + int25, int22, 0, true, true, false, 0, "", "", null);
+		script_2048(widget0, 7, sprite27, int23, int24, int21 - int25, int22 - int26, 0, false, false, false, 0, "", "", null);
+		script_2048(widget0, 8, sprite27, int23, int24, int21 + int25, int22 - int26, 0, false, true, false, 0, "", "", null);
+		script_2048(widget0, 9, sprite27, int23, int24, int21 - int25, int22 + int26, 0, false, false, true, 0, "", "", null);
+		script_2048(widget0, 10, sprite27, int23, int24, int21 + int25, int22 + int26, 0, false, true, true, 0, "", "", null);
+		script_2051(widget0, 11, string2, int19, int20, int21 + 1, int22 + 1, getAttributeMapValue(attrmap3, 653), "", "", null);
+		script_2051(widget0, 12, string2, int19, int20, int21, int22, getAttributeMapValue(attrmap3, 652), str2, str1, location1);
+	} else {
+		if (ACTIVE.setChild(widget0, 2)) {
+			ACTIVE.deleteChild();
+		}
+		if (ACTIVE.setChild(widget0, 3)) {
+			ACTIVE.deleteChild();
+		}
+		if (ACTIVE.setChild(widget0, 4)) {
+			ACTIVE.deleteChild();
+		}
+		if (ACTIVE.setChild(widget0, 5)) {
+			ACTIVE.deleteChild();
+		}
+		if (ACTIVE.setChild(widget0, 6)) {
+			ACTIVE.deleteChild();
+		}
+		if (ACTIVE.setChild(widget0, 7)) {
+			ACTIVE.deleteChild();
+		}
+		if (ACTIVE.setChild(widget0, 8)) {
+			ACTIVE.deleteChild();
+		}
+		if (ACTIVE.setChild(widget0, 9)) {
+			ACTIVE.deleteChild();
+		}
+		if (ACTIVE.setChild(widget0, 10)) {
+			ACTIVE.deleteChild();
+		}
+		if (ACTIVE.setChild(widget0, 11)) {
+			ACTIVE.deleteChild();
+		}
+		if (ACTIVE.setChild(widget0, 12)) {
+			ACTIVE.deleteChild();
+		}
+	}
+	int31 = 0;
+	int32 = 0;
+	if (int21 < 0) {
+		int31 = max(0 - (int21 - int19 / 2), int17);
+	} else if (int19 > 0) {
+		int31 = max(int21 + int19 / 2, int18);
+	} else {
+		int31 = max(int17, int18);
+	}
+	if (int22 <= 0) {
+		int32 = max(int15 + int20, int16);
+	} else {
+		int32 = int16 + int20;
+	}
+	int31, int32 = int31 * 2 + 2, int32 * 2 + 2;
+	widget0.setSize(int31, int32, 0, 0);
+	return;
+}

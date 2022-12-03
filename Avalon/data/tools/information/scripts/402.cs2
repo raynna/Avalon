@@ -1,0 +1,5 @@
+void script_402() {
+	widget(1010, 10).setTrans(0);
+	VARC[1391] = 1;
+	return;
+}

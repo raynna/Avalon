@@ -1,0 +1,102 @@
+void script_493(Widget widget0, int arg1) {
+	int int2;
+	Color color3;
+	AttrMap attrmap4;
+	int2 = 0;
+	color3 = 0x000000;
+	attrmap4 = null;
+	switch (widget0) {
+		case widget(1015, 58):
+			int2 = 1;
+			break;
+		case widget(1015, 60):
+			int2 = 2;
+			break;
+		case widget(1015, 62):
+			int2 = 3;
+			break;
+		case widget(1015, 64):
+			int2 = 4;
+			break;
+		case widget(1015, 68):
+			int2 = 5;
+			break;
+		case widget(1015, 70):
+			int2 = 6;
+			break;
+		case widget(1015, 72):
+			int2 = 7;
+			break;
+		case widget(1015, 74):
+			int2 = 8;
+			break;
+		case widget(1015, 66):
+			int2 = 9;
+			break;
+		default:
+			return;
+	}
+	if (arg1 == 1) {
+		color3 = 0xFFFFFF;
+	} else {
+		color3 = 0xFF981F;
+	}
+	if (VARPBIT[7539] != int2 && VARPBIT[7540] != int2 && VARPBIT[7541] != int2 && VARPBIT[7542] != int2) {
+		widget0.setRGB(color3);
+		if (arg1 == 1) {
+			attrmap4 = script_488(int2);
+			if (attrmap4 != null) {
+				widget(1015, 49).setIsHidden(true);
+				widget(1015, 50).setIsHidden(false);
+				widget(1015, 51).setIsHidden(false);
+				widget(1015, 52).setIsHidden(false);
+				widget(1015, 53).setIsHidden(false);
+				widget(1015, 54).setIsHidden(false);
+				widget(1015, 51).setText(getAttributeMapValue(attrmap4, 1150));
+				widget(1015, 50).setSprite(getAttributeMapValue(attrmap4, 1153));
+				widget(1015, 52).setText(getAttributeMapValue(attrmap4, 1151));
+				widget(1015, 53).setText(concat("Cooldown: ", str(getAttributeMapValue(attrmap4, 1155))));
+				widget(1015, 54).setText(concat("Cost: ", str(getAttributeMapValue(attrmap4, 1154))));
+			}
+		} else {
+			switch (VARPBIT[7515]) {
+				case 1:
+					attrmap4 = script_488(VARPBIT[7539]);
+					break;
+				case 2:
+					attrmap4 = script_488(VARPBIT[7540]);
+					break;
+				case 3:
+					attrmap4 = script_488(VARPBIT[7541]);
+					break;
+				case 4:
+					attrmap4 = script_488(VARPBIT[7542]);
+					break;
+				default:
+					attrmap4 = null;
+					break;
+			}
+			if (attrmap4 == null) {
+				widget(1015, 49).setIsHidden(false);
+				widget(1015, 50).setIsHidden(true);
+				widget(1015, 51).setIsHidden(true);
+				widget(1015, 52).setIsHidden(true);
+				widget(1015, 53).setIsHidden(true);
+				widget(1015, 54).setIsHidden(true);
+			} else {
+				widget(1015, 49).setIsHidden(true);
+				widget(1015, 50).setIsHidden(false);
+				widget(1015, 51).setIsHidden(false);
+				widget(1015, 52).setIsHidden(false);
+				widget(1015, 53).setIsHidden(false);
+				widget(1015, 54).setIsHidden(false);
+				widget(1015, 51).setText(getAttributeMapValue(attrmap4, 1150));
+				widget(1015, 50).setSprite(getAttributeMapValue(attrmap4, 1153));
+				widget(1015, 52).setText(getAttributeMapValue(attrmap4, 1151));
+				widget(1015, 53).setText(concat("Cooldown: ", str(getAttributeMapValue(attrmap4, 1155))));
+				widget(1015, 54).setText(concat("Cost: ", str(getAttributeMapValue(attrmap4, 1154))));
+			}
+		}
+	}
+	return;
+}

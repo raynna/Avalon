@@ -1,0 +1,6 @@
+void script_921(string string0, int arg1, int arg2) {
+	int int2;
+	int2 = getLineCount(string0, arg2, 494);
+	script_924(string0, int2, arg1, 1, 494);
+	return;
+}

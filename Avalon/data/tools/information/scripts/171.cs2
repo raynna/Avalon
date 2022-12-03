@@ -1,0 +1,36 @@
+void script_171() {
+	if (VARC[40] == 0) {
+		widget(390, 6).setText("Show riddle");
+		widget(390, 6).setContextMenuOption(1, "Show");
+		widget(390, 7).setIsHidden(false);
+		widget(390, 8).setIsHidden(false);
+		widget(390, 9).setIsHidden(false);
+		widget(390, 10).setIsHidden(false);
+		widget(390, 11).setIsHidden(false);
+		widget(390, 12).setIsHidden(false);
+		widget(390, 13).setIsHidden(false);
+		widget(390, 14).setIsHidden(false);
+		widget(390, 3).setIsHidden(true);
+		widget(390, 5).setIsHidden(true);
+		VARC[40] = 1;
+	} else {
+		widget(390, 6).setText("Hide riddle");
+		widget(390, 6).setContextMenuOption(1, "Hide");
+		widget(390, 18).setText("You seek the grail of old," + "<br>" + "but no longer is it a goblet of gold." + "<br>" + "Among these nine will you find what you seek," + "<br>" + "but be careful and don't peek!" + "<br>" + "A wrong choice will expel you," + "<br>" + "so consider carefully each clue." + "<br>" + "<br>" + "Three boxes contain only air," + "<br>" + "beware of three boxes, for danger lurks there." + "<br>" + "Two hold only rubbish but would fool you with disguise," + "<br>" + "only one box holds your prize." + "<br>" + "<br>" + "Clues will give the information you need," + "<br>" + "<br>" + "rubbish always sits to the right of danger, pay heed." + "<br>" + "There is nothing helpful in boxes great in height," + "<br>" + "and boxes on either end will not end your plight." + "<br>" + "A tall or small box will only bring you anger," + "<br>" + "but a square box will not put you in danger.");
+		widget(390, 18).setRGB(0x000000);
+		widget(390, 7).setIsHidden(true);
+		widget(390, 8).setIsHidden(true);
+		widget(390, 9).setIsHidden(true);
+		widget(390, 10).setIsHidden(true);
+		widget(390, 11).setIsHidden(true);
+		widget(390, 12).setIsHidden(true);
+		widget(390, 13).setIsHidden(true);
+		widget(390, 14).setIsHidden(true);
+		widget(390, 3).setIsHidden(false);
+		widget(390, 5).setIsHidden(false);
+		widget(390, 19).setScrollMax(190, 520);
+		script_31(widget(390, 5), widget(390, 19), 792, 789, 790, 791, 773, 788);
+		VARC[40] = 0;
+	}
+	return;
+}

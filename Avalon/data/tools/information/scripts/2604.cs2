@@ -1,0 +1,9 @@
+void script_2604() {
+	playSoundEffect(6784, 1, 0);
+	widget(292, 130).setIsHidden(false);
+	widget(292, 132).setText("Are you sure you wish to reset all your squad contract selections?");
+	widget(292, 135).setIsHidden(true);
+	widget(292, 137).setIsHidden(true);
+	widget(292, 134).setIsHidden(false);
+	return;
+}

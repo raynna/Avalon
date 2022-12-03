@@ -1,0 +1,19 @@
+Color script_718(int arg0) {
+	switch (arg0) {
+		case 1:
+			return 0xFF0000;
+		case 2:
+			return 0xFF8000;
+		case 3:
+			return 0xFFFF00;
+		case 4:
+			return 0x00FF00;
+		case 5:
+			return 0x0000FF;
+		case 6:
+			return 0x4000FF;
+		case 7:
+			return 0x8000FF;
+	}
+	return 0xFFFFFF;
+}

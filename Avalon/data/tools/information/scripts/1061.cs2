@@ -1,0 +1,25 @@
+void script_1061(Widget widget0, Widget widget1, int arg2, Widget widget3, int arg4, QcCat qccat5) {
+	int int6;
+	VARC[159] = 0;
+	VARC[158] = 0;
+	int6 = 0;
+	while (ACTIVE.setChild(widget0, int6)) {
+		if (int6 == arg2) {
+			ACTIVE.setScriptCallOnMouseEntered(-1, "");
+			ACTIVE.setScriptCallOnMouseExit(-1, "");
+			if (_ACTIVE.setChild(widget1, int6)) {
+				_ACTIVE.setHidden(false);
+				_ACTIVE.setRGB(0x969777);
+			}
+		} else {
+			ACTIVE.setScriptCallOnMouseEntered(1082, arg4 - 1, widget1, int6, "iIi");
+			ACTIVE.setScriptCallOnMouseExit(1083, arg4 - 1, widget1, int6, "iIi");
+			if (_ACTIVE.setChild(widget1, int6)) {
+				_ACTIVE.setHidden(true);
+			}
+		}
+		int6 = int6 + 1;
+	}
+	script_1062(widget3, arg4, qccat5, null, 0);
+	return;
+}

@@ -1,0 +1,30 @@
+void script_4741() {
+	int int0;
+	Item item1;
+	Container container2;
+	int0 = 0;
+	item1 = null;
+	container2 = null;
+	if (VARPBIT[9904] < 99999 && VARPBIT[9903] != 0) {
+		container2 = datamap('i', 'v', (DataMap)3879, VARPBIT[9903]);
+		if (ACTIVE.setChild(widget(1144, 0), VARPBIT[9904])) {
+			int0 = getItemAmtInSlot(container2, VARPBIT[9904]);
+			if (int0 > 0) {
+				item1 = getItemIdInSlot(container2, VARPBIT[9904]);
+				if (item1 != null) {
+					widget(1144, 23).setIsHidden(true);
+					widget(1144, 22).setIsHidden(false);
+					widget(1144, 9).setIsHidden(false);
+					widget(1144, 45).setIsHidden(false);
+					if (int0 == 1) {
+						widget(1144, 55).setText("Are you sure you want to delete " + "<col=ffff80>" + getItemName(item1) + "</col>" + "?");
+					} else {
+						widget(1144, 55).setText("Are you sure you want to delete " + "<col=ffff80>" + getItemName(item1) + "</col>" + " (" + "<col=ffffff>" + str(int0) + "</col>" + " items)?");
+					}
+					widget(1144, 56).setItem(item1, int0);
+				}
+			}
+		}
+	}
+	return;
+}

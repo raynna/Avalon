@@ -1,0 +1,10 @@
+void script_4331(Widget widget0, Widget widget1) {
+	int int2;
+	int int3;
+	int2 = -1;
+	int3 = -1;
+	if (cs2method3700()) {
+		script_4332(widget0, widget1);
+	}
+	return;
+}

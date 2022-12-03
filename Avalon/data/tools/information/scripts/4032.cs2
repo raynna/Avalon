@@ -1,0 +1,9 @@
+void script_4032(int arg0) {
+	if (arg0 == 0) {
+		widget(917, 114).setSprite(4298);
+	} else {
+		widget(917, 114).setSprite(4297);
+		script_41(widget(917, 97));
+	}
+	return;
+}

@@ -1,0 +1,19 @@
+void script_2077() {
+	int int0;
+	int int1;
+	int0 = 0;
+	int1 = 0;
+	if (VARC[632] == 0) {
+		int0 = 3 - VARC[635];
+		if (int0 == 1) {
+			widget(837, 9).setText("New game: " + str(int0) + " min");
+		} else {
+			widget(837, 9).setText("New game: " + str(int0) + " mins");
+		}
+	} else {
+		int1 = 20 - VARC[636];
+		int0 = int1 + 3;
+		widget(837, 9).setText("New game: " + str(int0) + " mins");
+	}
+	return;
+}

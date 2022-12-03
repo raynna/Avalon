@@ -1,0 +1,14 @@
+[11 mars 2020 at 05:37:12 PDT] - manager killed andreas
+[11 mars 2020 at 05:48:48 PDT] - manager died to andreas
+[11 mars 2020 at 06:15:41 PDT] - manager died to andreas
+[11 mars 2020 at 06:20:21 PDT] - manager killed andreas
+[11 mars 2020 at 06:22:25 PDT] - manager killed andreas
+[11 mars 2020 at 06:25:37 PDT] - manager killed andreas
+[11 mars 2020 at 06:31:42 PDT] - manager died to andreas
+[11 mars 2020 at 06:34:13 PDT] - manager killed andreas
+[11 mars 2020 at 06:35:34 PDT] - manager killed andreas
+[11 mars 2020 at 06:37:17 PDT] - manager died to andreas
+[11 mars 2020 at 06:38:28 PDT] - manager died to andreas
+[11 mars 2020 at 06:42:59 PDT] - manager died to andreas
+[11 mars 2020 at 06:43:44 PDT] - manager died to andreas
+[11 mars 2020 at 06:47:11 PDT] - manager died to andreas

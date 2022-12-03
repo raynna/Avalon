@@ -1,0 +1,19 @@
+void script_1405() {
+	if (VARPBIT[61] == 1) {
+		widget(756, 10).setText("Draughts: Options");
+		script_1406(widget(756, 3));
+	} else if (VARPBIT[61] == 2) {
+		widget(756, 10).setText("Runelink: Options");
+		script_1406(widget(756, 4));
+	} else if (VARPBIT[61] == 3) {
+		widget(756, 10).setText("Runesquares: Options");
+		script_1406(widget(756, 8));
+	} else if (VARPBIT[61] == 4) {
+		widget(756, 10).setText("Runeversi: Options");
+		script_1406(widget(756, 6));
+	}
+	script_1407();
+	script_1408();
+	script_1409();
+	return;
+}

@@ -1,0 +1,12 @@
+void script_2416(Widget widget0) {
+	if (VARC[805] == 2 || VARC[805] == 8) {
+		widget0.setContextMenuOption(1, "Cut wire");
+	} else if (VARC[805] == 3 || VARC[805] == 9) {
+		widget0.setContextMenuOption(1, "Replace wire");
+	} else if (VARC[805] == 4 || VARC[805] == 10) {
+		widget0.setContextMenuOption(1, "Repair wire");
+	} else {
+		widget0.setContextMenuOption(1, "Inspect");
+	}
+	return;
+}

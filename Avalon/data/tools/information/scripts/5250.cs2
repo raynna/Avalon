@@ -1,0 +1,75 @@
+void script_5250(int arg0) {
+	switch (VARP[2373]) {
+		case 2:
+			if (arg0 == 1) {
+				widget(1127, 18).setText("Battle-mage Helm");
+				widget(1127, 17).setText("Strong against melee and magical attacks, weak against ranged.");
+			}
+			if (arg0 == 2) {
+				widget(1127, 18).setText("Trickster Hood");
+				widget(1127, 17).setText("Strong against ranged and magical attacks, weak against melee.");
+			}
+			if (arg0 == 3) {
+				widget(1127, 18).setText("Vanguard Helm");
+				widget(1127, 17).setText("Strong against melee and ranged attacks, weak against magic.");
+			}
+			break;
+		case 1:
+			if (arg0 == 1) {
+				widget(1127, 18).setText("Battle-mage robe legs");
+				widget(1127, 17).setText("Strong against melee and magical attacks, weak against ranged.");
+			}
+			if (arg0 == 2) {
+				widget(1127, 18).setText("Trickster robe legs");
+				widget(1127, 17).setText("Strong against ranged and magical attacks, weak against melee.");
+			}
+			if (arg0 == 3) {
+				widget(1127, 18).setText("Vanguard leg armour");
+				widget(1127, 17).setText("Strong against melee and ranged attacks, weak against magic.");
+			}
+			break;
+		case 3:
+			if (arg0 == 1) {
+				widget(1127, 18).setText("Battle-mage robe");
+				widget(1127, 17).setText("Strong against melee and magical attacks, weak against ranged.");
+			}
+			if (arg0 == 2) {
+				widget(1127, 18).setText("Trickster robe");
+				widget(1127, 17).setText("Strong against ranged and magical attacks, weak against melee.");
+			}
+			if (arg0 == 3) {
+				widget(1127, 18).setText("Vanguard body armour");
+				widget(1127, 17).setText("Strong against melee and ranged attacks, weak against magic.");
+			}
+			break;
+		case 5:
+			if (arg0 == 1) {
+				widget(1127, 18).setText("Battle-mage gloves");
+				widget(1127, 17).setText("Strong against melee and magical attacks, weak against ranged.");
+			}
+			if (arg0 == 2) {
+				widget(1127, 18).setText("Trickster gloves");
+				widget(1127, 17).setText("Strong against ranged and magical attacks, weak against melee.");
+			}
+			if (arg0 == 3) {
+				widget(1127, 18).setText("Vanguard gloves");
+				widget(1127, 17).setText("Strong against melee and ranged attacks, weak against magic.");
+			}
+			break;
+		case 4:
+			if (arg0 == 1) {
+				widget(1127, 18).setText("Battle-mage boots");
+				widget(1127, 17).setText("Strong against melee and magical attacks, weak against ranged.");
+			}
+			if (arg0 == 2) {
+				widget(1127, 18).setText("Trickster boots");
+				widget(1127, 17).setText("Strong against ranged and magical attacks, weak against melee.");
+			}
+			if (arg0 == 3) {
+				widget(1127, 18).setText("Vanguard boots");
+				widget(1127, 17).setText("Strong against melee and ranged attacks, weak against magic.");
+			}
+			break;
+	}
+	return;
+}

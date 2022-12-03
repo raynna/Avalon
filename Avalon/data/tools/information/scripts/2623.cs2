@@ -1,0 +1,26 @@
+void script_2623() {
+	int int0;
+	int0 = 1;
+	while (datamap('i', 'I', (DataMap)2451, int0) != widget(850, 24)) {
+		datamap('i', 'I', (DataMap)2451, int0).setText("");
+		int0 = int0 + 1;
+	}
+	widget(850, 25).setText("Welcome to Mobilising Armies.");
+	switch (VARPBIT[6352]) {
+		case 1:
+			widget(850, 50).setSprite(1906);
+			break;
+		case 2:
+			widget(850, 50).setSprite(1904);
+			break;
+		case 3:
+			widget(850, 50).setSprite(1905);
+			break;
+		case 4:
+			widget(850, 50).setSprite(1907);
+			break;
+	}
+	script_157(widget(850, 45), widget(850, 46), widget(850, 46).getScrollMaxV(), 1);
+	widget(850, 48).setScriptCallOnKeyPress(2625, KEY_TYPED, (char)KEY_PRESSED, "iz");
+	return;
+}

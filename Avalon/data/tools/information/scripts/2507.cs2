@@ -1,0 +1,5 @@
+void script_2507(Widget widget0) {
+	VARC[840] = VARPBIT[6427];
+	widget0.setText(script_46(VARC[840], ","));
+	return;
+}

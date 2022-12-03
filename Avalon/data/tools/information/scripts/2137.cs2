@@ -1,0 +1,6 @@
+void script_2137(int arg0, int arg1, int arg2, int arg3, int arg4, Widget widget5, int arg6) {
+	if (ACTIVE.setChild(widget5, arg6)) {
+		ACTIVE.set3DRotation(arg3, arg4, bitAnd(ACTIVE.getRotateX() + arg0, 2047), bitAnd(ACTIVE.getRotateY() + arg1, 2047), bitAnd(ACTIVE.getRotateZ() + arg2, 2047), ACTIVE.get3DDistance());
+	}
+	return;
+}

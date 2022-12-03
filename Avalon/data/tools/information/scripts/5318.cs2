@@ -1,0 +1,125 @@
+void script_5318(int arg0, int arg1) {
+	switch (arg0) {
+		case 0:
+			VARC[1608] = arg1;
+			break;
+		case 1:
+			VARC[1609] = arg1;
+			break;
+		case 2:
+			VARC[1610] = arg1;
+			break;
+		case 3:
+			VARC[1611] = arg1;
+			break;
+		case 4:
+			VARC[1612] = arg1;
+			break;
+		case 5:
+			VARC[1613] = arg1;
+			break;
+		case 6:
+			VARC[1614] = arg1;
+			break;
+		case 7:
+			VARC[1615] = arg1;
+			break;
+		case 8:
+			VARC[1616] = arg1;
+			break;
+		case 9:
+			VARC[1617] = arg1;
+			break;
+		case 10:
+			VARC[1618] = arg1;
+			break;
+		case 11:
+			VARC[1619] = arg1;
+			break;
+		case 12:
+			VARC[1620] = arg1;
+			break;
+		case 13:
+			VARC[1621] = arg1;
+			break;
+		case 14:
+			VARC[1622] = arg1;
+			break;
+		case 15:
+			VARC[1623] = arg1;
+			break;
+		case 16:
+			VARC[1624] = arg1;
+			break;
+		case 17:
+			VARC[1625] = arg1;
+			break;
+		case 18:
+			VARC[1626] = arg1;
+			break;
+		case 19:
+			VARC[1627] = arg1;
+			break;
+		case 20:
+			VARC[1628] = arg1;
+			break;
+		case 21:
+			VARC[1629] = arg1;
+			break;
+		case 22:
+			VARC[1630] = arg1;
+			break;
+		case 23:
+			VARC[1631] = arg1;
+			break;
+		case 24:
+			VARC[1632] = arg1;
+			break;
+		case 25:
+			VARC[1633] = arg1;
+			break;
+		case 26:
+			VARC[1634] = arg1;
+			break;
+		case 27:
+			VARC[1635] = arg1;
+			break;
+		case 28:
+			VARC[1636] = arg1;
+			break;
+		case 29:
+			VARC[1637] = arg1;
+			break;
+		case 30:
+			VARC[1638] = arg1;
+			break;
+		case 31:
+			VARC[1639] = arg1;
+			break;
+		case 32:
+			VARC[1640] = arg1;
+			break;
+		case 33:
+			VARC[1641] = arg1;
+			break;
+		case 34:
+			VARC[1642] = arg1;
+			break;
+		case 35:
+			VARC[1643] = arg1;
+			break;
+		case 36:
+			VARC[1644] = arg1;
+			break;
+		case 37:
+			VARC[1645] = arg1;
+			break;
+		case 38:
+			VARC[1646] = arg1;
+			break;
+		case 39:
+			VARC[1647] = arg1;
+			break;
+	}
+	return;
+}

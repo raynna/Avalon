@@ -1,0 +1,16 @@
+void script_4649() {
+	switch (VARPBIT[9367]) {
+		case 1:
+			script_4650();
+			break;
+		case 2:
+			script_4652();
+			break;
+		case 3:
+			script_4651();
+			break;
+		default:
+			return;
+	}
+	return;
+}

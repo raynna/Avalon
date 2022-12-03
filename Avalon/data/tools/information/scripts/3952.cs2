@@ -1,0 +1,25 @@
+void script_3952(int arg0) {
+	STRING[331] = STRING[337];
+	STRING[332] = STRING[338];
+	STRING[333] = STRING[339];
+	STRING[334] = STRING[340];
+	STRING[335] = STRING[341];
+	STRING[336] = STRING[342];
+	if (arg0 == 1) {
+		widget(1028, 158).setText(concat("<u=ebe0bc>", STRING[331]));
+		widget(1028, 159).setText(concat("<u=ebe0bc>", STRING[332]));
+		widget(1028, 160).setText(concat("<u=ebe0bc>", STRING[333]));
+		widget(1028, 161).setText(concat("<u=ebe0bc>", STRING[334]));
+		widget(1028, 162).setText(concat("<u=ebe0bc>", STRING[335]));
+		widget(1028, 163).setText(concat("<u=ebe0bc>", STRING[336]));
+	} else {
+		widget(890, 37).setText(concat("<u=ebe0bc>", STRING[331]));
+		widget(890, 38).setText(concat("<u=ebe0bc>", STRING[332]));
+		widget(890, 39).setText(concat("<u=ebe0bc>", STRING[333]));
+		widget(890, 40).setText(concat("<u=ebe0bc>", STRING[334]));
+		widget(890, 41).setText(concat("<u=ebe0bc>", STRING[335]));
+		widget(890, 42).setText(concat("<u=ebe0bc>", STRING[336]));
+	}
+	script_3947(STRING[331], STRING[332], STRING[333], STRING[334], STRING[335], STRING[336], arg0);
+	return;
+}

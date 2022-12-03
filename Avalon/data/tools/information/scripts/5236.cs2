@@ -1,0 +1,8 @@
+void script_5236() {
+	int int0;
+	int0 = 120 - 120 * 100 / VARC[1186];
+	if (widget(1126, 124).getWidth() < int0) {
+		widget(1126, 124).setSize(widget(1126, 124).getWidth() + 1, widget(1126, 124).getHeight(), 0, 0);
+	}
+	return;
+}

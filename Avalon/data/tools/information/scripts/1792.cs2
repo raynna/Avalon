@@ -1,0 +1,38 @@
+void script_1792(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, int arg5) {
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	if (VARPBIT[5283] == 0) {
+		widget3.setRGB(0xFF981F);
+		widget4.setRGB(0xFF981F);
+		widget1.setSprite(444);
+		widget4.setText("ITEMS ARE" + "<br>" + "SAFE");
+	} else {
+		widget3.setRGB(0xFFFF00);
+		widget4.setRGB(0xFFFF00);
+		widget1.setSprite(445);
+		widget4.setText("ITEMS ARE" + "<br>" + "DROPPED");
+	}
+	widget1.setSpriteTiling(true);
+	int6 = getMaxLineWidth(widget3.getText(), 512, 494);
+	int6 = max(getMaxLineWidth(widget4.getText(), 512, 494), int6);
+	int6 = int6 + 6;
+	int7 = 5;
+	widget3.setPosition(0, int7, 0, 0);
+	int8 = getLineCount(widget3.getText(), int6, 494);
+	int8 = int8 * 10 + 3;
+	widget3.setSize(int6, int8, 0, 0);
+	int7 = int7 + int8 - 1;
+	widget2.setPosition((int6 - widget2.getWidth()) / 2, int7, 0, 0);
+	int7 = int7 + widget2.getHeight() - 1;
+	widget4.setPosition(0, int7, 0, 0);
+	int9 = getLineCount(widget4.getText(), int6, 494);
+	int9 = int9 * 10 + 3;
+	widget4.setSize(int6, int8, 0, 0);
+	int7 = int7 + int9 + 3;
+	widget0.setSize(int6, int7, 0, 0);
+	widget1.setSize(int6, int7, 0, 0);
+	script_1086(widget0, 0, 0, 0);
+	return;
+}

@@ -1,0 +1,163 @@
+void script_2723(Widget widget0, Widget widget1, Container container2, int arg3) {
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	Item item12;
+	int int13;
+	int int14;
+	int int15;
+	string str0;
+	widget0.clearChildren();
+	int4 = 1;
+	if (widget0.getScrollMaxV() > 0) {
+		int4 = 0;
+	}
+	int5 = -1;
+	int6 = 0;
+	int7 = getItemContainerLength(container2);
+	int8 = 4;
+	if (arg3 != -1) {
+		while (int6 < int7) {
+			if (getItemIdInSlot(container2, int6) != null) {
+				int5 = int6;
+			}
+			int6 = int6 + 1;
+		}
+		if (int5 > 26) {
+			widget0.setScrollMax(0, 63 * (int5 / 9 + 1));
+			if (int4 == 1) {
+				script_31(widget1, widget0, 792, 789, 790, 791, 773, 788);
+			} else {
+				script_72(widget1, widget0, widget0.getScrollY());
+			}
+			script_2718(widget0, 1, widget1);
+			int8 = 2;
+		} else {
+			widget0.setScrollMax(0, 0);
+			widget0.setScrollPos(0, 0);
+			widget1.clearChildren();
+			script_2718(widget0, 0, widget1);
+			int8 = 4;
+		}
+	} else {
+		script_2719(widget0, widget1);
+		while (int6 < int7) {
+			if (getItemIdInSlot(container2, int6) != null) {
+				int5 = int6;
+			}
+			int6 = int6 + 1;
+		}
+		if (int5 > 35) {
+			widget0.setScrollMax(0, 63 * (int5 / 9 + 1));
+			if (int4 == 1) {
+				script_31(widget1, widget0, 792, 789, 790, 791, 773, 788);
+			} else {
+				script_72(widget1, widget0, widget0.getScrollY());
+			}
+			int8 = 2;
+		} else {
+			widget0.setScrollMax(0, 0);
+			widget0.setScrollPos(0, 0);
+			widget1.clearChildren();
+			int8 = 4;
+		}
+	}
+	int6 = 0;
+	int9 = 0;
+	int10 = 0;
+	int11 = 0;
+	item12 = null;
+	int13 = 0;
+	str0 = "";
+	int14 = 0;
+	int15 = 0;
+	while (int6 < int7) {
+		item12 = getItemIdInSlot(container2, int6);
+		if (item12 != null) {
+			if (itemAttribute(item12, 258) == 1 || itemAttribute(item12, 259) == 1) {
+				int15 = 1;
+			} else {
+				int15 = 0;
+			}
+			int10 = int6 % 9 * 48 + int6 % 9 * int8;
+			int11 = int6 / 9 * 52 + int6 / 9 * 13;
+			ACTIVE.createChild(widget0, 5, int9);
+			int9 = int9 + 1;
+			ACTIVE.setSize(48, 52, 0, 0);
+			ACTIVE.setPosition(int10, int11, 0, 0);
+			ACTIVE.setSprite(2205);
+			ACTIVE.setOptionBase("<col=ff981f>" + getItemName(item12) + "</col>");
+			ACTIVE.setContextMenuOption(1, "Info");
+			ACTIVE.setContextMenuOption(2, "Buy 1");
+			ACTIVE.setContextMenuOption(10, "Examine");
+			if (int15 == 0) {
+				ACTIVE.setContextMenuOption(3, "Buy 5");
+				ACTIVE.setContextMenuOption(4, "Buy 10");
+				ACTIVE.setContextMenuOption(5, "Buy 50");
+				ACTIVE.setContextMenuOption(6, "Buy 500");
+			}
+			ACTIVE.setScriptCallOnMouseEntered(2724, CTX_WIDGET, int9, false, "Ii1");
+			ACTIVE.setScriptCallOnMouseExit(2724, CTX_WIDGET, int9, true, "Ii1");
+			ACTIVE.createChild(widget0, 5, int9);
+			int9 = int9 + 1;
+			ACTIVE.setSize(48, 52, 0, 0);
+			ACTIVE.setPosition(int10, int11, 0, 0);
+			ACTIVE.setSprite(2206);
+			ACTIVE.setHidden(true);
+			ACTIVE.createChild(widget0, 5, int9);
+			int9 = int9 + 1;
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition(int10 + 6, int11 + 4, 0, 0);
+			if (int15 == 1) {
+				ACTIVE.setItemNoNum(item12, getItemAmtInSlot(container2, int6));
+			} else {
+				ACTIVE.setItemAlwaysNum(item12, getItemAmtInSlot(container2, int6));
+			}
+			ACTIVE.setShadowColor(0x302020);
+			ACTIVE.setOutlineThickness(1);
+			ACTIVE.createChild(widget0, 5, int9);
+			int9 = int9 + 1;
+			ACTIVE.setSize(12, 12, 0, 0);
+			ACTIVE.setPosition(int10 + 2, int11 + 38, 0, 0);
+			ACTIVE.setSprite(datamap('o', 'd', (DataMap)200, (Item)VARP[532]));
+			ACTIVE.createChild(widget0, 4, int9);
+			int9 = int9 + 1;
+			ACTIVE.setSize(31, 12, 0, 0);
+			ACTIVE.setPosition(int10 + 13, int11 + 39, 0, 0);
+			ACTIVE.setFont(494);
+			ACTIVE.setTextAlignment(2, 1, 0);
+			int14 = script_2720(item12, int6);
+			if (int14 == -1) {
+				ACTIVE.setText("N/A");
+			} else {
+				ACTIVE.setText(script_940(int14));
+			}
+			ACTIVE.setRGB(script_1146(int14));
+			ACTIVE.setTextAntiMacro(true);
+			ACTIVE.createChild(widget0, 5, int9);
+			int9 = int9 + 1;
+			ACTIVE.setSize(12, 12, 0, 0);
+			ACTIVE.setPosition(int10 + 33, int11 + 4, 0, 0);
+			ACTIVE.setSprite(2180);
+			script_812(item12);
+			str0 = script_2706(item12);
+			ACTIVE.setScriptCallOnMouseOver(2707, CTX_WIDGET, CTX_WIDGET_CHILD, widget(620, 34), str0, 25, 200, MOUSE_X, MOUSE_Y, "IiIsiiii");
+			ACTIVE.setScriptCallOnMouseExit(40, widget(620, 34), "I");
+		} else {
+			int13 = 0;
+			while (int13 < 6) {
+				ACTIVE.createChild(widget0, 3, int9);
+				ACTIVE.setHidden(true);
+				int9 = int9 + 1;
+				int13 = int13 + 1;
+			}
+		}
+		int6 = int6 + 1;
+	}
+	return;
+}

@@ -1,0 +1,30 @@
+void script_184(int arg0, int arg1) {
+	switch (arg0) {
+		case 1:
+			if (arg1 > 0) {
+				VARPBIT[6161] = 1;
+			} else {
+				VARPBIT[6161] = 0;
+			}
+			break;
+		case 2:
+			cs2method5001(arg1, cs2method5005(), cs2method5016());
+			break;
+		case 3:
+			cs2method5001(cs2method5000(), arg1, cs2method5016());
+			break;
+		case 4:
+			VARP[2159] = arg1;
+			break;
+		case 5:
+			cs2method5001(cs2method5000(), cs2method5005(), arg1);
+			break;
+		case 6:
+			VARP[1055] = arg1;
+			break;
+		case 7:
+			VARP[1054] = arg1;
+			break;
+	}
+	return;
+}

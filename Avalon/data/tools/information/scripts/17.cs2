@@ -1,0 +1,7 @@
+void script_17(Widget widget0) {
+	widget0.setOutlineThickness(2);
+	if (bitAnd(widget0.getTargetMask(), 32) != 0) {
+		script_71(4);
+	}
+	return;
+}

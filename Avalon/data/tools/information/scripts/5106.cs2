@@ -1,0 +1,50 @@
+void script_5106() {
+	widget(1116, 33).setIsHidden(true);
+	widget(1116, 161).setIsHidden(true);
+	widget(1116, 210).setIsHidden(true);
+	widget(1116, 259).setIsHidden(true);
+	widget(1116, 308).setIsHidden(true);
+	widget(1116, 357).setIsHidden(true);
+	widget(1116, 406).setIsHidden(true);
+	widget(1116, 455).setIsHidden(true);
+	widget(1116, 504).setIsHidden(true);
+	switch (VARP[2317]) {
+		case 1:
+			widget(1116, 33).setIsHidden(false);
+			script_5107(VARP[2307]);
+			break;
+		case 2:
+			widget(1116, 161).setIsHidden(false);
+			script_5107(VARP[2308]);
+			break;
+		case 3:
+			widget(1116, 210).setIsHidden(false);
+			script_5107(VARP[2309]);
+			break;
+		case 4:
+			widget(1116, 259).setIsHidden(false);
+			script_5107(VARP[2310]);
+			break;
+		case 5:
+			widget(1116, 308).setIsHidden(false);
+			script_5107(VARP[2311]);
+			break;
+		case 6:
+			widget(1116, 357).setIsHidden(false);
+			script_5107(VARP[2312]);
+			break;
+		case 7:
+			widget(1116, 406).setIsHidden(false);
+			script_5107(VARP[2313]);
+			break;
+		case 8:
+			widget(1116, 455).setIsHidden(false);
+			script_5107(VARP[2314]);
+			break;
+		case 9:
+			widget(1116, 504).setIsHidden(false);
+			script_5107(VARP[2315]);
+			break;
+	}
+	return;
+}

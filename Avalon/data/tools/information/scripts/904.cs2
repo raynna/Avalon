@@ -1,0 +1,5 @@
+void script_904() {
+	widget(717, 13).set3DRotation(0, 0, 0, 0, 0, 400);
+	widget(717, 13).setPosition(widget(717, 13).getX() + 2, widget(717, 13).getY() + 2, 0, 0);
+	return;
+}

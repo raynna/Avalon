@@ -1,0 +1,21 @@
+void script_2289(Widget widget0, Widget widget1, int arg2) {
+	if (script_2296(arg2) == 0) {
+		if (script_2295(arg2) == 0) {
+			return;
+		}
+		if (ACTIVE.setChild(widget0, arg2)) {
+			ACTIVE.setContextMenuOption(1, "Deactivate");
+		}
+		if (ACTIVE.setChild(widget1, arg2)) {
+			ACTIVE.setSprite(155);
+		}
+	} else {
+		if (ACTIVE.setChild(widget0, arg2)) {
+			ACTIVE.setContextMenuOption(1, "Activate");
+		}
+		if (ACTIVE.setChild(widget1, arg2)) {
+			ACTIVE.setSprite(null);
+		}
+	}
+	return;
+}

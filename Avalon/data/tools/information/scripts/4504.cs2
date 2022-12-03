@@ -1,0 +1,17 @@
+void script_4504(Widget widget0) {
+	Widget widget1;
+	int int2;
+	widget1 = widget0.getLayer();
+	if (widget1 == null) {
+		return;
+	}
+	int2 = widget1.nextChild() - 1;
+	while (int2 >= 0) {
+		if (ACTIVE.setChild(widget1, int2)) {
+			ACTIVE.setNoOptions();
+		}
+		int2 = int2 - 1;
+	}
+	widget1.setIsHidden(true);
+	return;
+}

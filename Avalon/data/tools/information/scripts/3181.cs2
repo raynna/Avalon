@@ -1,0 +1,10 @@
+void script_3181() {
+	widget(914, 27).setText("");
+	widget(914, 27).setScriptCallOnKeyPress(-1, "");
+	widget(914, 16).setScriptCallOnClickContextMenu(-1, "");
+	widget(914, 21).setIsHidden(true);
+	widget(914, 23).setSprite(4084);
+	STRING[277] = "";
+	VARC[1094] = 0;
+	return;
+}

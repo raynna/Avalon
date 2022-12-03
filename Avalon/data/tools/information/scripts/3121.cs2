@@ -1,0 +1,11 @@
+void script_3121(Widget widget0) {
+	if (ACTIVE.setChild(widget0, 1)) {
+		ACTIVE.setHidden(false);
+		ACTIVE.setRGB(0x404040);
+	}
+	if (ACTIVE.setChild(widget0, 2)) {
+		ACTIVE.setHidden(false);
+		ACTIVE.setRGB(0x606060);
+	}
+	return;
+}

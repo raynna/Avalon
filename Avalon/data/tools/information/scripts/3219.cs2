@@ -1,0 +1,8 @@
+void script_3219(int arg0, Widget widget1, int arg2) {
+	if (VARC[174] == arg2 && (getClientCycle() - arg0) % 40 < 20 && getAccountCreateRC() != -3 && hasWindowFocus()) {
+		widget1.setIsHidden(false);
+	} else {
+		widget1.setIsHidden(true);
+	}
+	return;
+}

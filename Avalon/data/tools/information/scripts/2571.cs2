@@ -1,0 +1,8 @@
+void script_2571(int arg0) {
+	if (getContainerIntAttrCountIgnoreStacks(93, 803) + getContainerIntAttrCountIgnoreStacks(93, 802) < 1 + arg0) {
+		return;
+	}
+	VARC[929] = arg0;
+	script_2573();
+	return;
+}

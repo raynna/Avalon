@@ -1,0 +1,123 @@
+int script_4948(int arg0) {
+	int int1;
+	int1 = script_4951(arg0);
+	if (citadelConfigsInitialized()) {
+		if (int1 == 1) {
+			return 1;
+		}
+		if (int1 == 2) {
+			return 2;
+		}
+		if (int1 == 3) {
+			return 3;
+		}
+		if (int1 == 4) {
+			if (CLANBIT[2553] == arg0) {
+				return 4;
+			}
+			if (CLANBIT[2554] == arg0) {
+				return 5;
+			}
+			if (CLANBIT[2555] == arg0) {
+				return 6;
+			}
+			if (CLANBIT[2556] == arg0) {
+				return 7;
+			}
+			if (CLANBIT[2557] == arg0) {
+				return 8;
+			}
+			if (CLANBIT[2558] == arg0) {
+				return 9;
+			}
+			if (CLANBIT[2560] == arg0) {
+				return 10;
+			}
+			if (CLANBIT[2561] == arg0) {
+				return 11;
+			}
+			if (CLANBIT[2562] == arg0) {
+				return 12;
+			}
+			if (CLANBIT[2563] == arg0) {
+				return 13;
+			}
+			if (CLANBIT[2564] == arg0) {
+				return 14;
+			}
+			if (CLANBIT[2565] == arg0) {
+				return 15;
+			}
+		} else if (int1 == 5 || int1 == 6) {
+			switch (arg0) {
+				case 16:
+					return 16;
+				case 17:
+					return 17;
+				case 18:
+					return 18;
+				case 19:
+					return 19;
+				case 20:
+					return 20;
+				case 21:
+					return 21;
+				case 22:
+					return 22;
+				case 23:
+					return 23;
+				case 24:
+					return 24;
+				case 25:
+					return 25;
+				case 26:
+					return 26;
+				case 27:
+					return 27;
+				case 28:
+					return 28;
+				case 29:
+					return 29;
+				case 30:
+					return 30;
+				case 31:
+					return 31;
+				case 32:
+					return 32;
+				case 33:
+					return 33;
+				case 34:
+					return 34;
+				case 35:
+					return 35;
+				case 36:
+					return 36;
+				case 37:
+					return 40;
+				case 38:
+					return 38;
+				case 39:
+					return 39;
+				case 40:
+					return 40;
+				case 41:
+					return 41;
+				case 42:
+					return 42;
+				case 43:
+					return 43;
+				case 44:
+					return 44;
+				case 45:
+					return 45;
+				case 46:
+					return 46;
+				case 47:
+					return 47;
+				case 48:
+					return 48;
+			}
+		}
+	}
+	return -1;
+}

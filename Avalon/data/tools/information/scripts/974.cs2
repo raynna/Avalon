@@ -1,0 +1,44 @@
+int script_974(int arg0, int arg1, Item item2, Sprite sprite3, string string4, int arg5, int arg6) {
+	int int6;
+	Sprite sprite7;
+	int6 = 0;
+	sprite7 = 2287;
+	ACTIVE.createChild(widget(741, 2), 5, arg0);
+	if (script_1566(arg5, arg6) == 1) {
+		if (arg5 == 7) {
+			ACTIVE.setSize(30, 30, 0, 0);
+		} else if (arg5 == 4) {
+			ACTIVE.setSize(24, 24, 0, 0);
+		} else {
+			ACTIVE.setSize(36, 32, 0, 0);
+		}
+		ACTIVE.setOutlineThickness(0);
+		if (sprite3 != null) {
+			ACTIVE.setSprite(sprite3);
+		} else {
+			ACTIVE.setSprite(sprite7);
+		}
+	} else if (item2 == 18637 || item2 == 18638) {
+		ACTIVE.setSize(24, 24, 0, 0);
+		ACTIVE.setOutlineThickness(0);
+		if (item2 == 18637) {
+			ACTIVE.setSprite(3057);
+		} else {
+			ACTIVE.setSprite(3056);
+		}
+	} else {
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setOutlineThickness(1);
+		ACTIVE.setShadowColor(0x604E32);
+		if (item2 != null) {
+			ACTIVE.setItem(item2, -1);
+		} else {
+			ACTIVE.setItem(7620, -1);
+		}
+	}
+	ACTIVE.setPosition(0, arg1, 0, 0);
+	ACTIVE.createChild(widget(741, 2), 4, arg0 + 1);
+	int6 = getLineCount(string4, 300, 495);
+	ACTIVE.setSize(300, int6 * 16, 0, 0);
+	return int6;
+}

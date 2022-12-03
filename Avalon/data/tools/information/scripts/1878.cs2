@@ -1,0 +1,5 @@
+void script_1878(int arg0, Widget widget1, Widget widget2) {
+	VARC[1097] = script_1401(arg0 + widget1.getX(), STRING[277], 3793, widget1.getX());
+	script_1879(widget1, widget2, STRING[277]);
+	return;
+}

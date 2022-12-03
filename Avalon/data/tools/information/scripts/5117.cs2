@@ -1,0 +1,5 @@
+AttrMap script_5117(int arg0, int arg1) {
+	DataMap datamap2;
+	datamap2 = datamap('i', 'g', (DataMap)4520, arg0);
+	return datamap('i', 'J', datamap2, arg1);
+}

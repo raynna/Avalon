@@ -1,0 +1,19 @@
+int script_179(int arg0) {
+	switch (arg0) {
+		case 1:
+			return VARC[44];
+		case 2:
+			return VARC[45];
+		case 3:
+			return VARC[46];
+		case 4:
+			return VARC[47];
+		case 5:
+			return VARC[48];
+		case 6:
+			return VARC[49];
+		case 7:
+			return VARC[1511];
+	}
+	return 0;
+}

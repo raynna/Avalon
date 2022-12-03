@@ -1,0 +1,6 @@
+void script_2758(Widget widget0) {
+	widget0.setScriptCallOnConfigChange(2759, CTX_WIDGET, 466, "IY");
+	widget0.setScriptCallOnGlobalConfigChange(2759, CTX_WIDGET, 173, "IY");
+	script_2760(widget0);
+	return;
+}

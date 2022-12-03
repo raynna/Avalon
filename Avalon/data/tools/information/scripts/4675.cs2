@@ -1,0 +1,39 @@
+void script_4675() {
+	int int0;
+	int int1;
+	int0 = VARPBIT[9298] * 10;
+	int1 = 0;
+	if (VARC[1530] < int0) {
+		VARC[1530] = VARC[1530] + 1;
+		playSoundEffect2False(5251, 1, 0, 255);
+	}
+	script_4542(VARC[1530], widget(102, 100), widget(102, 105));
+	switch (VARPBIT[9306]) {
+		case 1:
+			int1 = VARPBIT[9308] * 10;
+			break;
+		case 2:
+			int1 = VARPBIT[9309] * 10;
+			break;
+		case 3:
+			int1 = VARPBIT[9310] * 10;
+			break;
+		case 4:
+			int1 = VARPBIT[9311] * 10;
+			break;
+		case 5:
+			int1 = VARPBIT[9312] * 10;
+			break;
+		case 6:
+			int1 = VARPBIT[9313] * 10;
+			break;
+	}
+	if (VARC[1530] >= int0 && VARC[1531] >= int1) {
+		script_4676(VARPBIT[9306]);
+	}
+	if (VARC[1531] < int1) {
+		VARC[1531] = VARC[1531] + 1;
+	}
+	script_4542(VARC[1531], widget(102, 110), widget(102, 115));
+	return;
+}

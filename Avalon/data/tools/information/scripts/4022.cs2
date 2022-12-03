@@ -1,0 +1,23 @@
+void script_4022(int arg0) {
+	int int1;
+	Widget widget2;
+	int1 = 0;
+	widget2 = null;
+	while (int1 <= datamapSize((DataMap)3489)) {
+		widget2 = datamap('i', 'I', (DataMap)3489, int1);
+		if (widget2 != null) {
+			widget2.setRGB(0x000000);
+		}
+		int1 = int1 + 1;
+	}
+	widget2 = datamap('i', 'I', (DataMap)3489, 62);
+	if (widget2 != null) {
+		widget2.setRGB(0x000000);
+	}
+	if (arg0 > 60 && arg0 != 62) {
+		return;
+	}
+	widget2 = datamap('i', 'I', (DataMap)3489, arg0);
+	widget2.setRGB(0x927D59);
+	return;
+}

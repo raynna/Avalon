@@ -1,0 +1,18 @@
+void script_3398(int arg0, int arg1, int arg2) {
+	switch (arg0) {
+		case 84:
+			script_3400();
+			return;
+		case 13:
+			if (!widget(915, 102).isHidden()) {
+				script_3198(widget(979, 64), widget(979, 65), widget(979, 51), widget(979, 43), widget(979, 0));
+			} else {
+				script_3391();
+			}
+			return;
+		case 1:
+			script_3196(2, widget(979, 64), widget(979, 65), widget(979, 51), widget(979, 43), widget(979, 0));
+			return;
+	}
+	return;
+}

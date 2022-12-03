@@ -1,0 +1,18 @@
+void script_3428() {
+	widget(985, 29).setItem(18739, -1);
+	widget(985, 29).setOutlineThickness(1);
+	widget(985, 29).setShadowColor(0x333333);
+	widget(985, 65).setItem(18740, -1);
+	widget(985, 65).setOutlineThickness(1);
+	widget(985, 65).setShadowColor(0x333333);
+	widget(985, 64).setItem(18741, -1);
+	widget(985, 64).setOutlineThickness(1);
+	widget(985, 64).setShadowColor(0x333333);
+	widget(985, 63).setItem(18742, -1);
+	widget(985, 63).setOutlineThickness(1);
+	widget(985, 63).setShadowColor(0x333333);
+	widget(985, 62).setItem(18743, -1);
+	widget(985, 62).setOutlineThickness(1);
+	widget(985, 62).setShadowColor(0x333333);
+	return;
+}

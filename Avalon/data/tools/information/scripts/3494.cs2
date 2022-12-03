@@ -1,0 +1,136 @@
+void script_3494(int arg0) {
+	DataMap datamap1;
+	playSoundEffect(9499, 1, 0);
+	widget(993, 112).setPosition(widget(993, 112).getX(), 52, 0, 0);
+	widget(993, 27).setPosition(widget(993, 27).getX(), 52, 0, 0);
+	widget(993, 26).setPosition(widget(993, 26).getX(), 52, 0, 0);
+	widget(993, 160).setSize(0, 16384, 2, 2);
+	widget(993, 67).setSize(0, 16384, 2, 2);
+	widget(993, 109).setSize(0, 16384, 2, 2);
+	widget(993, 254).setIsHidden(true);
+	widget(993, 239).setIsHidden(true);
+	widget(993, 224).setIsHidden(true);
+	widget(993, 209).setIsHidden(true);
+	widget(993, 257).setTrans(255);
+	widget(993, 242).setTrans(255);
+	widget(993, 227).setTrans(255);
+	widget(993, 212).setTrans(255);
+	widget(993, 194).setIsHidden(true);
+	widget(993, 195).setIsHidden(true);
+	widget(993, 196).setIsHidden(true);
+	widget(993, 197).setIsHidden(true);
+	widget(993, 261).setIsHidden(true);
+	switch (VARC[1184]) {
+		case 1:
+			if (VARPBIT[8065] == 1) {
+				widget(993, 139).setText("In use");
+			} else {
+				widget(993, 139).setText("Switch-to");
+			}
+			if (VARPBIT[8065] == 2) {
+				widget(993, 46).setText("In use");
+			} else {
+				widget(993, 46).setText("Switch-to");
+			}
+			if (VARPBIT[8065] == 3) {
+				widget(993, 88).setText("In use");
+			} else {
+				widget(993, 88).setText("Switch-to");
+			}
+			break;
+		case 2:
+			if (VARPBIT[8065] == 4) {
+				widget(993, 139).setText("In use");
+			} else {
+				widget(993, 139).setText("Switch-to");
+			}
+			if (VARPBIT[8065] == 5) {
+				widget(993, 46).setText("In use");
+			} else {
+				widget(993, 46).setText("Switch-to");
+			}
+			if (VARPBIT[8065] == 6) {
+				widget(993, 88).setText("In use");
+			} else {
+				widget(993, 88).setText("Switch-to");
+			}
+			break;
+		case 3:
+			if (VARPBIT[8065] == 7) {
+				widget(993, 139).setText("In use");
+			} else {
+				widget(993, 139).setText("Switch-to");
+			}
+			if (VARPBIT[8065] == 8) {
+				widget(993, 46).setText("In use");
+			} else {
+				widget(993, 46).setText("Switch-to");
+			}
+			if (VARPBIT[8065] == 9) {
+				widget(993, 88).setText("In use");
+			} else {
+				widget(993, 88).setText("Switch-to");
+			}
+			break;
+		case 4:
+			if (VARPBIT[8065] == 10) {
+				widget(993, 139).setText("In use");
+			} else {
+				widget(993, 139).setText("Switch-to");
+			}
+			if (VARPBIT[8065] == 11) {
+				widget(993, 46).setText("In use");
+			} else {
+				widget(993, 46).setText("Switch-to");
+			}
+			if (VARPBIT[8065] == 12) {
+				widget(993, 88).setText("In use");
+			} else {
+				widget(993, 88).setText("Switch-to");
+			}
+			break;
+	}
+	switch (arg0) {
+		case 65077505:
+			widget(993, 254).setIsHidden(false);
+			widget(993, 194).setIsHidden(false);
+			VARC[1184] = 1;
+			widget(993, 134).setRGB(0xFF3264);
+			widget(993, 41).setRGB(0xFF3264);
+			widget(993, 83).setRGB(0xFF3264);
+			break;
+		case 65077490:
+			widget(993, 239).setIsHidden(false);
+			widget(993, 195).setIsHidden(false);
+			VARC[1184] = 2;
+			widget(993, 134).setRGB(0x96FF96);
+			widget(993, 41).setRGB(0x96FF96);
+			widget(993, 83).setRGB(0x96FF96);
+			break;
+		case 65077475:
+			widget(993, 224).setIsHidden(false);
+			widget(993, 196).setIsHidden(false);
+			VARC[1184] = 3;
+			widget(993, 134).setRGB(0x00C8FF);
+			widget(993, 41).setRGB(0x00C8FF);
+			widget(993, 83).setRGB(0x00C8FF);
+			break;
+		case 65077460:
+			widget(993, 209).setIsHidden(false);
+			widget(993, 197).setIsHidden(false);
+			VARC[1184] = 4;
+			widget(993, 134).setRGB(0xFFFFFF);
+			widget(993, 41).setRGB(0xFFFFFF);
+			widget(993, 83).setRGB(0xFFFFFF);
+			break;
+	}
+	datamap1 = datamap('i', 'g', (DataMap)3088, VARC[1184]);
+	widget(993, 132).setText(getAttributeMapValue(datamap('i', 'J', datamap1, 1), 1089));
+	widget(993, 133).setText(getAttributeMapValue(datamap('i', 'J', datamap1, 1), 1090));
+	widget(993, 39).setText(getAttributeMapValue(datamap('i', 'J', datamap1, 2), 1089));
+	widget(993, 40).setText(getAttributeMapValue(datamap('i', 'J', datamap1, 2), 1090));
+	widget(993, 81).setText(getAttributeMapValue(datamap('i', 'J', datamap1, 3), 1089));
+	widget(993, 82).setText(getAttributeMapValue(datamap('i', 'J', datamap1, 3), 1090));
+	VARC[1186] = 0;
+	return;
+}

@@ -1,0 +1,3 @@
+Color script_5036(Color arg0) {
+	return arg0 / pow(2, 10);
+}

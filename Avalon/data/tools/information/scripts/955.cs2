@@ -1,0 +1,6 @@
+void script_955() {
+	if (VARPBIT[4540] == 3 && getItemAmtInContainer(94, 12845) == 0 && getItemAmtInContainer(93, 12845) == 0 && getItemAmtInContainer(94, 12846) == 0 && getItemAmtInContainer(93, 12846) == 0 && getItemAmtInContainer(94, 12847) == 0 && getItemAmtInContainer(93, 12847) == 0 && getItemAmtInContainer(94, 12848) == 0 && getItemAmtInContainer(93, 12848) == 0 && getItemAmtInContainer(94, 12849) == 0 && getItemAmtInContainer(93, 12849) == 0) {
+		widget(730, 24).setIsHidden(false);
+	}
+	return;
+}

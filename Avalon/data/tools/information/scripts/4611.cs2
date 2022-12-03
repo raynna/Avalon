@@ -1,0 +1,5 @@
+void script_4611() {
+	widget(20, 55).setScriptCallOnConfigChange(4612, widget(20, 55), 2172, 2173, 2174, "IY");
+	script_4613(widget(20, 55));
+	return;
+}

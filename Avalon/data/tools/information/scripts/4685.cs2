@@ -1,0 +1,26 @@
+void script_4685() {
+	int int0;
+	int int1;
+	string str0;
+	string str1;
+	str0 = str(VARPBIT[9467]);
+	str1 = "Waiting for next wave...";
+	if (VARC[1537] != 0) {
+		widget(447, 14).setIsHidden(false);
+		widget(447, 1).setSize(widget(447, 1).getWidth(), 79, 0, 0);
+	} else {
+		widget(447, 14).setIsHidden(true);
+		widget(447, 1).setSize(widget(447, 1).getWidth(), 45, 0, 0);
+	}
+	int0 = 0;
+	int1 = 0;
+	int0 = script_4699(widget(447, 11), widget(447, 12), widget(447, 13), "Wave", str0);
+	if (VARC[1537] != 0) {
+		int1 = script_4699(widget(447, 14), widget(447, 16), widget(447, 17), "Waiting?", str1);
+	}
+	int0 = max(int0, int1);
+	if (int0 > widget(447, 1).getWidth()) {
+		widget(447, 1).setSize(int0 + 5, widget(447, 1).getHeight(), 0, 0);
+	}
+	return;
+}

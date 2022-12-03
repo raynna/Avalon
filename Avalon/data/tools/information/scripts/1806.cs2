@@ -1,0 +1,30 @@
+void script_1806(string string0) {
+	int int0;
+	script_1548(12);
+	string0 = lower(removeTags(string0));
+	int0 = length(string0);
+	string0 = script_2332(string0, "_", " ");
+	string0 = script_2332(string0, " ", " ");
+	while (indexOf(string0, " ", 0) == 0 && int0 > 0) {
+		string0 = substr(string0, 1, int0);
+		int0 = length(string0);
+	}
+	while (indexOf(string0, " ", int0 - 1) == int0 - 1 && int0 > 0) {
+		string0 = substr(string0, 0, int0 - 1);
+		int0 = length(string0);
+	}
+	if (compare(STRING[38], string0) == 0) {
+		msg("Caller not changed.");
+		return;
+	}
+	STRING[38] = string0;
+	if (length(STRING[38]) > 0) {
+		msg("Caller set: " + script_1814(STRING[38]));
+	} else {
+		msg("Caller feature disabled.");
+	}
+	script_1809(widget(265, 22), widget(265, 24), widget(265, 25));
+	script_1809(widget(789, 14), widget(789, 16), widget(789, 17));
+	script_1809(widget(1112, 5), widget(1112, 7), widget(1112, 8));
+	return;
+}

@@ -1,0 +1,12 @@
+void script_1791(Widget widget0) {
+	int int1;
+	int int2;
+	int1 = VARC[270] / 60;
+	int2 = VARC[270] % 60;
+	if (int2 >= 10) {
+		widget0.setText(str(int1) + "h " + str(int2) + "m");
+	} else {
+		widget0.setText(str(int1) + "h 0" + str(int2) + "m");
+	}
+	return;
+}

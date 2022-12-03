@@ -1,0 +1,244 @@
+void script_498(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	AttrMap attrmap13;
+	int6 = 0;
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int10 = 0;
+	int11 = 0;
+	int12 = 0;
+	attrmap13 = null;
+	if (arg0 == VARC[1372] && arg1 == VARC[1373] && arg2 == VARC[1374] && arg3 == VARC[1375] && arg4 == VARC[1376] && arg5 == VARC[1377]) {
+		return;
+	}
+	widget(1012, 0).setScriptCallOnGlobalConfigChange(498, VARC[1372], VARC[1373], VARC[1374], VARC[1375], VARC[1376], VARC[1377], 1372, 1373, 1374, 1375, 1376, 1377, "iiiiiiY");
+	if (VARC[1367] != -1) {
+		int6 = VARC[1372] + VARC[1373] + VARC[1374] + VARC[1375] + VARC[1376] + VARC[1377];
+		if (int6 == 0) {
+			widget(1012, 14).setIsHidden(true);
+			widget(1012, 29).setIsHidden(false);
+		} else {
+			widget(1012, 14).setIsHidden(false);
+			widget(1012, 29).setIsHidden(true);
+		}
+		if (int6 == 1) {
+			widget(1012, 15).setIsHidden(false);
+			widget(1012, 15).setPosition(82, widget(1012, 15).getY(), 0, 0);
+			if (VARC[1372] == 1) {
+				attrmap13 = (AttrMap)293;
+			} else if (VARC[1373] == 1) {
+				attrmap13 = (AttrMap)299;
+			} else if (VARC[1374] == 1) {
+				attrmap13 = (AttrMap)305;
+			} else if (VARC[1375] == 1) {
+				attrmap13 = (AttrMap)1044;
+			} else if (VARC[1376] == 1) {
+				attrmap13 = (AttrMap)1045;
+			} else {
+				attrmap13 = (AttrMap)1046;
+			}
+			widget(1012, 15).setSprite(getAttributeMapValue(attrmap13, 1153));
+			widget(1012, 15).setScriptCallOnMouseOver(499, getAttributeMapValue(attrmap13, 1149), "i");
+			widget(1012, 16).setIsHidden(true);
+			widget(1012, 17).setIsHidden(true);
+			widget(1012, 18).setIsHidden(true);
+			widget(1012, 19).setIsHidden(true);
+		} else if (int6 == 2) {
+			widget(1012, 15).setIsHidden(false);
+			widget(1012, 15).setPosition(50, widget(1012, 15).getY(), 0, 0);
+			if (VARC[1372] == 1) {
+				attrmap13 = (AttrMap)293;
+			} else if (VARC[1373] == 1) {
+				attrmap13 = (AttrMap)299;
+				int8 = 1;
+			} else if (VARC[1374] == 1) {
+				attrmap13 = (AttrMap)305;
+				int9 = 1;
+			} else if (VARC[1375] == 1) {
+				attrmap13 = (AttrMap)1044;
+				int10 = 1;
+			} else {
+				attrmap13 = (AttrMap)1045;
+				int11 = 1;
+			}
+			widget(1012, 15).setSprite(getAttributeMapValue(attrmap13, 1153));
+			widget(1012, 15).setScriptCallOnMouseOver(499, getAttributeMapValue(attrmap13, 1149), "i");
+			widget(1012, 16).setIsHidden(false);
+			widget(1012, 16).setPosition(115, widget(1012, 16).getY(), 0, 0);
+			if (VARC[1373] == 1 && int8 == 0) {
+				attrmap13 = (AttrMap)299;
+			} else if (VARC[1374] == 1 && int9 == 0) {
+				attrmap13 = (AttrMap)305;
+			} else if (VARC[1375] == 1 && int10 == 0) {
+				attrmap13 = (AttrMap)1044;
+			} else if (VARC[1376] == 1 && int11 == 0) {
+				attrmap13 = (AttrMap)1045;
+			} else {
+				attrmap13 = (AttrMap)1046;
+			}
+			widget(1012, 16).setSprite(getAttributeMapValue(attrmap13, 1153));
+			widget(1012, 16).setScriptCallOnMouseOver(499, getAttributeMapValue(attrmap13, 1149), "i");
+			widget(1012, 17).setIsHidden(true);
+			widget(1012, 18).setIsHidden(true);
+			widget(1012, 19).setIsHidden(true);
+		} else if (int6 == 3) {
+			widget(1012, 15).setIsHidden(false);
+			widget(1012, 15).setPosition(30, widget(1012, 15).getY(), 0, 0);
+			if (VARC[1372] == 1) {
+				attrmap13 = (AttrMap)293;
+			} else if (VARC[1373] == 1) {
+				attrmap13 = (AttrMap)299;
+				int8 = 1;
+			} else if (VARC[1374] == 1) {
+				attrmap13 = (AttrMap)305;
+				int9 = 1;
+			} else {
+				attrmap13 = (AttrMap)1044;
+				int10 = 1;
+			}
+			widget(1012, 15).setSprite(getAttributeMapValue(attrmap13, 1153));
+			widget(1012, 15).setScriptCallOnMouseOver(499, getAttributeMapValue(attrmap13, 1149), "i");
+			widget(1012, 16).setIsHidden(false);
+			widget(1012, 16).setPosition(80, widget(1012, 16).getY(), 0, 0);
+			if (VARC[1373] == 1 && int8 == 0) {
+				attrmap13 = (AttrMap)299;
+			} else if (VARC[1374] == 1 && int9 == 0) {
+				attrmap13 = (AttrMap)305;
+				int9 = 1;
+			} else if (VARC[1375] == 1 && int10 == 0) {
+				attrmap13 = (AttrMap)1044;
+				int10 = 1;
+			} else {
+				attrmap13 = (AttrMap)1045;
+				int11 = 1;
+			}
+			widget(1012, 16).setSprite(getAttributeMapValue(attrmap13, 1153));
+			widget(1012, 16).setScriptCallOnMouseOver(499, getAttributeMapValue(attrmap13, 1149), "i");
+			widget(1012, 17).setIsHidden(false);
+			widget(1012, 17).setPosition(130, widget(1012, 17).getY(), 0, 0);
+			if (VARC[1374] == 1 && int9 == 0) {
+				attrmap13 = (AttrMap)305;
+			} else if (VARC[1375] == 1 && int10 == 0) {
+				attrmap13 = (AttrMap)1044;
+			} else if (VARC[1376] == 1 && int11 == 0) {
+				attrmap13 = (AttrMap)1045;
+			} else {
+				attrmap13 = (AttrMap)1046;
+			}
+			widget(1012, 17).setSprite(getAttributeMapValue(attrmap13, 1153));
+			widget(1012, 17).setScriptCallOnMouseOver(499, getAttributeMapValue(attrmap13, 1149), "i");
+			widget(1012, 18).setIsHidden(true);
+			widget(1012, 19).setIsHidden(true);
+		} else if (int6 == 4) {
+			widget(1012, 15).setIsHidden(false);
+			widget(1012, 15).setPosition(18, widget(1012, 15).getY(), 0, 0);
+			if (VARC[1372] == 1) {
+				attrmap13 = (AttrMap)293;
+			} else if (VARC[1373] == 1) {
+				attrmap13 = (AttrMap)299;
+				int8 = 1;
+			} else {
+				attrmap13 = (AttrMap)305;
+				int9 = 1;
+			}
+			widget(1012, 15).setSprite(getAttributeMapValue(attrmap13, 1153));
+			widget(1012, 15).setScriptCallOnMouseOver(499, getAttributeMapValue(attrmap13, 1149), "i");
+			widget(1012, 16).setIsHidden(false);
+			widget(1012, 16).setPosition(61, widget(1012, 16).getY(), 0, 0);
+			if (VARC[1373] == 1 && int8 == 0) {
+				attrmap13 = (AttrMap)299;
+			} else if (VARC[1374] == 1 && int9 == 0) {
+				attrmap13 = (AttrMap)305;
+				int9 = 1;
+			} else {
+				attrmap13 = (AttrMap)1044;
+				int10 = 1;
+			}
+			widget(1012, 16).setSprite(getAttributeMapValue(attrmap13, 1153));
+			widget(1012, 16).setScriptCallOnMouseOver(499, getAttributeMapValue(attrmap13, 1149), "i");
+			widget(1012, 17).setIsHidden(false);
+			widget(1012, 17).setPosition(104, widget(1012, 17).getY(), 0, 0);
+			if (VARC[1374] == 1 && int9 == 0) {
+				attrmap13 = (AttrMap)305;
+			} else if (VARC[1375] == 1 && int10 == 0) {
+				attrmap13 = (AttrMap)1044;
+				int10 = 1;
+			} else {
+				attrmap13 = (AttrMap)1045;
+				int11 = 1;
+			}
+			widget(1012, 17).setSprite(getAttributeMapValue(attrmap13, 1153));
+			widget(1012, 17).setScriptCallOnMouseOver(499, getAttributeMapValue(attrmap13, 1149), "i");
+			widget(1012, 18).setIsHidden(false);
+			widget(1012, 18).setPosition(147, widget(1012, 18).getY(), 0, 0);
+			if (VARC[1375] == 1 && int10 == 0) {
+				attrmap13 = (AttrMap)1044;
+			} else if (VARC[1376] == 1 && int11 == 0) {
+				attrmap13 = (AttrMap)1045;
+			} else {
+				attrmap13 = (AttrMap)1046;
+			}
+			widget(1012, 18).setSprite(getAttributeMapValue(attrmap13, 1153));
+			widget(1012, 18).setScriptCallOnMouseOver(499, getAttributeMapValue(attrmap13, 1149), "i");
+			widget(1012, 19).setIsHidden(true);
+		} else {
+			widget(1012, 15).setIsHidden(false);
+			widget(1012, 15).setPosition(11, widget(1012, 15).getY(), 0, 0);
+			if (VARC[1372] == 1) {
+				attrmap13 = (AttrMap)293;
+			} else {
+				attrmap13 = (AttrMap)299;
+				int8 = 1;
+			}
+			widget(1012, 15).setSprite(getAttributeMapValue(attrmap13, 1153));
+			widget(1012, 15).setScriptCallOnMouseOver(499, getAttributeMapValue(attrmap13, 1149), "i");
+			widget(1012, 16).setIsHidden(false);
+			widget(1012, 16).setPosition(47, widget(1012, 16).getY(), 0, 0);
+			if (VARC[1373] == 1 && int8 == 0) {
+				attrmap13 = (AttrMap)299;
+			} else {
+				attrmap13 = (AttrMap)305;
+				int9 = 1;
+			}
+			widget(1012, 16).setSprite(getAttributeMapValue(attrmap13, 1153));
+			widget(1012, 16).setScriptCallOnMouseOver(499, getAttributeMapValue(attrmap13, 1149), "i");
+			widget(1012, 17).setIsHidden(false);
+			widget(1012, 17).setPosition(83, widget(1012, 17).getY(), 0, 0);
+			if (VARC[1374] == 1 && int9 == 0) {
+				attrmap13 = (AttrMap)305;
+			} else {
+				attrmap13 = (AttrMap)1044;
+				int10 = 1;
+			}
+			widget(1012, 17).setSprite(getAttributeMapValue(attrmap13, 1153));
+			widget(1012, 17).setScriptCallOnMouseOver(499, getAttributeMapValue(attrmap13, 1149), "i");
+			widget(1012, 18).setIsHidden(false);
+			widget(1012, 18).setPosition(119, widget(1012, 18).getY(), 0, 0);
+			if (VARC[1375] == 1 && int10 == 0) {
+				attrmap13 = (AttrMap)1044;
+			} else {
+				attrmap13 = (AttrMap)1045;
+				int11 = 1;
+			}
+			widget(1012, 18).setSprite(getAttributeMapValue(attrmap13, 1153));
+			widget(1012, 18).setScriptCallOnMouseOver(499, getAttributeMapValue(attrmap13, 1149), "i");
+			widget(1012, 19).setIsHidden(false);
+			widget(1012, 19).setPosition(155, widget(1012, 19).getY(), 0, 0);
+			if (VARC[1376] == 1 && int11 == 0) {
+				attrmap13 = (AttrMap)1045;
+			} else {
+				attrmap13 = (AttrMap)1046;
+			}
+			widget(1012, 19).setSprite(getAttributeMapValue(attrmap13, 1153));
+			widget(1012, 19).setScriptCallOnMouseOver(499, getAttributeMapValue(attrmap13, 1149), "i");
+		}
+	}
+	return;
+}

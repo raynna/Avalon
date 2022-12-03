@@ -1,0 +1,31 @@
+void script_4199(Widget widget0) {
+	widget0.setSprite(5416);
+	widget(891, 76).setIsHidden(false);
+	widget(891, 65).setIsHidden(false);
+	if (widget0 == widget(891, 56)) {
+		widget(891, 75).setText("Cannon Room");
+		widget(891, 77).setText("62+");
+		widget(891, 78).setText("(Members only) Fix up broken cannons. This offers fast XP, for medium resource costs.");
+	}
+	if (widget0 == widget(891, 57)) {
+		widget(891, 75).setText("Burial Armour Room");
+		widget(891, 77).setText("30-70");
+		widget(891, 78).setText("Forge burial armour in line with the taskmaster's orders. Different XP rates at a range of resource costs.");
+	}
+	if (widget0 == widget(891, 58)) {
+		widget(891, 75).setText("Ceremonial Sword Room");
+		widget(891, 77).setText("70+");
+		widget(891, 78).setText("(Members Only) Smith beautiful ceremonial swords. High XP rate, for reasonably high resource costs.");
+	}
+	if (widget0 == widget(891, 59)) {
+		widget(891, 75).setText("Track Room");
+		widget(891, 77).setText("1-30");
+		widget(891, 78).setText("Build up sections of mine cart tracks. Low XP rate, no resource costs.");
+	}
+	if (widget0 == widget(891, 60)) {
+		widget(891, 75).setText("Reward Shop");
+		widget(891, 77).setText("--");
+		widget(891, 78).setText("Purchase unique rewards using respect earned in the workshop.");
+	}
+	return;
+}

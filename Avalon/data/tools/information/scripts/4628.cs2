@@ -1,0 +1,8 @@
+void script_4628() {
+	VARC[1518] = -1;
+	STRING[126] = "";
+	if (ACTIVE.setChild(widget(1110, 20))) {
+		ACTIVE.setScriptCallOnGameloop(4629, 0, "i");
+	}
+	return;
+}

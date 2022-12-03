@@ -1,0 +1,9 @@
+void script_697(Widget widget0) {
+	if (ACTIVE.setChild(widget0)) {
+		ACTIVE.setOutlineThickness(2);
+	}
+	if (ACTIVE.setChild(widget(662, 74), 0) && bitAnd(ACTIVE.getTargetMask(), 32) != 0) {
+		script_71(4);
+	}
+	return;
+}

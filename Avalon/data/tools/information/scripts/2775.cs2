@@ -1,0 +1,8 @@
+void script_2775(int arg0, Widget widget1) {
+	if (getClientCycle() < arg0) {
+		return;
+	}
+	widget1.setScriptCallOnGameloop(-1, "");
+	widget1.setRGB(0xFF3030);
+	return;
+}

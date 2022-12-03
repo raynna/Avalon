@@ -1,0 +1,5 @@
+void script_2133(Widget widget0) {
+	widget0.setAnimation(1);
+	playSoundEffect(819, 1, 0);
+	return;
+}

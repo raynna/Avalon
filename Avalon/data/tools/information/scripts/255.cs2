@@ -1,0 +1,4 @@
+void script_255() {
+	widget(919, 0).setScriptCallOnGlobalConfigChange(256, 1111, 1112, 1113, 1114, 1115, 1116, "Y");
+	return;
+}

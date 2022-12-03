@@ -1,0 +1,76 @@
+void script_2160(int arg0) {
+	AttrMap attrmap1;
+	DataMap datamap2;
+	Widget widget3;
+	Widget widget4;
+	int int5;
+	int int6;
+	AttrMap attrmap7;
+	int int8;
+	int int9;
+	attrmap1 = datamap('i', 'J', (DataMap)169, arg0);
+	if (attrmap1 == null) {
+		return;
+	}
+	datamap2 = getAttributeMapValue(attrmap1, 61);
+	if (datamap2 == null) {
+		return;
+	}
+	widget3 = getAttributeMapValue(attrmap1, 152);
+	widget4 = getAttributeMapValue(attrmap1, 153);
+	widget3.clearChildren();
+	int5 = 0;
+	int6 = 0;
+	attrmap7 = null;
+	int8 = -1;
+	int9 = 0;
+	if (isMember()) {
+		VARC[693] = VARPBIT[4536];
+	} else {
+		VARC[693] = 0;
+	}
+	VARC[694] = VARPBIT[4538];
+	VARC[1103] = VARPBIT[7264];
+	VARC[692] = VARPBIT[4537];
+	VARC[272] = datamapSize(datamap2);
+	while (int6 < VARC[272]) {
+		attrmap7 = datamap('i', 'J', datamap2, int5);
+		ACTIVE.createChild(widget3, 4, int5);
+		if (attrmap7 != null) {
+			int6 = int6 + 1;
+			int9 = script_2193(int5);
+			ACTIVE.setPosition(0, 0, 0, 0);
+			ACTIVE.setSize(0, 15, 1, 0);
+			ACTIVE.setRGB(0x222222);
+			ACTIVE.setFont(494);
+			ACTIVE.setTextAlignment(0, 0, 0);
+			ACTIVE.setTextAntiMacro(true);
+			ACTIVE.setText(getAttributeMapValue(attrmap7, 845));
+			if (int8 == -1 && attrmap7 == (AttrMap)510 && arg0 == 1) {
+				int8 = ACTIVE.getChildId();
+			}
+		} else {
+			ACTIVE.setHidden(true);
+		}
+		int5 = int5 + 1;
+	}
+	VARC[273] = int5 - 1;
+	while (int5 < VARC[273] + 10) {
+		ACTIVE.createChild(widget3, 4, int5);
+		ACTIVE.setFont(496);
+		ACTIVE.setSize(0, 30, 1, 0);
+		ACTIVE.setSize(0, 20, 1, 0);
+		ACTIVE.setTextAlignment(0, 1, 0);
+		ACTIVE.setText("");
+		ACTIVE.setRGB(0xFF9900);
+		ACTIVE.setHidden(true);
+		ACTIVE.setTextAntiMacro(true);
+		int5 = int5 + 1;
+	}
+	script_2162(arg0, VARC[693], VARC[694], VARC[692], VARC[1103]);
+	script_31(widget4, widget3, 792, 789, 790, 791, 773, 788);
+	if (int8 != -1) {
+		script_214(widget3, int8);
+	}
+	return;
+}

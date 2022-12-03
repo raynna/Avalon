@@ -1,0 +1,44 @@
+void script_2378(Widget widget0) {
+	Widget widget1;
+	widget1 = null;
+	switch (VARPBIT[6099]) {
+		case 0:
+			widget1 = widget(900, 23);
+			break;
+		case 1:
+			widget1 = widget(900, 24);
+			break;
+		case 2:
+			widget1 = widget(900, 25);
+			break;
+		case 3:
+			widget1 = widget(900, 26);
+			break;
+		case 4:
+			widget1 = widget(900, 27);
+			break;
+		case 5:
+			widget1 = widget(900, 28);
+			break;
+		case 6:
+			widget1 = widget(900, 29);
+			break;
+		case 7:
+			widget1 = widget(900, 22);
+			break;
+		case 8:
+			widget1 = widget(900, 21);
+			break;
+		case 9:
+			widget1 = widget(900, 20);
+			break;
+		case 10:
+			widget1 = widget(900, 30);
+			break;
+		case 11:
+			widget1 = widget(900, 31);
+			break;
+	}
+	script_2380(widget1, widget0);
+	return;
+}

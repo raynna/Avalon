@@ -1,0 +1,20 @@
+void script_1453(int arg0) {
+	Item item1;
+	item1 = getItemIdInSlot(95, arg0);
+	ACTIVE.setItem(item1, getItemAmtInSlot(95, arg0));
+	ACTIVE.setOptionBase("<col=ff981f>" + getItemName(getItemIdInSlot(95, arg0)));
+	ACTIVE.setContextMenuOption(1, "Withdraw-1");
+	ACTIVE.setContextMenuOption(2, "Withdraw-5");
+	ACTIVE.setContextMenuOption(3, "Withdraw-10");
+	ACTIVE.setContextMenuOption(4, "Withdraw-" + str(VARP[1249]));
+	ACTIVE.setContextMenuOption(5, "Withdraw-X");
+	ACTIVE.setContextMenuOption(6, "Withdraw-All");
+	ACTIVE.setContextMenuOption(7, "Withdraw-All but one");
+	ACTIVE.setContextMenuOption(10, "Examine" + "<col=ff9040>");
+	ACTIVE.setDraggable(widget(762, 0), -1);
+	ACTIVE.setDragDeadZone(5);
+	ACTIVE.setDragDeadTime(5);
+	ACTIVE.setScriptCallOnMouseDragged(1454, MOUSE_Y, "i");
+	ACTIVE.setScriptCallOnMouseDragReleased(1482, DRAG_WIDGET, "I");
+	return;
+}

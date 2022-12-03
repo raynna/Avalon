@@ -1,0 +1,10 @@
+void script_2087() {
+	if (VARC[649] <= 5) {
+		widget(836, 30).setRGB(0x3366FF);
+	} else if (VARC[649] >= 25) {
+		widget(836, 30).setRGB(0xE12323);
+	} else {
+		widget(836, 30).setRGB(0x666666);
+	}
+	return;
+}

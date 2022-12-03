@@ -1,0 +1,21 @@
+void script_253() {
+	widget(923, 0).setScriptCallOnGlobalConfigChange(260, 1104, 1105, 1106, 1107, 1108, 1109, 1110, "Y");
+	widget(923, 80).setItemOnWidgetMethod2205(15658, 0);
+	widget(923, 81).setItemOnWidgetMethod2205(15661, 0);
+	widget(923, 82).setItemOnWidgetMethod2205(15662, 0);
+	widget(923, 83).setItemOnWidgetMethod2205(15664, 0);
+	widget(923, 84).setItemOnWidgetMethod2205(15665, 0);
+	widget(923, 85).setItemOnWidgetMethod2205(15663, 0);
+	widget(923, 86).setItemOnWidgetMethod2205(15660, 0);
+	widget(923, 87).setItemOnWidgetMethod2205(15659, 0);
+	widget(919, 0).setScriptCallOnGlobalConfigChange(256, 1111, 1113, 1112, 1114, 1115, 1116, 1117, "Y");
+	VARC[1111] = 0;
+	VARC[1112] = 0;
+	VARC[1113] = 0;
+	VARC[1114] = 0;
+	VARC[1115] = 0;
+	VARC[1116] = 0;
+	VARC[1117] = -1;
+	widget(919, 6).setScrollMax(widget(919, 6).getWidth(), widget(919, 6).getHeight());
+	return;
+}

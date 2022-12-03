@@ -1,0 +1,48 @@
+void script_366(Widget widget0, int arg1, DataMap datamap2, int arg3, int arg4, boolean boolean5, int arg6, Widget widget7, string string8, int arg9) {
+	int int9;
+	int int10;
+	Widget widget11;
+	if (widget0 != null) {
+		if (boolean5) {
+			script_365(widget0, arg3, 1);
+		} else {
+			script_365(widget0, arg3, 0);
+		}
+		if (arg6 == 1) {
+			widget0.setScriptCallOnGameloop(367, widget0, arg4, boolean5, "Ii1");
+		}
+	} else {
+		script_365(widget7, arg3, 2);
+	}
+	if (ACTIVE.setChild(widget7)) {
+		if (boolean5) {
+			if (length(string8) > 0) {
+				script_379(string8, script_3365(widget7), widget7.getWidth(), script_3366(widget7), arg9);
+			}
+		} else if (script_3365(widget7) == VARC[2] && widget7.getWidth() == VARC[773]) {
+			script_383();
+		}
+	}
+	if (datamap2 == null) {
+		return;
+	}
+	int9 = 0;
+	int10 = datamapSize(datamap2);
+	widget11 = null;
+	if (boolean5) {
+		while (int9 < int10) {
+			if (int9 != arg1) {
+				widget11 = datamap('i', 'I', datamap2, int9);
+				if (widget11 == null) {
+					return;
+				}
+				if (widget11 != widget0 && !widget11.isHidden()) {
+					widget11.setScriptCallOnGameloop(367, widget11, arg4, false, "Ii1");
+					script_365(widget11, arg3, 0);
+				}
+			}
+			int9 = int9 + 1;
+		}
+	}
+	return;
+}

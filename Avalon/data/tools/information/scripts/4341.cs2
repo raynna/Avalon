@@ -1,0 +1,32 @@
+string, string script_4341(int arg0, int arg1, int arg2) {
+	int int3;
+	string str0;
+	string str1;
+	string str2;
+	str0 = str(arg1);
+	str1 = str(arg2);
+	int3 = 0;
+	str2 = "";
+	int3 = 60 * arg1 + arg0 + arg2;
+	if (int3 < 0) {
+		int3 = 1440 + int3;
+	}
+	arg2 = int3 % 60;
+	arg1 = int3 / 60;
+	if (arg1 > 23) {
+		arg1 = arg1 - 24;
+	} else if (arg1 < 0) {
+		arg1 = 24 - arg1;
+	}
+	if (arg1 < 10) {
+		str0 = "0" + str(arg1);
+	} else {
+		str0 = str(arg1);
+	}
+	if (arg2 < 10) {
+		str1 = "0" + str(arg2);
+	} else {
+		str1 = str(arg2);
+	}
+	return str0, str1;
+}

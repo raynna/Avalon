@@ -1,0 +1,10 @@
+void script_5143(Widget widget0, Widget widget1) {
+	if (widget0.isHidden()) {
+		widget0.setIsHidden(false);
+		widget1.setIsHidden(true);
+	} else {
+		widget0.setIsHidden(true);
+		widget1.setIsHidden(false);
+	}
+	return;
+}

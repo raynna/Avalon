@@ -1,0 +1,10 @@
+void script_3167(Widget widget0, int arg1, string string2) {
+	Widget widget2;
+	widget2 = widget(912, 48);
+	if (ACTIVE.setChild(widget0, arg1)) {
+		widget2.setIsHidden(false);
+		widget2.setPosition(widget2.getX(), ACTIVE.getY(), 0, 0);
+		ACTIVE.setScriptCallOnMouseOver(3168, widget0, arg1, getClientCycle() + 25, string2, MOUSE_X, MOUSE_Y, "Iiisii");
+	}
+	return;
+}

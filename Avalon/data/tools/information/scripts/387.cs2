@@ -1,0 +1,159 @@
+void script_387(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	DataMap datamap7;
+	int int8;
+	Widget widget9;
+	Sprite sprite10;
+	int int11;
+	int int12;
+	AttrMap attrmap13;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	str0 = "Select Character";
+	str1 = "Select Style";
+	str2 = "Style";
+	int1 = 0;
+	int1 = max(max(getTextWidth(str0, 468) + 40, getTextWidth(str1, 468)), getTextWidth(str2, 468));
+	widget(1028, 36).setPosition(0, 0, 0, 0);
+	script_362(widget(1028, 36), str0, int1);
+	script_362(widget(1028, 37), str1, int1);
+	int2 = widget(1028, 37).nextChild();
+	if (ACTIVE.setChild(widget(1028, 37), int2 - 1)) {
+		ACTIVE.setHidden(true);
+	}
+	ACTIVE.createChild(widget(1028, 37), 4, int2);
+	ACTIVE.setSize(0, 0, 1, 1);
+	ACTIVE.setPosition(0, 0, 1, 1);
+	ACTIVE.setFont(468);
+	ACTIVE.setRGB(0x241B12);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setText(str2);
+	ACTIVE.setHidden(true);
+	str0, str1 = widget(1028, 38).getOption(1), widget(1028, 39).getOption(1);
+	int3 = datamapSize((DataMap)3280);
+	int4 = 0;
+	int5 = 0;
+	int6 = 73;
+	datamap7 = (DataMap)3278;
+	int2 = widget(1028, 36).getX() + int1 + 20;
+	int1 = max(getTextWidth(str0, 495), getTextWidth(str1, 495)) + 30;
+	widget(1028, 38).setPosition(int2, widget(1028, 38).getY(), 0, 0);
+	script_368(widget(1028, 38), str0, int1, "");
+	int2 = int2 + int1 + 10;
+	widget(1028, 39).setPosition(int2, widget(1028, 38).getY(), 0, 0);
+	script_368(widget(1028, 39), str1, int1, "");
+	int4 = min(int3, datamapSize(datamap7));
+	int5 = (int4 + 1) / 2;
+	int1 = max(int5 * int6 + (89 - int6), 4 * 5 / 765);
+	widget(1028, 35).setSize(int1, 26, 0, 1);
+	widget(1028, 114).setSize(int1, widget(1028, 35).getHeight(), 0, 0);
+	widget(1028, 47).setSize(0, 180, 1, 0);
+	widget(1028, 71).setPosition(0, 237, 1, 0);
+	widget(1028, 40).setSize(int1 - (int2 + widget(1028, 39).getWidth() + 42), widget(1028, 40).getHeight(), 0, 0);
+	widget(1028, 40).setPosition(widget(1028, 40).getX(), widget(1028, 38).getY(), 0, 0);
+	script_389();
+	int8 = VARC[197] - 1;
+	if (int8 <= -1) {
+		widget(1028, 37).setIsHidden(true);
+		widget(1028, 115).setIsHidden(true);
+		widget(1028, 117).setIsHidden(true);
+		widget(1028, 112).setIsHidden(true);
+		widget(1028, 113).setIsHidden(true);
+	} else {
+		widget(1028, 37).setIsHidden(false);
+		widget(1028, 115).setIsHidden(false);
+		if (VARPBIT[8246] == 1 && VARPBIT[8247] == 0) {
+			widget(1028, 117).setIsHidden(true);
+		} else {
+			widget(1028, 117).setIsHidden(false);
+		}
+		widget(1028, 112).setIsHidden(false);
+		widget(1028, 113).setIsHidden(false);
+	}
+	widget9 = null;
+	str3 = "";
+	sprite10 = null;
+	int11 = 0;
+	int12 = 1;
+	attrmap13 = datamap('i', 'J', datamap7, int8);
+	script_385(attrmap13);
+	int2 = widget(1028, 47).getHeight() - (89 + 17);
+	while (int11 < int4) {
+		widget9 = datamap('i', 'I', (DataMap)3280, int11);
+		if (widget9 != null) {
+			if (int11 < int5) {
+				if (int11 == int8) {
+					widget9.setPosition(int6 * int11, 0, 0, 0);
+				} else {
+					widget9.setPosition(int6 * int11, int2, 0, 2);
+				}
+				if (int11 <= int8 || int8 <= -1) {
+					widget9.sendChildFront();
+				} else {
+					widget9.sendChildBack();
+				}
+			} else {
+				if (int11 == int8) {
+					widget9.setPosition(int6 * (int11 - int5), 17, 0, 2);
+				} else {
+					widget9.setPosition(int6 * (int11 - int5), 0, 0, 2);
+				}
+				if (int8 < int5 || int11 <= int8) {
+					widget9.sendChildFront();
+				}
+			}
+			widget9.setSize(89, 89, 0, 0);
+			attrmap13 = datamap('i', 'J', datamap7, int11);
+			if (attrmap13 != null) {
+				if (arg0 == 1) {
+					str3 = datamap('J', 's', (DataMap)3279, attrmap13);
+					sprite10 = getAttributeMapValue(attrmap13, 1162);
+				} else {
+					str3 = getAttributeMapValue(attrmap13, 1160);
+					sprite10 = getAttributeMapValue(attrmap13, 1161);
+				}
+				if (int11 == int8) {
+					int12 = 1;
+				} else {
+					int12 = 0;
+				}
+				script_363(widget9, int8, (DataMap)3280, sprite10, true, 51, 61, 2, str3, int12, "");
+				widget9.setScriptCallOnClickContextMenu(351, CTX_MENU_OPTION, int11 + 1, "ii");
+			} else {
+				script_363(widget9, -1, null, null, false, 0, 0, 0, "", 0, "");
+			}
+		}
+		int11 = int11 + 1;
+	}
+	while (int11 < int3) {
+		widget9 = datamap('i', 'I', (DataMap)3280, int11);
+		if (widget9 != null) {
+			widget9.setIsHidden(true);
+		}
+		int11 = int11 + 1;
+	}
+	if (int8 >= int5) {
+		int11 = int4 - 1;
+		while (int11 >= int8) {
+			widget9 = datamap('i', 'I', (DataMap)3280, int11);
+			if (widget9 != null) {
+				widget9.sendChildFront();
+			}
+			int11 = int11 - 1;
+		}
+	} else {
+		widget9 = datamap('i', 'I', (DataMap)3280, int8);
+		if (widget9 != null) {
+			widget9.sendChildFront();
+		}
+	}
+	return;
+}

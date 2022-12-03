@@ -1,0 +1,8 @@
+void script_4551() {
+	widget(550, 4).setScriptCallOnFriendListChange(128, "");
+	script_31(widget(550, 31), widget(550, 3), 5666, 5663, 5664, 5665, 5686, 5685);
+	widget(550, 3).setScrollMax(0, 0);
+	widget(550, 3).setScrollPos(0, 0);
+	script_129();
+	return;
+}

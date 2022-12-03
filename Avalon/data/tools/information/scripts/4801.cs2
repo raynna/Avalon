@@ -1,0 +1,23 @@
+void script_4801(int arg0) {
+	switch (arg0) {
+		case 1:
+			VARC[1659] = 1;
+			widget(1143, 11).setText("Price: High-Low");
+			break;
+		case 2:
+			VARC[1659] = 2;
+			widget(1143, 11).setText("Name: A-Z");
+			break;
+		case 3:
+			VARC[1659] = 3;
+			widget(1143, 11).setText("Name: Z-A");
+			break;
+		default:
+			VARC[1659] = 0;
+			widget(1143, 11).setText("Price: Low-High");
+			break;
+	}
+	widget(1143, 6).setIsHidden(true);
+	script_5350(VARPBIT[9487], widget(1143, 126));
+	return;
+}

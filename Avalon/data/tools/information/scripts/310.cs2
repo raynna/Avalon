@@ -1,0 +1,12 @@
+void script_310(string string0, Widget widget1, int arg2) {
+	int int2;
+	int int3;
+	int2 = 0;
+	int3 = 0;
+	if (ACTIVE.setChild(widget1, arg2)) {
+		int2, int3 = ACTIVE.getX() + ACTIVE.getHeight() + 1, ACTIVE.getY() + ACTIVE.getHeight() + 1;
+		int3 = int3 - widget1.getScrollY();
+		script_312(string0, int2, int3);
+	}
+	return;
+}

@@ -1,0 +1,40 @@
+void script_4991() {
+	int int0;
+	int int1;
+	script_4993();
+	script_4994();
+	int0 = -1;
+	int1 = 0;
+	if (citadelConfigsInitialized()) {
+		int0 = CLANBIT[2580];
+		widget(1092, 198).setIsHidden(false);
+		widget(1092, 199).setIsHidden(false);
+		widget(1092, 200).setIsHidden(false);
+		widget(1092, 201).setIsHidden(false);
+		int1 = 4;
+		if (int0 >= 2) {
+			widget(1092, 202).setIsHidden(false);
+			int1 = int1 + 1;
+		}
+		if (int0 >= 3) {
+			widget(1092, 203).setIsHidden(false);
+			widget(1092, 204).setIsHidden(false);
+			int1 = int1 + 2;
+		}
+		if (int0 >= 5) {
+			widget(1092, 206).setIsHidden(false);
+			widget(1092, 833).setIsHidden(false);
+			int1 = int1 + 2;
+		}
+		if (int0 >= 6) {
+			widget(1092, 205).setIsHidden(false);
+			int1 = int1 + 1;
+		}
+		if (int1 % 2 != 0) {
+			int1 = int1 + 1;
+		}
+		widget(1092, 221).setScrollMax(widget(1092, 221).getWidth(), int1 / 2 * 58 + 6);
+		script_31(widget(1092, 220), widget(1092, 221), 5666, 5663, 5664, 5665, 5686, 5685);
+	}
+	return;
+}

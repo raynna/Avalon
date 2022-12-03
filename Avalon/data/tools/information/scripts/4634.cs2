@@ -1,0 +1,58 @@
+void script_4634(int arg0) {
+	int int1;
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	Widget widget6;
+	Widget widget7;
+	int1 = -1;
+	script_1174(11);
+	switch (arg0) {
+		case 1:
+			int1 = 0;
+			break;
+	}
+	VARC[1100] = -1;
+	int2 = 0;
+	int3 = 0;
+	int4 = 0;
+	int5 = 0;
+	if (cs2method5420() == 1 && script_2727() == 1 && VARC[547] == 0) {
+		VARC[174] = 12;
+		widget(744, 28).setIsHidden(false);
+		playMusicEffect(349, 0);
+		script_3412(widget(744, 42), widget(744, 43));
+		int4 = widget(744, 43).getWidth();
+		int5 = widget(744, 43).getWidth();
+		int2 = max(337, getTextWidth(widget(744, 42).getText(), 591) + 31);
+		int5 = max(152, getLineCount(widget(744, 43).getText(), int4, 496) * 16);
+		int3 = max(252, int5 + 100);
+		widget(744, 43).setSize(int4, int5, 0, 0);
+		widget(744, 28).setSize(int2, int3, 0, 0);
+		widget(744, 26).setIsHidden(true);
+		widget(744, 27).setIsHidden(true);
+		return;
+	}
+	VARC[200] = 0;
+	VARC[201] = 0;
+	widget6 = widget(596, 60);
+	widget7 = widget(596, 45);
+	if (hasSSKey()) {
+		widget6 = widget(975, 49);
+		widget7 = widget(975, 44);
+	}
+	widget6.setText("Logging in...");
+	widget7.setScriptCallOnMousePressed(-1, "");
+	script_2950(-3, 0, "Logging In - Please Wait", 1, null, 1, 1, "Abort Login", 0, "");
+	widget(596, 15).setScriptCallOnMousePressed(4635, "");
+	widget(596, 9).setIsHidden(false);
+	VARC[1100] = -3;
+	cs2method5632(int1);
+	if (hasSSKey()) {
+		widget(975, 26).setScriptCallOnGameloop(2946, arg0, "i");
+	} else {
+		widget(596, 7).setScriptCallOnGameloop(2946, arg0, "i");
+	}
+	return;
+}

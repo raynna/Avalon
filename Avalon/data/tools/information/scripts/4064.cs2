@@ -1,0 +1,8 @@
+void script_4064(Widget widget0) {
+	if (VARC[1431] == 1) {
+		return;
+	}
+	script_4065(widget0);
+	script_4069();
+	return;
+}

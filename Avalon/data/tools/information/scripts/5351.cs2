@@ -1,0 +1,346 @@
+int, int, int, int, int script_5351(AttrMap attrmap0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, Sprite sprite8, Sprite sprite9, Sprite sprite10) {
+	int int11;
+	int int12;
+	int int13;
+	Widget widget14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	Widget widget20;
+	Widget widget21;
+	Widget widget22;
+	Widget widget23;
+	Widget widget24;
+	Widget widget25;
+	int int26;
+	DataMap datamap27;
+	boolean boolean28;
+	Sprite sprite29;
+	Sprite sprite30;
+	Sprite sprite31;
+	int int32;
+	Sprite sprite33;
+	Sprite sprite34;
+	Sprite sprite35;
+	Sprite sprite36;
+	Sprite sprite37;
+	Sprite sprite38;
+	Sprite sprite39;
+	Color color40;
+	int int41;
+	string str0;
+	string str1;
+	int11 = 0;
+	int12 = 0;
+	int13 = 74907774;
+	widget14 = widget(1143, 59);
+	int15 = 74907693;
+	int16 = 74907694;
+	int17 = 74907695;
+	int18 = 74907696;
+	int19 = 74907697;
+	widget20 = widget(1143, 40);
+	widget21 = widget(1143, 41);
+	widget22 = widget(1143, 42);
+	widget23 = widget(1143, 43);
+	widget24 = widget(1143, 44);
+	widget25 = null;
+	int26 = 0;
+	datamap27 = null;
+	boolean28 = false;
+	sprite29 = null;
+	sprite30 = null;
+	sprite31 = null;
+	str0 = "";
+	int32 = 0;
+	sprite33 = 7874;
+	sprite34 = 7875;
+	sprite35 = 7877;
+	sprite36 = 7877;
+	sprite37 = 7875;
+	sprite38 = 7877;
+	sprite39 = 7874;
+	color40 = 0xE6BE78;
+	int41 = 0;
+	str1 = "Over";
+	if (attrmap0 != null) {
+		if (arg1 >= 3) {
+			arg2 = arg5;
+			arg3 = arg3 + arg4 + arg5;
+			arg1 = 0;
+		}
+		switch (getAttributeMapValue(attrmap0, 1937)) {
+			case 1:
+				widget25 = widget(int15);
+				datamap27 = (DataMap)5182;
+				break;
+			case 2:
+				widget25 = widget(int16);
+				datamap27 = (DataMap)3875;
+				break;
+			case 3:
+				widget25 = widget(int17);
+				if (!IsFemale()) {
+					datamap27 = (DataMap)5189;
+				} else {
+					datamap27 = (DataMap)5188;
+				}
+				break;
+			case 4:
+				widget25 = widget(int18);
+				datamap27 = (DataMap)5184;
+				break;
+			case 5:
+				widget25 = widget(int19);
+				datamap27 = (DataMap)5183;
+				break;
+		}
+		int26 = 0;
+		while (attrmap0 != datamap('i', 'J', datamap27, int26) && int26 < datamapSize(datamap27)) {
+			int26 = int26 + 1;
+		}
+		int32 = int26;
+		ACTIVE.createChild(widget14, 5, arg6);
+		arg6 = arg6 + 1;
+		ACTIVE.setPosition(arg2, arg3, 0, 0);
+		ACTIVE.setSprite(sprite8);
+		int12 = 58;
+		arg4 = 68;
+		arg2 = arg2 + int12;
+		ACTIVE.setSize(int12, arg4, 0, 0);
+		ACTIVE.createChild(widget14, 4, arg6);
+		arg6 = arg6 + 1;
+		ACTIVE.setPosition(arg2 - int12, arg3, 0, 0);
+		ACTIVE.setSize(int12 * 3, arg4, 0, 0);
+		ACTIVE.setScriptCallOnMouseEntered(5359, widget14, CTX_WIDGET_CHILD, attrmap0, true, "IiJ1");
+		ACTIVE.setScriptCallOnMouseExit(5359, widget14, CTX_WIDGET_CHILD, attrmap0, false, "IiJ1");
+		ACTIVE.createChild(widget14, 5, arg6);
+		arg6 = arg6 + 1;
+		ACTIVE.setPosition(arg2, arg3, 0, 0);
+		arg2 = arg2 + int12;
+		ACTIVE.setSprite(sprite9);
+		ACTIVE.setSize(int12, arg4, 0, 0);
+		ACTIVE.createChild(widget14, 5, arg6);
+		arg6 = arg6 + 1;
+		ACTIVE.setPosition(arg2, arg3, 0, 0);
+		arg2 = arg2 + int12;
+		arg2 = arg2 + arg5;
+		ACTIVE.setSprite(sprite10);
+		ACTIVE.setSize(int12, arg4, 0, 0);
+		switch (getAttributeMapValue(attrmap0, 1937)) {
+			case 1:
+				boolean28 = isBitFlagged(VARP[2229], int32);
+				break;
+			case 2:
+				boolean28 = isBitFlagged(VARP[2230], int32);
+				int41 = 1;
+				break;
+			case 3:
+				boolean28 = isBitFlagged(VARP[2231], int32);
+				break;
+			case 4:
+				boolean28 = isBitFlagged(VARP[2232], int32);
+				break;
+			case 5:
+				boolean28 = isBitFlagged(VARP[2232], int32 + 16);
+				int41 = 1;
+				break;
+		}
+		if (!boolean28) {
+			sprite29 = 7891;
+			sprite30 = 7893;
+			sprite31 = 7895;
+			str0 = "Buy";
+		} else {
+			sprite29 = 7892;
+			sprite30 = 7894;
+			sprite31 = 7896;
+			str0 = "Reclaim";
+			if (int41 == 1) {
+				str0 = "Unlocked";
+			}
+		}
+		ACTIVE.createChild(widget14, 5, arg6);
+		arg6 = arg6 + 1;
+		ACTIVE.setPosition(arg2 - 103, arg3 + 50, 0, 0);
+		ACTIVE.setSprite(sprite29);
+		ACTIVE.setSize(90, 23, 0, 0);
+		ACTIVE.createChild(widget14, 5, arg6);
+		if (!(boolean28 && int41 == 1)) {
+			ACTIVE.setScriptCallOnMouseEntered(4410, widget14, arg6, 0, "Iii");
+			ACTIVE.setScriptCallOnMouseExit(4410, widget14, arg6, 1, "Iii");
+		}
+		arg6 = arg6 + 1;
+		ACTIVE.setPosition(arg2 - 103, arg3 + 50, 0, 0);
+		ACTIVE.setSprite(sprite30);
+		ACTIVE.setSize(90, 23, 0, 0);
+		ACTIVE.setTrans(255);
+		ACTIVE.createChild(widget14, 5, arg6);
+		if (!(boolean28 && int41 == 1)) {
+			ACTIVE.setScriptCallOnMousePressed(5362, widget14, arg6, 0, "Iii");
+			ACTIVE.setScriptCallOnMouseReleased(5362, widget14, arg6, 1, "Iii");
+		}
+		arg6 = arg6 + 1;
+		ACTIVE.setPosition(arg2 - 103, arg3 + 50, 0, 0);
+		ACTIVE.setSprite(sprite31);
+		ACTIVE.setSize(90, 23, 0, 0);
+		ACTIVE.setTrans(255);
+		int26 = 0;
+		while (int26 < int32) {
+			if (!ACTIVE.setChild(widget25, int26)) {
+				ACTIVE.createChild(widget25, 4, int26);
+				ACTIVE.setHidden(true);
+			}
+			int26 = int26 + 1;
+		}
+		ACTIVE.createChild(widget25, 4, int32);
+		ACTIVE.setPosition(arg2 - 103, arg3 + 50, 0, 0);
+		ACTIVE.setText(str0);
+		ACTIVE.setFont(3793);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setRGB(color40);
+		ACTIVE.setTextAlignment(1, 1, 0);
+		ACTIVE.setSize(90, 23, 0, 0);
+		if (!(boolean28 && int41 == 1)) {
+			ACTIVE.setContextMenuOption(1, str0);
+		}
+		ACTIVE.createChild(widget14, 4, arg6);
+		arg6 = arg6 + 1;
+		ACTIVE.setPosition(arg2 - 120, arg3 + 10, 0, 0);
+		if (getAttributeMapValue(attrmap0, 1937) == 4) {
+			int11 = datamap('J', 'i', (DataMap)5185, attrmap0);
+			if (!IsFemale()) {
+				ACTIVE.setText(datamap('i', 's', (DataMap)3886, int11));
+			} else {
+				ACTIVE.setText(datamap('i', 's', (DataMap)3887, int11));
+			}
+			ACTIVE.setText(substr(ACTIVE.getText(), 0, length(ACTIVE.getText()) - 1));
+		} else {
+			ACTIVE.setText(getAttributeMapValue(attrmap0, 1930));
+		}
+		ACTIVE.setFont(3793);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setRGB(color40);
+		ACTIVE.setTextAlignment(1, 1, 12);
+		ACTIVE.setSize(107, 24, 0, 0);
+		if (getLineCount(ACTIVE.getText(), ACTIVE.getWidth(), ACTIVE.getFont()) > 1) {
+			arg7 = 0;
+		} else {
+			arg7 = -5;
+		}
+		ACTIVE.createChild(widget14, 4, arg6);
+		arg6 = arg6 + 1;
+		ACTIVE.setPosition(arg2 - 117, arg3 + 34 + arg7, 0, 0);
+		ACTIVE.setFont(4040);
+		ACTIVE.setTextAntiMacro(true);
+		if (getAttributeMapValue(attrmap0, 1933) > 0) {
+			ACTIVE.setText(concat(formatNumber(getAttributeMapValue(attrmap0, 1933), 1), " Points"));
+			ACTIVE.setRGB(0x56A5CC);
+		} else {
+			ACTIVE.setText(concat(formatNumber(getAttributeMapValue(attrmap0, 1932), 1), " Points"));
+			ACTIVE.setRGB(0xDB9000);
+		}
+		ACTIVE.setTextAlignment(1, 1, 13);
+		ACTIVE.setSize(79, 19, 0, 0);
+		switch (getAttributeMapValue(attrmap0, 1937)) {
+			case 1:
+				widget25 = widget20;
+				break;
+			case 2:
+				widget25 = widget21;
+				break;
+			case 3:
+				widget25 = widget22;
+				break;
+			case 4:
+				widget25 = widget23;
+				break;
+			case 5:
+				widget25 = widget24;
+				break;
+		}
+		switch (getAttributeMapValue(attrmap0, 1937)) {
+			case 1:
+				boolean28 = isBitFlagged(VARP[2391], int32);
+				break;
+			case 2:
+				boolean28 = isBitFlagged(VARP[2392], int32);
+				break;
+			case 3:
+				boolean28 = isBitFlagged(VARP[2393], int32);
+				break;
+			case 4:
+				boolean28 = isBitFlagged(VARP[2394], int32);
+				break;
+			case 5:
+				boolean28 = isBitFlagged(VARP[2394], int32 + 16);
+				break;
+		}
+		int26 = 0;
+		while (int26 < int32) {
+			if (!ACTIVE.setChild(widget25, int26)) {
+				ACTIVE.createChild(widget25, 4, int26);
+				ACTIVE.setHidden(true);
+			}
+			int26 = int26 + 1;
+		}
+		ACTIVE.createChild(widget25, 5, int32);
+		ACTIVE.setPosition(arg2 - 36, arg3 + 33 + arg7, 0, 0);
+		if (!boolean28) {
+			sprite33 = sprite39;
+			sprite34 = sprite37;
+			sprite35 = sprite36;
+			ACTIVE.setContextMenuOption(1, "Add to Favourites");
+			if (VARPBIT[9487] != 8) {
+				ACTIVE.setScriptCallOnClickContextMenu(5354, widget25, int32, sprite35, sprite36, sprite38, sprite37, sprite39, "Iiddddd");
+			}
+		} else {
+			sprite33 = sprite38;
+			sprite34 = sprite36;
+			sprite35 = sprite37;
+			ACTIVE.setContextMenuOption(1, "Remove from Favourites");
+			if (VARPBIT[9487] != 8) {
+				ACTIVE.setScriptCallOnClickContextMenu(5354, widget25, int32, sprite35, sprite36, sprite38, sprite37, sprite39, "Iiddddd");
+			}
+		}
+		ACTIVE.setSprite(sprite33);
+		ACTIVE.setSize(21, 21, 0, 0);
+		ACTIVE.setScriptCallOnMouseEntered(5343, widget25, int32, sprite34, "Iid");
+		ACTIVE.setScriptCallOnMouseExit(5343, widget25, int32, sprite33, "Iid");
+		int32 = int32 + 1;
+		ACTIVE.createChild(widget14, 5, arg6);
+		arg6 = arg6 + 1;
+		if (getAttributeMapValue(attrmap0, 1937) == 1) {
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition(arg2 - 162, arg3 + 18, 0, 0);
+			ACTIVE.setItem(getAttributeMapValue(attrmap0, 1935), -1);
+		} else if (getAttributeMapValue(attrmap0, 1937) == 2) {
+			ACTIVE.setSprite(getAttributeMapValue(attrmap0, 1420));
+			ACTIVE.setSize(48, 48, 0, 0);
+			ACTIVE.setPosition(arg2 - 170, arg3 + 11, 0, 0);
+		} else if (getAttributeMapValue(attrmap0, 1937) == 3) {
+			ACTIVE.setSprite(getAttributeMapValue(attrmap0, 1441));
+			ACTIVE.setSize(40, 50, 0, 0);
+			ACTIVE.setPosition(arg2 - 166, arg3 + 10, 0, 0);
+		} else if (getAttributeMapValue(attrmap0, 1937) == 4) {
+			ACTIVE.setSprite(7883);
+			ACTIVE.setSize(42, 42, 0, 0);
+			ACTIVE.setPosition(arg2 - 166, arg3 + 14, 0, 0);
+		} else if (getAttributeMapValue(attrmap0, 1937) == 5) {
+			ACTIVE.setSize(36, 32, 0, 0);
+			ACTIVE.setPosition(arg2 - 161, arg3 + 18, 0, 0);
+			ACTIVE.setItem(getAttributeMapValue(attrmap0, 1935), -1);
+		}
+		if (getAttributeMapValue(attrmap0, 1933) > 0) {
+			ACTIVE.createChild(widget14, 5, arg6);
+			arg6 = arg6 + 1;
+			ACTIVE.setPosition(arg2 - 175, arg3 + 5, 0, 0);
+			ACTIVE.setSprite(6348);
+			ACTIVE.setSize(40, 34, 0, 0);
+		}
+		arg1 = arg1 + 1;
+	}
+	return arg1, arg2, arg3, arg4, arg6;
+}

@@ -1,0 +1,24 @@
+void script_4736(Widget widget0, int arg1) {
+	int int2;
+	Container container3;
+	int int4;
+	int2 = getItemContainerLength(95);
+	container3 = null;
+	if (VARPBIT[9903] > 0) {
+		container3 = datamap('i', 'v', (DataMap)3879, VARPBIT[9903]);
+		if (container3 != null) {
+			int2 = getItemContainerLength(container3);
+		}
+	}
+	widget0.setScrollPos(0, 0);
+	widget0.clearChildren();
+	int4 = 0;
+	while (int4 < int2) {
+		ACTIVE.createChild(widget0, 5, int4);
+		ACTIVE.setSize(0, 0, 0, 0);
+		ACTIVE.setPosition(0, 0, 0, 0);
+		ACTIVE.setHidden(true);
+		int4 = int4 + 1;
+	}
+	return;
+}

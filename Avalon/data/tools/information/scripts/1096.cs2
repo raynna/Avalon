@@ -1,0 +1,5 @@
+void script_1096() {
+	script_1098();
+	widget(746, 9).setSize((int, int)cs2method6203(), 0, 0);
+	return;
+}

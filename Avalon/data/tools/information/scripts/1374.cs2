@@ -1,0 +1,11 @@
+void script_1374(int arg0) {
+	if (arg0 == 1) {
+		widget(755, 46).setIsHidden(false);
+		widget(755, 6).setContextMenuOption(1, "Hide overview");
+	} else {
+		widget(755, 46).setIsHidden(true);
+		widget(755, 6).setContextMenuOption(1, "Show overview");
+	}
+	widget(755, 6).setScriptCallOnClickContextMenu(1373, "");
+	return;
+}

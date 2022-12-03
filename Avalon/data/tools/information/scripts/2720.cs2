@@ -1,0 +1,48 @@
+int script_2720(Item item0, int arg1) {
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	item0 = getRealItem(item0);
+	int2 = datamap('o', 'i', (DataMap)731, item0);
+	if (VARP[532] == 6529 && int2 != -1 && int2 > 0) {
+		return int2;
+	}
+	int2 = datamap('o', 'i', (DataMap)733, item0);
+	if (int2 != -1 && int2 > 0) {
+		return int2;
+	}
+	if (itemAttribute(item0, 258) == 1 || itemAttribute(item0, 259) == 1) {
+		return 99000;
+	}
+	int3 = 130;
+	int4 = 100;
+	int5 = 0;
+	int6 = script_2721(arg1);
+	if (int6 == -1) {
+		return -1;
+	}
+	int7 = getItemAmtInContainer((Container)VARP[118], item0);
+	int8 = int7 - int6;
+	if (int6 == 0) {
+		int5 = int4;
+	} else if (int7 == 0) {
+		int5 = int3;
+	} else if (int7 >= int6) {
+		int5 = int4;
+	} else {
+		int5 = int3 - (int3 - int4) * int6 / int7;
+	}
+	if (int5 < 0) {
+		int5 = 0;
+	}
+	int5 = max(int4, min(int3, int5));
+	int2 = getItemValue(item0) * 100 / int5;
+	if (VARP[532] == 6529) {
+		int2 = 3 * 2 / int2;
+	}
+	return max(int2, 1);
+}

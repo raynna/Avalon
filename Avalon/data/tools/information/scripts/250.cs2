@@ -1,0 +1,6 @@
+void script_250(Widget widget0) {
+	if (getClientCycle() % 5 == 0) {
+		script_251(widget0);
+	}
+	return;
+}

@@ -1,0 +1,108 @@
+void script_1046(int arg0, char char1, Widget widget2, Widget widget3, Widget widget4, QcPhrase qcphrase5, int arg6) {
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int7 = 1;
+	int8 = 0;
+	int9 = 1000;
+	int10 = -1;
+	if (isAlphaNumeric(char1)) {
+		while (int8 < arg6) {
+			if (ACTIVE.setChild(widget3, script_1844(int8) + 1) && indexOf(lower(ACTIVE.getText()), lower(char1), 0) == 0 && _ACTIVE.setChild(widget3, 0)) {
+				_ACTIVE.setPosition(ACTIVE.getX(), ACTIVE.getY(), 0, 0);
+				_ACTIVE.setSize(ACTIVE.getWidth(), ACTIVE.getHeight(), 0, 0);
+				_ACTIVE.setRGB(0x577E45);
+				_ACTIVE.setFilled(true);
+				if (int8 < VARC[128]) {
+					if (ACTIVE.getY() < widget3.getScrollY()) {
+						script_72(widget4, widget3, ACTIVE.getY());
+					}
+				} else if (int8 > VARC[128] && ACTIVE.getY() + ACTIVE.getHeight() > widget3.getHeight() + widget3.getScrollY()) {
+					script_72(widget4, widget3, ACTIVE.getY() + ACTIVE.getHeight() - widget3.getHeight());
+				}
+				VARC[128] = int8;
+				return;
+			}
+			int8 = int8 + 1;
+		}
+		return;
+	}
+	if (arg0 == 104) {
+		if (arg6 == 0) {
+			return;
+		}
+		if (VARC[128] <= 0) {
+			VARC[128] = arg6 - 1;
+		} else {
+			VARC[128] = VARC[128] - 1;
+		}
+		if (ACTIVE.setChild(widget3, script_1844(VARC[128]) + 1)) {
+			if (_ACTIVE.setChild(widget3, 0)) {
+				_ACTIVE.setPosition(ACTIVE.getX(), ACTIVE.getY(), 0, 0);
+				_ACTIVE.setSize(ACTIVE.getWidth(), ACTIVE.getHeight(), 0, 0);
+				_ACTIVE.setRGB(0x577E45);
+				_ACTIVE.setFilled(true);
+			}
+			if (ACTIVE.getY() < widget3.getScrollY()) {
+				script_72(widget4, widget3, widget3.getScrollY() - ACTIVE.getHeight());
+			} else if (ACTIVE.getY() + ACTIVE.getHeight() > widget3.getHeight() + widget3.getScrollY()) {
+				script_72(widget4, widget3, widget3.getScrollMaxV());
+			}
+		}
+		return;
+	}
+	if (arg0 == 105) {
+		if (arg6 == 0) {
+			return;
+		}
+		if (VARC[128] == arg6 - 1) {
+			VARC[128] = 0;
+		} else {
+			VARC[128] = VARC[128] + 1;
+		}
+		if (ACTIVE.setChild(widget3, script_1844(VARC[128]) + 1)) {
+			if (_ACTIVE.setChild(widget3, 0)) {
+				_ACTIVE.setPosition(ACTIVE.getX(), ACTIVE.getY(), 0, 0);
+				_ACTIVE.setSize(ACTIVE.getWidth(), ACTIVE.getHeight(), 0, 0);
+				_ACTIVE.setRGB(0x577E45);
+				_ACTIVE.setFilled(true);
+			}
+			if (ACTIVE.getY() + ACTIVE.getHeight() > widget3.getHeight() + widget3.getScrollY()) {
+				script_72(widget4, widget3, widget3.getScrollY() + ACTIVE.getHeight());
+			} else if (ACTIVE.getY() < widget3.getScrollY()) {
+				script_72(widget4, widget3, 0);
+			}
+		}
+		return;
+	}
+	if (arg0 == 102) {
+		script_1050(VARC[126], STRING[27]);
+		return;
+	}
+	if (arg0 == 13) {
+		script_1054();
+		return;
+	}
+	if (arg0 == 84) {
+		if (VARC[128] >= 0 && ACTIVE.setChild(widget3, VARC[128] + 1)) {
+			script_1074(widget2, qcphrase5, script_1844(VARC[128]));
+		}
+		return;
+	}
+	if (arg0 == 85) {
+		if (VARC[127] == 0) {
+			script_1054();
+		} else {
+			VARC[128] = -1;
+			widget(137, 7).setIsHidden(true);
+			widget(137, 9).setIsHidden(true);
+			widget(137, 13).setIsHidden(true);
+			widget(137, 17).setIsHidden(false);
+			widget(137, 1).setIsHidden(false);
+			widget(137, 3).setIsHidden(true);
+		}
+		return;
+	}
+	return;
+}

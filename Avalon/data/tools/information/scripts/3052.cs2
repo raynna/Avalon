@@ -1,0 +1,5 @@
+void script_3052(Widget widget0) {
+	widget0.setScriptCallOnFriendListChange(3053, widget0, "I");
+	script_3054(widget0);
+	return;
+}

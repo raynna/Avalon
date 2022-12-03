@@ -1,0 +1,26 @@
+void script_769() {
+	Item item0;
+	int int1;
+	item0 = datamap('o', 'o', (DataMap)1283, (Item)VARP[448]);
+	if (item0 == 526) {
+		widget(662, 66).setText("0");
+		return;
+	}
+	int1 = getItemAmtInContainer(93, item0);
+	if (int1 > 0) {
+		if (int1 > 1000000) {
+			int1 = int1 / 1000000;
+			widget(662, 66).setText(str(int1) + "M");
+			return;
+		}
+		if (int1 > 1000) {
+			int1 = int1 / 1000;
+			widget(662, 66).setText(str(int1) + "K");
+			return;
+		}
+		widget(662, 66).setText(str(getItemAmtInContainer(93, item0)));
+		return;
+	}
+	widget(662, 66).setText("0");
+	return;
+}

@@ -1,0 +1,35 @@
+void script_56(Widget widget0) {
+	int int1;
+	widget(18, 13).clearChildren();
+	script_4534(widget(18, 13));
+	widget(18, 21).clearChildren();
+	script_4534(widget(18, 21));
+	widget(18, 29).clearChildren();
+	ACTIVE.createChild(widget(18, 29), 5, widget(18, 29).nextChild());
+	ACTIVE.setSize(40, 0, 1, 1);
+	ACTIVE.setPosition(0, 0, 1, 0);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.createChild(widget(18, 29), 5, widget(18, 29).nextChild());
+	ACTIVE.setSize(20, 0, 0, 1);
+	ACTIVE.setPosition(0, 0, 0, 1);
+	ACTIVE.createChild(widget(18, 29), 5, widget(18, 29).nextChild());
+	ACTIVE.setSize(20, 0, 0, 1);
+	ACTIVE.setPosition(0, 0, 2, 1);
+	ACTIVE.createChild(widget(18, 29), 4, widget(18, 29).nextChild());
+	ACTIVE.setSize(26, 0, 1, 1);
+	ACTIVE.setPosition(4, 0, 0, 1);
+	ACTIVE.setFont(494);
+	ACTIVE.setRGB(0x282521);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	int1 = ACTIVE.getChildId();
+	widget0.setScriptCallOnConfigChange(58, int1, 1747, 1737, 105, 496, 1050, 1600, "iY");
+	widget0.setScriptCallOnItemContainerUpdate(58, int1, 93, 94, "iY");
+	script_59(int1);
+	widget(18, 43).setPosition(script_3365(widget(18, 27)), script_3366(widget(18, 27)) + widget(18, 27).getHeight() - 1, 0, 0);
+	widget(18, 43).clearChildren();
+	script_4535(widget(18, 43));
+	script_746(0);
+	widget(18, 29).setScriptCallOnMousePressed(745, true, "1");
+	widget(18, 42).setScriptCallOnMousePressed(745, false, "1");
+	return;
+}

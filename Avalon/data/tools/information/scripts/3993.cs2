@@ -1,0 +1,32 @@
+void script_3993() {
+	int int0;
+	Widget widget1;
+	int int2;
+	int0 = 1;
+	widget1 = null;
+	while (int0 < datamapSize((DataMap)3489) - 1) {
+		widget1 = datamap('i', 'I', (DataMap)3489, int0);
+		widget1.setPosition(14, (int0 - 1) * widget1.getHeight(), 0, 0);
+		widget1.setRGB(0x000000);
+		widget1 = datamap('i', 'I', (DataMap)3490, int0);
+		if (widget1 != null) {
+			widget1.setPosition(1, 2 + (int0 - 1) * widget1.getHeight(), 0, 0);
+		}
+		int0 = int0 + 1;
+	}
+	widget1 = datamap('i', 'I', (DataMap)3489, 62);
+	widget1.setPosition(14, (int0 - 1) * widget1.getHeight(), 0, 0);
+	widget1.setRGB(0x000000);
+	widget1 = datamap('i', 'I', (DataMap)3490, 62);
+	widget1.setPosition(1, 2 + (int0 - 1) * widget1.getHeight(), 0, 0);
+	int0 = int0 + 1;
+	widget1 = datamap('i', 'I', (DataMap)3489, 0);
+	widget1.setPosition(14, (int0 - 1) * widget1.getHeight(), 0, 0);
+	widget1.setRGB(0xFFF9EB);
+	widget1 = datamap('i', 'I', (DataMap)3490, 0);
+	widget1.setPosition(1, 2 + (int0 - 1) * widget1.getHeight(), 0, 0);
+	int2 = int0 * widget1.getHeight();
+	widget(917, 119).setScrollMax(0, int2);
+	script_31(widget(917, 115), widget(917, 119), 4288, 4286, 4285, 4287, 4290, 4289);
+	return;
+}

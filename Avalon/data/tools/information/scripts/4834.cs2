@@ -1,0 +1,11 @@
+void script_4834(Widget widget0) {
+	int int1;
+	int1 = widget0.nextChild() - 1;
+	while (int1 >= 0) {
+		if (ACTIVE.setChild(widget0, int1)) {
+			ACTIVE.setSprite(6009);
+		}
+		int1 = int1 - 1;
+	}
+	return;
+}

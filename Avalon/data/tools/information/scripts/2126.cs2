@@ -1,0 +1,28 @@
+void script_2126(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, Widget widget7) {
+	VARC[681] = (VARC[681] + rndExcl(4) + 2) % 2048;
+	VARC[684] = (VARC[684] + rndExcl(4) + 2) % 2048;
+	VARC[687] = (VARC[687] + rndExcl(4) + 2) % 2048;
+	VARC[690] = (VARC[690] + rndExcl(4) + 2) % 2048;
+	if (VARC[680] < 20 && (VARC[680] < -20 || rndExcl(2) == 0)) {
+		VARC[680] = min(VARC[680] + rndExcl(3) + 1, 25);
+	} else {
+		VARC[680] = max(VARC[680] - (rndExcl(3) + 1), -25);
+	}
+	if (VARC[683] < 20 && (VARC[683] < -20 || rndExcl(2) == 0)) {
+		VARC[683] = min(VARC[683] + rndExcl(3) + 1, 25);
+	} else {
+		VARC[683] = max(VARC[683] - (rndExcl(3) + 1), -25);
+	}
+	if (VARC[686] < 20 && (VARC[686] < -20 || rndExcl(2) == 0)) {
+		VARC[686] = min(VARC[686] + rndExcl(3) + 1, 25);
+	} else {
+		VARC[686] = max(VARC[686] - (rndExcl(3) + 1), -25);
+	}
+	if (VARC[689] < 20 && (VARC[689] < -20 || rndExcl(2) == 0)) {
+		VARC[689] = min(VARC[689] + rndExcl(3) + 1, 25);
+	} else {
+		VARC[689] = max(VARC[689] - (rndExcl(3) + 1), -25);
+	}
+	script_2127(widget0, widget1, widget2, widget3, widget4, widget5, widget6, widget7);
+	return;
+}

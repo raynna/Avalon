@@ -1,0 +1,229 @@
+void script_5178(int arg0, int arg1) {
+	switch (arg1) {
+		case 1:
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 0)) {
+				ACTIVE.setSprite(5528);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 1)) {
+				ACTIVE.setSprite(5529);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 2)) {
+				ACTIVE.setSprite(5528);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 3)) {
+				ACTIVE.setSprite(5538);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 4)) {
+				ACTIVE.setSprite(5539);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 5)) {
+				ACTIVE.setSprite(5538);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 6)) {
+				ACTIVE.setSprite(5548);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 7)) {
+				ACTIVE.setSprite(5549);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 8)) {
+				ACTIVE.setSprite(5548);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 9)) {
+				ACTIVE.setSprite(5558);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 10)) {
+				ACTIVE.setSprite(5559);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 11)) {
+				ACTIVE.setSprite(5558);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 12)) {
+				ACTIVE.setSprite(5552);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 13)) {
+				ACTIVE.setSprite(5553);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 14)) {
+				ACTIVE.setSprite(5552);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 15)) {
+				ACTIVE.setSprite(5562);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 16)) {
+				ACTIVE.setSprite(5563);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 17)) {
+				ACTIVE.setSprite(5562);
+			}
+			break;
+		case 2:
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 0)) {
+				ACTIVE.setSprite(5530);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 1)) {
+				ACTIVE.setSprite(5531);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 2)) {
+				ACTIVE.setSprite(5530);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 3)) {
+				ACTIVE.setSprite(5540);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 4)) {
+				ACTIVE.setSprite(5541);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 5)) {
+				ACTIVE.setSprite(5540);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 6)) {
+				ACTIVE.setSprite(5550);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 7)) {
+				ACTIVE.setSprite(5551);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 8)) {
+				ACTIVE.setSprite(5550);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 9)) {
+				ACTIVE.setSprite(5560);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 10)) {
+				ACTIVE.setSprite(5561);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 11)) {
+				ACTIVE.setSprite(5560);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 12)) {
+				ACTIVE.setSprite(5550);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 13)) {
+				ACTIVE.setSprite(5551);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 14)) {
+				ACTIVE.setSprite(5550);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 15)) {
+				ACTIVE.setSprite(5560);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 16)) {
+				ACTIVE.setSprite(5561);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 17)) {
+				ACTIVE.setSprite(5560);
+			}
+			break;
+		case 3:
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 0)) {
+				ACTIVE.setSprite(5532);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 1)) {
+				ACTIVE.setSprite(5533);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 2)) {
+				ACTIVE.setSprite(5532);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 3)) {
+				ACTIVE.setSprite(5542);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 4)) {
+				ACTIVE.setSprite(5543);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 5)) {
+				ACTIVE.setSprite(5542);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 6)) {
+				ACTIVE.setSprite(5552);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 7)) {
+				ACTIVE.setSprite(5553);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 8)) {
+				ACTIVE.setSprite(5552);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 9)) {
+				ACTIVE.setSprite(5562);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 10)) {
+				ACTIVE.setSprite(5563);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 11)) {
+				ACTIVE.setSprite(5562);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 12)) {
+				ACTIVE.setSprite(5556);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 13)) {
+				ACTIVE.setSprite(5557);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 14)) {
+				ACTIVE.setSprite(5556);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 15)) {
+				ACTIVE.setSprite(5566);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 16)) {
+				ACTIVE.setSprite(5567);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 17)) {
+				ACTIVE.setSprite(5566);
+			}
+			break;
+		case 4:
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 0)) {
+				ACTIVE.setSprite(5534);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 1)) {
+				ACTIVE.setSprite(5535);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 2)) {
+				ACTIVE.setSprite(5534);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 3)) {
+				ACTIVE.setSprite(5544);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 4)) {
+				ACTIVE.setSprite(5545);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 5)) {
+				ACTIVE.setSprite(5544);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 6)) {
+				ACTIVE.setSprite(5554);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 7)) {
+				ACTIVE.setSprite(5555);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 8)) {
+				ACTIVE.setSprite(5554);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 9)) {
+				ACTIVE.setSprite(5564);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 10)) {
+				ACTIVE.setSprite(5565);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 11)) {
+				ACTIVE.setSprite(5564);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 12)) {
+				ACTIVE.setSprite(5554);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 13)) {
+				ACTIVE.setSprite(5555);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 14)) {
+				ACTIVE.setSprite(5554);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 15)) {
+				ACTIVE.setSprite(5564);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 16)) {
+				ACTIVE.setSprite(5565);
+			}
+			if (ACTIVE.setChild(widget(1122, 88), arg0 + 17)) {
+				ACTIVE.setSprite(5564);
+			}
+			break;
+	}
+	return;
+}

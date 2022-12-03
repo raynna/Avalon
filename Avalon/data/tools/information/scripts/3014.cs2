@@ -1,0 +1,44 @@
+void script_3014() {
+	int int0;
+	int int1;
+	boolean boolean2;
+	int int3;
+	int0 = 0;
+	int1 = 0;
+	boolean2 = isSiteSettingsMembers();
+	int3 = rndExcl(100);
+	widget(908, 15).setIsHidden(true);
+	widget(908, 30).setIsHidden(false);
+	widget(908, 33).setText("Invite your friends to the world of RuneScape and receive a 7 day 10% XP boost.");
+	widget(908, 32).setText("Invite your friends to the world of RuneScape and receive a 7 day 10% XP boost.");
+	widget(908, 33).setRGB(0xFFFFFF);
+	widget(908, 33).setPosition(8, 50, 0, 0);
+	widget(908, 33).setSize(363, 73, 0, 0);
+	widget(908, 33).setFont(591);
+	widget(908, 33).setTextAlignment(1, 2, 0);
+	widget(908, 32).setRGB(0x1C1C1C);
+	widget(908, 32).setPosition(9, 51, 0, 0);
+	widget(908, 32).setSize(363, 73, 0, 0);
+	widget(908, 32).setFont(591);
+	widget(908, 32).setTextAlignment(1, 2, 0);
+	widget(908, 31).setSprite(7670);
+	widget(908, 35).setSprite(7662);
+	switch (getLanguage()) {
+		case 1:
+			widget(908, 35).setSprite(7664);
+			break;
+		case 2:
+			widget(908, 35).setSprite(7663);
+			break;
+		case 3:
+			widget(908, 35).setSprite(7665);
+			break;
+		default:
+			widget(908, 35).setSprite(7662);
+			break;
+	}
+	widget(908, 30).setScriptCallOnMouseEntered(4924, "");
+	widget(908, 30).setScriptCallOnMouseExit(5003, "");
+	widget(908, 30).setScriptCallOnMousePressed(5208, "");
+	return;
+}

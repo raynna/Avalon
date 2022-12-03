@@ -1,0 +1,48 @@
+int script_1401(int arg0, string string1, Sprite sprite2, int arg3) {
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	string1 = script_1602(string1);
+	int3 = length(string1);
+	arg0 = arg0 - arg3;
+	if (arg0 <= 0) {
+		return 0;
+	}
+	if (arg0 >= getTextWidth(string1, sprite2)) {
+		return int3;
+	}
+	int4 = 0;
+	int5 = length(string1);
+	int6 = -1;
+	int7 = 0;
+	int8 = 0;
+	while (int4 != int5) {
+		int6 = (int5 - int4) / 2 + int4;
+		if (int6 == int4) {
+			int7 = getTextWidth(substr(string1, 0, int5), sprite2);
+			if (int5 > 1) {
+				int8 = getTextWidth(substr(string1, 0, int5 - 1), sprite2);
+			}
+			if (int7 - arg0 < arg0 - int8) {
+				return int5;
+			}
+			return int5 - 1;
+		}
+		if (arg0 <= getTextWidth(substr(string1, 0, int6), sprite2)) {
+			int4, int5 = int4, int6;
+		} else {
+			int4, int5 = int6, int5;
+		}
+	}
+	int7 = getTextWidth(substr(string1, 0, int5), sprite2);
+	if (int5 > 1) {
+		int8 = getTextWidth(substr(string1, 0, int5 - 1), sprite2);
+	}
+	if (int7 - arg0 < arg0 - int8) {
+		return int5;
+	}
+	return int5 - 1;
+}

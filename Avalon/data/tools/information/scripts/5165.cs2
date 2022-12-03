@@ -1,0 +1,5 @@
+void script_5165() {
+	VARP[2347] = max(0, min(VARP[2347], 65535));
+	sendColorPickerPacket(VARP[2347]);
+	return;
+}

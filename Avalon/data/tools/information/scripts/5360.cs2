@@ -1,0 +1,24 @@
+void script_5360(Widget widget0, int arg1, int arg2, int arg3, int arg4) {
+	if (arg4 == 1) {
+		if (ACTIVE.setChild(widget0, arg1)) {
+			ACTIVE.setSprite(7829);
+		}
+		if (ACTIVE.setChild(widget0, arg2)) {
+			ACTIVE.setSprite(7830);
+		}
+		if (ACTIVE.setChild(widget0, arg3)) {
+			ACTIVE.setSprite(7831);
+		}
+	} else {
+		if (ACTIVE.setChild(widget0, arg1)) {
+			ACTIVE.setSprite(7826);
+		}
+		if (ACTIVE.setChild(widget0, arg2)) {
+			ACTIVE.setSprite(7827);
+		}
+		if (ACTIVE.setChild(widget0, arg3)) {
+			ACTIVE.setSprite(7828);
+		}
+	}
+	return;
+}

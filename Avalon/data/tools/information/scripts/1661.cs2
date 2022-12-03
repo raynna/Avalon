@@ -1,0 +1,14 @@
+void script_1661(Widget widget0, int arg1, Widget widget2) {
+	widget2.clearChildren();
+	if (VARPBIT[4895] != 3 || VARP[281] != 55) {
+		widget2.setScriptCallOnGameloop(-1, "");
+		return;
+	}
+	ACTIVE.createChild(widget2, 6, 0);
+	ACTIVE.setModel(41760);
+	ACTIVE.setAnimation(10221);
+	ACTIVE.setSize(43, 43, 0, 0);
+	script_1663(widget0, arg1, widget2);
+	widget2.setScriptCallOnGameloop(1662, widget0, arg1, widget2, "IiI");
+	return;
+}

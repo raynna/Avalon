@@ -1,0 +1,42 @@
+int script_4787(int arg0) {
+	switch (arg0) {
+		case 0:
+			return 1;
+		case 1:
+			if (CLAN[2136] > 4) {
+				return 1;
+			}
+			break;
+		case 2:
+			if (CLAN[2136] > 4) {
+				return 1;
+			}
+			break;
+		case 3:
+			if (CLAN[2136] > 9) {
+				return 1;
+			}
+			break;
+		case 4:
+			if (CLAN[2136] > 14) {
+				return 1;
+			}
+			break;
+		case 5:
+			if (CLAN[2136] > 19) {
+				return 1;
+			}
+			break;
+		case 6:
+			if (CLAN[2136] > 24) {
+				return 1;
+			}
+			break;
+		case 7:
+			if (CLAN[2136] > 34) {
+				return 1;
+			}
+			break;
+	}
+	return 0;
+}

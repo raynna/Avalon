@@ -1,0 +1,5 @@
+void script_4389(Widget widget0, Widget widget1) {
+	widget0.setRGB(getColorRelatedMethod4020(VARP[2096]));
+	widget1.setRGB(getColorRelatedMethod4020(VARP[2097]));
+	return;
+}

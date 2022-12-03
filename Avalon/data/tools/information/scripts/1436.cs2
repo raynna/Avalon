@@ -1,0 +1,41 @@
+void script_1436(DataMap datamap0, int arg1, int arg2, Widget widget3, Widget widget4, Widget widget5, Widget widget6, Sprite sprite7, Sprite sprite8, Sprite sprite9, Sprite sprite10, Color color11, Color color12, int arg13, Sprite sprite14, Sprite sprite15, Sprite sprite16, Sprite sprite17, Sprite sprite18, Sprite sprite19, Sprite sprite20) {
+	int int21;
+	int int22;
+	widget3.clearChildren();
+	ACTIVE.createChild(widget3, 5, 0);
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setSize(widget3.getWidth(), widget3.getHeight(), 0, 0);
+	ACTIVE.setSprite(sprite7);
+	ACTIVE.setSpriteTiling(true);
+	ACTIVE.createChild(widget3, 3, widget3.nextChild());
+	ACTIVE.setPosition(0, 0, 0, 0);
+	ACTIVE.setSize(widget3.getWidth(), widget3.getHeight(), 0, 0);
+	ACTIVE.setRGB(0x000000);
+	int21 = 1;
+	ACTIVE.createChild(widget3, 5, int21);
+	ACTIVE.setPosition(widget3.getWidth() - 16, 0, 0, 0);
+	ACTIVE.setSize(16, widget3.getHeight(), 0, 0);
+	ACTIVE.setSprite(sprite8);
+	ACTIVE.setSpriteTiling(false);
+	ACTIVE.setScriptCallOnMouseEntered(1351, widget3, int21, sprite9, "Iid");
+	ACTIVE.setScriptCallOnMouseExit(1352, widget3, int21, sprite8, "Iid");
+	int22 = widget3.nextChild();
+	ACTIVE.setScriptCallOnMousePressed(1347, datamap0, arg2, widget4, sprite10, widget5, widget6, widget3, color11, color12, arg13, sprite14, int22, int21, sprite15, sprite16, sprite17, sprite18, sprite19, sprite20, "giIdIIIiiidiidddddd");
+	ACTIVE.createChild(widget3, 4, int22);
+	ACTIVE.setText(datamap('i', 's', datamap0, arg1));
+	ACTIVE.setPosition(5, 0, 0, 0);
+	ACTIVE.setSize(widget3.getWidth() - 22, widget3.getHeight(), 0, 0);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setFont(sprite14);
+	ACTIVE.setTextAlignment(0, 1, 0);
+	if (arg1 >= arg2) {
+		ACTIVE.setRGB(color12);
+		ACTIVE.setScriptCallOnMouseExit(1354, widget3, int22, color12, "Iii");
+	} else {
+		ACTIVE.setRGB(color11);
+		ACTIVE.setScriptCallOnMouseExit(1354, widget3, int22, color11, "Iii");
+	}
+	ACTIVE.setScriptCallOnMouseEntered(1353, widget3, int22, arg13, "Iii");
+	ACTIVE.setScriptCallOnMousePressed(1347, datamap0, arg2, widget4, sprite10, widget5, widget6, widget3, color11, color12, arg13, sprite14, int22, int21, sprite15, sprite16, sprite17, sprite18, sprite19, sprite20, "giIdIIIiiidiidddddd");
+	return;
+}

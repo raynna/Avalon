@@ -1,0 +1,21 @@
+Date: 24th February
+Category: im a nigger
+Description: nigger
+Combat: No
+Controler: No.
+Coords: 3070, 3502, 0 and 12086
+
+Date: 24th February
+Category: Combat
+Description: I am a nigger
+Combat: No
+Controler: No.
+Coords: 3070, 3502, 0 and 12086
+
+Date: 24th May
+Category: Bug test
+Description: hello
+Combat: No
+Controler: No.
+Coords: 3070, 3502, 0 and 12086
+

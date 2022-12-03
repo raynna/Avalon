@@ -1,0 +1,96 @@
+int script_4830(int arg0) {
+	DataMap datamap1;
+	DataMap datamap2;
+	DataMap datamap3;
+	DataMap datamap4;
+	DataMap datamap5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int int11;
+	int int12;
+	datamap1 = null;
+	datamap2 = null;
+	datamap3 = null;
+	datamap4 = null;
+	datamap5 = null;
+	int6 = 0;
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int10 = 0;
+	int11 = 0;
+	int12 = 0;
+	switch (arg0) {
+		case 1:
+			int6 = VARPBIT[9562];
+			int7 = VARPBIT[9563];
+			int9 = VARPBIT[9567];
+			int10 = VARPBIT[9568];
+			int11 = VARPBIT[9569];
+			int12 = VARPBIT[9566];
+			break;
+		case 2:
+			int6 = VARPBIT[9571];
+			int7 = VARPBIT[9572];
+			int9 = VARPBIT[9576];
+			int10 = VARPBIT[9577];
+			int11 = VARPBIT[9578];
+			int12 = VARPBIT[9575];
+			break;
+		case 3:
+			int6 = VARPBIT[9580];
+			int7 = VARPBIT[9581];
+			int9 = VARPBIT[9585];
+			int10 = VARPBIT[9586];
+			int11 = VARPBIT[9587];
+			int12 = VARPBIT[9584];
+			break;
+	}
+	if (int12 == 1) {
+		return 5;
+	}
+	if (int6 == 0) {
+		return -1;
+	}
+	datamap1 = datamap('i', 'g', (DataMap)4043, int6);
+	if (datamap1 == null) {
+		return -1;
+	}
+	if (int7 > 0 && int7 <= 3) {
+		datamap2 = datamap('i', 'g', datamap1, int7);
+		if (datamap2 != null) {
+			datamap3 = datamap('i', 'g', datamap2, 1);
+			datamap4 = datamap('i', 'g', datamap2, 2);
+			datamap5 = datamap('i', 'g', datamap2, 3);
+			if (datamap3 != null) {
+				if (int9 > 0 && int9 <= datamapSize(datamap3)) {
+					if (CLANBIT[2580] >= getAttributeMapValue(datamap('i', 'J', datamap3, int9), 1567)) {
+						if (!(datamap4 == null)) {
+							if (!(int10 > 0 && int10 <= datamapSize(datamap4))) {
+								return 3;
+							}
+							if (CLANBIT[2580] < getAttributeMapValue(datamap('i', 'J', datamap4, int10), 1567)) {
+								return 2;
+							}
+						}
+						if (!(datamap5 == null)) {
+							if (!(int11 > 0 && int11 <= datamapSize(datamap5))) {
+								return 3;
+							}
+							if (CLANBIT[2580] < getAttributeMapValue(datamap('i', 'J', datamap5, int11), 1567)) {
+								return 2;
+							}
+						}
+						return 1;
+					}
+					return 2;
+				}
+				return 3;
+			}
+		}
+	}
+	return -1;
+}

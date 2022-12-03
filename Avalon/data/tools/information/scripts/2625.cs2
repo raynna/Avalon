@@ -1,0 +1,11 @@
+void script_2625(int arg0, char char1) {
+	if (arg0 == 84) {
+		script_2621();
+	} else if (!widget(850, 1).isHidden()) {
+		if (!(indexOf("abcdefghijklmnopqrst", lower(char1), 0) != -1)) {
+			return;
+		}
+		script_2621();
+	}
+	return;
+}

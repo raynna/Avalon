@@ -1,0 +1,17 @@
+void script_4686() {
+	if (VARC[1538] >= 160) {
+		return;
+	}
+	if (VARC[1539] == 1) {
+		VARC[1538] = 160;
+		widget(447, 15).setPosition(0, 75, 0, 0);
+		return;
+	}
+	if (VARC[1538] == 158) {
+		widget(447, 15).setIsHidden(true);
+	} else {
+		widget(447, 15).setPosition(-2 - VARC[1538], 75, 0, 0);
+		VARC[1538] = VARC[1538] + 2;
+	}
+	return;
+}

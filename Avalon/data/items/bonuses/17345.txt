@@ -1,0 +1,22 @@
+Attack bonus
+0
+0
+0
+-8
+-2
+Defence bonus
+16
+28
+23
+-1
+-24
+0
+Damage absorption
+0
+0
+0
+Other bonuses
+0
+0
+0
+0

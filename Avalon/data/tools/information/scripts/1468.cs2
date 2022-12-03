@@ -1,0 +1,28 @@
+int script_1468(int arg0) {
+	arg0 = arg0 + 1;
+	if (arg0 <= VARPBIT[4885]) {
+		return 2;
+	}
+	if (arg0 <= VARPBIT[4885] + VARPBIT[4886]) {
+		return 3;
+	}
+	if (arg0 <= VARPBIT[4885] + VARPBIT[4886] + VARPBIT[4887]) {
+		return 4;
+	}
+	if (arg0 <= VARPBIT[4885] + VARPBIT[4886] + VARPBIT[4887] + VARPBIT[4888]) {
+		return 5;
+	}
+	if (arg0 <= VARPBIT[4885] + VARPBIT[4886] + VARPBIT[4887] + VARPBIT[4888] + VARPBIT[4889]) {
+		return 6;
+	}
+	if (arg0 <= VARPBIT[4885] + VARPBIT[4886] + VARPBIT[4887] + VARPBIT[4888] + VARPBIT[4889] + VARPBIT[4890]) {
+		return 7;
+	}
+	if (arg0 <= VARPBIT[4885] + VARPBIT[4886] + VARPBIT[4887] + VARPBIT[4888] + VARPBIT[4889] + VARPBIT[4890] + VARPBIT[4891]) {
+		return 8;
+	}
+	if (arg0 <= VARPBIT[4885] + VARPBIT[4886] + VARPBIT[4887] + VARPBIT[4888] + VARPBIT[4889] + VARPBIT[4890] + VARPBIT[4891] + VARPBIT[4892]) {
+		return 9;
+	}
+	return 1;
+}

@@ -1,0 +1,22 @@
+void script_578() {
+	int int0;
+	int int1;
+	int int2;
+	int int3;
+	int0 = widget(389, 4).getHeight();
+	int1 = widget(389, 4).getScrollMaxV();
+	if (int1 < 15) {
+		int1 = 15;
+		widget(389, 4).setScrollMax(0, 15);
+	}
+	int2 = int1 - int0;
+	if (int2 < 0) {
+		int2 = 0;
+	}
+	int3 = widget(389, 4).getScrollY();
+	if (int3 > int2) {
+		int3 = int2;
+	}
+	script_72(widget(389, 8), widget(389, 4), int3);
+	return;
+}

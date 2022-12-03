@@ -1,0 +1,13 @@
+void script_2093() {
+	if (VARC[654] < 100) {
+		VARC[654] = VARC[654] + 1;
+	}
+	if (VARC[654] == 50) {
+		widget(834, 60).setIsHidden(true);
+	}
+	if (VARC[654] == 100) {
+		widget(834, 60).setIsHidden(false);
+		VARC[654] = 0;
+	}
+	return;
+}

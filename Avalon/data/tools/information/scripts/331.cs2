@@ -1,0 +1,12 @@
+void script_331(Widget widget0, int arg1) {
+	int int2;
+	int2 = 0;
+	if (IsFemale()) {
+		int2 = datamapSize((DataMap)2363);
+	} else {
+		int2 = datamapSize((DataMap)2132);
+	}
+	script_332(arg1);
+	script_2366(widget0, arg1, int2);
+	return;
+}

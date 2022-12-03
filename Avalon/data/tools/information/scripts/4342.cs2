@@ -1,0 +1,53 @@
+void script_4342(int arg0, int arg1, int arg2, Widget widget3, Widget widget4) {
+	string str0;
+	string str1;
+	str0 = "";
+	str1 = "";
+	if (getClientCycle() % 3000 == 0) {
+		arg1 = arg1 + 1;
+		if (arg1 >= 60) {
+			arg1 = 0;
+			arg0 = arg0 + 1;
+			if (arg0 >= 24) {
+				arg0 = 0;
+			}
+		}
+		if (arg0 < 10) {
+			str0 = "0" + str(arg0);
+		} else {
+			str0 = str(arg0);
+		}
+		if (arg1 < 10) {
+			str1 = "0" + str(arg1);
+		} else {
+			str1 = str(arg1);
+		}
+		widget3.setText(str0 + ":" + str1);
+		widget3.setScriptCallOnGameloop(4342, arg0, arg1, arg2, widget3, widget4, "iiiII");
+		str0, str1 = script_4341(arg2, arg0, arg1);
+		widget4.setText(str0 + ":" + str1);
+	} else if (getClientCycle() % 50 == 0) {
+		if (arg0 < 10) {
+			str0 = "0" + str(arg0);
+		} else {
+			str0 = str(arg0);
+		}
+		if (arg1 < 10) {
+			str1 = "0" + str(arg1);
+		} else {
+			str1 = str(arg1);
+		}
+		if (getClientCycle() % 100 == 0) {
+			widget3.setText(str0 + ":" + str1);
+		} else {
+			widget3.setText(str0 + " " + str1);
+		}
+		str0, str1 = script_4341(arg2, arg0, arg1);
+		if (getClientCycle() % 100 == 0) {
+			widget4.setText(str0 + ":" + str1);
+		} else {
+			widget4.setText(str0 + " " + str1);
+		}
+	}
+	return;
+}

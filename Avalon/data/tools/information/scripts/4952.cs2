@@ -1,0 +1,37 @@
+int script_4952(int arg0) {
+	if (citadelConfigsInitialized()) {
+		switch (arg0) {
+			case 1:
+				return CLANBIT[2633];
+			case 2:
+				return CLANBIT[2631];
+			case 3:
+				return CLANBIT[2632];
+			case 4:
+				return CLANBIT[2617];
+			case 5:
+				return CLANBIT[2618];
+			case 6:
+				return CLANBIT[2620];
+			case 7:
+				return CLANBIT[2621];
+			case 8:
+				return CLANBIT[2622];
+			case 9:
+				return CLANBIT[2623];
+			case 10:
+				return CLANBIT[2624];
+			case 11:
+				return CLANBIT[2625];
+			case 12:
+				return CLANBIT[2626];
+			case 13:
+				return CLANBIT[2627];
+			case 14:
+				return CLANBIT[2629];
+			case 15:
+				return CLANBIT[2630];
+		}
+	}
+	return 0;
+}

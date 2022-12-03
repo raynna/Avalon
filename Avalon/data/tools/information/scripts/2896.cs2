@@ -1,0 +1,12 @@
+void script_2896(Widget widget0) {
+	if (getClientCycle() % 5 == 0) {
+		if (VARC[1078] * 2000 / 200 > VARPBIT[7189] * 2000 / 200) {
+			widget0.setSize(20, VARC[1078] * 2000 / 200, 0, 0);
+			VARC[1078] = VARC[1078] - 1;
+		} else {
+			widget0.setScriptCallOnGameloop(-1, "");
+			VARC[1079] = 0;
+		}
+	}
+	return;
+}

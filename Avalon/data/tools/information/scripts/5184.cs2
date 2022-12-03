@@ -1,0 +1,16 @@
+void script_5184() {
+	script_5192();
+	script_5190(1, 0);
+	switch (VARPBIT[9646]) {
+		case 1:
+			widget(1122, 71).setText("Lumbridge herald cape");
+			break;
+		case 2:
+			widget(1122, 71).setText("Varrock herald cape");
+			break;
+		case 3:
+			widget(1122, 71).setText("Falador herald cape");
+			break;
+	}
+	return;
+}

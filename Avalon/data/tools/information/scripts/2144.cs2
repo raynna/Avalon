@@ -1,0 +1,13 @@
+void script_2144(Widget widget0) {
+	DataMap datamap1;
+	datamap1 = (DataMap)1093;
+	if (IsFemale()) {
+		datamap1 = (DataMap)3872;
+	}
+	if (VARP[1442] == 0) {
+		widget0.setText("No Prefix");
+	} else {
+		widget0.setText(datamap('i', 's', datamap1, VARP[1442]));
+	}
+	return;
+}

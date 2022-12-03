@@ -1,0 +1,24 @@
+void script_2128(Widget widget0, int arg1) {
+	switch (arg1) {
+		case 1:
+			widget0.setModel(16036);
+			widget0.set3DRotation(0, 0, script_686(VARC[680], 2048), VARC[681], script_686(VARC[682], 2048), 800);
+			break;
+		case 2:
+			widget0.setModel(16025);
+			widget0.set3DRotation(0, 17, script_686(VARC[683], 2048), VARC[684], script_686(VARC[685], 2048), 800);
+			break;
+		case 3:
+			widget0.setModel(16022);
+			widget0.set3DRotation(0, 0, script_686(VARC[686], 2048), VARC[687], script_686(VARC[688], 2048), 800);
+			break;
+		case 4:
+			widget0.setModel(16034);
+			widget0.set3DRotation(0, 0, script_686(VARC[689], 2048), VARC[690], script_686(VARC[691], 2048), 800);
+			break;
+		default:
+			widget0.setModel(null);
+			break;
+	}
+	return;
+}

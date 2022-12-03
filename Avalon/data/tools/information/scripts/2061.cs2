@@ -1,0 +1,17 @@
+void script_2061(Widget widget0) {
+	AttrMap attrmap1;
+	int int2;
+	Widget widget3;
+	string str0;
+	attrmap1 = datamap('i', 'J', (DataMap)2162, VARPBIT[357]);
+	int2 = datamap('I', 'i', getAttributeMapValue(attrmap1, 664), widget0);
+	widget3 = getAttributeMapValue(attrmap1, 661);
+	str0 = datamap('i', 's', getAttributeMapValue(attrmap1, 665), int2);
+	if (widget3 != null) {
+		script_39(widget0, widget3, str0, 25, 300);
+	}
+	if (int2 != VARC[631]) {
+		widget0.setSprite(1702);
+	}
+	return;
+}

@@ -1,0 +1,8 @@
+void script_1722(Widget widget0, int arg1, Sprite sprite2, Sprite sprite3, int arg4) {
+	arg4 = arg4 + getClientCycle();
+	if (ACTIVE.setChild(widget0, arg1) || arg1 == -1 && ACTIVE.setChild(widget0)) {
+		ACTIVE.setSprite(sprite2);
+		ACTIVE.setScriptCallOnGameloop(1723, widget0, arg1, sprite3, arg4, "Iidi");
+	}
+	return;
+}

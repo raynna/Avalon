@@ -1,0 +1,28 @@
+int script_5225(int arg0) {
+	int int1;
+	int1 = -1;
+	int1 = cs2method3717(removeTags(cs2method5020()));
+	if (int1 < 0) {
+		return 0;
+	}
+	if (arg0 == -1) {
+		arg0 = cs2method3711(int1);
+	}
+	switch (arg0) {
+		case 100:
+			return CLANDEF113[263];
+		case 101:
+			return CLANDEF113[264];
+		case 102:
+			return CLANDEF113[265];
+		case 103:
+			return CLANDEF113[266];
+		case 125:
+			return CLANDEF113[267];
+		case 126:
+			return 1;
+		case 127:
+			return 1;
+	}
+	return 0;
+}

@@ -1,0 +1,18 @@
+void script_1827(int arg0) {
+	if (script_1820(arg0) == 0) {
+		return;
+	}
+	if (!isMember()) {
+		if (VARC[252] == 1) {
+			VARC[252] = 2;
+		} else if (VARC[252] == 2) {
+			VARC[252] = 3;
+		} else {
+			VARC[252] = 1;
+		}
+	} else {
+		VARC[252] = (VARC[252] + 1) % 4;
+	}
+	script_1775();
+	return;
+}

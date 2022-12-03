@@ -1,0 +1,13 @@
+void script_1391(int arg0, Widget widget1) {
+	if (!cs2method3751()) {
+		widget(912, 24).setText("");
+		widget1.setIsHidden(true);
+		return;
+	}
+	if ((getClientCycle() - arg0) % 40 < 20 && hasWindowFocus()) {
+		widget1.setIsHidden(false);
+	} else {
+		widget1.setIsHidden(true);
+	}
+	return;
+}

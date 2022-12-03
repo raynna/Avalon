@@ -1,0 +1,67 @@
+void script_2952(Widget widget0, Widget widget1, int arg2) {
+	string str0;
+	string str1;
+	str0 = "";
+	str1 = "";
+	switch (arg2) {
+		case 3:
+			str0 = "accountappeal";
+			str1 = "passwordchoice.ws";
+			widget0.setScriptCallOnMousePressed(2931, str0, str1, true, "ss1");
+			widget1.setScriptCallOnMousePressed(2953, "");
+			break;
+		case 4:
+			str0 = "ticketing";
+			str1 = "inbox.ws";
+			widget0.setScriptCallOnMousePressed(2931, str0, str1, true, "ss1");
+			widget1.setScriptCallOnMousePressed(2953, "");
+			break;
+		case 11:
+			str0 = "password_history";
+			str1 = "password.ws";
+			widget0.setScriptCallOnMousePressed(2931, str0, str1, true, "ss1");
+			widget1.setScriptCallOnMousePressed(2953, "");
+			break;
+		case 18:
+			str0 = "accountappeal";
+			str1 = "lockchoice.ws";
+			widget0.setScriptCallOnMousePressed(2931, str0, str1, true, "ss1");
+			widget1.setScriptCallOnMousePressed(2953, "");
+			break;
+		case 30:
+			if (cs2method5420() == 1) {
+				str1 = "slu.ws";
+				widget0.setScriptCallOnMousePressed(2933, str1, false, "s1");
+			} else {
+				str0 = "dob";
+				str1 = "set_members_dob.ws";
+				widget0.setScriptCallOnMousePressed(2931, str0, str1, true, "ss1");
+			}
+			widget1.setScriptCallOnMousePressed(2953, "");
+			break;
+		case 31:
+			str0 = "displaynames";
+			str1 = "name.ws";
+			widget0.setScriptCallOnMousePressed(2931, str0, str1, true, "ss1");
+			widget1.setScriptCallOnMousePressed(2953, "");
+			break;
+		case 32:
+		case 19:
+		case 40:
+		case 12:
+			str0 = "dob";
+			str1 = "set_members_dob.ws";
+			widget0.setScriptCallOnMousePressed(2931, str0, str1, true, "ss1");
+			widget1.setScriptCallOnMousePressed(2953, "");
+			break;
+		case 21:
+			widget0.setScriptCallOnMousePressed(3234, "");
+			widget1.setScriptCallOnMousePressed(-1, "");
+			break;
+		default:
+			widget0.setScriptCallOnMousePressed(-1, "");
+			widget1.setScriptCallOnMousePressed(2953, "");
+			break;
+	}
+	return;
+}

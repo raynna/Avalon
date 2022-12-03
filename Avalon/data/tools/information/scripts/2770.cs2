@@ -1,0 +1,121 @@
+void script_2770(Widget widget0, Location location1) {
+	switch (VARC[1007]) {
+		case 1:
+			cs2method5405(0, 2);
+			cs2method5406(0, 0, script_2764(location(3680, 4941, 0), location1), 600, script_2764(location(3680, 4941, 0), location1), 600, 0);
+			cs2method5406(0, 1, script_2764(location(3680, 4941, 0), location1), 450, script_2764(location(3680, 4941, 0), location1), 450, 0);
+			cs2method5405(1, 2);
+			cs2method5406(1, 0, script_2764(location(3680, 4948, 0), location1), 100, script_2764(location(3680, 4948, 0), location1), 100, 0);
+			cs2method5406(1, 1, script_2764(location(3680, 4953, 0), location1), 100, script_2764(location(3680, 4953, 0), location1), 100, 0);
+			cameraMethod5502(0, 0, 100, 140, 1, 0);
+			widget0.setScriptCallOnGameloop(2771, widget0, getClientCycle(), "Ii");
+			break;
+		case 2:
+			widget0.setScriptCallOnGameloop(-1, "");
+			cs2method5405(0, 10);
+			cs2method5405(1, 10);
+			cs2method5406(0, 0, script_2764(location(3673, 4965, 0), location1), 400, script_2764(location(3673, 4965, 0), location1), 420, 0);
+			cs2method5406(0, 1, script_2764(location(3674, 4964, 0), location1), 400, script_2764(location(3674, 4964, 0), location1), 420, 128);
+			cs2method5406(0, 2, script_2764(location(3675, 4963, 0), location1), 400, script_2764(location(3675, 4963, 0), location1), 420, 0);
+			cs2method5406(0, 3, script_2764(location(3676, 4962, 0), location1), 400, script_2764(location(3676, 4962, 0), location1), 420, -128);
+			cs2method5406(0, 4, script_2764(location(3677, 4961, 0), location1), 400, script_2764(location(3677, 4961, 0), location1), 420, 0);
+			cs2method5406(0, 5, script_2764(location(3678, 4960, 0), location1), 400, script_2764(location(3678, 4960, 0), location1), 420, 128);
+			cs2method5406(0, 6, script_2764(location(3679, 4959, 0), location1), 400, script_2764(location(3679, 4959, 0), location1), 420, 0);
+			cs2method5406(0, 7, script_2764(location(3680, 4958, 0), location1), 400, script_2764(location(3680, 4958, 0), location1), 420, -128);
+			cs2method5406(0, 8, script_2764(location(3680, 4957, 0), location1), 400, script_2764(location(3680, 4957, 0), location1), 420, 0);
+			cs2method5406(0, 9, script_2764(location(3680, 4956, 0), location1), 400, script_2764(location(3680, 4956, 0), location1), 420, 128);
+			cs2method5406(0, 10, script_2764(location(3680, 4955, 0), location1), 400, script_2764(location(3680, 4955, 0), location1), 420, 0);
+			cs2method5406(1, 0, script_2764(location(3680, 4954, 0), location1), 400, script_2764(location(3680, 4954, 0), location1), 400, 0);
+			cs2method5406(1, 1, script_2764(location(3680, 4953, 0), location1), 395, script_2764(location(3680, 4953, 0), location1), 395, 0);
+			cs2method5406(1, 2, script_2764(location(3680, 4952, 0), location1), 390, script_2764(location(3680, 4952, 0), location1), 390, 0);
+			cs2method5406(1, 3, script_2764(location(3680, 4951, 0), location1), 385, script_2764(location(3680, 4951, 0), location1), 385, 0);
+			cs2method5406(1, 4, script_2764(location(3680, 4950, 0), location1), 380, script_2764(location(3680, 4950, 0), location1), 380, 0);
+			cs2method5406(1, 5, script_2764(location(3680, 4949, 0), location1), 375, script_2764(location(3680, 4949, 0), location1), 375, 0);
+			cs2method5406(1, 6, script_2764(location(3680, 4948, 0), location1), 370, script_2764(location(3680, 4948, 0), location1), 370, 0);
+			cs2method5406(1, 7, script_2764(location(3680, 4947, 0), location1), 365, script_2764(location(3680, 4947, 0), location1), 365, 0);
+			cs2method5406(1, 8, script_2764(location(3680, 4946, 0), location1), 360, script_2764(location(3680, 4946, 0), location1), 360, 0);
+			cs2method5406(1, 9, script_2764(location(3680, 4945, 0), location1), 355, script_2764(location(3680, 4945, 0), location1), 355, 0);
+			cs2method5406(1, 10, script_2764(location(3680, 4945, 0), location1), 350, script_2764(location(3680, 4945, 0), location1), 350, 0);
+			widget0.setScriptCallOnMinimapRelatedSetting3(2772, widget0, 1, "Ii");
+			cameraMethod5502(0, 0, 3000, 2500, 1, 0);
+			playSoundEffect(6645, 1, 0);
+			break;
+		case 3:
+			widget0.setScriptCallOnMinimapRelatedSetting3(-1, "");
+			cs2method5405(0, 2);
+			cs2method5406(0, 0, script_2764(location(3680, 4950, 0), location1), 350, script_2764(location(3680, 4950, 0), location1), 350, 0);
+			cs2method5406(0, 1, script_2764(location(3680, 4950, 0), location1), 300, script_2764(location(3680, 4950, 0), location1), 300, 0);
+			cs2method5405(1, 2);
+			cs2method5406(1, 0, script_2764(location(3680, 4958, 0), location1), 300, script_2764(location(3680, 4958, 0), location1), 300, 0);
+			cs2method5406(1, 1, script_2764(location(3680, 4958, 0), location1), 350, script_2764(location(3680, 4958, 0), location1), 350, 0);
+			cameraMethod5502(0, 0, 60, 50, 1, 0);
+			break;
+		case 4:
+			cs2method5405(0, 2);
+			cs2method5406(0, 0, script_2764(location(3684, 4946, 0), location1), 450, script_2764(location(3684, 4945, 0), location1), 450, 0);
+			cs2method5406(0, 1, script_2764(location(3682, 4940, 0), location1), 600, script_2764(location(3682, 4941, 0), location1), 600, 0);
+			cs2method5405(1, 2);
+			cs2method5406(1, 0, script_2764(location(3680, 4945, 0), location1), 400, script_2764(location(3680, 4946, 0), location1), 400, 0);
+			cs2method5406(1, 1, script_2764(location(3680, 4947, 0), location1), 350, script_2764(location(3680, 4946, 0), location1), 350, 0);
+			cameraMethod5502(0, 0, 250, 200, 1, 0);
+			break;
+		case 5:
+			cs2method5405(0, 2);
+			cs2method5406(0, 0, script_2764(location(3684, 4945, 0), location1), 700, script_2764(location(3684, 4945, 0), location1), 700, 0);
+			cs2method5406(0, 1, script_2764(location(3684, 4945, 0), location1), 700, script_2764(location(3684, 4945, 0), location1), 700, 0);
+			cs2method5405(1, 2);
+			cs2method5406(1, 0, script_2764(location(3680, 4942, 0), location1), 350, script_2764(location(3680, 4941, 0), location1), 350, 0);
+			cs2method5406(1, 1, script_2764(location(3680, 4941, 0), location1), 150, script_2764(location(3680, 4941, 0), location1), 350, 0);
+			cameraMethod5502(0, 0, 100, 100, 1, 0);
+			break;
+		case 6:
+			cs2method5405(0, 2);
+			cs2method5406(0, 0, script_2764(location(3683, 4941, 0), location1), 450, script_2764(location(3683, 4942, 0), location1), 450, 0);
+			cs2method5406(0, 1, script_2764(location(3681, 4942, 0), location1), 450, script_2764(location(3681, 4942, 0), location1), 450, 0);
+			cs2method5405(1, 2);
+			cs2method5406(1, 0, script_2764(location(3680, 4945, 0), location1), 400, script_2764(location(3680, 4946, 0), location1), 400, 0);
+			cs2method5406(1, 1, script_2764(location(3680, 4947, 0), location1), 400, script_2764(location(3680, 4946, 0), location1), 400, 0);
+			cameraMethod5502(0, 0, 60, 60, 1, 0);
+			break;
+		case 7:
+			cs2method5405(0, 2);
+			cs2method5406(0, 0, script_2764(location(3681, 4942, 0), location1), 400, script_2764(location(3681, 4941, 0), location1), 400, 0);
+			cs2method5406(0, 1, script_2764(location(3681, 4940, 0), location1), 400, script_2764(location(3681, 4941, 0), location1), 400, 0);
+			cs2method5405(1, 2);
+			cs2method5406(1, 0, script_2764(location(3677, 4941, 0), location1), 350, script_2764(location(3677, 4941, 0), location1), 350, 0);
+			cs2method5406(1, 1, script_2764(location(3677, 4941, 0), location1), 350, script_2764(location(3677, 4941, 0), location1), 350, 0);
+			cameraMethod5502(0, 0, 30, 30, 1, 0);
+			break;
+		case 8:
+			cs2method5405(0, 2);
+			cs2method5406(0, 0, script_2764(location(3684, 4949, 0), location1), 450, script_2764(location(3684, 4948, 0), location1), 450, 0);
+			cs2method5406(0, 1, script_2764(location(3683, 4947, 0), location1), 450, script_2764(location(3684, 4948, 0), location1), 450, 0);
+			cs2method5405(1, 2);
+			cs2method5406(1, 0, script_2764(location(3682, 4948, 0), location1), 400, script_2764(location(3681, 4949, 0), location1), 400, 0);
+			cs2method5406(1, 1, script_2764(location(3680, 4949, 0), location1), 400, script_2764(location(3681, 4949, 0), location1), 400, 0);
+			cameraMethod5502(0, 0, 150, 150, 1, 0);
+			break;
+		case 9:
+			cs2method5405(0, 2);
+			cs2method5406(0, 0, script_2764(location(3684, 4945, 0), location1), 500, script_2764(location(3682, 4945, 0), location1), 500, 0);
+			cs2method5406(0, 1, script_2764(location(3677, 4944, 0), location1), 700, script_2764(location(3677, 4945, 0), location1), 700, 0);
+			cs2method5405(1, 2);
+			cs2method5406(1, 0, script_2764(location(3682, 4940, 0), location1), 250, script_2764(location(3682, 4940, 0), location1), 250, 0);
+			cs2method5406(1, 1, script_2764(location(3683, 4940, 0), location1), 250, script_2764(location(3683, 4940, 0), location1), 250, 0);
+			cameraMethod5502(0, 0, 30, 30, 1, 0);
+			break;
+		case 10:
+			cs2method5405(0, 2);
+			cs2method5406(0, 0, script_2764(location(3684, 4937, 0), location1), 800, script_2764(location(3684, 4937, 0), location1), 800, 0);
+			cs2method5406(0, 1, script_2764(location(3684, 4935, 0), location1), 600, script_2764(location(3684, 4935, 0), location1), 600, 0);
+			cs2method5405(1, 2);
+			cs2method5406(1, 0, script_2764(location(3680, 4944, 0), location1), 500, script_2764(location(3680, 4944, 0), location1), 500, 0);
+			cs2method5406(1, 1, script_2764(location(3678, 4946, 0), location1), 400, script_2764(location(3678, 4946, 0), location1), 400, 0);
+			cameraMethod5502(0, 0, 400, 80, 1, 0);
+			break;
+		default:
+			cs2method5512();
+			break;
+	}
+	return;
+}

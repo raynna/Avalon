@@ -1,0 +1,88 @@
+void script_4831(Widget widget0) {
+	if (widget0.isHidden()) {
+		return;
+	}
+	script_4834(widget0);
+	switch (VARPBIT[9558]) {
+		case 1:
+			switch (widget0) {
+				case widget(1092, 1188):
+				case widget(1092, 1030):
+				case widget(1092, 1112):
+					if (VARPBIT[9567] > 0 && ACTIVE.setChild(widget0, VARPBIT[9567] - 1)) {
+						ACTIVE.setSprite(6004);
+					}
+					break;
+				case widget(1092, 1014):
+				case widget(1092, 1176):
+				case widget(1092, 1098):
+					if (VARPBIT[9568] > 0 && ACTIVE.setChild(widget0, VARPBIT[9568] - 1)) {
+						ACTIVE.setSprite(6004);
+					}
+					break;
+				case widget(1092, 998):
+				case widget(1092, 1164):
+				case widget(1092, 1084):
+					if (VARPBIT[9569] > 0 && ACTIVE.setChild(widget0, VARPBIT[9569] - 1)) {
+						ACTIVE.setSprite(6004);
+					}
+					break;
+			}
+			break;
+		case 2:
+			switch (widget0) {
+				case widget(1092, 1188):
+				case widget(1092, 1030):
+				case widget(1092, 1112):
+					if (VARPBIT[9576] > 0 && ACTIVE.setChild(widget0, VARPBIT[9576] - 1)) {
+						ACTIVE.setSprite(6004);
+					}
+					break;
+				case widget(1092, 1014):
+				case widget(1092, 1176):
+				case widget(1092, 1098):
+					if (VARPBIT[9577] > 0 && ACTIVE.setChild(widget0, VARPBIT[9577] - 1)) {
+						ACTIVE.setSprite(6004);
+					}
+					break;
+				case widget(1092, 998):
+				case widget(1092, 1164):
+				case widget(1092, 1084):
+					if (VARPBIT[9578] > 0 && ACTIVE.setChild(widget0, VARPBIT[9578] - 1)) {
+						ACTIVE.setSprite(6004);
+					}
+					break;
+			}
+			break;
+		case 3:
+			switch (widget0) {
+				case widget(1092, 1188):
+				case widget(1092, 1030):
+				case widget(1092, 1112):
+					if (VARPBIT[9585] > 0 && ACTIVE.setChild(widget0, VARPBIT[9585] - 1)) {
+						ACTIVE.setSprite(6004);
+					}
+					break;
+				case widget(1092, 1014):
+				case widget(1092, 1176):
+				case widget(1092, 1098):
+					if (VARPBIT[9586] > 0 && ACTIVE.setChild(widget0, VARPBIT[9586] - 1)) {
+						ACTIVE.setSprite(6004);
+					}
+					break;
+				case widget(1092, 998):
+				case widget(1092, 1164):
+				case widget(1092, 1084):
+					if (VARPBIT[9587] > 0 && ACTIVE.setChild(widget0, VARPBIT[9587] - 1)) {
+						ACTIVE.setSprite(6004);
+					}
+					break;
+			}
+			break;
+	}
+	script_4838();
+	script_4810();
+	script_4840();
+	script_4814();
+	return;
+}

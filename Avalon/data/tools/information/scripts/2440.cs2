@@ -1,0 +1,10 @@
+void script_2440() {
+	int int0;
+	int0 = VARC[819] / 2;
+	if (int0 < 1) {
+		widget(15, 17).setText("Catch: Nothing");
+	} else {
+		widget(15, 17).setText("Catch: " + str(int0) + " Fish");
+	}
+	return;
+}

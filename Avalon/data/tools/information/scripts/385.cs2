@@ -1,0 +1,75 @@
+void script_385(AttrMap arg0) {
+	if (arg0 == (AttrMap)VARC[543] && arg0 != null) {
+		return;
+	}
+	VARC[543] = arg0;
+	switch (arg0) {
+		case (AttrMap)1112:
+			open(widget(1028, 34), 1033);
+			break;
+		case (AttrMap)1118:
+			open(widget(1028, 34), 1043);
+			break;
+		case (AttrMap)1120:
+			open(widget(1028, 34), 1032);
+			break;
+		case (AttrMap)1127:
+			open(widget(1028, 34), 1038);
+			break;
+		case (AttrMap)1125:
+			open(widget(1028, 34), 1034);
+			break;
+		case (AttrMap)1122:
+			open(widget(1028, 34), 1036);
+			break;
+		case (AttrMap)1128:
+			open(widget(1028, 34), 1044);
+			break;
+		case (AttrMap)1129:
+			open(widget(1028, 34), 1042);
+			break;
+		case (AttrMap)1119:
+			open(widget(1028, 34), 1041);
+			break;
+		case (AttrMap)1114:
+			open(widget(1028, 34), 1029);
+			break;
+		case (AttrMap)1124:
+			open(widget(1028, 34), 1030);
+			break;
+		case (AttrMap)1121:
+			open(widget(1028, 34), 1031);
+			break;
+		case (AttrMap)1115:
+			open(widget(1028, 34), 1046);
+			break;
+		case (AttrMap)1130:
+			open(widget(1028, 34), 1047);
+			break;
+		case (AttrMap)1116:
+			open(widget(1028, 34), 1045);
+			break;
+		case (AttrMap)1126:
+			open(widget(1028, 34), 1049);
+			break;
+		case (AttrMap)1131:
+			open(widget(1028, 34), 1035);
+			break;
+		case (AttrMap)1117:
+			open(widget(1028, 34), 1039);
+			break;
+		case (AttrMap)1113:
+			open(widget(1028, 34), 1048);
+			break;
+		case (AttrMap)1123:
+			open(widget(1028, 34), 1037);
+			break;
+		case null:
+			close(widget(1028, 34));
+			break;
+		default:
+			open(widget(1028, 34), 1033);
+			break;
+	}
+	return;
+}

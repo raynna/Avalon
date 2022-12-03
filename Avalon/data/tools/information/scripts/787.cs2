@@ -1,0 +1,23 @@
+void script_787(Widget widget0) {
+	widget(667, 5).clearChildren();
+	script_1516(widget(667, 5), 375, 125);
+	script_2647(widget(667, 5));
+	script_2373(widget0, -1);
+	script_2947();
+	script_680(widget(667, 65));
+	widget(667, 65).setScriptCallOnMouseEntered(95, CTX_WIDGET, "I");
+	widget(667, 65).setScriptCallOnMouseExit(93, CTX_WIDGET, "I");
+	widget0.setScriptCallOnGlobalStringChange(2782, 321, 322, 323, 324, 325, "Y");
+	if (VARPBIT[4894] == 1) {
+		widget(667, 49).setIsHidden(false);
+	} else {
+		widget(667, 49).setIsHidden(true);
+	}
+	script_2957(widget(667, 50));
+	widget(667, 50).setScriptCallOnMouseEntered(1413, CTX_WIDGET, "I");
+	widget(667, 50).setScriptCallOnMouseExit(1414, CTX_WIDGET, "I");
+	widget0.setScriptCallOnConfigChange(2371, 1248, "Y");
+	widget(667, 25).setScriptCallOnGeneralDataChange(690, "");
+	widget(762, 121).setScriptCallOnGeneralDataChange(690, "");
+	return;
+}

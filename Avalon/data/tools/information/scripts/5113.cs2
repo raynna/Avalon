@@ -1,0 +1,32 @@
+void script_5113(int arg0) {
+	switch (VARP[2317]) {
+		case 1:
+			script_5114(widget(1116, 60), widget(1116, 62), widget(1116, 72), widget(1116, 81), widget(1116, 82), widget(1116, 157), arg0);
+			break;
+		case 2:
+			script_5114(widget(1116, 191), widget(1116, 166), widget(1116, 177), widget(1116, 187), widget(1116, 188), widget(1116, 202), arg0);
+			break;
+		case 3:
+			script_5114(widget(1116, 240), widget(1116, 215), widget(1116, 226), widget(1116, 236), widget(1116, 237), widget(1116, 251), arg0);
+			break;
+		case 4:
+			script_5114(widget(1116, 289), widget(1116, 264), widget(1116, 275), widget(1116, 285), widget(1116, 286), widget(1116, 300), arg0);
+			break;
+		case 5:
+			script_5114(widget(1116, 338), widget(1116, 313), widget(1116, 324), widget(1116, 334), widget(1116, 335), widget(1116, 349), arg0);
+			break;
+		case 6:
+			script_5114(widget(1116, 387), widget(1116, 362), widget(1116, 373), widget(1116, 383), widget(1116, 384), widget(1116, 398), arg0);
+			break;
+		case 7:
+			script_5114(widget(1116, 436), widget(1116, 411), widget(1116, 422), widget(1116, 432), widget(1116, 433), widget(1116, 447), arg0);
+			break;
+		case 8:
+			script_5114(widget(1116, 485), widget(1116, 460), widget(1116, 471), widget(1116, 481), widget(1116, 482), widget(1116, 496), arg0);
+			break;
+		case 9:
+			script_5114(widget(1116, 534), widget(1116, 509), widget(1116, 520), widget(1116, 530), widget(1116, 531), widget(1116, 545), arg0);
+			break;
+	}
+	return;
+}

@@ -1,0 +1,7 @@
+void script_4275() {
+	widget(1081, 7).setAnimation(8016);
+	widget(1081, 2).setAnimation(8016);
+	widget(1081, 1).setAnimation(4407);
+	widget(1081, 0).setAnimation(8016);
+	return;
+}

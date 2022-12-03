@@ -1,0 +1,23 @@
+void script_286(int arg0, Widget widget1, int arg2, int arg3, int arg4, string string5, int arg6) {
+	if (arg0 != 1) {
+		return;
+	}
+	if (ACTIVE.setChild(widget1, arg2)) {
+		ACTIVE.setContextMenuOption(1, string5);
+	}
+	if (ACTIVE.setChild(widget1, arg3)) {
+		ACTIVE.setContextMenuOption(1, string5);
+	}
+	if (ACTIVE.setChild(widget1, arg4)) {
+		if (arg6 == 1) {
+			ACTIVE.setHidden(false);
+		} else {
+			ACTIVE.setHidden(true);
+		}
+	}
+	if (arg2 == 11) {
+		cs2method5231(950, arg6);
+	}
+	playSoundEffect(2266, 1, 0);
+	return;
+}

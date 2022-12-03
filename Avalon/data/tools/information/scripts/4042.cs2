@@ -1,0 +1,88 @@
+void script_4042() {
+	switch (VARPBIT[8648]) {
+		case 1:
+			datamap('i', 'I', (DataMap)755, 1).setPosition(-130, 0, 1, 0);
+			break;
+		case 2:
+			datamap('i', 'I', (DataMap)755, 2).setPosition(-130, 0, 1, 0);
+			break;
+		case 3:
+			datamap('i', 'I', (DataMap)755, 3).setPosition(-130, 0, 1, 0);
+			break;
+		case 4:
+			datamap('i', 'I', (DataMap)755, 4).setPosition(-130, 0, 1, 0);
+			break;
+		case 5:
+			datamap('i', 'I', (DataMap)755, 5).setPosition(-130, 0, 1, 0);
+			break;
+	}
+	switch (VARPBIT[8649]) {
+		case 1:
+			datamap('i', 'I', (DataMap)755, 1).setPosition(-65, 0, 1, 0);
+			break;
+		case 2:
+			datamap('i', 'I', (DataMap)755, 2).setPosition(-65, 0, 1, 0);
+			break;
+		case 3:
+			datamap('i', 'I', (DataMap)755, 3).setPosition(-65, 0, 1, 0);
+			break;
+		case 4:
+			datamap('i', 'I', (DataMap)755, 4).setPosition(-65, 0, 1, 0);
+			break;
+		case 5:
+			datamap('i', 'I', (DataMap)755, 5).setPosition(-65, 0, 1, 0);
+			break;
+	}
+	switch (VARPBIT[8650]) {
+		case 1:
+			datamap('i', 'I', (DataMap)755, 1).setPosition(0, 0, 1, 0);
+			break;
+		case 2:
+			datamap('i', 'I', (DataMap)755, 2).setPosition(0, 0, 1, 0);
+			break;
+		case 3:
+			datamap('i', 'I', (DataMap)755, 3).setPosition(0, 0, 1, 0);
+			break;
+		case 4:
+			datamap('i', 'I', (DataMap)755, 4).setPosition(0, 0, 1, 0);
+			break;
+		case 5:
+			datamap('i', 'I', (DataMap)755, 5).setPosition(0, 0, 1, 0);
+			break;
+	}
+	switch (VARPBIT[8651]) {
+		case 1:
+			datamap('i', 'I', (DataMap)755, 1).setPosition(65, 0, 1, 0);
+			break;
+		case 2:
+			datamap('i', 'I', (DataMap)755, 2).setPosition(65, 0, 1, 0);
+			break;
+		case 3:
+			datamap('i', 'I', (DataMap)755, 3).setPosition(65, 0, 1, 0);
+			break;
+		case 4:
+			datamap('i', 'I', (DataMap)755, 4).setPosition(65, 0, 1, 0);
+			break;
+		case 5:
+			datamap('i', 'I', (DataMap)755, 5).setPosition(65, 0, 1, 0);
+			break;
+	}
+	switch (VARPBIT[8652]) {
+		case 1:
+			datamap('i', 'I', (DataMap)755, 1).setPosition(130, 0, 1, 0);
+			break;
+		case 2:
+			datamap('i', 'I', (DataMap)755, 2).setPosition(130, 0, 1, 0);
+			break;
+		case 3:
+			datamap('i', 'I', (DataMap)755, 3).setPosition(130, 0, 1, 0);
+			break;
+		case 4:
+			datamap('i', 'I', (DataMap)755, 4).setPosition(130, 0, 1, 0);
+			break;
+		case 5:
+			datamap('i', 'I', (DataMap)755, 5).setPosition(130, 0, 1, 0);
+			break;
+	}
+	return;
+}

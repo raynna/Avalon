@@ -1,0 +1,9 @@
+void script_4435(int arg0) {
+	if (cs2method3751()) {
+		if (arg0 <= -1) {
+			arg0 = VARC[1035];
+		}
+		script_4436(widget(1110, 14), arg0);
+	}
+	return;
+}

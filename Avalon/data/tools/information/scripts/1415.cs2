@@ -1,0 +1,30 @@
+void script_1415() {
+	int int0;
+	int int1;
+	int int2;
+	int0 = 0;
+	int1 = 0;
+	int2 = 0;
+	while (int0 <= getItemContainerLength(93)) {
+		ACTIVE.createChild(widget(323, 5), 5, int0);
+		ACTIVE.setSize(36, 32, 0, 0);
+		ACTIVE.setPosition(5 + 40 * int1, 40 * int2, 0, 0);
+		if (getItemIdInSlot(93, int0) != null) {
+			ACTIVE.setItem(getItemIdInSlot(93, int0), getItemAmtInSlot(93, int0));
+			ACTIVE.setOptionBase("<col=ff9040>" + getItemName(getItemIdInSlot(93, int0)));
+			ACTIVE.setContextMenuOption(1, "<col=00ff00>" + "Value");
+			ACTIVE.setContextMenuOption(2, "Pack " + "<col=ff0000>" + "1");
+			ACTIVE.setContextMenuOption(3, "Pack " + "<col=ff0000>" + "5");
+			ACTIVE.setContextMenuOption(4, "Pack " + "<col=ff0000>" + "All");
+			ACTIVE.setContextMenuOption(5, "Pack " + "<col=ff0000>" + "X");
+			ACTIVE.setContextMenuOption(10, "Examine");
+		}
+		int0 = int0 + 1;
+		int1 = int1 + 1;
+		if (int1 > 6) {
+			int1 = 0;
+			int2 = int2 + 1;
+		}
+	}
+	return;
+}

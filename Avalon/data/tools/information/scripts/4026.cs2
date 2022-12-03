@@ -1,0 +1,59 @@
+void script_4026(int arg0) {
+	switch (arg0) {
+		case 0:
+			if (widget(917, 83).isHidden()) {
+				widget(917, 26).setSprite(4316);
+				widget(917, 28).setSprite(4316);
+				widget(917, 27).setSprite(4317);
+			}
+			if (widget(917, 84).isHidden()) {
+				widget(917, 22).setSprite(4316);
+				widget(917, 24).setSprite(4316);
+				widget(917, 23).setSprite(4317);
+			}
+			if (widget(917, 82).isHidden()) {
+				widget(917, 18).setSprite(4316);
+				widget(917, 20).setSprite(4316);
+				widget(917, 19).setSprite(4317);
+			}
+			if (widget(917, 86).isHidden()) {
+				widget(917, 14).setSprite(4316);
+				widget(917, 16).setSprite(4316);
+				widget(917, 15).setSprite(4317);
+			}
+			break;
+		case 1:
+			if (!widget(917, 83).isHidden()) {
+				return;
+			}
+			widget(917, 26).setSprite(4318);
+			widget(917, 28).setSprite(4318);
+			widget(917, 27).setSprite(4319);
+			break;
+		case 2:
+			if (!widget(917, 84).isHidden()) {
+				return;
+			}
+			widget(917, 22).setSprite(4318);
+			widget(917, 24).setSprite(4318);
+			widget(917, 23).setSprite(4319);
+			break;
+		case 3:
+			if (!widget(917, 82).isHidden()) {
+				return;
+			}
+			widget(917, 18).setSprite(4318);
+			widget(917, 20).setSprite(4318);
+			widget(917, 19).setSprite(4319);
+			break;
+		case 4:
+			if (!widget(917, 86).isHidden()) {
+				return;
+			}
+			widget(917, 14).setSprite(4318);
+			widget(917, 16).setSprite(4318);
+			widget(917, 15).setSprite(4319);
+			break;
+	}
+	return;
+}

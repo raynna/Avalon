@@ -1,0 +1,10 @@
+void script_2023(int arg0, int arg1) {
+	if (arg0 != 1) {
+		return;
+	}
+	VARPBIT[8095] = max(min(VARPBIT[8095] + arg1, VARPBIT[8094]), 0);
+	script_2047();
+	widget(905, 28).setScriptCallOnGameloop(2024, getClientCycle() + 15, "i");
+	widget(905, 28).setIsHidden(false);
+	return;
+}

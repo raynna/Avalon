@@ -1,0 +1,15 @@
+int script_2240() {
+	int int0;
+	int0 = 5;
+	int0 = VARC[1126] + VARC[1127] + VARC[1128] + VARC[1129] + VARC[1131] + VARC[1130];
+	if (VARC[1133] == 1) {
+		int0 = int0 + 1;
+	}
+	if (VARC[1134] == 1) {
+		int0 = int0 + 1;
+	}
+	if (VARC[1132] == 1) {
+		int0 = int0 + 1;
+	}
+	return int0;
+}

@@ -1,0 +1,13 @@
+void script_234(int arg0) {
+	int int1;
+	string str0;
+	str0 = "";
+	int1 = -1;
+	if (ACTIVE.setChild(widget(594, 94), arg0)) {
+		STRING[24] = ACTIVE.getOptionBase();
+		VARC[792] = VARC[791];
+		script_240();
+		script_217();
+	}
+	return;
+}

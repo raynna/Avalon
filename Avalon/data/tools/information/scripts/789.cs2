@@ -1,0 +1,41 @@
+void script_789(Widget widget0) {
+	if ((widget0 == widget(1139, 37) || widget0 == widget(1139, 38) || widget0 == widget(1139, 39) || widget0 == widget(1139, 41) || widget0 == widget(1139, 49) || widget0 == widget(1139, 51) || widget0 == widget(1139, 52) || widget0 == widget(1139, 50) || widget0 == widget(1139, 53)) && !isMember()) {
+		return;
+	}
+	if (widget0 == widget(1139, 53) && VARPBIT[4302] < 110) {
+		return;
+	}
+	if (widget0 == widget(1139, 38) && VARP[80] < 4) {
+		return;
+	}
+	if (widget0 == widget(1139, 52) && VARPBIT[2187] == 0) {
+		return;
+	}
+	widget(1139, 4).setIsHidden(true);
+	widget(1139, 21).setIsHidden(true);
+	widget(1139, 22).setIsHidden(true);
+	widget(1139, 23).setIsHidden(true);
+	widget(1139, 24).setIsHidden(true);
+	widget(1139, 25).setIsHidden(true);
+	widget(1139, 27).setIsHidden(true);
+	widget(1139, 5).setIsHidden(true);
+	widget(1139, 6).setIsHidden(true);
+	widget(1139, 8).setIsHidden(true);
+	widget(1139, 26).setIsHidden(true);
+	widget(1139, 9).setIsHidden(true);
+	widget(1139, 12).setIsHidden(true);
+	widget(1139, 13).setIsHidden(true);
+	widget(1139, 7).setIsHidden(true);
+	widget(1139, 15).setIsHidden(true);
+	widget(1139, 16).setIsHidden(true);
+	widget(1139, 17).setIsHidden(true);
+	widget(1139, 18).setIsHidden(true);
+	widget(1139, 10).setIsHidden(true);
+	widget(1139, 11).setIsHidden(true);
+	widget(1139, 19).setIsHidden(true);
+	widget(1139, 14).setIsHidden(true);
+	widget(1139, 20).setIsHidden(true);
+	widget(1139, 28).setIsHidden(true);
+	widget0.setIsHidden(false);
+	return;
+}

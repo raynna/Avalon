@@ -1,0 +1,26 @@
+void script_2345() {
+	int int0;
+	int int1;
+	Location location2;
+	Location location3;
+	VARC[769] = 0;
+	int0 = x(getMyLocation()) - x(getMyLocation()) % 64;
+	int1 = y(getMyLocation()) - y(getMyLocation()) % 64;
+	location2 = moveCoord(location(0, 0, 0), int0, 0, int1);
+	location3 = moveCoord(location2, x(location(31, 40, 0)), 0, y(location(31, 40, 0)));
+	cs2method5405(0, 5);
+	cs2method5406(0, 0, moveCoord(location3, 0, 0, -5), 800, moveCoord(location3, 0, 0, -5), 900, 0);
+	cs2method5406(0, 1, moveCoord(location3, -5, 0, -1), 800, moveCoord(location3, -5, 0, 0), 900, 0);
+	cs2method5406(0, 2, moveCoord(location3, -1, 0, 5), 800, moveCoord(location3, 0, 0, 5), 900, 0);
+	cs2method5406(0, 3, moveCoord(location3, 5, 0, 1), 800, moveCoord(location3, 5, 0, 0), 900, 0);
+	cs2method5406(0, 4, moveCoord(location3, 0, 0, -3), 800, moveCoord(location3, 0, 0, -3), 900, 0);
+	cs2method5405(1, 5);
+	cs2method5406(1, 0, location3, 400, location3, 400, 0);
+	cs2method5406(1, 1, location3, 400, location3, 400, 0);
+	cs2method5406(1, 2, location3, 400, location3, 400, 0);
+	cs2method5406(1, 3, location3, 400, location3, 400, 0);
+	cs2method5406(1, 4, location3, 500, location3, 500, 0);
+	cameraMethod5502(0, 0, 200, 200, 1, 0);
+	widget(582, 0).setScriptCallOnMinimapRelatedSetting3(2346, "");
+	return;
+}

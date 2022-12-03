@@ -1,0 +1,5 @@
+void script_1372() {
+	setWorldmapZoom(VARC[172]);
+	widget(755, 14).setText(str(VARC[172]) + "%");
+	return;
+}

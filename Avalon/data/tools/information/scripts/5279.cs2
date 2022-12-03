@@ -1,0 +1,55 @@
+void script_5279(Widget widget0) {
+	boolean boolean1;
+	boolean1 = script_734(VARPBIT[9897]);
+	widget(388, 17).setIsHidden(boolean1);
+	widget(388, 30).setIsHidden(boolean1);
+	widget(388, 43).setIsHidden(boolean1);
+	widget(388, 56).setIsHidden(boolean1);
+	widget(388, 69).setIsHidden(boolean1);
+	widget(388, 107).setIsHidden(boolean1);
+	widget(388, 121).setIsHidden(boolean1);
+	widget(388, 135).setIsHidden(boolean1);
+	widget(388, 148).setIsHidden(boolean1);
+	widget(388, 163).setIsHidden(boolean1);
+	widget(388, 177).setIsHidden(boolean1);
+	widget(388, 191).setIsHidden(boolean1);
+	widget(388, 205).setIsHidden(boolean1);
+	widget(388, 90).setIsHidden(boolean1);
+	if (boolean1) {
+		widget0.setText("Theatre Options");
+		widget(388, 104).setScriptCallOnClickContextMenu(5293, CTX_MENU_OPTION, 1, false, "ii1");
+		widget(388, 117).setScriptCallOnClickContextMenu(5293, CTX_MENU_OPTION, 2, false, "ii1");
+		widget(388, 131).setScriptCallOnClickContextMenu(5293, CTX_MENU_OPTION, 3, false, "ii1");
+		widget(388, 145).setScriptCallOnClickContextMenu(5293, CTX_MENU_OPTION, 4, false, "ii1");
+		widget(388, 159).setScriptCallOnClickContextMenu(5293, CTX_MENU_OPTION, 5, false, "ii1");
+		widget(388, 173).setScriptCallOnClickContextMenu(5293, CTX_MENU_OPTION, 6, false, "ii1");
+		widget(388, 187).setScriptCallOnClickContextMenu(5293, CTX_MENU_OPTION, 7, false, "ii1");
+		widget(388, 201).setScriptCallOnClickContextMenu(5293, CTX_MENU_OPTION, 8, false, "ii1");
+		widget(388, 14).setScriptCallOnClickContextMenu(5293, CTX_MENU_OPTION, 1, true, "ii1");
+		widget(388, 27).setScriptCallOnClickContextMenu(5293, CTX_MENU_OPTION, 2, true, "ii1");
+		widget(388, 40).setScriptCallOnClickContextMenu(5293, CTX_MENU_OPTION, 3, true, "ii1");
+		widget(388, 53).setScriptCallOnClickContextMenu(5293, CTX_MENU_OPTION, 4, true, "ii1");
+		widget(388, 66).setScriptCallOnClickContextMenu(5293, CTX_MENU_OPTION, 5, true, "ii1");
+	} else {
+		if (VARPBIT[9887] == 0 || VARPBIT[9896] == 0) {
+			widget0.setText("Waiting on technician to select options...");
+		} else {
+			widget0.setText("Waiting on technician to unlock theatre...");
+		}
+		widget(388, 104).setScriptCallOnClickContextMenu(-1, "");
+		widget(388, 117).setScriptCallOnClickContextMenu(-1, "");
+		widget(388, 131).setScriptCallOnClickContextMenu(-1, "");
+		widget(388, 145).setScriptCallOnClickContextMenu(-1, "");
+		widget(388, 159).setScriptCallOnClickContextMenu(-1, "");
+		widget(388, 173).setScriptCallOnClickContextMenu(-1, "");
+		widget(388, 187).setScriptCallOnClickContextMenu(-1, "");
+		widget(388, 201).setScriptCallOnClickContextMenu(-1, "");
+		widget(388, 14).setScriptCallOnClickContextMenu(-1, "");
+		widget(388, 27).setScriptCallOnClickContextMenu(-1, "");
+		widget(388, 40).setScriptCallOnClickContextMenu(-1, "");
+		widget(388, 53).setScriptCallOnClickContextMenu(-1, "");
+		widget(388, 66).setScriptCallOnClickContextMenu(-1, "");
+	}
+	script_4532(widget0);
+	return;
+}

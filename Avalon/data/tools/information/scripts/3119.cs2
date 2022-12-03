@@ -1,0 +1,5 @@
+void script_3119(Widget widget0, int arg1) {
+	widget0.clearChildren();
+	widget0.setIsHidden(true);
+	return;
+}

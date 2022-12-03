@@ -1,0 +1,27 @@
+int script_2295(int arg0) {
+	DataMap datamap1;
+	if (!isMember() && script_2294(arg0) == 1) {
+		return 0;
+	}
+	if (script_5256() == 0) {
+		playSoundEffect(2673, 1, 0);
+		return 0;
+	}
+	datamap1 = (DataMap)2279;
+	if (VARPBIT[6840] == 1) {
+		datamap1 = (DataMap)863;
+	}
+	if (getSkillActualLvl(5) < getAttributeMapValue(datamap('i', 'J', datamap1, arg0), 737)) {
+		playSoundEffect(2673, 1, 0);
+		return 0;
+	}
+	if (arg0 == 25 && (getSkillActualLvl(1) < 55 || VARPBIT[3909] != 8)) {
+		playSoundEffect(2673, 1, 0);
+		return 0;
+	}
+	if (arg0 == 26 && (getSkillActualLvl(1) < 70 || VARPBIT[3909] != 8)) {
+		playSoundEffect(2673, 1, 0);
+		return 0;
+	}
+	return 1;
+}

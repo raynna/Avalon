@@ -1,0 +1,12 @@
+int script_1988() {
+	int int0;
+	int0 = 0;
+	int0 = int0 + VARPBIT[8180];
+	int0 = int0 + VARPBIT[8181];
+	int0 = int0 + VARPBIT[8188];
+	int0 = int0 + VARPBIT[8191];
+	int0 = int0 + VARPBIT[8192];
+	int0 = int0 + VARPBIT[8193];
+	int0 = int0 + VARPBIT[8194];
+	return int0;
+}

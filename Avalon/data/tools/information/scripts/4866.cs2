@@ -1,0 +1,92 @@
+void script_4866(int arg0, int arg1, int arg2, int arg3, int arg4) {
+	Widget widget5;
+	Widget widget6;
+	Widget widget7;
+	Widget widget8;
+	Widget widget9;
+	Widget widget10;
+	Widget widget11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	int int21;
+	Widget widget22;
+	Widget widget23;
+	Sprite sprite24;
+	Sprite sprite25;
+	int int26;
+	string str0;
+	string str1;
+	widget5 = widget(script_4867(arg0));
+	widget6 = widget(script_4868(arg0));
+	widget7 = widget(script_4869(arg0));
+	widget8 = widget(script_4870(arg0));
+	widget9 = widget6.getParentLayer();
+	widget10 = widget9.getParentLayer();
+	widget11 = widget10.getParentLayer();
+	int12 = 1;
+	if (citadelConfigsInitialized()) {
+		int12 = CLANBIT[2581];
+	}
+	int13 = script_5215(arg0);
+	int14 = widget6.getParentLayer().getWidth();
+	arg1 = arg1 / 100;
+	arg4 = max(arg4, int13);
+	int15 = arg1 * int14 / arg4;
+	int16 = int13 * int14 / arg4;
+	int17 = arg2 * int14 / arg4;
+	int18 = arg3 * int14 / arg4;
+	int19 = arg1 - (arg2 + arg3);
+	int20 = int19 * int14 / arg4;
+	widget5.setText(str(arg1));
+	int21 = 0;
+	widget6.setSize(min(int17 - 2, int15), widget6.getHeight(), 0, 0);
+	widget6.setPosition(1, 0, 0, 0);
+	widget7.setSize(min(int18, int15 - int17), widget7.getHeight(), 0, 0);
+	widget7.setPosition(int17, 0, 0, 0);
+	widget8.setSize(min(int20 - 2, int15 - (int17 + int18)), widget8.getHeight(), 0, 0);
+	widget8.setPosition(int17 + int18 + 1, 0, 0, 0);
+	widget22 = null;
+	widget23 = null;
+	sprite24 = 7317;
+	sprite25 = 7314;
+	widget22, widget23 = script_5223(arg0);
+	if (widget22 != null && widget23 != null) {
+		int16 = int16 + 82;
+		int16 = int16 - widget23.getWidth() / 2;
+		if (CLAN[2744] == arg0) {
+			sprite24 = 7316;
+			sprite25 = 7315;
+		}
+		widget22.setIsHidden(true);
+		widget23.setIsHidden(true);
+		if (int13 > 0) {
+			widget22.setSprite(sprite24);
+			widget23.setSprite(sprite25);
+			widget22.setIsHidden(false);
+			widget23.setIsHidden(false);
+			widget23.setPosition(int16, 0, 0, 1);
+		}
+	}
+	str0 = datamap('i', 's', (DataMap)4285, arg0);
+	str1 = str0 + "<br>" + "Total : " + str(arg1) + "<br>" + "Upkeep : " + str(arg2) + "<br>" + "Upgrades : " + str(arg3) + "<br>" + "Surplus : " + str(int19);
+	if (int13 > 0) {
+		str1 = concat(str1, "<br>" + "Goal: " + str(int13));
+	}
+	if (CLAN[2744] == arg0) {
+		str1 = concat(str1, " (Primary)");
+	}
+	int26 = 2;
+	if (widget11.getY() > widget11.getParentLayer().getHeight() / 2 - 10) {
+		int26 = 0;
+	}
+	widget11.setScriptCallOnMouseOver(4538, widget(1092, 257), CTX_WIDGET, -1, str1, 120, 3793, 3793, 16777215, 13, 4, int26, MOUSE_X, MOUSE_Y, "IIisifdiiiiii");
+	widget11.setScriptCallOnMouseExit(40, widget(1092, 257), "I");
+	return;
+}

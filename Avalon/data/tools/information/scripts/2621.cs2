@@ -1,0 +1,12 @@
+void script_2621() {
+	if (!widget(850, 1).isHidden()) {
+		widget(850, 1).setIsHidden(true);
+		widget(850, 47).setIsHidden(false);
+		widget(850, 50).setHFlip(false);
+	} else {
+		widget(850, 1).setIsHidden(false);
+		widget(850, 47).setIsHidden(true);
+		widget(850, 50).setHFlip(true);
+	}
+	return;
+}

@@ -1,0 +1,17 @@
+void script_2937() {
+	VARC[1089] = -1;
+	widget(596, 35).setSprite(4066);
+	widget(596, 34).setSprite(4066);
+	widget(596, 32).setSprite(4065);
+	widget(596, 33).setSprite(4065);
+	widget(596, 20).setSprite(4065);
+	widget(596, 20).setVFlip(true);
+	widget(596, 20).setHFlip(true);
+	widget(596, 24).setSprite(4065);
+	widget(596, 24).setVFlip(true);
+	widget(596, 24).setHFlip(false);
+	widget(596, 21).setSprite(4065);
+	widget(596, 25).setSprite(4065);
+	widget(744, 17).setScriptCallOnGameloop(4700, "");
+	return;
+}

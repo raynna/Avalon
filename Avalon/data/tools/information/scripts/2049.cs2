@@ -1,0 +1,33 @@
+void script_2049(Sprite sprite0, int arg1, int arg2, int arg3, int arg4, int arg5, boolean boolean6, boolean boolean7, boolean boolean8, int arg9, string arg10, string string11, Location location12) {
+	int int11;
+	int int12;
+	ACTIVE.setHidden(false);
+	ACTIVE.setSize(arg1, arg2, 0, 0);
+	ACTIVE.setPosition(arg3, arg4, 1, 1);
+	ACTIVE.set2DAngle(arg5);
+	ACTIVE.setSpriteTiling(boolean6);
+	ACTIVE.setHFlip(boolean7);
+	ACTIVE.setVFlip(boolean8);
+	ACTIVE.setSprite(sprite0);
+	int11 = 0;
+	int12 = 0;
+	if (arg9 == 1) {
+		ACTIVE.setAlpha(true);
+		int11 = getClientCycle() % 50;
+		int12 = 50 / 2;
+		if (int11 <= int12) {
+			ACTIVE.setTrans(255 - int11 * int12 / 255);
+		} else {
+			ACTIVE.setTrans((int11 - int12) * int12 / 255);
+		}
+	}
+	if (location12 != null) {
+		ACTIVE.setOptionBase("<col=ff9040>" + arg10 + "</col>");
+		ACTIVE.setContextMenuOption(1, string11);
+		ACTIVE.setScriptCallOnClickContextMenu(2053, CTX_MENU_OPTION, CTX_WIDGET, location12, "iIc");
+	} else {
+		ACTIVE.setContextMenuOption(1, "");
+		ACTIVE.setScriptCallOnClickContextMenu(-1, "");
+	}
+	return;
+}

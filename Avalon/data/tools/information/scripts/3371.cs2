@@ -1,0 +1,15 @@
+int, int script_3371(int arg0) {
+	if (arg0 == 1) {
+		cs2method5405(0, 3);
+		cs2method5405(1, 3);
+		cs2method5406(0, 0, location(3516, 3679, 0), 380, location(3524, 3699, 0), 445, 0);
+		cs2method5406(1, 0, location(3511, 3686, 0), -15, location(3514, 3698, 0), 10, 0);
+		cs2method5406(0, 1, location(3503, 3697, 0), 715, location(3488, 3695, 0), 775, 0);
+		cs2method5406(1, 1, location(3488, 3688, 0), -45, location(3484, 3684, 0), 210, 0);
+		script_1899(0, 75, 50);
+		cs2method5406(0, 2, location(3503, 3697, 0), 715, location(3488, 3695, 0), 775, 0);
+		cs2method5406(1, 2, location(3488, 3688, 0), -45, location(3484, 3684, 0), 210, 0);
+		script_1899(1, 50, 50);
+	}
+	return 57118312, 1250324;
+}

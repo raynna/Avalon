@@ -1,0 +1,137 @@
+void script_3165(Widget widget0, Widget widget1, Widget widget2, Widget widget3, Widget widget4, Widget widget5) {
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	Color color11;
+	int int12;
+	int int13;
+	int int14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	string str0;
+	string str1;
+	string str2;
+	if (cs2method5428(widget3, -1)) {
+		widget4.setScriptCallOnGameloop(3164, widget0, widget1, widget2, widget3, widget4, widget5, "IIIIII");
+		return;
+	}
+	widget4.setScriptCallOnGameloop(-1, "");
+	widget0.clearChildren();
+	widget1.clearChildren();
+	widget2.clearChildren();
+	widget3.clearChildren();
+	int6 = 0;
+	int7 = cs2method3755();
+	int8 = 0;
+	str0 = "";
+	int9 = 15;
+	int10 = 17;
+	color11 = 0x000000;
+	int12 = 0;
+	int13 = 0;
+	int14 = 0;
+	int15 = 0;
+	int16 = 0;
+	str1 = "";
+	str2 = "";
+	int17 = 0;
+	int18 = script_4468();
+	int19 = cs2method3760(removeTags(cs2method5020()));
+	int20 = 0;
+	if (int19 != -1) {
+		int20 = cs2method3757(int19);
+	}
+	script_1896();
+	widget(912, 39).setIsHidden(true);
+	widget(912, 17).setText(cs2method3752());
+	widget(912, 38).setSize(widget(912, 38).getWidth(), 4, 0, 1);
+	while (int8 < int7) {
+		int16 = cs2method3757(int8);
+		str2 = cs2method3756(int8);
+		str0 = str2;
+		script_2996(widget3, int8, widget3.getWidth(), int9, 0, int12, 0x000000, true, 0);
+		if (int8 % 2 == 0) {
+			ACTIVE.setRGB(0x201911);
+		} else {
+			ACTIVE.setRGB(0x292016);
+		}
+		str1 = "Rank: " + datamap('i', 's', (DataMap)3715, int16);
+		ACTIVE.setScriptCallOnMouseEntered(3167, widget3, int8, str1, "Iis");
+		ACTIVE.setScriptCallOnMouseExit(3169, widget3, int8, "Ii");
+		if (cs2method3760(removeTags(cs2method5020())) != int8) {
+			ACTIVE.setScriptCallOnClickContextMenu(3170, str2, CTX_MENU_OPTION, "si");
+			if (isFriend(removeTags(str2))) {
+				ACTIVE.setContextMenuOption(8, "Remove friend " + str0);
+			} else if (cs2method3623(removeTags(str2))) {
+				ACTIVE.setContextMenuOption(9, "Remove ignore " + str0);
+			} else {
+				ACTIVE.setContextMenuOption(6, "Add friend " + str0);
+				ACTIVE.setContextMenuOption(7, "Add ignore " + str0);
+			}
+		}
+		if (int18 == 1 && int20 > int16) {
+			ACTIVE.setContextMenuOption(10, "Kick/ban " + str0);
+		}
+		script_2994(widget1, int8, 9, 9, 5, int12 + 2, datamap('i', 'd', (DataMap)3712, int16), false, false, false, 0);
+		script_2995(widget0, int8, 0, int9, int10, int12, str0, 0xFFFFFF, 494, 0, 1, 0, true);
+		ACTIVE.setSize(int10, int9, 1, 0);
+		ACTIVE.setMaxLines(1);
+		int13 = cs2method3758(int8);
+		if (int13 == 0) {
+			str0 = "Offline";
+			color11 = 0xFF0000;
+		} else {
+			if (int13 >= 1100) {
+				str0 = "Lobby " + str(int13 - 1099);
+			} else {
+				str0 = "World " + str(int13);
+			}
+			if (int13 == getWorldId()) {
+				color11 = 0x00FF00;
+			} else {
+				color11 = 0xFFFF00;
+			}
+		}
+		script_2995(widget2, int8, 0, int9, 5, int12, str0, color11, 494, 0, 1, 0, true);
+		ACTIVE.setSize(5, int9, 1, 0);
+		ACTIVE.setMaxLines(1);
+		int12 = int12 + int9;
+		int8 = int8 + 1;
+	}
+	int14 = widget4.getHeight() / int9 + 1;
+	if (int14 > int7) {
+		while (int8 < int14) {
+			script_2996(widget3, int8, widget3.getWidth(), int9, 0, int12, 0x000000, true, 0);
+			if (int8 % 2 == 0) {
+				ACTIVE.setRGB(0x201911);
+			} else {
+				ACTIVE.setRGB(0x292016);
+			}
+			int12 = int12 + int9;
+			int8 = int8 + 1;
+		}
+		int15 = widget4.getHeight();
+	} else {
+		int15 = int12;
+	}
+	if (int14 <= int7) {
+		int17 = widget(912, 45).getScrollY();
+		widget(912, 45).setScrollMax(0, int15);
+		if (int17 > int15) {
+			int17 = int15;
+		}
+		script_72(widget(912, 46), widget(912, 45), int17);
+	} else {
+		widget(912, 45).setScrollMax(0, 0);
+		widget(912, 45).setScrollPos(0, 0);
+		script_72(widget(912, 46), widget(912, 45), 0);
+	}
+	script_1896();
+	return;
+}

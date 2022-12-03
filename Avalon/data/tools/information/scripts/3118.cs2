@@ -1,0 +1,115 @@
+void script_3118(int arg0, Widget widget1, int arg2, int arg3) {
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	Sprite sprite10;
+	int int11;
+	int int12;
+	Sprite sprite13;
+	Color color14;
+	Color color15;
+	Sprite sprite16;
+	Sprite sprite17;
+	string str0;
+	string str1;
+	string str2;
+	string str3;
+	string str4;
+	string str5;
+	widget1.clearChildren();
+	int4 = 0;
+	str0 = "";
+	int5 = 0;
+	str1 = "";
+	int6 = 0;
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	str2 = "";
+	sprite10 = null;
+	int11 = -1;
+	int12 = -1;
+	sprite13 = null;
+	color14 = 0x000000;
+	color15 = 0x000000;
+	int4, str0, int5, str1, int6, int9, str2 = cs2method6506(arg0);
+	widget1.setIsHidden(false);
+	sprite16 = null;
+	str3 = "";
+	sprite17 = null;
+	str4 = "";
+	str5 = "";
+	sprite16, str3, sprite10, color14, sprite17, color15, sprite13, str4, str5 = script_3117(arg0, int4, -1, str0, str1, int6, int5);
+	if (arg3 == 0) {
+		if (arg0 == VARC[998]) {
+			color15 = 0x203211;
+		} else if (arg0 == VARC[999]) {
+			color15 = 0x203C11;
+		}
+		sprite13 = 1541;
+		color14 = 0xFCFC64;
+		script_2996(widget1, 0, widget1.getWidth(), 20, 0, 0, color15, true, 0);
+		script_2996(widget1, 1, 23, 20, 0, 0, 0x606060, true, 0);
+		ACTIVE.setHidden(true);
+		script_2996(widget1, 2, 25, 20, 25, 0, 0x404040, true, 0);
+		ACTIVE.setSize(25, 20, 1, 0);
+		ACTIVE.setHidden(true);
+		script_2996(widget1, 3, 0, 20, 0, 0, 0xB24D00, true, 0);
+		ACTIVE.setSize(0, 20, 1, 0);
+		if (getWorldId() == arg0) {
+			ACTIVE.setHidden(false);
+		} else {
+			ACTIVE.setHidden(true);
+		}
+		script_2994(widget1, 4, 13, 12, widget(910, 68).getX() + (widget(910, 68).getWidth() - 13) / 2, 4, sprite13, false, false, false, 0);
+		script_2995(widget1, 5, widget1.getWidth() - (widget(910, 70).getX() + 2), 20, widget(910, 70).getX() + 2, 0, "World " + str(arg0) + " is running in a different language or is unavailable.", color14, 494, 0, 1, 0, true);
+		script_2995(widget1, 6, widget(910, 77).getWidth(), 20, widget(910, 77).getX(), 0, "", 0x000000, 494, 0, 1, 0, true);
+		ACTIVE.setScriptCallOnMouseEntered(3121, widget1, "I");
+		ACTIVE.setScriptCallOnMouseExit(3123, widget1, "I");
+		script_2995(widget1, 7, widget(910, 78).getWidth(), 20, widget(910, 78).getX(), 0, "", 0x000000, 494, 0, 1, 0, true);
+		ACTIVE.setScriptCallOnMouseEntered(3120, widget1, "I");
+		ACTIVE.setScriptCallOnMouseExit(3122, widget1, "I");
+		ACTIVE.setContextMenuOption(1, "Remove");
+		ACTIVE.setOptionBase("Favourite");
+		ACTIVE.setScriptCallOnClickContextMenu(3134, arg0, "i");
+		return;
+	}
+	script_2996(widget1, 0, widget1.getWidth(), 20, 0, 0, color15, true, 0);
+	script_2996(widget1, 1, 23, 20, 0, 0, 0x606060, true, 0);
+	ACTIVE.setHidden(true);
+	script_2996(widget1, 2, 25, 20, 25, 0, 0x404040, true, 0);
+	ACTIVE.setSize(25, 20, 1, 0);
+	ACTIVE.setHidden(true);
+	script_2996(widget1, 3, 0, 20, 0, 0, 0xB24D00, true, 0);
+	ACTIVE.setSize(0, 20, 1, 0);
+	if (getWorldId() == arg0) {
+		ACTIVE.setHidden(false);
+	} else {
+		ACTIVE.setHidden(true);
+	}
+	script_2994(widget1, 4, 13, 12, widget(910, 68).getX() + (widget(910, 68).getWidth() - 13) / 2, 4, sprite13, false, false, false, 0);
+	script_2994(widget1, 5, 19, 18, widget(910, 70).getX() + 2, 1, sprite10, false, false, false, 0);
+	script_2995(widget1, 6, widget(910, 69).getWidth() - 25, 20, widget(910, 69).getX() + 25, 0, str(arg0), color14, 494, 0, 1, 0, true);
+	script_2995(widget1, 7, widget(910, 71).getWidth() - 6, 20, widget(910, 71).getX() + 3, 0, str5, color14, 494, 0, 1, 0, true);
+	script_2994(widget1, 8, 24, 12, widget(910, 73).getX() + 4, 4, sprite16, false, false, false, 0);
+	script_2995(widget1, 9, widget(910, 72).getWidth() - 30, 20, widget(910, 72).getX() + 30, 0, str3, color14, 494, 0, 1, 0, true);
+	script_2995(widget1, 10, widget(910, 74).getWidth() - 10, 20, widget(910, 74).getX() + 5, 0, str4, color14, 494, 0, 1, 0, true);
+	script_2994(widget1, 11, 17, 17, widget(910, 75).getX() + (widget(910, 75).getWidth() - 17) / 2, 1, sprite17, false, false, false, 0);
+	script_2995(widget1, 12, widget(910, 75).getWidth() - 10, 20, widget(910, 76).getX() + 5, 0, str(int9), color14, 494, 0, 1, 0, true);
+	script_2995(widget1, 13, widget(910, 77).getWidth(), 20, widget(910, 77).getX(), 0, "", 0x000000, 494, 0, 1, 0, true);
+	ACTIVE.setScriptCallOnMouseEntered(3121, widget1, "I");
+	ACTIVE.setScriptCallOnMouseExit(3123, widget1, "I");
+	ACTIVE.setContextMenuOption(1, "Select");
+	ACTIVE.setOptionBase("World " + str(arg0));
+	ACTIVE.setScriptCallOnClickContextMenu(3129, CTX_MENU_OPTION, arg2, arg0, str2, "iiis");
+	script_2995(widget1, 14, widget(910, 78).getWidth(), 20, widget(910, 78).getX(), 0, "", 0x000000, 494, 0, 1, 0, true);
+	ACTIVE.setScriptCallOnMouseEntered(3120, widget1, "I");
+	ACTIVE.setScriptCallOnMouseExit(3122, widget1, "I");
+	ACTIVE.setContextMenuOption(1, "Remove");
+	ACTIVE.setOptionBase("Favourite");
+	ACTIVE.setScriptCallOnClickContextMenu(3134, arg0, "i");
+	return;
+}

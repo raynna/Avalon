@@ -1,0 +1,11 @@
+void script_4307() {
+	VARC[1500] = -1;
+	VARC[1501] = -1;
+	VARPBIT[9591] = -1;
+	VARPBIT[9593] = -1;
+	VARPBIT[9592] = -1;
+	VARPBIT[9594] = -1;
+	STRING[347] = "";
+	VARC[1568] = -1;
+	return;
+}

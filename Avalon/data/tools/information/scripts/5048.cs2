@@ -1,0 +1,15 @@
+void script_5048() {
+	int int0;
+	int int1;
+	int0 = VARC[1396] * (112 + 2 + 2);
+	int1 = 0;
+	while (int1 < 200) {
+		if (ACTIVE.setChild(widget(1111, 18), int1)) {
+			ACTIVE.setSize(VARC[1396] * ACTIVE.getAttribute(1476) - 1, VARC[1396] * ACTIVE.getAttribute(1477) - 1, 0, 0);
+			ACTIVE.setPosition((ACTIVE.getAttribute(1474) + 2) * VARC[1396], int0 - ((ACTIVE.getAttribute(1475) + 2) * VARC[1396] + 1 + ACTIVE.getHeight()), 0, 0);
+		}
+		int1 = int1 + 1;
+	}
+	widget(1111, 51).setPosition(max(VARC[1396] - 3, 0) * max(21 - 3, 1) / (widget(1111, 51).getLayer().getWidth() - widget(1111, 51).getWidth()), 0, 0, 1);
+	return;
+}

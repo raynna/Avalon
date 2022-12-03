@@ -1,0 +1,23 @@
+void script_2115(int arg0, Widget widget1) {
+	int int2;
+	if (!script_42(VARC[679])) {
+		return;
+	}
+	widget1.setIsHidden(false);
+	if (VARC[677] == -1 || VARC[678] == -1) {
+		return;
+	}
+	if (VARC[675] == -1 || VARC[676] == -1) {
+		VARC[675] = 56070889;
+		VARC[676] = 56087272;
+	}
+	int2 = rnd(50) + 50;
+	cs2method5405(0, 2);
+	cs2method5406(0, 0, location(VARC[675]), 450, location(VARC[675]), 450 + int2 / 2, 0);
+	cs2method5406(0, 1, location(VARC[676]), 450 + int2, location(VARC[676]), 450 + int2 * 2, 0);
+	cs2method5405(1, 2);
+	cs2method5406(1, 0, location(VARC[677]), 250, location(VARC[677]), 250, 0);
+	cs2method5406(1, 1, location(VARC[678]), 150, location(VARC[678]), 150, 0);
+	cameraMethod5502(0, 0, 200, 200, 1, 0);
+	return;
+}

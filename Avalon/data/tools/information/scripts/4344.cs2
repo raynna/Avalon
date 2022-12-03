@@ -1,0 +1,180 @@
+int, int, int, int, int script_4344(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, Sprite sprite7, Sprite sprite8, Sprite sprite9) {
+	Widget widget10;
+	int int11;
+	AttrMap attrmap12;
+	int int13;
+	DataMap datamap14;
+	int int15;
+	int int16;
+	int int17;
+	int int18;
+	int int19;
+	int int20;
+	string str0;
+	widget10 = widget(1143, 59);
+	int11 = 0;
+	attrmap12 = null;
+	str0 = "";
+	int13 = 0;
+	datamap14 = (DataMap)5182;
+	ARRAY0 = new AttrMap[datamapSize(datamap14)];
+	int15 = 0;
+	int16 = -1;
+	int17 = 0;
+	while (int17 < datamapSize(datamap14)) {
+		ARRAY0[int17] = datamap('i', 'J', datamap14, int17);
+		int17 = int17 + 1;
+	}
+	int17 = 0;
+	int15 = 1;
+	int18 = 0;
+	int19 = 0;
+	switch (VARC[1659]) {
+		case 1:
+			while (int15 == 1) {
+				int15 = 0;
+				int17 = datamapSize(datamap14) - 1;
+				while (int17 > 0) {
+					if (getAttributeMapValue((AttrMap)ARRAY0[int17], 1933) > 0) {
+						int18 = getAttributeMapValue((AttrMap)ARRAY0[int17], 1933);
+					} else {
+						int18 = getAttributeMapValue((AttrMap)ARRAY0[int17], 1932);
+					}
+					if (getAttributeMapValue((AttrMap)ARRAY0[int17 - 1], 1933) > 0) {
+						int19 = getAttributeMapValue((AttrMap)ARRAY0[int17 - 1], 1933);
+					} else {
+						int19 = getAttributeMapValue((AttrMap)ARRAY0[int17 - 1], 1932);
+					}
+					if (int18 > int19) {
+						int15 = 1;
+						int16 = ARRAY0[int17 - 1];
+						ARRAY0[int17 - 1] = ARRAY0[int17];
+						ARRAY0[int17] = int16;
+					}
+					int17 = int17 - 1;
+				}
+			}
+			break;
+		case 2:
+			while (int15 == 1) {
+				int15 = 0;
+				int17 = datamapSize(datamap14) - 1;
+				while (int17 > 0) {
+					if (compare(getAttributeMapValue((AttrMap)ARRAY0[int17], 1930), getAttributeMapValue((AttrMap)ARRAY0[int17 - 1], 1930)) < 0) {
+						int15 = 1;
+						int16 = ARRAY0[int17 - 1];
+						ARRAY0[int17 - 1] = ARRAY0[int17];
+						ARRAY0[int17] = int16;
+					}
+					int17 = int17 - 1;
+				}
+			}
+			break;
+		case 3:
+			while (int15 == 1) {
+				int15 = 0;
+				int17 = datamapSize(datamap14) - 1;
+				while (int17 > 0) {
+					if (compare(getAttributeMapValue((AttrMap)ARRAY0[int17], 1930), getAttributeMapValue((AttrMap)ARRAY0[int17 - 1], 1930)) > 0) {
+						int15 = 1;
+						int16 = ARRAY0[int17 - 1];
+						ARRAY0[int17 - 1] = ARRAY0[int17];
+						ARRAY0[int17] = int16;
+					}
+					int17 = int17 - 1;
+				}
+			}
+			break;
+		default:
+			while (int15 == 1) {
+				int15 = 0;
+				int17 = datamapSize(datamap14) - 1;
+				while (int17 > 0) {
+					if (getAttributeMapValue((AttrMap)ARRAY0[int17], 1933) > 0) {
+						int18 = getAttributeMapValue((AttrMap)ARRAY0[int17], 1933);
+					} else {
+						int18 = getAttributeMapValue((AttrMap)ARRAY0[int17], 1932);
+					}
+					if (getAttributeMapValue((AttrMap)ARRAY0[int17 - 1], 1933) > 0) {
+						int19 = getAttributeMapValue((AttrMap)ARRAY0[int17 - 1], 1933);
+					} else {
+						int19 = getAttributeMapValue((AttrMap)ARRAY0[int17 - 1], 1932);
+					}
+					if (int18 < int19) {
+						int15 = 1;
+						int16 = ARRAY0[int17 - 1];
+						ARRAY0[int17 - 1] = ARRAY0[int17];
+						ARRAY0[int17] = int16;
+					}
+					int17 = int17 - 1;
+				}
+			}
+			break;
+	}
+	int17 = 0;
+	int20 = 1;
+	while (int20 <= 3) {
+		ACTIVE.createChild(widget10, 4, arg5);
+		arg5 = arg5 + 1;
+		if (int20 == 1) {
+			ACTIVE.setPosition(11, arg4, 0, 0);
+		} else {
+			arg2 = arg2 + arg3 + arg4;
+			ACTIVE.setPosition(11, arg2, 0, 0);
+		}
+		int11 = ACTIVE.getY();
+		ACTIVE.setSize(widget10.getWidth() - 20, 13, 0, 0);
+		switch (int20) {
+			case 1:
+				ACTIVE.setText("Tier 1");
+				break;
+			case 2:
+				ACTIVE.setText("Tier 2");
+				break;
+			case 3:
+				ACTIVE.setText("Tier 3");
+				break;
+			case 4:
+				ACTIVE.setText("Tier 4");
+				break;
+		}
+		ACTIVE.setFont(4040);
+		ACTIVE.setTextAntiMacro(true);
+		ACTIVE.setRGB(0xE6BE78);
+		ACTIVE.setTextAlignment(0, 1, 13);
+		if (int20 == 1) {
+			ACTIVE.createChild(widget10, 4, arg5);
+			arg5 = arg5 + 1;
+			ACTIVE.setPosition(7, int11, 2, 0);
+			ACTIVE.setSize(widget10.getWidth() - 20, 13, 0, 0);
+			ACTIVE.setText("Scroll Down For More Tiers");
+			ACTIVE.setFont(4040);
+			ACTIVE.setTextAntiMacro(true);
+			ACTIVE.setRGB(0xE6BE78);
+			ACTIVE.setTextAlignment(2, 1, 13);
+		}
+		ACTIVE.createChild(widget10, 3, arg5);
+		arg5 = arg5 + 1;
+		if (int20 == 1) {
+			ACTIVE.setPosition(11, 23, 0, 0);
+		} else {
+			arg2 = arg2 + 17;
+			ACTIVE.setPosition(11, arg2, 0, 0);
+		}
+		ACTIVE.setSize(widget10.getWidth() - 20, 1, 0, 0);
+		ACTIVE.setRGB(0xE6BE78);
+		arg2 = ACTIVE.getY() + ACTIVE.getHeight();
+		int17 = 0;
+		arg0 = 0;
+		arg1 = arg4;
+		while (int17 < datamapSize(datamap14)) {
+			attrmap12 = (AttrMap)ARRAY0[int17];
+			if (getAttributeMapValue(attrmap12, 1993) == int20) {
+				arg0, arg1, arg2, arg3, arg5 = script_5351(attrmap12, arg0, arg1, arg2, arg3, arg4, arg5, arg6, sprite7, sprite8, sprite9);
+			}
+			int17 = int17 + 1;
+		}
+		int20 = int20 + 1;
+	}
+	return arg0, arg1, arg2, arg3, arg5;
+}

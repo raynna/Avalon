@@ -1,0 +1,12 @@
+void script_1455() {
+	int int0;
+	int0 = 0;
+	while (int0 < getItemContainerLength(95)) {
+		if (ACTIVE.setChild(widget(762, 93), int0)) {
+			ACTIVE.setHidden(true);
+			ACTIVE.setPosition(0, 0, 0, 0);
+		}
+		int0 = int0 + 1;
+	}
+	return;
+}

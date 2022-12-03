@@ -1,0 +1,41 @@
+int script_2879(int arg0, int arg1, int arg2) {
+	string str0;
+	str0 = "Remove from Playlist";
+	if (ACTIVE.setChild(widget(187, 9), arg0) && _ACTIVE.setChild(widget(187, 9), arg0 + 12)) {
+		if (arg1 == 32767) {
+			ACTIVE.setHidden(true);
+			_ACTIVE.setHidden(true);
+			return arg2;
+		}
+		ACTIVE.setPosition(15, arg2, 0, 0);
+		ACTIVE.setTextAlignment(0, 1, 0);
+		if (VARPBIT[4388] == arg1 && VARPBIT[7078] == 1) {
+			ACTIVE.setRGB(0xFFFF66);
+			ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777062, "Iii");
+		} else {
+			ACTIVE.setRGB(0x00FFFF);
+			ACTIVE.setScriptCallOnMouseExit(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 65535, "Iii");
+		}
+		ACTIVE.setScriptCallOnMouseEntered(1356, CTX_WIDGET, CTX_WIDGET_CHILD, 16777215, "Iii");
+		ACTIVE.setText(datamap((DataMap)1345, arg1));
+		ACTIVE.setSize(150, 15, 0, 0);
+		ACTIVE.setContextMenuOption(1, "Play");
+		ACTIVE.setContextMenuOption(2, "Remove");
+		ACTIVE.setOptionBase(datamap((DataMap)1345, arg1));
+		_ACTIVE.setOptionBase(datamap((DataMap)1345, arg1));
+		ACTIVE.setTextAntiMacro(false);
+		ACTIVE.setFont(494);
+		ACTIVE.setDraggable(widget(187, 9), -1);
+		_ACTIVE.setDraggable(null, -1);
+		ACTIVE.setDragRenderBehaviour(2);
+		_ACTIVE.setSize(12, 12, 0, 0);
+		_ACTIVE.setPosition(2, arg2 + 1, 0, 0);
+		_ACTIVE.setContextMenuOption(2, "Remove");
+		_ACTIVE.setSprite(2430);
+		_ACTIVE.setScriptCallOnClickContextMenu(2885, CTX_WIDGET, CTX_WIDGET_CHILD, 150, 0, 20, CTX_MENU_OPTION, "Iiiiii");
+		_ACTIVE.setScriptCallOnMouseOver(1160, widget(187, 9), CTX_WIDGET_CHILD, widget(187, 16), str0, 25, 189, "IiIsii");
+		_ACTIVE.setScriptCallOnMouseExit(40, widget(187, 16), "I");
+		_ACTIVE.setScriptCallOnMousePressed(40, widget(187, 16), "I");
+	}
+	return arg2 + 15;
+}

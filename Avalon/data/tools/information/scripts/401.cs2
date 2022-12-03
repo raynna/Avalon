@@ -1,0 +1,44 @@
+void script_401(Widget widget0, Widget widget1, Widget widget2) {
+	int int3;
+	int int4;
+	int int5;
+	string str0;
+	str0 = STRING[320];
+	if (length(STRING[319]) > 0 && VARP[170] == 1) {
+		str0 = STRING[319];
+	}
+	if (ACTIVE.setChild(widget1, 0) && compare(str0, ACTIVE.getText()) == 0) {
+		return;
+	}
+	widget0.clearChildren();
+	widget1.clearChildren();
+	widget2.clearChildren();
+	int3 = widget0.getWidth();
+	int4 = 0;
+	widget1.setScrollPos(0, 0);
+	widget1.setPosition(int4, 0, 0, 1);
+	int5 = getLineCount(str0, int3, 307) * 12 + 3;
+	if (int5 > widget0.getHeight()) {
+		int3 = int3 - (widget2.getWidth() + 5);
+		widget1.setSize(int3, 0, 0, 1);
+		int5 = getLineCount(str0, int3, 307) * 12 + 3;
+		widget1.setScrollMax(0, int5);
+		widget2.setIsHidden(false);
+		script_31(widget2, widget1, 792, 789, 790, 791, 773, 788);
+	} else {
+		int5 = widget0.getHeight();
+		widget1.setSize(int3, 0, 0, 1);
+		widget1.setScrollMax(0, 0);
+		widget2.setIsHidden(true);
+	}
+	ACTIVE.createChild(widget1, 4, 0);
+	ACTIVE.setSize(0, int5, 1, 0);
+	ACTIVE.setPosition(0, 0, 1, 0);
+	ACTIVE.setFont(307);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setText(str0);
+	widget(200, 4).setFont(307);
+	return;
+}

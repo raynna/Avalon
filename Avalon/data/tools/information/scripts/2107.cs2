@@ -1,0 +1,7 @@
+void script_2107(Widget widget0, Widget widget1, Widget widget2, Widget widget3) {
+	widget0.setModel(7753);
+	widget1.setModel(7752);
+	widget2.setModel(20104);
+	widget3.setModel(7751);
+	return;
+}

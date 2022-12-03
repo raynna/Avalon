@@ -1,0 +1,83 @@
+void script_2032() {
+	widget(366, 2).setIsHidden(true);
+	widget(366, 3).setIsHidden(true);
+	widget(366, 4).setIsHidden(true);
+	widget(366, 5).setIsHidden(true);
+	widget(366, 6).setIsHidden(true);
+	widget(366, 7).setIsHidden(true);
+	widget(366, 8).setIsHidden(true);
+	widget(366, 9).setIsHidden(true);
+	widget(366, 10).setIsHidden(true);
+	widget(366, 11).setIsHidden(true);
+	widget(366, 12).setIsHidden(true);
+	widget(366, 13).setIsHidden(true);
+	widget(366, 14).setIsHidden(true);
+	widget(366, 15).setIsHidden(true);
+	widget(366, 16).setIsHidden(true);
+	widget(366, 17).setIsHidden(true);
+	widget(366, 18).setIsHidden(true);
+	widget(366, 19).setIsHidden(true);
+	widget(366, 20).setIsHidden(true);
+	widget(366, 21).setIsHidden(true);
+	if (VARP[391] > 0) {
+		widget(366, 2).setIsHidden(false);
+	}
+	if (VARP[391] > 4) {
+		widget(366, 3).setIsHidden(false);
+	}
+	if (VARP[391] > 9) {
+		widget(366, 4).setIsHidden(false);
+	}
+	if (VARP[391] > 14) {
+		widget(366, 5).setIsHidden(false);
+	}
+	if (VARP[391] > 19) {
+		widget(366, 6).setIsHidden(false);
+	}
+	if (VARP[391] > 24) {
+		widget(366, 7).setIsHidden(false);
+	}
+	if (VARP[391] > 29) {
+		widget(366, 8).setIsHidden(false);
+	}
+	if (VARP[391] > 34) {
+		widget(366, 9).setIsHidden(false);
+	}
+	if (VARP[391] > 39) {
+		widget(366, 10).setIsHidden(false);
+	}
+	if (VARP[391] > 44) {
+		widget(366, 11).setIsHidden(false);
+	}
+	if (VARP[391] > 49) {
+		widget(366, 12).setIsHidden(false);
+	}
+	if (VARP[391] > 54) {
+		widget(366, 13).setIsHidden(false);
+	}
+	if (VARP[391] > 59) {
+		widget(366, 14).setIsHidden(false);
+	}
+	if (VARP[391] > 64) {
+		widget(366, 15).setIsHidden(false);
+	}
+	if (VARP[391] > 69) {
+		widget(366, 16).setIsHidden(false);
+	}
+	if (VARP[391] > 74) {
+		widget(366, 17).setIsHidden(false);
+	}
+	if (VARP[391] > 79) {
+		widget(366, 18).setIsHidden(false);
+	}
+	if (VARP[391] > 84) {
+		widget(366, 19).setIsHidden(false);
+	}
+	if (VARP[391] > 89) {
+		widget(366, 20).setIsHidden(false);
+	}
+	if (VARP[391] > 94) {
+		widget(366, 21).setIsHidden(false);
+	}
+	return;
+}

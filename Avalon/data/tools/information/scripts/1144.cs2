@@ -1,0 +1,7 @@
+void script_1144(Widget widget0) {
+	if (cs2method5407(0) == 7) {
+		cameraMethod5502(0, 5, 600, 400, 1, 5);
+	}
+	widget0.setScriptCallOnMinimapRelatedSetting3(-1, "");
+	return;
+}

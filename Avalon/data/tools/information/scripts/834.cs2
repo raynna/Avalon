@@ -1,0 +1,17 @@
+void script_834(Widget widget0) {
+	switch (VARPBIT[278]) {
+		case 1:
+			widget0.setTrans(200);
+			break;
+		case 2:
+			widget0.setTrans(150);
+			break;
+		case 3:
+			widget0.setTrans(50);
+			break;
+		default:
+			widget0.setTrans(255);
+			break;
+	}
+	return;
+}

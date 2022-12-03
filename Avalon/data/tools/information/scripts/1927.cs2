@@ -1,0 +1,17 @@
+void script_1927(Widget widget0) {
+	int int1;
+	int1 = 1;
+	while (int1 <= 6) {
+		if (int1 == datamap('I', 'i', (DataMap)2027, widget0) || int1 == VARC[544]) {
+			datamap('i', 'I', (DataMap)2031, int1).setIsHidden(false);
+			datamap('i', 'I', (DataMap)2030, int1).setRGB(0xFFFFFF);
+			datamap('i', 'I', (DataMap)2029, int1).setRGB(0xFFFFFF);
+		} else {
+			datamap('i', 'I', (DataMap)2031, int1).setIsHidden(true);
+			datamap('i', 'I', (DataMap)2030, int1).setRGB(0xC8AA64);
+			datamap('i', 'I', (DataMap)2029, int1).setRGB(0xC8AA64);
+		}
+		int1 = int1 + 1;
+	}
+	return;
+}

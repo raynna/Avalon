@@ -1,0 +1,57 @@
+void script_779(Widget widget0, Widget widget1, int arg2, int arg3, string string4) {
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	widget1.clearChildren();
+	if (compare(string4, "Call familiar") == 0 && datamap('o', 'o', (DataMap)1283, (Item)VARP[448]) == 526) {
+		string4 = "Call pet";
+	}
+	if (compare(string4, "Dismiss familiar") == 0 && datamap('o', 'o', (DataMap)1283, (Item)VARP[448]) == 526) {
+		string4 = "Dismiss pet";
+	}
+	int4 = 2 + 13 * getLineCount(string4, 125, 495);
+	int5 = 2 + int4 + 32 + 14 + 2;
+	int6 = 5;
+	int7 = 5;
+	int8 = 1;
+	int9 = 1;
+	int5 = int5 - 32 - 14;
+	int6 = widget0.getY();
+	if (int6 == 225 && widget0.getX() == 83) {
+		int6 = 180;
+	}
+	int7 = widget0.getX() - 60;
+	if (int7 < 0) {
+		int7 = 5;
+	}
+	if (int7 > 70) {
+		int7 = 65;
+	}
+	ACTIVE.createChild(widget1, 3, 0);
+	ACTIVE.setPosition(int7, int6, 0, 0);
+	ACTIVE.setSize(128, int5, 0, 0);
+	ACTIVE.setFilled(true);
+	ACTIVE.setRGB(0xFFFFA0);
+	ACTIVE.createChild(widget1, 3, 1);
+	ACTIVE.setPosition(int7 + 1, int6 + 1, 0, 0);
+	ACTIVE.setSize(127, int5 - 1, 0, 0);
+	ACTIVE.setFilled(false);
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.createChild(widget1, 3, 2);
+	ACTIVE.setPosition(int7, int6, 0, 0);
+	ACTIVE.setSize(127, int5 - 1, 0, 0);
+	ACTIVE.setFilled(false);
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.createChild(widget1, 4, 3);
+	ACTIVE.setPosition(int7 + 2, int6 + 2, 0, 0);
+	ACTIVE.setSize(125, int4, 0, 0);
+	ACTIVE.setTextAlignment(1, 1, 0);
+	ACTIVE.setFont(495);
+	ACTIVE.setRGB(0x000000);
+	ACTIVE.setTextAntiMacro(false);
+	ACTIVE.setText(string4);
+	return;
+}

@@ -1,0 +1,35 @@
+int script_1713(Skill skill0) {
+	int int1;
+	int1 = 0;
+	if (getItemIdInSlot(94, 2) == 19892) {
+		int1 = getSkillActualLvl(skill0) * 100 / 5;
+	}
+	switch (skill0) {
+		case 0:
+			if (VARPBIT[6830] == 1) {
+				return script_1714(0, script_1718(0, int1 + 5));
+			}
+			break;
+		case 2:
+			if (VARPBIT[6834] == 1) {
+				return script_1714(2, script_1718(2, int1 + 5));
+			}
+			break;
+		case 1:
+			if (VARPBIT[6833] == 1) {
+				return script_1714(1, script_1718(1, int1 + 5));
+			}
+			break;
+		case 4:
+			if (VARPBIT[6831] == 1) {
+				return script_1714(4, script_1718(4, int1 + 5));
+			}
+			break;
+		case 6:
+			if (VARPBIT[6832] == 1) {
+				return script_1714(6, script_1718(6, int1 + 5));
+			}
+			break;
+	}
+	return 0;
+}

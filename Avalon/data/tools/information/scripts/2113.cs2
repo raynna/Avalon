@@ -1,0 +1,15 @@
+void script_2113(Widget widget0) {
+	widget0.set3DRotation(0, 0, rndExcl(2048), rndExcl(2048), rndExcl(2048), widget0.get3DDistance());
+	switch (rndExcl(3)) {
+		case 0:
+			widget0.setScriptCallOnGameloop(66, rndExcl(3) + 9, 0, rndExcl(3) + 9, widget0, "iiiI");
+			break;
+		case 1:
+			widget0.setScriptCallOnGameloop(66, rndExcl(3) + 9, rndExcl(3) + 9, 0, widget0, "iiiI");
+			break;
+		default:
+			widget0.setScriptCallOnGameloop(66, 0, rndExcl(3) + 9, rndExcl(3) + 9, widget0, "iiiI");
+			break;
+	}
+	return;
+}

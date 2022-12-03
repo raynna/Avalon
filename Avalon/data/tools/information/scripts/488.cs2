@@ -1,0 +1,23 @@
+AttrMap script_488(int arg0) {
+	switch (arg0) {
+		case 1:
+			return (AttrMap)293;
+		case 2:
+			return (AttrMap)299;
+		case 3:
+			return (AttrMap)300;
+		case 4:
+			return (AttrMap)301;
+		case 5:
+			return (AttrMap)305;
+		case 6:
+			return (AttrMap)1044;
+		case 7:
+			return (AttrMap)1045;
+		case 8:
+			return (AttrMap)1046;
+		case 9:
+			return (AttrMap)1047;
+	}
+	return null;
+}

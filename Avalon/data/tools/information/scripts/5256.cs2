@@ -1,0 +1,3 @@
+int script_5256() {
+	return VARPBIT[9816];
+}

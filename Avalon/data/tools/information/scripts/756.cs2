@@ -1,0 +1,106 @@
+void script_756() {
+	if (VARP[1177] > 60) {
+		VARP[1177] = 60;
+	}
+	if (VARP[1177] == 60) {
+		widget(662, 39).setIsHidden(false);
+	} else {
+		widget(662, 39).setIsHidden(true);
+	}
+	if (VARP[1177] >= 57) {
+		widget(662, 38).setIsHidden(false);
+	} else {
+		widget(662, 38).setIsHidden(true);
+	}
+	if (VARP[1177] >= 54) {
+		widget(662, 37).setIsHidden(false);
+	} else {
+		widget(662, 37).setIsHidden(true);
+	}
+	if (VARP[1177] >= 51) {
+		widget(662, 36).setIsHidden(false);
+	} else {
+		widget(662, 36).setIsHidden(true);
+	}
+	if (VARP[1177] >= 48) {
+		widget(662, 35).setIsHidden(false);
+	} else {
+		widget(662, 35).setIsHidden(true);
+	}
+	if (VARP[1177] >= 45) {
+		widget(662, 34).setIsHidden(false);
+	} else {
+		widget(662, 34).setIsHidden(true);
+	}
+	if (VARP[1177] >= 42) {
+		widget(662, 33).setIsHidden(false);
+	} else {
+		widget(662, 33).setIsHidden(true);
+	}
+	if (VARP[1177] >= 39) {
+		widget(662, 32).setIsHidden(false);
+	} else {
+		widget(662, 32).setIsHidden(true);
+	}
+	if (VARP[1177] >= 36) {
+		widget(662, 31).setIsHidden(false);
+	} else {
+		widget(662, 31).setIsHidden(true);
+	}
+	if (VARP[1177] >= 33) {
+		widget(662, 30).setIsHidden(false);
+	} else {
+		widget(662, 30).setIsHidden(true);
+	}
+	if (VARP[1177] >= 30) {
+		widget(662, 29).setIsHidden(false);
+	} else {
+		widget(662, 29).setIsHidden(true);
+	}
+	if (VARP[1177] >= 27) {
+		widget(662, 28).setIsHidden(false);
+	} else {
+		widget(662, 28).setIsHidden(true);
+	}
+	if (VARP[1177] >= 24) {
+		widget(662, 27).setIsHidden(false);
+	} else {
+		widget(662, 27).setIsHidden(true);
+	}
+	if (VARP[1177] >= 21) {
+		widget(662, 26).setIsHidden(false);
+	} else {
+		widget(662, 26).setIsHidden(true);
+	}
+	if (VARP[1177] >= 18) {
+		widget(662, 25).setIsHidden(false);
+	} else {
+		widget(662, 25).setIsHidden(true);
+	}
+	if (VARP[1177] >= 15) {
+		widget(662, 24).setIsHidden(false);
+	} else {
+		widget(662, 24).setIsHidden(true);
+	}
+	if (VARP[1177] >= 12) {
+		widget(662, 23).setIsHidden(false);
+	} else {
+		widget(662, 23).setIsHidden(true);
+	}
+	if (VARP[1177] >= 9) {
+		widget(662, 22).setIsHidden(false);
+	} else {
+		widget(662, 22).setIsHidden(true);
+	}
+	if (VARP[1177] >= 6) {
+		widget(662, 21).setIsHidden(false);
+	} else {
+		widget(662, 21).setIsHidden(true);
+	}
+	if (VARP[1177] >= 3) {
+		widget(662, 20).setIsHidden(false);
+	} else {
+		widget(662, 20).setIsHidden(true);
+	}
+	return;
+}

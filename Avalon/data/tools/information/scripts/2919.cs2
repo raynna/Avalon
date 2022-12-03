@@ -1,0 +1,10 @@
+void script_2919(int arg0, int arg1) {
+	int int2;
+	int2 = cs2method6131();
+	if (arg0 == 0) {
+		script_2596(int2, getDisplayMode(), (int, int)script_2692(int2), arg1);
+	} else {
+		script_3387(int2, getDisplayMode(), (int, int)script_2692(int2), arg1);
+	}
+	return;
+}

@@ -1,0 +1,21 @@
+void script_819() {
+	if (VARP[1174] != -1 && VARP[1174] != 0) {
+		widget(663, 3).setNpcHead((NpcDef)VARP[1174]);
+	} else {
+		widget(663, 3).setModel(null);
+	}
+	if (VARPBIT[1049] == 1) {
+		widget(663, 25).setText(script_821());
+	} else if (VARP[448] != -1) {
+		widget(663, 25).setText(getItemName((Item)VARP[448]));
+	} else {
+		widget(663, 25).setText("");
+	}
+	if (VARPBIT[4282] > 50) {
+		VARPBIT[4282] = VARPBIT[4282] - 50;
+		widget(663, 3).setAnimation(datamap('i', 'A', (DataMap)1275, VARPBIT[4282]));
+	} else {
+		widget(663, 3).setAnimation(datamap('i', 'A', (DataMap)1276, VARPBIT[4282]));
+	}
+	return;
+}

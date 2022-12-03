@@ -1,0 +1,16 @@
+void script_864(Widget widget0, boolean boolean1, Widget widget2, Widget widget3, Widget widget4, Widget widget5, boolean boolean6, int arg7, int arg8, int arg9, int arg10) {
+	int int11;
+	int11 = 0;
+	if (boolean6) {
+		int11 = getTextWidth(widget5.getText(), 468);
+	} else {
+		int11 = widget5.getWidth();
+	}
+	if (!boolean1 && widget0.getWidth() - int11 < arg7) {
+		widget2.setScriptCallOnGameloop(2929, widget0, boolean1, widget2, widget3, widget4, widget5, boolean6, arg7, arg8, arg9, arg10, "I1IIII1iiii");
+		return;
+	}
+	widget2.setScriptCallOnGameloop(-1, "");
+	widget0.setScriptCallOnGameloop(2930, widget0, boolean1, int11, widget2, widget3, widget4, arg7, arg8, arg9, arg10, "I1iIIIiiii");
+	return;
+}

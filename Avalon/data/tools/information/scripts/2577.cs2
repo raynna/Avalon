@@ -1,0 +1,10 @@
+void script_2577(Widget widget0, int arg1, int arg2) {
+	if (getItemAmtInContainer(93, 995) < arg1) {
+		widget0.setRGB(0xCC0000);
+	} else if (getSkillActualLvl(22) < arg2) {
+		widget0.setRGB(0xCCCC00);
+	} else {
+		widget0.setRGB(0x00CC00);
+	}
+	return;
+}

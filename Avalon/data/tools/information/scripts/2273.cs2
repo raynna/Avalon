@@ -1,0 +1,18 @@
+void script_2273(Widget widget0, Sprite sprite1, Sprite sprite2, int arg3, int arg4, Item arg5, int arg6, Item arg7, int arg8, Item arg9, int arg10, Item arg11, int arg12) {
+	if (getSkillCurrentLvl(6) < arg3 && (arg4 == 0 || getSkillActualLvl(6) < arg3)) {
+		if (!(VARPBIT[4089] == 1)) {
+			widget0.setSprite(sprite2);
+			return;
+		}
+		if (VARP[1092] < arg3 || datamap('I', 'i', (DataMap)1061, widget0) == 0) {
+			widget0.setSprite(sprite2);
+			return;
+		}
+	}
+	if (VARP[1795] == -1) {
+		widget0.setSprite(sprite2);
+		return;
+	}
+	widget0.setSprite(sprite1);
+	return;
+}

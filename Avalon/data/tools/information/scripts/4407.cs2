@@ -1,0 +1,6 @@
+void script_4407(Widget widget0, int arg1, int arg2) {
+	if (arg1 >= 1 && arg1 <= 10) {
+		widget0.cs2method2309(arg1, arg2);
+	}
+	return;
+}

@@ -1,0 +1,59 @@
+void script_2091(Widget widget0, Widget widget1) {
+	string str0;
+	str0 = "";
+	if (VARPBIT[5835] == 1) {
+		return;
+	}
+	switch (widget0) {
+		case widget(836, 13):
+		case widget(836, 9):
+		case widget(836, 28):
+			str0 = "The number of times that the avatar has been killed.";
+			break;
+		case widget(836, 14):
+		case widget(836, 10):
+		case widget(836, 25):
+			str0 = "The Slayer level required to attack each avatar.";
+			break;
+		case widget(836, 15):
+		case widget(836, 11):
+		case widget(836, 24):
+			str0 = "The remaining health of each avatar.";
+			break;
+		case widget(836, 26):
+		case widget(836, 27):
+			str0 = "How much time the game has remaining.";
+			break;
+		case widget(836, 8):
+			str0 = "This column displays the blue team's statistics.";
+			break;
+		case widget(836, 12):
+			str0 = "This column displays the red team's statistics.";
+			break;
+		case widget(836, 29):
+			str0 = "Shows which team controls the soul obelisk.";
+			break;
+		case widget(836, 30):
+			str0 = "Shows which team controls the western graveyard.";
+			break;
+		case widget(836, 31):
+			str0 = "Shows which team controls the eastern graveyard.";
+			break;
+		case widget(836, 6):
+			str0 = "Shows how much control a team has over the soul obelisk.";
+			break;
+		case widget(836, 69):
+			str0 = "Shows how much control a team has over the eastern graveyard.";
+			break;
+		case widget(836, 62):
+			str0 = "Shows how much control a team has over the western graveyard.";
+			break;
+		case widget(836, 56):
+			str0 = "Shows how active you have been during the game.";
+			break;
+		default:
+			return;
+	}
+	script_39(widget0, widget1, str0, 25, widget1.getLayer().getWidth());
+	return;
+}

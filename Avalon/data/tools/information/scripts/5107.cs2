@@ -1,0 +1,25 @@
+void script_5107(int arg0) {
+	widget(1116, 115).setIsHidden(true);
+	widget(1116, 122).setIsHidden(true);
+	widget(1116, 108).setIsHidden(true);
+	widget(1116, 101).setIsHidden(true);
+	widget(1116, 94).setIsHidden(true);
+	switch (arg0) {
+		case -2:
+			widget(1116, 115).setIsHidden(false);
+			break;
+		case -1:
+			widget(1116, 122).setIsHidden(false);
+			break;
+		case 0:
+			widget(1116, 108).setIsHidden(false);
+			break;
+		case 1:
+			widget(1116, 101).setIsHidden(false);
+			break;
+		case 2:
+			widget(1116, 94).setIsHidden(false);
+			break;
+	}
+	return;
+}

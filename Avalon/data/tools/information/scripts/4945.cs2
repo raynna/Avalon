@@ -1,0 +1,41 @@
+int script_4945(int arg0) {
+	if (citadelConfigsInitialized()) {
+		if (CLANBIT[2553] == arg0) {
+			return 1;
+		}
+		if (CLANBIT[2554] == arg0) {
+			return 2;
+		}
+		if (CLANBIT[2555] == arg0) {
+			return 3;
+		}
+		if (CLANBIT[2556] == arg0) {
+			return 4;
+		}
+		if (CLANBIT[2557] == arg0) {
+			return 5;
+		}
+		if (CLANBIT[2558] == arg0) {
+			return 6;
+		}
+		if (CLANBIT[2560] == arg0) {
+			return 7;
+		}
+		if (CLANBIT[2561] == arg0) {
+			return 8;
+		}
+		if (CLANBIT[2562] == arg0) {
+			return 9;
+		}
+		if (CLANBIT[2563] == arg0) {
+			return 10;
+		}
+		if (CLANBIT[2564] == arg0) {
+			return 11;
+		}
+		if (CLANBIT[2565] == arg0) {
+			return 12;
+		}
+	}
+	return -1;
+}

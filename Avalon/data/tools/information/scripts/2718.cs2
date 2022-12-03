@@ -1,0 +1,12 @@
+void script_2718(Widget widget0, int arg1, Widget widget2) {
+	int int3;
+	int3 = 464;
+	if (arg1 == 1) {
+		int3 = 448;
+	}
+	widget0.setPosition(widget0.getX(), 118, 0, 0);
+	widget0.setSize(int3, 181, 0, 0);
+	widget2.setPosition(474, 120, 0, 0);
+	widget2.setSize(16, 181, 0, 0);
+	return;
+}

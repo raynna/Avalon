@@ -1,0 +1,23 @@
+void script_804() {
+	int int0;
+	widget(575, 3).setModel(datamap('i', 'm', (DataMap)1696, VARPBIT[5146]));
+	widget(575, 4).setModel(datamap('i', 'm', (DataMap)1696, VARPBIT[5147]));
+	widget(575, 5).setModel(datamap('i', 'm', (DataMap)1696, VARPBIT[5148]));
+	widget(575, 6).setModel(datamap('i', 'm', (DataMap)1696, VARPBIT[5149]));
+	widget(575, 7).setModel(datamap('i', 'm', (DataMap)1696, VARPBIT[5150]));
+	widget(575, 8).setModel(datamap('i', 'm', (DataMap)1696, VARPBIT[5151]));
+	widget(575, 9).setModel(datamap('i', 'm', (DataMap)1696, VARPBIT[5152]));
+	widget(575, 10).setModel(datamap('i', 'm', (DataMap)1696, VARPBIT[5153]));
+	widget(575, 11).setModel(datamap('i', 'm', (DataMap)1696, VARPBIT[5154]));
+	widget(575, 12).setModel(datamap('i', 'm', (DataMap)1696, VARPBIT[5155]));
+	widget(575, 13).setModel(datamap('i', 'm', (DataMap)1696, VARPBIT[5156]));
+	widget(575, 14).setModel(datamap('i', 'm', (DataMap)1696, VARPBIT[5157]));
+	widget(575, 15).setModel(datamap('i', 'm', (DataMap)1696, VARPBIT[5158]));
+	widget(575, 16).setModel(datamap('i', 'm', (DataMap)1696, VARPBIT[5159]));
+	int0 = 14;
+	while (int0 > 0) {
+		script_1421(int0);
+		int0 = int0 - 1;
+	}
+	return;
+}

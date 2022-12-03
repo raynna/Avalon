@@ -1,0 +1,18 @@
+void script_3130(Widget widget0, Widget widget1, int arg2, int arg3) {
+	if (ACTIVE.setChild(widget0, arg2)) {
+		if (VARC[998] == arg3 || VARC[999] == arg3) {
+			ACTIVE.setSprite(1542);
+		} else {
+			ACTIVE.setSprite(1546);
+		}
+	}
+	if (ACTIVE.setChild(widget1, arg2)) {
+		widget(910, 65).setIsHidden(false);
+		widget(910, 66).setIsHidden(false);
+		widget(910, 65).setPosition(widget(910, 65).getX(), ACTIVE.getY(), 0, 0);
+		widget(910, 66).setPosition(widget(910, 66).getX(), ACTIVE.getY(), 0, 0);
+	}
+	widget(910, 66).setRGB(0x606060);
+	widget(910, 65).setRGB(0x404040);
+	return;
+}

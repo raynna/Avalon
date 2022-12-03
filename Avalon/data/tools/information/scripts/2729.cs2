@@ -1,0 +1,14 @@
+void script_2729(Widget widget0, Widget widget1, Widget widget2, int arg3) {
+	int int4;
+	int4 = getDisplayMode();
+	if (int4 != 1) {
+		if (arg3 != 1) {
+			return;
+		}
+	} else if (arg3 == 1) {
+		return;
+	}
+	script_2730(widget1, widget2, int4);
+	widget0.setScriptCallOnGameloop(2729, CTX_WIDGET, widget1, widget2, int4, "IIIi");
+	return;
+}

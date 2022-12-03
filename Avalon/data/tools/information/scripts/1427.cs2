@@ -1,0 +1,20 @@
+void script_1427(Widget widget0) {
+	int int1;
+	int1 = getClientCycle() % 32;
+	if (VARC[1024] == VARPBIT[6521] && VARC[1024] != 0) {
+		if (int1 < 8) {
+			widget0.setTrans(0);
+		} else if (int1 < 16) {
+			widget0.setTrans(85);
+		} else if (int1 < 24) {
+			widget0.setTrans(255);
+		} else {
+			widget0.setTrans(85);
+		}
+	} else if (widget0.getShadeColor() != 0) {
+		widget0.setTrans(0);
+	} else {
+		widget0.setScriptCallOnGameloop(-1, "");
+	}
+	return;
+}

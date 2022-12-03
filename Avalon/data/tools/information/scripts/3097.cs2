@@ -1,0 +1,24 @@
+void script_3097() {
+	widget(906, 236).setNoOptions();
+	widget(906, 242).setNoOptions();
+	widget(906, 236).setScriptCallOnClickContextMenu(-1, "");
+	widget(906, 242).setScriptCallOnClickContextMenu(-1, "");
+	widget(906, 242).setScriptCallOnMouseEntered(-1, "");
+	widget(906, 242).setScriptCallOnMouseExit(-1, "");
+	widget(906, 236).setScriptCallOnMouseEntered(-1, "");
+	widget(906, 236).setScriptCallOnMouseExit(-1, "");
+	widget(906, 236).setPosition(6, 5, 0, 2);
+	widget(906, 242).setPosition(6, 5, 0, 2);
+	widget(906, 241).setText("");
+	widget(906, 247).setText("");
+	widget(906, 236).setIsHidden(true);
+	widget(906, 242).setIsHidden(true);
+	widget(906, 235).setText("");
+	VARC[1092] = 0;
+	widget(906, 234).setSprite(null);
+	widget(906, 234).setScriptCallOnGameloop(-1, "");
+	widget(906, 44).setScriptCallOnKeyPress(-1, "");
+	widget(906, 44).setIsHidden(true);
+	widget(906, 29).setIsHidden(true);
+	return;
+}

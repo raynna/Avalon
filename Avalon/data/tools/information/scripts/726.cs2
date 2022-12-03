@@ -1,0 +1,36 @@
+void script_726(Widget widget0, Widget widget1) {
+	if (!widget1.hasChild() || VARC[199] == -1) {
+		widget0.clearChildren();
+		VARC[199] = -1;
+		widget0.setScriptCallOnGameloop(-1, "");
+		widget0.setScriptCallOnWidgetResize(-1, "");
+		return;
+	}
+	widget0.setScriptCallOnGameloop(727, widget0, widget1, "II");
+	widget0.setScriptCallOnWidgetResize(726, widget0, widget1, "II");
+	ACTIVE.createChild(widget0, 3, 0);
+	ACTIVE.setPosition(0, 0, 3, 3);
+	ACTIVE.setSize(widget1.getX(), 16384, 0, 2);
+	ACTIVE.setRGB(color(VARC[199]));
+	ACTIVE.setTrans(VARC[213]);
+	ACTIVE.setFilled(true);
+	ACTIVE.createChild(widget0, 3, 1);
+	ACTIVE.setPosition(0, 0, 5, 3);
+	ACTIVE.setSize(widget0.getWidth() - (widget1.getX() + widget1.getWidth()), 16384, 0, 2);
+	ACTIVE.setRGB(color(VARC[199]));
+	ACTIVE.setTrans(VARC[213]);
+	ACTIVE.setFilled(true);
+	ACTIVE.createChild(widget0, 3, 2);
+	ACTIVE.setPosition(widget1.getX(), 0, 0, 3);
+	ACTIVE.setSize(widget1.getWidth(), widget1.getY(), 0, 0);
+	ACTIVE.setRGB(color(VARC[199]));
+	ACTIVE.setTrans(VARC[213]);
+	ACTIVE.setFilled(true);
+	ACTIVE.createChild(widget0, 3, 3);
+	ACTIVE.setPosition(widget1.getX(), 0, 0, 5);
+	ACTIVE.setSize(widget1.getWidth(), widget0.getHeight() - (widget1.getY() + widget1.getHeight()), 0, 0);
+	ACTIVE.setRGB(color(VARC[199]));
+	ACTIVE.setTrans(VARC[213]);
+	ACTIVE.setFilled(true);
+	return;
+}

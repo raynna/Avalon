@@ -1,0 +1,11 @@
+void script_2201() {
+	if (VARP[1701] == 1) {
+		script_2200();
+	} else {
+		script_2199();
+	}
+	script_2209();
+	widget(VARC[1136]).setIsHidden(false);
+	widget(932, 1).setScriptCallOnGameloop(2210, "");
+	return;
+}

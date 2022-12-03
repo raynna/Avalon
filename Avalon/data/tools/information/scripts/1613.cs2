@@ -1,0 +1,77 @@
+void script_1613(Widget widget0, int arg1) {
+	int int2;
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	Item item8;
+	if (arg1 == 1) {
+		VARC[1031] = 0;
+	}
+	int2 = getItemContainerLength(93);
+	int3 = int2 * 2 - 1;
+	int4 = 0;
+	while (int4 <= int3) {
+		if (!ACTIVE.setChild(widget0, int4)) {
+			ACTIVE.createChild(widget0, 5, int4);
+			ACTIVE.setSize(36, 32, 0, 0);
+			if (int4 < int2) {
+				ACTIVE.setShadowColor(0x302020);
+				ACTIVE.setScriptCallOnUse(1615, true, CTX_WIDGET, CTX_WIDGET_CHILD, "1Ii");
+				ACTIVE.setScriptCallOnUseWith(1615, false, CTX_WIDGET, CTX_WIDGET_CHILD, "1Ii");
+				ACTIVE.setDragRenderBehaviour(2);
+				ACTIVE.setDragDeadZone(5);
+				ACTIVE.setDragDeadTime(5);
+				ACTIVE.setScriptCallOnMouseDragReleased(1616, CTX_WIDGET, CTX_WIDGET_CHILD, DRAG_WIDGET, DRAG_WIDGET_CHILD, "IiIi");
+				ACTIVE.setScriptCallOnClickContextMenu(1620, CTX_WIDGET, CTX_WIDGET_CHILD, 100, 0, 8, "Iiiii");
+			} else {
+				ACTIVE.setRGB(0x000000);
+				ACTIVE.setTrans(255);
+				ACTIVE.setHidden(false);
+			}
+		}
+		int4 = int4 + 1;
+	}
+	int5 = int2 / 4;
+	int6 = (widget0.getWidth() - 4 * 36) / 3;
+	int7 = (widget0.getHeight() - int5 * 32) / 6;
+	item8 = null;
+	int3 = VARC[1031] - 1;
+	int4 = 0;
+	while (int4 < int2) {
+		if (ACTIVE.setChild(widget0, int4)) {
+			ACTIVE.setNoOptions();
+			ACTIVE.setPosition(int4 % 4 * (36 + int6), int4 / 4 * (32 + int7), 0, 0);
+			item8 = getItemIdInSlot(93, int4);
+			if (item8 != null) {
+				ACTIVE.setHidden(false);
+				ACTIVE.setItem(item8, getItemAmtInSlot(93, int4));
+				if (int4 == int3) {
+					ACTIVE.setOutlineThickness(2);
+				} else {
+					ACTIVE.setOutlineThickness(1);
+				}
+				script_2833(item8);
+				ACTIVE.setDraggable(widget0, -1);
+			} else {
+				ACTIVE.setHidden(true);
+				ACTIVE.setScriptCallOnConfigChange(-1, "");
+				ACTIVE.setItem(null, 0);
+				ACTIVE.setOutlineThickness(1);
+				if (int4 == int3) {
+					VARC[1031] = 0;
+				}
+			}
+		}
+		int4 = int4 + 1;
+	}
+	int4 = 0;
+	while (int4 < int2) {
+		if (ACTIVE.setChild(widget0, int2 + int4)) {
+			ACTIVE.setPosition(int4 % 4 * (36 + int6), int4 / 4 * (32 + int7), 0, 0);
+		}
+		int4 = int4 + 1;
+	}
+	return;
+}

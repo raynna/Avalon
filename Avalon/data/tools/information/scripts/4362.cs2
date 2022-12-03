@@ -1,0 +1,27 @@
+void script_4362(int arg0, Widget widget1, Widget widget2, Widget widget3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, long long12) {
+	DataMap datamap12;
+	string str0;
+	if (arg9 == 0 || arg8 == 0 || arg6 == 0) {
+		widget2.setSprite(5936);
+		return;
+	}
+	datamap12 = datamap('i', 'g', (DataMap)3689, arg6);
+	str0 = timeToStr(arg4) + " at " + datamap('i', 's', (DataMap)3695, arg5);
+	if (CLANDEF113[5] == 0) {
+		str0 = str0 + " Game Time";
+	} else {
+		str0 = str0 + " Clan Local Time";
+	}
+	str0 = str0 + "<br>" + "<br>" + "World " + str(arg9) + " at " + "<br>" + datamap('i', 's', (DataMap)3696, arg8) + "<br>" + "<br>" + datamap('i', 's', (DataMap)3687, arg6);
+	if (datamap12 != null && arg7 > 0) {
+		str0 = str0 + "<br>" + datamap('i', 's', datamap12, arg7);
+	}
+	str0 = str0 + "<br>" + "<br>" + "Open to " + datamap('i', 's', (DataMap)3716, arg10);
+	if (arg11 == 1) {
+		str0 = str0 + "<br>" + "Attendance is mandatory";
+	}
+	widget1.setScriptCallOnClickContextMenu(4363, arg0, str0, long12, widget2, arg4, arg5, arg9, arg8, arg6, "is§Iiiiii");
+	widget3.setSprite(datamap('i', 'd', (DataMap)3688, arg6));
+	widget2.setSprite(5932);
+	return;
+}

@@ -1,0 +1,77 @@
+void script_421(int arg0, int arg1, int arg2) {
+	int int3;
+	int int4;
+	int int5;
+	int int6;
+	int int7;
+	int int8;
+	int int9;
+	int int10;
+	int3 = 0;
+	int4 = 0;
+	int5 = 5;
+	int6 = 5;
+	int7 = 0;
+	int8 = 0;
+	int9 = 0;
+	int10 = 0;
+	if (cameraGetVrot() < arg0) {
+		int9 = arg0 - cameraGetVrot();
+	} else if (cameraGetVrot() > arg0) {
+		int9 = cameraGetVrot() - arg0;
+	}
+	if (cameraGetHrot() < arg1) {
+		int8 = arg1 - cameraGetHrot();
+		int7 = 2047 - arg1 + cameraGetHrot();
+		if (int7 > int8) {
+			int10 = int8;
+			int5, int6 = script_422(int9, int10);
+			cameraMethod5504(cameraGetVrot(), min(cameraGetHrot() + int6, arg1));
+		} else {
+			int10 = int7;
+			int5, int6 = script_422(int9, int10);
+			if (arg2 == 0) {
+				cameraMethod5504(cameraGetVrot(), max(cameraGetHrot() - int6, 0));
+			} else {
+				cameraMethod5504(cameraGetVrot(), max(cameraGetHrot() - int6, arg1));
+			}
+			if (cameraGetHrot() == 0 && arg2 == 0) {
+				cameraMethod5504(cameraGetVrot(), 2047);
+				widget(1013, 0).setScriptCallOnGameloop(421, arg0, arg1, 1, "iii");
+			}
+		}
+	} else if (cameraGetHrot() > arg1) {
+		int8 = 2047 - cameraGetHrot() + arg1;
+		int7 = cameraGetHrot() - arg1;
+		if (int7 > int8) {
+			int10 = int8;
+			int5, int6 = script_422(int9, int10);
+			if (arg2 == 0) {
+				cameraMethod5504(cameraGetVrot(), min(cameraGetHrot() + int6, 2047));
+			} else {
+				cameraMethod5504(cameraGetVrot(), min(cameraGetHrot() + int6, arg1));
+			}
+			if (cameraGetHrot() == 2047 && arg2 == 0) {
+				cameraMethod5504(cameraGetVrot(), 0);
+				widget(1013, 0).setScriptCallOnGameloop(421, arg0, arg1, 1, "iii");
+			}
+		} else {
+			int10 = int7;
+			int5, int6 = script_422(int9, int10);
+			cameraMethod5504(cameraGetVrot(), max(cameraGetHrot() - int6, arg1));
+		}
+	} else {
+		int4 = 1;
+	}
+	if (cameraGetVrot() < arg0) {
+		cameraMethod5504(min(cameraGetVrot() + int5, arg0), cameraGetHrot());
+	} else if (cameraGetVrot() > arg0) {
+		cameraMethod5504(max(cameraGetVrot() - int5, arg0), cameraGetHrot());
+	} else {
+		int3 = 1;
+	}
+	if (int3 == 1 && int4 == 1) {
+		widget(1013, 0).setScriptCallOnGameloop(-1, "");
+	}
+	return;
+}

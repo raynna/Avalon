@@ -1,0 +1,133 @@
+void script_1402() {
+	if (VARP[106] == -1) {
+		return;
+	}
+	if (VARP[106] == 0) {
+		widget(270, 5).setModel(3062);
+		widget(270, 5).setAnimation(646);
+	} else if (VARP[106] == 1) {
+		widget(270, 6).setModel(3062);
+		widget(270, 6).setAnimation(646);
+	} else if (VARP[106] == 2) {
+		widget(270, 7).setModel(3062);
+		widget(270, 7).setAnimation(646);
+	} else if (VARP[106] == 3) {
+		widget(270, 8).setModel(3062);
+		widget(270, 8).setAnimation(646);
+	} else if (VARP[106] == 4) {
+		widget(270, 9).setModel(3062);
+		widget(270, 9).setAnimation(646);
+	} else if (VARP[106] == 5) {
+		widget(270, 10).setModel(3062);
+		widget(270, 10).setAnimation(646);
+	} else if (VARP[106] == 6) {
+		widget(270, 11).setModel(3062);
+		widget(270, 11).setAnimation(646);
+	} else if (VARP[106] == 7) {
+		widget(270, 12).setModel(3062);
+		widget(270, 12).setAnimation(646);
+	} else if (VARP[106] == 8) {
+		widget(270, 13).setModel(3062);
+		widget(270, 13).setAnimation(646);
+	} else if (VARP[106] == 9) {
+		widget(270, 14).setModel(3062);
+		widget(270, 14).setAnimation(646);
+	} else if (VARP[106] == 10) {
+		widget(270, 15).setModel(3062);
+		widget(270, 15).setAnimation(646);
+	} else if (VARP[106] == 11) {
+		widget(270, 16).setModel(3062);
+		widget(270, 16).setAnimation(646);
+	} else if (VARP[106] == 12) {
+		widget(270, 17).setModel(3062);
+		widget(270, 17).setAnimation(646);
+	} else if (VARP[106] == 13) {
+		widget(270, 18).setModel(3062);
+		widget(270, 18).setAnimation(646);
+	} else if (VARP[106] == 14) {
+		widget(270, 19).setModel(3062);
+		widget(270, 19).setAnimation(646);
+	} else if (VARP[106] == 15) {
+		widget(270, 20).setModel(3062);
+		widget(270, 20).setAnimation(646);
+	} else if (VARP[106] == 16) {
+		widget(270, 21).setModel(3062);
+		widget(270, 21).setAnimation(646);
+	} else if (VARP[106] == 17) {
+		widget(270, 22).setModel(3062);
+		widget(270, 22).setAnimation(646);
+	} else if (VARP[106] == 18) {
+		widget(270, 23).setModel(3062);
+		widget(270, 23).setAnimation(646);
+	} else if (VARP[106] == 19) {
+		widget(270, 24).setModel(3062);
+		widget(270, 24).setAnimation(646);
+	} else if (VARP[106] == 20) {
+		widget(270, 25).setModel(3062);
+		widget(270, 25).setAnimation(646);
+	} else if (VARP[106] == 21) {
+		widget(270, 26).setModel(3062);
+		widget(270, 26).setAnimation(646);
+	} else if (VARP[106] == 22) {
+		widget(270, 27).setModel(3062);
+		widget(270, 27).setAnimation(646);
+	} else if (VARP[106] == 23) {
+		widget(270, 28).setModel(3062);
+		widget(270, 28).setAnimation(646);
+	} else if (VARP[106] == 24) {
+		widget(270, 29).setModel(3062);
+		widget(270, 29).setAnimation(646);
+	} else if (VARP[106] == 25) {
+		widget(270, 30).setModel(3062);
+		widget(270, 30).setAnimation(646);
+	} else if (VARP[106] == 26) {
+		widget(270, 31).setModel(3062);
+		widget(270, 31).setAnimation(646);
+	} else if (VARP[106] == 27) {
+		widget(270, 32).setModel(3062);
+		widget(270, 32).setAnimation(646);
+	} else if (VARP[106] == 28) {
+		widget(270, 33).setModel(3062);
+		widget(270, 33).setAnimation(646);
+	} else if (VARP[106] == 29) {
+		widget(270, 34).setModel(3062);
+		widget(270, 34).setAnimation(646);
+	} else if (VARP[106] == 30) {
+		widget(270, 35).setModel(3062);
+		widget(270, 35).setAnimation(646);
+	} else if (VARP[106] == 31) {
+		widget(270, 36).setModel(3062);
+		widget(270, 36).setAnimation(646);
+	} else if (VARP[106] == 32) {
+		widget(270, 37).setModel(3062);
+		widget(270, 37).setAnimation(646);
+	} else if (VARP[106] == 33) {
+		widget(270, 38).setModel(3062);
+		widget(270, 38).setAnimation(646);
+	} else if (VARP[106] == 34) {
+		widget(270, 39).setModel(3062);
+		widget(270, 39).setAnimation(646);
+	} else if (VARP[106] == 35) {
+		widget(270, 40).setModel(3062);
+		widget(270, 40).setAnimation(646);
+	} else if (VARP[106] == 36) {
+		widget(270, 41).setModel(3062);
+		widget(270, 41).setAnimation(646);
+	} else if (VARP[106] == 37) {
+		widget(270, 42).setModel(3062);
+		widget(270, 42).setAnimation(646);
+	} else if (VARP[106] == 38) {
+		widget(270, 43).setModel(3062);
+		widget(270, 43).setAnimation(646);
+	} else if (VARP[106] == 39) {
+		widget(270, 44).setModel(3062);
+		widget(270, 44).setAnimation(646);
+	} else if (VARP[106] == 40) {
+		widget(270, 45).setModel(3062);
+		widget(270, 45).setAnimation(646);
+	} else if (VARP[106] == 41) {
+		widget(270, 46).setModel(3062);
+		widget(270, 46).setAnimation(646);
+	}
+	return;
+}
