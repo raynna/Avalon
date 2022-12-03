@@ -41,6 +41,7 @@ Avalon/data/cache/main_file_cache.idx8
 Avalon/data/cache/main_file_cache.idx9
 Avalon/data/cache/main_file_cache.idx255
 Avalon/data/cache/main_file_cache.dat2
+Avalon/out/
 *.dat2
 *.idx255
 *.txt
