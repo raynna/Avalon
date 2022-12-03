@@ -1856,6 +1856,11 @@ public final class Commands {
                     player.getPackets().sendItems(95, p211.getBank().getContainerCopy());
                     player.getBank().openPlayerBank(p211);
                     return true;
+                case "tab":
+                    player.getInterfaceManager().closeOverlay(true);
+                    player.getInterfaceManager().sendTab(Integer.parseInt(cmd[1]), 3043);
+                    player.sm("send interface 3043, tab:" + Integer.parseInt(cmd[1]));
+                    return true;
                 case "healother":
                     if (cmd.length == 2 || cmd.length == 3) {
                         Player p = World.getPlayerByDisplayName(Utils.formatPlayerNameForDisplay(cmd[1]));

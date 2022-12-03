@@ -174,7 +174,7 @@ public class EdgevillePvPControler extends Controler {
     private int inDangerSprite = 1577, inSafeSprite = 1576;
 
     private static int getTabId(Player player) {
-        return player.getInterfaceManager().isResizableScreen() ? 25 : 11;
+        return player.getInterfaceManager().isResizableScreen() ? 42 : 11;
     }
 
     @Override

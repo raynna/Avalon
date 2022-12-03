@@ -1,6 +1,7 @@
 package com.rs.game.player.content;
 
 import com.rs.Launcher;
+import com.rs.Settings;
 import com.rs.game.World;
 import com.rs.game.player.Player;
 import com.rs.game.player.Ranks.Rank;
@@ -33,6 +34,7 @@ public class ServerMessage {
 	}
 
 	public static void sendGlobalMessage(Player player, String data, boolean staff) {
+		if (Settings.discordEnabled)
 		Launcher.getDiscordBot().getChannelByName("server-yell-chat")
 				.sendMessage("```[Ingame -> Discord] \n" + player.getDisplayName() + ": " + data + "```");
 		if (player.isDeveloper()) {
