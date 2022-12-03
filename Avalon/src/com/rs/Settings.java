@@ -21,7 +21,7 @@ public final class Settings {
 	 * Should we send SQL queries such as recent trades, etc.. to database?
 	 */
 	public static final boolean sqlQueries = true;
-	public static final boolean discordEnabled = false;
+	public static final boolean discordEnabled = true;
 	
 	/**
 	 * 0 full eco, 1 eco spawn, 2 spawn

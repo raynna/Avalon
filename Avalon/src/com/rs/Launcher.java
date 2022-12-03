@@ -136,7 +136,6 @@ public final class Launcher {
 		if (Settings.sqlQueries)
 			DatabaseUtility.init();
 		if (!Settings.DEBUG) {
-			discord.getChannelByName("public-chat").sendMessage("Avalon is now online!");
 			discord.getChannelByName("server-status").sendMessage("Avalon is now online!");
 		}
 		addAccountsSavingTask();
