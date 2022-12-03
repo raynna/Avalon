@@ -71565,3 +71565,28 @@
 [03 december 2022 at 12:45:01 CET] - ::var 1324 1
 [03 december 2022 at 12:45:11 CET] - ::varbit 1324 1
 [03 december 2022 at 12:45:16 CET] - ::varbit 1324 5
+[03 december 2022 at 11:17:36 CET] - ::tele 0,48,54,25,35
+[03 december 2022 at 11:17:39 CET] - ::tele 0,48,54,24,36
+[03 december 2022 at 11:17:47 CET] - ::tele 0,48,54,17,50
+[03 december 2022 at 11:17:48 CET] - ::tele 0,48,54,9,56
+[03 december 2022 at 11:17:50 CET] - ::tele 0,48,54,15,55
+[03 december 2022 at 11:17:52 CET] - ::tele 0,48,54,21,54
+[03 december 2022 at 11:18:01 CET] - ::tele 0,48,54,27,63
+[03 december 2022 at 11:18:03 CET] - ::tele 0,48,54,21,57
+[03 december 2022 at 11:18:12 CET] - ::tele 0,48,54,25,54
+[03 december 2022 at 11:18:16 CET] - ::tele 0,48,54,21,52
+[03 december 2022 at 11:18:18 CET] - ::tele 0,48,54,8,53
+[03 december 2022 at 11:18:26 CET] - ::tele 0,48,54,21,56
+[03 december 2022 at 11:18:28 CET] - ::tele 0,48,54,23,53
+[03 december 2022 at 11:18:28 CET] - ::tele 0,48,54,33,55
+[03 december 2022 at 11:18:29 CET] - ::tele 0,48,54,31,54
+[03 december 2022 at 11:18:30 CET] - ::tele 0,48,54,23,52
+[03 december 2022 at 11:19:20 CET] - ::tele 0,48,54,8,56
+[03 december 2022 at 11:19:23 CET] - ::tele 0,48,54,8,52
+[03 december 2022 at 11:19:27 CET] - ::tele 0,48,54,9,51
+[03 december 2022 at 11:19:29 CET] - ::tele 0,48,54,8,57
+[03 december 2022 at 11:19:36 CET] - ::pos 
+[03 december 2022 at 11:20:18 CET] - ::pos 
+[03 december 2022 at 11:20:52 CET] - ::tele 0,48,54,9,57
+[03 december 2022 at 11:20:53 CET] - ::tele 0,48,54,9,58
+[03 december 2022 at 11:22:57 CET] - ::pos 

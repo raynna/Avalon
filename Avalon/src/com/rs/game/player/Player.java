@@ -1656,6 +1656,119 @@ public class Player extends Entity {
         return this.skullDelay = delay;
     }
 
+    public void addGlobalObjects() {
+        List<WorldTile> allObjects = new ArrayList<>();
+        for (WorldTile tile : GlobalObjectDeletion.getTiles()) {
+            allObjects.add(tile);
+        }
+        /**
+         * Removes ALL objects in an area
+         */
+        if (allObjects != null) {
+            for (WorldTile tile : allObjects) {
+                WorldObject object = World.getStandardWallObject(tile);
+                if (object != null) {
+                    if (object != null && (object.getId() == 24397))//temp fix for bank booths in edgeville bank
+                        object = World.getObjectWithType(tile, 10);
+                    else
+                        World.spawnObject(object);
+                    object = null;
+                }
+                if (object == null)
+                    object = World.getStandardFloorObject(tile);
+                if (object != null) {
+                    World.spawnObject(object);
+                    object = null;
+                }
+                if (object == null)
+                    object = World.getObjectWithType(tile, 10);
+                if (object != null) {
+                    World.spawnObject(object);
+                    object = null;
+                }
+                if (object == null)
+                    object = World.getObjectWithType(tile, 4);
+                if (object != null) {
+                    World.spawnObject(object);
+                    object = null;
+                }
+                if (object == null)
+                    object = World.getStandardFloorDecoration(tile);
+                if (object != null) {
+                    if (object != null && (object.getId() == 39639))//temp fix for bank carpet in edgeville bank
+                        object = World.getObjectWithType(tile, 10);
+                    else
+                        World.spawnObject(object);
+                    object = null;
+                }
+                if (object == null)
+                    object = World.getStandardWallDecoration(tile);
+                if (object != null) {
+                    World.spawnObject(object);
+                    object = null;
+                }
+                if (object == null) {
+                    //World.unclipTile(tile);
+                    continue;
+                }
+                World.spawnObject(object);
+            }
+        }
+        /**
+         * //int id, int type, int rotation, int x, int y, int plane
+         * Spawn custom objects here, always spawn it twice if there is a global object already on that spot
+         */
+        WorldObject altar = new WorldObject(409, 10, 0, 3092, 3488, 0);
+        World.spawnObject(altar);//twice to replace globalobject
+        World.spawnObject(altar);
+
+        /**
+         *  used to remove objects in an area, but it skips floordecorations like flowers/grass
+         */
+        List<WorldTile> allButFloorDecoration = new ArrayList<>();
+        if (allButFloorDecoration != null) {
+            for (WorldTile tile : allButFloorDecoration) {
+                WorldObject object = World.getStandardWallObject(tile);
+                if (object != null) {
+                    if (object != null)//temp fix for bank booths in edgeville bank
+                        object = World.getObjectWithType(tile, 10);
+                    else
+                        World.spawnObject(object);
+                    object = null;
+                }
+                if (object == null)
+                    object = World.getStandardFloorObject(tile);
+                if (object != null) {
+                    World.spawnObject(object);
+                    object = null;
+                }
+                if (object == null)
+                    object = World.getObjectWithType(tile, 10);
+                if (object != null) {
+                    World.spawnObject(object);
+                    object = null;
+                }
+                if (object == null)
+                    object = World.getObjectWithType(tile, 4);
+                if (object != null) {
+                    World.spawnObject(object);
+                    object = null;
+                }
+                if (object == null)
+                    object = World.getStandardWallDecoration(tile);
+                if (object != null) {
+                    World.spawnObject(object);
+                    object = null;
+                }
+                if (object == null) {
+                    //World.unclipTile(tile);
+                    continue;
+                }
+                World.spawnObject(object);
+            }
+        }
+    }
+
     public void removeGlobalObjects() {
         List<WorldTile> allObjects = new ArrayList<>();
         for (WorldTile tile : GlobalObjectDeletion.getTiles()) {
@@ -1714,13 +1827,6 @@ public class Player extends Entity {
                 World.removeObject(object);
             }
         }
-        /**
-         * //int id, int type, int rotation, int x, int y, int plane
-         * Spawn custom objects here, always spawn it twice if there is a global object already on that spot
-         */
-        WorldObject altar = new WorldObject(409, 10, 0, 3092, 3488, 0);
-        World.spawnObject(altar);//twice to replace globalobject
-        World.spawnObject(altar);
 
         /**
          *  used to remove objects in an area, but it skips floordecorations like flowers/grass
@@ -1830,6 +1936,7 @@ public class Player extends Entity {
 
     public void refreshSpawnedObjects() {
         removeGlobalObjects();
+        addGlobalObjects();
         for (int regionId : getMapRegionsIds()) {
             List<WorldObject> spawnedObjects = World.getRegion(regionId).getSpawnedObjects();
             if (spawnedObjects != null) {

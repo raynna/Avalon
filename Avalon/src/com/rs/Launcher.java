@@ -19,6 +19,7 @@ import com.rs.game.item.ground.AutomaticGroundItem;
 import com.rs.game.map.MapBuilder;
 import com.rs.game.npc.combat.CombatScriptsHandler;
 import com.rs.game.npc.drops.MobRewardRDT;
+import com.rs.game.objects.GlobalObjectAddition;
 import com.rs.game.objects.GlobalObjectDeletion;
 import com.rs.game.objects.ObjectScriptsHandler;
 import com.rs.game.player.AccountCreation;
@@ -107,6 +108,7 @@ public final class Launcher {
 		LimitedGEReader.init();
 		UnlimitedGEReader.init();
 		GlobalObjectDeletion.init();
+		GlobalObjectAddition.init();
 		//StarterProtection.loadIPS();
 		NPCExamines.loadPackedExamines();
 		Credentials.init();

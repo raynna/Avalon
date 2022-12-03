@@ -19,6 +19,17 @@ public class GlobalObjectDeletion {
 	}
 
 	private static void readToStoreCollection() throws Exception {
+
+		/**
+		 * Edgeville General store north walls
+		 */
+		tiles.add(new WorldTile(3079, 3513, 0));
+		tiles.add(new WorldTile(3080, 3513, 0));
+		tiles.add(new WorldTile(3081, 3513, 0));
+		tiles.add(new WorldTile(3079, 3514, 0));
+		tiles.add(new WorldTile(3080, 3514, 0));
+		tiles.add(new WorldTile(3081, 3514, 0));
+
 		/**
 		 * Man house walls & candles
 		 */

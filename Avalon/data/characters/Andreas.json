@@ -2660,7 +2660,7 @@
   },
   "currentFriendChatOwner": "help",
   "connectedClanChannel": false,
-  "lastLoggedIn": 1670024445672,
+  "lastLoggedIn": 1670062833053,
   "petManager": {
     "petDetails": {},
     "npcId": 0,
@@ -4051,9 +4051,9 @@
       "STEAL_FROM_SILK_STALL": 4,
       "CLAIM_WILDSTALKER_HELMET": 0,
       "COMPLETE_SLAYER_TASK": 10,
+      "STEAL_FROM_BAKERS_STALL": 1,
       "STEAL_FROM_GEM_STALL": 26,
-      "MINE_COPPER_AND_TIN": 21,
-      "STEAL_FROM_BAKERS_STALL": 1
+      "MINE_COPPER_AND_TIN": 21
     }
   },
   "geManager": {
@@ -4394,7 +4394,7 @@
     "poisonDamage": 0,
     "poisonCount": 0
   },
-  "x": 3095,
-  "y": 3493,
+  "x": 3082,
+  "y": 3513,
   "plane": 0
 }
