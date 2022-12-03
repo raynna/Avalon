@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Documents/GitHub/avalon/1. Avalon/lib/everythingrs-api.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/GitHub/avalon/1. Avalon/lib/slf4j-simple-1.7.25.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/GitHub/avalon/1. Avalon/lib/gson-2.8.2.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/GitHub/avalon/1. Avalon/lib/netty-3.6.5.Final.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/GitHub/avalon/1. Avalon/lib/c3p0-0.9.5.5.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/GitHub/avalon/1. Avalon/lib/mchange-commons-java-0.2.19.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/GitHub/avalon/1. Avalon/lib/FileStore.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/GitHub/avalon/1. Avalon/lib/RS-Cache-Library.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/GitHub/avalon/1. Avalon/lib/javacord-2.0.17-shaded.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
