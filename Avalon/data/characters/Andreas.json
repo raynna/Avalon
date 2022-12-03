@@ -49,10 +49,7 @@
           "id": 11673,
           "amount": 1
         },
-        {
-          "id": 4151,
-          "amount": 1
-        },
+        null,
         {
           "id": 1323,
           "amount": 1
@@ -101,7 +98,10 @@
         null,
         null,
         null,
-        null,
+        {
+          "id": 4151,
+          "amount": 1
+        },
         null,
         null,
         null,
@@ -2782,7 +2782,10 @@
     "prayerpoints": 700,
     "ancientcurses": true
   },
-  "controlerManager": {},
+  "controlerManager": {
+    "lastControlerArguments": [],
+    "lastControler": "EdgevillePvPControler"
+  },
   "musicsManager": {
     "unlockedMusics": [
       0,
@@ -4048,12 +4051,12 @@
     ],
     "taskStages": {
       "null": 1,
-      "STEAL_FROM_SILK_STALL": 4,
-      "CLAIM_WILDSTALKER_HELMET": 0,
+      "STEAL_FROM_GEM_STALL": 26,
+      "MINE_COPPER_AND_TIN": 21,
       "COMPLETE_SLAYER_TASK": 10,
       "STEAL_FROM_BAKERS_STALL": 1,
-      "STEAL_FROM_GEM_STALL": 26,
-      "MINE_COPPER_AND_TIN": 21
+      "STEAL_FROM_SILK_STALL": 4,
+      "CLAIM_WILDSTALKER_HELMET": 0
     }
   },
   "geManager": {
@@ -4394,7 +4397,7 @@
     "poisonDamage": 0,
     "poisonCount": 0
   },
-  "x": 3082,
-  "y": 3513,
+  "x": 83,
+  "y": 78,
   "plane": 0
 }

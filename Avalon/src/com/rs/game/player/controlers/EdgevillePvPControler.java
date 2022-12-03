@@ -30,10 +30,10 @@ public class EdgevillePvPControler extends Controler {
     }
 
     public static void leavePVP(Player player) {
+        player.getControlerManager().forceStop();
         player.setNextWorldTile(new WorldTile(Settings.HOME_PLAYER_LOCATION));
         player.getAppearence().generateAppearenceData();
         player.sm("You " + HexColours.getShortMessage(Colours.RED, "leave") + " edgeville pvp instance.");
-        player.getControlerManager().getControler().forceClose();
         player.setCanPvp(false);
         player.getPackets().sendGlobalConfig(1000, 0);
         player.getAppearence().generateAppearenceData();

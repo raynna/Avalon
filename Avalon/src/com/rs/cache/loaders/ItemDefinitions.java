@@ -962,11 +962,8 @@ public final class ItemDefinitions {
 				String string;
 
 				while ((string = reader.readLine()) != null) {
-
 					fileLines.add(string);
-
 				}
-
 			} finally {
 
 				if (reader != null) {

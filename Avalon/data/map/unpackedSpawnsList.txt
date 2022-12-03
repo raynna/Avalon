@@ -86,28 +86,7 @@
 //Armour repair stand spawned by andreas
 13715 10 3 - 83 81 0 true
 //null spawned by andreas
-0 10 0 - 83 83 0 true
+//0 10 0 - 83 83 0 true
 //Plant spawned by andreas
-1392 10 0 - 3099 3487 0 true
-//null spawned by andreas
-24397 0 2 - 3095 3492 0 true
-//null spawned by andreas
-24397 0 2 - 3095 3491 0 true
-//null spawned by andreas
-24397 0 2 - 3095 3490 0 true
-//null spawned by andreas
-24397 0 2 - 3095 3489 0 true
-//null spawned by andreas
-24397 0 2 - 3095 3488 0 true
-//null spawned by andreas
-24397 0 2 - 3095 3493 0 true
-//null spawned by andreas
-24397 0 2 - 3095 3494 0 true
-//null spawned by andreas
-24397 0 3 - 3096 3495 0 true
-//null spawned by andreas
-24397 0 3 - 3097 3495 0 true
-//null spawned by andreas
-24397 0 3 - 3098 3495 0 true
-//null spawned by andreas
-39639 22 2 - 3092 3488 0 true
+//1392 10 0 - 3099 3487 0 true
+

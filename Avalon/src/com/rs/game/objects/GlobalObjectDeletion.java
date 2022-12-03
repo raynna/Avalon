@@ -89,15 +89,14 @@ public class GlobalObjectDeletion {
 		tiles.add(new WorldTile(3076, 3509, 0));
 		tiles.add(new WorldTile(3078, 3507, 0));
 
-
-
-
-
-
-
 		/**
 		 * Edgeville bank objects
 		 */
+
+		tiles.add(new WorldTile(83, 83, 0));
+
+		tiles.add(new WorldTile(3092, 3488, 0));
+
 		tiles.add(new WorldTile(3092, 3488, 0));
 		for (int y = 3488; y <= 3495; y++)
 			tiles.add(new WorldTile(3095, y, 0));

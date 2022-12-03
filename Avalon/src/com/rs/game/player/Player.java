@@ -52,6 +52,7 @@ import com.rs.game.npc.NPC;
 import com.rs.game.npc.NPC.AchievementKills;
 import com.rs.game.npc.familiar.Familiar;
 import com.rs.game.npc.pet.Pet;
+import com.rs.game.objects.GlobalObjectAddition;
 import com.rs.game.objects.GlobalObjectDeletion;
 import com.rs.game.objects.ObjectScript;
 import com.rs.game.player.Ranks.Rank;
@@ -1657,116 +1658,17 @@ public class Player extends Entity {
     }
 
     public void addGlobalObjects() {
-        List<WorldTile> allObjects = new ArrayList<>();
-        for (WorldTile tile : GlobalObjectDeletion.getTiles()) {
-            allObjects.add(tile);
+        List<WorldObject> allObjects = new ArrayList<>();
+        for (WorldObject object : GlobalObjectAddition.getObjects()) {
+            allObjects.add(object);
         }
-        /**
-         * Removes ALL objects in an area
-         */
         if (allObjects != null) {
-            for (WorldTile tile : allObjects) {
-                WorldObject object = World.getStandardWallObject(tile);
-                if (object != null) {
-                    if (object != null && (object.getId() == 24397))//temp fix for bank booths in edgeville bank
-                        object = World.getObjectWithType(tile, 10);
-                    else
-                        World.spawnObject(object);
-                    object = null;
-                }
-                if (object == null)
-                    object = World.getStandardFloorObject(tile);
-                if (object != null) {
-                    World.spawnObject(object);
-                    object = null;
-                }
-                if (object == null)
-                    object = World.getObjectWithType(tile, 10);
-                if (object != null) {
-                    World.spawnObject(object);
-                    object = null;
-                }
-                if (object == null)
-                    object = World.getObjectWithType(tile, 4);
-                if (object != null) {
-                    World.spawnObject(object);
-                    object = null;
-                }
-                if (object == null)
-                    object = World.getStandardFloorDecoration(tile);
-                if (object != null) {
-                    if (object != null && (object.getId() == 39639))//temp fix for bank carpet in edgeville bank
-                        object = World.getObjectWithType(tile, 10);
-                    else
-                        World.spawnObject(object);
-                    object = null;
-                }
-                if (object == null)
-                    object = World.getStandardWallDecoration(tile);
-                if (object != null) {
-                    World.spawnObject(object);
-                    object = null;
-                }
-                if (object == null) {
-                    //World.unclipTile(tile);
-                    continue;
-                }
+            for (WorldObject object : allObjects) {
                 World.spawnObject(object);
             }
         }
-        /**
-         * //int id, int type, int rotation, int x, int y, int plane
-         * Spawn custom objects here, always spawn it twice if there is a global object already on that spot
-         */
-        WorldObject altar = new WorldObject(409, 10, 0, 3092, 3488, 0);
-        World.spawnObject(altar);//twice to replace globalobject
-        World.spawnObject(altar);
-
-        /**
-         *  used to remove objects in an area, but it skips floordecorations like flowers/grass
-         */
-        List<WorldTile> allButFloorDecoration = new ArrayList<>();
-        if (allButFloorDecoration != null) {
-            for (WorldTile tile : allButFloorDecoration) {
-                WorldObject object = World.getStandardWallObject(tile);
-                if (object != null) {
-                    if (object != null)//temp fix for bank booths in edgeville bank
-                        object = World.getObjectWithType(tile, 10);
-                    else
-                        World.spawnObject(object);
-                    object = null;
-                }
-                if (object == null)
-                    object = World.getStandardFloorObject(tile);
-                if (object != null) {
-                    World.spawnObject(object);
-                    object = null;
-                }
-                if (object == null)
-                    object = World.getObjectWithType(tile, 10);
-                if (object != null) {
-                    World.spawnObject(object);
-                    object = null;
-                }
-                if (object == null)
-                    object = World.getObjectWithType(tile, 4);
-                if (object != null) {
-                    World.spawnObject(object);
-                    object = null;
-                }
-                if (object == null)
-                    object = World.getStandardWallDecoration(tile);
-                if (object != null) {
-                    World.spawnObject(object);
-                    object = null;
-                }
-                if (object == null) {
-                    //World.unclipTile(tile);
-                    continue;
-                }
-                World.spawnObject(object);
-            }
-        }
+        //WorldObject altar = new WorldObject(409, 10, 0, 3092, 3488, 0);
+        //World.spawnObject(altar);//twice to replace globalobject
     }
 
     public void removeGlobalObjects() {
@@ -1832,6 +1734,9 @@ public class Player extends Entity {
          *  used to remove objects in an area, but it skips floordecorations like flowers/grass
          */
         List<WorldTile> allButFloorDecoration = new ArrayList<>();
+        for (WorldTile tile : GlobalObjectDeletion.getTiles()) {
+            allButFloorDecoration.add(tile);
+        }
         for (int x = 3072; x <= 3104; x++) {//north of man house
             for (int y = 3515; y <= 3519; y++) {
                 allButFloorDecoration.add(new WorldTile(x, y, 0));
@@ -1865,6 +1770,12 @@ public class Player extends Entity {
                 }
                 if (object == null)
                     object = World.getObjectWithType(tile, 4);
+                if (object != null) {
+                    World.removeObject(object);
+                    object = null;
+                }
+                if (object == null)
+                    object = World.getObjectWithType(tile, 3);
                 if (object != null) {
                     World.removeObject(object);
                     object = null;

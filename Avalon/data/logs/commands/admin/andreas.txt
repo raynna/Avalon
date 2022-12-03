@@ -71590,3 +71590,25 @@
 [03 december 2022 at 11:20:52 CET] - ::tele 0,48,54,9,57
 [03 december 2022 at 11:20:53 CET] - ::tele 0,48,54,9,58
 [03 december 2022 at 11:22:57 CET] - ::pos 
+[03 december 2022 at 11:35:11 CET] - ::pos 
+[03 december 2022 at 11:39:28 CET] - ::tele 0,48,54,17,45
+[03 december 2022 at 11:39:29 CET] - ::tele 0,48,54,22,38
+[03 december 2022 at 11:39:30 CET] - ::tele 0,48,54,22,34
+[03 december 2022 at 11:39:43 CET] - ::tele 0,48,54,17,46
+[03 december 2022 at 11:39:44 CET] - ::tele 0,48,54,20,37
+[03 december 2022 at 11:39:47 CET] - ::tele 0,48,54,21,32
+[03 december 2022 at 11:40:34 CET] - ::tele 0,48,54,14,47
+[03 december 2022 at 11:40:34 CET] - ::tele 0,48,54,21,38
+[03 december 2022 at 11:44:22 CET] - ::pos 
+[03 december 2022 at 11:47:42 CET] - ::tele 2893 4842
+[03 december 2022 at 11:49:41 CET] - ::tele 3092 3488
+[03 december 2022 at 11:49:59 CET] - ::tele 3092 3488
+[03 december 2022 at 11:50:16 CET] - ::tele 3092 3488
+[03 december 2022 at 11:51:05 CET] - ::tele 3098 3495
+[03 december 2022 at 11:53:34 CET] - ::tele 3099 3487
+[03 december 2022 at 11:53:52 CET] - ::tele 83 83
+[03 december 2022 at 11:54:26 CET] - ::tele 0,1,1,20,18
+[03 december 2022 at 11:56:06 CET] - ::tele 83 83
+[03 december 2022 at 11:56:09 CET] - ::tele 0,1,1,20,17
+[03 december 2022 at 11:57:03 CET] - ::tele 83 83
+[03 december 2022 at 11:57:05 CET] - ::tele 0,1,1,20,16

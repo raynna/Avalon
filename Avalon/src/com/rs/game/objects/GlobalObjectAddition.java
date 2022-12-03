@@ -5,11 +5,12 @@ import java.io.FileReader;
 import java.util.ArrayList;
 
 import com.rs.cache.loaders.ItemDefinitions;
+import com.rs.game.WorldObject;
 import com.rs.game.WorldTile;
 
 public class GlobalObjectAddition {
 
-    private static ArrayList<WorldTile> tiles = new ArrayList<WorldTile>();
+    private static ArrayList<WorldObject> objects = new ArrayList<WorldObject>();
 
     public static void init() {
         try {
@@ -20,30 +21,46 @@ public class GlobalObjectAddition {
 
     private static void readToStoreCollection() throws Exception {
 
+        objects.add(new WorldObject(37548, 4, 1, 3082, 3513, 0));
+        objects.add(new WorldObject(409, 10, 0, 3095, 3499, 0));
+        objects.add(new WorldObject(409, 10, 0, 3095, 3499, 0));
+
         /**
-         * Edgeville General store north walls candle
+         * Carpet in edgeville bank
          */
+        objects.add(new WorldObject(39639, 22, 2, 3092, 3488, 0));
 
-        tiles.add(new WorldTile(3082, 3513, 0));
+        /**
+         * Border in Edgeville Bank
+        */
+        objects.add(new WorldObject(24397, 0, 2, 3095, 3489, 0));
+        objects.add(new WorldObject(24397, 0, 2, 3095, 3490, 0));
+        objects.add(new WorldObject(24397, 0, 2, 3095, 3491, 0));
+        objects.add(new WorldObject(24397, 0, 2, 3095, 3492, 0));
+        objects.add(new WorldObject(24397, 0, 2, 3095, 3493, 0));
+        objects.add(new WorldObject(24397, 0, 2, 3095, 3494, 0));
+        objects.add(new WorldObject(24397, 0, 3, 3098, 3495, 0));
+        objects.add(new WorldObject(24397, 0, 3, 3097, 3495, 0));
+        objects.add(new WorldObject(24397, 0, 3, 3096, 3495, 0));
 
     }
 
-    public static ArrayList<WorldTile> getTiles() {
-        return tiles;
+    public static ArrayList<WorldObject> getObjects() {
+        return objects;
     }
 
-    public static void reloadTiles() {
+    public static void reloadObjects() {
         try {
-            tiles.clear();
+            objects.clear();
             readToStoreCollection();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static boolean removableTile(WorldTile tile) {
-        for (int i = 0; i < tiles.size(); i++) {
-            if (tile == tiles.get(i)) {
+    public static boolean removableObjects(WorldTile tile) {
+        for (int i = 0; i < objects.size(); i++) {
+            if (tile == objects.get(i)) {
                 return true;
             }
         }
