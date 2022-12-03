@@ -2,33 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19d6d72d-833d-45db-b6ef-9a0a31c62ea6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Avalon/data/cache/main_file_cache.dat2" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/data/cache/main_file_cache.dat2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Avalon/data/cache/main_file_cache.idx255" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/data/cache/main_file_cache.idx255" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/libs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/data/iplog/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/data/iplog/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/game/npc/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/game/npc/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/dialogues/CompletionistStand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/dialogues/CompletionistStand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/dialogues/LevelUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/dialogues/LevelUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/net/decoders/handlers/ButtonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/net/decoders/handlers/ButtonHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Avalon - Client.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Avalon - Client.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/1. Avalon/META-INF/1. Avalon.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/clientlibs.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/ini.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/libraries/lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/libraries/libs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1344,10 +1344,10 @@ public class Player extends Entity {
             skills.resetSkillNoRefresh(Skills.SLAYER);
             slayerManager = new SlayerManager();
         }
-		if (artisan == null) 
-			artisan = new ArtisanWorkshop();
-		
-		artisan.setPlayer(this);
+        if (artisan == null)
+            artisan = new ArtisanWorkshop();
+
+        artisan.setPlayer(this);
         if (godwarsKillcount == null)
             godwarsKillcount = new GodwarsKillcount();
         if (varsManager == null)
@@ -2826,7 +2826,7 @@ public class Player extends Entity {
         getPackets().sendDeveloperPacket();
         sendRunButtonConfig();
         if (isMember()) {
-        	getDialogueManager().startDialogue("SimpleItemMessage", 617, "Welcome back Avalon Member " + Utils.formatPlayerNameForDisplay(getUsername()) + ".");
+            getDialogueManager().startDialogue("SimpleItemMessage", 617, "Welcome back Avalon Member " + Utils.formatPlayerNameForDisplay(getUsername()) + ".");
         }
         getPackets().sendGameMessage("Welcome to %s.", Settings.SERVER_NAME);
         getPackets().sendWeight(getWeight());
@@ -3138,13 +3138,13 @@ public class Player extends Entity {
             playerXP[i] = (int) this.getSkills().getXp(i);
         }
         if (familiar != null) {
-        	if (familiar.getBob() != null) {
-        		bobItems = familiar.getBob().getBeastItems();
-        	}
+            if (familiar.getBob() != null) {
+                bobItems = familiar.getBob().getBeastItems();
+            }
             familiarPouch = familiar.getPouch();
         }
         if (getPlayerRank().getRank()[0] != Rank.DEVELOPER) {
-        	com.everythingrs.hiscores.Hiscores.update("JkQT2VoUwdun6IyLu2xk0lc7fOH4RV077Gc5g6hUpwA6Q2E5Yaxxu24tQt86i4B26RbIGl40", "Normal Mode", this.getUsername(), 0, playerXP, false);
+            com.everythingrs.hiscores.Hiscores.update("JkQT2VoUwdun6IyLu2xk0lc7fOH4RV077Gc5g6hUpwA6Q2E5Yaxxu24tQt86i4B26RbIGl40", "Normal Mode", this.getUsername(), 0, playerXP, false);
         }
         TicketSystem.destroyChatOnLogOut(this);
         AntiBot.getInstance().destroy(this);
@@ -3289,39 +3289,39 @@ public class Player extends Entity {
      * @param item
      * @return
      */
-	public boolean ownsItem(int... item) {
-		for (int itemId : item) {
-			if (getInventory().containsItem(itemId, 1) || getEquipment().containsOneItem(itemId)
-					|| getBank().containsOneItem(itemId)) {
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	public boolean hasItem(Item item) {
-		if (getInventory().contains(item))
-			return true;
-		if (getEquipment().getItemsContainer().contains(item))
-			return true;
-		if (getBank().getItem(item.getId()) != null)
-			return true;
-		return false;
-	}
-	
-	/**
-	 * handles the frozen key
-	 */
-	private byte frozenKeyCharges;
+    public boolean ownsItem(int... item) {
+        for (int itemId : item) {
+            if (getInventory().containsItem(itemId, 1) || getEquipment().containsOneItem(itemId)
+                    || getBank().containsOneItem(itemId)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
-	public byte getFrozenKeyCharges() {
-		return frozenKeyCharges;
-	}
+    public boolean hasItem(Item item) {
+        if (getInventory().contains(item))
+            return true;
+        if (getEquipment().getItemsContainer().contains(item))
+            return true;
+        if (getBank().getItem(item.getId()) != null)
+            return true;
+        return false;
+    }
 
-	public void setFrozenKeyCharges(byte charges) {
-		this.frozenKeyCharges = charges;
-	}
-    
+    /**
+     * handles the frozen key
+     */
+    private byte frozenKeyCharges;
+
+    public byte getFrozenKeyCharges() {
+        return frozenKeyCharges;
+    }
+
+    public void setFrozenKeyCharges(byte charges) {
+        this.frozenKeyCharges = charges;
+    }
+
     public void refreshHitPoints() {
         if (toggles("ONEXHITS", false)) {
             getPackets().sendConfigByFile(7198, getHitpoints());
@@ -3985,8 +3985,8 @@ public class Player extends Entity {
             return;
         final Player instance = this;
         if (getAppearence().isNPC()) {
-			getAppearence().transformIntoNPC(-1);
-		}
+            getAppearence().transformIntoNPC(-1);
+        }
         handleWrath(source);
         if (isDreaming)
             isDreaming = false;
@@ -4560,29 +4560,29 @@ public class Player extends Entity {
             }, useDelay - 1);
         }
     }
-    
-	public void useStairs(int emoteId, final WorldTile dest, int useDelay, int totalDelay, final String message, final boolean resetAnimation) {
-		stopAll();
-		lock(totalDelay);
-		if (emoteId != -1)
-			animate(new Animation(emoteId));
-		if (useDelay == 0)
-			setNextWorldTile(dest);
-		else {
-			WorldTasksManager.schedule(new WorldTask() {
-				@Override
-				public void run() {
-					if (isDead())
-						return;
-					if (resetAnimation)
-						animate(new Animation(-1));
-					setNextWorldTile(dest);
-					if (message != null)
-						getPackets().sendGameMessage(message);
-				}
-			}, useDelay - 1);
-		}
-	}
+
+    public void useStairs(int emoteId, final WorldTile dest, int useDelay, int totalDelay, final String message, final boolean resetAnimation) {
+        stopAll();
+        lock(totalDelay);
+        if (emoteId != -1)
+            animate(new Animation(emoteId));
+        if (useDelay == 0)
+            setNextWorldTile(dest);
+        else {
+            WorldTasksManager.schedule(new WorldTask() {
+                @Override
+                public void run() {
+                    if (isDead())
+                        return;
+                    if (resetAnimation)
+                        animate(new Animation(-1));
+                    setNextWorldTile(dest);
+                    if (message != null)
+                        getPackets().sendGameMessage(message);
+                }
+            }, useDelay - 1);
+        }
+    }
 
     public Bank getBank() {
         return bank;
@@ -6675,8 +6675,8 @@ public class Player extends Entity {
 
     private int combatDelay;
 
-	//pyra;id plunder
-	public boolean pyramidReward;
+    //pyra;id plunder
+    public boolean pyramidReward;
 
     public void setCombatDelay(int ticks) {
         combatDelay = ticks;
@@ -6686,12 +6686,12 @@ public class Player extends Entity {
         return combatDelay;
     }
 
-	// artisant
-	private ArtisanWorkshop artisan;
-	public ArtisanWorkshop getArtisanWorkshop() {
-		return artisan;
-	}
-	
-	public int lavaflowCrustsMined;
+    // artisant
+    private ArtisanWorkshop artisan;
+    public ArtisanWorkshop getArtisanWorkshop() {
+        return artisan;
+    }
+
+    public int lavaflowCrustsMined;
 
 }

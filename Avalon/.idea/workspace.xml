@@ -2,32 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="120c750b-be1e-49c4-8ff0-415d3e45281b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/main_file_cache.dat2" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/main_file_cache.dat2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/main_file_cache.idx255" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/main_file_cache.idx255" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/libraries/lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/libraries/lib1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/libraries/libs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/libraries/libs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/iplog/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/iplog/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/Avalon - Client.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/Avalon - Client.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/1. Avalon/META-INF/1. Avalon.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/client/clientlibs.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/client/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/client/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/client/ini.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/client/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/client/libraries/lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/client/libraries/libs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/client/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/client/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/out/production/client/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +16,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2IPNNHzr1KuHuUBrV65jwCXByuT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
