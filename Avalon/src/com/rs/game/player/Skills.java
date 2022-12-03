@@ -670,10 +670,9 @@ public final class Skills implements Serializable {
         int[] combatLevels = {3, 5, 10, 15, 25, 50, 75, 90, 100, 110, 120, 126, 130, 138};
         for (int c : combatLevels) {
             if (oldCombat < c && getCombatLevelWithSummoning() >= c) {
-                player.getPackets()
-                        .sendGameMessage("You've reached the Combat level of  " + c + ".");
+                player.getPackets().sendGameMessage("You've reached the Combat level of  " + c + ".");
                 player.getTemporaryAttributtes().put("COMBATMILESTONE", index);
-                if (getCombatLevel() == 126 || getCombatLevelWithSummoning() == 138)
+                if (oldCombat - getSummoningCombatLevel() < 126 && getCombatLevel() == 126 || getCombatLevelWithSummoning() == 138)
                     World.sendWorldMessage(HexColours.Colours.ORANGE.getHex()+"<img=5><>News: " + player.getDisplayName() + " has achieved combat level " + c + "!", false);
             }
             index++;
