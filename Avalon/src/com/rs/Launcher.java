@@ -127,15 +127,14 @@ public final class Launcher {
 			System.exit(1);
 			return;
 		}
-		if (Settings.sqlQueries)
-			DatabaseUtility.init();
 		if (Settings.discordEnabled)
 			discord = new DiscordBot();
-		TimeUnit.SECONDS.sleep(5);
 		Logger.log("Economy",
 				Settings.ECONOMY_MODE == 2 ? "Full Spawn" : Settings.ECONOMY_MODE == 1 ? "Half Economy" : "Economy");
 		Logger.log("Debug", Settings.DEBUG ? "Debug is activated." : "Debug is inactived.");
 		Logger.log("Status", Settings.SERVER_NAME + " is now online.");
+		if (Settings.sqlQueries)
+			DatabaseUtility.init();
 		if (!Settings.DEBUG) {
 			discord.getChannelByName("public-chat").sendMessage("Avalon is now online!");
 			discord.getChannelByName("server-status").sendMessage("Avalon is now online!");

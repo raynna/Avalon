@@ -31,7 +31,7 @@ public final class DatabaseUtility {
         dataSource.setMinPoolSize(3);
         dataSource.setMaxPoolSize(100);
         initiated = true;
-        System.out.println(initiated ? "Online" : "offline");
+        System.out.println("DatabaseUtility: " + (initiated ? "Online" : "offline"));
     }
 
     /**
