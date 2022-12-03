@@ -1,218 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="SCOPE_TYPE" value="3" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9db1d3f-7b5e-4e0b-8158-f9dcfff30524" name="Default Changelist" comment="" />
+    <list default="true" id="19d6d72d-833d-45db-b6ef-9a0a31c62ea6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/data/cache/main_file_cache.dat2" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/data/cache/main_file_cache.dat2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/data/cache/main_file_cache.idx255" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/data/cache/main_file_cache.idx255" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/libs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avalon - Client.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avalon - Client.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/1. Avalon/META-INF/1. Avalon.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/clientlibs.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/ini.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/libraries/libs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/workspace.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/Documents/GitHub/avalon/1. Avalon/src/com/rs/game/player/Player.java" root0="SKIP_INSPECTION" />
-  </component>
-  <component name="ProjectId" id="1YmjKYcBLwHSEEMJscwT85zRj1J" />
+  <component name="ProjectId" id="2IPOALvz8BYunLzDBIGQIUyV9e8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub/avalon/1. Avalon" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="restartRequiresConfirmation" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.rs.game.npc.drops" />
-      <recent name="com.rs.game.npc.drops.droptable" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\andre\Documents\GitHub\avalon\1. Avalon\src\com\rs\game\npc\drops" />
-      <recent name="C:\Users\andre\Documents\GitHub\avalon\1. Avalon\src" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.Launcher">
-    <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rs.Launcher" />
-      <module name="1. Avalon" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documents/GitHub/avalon/1. Avalon" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.rs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="droptable.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager">
+    <configuration name="Loader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Loader" />
+      <module name="Client" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.editor.Main" />
-      <module name="FrostyCacheEditorV2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.editor.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.Launcher" />
-      <item itemvalue="Application.Main" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Launcher" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Loader" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d9db1d3f-7b5e-4e0b-8158-f9dcfff30524" name="Default Changelist" comment="" />
-      <created>1583554600937</created>
+      <changelist id="19d6d72d-833d-45db-b6ef-9a0a31c62ea6" name="Changes" comment="" />
+      <created>1670079609284</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1583554600937</updated>
-      <workItem from="1583554604799" duration="40813000" />
+      <updated>1670079609284</updated>
     </task>
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="321" y="159" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583704029097">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="321" y="159" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583704029097" />
-    <state x="983" y="346" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583604179757">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="983" y="346" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1583604179757" />
-    <state x="885" y="179" key="#com.intellij.ide.util.MemberChooser" timestamp="1583691386519">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="885" y="179" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1583691386519" />
-    <state x="597" y="280" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1583704024916">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="597" y="280" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583704024916" />
-    <state x="596" y="288" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1583704021343">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="596" y="288" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583704021343" />
-    <state x="824" y="152" key="FileChooserDialogImpl" timestamp="1583704166628">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="824" y="152" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583704166628" />
-    <state width="1877" height="171" key="GridCell.Tab.0.bottom" timestamp="1583704196235">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="171" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583704196235" />
-    <state width="1877" height="171" key="GridCell.Tab.0.center" timestamp="1583704196235">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="171" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583704196235" />
-    <state width="1877" height="171" key="GridCell.Tab.0.left" timestamp="1583704196235">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="171" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583704196235" />
-    <state width="1877" height="171" key="GridCell.Tab.0.right" timestamp="1583704196235">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="171" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583704196235" />
-    <state width="1009" height="241" key="GridCell.Tab.1.bottom" timestamp="1583704196232">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1009" height="241" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583704196232" />
-    <state width="1009" height="241" key="GridCell.Tab.1.center" timestamp="1583704196231">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1009" height="241" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583704196231" />
-    <state width="1009" height="241" key="GridCell.Tab.1.left" timestamp="1583704196231">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1009" height="241" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583704196231" />
-    <state width="1009" height="241" key="GridCell.Tab.1.right" timestamp="1583704196231">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1009" height="241" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583704196231" />
-    <state x="709" y="157" width="679" height="602" key="NewModule_or_Project.wizard" timestamp="1583704192484">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="709" y="157" width="679" height="602" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1583704192484" />
-    <state x="560" y="44" key="SettingsEditor" timestamp="1583704153334">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="560" y="44" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583704153334" />
-    <state x="11" y="385" width="829" height="562" key="find.popup" timestamp="1583689564694">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="11" y="385" width="829" height="562" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583689564694" />
-    <state x="702" y="148" key="refactoring.ChangeSignatureDialog" timestamp="1583691675713">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="702" y="148" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583691675713" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1583703364680">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583703364680" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$USER_HOME$/Documents/GitHub/avalon/1. Avalon/src/com/rs/game/player/content/pet/PetManager.java</url>
-          <line>280</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
