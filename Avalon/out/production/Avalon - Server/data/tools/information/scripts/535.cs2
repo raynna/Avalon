@@ -1,4 +1,0 @@
-void script_535(Widget widget0) {
-	widget0.setText(str(VARPBIT[4103] / 10));
-	return;
-}

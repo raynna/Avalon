@@ -1,4 +1,0 @@
-void script_534(Widget widget0) {
-	widget0.setFilled(false);
-	return;
-}

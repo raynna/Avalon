@@ -1,3 +1,0 @@
-int script_1984() {
-	return 10;
-}

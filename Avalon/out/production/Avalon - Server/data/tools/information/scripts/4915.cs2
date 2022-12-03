@@ -1,6 +1,0 @@
-void script_4915() {
-	widget(1092, 319).setScriptCallOnGameloop(4916, "");
-	script_4993();
-	script_4853();
-	return;
-}

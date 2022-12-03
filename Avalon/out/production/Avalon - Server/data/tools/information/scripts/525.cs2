@@ -1,4 +1,0 @@
-void script_525(Widget widget0, Skill skill1) {
-	widget0.setText(str(getSkillCurrentLvl(skill1)));
-	return;
-}

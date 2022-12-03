@@ -1,4 +1,0 @@
-void script_755() {
-	widget(662, 41).setText(str(getSkillCurrentLvl(23)) + "/" + str(getSkillActualLvl(23)));
-	return;
-}

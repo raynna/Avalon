@@ -1,3 +1,0 @@
-Location script_3460(int arg0, int arg1, Location location2) {
-	return moveCoord(location2, arg0, 0, arg1);
-}

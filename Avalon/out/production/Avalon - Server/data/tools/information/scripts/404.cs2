@@ -1,4 +1,0 @@
-void script_404(Widget widget0) {
-	widget0.setText("Conquest Ranking: " + str(VARP[1875]));
-	return;
-}

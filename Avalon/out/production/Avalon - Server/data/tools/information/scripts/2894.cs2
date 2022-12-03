@@ -1,6 +1,0 @@
-void script_2894(Widget widget0) {
-	if (VARPBIT[7093] >= 0) {
-		widget0.setText(str(VARPBIT[7093]));
-	}
-	return;
-}

@@ -1,4 +1,0 @@
-void script_116() {
-	widget(209, 4).setText(str(VARP[531]) + " %");
-	return;
-}

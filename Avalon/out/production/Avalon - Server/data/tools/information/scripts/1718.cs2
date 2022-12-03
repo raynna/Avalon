@@ -1,3 +1,0 @@
-int script_1718(Skill skill0, int arg1) {
-	return getSkillActualLvl(skill0) * arg1 / 100;
-}

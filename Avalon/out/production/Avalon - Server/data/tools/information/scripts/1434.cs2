@@ -1,4 +1,0 @@
-void script_1434() {
-	cs2method6200(VARC[184], VARC[184]);
-	return;
-}

@@ -1,4 +1,0 @@
-void script_4288() {
-	sendStringInput(STRING[348]);
-	return;
-}

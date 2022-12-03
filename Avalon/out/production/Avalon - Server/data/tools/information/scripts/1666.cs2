@@ -1,4 +1,0 @@
-void script_1666() {
-	cs2method5421("kbase/view.ws?guid=controls_banks#memberspace", 1);
-	return;
-}

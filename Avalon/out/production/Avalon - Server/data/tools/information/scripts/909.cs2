@@ -1,4 +1,0 @@
-void script_909() {
-	VARC[117] = 0;
-	return;
-}

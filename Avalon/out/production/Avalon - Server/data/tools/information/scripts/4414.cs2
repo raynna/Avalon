@@ -1,6 +1,0 @@
-void script_4414() {
-	if (cs2method3700()) {
-		script_4415();
-	}
-	return;
-}

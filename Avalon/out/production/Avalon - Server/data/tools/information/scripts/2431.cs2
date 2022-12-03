@@ -1,5 +1,0 @@
-void script_2431(Item item0) {
-	script_2410(getItemOption(item0, 2), getItemDefOpcode129Or130Method4209(item0, 2), getItemOption(item0, 1), getItemDefOpcode129Or130Method4209(item0, 1), getItemOption(item0, 3), getItemDefOpcode129Or130Method4209(item0, 3), getItemOption(item0, 4), getItemDefOpcode129Or130Method4209(item0, 4), getItemOption(item0, 5), getItemDefOpcode129Or130Method4209(item0, 5), getItemName(item0));
-	ACTIVE.setScriptCallOnConfigChange(-1, "");
-	return;
-}

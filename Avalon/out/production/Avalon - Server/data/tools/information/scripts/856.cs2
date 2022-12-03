@@ -1,8 +1,0 @@
-void script_856() {
-	playSoundEffect(2605, 1, 0);
-	if (VARPBIT[4400] < 7 - 1) {
-		VARC[108] = VARPBIT[4400] + 1;
-		script_861();
-	}
-	return;
-}

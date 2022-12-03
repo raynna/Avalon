@@ -1,3 +1,0 @@
-int script_1993() {
-	return VARPBIT[8205] + VARPBIT[8212] + VARPBIT[8217] + VARPBIT[8221] + VARPBIT[8224];
-}

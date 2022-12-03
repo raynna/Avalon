@@ -1,6 +1,0 @@
-void script_3299(Container container0, int arg1) {
-	if (getItemIdInInpsectingSlot(container0, arg1) != null) {
-		msg(getItemName(getItemIdInInpsectingSlot(container0, arg1)));
-	}
-	return;
-}

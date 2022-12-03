@@ -1,4 +1,0 @@
-void script_5254(Widget widget0) {
-	script_4534(widget0);
-	return;
-}

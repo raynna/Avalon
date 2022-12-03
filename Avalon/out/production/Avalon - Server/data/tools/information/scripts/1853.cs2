@@ -1,3 +1,0 @@
-int script_1853() {
-	return VARC[998];
-}

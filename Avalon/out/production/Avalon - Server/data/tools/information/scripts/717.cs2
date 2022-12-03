@@ -1,4 +1,0 @@
-void script_717() {
-	widget(774, 11).setModel(41313);
-	return;
-}

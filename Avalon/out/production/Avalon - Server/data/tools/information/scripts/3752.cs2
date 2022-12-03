@@ -1,4 +1,0 @@
-void script_3752() {
-	script_304(location(3081, 3421, 0));
-	return;
-}

@@ -1,9 +1,0 @@
-void script_604() {
-	if (VARP[1109] == -1) {
-		return;
-	}
-	VARC[85] = max(VARC[85] - 1, 1);
-	widget(105, 153).setText(formatNumber(VARC[85], 1) + " gp");
-	script_609();
-	return;
-}

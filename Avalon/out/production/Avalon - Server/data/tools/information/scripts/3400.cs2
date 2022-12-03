@@ -1,8 +1,0 @@
-void script_3400() {
-	if (length(STRING[279]) <= 0) {
-		return;
-	}
-	script_3391();
-	script_3190();
-	return;
-}

@@ -1,4 +1,0 @@
-void script_4148(Widget widget0, string string1, int arg2) {
-	script_4149(widget0, string1, arg2);
-	return;
-}

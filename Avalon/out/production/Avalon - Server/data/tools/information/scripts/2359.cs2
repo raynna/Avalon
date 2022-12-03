@@ -1,4 +1,0 @@
-void script_2359() {
-	widget(1053, 96).setIsHidden(true);
-	return;
-}

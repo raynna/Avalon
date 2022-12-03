@@ -1,4 +1,0 @@
-void script_1606() {
-	widget(549, 127).setRGB(0xC9800D);
-	return;
-}

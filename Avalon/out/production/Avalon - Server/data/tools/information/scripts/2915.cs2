@@ -1,3 +1,0 @@
-int script_2915() {
-	return max(getSkillCurrentLvl(3), 0) * 10;
-}

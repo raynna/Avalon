@@ -1,5 +1,0 @@
-void script_2600() {
-	playSoundEffect(6784, 1, 0);
-	widget(292, 130).setIsHidden(true);
-	return;
-}

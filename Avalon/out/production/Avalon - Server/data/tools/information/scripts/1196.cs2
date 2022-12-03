@@ -1,6 +1,0 @@
-void script_1196(int arg0, int arg1) {
-	if (getClientCycle() > arg1 + 50) {
-		script_1197(arg0);
-	}
-	return;
-}

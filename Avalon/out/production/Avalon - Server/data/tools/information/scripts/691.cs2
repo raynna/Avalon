@@ -1,5 +1,0 @@
-void script_691(Widget widget0, Widget widget1, Sprite sprite2, int arg3) {
-	widget0.setSprite(sprite2);
-	widget1.setTrans(arg3);
-	return;
-}

@@ -1,4 +1,0 @@
-void script_2134(Widget widget0) {
-	widget0.setAnimation(0);
-	return;
-}

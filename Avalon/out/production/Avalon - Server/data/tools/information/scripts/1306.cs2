@@ -1,8 +1,0 @@
-void script_1306() {
-	if (getDisplayMode() >= 2) {
-		script_1385();
-	} else {
-		script_1386();
-	}
-	return;
-}

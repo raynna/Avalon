@@ -1,4 +1,0 @@
-void script_5369(Widget widget0) {
-	widget0.setText(str(rndExcl(9) + 1));
-	return;
-}

@@ -1,4 +1,0 @@
-void script_4104() {
-	cs2method5421("golden_joystick.ws", 1);
-	return;
-}

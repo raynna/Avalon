@@ -1,5 +1,0 @@
-void script_2783() {
-	playSoundEffect(2266, 1, 0);
-	script_2947();
-	return;
-}
