@@ -5,7 +5,6 @@ import java.util.Map;
 
 import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.game.Graphics;
-import com.rs.game.World;
 import com.rs.game.player.Equipment;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
@@ -75,7 +74,7 @@ public final class LevelUp extends Dialogue {
             return id2;
         }
 
-        private static final Map<Integer, Musics> musics = new HashMap<Integer, Musics>();
+        private static final Map<Integer, Musics> musics = new HashMap<>();
 
         public static Musics levelup(int skill) {
             return musics.get(skill);
@@ -93,7 +92,6 @@ public final class LevelUp extends Dialogue {
         int skill = (Integer) parameters[0];
         int level = player.getSkills().getLevelForXp(skill);
         String name = Skills.SKILL_NAME[skill];
-        totalMileStone(player);
         player.temporaryAttribute().put("leveledUp[" + skill + "]", Boolean.TRUE);
         if (level >= 90)
             player.getAdventureLog().addActivity("I levelled up my " + name + ". I am now level " + level + ".");
@@ -348,20 +346,6 @@ public final class LevelUp extends Dialogue {
         if (skill == Skills.DUNGEONEERING)
             id = 7756;
         player.getVarsManager().sendVarBit(id, on ? 1 : 0);
-    }
-
-    public void totalMileStone(Player player) {
-        final int[] TotalLevels = {50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500,
-                1600, 1700, 1800, 1900, 2000, 2100, 2200, 2300, 2400, 2496};
-        for (int levels : TotalLevels) {
-            if (player.getSkills().getTotalLevel(player) == levels) {
-                player.sm("<col=990000>Well done! You've reached the total level "
-                        + player.getSkills().getTotalLevel(player) + " milestone!");
-                player.gfx(new Graphics(199));
-                player.setAvalonPoints(player.getAvalonPoints() + 5000);
-            }
-            return;
-        }
     }
 
     @Override

@@ -833,7 +833,7 @@ public final class Skills implements Serializable {
         for (int i : xpMilestones) {
             if (oldExp < i && xp[skill] >= i) {
                 player.getPackets()
-                        .sendGameMessage(HexColours.Colours.WHITE.getHex() + "You've reached a total xp of " + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".");
+                        .sendGameMessage("You've reached a total xp of " + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".");
                 World.sendWorldMessage(HexColours.Colours.BLUE.getHex() + "<img=5>News: " + player.getDisplayName() + " has achieved "
                         + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".", false);
                 if (Settings.discordEnabled) {
