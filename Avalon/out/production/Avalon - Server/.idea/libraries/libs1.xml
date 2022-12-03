@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="libs1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Avalon - Client/libs/clientlibs.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Avalon - Client/libs/ini.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Avalon - Client/libs/jogl-all.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Avalon - Client/libs/gluegen-rt.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
