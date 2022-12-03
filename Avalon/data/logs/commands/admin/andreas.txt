@@ -71612,3 +71612,99 @@
 [03 december 2022 at 11:56:09 CET] - ::tele 0,1,1,20,17
 [03 december 2022 at 11:57:03 CET] - ::tele 83 83
 [03 december 2022 at 11:57:05 CET] - ::tele 0,1,1,20,16
+[03 december 2022 at 02:28:58 CET] - ::ecomode 1
+[03 december 2022 at 02:33:01 CET] - ::clearchat 
+[03 december 2022 at 02:38:26 CET] - ::setlevel 0 80
+[03 december 2022 at 02:38:28 CET] - ::setlevel 0 80
+[03 december 2022 at 02:38:44 CET] - ::setlevel 0 69
+[03 december 2022 at 02:38:47 CET] - ::setlevel 0 70
+[03 december 2022 at 02:38:50 CET] - ::setlevel 0 71
+[03 december 2022 at 02:38:51 CET] - ::setlevel 0 72
+[03 december 2022 at 02:38:52 CET] - ::setlevel 0 73
+[03 december 2022 at 02:38:53 CET] - ::setlevel 0 74
+[03 december 2022 at 02:40:05 CET] - ::setlevel 0 69
+[03 december 2022 at 02:40:09 CET] - ::setlevel 0 70
+[03 december 2022 at 02:40:10 CET] - ::setlevel 0 71
+[03 december 2022 at 02:40:11 CET] - ::setlevel 0 72
+[03 december 2022 at 02:40:13 CET] - ::setlevel 0 79
+[03 december 2022 at 02:40:14 CET] - ::setlevel 0 80
+[03 december 2022 at 02:40:31 CET] - ::setlevel 4 99
+[03 december 2022 at 02:40:33 CET] - ::setlevel 4 5
+[03 december 2022 at 02:40:39 CET] - ::setlevel 4 6
+[03 december 2022 at 02:40:40 CET] - ::setlevel 4 7
+[03 december 2022 at 02:40:43 CET] - ::setlevel 4 88
+[03 december 2022 at 02:40:43 CET] - ::setlevel 4 88
+[03 december 2022 at 02:40:46 CET] - ::setlevel 4 97
+[03 december 2022 at 02:40:51 CET] - ::setlevel 4 97
+[03 december 2022 at 02:40:52 CET] - ::setlevel 4 96
+[03 december 2022 at 02:40:53 CET] - ::setlevel 4 98
+[03 december 2022 at 02:40:55 CET] - ::setlevel 4 99
+[03 december 2022 at 02:40:55 CET] - ::setlevel 4 99
+[03 december 2022 at 02:40:55 CET] - ::setlevel 4 99
+[03 december 2022 at 02:40:56 CET] - ::setlevel 4 99
+[03 december 2022 at 02:40:56 CET] - ::setlevel 4 99
+[03 december 2022 at 02:40:57 CET] - ::setlevel 4 99
+[03 december 2022 at 02:40:58 CET] - ::setlevel 4 100
+[03 december 2022 at 02:43:58 CET] - ::setlevel 4 55
+[03 december 2022 at 02:44:18 CET] - ::setlevel 4 77
+[03 december 2022 at 02:46:28 CET] - ::setlevel 4 78
+[03 december 2022 at 02:46:34 CET] - ::setlevel 4 99
+[03 december 2022 at 02:46:41 CET] - ::setlevel 4 98
+[03 december 2022 at 02:46:42 CET] - ::setlevel 4 97
+[03 december 2022 at 02:46:44 CET] - ::setlevel 4 96
+[03 december 2022 at 02:46:46 CET] - ::setlevel 4 97
+[03 december 2022 at 02:46:52 CET] - ::setlevel 4 99
+[03 december 2022 at 02:46:56 CET] - ::setlevel 2 99
+[03 december 2022 at 02:47:00 CET] - ::setlevel 1 99
+[03 december 2022 at 02:47:11 CET] - ::setlevel 0 99
+[03 december 2022 at 02:47:16 CET] - ::setlevel 5 99
+[03 december 2022 at 02:47:20 CET] - ::setlevel 6 99
+[03 december 2022 at 02:48:54 CET] - ::setlevel 6 90
+[03 december 2022 at 02:48:58 CET] - ::setlevel 6 99
+[03 december 2022 at 02:49:18 CET] - ::clearchat 
+[03 december 2022 at 02:49:22 CET] - ::setlevel 6 85
+[03 december 2022 at 02:49:27 CET] - ::setlevel 6 91
+[03 december 2022 at 02:54:26 CET] - ::setlevel 6 91
+[03 december 2022 at 02:54:28 CET] - ::setlevel 6 80
+[03 december 2022 at 02:54:30 CET] - ::setlevel 6 90
+[03 december 2022 at 02:57:18 CET] - ::setlevel 6 89
+[03 december 2022 at 02:57:21 CET] - ::setlevel 6 99
+[03 december 2022 at 03:01:54 CET] - ::setlevel 5 89
+[03 december 2022 at 03:01:58 CET] - ::setlevel 5 99
+[03 december 2022 at 03:03:59 CET] - ::setlevel 5 89
+[03 december 2022 at 03:04:01 CET] - ::setlevel 5 99
+[03 december 2022 at 03:05:51 CET] - ::setlevel 5 89
+[03 december 2022 at 03:05:52 CET] - ::setlevel 5 99
+[03 december 2022 at 03:06:46 CET] - ::setlevel 5 89
+[03 december 2022 at 03:06:46 CET] - ::setlevel 5 99
+[03 december 2022 at 03:07:54 CET] - ::setlevel 5 89
+[03 december 2022 at 03:07:54 CET] - ::setlevel 5 99
+[03 december 2022 at 03:10:47 CET] - ::setlevel 5 89
+[03 december 2022 at 03:10:47 CET] - ::setlevel 5 99
+[03 december 2022 at 03:11:23 CET] - ::setlevel 5 89
+[03 december 2022 at 03:11:26 CET] - ::setlevel 5 88
+[03 december 2022 at 03:11:28 CET] - ::setlevel 5 89
+[03 december 2022 at 03:11:32 CET] - ::setlevel 5 91
+[03 december 2022 at 03:11:36 CET] - ::setlevel 5 99
+[03 december 2022 at 03:13:34 CET] - ::setlevel 5 91
+[03 december 2022 at 03:13:35 CET] - ::setlevel 5 99
+[03 december 2022 at 03:16:41 CET] - ::setlevel 5 91
+[03 december 2022 at 03:16:41 CET] - ::setlevel 5 99
+[03 december 2022 at 03:17:05 CET] - ::setlevel 5 92
+[03 december 2022 at 03:17:07 CET] - ::setlevel 5 93
+[03 december 2022 at 03:17:10 CET] - ::setlevel 5 95
+[03 december 2022 at 03:18:42 CET] - ::setlevel 5 92
+[03 december 2022 at 03:18:43 CET] - ::setlevel 5 93
+[03 december 2022 at 03:18:45 CET] - ::setlevel 5 95
+[03 december 2022 at 03:19:05 CET] - ::setlevel 5 92
+[03 december 2022 at 03:19:06 CET] - ::setlevel 5 93
+[03 december 2022 at 03:19:08 CET] - ::setlevel 5 95
+[03 december 2022 at 03:19:55 CET] - ::setlevel 5 92
+[03 december 2022 at 03:19:56 CET] - ::setlevel 5 95
+[03 december 2022 at 03:20:01 CET] - ::setlevel 5 99
+[03 december 2022 at 03:20:30 CET] - ::clearchat 
+[03 december 2022 at 03:20:33 CET] - ::clearchat 
+[03 december 2022 at 03:20:33 CET] - ::clearchat 
+[03 december 2022 at 03:20:34 CET] - ::clearchat 
+[03 december 2022 at 03:20:37 CET] - ::setlevel 5 89
+[03 december 2022 at 03:20:40 CET] - ::setlevel 5 99

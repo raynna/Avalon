@@ -2400,6 +2400,8 @@ public final class Commands {
                             player.getSkills().set(skill1, level);
                             player.getSkills().setXp(skill1, Skills.getXPForLevel(level));
                         } else {
+                            System.out.println("Current Xp: " + Utils.getFormattedNumber(player.getSkills().getXp(skill1), ',') + " Xp for level: " + level + ": " + Utils.getFormattedNumber(Skills.getXPForLevel(level), ','));
+                            System.out.println("xp to add: " + (Utils.getFormattedNumber((int) (Skills.getXPForLevel(level) - player.getSkills().getXp(skill1)), ',')));
                             player.getSkills().addXpNoBonus(skill1, Skills.getXPForLevel(level) - player.getSkills().getXp(skill1));
                         }
                         player.getAppearence().generateAppearenceData();

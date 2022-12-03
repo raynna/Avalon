@@ -8,15 +8,23 @@ public class HexColours {
 
 		RED("b50404"),
 
-		YELLOW("EAEC2C"),
+		DARK_RED("660000"),
 
-		GREEN("3bad5a"),
+		ORANGE("f9782c"),
+
+		BROWN("7f6000"),
+
+		YELLOW("cdc550"),
+
+		GREEN("008a05"),
 
 		DARK_GREEN("366e45"),
 
 		BLACK("000000"),
 		
 		PURPLE("9966CC"),
+
+		BLUE("00528f"),
 		
 		DARK_PURPLE("450089");
 

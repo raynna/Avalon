@@ -611,6 +611,21 @@ public final class Skills implements Serializable {
         boolean maxed = true;
         int milestoneLevel = -1;
         int index = 0;
+        int[] xpMilestones = {5000000, 7500000, 10000000, 20000000, 30000000, 40000000, 50000000, 60000000, 70000000,
+                80000000, 90000000, 100000000, 150000000, 200000000};
+        for (int i : xpMilestones) {
+            if (oldExp < i && xp[skill] >= i) {
+                player.getPackets()
+                        .sendGameMessage(HexColours.Colours.WHITE.getHex() + "You've reached a total xp of " + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".");
+                World.sendWorldMessage(HexColours.Colours.BLUE.getHex() + "<img=5>News: " + player.getDisplayName() + " has achieved "
+                        + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".", false);
+                if (Settings.discordEnabled) {
+                    Launcher.getDiscordBot().getChannelByName("public-chat")
+                            .sendMessage(":trophy: " + player.getDisplayName() + " has achieved "
+                                    + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".");
+                }
+            }
+        }
         int[] levelMilestones = {10, 20, 30, 40, 50, 60, 70, 80, 90};
         for (int a : levelMilestones) {
             if (getLevelForXp(Skills.ATTACK) >= a && getLevelForXp(Skills.DEFENCE) >= a && getLevelForXp(Skills.STRENGTH) >= a
@@ -624,15 +639,20 @@ public final class Skills implements Serializable {
                 milestoneLevel = a;
             }
         }
-        if (milestoneLevel != -1) {
-            player.getPackets().sendGameMessage("<col=ff8c38>You've reached at least level " + milestoneLevel + " in all skills!", false);
-            World.sendWorldMessage("<img=6><col=ff0000>News: " + player.getDisplayName()
+        if (milestoneLevel != -1 && oldLevel < milestoneLevel) {
+            player.getPackets().sendGameMessage("You've reached at least level " + milestoneLevel + " in all skills!", false);
+            World.sendWorldMessage(HexColours.Colours.DARK_GREEN.getHex() + "<img=6>News: " + player.getDisplayName()
                     + " has just achieved at least level " + milestoneLevel + " in all skills!", false);
+        }
+        if (oldLevel < getLevelForXp(skill)) {
+            int levels = getLevelForXp(skill) - oldLevel;
+            player.getPackets().sendGameMessage("You've just advanced " + (levels > 1 ? levels : "a") + " " + getSkillName(skill)
+                    + " level"+ (levels > 1 ? "s" : "") +"! You have reached level " + getLevelForXp(skill) + ".");
         }
         if (oldLevel < 99 && getLevelForXp(skill) == 99 || oldLevel < 120 && getLevelForXp(skill) == 120) {
             player.getPackets()
-                    .sendGameMessage("<col=bd7200>You've reached the highest possible level in " + getSkillName(skill) + ".");
-            World.sendWorldMessage("<img=5><col=ff0000>News: " + player.getDisplayName() + " has achieved level "
+                    .sendGameMessage("You've reached the highest possible level in " + getSkillName(skill) + ".");
+            World.sendWorldMessage(HexColours.Colours.ORANGE.getHex() + "<img=5>News: " + player.getDisplayName() + " has achieved level "
                     + getLevel(skill) + " " + getSkillName(skill) + ".", false);
             if (Settings.discordEnabled) {
                 Launcher.getDiscordBot().getChannelByName("public-chat")
@@ -645,10 +665,10 @@ public final class Skills implements Serializable {
             if (oldTotal < i && getTotalLevel(player) >= i) {
                 if (i != 2496)
                 player.getPackets()
-                        .sendGameMessage("<col=bd7200>You've reached the total level of " + i + ".");
+                        .sendGameMessage("You've reached the total level of " + i + ".");
                 if (i >= 1500 && i != 2496)
                     World.sendWorldMessage(
-                            "<img=5><col=ff0000>News: " + player.getDisplayName() + " has achieved a total level of " + i + ".",
+                            HexColours.Colours.GREEN.getHex()+"<img=5>News: " + player.getDisplayName() + " has achieved a total level of " + i + ".",
                             false);
                 player.getTemporaryAttributtes().put("MILESTONE", index);
                 if (index >= 10) {
@@ -661,35 +681,33 @@ public final class Skills implements Serializable {
             }
             index++;
         }
+        index = 0;
+        int[] combatLevels = {3, 5, 10, 15, 25, 50, 75, 90, 100, 110, 120, 126, 130, 138};
+        for (int c : combatLevels) {
+            if (oldCombat < c && getCombatLevelWithSummoning() >= c) {
+                player.getPackets()
+                        .sendGameMessage("You've reached the Combat level of  " + c + ".");
+                player.getTemporaryAttributtes().put("COMBATMILESTONE", index);
+                if (getCombatLevel() == 126 || getCombatLevelWithSummoning() == 138)
+                    World.sendWorldMessage(HexColours.Colours.ORANGE.getHex()+"<img=5><>News: " + player.getDisplayName() + " has achieved combat level " + c + "!", false);
+            }
+            index++;
+        }
         for (int i = 0; i < Skills.SKILL_NAME.length; i++) {
             if (player.getSkills().getLevelForXp(i) < 99) {
                 maxed = false;
                 break;
             }
         }
+
         if (maxed) {
             player.getPackets()
-                    .sendGameMessage("<col=bd7200>You've reached the highest possible level in all skills.");
-            World.sendWorldMessage("<img=6><col=ff0000>News: " + player.getDisplayName()
+                    .sendGameMessage("You've reached the highest possible level in all skills.");
+            World.sendWorldMessage(HexColours.Colours.RED.getHex()+"<img=6>News: " + player.getDisplayName()
                     + " has just achieved at least level 99 in all skills!", false);
             if (Settings.discordEnabled) {
                 Launcher.getDiscordBot().getChannelByName("public-chat").sendMessage(":trophy: "
                         + player.getDisplayName() + " has just achieved at least level 99 in all skills!");
-            }
-        }
-        int[] xpMilestones = {5000000, 7500000, 10000000, 20000000, 30000000, 40000000, 50000000, 60000000, 70000000,
-                80000000, 90000000, 100000000, 150000000, 200000000};
-        for (int i : xpMilestones) {
-            if (oldExp < i && xp[skill] >= i) {
-                player.getPackets()
-                        .sendGameMessage("<col=bd7200>You've reached a total xp of " + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".");
-                World.sendWorldMessage("<img=5><col=ff0000>News: " + player.getDisplayName() + " has achieved "
-                        + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".", false);
-                if (Settings.discordEnabled) {
-                    Launcher.getDiscordBot().getChannelByName("public-chat")
-                            .sendMessage(":trophy: " + player.getDisplayName() + " has achieved "
-                                    + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".");
-                }
             }
         }
         index = 0;
@@ -697,18 +715,6 @@ public final class Skills implements Serializable {
         for (int c : slayerCombatLevels) {
             if (oldCombat < c && getCombatLevelWithSummoning() >= c) {
                 player.getTemporaryAttributtes().put("SLAYERCOMBATMILESTONE", index);
-            }
-            index++;
-        }
-        index = 0;
-        int[] combatLevels = {3, 5, 10, 15, 25, 50, 75, 90, 100, 110, 120, 126, 130, 138};
-        for (int c : combatLevels) {
-            if (oldCombat < c && getCombatLevelWithSummoning() >= c) {
-                player.getPackets()
-                        .sendGameMessage("<col=ff8c38>You've reached the Combat level of  " + c + ".");
-                player.getTemporaryAttributtes().put("COMBATMILESTONE", index);
-                if (getCombatLevel() == 126 || getCombatLevelWithSummoning() == 138)
-                    World.sendWorldMessage("<img=5><col=ff0000>News: " + player.getDisplayName() + " has achieved combat level " + c + "!", false);
             }
             index++;
         }

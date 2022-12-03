@@ -102,8 +102,6 @@ public final class LevelUp extends Dialogue {
         player.gfx(new Graphics(199));
         if (level == 99 || level == 120)
             player.gfx(new Graphics(1765));
-        player.getPackets().sendGameMessage("You've just advanced a" + (name.startsWith("A") ? "n" : "") + " " + name
-                + " level! You have reached level " + level + ".");
         player.lastlevelUp.clear();
         player.lastSkill.clear();
         player.lastlevelUp.add(Integer.valueOf(level).toString());
