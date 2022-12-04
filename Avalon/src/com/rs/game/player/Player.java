@@ -5159,8 +5159,8 @@ public class Player extends Entity {
             }
         }
         if (Settings.discordEnabled) {
-            Launcher.getDiscordBot().getChannelByName("server-ingame-chat")
-                    .sendMessage(this.getDisplayName().toString() + ": " + message.getMessage().toString());
+            // Launcher.getDiscordBot().getChannelByName("server-ingame-chat")
+            //      .sendMessage(this.getDisplayName().toString() + ": " + message.getMessage().toString());
         }
     }
 

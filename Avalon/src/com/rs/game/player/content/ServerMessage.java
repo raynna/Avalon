@@ -35,8 +35,8 @@ public class ServerMessage {
 
 	public static void sendGlobalMessage(Player player, String data, boolean staff) {
 		if (Settings.discordEnabled)
-		Launcher.getDiscordBot().getChannelByName("server-yell-chat")
-				.sendMessage("```[Ingame -> Discord] \n" + player.getDisplayName() + ": " + data + "```");
+		//Launcher.getDiscordBot().getChannelByName("server-yell-chat")
+		//		.sendMessage("```[Ingame -> Discord] \n" + player.getDisplayName() + ": " + data + "```");
 		if (player.isDeveloper()) {
 			String edits = String.format("[<shad=000000><col=ffce00>Server Message</col></shad>] <img=1>%s: %s",
 					player.getDisplayName(), data);

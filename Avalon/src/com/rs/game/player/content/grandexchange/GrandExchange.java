@@ -363,9 +363,9 @@ public class GrandExchange {
 				deleteOffer(player, slot);
 			if (!UnlimitedGEReader.itemIsLimited(offer.getId()) && EconomyPrices.getPrice(offer.getId()) >= Settings.LOWPRICE_LIMIT) {
 				DatabaseUtility.sendTask(offer, new sendGEOfferRemoval(), false);
-				if (!offer.isBuying() && Settings.discordEnabled)
-					Launcher.getDiscordBot().getChannelByName("exchange").sendMessage(offer.getOwner().getDisplayName()
-							+ " aborted selling " + offer.getDefinitions().getName() + "!");
+				//if (!offer.isBuying() && Settings.discordEnabled)
+					//Launcher.getDiscordBot().getChannelByName("exchange").sendMessage(offer.getOwner().getDisplayName()
+				//	+ " aborted selling " + offer.getDefinitions().getName() + "!");
 			}
 		}
 	}
@@ -408,13 +408,13 @@ public class GrandExchange {
 			if (bestOffer == null) {
 				if (!UnlimitedGEReader.itemIsLimited(offer.getId()) && EconomyPrices.getPrice(offer.getId()) >= Settings.LOWPRICE_LIMIT) {
 					DatabaseUtility.sendTask(offer, new sendGEOffer(), false);
-					if (Settings.discordEnabled)
-						Launcher.getDiscordBot().getChannelByName("exchange")
-								.sendMessage(offer.getOwner().getDisplayName() + " is now "
-										+ (offer.isBuying() ? "buying " : "selling ")
-										+ (offer.getAmount() > 1 ? format(offer.getAmount()) + " x " : " ")
-										+ offer.getDefinitions().getName() + " for " + format(offer.getPrice()) + ""
-										+ (offer.getAmount() > 1 ? " each" : "") + "!");
+					//if (Settings.discordEnabled)
+					//Launcher.getDiscordBot().getChannelByName("exchange")
+						//		.sendMessage(offer.getOwner().getDisplayName() + " is now "
+						//				+ (offer.isBuying() ? "buying " : "selling ")
+						//				+ (offer.getAmount() > 1 ? format(offer.getAmount()) + " x " : " ")
+						//				+ offer.getDefinitions().getName() + " for " + format(offer.getPrice()) + ""
+					//				+ (offer.getAmount() > 1 ? " each" : "") + "!");
 				}
 				break;
 			}

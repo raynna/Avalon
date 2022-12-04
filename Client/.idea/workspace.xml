@@ -2,15 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19d6d72d-833d-45db-b6ef-9a0a31c62ea6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Avalon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Avalon/data/cache/main_file_cache.dat2" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/data/cache/main_file_cache.dat2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Avalon/data/cache/main_file_cache.idx255" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/data/cache/main_file_cache.idx255" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/data/characters/Andreas.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/data/characters/Andreas.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Avalon/data/iplog/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/data/iplog/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/data/logs/chat/andreas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/data/logs/chat/andreas.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/data/logs/commands/admin/andreas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/data/logs/commands/admin/andreas.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/data/logs/yell/andreas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/data/logs/yell/andreas.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/lib/javacord-2.0.17-shaded.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/Settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/game/npc/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/game/npc/NPC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/dialogues/CompletionistStand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/dialogues/CompletionistStand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/dialogues/LevelUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/dialogues/LevelUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/net/decoders/handlers/ButtonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/net/decoders/handlers/ButtonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/Skills.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/Skills.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/content/CrystalChest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/content/CrystalChest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/content/Ironman.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/content/Ironman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/content/ServerMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/content/ServerMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/content/grandexchange/GrandExchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/content/grandexchange/GrandExchange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/content/grandexchange/Offer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/content/grandexchange/Offer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/content/treasuretrails/TreasureTrailsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/game/player/content/treasuretrails/TreasureTrailsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Avalon/src/com/rs/net/DiscordBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Avalon/src/com/rs/net/DiscordBot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

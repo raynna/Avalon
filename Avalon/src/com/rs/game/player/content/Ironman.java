@@ -57,7 +57,7 @@ public class Ironman implements Serializable {
 	/**
 	 * Adds the life.
 	 *
-	 * @param life the l
+	 * @param  //life the l
 	 * @return the int
 	 */
 	public int addLife(int l) {
@@ -146,12 +146,12 @@ public class Ironman implements Serializable {
 						.sendGameMessage("You have fallen as a Hardcore Iron"
 								+ (player.getAppearence().isMale() ? "man" : "woman")
 								+ ", your Hardcore status has been revoked.");
-				if (Settings.discordEnabled) {
-					Launcher.getDiscordBot().getChannelByName("public-chat")
-							.sendMessage(player.getDisplayName().toString()
-									+ " just died in Hardcore ironman mode with a skill total of " + PlayerTotal + " ("
-									+ Utils.getFormattedNumber(PlayerTotalXP, ',') + " XP)" + "!");
-				}
+				//if (Settings.discordEnabled) {
+				//	Launcher.getDiscordBot().getChannelByName("public-chat")
+				//			.sendMessage(player.getDisplayName().toString()
+				//					+ " just died in Hardcore ironman mode with a skill total of " + PlayerTotal + " ("
+				//					+ Utils.getFormattedNumber(PlayerTotalXP, ',') + " XP)" + "!");
+				//}
 				player.getPlayerRank().setRank(2, Rank.IRONMAN);
 			}
 		}
@@ -174,13 +174,13 @@ public class Ironman implements Serializable {
 						+ " just died in Hardcore ironman mode with a skill total of " + PlayerTotal + " ("
 						+ Utils.getFormattedNumber(PlayerTotalXP, ',') + " XP) fighting against " + npc.getName() + "!",
 						false);
-				if (Settings.discordEnabled) {
-					Launcher.getDiscordBot().getChannelByName("public-chat")
-							.sendMessage(player.getDisplayName().toString()
-									+ " just died in Hardcore ironman mode with a skill total of " + PlayerTotal + " ("
-									+ Utils.getFormattedNumber(PlayerTotalXP, ',') + " XP) fighting against "
-									+ npc.getName() + "!");
-				}
+				//if (Settings.discordEnabled) {
+				//	Launcher.getDiscordBot().getChannelByName("public-chat")
+				//			.sendMessage(player.getDisplayName().toString()
+				//					+ " just died in Hardcore ironman mode with a skill total of " + PlayerTotal + " ("
+				//					+ Utils.getFormattedNumber(PlayerTotalXP, ',') + " XP) fighting against "
+				//					+ npc.getName() + "!");
+				//}
 			}
 		}
 	}

@@ -593,9 +593,9 @@ public class NPC extends Entity implements Serializable {
                     if (npcIgnoreMatch) {
                         return;
                     } else {
-                        if (Settings.discordEnabled)
-                    	Launcher.getDiscordBot().getChannelByName("-bugreports")
-                        .sendMessage("[Missing Drop] " + getName() + " has no drops, ID: " + getId());
+                        //if (Settings.discordEnabled)
+                        //Launcher.getDiscordBot().getChannelByName("-bugreports")
+                        // .sendMessage("[Missing Drop] " + getName() + " has no drops, ID: " + getId());
                     }
                     return;
                 } else {
@@ -730,12 +730,12 @@ public class NPC extends Entity implements Serializable {
                                             + " as a loot from " + getName() + "!",
                                     false);
                             if (Settings.discordEnabled) {
-                                Launcher.getDiscordBot().getChannelByName("public-chat")
-                                        .sendMessage(":gift: " + luckyPlayer.getDisplayName() + " has recieved "
-                                                + (item.getAmount() > 1
-                                                ? item.getAmount() + " x " + Utils.formatString(dropName)
-                                                : Utils.formatString(dropName))
-                                                + " as a loot from " + getName() + "!");
+                                // Launcher.getDiscordBot().getChannelByName("public-chat")
+                                //       .sendMessage(":gift: " + luckyPlayer.getDisplayName() + " has recieved "
+                                //              + (item.getAmount() > 1
+                                //              ? item.getAmount() + " x " + Utils.formatString(dropName)
+                                //               : Utils.formatString(dropName))
+                                //               + " as a loot from " + getName() + "!");
                             }
                         }
                         sendLootBeam(item, luckyPlayer, this);
@@ -826,12 +826,12 @@ public class NPC extends Entity implements Serializable {
                                             + " as a loot from " + getName() + "!",
                                     false);
                             if (Settings.discordEnabled) {
-                                Launcher.getDiscordBot().getChannelByName("public-chat")
-                                        .sendMessage(":gift: " + player.getDisplayName() + " has recieved "
-                                                + (item.getAmount() > 1
-                                                ? item.getAmount() + " x " + Utils.formatString(dropName)
-                                                : Utils.formatString(dropName))
-                                                + " as a loot from " + getName() + "!");
+                                //Launcher.getDiscordBot().getChannelByName("public-chat")
+                                //       .sendMessage(":gift: " + player.getDisplayName() + " has recieved "
+                                //              + (item.getAmount() > 1
+                                //              ? item.getAmount() + " x " + Utils.formatString(dropName)
+                                //              : Utils.formatString(dropName))
+                                //              + " as a loot from " + getName() + "!");
                             }
                         }
                         sendLootBeam(item, player, this);

@@ -251,19 +251,19 @@ public class Offer extends Item {
 			if (!fromOffer.isCompleted()) {
 				DatabaseUtility.sendTask(fromOffer, new sendGEOfferRemoval(), true);
 				if (!fromOffer.isBuying()) {
-					Launcher.getDiscordBot().getChannelByName("exchange")
-							.sendMessage(fromOwner.getDisplayName() + " has sold total of "
-									+ Utils.getFormattedNumber(fromOffer.getTotalAmmountSoFar(), ',') + "/"
-									+ Utils.getFormattedNumber(fromOffer.getAmount(), ',') + " "
-									+ fromOffer.getDefinitions().getName() + "!");
+					//Launcher.getDiscordBot().getChannelByName("exchange")
+					//		.sendMessage(fromOwner.getDisplayName() + " has sold total of "
+					//				+ Utils.getFormattedNumber(fromOffer.getTotalAmmountSoFar(), ',') + "/"
+					//				+ Utils.getFormattedNumber(fromOffer.getAmount(), ',') + " "
+					//			+ fromOffer.getDefinitions().getName() + "!");
 				}
 			} else {
 				DatabaseUtility.sendTask(fromOffer, new sendGEOfferRemoval(), false);
-				if (!fromOffer.isBuying())
-					Launcher.getDiscordBot().getChannelByName("exchange")
-							.sendMessage(fromOwner.getDisplayName() + " finished selling "
-									+ Utils.getFormattedNumber(fromOffer.getAmount(), ',') + " x "
-									+ fromOffer.getDefinitions().getName() + "!");
+				//if (!fromOffer.isBuying())
+				//Launcher.getDiscordBot().getChannelByName("exchange")
+					//		.sendMessage(fromOwner.getDisplayName() + " finished selling "
+					//				+ Utils.getFormattedNumber(fromOffer.getAmount(), ',') + " x "
+				//				+ fromOffer.getDefinitions().getName() + "!");
 			}
 		}
 		sendUpdateWarning(this);

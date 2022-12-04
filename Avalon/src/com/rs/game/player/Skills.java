@@ -640,9 +640,9 @@ public final class Skills implements Serializable {
             World.sendWorldMessage(HexColours.Colours.ORANGE.getHex() + "<img=5>News: " + player.getDisplayName() + " has achieved level "
                     + getLevel(skill) + " " + getSkillName(skill) + ".", false);
             if (Settings.discordEnabled) {
-                Launcher.getDiscordBot().getChannelByName("public-chat")
-                        .sendMessage(":trophy: " + player.getDisplayName() + " has achieved level "
-                                + getLevelForXp(skill) + " " + getSkillName(skill) + ".");
+                // Launcher.getDiscordBot().getChannelByName("public-chat")
+                //        .sendMessage(":trophy: " + player.getDisplayName() + " has achieved level "
+                //               + getLevelForXp(skill) + " " + getSkillName(skill) + ".");
             }
         }
         int[] totalMilestones = {25, 50, 75, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1614, 1700, 1800, 1900, 2000, 2100, 2200, 2300, 2400, 2496};
@@ -658,8 +658,8 @@ public final class Skills implements Serializable {
                 player.getTemporaryAttributtes().put("MILESTONE", index);
                 if (index >= 10) {
                     if (Settings.discordEnabled) {
-                        Launcher.getDiscordBot().getChannelByName("public-chat").sendMessage(
-                                ":trophy: " + player.getDisplayName() + " has achieved " + i + " total level!");
+                        // Launcher.getDiscordBot().getChannelByName("public-chat").sendMessage(
+                        //        ":trophy: " + player.getDisplayName() + " has achieved " + i + " total level!");
                     }
                 }
                 break;
@@ -690,8 +690,8 @@ public final class Skills implements Serializable {
             World.sendWorldMessage(HexColours.Colours.RED.getHex()+"<img=6>News: " + player.getDisplayName()
                     + " has just achieved at least level 99 in all skills!", false);
             if (Settings.discordEnabled) {
-                Launcher.getDiscordBot().getChannelByName("public-chat").sendMessage(":trophy: "
-                        + player.getDisplayName() + " has just achieved at least level 99 in all skills!");
+                //  Launcher.getDiscordBot().getChannelByName("public-chat").sendMessage(":trophy: "
+                //      + player.getDisplayName() + " has just achieved at least level 99 in all skills!");
             }
         }
         index = 0;
@@ -836,9 +836,9 @@ public final class Skills implements Serializable {
                 World.sendWorldMessage(HexColours.Colours.BLUE.getHex() + "<img=5>News: " + player.getDisplayName() + " has achieved "
                         + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".", false);
                 if (Settings.discordEnabled) {
-                    Launcher.getDiscordBot().getChannelByName("public-chat")
-                            .sendMessage(":trophy: " + player.getDisplayName() + " has achieved "
-                                    + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".");
+                    //  Launcher.getDiscordBot().getChannelByName("public-chat")
+                    //       .sendMessage(":trophy: " + player.getDisplayName() + " has achieved "
+                    //              + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".");
                 }
             }
         }

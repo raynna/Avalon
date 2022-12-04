@@ -138,7 +138,7 @@ public final class Launcher {
 		if (Settings.sqlQueries)
 			DatabaseUtility.init();
 		if (!Settings.DEBUG) {
-			discord.getChannelByName("server-status").sendMessage("Avalon is now online!");
+			//discord.getChannelByName("server-status").sendMessage("Avalon is now online!");
 		}
 		addAccountsSavingTask();
 		addCleanMemoryTask();
@@ -166,8 +166,8 @@ public final class Launcher {
 				try {
 					i++;
 					if (i % 30 == 0 && !Settings.DEBUG) {
-						discord.getChannelByName("public-chat").sendMessage("30 Minutes Message\n"
-								+ World.getPlayers().size() + " players are currently playing Avalon.");
+						//discord.getChannelByName("public-chat").sendMessage("30 Minutes Message\n"
+						//		+ World.getPlayers().size() + " players are currently playing Avalon.");
 						i = 0;
 					}
 					saveFiles();
@@ -229,8 +229,8 @@ public final class Launcher {
 
 	public static void closeServices() {
 		if (!Settings.DEBUG) {
-			discord.getChannelByName("public-chat").sendMessage("Avalon is now offline!");
-			discord.getChannelByName("server-status").sendMessage("Avalon is now offline!");
+			//discord.getChannelByName("public-chat").sendMessage("Avalon is now offline!");
+			//discord.getChannelByName("server-status").sendMessage("Avalon is now offline!");
 		}
 		try {
 			TimeUnit.SECONDS.sleep(3);

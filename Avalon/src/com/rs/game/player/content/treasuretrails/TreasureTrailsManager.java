@@ -613,10 +613,10 @@ public class TreasureTrailsManager implements Serializable {
 					|| name.contains("ornament")) {
 				World.sendWorldMessage("<img=7><col=36648b>News: " + player.getDisplayName() + " looted "
 						+ item.getName() + " from a casket.", false);
-				if (Settings.discordEnabled) {
-					Launcher.getDiscordBot().getChannelByName("public-chat").sendMessage(":sweat_drops: " + player.getDisplayName() + " looted "
-							+ item.getName() + " from a casket.");
-				}
+				//if (Settings.discordEnabled) {
+					//Launcher.getDiscordBot().getChannelByName("public-chat").sendMessage(":sweat_drops: " + player.getDisplayName() + " looted "
+					//		+ item.getName() + " from a casket.");
+				//}
 				player.getAdventureLog().addActivity("After opening a casket, I found a " + item.getName() + ".");
 			}
 		}

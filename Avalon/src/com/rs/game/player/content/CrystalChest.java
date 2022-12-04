@@ -90,10 +90,10 @@ public class CrystalChest {
 				|| reward.getChance() == SUPER_RARE || reward.getChance() == VERY_RARE) {
 			World.sendWorldMessage("<img=7><col=36648b>News: " + player.getDisplayName() + " looted " + item.getName()
 					+ " from a crystal chest.", false);
-			if (Settings.discordEnabled) {
-				Launcher.getDiscordBot().getChannelByName("public-chat").sendMessage(":sparkles:  " + player.getDisplayName() + " looted " + item.getName()
-				+ " from a crystal chest.");
-			}
+			//f (Settings.discordEnabled) {
+			//	Launcher.getDiscordBot().getChannelByName("public-chat").sendMessage(":sparkles:  " + player.getDisplayName() + " looted " + item.getName()
+			//	+ " from a crystal chest.");
+			//}
 			player.getAdventureLog().addActivity("After opening a crystal chest, I found a " + item.getName() + ".");
 		}
 
