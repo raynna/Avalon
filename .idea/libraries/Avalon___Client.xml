@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Avalon - Client">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/Client/Avalon - Client.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
