@@ -50,3 +50,7 @@ Avalon/src/com/rs/net/sql/
 *.json
 *.class
 *.txt
+*.dat2
+*.idx255
+Avalon/data/cache/main_file_cache.dat2
+Avalon/data/cache/main_file_cache.idx255
