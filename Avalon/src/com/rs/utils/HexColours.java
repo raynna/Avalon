@@ -2,7 +2,7 @@ package com.rs.utils;
 
 public class HexColours {
 
-	public enum Colours {
+	public enum Colour {
 
 		WHITE("ffffff"),
 
@@ -30,7 +30,7 @@ public class HexColours {
 
 		private String hex;
 
-		private Colours(String hex) {
+		Colour(String hex) {
 			this.setHex("<col=" + hex + ">");
 		}
 
@@ -63,7 +63,7 @@ public class HexColours {
 
 		private String shad;
 
-		private Shadow(String shad) {
+		Shadow(String shad) {
 			this.setShad("<shad=" + shad + ">");
 		}
 
@@ -80,15 +80,15 @@ public class HexColours {
 		return "</col></shad>";
 	}
 
-	public static String getShortMessage(Colours colour, String message) {
+	public static String getShortMessage(Colour colour, String message) {
 		return colour.getHex() + message + end();
 	}
 
-	public static String getMessage(Colours colour, String message) {
+	public static String getMessage(Colour colour, String message) {
 		return colour.getHex() + message;
 	}
 
-	public static String getMessageWithShad(Shadow shad, Colours colour, String message) {
+	public static String getMessageWithShad(Shadow shad, Colour colour, String message) {
 		return shad.getShad() + colour.getHex() + message;
 	}
 }

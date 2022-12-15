@@ -5,6 +5,7 @@ import java.text.DecimalFormat;
 
 import com.rs.game.World;
 import com.rs.game.WorldTile;
+import com.rs.game.item.FloorItem;
 import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.utils.Utils;
@@ -25,27 +26,32 @@ public class MoneyPouch implements Serializable {
 		this.player = player;
 	}
 
+
 	public void addMoneyFromInventory(int amount, boolean delete) {
-		if (player.getInventory().getNumberOf(995) > Integer.MAX_VALUE - getTotal()) {
+		if (amount + getTotal() < 0) {
 			amount = Integer.MAX_VALUE - getTotal();
 		}
 		if (getTotal() == Integer.MAX_VALUE) {
 			player.getPackets().sendGameMessage("You can't store more in your money pouch.");
 			return;
 		}
-		if (amount > 1) {
-			player.getPackets().sendGameMessage(
-					Utils.getFormattedNumber(amount, ',') + " coins have been added to your money pouch.");
-		} else {
-			player.getPackets().sendGameMessage("One coin has been added to your money pouch.");
-		}
+		StringBuilder builder = new StringBuilder();
+		if (amount > 1)
+			builder.append(Utils.getFormattedNumber(amount, ',') + " coins");
+		else
+			builder.append("One coin");
+		builder.append(" have been added to your money pouch.");
+		player.sm(builder.toString());
 		player.getPackets().sendRunScript(5561, 1, amount);
 		player.getMoneyPouch().setTotal(player.getMoneyPouch().getTotal() + amount);
-		if (delete) {
+		if (delete)
 			player.getInventory().deleteItem(new Item(995, amount));
-		}
 		refresh();
 	}
+
+
+
+
 
 	public void addMoneyFromBank(int amount, int bankSlot) {
 		// if (!player.getControlerManager().processMoneyPouch())
@@ -90,16 +96,13 @@ public class MoneyPouch implements Serializable {
 	}
 
 	public void addMoney(int amount, boolean delete) {
-		// if (!player.getControlerManager().processMoneyPouch())
-		// return;
 		if (delete) {
 			if (player.getInventory().getNumberOf(995) > Integer.MAX_VALUE - getTotal()) {
 				amount = Integer.MAX_VALUE - getTotal();
 			}
 		}
 		int leftOver = 0;
-		int inventoryLeftOver = 0;
-		if (getTotal() + amount > Integer.MAX_VALUE || getTotal() + amount < 0) {
+		if (getTotal() + amount < 0) {
 			if (getTotal() != Integer.MAX_VALUE)
 				player.getPackets().sendGameMessage("Your money pouch is not big enough to hold that much cash.");
 			leftOver = Integer.MAX_VALUE - getTotal();
@@ -109,24 +112,18 @@ public class MoneyPouch implements Serializable {
 				player.getMoneyPouch().setTotal(Integer.MAX_VALUE);
 				refresh();
 			}
-			if (player.getInventory().getNumberOf(995) + amount > Integer.MAX_VALUE
-					|| player.getInventory().getNumberOf(995) + amount < 0) {
-				inventoryLeftOver = Integer.MAX_VALUE - player.getInventory().getNumberOf(995);
-				amount = amount - inventoryLeftOver;
+			if (player.getInventory().getNumberOf(995) + amount < 0) {
+				leftOver = Integer.MAX_VALUE - player.getInventory().getNumberOf(995);
+				amount = amount - leftOver;
 				if (player.getInventory().getNumberOf(995) != Integer.MAX_VALUE)
-					player.getInventory().addItem(995, inventoryLeftOver);
-				if (delete) {
-					World.addGroundItem(new Item(995, amount), player, player, true, 60);
+					player.getInventory().addItem(995, leftOver);
+				if (delete)
 					player.getInventory().deleteItem(995, amount);
-				} else {
-					World.updateGroundItem(new Item(995, amount), new WorldTile(player), player, 60, 0);
-				}
+				World.addGroundItem(new Item(995, amount), player, player, true, 60);
 				return;
 			} else {
-				if (delete) {
-					player.getInventory().addItem(new Item(995, amount));
+				if (delete)
 					player.getInventory().deleteItem(995, amount);
-				} else
 					player.getInventory().addItem(new Item(995, amount));
 				return;
 			}

@@ -249,7 +249,7 @@ public class Offer extends Item {
 			if (fromOwner == null)
 				fromOwner = AccountCreation.loadPlayer(fromOffer.getUsername());
 			if (!fromOffer.isCompleted()) {
-				DatabaseUtility.sendTask(fromOffer, new sendGEOfferRemoval(), true);
+				//DatabaseUtility.sendTask(fromOffer, new sendGEOfferRemoval(), true);
 				if (!fromOffer.isBuying()) {
 					//Launcher.getDiscordBot().getChannelByName("exchange")
 					//		.sendMessage(fromOwner.getDisplayName() + " has sold total of "
@@ -258,7 +258,7 @@ public class Offer extends Item {
 					//			+ fromOffer.getDefinitions().getName() + "!");
 				}
 			} else {
-				DatabaseUtility.sendTask(fromOffer, new sendGEOfferRemoval(), false);
+				//DatabaseUtility.sendTask(fromOffer, new sendGEOfferRemoval(), false);
 				//if (!fromOffer.isBuying())
 				//Launcher.getDiscordBot().getChannelByName("exchange")
 					//		.sendMessage(fromOwner.getDisplayName() + " finished selling "

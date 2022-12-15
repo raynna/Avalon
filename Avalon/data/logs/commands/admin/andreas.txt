@@ -174,3 +174,71 @@
 [03 december 2022 at 05:33:54 CET] - ::tele 0,48,54,16,57
 [03 december 2022 at 05:33:55 CET] - ::tele 0,48,54,16,47
 [03 december 2022 at 05:33:56 CET] - ::tele 0,48,54,13,39
+[04 december 2022 at 10:38:48 CET] - ::tele 0,48,54,17,54
+[04 december 2022 at 10:38:49 CET] - ::tele 0,48,55,18,5
+[04 december 2022 at 10:49:25 CET] - ::tele 0,48,54,16,57
+[04 december 2022 at 10:49:26 CET] - ::tele 0,48,54,15,46
+[04 december 2022 at 10:49:27 CET] - ::tele 0,48,54,17,39
+[04 december 2022 at 10:52:22 CET] - ::give dragon_arrow +100
+[04 december 2022 at 10:52:23 CET] - ::give dragon_arrow +100
+[04 december 2022 at 10:52:44 CET] - ::spec 
+[04 december 2022 at 10:52:48 CET] - ::spec 
+[04 december 2022 at 10:52:55 CET] - ::spec 
+[04 december 2022 at 10:53:01 CET] - ::spec 
+[04 december 2022 at 10:53:06 CET] - ::spec 
+[04 december 2022 at 10:53:15 CET] - ::spec 
+[04 december 2022 at 10:53:21 CET] - ::spec 
+[04 december 2022 at 10:53:26 CET] - ::spec 
+[04 december 2022 at 10:53:35 CET] - ::spec 
+[04 december 2022 at 10:54:56 CET] - ::spec 
+[04 december 2022 at 10:55:04 CET] - ::spec 
+[04 december 2022 at 10:55:10 CET] - ::spec 
+[04 december 2022 at 10:55:17 CET] - ::spec 
+[04 december 2022 at 10:55:23 CET] - ::spec 
+[04 december 2022 at 10:55:30 CET] - ::spec 
+[04 december 2022 at 10:55:37 CET] - ::spec 
+[05 december 2022 at 11:44:34 CET] - ::item 565 10
+[05 december 2022 at 11:44:44 CET] - ::item 560 1
+[05 december 2022 at 11:52:00 CET] - ::item 11694 1
+[05 december 2022 at 11:52:32 CET] - ::item 11694 1
+[05 december 2022 at 12:00:55 CET] - ::item 1042 1
+[05 december 2022 at 12:03:45 CET] - ::tele 0,48,54,3,39
+[05 december 2022 at 12:03:53 CET] - ::clearchat 
+[05 december 2022 at 12:03:54 CET] - ::clearchat 
+[05 december 2022 at 12:03:54 CET] - ::clearchat 
+[05 december 2022 at 12:03:54 CET] - ::clearchat 
+[05 december 2022 at 12:03:55 CET] - ::clearchat 
+[05 december 2022 at 12:04:50 CET] - ::item 11695 1
+[05 december 2022 at 12:05:00 CET] - ::item 11695 10
+[05 december 2022 at 12:11:52 CET] - ::item 11695 100
+[05 december 2022 at 12:12:41 CET] - ::item 11695 2
+[05 december 2022 at 12:13:13 CET] - ::item 11695 2
+[05 december 2022 at 12:15:28 CET] - ::empty 
+[05 december 2022 at 12:15:29 CET] - ::item 565 10
+[05 december 2022 at 12:15:32 CET] - ::item 560 1
+[05 december 2022 at 12:15:38 CET] - ::item 555 1
+[05 december 2022 at 12:15:40 CET] - ::item 666 1
+[05 december 2022 at 12:15:44 CET] - ::item 1713 1
+[05 december 2022 at 12:15:47 CET] - ::item 1713 1
+[05 december 2022 at 12:33:46 CET] - ::item 11694 1
+[05 december 2022 at 12:33:51 CET] - ::item 1042 1
+[05 december 2022 at 12:34:18 CET] - ::tele 0,48,54,20,39
+[05 december 2022 at 12:34:19 CET] - ::tele 0,48,54,24,41
+[05 december 2022 at 12:34:30 CET] - ::item 1712 1
+[05 december 2022 at 12:34:49 CET] - ::item 995 150000
+[05 december 2022 at 12:34:55 CET] - ::ecomode 0
+[05 december 2022 at 12:35:11 CET] - ::item 4712 1
+[05 december 2022 at 12:35:26 CET] - ::item 995 2147000000
+[05 december 2022 at 12:35:27 CET] - ::item 995 2147000000
+[05 december 2022 at 12:35:36 CET] - ::item 995 2147000000
+[05 december 2022 at 12:36:22 CET] - ::item 995 15000000
+[05 december 2022 at 12:38:06 CET] - ::item 6570
+[05 december 2022 at 12:38:07 CET] - ::give fury
+[05 december 2022 at 12:38:11 CET] - ::give amulet_of_fury
+[05 december 2022 at 12:38:24 CET] - ::give amulet_of_fury
+[05 december 2022 at 12:38:26 CET] - ::clearchat 
+[05 december 2022 at 12:38:26 CET] - ::clearchat 
+[05 december 2022 at 12:38:26 CET] - ::clearchat 
+[05 december 2022 at 12:38:27 CET] - ::clearchat 
+[05 december 2022 at 12:38:41 CET] - ::tele 0,48,54,11,37
+[05 december 2022 at 12:38:41 CET] - ::tele 0,48,54,2,36

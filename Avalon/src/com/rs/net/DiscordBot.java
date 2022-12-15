@@ -11,7 +11,7 @@ import com.rs.game.player.AccountCreation;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
 import com.rs.utils.HexColours;
-import com.rs.utils.HexColours.Colours;
+import com.rs.utils.HexColours.Colour;
 import com.rs.utils.Logger;
 import com.rs.utils.Utils;
 import de.btobastian.javacord.DiscordAPI;
@@ -229,7 +229,7 @@ public class DiscordBot {
 								for (int i = 1; i < cmd.length; i++) {
 									data += cmd[i] + ((i == cmd.length - 1) ? "" : " ");
 								}
-								World.sendWorldMessage(Colours.PURPLE.getHex() + "[Discord] "
+								World.sendWorldMessage(Colour.PURPLE.getHex() + "[Discord] "
 										+ Utils.formatPlayerNameForDisplay(message.getAuthor().getName()) + "#"
 										+ message.getAuthor().getDiscriminator() + ": " + HexColours.end()
 										+ Utils.fixChatMessage(data), true);

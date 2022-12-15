@@ -5,7 +5,7 @@ import com.rs.game.World;
 import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.utils.HexColours;
-import com.rs.utils.HexColours.Colours;
+import com.rs.utils.HexColours.Colour;
 import com.rs.utils.Utils;
 
 public class FishingOutfit {
@@ -113,8 +113,8 @@ public class FishingOutfit {
 		Pieces piece = getRandomPiece(player);
 		ItemDefinitions defs = ItemDefinitions.getItemDefinitions(piece.getItemId());
 		player.sm("You have recieved a "
-				+ (piece == Pieces.FISH_HAT ? (HexColours.getShortMessage(Colours.RED, "rare") + " item:") : "") + " "
-				+ (HexColours.getShortMessage(Colours.RED, defs.getName())) + "!");
+				+ (piece == Pieces.FISH_HAT ? (HexColours.getShortMessage(Colour.RED, "rare") + " item:") : "") + " "
+				+ (HexColours.getShortMessage(Colour.RED, defs.getName())) + "!");
 		if (player.getInventory().hasFreeSlots())
 			player.getInventory().addItem(piece.getItemId(), 1);
 		else

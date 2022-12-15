@@ -7,7 +7,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
-import com.rs.Launcher;
 import com.rs.Settings;
 import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.cache.loaders.NPCDefinitions;
@@ -34,7 +33,6 @@ import com.rs.game.player.actions.skills.slayer.SlayerManager;
 import com.rs.game.player.content.friendschat.FriendChatsManager;
 import com.rs.game.player.content.tasksystem.TaskManager.Tasks;
 import com.rs.game.player.controlers.DungeonControler;
-import com.rs.game.player.controlers.GodWars;
 import com.rs.game.player.controlers.WildernessControler;
 import com.rs.game.route.RouteFinder;
 import com.rs.game.route.strategy.FixedTileStrategy;
@@ -692,7 +690,7 @@ public class NPC extends Entity implements Serializable {
                 for (Player p : playersWithLs) {
                     if (!p.equals(luckyPlayer)) {
                         p.sm(String.format("%s</col> received: %s x %s. (" + getName() + ") ",
-                                HexColours.Colours.RED.getHex() + luckyPlayer.getDisplayName(),
+                                HexColours.Colour.RED.getHex() + luckyPlayer.getDisplayName(),
                                 Utils.getFormattedNumber(item.getAmount(), ','), dropName));
                     }
                 }

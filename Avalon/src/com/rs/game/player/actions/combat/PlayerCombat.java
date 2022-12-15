@@ -886,7 +886,7 @@ public class PlayerCombat extends Action {
                     World.sendSlowBow2Projectile(player, target, dragonArrows ? 1099 : 1103);
                     int distance = Utils.getDistance(player, target);
                     delayHit(distance >= 5 ? 2 : distance >= 3 ? 1 : 1, weaponId, attackStyle, getRangeHit(player, damage));
-                    delayHit(distance >= 5 ? 4 : distance >= 3 ? 1 : 2, weaponId, attackStyle,
+                    delayHit(distance >= 5 ? 3 : distance >= 3 ? 1 : 2, weaponId, attackStyle,
                             getRangeHit(player, damage2));
                     checkSwiftGlovesEffect(player, attackStyle, weaponId, damage2, getArrowProjectileId(weaponId, ammoId),
                             2);

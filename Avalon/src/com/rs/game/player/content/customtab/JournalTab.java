@@ -7,7 +7,7 @@ import com.rs.game.ForceTalk;
 import com.rs.game.World;
 import com.rs.game.player.Player;
 import com.rs.game.player.Ranks.Rank;
-import com.rs.utils.HexColours.Colours;
+import com.rs.utils.HexColours.Colour;
 
 public class JournalTab extends CustomTab {
 
@@ -124,7 +124,7 @@ public class JournalTab extends CustomTab {
 
 			@Override
 			public String text(Player p) {
-				return "Rank: " + Colours.GREEN.getHex() + "<img="
+				return "Rank: " + Colour.GREEN.getHex() + "<img="
 						+ (p.getPlayerRank().getRank()[0] == Rank.DEVELOPER
 								|| p.getPlayerRank().getRank()[0] == Rank.DEVELOPER
 										? p.getMessageIcon() - 1
@@ -149,9 +149,9 @@ public class JournalTab extends CustomTab {
 			@Override
 			public String text(Player p) {
 				boolean donator = p.getPlayerRank().isDonator();
-				return "Donator rank:  " + Colours.WHITE.getHex()
+				return "Donator rank:  " + Colour.WHITE.getHex()
 						+ (donator ? "<img=" + p.getDonatorIcon() + ">" + p.getPlayerRank().getRankName(1)
-								: Colours.RED.getHex() +  "I'm not a donator");
+								: Colour.RED.getHex() +  "I'm not a donator");
 			}
 		},
 		PLAYERTITLE(13) {

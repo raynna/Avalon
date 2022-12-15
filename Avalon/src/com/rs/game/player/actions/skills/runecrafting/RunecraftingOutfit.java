@@ -6,7 +6,7 @@ import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.utils.HexColours;
 import com.rs.utils.Utils;
-import com.rs.utils.HexColours.Colours;
+import com.rs.utils.HexColours.Colour;
 
 public class RunecraftingOutfit {
 
@@ -74,7 +74,7 @@ public class RunecraftingOutfit {
 			return false;
 		Pieces piece = getRandomPiece(player);
 		ItemDefinitions defs = ItemDefinitions.getItemDefinitions(piece.getItemId());
-		player.sm("<img=5><col=b25200>You have recieved " + (HexColours.getShortMessage(Colours.RED, defs.getName())) + "!");
+		player.sm("<img=5><col=b25200>You have recieved " + (HexColours.getShortMessage(Colour.RED, defs.getName())) + "!");
 		if (player.getInventory().hasFreeSlots())
 			player.getInventory().addItem(piece.getItemId(), 1);
 		else

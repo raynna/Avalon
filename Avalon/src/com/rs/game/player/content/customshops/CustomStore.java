@@ -7,7 +7,7 @@ import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.utils.EconomyPrices;
 import com.rs.utils.HexColours;
-import com.rs.utils.HexColours.Colours;
+import com.rs.utils.HexColours.Colour;
 import com.rs.utils.Utils;
 
 public class CustomStore extends CustomStoreData {
@@ -154,9 +154,9 @@ public class CustomStore extends CustomStoreData {
 									: getItems(TYPE, SHOP).get(container).getAmount())) });// sends items
 			player.getPackets().sendIComponentText(INTERFACE_ID, COMPONENTS[container] + 4,
 					getItems(TYPE, SHOP).get(container).getAmount() == 0 ? "Out<br>of<br>stock<br><br><br><br><br>"
-							: price == 0 ? HexColours.getShortMessage(Colours.GREEN, "Free")
-									: totalCurrency >= price ? HexColours.getMessage(Colours.YELLOW, formatPrice(price))
-											: HexColours.getMessage(Colours.RED, formatPrice(price)));// sends price
+							: price == 0 ? HexColours.getShortMessage(Colour.GREEN, "Free")
+									: totalCurrency >= price ? HexColours.getMessage(Colour.YELLOW, formatPrice(price))
+											: HexColours.getMessage(Colour.RED, formatPrice(price)));// sends price
 			player.getPackets().sendSpriteOnIComponent(INTERFACE_ID, COMPONENTS[container] + 5,
 					getCurrencySprite(TYPE, SHOP));// sends sprite next to price
 			// price
@@ -184,8 +184,8 @@ public class CustomStore extends CustomStoreData {
 			int price = SkillcapeStore.capes.get(container).getId() == 20767 ? 2475000
 					: SkillcapeStore.capes.get(container).getId() == 19709 ? 120000 : 99000;
 			player.getPackets().sendIComponentText(INTERFACE_ID, COMPONENTS[container] + 4,
-					player.getTotalCoins() >= price ? HexColours.getMessage(Colours.YELLOW, formatPrice(price))
-							: HexColours.getMessage(Colours.RED, formatPrice(price)));// sends
+					player.getTotalCoins() >= price ? HexColours.getMessage(Colour.YELLOW, formatPrice(price))
+							: HexColours.getMessage(Colour.RED, formatPrice(price)));// sends
 			// price
 			// of
 			// each
@@ -244,9 +244,9 @@ public class CustomStore extends CustomStoreData {
 					price = itemId == 20767 ? 2475000 : itemId == 19709 ? 120000 : 99000;
 					player.getPackets()
 							.sendGameMessage(ItemDefinitions.getItemDefinitions(itemId).getName()
-									+ (price == 0 ? " is " + HexColours.getShortMessage(Colours.DARK_GREEN, "free!")
+									+ (price == 0 ? " is " + HexColours.getShortMessage(Colour.DARK_GREEN, "free!")
 											: (" costs "
-													+ HexColours.getShortMessage(Colours.RED,
+													+ HexColours.getShortMessage(Colour.RED,
 															Utils.getFormattedNumber(price, ','))
 													+ " " + getPointsName(TYPE, SHOP) + ".")));
 				}
@@ -257,9 +257,9 @@ public class CustomStore extends CustomStoreData {
 							: EconomyPrices.getPrice(itemId);
 					player.getPackets()
 							.sendGameMessage(ItemDefinitions.getItemDefinitions(itemId).getName()
-									+ (price == 0 ? " is " + HexColours.getShortMessage(Colours.DARK_GREEN, "free!")
+									+ (price == 0 ? " is " + HexColours.getShortMessage(Colour.DARK_GREEN, "free!")
 											: (" costs "
-													+ HexColours.getShortMessage(Colours.RED,
+													+ HexColours.getShortMessage(Colour.RED,
 															Utils.getFormattedNumber(price, ','))
 													+ " " + getPointsName(TYPE, SHOP) + ".")));
 				}
@@ -269,9 +269,9 @@ public class CustomStore extends CustomStoreData {
 					price = getShopType(TYPE)[i][2];
 					player.getPackets()
 							.sendGameMessage(ItemDefinitions.getItemDefinitions(itemId).getName()
-									+ (price == 0 ? " is " + HexColours.getShortMessage(Colours.DARK_GREEN, "free!")
+									+ (price == 0 ? " is " + HexColours.getShortMessage(Colour.DARK_GREEN, "free!")
 											: (" costs "
-													+ HexColours.getShortMessage(Colours.RED,
+													+ HexColours.getShortMessage(Colour.RED,
 															Utils.getFormattedNumber(price, ','))
 													+ " " + getPointsName(TYPE, SHOP) + ".")));
 				}
@@ -352,10 +352,10 @@ public class CustomStore extends CustomStoreData {
 			}
 			player.addItem(itemId, amount);
 			removeCurrency(player, SHOP, price);
-			player.sm("You bought " + HexColours.getShortMessage(Colours.RED, Utils.getFormattedNumber(amount, ','))
+			player.sm("You bought " + HexColours.getShortMessage(Colour.RED, Utils.getFormattedNumber(amount, ','))
 					+ " x " + defs.getName() + " for "
 					+ (price == 0 ? "free!"
-							: HexColours.getShortMessage(Colours.RED, Utils.getFormattedNumber(price, ',')) + " "
+							: HexColours.getShortMessage(Colour.RED, Utils.getFormattedNumber(price, ',')) + " "
 									+ getPointsName(TYPE, SHOP) + "."));
 			refreshInterface();
 		}

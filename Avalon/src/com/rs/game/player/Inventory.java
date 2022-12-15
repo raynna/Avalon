@@ -4,16 +4,13 @@ import java.io.Serializable;
 import java.util.List;
 
 import com.rs.Settings;
-import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.game.World;
 import com.rs.game.WorldTile;
 import com.rs.game.item.Item;
 import com.rs.game.item.ItemsContainer;
 import com.rs.game.player.content.ItemConstants;
-import com.rs.utils.EconomyPrices;
-import com.rs.utils.ItemExamines;
-import com.rs.utils.Utils;
-import com.rs.utils.Weights;
+import com.rs.game.player.content.grandexchange.GrandExchange;
+import com.rs.utils.*;
 
 public final class Inventory implements Serializable {
 
@@ -350,58 +347,60 @@ public final class Inventory implements Serializable {
 		Item item = items.get(slotId);
 		if (item == null)
 			return;
-		long price;
-		long totalPrice;
-		long amount;
-		// player.getPackets().sendGameMessage("High Alchemy Value: " +
-		// item.getDefinitions().getHighAlchValue());
-		Item storeItem = new Item(item.getId());
-		if (storeItem.getDefinitions().isNoted())
-			storeItem = new Item(storeItem.getDefinitions().getCertId());
+		Item fakeItem = item;
+		long price = EconomyPrices.getPrice(fakeItem.getId());
+		long amount = fakeItem.getAmount();
+		long totalPrice = EconomyPrices.getPrice(fakeItem.getId()) * amount;
+		boolean isNoted = fakeItem.getDefinitions().isNoted();
+		boolean isStackable = fakeItem.getDefinitions().isStackable();
+		System.out.println("before is noted");
+		if (isNoted)
+			fakeItem = new Item(item.getDefinitions().getCertId(), item.getAmount());
 		if (item.getDefinitions().isMembersOnly() && Settings.FREE_TO_PLAY) {
 			player.getPackets().sendGameMessage("This is a members object.");
 			return;
 		}
-		if (!ItemConstants.isTradeable(item)) {
-			player.getPackets()
-					.sendGameMessage("[Price Checker] " + item.getDefinitions().getName() + " is untradeable.");
-			player.getPackets()
-					.sendGameMessage("[Price Checker] "
-							+ (player.isDeveloper() ? "ItemId: " + item.getId() + ", " : "") + "Store value: "
-							+ Utils.getFormattedNumber(storeItem.getDefinitions().getPrice(), ',') + ", Alch Value: "
-							+ Utils.getFormattedNumber(storeItem.getDefinitions().getHighAlchPrice(), ',') + ".");
-			player.getPackets().sendGameMessage("[Description]" + ItemExamines.getExamine(item));
-			return;
-		}
-		if (item.getId() == 995) {
-			player.getPackets().sendGameMessage("[Price Checker] " + Utils.getFormattedNumber(item.getAmount(), ',')
-					+ " x " + item.getDefinitions().getName() + ".");
-			return;
-		}
-		amount = item.getAmount();
-		totalPrice = EconomyPrices.getPrice(item.getId()) * amount;
-		price = EconomyPrices.getPrice(item.getId());
-		if (price == 1) {
-			player.getPackets().sendGameMessage("[Price Checker] " + item.getDefinitions().getName() + " is free.");
-			player.getPackets().sendGameMessage("[Description]" + ItemExamines.getExamine(item));
-			return;
-		}
-		if ((item.getDefinitions().isNoted() || item.getDefinitions().isStackable()) && item.getAmount() > 1) {
-			player.getPackets()
-					.sendGameMessage("[Price Checker] " + Utils.getFormattedNumber(item.getAmount(), ',') + " x "
-							+ item.getDefinitions().getName() + ": " + Utils.formatMillionAmount(totalPrice)
-							+ " coins. (" + Utils.getFormattedNumber(EconomyPrices.getPrice(item.getId()), ',')
-							+ " coins each)");
+		System.out.println("after is noted");
+		player.sm("itemId: " + fakeItem.getId() + ", amount: " + fakeItem.getAmount());
+		StringBuilder builder = new StringBuilder();
+		builder.append("Price check: ");
+		if (price == 1)
+			builder.append(" is free.");
+		if (!ItemConstants.isTradeable(item))
+			builder.append(" is untradeable.");
+		if ((isNoted || isStackable)) {
+			System.out.println("is noted or stackable");
+			if (fakeItem.getAmount() > 1)
+				builder.append(Utils.getFormattedNumber(fakeItem.getAmount(), ',') + " x ");
+			builder.append(fakeItem.getDefinitions().getName());
+			builder.append(": " + HexColours.getShortMessage(HexColours.Colour.RED, Utils.formatMillionAmount(totalPrice)) + " coins.");
+			if (fakeItem.getAmount() > 1)
+				builder.append(" (" + HexColours.getShortMessage(HexColours.Colour.RED, Utils.getFormattedNumber(EconomyPrices.getPrice(fakeItem.getId()), ','))
+						+ " coins each)");
 		} else {
-			player.getPackets().sendGameMessage("[Price Checker] " + item.getDefinitions().getName() + ": "
-					+ (Utils.getFormattedNumber(EconomyPrices.getPrice(item.getId()), ',')) + " coins.");
+			builder.append(item.getDefinitions().getName());
+			builder.append(": " + HexColours.getShortMessage(HexColours.Colour.RED, Utils.formatMillionAmount(totalPrice)) + " coins.");
 		}
-		player.getPackets()
-				.sendGameMessage("[Price Checker] " + (player.isDeveloper() ? "ItemId: " + item.getId() + ", " : "")
-						+ "Store value: " + Utils.getFormattedNumber(storeItem.getDefinitions().getPrice(), ',')
-						+ ", Alch Value: "
-						+ Utils.getFormattedNumber(storeItem.getDefinitions().getHighAlchPrice(), ',') + ".");
-		player.getPackets().sendGameMessage("[-Description-] " + ItemExamines.getExamine(item));
+		player.sm(builder.toString());
+
+		builder = new StringBuilder();
+		builder.append("High Alch: " + HexColours.getShortMessage(HexColours.Colour.RED, Utils.getFormattedNumber(fakeItem.getDefinitions().getHighAlchPrice(), ',')) + " coins, ");
+		builder.append("Low Alch: " + HexColours.getShortMessage(HexColours.Colour.RED, Utils.getFormattedNumber(fakeItem.getDefinitions().getLowAlchPrice(), ',')) + " coins.");
+		player.sm(builder.toString());
+
+		int bestBuyOffer = GrandExchange.getBestBuyPrice(fakeItem.getId());
+		int bestSellOffer = GrandExchange.getCheapestSellPrice(fakeItem.getId());
+		builder = new StringBuilder();
+		builder.append("Grand Exchange: ");
+		builder.append("Buy Offer: " + (bestBuyOffer == 0 ? "None" : HexColours.getShortMessage(HexColours.Colour.RED, Utils.getFormattedNumber(bestBuyOffer,','))  + " coins."));
+		builder.append("Sell Offer: " + (bestSellOffer == 0 ? "None" : HexColours.getShortMessage(HexColours.Colour.RED, Utils.getFormattedNumber(bestSellOffer,','))  + " coins."));
+		player.sm(builder.toString());
+
+
+		builder = new StringBuilder();
+		builder.append("Description: " + ItemExamines.getExamine(fakeItem));
+		System.out.println(builder.toString());
+		player.sm(builder.toString());
 	}
 
 	public void refresh() {

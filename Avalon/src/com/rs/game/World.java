@@ -1752,11 +1752,9 @@ public final class World {
         if (floorItem.getId() == 995 && !player.isAtWild() && !FfaZone.inRiskArea(player)) {
             amount = floorItem.getAmount();
             int leftOver = 0;
-            int inventoryLeftOver = 0;
-            if (player.getMoneyPouch().getTotal() + amount > Integer.MAX_VALUE
-                    || player.getMoneyPouch().getTotal() + amount < 0) {
+            if (player.getMoneyPouch().getTotal() + amount < 0) {
                 if (player.getMoneyPouch().getTotal() != Integer.MAX_VALUE)
-                    player.getPackets().sendGameMessage("Your money pouch is not big enough to hold that much cash.");
+                    player.getPackets().sendGameMessage("You can't hold more coins in your money pouch.");
                 leftOver = Integer.MAX_VALUE - player.getMoneyPouch().getTotal();
                 amount = amount - leftOver;
                 if (player.getMoneyPouch().getTotal() != Integer.MAX_VALUE) {
@@ -1767,20 +1765,17 @@ public final class World {
                     player.getMoneyPouch().refresh();
                     floorItem.setAmount(leftOver);
                 }
-                if (!player.getInventory().hasFreeSlots() && !player.getInventory().containsItem(995, 1)) {
+                if (!player.getInventory().hasFreeSlots() && !player.getInventory().containsOneItem(995)) {
                     player.getPackets().sendGameMessage("You don't have enough inventory space.");
                     return false;
                 }
-                if (player.getInventory().getNumberOf(995) + amount > Integer.MAX_VALUE
-                        || player.getInventory().getNumberOf(995) + amount < 0) {
-                    inventoryLeftOver = Integer.MAX_VALUE - player.getInventory().getNumberOf(995);
-                    amount = amount - inventoryLeftOver;
+                if (player.getInventory().getNumberOf(995) + amount < 0) {
+                    leftOver = Integer.MAX_VALUE - player.getInventory().getNumberOf(995);
+                    amount = amount - leftOver;
                     if (player.getInventory().getNumberOf(995) != Integer.MAX_VALUE) {
                         player.getInventory().deleteItem(995, Integer.MAX_VALUE);
                         player.getInventory().addItem(995, Integer.MAX_VALUE);
                     }
-                    if (!floorItem.getTile().matches(player.getTile()) && add)
-                        player.animate(new Animation(832));
                     floorItem.setAmount(amount);
                     player.getPackets().sendRemoveGroundItem(floorItem);
                     player.getPackets().sendGroundItem(floorItem);
@@ -1833,7 +1828,6 @@ public final class World {
             region.getGroundItemsSafe().remove(floorItem);
             if (floorItem.isInvisible()) {
                 player.getPackets().sendRemoveGroundItem(floorItem);
-                return true;
             } else {
                 for (Player p2 : World.getPlayers()) {
                     if (p2 == null || !p2.hasStarted() || p2.hasFinished()
@@ -1872,8 +1866,7 @@ public final class World {
             player.getPackets().sendGameMessage("Not enough space in your inventory.");
             return false;
         }
-        if (player.getInventory().getNumberOf(floorItem.getId()) + amount > Integer.MAX_VALUE
-                || player.getInventory().getNumberOf(floorItem.getId()) + amount < 0) {
+        if (player.getInventory().getNumberOf(floorItem.getId()) + amount < 0) {
             inventoryLeftOver = Integer.MAX_VALUE - player.getInventory().getNumberOf(floorItem.getId());
             amount = amount - inventoryLeftOver;
             if (player.getInventory().getNumberOf(floorItem.getId()) != Integer.MAX_VALUE) {

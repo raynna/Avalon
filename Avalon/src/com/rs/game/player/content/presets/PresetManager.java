@@ -13,7 +13,7 @@ import com.rs.game.player.Skills;
 import com.rs.game.player.controlers.EdgevillePvPControler;
 import com.rs.net.decoders.WorldPacketsDecoder;
 import com.rs.utils.HexColours;
-import com.rs.utils.HexColours.Colours;
+import com.rs.utils.HexColours.Colour;
 
 public final class PresetManager implements Serializable {
 
@@ -90,18 +90,18 @@ public final class PresetManager implements Serializable {
 			return;
 		if (player.isAtWild()) {
 			player.getPackets().sendGameMessage(
-					HexColours.getMessage(Colours.RED, "You can't load gear presets in the wilderness."));
+					HexColours.getMessage(Colour.RED, "You can't load gear presets in the wilderness."));
 			return;
 		}
 		if (player.getControlerManager().getControler() != null
 				&& !(player.getControlerManager().getControler() instanceof EdgevillePvPControler)) {
 			player.getPackets()
-					.sendGameMessage(HexColours.getMessage(Colours.RED, "You can't load gear presets in here."));
+					.sendGameMessage(HexColours.getMessage(Colour.RED, "You can't load gear presets in here."));
 			return;
 		}
 		if (EdgevillePvPControler.isAtPvP(player) && !EdgevillePvPControler.isAtBank(player)) {
 			player.getPackets()
-					.sendGameMessage(HexColours.getMessage(Colours.RED, "You can't load gear presets in pvp area."));
+					.sendGameMessage(HexColours.getMessage(Colour.RED, "You can't load gear presets in pvp area."));
 			return;
 		}
 		name = name.toLowerCase();

@@ -21,7 +21,6 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.TimeUnit;
 
 import com.rs.CreationKiln;
-import com.rs.Launcher;
 import com.rs.Settings;
 import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.cache.loaders.NPCDefinitions;
@@ -126,7 +125,7 @@ import com.rs.net.decoders.handlers.ButtonHandler;
 import com.rs.net.encoders.WorldPacketsEncoder;
 import com.rs.utils.EconomyPrices;
 import com.rs.utils.HexColours;
-import com.rs.utils.HexColours.Colours;
+import com.rs.utils.HexColours.Colour;
 import com.rs.utils.IsaacKeyPair;
 import com.rs.utils.Logger;
 import com.rs.utils.MachineInformation;
@@ -2973,7 +2972,7 @@ public class Player extends Entity {
             }
             World.sendNewsMessage(getDisplayName() + " has received " + NPCDefinitions.getNPCDefinitions(getPet(itemId).getBabyNpcId()).getName() + " as a rare drop.", true);
         }
-        sm(Colours.RED.getHex() + "You have a funny feeling something is following you.");
+        sm(Colour.RED.getHex() + "You have a funny feeling something is following you.");
     }
 
     public void activateLodeStone(final WorldObject object, final Player p) {
@@ -4170,15 +4169,15 @@ public class Player extends Entity {
                     killer.getPlayerRank().isIronman() ? killer.getDisplayName() : null);
         }
         sm("You have lost approximately: "
-                + HexColours.getShortMessage(Colours.RED, "" + Utils.getFormattedNumber(killer.totalCurrentDrop, ','))
+                + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(killer.totalCurrentDrop, ','))
                 + " coins!");
         if (killer != this)
-            killer.sm("Total loot is worth approximately: " + HexColours.getShortMessage(Colours.RED,
+            killer.sm("Total loot is worth approximately: " + HexColours.getShortMessage(Colour.RED,
                     "" + Utils.getFormattedNumber(killer.totalCurrentDrop, ',')) + " coins!");
         if ((killer.totalCurrentDrop > killer.getHighestValuedKill()) && killer.hasWildstalker() && killer != null
                 && killer != this) {
             killer.setHighestValuedKill(killer.totalCurrentDrop);
-            killer.sm("New highest value Wilderness kill: " + HexColours.getShortMessage(Colours.RED,
+            killer.sm("New highest value Wilderness kill: " + HexColours.getShortMessage(Colour.RED,
                     "" + Utils.getFormattedNumber(killer.getHighestValuedKill(), ',')) + " coins!");
         }
         if (killer != this) {
@@ -4189,10 +4188,10 @@ public class Player extends Entity {
                 Item pkKey = new Item("pk key");
                 if (killer.getInventory().hasFreeSlots()) {
                     killer.getInventory().addItem(pkKey);
-                    killer.sm("You recieved a " + HexColours.getShortMessage(Colours.RED, pkKey.getName()) + ".");
+                    killer.sm("You recieved a " + HexColours.getShortMessage(Colour.RED, pkKey.getName()) + ".");
                 } else {
                     killer.getBank().addItem(pkKey, true);
-                    killer.sm("You recieved a " + HexColours.getShortMessage(Colours.RED, pkKey.getName())
+                    killer.sm("You recieved a " + HexColours.getShortMessage(Colour.RED, pkKey.getName())
                             + ", but it was added to your bank.");
                 }
             }
@@ -4380,16 +4379,16 @@ public class Player extends Entity {
             totalPts = Utils.random(9500, 10000);
         PKP += totalPts;
         getAdventureLog().addActivity("I have killed " + killed.getDisplayName() + " in a PvP zone.");
-        sm("You now have a killstreak of " + HexColours.getShortMessage(Colours.RED, "" + killStreak)
+        sm("You now have a killstreak of " + HexColours.getShortMessage(Colour.RED, "" + killStreak)
                 + (killStreak > 1 ? " kills." : " kill.")
-                + (killStreak > killStreakRecord ? " " + HexColours.getShortMessage(Colours.RED, "New Record!") : ""));
+                + (killStreak > killStreakRecord ? " " + HexColours.getShortMessage(Colour.RED, "New Record!") : ""));
         if (killed.killStreak >= 5)
             World.sendNewsMessage(getDisplayName() + " has ended " + killed.getDisplayName()
                             + (killed.getDisplayName().endsWith("s") ? "'" : "s") + " killstreak of " + killed.killStreak + "!",
                     false);
-        sm("You gained " + HexColours.getShortMessage(Colours.RED, "" + Utils.getFormattedNumber(totalPts, ','))
+        sm("You gained " + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(totalPts, ','))
                 + " pk points, you now have "
-                + HexColours.getShortMessage(Colours.RED, "" + Utils.getFormattedNumber(getPKP(), ','))
+                + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(getPKP(), ','))
                 + " pk points.");
         if (killStreak > killStreakRecord)
             killStreakRecord++;

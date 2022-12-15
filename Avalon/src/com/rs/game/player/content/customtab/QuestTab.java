@@ -5,7 +5,7 @@ import com.rs.game.player.content.quest.Quest;
 import com.rs.game.player.content.quest.QuestList.Quests;
 import com.rs.game.player.content.quest.State.QuestState;
 import com.rs.utils.HexColours;
-import com.rs.utils.HexColours.Colours;
+import com.rs.utils.HexColours.Colour;
 
 public class QuestTab extends CustomTab {
 	
@@ -35,7 +35,7 @@ public class QuestTab extends CustomTab {
 
 		private int compId;
 		private Quests quest;
-		private Colours state;
+		private Colour state;
 		private String text;
 
 		private QuestStore(int compId, Quests quest) {
@@ -74,11 +74,11 @@ public class QuestTab extends CustomTab {
 			this.quest = quest;
 		}
 
-		public Colours getState(Player p, Quests quest) {
-			return p.getQuestManager().get(quest).getState() == QuestState.COMPLETED ? Colours.GREEN : p.getQuestManager().get(quest).getState() == QuestState.STARTED ? Colours.YELLOW : Colours.RED;
+		public Colour getState(Player p, Quests quest) {
+			return p.getQuestManager().get(quest).getState() == QuestState.COMPLETED ? Colour.GREEN : p.getQuestManager().get(quest).getState() == QuestState.STARTED ? Colour.YELLOW : Colour.RED;
 		}
 
-		public void setState(Colours state) {
+		public void setState(Colour state) {
 			this.state = state;
 		}
 

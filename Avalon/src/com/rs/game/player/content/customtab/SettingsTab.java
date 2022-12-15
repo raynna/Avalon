@@ -3,7 +3,7 @@ package com.rs.game.player.content.customtab;
 import com.rs.game.player.Player;
 import com.rs.game.player.controlers.WildernessControler;
 import com.rs.utils.HexColours;
-import com.rs.utils.HexColours.Colours;
+import com.rs.utils.HexColours.Colour;
 import com.rs.utils.Utils;
 
 public class SettingsTab extends CustomTab {
@@ -173,7 +173,7 @@ public class SettingsTab extends CustomTab {
             @Override
             public String text(Player p) {
                 int dropValue = Integer.parseInt(p.getToggleValue(p.toggles.get("DROPVALUE")));
-                return "Valuable Drop: " + (dropValue < 1 ? HexColours.getMessage(Colours.RED, "0 - click to set") : HexColours.getMessage(Colours.GREEN, "" + Utils.getFormattedNumber(dropValue, ',') + " gp"));
+                return "Valuable Drop: " + (dropValue < 1 ? HexColours.getMessage(Colour.RED, "0 - click to set") : HexColours.getMessage(Colour.GREEN, "" + Utils.getFormattedNumber(dropValue, ',') + " gp"));
             }
         },
 

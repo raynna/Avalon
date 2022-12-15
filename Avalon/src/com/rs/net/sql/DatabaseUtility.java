@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.util.Optional;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import com.rs.Settings;
 import com.rs.game.player.Player;
 import com.rs.game.player.content.grandexchange.Offer;
 
@@ -55,6 +56,8 @@ public final class DatabaseUtility {
      * @return
      */
     public static Optional<QueryTask> sendTask(Offer offer, QueryTask task, boolean refresh) {
+        if (!Settings.sqlQueries)
+            return null;
         return task.submitTask(offer, true, refresh);
     }
 }

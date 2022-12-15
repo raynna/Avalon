@@ -6,7 +6,7 @@ import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
 import com.rs.utils.HexColours;
-import com.rs.utils.HexColours.Colours;
+import com.rs.utils.HexColours.Colour;
 import com.rs.utils.Utils;
 
 public class LavaFlowMine extends MiningBase {
@@ -58,7 +58,7 @@ public class LavaFlowMine extends MiningBase {
 			}
 			if (!hasPetRock(player) && Utils.random(10000) == 0) {
 				player.getInventory().addItem(new Item(3695, 1));
-				player.sm("<img=5><col=b25200>You have recieved a " + (HexColours.getShortMessage(Colours.RED, "Pet Rock")) + "!");
+				player.sm("<img=5><col=b25200>You have recieved a " + (HexColours.getShortMessage(Colour.RED, "Pet Rock")) + "!");
 			}
 			return true;
 		}

@@ -407,7 +407,7 @@ public class GrandExchange {
 			}
 			if (bestOffer == null) {
 				if (!UnlimitedGEReader.itemIsLimited(offer.getId()) && EconomyPrices.getPrice(offer.getId()) >= Settings.LOWPRICE_LIMIT) {
-					DatabaseUtility.sendTask(offer, new sendGEOffer(), false);
+					//DatabaseUtility.sendTask(offer, new sendGEOffer(), false);
 					//if (Settings.discordEnabled)
 					//Launcher.getDiscordBot().getChannelByName("exchange")
 						//		.sendMessage(offer.getOwner().getDisplayName() + " is now "

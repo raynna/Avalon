@@ -2,11 +2,9 @@ package com.rs.game.player;
 
 import java.io.Serializable;
 
-import com.rs.Launcher;
 import com.rs.Settings;
 import com.rs.game.World;
 import com.rs.game.npc.NPC;
-import com.rs.game.player.dialogues.LevelUp;
 import com.rs.utils.HexColours;
 import com.rs.utils.Utils;
 
@@ -626,7 +624,7 @@ public final class Skills implements Serializable {
         }
         if (milestoneLevel != -1 && oldLevel < milestoneLevel) {
             player.getPackets().sendGameMessage("You've reached at least level " + milestoneLevel + " in all skills!", false);
-            World.sendWorldMessage(HexColours.Colours.DARK_GREEN.getHex() + "<img=6>News: " + player.getDisplayName()
+            World.sendWorldMessage(HexColours.Colour.DARK_GREEN.getHex() + "<img=6>News: " + player.getDisplayName()
                     + " has just achieved at least level " + milestoneLevel + " in all skills!", false);
         }
         if (oldLevel < getLevelForXp(skill)) {
@@ -637,7 +635,7 @@ public final class Skills implements Serializable {
         if (oldLevel < 99 && getLevelForXp(skill) == 99 || oldLevel < 120 && getLevelForXp(skill) == 120) {
             player.getPackets()
                     .sendGameMessage("You've reached the highest possible level in " + getSkillName(skill) + ".");
-            World.sendWorldMessage(HexColours.Colours.ORANGE.getHex() + "<img=5>News: " + player.getDisplayName() + " has achieved level "
+            World.sendWorldMessage(HexColours.Colour.ORANGE.getHex() + "<img=5>News: " + player.getDisplayName() + " has achieved level "
                     + getLevel(skill) + " " + getSkillName(skill) + ".", false);
             if (Settings.discordEnabled) {
                 // Launcher.getDiscordBot().getChannelByName("public-chat")
@@ -653,7 +651,7 @@ public final class Skills implements Serializable {
                         .sendGameMessage("You've reached the total level of " + i + ".");
                 if (i >= 1500 && i != 2496)
                     World.sendWorldMessage(
-                            HexColours.Colours.GREEN.getHex()+"<img=5>News: " + player.getDisplayName() + " has achieved a total level of " + i + ".",
+                            HexColours.Colour.GREEN.getHex()+"<img=5>News: " + player.getDisplayName() + " has achieved a total level of " + i + ".",
                             false);
                 player.getTemporaryAttributtes().put("MILESTONE", index);
                 if (index >= 10) {
@@ -673,7 +671,7 @@ public final class Skills implements Serializable {
                 player.getPackets().sendGameMessage("You've reached the Combat level of  " + c + ".");
                 player.getTemporaryAttributtes().put("COMBATMILESTONE", index);
                 if (oldCombat - getSummoningCombatLevel() < 126 && getCombatLevel() == 126 || getCombatLevelWithSummoning() == 138)
-                    World.sendWorldMessage(HexColours.Colours.ORANGE.getHex()+"<img=5><>News: " + player.getDisplayName() + " has achieved combat level " + c + "!", false);
+                    World.sendWorldMessage(HexColours.Colour.ORANGE.getHex()+"<img=5><>News: " + player.getDisplayName() + " has achieved combat level " + c + "!", false);
             }
             index++;
         }
@@ -687,7 +685,7 @@ public final class Skills implements Serializable {
         if (maxed) {
             player.getPackets()
                     .sendGameMessage("You've reached the highest possible level in all skills.");
-            World.sendWorldMessage(HexColours.Colours.RED.getHex()+"<img=6>News: " + player.getDisplayName()
+            World.sendWorldMessage(HexColours.Colour.RED.getHex()+"<img=6>News: " + player.getDisplayName()
                     + " has just achieved at least level 99 in all skills!", false);
             if (Settings.discordEnabled) {
                 //  Launcher.getDiscordBot().getChannelByName("public-chat").sendMessage(":trophy: "
@@ -833,7 +831,7 @@ public final class Skills implements Serializable {
             if (oldExp < i && xp[skill] >= i) {
                 player.getPackets()
                         .sendGameMessage("You've reached a total xp of " + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".");
-                World.sendWorldMessage(HexColours.Colours.BLUE.getHex() + "<img=5>News: " + player.getDisplayName() + " has achieved "
+                World.sendWorldMessage(HexColours.Colour.BLUE.getHex() + "<img=5>News: " + player.getDisplayName() + " has achieved "
                         + Utils.getFormattedNumber(i, ',') + " xp in " + getSkillName(skill) + ".", false);
                 if (Settings.discordEnabled) {
                     //  Launcher.getDiscordBot().getChannelByName("public-chat")

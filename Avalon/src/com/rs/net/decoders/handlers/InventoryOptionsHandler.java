@@ -93,7 +93,7 @@ import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
 import com.rs.io.InputStream;
 import com.rs.utils.HexColours;
-import com.rs.utils.HexColours.Colours;
+import com.rs.utils.HexColours.Colour;
 import com.rs.utils.Logger;
 import com.rs.utils.Utils;
 
@@ -306,7 +306,7 @@ public class InventoryOptionsHandler {
 		if (itemId == 13663) {
 			int amount = player.getInventory().getAmountOf(itemId);
 			player.removeItem(itemId, amount);
-			player.sm(HexColours.getShortMessage(Colours.RED, amount + "") + " pk points were added to your account.");
+			player.sm(HexColours.getShortMessage(Colour.RED, amount + "") + " pk points were added to your account.");
 			player.setPKP(player.getPKP() + amount);
 			return;
 		}

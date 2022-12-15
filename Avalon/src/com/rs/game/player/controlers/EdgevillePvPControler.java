@@ -1,10 +1,8 @@
 package com.rs.game.player.controlers;
 
 import com.rs.Settings;
-import com.rs.cores.CoresManager;
 import com.rs.game.Animation;
 import com.rs.game.Entity;
-import com.rs.game.World;
 import com.rs.game.WorldTile;
 import com.rs.game.npc.NPC;
 import com.rs.game.player.Player;
@@ -14,9 +12,7 @@ import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
 import com.rs.utils.HexColours;
 import com.rs.utils.Utils;
-import com.rs.utils.HexColours.Colours;
-
-import java.util.concurrent.TimeUnit;
+import com.rs.utils.HexColours.Colour;
 
 public class EdgevillePvPControler extends Controler {
 
@@ -25,7 +21,7 @@ public class EdgevillePvPControler extends Controler {
     public static void enterPVP(Player player) {
         player.getControlerManager().startControler("EdgevillePvPControler");
         player.setNextWorldTile(TeleportStore.EDGEVILLE_PVP_INSTANCE.getTile());
-        player.sm("You " + HexColours.getShortMessage(Colours.RED, "enter") + " edgeville pvp instance.");
+        player.sm("You " + HexColours.getShortMessage(Colour.RED, "enter") + " edgeville pvp instance.");
         player.getAppearence().generateAppearenceData();
     }
 
@@ -33,7 +29,7 @@ public class EdgevillePvPControler extends Controler {
         player.getControlerManager().forceStop();
         player.setNextWorldTile(new WorldTile(Settings.HOME_PLAYER_LOCATION));
         player.getAppearence().generateAppearenceData();
-        player.sm("You " + HexColours.getShortMessage(Colours.RED, "leave") + " edgeville pvp instance.");
+        player.sm("You " + HexColours.getShortMessage(Colour.RED, "leave") + " edgeville pvp instance.");
         player.setCanPvp(false);
         player.getPackets().sendGlobalConfig(1000, 0);
         player.getAppearence().generateAppearenceData();

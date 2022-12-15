@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.rs.Launcher;
-import com.rs.Settings;
 import com.rs.cache.loaders.NPCDefinitions;
 import com.rs.game.ForceTalk;
 import com.rs.game.Graphics;
@@ -26,7 +24,7 @@ import com.rs.game.tasks.WorldTasksManager;
 import com.rs.utils.EconomyPrices;
 import com.rs.utils.HexColours;
 import com.rs.utils.Utils;
-import com.rs.utils.HexColours.Colours;
+import com.rs.utils.HexColours.Colour;
 
 public class TreasureTrailsManager implements Serializable {
 
@@ -631,10 +629,10 @@ public class TreasureTrailsManager implements Serializable {
 							+ player.getTreasureTrailCompleted().get(LEVEL[level])
 							+ " " + LEVEL[level].toLowerCase() + " treasure trails.");
 		player.sm("You have completed "
-				+ HexColours.getShortMessage(Colours.RED, "" + player.getTreasureTrailCompleted().get(LEVEL[level]))
+				+ HexColours.getShortMessage(Colour.RED, "" + player.getTreasureTrailCompleted().get(LEVEL[level]))
 				+ " " + LEVEL[level].toLowerCase() + " treasure trails.");
 		player.sm("Your treasure is worth around "
-				+ HexColours.getShortMessage(Colours.RED, Utils.getFormattedNumber(totalValue, ',') + "") + " coins!");
+				+ HexColours.getShortMessage(Colour.RED, Utils.getFormattedNumber(totalValue, ',') + "") + " coins!");
 		if (player.getTreasureTrailCompleted().get(LEVEL[level]).intValue() == 100) {
 			player.getPackets().sendGameMessage(
 					"<col=ff0000>Congratulations, you have completed a completionist cape requirement;");

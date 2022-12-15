@@ -1,30 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="120c750b-be1e-49c4-8ff0-415d3e45281b" name="Changes" comment="Fixed up icons in Wildy &amp; Pvp">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/cache/main_file_cache.dat2" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/main_file_cache.dat2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/cache/main_file_cache.idx255" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/main_file_cache.idx255" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/characters/Andreas.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/characters/Andreas.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/iplog/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/iplog/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/logs/chat/andreas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/chat/andreas.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/logs/commands/admin/andreas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/commands/admin/andreas.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/logs/yell/andreas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/yell/andreas.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javacord-2.0.17-shaded.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/game/npc/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/npc/NPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/Skills.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/Skills.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/CrystalChest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/CrystalChest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/Ironman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/Ironman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/ServerMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/ServerMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/grandexchange/GrandExchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/grandexchange/GrandExchange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/grandexchange/Offer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/grandexchange/Offer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/treasuretrails/TreasureTrailsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/treasuretrails/TreasureTrailsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/net/DiscordBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/net/DiscordBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="120c750b-be1e-49c4-8ff0-415d3e45281b" name="Changes" comment="Fixed up Examine">
+      <change beforePath="$PROJECT_DIR$/data/cache/main_file_cache.dat2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/cache/main_file_cache.idx255" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +92,13 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1670085343616</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Fixed up Examine">
+      <created>1671130906921</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1671130906921</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +117,8 @@
     <MESSAGE value="Removal of MilestoneNews from LevelUp.java due to already existing in Skills.java" />
     <MESSAGE value="Fixed issue with combatmilestone printing out all levels above combat 126, not only 126(without sum) &amp; 138(with sum)" />
     <MESSAGE value="Fixed up icons in Wildy &amp; Pvp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed up icons in Wildy &amp; Pvp" />
+    <MESSAGE value="Fixed up Examine" />
+    <MESSAGE value="lol" />
+    <option name="LAST_COMMIT_MESSAGE" value="lol" />
   </component>
 </project>
