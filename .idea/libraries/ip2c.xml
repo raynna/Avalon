@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="ip2c">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/ip2c.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/ip2c.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="netty-3.6.5.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/netty-3.6.5.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

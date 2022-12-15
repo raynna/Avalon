@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="everythingrs-api">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/everythingrs-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

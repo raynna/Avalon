@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="javacord-2.0.17-shaded">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Avalon/lib/javacord-2.0.17-shaded.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

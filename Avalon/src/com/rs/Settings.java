@@ -20,7 +20,7 @@ public final class Settings {
 	/**
 	 * Should we send SQL queries such as recent trades, etc.. to database?
 	 */
-	public static final boolean sqlQueries = true;
+	public static final boolean sqlQueries = false;
 
 	/**
 	 * Should DiscordBot be launched

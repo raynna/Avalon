@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="FileStore">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/Avalon/lib/FileStore" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
