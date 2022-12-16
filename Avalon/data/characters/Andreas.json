@@ -2794,7 +2794,7 @@
   "strongHoldSecurityFloor3": false,
   "strongHoldSecurityFloor4": false,
   "connectedClanChannel": false,
-  "lastLoggedIn": 1670239310284,
+  "lastLoggedIn": 1671187970457,
   "petManager": {
     "petDetails": {},
     "npcId": 0,
@@ -2818,7 +2818,7 @@
   "RCReport": false,
   "filter": false,
   "temporaryMovementType": -1,
-  "updateMovementType": true,
+  "updateMovementType": false,
   "hasDesign": false,
   "avalonPoints": 119114,
   "ticketstaff": "",
@@ -4182,11 +4182,11 @@
     ],
     "taskStages": {
       "null": 1,
+      "STEAL_FROM_BAKERS_STALL": 1,
+      "STEAL_FROM_GEM_STALL": 26,
       "CLAIM_WILDSTALKER_HELMET": 0,
       "STEAL_FROM_SILK_STALL": 4,
       "MINE_COPPER_AND_TIN": 21,
-      "STEAL_FROM_GEM_STALL": 26,
-      "STEAL_FROM_BAKERS_STALL": 1,
       "COMPLETE_SLAYER_TASK": 10
     }
   },
@@ -4451,7 +4451,7 @@
   },
   "squealOfFortune": {
     "version": 1,
-    "lastDailySpinsGiveaway": 1670237056334,
+    "lastDailySpinsGiveaway": 1671180657289,
     "dailySpins": 8,
     "earnedSpins": 0,
     "boughtSpins": 0,
@@ -4534,6 +4534,6 @@
     "poisonCount": 0
   },
   "x": 3074,
-  "y": 3492,
+  "y": 3490,
   "plane": 0
 }

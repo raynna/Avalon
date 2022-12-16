@@ -17,7 +17,7 @@ public class Class305 implements Interface27 {
     Hashtable aHashtable6737 = new Hashtable();
     Hashtable aHashtable6738 = new Hashtable();
 
-    public int method3743(String string) {
+	public int method3743(String string) {
 	if (this.aHashtable6737.containsKey(string))
 	    return 100;
 	String string_0_ = Class462.method5990(string, 1546651930);

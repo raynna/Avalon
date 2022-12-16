@@ -353,15 +353,12 @@ public final class Inventory implements Serializable {
 		long totalPrice = EconomyPrices.getPrice(fakeItem.getId()) * amount;
 		boolean isNoted = fakeItem.getDefinitions().isNoted();
 		boolean isStackable = fakeItem.getDefinitions().isStackable();
-		System.out.println("before is noted");
 		if (isNoted)
 			fakeItem = new Item(item.getDefinitions().getCertId(), item.getAmount());
 		if (item.getDefinitions().isMembersOnly() && Settings.FREE_TO_PLAY) {
 			player.getPackets().sendGameMessage("This is a members object.");
 			return;
 		}
-		System.out.println("after is noted");
-		player.sm("itemId: " + fakeItem.getId() + ", amount: " + fakeItem.getAmount());
 		StringBuilder builder = new StringBuilder();
 		builder.append("Price check: ");
 		if (price == 1)
@@ -369,7 +366,6 @@ public final class Inventory implements Serializable {
 		if (!ItemConstants.isTradeable(item))
 			builder.append(" is untradeable.");
 		if ((isNoted || isStackable)) {
-			System.out.println("is noted or stackable");
 			if (fakeItem.getAmount() > 1)
 				builder.append(Utils.getFormattedNumber(fakeItem.getAmount(), ',') + " x ");
 			builder.append(fakeItem.getDefinitions().getName());
@@ -392,14 +388,17 @@ public final class Inventory implements Serializable {
 		int bestSellOffer = GrandExchange.getCheapestSellPrice(fakeItem.getId());
 		builder = new StringBuilder();
 		builder.append("Grand Exchange: ");
-		builder.append("Buy Offer: " + (bestBuyOffer == 0 ? "None" : HexColours.getShortMessage(HexColours.Colour.RED, Utils.getFormattedNumber(bestBuyOffer,','))  + " coins."));
-		builder.append("Sell Offer: " + (bestSellOffer == 0 ? "None" : HexColours.getShortMessage(HexColours.Colour.RED, Utils.getFormattedNumber(bestSellOffer,','))  + " coins."));
+		if (bestBuyOffer == 0 && bestSellOffer == 0) {
+			builder.append("There is no grand exchange offers for this item.");
+		} else {
+			builder.append("Buy Offer: " + (bestBuyOffer == 0 ? (HexColours.getShortMessage(HexColours.Colour.RED, "None") + ", ") : HexColours.getShortMessage(HexColours.Colour.GREEN, Utils.getFormattedNumber(bestBuyOffer, ',')) + " coins. "));
+			builder.append("Sell Offer: " + (bestSellOffer == 0 ? (HexColours.getShortMessage(HexColours.Colour.RED, "None") + ", ") : HexColours.getShortMessage(HexColours.Colour.GREEN, Utils.getFormattedNumber(bestSellOffer, ',')) + " coins."));
+		}
 		player.sm(builder.toString());
 
 
 		builder = new StringBuilder();
 		builder.append("Description: " + ItemExamines.getExamine(fakeItem));
-		System.out.println(builder.toString());
 		player.sm(builder.toString());
 	}
 

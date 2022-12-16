@@ -11,7 +11,7 @@ public class InterfaceRemover {
 	private static int INTERFACE_TO_REMOVE = 320;
 
 	public static void main(String[] args) throws ClassNotFoundException, IOException {
-		CacheLibrary library = new CacheLibrary("C:/Users/andre/Documents/GitHub/avalon/Avalon - Server/data/cache/");
+		CacheLibrary library = new CacheLibrary("data/cache/");
 		Archive toRemove = library.getIndex(3).getArchive(INTERFACE_TO_REMOVE);
 		System.out.println("Removed archive: " + INTERFACE_TO_REMOVE + " containing...");
 		for (File files : toRemove.getFiles()) {

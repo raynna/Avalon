@@ -19,7 +19,7 @@ public final class CityEventHandler {
             .getCanonicalName());
 
     public static final boolean registerCitys() {
-        for (File file : (Settings.VPS_HOSTED ? new File("C:/Users/Administrator/Dropbox/1. Avalon/src/com/game/cityhandlers/impl/") : new File("./src/com/rs/game/cityhandler/impl/")).listFiles()) {
+        for (File file : (Settings.VPS_HOSTED ? new File("src/com/game/cityhandlers/impl/") : new File("src/com/rs/game/cityhandler/impl/")).listFiles()) {
             try {
 				if (!((CityEvent) Class.forName("com.rs.game.cityhandler.impl."+ file.getName().replace(".java", "")).newInstance()).init()) {
 				    return false;

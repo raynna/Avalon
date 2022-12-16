@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 public class WeaponTypesLoader {
 	
-	private static final String PATH = "./data/items/weapons.dat";
+	private static final String PATH = "data/items/weapons.dat";
 	private static WeaponType DEFAULT_WEAPON_DEFINITION = new WeaponType(0, 0);
 
 	private final static HashMap<Integer, WeaponType> weaponDefs = new HashMap<Integer, WeaponType>();

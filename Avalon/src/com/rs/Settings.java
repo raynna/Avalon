@@ -44,7 +44,7 @@ public final class Settings {
 	public static final String FORMAL_SERVER_NAME = "Avalon";
 	public static final String HELP_CC_NAME = "help";
 	public static final String LASTEST_UPDATE = "";
-	public static final String CACHE_PATH = "C:/Users/Andreas/Documents/GitHub/Avalon/Avalon/data/cache";
+	public static final String CACHE_PATH = "data/cache/";
 	public static final int RECEIVE_DATA_LIMIT = 7500;
 	public static final int PACKET_SIZE_LIMIT = 7500;
 	public static final int CLIENT_BUILD = 718;

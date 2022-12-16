@@ -1,44 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="120c750b-be1e-49c4-8ff0-415d3e45281b" name="Changes" comment="Fixed up Examine">
-      <change beforePath="$PROJECT_DIR$/data/cache/main_file_cache.dat2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/cache/main_file_cache.idx255" beforeDir="false" />
+    <list default="true" id="a08881de-7812-4170-b954-a1fd47c840d7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/clientlibs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/apache_log4j_2_13_1_bin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/apache_log4j_2_13_1_bin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/libs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avalon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Avalon.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/cache/main_file_cache.dat2" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/main_file_cache.dat2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/cache/main_file_cache.idx255" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/main_file_cache.idx255" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/characters/Andreas.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/characters/Andreas.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/iplog/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/iplog/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/logs/commands/admin/andreas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/commands/admin/andreas.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/cityhandler/CityEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/cityhandler/CityEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/tools/InterfaceRemover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/tools/InterfaceRemover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/tools/InterfaceReplacer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/tools/InterfaceReplacer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/utils/WeaponTypesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/utils/WeaponTypesLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/.idea/libraries/libs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/libraries/libs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/candy_bar_back.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/candy_bar_end.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/candy_bar_middle.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/candy_bar_outline_bottom.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/candy_bar_outline_left.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/candy_bar_outline_right.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/candy_bar_outline_top.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/client_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/forum.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/framespersecond.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/ghostBg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/ghostBg1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/ghostBg2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/hiscore.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/information.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/loadbar_body_fill.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/loadbar_body_left.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/loadbar_body_right.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/screenshot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/store.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/vote.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/Class305.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/Class305.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2IPNNHzr1KuHuUBrV65jwCXByuT" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2Iy21Hufnu6YudU6xlWnK90dAEh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/javacord-2.0.17-shaded.jar" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="advanced.settings" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.rs.Launcher" />
@@ -62,63 +105,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="120c750b-be1e-49c4-8ff0-415d3e45281b" name="Changes" comment="" />
-      <created>1670079218171</created>
+      <changelist id="a08881de-7812-4170-b954-a1fd47c840d7" name="Changes" comment="" />
+      <created>1671139288837</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1670079218171</updated>
+      <updated>1671139288837</updated>
     </task>
-    <task id="LOCAL−00001" summary="Change of Experience milestone handling">
-      <created>1670083054978</created>
-      <option name="number" value="LOCAL−00001" />
-      <option name="presentableId" value="LOCAL−00001" />
-      <updated>1670083054978</updated>
-    </task>
-    <task id="LOCAL−00002" summary="Removal of MilestoneNews from LevelUp.java due to already existing in Skills.java">
-      <created>1670083344083</created>
-      <option name="number" value="LOCAL−00002" />
-      <option name="presentableId" value="LOCAL−00002" />
-      <updated>1670083344083</updated>
-    </task>
-    <task id="LOCAL−00003" summary="Fixed issue with combatmilestone printing out all levels above combat 126, not only 126(without sum) &amp; 138(with sum)">
-      <created>1670083845947</created>
-      <option name="number" value="LOCAL−00003" />
-      <option name="presentableId" value="LOCAL−00003" />
-      <updated>1670083845947</updated>
-    </task>
-    <task id="LOCAL−00004" summary="Fixed up icons in Wildy &amp; Pvp">
-      <created>1670085343616</created>
-      <option name="number" value="LOCAL−00004" />
-      <option name="presentableId" value="LOCAL−00004" />
-      <updated>1670085343616</updated>
-    </task>
-    <task id="LOCAL−00005" summary="Fixed up Examine">
-      <created>1671130906921</created>
-      <option name="number" value="LOCAL−00005" />
-      <option name="presentableId" value="LOCAL−00005" />
-      <updated>1671130906921</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change of Experience milestone handling" />
-    <MESSAGE value="Removal of MilestoneNews from LevelUp.java due to already existing in Skills.java" />
-    <MESSAGE value="Fixed issue with combatmilestone printing out all levels above combat 126, not only 126(without sum) &amp; 138(with sum)" />
-    <MESSAGE value="Fixed up icons in Wildy &amp; Pvp" />
-    <MESSAGE value="Fixed up Examine" />
-    <MESSAGE value="lol" />
-    <option name="LAST_COMMIT_MESSAGE" value="lol" />
   </component>
 </project>
