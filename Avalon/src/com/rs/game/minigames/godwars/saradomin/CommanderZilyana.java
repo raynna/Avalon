@@ -71,7 +71,6 @@ public class CommanderZilyana extends NPC {
 						if (controler != null && controler instanceof GodWars) {
 							GodWars godControler = (GodWars) controler;
 							godControler.incrementKillCount(1);
-							System.out.println("added");
 						}
 					}
 						drop();

@@ -247,3 +247,21 @@
 [16 December 2022 at 10:48:10 CET] - ::clearchat 
 [16 December 2022 at 10:50:09 CET] - ::clearchat 
 [16 December 2022 at 10:50:10 CET] - ::clearchat 
+[16 December 2022 at 07:23:16 CET] - ::clearchat 
+[16 December 2022 at 07:23:17 CET] - ::clearchat 
+[16 December 2022 at 07:23:17 CET] - ::clearchat 
+[16 December 2022 at 07:23:17 CET] - ::clearchat 
+[16 December 2022 at 07:24:12 CET] - ::clearchat 
+[16 December 2022 at 07:24:13 CET] - ::clearchat 
+[16 December 2022 at 07:24:13 CET] - ::clearchat 
+[16 December 2022 at 07:41:54 CET] - ::inters 3037
+[16 December 2022 at 07:41:57 CET] - ::inters 3037
+[16 December 2022 at 07:42:36 CET] - ::npc 75
+[16 December 2022 at 07:58:30 CET] - ::npc 75
+[16 December 2022 at 07:59:37 CET] - ::npc 75
+[16 December 2022 at 08:40:31 CET] - ::npc 75
+[16 December 2022 at 08:40:48 CET] - ::npc 50
+[16 December 2022 at 08:40:48 CET] - ::god 
+[16 December 2022 at 08:45:57 CET] - ::god 
+[16 December 2022 at 08:45:58 CET] - ::npc 50
+[16 December 2022 at 08:45:58 CET] - ::god 

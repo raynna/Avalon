@@ -84,6 +84,42 @@ public class PlayerCombat extends Action {
         return player.getInterfaceManager().isResizableScreen() ? 1 : 30;
     }
 
+    public void checkCombatLevel(Player player, Entity target) {
+        if (target instanceof NPC) {
+            NPC npc = (NPC) target;
+            int level = player.isAtWild() ? player.getSkills().getCombatLevel() : player.getSkills().getCombatLevelWithSummoning();
+            int targetLevel = npc.getCombatLevel();
+            player.getPackets().sendHideIComponent(3037, 8, npc.getCombatLevel() == 0);
+            player.getPackets().sendHideIComponent(3037, 9, npc.getCombatLevel() == 0);
+            StringBuilder builder = new StringBuilder();
+            if (targetLevel > level)
+                builder.append("<col=ff5331>");
+            if (targetLevel == level)
+                builder.append("<col=FFC428>");
+            if (targetLevel < level)
+                builder.append("<col=00b427");
+            builder.append("Level: " + targetLevel);
+            player.sm("Update combat level: " + targetLevel);
+            player.getPackets().sendIComponentText(3037, 9, builder.toString());
+        } else {
+            Player p2 = (Player) target;
+            int level = player.isAtWild() ? player.getSkills().getCombatLevel() : player.getSkills().getCombatLevelWithSummoning();
+            int targetLevel = p2.getSkills().getCombatLevel();
+            player.getPackets().sendHideIComponent(3037, 8, false);
+            player.getPackets().sendHideIComponent(3037, 9, false);
+            StringBuilder builder = new StringBuilder();
+            if (targetLevel > level)
+                builder.append("<col=ff5331>");
+            if (targetLevel == level)
+                builder.append("<col=FFC428>");
+            if (targetLevel < level)
+                builder.append("<col=00b427");
+            builder.append("Level: ");
+            builder.append((player.isAtWild() || player.isAtPvP() ? targetLevel + " + " + p2.getSkills().getSummoningCombatLevel() : p2.getSkills().getCombatLevelWithSummoning()));
+            player.getPackets().sendIComponentText(3037, 9, builder.toString());
+        }
+    }
+
     @Override
     public boolean start(Player player) {
         if (player == null)
@@ -93,6 +129,7 @@ public class PlayerCombat extends Action {
         player.setNextFaceEntity(target);
         player.setTemporaryTarget(target);
         player.getTemporaryAttributtes().put("temporaryActionDelay", 4 * 1000 + Utils.currentTimeMillis());
+        checkCombatLevel(player, target);
         if (player.toggles("HEALTHBAR", false)
                 && (!player.getInterfaceManager().containsTab(getHealthOverlayId(player)))) {
             player.getInterfaceManager().sendTab(getHealthOverlayId(player), 3037);
@@ -110,12 +147,7 @@ public class PlayerCombat extends Action {
             Player p2 = (Player) target;
             Player p1 = (Player) player;
             p1.getPackets().sendIComponentText(3037, 6, p2.getDisplayName());
-            int combat = p1.isAtWild() ? p1.getSkills().getCombatLevel() : p1.getSkills().getCombatLevelWithSummoning();
-            int targetCombat = p2.isAtWild() ? p2.getSkills().getCombatLevel()
-                    : p2.getSkills().getCombatLevelWithSummoning();
-            String level = (targetCombat > combat ? "<col=ff5331>"
-                    : targetCombat == combat ? "<col=FFC428>" : "<col=00b427>") + targetCombat;
-            p1.getPackets().sendIComponentText(3037, 9, "Level: " + level);
+            checkCombatLevel(p1, p2);
             p1.getPackets().sendIComponentText(3037, 7,
                     (p1.toggles("ONEXHITS", false) ? p2.getHitpoints() / 10 + "/" + p2.getMaxHitpoints() / 10
                             : p2.getHitpoints() + "/" + p2.getMaxHitpoints()));
@@ -125,11 +157,7 @@ public class PlayerCombat extends Action {
             NPC npc = (NPC) target;
             Player p1 = (Player) player;
             p1.getPackets().sendIComponentText(3037, 6, npc.getName());
-            int combat = p1.isAtWild() ? p1.getSkills().getCombatLevel() : p1.getSkills().getCombatLevelWithSummoning();
-            int targetCombat = npc.getCombatLevel();
-            String level = (targetCombat > combat ? "<col=ff5331>"
-                    : targetCombat == combat ? "<col=FFC428>" : "<col=00b427>") + targetCombat;
-            p1.getPackets().sendIComponentText(3037, 9, "Level: " + level);
+            checkCombatLevel(p1, npc);
             p1.getPackets().sendIComponentText(3037, 7,
                     (p1.toggles("ONEXHITS", false) ? npc.getHitpoints() / 10 + "/" + npc.getMaxHitpoints() / 10
                             : npc.getHitpoints() + "/" + npc.getMaxHitpoints()));
@@ -2439,7 +2467,6 @@ public class PlayerCombat extends Action {
                 int oldMaxHit = maxHit;
                 maxHit *= NpcDamageBoost.getMultiplier(player, n, NpcDamageBoost.Style.MELEE);
                 int newMaxHit = maxHit;
-                System.out.println("Old MaxHit: " + oldMaxHit + " - new MaxHit: " + newMaxHit);
             }
             maxHit *= PlayerDamageBoost.getMultiplier(player);
             int style = player.getCombatDefinitions().getStyle(weaponId, attackStyle);
@@ -2475,7 +2502,6 @@ public class PlayerCombat extends Action {
                 int oldMaxHit = maxHit;
                 maxHit *= NpcDamageBoost.getMultiplier(player, n, NpcDamageBoost.Style.RANGE);
                 int newMaxHit = maxHit;
-                System.out.println("Old MaxHit: " + oldMaxHit + " - new MaxHit: " + newMaxHit);
             }
             if (player.getCombatDefinitions().getStyle(weaponId, attackStyle) == CombatDefinitions.ACCURATE)
                 maxHit += 3;

@@ -23,7 +23,7 @@ public class Iterate {
 			if (files == null) {
 			if (DEBUG)
 				Logger.log("","Failed class iterate - No files exist.");
-				return;// here u had return this is correct oh didnt see == null, only saw debug boolean lol
+				return;
 			}
 			for (File f : files) {
 				if (f == null || !f.getName().endsWith("class")) {
@@ -31,8 +31,8 @@ public class Iterate {
 						Logger.log("","Failed class iterate stage 0.");
 					continue;
 				}
-				final String packagePath = f.getPath().replace("\\", ".").replace("bin/", "");
-				final Class<?> c = Class.forName(packagePath.substring(0, packagePath.length() - 6).replace('/', '.').replace("bin.", ""));
+				final String packagePath = f.getPath().replace("\\", ".").replace("out/", "").replace("production/.", "").replace("Avalon/.", "");
+				final Class<?> c = Class.forName(packagePath.substring(0, packagePath.length() - 6).replace('/', '.').replace("out.", "").replace("production.", "").replace("Avalon.", ""));
 				if (c == null || c.isAnonymousClass()) {
 					if (DEBUG)
 						Logger.log("","Failed class iterate stage 1.");

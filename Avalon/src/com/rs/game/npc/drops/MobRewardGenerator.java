@@ -21,7 +21,7 @@ public final class MobRewardGenerator {
 	/**
 	 * The path of the drop table.
 	 */
-	private static final String DROP_TABLE_PATH = "bin/com/rs/game/npc/drops/droptable";
+	private static final String DROP_TABLE_PATH = "out/production/Avalon/com/rs/game/npc/drops/droptable";
 
 	/**
 	 * The logger for this specific class.

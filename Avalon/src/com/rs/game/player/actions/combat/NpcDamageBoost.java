@@ -95,24 +95,17 @@ public class NpcDamageBoost extends PlayerCombat{
                 continue;
                 if (equipment.getId() == items.getItemId()) {
                         equippedItem = items;
-                        System.out.println("Equipped item is valid: " + items.name() + ", id: " + items.getItemId());
                         continue;
                 }
             }
         }
-        if (equippedItem == null)
-            System.out.println("No valid item equipped.");
           BoostEquipment equipment = BoostEquipment.getBoost(equippedItem == null ? -1 : equippedItem.getItemId());
-        if (equipment != null) {
-                System.out.println("Has " + equipment.getStyle() + " equipment boost of " + equipment.getBoost() * 100 + "% against " + equipment.getType());
-            }
         for (String string : Settings.UNDEAD_NPCS) {
             if (target.getDefinitions().getName().toLowerCase().contains(string)) {
                 undead = true;
             }
         }
         if (equipment != null) {
-            System.out.println("Currently using " + style + " style for item " + equipment.name() + " who has " + equipment.getStyle() + " type.");
             if (style == equipment.getStyle() || (equipment.getStyle() == Style.HYBRID)) {
                 if (maxHitDummy) {
                     multiplier += equipment.getBoost();

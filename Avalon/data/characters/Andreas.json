@@ -67,7 +67,7 @@
         },
         {
           "id": 995,
-          "amount": 9445000
+          "amount": 9445295
         },
         {
           "id": 6570,
@@ -77,16 +77,46 @@
           "id": 6585,
           "amount": 1
         },
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        {
+          "id": 526,
+          "amount": 1
+        },
+        {
+          "id": 202,
+          "amount": 3
+        },
+        {
+          "id": 526,
+          "amount": 1
+        },
+        {
+          "id": 18778,
+          "amount": 1
+        },
+        {
+          "id": 884,
+          "amount": 690
+        },
+        {
+          "id": 1731,
+          "amount": 1
+        },
+        {
+          "id": 1747,
+          "amount": 1
+        },
+        {
+          "id": 1747,
+          "amount": 1
+        },
+        {
+          "id": 536,
+          "amount": 1
+        },
+        {
+          "id": 12160,
+          "amount": 4
+        },
         null,
         null,
         null,
@@ -656,11 +686,11 @@
       1
     ],
     "xp": [
-      1.3107551E7,
+      1.6161071E7,
       1.3034431E7,
       1.3034431E7,
-      1.33070544E7,
-      1.3781551E7,
+      1.4751726999999993E7,
+      1.5086511E7,
       1.3034431E7,
       1.3034431E7,
       1.3034431E7,
@@ -683,7 +713,7 @@
       0.0
     ],
     "xpTracks": [
-      1.0480274535939995E9,
+      1.053830606194E9,
       0.0,
       0.0
     ],
@@ -1430,7 +1460,7 @@
     ]
   },
   "combatDefinitions": {
-    "attackStyle": 0,
+    "attackStyle": 1,
     "specialAttackPercentage": 100,
     "autoRetaliate": false,
     "sortSpellBook": 1,
@@ -2678,7 +2708,7 @@
   ],
   "bossKillcount": {
     "Dagannoth Supreme": 1,
-    "King Black Dragon": 2
+    "King Black Dragon": 4
   },
   "treasureTrailCount": {
     "Elite": 814
@@ -2820,7 +2850,7 @@
   "temporaryMovementType": -1,
   "updateMovementType": false,
   "hasDesign": false,
-  "avalonPoints": 119114,
+  "avalonPoints": 121322,
   "ticketstaff": "",
   "ticketsender": "",
   "isRequestingChat": false,
@@ -4182,12 +4212,12 @@
     ],
     "taskStages": {
       "null": 1,
-      "STEAL_FROM_BAKERS_STALL": 1,
-      "STEAL_FROM_GEM_STALL": 26,
       "CLAIM_WILDSTALKER_HELMET": 0,
       "STEAL_FROM_SILK_STALL": 4,
       "MINE_COPPER_AND_TIN": 21,
-      "COMPLETE_SLAYER_TASK": 10
+      "COMPLETE_SLAYER_TASK": 10,
+      "STEAL_FROM_BAKERS_STALL": 1,
+      "STEAL_FROM_GEM_STALL": 26
     }
   },
   "geManager": {
@@ -4399,7 +4429,7 @@
   "hasEfficiency": false,
   "oldItemsLook": true,
   "developerMode": false,
-  "pouchMoney": 118792,
+  "pouchMoney": 119087,
   "warriorPoints": [
     0.0,
     0.0,
@@ -4408,7 +4438,7 @@
     0.0,
     0.0
   ],
-  "weight": 33.8,
+  "weight": 43.5,
   "lividFarm": {
     "produce": 0,
     "spellAmount": 0,
@@ -4464,7 +4494,7 @@
   },
   "treasureTrailsManager": {},
   "spokenWithGiles": false,
-  "lastMessage": "example 2:",
+  "lastMessage": "l",
   "claimBox": false,
   "combatDelay": 0,
   "pyramidReward": false,
@@ -4525,7 +4555,7 @@
   },
   "lavaflowCrustsMined": 0,
   "isTeleporting": false,
-  "hitpoints": 990,
+  "hitpoints": 375,
   "pid": 0,
   "mapSize": 0,
   "run": true,
@@ -4533,7 +4563,7 @@
     "poisonDamage": 0,
     "poisonCount": 0
   },
-  "x": 3074,
-  "y": 3490,
+  "x": 3087,
+  "y": 3496,
   "plane": 0
 }

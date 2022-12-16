@@ -347,59 +347,76 @@ public final class Inventory implements Serializable {
 		Item item = items.get(slotId);
 		if (item == null)
 			return;
-		Item fakeItem = item;
-		long price = EconomyPrices.getPrice(fakeItem.getId());
-		long amount = fakeItem.getAmount();
-		long totalPrice = EconomyPrices.getPrice(fakeItem.getId()) * amount;
-		boolean isNoted = fakeItem.getDefinitions().isNoted();
-		boolean isStackable = fakeItem.getDefinitions().isStackable();
+		long price = EconomyPrices.getPrice(item.getId());
+		long amount = item.getAmount();
+		long totalPrice = EconomyPrices.getPrice(item.getId()) * amount;
+		boolean isNoted = item.getDefinitions().isNoted();
+		boolean isStackable = item.getDefinitions().isStackable();
+		boolean isTradeable = ItemConstants.isTradeable(item);
+		boolean isFree = price == 1;
 		if (isNoted)
-			fakeItem = new Item(item.getDefinitions().getCertId(), item.getAmount());
+			item = new Item(item.getDefinitions().getCertId(), item.getAmount());
 		if (item.getDefinitions().isMembersOnly() && Settings.FREE_TO_PLAY) {
 			player.getPackets().sendGameMessage("This is a members object.");
 			return;
 		}
 		StringBuilder builder = new StringBuilder();
 		builder.append("Price check: ");
-		if (price == 1)
-			builder.append(" is free.");
-		if (!ItemConstants.isTradeable(item))
-			builder.append(" is untradeable.");
-		if ((isNoted || isStackable)) {
-			if (fakeItem.getAmount() > 1)
-				builder.append(Utils.getFormattedNumber(fakeItem.getAmount(), ',') + " x ");
-			builder.append(fakeItem.getDefinitions().getName());
-			builder.append(": " + HexColours.getShortMessage(HexColours.Colour.RED, Utils.formatMillionAmount(totalPrice)) + " coins.");
-			if (fakeItem.getAmount() > 1)
-				builder.append(" (" + HexColours.getShortMessage(HexColours.Colour.RED, Utils.getFormattedNumber(EconomyPrices.getPrice(fakeItem.getId()), ','))
-						+ " coins each)");
-		} else {
-			builder.append(item.getDefinitions().getName());
-			builder.append(": " + HexColours.getShortMessage(HexColours.Colour.RED, Utils.formatMillionAmount(totalPrice)) + " coins.");
+		if (!isTradeable) {
+			builder.append(item.getDefinitions().getName() + " is untradeable.");
+		}
+		if (isFree) {
+			builder.append(item.getDefinitions().getName() + " has no cost.");
+		}
+		if (isTradeable && !isFree) {
+			if ((isNoted || isStackable)) {
+				if (item.getAmount() > 1)
+					builder.append(Utils.getFormattedNumber(item.getAmount(), ',') + " x ");
+				builder.append(item.getDefinitions().getName());
+				builder.append(": " + HexColours.getShortMessage(HexColours.Colour.RED, Utils.formatMillionAmount(totalPrice)) + " coins.");
+				if (item.getAmount() > 1)
+					builder.append(" (" + HexColours.getShortMessage(HexColours.Colour.RED, Utils.getFormattedNumber(EconomyPrices.getPrice(item.getId()), ','))
+							+ " coins each)");
+			} else {
+				builder.append(item.getDefinitions().getName());
+				builder.append(": " + HexColours.getShortMessage(HexColours.Colour.RED, Utils.formatMillionAmount(totalPrice)) + " coins.");
+			}
 		}
 		player.sm(builder.toString());
-
+		/*
+		new ChatLine
+		 */
 		builder = new StringBuilder();
-		builder.append("High Alch: " + HexColours.getShortMessage(HexColours.Colour.RED, Utils.getFormattedNumber(fakeItem.getDefinitions().getHighAlchPrice(), ',')) + " coins, ");
-		builder.append("Low Alch: " + HexColours.getShortMessage(HexColours.Colour.RED, Utils.getFormattedNumber(fakeItem.getDefinitions().getLowAlchPrice(), ',')) + " coins.");
+		builder.append("High Alch: " + HexColours.getShortMessage(HexColours.Colour.RED, Utils.getFormattedNumber(item.getDefinitions().getHighAlchPrice(), ',')) + " coins, ");
+		builder.append("Low Alch: " + HexColours.getShortMessage(HexColours.Colour.RED, Utils.getFormattedNumber(item.getDefinitions().getLowAlchPrice(), ',')) + " coins.");
 		player.sm(builder.toString());
-
-		int bestBuyOffer = GrandExchange.getBestBuyPrice(fakeItem.getId());
-		int bestSellOffer = GrandExchange.getCheapestSellPrice(fakeItem.getId());
-		builder = new StringBuilder();
-		builder.append("Grand Exchange: ");
-		if (bestBuyOffer == 0 && bestSellOffer == 0) {
-			builder.append("There is no grand exchange offers for this item.");
-		} else {
-			builder.append("Buy Offer: " + (bestBuyOffer == 0 ? (HexColours.getShortMessage(HexColours.Colour.RED, "None") + ", ") : HexColours.getShortMessage(HexColours.Colour.GREEN, Utils.getFormattedNumber(bestBuyOffer, ',')) + " coins. "));
-			builder.append("Sell Offer: " + (bestSellOffer == 0 ? (HexColours.getShortMessage(HexColours.Colour.RED, "None") + ", ") : HexColours.getShortMessage(HexColours.Colour.GREEN, Utils.getFormattedNumber(bestSellOffer, ',')) + " coins."));
+		/*
+		new ChatLine
+		 */
+		if (isTradeable && !isFree) {
+			int bestBuyOffer = GrandExchange.getBestBuyPrice(item.getId());
+			int bestSellOffer = GrandExchange.getCheapestSellPrice(item.getId());
+			builder = new StringBuilder();
+			builder.append("Grand Exchange: ");
+			if (bestBuyOffer == 0 && bestSellOffer == 0) {
+				builder.append("There is no grand exchange offers for this item.");
+			} else {
+				builder.append("Buy Offer: " + (bestBuyOffer == 0 ? (HexColours.getShortMessage(HexColours.Colour.RED, "None") + ", ") : HexColours.getShortMessage(HexColours.Colour.GREEN, Utils.getFormattedNumber(bestBuyOffer, ',')) + " coins. "));
+				builder.append("Sell Offer: " + (bestSellOffer == 0 ? (HexColours.getShortMessage(HexColours.Colour.RED, "None") + ", ") : HexColours.getShortMessage(HexColours.Colour.GREEN, Utils.getFormattedNumber(bestSellOffer, ',')) + " coins."));
+			}
+			player.sm(builder.toString());
 		}
-		player.sm(builder.toString());
-
-
+		/*
+		new ChatLine
+		 */
 		builder = new StringBuilder();
-		builder.append("Description: " + ItemExamines.getExamine(fakeItem));
+		builder.append("Description: " + ItemExamines.getExamine(item));
 		player.sm(builder.toString());
+		if (player.isDeveloperMode()) {
+			builder = new StringBuilder();
+			builder.append("FileId: " + item.getDefinitions().getFileId() + ", ArchiveId: " + item.getDefinitions().getArchiveId());
+			player.sm(builder.toString());
+		}
 	}
 
 	public void refresh() {
