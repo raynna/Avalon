@@ -40,8 +40,6 @@ public class ItemExamines {
 	}
 
 	public static final String getExamine(Item item) {
-		if (item.getAmount() >= 100000)
-			return Utils.getFormattedNumber(item.getAmount(), ',') + " x " + item.getDefinitions().getName() + ".";
 		if (item.getDefinitions().isNoted())
 			return "Swamp this note at any bank for the equivalent item.";
 		String examine = itemExamines.get(item.getId());
@@ -79,7 +77,7 @@ public class ItemExamines {
 				String[] splitedLine = line.split(" - ", 2);
 				if (splitedLine.length < 2)
 					throw new RuntimeException("Invalid list for item examine line: " + line);
-				int itemId = Integer.valueOf(splitedLine[0]);
+				int itemId = Integer.parseInt(splitedLine[0]);
 				if (splitedLine[1].length() > 255)
 					continue;
 				out.writeShort(itemId);
