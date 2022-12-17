@@ -1,5 +1,6 @@
 package com.rs.game.player.actions.combat;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -42,6 +43,7 @@ import com.rs.game.player.controlers.WildernessControler;
 import com.rs.game.player.controlers.pestcontrol.PestControlGame;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
+import com.rs.utils.HexColours;
 import com.rs.utils.Logger;
 import com.rs.utils.MapAreas;
 import com.rs.utils.Utils;
@@ -92,14 +94,14 @@ public class PlayerCombat extends Action {
             player.getPackets().sendHideIComponent(3037, 8, npc.getCombatLevel() == 0);
             player.getPackets().sendHideIComponent(3037, 9, npc.getCombatLevel() == 0);
             StringBuilder builder = new StringBuilder();
-            if (targetLevel > level)
-                builder.append("<col=ff5331>");
-            if (targetLevel == level)
-                builder.append("<col=FFC428>");
-            if (targetLevel < level)
-                builder.append("<col=00b427");
-            builder.append("Level: " + targetLevel);
-            player.sm("Update combat level: " + targetLevel);
+            builder.append("Level: ");
+            if (level > targetLevel)
+                builder.append(HexColours.Colour.GREEN.getHex());
+            if (level == targetLevel)
+                builder.append(HexColours.Colour.YELLOW.getHex());
+            if (level < targetLevel)
+                builder.append(HexColours.Colour.RED.getHex());
+            builder.append(targetLevel);
             player.getPackets().sendIComponentText(3037, 9, builder.toString());
         } else {
             Player p2 = (Player) target;
@@ -108,14 +110,14 @@ public class PlayerCombat extends Action {
             player.getPackets().sendHideIComponent(3037, 8, false);
             player.getPackets().sendHideIComponent(3037, 9, false);
             StringBuilder builder = new StringBuilder();
-            if (targetLevel > level)
-                builder.append("<col=ff5331>");
-            if (targetLevel == level)
-                builder.append("<col=FFC428>");
-            if (targetLevel < level)
-                builder.append("<col=00b427");
-            builder.append("Level: ");
-            builder.append((player.isAtWild() || player.isAtPvP() ? targetLevel + " + " + p2.getSkills().getSummoningCombatLevel() : p2.getSkills().getCombatLevelWithSummoning()));
+            builder.append("Lvl: ");
+            if (level > targetLevel)
+                builder.append(HexColours.Colour.GREEN.getHex());
+            if (level == targetLevel)
+                builder.append(HexColours.Colour.YELLOW.getHex());
+            if (level < targetLevel)
+                builder.append(HexColours.Colour.RED.getHex());
+            builder.append((player.isAtWild() || player.isAtPvP() ? targetLevel + "+" + p2.getSkills().getSummoningCombatLevel() : p2.getSkills().getCombatLevelWithSummoning()));
             player.getPackets().sendIComponentText(3037, 9, builder.toString());
         }
     }
@@ -130,10 +132,12 @@ public class PlayerCombat extends Action {
         player.setTemporaryTarget(target);
         player.getTemporaryAttributtes().put("temporaryActionDelay", 4 * 1000 + Utils.currentTimeMillis());
         checkCombatLevel(player, target);
+        updateHealthOverlay(player, target);
         if (player.toggles("HEALTHBAR", false)
                 && (!player.getInterfaceManager().containsTab(getHealthOverlayId(player)))) {
             player.getInterfaceManager().sendTab(getHealthOverlayId(player), 3037);
-            updateHealthOverlay(player, target);
+            final int pixels = (int) ((double) target.getHitpoints() / target.getMaxHitpoints() * 126D);
+            player.getPackets().sendRunScript(6252, pixels);
         }
         if (checkAll(player)) {
             return true;
@@ -146,13 +150,15 @@ public class PlayerCombat extends Action {
         if (target instanceof Player) {
             Player p2 = (Player) target;
             Player p1 = (Player) player;
-            p1.getPackets().sendIComponentText(3037, 6, p2.getDisplayName());
             checkCombatLevel(p1, p2);
+            StringBuilder name = new StringBuilder();
+            if (p2.getAppearence().getTitle() != -1)
+                name.append(p2.getAppearence().getTitleName());
+            name.append(p2.getDisplayName());
+            p1.getPackets().sendIComponentText(3037, 6, name.toString());
             p1.getPackets().sendIComponentText(3037, 7,
                     (p1.toggles("ONEXHITS", false) ? p2.getHitpoints() / 10 + "/" + p2.getMaxHitpoints() / 10
                             : p2.getHitpoints() + "/" + p2.getMaxHitpoints()));
-            final int pixels = (int) ((double) p2.getHitpoints() / p2.getMaxHitpoints() * 126D);
-            p1.getPackets().sendRunScript(6252, pixels);
         } else {
             NPC npc = (NPC) target;
             Player p1 = (Player) player;
@@ -161,8 +167,6 @@ public class PlayerCombat extends Action {
             p1.getPackets().sendIComponentText(3037, 7,
                     (p1.toggles("ONEXHITS", false) ? npc.getHitpoints() / 10 + "/" + npc.getMaxHitpoints() / 10
                             : npc.getHitpoints() + "/" + npc.getMaxHitpoints()));
-            final int pixels = (int) ((double) npc.getHitpoints() / npc.getMaxHitpoints() * 126D);
-            p1.getPackets().sendRunScript(6252, pixels);
         }
     }
 
@@ -2367,20 +2371,35 @@ public class PlayerCombat extends Action {
                     D = Math.round(defence);
                 }
             }
+            double prob;
+            double random = Utils.getRandomDouble(100);
             if (ranging) {
-                double prob = R / RD;
-                double random = Utils.getRandomDouble(100);
+                prob = R / RD;
                 if (R < RD) {
                     prob = (R - 1) / (RD * 2);
                 } else if (R >= RD) {
                     prob = 1 - (RD + 1) / (R * 2);
                 }
+                if (Settings.DEBUG) {
+                    double percent = prob * 100;
+                    boolean success = prob > random / 100;
+                    StringBuilder builder = new StringBuilder();
+                    builder.append("Chance to hit: ");
+                    builder.append(new DecimalFormat("##.00").format(percent) + "%, ");
+                    builder.append("Roll: ");
+                    builder.append(new DecimalFormat("##.00").format(random) + "%");
+                    builder.append(" - Hit: ");
+                    if (success)
+                        builder.append(HexColours.getShortMessage(HexColours.Colour.GREEN, "Success!"));
+                    else
+                        builder.append(HexColours.getShortMessage(HexColours.Colour.RED, "Failed!"));
+                    player.getPackets().sendGameMessage(builder.toString());
+                }
                 if (prob < random / 100) {
                     return 0;
                 }
             } else {
-                double prob = A / D;
-                double random = Utils.getRandomDouble(100);
+                prob = A / D;
                 if (A < D) {
                     prob = (A - 1) / (D * 2);
                 } else if (A >= D) {
@@ -2390,9 +2409,24 @@ public class PlayerCombat extends Action {
                     prob = 100;
                 if (player.getEquipment().getWeaponId() == 4566)
                     prob = 100;
-                if (prob < random / 100) {
-                    return 0;
+                if (Settings.DEBUG) {
+                    double percent = prob * 100;
+                    boolean success = prob > random / 100;
+                    StringBuilder builder = new StringBuilder();
+                    builder.append("Chance to hit: ");
+                    builder.append(new DecimalFormat("##.00").format(percent) + "%, ");
+                    builder.append("Roll: ");
+                    builder.append(new DecimalFormat("##.00").format(random) + "%");
+                    builder.append(" - Hit: ");
+                    if (success)
+                     builder.append(HexColours.getShortMessage(HexColours.Colour.GREEN, "Success!"));
+                    else
+                        builder.append(HexColours.getShortMessage(HexColours.Colour.RED, "Failed!"));
+                    player.getPackets().sendGameMessage(builder.toString());
                 }
+            }
+            if (prob < random / 100) {
+                return 0;
             }
 
         }

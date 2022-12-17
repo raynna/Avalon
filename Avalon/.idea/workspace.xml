@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Client:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a08881de-7812-4170-b954-a1fd47c840d7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/main_file_cache.dat2" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/main_file_cache.dat2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/main_file_cache.idx255" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/main_file_cache.idx255" afterDir="false" />
@@ -14,15 +17,11 @@
       <change beforePath="$PROJECT_DIR$/data/iplog/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/iplog/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/logs/chat/andreas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/chat/andreas.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/logs/commands/admin/andreas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/commands/admin/andreas.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/game/minigames/godwars/saradomin/CommanderZilyana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/minigames/godwars/saradomin/CommanderZilyana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/game/npc/drops/MobRewardGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/npc/drops/MobRewardGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/game/npc/drops/MobRewardNodeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/npc/drops/MobRewardNodeBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/NpcDamageBoost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/NpcDamageBoost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/logs/kills/andreas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/kills/andreas.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/PlayerCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/PlayerCombat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/skills/hunter/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/skills/hunter/Hunter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/dialogues/player/StaffOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/dialogues/player/StaffOptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/utils/Iterate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/utils/Iterate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/controlers/EdgevillePvPControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/controlers/EdgevillePvPControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/dialogues/artisianworkshop/artisanRewardsD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/dialogues/artisianworkshop/artisanRewardsD.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,10 +57,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Client" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected="Application.Launcher">
     <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">

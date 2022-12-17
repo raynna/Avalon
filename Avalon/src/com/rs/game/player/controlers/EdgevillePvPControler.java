@@ -179,11 +179,11 @@ public class EdgevillePvPControler extends Controler {
             player.getInterfaceManager().sendTab(getTabId(player), 3043);
         int minus = player.getSkills().getCombatLevel() - getWildLevel();
         int plus = player.getSkills().getCombatLevel() + getWildLevel();
-        if (minus < 4)
+        if (minus <= 3)
             player.getPackets().sendIComponentText(3043, 3, "3 - " + plus);
-        else if (plus > 137)
-            player.getPackets().sendIComponentText(3043, 3, "" + minus + " - 138");
-        else if (plus < 138 && minus > 3)
+        else if (plus >= 126)
+            player.getPackets().sendIComponentText(3043, 3, "" + minus + " - 126");
+        else if (plus < 126 && minus > 3)
             player.getPackets().sendIComponentText(3043, 3, "" + minus + " - " + plus);
         player.getPackets().sendIComponentText(3043, 4, "EP: " + player.getEp() + "%");
         if (isSafe(player))

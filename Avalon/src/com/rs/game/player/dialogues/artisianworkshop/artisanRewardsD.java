@@ -24,11 +24,12 @@ public class artisanRewardsD extends Dialogue {
 		 if(stage == 1){
 			if(componentId == OPTION_1){
 				if(param == "quick" && !player.getArtisanWorkshop().quick_Learner){
-				player.getArtisanWorkshop().setRespect(player.getArtisanWorkshop().getRespect() - cost);
-				player.getArtisanWorkshop().quick_Learner = true;
-				player.getDialogueManager().startDialogue("SimpleMessage", "You've unlocked a new feature.");
-				player.getArtisanWorkshop().sendRewardInterface();
-			    stage = 100;
+
+					player.getArtisanWorkshop().setRespect(player.getArtisanWorkshop().getRespect() - cost);
+					player.getArtisanWorkshop().quick_Learner = true;
+					player.getDialogueManager().startDialogue("SimpleMessage", "You've unlocked a new feature.");
+					player.getArtisanWorkshop().sendRewardInterface();
+			    	stage = 100;
 				} else if(param == "budding" && !player.getArtisanWorkshop().budding_Student){
 					player.getArtisanWorkshop().setRespect(player.getArtisanWorkshop().getRespect() - cost);
 					player.getArtisanWorkshop().budding_Student = true;

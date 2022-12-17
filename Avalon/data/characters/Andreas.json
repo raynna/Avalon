@@ -46,77 +46,50 @@
     "items": {
       "data": [
         {
-          "id": 565,
-          "amount": 10
-        },
-        {
-          "id": 560,
+          "id": 18361,
           "amount": 1
         },
         {
-          "id": 1712,
+          "id": 169,
           "amount": 1
         },
         {
-          "id": 1712,
+          "id": 2444,
           "amount": 1
         },
         {
-          "id": 4712,
+          "id": 13879,
+          "amount": 101
+        },
+        {
+          "id": 11212,
+          "amount": 1000
+        },
+        {
+          "id": 9244,
+          "amount": 100
+        },
+        null,
+        {
+          "id": 1079,
           "amount": 1
         },
         {
-          "id": 995,
-          "amount": 9445295
-        },
-        {
-          "id": 6570,
+          "id": 11235,
           "amount": 1
         },
         {
-          "id": 6585,
+          "id": 18357,
           "amount": 1
         },
-        {
-          "id": 526,
-          "amount": 1
-        },
-        {
-          "id": 202,
-          "amount": 3
-        },
-        {
-          "id": 526,
-          "amount": 1
-        },
-        {
-          "id": 18778,
-          "amount": 1
-        },
-        {
-          "id": 884,
-          "amount": 690
-        },
-        {
-          "id": 1731,
-          "amount": 1
-        },
-        {
-          "id": 1747,
-          "amount": 1
-        },
-        {
-          "id": 1747,
-          "amount": 1
-        },
-        {
-          "id": 536,
-          "amount": 1
-        },
-        {
-          "id": 12160,
-          "amount": 4
-        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -135,7 +108,7 @@
     "items": {
       "data": [
         {
-          "id": 11664,
+          "id": 11718,
           "amount": 1
         },
         {
@@ -143,30 +116,30 @@
           "amount": 1
         },
         {
-          "id": 15126,
+          "id": 6585,
           "amount": 1
         },
         {
-          "id": 11235,
+          "id": 15241,
           "amount": 1
         },
         {
-          "id": 8839,
-          "amount": 1
-        },
-        null,
-        null,
-        {
-          "id": 8840,
+          "id": 11720,
           "amount": 1
         },
         null,
+        null,
         {
-          "id": 8842,
+          "id": 11722,
+          "amount": 1
+        },
+        null,
+        {
+          "id": 22363,
           "amount": 1
         },
         {
-          "id": 2577,
+          "id": 21790,
           "amount": 1
         },
         null,
@@ -175,8 +148,8 @@
           "amount": 1
         },
         {
-          "id": 11212,
-          "amount": 200
+          "id": 15243,
+          "amount": 983
         },
         null
       ],
@@ -682,19 +655,16 @@
       99,
       99,
       99,
-      96,
-      1
+      99,
+      120
     ],
     "xp": [
-      1.6161071E7,
-      1.3034431E7,
-      1.3034431E7,
-      1.4751726999999993E7,
-      1.5086511E7,
-      1.3034431E7,
-      1.3034431E7,
-      1.3034431E7,
-      1.3034431E7,
+      1.3034635155E7,
+      1.3034635155E7,
+      1.3034679954999998E7,
+      1.3036021946000002E7,
+      1.3038558999999994E7,
+      1.3034476E7,
       1.3034431E7,
       1.3034431E7,
       1.3034431E7,
@@ -709,11 +679,14 @@
       1.3034431E7,
       1.3034431E7,
       1.3034431E7,
-      9684577.0,
-      0.0
+      1.3034431E7,
+      1.3034431E7,
+      1.3034431E7,
+      1.3034431E7,
+      1.04273167E8
     ],
     "xpTracks": [
-      1.053830606194E9,
+      1.0542931576190003E9,
       0.0,
       0.0
     ],
@@ -819,6 +792,129 @@
   "permBanned": false,
   "presetManager": {
     "PRESET_SETUPS": {
+      "max range": {
+        "inventory": [
+          {
+            "id": 2444,
+            "amount": 1
+          },
+          {
+            "id": 2444,
+            "amount": 1
+          },
+          {
+            "id": 2444,
+            "amount": 1
+          },
+          {
+            "id": 13879,
+            "amount": 101
+          },
+          {
+            "id": 11212,
+            "amount": 1000
+          },
+          {
+            "id": 15243,
+            "amount": 1000
+          },
+          null,
+          null,
+          {
+            "id": 11235,
+            "amount": 1
+          },
+          {
+            "id": 15241,
+            "amount": 1
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "equipment": [
+          {
+            "id": 11718,
+            "amount": 1
+          },
+          {
+            "id": 20068,
+            "amount": 1
+          },
+          {
+            "id": 6585,
+            "amount": 1
+          },
+          {
+            "id": 18357,
+            "amount": 1
+          },
+          {
+            "id": 11720,
+            "amount": 1
+          },
+          {
+            "id": 18361,
+            "amount": 1
+          },
+          null,
+          {
+            "id": 11722,
+            "amount": 1
+          },
+          null,
+          {
+            "id": 22363,
+            "amount": 1
+          },
+          {
+            "id": 21790,
+            "amount": 1
+          },
+          null,
+          {
+            "id": 15019,
+            "amount": 1
+          },
+          {
+            "id": 9244,
+            "amount": 100
+          },
+          null
+        ],
+        "prayerBook": 0,
+        "spellBook": 1,
+        "name": "max range",
+        "xp": [
+          1.3034635155E7,
+          1.3034635155E7,
+          1.3034679954999998E7,
+          1.3035238044000003E7,
+          1.3036199399999995E7,
+          1.3034476E7,
+          1.3034431E7
+        ],
+        "runes": [
+          null,
+          null,
+          null
+        ]
+      },
       "void": {
         "inventory": [
           {
@@ -1495,7 +1591,7 @@
     "HEALTHBAR": true,
     "ONEXPPERHIT": false,
     "KDRINTER": true,
-    "ONEXHITS": true,
+    "ONEXHITS": false,
     "DROPVALUE": 10000.0,
     "BREAK_VIALS": true,
     "UNTRADEABLEMESSAGE": true,
@@ -1504,6 +1600,42 @@
   "KBDEntrance": false,
   "advlog": {
     "Activities": [
+      "I have killed Manager in a PvP zone.",
+      "I have killed Manager in a PvP zone.",
+      "I have killed Manager in a PvP zone.",
+      "I have killed Manager in a PvP zone.",
+      "I have killed Manager in a PvP zone.",
+      "I have killed Manager in a PvP zone.",
+      "I levelled up my Dungeoneering. I am now level 120.",
+      "I levelled up my Summoning. I am now level 99.",
+      "I levelled up my Construction. I am now level 99.",
+      "I levelled up my Hunter. I am now level 99.",
+      "I levelled up my Runecrafting. I am now level 99.",
+      "I levelled up my Farming. I am now level 99.",
+      "I levelled up my Slayer. I am now level 99.",
+      "I levelled up my Thieving. I am now level 99.",
+      "I levelled up my Agility. I am now level 99.",
+      "I levelled up my Herblore. I am now level 99.",
+      "I levelled up my Mining. I am now level 99.",
+      "I levelled up my Smithing. I am now level 99.",
+      "I levelled up my Crafting. I am now level 99.",
+      "I levelled up my Firemaking. I am now level 99.",
+      "I levelled up my Fishing. I am now level 99.",
+      "I levelled up my Fletching. I am now level 99.",
+      "I levelled up my Woodcutting. I am now level 99.",
+      "I levelled up my Cooking. I am now level 99.",
+      "I levelled up my Magic. I am now level 99.",
+      "I levelled up my Prayer. I am now level 99.",
+      "I levelled up my Ranged. I am now level 99.",
+      "I levelled up my Constitution. I am now level 99.",
+      "I levelled up my Strength. I am now level 99.",
+      "I levelled up my Defence. I am now level 99.",
+      "I levelled up my Attack. I am now level 99.",
+      "I have killed Manager in a PvP zone.",
+      "I have killed Manager in a PvP zone.",
+      "I have killed Manager in a PvP zone.",
+      "I have killed Manager in a PvP zone.",
+      "I have killed Manager in a PvP zone.",
       "I levelled up my Summoning. I am now level 96.",
       "I levelled up my Summoning. I am now level 95.",
       "I levelled up my Prayer. I am now level 99.",
@@ -1868,6 +2000,42 @@
       "I have killed Manager in a PvP zone."
     ],
     "ActivitiesTime": [
+      "13:41:02",
+      "13:39:27",
+      "13:38:25",
+      "13:30:48",
+      "13:20:55",
+      "23:02:41",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:54:51",
+      "22:44:16",
+      "22:28:22",
+      "22:14:26",
+      "22:13:54",
+      "22:11:51",
       "17:09:35",
       "17:09:33",
       "17:07:06",
@@ -2232,6 +2400,42 @@
       "18:15:41"
     ],
     "ActivitiesDate": [
+      "17th December",
+      "17th December",
+      "17th December",
+      "17th December",
+      "17th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
+      "16th December",
       "3rd december",
       "3rd december",
       "3rd december",
@@ -2701,14 +2905,14 @@
   },
   "timePiece": 0,
   "lastlevelUp": [
-    "96"
+    "120"
   ],
   "lastSkill": [
-    "Summoning"
+    "Dungeoneering"
   ],
   "bossKillcount": {
     "Dagannoth Supreme": 1,
-    "King Black Dragon": 4
+    "King Black Dragon": 5
   },
   "treasureTrailCount": {
     "Elite": 814
@@ -2803,10 +3007,10 @@
   "storedScrolls": 0,
   "isTitle": false,
   "clanTag": "",
-  "ep": 80,
-  "PKP": 5223,
+  "ep": 0,
+  "PKP": 17175,
   "killStreak": 5,
-  "killStreakRecord": 5,
+  "killStreakRecord": 11,
   "completedSafety": false,
   "recievedStarter": true,
   "coalStored": 0,
@@ -2824,7 +3028,7 @@
   "strongHoldSecurityFloor3": false,
   "strongHoldSecurityFloor4": false,
   "connectedClanChannel": false,
-  "lastLoggedIn": 1671187970457,
+  "lastLoggedIn": 1671223536867,
   "petManager": {
     "petDetails": {},
     "npcId": 0,
@@ -2850,7 +3054,7 @@
   "temporaryMovementType": -1,
   "updateMovementType": false,
   "hasDesign": false,
-  "avalonPoints": 121322,
+  "avalonPoints": 122426,
   "ticketstaff": "",
   "ticketsender": "",
   "isRequestingChat": false,
@@ -2943,10 +3147,13 @@
         false
       ]
     ],
-    "prayerpoints": 452,
+    "prayerpoints": 0,
     "ancientcurses": false
   },
-  "controlerManager": {},
+  "controlerManager": {
+    "lastControlerArguments": [],
+    "lastControler": "EdgevillePvPControler"
+  },
   "musicsManager": {
     "unlockedMusics": [
       0,
@@ -4212,12 +4419,12 @@
     ],
     "taskStages": {
       "null": 1,
-      "CLAIM_WILDSTALKER_HELMET": 0,
       "STEAL_FROM_SILK_STALL": 4,
-      "MINE_COPPER_AND_TIN": 21,
-      "COMPLETE_SLAYER_TASK": 10,
       "STEAL_FROM_BAKERS_STALL": 1,
-      "STEAL_FROM_GEM_STALL": 26
+      "MINE_COPPER_AND_TIN": 21,
+      "CLAIM_WILDSTALKER_HELMET": 0,
+      "STEAL_FROM_GEM_STALL": 26,
+      "COMPLETE_SLAYER_TASK": 10
     }
   },
   "geManager": {
@@ -4372,8 +4579,14 @@
         "id": 2412,
         "amount": 1
       },
-      null,
-      null,
+      {
+        "id": 20068,
+        "amount": 1
+      },
+      {
+        "id": 8842,
+        "amount": 1
+      },
       null,
       null,
       null,
@@ -4390,14 +4603,15 @@
     null
   ],
   "unlockedItems": [],
-  "killCount": 7,
-  "deathCount": 5,
+  "killCount": 18,
+  "deathCount": 6,
   "charges": {
     "charges": {
       "18355": 29881,
       "13876": 1,
-      "18357": 29931,
+      "18357": 29844,
       "13878": 1,
+      "18361": 29974,
       "18349": 29723
     }
   },
@@ -4438,7 +4652,7 @@
     0.0,
     0.0
   ],
-  "weight": 43.5,
+  "weight": 34.0,
   "lividFarm": {
     "produce": 0,
     "spellAmount": 0,
@@ -4481,7 +4695,7 @@
   },
   "squealOfFortune": {
     "version": 1,
-    "lastDailySpinsGiveaway": 1671180657289,
+    "lastDailySpinsGiveaway": 1671279982428,
     "dailySpins": 8,
     "earnedSpins": 0,
     "boughtSpins": 0,
@@ -4555,7 +4769,7 @@
   },
   "lavaflowCrustsMined": 0,
   "isTeleporting": false,
-  "hitpoints": 375,
+  "hitpoints": 990,
   "pid": 0,
   "mapSize": 0,
   "run": true,
@@ -4563,7 +4777,7 @@
     "poisonDamage": 0,
     "poisonCount": 0
   },
-  "x": 3087,
-  "y": 3496,
+  "x": 84,
+  "y": 86,
   "plane": 0
 }

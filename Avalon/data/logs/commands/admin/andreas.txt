@@ -265,3 +265,77 @@
 [16 December 2022 at 08:45:57 CET] - ::god 
 [16 December 2022 at 08:45:58 CET] - ::npc 50
 [16 December 2022 at 08:45:58 CET] - ::god 
+[16 December 2022 at 09:52:34 CET] - ::inters 3037
+[16 December 2022 at 09:52:37 CET] - ::inters 3037
+[16 December 2022 at 09:58:15 CET] - ::npc 50
+[16 December 2022 at 09:58:23 CET] - ::heal 
+[16 December 2022 at 09:58:24 CET] - ::god 
+[16 December 2022 at 10:00:02 CET] - ::heal 
+[16 December 2022 at 10:12:51 CET] - ::heal 
+[16 December 2022 at 10:14:08 CET] - ::god 
+[16 December 2022 at 10:14:15 CET] - ::god 
+[16 December 2022 at 10:14:15 CET] - ::god 
+[16 December 2022 at 10:14:17 CET] - ::spec 
+[16 December 2022 at 10:19:23 CET] - ::give rune_crossbow
+[16 December 2022 at 10:19:30 CET] - ::give runite_bolts +500
+[16 December 2022 at 10:24:40 CET] - ::item 2444 1
+[16 December 2022 at 10:28:32 CET] - ::give bronze_shortbow
+[16 December 2022 at 10:28:39 CET] - ::give shortbow
+[16 December 2022 at 10:28:42 CET] - ::give bronze_arrow +100
+[16 December 2022 at 10:30:49 CET] - ::setlevel 4 70
+[16 December 2022 at 10:30:56 CET] - ::setlevel 4 70
+[16 December 2022 at 10:54:07 CET] - ::heal 
+[16 December 2022 at 10:54:51 CET] - ::master 
+[16 December 2022 at 10:56:38 CET] - ::item 2444 1
+[16 December 2022 at 10:57:11 CET] - ::item 11694 1
+[16 December 2022 at 10:57:17 CET] - ::item 11690 1
+[16 December 2022 at 10:57:21 CET] - ::give armadyl_chestplate
+[16 December 2022 at 10:57:25 CET] - ::item 11722 1
+[16 December 2022 at 10:57:27 CET] - ::item 11724 1
+[16 December 2022 at 10:57:29 CET] - ::item 11718 1
+[16 December 2022 at 10:57:35 CET] - ::item 18361 1
+[16 December 2022 at 10:57:41 CET] - ::item swift_gloves
+[16 December 2022 at 10:57:53 CET] - ::give swift_gloves_(red)
+[16 December 2022 at 10:57:57 CET] - ::give swift_gloves
+[16 December 2022 at 10:57:59 CET] - ::item 22487 1
+[16 December 2022 at 10:58:01 CET] - ::item 22484 1
+[16 December 2022 at 10:58:03 CET] - ::item empty
+[16 December 2022 at 10:58:03 CET] - ::empty 
+[16 December 2022 at 10:58:57 CET] - ::item 22363 1
+[16 December 2022 at 10:59:02 CET] - ::item 18357 1
+[16 December 2022 at 10:59:06 CET] - ::heal 
+[16 December 2022 at 10:59:07 CET] - ::item 2444 3
+[17 December 2022 at 01:19:25 CET] - ::item 15486 1
+[17 December 2022 at 01:20:02 CET] - ::item 4151 1
+[17 December 2022 at 01:28:10 CET] - ::empty 
+[17 December 2022 at 01:28:13 CET] - ::item 18357 1
+[17 December 2022 at 01:28:17 CET] - ::give armadyl_chestplate
+[17 December 2022 at 01:28:18 CET] - ::item item 11718 1
+[17 December 2022 at 01:28:21 CET] - ::item 11720
+[17 December 2022 at 01:28:23 CET] - ::item 11722
+[17 December 2022 at 01:28:26 CET] - ::item 11718
+[17 December 2022 at 01:28:33 CET] - ::item 18361 1
+[17 December 2022 at 01:28:35 CET] - ::item 22363 1
+[17 December 2022 at 01:28:40 CET] - ::item 6585 1
+[17 December 2022 at 01:28:47 CET] - ::give ava's_alerter
+[17 December 2022 at 01:28:50 CET] - ::item 21787 1
+[17 December 2022 at 01:28:53 CET] - ::item 21790 1
+[17 December 2022 at 01:29:03 CET] - ::give dragon_bolts#e +100
+[17 December 2022 at 01:29:06 CET] - ::item 15018 1
+[17 December 2022 at 01:29:07 CET] - ::item 15019 1
+[17 December 2022 at 01:29:16 CET] - ::item 2444 3
+[17 December 2022 at 01:29:18 CET] - ::item 11235 1
+[17 December 2022 at 01:29:20 CET] - ::item 111212 100
+[17 December 2022 at 01:29:22 CET] - ::item 11212 1000
+[17 December 2022 at 01:29:27 CET] - ::give hand_cannon
+[17 December 2022 at 01:29:29 CET] - ::item 15243 1000
+[17 December 2022 at 01:29:45 CET] - ::give morrigan's_javelin
+[17 December 2022 at 01:29:49 CET] - ::give morrigan's_javelin 99
+[17 December 2022 at 01:29:54 CET] - ::give morrigan's_javelin +99
+[17 December 2022 at 01:34:14 CET] - ::give rune_platelegs
+[17 December 2022 at 01:39:51 CET] - ::item 15243 1000heal
+[17 December 2022 at 01:39:52 CET] - ::heal 
+[17 December 2022 at 01:40:10 CET] - ::spec 
+[17 December 2022 at 01:40:26 CET] - ::spec 
+[17 December 2022 at 01:40:46 CET] - ::spec 
+[17 December 2022 at 01:40:52 CET] - ::spec 
