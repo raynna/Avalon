@@ -46,7 +46,7 @@ import com.rs.game.player.actions.skills.crafting.GemCutting;
 import com.rs.game.player.actions.skills.crafting.GemCutting.Gem;
 import com.rs.game.player.actions.skills.crafting.LeatherCrafting;
 import com.rs.game.player.actions.skills.crafting.LeatherCrafting.Craft;
-import com.rs.game.player.actions.skills.farming.FarmingManager.ProductInfo;
+import com.rs.game.player.actions.skills.farming.FarmingManager;
 import com.rs.game.player.actions.skills.farming.TreeSaplings;
 import com.rs.game.player.actions.skills.firemaking.FireLighter;
 import com.rs.game.player.actions.skills.firemaking.FireLighter.Lighters;
@@ -1835,7 +1835,7 @@ public class InventoryOptionsHandler {
 	private static boolean isFarmingItem(Item item) {
 		// if (defs.getName().toLowerCase().contains("grimy"))
 		// return true;
-		for (ProductInfo infos : ProductInfo.values()) {
+		for (FarmingManager.ProductInfo infos : FarmingManager.ProductInfo.values()) {
 			if (infos.isProduct(item)) {
 				return true;
 			}

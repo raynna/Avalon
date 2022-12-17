@@ -147,7 +147,7 @@ public class IComponentDefinition {
     public int anInt1242;
     public Object[] anObjectArray1243;
     public Object[] anObjectArray1244;
-    public Object[] anObjectArray1245;
+    public Object[] onMouseMoveListener;
     public boolean aBoolean1246;
     public Object[] anObjectArray1247;
     public int anInt1248;
@@ -429,7 +429,7 @@ public class IComponentDefinition {
 	    anObjectArray1264 = method1111(stream, 1382442228);
 	    if (i_1_ >= 0)
 		anObjectArray1247 = method1111(stream, -699098198);
-	    anObjectArray1245 = method1111(stream, 1910073926);
+	    onMouseMoveListener = method1111(stream, 1910073926);
 	    anObjectArray1240 = method1111(stream, 1197869623);
 	    anObjectArray1263 = method1111(stream, -894827658);
 	    anObjectArray1150 = method1111(stream, 281193138);
@@ -683,7 +683,7 @@ public class IComponentDefinition {
 	    anObjectArray1150 = null;
 	    anObjectArray1243 = null;
 	    anObjectArray1244 = null;
-	    anObjectArray1245 = null;
+	    onMouseMoveListener = null;
 	    anObjectArray1122 = null;
 	    anObjectArray1291 = null;
 	    anObjectArray1137 = null;

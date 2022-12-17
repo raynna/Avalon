@@ -12,24 +12,24 @@ import com.rs.game.player.Player;
 
 public class CreationKiln {
 
-	private transient Player player;
+	private Player player;
 
 	public CreationKiln(Player player) {
 		this.player = player;
 	}
 
-	private transient final int INTERFACE_ID = 813;
-	private transient final int[] GLOBALCONFIG = { 583, 584, 585, 586, 587 };
-	private transient final int[] clayIds = { 14182, 14184, 14186, 14188, 14190 };
-	private transient final int[] QUALITY_COMP = { 99, 101, 103, 105, 107 };
-	private transient final int CATEGORY_WEAPONS_COMP = 29, CATEGORY_POTIONS_COMP = 32;
+	private final int INTERFACE_ID = 813;
+	private final int[] GLOBALCONFIG = { 583, 584, 585, 586, 587 };
+	private final int[] clayIds = { 14182, 14184, 14186, 14188, 14190 };
+	private final int[] QUALITY_COMP = { 99, 101, 103, 105, 107 };
+	private final int CATEGORY_WEAPONS_COMP = 29, CATEGORY_POTIONS_COMP = 32;
 
 	/**
 	 * Static variables
 	 */
-	private transient static Category[] category = Category.values();
-	private transient static Category currentCategory;
-	private transient static Data[] data = Data.values();
+	private static Category[] category = Category.values();
+	private static Category currentCategory;
+	private static Data[] data = Data.values();
 
 	private enum Category {
 

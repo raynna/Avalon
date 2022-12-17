@@ -256,6 +256,8 @@ public class RSApplet extends Class319 implements MouseListener, MouseMotionList
 	}
     }
 
+	public int mouseWheelDelta = -1;
+
     @Override
     public synchronized void mouseWheelMoved(MouseWheelEvent mousewheelevent) {
 	try {
@@ -268,28 +270,10 @@ public class RSApplet extends Class319 implements MouseListener, MouseMotionList
 	catch (RuntimeException runtimeexception) {
 	    throw Class346.method4175(runtimeexception, new StringBuilder().append("aci.mouseWheelMoved(").append(')').toString());
 	}
-	if (/*mousewheelevent.isControlDown() && */client.Zoom) {
-	    int decrement = mousewheelevent.isControlDown() ? 40 : 12;
-	    int maxZoomin = 600;
-	    int maxZoomout = 125;
-	    if (mousewheelevent.getWheelRotation() == +1) {
-		if (client.zoomValue >= maxZoomout)
-		    client.zoomValue -= decrement;
-		else {
-		    System.out.println("You've reached the maximum zoom distance");
-		    return;
+	client.zoomDelta = mousewheelevent.isControlDown() ? 40 : 12;
+	if (mousewheelevent.getWheelRotation() == 1) {
+		client.zoomDelta = -client.zoomDelta;
 		}
-	    }
-	    if (mousewheelevent.getWheelRotation() == -1) {
-		if (client.zoomValue < maxZoomin)
-		    client.zoomValue += decrement;
-		else {
-		    System.out.println("You can not zoom any farther inwards!");
-		    return;
-		}
-	    }
-	    Class305.method3752(184, client.zoomValue, 644551429);
-	}
     }
 
     @Override

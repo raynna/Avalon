@@ -77,7 +77,7 @@ public class WorldPacketsEncoder extends Encoder {
 
 	public void sendCustomPacket161() {
 		OutputStream stream = new OutputStream(2);
-		stream.writePacket(player, 161);
+		stream.writePacket(player, 161);//like this, on open interface = turn a boolean to true, on close, false && if true cant zoom? nah
 		int flag = 0x0;
 		if (player.isShiftDrop())
 			flag |= 0x1;

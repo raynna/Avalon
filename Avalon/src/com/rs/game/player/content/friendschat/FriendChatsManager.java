@@ -42,7 +42,7 @@ public class FriendChatsManager {
 	public int getRank(int rights, String username) {
 		if (rights == 2)
 			return 127;
-		if (username.equals(owner))
+		if (username.equals(owner))//ye owner i had to change to save as username, instead of owner = player, but farming there is no way
 			return 7;
 		return settings.getRank(username);
 	}

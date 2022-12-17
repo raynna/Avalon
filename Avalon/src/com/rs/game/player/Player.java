@@ -2552,7 +2552,10 @@ public class Player extends Entity {
             memberTill = 0;
             member = false;
         }
-        farmingManager.process();
+        if (farmingManager != null) {
+            farmingManager.setPlayer(this);
+            farmingManager.process();
+        }
         //handleSwitch();
         if (getAssist().isAssisting()) {
             getAssist().Check();
@@ -2810,7 +2813,10 @@ public class Player extends Entity {
         }
         interfaceManager.sendInterfaces();
         bank.init();
-        farmingManager.init();
+        if (farmingManager != null) {
+            farmingManager.setPlayer(this);
+            farmingManager.init();
+        }
         getPackets().sendRunEnergy();
         refreshAllowChatEffects();
         refreshMouseButtons();

@@ -57,7 +57,7 @@ public class FarmingManager implements Serializable {
             COMPOST_ANIMATION = new Animation(2283), BUSH_PICKING_ANIMATION = new Animation(2281), FILL_COMPOST_ANIMATION = new Animation(832);
 
     private List<FarmingSpot> spots;
-    private transient Player player;
+    private transient Player player;//player has to be transient, but probably timeconsuming to fix, idk
 
     public FarmingManager() {
         spots = new CopyOnWriteArrayList<FarmingSpot>();

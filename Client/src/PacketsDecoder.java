@@ -836,9 +836,7 @@ public class PacketsDecoder {
                 class25.INCOMMING_PACKET = null;
                 return true;
             }
-            if (class25.INCOMMING_PACKET == IncommingPacket.INTERFACE_PACKET) { // interface
-                // definitions
-                // way
+            if (class25.INCOMMING_PACKET == IncommingPacket.INTERFACE_PACKET) {
                 int interfaceId = stream.readUnsignedShort();
                 int key1 = stream.readInt((byte) -24);
                 int key2 = stream.readIntV2((byte) 113);

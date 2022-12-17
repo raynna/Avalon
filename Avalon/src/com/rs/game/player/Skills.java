@@ -1141,7 +1141,7 @@ public final class Skills implements Serializable {
         int oldLevel = getOldLevel(player, skillId);
         int newLevel = getNewLevel(player, skillId);
         int gainedLevels = getGainedLevels(player, skillId);
-        int milestone = getMilestone(player);
+        int milestone = getMilestone(player);//all this to handle it good shit nice to see the little details thats what i do the best
         int combatMilestone = getCombatMilestone(player);
         int slayerCombatMilestones = getSlayerCombatMilestone(player);
         player.getPackets().sendGlobalConfig(gainedLevelConfig, gainedLevels + newLevel);
