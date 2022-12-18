@@ -123,6 +123,7 @@ public final class ObjectHandler {
             return;
         }
         final WorldObject object = mapObject;
+        if (option != -1)
         player.stopAll();
         if (forceRun)
             player.setRun(forceRun);
@@ -2015,7 +2016,6 @@ public final class ObjectHandler {
         if (Settings.DEBUG) {
             int offsetX = object.getX() - player.getX();
             int offsetY = object.getY() - player.getY();
-            System.out.println("Offsets" + offsetX + " , " + offsetY);
         }
         if (object.getId() == 29735) {
             player.useStairs(-1, new WorldTile(3140, 4230, 2), 1, 2);
@@ -2026,8 +2026,7 @@ public final class ObjectHandler {
                 "It's " + player.grammar(object) + " " + object.getDefinitions().name + ".");
 
         if (Settings.DEBUG)
-            Logger.log("ObjectHandler",
-                    "examined object id : " + object.getId() + ", x" + object.getX() + ", y" + object.getY() + ", z"
+           System.out.println("ObjectHandler: examined object id : " + object.getId() + ", x" + object.getX() + ", y" + object.getY() + ", z"
                             + object.getPlane() + ", t" + object.getType() + ", r" + object.getRotation() + ", "
                             + object.getDefinitions().name + ", varbit: " + object.getConfigByFile() + ", var: "
                             + object.getConfig());
