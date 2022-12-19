@@ -1,6 +1,7 @@
 package com.rs.game;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -31,6 +32,7 @@ import com.rs.game.route.strategy.EntityStrategy;
 import com.rs.game.route.strategy.ObjectStrategy;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
+import com.rs.game.timer.TimerRepository;
 import com.rs.utils.HexColours;
 import com.rs.utils.Utils;
 
@@ -102,6 +104,16 @@ public abstract class Entity extends WorldTile {
 		poison = new Poison();
 	}
 
+	protected TimerRepository timers = new TimerRepository();
+
+	public TimerRepository timers() {
+		return timers;
+	}
+
+	public void cycle() {
+		timers.cycle();
+	}
+
 	@Override
 	public int hashCode() {
 		return hashCode;
@@ -168,8 +180,9 @@ public abstract class Entity extends WorldTile {
 		walkSteps.clear();
 		poison.reset();
 		resetReceivedDamage();
-		if (attributes)
+		if (attributes) {
 			temporaryAttributes.clear();
+		}
 	}
 
 	public void resetReceivedHits() {
@@ -350,7 +363,7 @@ public abstract class Entity extends WorldTile {
 			Player p = (Player) attacker;
 			if (p.toggles("HEALTHBAR", false)) {
 				Entity target = (Entity) this;
-				p.getTemporaryAttributtes().put("temporaryTarget", target);
+				p.getTemporaryAttributes().put("temporaryTarget", target);
 				checkCombatLevel(p, target);
 				updateHealthOverlay(attacker, target);
 			}
@@ -1514,7 +1527,7 @@ public abstract class Entity extends WorldTile {
 		return temporaryAttributes;
 	}
 
-	public ConcurrentHashMap<Object, Object> getTemporaryAttributtes() {
+	public ConcurrentHashMap<Object, Object> getTemporaryAttributes() {
 		return temporaryAttributes;
 	}
 

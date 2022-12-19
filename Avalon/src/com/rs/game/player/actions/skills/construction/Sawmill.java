@@ -4,7 +4,6 @@ import com.rs.game.WorldObject;
 import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
-import com.rs.game.player.actions.skills.construction.HouseConstants;
 import com.rs.net.decoders.WorldPacketsDecoder;
 
 public class Sawmill {
@@ -61,7 +60,7 @@ public class Sawmill {
 		if (componentId >= 12 && componentId <= 15) {
 			Plank type = Plank.values()[componentId - 12];
 			if (packetId == WorldPacketsDecoder.ACTION_BUTTON4_PACKET) {
-				player.getTemporaryAttributtes().put("PlanksConvert", type);
+				player.getTemporaryAttributes().put("PlanksConvert", type);
 				player.getPackets().sendInputIntegerScript(true, "Enter amount:");
 				return;
 			}

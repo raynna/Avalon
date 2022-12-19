@@ -25,16 +25,8 @@ import com.rs.Settings;
 import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.cache.loaders.NPCDefinitions;
 import com.rs.cores.CoresManager;
-import com.rs.game.Animation;
-import com.rs.game.Entity;
-import com.rs.game.ForceTalk;
-import com.rs.game.Graphics;
-import com.rs.game.Hit;
+import com.rs.game.*;
 import com.rs.game.Hit.HitLook;
-import com.rs.game.Region;
-import com.rs.game.World;
-import com.rs.game.WorldObject;
-import com.rs.game.WorldTile;
 import com.rs.game.item.FloorItem;
 import com.rs.game.item.Item;
 import com.rs.game.item.ItemsContainer;
@@ -119,6 +111,7 @@ import com.rs.game.player.dialogues.Dialogue;
 import com.rs.game.player.teleportation.TeleportsData.TeleportStore;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
+import com.rs.game.timer.TimerRepository;
 import com.rs.net.Session;
 import com.rs.net.decoders.WorldPacketsDecoder;
 import com.rs.net.decoders.handlers.ButtonHandler;
@@ -150,7 +143,7 @@ public class Player extends Entity {
      * @varpbit
      */
 
-    public HashMap<Integer, Integer> varBitList = new HashMap<>();
+    public HashMap<Integer, Integer> savedVarBits = new HashMap<>();
     public transient HashMap<Integer, Integer> temporaryVarBits = new HashMap<>();
 
     /**
@@ -1210,6 +1203,7 @@ public class Player extends Entity {
         varsManager = new VarsManager(this);
         cstore = new CustomStore(this);
         geManager = new GrandExchangeManager();
+        timers = new TimerRepository();
         slayerManager = new SlayerManager();
         squealOfFortune = new SquealOfFortune();
         treasureTrailsManager = new TreasureTrailsManager();
@@ -1330,6 +1324,8 @@ public class Player extends Entity {
             CustomDuelRule = new HashMap<>();
         if (geManager == null)
             geManager = new GrandExchangeManager();
+        if (timers == null)
+            timers = new TimerRepository();
         if (squealOfFortune == null)
             squealOfFortune = new SquealOfFortune();
         if (pinpinpin != 1) {
@@ -1384,10 +1380,16 @@ public class Player extends Entity {
         this.isaacKeyPair = isaacKeyPair;
         if (lividFarm == null)
             lividFarm = new LividFarm();
-        if (varBitList == null)
-            varBitList = new HashMap<Integer, Integer>();
+        if (savedVarBits == null)
+            savedVarBits = new HashMap<Integer, Integer>();
         if (temporaryVarBits == null)
             temporaryVarBits = new HashMap<Integer, Integer>();
+        if (longMap == null)
+            longMap = new HashMap<>();
+        if (intMap == null)
+            intMap = new HashMap<>();
+        if (booleanMap == null)
+            booleanMap = new HashMap<>();
         if (toggles == null)
             toggles = new HashMap<String, Object>();
         if (attackedBy == null)
@@ -2691,7 +2693,7 @@ public class Player extends Entity {
                 Pots.resetOverLoadEffect(this);
                 return;
             }
-            if (getRenewalSeconds() == 29)
+            if (getOverloadSeconds() == 30)
                 sm("<col=0000FF>Your overload effect will wear off in 30 seconds.");
             if (getOverloadSeconds() % 25 == 0)
                 Pots.applyOverLoadEffect(this);
@@ -2702,7 +2704,7 @@ public class Player extends Entity {
                 sm("<col=0000FF>Your prayer renewal has ended.");
                 return;
             } else {
-                if (getRenewalSeconds() == 29)
+                if (getRenewalSeconds() == 30)
                     sm("<col=0000FF>Your prayer renewal will wear off in 30 seconds.");
                 if (!prayer.hasFullPrayerpoints()) {
                     getPrayer().restorePrayer(1, true);
@@ -2921,7 +2923,7 @@ public class Player extends Entity {
         getSkills().switchXPPopup(true);
         squealOfFortune.giveDailySpins();
         controlerManager.login();
-        Iterator<Entry<Integer, Integer>> it = getVarBitList().entrySet().iterator();
+        Iterator<Entry<Integer, Integer>> it = getSavedVarBits().entrySet().iterator();
         while (it.hasNext()) {
             HashMap.Entry<Integer, Integer> pair = (HashMap.Entry<Integer, Integer>) it.next();
             getVarsManager().sendVarBit(pair.getKey(), pair.getValue());
@@ -4821,9 +4823,6 @@ public class Player extends Entity {
         temporaryAttribute().put("renewalDelay", renewalDelay + Utils.currentTimeMillis());
     }
 
-    public void setOverload(long overloadDelay) {
-        temporaryAttribute().put("overloadDelay", overloadDelay + Utils.currentTimeMillis());
-    }
 
     public void setDisruption(long disruptionDelay) {
         temporaryAttribute().put("disruptionDelay", disruptionDelay + Utils.currentTimeMillis());
@@ -4847,22 +4846,11 @@ public class Player extends Entity {
         return temporaryTarget;
     }
 
-    public int getOverloadSeconds() {
-        int seconds = (int) TimeUnit.MILLISECONDS.toSeconds(getOverloadDelay() - Utils.currentTimeMillis());
-        return seconds;
-    }
-
     public int getRenewalSeconds() {
         int seconds = (int) TimeUnit.MILLISECONDS.toSeconds(getPrayerRenewalDelay() - Utils.currentTimeMillis());
         return seconds;
     }
 
-    public long getOverloadDelay() {
-        Long overloadDelay = (Long) temporaryAttribute().get("overloadDelay");
-        if (overloadDelay == null)
-            return 0;
-        return overloadDelay;
-    }
 
     public long getPrayerRenewalDelay() {
         Long renewalDelay = (Long) temporaryAttribute().get("renewalDelay");
@@ -5149,6 +5137,7 @@ public class Player extends Entity {
             return;
         currentFriendChat.sendQuickMessage(this, message);
     }
+
 
     public void sendPublicChatMessage(PublicChatMessage message) {
         for (int regionId : getMapRegionsIds()) {
@@ -6542,29 +6531,29 @@ public class Player extends Entity {
     }
 
     public Item getRareItem() {
-        Item item = (Item) getTemporaryAttributtes().get("RARE_ITEM");
+        Item item = (Item) getTemporaryAttributes().get("RARE_ITEM");
         if (item == null)
             return null;
         return item;
     }
 
     public WorldTile getRareItemTile() {
-        WorldTile tile = (WorldTile) getTemporaryAttributtes().get("RARE_ITEM_TILE");
+        WorldTile tile = (WorldTile) getTemporaryAttributes().get("RARE_ITEM_TILE");
         if (tile == null)
             return null;
         return tile;
     }
 
     public boolean hasRareDrop() {
-        Integer rarity = (Integer) getTemporaryAttributtes().get("RARITY_NODE");
+        Integer rarity = (Integer) getTemporaryAttributes().get("RARITY_NODE");
         if (rarity == null)
             return false;
         return rarity > 1;
     }
 
     public void setRareDrop(Item item, WorldTile tile) {
-        getTemporaryAttributtes().put("RARE_ITEM", item);
-        getTemporaryAttributtes().put("RARE_ITEM_TILE", tile);
+        getTemporaryAttributes().put("RARE_ITEM", item);
+        getTemporaryAttributes().put("RARE_ITEM_TILE", tile);
     }
 
     public int getValueableDrop() {
@@ -6648,8 +6637,8 @@ public class Player extends Entity {
         this.lividFarm = lividFarm;
     }
 
-    public HashMap<Integer, Integer> getVarBitList() {
-        return varBitList;
+    public HashMap<Integer, Integer> getSavedVarBits() {
+        return savedVarBits;
     }
 
     public  HashMap<Integer, Integer> getTemporaryVarBits() {
@@ -6699,4 +6688,58 @@ public class Player extends Entity {
 
     public int lavaflowCrustsMined;
 
+    public int getOverloadSeconds() {
+        int seconds = (int) TimeUnit.MILLISECONDS.toSeconds(getOverloadDelay() - Utils.currentTimeMillis());
+        return seconds;
+    }
+
+    public void setOverload(long overloadDelay) {
+        set(Keys.LongKey.OVERLOAD_EFFECT, overloadDelay + Utils.currentTimeMillis());
+    }
+
+    public long getOverloadDelay() {
+        long overloadDelay = get(Keys.LongKey.OVERLOAD_EFFECT);
+        return overloadDelay;
+    }
+
+    private Map<Keys.LongKey, Long> longMap = new HashMap<>();
+    private Map<Keys.IntKey, Integer> intMap = new HashMap<>();
+    private Map<Keys.BooleanKey, Boolean> booleanMap = new HashMap<>();
+    private Map<Keys.StringKey, String> stringKey = new HashMap<>();
+
+    public void set(Keys.LongKey key, long i) {
+        longMap.put(key, i);
+    }
+
+    public long get(Keys.LongKey key) {
+        Long map = longMap.getOrDefault(key, key.getDefaultValue());
+        if (map == null)
+            return -1;
+        if (map.longValue() < 0 && longMap.containsKey(key)) {
+            return longMap.remove(key);
+        }
+        return map.longValue();
+    }
+
+    public void set(Keys.IntKey key, int i) {
+        intMap.put(key, i);
+    }
+
+    public int get(Keys.IntKey key) {
+        Integer map = intMap.getOrDefault(key, key.getDefaultValue());
+        if (map == null)
+            return -1;
+        return map.intValue();
+    }
+
+    public void set(Keys.BooleanKey key, boolean i) {
+        booleanMap.put(key, i);
+    }
+
+    public boolean get(Keys.BooleanKey key) {
+        Boolean map = booleanMap.getOrDefault(key, key.getDefaultValue());
+        if (map == null)
+            return false;
+        return map.booleanValue();
+    }
 }

@@ -691,7 +691,7 @@ public final class ObjectHandler {
                     return;
                 }
                 if (object.getId() == 26342) {
-                	if (player.getInventory().contains(new Item(954)) && player.getVarBitList().get(3932) == null) {
+                	if (player.getInventory().contains(new Item(954)) && player.getSavedVarBits().get(3932) == null) {
                 		player.getVarsManager().sendVarBit(3932, 1, true);
                     	player.getInventory().removeItems(new Item(954));
                     	player.sm("You tie the rope to the enterance.");
@@ -749,7 +749,7 @@ public final class ObjectHandler {
                     return;
                 }
                 if (object.getId() == 29736) {// leverhere
-                    if (player.getVarBitList().containsKey(object.getConfigByFile())) {
+                    if (player.getSavedVarBits().containsKey(object.getConfigByFile())) {
                         player.getPackets().sendGameMessage("You have already pulled this lever.");
                         return;
                     }
@@ -758,7 +758,7 @@ public final class ObjectHandler {
                     return;
                 }
                 if (object.getId() == 29624) {
-                    if (!player.getVarBitList().containsKey(object.getConfigByFile())) {
+                    if (!player.getSavedVarBits().containsKey(object.getConfigByFile())) {
                         player.getPackets().sendGameMessage("This gate is locked.");
                         return;
                     }
@@ -774,7 +774,7 @@ public final class ObjectHandler {
                 }
 
                 if (object.getId() == 29734) {
-                    if (player.getVarBitList().containsKey(object.getConfigByFile())) {
+                    if (player.getSavedVarBits().containsKey(object.getConfigByFile())) {
                         player.getPackets().sendGameMessage("You have already opened this chest.");
                         return;
                     }

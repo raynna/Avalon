@@ -28,7 +28,6 @@ import com.rs.game.player.AccountCreation;
 import com.rs.game.player.Inventory;
 import com.rs.game.player.LogicPacket;
 import com.rs.game.player.Player;
-import com.rs.game.player.Player.Limits;
 import com.rs.game.player.PublicChatMessage;
 import com.rs.game.player.QuickChatMessage;
 import com.rs.game.player.RouteEvent;
@@ -485,7 +484,7 @@ public final class WorldPacketsDecoder extends Decoder {
 						if (s != null) {
 							if (s.getSpellId() == 44)
 								return;
-							player.getTemporaryAttributtes().put("spell_objectid", objectId);
+							player.getTemporaryAttributes().put("spell_objectid", objectId);
 							if (!LunarMagicks.hasRequirement(player, componentId)) {
 								return;
 							}
@@ -500,7 +499,7 @@ public final class WorldPacketsDecoder extends Decoder {
 						player.faceObject(object);
 						RSSpellStore modern = RSSpellStore.getSpell(componentId);
 						if (modern != null) {
-							player.getTemporaryAttributtes().put("spell_objectid", objectId);
+							player.getTemporaryAttributes().put("spell_objectid", objectId);
 							if (!ModernMagicks.hasRequirement(player, componentId, false, false)) {
 								return;
 							}
@@ -653,8 +652,8 @@ public final class WorldPacketsDecoder extends Decoder {
 				return;
 			if (player.getLockDelay() > Utils.currentTimeMillis())
 				return;
-			if (player.getTemporaryAttributtes().get("DUNGEON_INVITE_RECIEVED") != null) {
-				Player inviteBy = (Player) player.getTemporaryAttributtes().get("DUNGEON_INVITE_RECIEVED");
+			if (player.getTemporaryAttributes().get("DUNGEON_INVITE_RECIEVED") != null) {
+				Player inviteBy = (Player) player.getTemporaryAttributes().get("DUNGEON_INVITE_RECIEVED");
 				if (inviteBy != null)
 					player.getDungManager().acceptInvite(inviteBy.getDisplayName());
 				else
@@ -705,7 +704,7 @@ public final class WorldPacketsDecoder extends Decoder {
 			if (forceRun)
 				player.setRun(forceRun);
 			player.stopAll();
-			if (player.getTemporaryAttributtes().remove("claninvite") != null) {
+			if (player.getTemporaryAttributes().remove("claninvite") != null) {
 				ClansManager.viewInvite(player, p2);
 				return;
 			}
@@ -906,7 +905,7 @@ public final class WorldPacketsDecoder extends Decoder {
 			case 430:
 				RSLunarSpellStore lunar = RSLunarSpellStore.getSpell(componentId);
 				if (lunar != null) {
-					player.getTemporaryAttributtes().put("spell_target", p2);
+					player.getTemporaryAttributes().put("spell_target", p2);
 					if (lunar.getSpellType() == LunarMagicks.NPC) {
 						player.getPackets().sendGameMessage("You can only cast this spell on a npcs.");
 						return;
@@ -1006,7 +1005,7 @@ public final class WorldPacketsDecoder extends Decoder {
 							return;
 						}
 					} else {
-						player.getTemporaryAttributtes().put("spell_target", p2);
+						player.getTemporaryAttributes().put("spell_target", p2);
 						ModernMagicks.hasRequirement(player, componentId, false, false);
 						return;
 					}
@@ -1150,7 +1149,7 @@ public final class WorldPacketsDecoder extends Decoder {
 			case 430:
 				RSLunarSpellStore lunar = RSLunarSpellStore.getSpell(componentId);
 				if (lunar != null) {
-					player.getTemporaryAttributtes().put("spell_target", npc);
+					player.getTemporaryAttributes().put("spell_target", npc);
 					if (lunar.getSpellType() == LunarMagicks.PLAYER) {
 						player.getPackets().sendGameMessage("You can only cast this spell on players.");
 						return;
@@ -1458,9 +1457,9 @@ public final class WorldPacketsDecoder extends Decoder {
 				ClansManager.banPlayer(player, value);
 			else if (player.temporaryAttribute().remove("unbanclanplayer") != null)
 				ClansManager.unbanPlayer(player, value);
-			else if (player.getTemporaryAttributtes().remove("enterhouse") == Boolean.TRUE)
+			else if (player.getTemporaryAttributes().remove("enterhouse") == Boolean.TRUE)
 				House.enterHouse(player, value);
-			else if (player.getTemporaryAttributtes().remove("DUNGEON_INVITE") == Boolean.TRUE)
+			else if (player.getTemporaryAttributes().remove("DUNGEON_INVITE") == Boolean.TRUE)
 				player.getDungManager().invite(value);
 			else if (player.temporaryAttribute().get("titlecolor") == Boolean.TRUE) {
 				if (value.length() != 6) {
@@ -1518,7 +1517,7 @@ public final class WorldPacketsDecoder extends Decoder {
 				String otherName = Utils.formatPlayerNameForDisplay(value);
 				Player p2 = World.getPlayerByDisplayName(otherName);
 				if (p2 != null) {
-					player.getTemporaryAttributtes().put("OTHERPRESET_NAME", otherName);
+					player.getTemporaryAttributes().put("OTHERPRESET_NAME", otherName);
 					GearTab.open(player, otherName);
 					player.getPackets().sendGameMessage("Viewing " + otherName + " presets.");
 				} else {
@@ -1528,7 +1527,7 @@ public final class WorldPacketsDecoder extends Decoder {
 						GearTab.open(player, null);
 					} else {
 						p2 = AccountCreation.loadPlayer(otherName);
-						player.getTemporaryAttributtes().put("OTHERPRESET_NAME", otherName);
+						player.getTemporaryAttributes().put("OTHERPRESET_NAME", otherName);
 						GearTab.open(player, otherName);
 						player.getPackets().sendGameMessage("Viewing " + otherName + " presets.");
 					}
@@ -1604,7 +1603,7 @@ public final class WorldPacketsDecoder extends Decoder {
 				player.getPackets()
 						.sendGameMessage("You have changed your password, your new password is '" + value + "'.");
 			} else if (player.temporaryAttribute().remove("refer") == Boolean.TRUE) {
-				player.getTemporaryAttributtes().put("refer", Boolean.FALSE);
+				player.getTemporaryAttributes().put("refer", Boolean.FALSE);
 				ReferSystem.SendInvite(player, value);
 			} else if (player.temporaryAttribute().remove("doubledrop") == Boolean.TRUE) {
 				if (value.equalsIgnoreCase("enable")) {
@@ -1716,8 +1715,8 @@ public final class WorldPacketsDecoder extends Decoder {
 					player.getBank().depositItem(bank_item_X_Slot, value,
 							player.getInterfaceManager().containsInterface(11) ? false : true);
 			} else if (player.getInterfaceManager().containsInterface(934)
-					&& player.getTemporaryAttributtes().get("FORGE_X") != null) {
-				Integer index = (Integer) player.getTemporaryAttributtes().remove("FORGE_X");
+					&& player.getTemporaryAttributes().get("FORGE_X") != null) {
+				Integer index = (Integer) player.getTemporaryAttributes().remove("FORGE_X");
 				if (index == null)
 					return;
 				boolean dungeoneering = false;
@@ -1727,8 +1726,8 @@ public final class WorldPacketsDecoder extends Decoder {
 				}
 				player.closeInterfaces();
 				player.getActionManager().setAction(new DungeoneeringSmithing(index, value, dungeoneering));
-			} else if (player.getTemporaryAttributtes().get("CUSTOM_STORE_X") != null) {
-				int itemId = (int) player.getTemporaryAttributtes().remove("CUSTOM_STORE_X");
+			} else if (player.getTemporaryAttributes().get("CUSTOM_STORE_X") != null) {
+				int itemId = (int) player.getTemporaryAttributes().remove("CUSTOM_STORE_X");
 				if (value < 0 || value == 0)
 					return;
 				player.getCustomStore().sendBuy(itemId, value);
@@ -1904,22 +1903,22 @@ public final class WorldPacketsDecoder extends Decoder {
 				else
 					player.getFamiliar().getBob().addItem(bob_item_X_Slot, value);
 			} else if (player.getInterfaceManager().containsInterface(403)
-					&& player.getTemporaryAttributtes().get("PlanksConvert") != null) {
-				Sawmill.convertPlanks(player, (Plank) player.getTemporaryAttributtes().remove("PlanksConvert"), value);
+					&& player.getTemporaryAttributes().get("PlanksConvert") != null) {
+				Sawmill.convertPlanks(player, (Plank) player.getTemporaryAttributes().remove("PlanksConvert"), value);
 			} else if (player.getInterfaceManager().containsInterface(902)
-					&& player.getTemporaryAttributtes().get("PlankMake") != null) {
-				Integer type = (Integer) player.getTemporaryAttributtes().remove("PlankMake");
+					&& player.getTemporaryAttributes().get("PlankMake") != null) {
+				Integer type = (Integer) player.getTemporaryAttributes().remove("PlankMake");
 				if (player.getControlerManager().getControler() instanceof SawmillController)
 					((SawmillController) player.getControlerManager().getControler()).cutPlank(type, value);
 			} else if (player.getInterfaceManager().containsInterface(903)
-					&& player.getTemporaryAttributtes().get("PlankWithdraw") != null) {
-				Integer type = (Integer) player.getTemporaryAttributtes().remove("PlankWithdraw");
+					&& player.getTemporaryAttributes().get("PlankWithdraw") != null) {
+				Integer type = (Integer) player.getTemporaryAttributes().remove("PlankWithdraw");
 				if (player.getControlerManager().getControler() instanceof SawmillController)
 					((SawmillController) player.getControlerManager().getControler()).withdrawFromCart(type, value);
 			} else if (player.getControlerManager().getControler() != null
-					&& player.getTemporaryAttributtes().get("SERVANT_REQUEST_ITEM") != null) {
-				Integer type = (Integer) player.getTemporaryAttributtes().remove("SERVANT_REQUEST_TYPE");
-				Integer item = (Integer) player.getTemporaryAttributtes().remove("SERVANT_REQUEST_ITEM");
+					&& player.getTemporaryAttributes().get("SERVANT_REQUEST_ITEM") != null) {
+				Integer type = (Integer) player.getTemporaryAttributes().remove("SERVANT_REQUEST_TYPE");
+				Integer item = (Integer) player.getTemporaryAttributes().remove("SERVANT_REQUEST_ITEM");
 				player.sm("works");
 				if (!player.getHouse().isLoaded() || !player.getHouse().getPlayers().contains(player) || type == null
 						|| item == null)
@@ -1985,8 +1984,8 @@ public final class WorldPacketsDecoder extends Decoder {
 				if (value < 1)
 					value = 1;
 				player.getSkills().setSkillTarget(false, skillId, value);
-			} else if (player.getTemporaryAttributtes().get("SET_DROPVALUE") == Boolean.TRUE) {
-				player.getTemporaryAttributtes().remove("SET_DROPVALUE");
+			} else if (player.getTemporaryAttributes().get("SET_DROPVALUE") == Boolean.TRUE) {
+				player.getTemporaryAttributes().remove("SET_DROPVALUE");
 				if (value < 0)
 					value = 0;
 				if (value > Integer.MAX_VALUE)
@@ -1995,8 +1994,8 @@ public final class WorldPacketsDecoder extends Decoder {
 				player.getPackets().sendGameMessage("Drop value set to: "
 						+ Utils.getFormattedNumber((Integer) player.toggles.get("DROPVALUE"), ',') + " gp.");
 				SettingsTab.open(player);
-			} else if (player.getTemporaryAttributtes().get("SET_TITLE") == Boolean.TRUE) {
-				player.getTemporaryAttributtes().remove("SET_TITLE");
+			} else if (player.getTemporaryAttributes().get("SET_TITLE") == Boolean.TRUE) {
+				player.getTemporaryAttributes().remove("SET_TITLE");
 				if (value < 1)
 					value = 0;
 				if (value == 0)

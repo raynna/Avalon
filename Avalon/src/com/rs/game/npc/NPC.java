@@ -339,6 +339,8 @@ public class NPC extends Entity implements Serializable {
     @Override
     public void processEntity() {
         super.processEntity();
+        // Decrease timers
+        //super.cycle();
         if (getOwner() != null && getOwner().hasFinished()) {
             getOwner().setMarker(false);
             setOwner(null);
@@ -601,7 +603,7 @@ public class NPC extends Entity implements Serializable {
                         Drop drop = new Drop(item.getId(), 100, item.getAmount(), item.getAmount());
                         if (killer.hasRareDrop()) {
                             killer.setRareDrop(new Item(item.getId(), item.getAmount()), new WorldTile(getCoordFaceX(getSize()), getCoordFaceY(getSize()), getPlane()));
-                            killer.getTemporaryAttributtes().remove("RARITY_NODE");
+                            killer.getTemporaryAttributes().remove("RARITY_NODE");
                         }
                         sendDrop(killer, drop);
                     }

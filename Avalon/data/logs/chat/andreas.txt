@@ -10131,3 +10131,111 @@
 [16 December 2022 at 07:59:31 CET] - andreas: l
 [16 December 2022 at 08:02:12 CET] - andreas: l
 [16 December 2022 at 11:00:13 CET] - andreas: l
+[17 December 2022 at 10:30:24 CET] - andreas: andreasscape :)
+[17 December 2022 at 10:30:30 CET] - andreas: never gonna get rid of this shit
+[17 December 2022 at 10:30:35 CET] - andreas: what shit
+[17 December 2022 at 10:30:37 CET] - andreas: avalon
+[17 December 2022 at 10:31:14 CET] - andreas: nice
+[17 December 2022 at 10:57:41 CET] - andreas: omg
+[17 December 2022 at 10:57:42 CET] - andreas: it works
+[17 December 2022 at 10:57:50 CET] - andreas: aw
+[17 December 2022 at 10:57:53 CET] - andreas: but ye
+[17 December 2022 at 10:57:58 CET] - andreas: this counts as 3d area
+[17 December 2022 at 10:58:09 CET] - andreas: hmm
+[17 December 2022 at 10:58:15 CET] - andreas: it should've worked for that too
+[17 December 2022 at 10:58:19 CET] - andreas: mna
+[17 December 2022 at 10:58:20 CET] - andreas: cus look
+[17 December 2022 at 10:58:25 CET] - andreas: i can rotate
+[17 December 2022 at 10:58:28 CET] - andreas: even with this bank open
+[17 December 2022 at 10:58:36 CET] - andreas: oh
+[17 December 2022 at 10:58:52 CET] - andreas: just need a check now
+[17 December 2022 at 10:58:53 CET] - andreas: from this
+[17 December 2022 at 10:58:54 CET] - andreas: look
+[17 December 2022 at 10:59:40 CET] - andreas: hmm
+[17 December 2022 at 10:59:44 CET] - andreas: maybe
+[17 December 2022 at 10:59:45 CET] - andreas: a custompacket
+[17 December 2022 at 10:59:51 CET] - andreas: who sends on open and close interfaces
+[17 December 2022 at 10:59:54 CET] - andreas: and a value
+[17 December 2022 at 11:01:40 CET] - andreas: fuck me
+[17 December 2022 at 11:01:53 CET] - andreas: imma send some paypal cash after
+[17 December 2022 at 11:02:21 CET] - andreas: ofc im not helping you for the money i know but u know, u helped me like long
+[17 December 2022 at 11:02:23 CET] - andreas: time ago aswell alot
+[17 December 2022 at 11:02:47 CET] - andreas: well
+[17 December 2022 at 11:02:50 CET] - andreas: any thought on interface check
+[17 December 2022 at 11:02:58 CET] - andreas: there must be some client variable who checks if an interface is open right
+[17 December 2022 at 11:03:16 CET] - andreas: IM THINKING OF THE RIGHT WAY
+[17 December 2022 at 11:03:22 CET] - andreas: LETS SAY
+[17 December 2022 at 11:03:28 CET] - andreas: YOU WOULD BE ABLE TO ZOOM AT THE EDGE
+[17 December 2022 at 11:03:41 CET] - andreas: IDK IF THAT WOULD BE GOOD THOUGH
+[17 December 2022 at 11:03:43 CET] - andreas: well
+[17 December 2022 at 11:03:54 CET] - andreas: an overlay can also be within the s
+[17 December 2022 at 11:03:57 CET] - andreas: why cant i type number l=l
+[17 December 2022 at 11:04:07 CET] - andreas: hlding shift?
+[17 December 2022 at 11:04:16 CET] - andreas: WELL
+[17 December 2022 at 11:04:21 CET] - andreas: three d screen
+[17 December 2022 at 11:04:42 CET] - andreas: i guess it would be eaiser to check if there is t op interface
+[17 December 2022 at 11:04:51 CET] - andreas: i wouldnt want
+[17 December 2022 at 11:04:54 CET] - andreas: this etc
+[17 December 2022 at 11:04:55 CET] - andreas: to stop it
+[17 December 2022 at 11:05:02 CET] - andreas: lr ths
+[17 December 2022 at 11:05:34 CET] - andreas: wait
+[17 December 2022 at 11:05:36 CET] - andreas: i got an idea aswell
+[17 December 2022 at 11:05:39 CET] - andreas: maybe more difficult
+[17 December 2022 at 11:05:48 CET] - andreas: is there a check if interface has a scrollbar
+[17 December 2022 at 11:05:55 CET] - andreas: hmm
+[17 December 2022 at 11:06:00 CET] - andreas: that could do it aswell
+[17 December 2022 at 11:06:06 CET] - andreas: so if u try zoom & there is a scrollbar present
+[17 December 2022 at 11:06:11 CET] - andreas: then it wont zoom?
+[17 December 2022 at 11:06:39 CET] - andreas: possible but harder hmm k
+[17 December 2022 at 11:17:05 CET] - andreas: oh
+[17 December 2022 at 11:17:12 CET] - andreas: works?
+[17 December 2022 at 11:17:14 CET] - andreas: seems so
+[17 December 2022 at 11:17:25 CET] - andreas: cant believe it worked the fiwa
+[17 December 2022 at 11:17:26 CET] - andreas: wait
+[17 December 2022 at 11:17:29 CET] - andreas: what interface did u open earlier
+[17 December 2022 at 11:17:30 CET] - andreas: to try
+[17 December 2022 at 11:17:42 CET] - andreas: oye
+[17 December 2022 at 11:17:53 CET] - andreas: ur an actual god
+[17 December 2022 at 11:18:00 CET] - andreas: why arent u a millionare from making a big rsps yet
+[17 December 2022 at 11:18:10 CET] - andreas: im a mllioanire from botting
+[17 December 2022 at 11:18:11 CET] - andreas: fair enough
+[17 December 2022 at 11:18:22 CET] - andreas: now thats why u declined my paypal
+[17 December 2022 at 11:18:30 CET] - andreas: u know it wont notice on ur bankaccount
+[17 December 2022 at 11:18:33 CET] - andreas: haha
+[17 December 2022 at 11:18:38 CET] - andreas: look
+[17 December 2022 at 11:18:39 CET] - andreas: what i did
+[17 December 2022 at 11:19:07 CET] - andreas: correct 
+[17 December 2022 at 11:19:09 CET] - andreas: skillmenu
+[17 December 2022 at 11:19:19 CET] - andreas: nice bro
+[17 December 2022 at 11:19:23 CET] - andreas: all servers have it all wrong
+[17 December 2022 at 11:19:48 CET] - andreas: with milestones
+[17 December 2022 at 11:19:57 CET] - andreas: did you find that all?
+[17 December 2022 at 11:20:00 CET] - andreas: ye through cs2 scripts
+[17 December 2022 at 11:20:06 CET] - andreas: took me a while tho to understand all and find it
+[17 December 2022 at 11:21:59 CET] - andreas: instanced pvp
+[17 December 2022 at 11:22:01 CET] - andreas: lel
+[17 December 2022 at 11:22:22 CET] - andreas: nice you ever plan on hosting?
+[17 December 2022 at 11:22:25 CET] - andreas: na its all on github
+[17 December 2022 at 11:22:30 CET] - andreas: released a new thread today
+[17 December 2022 at 11:23:33 CET] - andreas: 3 eco modes
+[17 December 2022 at 11:23:37 CET] - andreas: full spawn, half spawn, full eco
+[17 December 2022 at 11:24:07 CET] - andreas: well
+[17 December 2022 at 11:24:12 CET] - andreas: there was second issue
+[17 December 2022 at 11:24:16 CET] - andreas: but not to big atm
+[17 December 2022 at 11:24:23 CET] - andreas: not client related tho
+[17 December 2022 at 11:24:32 CET] - andreas: i changed saving from old matrix into gson
+[17 December 2022 at 11:24:34 CET] - andreas: like this
+[17 December 2022 at 11:24:51 CET] - andreas: but...
+[17 December 2022 at 11:24:56 CET] - andreas: then i cant save player object
+[17 December 2022 at 11:25:00 CET] - andreas: cus itll wipe out the whole json
+[17 December 2022 at 11:25:06 CET] - andreas: therefor
+[17 December 2022 at 11:25:11 CET] - andreas: i cant save farming for example
+[17 December 2022 at 11:25:19 CET] - andreas: if i plant a seed, relog it nulls it
+[17 December 2022 at 11:25:33 CET] - andreas: hmm
+[17 December 2022 at 11:25:38 CET] - andreas: if u understood
+[17 December 2022 at 11:25:42 CET] - andreas: like
+[17 December 2022 at 11:25:46 CET] - andreas: friendchat and clanchat etc
+[17 December 2022 at 11:25:52 CET] - andreas: i had to redo to load from username
+[17 December 2022 at 11:25:55 CET] - andreas: instead of player object
+[18 December 2022 at 12:56:16 CET] - andreas: 1
+[18 December 2022 at 11:33:45 CET] - andreas: hi arno

@@ -15,7 +15,7 @@ public class SaradominShortcuts extends ObjectScript {
 
 	@Override
 	public boolean processObject(Player player, WorldObject object) {
-		if (!player.getVarBitList().containsKey(3934)) {
+		if (!player.getSavedVarBits().containsKey(3934)) {
 			player.sm("You have to tie a rope around the rock.");
 			return false;
 		}
@@ -37,7 +37,7 @@ public class SaradominShortcuts extends ObjectScript {
 	public boolean processItemOnObject(Player player, WorldObject object, Item item) {
 		if (item.getId() != 954)
 			return false;
-		if (player.getVarBitList().containsKey(3934)) {
+		if (player.getSavedVarBits().containsKey(3934)) {
 			player.sm("There is already a rope tied to this rock.");
 			return false;
 		}

@@ -64,8 +64,8 @@ public class Canoes {
 
 			@Override
 			public int processWithDelay(Player player) {
-				player.getTemporaryAttributtes().put("canoe_chopped", true);
-				player.getTemporaryAttributtes().put("canoe_config", 1839 + configIndex);
+				player.getTemporaryAttributes().put("canoe_chopped", true);
+				player.getTemporaryAttributes().put("canoe_config", 1839 + configIndex);
 				player.getVarsManager().sendVarBit(1839 + configIndex, 10);
 				isComplete = true;
 				stop(player);
@@ -94,7 +94,7 @@ public class Canoes {
 	}
 
 	public static void createShapedCanoe(final Player player) {
-		final int selectedCanoe = (int) player.getTemporaryAttributtes().get("selected_canoe");
+		final int selectedCanoe = (int) player.getTemporaryAttributes().get("selected_canoe");
 		player.closeInterfaces();
 		HatchetDefinitions hatchet = null;
 		for (HatchetDefinitions def : HatchetDefinitions.values()) {
@@ -115,9 +115,9 @@ public class Canoes {
 
 			@Override
 			public void run() {
-				player.getTemporaryAttributtes().put("canoe_shaped", true);
+				player.getTemporaryAttributes().put("canoe_shaped", true);
 				player.unlock();
-				player.getVarsManager().sendVarBit((int) player.getTemporaryAttributtes().get("canoe_config"),
+				player.getVarsManager().sendVarBit((int) player.getTemporaryAttributes().get("canoe_config"),
 						11 + selectedCanoe);
 				return;
 			}
@@ -125,15 +125,15 @@ public class Canoes {
 	}
 
 	public static void openTravelInterface(Player player, int canoeArea) {
-		player.getTemporaryAttributtes().put("selected_area", canoeArea);
+		player.getTemporaryAttributes().put("selected_area", canoeArea);
 		player.getInterfaceManager().sendInterface(AREA_SELECTION);
 		player.getPackets().sendHideIComponent(AREA_SELECTION, 21, false); // default
 		player.getPackets().sendHideIComponent(AREA_SELECTION, canoeArea == 3 ? 19 : 22 + (3 - canoeArea), false); // area
 	}
 
 	public static void deportCanoeStation(final Player player, int selectedArea) {
-		final int selectedCanoe = (int) player.getTemporaryAttributtes().get("selected_canoe");
-		int canoeArea = (int) player.getTemporaryAttributtes().get("selected_area");
+		final int selectedCanoe = (int) player.getTemporaryAttributes().get("selected_canoe");
+		int canoeArea = (int) player.getTemporaryAttributes().get("selected_area");
 		if (selectedArea != canoeArea) {
 			if (selectedArea > (canoeArea + selectedCanoe + 1) || selectedArea < (canoeArea - selectedCanoe - 1)) {
 				player.getPackets().sendGameMessage(
@@ -144,8 +144,8 @@ public class Canoes {
 				return;
 			} else {
 				player.closeInterfaces();
-				player.getVarsManager().sendVarBit((int) player.getTemporaryAttributtes().get("canoe_config"), 0);
-				player.getTemporaryAttributtes().clear();
+				player.getVarsManager().sendVarBit((int) player.getTemporaryAttributes().get("canoe_config"), 0);
+				player.getTemporaryAttributes().clear();
 				WorldTasksManager.schedule(new WorldTask() {
 
 					@Override

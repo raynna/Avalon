@@ -16,7 +16,7 @@ public class MillHopper extends ObjectScript {
 	@Override
 	public boolean processObject(Player player, WorldObject object) {
 		if (object.getId() == 67774) {
-			if (player.getTemporaryAttributtes().containsKey(("HOPPER_WHEAT" + object.getId()))) {
+			if (player.getTemporaryAttributes().containsKey(("HOPPER_WHEAT" + object.getId()))) {
 				player.getPackets().sendGameMessage("You have already put down some wheat inside this hopper.");
 				return false;
 			}
@@ -26,10 +26,10 @@ public class MillHopper extends ObjectScript {
 			}
 			player.getInventory().deleteItem(WHEAT, 1);
 			player.getPackets().sendGameMessage("You put some wheat inside the hopper, maybe i should pull the lever?");
-			player.getTemporaryAttributtes().put(("HOPPER_WHEAT" + object.getId()), true);
+			player.getTemporaryAttributes().put(("HOPPER_WHEAT" + object.getId()), true);
 			return true;
 		}
-		player.getTemporaryAttributtes().remove(("HOPPER_WHEAT" + object.getId()));
+		player.getTemporaryAttributes().remove(("HOPPER_WHEAT" + object.getId()));
 		player.getPackets().sendGameMessage("You operate the hopper. The grain slides down the chute.");
 		if (object.getId() == 67775)
 			player.getVarsManager().sendVarBit(10712, 1, true);

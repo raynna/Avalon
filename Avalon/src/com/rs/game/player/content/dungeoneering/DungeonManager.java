@@ -1224,8 +1224,8 @@ public class DungeonManager {
 	}
 
 	public void exitDungeon(final Player player, final boolean logout) {
-		if (player.getTemporaryAttributtes().get("DUNGEXP") != null) {
-			Double exp = (Double) player.getTemporaryAttributtes().remove("DUNGEXP");
+		if (player.getTemporaryAttributes().get("DUNGEXP") != null) {
+			Double exp = (Double) player.getTemporaryAttributes().remove("DUNGEXP");
 			player.getSkills().addXpNoBonus(Skills.DUNGEONEERING, exp);
 		}
 		party.remove(player, logout);
@@ -1290,8 +1290,8 @@ public class DungeonManager {
 			if (isDestroyed()) // to prevent issues when shutting down forcing
 				return;
 			for (Player player : party.getTeam()) {
-				if (player.getTemporaryAttributtes().get("DUNGEXP") != null) {
-					Double exp = (Double) player.getTemporaryAttributtes().remove("DUNGEXP");
+				if (player.getTemporaryAttributes().get("DUNGEXP") != null) {
+					Double exp = (Double) player.getTemporaryAttributes().remove("DUNGEXP");
 					player.getSkills().addXpNoBonus(Skills.DUNGEONEERING, exp);
 				}
 			}
@@ -1498,7 +1498,7 @@ public class DungeonManager {
 						+ ", multiplier: " + multiplier + ", TotalXp: " + totalXp * xpBoost + ", Total tokens: "
 						+ (totalXp * xpBoost) / 10);
 			if (hsType != 2) {
-				player.getTemporaryAttributtes().put("DUNGEXP", totalXp * xpBoost);
+				player.getTemporaryAttributes().put("DUNGEXP", totalXp * xpBoost);
 				// player.getSkills().addXpNoBonus(Skills.DUNGEONEERING, totalXp * xpBoost);//
 				// add (xp * xpRate)
 				player.getDungManager().addTokens(tokens);// add tokens

@@ -52,13 +52,13 @@ public class TabletMaking {
 	public static void openTabInterface(Player player, int index) {
 		player.getPackets().sendCSVarInteger(943, index + 1);
 		player.getInterfaceManager().sendInterface(400);
-		player.getTemporaryAttributtes().put("tablet_index", index);
+		player.getTemporaryAttributes().put("tablet_index", index);
 		player.animate(new Animation(3652));
 	}
 
 	public static void handleTabletCreation(final Player player, int componentId, int amount) {
 		player.closeInterfaces();
-		final int index = (int) player.getTemporaryAttributtes().get("tablet_index");
+		final int index = (int) player.getTemporaryAttributes().get("tablet_index");
 		final int slot = componentId - 2;
 		for (int enabledSlot : ENABLED_SLOTS[index]) {
 			if (enabledSlot == slot) {
@@ -79,7 +79,7 @@ public class TabletMaking {
 				player.getSkills().addXp(Skills.MAGIC, TABLET_EXPERIENCE[slot] * realAmount);
 				player.lock(2);
 				player.animate(new Animation(3645));
-				player.getTemporaryAttributtes().remove("tablet_index");
+				player.getTemporaryAttributes().remove("tablet_index");
 				return;
 			}
 		}

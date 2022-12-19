@@ -130,7 +130,7 @@ public class PlayerCombat extends Action {
             return false;
         player.setNextFaceEntity(target);
         player.setTemporaryTarget(target);
-        player.getTemporaryAttributtes().put("temporaryActionDelay", 4 * 1000 + Utils.currentTimeMillis());
+        player.getTemporaryAttributes().put("temporaryActionDelay", 4 * 1000 + Utils.currentTimeMillis());
         checkCombatLevel(player, target);
         updateHealthOverlay(player, target);
         if (player.toggles("HEALTHBAR", false)
@@ -1111,10 +1111,10 @@ public class PlayerCombat extends Action {
                                     NPC n = (NPC) target;
                                     int npcDef = n.getBonuses()[CombatDefinitions.NPC_RANGE_DEFENCE];
                                     int temporaryDef = 0;
-                                    if (n.getTemporaryAttributtes().get("NPC_RANGE_DEFENCE") == null) {
+                                    if (n.getTemporaryAttributes().get("NPC_RANGE_DEFENCE") == null) {
                                         temporaryDef = npcDef;
                                     } else
-                                        temporaryDef = (int) n.getTemporaryAttributtes().get("NPC_RANGE_DEFENCE");
+                                        temporaryDef = (int) n.getTemporaryAttributes().get("NPC_RANGE_DEFENCE");
                                     int drain = damage / 20;
                                     if ((temporaryDef - drain) < 0)
                                         temporaryDef = 0;
@@ -1123,7 +1123,7 @@ public class PlayerCombat extends Action {
                                     player.getPackets()
                                             .sendGameMessage("You drain " + n.getName() + " range defence by <col=a80d05>"
                                                     + drain + "</col> down to <col=a80d05>" + temporaryDef + "</col>.");
-                                    n.getTemporaryAttributtes().put("NPC_RANGE_DEFENCE", temporaryDef);
+                                    n.getTemporaryAttributes().put("NPC_RANGE_DEFENCE", temporaryDef);
                                 }
                                 break;
                             case 9244:
@@ -1785,10 +1785,10 @@ public class PlayerCombat extends Action {
                             NPC n = (NPC) target;
                             int npcDef = n.getBonuses()[CombatDefinitions.NPC_DEFENCE_LEVEL];
                             int temporaryDef = 0;
-                            if (n.getTemporaryAttributtes().get("NPC_DEFENCE_LEVEL") == null)
+                            if (n.getTemporaryAttributes().get("NPC_DEFENCE_LEVEL") == null)
                                 temporaryDef = npcDef;
                             else
-                                temporaryDef = (int) n.getTemporaryAttributtes().get("NPC_DEFENCE_LEVEL");
+                                temporaryDef = (int) n.getTemporaryAttributes().get("NPC_DEFENCE_LEVEL");
                             int drain = damage1 / 20;
                             if ((temporaryDef - drain) < 0)
                                 temporaryDef = 0;
@@ -1797,7 +1797,7 @@ public class PlayerCombat extends Action {
                             player.getPackets()
                                     .sendGameMessage("You drain " + n.getName() + " defence level by <col=a80d05>" + drain
                                             + "</col> down to <col=a80d05>" + temporaryDef + "</col>.");
-                            n.getTemporaryAttributtes().put("NPC_DEFENCE_LEVEL", temporaryDef);
+                            n.getTemporaryAttributes().put("NPC_DEFENCE_LEVEL", temporaryDef);
                         }
                     }
                     break;
@@ -1829,10 +1829,10 @@ public class PlayerCombat extends Action {
                             NPC n = (NPC) target;
                             int npcDef = n.getBonuses()[CombatDefinitions.NPC_DEFENCE_LEVEL];
                             int temporaryDef = 0;
-                            if (n.getTemporaryAttributtes().get("NPC_DEFENCE_LEVEL") == null)
+                            if (n.getTemporaryAttributes().get("NPC_DEFENCE_LEVEL") == null)
                                 temporaryDef = npcDef;
                             else
-                                temporaryDef = (int) n.getTemporaryAttributtes().get("NPC_DEFENCE_LEVEL");
+                                temporaryDef = (int) n.getTemporaryAttributes().get("NPC_DEFENCE_LEVEL");
                             int drain = warhammerDamage / 20;
                             if ((temporaryDef - drain) < 0)
                                 temporaryDef = 0;
@@ -1841,7 +1841,7 @@ public class PlayerCombat extends Action {
                             player.getPackets()
                                     .sendGameMessage("You drain " + n.getName() + " defence level by <col=a80d05>" + drain
                                             + "</col> down to <col=a80d05>" + temporaryDef + "</col>.");
-                            n.getTemporaryAttributtes().put("NPC_DEFENCE_LEVEL", temporaryDef);
+                            n.getTemporaryAttributes().put("NPC_DEFENCE_LEVEL", temporaryDef);
                         }
                     }
                     break;
@@ -2246,7 +2246,7 @@ public class PlayerCombat extends Action {
             double rangeBonus = player.getCombatDefinitions().getBonuses()[4];
             if (!ranging) {
                 if (fullVeracsEquipped(player) && Utils.getRandom(3) == 0)
-                    player.getTemporaryAttributtes().put("VERAC_EFFECT", Boolean.TRUE);
+                    player.getTemporaryAttributes().put("VERAC_EFFECT", Boolean.TRUE);
                 double attack = Math.round(player.getSkills().getLevel(Skills.ATTACK) * player.getPrayer().getAttackMultiplier()) + 8;
                 if (fullVoidEquipped(player, (new int[]{11665, 11676})))
                     attack *= (hasEliteVoid(player) ? 1.135 : 1.1);
@@ -2334,13 +2334,13 @@ public class PlayerCombat extends Action {
                     if (n.getBonuses() == null)
                         n.setBonuses();
                     int temporaryBonus = 0;
-                    if (n.getTemporaryAttributtes().get("NPC_RANGE_DEFENCE") != null)
-                        temporaryBonus = (int) n.getTemporaryAttributtes().get("NPC_RANGE_DEFENCE");
+                    if (n.getTemporaryAttributes().get("NPC_RANGE_DEFENCE") != null)
+                        temporaryBonus = (int) n.getTemporaryAttributes().get("NPC_RANGE_DEFENCE");
                     double rangeDefenceBonus = temporaryBonus > 0 ? temporaryBonus
                             : n.getBonuses() != null ? n.getBonuses()[CombatDefinitions.NPC_RANGE_DEFENCE] : 0;
                     int temporaryDef = 0;
-                    if (n.getTemporaryAttributtes().get("NPC_DEFENCE_LEVEL") != null)
-                        temporaryDef = (int) n.getTemporaryAttributtes().get("NPC_DEFENCE_LEVEL");
+                    if (n.getTemporaryAttributes().get("NPC_DEFENCE_LEVEL") != null)
+                        temporaryDef = (int) n.getTemporaryAttributes().get("NPC_DEFENCE_LEVEL");
                     double rangedefence = temporaryDef > 0 ? temporaryDef
                             : n.getBonuses() != null ? n.getBonuses()[CombatDefinitions.NPC_DEFENCE_LEVEL]
                             : n.getCombatLevel();
@@ -2360,8 +2360,8 @@ public class PlayerCombat extends Action {
                             : n.getBonuses() == null ? n.getCombatLevel()
                             : n.getBonuses()[CombatDefinitions.NPC_CRUSH_DEFENCE];
                     int temporaryDef = 0;
-                    if (n.getTemporaryAttributtes().get("NPC_DEFENCE_LEVEL") != null)
-                        temporaryDef = (int) n.getTemporaryAttributtes().get("NPC_DEFENCE_LEVEL");
+                    if (n.getTemporaryAttributes().get("NPC_DEFENCE_LEVEL") != null)
+                        temporaryDef = (int) n.getTemporaryAttributes().get("NPC_DEFENCE_LEVEL");
                    double defence = temporaryDef > 0 ? temporaryDef
                             : n.getBonuses() != null ? n.getBonuses()[CombatDefinitions.NPC_DEFENCE_LEVEL]
                             : n.getCombatLevel() / 3;
@@ -2405,7 +2405,7 @@ public class PlayerCombat extends Action {
                 } else if (A >= D) {
                     prob = 1 - (D + 1) / (A * 2);
                 }
-                if (player.getTemporaryAttributtes().remove("VERAC_EFFECT") == Boolean.TRUE)
+                if (player.getTemporaryAttributes().remove("VERAC_EFFECT") == Boolean.TRUE)
                     prob = 100;
                 if (player.getEquipment().getWeaponId() == 4566)
                     prob = 100;
@@ -3111,7 +3111,7 @@ public class PlayerCombat extends Action {
                 hit.setMissedHit();
                 p2.getPackets().sendGameMessage("Your Disruption Shield blocked your victim's damage.");
                 player.getPackets().sendGameMessage("Your victim's Disruption Shield blocked your damage.");
-                p2.getTemporaryAttributtes().put("isDisruptionActivated", Boolean.FALSE);
+                p2.getTemporaryAttributes().put("isDisruptionActivated", Boolean.FALSE);
             }
         }
     }
@@ -3308,7 +3308,7 @@ public class PlayerCombat extends Action {
     }
 
     public boolean isVeracEffect(Player player) {
-        Boolean verac = (Boolean) player.getTemporaryAttributtes().get("VERAC_EFFECT");
+        Boolean verac = (Boolean) player.getTemporaryAttributes().get("VERAC_EFFECT");
         if (verac == null)
             return false;
         return verac;
@@ -3395,7 +3395,7 @@ public class PlayerCombat extends Action {
                 }
                 if (n.getId() == 1160) {
                     if (meleeAttack) {
-                        if (player.getTemporaryAttributtes().get("VERAC_EFFECT") == Boolean.FALSE)
+                        if (player.getTemporaryAttributes().get("VERAC_EFFECT") == Boolean.FALSE)
                             hit.setDamage(hit.getDamage() / 2);
                     }
                 }
@@ -3420,7 +3420,7 @@ public class PlayerCombat extends Action {
                         }
                     }
                 }
-                if (player.getTemporaryAttributtes().get("GODMODE") != null)
+                if (player.getTemporaryAttributes().get("GODMODE") != null)
                     hit.setDamage(n.getHitpoints());
             }
             if (player.isAtWild() && player.getEp() != 100 && player.getAttackedByDelay() > Utils.currentTimeMillis()) {
@@ -4209,7 +4209,7 @@ public class PlayerCombat extends Action {
             p2.setTargetName(player);
         }
         target.temporaryAttribute().put("last_attacker", player);
-        player.getTemporaryAttributtes().put("temporaryActionDelay", 4 * 1000 + Utils.currentTimeMillis());
+        player.getTemporaryAttributes().put("temporaryActionDelay", 4 * 1000 + Utils.currentTimeMillis());
         if (player.getCombatDefinitions().isInstantAttack()) {
             player.getCombatDefinitions().setInstantAttack(false);
             if (player.getCombatDefinitions().getAutoCastSpell() > 0)
@@ -4888,11 +4888,11 @@ public class PlayerCombat extends Action {
 
     public void processMorriganJavelins(final Player player, int hit) {
         final Entity finalTarget = target;
-        if (finalTarget.getTemporaryAttributtes().get("MORRIGANEFFECT") == Boolean.TRUE) {
+        if (finalTarget.getTemporaryAttributes().get("MORRIGANEFFECT") == Boolean.TRUE) {
             finalTarget.morriganHits += hit;
             return;
         }
-        finalTarget.getTemporaryAttributtes().put("MORRIGANEFFECT", Boolean.TRUE);
+        finalTarget.getTemporaryAttributes().put("MORRIGANEFFECT", Boolean.TRUE);
         finalTarget.morriganHits += hit;
         WorldTasksManager.schedule(new WorldTask() {
 
@@ -4901,7 +4901,7 @@ public class PlayerCombat extends Action {
                 if (finalTarget.isDead() || finalTarget.hasFinished() || player.isDead() || player.hasFinished()) {
                     stop();
                     finalTarget.morriganHits = 0;
-                    finalTarget.getTemporaryAttributtes().remove("MORRIGANEFFECT");
+                    finalTarget.getTemporaryAttributes().remove("MORRIGANEFFECT");
                     return;
                 }
                 if (finalTarget.morriganHits >= 50) {
@@ -4910,7 +4910,7 @@ public class PlayerCombat extends Action {
                 } else {
                     finalTarget.applyHit(new Hit(player, finalTarget.morriganHits, HitLook.REGULAR_DAMAGE));
                     finalTarget.morriganHits = 0;
-                    finalTarget.getTemporaryAttributtes().remove("MORRIGANEFFECT");
+                    finalTarget.getTemporaryAttributes().remove("MORRIGANEFFECT");
                     stop();
                     return;
                 }
@@ -4928,11 +4928,11 @@ public class PlayerCombat extends Action {
         }
         delayNormalHit(weaponId, attackStyle,
                 getMeleeHit(player, getRandomMaxHit(player, weaponId, attackStyle, false, true, 1.0, true)));
-        if (finalTarget.getTemporaryAttributtes().get("VINEEFFECT") == Boolean.TRUE) {
+        if (finalTarget.getTemporaryAttributes().get("VINEEFFECT") == Boolean.TRUE) {
             finalTarget.vineHits = 10;
         } else
             finalTarget.vineHits += 10;
-        finalTarget.getTemporaryAttributtes().put("VINEEFFECT", Boolean.TRUE);
+        finalTarget.getTemporaryAttributes().put("VINEEFFECT", Boolean.TRUE);
         final WorldTile vineTile = new WorldTile(target.getX(), target.getY(), target.getPlane());
         WorldTasksManager.schedule(new WorldTask() {
 
@@ -4940,13 +4940,13 @@ public class PlayerCombat extends Action {
             public void run() {
                 if (player.getEquipment().getWeaponId() != 21371) {
                     player.sm("Since you no longer wield a vine whip, the vine ignores your call");
-                    finalTarget.getTemporaryAttributtes().remove("VINEEFFECT");
+                    finalTarget.getTemporaryAttributes().remove("VINEEFFECT");
                     finalTarget.vineHits = 0; stop();
                  return;
                 }
 
                 if (finalTarget.isDead() || finalTarget.hasFinished() || player.isDead() || player.hasFinished()) {
-                    finalTarget.getTemporaryAttributtes().remove("VINEEFFECT");
+                    finalTarget.getTemporaryAttributes().remove("VINEEFFECT");
                     finalTarget.vineHits = 0;
                     stop();
                     return;
@@ -4956,7 +4956,7 @@ public class PlayerCombat extends Action {
                     World.sendGraphics(null, new Graphics(478), vineTile);
                 }
                 if (finalTarget.vineHits < 1) {
-                    finalTarget.getTemporaryAttributtes().remove("VINEEFFECT");
+                    finalTarget.getTemporaryAttributes().remove("VINEEFFECT");
                     stop();
                 }
                 int damage = 0;

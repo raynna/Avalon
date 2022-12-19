@@ -913,8 +913,8 @@ public class InventoryOptionsHandler {
 		int itemUsedId = stream.readShortLE128();
 		player.stopAll(false);
 		if (interfaceId == 192 && interfaceId2 == Inventory.INVENTORY_INTERFACE) {
-			player.getTemporaryAttributtes().put("spell_itemid", itemUsedWithId);
-			player.getTemporaryAttributtes().put("spell_slotid", toSlot);
+			player.getTemporaryAttributes().put("spell_itemid", itemUsedWithId);
+			player.getTemporaryAttributes().put("spell_slotid", toSlot);
 			RSSpellStore modern = RSSpellStore.getSpell(compId);
 			if (modern != null) {
 				if (!ModernMagicks.hasRequirement(player, spellId, false, false)) {
@@ -925,8 +925,8 @@ public class InventoryOptionsHandler {
 				return;
 			}
 		} else if (interfaceId == 430 && interfaceId2 == Inventory.INVENTORY_INTERFACE) {
-			player.getTemporaryAttributtes().put("spell_itemid", itemUsedWithId);
-			player.getTemporaryAttributtes().put("spell_slotid", toSlot);
+			player.getTemporaryAttributes().put("spell_itemid", itemUsedWithId);
+			player.getTemporaryAttributes().put("spell_slotid", toSlot);
 			RSLunarSpellStore lunar = RSLunarSpellStore.getSpell(compId);
 			if (lunar != null) {
 				if (!LunarMagicks.hasRequirement(player, spellId)) {
