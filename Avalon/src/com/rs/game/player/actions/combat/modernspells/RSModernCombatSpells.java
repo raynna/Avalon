@@ -2,6 +2,7 @@ package com.rs.game.player.actions.combat.modernspells;
 
 import com.rs.game.Entity;
 import com.rs.game.Graphics;
+import com.rs.game.Hit;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
 import com.rs.game.player.actions.combat.AncientMagicks;
@@ -260,24 +261,26 @@ public class RSModernCombatSpells {
 		return baseDamage;
 	}
 
-	public static void instantSpellEffect(Player player, Entity target, int spellId, boolean successHit) {
+	public static void instantSpellEffect(Player player, Entity target, int spellId, Hit hit) {
 		ModernCombatSpellsStore spellStore = ModernCombatSpellsStore.getSpell(spellId);
 		if (spellStore == null)
 			return;
+		boolean missed = hit.getDamage() == 0;
+		boolean isPlayer = target instanceof Player;
 		switch (spellStore) {
 			case TELEPORT_BLOCK:
-				if (target instanceof Player && successHit) {
-					Player p2 = (Player) target;
-					PlayerCombat.teleBlockTime = (p2.getPrayer().usingPrayer(0, 17) || p2.getPrayer().usingPrayer(1, 7)
-							? 150000
-							: 300000);
-				}
+				if (!isPlayer || missed)
+					return;
+					PlayerCombat.teleBlockTime = (((Player) target).getPrayer().usingPrayer(0, 17) || ((Player) target).getPrayer().usingPrayer(1, 7)
+							? 240
+							: 480);
 				break;
 			case BIND:
 			case SNARE:
 			case ENTANGLE:
-				if (successHit)
-					target.addFreezeDelay(spellStore == ModernCombatSpellsStore.BIND ? 5000 : spellStore == ModernCombatSpellsStore.SNARE ? 10000 : 15000, true);
+				if (missed)
+					return;
+				target.addFreezeDelay(spellStore == ModernCombatSpellsStore.BIND ? 8 : spellStore == ModernCombatSpellsStore.SNARE ? 16 : 24, true);
 				break;
 		}
 	}

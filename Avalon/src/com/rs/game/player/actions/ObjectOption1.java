@@ -5,7 +5,7 @@ import com.rs.game.Graphics;
 import com.rs.game.World;
 import com.rs.game.WorldObject;
 import com.rs.game.WorldTile;
-import com.rs.game.objects.impl.DoorsAndGates;
+import com.rs.game.objects.scripts.DoorsAndGates;
 import com.rs.game.player.Player;
 import com.rs.game.player.RouteEvent;
 import com.rs.game.player.Skills;

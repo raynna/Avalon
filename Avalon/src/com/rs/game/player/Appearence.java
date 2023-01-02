@@ -106,7 +106,7 @@ public class Appearence implements Serializable {
 											: title == 9003 ? "<col=ffc800> the Recruiter"
 													: title == 800 ? "<col="+player.getCustomTitle() + ">" : title == 900 ? player.getCustomTitle()
 															: title == 901 ? player.getCustomTitle2()
-																	: title == 65535 ? player.getPlayerRank().getTitle()
+																	: title == 65535 ? player.getPlayerRank().getRankName(0)
 																			: ClientScriptMap.getMap(male ? 1093 : 3872)
 																					.getStringValue(title));
 			stream.writeGJString(getTitleName());

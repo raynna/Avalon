@@ -72,7 +72,7 @@ public class AgilityPyramid {
 				} else if (object.getX() == 3042 && object.getY() == 4695) {
 					player.useStairs(828, new WorldTile(3043, 4697, 3), 1, 2);
 				} else if (player.getPlane() == 0) {
-					player.pyramidReward = false;
+					player.getTemporaryAttributtes().put("PENDING_PYRAMID_REWARD", Boolean.FALSE);
 					player.useStairs(828, new WorldTile(player.getX() -2, player.getY() + 3, 1), 1, 2);
 				} else if (player.getPlane() == 1) {
 					player.useStairs(828, new WorldTile(player.getX(), player.getY() + 3, 2), 1, 2);
@@ -88,10 +88,10 @@ public class AgilityPyramid {
 			player.setNextWorldTile(new WorldTile(3364, 2830, 0));
 			return true;
 		case PYRAMID_REWARD_OBJECT:
-			if (!player.pyramidReward) {
+			if (player.getTemporaryAttributtes().get("PENDING_PYRAMID_REWARD") == Boolean.FALSE) {
 				player.getMoneyPouch().addMoney(10000, false);
 				player.sm("You recieve a reward for reaching the top of the pyramid.");
-				player.pyramidReward = true;
+				player.getTemporaryAttributtes().put("PENDING_PYRAMID_REWARD", Boolean.TRUE);
 			} else {
 				player.sm("You have already claimed your reward, complete the pyramid again.");
 			}

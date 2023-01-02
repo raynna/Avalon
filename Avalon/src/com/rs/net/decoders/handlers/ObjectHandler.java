@@ -22,9 +22,9 @@ import com.rs.game.minigames.fightpits.FightPits;
 import com.rs.game.minigames.pest.Lander;
 import com.rs.game.minigames.warriorguild.WarriorsGuild;
 import com.rs.game.objects.ObjectScript;
-import com.rs.game.objects.ObjectScriptsHandler;
-import com.rs.game.objects.impl.DoorsAndGates;
-import com.rs.game.objects.impl.GlobalStairs;
+import com.rs.game.objects.ObjectScriptHandler;
+import com.rs.game.objects.scripts.DoorsAndGates;
+import com.rs.game.objects.scripts.GlobalStairs;
 import com.rs.game.player.CombatDefinitions;
 import com.rs.game.player.Player;
 import com.rs.game.player.RouteEvent;
@@ -175,8 +175,8 @@ public final class ObjectHandler {
         final int x = object.getX();
         final int y = object.getY();
         player.setNextFaceEntity(null);
-        ObjectScript script = ObjectScriptsHandler.cachedObjectScripts.getOrDefault(object.getId(),
-                ObjectScriptsHandler.cachedObjectScripts.get(objectDef.name));
+        ObjectScript script = ObjectScriptHandler.cachedObjectScripts.getOrDefault(object.getId(),
+                ObjectScriptHandler.cachedObjectScripts.get(objectDef.name));
         if (script != null) {
             player.setRouteEvent(new RouteEvent(object, new Runnable() {
                 @Override
@@ -1631,8 +1631,8 @@ public final class ObjectHandler {
         final ObjectDefinitions objectDef = object.getDefinitions();
         final int id = object.getId();
         player.setNextFaceEntity(null);
-        ObjectScript script = ObjectScriptsHandler.cachedObjectScripts.getOrDefault(object.getId(),
-                ObjectScriptsHandler.cachedObjectScripts.get(objectDef.name));
+        ObjectScript script = ObjectScriptHandler.cachedObjectScripts.getOrDefault(object.getId(),
+                ObjectScriptHandler.cachedObjectScripts.get(objectDef.name));
         if (script != null) {
             if (script.getDistance() == 0) {
                 player.setRouteEvent(new RouteEvent(object, new Runnable() {
@@ -1803,8 +1803,8 @@ public final class ObjectHandler {
         final ObjectDefinitions objectDef = object.getDefinitions();
         final int id = object.getId();
         player.setNextFaceEntity(null);
-        ObjectScript script = ObjectScriptsHandler.cachedObjectScripts.getOrDefault(object.getId(),
-                ObjectScriptsHandler.cachedObjectScripts.get(objectDef.name));
+        ObjectScript script = ObjectScriptHandler.cachedObjectScripts.getOrDefault(object.getId(),
+                ObjectScriptHandler.cachedObjectScripts.get(objectDef.name));
         if (script != null) {
             if (script.getDistance() == 0) {
                 player.setRouteEvent(new RouteEvent(object, new Runnable() {
@@ -1898,8 +1898,8 @@ public final class ObjectHandler {
         final ObjectDefinitions objectDef = object.getDefinitions();
         final int id = object.getId();
         player.setNextFaceEntity(null);
-        ObjectScript script = ObjectScriptsHandler.cachedObjectScripts.getOrDefault(object.getId(),
-                ObjectScriptsHandler.cachedObjectScripts.get(objectDef.name));
+        ObjectScript script = ObjectScriptHandler.cachedObjectScripts.getOrDefault(object.getId(),
+                ObjectScriptHandler.cachedObjectScripts.get(objectDef.name));
         if (script != null) {
             if (script.getDistance() == 0) {
                 player.setRouteEvent(new RouteEvent(object, new Runnable() {
@@ -1955,8 +1955,8 @@ public final class ObjectHandler {
         final ObjectDefinitions objectDef = object.getDefinitions();
         final int id = object.getId();
         player.setNextFaceEntity(null);
-        ObjectScript script = ObjectScriptsHandler.cachedObjectScripts.getOrDefault(object.getId(),
-                ObjectScriptsHandler.cachedObjectScripts.get(objectDef.name));
+        ObjectScript script = ObjectScriptHandler.cachedObjectScripts.getOrDefault(object.getId(),
+                ObjectScriptHandler.cachedObjectScripts.get(objectDef.name));
         if (script != null) {
             if (script.getDistance() == 0) {
                 player.setRouteEvent(new RouteEvent(object, new Runnable() {
@@ -2065,8 +2065,8 @@ public final class ObjectHandler {
                                           final Item item) {
         final int itemId = item.getId();
         final ObjectDefinitions objectDef = object.getDefinitions();
-        ObjectScript script = ObjectScriptsHandler.cachedObjectScripts.getOrDefault(object.getId(),
-                ObjectScriptsHandler.cachedObjectScripts.get(objectDef.name));
+        ObjectScript script = ObjectScriptHandler.cachedObjectScripts.getOrDefault(object.getId(),
+                ObjectScriptHandler.cachedObjectScripts.get(objectDef.name));
         if (script != null) {
             if (script.getDistance() == 0) {
                 player.setRouteEvent(new RouteEvent(object, new Runnable() {

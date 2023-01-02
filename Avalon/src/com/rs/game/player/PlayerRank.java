@@ -77,6 +77,11 @@ public class PlayerRank implements Serializable {
 		return false;
 	}
 
+	public int getIconId() {
+		Rank rank = getRank()[0];
+		return rank.getIconId();
+	}
+
 	public boolean isIronman() {
 		return rank[2] == Rank.IRONMAN || rank[2] == Rank.HARDCORE_IRONMAN;
 	}
@@ -88,13 +93,5 @@ public class PlayerRank implements Serializable {
 	public boolean isStaff() {
 		Rank rank = getRank()[0];
 		return rank != Rank.PLAYER && rank != Rank.YOUTUBER;
-	}
-
-	public String getTitle() {
-		for (Rank rank : rank) {
-			if (rank.getTitle() != null)
-				return rank.getTitle();
-		}
-		return null;
 	}
 }

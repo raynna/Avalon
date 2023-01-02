@@ -28,24 +28,25 @@ public class Ranks {
 
 		PLAYERSUPPORT("Player Support"),
 
-		DEVELOPER("Developer");
+		DEVELOPER("Developer", 1.0, 1);
 
 		private String rankName;
-		private String title;
 		private double xpBoost;
 
+		private int iconId;
+
 		private Rank(String rankName) {
-			this(rankName, 1.0, null);
-		}
-		
-		private Rank(String rankName, double xpBoost) {
-			this(rankName, xpBoost, null);
+			this(rankName, 1.0, -1);
 		}
 
-		private Rank(String rankName, double xpBoost, String title) {
+		private Rank(String rankName, double xpBoost) {
+			this(rankName, xpBoost, -1);
+		}
+
+		private Rank(String rankName, double xpBoost, int iconId) {
 			this.rankName = rankName;
 			this.xpBoost = xpBoost;
-			this.title = title;
+			this.iconId = iconId;
 		}
 
 		public String getRankName() {
@@ -56,8 +57,8 @@ public class Ranks {
 			return xpBoost;
 		}
 
-		public String getTitle() {
-			return title;
+		public int getIconId() {
+			return iconId;
 		}
 	}
 

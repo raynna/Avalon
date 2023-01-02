@@ -17,7 +17,7 @@ public class Vengeance {
 		player.gfx(new Graphics(726, 0, 100));
 		player.animate(new Animation(4410));
 		player.setVengeance(true);
-		player.setVengeance(30000);
+		player.setVengeance(48);
 		player.sm("You cast a vengeance.");
 		return true;
 	}

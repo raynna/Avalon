@@ -29,10 +29,7 @@ import com.rs.game.npc.fightkiln.HarAkenTentacle;
 import com.rs.game.npc.glacior.Glacyte;
 import com.rs.game.npc.pest.PestPortal;
 import com.rs.game.npc.qbd.QueenBlackDragon;
-import com.rs.game.player.CombatDefinitions;
-import com.rs.game.player.Equipment;
-import com.rs.game.player.Player;
-import com.rs.game.player.Skills;
+import com.rs.game.player.*;
 import com.rs.game.player.actions.Action;
 import com.rs.game.player.actions.combat.ancientspells.RSAncientCombatSpells;
 import com.rs.game.player.actions.combat.ancientspells.RSAncientCombatSpells.AncientCombatSpellsStore;
@@ -42,9 +39,11 @@ import com.rs.game.player.controlers.WildernessControler;
 import com.rs.game.player.controlers.pestcontrol.PestControlGame;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
+import com.rs.utils.HexColours;
 import com.rs.utils.Logger;
 import com.rs.utils.MapAreas;
 import com.rs.utils.Utils;
+import com.rs.game.player.VariableKeys.*;
 
 /**
  * @Improved Andreas - AvalonPK
@@ -84,6 +83,66 @@ public class PlayerCombat extends Action {
         return player.getInterfaceManager().isResizableScreen() ? 1 : 30;
     }
 
+    public void updateHealthOverlay(Entity player, Entity target) {
+        if (target instanceof Player) {
+            Player p2 = (Player) target;
+            Player p1 = (Player) player;
+            checkCombatLevel(p1, p2);
+            StringBuilder name = new StringBuilder();
+            if (p2.getAppearence().getTitle() != -1)
+                name.append(p2.getAppearence().getTitleName());
+            name.append(p2.getDisplayName());
+            p1.getPackets().sendIComponentText(3037, 6, name.toString());
+            p1.getPackets().sendIComponentText(3037, 7,
+                    (p1.toggles("ONEXHITS", false) ? p2.getHitpoints() / 10 + "/" + p2.getMaxHitpoints() / 10
+                            : p2.getHitpoints() + "/" + p2.getMaxHitpoints()));
+        } else {
+            NPC npc = (NPC) target;
+            Player p1 = (Player) player;
+            p1.getPackets().sendIComponentText(3037, 6, npc.getName());
+            checkCombatLevel(p1, npc);
+            p1.getPackets().sendIComponentText(3037, 7,
+                    (p1.toggles("ONEXHITS", false) ? npc.getHitpoints() / 10 + "/" + npc.getMaxHitpoints() / 10
+                            : npc.getHitpoints() + "/" + npc.getMaxHitpoints()));
+        }
+    }
+
+    public void checkCombatLevel(Player player, Entity target) {
+        if (target instanceof NPC) {
+            NPC npc = (NPC) target;
+            int level = player.isAtWild() ? player.getSkills().getCombatLevel() : player.getSkills().getCombatLevelWithSummoning();
+            int targetLevel = npc.getCombatLevel();
+            player.getPackets().sendHideIComponent(3037, 8, npc.getCombatLevel() == 0);
+            player.getPackets().sendHideIComponent(3037, 9, npc.getCombatLevel() == 0);
+            StringBuilder builder = new StringBuilder();
+            builder.append("Level: ");
+            if (level > targetLevel)
+                builder.append(HexColours.Colour.GREEN.getHex());
+            if (level == targetLevel)
+                builder.append(HexColours.Colour.YELLOW.getHex());
+            if (level < targetLevel)
+                builder.append(HexColours.Colour.RED.getHex());
+            builder.append(targetLevel);
+            player.getPackets().sendIComponentText(3037, 9, builder.toString());
+        } else {
+            Player p2 = (Player) target;
+            int level = player.isAtWild() ? player.getSkills().getCombatLevel() : player.getSkills().getCombatLevelWithSummoning();
+            int targetLevel = p2.getSkills().getCombatLevel();
+            player.getPackets().sendHideIComponent(3037, 8, false);
+            player.getPackets().sendHideIComponent(3037, 9, false);
+            StringBuilder builder = new StringBuilder();
+            builder.append("Lvl: ");
+            if (level > targetLevel)
+                builder.append(HexColours.Colour.GREEN.getHex());
+            if (level == targetLevel)
+                builder.append(HexColours.Colour.YELLOW.getHex());
+            if (level < targetLevel)
+                builder.append(HexColours.Colour.RED.getHex());
+            builder.append((player.isAtWild() || player.isAtPvP() ? targetLevel + "+" + p2.getSkills().getSummoningCombatLevel() : p2.getSkills().getCombatLevelWithSummoning()));
+            player.getPackets().sendIComponentText(3037, 9, builder.toString());
+        }
+    }
+
     @Override
     public boolean start(Player player) {
         if (player == null)
@@ -93,10 +152,13 @@ public class PlayerCombat extends Action {
         player.setNextFaceEntity(target);
         player.setTemporaryTarget(target);
         player.getTemporaryAttributtes().put("temporaryActionDelay", 4 * 1000 + Utils.currentTimeMillis());
+        checkCombatLevel(player, target);
+        updateHealthOverlay(player, target);
         if (player.toggles("HEALTHBAR", false)
                 && (!player.getInterfaceManager().containsTab(getHealthOverlayId(player)))) {
             player.getInterfaceManager().sendTab(getHealthOverlayId(player), 3037);
-            updateHealthOverlay(player, target);
+            final int pixels = (int) ((double) target.getHitpoints() / target.getMaxHitpoints() * 126D);
+            player.getPackets().sendRunScript(6252, pixels);
         }
         if (checkAll(player)) {
             return true;
@@ -104,40 +166,6 @@ public class PlayerCombat extends Action {
         player.setNextFaceEntity(null);
         return false;
     }
-
-    public void updateHealthOverlay(Entity player, Entity target) {
-        if (target instanceof Player) {
-            Player p2 = (Player) target;
-            Player p1 = (Player) player;
-            p1.getPackets().sendIComponentText(3037, 6, p2.getDisplayName());
-            int combat = p1.isAtWild() ? p1.getSkills().getCombatLevel() : p1.getSkills().getCombatLevelWithSummoning();
-            int targetCombat = p2.isAtWild() ? p2.getSkills().getCombatLevel()
-                    : p2.getSkills().getCombatLevelWithSummoning();
-            String level = (targetCombat > combat ? "<col=ff5331>"
-                    : targetCombat == combat ? "<col=FFC428>" : "<col=00b427>") + targetCombat;
-            p1.getPackets().sendIComponentText(3037, 9, "Level: " + level);
-            p1.getPackets().sendIComponentText(3037, 7,
-                    (p1.toggles("ONEXHITS", false) ? p2.getHitpoints() / 10 + "/" + p2.getMaxHitpoints() / 10
-                            : p2.getHitpoints() + "/" + p2.getMaxHitpoints()));
-            final int pixels = (int) ((double) p2.getHitpoints() / p2.getMaxHitpoints() * 126D);
-            p1.getPackets().sendRunScript(6252, pixels);
-        } else {
-            NPC npc = (NPC) target;
-            Player p1 = (Player) player;
-            p1.getPackets().sendIComponentText(3037, 6, npc.getName());
-            int combat = p1.isAtWild() ? p1.getSkills().getCombatLevel() : p1.getSkills().getCombatLevelWithSummoning();
-            int targetCombat = npc.getCombatLevel();
-            String level = (targetCombat > combat ? "<col=ff5331>"
-                    : targetCombat == combat ? "<col=FFC428>" : "<col=00b427>") + targetCombat;
-            p1.getPackets().sendIComponentText(3037, 9, "Level: " + level);
-            p1.getPackets().sendIComponentText(3037, 7,
-                    (p1.toggles("ONEXHITS", false) ? npc.getHitpoints() / 10 + "/" + npc.getMaxHitpoints() / 10
-                            : npc.getHitpoints() + "/" + npc.getMaxHitpoints()));
-            final int pixels = (int) ((double) npc.getHitpoints() / npc.getMaxHitpoints() * 126D);
-            p1.getPackets().sendRunScript(6252, pixels);
-        }
-    }
-
     @Override
     public boolean process(Player player) {
         if (target.isDead())
@@ -333,7 +361,7 @@ public class PlayerCombat extends Action {
 
     }
 
-    public static long teleBlockTime;
+    public static int teleBlockTime;
 
     public int mageAttack(final Player player, int spellId, boolean autocast) {
         if (spellId == 65535) {
@@ -475,7 +503,7 @@ public class PlayerCombat extends Action {
                 }
             }
             delayMagicHit(getMageDelay(player, target), hit);
-            RSModernCombatSpells.instantSpellEffect(player, target, spell.getId(), hit.getDamage() > 0);
+            RSModernCombatSpells.instantSpellEffect(player, target, spell.getId(), hit);
             return spell == ModernCombatSpellsStore.STORM_OF_ARMADYL && wearingArmadylStaff(player) ? 3 : 4;
         } else if (player.getCombatDefinitions().getSpellBook() == AncientMagicks.SPELLBOOK_ID) {
             AncientCombatSpellsStore spell = AncientCombatSpellsStore.getSpell(spellId);
@@ -503,8 +531,8 @@ public class PlayerCombat extends Action {
                 magic_sound = 170;
             if (spell == AncientCombatSpellsStore.ICE_BARRAGE) {
                 magic_sound = 168;
-                if (target.getSize() >= 2 || target.getFreezeDelay() >= Utils.currentTimeMillis()
-                        || target.getFreezeImmuneDelay() >= Utils.currentTimeMillis()) {
+                if (target.getSize() >= 2 || target.getFreezeDelay() > 0
+                        || target.getFreezeImmuneDelay() > 0) {
                     mage_hit_gfx = 1677;
                 } else
                     mage_hit_gfx = 369;
@@ -3363,13 +3391,13 @@ public class PlayerCombat extends Action {
                 if (player.getTemporaryAttributtes().get("GODMODE") != null)
                     hit.setDamage(n.getHitpoints());
             }
-            if (player.isAtWild() && player.getEp() != 100 && player.getAttackedByDelay() > Utils.currentTimeMillis()) {
+            if (player.isAtWild() && player.get(IntKey.EP) != 100 && player.getAttackedByDelay() > Utils.currentTimeMillis()) {
                 if (Utils.getRandom(2) == 0) {
                     int random = Utils.random(5) + 1;
-                    if (player.getEp() + random > 100)
-                        player.setEp(100);
+                    if (player.get(IntKey.EP) + random > 100)
+                        player.set(IntKey.EP, 100);
                     else
-                        player.setEp(player.getEp() + (random));
+                        player.add(IntKey.EP, random);
                 }
             }
             int damage = hit.getDamage() > target.getHitpoints() ? target.getHitpoints() : hit.getDamage();
@@ -3567,7 +3595,7 @@ public class PlayerCombat extends Action {
                                 if (target instanceof Player) {
                                     Player targetPlayer = (Player) target;
                                     targetPlayer.setTeleBlockDelay(teleBlockTime);
-                                    targetPlayer.setTeleBlockImmune(teleBlockTime + 30000);
+                                    targetPlayer.setTeleBlockImmune(teleBlockTime + 48);
                                     targetPlayer.getPackets().sendGameMessage(
                                             "A teleportblock spell have been cast on you, you can't teleport for another "
                                                     + targetPlayer.getTeleBlockTimeleft() + ".",

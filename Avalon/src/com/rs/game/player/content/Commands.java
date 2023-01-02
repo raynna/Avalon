@@ -32,11 +32,12 @@ import com.rs.game.minigames.lividfarm.LividFarmControler;
 import com.rs.game.minigames.lividfarm.LividStore.Spell;
 import com.rs.game.minigames.pest.CommendationExchange;
 import com.rs.game.npc.NPC;
-import com.rs.game.objects.ObjectScriptsHandler;
+import com.rs.game.objects.ObjectScriptHandler;
 import com.rs.game.player.AccountCreation;
 import com.rs.game.player.Player;
 import com.rs.game.player.Ranks.Rank;
 import com.rs.game.player.Skills;
+import com.rs.game.player.VariableKeys;
 import com.rs.game.player.actions.combat.Magic;
 import com.rs.game.player.actions.skills.construction.ConstructorsOutfit;
 import com.rs.game.player.actions.skills.summoning.Summoning;
@@ -99,6 +100,8 @@ public final class Commands {
         if (clientCommand) {
         } else {
             String name;
+            int amount = 0;
+            int itemId = 0;
             switch (cmd[0]) {
                 case "flowertest":
                     String[] flowers = {"red", "blue", "yellow", "orange", "pastel", "rainbow"};
@@ -503,7 +506,7 @@ public final class Commands {
                         dr = 0;
                     player.setNextForceTalk(
                             new ForceTalk("Kills: " + player.getKillCount() + " Deaths: " + player.getDeathCount()
-                                    + " Streak: " + player.killStreak + " Ratio: " + new DecimalFormat("##.#").format(dr)));
+                                    + " Streak: " + player.get(VariableKeys.IntKey.KILLSTREAK) + " Ratio: " + new DecimalFormat("##.#").format(dr)));
                     return true;
                 case "switchitemslook":
                     player.switchItemsLook();
@@ -525,6 +528,10 @@ public final class Commands {
 
     public static boolean processAdminCommands(final Player player, String[] cmd, boolean console,
                                                boolean clientCommand) {
+        int amount = 0;
+        int itemId = 0;
+        String name;
+        Player target;
         if (clientCommand) {
             switch (cmd[0]) {
                 case "playmusic":
@@ -547,8 +554,6 @@ public final class Commands {
                     return true;
             }
         } else {
-            String name;
-            Player target;
             switch (cmd[0]) {
 
                 case "pvp":
@@ -634,7 +639,6 @@ public final class Commands {
                     }
                     return true;
                 case "testdrop":
-                    int amount = 0;
                     int max = 32000;
                     for (int i = 0; i < 1000000; i++) {
                         int row = (int) (max * 0.05);
@@ -1137,7 +1141,7 @@ public final class Commands {
                     }
                     return true;
                 case "robjects":
-                    ObjectScriptsHandler.init();
+                    ObjectScriptHandler.init();
                     System.out.println("reload object scripts");
                     return true;
                 case "regionid":
@@ -1629,17 +1633,16 @@ public final class Commands {
                 case "removebankitem":
                     if (cmd.length == 3 || cmd.length == 4) {
                         Player p = World.getPlayerByDisplayName(Utils.formatPlayerNameForDisplay(cmd[1]));
-                        int amounts = 1;
                         if (cmd.length == 4) {
                             try {
-                                amounts = Integer.parseInt(cmd[3]);
+                                amount = Integer.parseInt(cmd[3]);
                             } catch (NumberFormatException e) {
-                                amounts = 1;
+                                amount = 1;
                             }
                         }
                         if (p != null) {
                             try {
-                                Item itemToRemove = new Item(Integer.parseInt(cmd[2]), amounts);
+                                Item itemToRemove = new Item(Integer.parseInt(cmd[2]), amount);
                                 boolean multiple = itemToRemove.getAmount() > 1;
                                 p.getBank().removeItem(itemToRemove.getId());
                                 p.getPackets().sendGameMessage(player.getDisplayName() + " has removed "
@@ -1678,19 +1681,18 @@ public final class Commands {
                 case "makemember":
                     if (cmd.length == 2 || cmd.length == 3) {
                         Player p = World.getPlayerByDisplayName(Utils.formatPlayerNameForDisplay(cmd[1]));
-                        int amountz = 1;
                         if (cmd.length == 3) {
                             try {
-                                amountz = Integer.parseInt(cmd[2]);
+                                amount = Integer.parseInt(cmd[2]);
                             } catch (NumberFormatException e) {
-                                amountz = 1;
+                                amount = 1;
                             }
                         }
                         if (p != null) {
                             try {
-                                p.makeMember(amountz);
+                                p.makeMember(amount);
                                 p.member = true;
-                                p.getPackets().sendGameMessage("You recieve " + amountz + " days of member.");
+                                p.getPackets().sendGameMessage("You recieve " + amount + " days of member.");
                                 return true;
                             } catch (NumberFormatException e) {
                             }
@@ -1705,17 +1707,16 @@ public final class Commands {
                 case "giveitem":
                     if (cmd.length == 3 || cmd.length == 4) {
                         Player p = World.getPlayerByDisplayName(Utils.formatPlayerNameForDisplay(cmd[1]));
-                        int amountx = 1;
                         if (cmd.length == 4) {
                             try {
-                                amountx = Integer.parseInt(cmd[3]);
+                                amount = Integer.parseInt(cmd[3]);
                             } catch (NumberFormatException e) {
-                                amountx = 1;
+                                amount = 1;
                             }
                         }
                         if (p != null) {
                             try {
-                                Item itemToGive = new Item(Integer.parseInt(cmd[2]), amountx);
+                                Item itemToGive = new Item(Integer.parseInt(cmd[2]), amount);
                                 boolean multiple = itemToGive.getAmount() > 1;
                                 if (!p.getInventory().addItem(itemToGive)) {
                                     p.getBank().addItem(itemToGive.getId(), itemToGive.getAmount(), true);
@@ -1750,20 +1751,19 @@ public final class Commands {
                     }
                     if (cmd.length == 2 || cmd.length == 3) {
                         Player p = World.getPlayerByDisplayName(Utils.formatPlayerNameForDisplay(cmd[1]));
-                        int amountc = 1;
                         if (cmd.length == 3) {
                             try {
-                                amountc = Integer.parseInt(cmd[2]);
+                                amount = Integer.parseInt(cmd[2]);
                             } catch (NumberFormatException e) {
-                                amountc = 1;
+                                amount = 1;
                             }
                         }
                         if (p != null) {
                             try {
-                                p.PKP += amountc;
-                                p.getPackets().sendGameMessage("You recieve " + amountc + " Pk points.");
-                                player.getPackets().sendGameMessage("You gave " + amountc + " pkp to " + p.getDisplayName());
-                                player.getPackets().sendGameMessage("They now have " + p.PKP + "");
+                                p.addPKP(amount);
+                                p.getPackets().sendGameMessage("You recieve " + amount + " Pk points.");
+                                player.getPackets().sendGameMessage("You gave " + amount + " pkp to " + p.getDisplayName());
+                                player.getPackets().sendGameMessage("They now have " + p.getPKP() + "");
 
                                 return true;
                             } catch (NumberFormatException e) {
@@ -1775,18 +1775,18 @@ public final class Commands {
                 case "setks":
                     if (cmd.length == 2 || cmd.length == 3) {
                         Player p = World.getPlayerByDisplayName(Utils.formatPlayerNameForDisplay(cmd[1]));
-                        int amountb = 1;
+                        amount = 1;
                         if (cmd.length == 3) {
                             try {
-                                amountb = Integer.parseInt(cmd[2]);
+                                amount = Integer.parseInt(cmd[2]);
                             } catch (NumberFormatException e) {
-                                amountb = 1;
+                                amount = 1;
                             }
                         }
                         if (p != null) {
                             try {
-                                p.killStreak += amountb;
-                                p.getPackets().sendGameMessage("You recieve " + amountb + " killstreaks.");
+                                p.add(VariableKeys.IntKey.KILLSTREAK, amount);
+                                p.getPackets().sendGameMessage("You recieve " + amount + " killstreaks.");
                                 return true;
                             } catch (NumberFormatException e) {
                             }
@@ -1797,18 +1797,17 @@ public final class Commands {
                 case "kills":
                     if (cmd.length == 2 || cmd.length == 3) {
                         Player p = World.getPlayerByDisplayName(Utils.formatPlayerNameForDisplay(cmd[1]));
-                        int amount1 = 1;
                         if (cmd.length == 3) {
                             try {
-                                amount1 = Integer.parseInt(cmd[2]);
+                                amount = Integer.parseInt(cmd[2]);
                             } catch (NumberFormatException e) {
-                                amount1 = 1;
+                                amount = 1;
                             }
                         }
                         if (p != null) {
                             try {
-                                p.killCount += amount1;
-                                p.getPackets().sendGameMessage("You recieve " + amount1 + " kills.");
+                                p.add(VariableKeys.IntKey.KILLCOUNT, amount);
+                                p.getPackets().sendGameMessage("You recieve " + amount + " kills.");
                                 return true;
                             } catch (NumberFormatException e) {
                             }
@@ -1819,18 +1818,17 @@ public final class Commands {
                 case "deaths":
                     if (cmd.length == 2 || cmd.length == 3) {
                         Player p = World.getPlayerByDisplayName(Utils.formatPlayerNameForDisplay(cmd[1]));
-                        int amount1 = 1;
                         if (cmd.length == 3) {
                             try {
-                                amount1 = Integer.parseInt(cmd[2]);
+                                amount = Integer.parseInt(cmd[2]);
                             } catch (NumberFormatException e) {
-                                amount1 = 1;
+                                amount = 1;
                             }
                         }
                         if (p != null) {
                             try {
-                                p.deathCount += amount1;
-                                p.getPackets().sendGameMessage("You recieve " + amount1 + " kills.");
+                                p.add(VariableKeys.IntKey.DEATHCOUNT, amount);
+                                p.getPackets().sendGameMessage("You recieve " + amount + " deaths.");
                                 return true;
                             } catch (NumberFormatException e) {
                             }
@@ -1864,12 +1862,11 @@ public final class Commands {
                 case "healother":
                     if (cmd.length == 2 || cmd.length == 3) {
                         Player p = World.getPlayerByDisplayName(Utils.formatPlayerNameForDisplay(cmd[1]));
-                        int amount2 = 1;
                         if (cmd.length == 3) {
                             try {
-                                amount2 = Integer.parseInt(cmd[2]);
+                                amount = Integer.parseInt(cmd[2]);
                             } catch (NumberFormatException e) {
-                                amount2 = 1;
+                                amount = 1;
                             }
                         }
                         if (p != null) {
@@ -1883,7 +1880,7 @@ public final class Commands {
                                 p.getSkills().restoreSkills();
                                 p.getCombatDefinitions().resetSpecialAttack();
                                 p.getAppearence().generateAppearenceData();
-                                p.heal(amount2);
+                                p.heal(amount);
                                 p.getPackets().sendGameMessage("You were healed.");
                                 return true;
                             } catch (NumberFormatException e) {
@@ -1992,21 +1989,20 @@ public final class Commands {
                 case "setptsother":
                     if (cmd.length == 2 || cmd.length == 3) {
                         Player p = World.getPlayerByDisplayName(Utils.formatPlayerNameForDisplay(cmd[1]));
-                        int amount3 = 1;
                         if (cmd.length == 3) {
                             try {
-                                amount3 = Integer.parseInt(cmd[2]);
+                                amount = Integer.parseInt(cmd[2]);
                             } catch (NumberFormatException e) {
-                                amount3 = 1;
+                                amount = 1;
                             }
                         }
                         if (p != null) {
                             try {
                                 player.getPackets().sendGameMessage("You gave " + p.getUsername() + " "
-                                        + Utils.getFormattedNumber(amount3, ',') + " " + Settings.SERVER_NAME + " points.");
-                                p.getPackets().sendGameMessage("You recieved " + Utils.getFormattedNumber(amount3, ',') + " "
+                                        + Utils.getFormattedNumber(amount, ',') + " " + Settings.SERVER_NAME + " points.");
+                                p.getPackets().sendGameMessage("You recieved " + Utils.getFormattedNumber(amount, ',') + " "
                                         + Settings.SERVER_NAME + " points.");
-                                p.setAvalonPoints(p.getAvalonPoints() + amount3);
+                                p.setAvalonPoints(p.getAvalonPoints() + amount);
                                 return true;
                             } catch (NumberFormatException e) {
                             }
@@ -2019,17 +2015,16 @@ public final class Commands {
                 case "setkillsother":
                     if (cmd.length == 2 || cmd.length == 3) {
                         Player p = World.getPlayerByDisplayName(Utils.formatPlayerNameForDisplay(cmd[1]));
-                        int amount4 = 1;
                         if (cmd.length == 3) {
                             try {
-                                amount4 = Integer.parseInt(cmd[2]);
+                                amount = Integer.parseInt(cmd[2]);
                             } catch (NumberFormatException e) {
-                                amount4 = 1;
+                                amount = 1;
                             }
                         }
                         if (p != null) {
                             try {
-                                p.killCount = amount4;
+                                p.add(VariableKeys.IntKey.KILLCOUNT, amount);
                                 return true;
                             } catch (NumberFormatException e) {
                             }
@@ -2042,20 +2037,16 @@ public final class Commands {
                 case "setduelkillsother":
                     if (cmd.length == 2 || cmd.length == 3) {
                         Player p = World.getPlayerByDisplayName(Utils.formatPlayerNameForDisplay(cmd[1]));
-                        int amount5 = 1;
                         if (cmd.length == 3) {
                             try {
-                                amount5 = Integer.parseInt(cmd[2]);
+                                amount = Integer.parseInt(cmd[2]);
                             } catch (NumberFormatException e) {
-                                amount5 = 1;
+                                amount = 1;
                             }
                         }
                         if (p != null) {
-                            try {
-                                p.setDuelkillCount(amount5);
-                                return true;
-                            } catch (NumberFormatException e) {
-                            }
+                                p.setDuelkillCount(amount);
+                          return true;
                         }
                     } else {
                         player.getPackets().sendGameMessage("Use: ::setduelkillsother username amount");
@@ -2272,7 +2263,7 @@ public final class Commands {
 
                 case "ks":
                 case "killstreak":
-                    player.setNextForceTalk(new ForceTalk("My current killstreak: " + player.killStreak));
+                    player.setNextForceTalk(new ForceTalk("My current killstreak: " + player.get(VariableKeys.IntKey.KILLSTREAK)));
                     return true;
 
                 case "players":
@@ -2420,17 +2411,16 @@ public final class Commands {
                 case "setdeathsother":
                     if (cmd.length == 2 || cmd.length == 3) {
                         Player p = World.getPlayerByDisplayName(Utils.formatPlayerNameForDisplay(cmd[1]));
-                        int amount5 = 1;
                         if (cmd.length == 3) {
                             try {
-                                amount5 = Integer.parseInt(cmd[2]);
+                                amount = Integer.parseInt(cmd[2]);
                             } catch (NumberFormatException e) {
-                                amount5 = 1;
+                                amount = 1;
                             }
                         }
                         if (p != null) {
                             try {
-                                p.deathCount = amount5;
+                                p.set(VariableKeys.IntKey.DEATHCOUNT, amount);
                                 return true;
                             } catch (NumberFormatException e) {
                             }
@@ -2446,11 +2436,10 @@ public final class Commands {
                     }
                     try {
                         int itemId1 = Integer.valueOf(cmd[1]);
-                        int amount3 = 1;
                         if (cmd.length == 3)
-                            amount3 = Integer.parseInt(cmd[2]);
-                        player.getBank().addItem(itemId1, amount3, true);
-                        player.getPackets().sendGameMessage("You spawn " + amount3 + " x "
+                            amount = Integer.parseInt(cmd[2]);
+                        player.getBank().addItem(itemId1, amount, true);
+                        player.getPackets().sendGameMessage("You spawn " + amount + " x "
                                 + ItemDefinitions.getItemDefinitions(itemId1).getName() + " to your bank.");
                     } catch (NumberFormatException e) {
                         player.getPackets().sendGameMessage("Use: ::bankitem id (optional:amount)");
@@ -2463,11 +2452,10 @@ public final class Commands {
                     }
                     try {
                         int itemId1 = Integer.valueOf(cmd[1]);
-                        int amount4 = 1;
                         if (cmd.length == 3)
-                            amount4 = Integer.parseInt(cmd[2]);
-                        player.getInventory().addItem(itemId1, amount4);
-                        player.getPackets().sendGameMessage("You spawn " + amount4 + " x "
+                            amount = Integer.parseInt(cmd[2]);
+                        player.getInventory().addItem(itemId1, amount);
+                        player.getPackets().sendGameMessage("You spawn " + amount + " x "
                                 + ItemDefinitions.getItemDefinitions(itemId1).getName() + ".");
                     } catch (NumberFormatException e) {
                         player.getPackets().sendGameMessage("Use: ::item id (optional:amount)");
@@ -3040,6 +3028,8 @@ public final class Commands {
         } else {
             String name;
             Player target;
+            int amount = 0;
+            int itemId = 0;
             switch (cmd[0]) {
                 case "answer":
                 case "open":

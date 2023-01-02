@@ -17,7 +17,7 @@ public class DisruptionShield {
 		player.gfx(new Graphics(1320, 0, 100));
 		player.animate(new Animation(8770));
 		player.setDisruption(true);
-		player.setDisruption(60000);
+		player.setDisruption(96);
 		player.sm("You cast a Disruption Shield.");
 		return true;
 	}

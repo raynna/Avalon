@@ -7,14 +7,13 @@ import com.rs.game.ForceMovement;
 import com.rs.game.World;
 import com.rs.game.WorldObject;
 import com.rs.game.WorldTile;
-import com.rs.game.objects.impl.DoorsAndGates;
+import com.rs.game.objects.scripts.DoorsAndGates;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
 import com.rs.game.player.actions.skills.agility.Agility;
 import com.rs.game.player.actions.skills.smithing.Smithing;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
-import com.rs.net.decoders.handlers.ObjectHandler;
 import com.rs.utils.Utils;
 
 public class GodWars extends Controler {

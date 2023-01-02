@@ -28,7 +28,6 @@ import com.rs.game.player.AccountCreation;
 import com.rs.game.player.Inventory;
 import com.rs.game.player.LogicPacket;
 import com.rs.game.player.Player;
-import com.rs.game.player.Player.Limits;
 import com.rs.game.player.PublicChatMessage;
 import com.rs.game.player.QuickChatMessage;
 import com.rs.game.player.RouteEvent;
@@ -81,6 +80,7 @@ import com.rs.utils.huffman.Huffman;
 
 public final class WorldPacketsDecoder extends Decoder {
 
+	public static final int EQUIPMENT_REMOVE_PACKET = 216;
 	private static final byte[] PACKET_SIZES = new byte[104];
 
 	private final static int WALKING_PACKET = 8;
@@ -98,7 +98,7 @@ public final class WorldPacketsDecoder extends Decoder {
 	public final static int WORLD_MAP_CLICK = 38;
 	public final static int ACTION_BUTTON10_PACKET = 96;
 	public final static int RECEIVE_PACKET_COUNT_PACKET = 33;
-	private final static int MAGIC_ON_ITEM_PACKET = 3;
+	public final static int EQUIPMENT_EXAMINE_PACKET = 3;
 	private final static int MOVE_CAMERA_PACKET = 103;
 	private final static int INTERFACE_ON_OBJECT = 37;
 	private final static int CLICK_PACKET = -1;
@@ -158,6 +158,7 @@ public final class WorldPacketsDecoder extends Decoder {
 	private final static int INTERFACE_ON_PLAYER = 50;
 	private final static int INTERFACE_ON_NPC = 66;
 	private final static int COLOR_ID_PACKET = 97;
+
 	private final static int REPORT_ABUSE_PACKET = 11;
 	private final static int GRAND_EXCHANGE_ITEM_SELECT_PACKET = 71;
 	private final static int TELEKINETIC_GRAB_SPELL_PACKET = 69;
@@ -188,44 +189,6 @@ public final class WorldPacketsDecoder extends Decoder {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
-
-	public static int getMaxedLevel(Player player, int skillId) {
-		if (skillId == Skills.STRENGTH) {
-			return player.maxed_str;
-		}
-		if (skillId == Skills.ATTACK)
-			return player.maxed_atk;
-		if (skillId == Skills.DEFENCE)
-			return player.maxed_def;
-		if (skillId == Skills.RANGE)
-			return player.maxed_range;
-		if (skillId == Skills.MAGIC)
-			return player.maxed_mage;
-		if (skillId == Skills.HITPOINTS)
-			return player.maxed_hp;
-		if (skillId == Skills.PRAYER)
-			return player.maxed_prayer;
-		return -1;
-	}
-
-	public static int getMaxedXp(Player player, int skillId) {
-		if (skillId == Skills.STRENGTH) {
-			return Skills.getXPForLevel(player.maxed_str);
-		}
-		if (skillId == Skills.ATTACK)
-			return Skills.getXPForLevel(player.maxed_atk);
-		if (skillId == Skills.DEFENCE)
-			return Skills.getXPForLevel(player.maxed_def);
-		if (skillId == Skills.RANGE)
-			return Skills.getXPForLevel(player.maxed_range);
-		if (skillId == Skills.MAGIC)
-			return Skills.getXPForLevel(player.maxed_mage);
-		if (skillId == Skills.HITPOINTS)
-			return Skills.getXPForLevel(player.maxed_hp);
-		if (skillId == Skills.PRAYER)
-			return Skills.getXPForLevel(player.maxed_prayer);
-		return -1;
 	}
 
 	public static void loadPacketSizes() {
@@ -1305,7 +1268,7 @@ public final class WorldPacketsDecoder extends Decoder {
 			player.getPackets().sendWorldList(updateType == 0);
 		} else if (packetId == ITEM_ON_ITEM_PACKET) {
 			InventoryOptionsHandler.handleItemOnItem(player, stream);
-		} else if (packetId == MAGIC_ON_ITEM_PACKET) {
+		} else if (packetId == EQUIPMENT_EXAMINE_PACKET) {
 			InventoryOptionsHandler.handleMagicOnItem(player, stream);
 		} else if (packetId == AFK_PACKET) {
 
@@ -2075,7 +2038,7 @@ public final class WorldPacketsDecoder extends Decoder {
 				|| packetId == OBJECT_CLICK1_PACKET || packetId == SWITCH_INTERFACE_ITEM_PACKET
 				|| packetId == OBJECT_CLICK2_PACKET || packetId == OBJECT_CLICK3_PACKET
 				|| packetId == OBJECT_CLICK4_PACKET || packetId == OBJECT_CLICK5_PACKET
-				|| packetId == INTERFACE_ON_OBJECT || packetId == TELEKINETIC_GRAB_SPELL_PACKET || packetId == DEVELOPER_PACKET) {
+				|| packetId == INTERFACE_ON_OBJECT || packetId == TELEKINETIC_GRAB_SPELL_PACKET || packetId == DEVELOPER_PACKET || packetId == EQUIPMENT_REMOVE_PACKET) {
 			player.addLogicPacketToQueue(new LogicPacket(packetId, length, stream));
 		} else if (packetId == OBJECT_EXAMINE_PACKET) {
 			ObjectHandler.handleOption(player, stream, -1);
@@ -2280,45 +2243,6 @@ public final class WorldPacketsDecoder extends Decoder {
 			 * + ", actual size: " + PACKET_SIZES[packetId]);
 			 */
 		}
-	}
-
-	public static void setMaxedLevel(Player player, int skillId, int level) {
-		if (skillId == Skills.ATTACK) {
-			player.maxed_atk = level;
-			player.getPackets().sendGameMessage(
-					"<col=ff7000>You can set your attack level back to " + player.maxed_atk + " at anytime.");
-		}
-		if (skillId == Skills.STRENGTH) {
-			player.maxed_str = level;
-			player.getPackets().sendGameMessage(
-					"<col=ff7000>You can set your strength level back to " + player.maxed_str + " at anytime.");
-		}
-		if (skillId == Skills.DEFENCE) {
-			player.maxed_def = level;
-			player.getPackets().sendGameMessage(
-					"<col=ff7000>You can set your defence level back to " + player.maxed_def + " at anytime.");
-		}
-		if (skillId == Skills.RANGE) {
-			player.maxed_range = level;
-			player.getPackets().sendGameMessage(
-					"<col=ff7000>You can set your range level back to " + player.maxed_range + " at anytime.");
-		}
-		if (skillId == Skills.MAGIC) {
-			player.maxed_mage = level;
-			player.getPackets().sendGameMessage(
-					"<col=ff7000>You can set your magic level back to " + player.maxed_mage + " at anytime.");
-		}
-		if (skillId == Skills.HITPOINTS) {
-			player.maxed_hp = level;
-			player.getPackets().sendGameMessage(
-					"<col=ff7000>You can set your hitpoints level back to " + player.maxed_hp + " at anytime.");
-		}
-		if (skillId == Skills.PRAYER) {
-			player.maxed_prayer = level;
-			player.getPackets().sendGameMessage(
-					"<col=ff7000>You can set your prayer level back to " + player.maxed_prayer + " at anytime.");
-		}
-
 	}
 
 	boolean QuestionScript(Player player, Object in) {

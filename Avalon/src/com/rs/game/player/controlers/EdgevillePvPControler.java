@@ -179,13 +179,24 @@ public class EdgevillePvPControler extends Controler {
             player.getInterfaceManager().sendTab(getTabId(player), 3043);
         int minus = player.getSkills().getCombatLevel() - getWildLevel();
         int plus = player.getSkills().getCombatLevel() + getWildLevel();
-        if (minus < 4)
-            player.getPackets().sendIComponentText(3043, 3, "3 - " + plus);
+        StringBuilder builder = new StringBuilder();
+        if (minus< 4)
+            builder.append("3 - " + plus);
         else if (plus > 137)
-            player.getPackets().sendIComponentText(3043, 3, "" + minus + " - 138");
+            builder.append(minus + " - 138");
         else if (plus < 138 && minus > 3)
-            player.getPackets().sendIComponentText(3043, 3, "" + minus + " - " + plus);
-        player.getPackets().sendIComponentText(3043, 4, "EP: " + player.getEp() + "%");
+            builder.append(minus + " - " + plus);
+        player.getPackets().sendIComponentText(3043, 3, builder.toString());
+        builder = new StringBuilder();
+        builder.append("EP: ");
+        if (player.getEP() >= 75)
+            builder.append(HexColours.Colour.GREEN.getHex());
+        if (player.getEP() >= 30 && player.getEP() <= 74)
+            builder.append(HexColours.Colour.YELLOW.getHex());
+        if (player.getEP() < 30)
+            builder.append(HexColours.Colour.RED.getHex());
+        builder.append(player.getEP() + "%");
+        player.getPackets().sendIComponentText(3043, 4, builder.toString());
         if (isSafe(player))
             player.getPackets().sendSpriteOnIComponent(3043, 2, inSafeSprite);
         else

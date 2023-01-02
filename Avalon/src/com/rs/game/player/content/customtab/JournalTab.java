@@ -229,14 +229,14 @@ public class JournalTab extends CustomTab {
 		EP(18) {
 			@Override
 			public void usage(Player p) {
-				p.getPackets().sendGameMessage("Your Ep is: " + p.getEp() + ".");
-				p.setNextForceTalk(new ForceTalk("I have a total of " + p.getEp() + "% EP."));
+				p.getPackets().sendGameMessage("Your Ep is: " + p.getEP() + ".");
+				p.setNextForceTalk(new ForceTalk("I have a total of " + p.getEP() + "% EP."));
 			}
 
 			@Override
 			public String text(Player p) {
-				return "Ep: " + (p.getEp() == 100 ? "<col=04BB3B>" : p.getEp() > 0 ? "<col=FFF300>" : "<col=BB0404>")
-						+ p.getEp() + "%";
+				return "Ep: " + (p.getEP() == 100 ? "<col=04BB3B>" : p.getEP() > 0 ? "<col=FFF300>" : "<col=BB0404>")
+						+ p.getEP() + "%";
 			}
 		},
 

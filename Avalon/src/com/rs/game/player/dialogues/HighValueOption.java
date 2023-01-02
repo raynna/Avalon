@@ -1,8 +1,11 @@
 package com.rs.game.player.dialogues;
 
+import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.game.World;
 import com.rs.game.WorldTile;
 import com.rs.game.item.Item;
+import com.rs.game.item.ItemScriptHandler;
+import com.rs.game.item.ItemScripts;
 import com.rs.game.player.content.ItemConstants;
 
 public class HighValueOption extends Dialogue {
@@ -56,19 +59,12 @@ public class HighValueOption extends Dialogue {
 					end();
 					return;		
 				}
-				player.getInventory().deleteItem(slotId, item);
-				if (item.getId() == 21371) {
-					item.setId(ItemConstants.removeAttachedId(item));
-					if (player.isAtWild() && ItemConstants.isTradeable(item))
-						World.updateGroundItem(new Item(4151, 1), new WorldTile(player), player, 1, 0);
-					else
-						World.updateGroundItem(new Item(4151, 1), new WorldTile(player), player, 60, 0);
+				ItemScripts script = ItemScriptHandler.cachedItemScripts.getOrDefault(item.getId(), ItemScriptHandler.cachedItemScripts.get(ItemDefinitions.getItemDefinitions(item.getId()).name));
+				if (script != null) {
+					if (script.processDrop(player, item, slotId))
+						return;
 				}
-				if (player.isAtWild() && ItemConstants.isTradeable(item))
-					World.updateGroundItem(item, new WorldTile(player), player, 1, 0);
-				else
-					World.updateGroundItem(item, new WorldTile(player), player, 60, 0);
-				player.getPackets().sendSound(4500, 0, 1);
+				player.getInventory().dropItem(slotId, item, true);
 				end();
 				break;
 			case OPTION_2:
@@ -76,19 +72,12 @@ public class HighValueOption extends Dialogue {
 					end();
 					return;		
 				}
-				player.getInventory().deleteItem(slotId, item);
-				if (item.getId() == 21371) {
-					item.setId(ItemConstants.removeAttachedId(item));
-					if (player.isAtWild() && ItemConstants.isTradeable(item))
-						World.updateGroundItem(new Item(4151, 1), new WorldTile(player), player, 1, 0);
-					else
-						World.updateGroundItem(new Item(4151, 1), new WorldTile(player), player, 60, 0);
+				script = ItemScriptHandler.cachedItemScripts.getOrDefault(item.getId(), ItemScriptHandler.cachedItemScripts.get(ItemDefinitions.getItemDefinitions(item.getId()).name));
+				if (script != null) {
+					if (script.processDrop(player, item, slotId))
+						return;
 				}
-				if (player.isAtWild() && ItemConstants.isTradeable(item))
-					World.updateGroundItem(item, new WorldTile(player), player, 1, 0);
-				else
-					World.updateGroundItem(item, new WorldTile(player), player, 60, 0);
-				player.getPackets().sendSound(4500, 0, 1);
+				player.getInventory().dropItem(slotId, item, true);
 				player.HighValueOption = true;
 				end();
 				break;

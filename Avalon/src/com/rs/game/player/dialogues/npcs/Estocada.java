@@ -2,6 +2,7 @@ package com.rs.game.player.dialogues.npcs;
 
 import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.cache.loaders.NPCDefinitions;
+import com.rs.game.player.VariableKeys;
 import com.rs.game.player.dialogues.Dialogue;
 
 public class Estocada extends Dialogue {
@@ -11,17 +12,17 @@ public class Estocada extends Dialogue {
 	@Override
 	public void start() {
 		npcId = (Integer) parameters[0];
-		if (!player.talkedToEstocada) {
+		if (!player.get(VariableKeys.BooleanKey.TALKED_TO_ESTOCADA)) {
 			stageName = "FirstTimeStage2";
 			sendEntityDialogue(SEND_2_TEXT_CHAT,
 					new String[] { NPCDefinitions.getNPCDefinitions(npcId).name,
 							"Ah, a new face. You are here to fight, yes? Honour and blood under the Code Duello?" },
 					IS_NPC, npcId, 9827);
-		} else if (player.talkedToEstocada && !player.hasDuellist()) {
+		} else if (player.get(VariableKeys.BooleanKey.TALKED_TO_ESTOCADA) && !player.hasDuellist()) {
 			stageName = "LostHatStage2";
 			sendEntityDialogue(SEND_2_TEXT_CHAT, new String[] { NPCDefinitions.getNPCDefinitions(npcId).name,
 					"My friend, you have not got your hat. Where is it gone to?" }, IS_NPC, npcId, 9827);
-		} else if (player.talkedToEstocada && player.hasDuellist()) {
+		} else if (player.get(VariableKeys.BooleanKey.TALKED_TO_ESTOCADA) && player.hasDuellist()) {
 			stageName = "TellMoreOptions";
 			sendOptionsDialogue("Choose an option.", "Tell me more about this hat, then.", "Farewell!");
 		}
@@ -63,7 +64,7 @@ public class Estocada extends Dialogue {
 					"Glad to hear it! Then I have something for you." }, IS_NPC, npcId, 9827);
 		} else if (stageName == "FirstTimeStage4") {
 			stageName = "TellMoreOption";
-			player.talkedToEstocada = true;
+			player.set(VariableKeys.BooleanKey.TALKED_TO_ESTOCADA, true);
 			player.getInventory().addItem(20795, 1);
 			sendEntityDialogue(SEND_ITEM_DIALOGUE, new String[] { ItemDefinitions.getItemDefinitions(20795).name,
 					"Estocada gives you a wide-brimmed hat." }, IS_ITEM, 20795, -1);

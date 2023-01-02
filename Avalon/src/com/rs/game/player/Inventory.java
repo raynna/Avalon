@@ -204,12 +204,36 @@ public final class Inventory implements Serializable {
 		refreshItems(itemsBefore);
 	}
 
+	public void dropItem(int slot, Item item, boolean addToGround) {
+		if (!player.getControlerManager().canDeleteInventoryItem(item.getId(), item.getAmount()))
+			return;
+		Item[] itemsBefore = items.getItemsCopy();
+		items.remove(slot, item);
+		if (addToGround)
+			World.updateGroundItem(item, new WorldTile(player), player, player.isAtWild() && ItemConstants.isTradeable(item) ? 0 : 60, 0);
+		refreshItems(itemsBefore);
+		player.getPackets().sendSound(4500, 0, 1);
+	}
+
 	public boolean removeItems(Item... list) {
 		for (Item item : list) {
 			if (item == null)
 				continue;
 			deleteItem(item);
 		}
+		player.getPackets().sendSound(4500, 0, 1);
+		return true;
+	}
+
+	public boolean dropItems(boolean addToGround, Item... list) {
+		for (Item item : list) {
+			if (item == null)
+				continue;
+			if (addToGround)
+				World.updateGroundItem(item, new WorldTile(player), player, player.isAtWild() ? 0 : 60, 0);
+			deleteItem(item);
+		}
+		player.getPackets().sendSound(4500, 0, 1);
 		return true;
 	}
 

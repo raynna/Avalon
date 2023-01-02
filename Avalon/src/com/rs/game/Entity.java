@@ -31,6 +31,7 @@ import com.rs.game.route.strategy.EntityStrategy;
 import com.rs.game.route.strategy.ObjectStrategy;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
+import com.rs.utils.HexColours;
 import com.rs.utils.Utils;
 
 public abstract class Entity extends WorldTile {
@@ -224,19 +225,54 @@ public abstract class Entity extends WorldTile {
 		nextHits.add(hit);
 	}
 
+	public void checkCombatLevel(Player player, Entity target) {
+		if (target instanceof NPC) {
+			NPC npc = (NPC) target;
+			int level = player.isAtWild() ? player.getSkills().getCombatLevel() : player.getSkills().getCombatLevelWithSummoning();
+			int targetLevel = npc.getCombatLevel();
+			player.getPackets().sendHideIComponent(3037, 8, npc.getCombatLevel() == 0);
+			player.getPackets().sendHideIComponent(3037, 9, npc.getCombatLevel() == 0);
+			StringBuilder builder = new StringBuilder();
+			builder.append("Level: ");
+			if (level > targetLevel)
+				builder.append(HexColours.Colour.GREEN.getHex());
+			if (level == targetLevel)
+				builder.append(HexColours.Colour.YELLOW.getHex());
+			if (level < targetLevel)
+				builder.append(HexColours.Colour.RED.getHex());
+			builder.append(targetLevel);
+			player.getPackets().sendIComponentText(3037, 9, builder.toString());
+		} else {
+			Player p2 = (Player) target;
+			int level = player.isAtWild() ? player.getSkills().getCombatLevel() : player.getSkills().getCombatLevelWithSummoning();
+			int targetLevel = p2.getSkills().getCombatLevel();
+			player.getPackets().sendHideIComponent(3037, 8, false);
+			player.getPackets().sendHideIComponent(3037, 9, false);
+			StringBuilder builder = new StringBuilder();
+			builder.append("Lvl: ");
+			if (level > targetLevel)
+				builder.append(HexColours.Colour.GREEN.getHex());
+			if (level == targetLevel)
+				builder.append(HexColours.Colour.YELLOW.getHex());
+			if (level < targetLevel)
+				builder.append(HexColours.Colour.RED.getHex());
+			builder.append((player.isAtWild() || player.isAtPvP() ? targetLevel + "+" + p2.getSkills().getSummoningCombatLevel() : p2.getSkills().getCombatLevelWithSummoning()));
+			player.getPackets().sendIComponentText(3037, 9, builder.toString());
+		}
+	}
+
 	public void updateHealthOverlay(Entity player, Entity target) {
 		if (target instanceof Player) {
 			Player p2 = (Player) target;
 			Player p1 = (Player) player;
 			if (!p1.getInterfaceManager().containsTab(PlayerCombat.getHealthOverlayId(p1)))
 				p1.getInterfaceManager().sendTab(PlayerCombat.getHealthOverlayId(p1), 3037);
-			p1.getPackets().sendIComponentText(3037, 6, p2.getDisplayName());
-			int combat = p1.isAtWild() ? p1.getSkills().getCombatLevel() : p1.getSkills().getCombatLevelWithSummoning();
-			int targetCombat = p2.isAtWild() ? p2.getSkills().getCombatLevel()
-					: p2.getSkills().getCombatLevelWithSummoning();
-			String level = (targetCombat > combat ? "<col=ff5331>"
-					: targetCombat == combat ? "<col=FFC428>" : "<col=00b427>") + targetCombat;
-			p1.getPackets().sendIComponentText(3037, 9, "Level: " + level);
+			checkCombatLevel(p1, p2);
+			StringBuilder name = new StringBuilder();
+			if (p2.getAppearence().getTitle() != -1)
+				name.append(p2.getAppearence().getTitleName());
+			name.append(p2.getDisplayName());
+			p1.getPackets().sendIComponentText(3037, 6, name.toString());
 			p1.getPackets().sendIComponentText(3037, 7,
 					(p1.toggles("ONEXHITS", false) ? p2.getHitpoints() / 10 + "/" + p2.getMaxHitpoints() / 10
 							: p2.getHitpoints() + "/" + p2.getMaxHitpoints()));
@@ -254,12 +290,8 @@ public abstract class Entity extends WorldTile {
 			Player p1 = (Player) player;
 			if (!p1.getInterfaceManager().containsTab(PlayerCombat.getHealthOverlayId(p1)))
 				p1.getInterfaceManager().sendTab(PlayerCombat.getHealthOverlayId(p1), 3037);
+			checkCombatLevel(p1, npc);
 			p1.getPackets().sendIComponentText(3037, 6, npc.getName());
-			int combat = p1.isAtWild() ? p1.getSkills().getCombatLevel() : p1.getSkills().getCombatLevelWithSummoning();
-			int targetCombat = npc.getCombatLevel();
-			String level = (targetCombat > combat ? "<col=ff5331>"
-					: targetCombat == combat ? "<col=FFC428>" : "<col=00b427>") + targetCombat;
-			p1.getPackets().sendIComponentText(3037, 9, "Level: " + level);
 			p1.getPackets().sendIComponentText(3037, 7,
 					(p1.toggles("ONEXHITS", false) ? npc.getHitpoints() / 10 + "/" + npc.getMaxHitpoints() / 10
 							: npc.getHitpoints() + "/" + npc.getMaxHitpoints()));
@@ -318,7 +350,8 @@ public abstract class Entity extends WorldTile {
 			Player p = (Player) attacker;
 			if (p.toggles("HEALTHBAR", false)) {
 				Entity target = (Entity) this;
-				p.getTemporaryAttributtes().put("temporaryTarget", target);
+				p.temporaryAttribute().put("temporaryTarget", target);
+				checkCombatLevel(p, target);
 				updateHealthOverlay(attacker, target);
 			}
 		}
@@ -863,15 +896,15 @@ public abstract class Entity extends WorldTile {
 		return true;
 	}
 
-	public long getFreezeDelay() {
-		Long freezeDelay = (Long) temporaryAttribute().get("freezeDelay");
+	public int getFreezeDelay() {
+		Integer freezeDelay = (Integer) temporaryAttribute().get("freezeDelay");
 		if (freezeDelay == null)
 			return 0;
 		return freezeDelay;
 	}
 
-	public long getFreezeImmuneDelay() {
-		Long freezeImmune = (Long) temporaryAttribute().get("freezeImmune");
+	public int getFreezeImmuneDelay() {
+		Integer freezeImmune = (Integer) temporaryAttribute().get("freezeImmune");
 		if (freezeImmune == null)
 			return 0;
 		return freezeImmune;

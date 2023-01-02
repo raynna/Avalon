@@ -15,6 +15,7 @@ import com.rs.game.Entity;
 import com.rs.game.Graphics;
 import com.rs.game.WorldTile;
 import com.rs.game.item.Item;
+import com.rs.game.item.ItemId;
 import com.rs.game.item.itemdegrading.ChargesManager;
 import com.rs.game.minigames.clanwars.FfaZone;
 import com.rs.game.minigames.crucible.Crucible;
@@ -29,7 +30,6 @@ import com.rs.game.player.EmotesManager;
 import com.rs.game.player.Equipment;
 import com.rs.game.player.Inventory;
 import com.rs.game.player.Player;
-import com.rs.game.player.Player.Limits;
 import com.rs.game.player.Skills;
 import com.rs.game.player.actions.FightPitsViewingOrb;
 import com.rs.game.player.actions.HomeTeleport;
@@ -119,22 +119,19 @@ public class ButtonHandler {
             player.getCreationKiln().handleButton(componentId, packetId);
             return;
         }
-        
-        if (interfaceId == 1163 || interfaceId == 1164
-                || interfaceId == 1168 || interfaceId == 1170
-                || interfaceId == 1171 || interfaceId == 1173)
-            player.getDominionTower().handleButtons(interfaceId, componentId,
-                    slotId, packetId);
+
+        if (interfaceId == 1163 || interfaceId == 1164 || interfaceId == 1168 || interfaceId == 1170 || interfaceId == 1171 || interfaceId == 1173)
+            player.getDominionTower().handleButtons(interfaceId, componentId, slotId, packetId);
         if (interfaceId == 3010) {
-            if (packetId == 14)
+            if (packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET)
                 player.getCustomStore().sendInfo(slotId2);
-            if (packetId == 67 || packetId == 5 || packetId == 55)
-                player.getCustomStore().sendBuy(slotId2, packetId == 67 ? 1 : packetId == 5 ? 10 : 100);
-            if (packetId == 68) {
+            if (packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET || packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET || packetId == WorldPacketsDecoder.ACTION_BUTTON4_PACKET)
+                player.getCustomStore().sendBuy(slotId2, packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET ? 1 : packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET ? 10 : 100);
+            if (packetId == WorldPacketsDecoder.ACTION_BUTTON5_PACKET) {
                 player.temporaryAttribute().put("CUSTOM_STORE_X", slotId2);
                 player.getPackets().sendRunScript(108, "How many would you like to buy?");
             }
-            if (packetId == 27)
+            if (packetId == WorldPacketsDecoder.ACTION_BUTTON9_PACKET)
                 player.sm(ItemExamines.getExamine(new Item(slotId2)));
         } else if (interfaceId == 548 || interfaceId == 746) {
             if (componentId == 75 || componentId == 99) {
@@ -164,15 +161,13 @@ public class ButtonHandler {
                 }
             }
             if ((interfaceId == 548 && componentId == 148) || (interfaceId == 746 && componentId == 199)) {
-                if (packetId == 67) {
+                if (packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET) {
                     player.getHintIconsManager().removeAll();
                     player.getPackets().sendConfig(1159, 0);
                     return;
                 }
-                if (player.getInterfaceManager().containsScreenInter()
-                        || player.getInterfaceManager().containsInventoryInter()) {
-                    player.getPackets()
-                            .sendGameMessage("Please finish what you're doing before opening the world map.");
+                if (player.getInterfaceManager().containsScreenInter() || player.getInterfaceManager().containsInventoryInter()) {
+                    player.getPackets().sendGameMessage("Please finish what you're doing before opening the world map.");
                     return;
                 }
                 if (player.isInCombat(10000)) {
@@ -193,8 +188,7 @@ public class ButtonHandler {
                     player.getSkills().switchXPPopup(false);
                 else if (packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET)
                     player.getSkills().setupXPCounter();
-            } else if ((interfaceId == 746 && componentId == 207) || (interfaceId == 548 && componentId == 159)
-                    || (interfaceId == 548 && componentId == 194)) {
+            } else if ((interfaceId == 746 && componentId == 207) || (interfaceId == 548 && componentId == 159) || (interfaceId == 548 && componentId == 194)) {
                 if (packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET) {
                     player.getPackets().sendRunScript(5557, 1);
                     player.refreshMoneyPouch();
@@ -204,16 +198,12 @@ public class ButtonHandler {
                         return;
                     }
                     player.temporaryAttribute().put("money_pouch_remove", Boolean.TRUE);
-                    player.getPackets().sendRunScript(108,
-                            new Object[]{"                          Your money pouch contains "
-                                    + Utils.getFormattedNumber(player.getMoneyPouch().getTotal(), ',') + " coins."
-                                    + "                           How many would you like to withdraw?"});
+                    player.getPackets().sendRunScript(108, new Object[]{"                          Your money pouch contains " + Utils.getFormattedNumber(player.getMoneyPouch().getTotal(), ',') + " coins." + "                           How many would you like to withdraw?"});
                 } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET) {
                     player.getMoneyPouch().sendExamine();
                 } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON4_PACKET) {
                     if (player.getInterfaceManager().containsScreenInter()) {
-                        player.getPackets().sendGameMessage(
-                                "Please finish with what you're doing before opening the price checker.");
+                        player.getPackets().sendGameMessage("Please finish with what you're doing before opening the price checker.");
                         return;
                     }
                     long currentTime = Utils.currentTimeMillis();
@@ -277,9 +267,7 @@ public class ButtonHandler {
             else if (componentId >= 59 && componentId <= 72) {
                 int playerIndex = (componentId - 59) / 3;
                 if ((componentId & 0x3) != 0)
-                    player.getDungManager().pressOption(playerIndex,
-                            packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET ? 0
-                                    : packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET ? 1 : 2);
+                    player.getDungManager().pressOption(playerIndex, packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET ? 0 : packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET ? 1 : 2);
                 else
                     player.getDungManager().pressOption(playerIndex, 3);
             } else if (componentId == 45)
@@ -338,22 +326,21 @@ public class ButtonHandler {
             if (componentId == 11)
                 player.getHouse().build(slotId);
         } else if (interfaceId == 432) {
-            Enchant enchant = EnchantingBolts.isEnchanting(new Item(getEnchantId(componentId)),
-                    new Item(getEnchantId2(componentId)));
+            Enchant enchant = EnchantingBolts.isEnchanting(new Item(getEnchantId(componentId)), new Item(getEnchantId2(componentId)));
             if (enchant != null) {
-                if (packetId == 14) {
+                if (packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET) {
                     int invQuantity = player.getInventory().getItems().getNumberOf(getEnchantId(componentId));
                     int quantity = 1;
                     if (quantity > invQuantity)
                         quantity = invQuantity;
                     player.getActionManager().setAction(new EnchantingBolts(enchant, quantity));
-                } else if (packetId == 67) {
+                } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET) {
                     int invQuantity = player.getInventory().getItems().getNumberOf(getEnchantId(componentId));
                     int quantity = 5;
                     if (quantity > invQuantity)
                         quantity = invQuantity;
                     player.getActionManager().setAction(new EnchantingBolts(enchant, quantity));
-                } else if (packetId == 5) {
+                } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET) {
                     int invQuantity = player.getInventory().getItems().getNumberOf(getEnchantId(componentId));
                     int quantity = 10;
                     if (quantity > invQuantity)
@@ -368,8 +355,7 @@ public class ButtonHandler {
                     return;
                 switch (componentId) {
                     case 7:
-                        if (player.getInventory().getFreeSlots() == 0
-                                && !player.getInventory().containsItem(player.getUntradeables().get(slotId).getId(), 1)) {
+                        if (player.getInventory().getFreeSlots() == 0 && !player.getInventory().containsItem(player.getUntradeables().get(slotId).getId(), 1)) {
                             player.getPackets().sendGameMessage("You don't have enough inventory space.");
                             return;
                         }
@@ -392,8 +378,7 @@ public class ButtonHandler {
                     return;
                 switch (componentId) {
                     case 7:
-                        if (player.getInventory().getFreeSlots() == 0
-                                && !player.getInventory().containsItem(player.getRunePouch().get(slotId).getId(), 1)) {
+                        if (player.getInventory().getFreeSlots() == 0 && !player.getInventory().containsItem(player.getRunePouch().get(slotId).getId(), 1)) {
                             player.getPackets().sendGameMessage("You don't have enough inventory space.");
                             return;
                         }
@@ -419,21 +404,17 @@ public class ButtonHandler {
                                     for (Item items : player.getRunePouch().getContainerItems()) {
                                         if (items == null)
                                             continue;
-                                        if (!player.getInventory().hasFreeSlots()
-                                                && !player.getInventory().containsItem(items.getId(), 1)) {
-                                            player.getPackets()
-                                                    .sendGameMessage("You don't have enough inventory space to withdraw the "
-                                                            + items.getName() + "s.");
+                                        if (!player.getInventory().hasFreeSlots() && !player.getInventory().containsItem(items.getId(), 1)) {
+                                            player.getPackets().sendGameMessage("You don't have enough inventory space to withdraw the " + items.getName() + "s.");
                                             continue;
                                         }
                                         player.getInventory().addItem(items);
                                         player.getRunePouch().remove(items);
                                         player.getRunePouch().shift();
                                         player.getInventory().refresh();
-                                        player.getPackets().sendGameMessage(
-                                                "You withdraw " + items.getAmount() + " x " + items.getName() + "s.");
+                                        player.getPackets().sendGameMessage("You withdraw " + items.getAmount() + " x " + items.getName() + "s.");
                                     }
-                                    refreshRunePouch(player);
+                                    openRunePouch(player);
                                     break;
                                 } else {
                                     player.getPackets().sendGameMessage("Your rune pouch is empty.");
@@ -501,20 +482,18 @@ public class ButtonHandler {
             CommendationExchange.handleButtonOptions(player, componentId);
         } else if (interfaceId == 1309) {
             if (componentId == 20)
-                player.getPackets().sendGameMessage(
-                        "Use your enchanted stone ring onto the player that you would like to invite.", true);
+                player.getPackets().sendGameMessage("Use your enchanted stone ring onto the player that you would like to invite.", true);
             else if (componentId == 22) {
                 Player p2 = player.getSlayerManager().getSocialPlayer();
                 if (p2 == null)
                     player.getPackets().sendGameMessage("You have no slayer group, invite a player to start one.");
                 else
-                    player.getPackets().sendGameMessage(
-                            "Your current slayer group consists of you and " + p2.getDisplayName() + ".");
+                    player.getPackets().sendGameMessage("Your current slayer group consists of you and " + p2.getDisplayName() + ".");
             } else if (componentId == 24)
                 player.getSlayerManager().resetSocialGroup(true);
             player.closeInterfaces();
         } else if (interfaceId == 675) {
-            JewllerySmithing.handleButtonClick(player, componentId, packetId == 14 ? 1 : packetId == 67 ? 5 : 10);
+            JewllerySmithing.handleButtonClick(player, componentId, packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET ? 1 : packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET ? 5 : 10);
         } else if (interfaceId == 1008) {
             if (componentId == 29) {
                 player.setNextWorldTile(new WorldTile(2336, 3689, 0));
@@ -659,8 +638,7 @@ public class ButtonHandler {
                 player.getPackets().sendOpenURL(Settings.WEBSITE_LINK);
             }
         } else if ((interfaceId == 590 && componentId == 8) || interfaceId == 464) {
-            player.getEmotesManager()
-                    .useBookEmote(interfaceId == 464 ? componentId : EmotesManager.getId(slotId, packetId));
+            player.getEmotesManager().useBookEmote(interfaceId == 464 ? componentId : EmotesManager.getId(slotId, packetId));
         } else if (interfaceId == 192) {
             if (componentId == 2)
                 player.getCombatDefinitions().switchDefensiveCasting();
@@ -795,9 +773,7 @@ public class ButtonHandler {
         } else if (interfaceId == 934) {
             for (int index = 0; index < DungeoneeringSmithing.COMPONENTS[1].length; index++) {
                 if (componentId == (index == 0 ? 22 : index == 1 ? 23 : (14 + index * 5))) {
-                    int cycles = packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET ? 1
-                            : packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET ? 5
-                            : packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET ? -1 : 28;
+                    int cycles = packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET ? 1 : packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET ? 5 : packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET ? -1 : 28;
                     if (cycles == -1) {
                         player.getPackets().sendInputIntegerScript(true, "How many would you like to make: ");
                         player.getTemporaryAttributtes().put("FORGE_X", index + 100);
@@ -837,8 +813,7 @@ public class ButtonHandler {
                 } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON5_PACKET)
                     Summoning.handlePouchInfusion(player, slotId, 28);// x
                 else if (packetId == WorldPacketsDecoder.ACTION_BUTTON6_PACKET) {
-                    Summoning.sendItemList(player, (boolean) player.temporaryAttribute().get("infusing_scroll"), 1,
-                            slotId);
+                    Summoning.sendItemList(player, (boolean) player.temporaryAttribute().get("infusing_scroll"), 1, slotId);
                 }
             } else if (componentId == 19) {
                 Summoning.switchInfusionOption(player);
@@ -1058,7 +1033,7 @@ public class ButtonHandler {
             int lvlupSkill = -1;
             int skillMenu = -1;
             int skillId = -1;
-            if (packetId == 14) {
+            if (packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET) {
                 switch (componentId) {
                     case 30: // Attack
                         skillId = Skills.ATTACK;
@@ -1338,7 +1313,7 @@ public class ButtonHandler {
             }
         } else if (interfaceId == 320) {
             player.stopAll();
-            if (packetId == 14) {
+            if (packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET) {
                 int lvlupSkill = -1;
                 int skillMenu = -1;
                 int skillId = -1;
@@ -1616,22 +1591,20 @@ public class ButtonHandler {
                         player.getVarsManager().sendVarBit(4731, 0);
                     }
                 });
-            } else if (packetId == 67 || packetId == 5) {
+            } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET || packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET) {
                 int skillId = player.getSkills().getTargetIdByComponentId(componentId);
-                boolean usingLevel = packetId == 67;
+                boolean usingLevel = packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET;
                 player.temporaryAttribute().put(usingLevel ? "setLevel" : "setXp", skillId);
-                player.getPackets().sendInputIntegerScript(true,
-                        "Please enter " + (usingLevel ? "level" : "xp") + " you want to set as a target: ");
+                player.getPackets().sendInputIntegerScript(true, "Please enter " + (usingLevel ? "level" : "xp") + " you want to set as a target: ");
 
-            } else if (packetId == 55) { // clear level
+            } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON4_PACKET) {
                 int skillId = player.getSkills().getTargetIdByComponentId(componentId);
                 player.getSkills().setSkillTargetEnabled(skillId, false);
                 player.getSkills().setSkillTargetValue(skillId, 0);
                 player.getSkills().setSkillTargetUsingLevelMode(skillId, false);
             }
         } else if (interfaceId == 1218) {
-            if ((componentId >= 33 && componentId <= 55) || componentId == 120 || componentId == 151
-                    || componentId == 189)
+            if ((componentId >= 33 && componentId <= 55) || componentId == 120 || componentId == 151 || componentId == 189)
                 player.getPackets().sendInterface(false, 1218, 1, 1217);
         } else if (interfaceId == 499) {
             int skillMenu = -1;
@@ -1646,9 +1619,7 @@ public class ButtonHandler {
                 if (packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET) {
                     int hatId = player.getEquipment().getHatId();
                     if (hatId == 20804 || hatId == 20805 || hatId == 20806) {
-                        if ((Long) player.temporaryAttribute().get("LeetEmote") != null
-                                && (Long) player.temporaryAttribute().get("LeetEmote") + 8500 > Utils
-                                .currentTimeMillis())
+                        if ((Long) player.temporaryAttribute().get("LeetEmote") != null && (Long) player.temporaryAttribute().get("LeetEmote") + 8500 > Utils.currentTimeMillis())
                             return;
                         player.animate(new Animation(9098));
                         player.gfx(new Graphics(92));
@@ -1675,8 +1646,7 @@ public class ButtonHandler {
                         return;
                     }
                     if (hatId == 24437 || hatId == 24439 || hatId == 24440 || hatId == 24441) {
-                        player.getDialogueManager().startDialogue("FlamingSkull",
-                                player.getEquipment().getItem(Equipment.SLOT_HAT), -1);
+                        player.getDialogueManager().startDialogue("FlamingSkull", player.getEquipment().getItem(Equipment.SLOT_HAT), -1);
                         return;
                     } else if (componentId == 15) {
                         int weaponId = player.getEquipment().getWeaponId();
@@ -1732,8 +1702,7 @@ public class ButtonHandler {
                 if (packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET) {
                     int amuletId = player.getEquipment().getAmuletId();
                     if (amuletId <= 1712 && amuletId >= 1706) {
-                        if (Magic.sendJewerlyTeleportSpell(player, true, Transportation.EMOTE, Transportation.GFX, 4,
-                                new WorldTile(3086, 3496, 0))) {
+                        if (Magic.sendJewerlyTeleportSpell(player, true, Transportation.EMOTE, Transportation.GFX, 4, new WorldTile(3086, 3496, 0))) {
                             Item amulet = player.getEquipment().getItem(Equipment.SLOT_AMULET);
                             if (amulet != null) {
                                 amulet.setId(amulet.getId() - 2);
@@ -1741,13 +1710,11 @@ public class ButtonHandler {
                             }
                         }
                     } else if (amuletId == 1704)
-                        player.getPackets().sendGameMessage(
-                                "The amulet has ran out of charges. You need to recharge it if you wish it use it once more.");
+                        player.getPackets().sendGameMessage("The amulet has ran out of charges. You need to recharge it if you wish it use it once more.");
                 } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET) {
                     int amuletId = player.getEquipment().getAmuletId();
                     if (amuletId <= 1712 && amuletId >= 1706) {
-                        if (Magic.sendJewerlyTeleportSpell(player, true, Transportation.EMOTE, Transportation.GFX, 4,
-                                new WorldTile(3081, 3648, 0))) {
+                        if (Magic.sendJewerlyTeleportSpell(player, true, Transportation.EMOTE, Transportation.GFX, 4, new WorldTile(3081, 3648, 0))) {
                             Item amulet = player.getEquipment().getItem(Equipment.SLOT_AMULET);
                             if (amulet != null) {
                                 amulet.setId(amulet.getId() - 2);
@@ -1758,8 +1725,7 @@ public class ButtonHandler {
                 } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON4_PACKET) {
                     int amuletId = player.getEquipment().getAmuletId();
                     if (amuletId <= 1712 && amuletId >= 1706) {
-                        if (Magic.sendJewerlyTeleportSpell(player, true, Transportation.EMOTE, Transportation.GFX, 4,
-                                new WorldTile(3105, 3251, 0))) {
+                        if (Magic.sendJewerlyTeleportSpell(player, true, Transportation.EMOTE, Transportation.GFX, 4, new WorldTile(3105, 3251, 0))) {
                             Item amulet = player.getEquipment().getItem(Equipment.SLOT_AMULET);
                             if (amulet != null) {
                                 amulet.setId(amulet.getId() - 2);
@@ -1770,8 +1736,7 @@ public class ButtonHandler {
                 } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON5_PACKET) {
                     int amuletId = player.getEquipment().getAmuletId();
                     if (amuletId <= 1712 && amuletId >= 1706) {
-                        if (Magic.sendJewerlyTeleportSpell(player, true, Transportation.EMOTE, Transportation.GFX, 4,
-                                new WorldTile(3293, 3163, 0))) {
+                        if (Magic.sendJewerlyTeleportSpell(player, true, Transportation.EMOTE, Transportation.GFX, 4, new WorldTile(3293, 3163, 0))) {
                             Item amulet = player.getEquipment().getItem(Equipment.SLOT_AMULET);
                             if (amulet != null) {
                                 amulet.setId(amulet.getId() - 2);
@@ -1788,13 +1753,10 @@ public class ButtonHandler {
                     int weaponId = player.getEquipment().getWeaponId();
                     if (weaponId == 24202 || weaponId == 24203) {
                         for (RunicStaffSpellStore s : RunicStaffSpellStore.values()) {
-                            if (s.spellId != player.getRunicStaff().getSpellId()
-                                    || s.component != player.getRunicStaff().getComponentId()) {
+                            if (s.spellId != player.getRunicStaff().getSpellId() || s.component != player.getRunicStaff().getComponentId()) {
                                 continue;
                             }
-                            player.getPackets()
-                                    .sendGameMessage("You currently have " + player.getRunicStaff().getCharges() + " "
-                                            + s.name().toLowerCase().replace('_', ' ') + " charges left.");
+                            player.getPackets().sendGameMessage("You currently have " + player.getRunicStaff().getCharges() + " " + s.name().toLowerCase().replace('_', ' ') + " charges left.");
                         }
                         return;
                     }
@@ -1804,9 +1766,7 @@ public class ButtonHandler {
                         return;
                     }
                     if (weaponId >= 18349 && weaponId <= 18357) {
-                        player.getCharges()
-                                .checkPercentage("Your " + ItemDefinitions.getItemDefinitions(weaponId).getName()
-                                        + " has " + ChargesManager.REPLACE + "% charges left.", weaponId, false);
+                        player.getCharges().checkPercentage("Your " + ItemDefinitions.getItemDefinitions(weaponId).getName() + " has " + ChargesManager.REPLACE + "% charges left.", weaponId, false);
                     }
                     if (weaponId == 15484)
                         player.getInterfaceManager().gazeOrbOfOculus();
@@ -1815,30 +1775,26 @@ public class ButtonHandler {
                             player.getEquipment().deleteItem(9013, 1);
                             player.getAppearence().generateAppearenceData();
                             player.setSkullSkeptreCharges(5);
-                            player.getPackets()
-                                    .sendGameMessage("You have no more charges, the sceptre crumbled to dust.");
+                            player.getPackets().sendGameMessage("You have no more charges, the sceptre crumbled to dust.");
                             player.animate(new Animation(9601));
                             player.gfx(new Graphics(94));
                             WorldTasksManager.schedule(new WorldTask() {
 
                                 @Override
                                 public void run() {
-                                    Magic.sendSkullSceptreTeleport(player, false, 4731, -1, 2,
-                                            new WorldTile(3081, 3421, 0));
+                                    Magic.sendSkullSceptreTeleport(player, false, 4731, -1, 2, new WorldTile(3081, 3421, 0));
                                 }
                             }, 2);
                             return;
                         }
                         player.setSkullSkeptreCharges(player.getSkullSkeptreCharges() - 1);
-                        player.getPackets()
-                                .sendGameMessage("You have " + player.getSkullSkeptreCharges() + " charges left.");
+                        player.getPackets().sendGameMessage("You have " + player.getSkullSkeptreCharges() + " charges left.");
                         player.animate(new Animation(9601));
                         player.gfx(new Graphics(94));
                         WorldTasksManager.schedule(new WorldTask() {
                             @Override
                             public void run() {
-                                Magic.sendSkullSceptreTeleport(player, false, 4731, -1, 2,
-                                        new WorldTile(3081, 3421, 0));
+                                Magic.sendSkullSceptreTeleport(player, false, 4731, -1, 2, new WorldTile(3081, 3421, 0));
                             }
                         }, 2);
                     }
@@ -1846,17 +1802,20 @@ public class ButtonHandler {
                     ButtonHandler.sendRemove(player, Equipment.SLOT_WEAPON);
                 else if (packetId == WorldPacketsDecoder.ACTION_BUTTON8_PACKET)
                     player.getEquipment().sendExamine(Equipment.SLOT_WEAPON);
-                else if (packetId == 5) {
+                else if (packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET) {
                     int weaponId = player.getEquipment().getWeaponId();
                     if (weaponId == 24202 || weaponId == 24203) {
                         player.getDialogueManager().startDialogue("GreaterRunicStaffD");
                         return;
                     }
-                } else if (packetId == 55) {
+                } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON4_PACKET) {
                     int weaponId = player.getEquipment().getWeaponId();
-                    if (weaponId == 24202 || weaponId == 24203) {
+                    if (weaponId == ItemId.GREATER_RUNIC_STAFF_CHARGED) {
                         player.getRunicStaff().clearCharges(true, false);
                         return;
+                    }
+                    if (weaponId == ItemId.GREATER_RUNIC_STAFF_ACTIVE) {
+                        player.getRunicStaff().clearSpell(true);
                     }
                 }
             } else if (componentId == 18) {
@@ -1871,9 +1830,7 @@ public class ButtonHandler {
                 } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET) {
                     int shieldId = player.getEquipment().getShieldId();
                     if (shieldId >= 18359 && shieldId <= 18363) {
-                        player.getCharges()
-                                .checkPercentage("Your " + ItemDefinitions.getItemDefinitions(shieldId).getName()
-                                        + " has " + ChargesManager.REPLACE + "% charges left.", shieldId, false);
+                        player.getCharges().checkPercentage("Your " + ItemDefinitions.getItemDefinitions(shieldId).getName() + " has " + ChargesManager.REPLACE + "% charges left.", shieldId, false);
                     }
                 } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON8_PACKET) {
                     player.getEquipment().sendExamine(Equipment.SLOT_SHIELD);
@@ -1899,8 +1856,7 @@ public class ButtonHandler {
             } else if (componentId == 33) {
                 if (packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET) {
                     if (player.getEquipment().getRingId() == 2550)
-                        player.getPackets().sendGameMessage("Your " + ItemDefinitions.getItemDefinitions(2550).getName()
-                                + " has " + player.getCharges().getCharges(2550) + " left.");
+                        player.getPackets().sendGameMessage("Your " + ItemDefinitions.getItemDefinitions(2550).getName() + " has " + player.getCharges().getCharges(2550) + " left.");
                 } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET) {
                     ButtonHandler.sendRemove(player, Equipment.SLOT_RING);
                 } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON8_PACKET) {
@@ -2003,9 +1959,9 @@ public class ButtonHandler {
                 if (item == null)
                     return;
 
-                if (packetId == 3)
+                if (packetId == WorldPacketsDecoder.EQUIPMENT_EXAMINE_PACKET)
                     player.getPackets().sendGameMessage(ItemExamines.getExamine(item));
-                else if (packetId == 216) {
+                else if (packetId == WorldPacketsDecoder.EQUIPMENT_REMOVE_PACKET) {
                     sendRemove(player, slotId);
                     ButtonHandler.refreshEquipBonuses(player);
                 }
@@ -2019,11 +1975,10 @@ public class ButtonHandler {
                 Item item = player.getEquipment().getItem(slotId);
                 if (item == null)
                     return;
-
-                if (packetId == 96) {
+                if (packetId == WorldPacketsDecoder.ACTION_BUTTON10_PACKET) {
                     sendItemStats(player, item);
                     return;
-                } else if (packetId == 14) {
+                } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET) {
                     sendRemove(player, slotId);
                     player.getPackets().sendGlobalConfig(779, player.getEquipment().getWeaponRenderEmote());
                     ButtonHandler.refreshEquipBonuses(player);
@@ -2032,10 +1987,10 @@ public class ButtonHandler {
                 player.getBank().openBank();
             }
         } else if (interfaceId == 670) {
-            if (componentId == 0 && packetId == 67) {
+            if (componentId == 0 && packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET) {
                 return;
             }
-            if (packetId == 5) {
+            if (packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET) {
                 Item item = player.getInventory().getItem(slotId);
                 if (item == null)
                     return;
@@ -2246,23 +2201,19 @@ public class ButtonHandler {
                 player.getPackets().sendIComponentText(629, 59, Utils.formatDoubledAmount(grandexchangeValue));
                 player.getPackets().sendIComponentText(629, 47, "Collection Box:");
                 player.getPackets().sendIComponentText(629, 60, Utils.formatDoubledAmount(collectionValue));
-                totalValue = bankValue + inventoryValue + equipmentValue + moneyPouch + collectionValue
-                        + grandexchangeValue;
+                totalValue = bankValue + inventoryValue + equipmentValue + moneyPouch + collectionValue + grandexchangeValue;
                 player.getPackets().sendIComponentText(629, 48, "Total wealth:");
                 player.getPackets().sendIComponentText(629, 61, Utils.formatDoubledAmount(totalValue));
                 player.getPackets().sendIComponentText(629, 49, "");
                 player.getPackets().sendIComponentText(629, 62, "");
                 player.getPackets().sendIComponentText(629, 50, "Highest value Wildy kill:");
-                player.getPackets().sendIComponentText(629, 63,
-                        (player.getHighestValuedKill() >= Integer.MAX_VALUE ? "Lots!"
-                                : Utils.getFormattedNumber(player.getHighestValuedKill(), ',')));
+                player.getPackets().sendIComponentText(629, 63, (player.getHighestValuedKill() >= Integer.MAX_VALUE ? "Lots!" : Utils.getFormattedNumber(player.getHighestValuedKill(), ',')));
                 int bossKills = 0;
                 bossKills += player.getBossKillcount().size();
                 player.getPackets().sendIComponentText(629, 51, "Total boss kills:");
                 player.getPackets().sendIComponentText(629, 64, Utils.getFormattedNumber(bossKills, ','));
                 player.getPackets().sendIComponentText(629, 52, "Slayer tasks completed:");
-                player.getPackets().sendIComponentText(629, 65,
-                        Utils.getFormattedNumber(player.getSlayerManager().getCompletedTasks()));
+                player.getPackets().sendIComponentText(629, 65, Utils.getFormattedNumber(player.getSlayerManager().getCompletedTasks()));
                 player.getPackets().sendHideIComponent(629, 68, true);
                 player.getPackets().sendHideIComponent(629, 69, true);
             } else if (componentId >= 46 && componentId <= 64) {
@@ -2480,8 +2431,7 @@ public class ButtonHandler {
             } else if (componentId == 211) {
                 if (slot == null)
                     return;
-                shop.setAmount(player, isBuying ? shop.getMainStock()[slot].getAmount()
-                        : player.getInventory().getNumberOf(player.getInventory().getItem(slot).getId()));
+                shop.setAmount(player, isBuying ? shop.getMainStock()[slot].getAmount() : player.getInventory().getNumberOf(player.getInventory().getItem(slot).getId()));
             } else if (componentId == 29) {
                 player.getPackets().sendConfig(2561, 93);
                 player.getTemporaryAttributtes().remove("shop_buying");
@@ -2628,9 +2578,7 @@ public class ButtonHandler {
             else if (componentId == 15)
                 player.stopAll();
         } else if (interfaceId == 1092) {
-            String[] lodestoneNames = new String[]{"Lunar Isle", "Al Kharid", "Ardougne", "Burthorpe", "Catherby",
-                    "Draynor Village", "Edgeville", "Falador", "Lumbridge", "Port Sarim", "Seer's Village", "Taverley",
-                    "Varrock", "Yannile"};
+            String[] lodestoneNames = new String[]{"Lunar Isle", "Al Kharid", "Ardougne", "Burthorpe", "Catherby", "Draynor Village", "Edgeville", "Falador", "Lumbridge", "Port Sarim", "Seer's Village", "Taverley", "Varrock", "Yannile"};
             if (componentId != 7 && !player.lodestone[componentId - 38]) {
                 player.getPackets().sendGameMessage(lodestoneNames[componentId - 39] + " lodestone is not activated.");
                 return;
@@ -2699,20 +2647,18 @@ public class ButtonHandler {
         }
 
         if (interfaceId == 679) {
-            if (packetId == 90 && (slotId2 == 20769 || slotId2 == 20771)) {
+            if (packetId == WorldPacketsDecoder.ACTION_BUTTON6_PACKET && (slotId2 == 20769 || slotId2 == 20771)) {
                 player.getDialogueManager().startDialogue("CompFeatures");
             }
-            if (packetId == 67) {
+            if (packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET) {
 
             }
         }
         if (player.isDeveloper()) {
-            player.getPackets().sendPanelBoxMessage(
-                    "Interface: " + interfaceId + " Component: " + componentId + " Slot: " + slotId);
+            player.getPackets().sendPanelBoxMessage("Interface: " + interfaceId + " Component: " + componentId + " Slot: " + slotId);
         }
         if (Settings.DEBUG)
-            Logger.log("ButtonHandler", player.getDisplayName() + " clicked interfaceId: " + interfaceId + ", compId: "
-                    + componentId + ", slotId: " + slotId + ", packetId: " + packetId + ", slotId2: " + slotId2);
+            Logger.log("ButtonHandler", player.getDisplayName() + " clicked interfaceId: " + interfaceId + ", compId: " + componentId + ", slotId: " + slotId + ", packetId: " + packetId + ", slotId2: " + slotId2);
         /*
          * if (player.getUsername().equalsIgnoreCase("andreas"))
          * player.getPackets().sendGameMessage(player.getDisplayName() +
@@ -2730,8 +2676,7 @@ public class ButtonHandler {
             int bonus = hasBonuses ? ItemBonuses.getItemBonuses(item.getId())[i] : 0;
             String label = CombatDefinitions.BONUS_LABELS[i];
             String sign = bonus > 0 ? "+" : "";
-            b.append(label + ": " + (sign + bonus) + ((label == "Magic Damage" || label == "Absorb Melee"
-                    || label == "Absorb Magic" || label == "Absorb Ranged") ? "%" : "") + "<br>");
+            b.append(label + ": " + (sign + bonus) + ((label == "Magic Damage" || label == "Absorb Melee" || label == "Absorb Magic" || label == "Absorb Ranged") ? "%" : "") + "<br>");
         }
         player.getPackets().sendGlobalString(321, "Stats for " + item.getName());
         player.getPackets().sendGlobalString(324, b.toString());
@@ -2754,14 +2699,13 @@ public class ButtonHandler {
         player.getEquipment().getItems().set(slotId, null);
         player.getEquipment().refresh(slotId);
         if (item.getId() == 4024)
-			player.getAppearence().transformIntoNPC(-1);
+            player.getAppearence().transformIntoNPC(-1);
         if (slotId == 3)
             player.getCombatDefinitions().desecreaseSpecialAttack(0);
         player.checkDFSCharges();
         if (item.getId() == 15486 && player.polDelay > Utils.currentTimeMillis()) {
             player.setPolDelay(0);
-            player.getPackets().sendGameMessage(
-                    "The power of the light fades. Your resistance to melee attacks return to normal.");
+            player.getPackets().sendGameMessage("The power of the light fades. Your resistance to melee attacks return to normal.");
         }
         if (player.getHitpoints() > (player.getMaxHitpoints() * 1.15)) {
             player.setHitpoints(player.getMaxHitpoints());
@@ -2821,8 +2765,7 @@ public class ButtonHandler {
             return false;
         player.stopAll(false, false);
         Item item = player.getInventory().getItem(slotId);
-        @SuppressWarnings("unused")
-        String itemName = item.getDefinitions() == null ? "" : item.getDefinitions().getName().toLowerCase();
+        @SuppressWarnings("unused") String itemName = item.getDefinitions() == null ? "" : item.getDefinitions().getName().toLowerCase();
         if (item == null || item.getId() != itemId)
             return false;
         int targetSlot = Equipment.getItemSlot(itemId);
@@ -2833,8 +2776,7 @@ public class ButtonHandler {
         if (!ItemConstants.canWear(item, player))
             return true;
         boolean isTwoHandedWeapon = targetSlot == 3 && Equipment.isTwoHandedWeapon(item);
-        if (isTwoHandedWeapon && !player.getInventory().hasFreeSlots() && player.getEquipment().getWeaponId() != -1
-                && player.getEquipment().hasShield()) {
+        if (isTwoHandedWeapon && !player.getInventory().hasFreeSlots() && player.getEquipment().getWeaponId() != -1 && player.getEquipment().hasShield()) {
             player.getPackets().sendGameMessage("Not enough free space in your inventory.");
             return false;
         }
@@ -2853,8 +2795,7 @@ public class ButtonHandler {
                     }
                     hasRequiriments = false;
                     String name = Skills.SKILL_NAME[skillId].toLowerCase();
-                    player.getPackets().sendGameMessage("You need to have a" + (name.startsWith("a") ? "n" : "") + " "
-                            + name + " level of " + level + ".");
+                    player.getPackets().sendGameMessage("You need to have a" + (name.startsWith("a") ? "n" : "") + " " + name + " level of " + level + ".");
                 }
 
             }
@@ -2867,8 +2808,7 @@ public class ButtonHandler {
         player.getInventory().deleteItem(slotId, item);
         if (targetSlot == 3) {
             if (isTwoHandedWeapon && player.getEquipment().getItem(5) != null) {
-                if (!player.getInventory().addItem(player.getEquipment().getItem(5).getId(),
-                        player.getEquipment().getItem(5).getAmount())) {
+                if (!player.getInventory().addItem(player.getEquipment().getItem(5).getId(), player.getEquipment().getItem(5).getAmount())) {
                     player.getInventory().getItems().set(slotId, item);
                     player.getInventory().refresh(slotId);
                     return true;
@@ -2876,10 +2816,8 @@ public class ButtonHandler {
                 player.getEquipment().getItems().set(5, null);
             }
         } else if (targetSlot == 5) {
-            if (player.getEquipment().getItem(3) != null
-                    && Equipment.isTwoHandedWeapon(player.getEquipment().getItem(3))) {
-                if (!player.getInventory().addItem(player.getEquipment().getItem(3).getId(),
-                        player.getEquipment().getItem(3).getAmount())) {
+            if (player.getEquipment().getItem(3) != null && Equipment.isTwoHandedWeapon(player.getEquipment().getItem(3))) {
+                if (!player.getInventory().addItem(player.getEquipment().getItem(3).getId(), player.getEquipment().getItem(3).getAmount())) {
                     player.getInventory().getItems().set(slotId, item);
                     player.getInventory().refresh(slotId);
                     return true;
@@ -2888,16 +2826,12 @@ public class ButtonHandler {
             }
 
         }
-        if (player.getEquipment().getItem(targetSlot) != null
-                && (itemId != player.getEquipment().getItem(targetSlot).getId()
-                || !item.getDefinitions().isStackable())) {
+        if (player.getEquipment().getItem(targetSlot) != null && (itemId != player.getEquipment().getItem(targetSlot).getId() || !item.getDefinitions().isStackable())) {
             if (player.getInventory().getItems().get(slotId) == null) {
-                player.getInventory().getItems().set(slotId, new Item(player.getEquipment().getItem(targetSlot).getId(),
-                        player.getEquipment().getItem(targetSlot).getAmount()));
+                player.getInventory().getItems().set(slotId, new Item(player.getEquipment().getItem(targetSlot).getId(), player.getEquipment().getItem(targetSlot).getAmount()));
                 player.getInventory().refresh(slotId);
             } else
-                player.getInventory().addItem(new Item(player.getEquipment().getItem(targetSlot).getId(),
-                        player.getEquipment().getItem(targetSlot).getAmount()));
+                player.getInventory().addItem(new Item(player.getEquipment().getItem(targetSlot).getId(), player.getEquipment().getItem(targetSlot).getAmount()));
             player.getEquipment().getItems().set(targetSlot, null);
         }
         if (targetSlot == Equipment.SLOT_AURA)
@@ -2922,8 +2856,7 @@ public class ButtonHandler {
         if (targetSlot == Equipment.SLOT_WEAPON && itemId != 15486) {
             if (player.polDelay > Utils.currentTimeMillis()) {
                 player.setPolDelay(0);
-                player.getPackets().sendGameMessage(
-                        "The power of the light fades. Your resistance to melee attacks return to normal.");
+                player.getPackets().sendGameMessage("The power of the light fades. Your resistance to melee attacks return to normal.");
             }
         }
         return true;
@@ -2947,13 +2880,11 @@ public class ButtonHandler {
          * player.getPackets().sendGameMessage("You did not unlock this item yet.");
          * return true; }
          */
-        @SuppressWarnings("unused")
-        String itemName = item.getDefinitions() == null ? "" : item.getDefinitions().getName().toLowerCase();
+        @SuppressWarnings("unused") String itemName = item.getDefinitions() == null ? "" : item.getDefinitions().getName().toLowerCase();
         if (!ItemConstants.canWear(item, player))
             return false;
         boolean isTwoHandedWeapon = targetSlot == 3 && Equipment.isTwoHandedWeapon(item);
-        if (isTwoHandedWeapon && !player.getInventory().hasFreeSlots() && player.getEquipment().getWeaponId() != -1
-                && player.getEquipment().hasShield()) {
+        if (isTwoHandedWeapon && !player.getInventory().hasFreeSlots() && player.getEquipment().getWeaponId() != -1 && player.getEquipment().hasShield()) {
             player.getPackets().sendGameMessage("Not enough free space in your inventory.");
             return false;
         }
@@ -2971,8 +2902,7 @@ public class ButtonHandler {
                         player.getPackets().sendGameMessage("You are not high enough level to use this item.");
                     hasRequiriments = false;
                     String name = Skills.SKILL_NAME[skillId].toLowerCase();
-                    player.getPackets().sendGameMessage("You need to have a" + (name.startsWith("a") ? "n" : "") + " "
-                            + name + " level of " + level + ".");
+                    player.getPackets().sendGameMessage("You need to have a" + (name.startsWith("a") ? "n" : "") + " " + name + " level of " + level + ".");
                 }
 
             }
@@ -2991,8 +2921,7 @@ public class ButtonHandler {
                 player.getEquipment().getItems().set(5, null);
             }
         } else if (targetSlot == 5) {
-            if (player.getEquipment().getItem(3) != null
-                    && Equipment.isTwoHandedWeapon(player.getEquipment().getItem(3))) {
+            if (player.getEquipment().getItem(3) != null && Equipment.isTwoHandedWeapon(player.getEquipment().getItem(3))) {
                 if (!player.getInventory().getItems().add(player.getEquipment().getItem(3))) {
                     player.getInventory().getItems().set(slotId, item);
                     return false;
@@ -3001,15 +2930,11 @@ public class ButtonHandler {
             }
 
         }
-        if (player.getEquipment().getItem(targetSlot) != null
-                && (itemId != player.getEquipment().getItem(targetSlot).getId()
-                || !item.getDefinitions().isStackable())) {
+        if (player.getEquipment().getItem(targetSlot) != null && (itemId != player.getEquipment().getItem(targetSlot).getId() || !item.getDefinitions().isStackable())) {
             if (player.getInventory().getItems().get(slotId) == null) {
-                player.getInventory().getItems().set(slotId, new Item(player.getEquipment().getItem(targetSlot).getId(),
-                        player.getEquipment().getItem(targetSlot).getAmount()));
+                player.getInventory().getItems().set(slotId, new Item(player.getEquipment().getItem(targetSlot).getId(), player.getEquipment().getItem(targetSlot).getAmount()));
             } else
-                player.getInventory().getItems().add(new Item(player.getEquipment().getItem(targetSlot).getId(),
-                        player.getEquipment().getItem(targetSlot).getAmount()));
+                player.getInventory().getItems().add(new Item(player.getEquipment().getItem(targetSlot).getId(), player.getEquipment().getItem(targetSlot).getAmount()));
             player.getEquipment().getItems().set(targetSlot, null);
         }
         if (targetSlot == Equipment.SLOT_AURA)
@@ -3043,8 +2968,7 @@ public class ButtonHandler {
         if (targetSlot == Equipment.SLOT_WEAPON && itemId != 15486) {
             if (player.polDelay > Utils.currentTimeMillis()) {
                 player.setPolDelay(0);
-                player.getPackets().sendGameMessage(
-                        "The power of the light fades. Your resistance to melee attacks return to normal.");
+                player.getPackets().sendGameMessage("The power of the light fades. Your resistance to melee attacks return to normal.");
             }
         }
         refreshEquipBonuses(player);
@@ -3102,8 +3026,7 @@ public class ButtonHandler {
         sendItemsKeptOnDeath(player, player.isAtWild() ? true : false);
     }
 
-    public static Integer[][] getItemSlotsKeptOnDeath(final Player player, boolean atWilderness, boolean skulled,
-                                                      boolean protectPrayer) {
+    public static Integer[][] getItemSlotsKeptOnDeath(final Player player, boolean atWilderness, boolean skulled, boolean protectPrayer) {
         ArrayList<Integer> droppedItems = new ArrayList<Integer>();
         ArrayList<Integer> protectedItems = new ArrayList<Integer>();
         ArrayList<Integer> lostItems = new ArrayList<Integer>();
@@ -3146,9 +3069,7 @@ public class ButtonHandler {
         Integer[] keptItems = new Integer[keptAmount];
         for (int i = 0; i < keptAmount; i++)
             keptItems[i] = droppedItems.remove(0);
-        return new Integer[][]{keptItems, droppedItems.toArray(new Integer[droppedItems.size()]),
-                protectedItems.toArray(new Integer[protectedItems.size()]),
-                atWilderness ? new Integer[0] : lostItems.toArray(new Integer[lostItems.size()])};
+        return new Integer[][]{keptItems, droppedItems.toArray(new Integer[droppedItems.size()]), protectedItems.toArray(new Integer[protectedItems.size()]), atWilderness ? new Integer[0] : lostItems.toArray(new Integer[lostItems.size()])};
     }
 
     public static Item[][] getItemsKeptOnDeath(Player player, Integer[][] slots) {
@@ -3179,8 +3100,7 @@ public class ButtonHandler {
             item = new Item(item.getId(), item.getAmount());
             keptItems.add(item);
         }
-        return new Item[][]{keptItems.toArray(new Item[keptItems.size()]),
-                droppedItems.toArray(new Item[droppedItems.size()])};
+        return new Item[][]{keptItems.toArray(new Item[keptItems.size()]), droppedItems.toArray(new Item[droppedItems.size()])};
 
     }
 
@@ -3189,9 +3109,8 @@ public class ButtonHandler {
         boolean inFfa = FfaZone.inArea(player);
         @SuppressWarnings("unused")
         // TODO
-                boolean inRiskArea = FfaZone.inRiskArea(player);
-        Integer[][] slots = getItemSlotsKeptOnDeath(player, wilderness, skulled,
-                player.getPrayer().usingPrayer(0, 10) || player.getPrayer().usingPrayer(1, 0));
+        boolean inRiskArea = FfaZone.inRiskArea(player);
+        Integer[][] slots = getItemSlotsKeptOnDeath(player, wilderness, skulled, player.getPrayer().usingPrayer(0, 10) || player.getPrayer().usingPrayer(1, 0));
         Item[][] items = getItemsKeptOnDeath(player, slots);
         long riskedWealth = 0;
         long carriedWealth = 0;
@@ -3227,10 +3146,7 @@ public class ButtonHandler {
         for (Item item : items[0]) {
             text.append(item.getName()).append("<br>").append("<br>");
         }
-        text.append("<br>").append("<br>").append("Carried wealth:").append("<br>")
-                .append(Utils.getFormattedNumber(carriedWealth, ',')).append("<br>").append("<br>")
-                .append("Risked wealth:").append("<br>").append(Utils.getFormattedNumber(riskedWealth, ','))
-                .append("<br>").append("<br>");
+        text.append("<br>").append("<br>").append("Carried wealth:").append("<br>").append(Utils.getFormattedNumber(carriedWealth, ',')).append("<br>").append("<br>").append("Risked wealth:").append("<br>").append(Utils.getFormattedNumber(riskedWealth, ',')).append("<br>").append("<br>");
         text.append("Respawn point:").append("<br>").append("Edgeville");
         player.getPackets().sendGlobalString(352, text.toString());
     }
@@ -3300,14 +3216,12 @@ public class ButtonHandler {
     public static void renewSummoningPoints(Player player) {
         int summonLevel = player.getSkills().getLevelForXp(Skills.SUMMONING);
 
-        if (player.restoreDelay < Utils.currentTimeMillis()
-                && player.getSkills().getLevel(Skills.SUMMONING) < summonLevel) {
+        if (player.restoreDelay < Utils.currentTimeMillis() && player.getSkills().getLevel(Skills.SUMMONING) < summonLevel) {
             player.restoreDelay = (Utils.currentTimeMillis() + 30000);
             player.getSkills().set(Skills.SUMMONING, summonLevel);
             player.animate(new Animation(8502));
             player.gfx(new Graphics(1308));
-            player.getPackets().sendGameMessage("You restored your Summoning points with the Completionist cape!",
-                    true);
+            player.getPackets().sendGameMessage("You restored your Summoning points with the Completionist cape!", true);
         } else if (player.restoreDelay > Utils.currentTimeMillis()) {
             player.sm("Your cape is still recharging from it's last use.");
         } else {
@@ -3372,8 +3286,7 @@ public class ButtonHandler {
         for (int i = 0; i < 18; i++) {
             String bonusName = (new StringBuilder(String.valueOf(names[i <= 4 ? i : i - 5]))).append(": ").toString();
             int bonus = player.getCombatDefinitions().getBonuses()[i];
-            bonusName = (new StringBuilder(String.valueOf(bonusName))).append(bonus >= 0 ? "+" : "").append(bonus)
-                    .toString();
+            bonusName = (new StringBuilder(String.valueOf(bonusName))).append(bonus >= 0 ? "+" : "").append(bonus).toString();
             if (i == 17 || i > 10 && i < 14)
                 bonusName = (new StringBuilder(String.valueOf(bonusName))).append("%").toString();
 
@@ -3405,19 +3318,18 @@ public class ButtonHandler {
         });
     }
 
-    public static void refreshRunePouch(Player player) {
+    public static void openRunePouch(Player player) {
         Item[] items = player.getRunePouch().getContainerItems();
-        player.getInterfaceManager().sendInterface(1284);
+        if (!player.getInterfaceManager().containsInterface(1284))
+            player.getInterfaceManager().sendInterface(1284);
         player.getInterfaceManager().sendInventoryInterface(670);
-        player.getPackets().sendInterSetItemsOptionsScript(670, 0, 93, 4, 7, "Store 1", "Store 10", "Store 100",
-                "Store-All");
+        player.getPackets().sendInterSetItemsOptionsScript(670, 0, 93, 4, 7, "Store 1", "Store 10", "Store 100", "Store-All");
         player.getPackets().sendUnlockIComponentOptionSlots(670, 0, 0, 27, 0, 1, 2, 3);
         player.getPackets().sendIComponentText(1284, 28, "Rune Pouch");
         player.getPackets().sendHideIComponent(1284, 8, true);
         player.getPackets().sendHideIComponent(1284, 9, true);
         player.getPackets().sendIComponentText(1284, 46, "Take-All");
-        player.getPackets().sendInterSetItemsOptionsScript(1284, 7, 100, 8, 4, "Withdraw 1", "Withdraw 10",
-                "Withdraw 100", "Withdraw-All");
+        player.getPackets().sendInterSetItemsOptionsScript(1284, 7, 100, 8, 4, "Withdraw 1", "Withdraw 10", "Withdraw 100", "Withdraw-All");
         player.getPackets().sendUnlockIComponentOptionSlots(1284, 7, 0, 3, 0, 1, 2, 3);
         player.getPackets().sendItems(100, items);
         player.temporaryAttribute().put("runepouch", Boolean.TRUE);
@@ -3453,12 +3365,11 @@ public class ButtonHandler {
         player.getRunePouch().shift();
         player.getInventory().refresh();
         player.getPackets().sendGameMessage("You store " + amount + " x " + item.getName() + "s in the rune pouch.");
-        refreshRunePouch(player);
+        openRunePouch(player);
     }
 
     public static void withdrawRunePouch(Player player, int slotId, Item item, int amount) {
-        if (player.getInventory().getFreeSlots() == 0
-                && !player.getInventory().containsItem(player.getRunePouch().get(slotId).getId(), 1)) {
+        if (player.getInventory().getFreeSlots() == 0 && !player.getInventory().containsItem(player.getRunePouch().get(slotId).getId(), 1)) {
             player.getPackets().sendGameMessage("You don't have enough inventory spaces.");
             return;
         }
@@ -3472,9 +3383,8 @@ public class ButtonHandler {
             player.getRunePouch().remove(item);
             player.getRunePouch().shift();
         }
-        refreshRunePouch(player);
-        player.getPackets()
-                .sendGameMessage("You withdraw " + amount + " x " + item.getName() + "s from the rune pouch.");
+        openRunePouch(player);
+        player.getPackets().sendGameMessage("You withdraw " + amount + " x " + item.getName() + "s from the rune pouch.");
 
     }
 
@@ -3482,6 +3392,5 @@ public class ButtonHandler {
         player.getInterfaceManager().sendInterface(499);
     }
 
-    private static String names[] = {"Stab", "Slash", "Crush", "Magic", "Ranged", "Summoning", "Absorb Melee",
-            "Absorb Magic", "Absorb Ranged", "Strength", "Ranged Strength", "Prayer", "Magic Damage"};
+    private static String names[] = {"Stab", "Slash", "Crush", "Magic", "Ranged", "Summoning", "Absorb Melee", "Absorb Magic", "Absorb Ranged", "Strength", "Ranged Strength", "Prayer", "Magic Damage"};
 }

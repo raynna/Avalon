@@ -1,5 +1,6 @@
 package com.rs.game.player.dialogues.npcs;
 
+import com.rs.game.player.VariableKeys;
 import com.rs.game.player.dialogues.Dialogue;
 
 /**
@@ -15,7 +16,7 @@ public class Giles extends Dialogue {
 
 	@Override
 	public void start() {
-		if (!player.spokenWithGiles) {
+		if (!player.get(VariableKeys.BooleanKey.TALKED_TO_GILES)) {
 			sendPlayerDialogue(Thinking, "Giles...? What are you doing here?");
 			stage = 1;
 		} else {
@@ -49,7 +50,7 @@ public class Giles extends Dialogue {
 			break;
 		case 5:
 			sendOptions(TITLE, "Unnote my item", "Who are you?");
-			player.spokenWithGiles = true;
+			player.set(VariableKeys.BooleanKey.TALKED_TO_GILES, true);
 			stage = 6;
 			break;
 		case 6:

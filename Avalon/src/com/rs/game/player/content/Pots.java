@@ -637,7 +637,7 @@ public final class Pots {
 
 			@Override
 			public void extra(final Player player) {
-				player.setOverload(300000);
+				player.setOverload(480);
 				applyOverLoadEffect(player);
 				// player.getPackets().sendGameMessage("You are now immune to for " +
 				// getOverloadTimeleft(player) + "");
@@ -666,7 +666,7 @@ public final class Pots {
 		PRAYER_RENEWAL() {
 			@Override
 			public void extra(Player player) {
-				player.setPrayerRenewal(300000);
+				player.setPrayerRenewal(480);
 			}
 		},
 		SUPER_RESTORE(Skills.ATTACK, Skills.STRENGTH, Skills.DEFENCE, Skills.MAGIC, Skills.RANGE, Skills.AGILITY,

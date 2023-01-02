@@ -15,13 +15,15 @@ import com.rs.game.Region;
 import com.rs.game.World;
 import com.rs.game.area.AreaManager;
 import com.rs.game.cityhandler.CityEventHandler;
+import com.rs.game.item.ItemScriptHandler;
 import com.rs.game.item.ground.AutomaticGroundItem;
 import com.rs.game.map.MapBuilder;
+import com.rs.game.npc.NpcScriptHandler;
 import com.rs.game.npc.combat.CombatScriptsHandler;
 import com.rs.game.npc.drops.MobRewardRDT;
 import com.rs.game.objects.GlobalObjectAddition;
 import com.rs.game.objects.GlobalObjectDeletion;
-import com.rs.game.objects.ObjectScriptsHandler;
+import com.rs.game.objects.ObjectScriptHandler;
 import com.rs.game.player.AccountCreation;
 import com.rs.game.player.Player;
 import com.rs.game.player.actions.combat.weaponscript.WeaponScriptsManager;
@@ -92,9 +94,6 @@ public final class Launcher {
 		MusicHints.init();
 		ShopsHandler.init();
 		FishingSpotsHandler.init();
-		CombatScriptsHandler.init();
-		ObjectScriptsHandler.init();
-		WeaponScriptsManager.init();
 		DialogueHandler.init();
 		ControlerHandler.init();
 		CutscenesHandler.init();
@@ -121,6 +120,11 @@ public final class Launcher {
 		CityEventHandler.registerCitys();
 		CustomStoreData.init();
 		DTRank.init();
+		CombatScriptsHandler.init();
+		ObjectScriptHandler.init();
+		NpcScriptHandler.init();
+		ItemScriptHandler.init();
+		WeaponScriptsManager.init();
 		try {
 			ServerChannelHandler.init();
 		} catch (Throwable e) {

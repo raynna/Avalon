@@ -2,6 +2,7 @@ package com.rs.game.player.dialogues;
 
 import java.text.DecimalFormat;
 
+import com.rs.game.player.VariableKeys;
 import com.rs.utils.Utils;
 
 public class WildStalkerHelmet extends Dialogue {
@@ -15,8 +16,8 @@ public class WildStalkerHelmet extends Dialogue {
 
 	@Override
 	public void run(int interfaceId, int componentId) {
-		int ks = player.killStreak;
-		int ksr = player.killStreakRecord;
+		int ks = player.get(VariableKeys.IntKey.KILLSTREAK);
+		int ksr = player.get(VariableKeys.IntKey.KILLSTREAK_RECORD);
 		double kills = player.getKillCount();
 		double deaths = player.getDeathCount();
 		double dr = (kills / deaths);
@@ -38,7 +39,7 @@ public class WildStalkerHelmet extends Dialogue {
 						"No, I wan't to keep it!");
 			} else if (componentId == OPTION_4) {
 				stage = 15;
-				sendDialogue("Current stats (Wilderness):</col><br>" + player.killCount + " kills, " + player.deathCount
+				sendDialogue("Current stats (Wilderness):</col><br>" + player.getKillCount() + " kills, " + player.getDeathCount()
 						+ " deaths.<br>" + "Current kills in a row: " + ks + ".<br>" + "Current kills in a row record: "
 						+ ksr + ".<br>" + "Most valuable kill: "
 						+ (player.getHighestValuedKill() == Integer.MAX_VALUE ? "Lots!"
@@ -51,16 +52,15 @@ public class WildStalkerHelmet extends Dialogue {
 			end();
 		} else if (stage == 25) {
 			stage = 15;
-			player.setKillCount(0);
-			player.setDeathCount(0);
-			player.killStreak = 0;
+			player.set(VariableKeys.IntKey.KILLCOUNT, 0);
+			player.set(VariableKeys.IntKey.DEATHCOUNT, 0);
+			player.set(VariableKeys.IntKey.KILLSTREAK, 0);
 			removeWildStalkers();
 			sendDialogue("You reset your Wilderness kills and deaths.");
 			player.getInventory().addItem(20801, 1);
 		} else if (stage == 30) {
 			stage = 15;
 			player.setHighestValuedKill(0);
-			player.reachedMaxValue = false;
 			sendDialogue("You reset your highest value Wilderness kill.");
 		}
 	}

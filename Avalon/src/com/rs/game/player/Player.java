@@ -130,12 +130,74 @@ import com.rs.utils.IsaacKeyPair;
 import com.rs.utils.Logger;
 import com.rs.utils.MachineInformation;
 import com.rs.utils.Utils;
+import com.rs.game.player.VariableKeys.*;
 
 public class Player extends Entity {
 
     public static final int TELE_MOVE_TYPE = 127, WALK_MOVE_TYPE = 1, RUN_MOVE_TYPE = 2;
 
     private static final long serialVersionUID = 2011932556974180375L;
+
+
+    private Map<VariableKeys.LongKey, Long> longMap = new HashMap<>();
+    private Map<VariableKeys.IntKey, Integer> intMap = new HashMap<>();
+    private Map<VariableKeys.BooleanKey, Boolean> booleanMap = new HashMap<>();
+    private Map<VariableKeys.StringKey, String> stringKey = new HashMap<>();
+
+    public void set(LongKey key, long i) {
+        longMap.put(key, i);
+    }
+
+    public long get(LongKey key) {
+        Long map = longMap.getOrDefault(key, key.getDefaultValue());
+        if (map == null) {
+            System.out.println("LongMap: " + map + " is null");
+            return -1;
+        }
+        return map.longValue();
+    }
+
+    public void set(IntKey key, int i) {
+        intMap.put(key, i);
+    }
+
+    public void add(IntKey key, int i) {
+        intMap.merge(key, i, Integer::sum);
+    }
+
+    public void remove(IntKey key, int i) {
+        intMap.compute(key, (k, v) -> Math.max(v - i, 0));
+    }
+
+    public void remove(LongKey key, int i) {
+        longMap.compute(key, (k, v) -> Math.max(v - i, 0));
+    }
+
+    public void clear(LongKey key) {
+        longMap.remove(key);
+    }
+
+    public void clear(IntKey key) {
+        intMap.remove(key);
+    }
+
+    public int get(IntKey key) {
+        Integer map = intMap.getOrDefault(key, key.getDefaultValue());
+        if (map == null)
+            return 0;
+        return map.intValue();
+    }
+
+    public void set(BooleanKey key, boolean i) {
+        booleanMap.put(key, i);
+    }
+
+    public boolean get(BooleanKey key) {
+        Boolean map = booleanMap.getOrDefault(key, key.getDefaultValue());
+        if (map == null)
+            return false;
+        return map.booleanValue();
+    }
 
     /**
      * @Player
@@ -158,6 +220,10 @@ public class Player extends Entity {
      */
 
     private PlayerRank playerRank;
+
+    public PlayerRank getRank() {
+        return playerRank;
+    }
 
     /*
      * @Ironman
@@ -506,10 +572,6 @@ public class Player extends Entity {
     /**
      * @PvP
      */
-    private int ep;
-    public int PKP;
-    public int killStreak;
-    public int killStreakRecord;
     private transient boolean canPvp;
 
     /**
@@ -526,30 +588,30 @@ public class Player extends Entity {
     /**
      * @CoalBag TODO
      */
-    public int coalStored;
+
+    public int getCoalStored() {
+        return get(IntKey.COAL_STORED);
+    }
+
+    public void addCoalStored(int amount) {
+        add(IntKey.COAL_STORED, amount);
+    }
+
+    public void removeCoalStored(int amount) {
+        remove(IntKey.COAL_STORED, amount);
+    }
 
     /**
      * @PlayerDropValues
      */
-    private long highestDrop;
 
     public long getHighestValuedKill() {
-        return highestDrop;
+        return get(LongKey.HIGHEST_VALUE_DROP);
     }
 
     public void setHighestValuedKill(long price) {
-        highestDrop = price;
+        set(LongKey.HIGHEST_VALUE_DROP, price);
     }
-
-    /**
-     * @NPCTalkedBooleans
-     */
-
-    private boolean talkedWithMarv;
-    public boolean talkedToMrEx;
-    public boolean talkedToEstocada;
-
-    public boolean reachedMaxValue;
 
     /**
      * @Healmode
@@ -1039,12 +1101,6 @@ public class Player extends Entity {
     private ArrayList<UnlockableItems> unlockedItems = new ArrayList<>();
 
     /**
-     * @PlayerKillsDeaths
-     */
-    public int killCount;
-    public int deathCount;
-
-    /**
      * @ItemCharges
      */
     private ChargesManager charges;
@@ -1465,6 +1521,15 @@ public class Player extends Entity {
             lastlevelUp = new ArrayList<String>();
         if (slayerTask == null)
             slayerTask = new HashMap<Integer, String>();
+        if (intMap == null)
+            intMap = new HashMap<IntKey, Integer>();
+        if (longMap == null)
+            longMap = new HashMap<LongKey, Long>();
+        if (booleanMap == null)
+            booleanMap = new HashMap<BooleanKey, Boolean>();
+        if (stringKey == null)
+            stringKey = new HashMap<StringKey, String>();
+
         updateIPnPass();
         if (getSkullSkeptreCharges() <= 0)
             setSkullSkeptreCharges(5);
@@ -1496,37 +1561,34 @@ public class Player extends Entity {
         return false;
     }
 
-    public static int ATTACK = Skills.ATTACK;
+    public void setHighestLevel(int skill, int value) {
+        if (skill == Skills.ATTACK)
+        set(IntKey.HIGHEST_ATTACK_LEVEL, value);
+        if (skill == Skills.STRENGTH)
+            set(IntKey.HIGHEST_STRENGTH_LEVEL, value);
+        if (skill == Skills.DEFENCE)
+            set(IntKey.HIGHEST_DEFENCE_LEVEL, value);
+        if (skill == Skills.RANGE)
+            set(IntKey.HIGHEST_RANGED_LEVEL, value);
+        if (skill == Skills.PRAYER)
+            set(IntKey.HIGHEST_PRAYER_LEVEL, value);
+        if (skill == Skills.MAGIC)
+            set(IntKey.HIGHEST_MAGIC_LEVEL, value);
+    }
 
-    public static int STRENGTH = Skills.STRENGTH;
-
-    public static int DEFENCE = Skills.DEFENCE;
-
-    public static int RANGE = Skills.RANGE;
-
-    public static int MAGIC = Skills.MAGIC;
-
-    public static int HITPOINTS = Skills.HITPOINTS;
-
-    public static int PRAYER = Skills.PRAYER;
-
-    public int getMaxedLevel(int skillId) {
-        if (skillId == STRENGTH) {
-            return maxed_str;
-        }
-        if (skillId == ATTACK)
-            return maxed_atk;
-        if (skillId == DEFENCE)
-            return maxed_def;
-        if (skillId == RANGE)
-            return maxed_range;
-        if (skillId == MAGIC)
-            return maxed_mage;
-        if (skillId == HITPOINTS)
-            return maxed_hp;
-        if (skillId == PRAYER)
-            return maxed_prayer;
-        return skillId;
+    public void getHighestLevel(int skill) {
+        if (skill == Skills.ATTACK)
+            get(IntKey.HIGHEST_ATTACK_LEVEL);
+        if (skill == Skills.STRENGTH)
+            get(IntKey.HIGHEST_STRENGTH_LEVEL);
+        if (skill == Skills.DEFENCE)
+            get(IntKey.HIGHEST_DEFENCE_LEVEL);
+        if (skill == Skills.RANGE)
+            get(IntKey.HIGHEST_RANGED_LEVEL);
+        if (skill == Skills.PRAYER)
+            get(IntKey.HIGHEST_PRAYER_LEVEL);
+        if (skill == Skills.MAGIC)
+            get(IntKey.HIGHEST_MAGIC_LEVEL);
     }
 
     public void setFamiliarBoB(ItemsContainer<Item> items) {
@@ -1539,19 +1601,19 @@ public class Player extends Entity {
 
     public enum Limits {
 
-        ATTACK_LEVEL(ATTACK, 60),
+        ATTACK_LEVEL(Skills.ATTACK, 60),
 
-        STRENGTH_LEVEL(STRENGTH, 70),
+        STRENGTH_LEVEL(Skills.STRENGTH, 70),
 
-        DEFENCE_LEVEL(DEFENCE, 20),
+        DEFENCE_LEVEL(Skills.DEFENCE, 20),
 
-        RANGE_LEVEL(RANGE, 70),
+        RANGE_LEVEL(Skills.RANGE, 70),
 
-        MAGIC_LEVEL(MAGIC, 70),
+        MAGIC_LEVEL(Skills.MAGIC, 70),
 
-        HITPOINTS_LEVEL(HITPOINTS, 70),
+        HITPOINTS_LEVEL(Skills.HITPOINTS, 70),
 
-        PRAYER_LEVEL(PRAYER, 43);;
+        PRAYER_LEVEL(Skills.PRAYER, 43);;
 
         private int skill;
         private int level;
@@ -1586,20 +1648,6 @@ public class Player extends Entity {
             this.level = level;
         }
     }
-
-    public int maxed_str = 99;
-
-    public int maxed_def = 99;
-
-    public int maxed_atk = 99;
-
-    public int maxed_range = 99;
-
-    public int maxed_mage = 99;
-
-    public int maxed_prayer = 99;
-
-    public int maxed_hp = 99;
 
     public void startGame(Player player) {
         if (!recievedStarter)
@@ -2451,7 +2499,7 @@ public class Player extends Entity {
             getPackets().sendHideIComponent(3039, 11, true);
             getPackets().sendHideIComponent(3039, 12, true);
         }
-        if (getOverloadDelay() >= Utils.currentTimeMillis()) {
+        if (getOverloadDelay() > 0) {
             getPackets().sendHideIComponent(3039, 13, false);
             getPackets().sendHideIComponent(3039, 14, false);
             getPackets().sendIComponentText(3039, 14, getTimeLeft(getOverloadDelay()) + "");
@@ -2475,6 +2523,11 @@ public class Player extends Entity {
         return "Attack";
     }
 
+
+    public String getTitle() {
+           return getPlayerRank().getRankName(getPlayerRank().isStaff() ? 0 : 1);
+    }
+
     public void sendPlayersList() {
         getInterfaceManager().sendInterface(275);
         int number1 = 0;
@@ -2485,30 +2538,11 @@ public class Player extends Entity {
             if (p5 == null)
                 continue;
             number1++;
-            String titles = "";
             PlayerRank rank = p5.getPlayerRank();
-            if (rank.getRank()[0] == Rank.MODERATOR) {
-                titles = "<col=ff0000><shad=ff0050>Player Moderator</col></shad> <img=0> ";
-            }
-            if (rank.getRank()[0] == Rank.PLAYER) {
-                titles = "Player ";
-            }
-            if (rank.getRank()[0] == Rank.PLAYER && p5.getPlayerRank().isIronman()) {
-                titles = "<img=23>Ironman ";
-            }
-            if (rank.getRank()[0] == Rank.PLAYER && p5.getPlayerRank().isHardcore()) {
-                titles = "<img=24>Hardcore Ironman ";
-            }
-            if (rank.getRank()[0] == Rank.DEVELOPER) {
-                titles = "<col=00ffff><shad=0000ff>Developer</col></shad> <img=1> ";
-            }
-            if (rank.getRank()[0] == Rank.PLAYERSUPPORT) {
-                titles = "<col=58ACFA><shad=2E2EFE>" + Settings.SERVER_NAME + " Support</shad></col> <img=12> ";
-            }
-            if (p5.getUsername().equalsIgnoreCase("andreas")) {
-                titles = "<col=ff0000><shad=000000>The Real Viking</col></shad> <img=1> ";
-            }
-            getPackets().sendIComponentText(275, (13 + number1), titles + "" + p5.getDisplayName());
+            StringBuilder builder = new StringBuilder();
+            builder.append("<img=" + getPlayerRank().getIconId() + ">");
+            builder.append(HexColours.getShortMessage(Colour.RED, getTitle()));
+            getPackets().sendIComponentText(275, (13 + number1), builder.toString() + " " + p5.getDisplayName());
         }
         getPackets().sendIComponentText(275, 1, Settings.SERVER_NAME);
         getPackets().sendIComponentText(275, 10, " ");
@@ -2523,8 +2557,9 @@ public class Player extends Entity {
                         true);
             if (getPrayer().leechBonuses[i] < 0)
                 getPrayer().increase(i);
-            if (getPrayer().leechBonuses[i] > 0)
+            if (getPrayer().leechBonuses[i] > 0) {
                 getPrayer().decrease(i);
+            }
         }
     }
 
@@ -2558,8 +2593,6 @@ public class Player extends Entity {
             getAssist().Check();
         }
         checkTimers();
-        if (combatDelay > 0)
-            combatDelay--;
         if (miscTick % 10 == 0)
             drainHitPoints();
         if (miscTick % 32 == 0)
@@ -2612,9 +2645,7 @@ public class Player extends Entity {
         boolean usingRapidHeal = PrayerBook.usingRapidHeal(this);
         if (healTick % (usingRenewal ? 2 : isResting() ? 2 : usingRapidHeal ? 5 : 10) == 0)
             restoreHitPoints();
-
         /**/
-
         for (Player player : World.getPlayers()) {
             if (player == null || attackedBy.isEmpty())
                 continue;
@@ -2683,27 +2714,27 @@ public class Player extends Entity {
                         PlayerCombat.getHealthOverlayId(this));
             }
         }
-        if (getOverloadSeconds() > 0) {
-            if (getOverloadSeconds() < 1 || isDead()) {
+        if (getOverloadDelay() > 0) {
+            remove(IntKey.OVERLOAD_EFFECT, 1);
+            if (getOverloadDelay() == 0 || isDead()) {
                 Pots.resetOverLoadEffect(this);
                 return;
             }
-            if (getRenewalSeconds() == 29)
+            if (getOverloadDelay() == 48)
                 sm("<col=0000FF>Your overload effect will wear off in 30 seconds.");
-            if (getOverloadSeconds() % 25 == 0)
+            if (getOverloadDelay() % 40 == 0)
                 Pots.applyOverLoadEffect(this);
         }
-        if (getRenewalSeconds() > 0) {
-            if (getRenewalSeconds() < 1 || isDead()) {
-                setPrayerRenewal(0);
+        if (getPrayerRenewalDelay() > 0) {
+            if (getPrayerRenewalDelay() == 0 || isDead()) {
                 sm("<col=0000FF>Your prayer renewal has ended.");
                 return;
             } else {
-                if (getRenewalSeconds() == 29)
+                if (getPrayerRenewalDelay() == 48)
                     sm("<col=0000FF>Your prayer renewal will wear off in 30 seconds.");
                 if (!prayer.hasFullPrayerpoints()) {
                     getPrayer().restorePrayer(1, true);
-                    if ((getRenewalSeconds() - 1) % 25 == 0)
+                    if ((getPrayerRenewalDelay() - 1) % 40 == 0)
                         gfx(new Graphics(1295));
                 }
             }
@@ -4195,14 +4226,14 @@ public class Player extends Entity {
                             + ", but it was added to your bank.");
                 }
             }
-            double ep = killer.getEp() * 0.30;
+            double ep = killer.get(IntKey.EP) * 0.30;
             if (ep < 0)
                 ep = 0;
             double rollChance = 100 - ep;
             double c = Utils.getRandomDouble2(rollChance);
             Artefacts rolledItem = Artefacts.values()[Utils.getRandom(Artefacts.values().length - 1)];
             if (c <= rolledItem.getChance()) {
-                killer.setEp(0);
+                killer.set(IntKey.EP, 0);
                 World.addGroundItem(new Item(rolledItem.getId(), 1), deathTile, killer == null ? this : killer, true,
                         60);
                 killer.sm("You recieved a " + rolledItem.getName() + " as a pvp drop.");
@@ -4368,39 +4399,32 @@ public class Player extends Entity {
         archiveDeaths(killed, this);
         if (hasWildstalker())
             upgradeWildstalker();
-        killStreak++;
-        killCount++;
+        add(IntKey.KILLSTREAK, 1);
+        add(IntKey.KILLCOUNT, 1);
         if (!getPlayerRank().isStaff())
             KillScoreBoard.checkRank(this);
-        int totalPts = Utils.random(400, 600) + ((killStreak * 200) / 2);
+        int totalPts = Utils.random(400, 600) + ((get(IntKey.KILLSTREAK) * 200) / 2);
         if (isMember())
             totalPts *= 1.20;
         if (totalPts > 10000)
             totalPts = Utils.random(9500, 10000);
-        PKP += totalPts;
+        add(IntKey.PK_POINTS, totalPts);
         getAdventureLog().addActivity("I have killed " + killed.getDisplayName() + " in a PvP zone.");
-        sm("You now have a killstreak of " + HexColours.getShortMessage(Colour.RED, "" + killStreak)
-                + (killStreak > 1 ? " kills." : " kill.")
-                + (killStreak > killStreakRecord ? " " + HexColours.getShortMessage(Colour.RED, "New Record!") : ""));
-        if (killed.killStreak >= 5)
+        sm("You now have a killstreak of " + HexColours.getShortMessage(Colour.RED, "" + get(IntKey.KILLSTREAK))
+                + (get(IntKey.KILLSTREAK) > 1 ? " kills." : " kill.")
+                + (get(IntKey.KILLSTREAK) > get(IntKey.KILLSTREAK_RECORD) ? " " + HexColours.getShortMessage(Colour.RED, "New Record!") : ""));
+        if (killed.get(IntKey.KILLSTREAK) >= 5)
             World.sendNewsMessage(getDisplayName() + " has ended " + killed.getDisplayName()
-                            + (killed.getDisplayName().endsWith("s") ? "'" : "s") + " killstreak of " + killed.killStreak + "!",
+                            + (killed.getDisplayName().endsWith("s") ? "'" : "s") + " killstreak of " + killed.get(IntKey.KILLSTREAK) + "!",
                     false);
         sm("You gained " + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(totalPts, ','))
                 + " pk points, you now have "
-                + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(getPKP(), ','))
+                + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(get(IntKey.PK_POINTS), ','))
                 + " pk points.");
-        if (killStreak > killStreakRecord)
-            killStreakRecord++;
-        killed.deathCount++;
-        killed.killStreak = 0;
-        sm("" + randomKillMessage(killed));
-    }
-
-    public void increaseKillCountSafe(Player killed) {
-        if (killed == this)
-            return;
-        killCount++;
+        if (get(IntKey.KILLSTREAK) > get(IntKey.KILLSTREAK_RECORD))
+            set(IntKey.KILLSTREAK_RECORD, 1);
+        killed.add(IntKey.DEATHCOUNT, 1);
+        killed.set(IntKey.KILLSTREAK, 0);
         sm("" + randomKillMessage(killed));
     }
 
@@ -4787,40 +4811,63 @@ public class Player extends Entity {
         return staffCharges;
     }
 
-    public boolean isCastVeng() {
-        return castedVeng;
+
+    public void setVengeance(boolean value) {
+        set(BooleanKey.VENGEANCE_ACTIVE, value);
     }
 
-    public void setVengeance(boolean castVengeance) {
-        temporaryAttribute().put("vengeanceActivated", castVengeance);
+    public void setDisruption(boolean value) {
+        set(BooleanKey.DISRUPTION_ACTIVE, value);
     }
 
-    public void setDisruption(boolean castDisruption) {
-        temporaryAttribute().put("disruptionActivated", castDisruption);
+    public void setVengeance(int ticks) {
+        set(IntKey.VENGEANCE, ticks);
     }
 
-    public void setVengeance(long vengDelay) {
-        temporaryAttribute().put("vengDelay", vengDelay + Utils.currentTimeMillis());
+    public void setTeleBlockDelay(int ticks) {
+       set(IntKey.TELEPORT_BLOCK_IMMUNITY, ticks);
     }
 
-    public void setTeleBlockDelay(long teleblockDelay) {
-        temporaryAttribute().put("teleblockDelay", teleblockDelay + Utils.currentTimeMillis());
+    public void setTeleBlockImmune(int ticks) {
+       set(IntKey.TELEPORT_BLOCK, ticks);
     }
 
-    public void setTeleBlockImmune(long teleblockImmune) {
-        temporaryAttribute().put("teleblockImmune", teleblockImmune + Utils.currentTimeMillis());
+    public void setPrayerRenewal(int ticks) {
+        set(IntKey.PRAYER_RENEWAL_EFFECT, ticks);
     }
 
-    public void setPrayerRenewal(long renewalDelay) {
-        temporaryAttribute().put("renewalDelay", renewalDelay + Utils.currentTimeMillis());
+    public int getTickToSeconds(int ticks) {
+        Integer seconds = (int) ((Integer) ticks * 0.6);
+        if (seconds == null)
+            return 0;
+        return seconds.intValue();
     }
 
-    public void setOverload(long overloadDelay) {
-        temporaryAttribute().put("overloadDelay", overloadDelay + Utils.currentTimeMillis());
+    public String getTimeLeft(int ticks) {
+        StringBuilder builder = new StringBuilder();
+        int seconds = (int) (1 + ticks * 0.6);
+        int minutes = seconds / 60;
+        builder.append(minutes > 0 ? minutes + "m" : seconds + "s");
+        System.out.println(ticks + ", seconds: " + seconds + ", minutes: " + minutes);
+        return builder.toString();
     }
 
-    public void setDisruption(long disruptionDelay) {
-        temporaryAttribute().put("disruptionDelay", disruptionDelay + Utils.currentTimeMillis());
+    public String getTimeLeft(long value) {
+        long seconds = 1 + TimeUnit.MILLISECONDS.toSeconds(value - Utils.currentTimeMillis());
+        long minutes = TimeUnit.SECONDS.toMinutes(seconds);
+        String message = (minutes > 0 ? minutes + "m" : seconds + "s");
+        return message;
+    }
+
+    public void setOverload(int ticks) {
+        //redo to int and use ticks, 480 ticks is 300 seconds/5minutes
+        getTickToSeconds(ticks);
+        set(IntKey.OVERLOAD_EFFECT, ticks);
+    }
+
+
+    public void setDisruption(int ticks) {
+        set(IntKey.DISRUPTION_SHIELD, ticks);
     }
 
     public void setTemporaryTarget(Entity target) {
@@ -4841,64 +4888,36 @@ public class Player extends Entity {
         return temporaryTarget;
     }
 
-    public int getOverloadSeconds() {
-        int seconds = (int) TimeUnit.MILLISECONDS.toSeconds(getOverloadDelay() - Utils.currentTimeMillis());
-        return seconds;
+    public int getOverloadDelay() {
+        return get(IntKey.OVERLOAD_EFFECT);
     }
 
-    public int getRenewalSeconds() {
-        int seconds = (int) TimeUnit.MILLISECONDS.toSeconds(getPrayerRenewalDelay() - Utils.currentTimeMillis());
-        return seconds;
+    public int getPrayerRenewalDelay() {
+        return get(IntKey.PRAYER_RENEWAL_EFFECT);
     }
 
-    public long getOverloadDelay() {
-        Long overloadDelay = (Long) temporaryAttribute().get("overloadDelay");
-        if (overloadDelay == null)
-            return 0;
-        return overloadDelay;
+    public int getVengDelay() {
+        return get(IntKey.VENGEANCE);
     }
 
-    public long getPrayerRenewalDelay() {
-        Long renewalDelay = (Long) temporaryAttribute().get("renewalDelay");
-        if (renewalDelay == null)
-            return 0;
-        return renewalDelay;
+    public int getDisruptionDelay() {
+        return get(IntKey.DISRUPTION_SHIELD);
     }
 
-    public long getVengDelay() {
-        Long vengDelay = (Long) temporaryAttribute().get("vengDelay");
-        if (vengDelay == null)
-            return 0;
-        return vengDelay;
+    public int getTeleBlockDelay() {
+        return get(IntKey.TELEPORT_BLOCK);
     }
 
-    public long getDisruptionDelay() {
-        Long disruptionDelay = (Long) temporaryAttribute().get("disruptionDelay");
-        if (disruptionDelay == null)
-            return 0;
-        return disruptionDelay;
+    public int getTeleBlockImmune() {
+        return get(IntKey.TELEPORT_BLOCK_IMMUNITY);
     }
 
-    public long getTeleBlockDelay() {
-        Long teleblock = (Long) temporaryAttribute().get("teleblockDelay");
-        if (teleblock == null)
-            return 0;
-        return teleblock;
+    public void setFreezeDelay(int ticks) {
+        set(IntKey.FREEZE_DELAY, ticks);
     }
 
-    public long getTeleBlockImmune() {
-        Long teleimmune = (Long) temporaryAttribute().get("teleblockImmune");
-        if (teleimmune == null)
-            return 0;
-        return teleimmune;
-    }
-
-    public void setFreezeDelay(long freezeDelay) {
-        temporaryAttribute().put("freezeDelay", freezeDelay + Utils.currentTimeMillis());
-    }
-
-    public void addFreezeDelay(long freezeDelay, boolean entangle) {
-        temporaryAttribute().put("freezeDelay", freezeDelay + Utils.currentTimeMillis());
+    public void addFreezeDelay(int ticks, boolean entangle) {
+        set(IntKey.FREEZE_DELAY, ticks);
         if (getFreezeDelay() >= Utils.currentTimeMillis()) {
             resetWalkSteps();
             if (this instanceof Player) {
@@ -4917,31 +4936,62 @@ public class Player extends Entity {
         }
     }
 
-    public void setFreezeImmune(long freezeImmune) {
-        temporaryAttribute().put("freezeImmune", freezeImmune + Utils.currentTimeMillis());
+    public void setFreezeImmune(int ticks) {
+        set(IntKey.FREEZE_IMMUNITY, ticks);
     }
 
     public void resetFreezeDelay() {
-        temporaryAttribute().remove("freezeDelay");
+        clear(IntKey.FREEZE_DELAY);
     }
 
-    public long getFreezeDelay() {
-        Long freezeDelay = (Long) temporaryAttribute().get("freezeDelay");
-        if (freezeDelay == null)
-            return 0;
-        return freezeDelay;
+    public int getFreezeDelay() {
+        return get(IntKey.FREEZE_DELAY);
     }
 
-    public long getFreezeImmuneDelay() {
-        Long freezeImmune = (Long) temporaryAttribute().get("freezeImmune");
-        if (freezeImmune == null)
-            return 0;
-        return freezeImmune;
+    public int getFreezeImmuneDelay() {
+        return get(IntKey.FREEZE_IMMUNITY);
     }
 
     public int getKillCount() {
-        return killCount;
+        return get(IntKey.KILLCOUNT);
     }
+
+    public int getDeathCount() {
+        return get(IntKey.DEATHCOUNT);
+    }
+
+    public int getEP() {
+        return get(IntKey.EP);
+    }
+
+    public void addEP(int amount) {
+        add(IntKey.EP, amount);
+    }
+
+    public void removeEP(int amount) {
+        remove(IntKey.EP, amount);
+    }
+
+    public void setEP(int amount) {
+        set(IntKey.EP, amount);
+    }
+
+    public int getPKP() {
+        return get(IntKey.PK_POINTS);
+    }
+
+    public void addPKP(int amount) {
+        add(IntKey.PK_POINTS, amount);
+    }
+
+    public void removePKP(int amount) {
+        remove(IntKey.PK_POINTS, amount);
+    }
+
+    public void setPKP(int amount) {
+        set(IntKey.PK_POINTS, amount);
+    }
+
 
     public int getBarrowsKillCount() {
         return barrowsKillCount;
@@ -4949,18 +4999,6 @@ public class Player extends Entity {
 
     public int setBarrowsKillCount(int barrowsKillCount) {
         return this.barrowsKillCount = barrowsKillCount;
-    }
-
-    public int setKillCount(int killCount) {
-        return this.killCount = killCount;
-    }
-
-    public int getDeathCount() {
-        return deathCount;
-    }
-
-    public int setDeathCount(int deathCount) {
-        return this.deathCount = deathCount;
     }
 
     public void setCloseInterfacesEvent(Runnable closeInterfacesEvent) {
@@ -5046,14 +5084,6 @@ public class Player extends Entity {
 
     public String getLastIP() {
         return lastIP;
-    }
-
-    public void setPKP(int PKP) {
-        this.PKP = PKP;
-    }
-
-    public int getPKP() {
-        return PKP;
     }
 
     public String getLastHostname() {
@@ -5253,12 +5283,6 @@ public class Player extends Entity {
         return (minutes > 0 ? minutesMessage : secondsMessage);
     }
 
-    public String getTimeLeft(long value) {
-        long seconds = 1 + TimeUnit.MILLISECONDS.toSeconds(value - Utils.currentTimeMillis());
-        long minutes = TimeUnit.SECONDS.toMinutes(seconds);
-        String message = (minutes > 0 ? minutes + "m" : seconds + "s");
-        return message;
-    }
 
     public String getTimePieceTimer() {
         return Utils.getFormatedTimeShort3(timePiece);
@@ -6051,11 +6075,11 @@ public class Player extends Entity {
     }
 
     public boolean isTalkedWithMarv() {
-        return talkedWithMarv;
+        return get(BooleanKey.TALKED_TO_MARV);
     }
 
     public void setTalkedWithMarv() {
-        talkedWithMarv = true;
+        set(BooleanKey.TALKED_TO_MARV, true);
     }
 
     public int getCrucibleHighScore() {
@@ -6082,78 +6106,6 @@ public class Player extends Entity {
 
     public Entity getTarget() {
         return combatTarget;
-    }
-
-    public static void setWeapon(Player player, Item weapon) {
-        player.getEquipment().getItems().set(Equipment.SLOT_WEAPON, weapon);
-        player.getEquipment().refresh(Equipment.SLOT_WEAPON);
-        player.getAppearence().generateAppearenceData();
-    }
-
-    public static void setHat(Player player, Item hat) {
-        player.getEquipment().getItems().set(Equipment.SLOT_HAT, hat);
-        player.getEquipment().refresh(Equipment.SLOT_HAT);
-        player.getAppearence().generateAppearenceData();
-    }
-
-    public static void setCape(Player player, Item cape) {
-        player.getEquipment().getItems().set(Equipment.SLOT_CAPE, cape);
-        player.getEquipment().refresh(Equipment.SLOT_CAPE);
-        player.getAppearence().generateAppearenceData();
-    }
-
-    public static void setAmulet(Player player, Item cape) {
-        player.getEquipment().getItems().set(Equipment.SLOT_AMULET, cape);
-        player.getEquipment().refresh(Equipment.SLOT_AMULET);
-        player.getAppearence().generateAppearenceData();
-    }
-
-    public static void setChest(Player player, Item chest) {
-        player.getEquipment().getItems().set(Equipment.SLOT_CHEST, chest);
-        player.getEquipment().refresh(Equipment.SLOT_CHEST);
-        player.getAppearence().generateAppearenceData();
-    }
-
-    public static void setShield(Player player, Item shield) {
-        player.getEquipment().getItems().set(Equipment.SLOT_SHIELD, shield);
-        player.getEquipment().refresh(Equipment.SLOT_SHIELD);
-        player.getAppearence().generateAppearenceData();
-    }
-
-    public static void setLegs(Player player, Item legs) {
-        player.getEquipment().getItems().set(Equipment.SLOT_LEGS, legs);
-        player.getEquipment().refresh(Equipment.SLOT_LEGS);
-        player.getAppearence().generateAppearenceData();
-    }
-
-    public static void setHands(Player player, Item hands) {
-        player.getEquipment().getItems().set(Equipment.SLOT_HANDS, hands);
-        player.getEquipment().refresh(Equipment.SLOT_HANDS);
-        player.getAppearence().generateAppearenceData();
-    }
-
-    public static void setFeet(Player player, Item feet) {
-        player.getEquipment().getItems().set(Equipment.SLOT_FEET, feet);
-        player.getEquipment().refresh(Equipment.SLOT_FEET);
-        player.getAppearence().generateAppearenceData();
-    }
-
-    public static void setRing(Player player, Item ring) {
-        player.getEquipment().getItems().set(Equipment.SLOT_RING, ring);
-        player.getEquipment().refresh(Equipment.SLOT_RING);
-        player.getAppearence().generateAppearenceData();
-    }
-
-    public static void setArrows(Player player, Item arrows) {
-        player.getEquipment().getItems().set(Equipment.SLOT_ARROWS, arrows);
-        player.getEquipment().refresh(Equipment.SLOT_ARROWS);
-        player.getAppearence().generateAppearenceData();
-    }
-
-    public static void setAura(Player player, Item aura) {
-        player.getEquipment().getItems().set(Equipment.SLOT_AURA, aura);
-        player.getEquipment().refresh(Equipment.SLOT_AURA);
-        player.getAppearence().generateAppearenceData();
     }
 
     public boolean isDeveloper() {
@@ -6252,10 +6204,6 @@ public class Player extends Entity {
 
     public void setGeManager(GrandExchangeManager geManager) {
         this.geManager = geManager;
-    }
-
-    public double getDropRate() {
-        return Settings.DROP_RATE;
     }
 
     public int getAvalonPoints() {
@@ -6424,14 +6372,6 @@ public class Player extends Entity {
         }
     }
 
-    public int getEp() {
-        return ep;
-    }
-
-    public void setEp(int ep) {
-        this.ep = ep;
-    }
-
     public void rememberChoice(boolean KBDEntrance) {
         this.KBDEntrance = KBDEntrance;
     }
@@ -6542,13 +6482,6 @@ public class Player extends Entity {
         return item;
     }
 
-    public WorldTile getRareItemTile() {
-        WorldTile tile = (WorldTile) getTemporaryAttributtes().get("RARE_ITEM_TILE");
-        if (tile == null)
-            return null;
-        return tile;
-    }
-
     public boolean hasRareDrop() {
         Integer rarity = (Integer) getTemporaryAttributtes().get("RARITY_NODE");
         if (rarity == null)
@@ -6582,8 +6515,6 @@ public class Player extends Entity {
     }
 
     private TreasureTrailsManager treasureTrailsManager;
-
-    public boolean spokenWithGiles;
 
     public TreasureTrailsManager getTreasureTrailsManager() {
         return treasureTrailsManager;
@@ -6672,18 +6603,6 @@ public class Player extends Entity {
         getVarsManager().sendVarBit(id, value, save);
     }
 
-    private int combatDelay;
-
-    //pyra;id plunder
-    public boolean pyramidReward;
-
-    public void setCombatDelay(int ticks) {
-        combatDelay = ticks;
-    }
-
-    public int getCombatDelay() {
-        return combatDelay;
-    }
 
     // artisant
     private ArtisanWorkshop artisan;

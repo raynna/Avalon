@@ -203,15 +203,15 @@ public class RSAncientCombatSpells {// this gets the data from spells
 		if (spell.getSpellType() == ICE_SPELL) {
 			if (target.getSize() < 2 && target.getFreezeDelay() < Utils.currentTimeMillis()
 					&& target.getFreezeImmuneDelay() < Utils.currentTimeMillis()) {
-				int freeze_time = spell.getId() == 20 ? 5000
-						: spell.getId() == 21 ? 10000 : spell.getId() == 22 ? 15000 : 20000;
+				int freeze_time = spell.getId() == 20 ? 8
+						: spell.getId() == 21 ? 16 : spell.getId() == 22 ? 24 : 32;
 				if (damage > 0) {
 					if (target instanceof Player) {
 						Player p2 = (Player) target;
 						p2.setFrozenBy(player);
 					}
 					target.addFreezeDelay(freeze_time, false);
-					target.setFreezeImmune(freeze_time + (10 * 1000));
+					target.setFreezeImmune(freeze_time + 6);
 				}
 			}
 		}

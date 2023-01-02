@@ -153,27 +153,6 @@ public final class PresetManager implements Serializable {
 		player.getEquipment().reset();
 		player.getEquipment().refresh();
 		player.getAppearence().generateAppearenceData();
-		if (Settings.ECONOMY_MODE >= 1) {
-			if (set.getLevels() != null) {
-				for (int id = 0; id < set.getLevels().length; id++) {
-					if (WorldPacketsDecoder.getMaxedLevel(player, id) < player.getSkills().getLevelForXp(id)) {
-						WorldPacketsDecoder.setMaxedLevel(player, id, player.getSkills().getLevelForXp(id));
-					}
-					if (WorldPacketsDecoder.getMaxedLevel(player, id) < Skills.getLevelForXp((int) set.getLevels()[id],
-							99)) {
-						player.getPackets()
-								.sendGameMessage("Couldn't set your " + Skills.SKILL_NAME[id] + " to "
-										+ Skills.getLevelForXp((int) set.getLevels()[id], 99)
-										+ " because you haven't reached that level yet.");
-						continue;
-					}
-					player.getSkills().setXp(id, set.getLevels()[id]);
-					player.getSkills().set(id, player.getSkills().getLevelForXp(id));
-					player.getSkills().switchXPPopup(true);
-					player.getSkills().switchXPPopup(true);
-				}
-			}
-		}
 		player.refreshHitPoints();
 		player.getPrayer().reset();
 		Item[] data = set.getEquipment();
