@@ -198,6 +198,34 @@ public abstract class Controler {
 		return true;
 	}
 
+	public boolean processItemClick(int slotId, Item item, Player player) {
+		return true;
+	}
+
+	public boolean processItemClick2(Item item) {
+		return true;
+	}
+
+	public boolean processItemClick3(Item item) {
+		return true;
+	}
+
+	public boolean processItemClick4(Item item) {
+		return true;
+	}
+
+	public boolean processItemClick5(Item item) {
+		return true;
+	}
+
+	public boolean processItemClick6(Item item) {
+		return true;
+	}
+
+	public boolean processItemClick7(Item item) {
+		return true;
+	}
+
 	/**
 	 * return process normaly
 	 */

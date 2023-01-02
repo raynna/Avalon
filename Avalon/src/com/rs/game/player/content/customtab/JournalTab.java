@@ -158,7 +158,7 @@ public class JournalTab extends CustomTab {
 			@Override
 			public void usage(Player p) {
 				p.setCustomTitle(null);
-				p.getTemporaryAttributes().put("SET_TITLE", Boolean.TRUE);
+				p.getTemporaryAttributtes().put("SET_TITLE", Boolean.TRUE);
 				p.getPackets().sendRunScript(108, new Object[] { "Enter title id, 0-58, 0 = none:" });
 			}
 
@@ -290,7 +290,7 @@ public class JournalTab extends CustomTab {
 			player.getPackets().sendHideIComponent(3002, i, true);
 		for (int i = 28; i <= 56; i++)
 			player.getPackets().sendHideIComponent(3002, i, true);
-		player.getTemporaryAttributes().put("CUSTOMTAB", 0);
+		player.getTemporaryAttributtes().put("CUSTOMTAB", 0);
 		player.getPackets().sendHideIComponent(3002, BACK_BUTTON, true);
 		player.getPackets().sendHideIComponent(3002, FORWARD_BUTTON, false);
 		player.getPackets().sendSpriteOnIComponent(3002, BLUE_STAR_COMP, BLUE_HIGHLIGHTED);

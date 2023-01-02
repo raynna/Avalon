@@ -55,16 +55,16 @@ public final class RequestController extends Controler {
 	@Override
 	public boolean processButtonClick(int interfaceId, int componentId,
 			int slotId, int slotId2, int packetId) {
-		ClanWars clanWars = (ClanWars) player.getTemporaryAttributes().get(
+		ClanWars clanWars = (ClanWars) player.getTemporaryAttributtes().get(
 				"clan_wars");
 		if (clanWars == null) {
 			return true;
 		}
-		Player other = (Player) player.getTemporaryAttributes().get(
+		Player other = (Player) player.getTemporaryAttributtes().get(
 				"clan_request_p");
 		if (other == null
-				|| player.getTemporaryAttributes().get("clan_wars") != other
-						.getTemporaryAttributes().get("clan_wars")) {
+				|| player.getTemporaryAttributtes().get("clan_wars") != other
+						.getTemporaryAttributtes().get("clan_wars")) {
 			return true;
 		}
 		switch (interfaceId) {
@@ -225,8 +225,8 @@ public final class RequestController extends Controler {
 							"The other player is busy.");
 					return;
 				}
-				player.getTemporaryAttributes().put("clan_request_p", target);
-				if (target.getTemporaryAttributes().get("clan_request_p") == player) {
+				player.getTemporaryAttributtes().put("clan_request_p", target);
+				if (target.getTemporaryAttributtes().get("clan_request_p") == player) {
 					ClanWars clanWars = new ClanWars(target.getCurrentFriendChat(), player.getCurrentFriendChat());
 					if (canRequest(target, player, false)) {
 						clanWars.sendInterface(player, target);
@@ -290,9 +290,9 @@ public final class RequestController extends Controler {
 	 * Declines the challenge.
 	 */
 	public void decline() {
-		Player other = (Player) player.getTemporaryAttributes().get(
+		Player other = (Player) player.getTemporaryAttributtes().get(
 				"clan_request_p");
-		ClanWars war = (ClanWars) player.getTemporaryAttributes().get(
+		ClanWars war = (ClanWars) player.getTemporaryAttributtes().get(
 				"clan_wars");
 		if (other == null || war == null) {
 			return;
@@ -300,10 +300,10 @@ public final class RequestController extends Controler {
 		if (war != null) {
 			player.getInterfaceManager().closeScreenInterface();
 			other.getInterfaceManager().closeScreenInterface();
-			player.getTemporaryAttributes().remove("clan_request_p");
-			other.getTemporaryAttributes().remove("clan_request_p");
-			player.getTemporaryAttributes().remove("clan_wars");
-			other.getTemporaryAttributes().remove("clan_wars");
+			player.getTemporaryAttributtes().remove("clan_request_p");
+			other.getTemporaryAttributtes().remove("clan_request_p");
+			player.getTemporaryAttributtes().remove("clan_wars");
+			other.getTemporaryAttributtes().remove("clan_wars");
 		}
 	}
 

@@ -135,10 +135,10 @@ public class ButtonHandler {
                 player.sm(ItemExamines.getExamine(new Item(slotId2)));
         } else if (interfaceId == 548 || interfaceId == 746) {
             if (componentId == 75 || componentId == 99) {
-                player.getTemporaryAttributes().put("ACHIEVEMENTTAB", 0);
-                Integer achievement = (Integer) player.getTemporaryAttributes().get("ACHIEVEMENTTAB");
+                player.getTemporaryAttributtes().put("ACHIEVEMENTTAB", 0);
+                Integer achievement = (Integer) player.getTemporaryAttributtes().get("ACHIEVEMENTTAB");
                 if (achievement == 0) {
-                    String category = (String) player.getTemporaryAttributes().get("ACHIEVEMENTCATEGORY");
+                    String category = (String) player.getTemporaryAttributtes().get("ACHIEVEMENTCATEGORY");
                     if (category != null)
                         AchievementsTab.openTasks(player, category);
                     else
@@ -146,7 +146,7 @@ public class ButtonHandler {
                 }
             }
             if (componentId == 77 || componentId == 101) {
-                player.getTemporaryAttributes().remove("ACHIEVEMENTTAB");
+                player.getTemporaryAttributtes().remove("ACHIEVEMENTTAB");
                 Integer tab = (Integer) player.temporaryAttribute().get("CUSTOMTAB");
                 if (tab == null || tab == 0) {
                     JournalTab.open(player);
@@ -219,12 +219,12 @@ public class ButtonHandler {
             LividStore.handleButtons(player, componentId);
         } else if (interfaceId == 3002) {
             Integer tab = (Integer) player.temporaryAttribute().get("CUSTOMTAB");
-            Integer achievement = (Integer) player.getTemporaryAttributes().get("ACHIEVEMENTTAB");
+            Integer achievement = (Integer) player.getTemporaryAttributtes().get("ACHIEVEMENTTAB");
             if (achievement != null) {
                 AchievementsTab.handleButtons(player, componentId);
                 return;
             } else if (tab != null && tab == 3) {
-                String otherPreset = (String) player.getTemporaryAttributes().get("OTHERPRESET_NAME");
+                String otherPreset = (String) player.getTemporaryAttributtes().get("OTHERPRESET_NAME");
                 GearTab.handleButtons(player, otherPreset != null ? otherPreset : null, componentId);
                 return;
             } else {
@@ -252,7 +252,7 @@ public class ButtonHandler {
                         SettingsTab.handleButtons(player, componentId);
                         return;
                     } else if (tab == 3) {
-                        String otherPreset = (String) player.getTemporaryAttributes().get("OTHERPRESET_NAME");
+                        String otherPreset = (String) player.getTemporaryAttributtes().get("OTHERPRESET_NAME");
                         GearTab.handleButtons(player, otherPreset != null ? otherPreset : null, componentId);
                         return;
                     } else if (tab == 4) {
@@ -349,7 +349,7 @@ public class ButtonHandler {
                 }
             }
         } else if (interfaceId == 1284) {
-            if (player.getTemporaryAttributes().get("untradeables") != null) {
+            if (player.getTemporaryAttributtes().get("untradeables") != null) {
                 Item item = player.getUntradeables().get(slotId);
                 if (item == null && componentId == 7)
                     return;
@@ -372,7 +372,7 @@ public class ButtonHandler {
                         }
                         break;
                 }
-            } else if (player.getTemporaryAttributes().get("runepouch") != null) {
+            } else if (player.getTemporaryAttributtes().get("runepouch") != null) {
                 Item item = player.getRunePouch().get(slotId);
                 if (item == null && componentId == 7)
                     return;
@@ -661,7 +661,7 @@ public class ButtonHandler {
             else
                 player.getRunicStaff().processSpell(player, componentId, packetId);
         } else if (interfaceId == 334) {
-            TradeStore tradeStore = (TradeStore) player.getTemporaryAttributes().get("CUSTOM_TRADE");
+            TradeStore tradeStore = (TradeStore) player.getTemporaryAttributtes().get("CUSTOM_TRADE");
             if (componentId == 22)
                 player.closeInterfaces();
             else if (componentId == 21) {
@@ -671,7 +671,7 @@ public class ButtonHandler {
                     player.getTrade().accept(false);
             }
         } else if (interfaceId == 335) {
-            TradeStore tradeStore = (TradeStore) player.getTemporaryAttributes().get("CUSTOM_TRADE");
+            TradeStore tradeStore = (TradeStore) player.getTemporaryAttributtes().get("CUSTOM_TRADE");
             if (tradeStore != null) {
                 if (componentId == 18)
                     player.getTradeStore().accept(true);
@@ -731,7 +731,7 @@ public class ButtonHandler {
                 }
             }
         } else if (interfaceId == 336) {
-            TradeStore tradeStore = (TradeStore) player.getTemporaryAttributes().get("CUSTOM_TRADE");
+            TradeStore tradeStore = (TradeStore) player.getTemporaryAttributtes().get("CUSTOM_TRADE");
             if (tradeStore != null) {
                 if (componentId == 0) {
                     if (packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET)
@@ -776,7 +776,7 @@ public class ButtonHandler {
                     int cycles = packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET ? 1 : packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET ? 5 : packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET ? -1 : 28;
                     if (cycles == -1) {
                         player.getPackets().sendInputIntegerScript(true, "How many would you like to make: ");
-                        player.getTemporaryAttributes().put("FORGE_X", index + 100);
+                        player.getTemporaryAttributtes().put("FORGE_X", index + 100);
                     } else {
                         player.closeInterfaces();
                         player.getActionManager().setAction(new DungeoneeringSmithing(index, cycles, true));
@@ -987,7 +987,7 @@ public class ButtonHandler {
             return;
         } else if (interfaceId == 52) {
             if (componentId >= 30 && componentId <= 34) {
-                player.getTemporaryAttributes().put("selected_canoe", componentId - 30);
+                player.getTemporaryAttributtes().put("selected_canoe", componentId - 30);
                 Canoes.createShapedCanoe(player);
             }
         } else if (interfaceId == 95) {
@@ -1038,7 +1038,7 @@ public class ButtonHandler {
                     case 30: // Attack
                         skillId = Skills.ATTACK;
                         skillMenu = Skills.SkillData.ATTACK.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1048,7 +1048,7 @@ public class ButtonHandler {
                     case 31: // Strength
                         skillId = Skills.STRENGTH;
                         skillMenu = Skills.SkillData.STRENGTH.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1058,7 +1058,7 @@ public class ButtonHandler {
                     case 32: // Defence
                         skillId = Skills.DEFENCE;
                         skillMenu = Skills.SkillData.DEFENCE.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1068,7 +1068,7 @@ public class ButtonHandler {
                     case 33: // Ranged
                         skillId = Skills.RANGE;
                         skillMenu = Skills.SkillData.RANGE.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1078,7 +1078,7 @@ public class ButtonHandler {
                     case 34: // Prayer
                         skillId = Skills.PRAYER;
                         skillMenu = Skills.SkillData.PRAYER.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1088,7 +1088,7 @@ public class ButtonHandler {
                     case 35: // Magic
                         skillId = Skills.MAGIC;
                         skillMenu = Skills.SkillData.MAGIC.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1098,7 +1098,7 @@ public class ButtonHandler {
                     case 48: // Runecrafting
                         skillId = Skills.RUNECRAFTING;
                         skillMenu = Skills.SkillData.RUNECRAFTING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1108,7 +1108,7 @@ public class ButtonHandler {
                     case 36: // Hitpoints
                         skillId = Skills.HITPOINTS;
                         skillMenu = Skills.SkillData.HITPOINTS.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1118,7 +1118,7 @@ public class ButtonHandler {
                     case 37: // Agility
                         skillId = Skills.AGILITY;
                         skillMenu = Skills.SkillData.AGILITY.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1128,7 +1128,7 @@ public class ButtonHandler {
                     case 38: // Herblore
                         skillId = Skills.HERBLORE;
                         skillMenu = Skills.SkillData.HERBLORE.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1138,7 +1138,7 @@ public class ButtonHandler {
                     case 39: // Thieving
                         skillId = Skills.THIEVING;
                         skillMenu = Skills.SkillData.THIEVING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1148,7 +1148,7 @@ public class ButtonHandler {
                     case 40: // Crafting
                         skillId = Skills.CRAFTING;
                         skillMenu = Skills.SkillData.CRAFTING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1158,7 +1158,7 @@ public class ButtonHandler {
                     case 41: // Fletching
                         skillId = Skills.FLETCHING;
                         skillMenu = Skills.SkillData.FLETCHING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1168,7 +1168,7 @@ public class ButtonHandler {
                     case 49: // Slayer
                         skillId = Skills.SLAYER;
                         skillMenu = Skills.SkillData.SLAYER.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1178,7 +1178,7 @@ public class ButtonHandler {
                     case 51: // Hunter
                         skillId = Skills.HUNTER;
                         skillMenu = Skills.SkillData.HUNTER.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1188,7 +1188,7 @@ public class ButtonHandler {
                     case 52: // Construction
                         skillId = Skills.CONSTRUCTION;
                         skillMenu = Skills.SkillData.CONSTRUCTION.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1198,7 +1198,7 @@ public class ButtonHandler {
                     case 42: // Mining
                         skillId = Skills.MINING;
                         skillMenu = Skills.SkillData.MINING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1208,7 +1208,7 @@ public class ButtonHandler {
                     case 43: // Smithing
                         skillId = Skills.SMITHING;
                         skillMenu = Skills.SkillData.SMITHING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1218,7 +1218,7 @@ public class ButtonHandler {
                     case 44: // Fishing
                         skillId = Skills.FISHING;
                         skillMenu = Skills.SkillData.FISHING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1228,7 +1228,7 @@ public class ButtonHandler {
                     case 45: // Cooking
                         skillId = Skills.COOKING;
                         skillMenu = Skills.SkillData.COOKING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1238,7 +1238,7 @@ public class ButtonHandler {
                     case 46: // Firemaking
                         skillId = Skills.FIREMAKING;
                         skillMenu = Skills.SkillData.FIREMAKING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1248,7 +1248,7 @@ public class ButtonHandler {
                     case 47: // Woodcutting
                         skillId = Skills.WOODCUTTING;
                         skillMenu = Skills.SkillData.WOODCUTTING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1258,7 +1258,7 @@ public class ButtonHandler {
                     case 50: // Farming
                         skillId = Skills.FARMING;
                         skillMenu = Skills.SkillData.FARMING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1268,7 +1268,7 @@ public class ButtonHandler {
                     case 53: // Summoning
                         skillId = Skills.SUMMONING;
                         skillMenu = Skills.SkillData.SUMMONING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1278,7 +1278,7 @@ public class ButtonHandler {
                     case 54: // Dung
                         skillId = Skills.DUNGEONEERING;
                         skillMenu = Skills.SkillData.DUNGEONEERING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1292,17 +1292,17 @@ public class ButtonHandler {
                     LevelUp.switchFlash(player, lvlupSkill, false);
                 }
                 if (skillMenu != -1) {
-                    player.getTemporaryAttributes().put("skillMenu", skillMenu);
+                    player.getTemporaryAttributtes().put("skillMenu", skillMenu);
                 }
                 int finalSkillId = skillId;
                 player.setCloseInterfacesEvent(new Runnable() {
 
                     @Override
                     public void run() {
-                        player.getTemporaryAttributes().remove("MILESTONE");
-                        player.getTemporaryAttributes().remove("COMBATMILESTONE");
-                        player.getTemporaryAttributes().remove("SLAYERCOMBATMILESTONE");
-                        player.getTemporaryAttributes().remove("LEVELUP[" + finalSkillId + "]:GAINEDLEVELS");
+                        player.getTemporaryAttributtes().remove("MILESTONE");
+                        player.getTemporaryAttributtes().remove("COMBATMILESTONE");
+                        player.getTemporaryAttributtes().remove("SLAYERCOMBATMILESTONE");
+                        player.getTemporaryAttributtes().remove("LEVELUP[" + finalSkillId + "]:GAINEDLEVELS");
                         player.getVarsManager().sendVarBit(4727, -1);
                         player.getVarsManager().sendVarBit(4728, -1);
                         player.getVarsManager().sendVarBit(4730, 0);
@@ -1321,7 +1321,7 @@ public class ButtonHandler {
                     case 150: // Attack
                         skillId = Skills.ATTACK;
                         skillMenu = Skills.SkillData.ATTACK.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1331,7 +1331,7 @@ public class ButtonHandler {
                     case 9: // Strength
                         skillId = Skills.STRENGTH;
                         skillMenu = Skills.SkillData.STRENGTH.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1341,7 +1341,7 @@ public class ButtonHandler {
                     case 22: // Defence
                         skillId = Skills.DEFENCE;
                         skillMenu = Skills.SkillData.DEFENCE.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1351,7 +1351,7 @@ public class ButtonHandler {
                     case 40: // Ranged
                         skillId = Skills.RANGE;
                         skillMenu = Skills.SkillData.RANGE.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1361,7 +1361,7 @@ public class ButtonHandler {
                     case 58: // Prayer
                         skillId = Skills.PRAYER;
                         skillMenu = Skills.SkillData.PRAYER.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1371,7 +1371,7 @@ public class ButtonHandler {
                     case 71: // Magic
                         skillId = Skills.MAGIC;
                         skillMenu = Skills.SkillData.MAGIC.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1381,7 +1381,7 @@ public class ButtonHandler {
                     case 84: // Runecrafting
                         skillId = Skills.RUNECRAFTING;
                         skillMenu = Skills.SkillData.RUNECRAFTING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1391,7 +1391,7 @@ public class ButtonHandler {
                     case 145: // Hitpoints
                         skillId = Skills.HITPOINTS;
                         skillMenu = Skills.SkillData.HITPOINTS.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1401,7 +1401,7 @@ public class ButtonHandler {
                     case 15: // Agility
                         skillId = Skills.AGILITY;
                         skillMenu = Skills.SkillData.AGILITY.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1411,7 +1411,7 @@ public class ButtonHandler {
                     case 28: // Herblore
                         skillId = Skills.HERBLORE;
                         skillMenu = Skills.SkillData.HERBLORE.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1421,7 +1421,7 @@ public class ButtonHandler {
                     case 46: // Thieving
                         skillId = Skills.THIEVING;
                         skillMenu = Skills.SkillData.THIEVING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1431,7 +1431,7 @@ public class ButtonHandler {
                     case 64: // Crafting
                         skillId = Skills.CRAFTING;
                         skillMenu = Skills.SkillData.CRAFTING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1441,7 +1441,7 @@ public class ButtonHandler {
                     case 77: // Fletching
                         skillId = Skills.FLETCHING;
                         skillMenu = Skills.SkillData.FLETCHING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1451,7 +1451,7 @@ public class ButtonHandler {
                     case 90: // Slayer
                         skillId = Skills.SLAYER;
                         skillMenu = Skills.SkillData.SLAYER.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1461,7 +1461,7 @@ public class ButtonHandler {
                     case 108: // Hunter
                         skillId = Skills.HUNTER;
                         skillMenu = Skills.SkillData.HUNTER.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1471,7 +1471,7 @@ public class ButtonHandler {
                     case 102: // Construction
                         skillId = Skills.CONSTRUCTION;
                         skillMenu = Skills.SkillData.CONSTRUCTION.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1481,7 +1481,7 @@ public class ButtonHandler {
                     case 140: // Mining
                         skillId = Skills.MINING;
                         skillMenu = Skills.SkillData.MINING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1491,7 +1491,7 @@ public class ButtonHandler {
                     case 135: // Smithing
                         skillId = Skills.SMITHING;
                         skillMenu = Skills.SkillData.SMITHING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getPackets().sendConfig(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1501,7 +1501,7 @@ public class ButtonHandler {
                     case 34: // Fishing
                         skillId = Skills.FISHING;
                         skillMenu = Skills.SkillData.FISHING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1511,7 +1511,7 @@ public class ButtonHandler {
                     case 52: // Cooking
                         skillId = Skills.COOKING;
                         skillMenu = Skills.SkillData.COOKING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1521,7 +1521,7 @@ public class ButtonHandler {
                     case 130: // Firemaking
                         skillId = Skills.FIREMAKING;
                         skillMenu = Skills.SkillData.FIREMAKING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1531,7 +1531,7 @@ public class ButtonHandler {
                     case 125: // Woodcutting
                         skillId = Skills.WOODCUTTING;
                         skillMenu = Skills.SkillData.WOODCUTTING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1541,7 +1541,7 @@ public class ButtonHandler {
                     case 96: // Farming
                         skillId = Skills.FARMING;
                         skillMenu = Skills.SkillData.FARMING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1551,7 +1551,7 @@ public class ButtonHandler {
                     case 114: // Summoning
                         skillId = Skills.SUMMONING;
                         skillMenu = Skills.SkillData.SUMMONING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1561,7 +1561,7 @@ public class ButtonHandler {
                     case 120: // Dung
                         skillId = Skills.DUNGEONEERING;
                         skillMenu = Skills.SkillData.DUNGEONEERING.getValue();
-                        if (player.getTemporaryAttributes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
+                        if (player.getTemporaryAttributtes().remove("leveledUp[" + skillId + "]") != Boolean.TRUE) {
                             player.getVarsManager().sendVar(965, skillMenu);
                         } else {
                             Skills.sendLevelConfigs(player, skillId);
@@ -1575,16 +1575,16 @@ public class ButtonHandler {
                     LevelUp.switchFlash(player, lvlupSkill, false);
                 }
                 if (skillMenu != -1) {
-                    player.getTemporaryAttributes().put("skillMenu", skillMenu);
+                    player.getTemporaryAttributtes().put("skillMenu", skillMenu);
                 }
                 int finalSkillId = skillId;
                 player.setCloseInterfacesEvent(new Runnable() {
 
                     @Override
                     public void run() {
-                        player.getTemporaryAttributes().remove("MILESTONE");
-                        player.getTemporaryAttributes().remove("COMBATMILESTONE");
-                        player.getTemporaryAttributes().remove("LEVELUP[" + finalSkillId + "]:GAINEDLEVELS");
+                        player.getTemporaryAttributtes().remove("MILESTONE");
+                        player.getTemporaryAttributtes().remove("COMBATMILESTONE");
+                        player.getTemporaryAttributtes().remove("LEVELUP[" + finalSkillId + "]:GAINEDLEVELS");
                         player.getVarsManager().sendVarBit(4727, -1);
                         player.getVarsManager().sendVarBit(4728, -1);
                         player.getVarsManager().sendVarBit(4730, 0);
@@ -1997,7 +1997,7 @@ public class ButtonHandler {
                 sendItemStats(player, item);
                 return;
             }
-            if (player.getTemporaryAttributes().get("runepouch") != null) {
+            if (player.getTemporaryAttributtes().get("runepouch") != null) {
                 if (componentId == 0) {
                     if (slotId >= player.getInventory().getItemsContainerSize())
                         return;
@@ -2434,9 +2434,9 @@ public class ButtonHandler {
                 shop.setAmount(player, isBuying ? shop.getMainStock()[slot].getAmount() : player.getInventory().getNumberOf(player.getInventory().getItem(slot).getId()));
             } else if (componentId == 29) {
                 player.getPackets().sendConfig(2561, 93);
-                player.getTemporaryAttributes().remove("shop_buying");
+                player.getTemporaryAttributtes().remove("shop_buying");
             } else if (componentId == 28) {
-                player.getTemporaryAttributes().put("shop_buying", true);
+                player.getTemporaryAttributtes().put("shop_buying", true);
 
             }
         } else if (interfaceId == 1266) {
@@ -2657,8 +2657,8 @@ public class ButtonHandler {
         if (player.isDeveloper()) {
             player.getPackets().sendPanelBoxMessage("Interface: " + interfaceId + " Component: " + componentId + " Slot: " + slotId);
         }
-        if (Settings.DEBUG)
-            Logger.log("ButtonHandler", player.getDisplayName() + " clicked interfaceId: " + interfaceId + ", compId: " + componentId + ", slotId: " + slotId + ", packetId: " + packetId + ", slotId2: " + slotId2);
+        //if (Settings.DEBUG)
+            //Logger.log("ButtonHandler", player.getDisplayName() + " clicked interfaceId: " + interfaceId + ", compId: " + componentId + ", slotId: " + slotId + ", packetId: " + packetId + ", slotId2: " + slotId2);
         /*
          * if (player.getUsername().equalsIgnoreCase("andreas"))
          * player.getPackets().sendGameMessage(player.getDisplayName() +
@@ -3173,11 +3173,11 @@ public class ButtonHandler {
         player.getPackets().sendIComponentSettings(667, 14, 0, 13, 1030);
         refreshEquipBonuses(player);
         if (banking) {
-            player.getTemporaryAttributes().put("Banking", Boolean.TRUE);
+            player.getTemporaryAttributtes().put("Banking", Boolean.TRUE);
             player.setCloseInterfacesEvent(new Runnable() {
                 @Override
                 public void run() {
-                    player.getTemporaryAttributes().remove("Banking");
+                    player.getTemporaryAttributtes().remove("Banking");
                     player.getVarsManager().sendVarBit(4894, 0);
                 }
             });

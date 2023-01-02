@@ -227,21 +227,21 @@ public class CreationKiln {
 	}
 
 	private Category getCategory() {
-		Category type = (Category) player.getTemporaryAttributes().get("CATEGORY");
+		Category type = (Category) player.getTemporaryAttributtes().get("CATEGORY");
 		if (type == null)
 			return null;
 		return type;
 	}
 
 	private int getQuality() {
-		Integer quality = (Integer) player.getTemporaryAttributes().get("QUALITY");
+		Integer quality = (Integer) player.getTemporaryAttributtes().get("QUALITY");
 		if (quality == null)
 			return -1;
 		return quality;
 	}
 
 	private void setCategory(Category category) {
-		player.getTemporaryAttributes().put("CATEGORY", category);
+		player.getTemporaryAttributtes().put("CATEGORY", category);
 		currentCategory = category;
 	}
 
@@ -253,7 +253,7 @@ public class CreationKiln {
 		}
 		for (int qualitycomp : QUALITY_COMP)
 			player.getPackets().sendHideIComponent(INTERFACE_ID, qualitycomp - 1, true);
-		player.getTemporaryAttributes().put("QUALITY", quality);
+		player.getTemporaryAttributtes().put("QUALITY", quality);
 		player.getPackets().sendHideIComponent(INTERFACE_ID, compId - 1, false);
 	}
 
@@ -269,7 +269,7 @@ public class CreationKiln {
 			i++;
 		}
 		player.getPackets().sendHideIComponent(INTERFACE_ID, 16, false);
-		player.getTemporaryAttributes().put("QUALITY", -1);
+		player.getTemporaryAttributtes().put("QUALITY", -1);
 		setCategory(Category.WEAPONS);
 	}
 }

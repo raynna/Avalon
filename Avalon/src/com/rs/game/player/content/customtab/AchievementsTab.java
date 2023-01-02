@@ -57,8 +57,8 @@ public class AchievementsTab extends CustomTab {
 			player.getPackets().sendHideIComponent(3002, i, true);
 		for (int i = 28; i <= 56; i++)
 			player.getPackets().sendHideIComponent(3002, i, true);
-		player.getTemporaryAttributes().put("ACHIEVEMENTTAB", 0);
-		player.getTemporaryAttributes().remove("ACHIEVEMENTCATEGORY");
+		player.getTemporaryAttributtes().put("ACHIEVEMENTTAB", 0);
+		player.getTemporaryAttributtes().remove("ACHIEVEMENTCATEGORY");
 		completedTasks = 0;
 		totalTasks = 0;
 		totalActions = 0;
@@ -178,7 +178,7 @@ public class AchievementsTab extends CustomTab {
 	public static void openTasks(Player player, String category) {
 		for (int i = 3; i <= 15; i++)
 			player.getPackets().sendHideIComponent(3002, i, true);
-		player.getTemporaryAttributes().put("ACHIEVEMENTCATEGORY", category);
+		player.getTemporaryAttributtes().put("ACHIEVEMENTCATEGORY", category);
 		sendComponentButtons(player);
 		if (!category.contains("elite"))
 			player.getPackets().sendHideIComponent(3002, FORWARD_BUTTON, false);

@@ -60,7 +60,7 @@ public class Sawmill {
 		if (componentId >= 12 && componentId <= 15) {
 			Plank type = Plank.values()[componentId - 12];
 			if (packetId == WorldPacketsDecoder.ACTION_BUTTON4_PACKET) {
-				player.getTemporaryAttributes().put("PlanksConvert", type);
+				player.getTemporaryAttributtes().put("PlanksConvert", type);
 				player.getPackets().sendInputIntegerScript(true, "Enter amount:");
 				return;
 			}

@@ -635,13 +635,13 @@ public class DungeonControler extends Controler {
 			return false;
 		} else if (object.getId() == 49297) {
 
-			Integer value = (Integer) player.getTemporaryAttributes().get("UNHOLY_CURSEBEARER_ROT");
+			Integer value = (Integer) player.getTemporaryAttributtes().get("UNHOLY_CURSEBEARER_ROT");
 			if (value != null && value >= 6) {
 				NPC boss = getNPC(player, 10111);
 				if (boss != null) {
 					player.getPackets().sendGameMessage(
 							"You restore your combat stats, and the skeletal archmage is healed in the process. The font lessens the effect of the rot within your body.");
-					player.getTemporaryAttributes().put("UNHOLY_CURSEBEARER_ROT", 1);
+					player.getTemporaryAttributtes().put("UNHOLY_CURSEBEARER_ROT", 1);
 					player.getSkills().restoreSkills();
 					boss.heal(boss.getMaxHitpoints() / 10);
 				}

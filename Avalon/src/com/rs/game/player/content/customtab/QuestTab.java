@@ -90,7 +90,7 @@ public class QuestTab extends CustomTab {
 			player.getPackets().sendHideIComponent(3002, i, true);
 		for (int i = 28; i <= 56; i++)
 			player.getPackets().sendHideIComponent(3002, i, true);
-		player.getTemporaryAttributes().put("CUSTOMTAB", 4);
+		player.getTemporaryAttributtes().put("CUSTOMTAB", 4);
 		player.getPackets().sendHideIComponent(3002, BACK_BUTTON, false);
 		player.getPackets().sendHideIComponent(3002, FORWARD_BUTTON, false);
 		player.getPackets().sendSpriteOnIComponent(3002, PURPLE_STAR_COMP, PURPLE_HIGHLIGHTED);

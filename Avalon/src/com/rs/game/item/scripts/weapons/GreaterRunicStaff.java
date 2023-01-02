@@ -6,6 +6,7 @@ import com.rs.game.item.ItemId;
 import com.rs.game.item.ItemScripts;
 import com.rs.game.player.Player;
 import com.rs.game.player.content.GreaterRunicStaff.*;
+import com.rs.net.decoders.handlers.ButtonHandler;
 
 import java.util.Map;
 
@@ -18,7 +19,8 @@ public class GreaterRunicStaff extends ItemScripts {
 
 	@Override
 	public boolean processItem(Player player, Item item, int slotId) {
-		return false;//just to make charged staff wield
+		ButtonHandler.sendWear(player, slotId, item.getId());
+		return false;
 	}
 
 	@Override

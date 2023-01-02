@@ -182,7 +182,7 @@ public abstract class MobRewardNodeBuilder {
         int random = Utils.getRandom(max - row);
         if (random <= 0) {
             if (max >= 100) {
-                player.getTemporaryAttributes().put("RARITY_NODE", max >= 200 ? VERY_RARE : RARE);//variable for temporary lootbeams
+                player.getTemporaryAttributtes().put("RARITY_NODE", max >= 200 ? VERY_RARE : RARE);//variable for temporary lootbeams
             }
             if (row > 0) {
                 player.getPackets().sendGameMessage("<col=ff7000>Your ring of wealth shines more brightly!</col>");
@@ -495,7 +495,7 @@ public abstract class MobRewardNodeBuilder {
     protected int rarityNode(Player player) {
         int rarity = MobRewardGenerator.getGenerator().generateRarityNode(player);
         if (rarity > 1) {
-            player.getTemporaryAttributes().put("RARITY_NODE", rarity);
+            player.getTemporaryAttributtes().put("RARITY_NODE", rarity);
         }
         return rarity;
     }

@@ -225,6 +225,7 @@ public class PlayerCombat extends Action {
         if (!player.getControlerManager().keepCombating(target)) {
             return -1;
         }
+        player.setNextFaceEntity(target);
         if (spellId > 0) {
             boolean manualCast = spellId != 65535 && spellId != 65536 && spellId >= 256;
             Item gloves = player.getEquipment().getItem(Equipment.SLOT_HANDS);
@@ -4010,9 +4011,9 @@ public class PlayerCombat extends Action {
 
     @Override
     public void stop(final Player player) {
-        player.setNextFaceEntity(null);
         // player.getInterfaceManager().closeTab(player.getInterfaceManager().isResizableScreen(),
         // getHealthOverlayId(player));
+        player.setNextFaceEntity(null);
     }
 
     private boolean checkAll(Player player) {

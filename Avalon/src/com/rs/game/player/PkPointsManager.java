@@ -55,7 +55,7 @@ public class PkPointsManager {
 		sendInterItems();
 		sendOptions();
 		player.getPackets().sendGlobalConfig(728, 0);
-		player.getTemporaryAttributes().put("PkPointsStore", Boolean.TRUE);
+		player.getTemporaryAttributtes().put("PkPointsStore", Boolean.TRUE);
 		for (PkPointStore items : PkPointStore.values()) {
 			if (items != null) {
 				addItem(items);
@@ -65,7 +65,7 @@ public class PkPointsManager {
 			@Override
 			public void run() {
 				pkpItems.clear();
-				player.getTemporaryAttributes().remove("PkPointsStore");
+				player.getTemporaryAttributtes().remove("PkPointsStore");
 			}
 		});
 	}

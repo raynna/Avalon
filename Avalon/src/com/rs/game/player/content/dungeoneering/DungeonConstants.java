@@ -1065,13 +1065,13 @@ public class DungeonConstants {
 		if (!isVisible(npc, target, true)) {
 			final Player player = (Player) target;
 			npc.animate(new Animation(717));
-			player.getTemporaryAttributes().put("SHADOW_SILK_CD", true);//25 secs
+			player.getTemporaryAttributtes().put("SHADOW_SILK_CD", true);//25 secs
 			player.getPackets().sendGameMessage("Your concealment effect has been temporarily disabled.");
 			WorldTasksManager.schedule(new WorldTask() {
 
 				@Override
 				public void run() {
-					player.getTemporaryAttributes().remove("SHADOW_SILK_CD");
+					player.getTemporaryAttributtes().remove("SHADOW_SILK_CD");
 					player.getPackets().sendGameMessage("The spell has faded and you are once again concealed under your shadow-silk hood.");
 				}
 			}, 35);
@@ -1085,7 +1085,7 @@ public class DungeonConstants {
 			Player player = (Player) target;
 			int cape = player.getEquipment().getHatId();
 			if (cape == 15828 || cape == 17279) {
-				if (target.getTemporaryAttributes().get("SHADOW_SILK_CD") != null || (!spell && npc.getShadowType() > NOT_VISIBLE))
+				if (target.getTemporaryAttributtes().get("SHADOW_SILK_CD") != null || (!spell && npc.getShadowType() > NOT_VISIBLE))
 					return true;
 				return false;
 			}

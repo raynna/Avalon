@@ -146,11 +146,11 @@ public class ObjectOption1 {
 		case CANOE_2:
 		case CANOE_3:
 		case CANOE_4:
-			if (player.getTemporaryAttributes().get("canoe_shaped") != null
-					&& (boolean) player.getTemporaryAttributes().get("canoe_shaped"))
+			if (player.getTemporaryAttributtes().get("canoe_shaped") != null
+					&& (boolean) player.getTemporaryAttributtes().get("canoe_shaped"))
 				Canoes.openTravelInterface(player, object.getId() - 12163);
-			else if (player.getTemporaryAttributes().get("canoe_chopped") != null
-					&& (boolean) player.getTemporaryAttributes().get("canoe_chopped"))
+			else if (player.getTemporaryAttributtes().get("canoe_chopped") != null
+					&& (boolean) player.getTemporaryAttributtes().get("canoe_chopped"))
 				Canoes.openSelectionInterface(player);
 			else
 				Canoes.chopCanoeTree(player, object.getId() - 12163);

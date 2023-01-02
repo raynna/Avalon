@@ -31,7 +31,7 @@ public class GluttonousBehemothCombat extends CombatScript {
 		DungeonBoss boss = (DungeonBoss) npc;
 		DungeonManager manager = boss.getManager();
 		boolean lessThanHalf = npc.getHitpoints() < npc.getMaxHitpoints() * .5;
-		if (lessThanHalf && npc.getTemporaryAttributes().get("GLUTTONOUS_HEALING") == null) {
+		if (lessThanHalf && npc.getTemporaryAttributtes().get("GLUTTONOUS_HEALING") == null) {
 			RoomReference reference = manager.getCurrentRoomReference(npc);
 			WorldObject food1 = manager.getObject(reference, 49283, 0, 11);
 			WorldObject food2 = manager.getParty().getTeam().size() <= 1 ? null : manager.getObject(reference, 49283, 11, 11);
@@ -54,7 +54,7 @@ public class GluttonousBehemothCombat extends CombatScript {
 				}
 			}
 			if (food != null) {
-				npc.getTemporaryAttributes().put("GLUTTONOUS_HEALING", true);
+				npc.getTemporaryAttributtes().put("GLUTTONOUS_HEALING", true);
 				food = null;
 				((GluttonousBehemoth) npc).setHeal(food);
 				return 0;

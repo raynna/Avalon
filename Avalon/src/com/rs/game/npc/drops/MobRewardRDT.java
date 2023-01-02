@@ -246,7 +246,7 @@ public final class MobRewardRDT {
             }
             final int shake = Utils.random(node.size());
             final Item reward = node.get(shake).getReward().generateItem();
-            player.getTemporaryAttributes().put("RARITY_NODE", 2);
+            player.getTemporaryAttributtes().put("RARITY_NODE", 2);
             player.getPackets().sendGameMessage("<col=ff0000>You recieved an extra drop: " + (reward.getAmount() > 1 ? reward.getAmount() + " x " : "") + reward.getName() + ".");
             return reward; // gets an item!
         } else {

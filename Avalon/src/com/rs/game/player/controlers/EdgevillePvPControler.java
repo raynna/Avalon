@@ -189,11 +189,11 @@ public class EdgevillePvPControler extends Controler {
         player.getPackets().sendIComponentText(3043, 3, builder.toString());
         builder = new StringBuilder();
         builder.append("EP: ");
-        if (player.getEP() >= 75)
+        if (player.getEP() >= 70)
             builder.append(HexColours.Colour.GREEN.getHex());
-        if (player.getEP() >= 30 && player.getEP() <= 74)
+        if (player.getEP() >= 35 && player.getEP() <= 69)
             builder.append(HexColours.Colour.YELLOW.getHex());
-        if (player.getEP() < 30)
+        if (player.getEP() < 35)
             builder.append(HexColours.Colour.RED.getHex());
         builder.append(player.getEP() + "%");
         player.getPackets().sendIComponentText(3043, 4, builder.toString());

@@ -12,7 +12,7 @@ public class MagicImbue {
 			player.getPackets().sendGameMessage("You can only cast this spell every 12 seconds.");
 			return false;
 		}
-		player.getTemporaryAttributes().put("LAST_IMBUE", Boolean.TRUE);
+		player.getTemporaryAttributtes().put("LAST_IMBUE", Boolean.TRUE);
 		player.getPackets().sendGameMessage("You are charged to combine runes.");
 		WorldTasksManager.schedule(new WorldTask() {
 
@@ -23,7 +23,7 @@ public class MagicImbue {
 				time++;
 				if (time == 12) {
 					player.getPackets().sendGameMessage("Magic Imbue spell has run out.");
-					player.getTemporaryAttributes().put("LAST_IMBUE", Boolean.FALSE);
+					player.getTemporaryAttributtes().put("LAST_IMBUE", Boolean.FALSE);
 					stop();
 					return;
 				}

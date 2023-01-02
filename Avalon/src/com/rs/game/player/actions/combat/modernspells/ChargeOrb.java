@@ -78,8 +78,8 @@ public class ChargeOrb extends Action {
 
 	public static void charge(Player player, int itemId) {
 		// int itemId = -1;
-		if (player.getTemporaryAttributes().get("spell_itemid") != null)
-			itemId = (int) player.getTemporaryAttributes().get("spell_itemid");
+		if (player.getTemporaryAttributtes().get("spell_itemid") != null)
+			itemId = (int) player.getTemporaryAttributtes().get("spell_itemid");
 		player.getDialogueManager().startDialogue("AirOrbD", itemId);
 	}
 
@@ -110,7 +110,7 @@ public class ChargeOrb extends Action {
 	}
 
 	public static boolean hasRunes(Player player) {
-		for (Item item : (Item[]) player.getTemporaryAttributes().get("spell_runes")) {
+		for (Item item : (Item[]) player.getTemporaryAttributtes().get("spell_runes")) {
 			if (item == null)
 				continue;
 			if (!player.getInventory().containsItem(item.getId(), item.getAmount()))
@@ -124,14 +124,14 @@ public class ChargeOrb extends Action {
 	public int processWithDelay(Player player) {
 		Orbs orb = getOrb(getItemId());
 		if (orb != null) {
-			for (Item item : (Item[]) player.getTemporaryAttributes().get("spell_runes")) {
+			for (Item item : (Item[]) player.getTemporaryAttributtes().get("spell_runes")) {
 				if (item == null)
 					continue;
 				player.getInventory().deleteItem(item.getId(), item.getAmount());
 			}
 			player.getSkills().addXp(Skills.CRAFTING, orb.getExperience());
-			if (player.getTemporaryAttributes().get("spell_xp") != null)
-			player.getSkills().addXp(Skills.MAGIC, (double) player.getTemporaryAttributes().get("spell_xp"));
+			if (player.getTemporaryAttributtes().get("spell_xp") != null)
+			player.getSkills().addXp(Skills.MAGIC, (double) player.getTemporaryAttributtes().get("spell_xp"));
 			player.getInventory().addItem(orb.getNewId(), 1);
 			player.getPackets().sendGameMessage("You charge the unpowered orb into an "
 					+ ItemDefinitions.getItemDefinitions(orb.getNewId()).getName() + ".", true);

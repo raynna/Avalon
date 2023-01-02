@@ -240,6 +240,49 @@ public final class ControlerManager implements Serializable {
 		return controler.canSummonFamiliar();
 	}
 
+	public boolean processItemClick(int slotId, Item item, Player player) {
+		if (controler == null || !inited)
+			return true;
+		return controler.processItemClick(slotId, item, player);
+	}
+
+
+	public boolean processItemClick2(Item item) {
+		if (controler == null || !inited)
+			return true;
+		return controler.processItemClick2(item);
+	}
+
+	public boolean processItemClick3(Item item) {
+		if (controler == null || !inited)
+			return true;
+		return controler.processItemClick3(item);
+	}
+
+	public boolean processItemClick4(Item item) {
+		if (controler == null || !inited)
+			return true;
+		return controler.processItemClick4(item);
+	}
+
+	public boolean processItemClick5(Item item) {
+		if (controler == null || !inited)
+			return true;
+		return controler.processItemClick5(item);
+	}
+
+	public boolean processItemClick6(Item item) {
+		if (controler == null || !inited)
+			return true;
+		return controler.processItemClick6(item);
+	}
+
+	public boolean processItemClick7(Item item) {
+		if (controler == null || !inited)
+			return true;
+		return controler.processItemClick7(item);
+	}
+
 	public boolean processNPCClick2(NPC npc) {
 		if (controler == null || !inited)
 			return true;

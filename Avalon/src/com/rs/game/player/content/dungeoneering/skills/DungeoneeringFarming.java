@@ -114,7 +114,7 @@ public class DungeoneeringFarming {
 	}
 
 	public static void initHarvest(final Player player, final Harvest harvest, final WorldObject object) {
-		Integer harvestCount = (Integer) player.getTemporaryAttributes().get("HARVEST_COUNT");
+		Integer harvestCount = (Integer) player.getTemporaryAttributtes().get("HARVEST_COUNT");
 		final boolean isTextile = harvest.isTextile();
 		final String productName = ItemDefinitions.getItemDefinitions(harvest.product).getName().toLowerCase();
 
@@ -133,7 +133,7 @@ public class DungeoneeringFarming {
 			return;
 		}
 		if (harvestCount == 0) {
-			player.getTemporaryAttributes().remove("HARVEST_COUNT");
+			player.getTemporaryAttributtes().remove("HARVEST_COUNT");
 			if (!isTextile)
 				OwnedObjectManager.removeObject(player, object);
 			else
@@ -147,7 +147,7 @@ public class DungeoneeringFarming {
 			});
 			return;
 		}
-		player.getTemporaryAttributes().put("HARVEST_COUNT", harvestCount);
+		player.getTemporaryAttributtes().put("HARVEST_COUNT", harvestCount);
 		player.animate(new Animation(3659));
 		player.lock(2);
 		WorldTasksManager.schedule(new WorldTask() {

@@ -96,7 +96,7 @@ public class LuminscentIcefiend extends DungeonBoss {
 					setCapDamage(-1);
 					for (Player player : getManager().getParty().getTeam()) {
 						//TODO player.setCantWalk(false);
-						player.getTemporaryAttributes().remove("FIEND_FLAGGED");
+						player.getTemporaryAttributtes().remove("FIEND_FLAGGED");
 					}
 					return;
 				}
@@ -116,14 +116,14 @@ public class LuminscentIcefiend extends DungeonBoss {
 					Player player = getManager().getParty().getTeam().get(idx);
 					if (player == null || !player.withinDistance(icefiend, getForceTargetDistance()) || player.isDead() || player.hasFinished())
 						continue;
-					boolean flagEnabled = player.getTemporaryAttributes().get("FIEND_FLAGGED") != null;
+					boolean flagEnabled = player.getTemporaryAttributtes().get("FIEND_FLAGGED") != null;
 					WorldTile currentTile = flagEnabled ? new WorldTile(player) : player.getLastWorldTile();
 					tileLoop: for (int i = 0; i < icicles.size(); i++) {
 						WorldTile tile = icicles.remove(i);
 						player.getPackets().sendGraphics(ICE_SHARDS, tile);
 						if (flagEnabled || player.getX() != tile.getX() || player.getY() != tile.getY())
 							continue tileLoop;
-						player.getTemporaryAttributes().put("FIEND_FLAGGED", true);
+						player.getTemporaryAttributtes().put("FIEND_FLAGGED", true);
 					}
 					icicles.add(currentTile);
 				}
@@ -136,7 +136,7 @@ public class LuminscentIcefiend extends DungeonBoss {
 
 					entityLoop: for (Entity t : getPossibleTargets()) {
 						Player player = (Player) t;
-						if (player.getTemporaryAttributes().get("FIEND_FLAGGED") == null)
+						if (player.getTemporaryAttributtes().get("FIEND_FLAGGED") == null)
 							continue entityLoop;
 
 						WorldTile nextTile = Utils.getFreeTile(player, 1);

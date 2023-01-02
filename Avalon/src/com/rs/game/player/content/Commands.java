@@ -144,6 +144,11 @@ public final class Commands {
                         }
                     }, 0, 2);
                     return true;
+                case "add":
+                    player.add(VariableKeys.IntKey.EP, 10);
+
+
+                    return true;
                 case "store":
                     player.getPackets().sendOpenURL("http://avalonrsps718.everythingrs.com/services/store");
                     return true;
@@ -1387,13 +1392,6 @@ public final class Commands {
                                 new WorldTile(tiles[Utils.getRandom(tiles.length - 1)]), player, false, 0);
                     }
                     return true;
-                case "l":
-                    if (player.timers().has(TimerKey.ANTIFIRE_POTION)) {
-                        player.timers().cancel(TimerKey.ANTIFIRE_POTION);
-                    } else {
-                        player.timers().register(TimerKey.ANTIFIRE_POTION, 20);
-                    }
-                    return true;
                 case "give":
                     StringBuilder itemName = new StringBuilder(cmd[1]);
                     int quantity = 1;
@@ -1738,11 +1736,11 @@ public final class Commands {
                     return true;
                 case "god":
                     player.getPackets().sendGameMessage("Godmode is now "
-                            + (player.getTemporaryAttributes().get("GODMODE") != null ? "Inactive" : "Active."));
-                    if (player.getTemporaryAttributes().get("GODMODE") != null)
-                        player.getTemporaryAttributes().remove("GODMODE");
+                            + (player.getTemporaryAttributtes().get("GODMODE") != null ? "Inactive" : "Active."));
+                    if (player.getTemporaryAttributtes().get("GODMODE") != null)
+                        player.getTemporaryAttributtes().remove("GODMODE");
                     else
-                        player.getTemporaryAttributes().put("GODMODE", 0);
+                        player.getTemporaryAttributtes().put("GODMODE", 0);
                     return true;
                 case "givepkp":
                     if (!isDeveloper(player)) {

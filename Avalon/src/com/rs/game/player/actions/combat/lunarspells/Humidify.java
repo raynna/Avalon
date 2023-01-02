@@ -16,8 +16,8 @@ public class Humidify {
 
 	public static boolean cast(Player player, double xp) {
 		boolean hasItems = false;
-		if ((Long) player.getTemporaryAttributes().get("LAST_SPELL") != null
-				&& (long) player.getTemporaryAttributes().get("LAST_SPELL") + 4800 > Utils.currentTimeMillis()) {
+		if ((Long) player.getTemporaryAttributtes().get("LAST_SPELL") != null
+				&& (long) player.getTemporaryAttributtes().get("LAST_SPELL") + 4800 > Utils.currentTimeMillis()) {
 			return false;
 		}
 		for (int empty : empty_Items) {
@@ -31,7 +31,7 @@ public class Humidify {
 					player.getSkills().addXp(Skills.MAGIC, xp);
 					player.animate(new Animation(6294));
 					player.gfx(new Graphics(1061));
-					player.getTemporaryAttributes().put("LAST_SPELL", Utils.currentTimeMillis());
+					player.getTemporaryAttributtes().put("LAST_SPELL", Utils.currentTimeMillis());
 					player.getInventory().deleteItem(empty_Items[i], amount);
 					player.getInventory().addItem(filled_Items[i], amount);
 				}

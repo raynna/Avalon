@@ -166,7 +166,7 @@ public class SettingsTab extends CustomTab {
         DROPVALUE(15) {
             @Override
             public void usage(Player p) {
-                p.getTemporaryAttributes().put("SET_DROPVALUE", Boolean.TRUE);
+                p.getTemporaryAttributtes().put("SET_DROPVALUE", Boolean.TRUE);
                 p.getPackets().sendRunScript(108, new Object[]{"Enter Amount:"});
             }
 
@@ -259,7 +259,7 @@ public class SettingsTab extends CustomTab {
             player.getPackets().sendHideIComponent(3002, i, true);
         for (int i = 28; i <= 56; i++)
             player.getPackets().sendHideIComponent(3002, i, true);
-        player.getTemporaryAttributes().put("CUSTOMTAB", 2);
+        player.getTemporaryAttributtes().put("CUSTOMTAB", 2);
         player.getPackets().sendHideIComponent(3002, BACK_BUTTON, false);
         player.getPackets().sendHideIComponent(3002, FORWARD_BUTTON, false);
         player.getPackets().sendSpriteOnIComponent(3002, RED_STAR_COMP, RED_HIGHLIGHTED);

@@ -57,11 +57,11 @@ public class TradeStore {
 			player.getPackets().sendHideIComponent(335, 62, true);
 			player.getPackets().sendHideIComponent(335, 55, true);
 			player.getPackets().sendHideIComponent(335, 58, true);
-			player.getTemporaryAttributes().put("CUSTOM_TRADE", this);
+			player.getTemporaryAttributtes().put("CUSTOM_TRADE", this);
 			player.setCloseInterfacesEvent(new Runnable() {
 				@Override
 				public void run() {
-					player.getTemporaryAttributes().remove("CUSTOM_TRADE");
+					player.getTemporaryAttributtes().remove("CUSTOM_TRADE");
 					closeTrade(CloseTradeStage.CANCEL);
 				}
 			});

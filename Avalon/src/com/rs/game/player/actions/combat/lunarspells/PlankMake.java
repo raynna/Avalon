@@ -65,8 +65,8 @@ public class PlankMake {
 	}
 
 	public static boolean cast(Player player, double xp, int itemId, int slotId, boolean lividFarm) {
-		if ((Long) player.getTemporaryAttributes().get("LAST_SPELL") != null
-				&& (long) player.getTemporaryAttributes().get("LAST_SPELL") + 1800 > Utils.currentTimeMillis()) {
+		if ((Long) player.getTemporaryAttributtes().get("LAST_SPELL") != null
+				&& (long) player.getTemporaryAttributtes().get("LAST_SPELL") + 1800 > Utils.currentTimeMillis()) {
 			return false;
 		}
 		Planks plank = Planks.getPlank(itemId);
@@ -85,7 +85,7 @@ public class PlankMake {
 				player.getInterfaceManager().openGameTab(7);
 				player.addXp(Skills.MAGIC, xp);
 			}
-			player.getTemporaryAttributes().put("LAST_SPELL", Utils.currentTimeMillis());
+			player.getTemporaryAttributtes().put("LAST_SPELL", Utils.currentTimeMillis());
 			return true;
 		} else {
 			player.sm("You need at least " + plank.getCost() + " coins to cast this spell on this log.");

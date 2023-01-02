@@ -1013,7 +1013,7 @@ public class FarmingManager implements Serializable {
     }
 
     private void openGuide() {
-        player.getTemporaryAttributes().put("skillMenu", 21);
+        player.getTemporaryAttributtes().put("skillMenu", 21);
         player.getVarsManager().sendVar(965, 21);
         ButtonHandler.openSkillGuide(player);
     }

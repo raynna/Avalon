@@ -665,7 +665,7 @@ public class FightKiln extends Controler {
 		if (player.getFamiliar() != null)
 			player.getFamiliar().call(false);
 		playMusic();
-		player.getSavedVarBits().put(10838, 1);
+		player.getVarBitList().put(10838, 1);
 		int nextWave = getCurrentWave() + 1;
 		if (getCurrentWave() < 20) {
 			setCurrentWave(21);

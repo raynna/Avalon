@@ -79,7 +79,7 @@ public class CombinationRunes extends Runecrafting {
 		player.gfx(new Graphics(186));
 		player.animate(CRAFT_ANIMATION);
 		player.lock(1);
-		Boolean magicImbue = (Boolean) player.getTemporaryAttributes().get("LAST_IMBUE");
+		Boolean magicImbue = (Boolean) player.getTemporaryAttributtes().get("LAST_IMBUE");
 		if (magicImbue == null || magicImbue == Boolean.FALSE)
 			player.removeItem(talisman, 1);
 		player.removeItem(runeId, amount);

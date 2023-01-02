@@ -1,6 +1,7 @@
 package com.rs.net.decoders.handlers;
 
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import com.rs.Settings;
@@ -104,14 +105,11 @@ public class InventoryOptionsHandler {
             return;
         }
         System.out.println("ItemOption2: slotId: " + slotId + ", itemId: " + itemId + "");
-        ItemDefinitions itemDef = ItemDefinitions.getItemDefinitions(itemId);
-        ItemScripts script = ItemScriptHandler.cachedItemScripts.getOrDefault(item.getId(), ItemScriptHandler.cachedItemScripts.get(itemDef.name));
+        ItemScripts script = ItemScriptHandler.getScript(item);
         if (script != null) {
             if (script.processItem2(player, item, slotId))
                 return;
         }
-        if (Firemaking.isFiremaking(player, itemId))
-            return;
        if (itemId >= 15086 && itemId <= 15100) {
             if (player.getLockDelay() > Utils.currentTimeMillis())
                 return;
@@ -159,35 +157,20 @@ public class InventoryOptionsHandler {
         }, 1);
     }
 
-    /*
-     *
-     * if (!player.getTaskManager().completedTask(Tasks.FLETCH_SHORTBOW)) { if (new
-     * Item(fletch.getProduct()[option]).getId() == 50)
-     * player.getTaskManager().completeTask(Tasks.FLETCH_SHORTBOW); } if
-     * (!player.getTaskManager().completedTask(Tasks.FLETCH_MAPLE_LONGBOW)) { if
-     * (new Item(fletch.getProduct()[option]).getId() == 62)
-     * player.getTaskManager().completeTask(Tasks.FLETCH_MAPLE_LONGBOW); } if
-     * (!player.getTaskManager().completedTask(Tasks.FLETCH_YEW_SHORTBOW)) { if (new
-     * Item(fletch.getProduct()[option]).getId() == 68)
-     * player.getTaskManager().completeTask(Tasks.FLETCH_YEW_SHORTBOW); } if
-     * (!player.getTaskManager().completedTask(Tasks.FLETCH_MAGIC_LONGBOW)) { if
-     * (new Item(fletch.getProduct()[option]).getId() == 70)
-     * player.getTaskManager().completeTask(Tasks.FLETCH_MAGIC_LONGBOW); }
-     */
-
     public static void handleItemOption1(Player player, final int slotId, final int itemId, Item item) {
         long time = Utils.currentTimeMillis();
         if (player.getLockDelay() >= time || player.getEmotesManager().getNextEmoteEnd() >= time)
             return;
         if (Settings.DEBUG)
-            Logger.log("ItemHandler", "Item Select:" + itemId + ", Slot Id:" + slotId);
+            Logger.log("ItemHandler", "Item Select: " + item.getName() + ", ItemId: " + itemId + ", Slot Id:" + slotId);
         player.stopAll(false);
         if (Settings.FREE_TO_PLAY && item.getDefinitions().isMembersOnly()) {
             player.sm("This is a members object.");
             return;
         }
-        ItemDefinitions itemDef = ItemDefinitions.getItemDefinitions(itemId);
-        ItemScripts script = ItemScriptHandler.cachedItemScripts.getOrDefault(item.getId(), ItemScriptHandler.cachedItemScripts.get(itemDef.name));
+        if (!player.getControlerManager().processItemClick(slotId, item, player))
+            return;
+       ItemScripts script = ItemScriptHandler.getScript(item);
         if (script != null) {
             if (script.processItem(player, item, slotId))
                 return;
@@ -198,11 +181,6 @@ public class InventoryOptionsHandler {
             return;
         if (BirdNest.searchNest(player, itemId, slotId))
             return;
-        if (itemId == 24202 || itemId == 24203) {
-            ButtonHandler.sendWear(player, slotId, itemId);
-            return;
-        }
-
         if (itemId == 13663) {
             int amount = player.getInventory().getAmountOf(itemId);
             player.removeItem(itemId, amount);
@@ -210,57 +188,10 @@ public class InventoryOptionsHandler {
             player.addPKP(amount);
             return;
         }
-        if (itemId == 407) {
-            player.getInventory().deleteItem(new Item(407));
-            int rng = Utils.getRandom(3);
-            if (rng == 0) {
-                player.getMoneyPouch().addMoney(Utils.random(100, 5000), false);
-            } else {
-                player.getInventory().addItem(new Item(409));
-            }
-        }
-        if (itemId == 20702) {
-            if (player.getControlerManager().getControler() instanceof LividFarmControler)
-                LividFarmControler.makePlank(slotId, item, player);
-            else
-                player.sm("You can only do this inside livid farm.");
-            return;
-        }
-        if (itemId == 20704) {
-            if (player.getControlerManager().getControler() instanceof LividFarmControler)
-                LividFarmControler.makeBunch(player);
-            else
-                player.sm("You can only do this inside livid farm.");
-            return;
-        }
         if (itemId == 15707)
             player.getDungManager().openPartyInterface();
         if (player.getTreasureTrailsManager().useItem(item, slotId))
             return;
-        if (itemId == 6 || itemId == 20494 || itemId == 20498) {
-            DwarfMultiCannon.setUp(player, itemId == 6 ? 0 : itemId == 20494 ? 1 : 2);
-            return;
-        }
-        if ((itemId >= 1511 && itemId <= 1521) || itemId == 24121 || itemId == 21600 || itemId == 2862) {
-            if (Settings.FREE_TO_PLAY) {
-                player.sm("You can't fletch items in free to play.");
-                return;
-            }
-            if (!player.getInventory().containsItem(946, 1) && !player.getToolbelt().contains(946))
-                player.sm("You need a knife to fletch this item.");
-            else {
-                Fletch fletch = Fletch.forId(itemId);
-                player.getDialogueManager().startDialogue("FletchingD", fletch);
-            }
-        }
-        if ((itemId >= 1741 && itemId <= 1743)) {
-            if (!player.getInventory().containsItem(1733, 1) && !player.getToolbelt().contains(1733))
-                player.sm("You need a needle to craft this item.");
-            else {
-                Craft craft = Craft.forId(itemId);
-                player.getDialogueManager().startDialogue("LeatherCraftingD", craft);
-            }
-        }
         if ((itemId >= 1601 && itemId <= 1615 || itemId == 6573) || itemId == 10105 || itemId == 10107) {
             if (Settings.FREE_TO_PLAY) {
                 player.sm("You can't fletch items in free to play.");
@@ -790,8 +721,9 @@ public class InventoryOptionsHandler {
                 player.sm("alch on " + toSlot);
             if (!player.getControlerManager().canUseItemOnItem(itemUsed, usedWith))
                 return;
-            ItemDefinitions itemDef = ItemDefinitions.getItemDefinitions(itemUsed.getId());
-            ItemScripts script = ItemScriptHandler.cachedItemScripts.getOrDefault(itemUsed.getId(), ItemScriptHandler.cachedItemScripts.get(itemDef.name));
+            ItemScripts script = ItemScriptHandler.getScript(itemUsed);
+            if (script == null)
+                script = ItemScriptHandler.getScript(usedWith);
             if (script != null) {
                 if (script.processItemOnItem(player, itemUsed, usedWith, fromSlot, toSlot)) {
                     return;
@@ -809,11 +741,6 @@ public class InventoryOptionsHandler {
             Cook cook = DoughCooking.isCooking(usedWith, itemUsed);
             if (cook != null) {
                 player.getDialogueManager().startDialogue("DoughCookingD", cook);
-                return;
-            }
-            Fletch fletch = Fletching.isFletching(usedWith, itemUsed);
-            if (fletch != null) {
-                player.getDialogueManager().startDialogue("FletchingD", fletch);
                 return;
             }
             Lighters lighters = FireLighter.getColoredLog(itemUsedId, usedWith.getId());
@@ -1098,8 +1025,7 @@ public class InventoryOptionsHandler {
             return;
         System.out.println("ItemOption3: slotId: " + slotId + ", itemId: " + itemId + "");
         player.stopAll(false);
-        ItemDefinitions itemDef = ItemDefinitions.getItemDefinitions(itemId);
-        ItemScripts script = ItemScriptHandler.cachedItemScripts.getOrDefault(item.getId(), ItemScriptHandler.cachedItemScripts.get(itemDef.name));
+        ItemScripts script = ItemScriptHandler.getScript(item);
         if (script != null) {
             if (script.processItem3(player, item, slotId))
                 return;
@@ -1276,9 +1202,7 @@ public class InventoryOptionsHandler {
     }
 
     public static void handleItemOption4(Player player, int slotId, int itemId, Item item) {
-        ItemDefinitions itemDef = ItemDefinitions.getItemDefinitions(itemId);
-        ItemScripts script = ItemScriptHandler.cachedItemScripts.getOrDefault(item.getId(), ItemScriptHandler.cachedItemScripts.get(itemDef.name));
-        System.out.println("ItemOption4: slotId: " + slotId + ", itemId: " + itemId + "");
+        ItemScripts script = ItemScriptHandler.getScript(item);
         if (script != null) {
             if (script.processItem4(player, item, slotId))
                 return;
@@ -1289,8 +1213,7 @@ public class InventoryOptionsHandler {
 
     public static void handleItemOption5(Player player, int slotId, int itemId, Item item) {
         System.out.println("ItemOption5: slotId: " + slotId + ", itemId: " + itemId + "");
-        ItemDefinitions itemDef = ItemDefinitions.getItemDefinitions(itemId);
-        ItemScripts script = ItemScriptHandler.cachedItemScripts.getOrDefault(item.getId(), ItemScriptHandler.cachedItemScripts.get(itemDef.name));
+        ItemScripts script = ItemScriptHandler.getScript(item);
         if (script != null) {
             if (script.processItem5(player, item, slotId))
                 return;
@@ -1305,8 +1228,7 @@ public class InventoryOptionsHandler {
             return;
         System.out.println("ItemOption6: slotId: " + slotId + ", itemId: " + itemId + "");
         player.stopAll(false);
-        ItemDefinitions itemDef = ItemDefinitions.getItemDefinitions(itemId);
-        ItemScripts script = ItemScriptHandler.cachedItemScripts.getOrDefault(item.getId(), ItemScriptHandler.cachedItemScripts.get(itemDef.name));
+        ItemScripts script = ItemScriptHandler.getScript(item);
         if (script != null) {
             if (script.processItem6(player, item, slotId))
                 return;
@@ -1510,10 +1432,9 @@ public class InventoryOptionsHandler {
         if (!player.getControlerManager().canDropItem(item))
             return;
         player.stopAll(false);
-        ItemDefinitions itemDef = ItemDefinitions.getItemDefinitions(itemId);
-        ItemScripts script = ItemScriptHandler.cachedItemScripts.getOrDefault(item.getId(), ItemScriptHandler.cachedItemScripts.get(itemDef.name));
+        ItemScripts script = ItemScriptHandler.getScript(item);
         if (script != null) {
-            if (script.processDrop(player, item, slotId) && !item.getDefinitions().isDestroyItem())
+            if (script.processDrop(player, item, slotId))
                 return;
         }
         if (player.getPetManager().spawnPet(itemId, true)) {

@@ -34,8 +34,8 @@ public class CustomStore extends CustomStoreData {
 			}
 		}
 		player.getInterfaceManager().closeScreenInterface();
-		player.getTemporaryAttributes().put("CUSTOM_STORE_TYPE", type);
-		player.getTemporaryAttributes().put("CUSTOM_STORE", -1);
+		player.getTemporaryAttributtes().put("CUSTOM_STORE_TYPE", type);
+		player.getTemporaryAttributtes().put("CUSTOM_STORE", -1);
 		for (int i = 25; i <= COMPONENTS[COMPONENTS.length - 1]; i += 6)
 			player.getPackets().sendHideIComponent(INTERFACE_ID, i, true);
 		refreshInterface();
@@ -44,8 +44,8 @@ public class CustomStore extends CustomStoreData {
 
 			@Override
 			public void run() {
-				player.getTemporaryAttributes().remove("CUSTOM_STORE_TYPE");
-				player.getTemporaryAttributes().remove("CUSTOM_STORE_TYPE");
+				player.getTemporaryAttributtes().remove("CUSTOM_STORE_TYPE");
+				player.getTemporaryAttributtes().remove("CUSTOM_STORE_TYPE");
 			}
 		});
 	}
@@ -66,7 +66,7 @@ public class CustomStore extends CustomStoreData {
 			}
 		}
 		player.getInterfaceManager().closeScreenInterface();
-		player.getTemporaryAttributes().put("CUSTOM_STORE_TYPE", type);
+		player.getTemporaryAttributtes().put("CUSTOM_STORE_TYPE", type);
 		player.temporaryAttribute().put("customStore", this);
 		for (int i = 25; i <= COMPONENTS[COMPONENTS.length - 1]; i += 6)// hides all containers
 			player.getPackets().sendHideIComponent(INTERFACE_ID, i, true);
@@ -78,9 +78,9 @@ public class CustomStore extends CustomStoreData {
 			@Override
 			public void run() {
 				viewingPlayers.remove(player);
-				player.getTemporaryAttributes().remove("customStore");
-				player.getTemporaryAttributes().remove("CUSTOM_STORE");
-				player.getTemporaryAttributes().remove("CUSTOM_STORE_TYPE");
+				player.getTemporaryAttributtes().remove("customStore");
+				player.getTemporaryAttributtes().remove("CUSTOM_STORE");
+				player.getTemporaryAttributtes().remove("CUSTOM_STORE_TYPE");
 			}
 		});
 	}
@@ -90,8 +90,8 @@ public class CustomStore extends CustomStoreData {
 	}
 
 	private static int getShopType(Player player) {
-		int shopType = (Integer) player.getTemporaryAttributes().get("CUSTOM_STORE_TYPE");
-		if (player.getTemporaryAttributes().get("CUSTOM_STORE_TYPE") == null)
+		int shopType = (Integer) player.getTemporaryAttributtes().get("CUSTOM_STORE_TYPE");
+		if (player.getTemporaryAttributtes().get("CUSTOM_STORE_TYPE") == null)
 			return -1;
 		return shopType;
 	}

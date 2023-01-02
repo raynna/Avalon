@@ -139,7 +139,7 @@ public class Burying {
 					player.getInventory().deleteItem(inventorySlot, item);
 					double xp = bone.getExperience() * player.getAuraManager().getPrayerMultiplier();
 					player.getSkills().addXp(Skills.PRAYER, xp);
-					Double lastPrayer = (Double) player.getTemporaryAttributes().get("current_prayer_xp");
+					Double lastPrayer = (Double) player.getTemporaryAttributtes().get("current_prayer_xp");
 					if (lastPrayer == null) {
 						lastPrayer = 0.0;
 					}
@@ -154,7 +154,7 @@ public class Burying {
 			        if (rngEvent == 0) {
 			        	CombatEventNPC.startRandomEvent(player, Skills.PRAYER);
 			        }
-					player.getTemporaryAttributes().put("current_prayer_xp", total);
+					player.getTemporaryAttributtes().put("current_prayer_xp", total);
 					stop();
 				}
 

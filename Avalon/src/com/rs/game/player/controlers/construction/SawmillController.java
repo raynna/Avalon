@@ -78,7 +78,7 @@ public class SawmillController extends Controler {
 					else if (packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET)
 						cutPlank(0, 10);
 					else if (packetId == WorldPacketsDecoder.ACTION_BUTTON4_PACKET) {
-						player.getTemporaryAttributes().put("PlankMake", 0);
+						player.getTemporaryAttributtes().put("PlankMake", 0);
 						player.getPackets().sendInputIntegerScript(true, "Enter amount:");
 					} else if (packetId == WorldPacketsDecoder.ACTION_BUTTON5_PACKET)
 						cutPlank(0, Integer.MAX_VALUE);
@@ -90,7 +90,7 @@ public class SawmillController extends Controler {
 					else if (packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET)
 						cutPlank(1, 10);
 					else if (packetId == WorldPacketsDecoder.ACTION_BUTTON4_PACKET) {
-						player.getTemporaryAttributes().put("PlankMake", 1);
+						player.getTemporaryAttributtes().put("PlankMake", 1);
 						player.getPackets().sendInputIntegerScript(true, "Enter amount:");
 					} else if (packetId == WorldPacketsDecoder.ACTION_BUTTON5_PACKET)
 						cutPlank(1, Integer.MAX_VALUE);
@@ -102,7 +102,7 @@ public class SawmillController extends Controler {
 					else if (packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET)
 						cutPlank(2, 10);
 					else if (packetId == WorldPacketsDecoder.ACTION_BUTTON4_PACKET) {
-						player.getTemporaryAttributes().put("PlankMake", 2);
+						player.getTemporaryAttributtes().put("PlankMake", 2);
 						player.getPackets().sendInputIntegerScript(true, "Enter amount:");
 					} else if (packetId == WorldPacketsDecoder.ACTION_BUTTON5_PACKET)
 						cutPlank(2, Integer.MAX_VALUE);
@@ -114,7 +114,7 @@ public class SawmillController extends Controler {
 					else if (packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET)
 						cutPlank(3, 10);
 					else if (packetId == WorldPacketsDecoder.ACTION_BUTTON4_PACKET) {
-						player.getTemporaryAttributes().put("PlankMake", 3);
+						player.getTemporaryAttributtes().put("PlankMake", 3);
 						player.getPackets().sendInputIntegerScript( true, "Enter amount:");
 					} else if (packetId == WorldPacketsDecoder.ACTION_BUTTON5_PACKET)
 						cutPlank(3, Integer.MAX_VALUE);
@@ -134,7 +134,7 @@ public class SawmillController extends Controler {
 							else if (packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET)
 								withdrawFromCart(i, 10);
 							else {
-								player.getTemporaryAttributes().put(
+								player.getTemporaryAttributtes().put(
 										"PlankWithdraw", i);
 								player.getPackets().sendInputIntegerScript(true,
 										"Enter amount:");

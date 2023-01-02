@@ -1,10 +1,7 @@
 package com.rs.game;
 
-import lombok.extern.slf4j.Slf4j;
-
 public class Keys {
 
-    @Slf4j
     public enum IntKey {
 
         KEYS_OPENED(1, 0),
@@ -27,7 +24,6 @@ public class Keys {
         }
     }
 
-    @Slf4j
     public enum BooleanKey {
 
         BANK_PIN(1, false),
@@ -50,7 +46,6 @@ public class Keys {
         }
     }
 
-    @Slf4j
     public enum LongKey {
 
         OVERLOAD_EFFECT(1, -1),
@@ -74,7 +69,6 @@ public class Keys {
         }
     }
 
-    @Slf4j
     public enum StringKey {
 
         EXAMPLE_STRING(1, ""),

@@ -205,11 +205,11 @@ public class House implements Serializable {
 							"<col=008000> " + refRoom.getPrice() + " coins");
 			}
 			player.getInterfaceManager().sendInterface(402);
-			player.getTemporaryAttributes().put("CreationRoom", new int[] { roomX, roomY, plane });
+			player.getTemporaryAttributtes().put("CreationRoom", new int[] { roomX, roomY, plane });
 			player.setCloseInterfacesEvent(new Runnable() {
 				@Override
 				public void run() {
-					player.getTemporaryAttributes().remove("CreationRoom");
+					player.getTemporaryAttributtes().remove("CreationRoom");
 				}
 			});
 		}
@@ -284,7 +284,7 @@ public class House implements Serializable {
 		Room[] rooms = HouseConstants.Room.values();
 		if (slot >= rooms.length)
 			return;
-		int[] position = (int[]) player.getTemporaryAttributes().get("CreationRoom");
+		int[] position = (int[]) player.getTemporaryAttributtes().get("CreationRoom");
 		player.closeInterfaces();
 		if (position == null)
 			return;
@@ -410,13 +410,13 @@ public class House implements Serializable {
 											+ build.getPieces()[i].getRequirements()[i2].getAmount());
 			}
 		}
-		player.getTemporaryAttributes().put("OpenedBuild", build);
-		player.getTemporaryAttributes().put("OpenedBuildObject", object);
+		player.getTemporaryAttributtes().put("OpenedBuild", build);
+		player.getTemporaryAttributtes().put("OpenedBuildObject", object);
 		player.setCloseInterfacesEvent(new Runnable() {
 			@Override
 			public void run() {
-				player.getTemporaryAttributes().remove("OpenedBuild");
-				player.getTemporaryAttributes().remove("OpenedBuildObject");
+				player.getTemporaryAttributtes().remove("OpenedBuild");
+				player.getTemporaryAttributtes().remove("OpenedBuildObject");
 			}
 
 		});
@@ -450,8 +450,8 @@ public class House implements Serializable {
 					break;
 				}
 		}
-		final Builds build = (Builds) player.getTemporaryAttributes().get("OpenedBuild");
-		WorldObject object = (WorldObject) player.getTemporaryAttributes().get("OpenedBuildObject");
+		final Builds build = (Builds) player.getTemporaryAttributtes().get("OpenedBuild");
+		WorldObject object = (WorldObject) player.getTemporaryAttributtes().get("OpenedBuildObject");
 		if (build == null || object == null || build.getPieces().length <= slot)
 			return;
 		int roomX = object.getChunkX() - boundChuncks[0];

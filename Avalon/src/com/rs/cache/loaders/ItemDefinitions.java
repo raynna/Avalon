@@ -298,9 +298,10 @@ public final class ItemDefinitions {
 		if (inventoryOptions == null)
 			return false;
 		for (String o : inventoryOptions) {
-			if (o == null || !o.equals(option))
+			if (o == null)
 				continue;
-			return true;
+			if (o.equalsIgnoreCase(option))
+				return true;
 		}
 		return false;
 	}

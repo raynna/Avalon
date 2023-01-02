@@ -15,8 +15,8 @@ public class HealOther {
 		if (target instanceof Player) {
 			Player other = (Player) target;
 			player.faceEntity(target);
-			if ((Long) player.getTemporaryAttributes().get("LAST_SPELL") != null
-					&& (long) player.getTemporaryAttributes().get("LAST_SPELL") + 4800 > Utils.currentTimeMillis()) {
+			if ((Long) player.getTemporaryAttributtes().get("LAST_SPELL") != null
+					&& (long) player.getTemporaryAttributtes().get("LAST_SPELL") + 4800 > Utils.currentTimeMillis()) {
 				player.getPackets().sendGameMessage("You can't do this yet.");
 				return false;
 			}
@@ -35,7 +35,7 @@ public class HealOther {
 				other.getPackets().sendGameMessage("You have been healed by player " + player.getDisplayName() + ".");
 				int damage = (int) (player.getHitpoints() * 0.75);
 				player.applyHit(new Hit(player, damage, HitLook.REGULAR_DAMAGE)); 
-				player.getTemporaryAttributes().put("LAST_SPELL", Utils.currentTimeMillis());
+				player.getTemporaryAttributtes().put("LAST_SPELL", Utils.currentTimeMillis());
 				other.heal(damage);
 				return true;
 			} else {

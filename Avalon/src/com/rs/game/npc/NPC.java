@@ -603,7 +603,7 @@ public class NPC extends Entity implements Serializable {
                         Drop drop = new Drop(item.getId(), 100, item.getAmount(), item.getAmount());
                         if (killer.hasRareDrop()) {
                             killer.setRareDrop(new Item(item.getId(), item.getAmount()), new WorldTile(getCoordFaceX(getSize()), getCoordFaceY(getSize()), getPlane()));
-                            killer.getTemporaryAttributes().remove("RARITY_NODE");
+                            killer.getTemporaryAttributtes().remove("RARITY_NODE");
                         }
                         sendDrop(killer, drop);
                     }

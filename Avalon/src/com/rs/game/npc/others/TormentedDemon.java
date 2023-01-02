@@ -84,7 +84,7 @@ public final class TormentedDemon extends NPC {
 			currentType = 0;
 			if (hit.getSource() instanceof Player) {// darklight
 				Player player = (Player) hit.getSource();
-				if (demonPrayer[currentType] && player.getTemporaryAttributes().get("VERAC_EFFECT") == Boolean.FALSE) {
+				if (demonPrayer[currentType] && player.getTemporaryAttributtes().get("VERAC_EFFECT") == Boolean.FALSE) {
 					hit.setDamage(0);// hits 0 if pray melee unless verac effect
 				} else {
 					if ((player.getEquipment().getWeaponId() == 6746 || player.getEquipment().getWeaponId() == 2402)

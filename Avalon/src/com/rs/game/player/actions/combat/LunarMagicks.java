@@ -498,14 +498,14 @@ public class LunarMagicks {
 		int slotId = -1;
 		int objectId = -1;
 		Entity target = null;
-		if (player.getTemporaryAttributes().get("spell_itemid") != null)
-			itemId = (int) player.getTemporaryAttributes().get("spell_itemid");
-		if (player.getTemporaryAttributes().get("spell_objectid") != null)
-			objectId = (int) player.getTemporaryAttributes().get("spell_objectid");
-		if (player.getTemporaryAttributes().get("spell_slotid") != null)
-			slotId = (int) player.getTemporaryAttributes().get("spell_slotid");
-		if (player.getTemporaryAttributes().get("spell_target") != null)
-			target = (Entity) player.getTemporaryAttributes().get("spell_target");
+		if (player.getTemporaryAttributtes().get("spell_itemid") != null)
+			itemId = (int) player.getTemporaryAttributtes().get("spell_itemid");
+		if (player.getTemporaryAttributtes().get("spell_objectid") != null)
+			objectId = (int) player.getTemporaryAttributtes().get("spell_objectid");
+		if (player.getTemporaryAttributtes().get("spell_slotid") != null)
+			slotId = (int) player.getTemporaryAttributtes().get("spell_slotid");
+		if (player.getTemporaryAttributtes().get("spell_target") != null)
+			target = (Entity) player.getTemporaryAttributtes().get("spell_target");
 		RSLunarSpellStore s = RSLunarSpellStore.getSpell(spellId);
 		if (s == null)
 			return;
