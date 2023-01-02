@@ -363,10 +363,10 @@ public class TeleportTab extends CustomTab {
 			player.getPackets().sendHideIComponent(3002, i, true);
 		for (int i = 28; i <= 56; i++)
 			player.getPackets().sendHideIComponent(3002, i, true);
-		player.getTemporaryAttributtes().remove("ACHIEVEMENTTAB");
-		player.getTemporaryAttributtes().remove("DANGEROUSTELEPORT");
-		player.getTemporaryAttributtes().remove("TELEPORTTYPE");
-		player.getTemporaryAttributtes().put("CUSTOMTAB", 1);
+		player.getTemporaryAttributes().remove("ACHIEVEMENTTAB");
+		player.getTemporaryAttributes().remove("DANGEROUSTELEPORT");
+		player.getTemporaryAttributes().remove("TELEPORTTYPE");
+		player.getTemporaryAttributes().put("CUSTOMTAB", 1);
 		player.getPackets().sendHideIComponent(3002, BACK_BUTTON, false);
 		player.getPackets().sendHideIComponent(3002, FORWARD_BUTTON, false);
 		player.getPackets().sendSpriteOnIComponent(3002, GREEN_STAR_COMP, GREEN_HIGHLIGHTED);
@@ -383,7 +383,7 @@ public class TeleportTab extends CustomTab {
 
 	private static void sendDangerousTeleport(Player player, WorldTile tile) {
 		sendHideComponents(player);
-		player.getTemporaryAttributtes().put("DANGEROUSTELEPORT", tile);
+		player.getTemporaryAttributes().put("DANGEROUSTELEPORT", tile);
 		player.getPackets().sendHideIComponent(3002, BACK_BUTTON, false);
 		player.getPackets().sendHideIComponent(3002, 3, false);
 		player.getPackets().sendHideIComponent(3002, 7, false);
@@ -408,16 +408,16 @@ public class TeleportTab extends CustomTab {
 			player.getPackets().sendGameMessage("You can't use this teleport in combat.");
 			return;
 		}
-		player.getTemporaryAttributtes().remove("PREVIOUSTELEPORT");
+		player.getTemporaryAttributes().remove("PREVIOUSTELEPORT");
 		ModernMagicks.sendNormalTeleportSpell(player, -1, tile);
 		open(player);
-		player.getTemporaryAttributtes().put("PREVIOUSTELEPORT", tile);
+		player.getTemporaryAttributes().put("PREVIOUSTELEPORT", tile);
 	}
 
 	public static void handleButtons(Player player, int compId) {
 		Integer type = (Integer) player.temporaryAttribute().get("TELEPORTTYPE");
-		WorldTile dangerTile = (WorldTile) player.getTemporaryAttributtes().get("DANGEROUSTELEPORT");
-		WorldTile previousTile = (WorldTile) player.getTemporaryAttributtes().get("PREVIOUSTELEPORT");
+		WorldTile dangerTile = (WorldTile) player.getTemporaryAttributes().get("DANGEROUSTELEPORT");
+		WorldTile previousTile = (WorldTile) player.getTemporaryAttributes().get("PREVIOUSTELEPORT");
 		if (player.getLockDelay() > Utils.currentTimeMillis())
 			return;
 		if (dangerTile != null) {
@@ -497,8 +497,8 @@ public class TeleportTab extends CustomTab {
 		sendComponents(player);
 		for (int i = 3; i <= 15; i++)
 			player.getPackets().sendHideIComponent(3002, i, true);
-		player.getTemporaryAttributtes().remove("DANGEROUSTELEPORT");
-		player.getTemporaryAttributtes().put("TELEPORTTYPE", type);
+		player.getTemporaryAttributes().remove("DANGEROUSTELEPORT");
+		player.getTemporaryAttributes().put("TELEPORTTYPE", type);
 		player.getPackets().sendHideIComponent(3002, 27, true);
 		player.getPackets().sendSpriteOnIComponent(3002, GREEN_STAR_COMP, GREEN_HIGHLIGHTED);
 		for (TeleportTabData store : TeleportTabData.values()) {
@@ -532,8 +532,8 @@ public class TeleportTab extends CustomTab {
 		sendComponents(player);
 		for (int i = 3; i <= 15; i++)
 			player.getPackets().sendHideIComponent(3002, i, true);
-		player.getTemporaryAttributtes().remove("DANGEROUSTELEPORT");
-		player.getTemporaryAttributtes().put("TELEPORTTYPE", type);
+		player.getTemporaryAttributes().remove("DANGEROUSTELEPORT");
+		player.getTemporaryAttributes().put("TELEPORTTYPE", type);
 		player.getPackets().sendHideIComponent(3002, 27, true);
 		player.getPackets().sendSpriteOnIComponent(3002, GREEN_STAR_COMP, GREEN_HIGHLIGHTED);
 		for (TeleportTabData store : TeleportTabData.values()) {

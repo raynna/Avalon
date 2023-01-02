@@ -26,12 +26,10 @@ public class FarmingManager implements Serializable {
 
     private static final long serialVersionUID = -6487741852718632170L;
 
-    private static final int REGENERATION_CONSTANT = Settings.DEBUG ? 120000 : 120000; // Twelve
-    // minutes
+    private static final int REGENERATION_CONSTANT = Settings.DEBUG ? 120000 : 120000; // Twelve minutes
     private static final int ALLOTMENT = 0, TREES = 1, HOPS = 2, FLOWERS = 3, FRUIT_TREES = 4, BUSHES = 5, HERBS = 6, COMPOST = 7, MUSHROOMS = 8, BELLADONNA = 9, CACTUS = 10, CALQUAT = 11;
     private static final int RAKE = 5341, EMPTY_BUCKET = 1925, SPADE = 952, DIBBER = 5343, SECATEURS = 5329, MAGIC_SECATEURS = 7409, TROWEL = 5325, COMPOST_BUCKET = 6032, SUPERCOMPOST_BUCKET = 6034;
-    private static final String[] PATCH_NAMES =
-            { "allotment", "tree", "hops", "flower", "fruit tree", "bush", "herb", "compost", "mushroom", "belladonna", "cactus", "calquat" };
+    private static final String[] PATCH_NAMES = { "allotment", "tree", "hops", "flower", "fruit tree", "bush", "herb", "compost", "mushroom", "belladonna", "cactus", "calquat" };
     private static final int[][] HARVEST_AMOUNTS =
             {
                     { 3, 3 }, //alot 3, 53
@@ -1015,7 +1013,7 @@ public class FarmingManager implements Serializable {
     }
 
     private void openGuide() {
-        player.getTemporaryAttributtes().put("skillMenu", 21);
+        player.getTemporaryAttributes().put("skillMenu", 21);
         player.getVarsManager().sendVar(965, 21);
         ButtonHandler.openSkillGuide(player);
     }

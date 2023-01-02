@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Avalon.iml" filepath="$PROJECT_DIR$/Avalon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Client/Client.iml" filepath="$PROJECT_DIR$/../Client/Client.iml" />
     </modules>
   </component>
 </project>

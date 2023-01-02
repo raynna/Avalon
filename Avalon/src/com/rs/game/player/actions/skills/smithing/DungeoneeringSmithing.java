@@ -123,7 +123,7 @@ public class DungeoneeringSmithing extends Action {
 
 	@Override
 	public boolean start(Player player) {
-		type = (int) player.getTemporaryAttributtes().get("FORGE_TYPE");
+		type = (int) player.getTemporaryAttributes().get("FORGE_TYPE");
 		int levelRequirement = BASE_LEVEL[dungeoneering ? 1 : 0][type] + LEVEL_INCREMENT[dungeoneering ? 1 : 0][index];
 		if (levelRequirement > 99)
 			levelRequirement = 99;
@@ -193,7 +193,7 @@ public class DungeoneeringSmithing extends Action {
 			player.getDialogueManager().startDialogue("SimpleMessage", "You need a hammer to work the metal with.");
 			return;
 		}
-		player.getTemporaryAttributtes().put("FORGE_TYPE", type);
+		player.getTemporaryAttributes().put("FORGE_TYPE", type);
 
 		for (int index = 0; index < BUILDS[type + (dungeoneering ? 6 : 0)].length; index++) {
 			int componentBase = COMPONENTS[dungeoneering ? 1 : 0][index];

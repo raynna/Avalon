@@ -16,7 +16,7 @@ public class PriceCheckManager {
 	}
 
 	public void openPriceCheck() {
-		player.getTemporaryAttributtes().remove("PkPointsStore");
+		player.getTemporaryAttributes().remove("PkPointsStore");
 		player.getInterfaceManager().sendInterface(206);
 		player.getInterfaceManager().sendInventoryInterface(207);
 		sendInterItems();

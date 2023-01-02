@@ -54,6 +54,7 @@ import com.rs.game.player.controlers.EdgevillePvPControler;
 import com.rs.game.player.dialogues.LevelUp;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
+import com.rs.game.timer.TimerKey;
 import com.rs.net.decoders.handlers.ButtonHandler;
 import com.rs.utils.EconomyPrices;
 import com.rs.utils.Encrypt;
@@ -1387,12 +1388,11 @@ public final class Commands {
                     }
                     return true;
                 case "l":
-                    player.getPackets().sendGameMessage("Sent all timers");
-                    player.setOverload(35000);
-                    player.setPrayerRenewal(35000);
-                    player.setFreezeDelay(35000);
-                    player.setTeleBlockDelay(35000);
-                    player.setVengeance(35000);
+                    if (player.timers().has(TimerKey.ANTIFIRE_POTION)) {
+                        player.timers().cancel(TimerKey.ANTIFIRE_POTION);
+                    } else {
+                        player.timers().register(TimerKey.ANTIFIRE_POTION, 20);
+                    }
                     return true;
                 case "give":
                     StringBuilder itemName = new StringBuilder(cmd[1]);
@@ -1738,11 +1738,11 @@ public final class Commands {
                     return true;
                 case "god":
                     player.getPackets().sendGameMessage("Godmode is now "
-                            + (player.getTemporaryAttributtes().get("GODMODE") != null ? "Inactive" : "Active."));
-                    if (player.getTemporaryAttributtes().get("GODMODE") != null)
-                        player.getTemporaryAttributtes().remove("GODMODE");
+                            + (player.getTemporaryAttributes().get("GODMODE") != null ? "Inactive" : "Active."));
+                    if (player.getTemporaryAttributes().get("GODMODE") != null)
+                        player.getTemporaryAttributes().remove("GODMODE");
                     else
-                        player.getTemporaryAttributtes().put("GODMODE", 0);
+                        player.getTemporaryAttributes().put("GODMODE", 0);
                     return true;
                 case "givepkp":
                     if (!isDeveloper(player)) {

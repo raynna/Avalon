@@ -220,7 +220,6 @@ public abstract class Controler {
 	}
 
 	public boolean processObjectClick5(WorldObject object) {
-		player.sm("process");
 		return true;
 	}
 

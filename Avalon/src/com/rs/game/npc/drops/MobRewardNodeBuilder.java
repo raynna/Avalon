@@ -182,7 +182,7 @@ public abstract class MobRewardNodeBuilder {
         int random = Utils.getRandom(max - row);
         if (random <= 0) {
             if (max >= 100) {
-                player.getTemporaryAttributtes().put("RARITY_NODE", max >= 200 ? VERY_RARE : RARE);//variable for temporary lootbeams
+                player.getTemporaryAttributes().put("RARITY_NODE", max >= 200 ? VERY_RARE : RARE);//variable for temporary lootbeams
             }
             if (row > 0) {
                 player.getPackets().sendGameMessage("<col=ff7000>Your ring of wealth shines more brightly!</col>");
@@ -208,7 +208,7 @@ public abstract class MobRewardNodeBuilder {
      * @param type The type of clue scroll.
      */
     protected void shakeTreasureTrail(Player player, int type) {
-        final boolean shake = shake(player, 100);
+        final boolean shake = shake(player, 64);
         if (shake) {
             player.getPackets().sendGameMessage("<col=ff0000>You are rewarded a treasure trail.");
             addObj(new int[]{EASY_CLUE_ID, MEDIUM_CLUE_ID, HARD_CLUE_ID, ELITE_CLUE_ID}[type], 1);
@@ -243,7 +243,7 @@ public abstract class MobRewardNodeBuilder {
      */
     private void shakeSpinTicket(Player player) {
         if (SPIN_TICKET > 0) {
-            boolean shake = shake(player, 100);
+            boolean shake = shake(player, 128);
             if (shake) {
                 addObj(SPIN_TICKET, 1);
             }
@@ -296,7 +296,7 @@ public abstract class MobRewardNodeBuilder {
     }
 
     private void shakeDefenders(Player player, NPC mob) {
-        boolean shake = shake(player, 100);
+        boolean shake = shake(player, 16);
         if (!mob.getName().toLowerCase().contains("cyclops"))
             return;
         if (shake) {
@@ -312,7 +312,7 @@ public abstract class MobRewardNodeBuilder {
      * @param mob The mob which was killed.
      */
     private void shakeEffigy(Player player, NPC mob) {
-        boolean shake = shake(player, (10000 / mob.getCombatLevel() / 2));
+        boolean shake = shake(player, (10000 / (mob.getCombatLevel() / 2)));
         if (!mob.getDefinitions().hasAttackOption())
             return;
         if (shake) {
@@ -328,9 +328,9 @@ public abstract class MobRewardNodeBuilder {
     private void shakeCoinbag(Player player, NPC mob) {
         boolean row = ItemDefinitions.getItemDefinitions(player.getEquipment().getRingId()).getName().toLowerCase()
                 .contains("ring of wealth");
-        int shake = row ? 20 : 10;
+        int shake = row ? 15 : 10;
         if (Utils.getRandom(100) <= shake) {
-            if (row) {
+            if (row && shake >= 11 && shake <= 15) {
                 player.getPackets().sendGameMessage("<col=ff7000>Your ring of wealth shines more brightly!</col>");
             }
             for (BossIds id : BossIds.values()) {
@@ -495,7 +495,7 @@ public abstract class MobRewardNodeBuilder {
     protected int rarityNode(Player player) {
         int rarity = MobRewardGenerator.getGenerator().generateRarityNode(player);
         if (rarity > 1) {
-            player.getTemporaryAttributtes().put("RARITY_NODE", rarity);
+            player.getTemporaryAttributes().put("RARITY_NODE", rarity);
         }
         return rarity;
     }

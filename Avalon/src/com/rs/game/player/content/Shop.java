@@ -95,7 +95,7 @@ public class Shop {
 		player.getPackets().sendIComponentSettings(1265, 26, 0, getStoreSize() * 6, 82903066);
 		sendInventory(player);
 		player.getPackets().sendIComponentText(1265, 85, name);
-		player.getTemporaryAttributtes().put("shop_buying", Boolean.TRUE);
+		player.getTemporaryAttributes().put("shop_buying", Boolean.TRUE);
 		player.temporaryAttribute().put("amount_shop", 1);
 	}
 

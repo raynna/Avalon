@@ -247,3 +247,345 @@
 [16 December 2022 at 10:48:10 CET] - ::clearchat 
 [16 December 2022 at 10:50:09 CET] - ::clearchat 
 [16 December 2022 at 10:50:10 CET] - ::clearchat 
+[16 December 2022 at 07:23:16 CET] - ::clearchat 
+[16 December 2022 at 07:23:17 CET] - ::clearchat 
+[16 December 2022 at 07:23:17 CET] - ::clearchat 
+[16 December 2022 at 07:23:17 CET] - ::clearchat 
+[16 December 2022 at 07:24:12 CET] - ::clearchat 
+[16 December 2022 at 07:24:13 CET] - ::clearchat 
+[16 December 2022 at 07:24:13 CET] - ::clearchat 
+[16 December 2022 at 07:41:54 CET] - ::inters 3037
+[16 December 2022 at 07:41:57 CET] - ::inters 3037
+[16 December 2022 at 07:42:36 CET] - ::npc 75
+[16 December 2022 at 07:58:30 CET] - ::npc 75
+[16 December 2022 at 07:59:37 CET] - ::npc 75
+[16 December 2022 at 08:40:31 CET] - ::npc 75
+[16 December 2022 at 08:40:48 CET] - ::npc 50
+[16 December 2022 at 08:40:48 CET] - ::god 
+[16 December 2022 at 08:45:57 CET] - ::god 
+[16 December 2022 at 08:45:58 CET] - ::npc 50
+[16 December 2022 at 08:45:58 CET] - ::god 
+[16 December 2022 at 09:52:34 CET] - ::inters 3037
+[16 December 2022 at 09:52:37 CET] - ::inters 3037
+[16 December 2022 at 09:58:15 CET] - ::npc 50
+[16 December 2022 at 09:58:23 CET] - ::heal 
+[16 December 2022 at 09:58:24 CET] - ::god 
+[16 December 2022 at 10:00:02 CET] - ::heal 
+[16 December 2022 at 10:12:51 CET] - ::heal 
+[16 December 2022 at 10:14:08 CET] - ::god 
+[16 December 2022 at 10:14:15 CET] - ::god 
+[16 December 2022 at 10:14:15 CET] - ::god 
+[16 December 2022 at 10:14:17 CET] - ::spec 
+[16 December 2022 at 10:19:23 CET] - ::give rune_crossbow
+[16 December 2022 at 10:19:30 CET] - ::give runite_bolts +500
+[16 December 2022 at 10:24:40 CET] - ::item 2444 1
+[16 December 2022 at 10:28:32 CET] - ::give bronze_shortbow
+[16 December 2022 at 10:28:39 CET] - ::give shortbow
+[16 December 2022 at 10:28:42 CET] - ::give bronze_arrow +100
+[16 December 2022 at 10:30:49 CET] - ::setlevel 4 70
+[16 December 2022 at 10:30:56 CET] - ::setlevel 4 70
+[16 December 2022 at 10:54:07 CET] - ::heal 
+[16 December 2022 at 10:54:51 CET] - ::master 
+[16 December 2022 at 10:56:38 CET] - ::item 2444 1
+[16 December 2022 at 10:57:11 CET] - ::item 11694 1
+[16 December 2022 at 10:57:17 CET] - ::item 11690 1
+[16 December 2022 at 10:57:21 CET] - ::give armadyl_chestplate
+[16 December 2022 at 10:57:25 CET] - ::item 11722 1
+[16 December 2022 at 10:57:27 CET] - ::item 11724 1
+[16 December 2022 at 10:57:29 CET] - ::item 11718 1
+[16 December 2022 at 10:57:35 CET] - ::item 18361 1
+[16 December 2022 at 10:57:41 CET] - ::item swift_gloves
+[16 December 2022 at 10:57:53 CET] - ::give swift_gloves_(red)
+[16 December 2022 at 10:57:57 CET] - ::give swift_gloves
+[16 December 2022 at 10:57:59 CET] - ::item 22487 1
+[16 December 2022 at 10:58:01 CET] - ::item 22484 1
+[16 December 2022 at 10:58:03 CET] - ::item empty
+[16 December 2022 at 10:58:03 CET] - ::empty 
+[16 December 2022 at 10:58:57 CET] - ::item 22363 1
+[16 December 2022 at 10:59:02 CET] - ::item 18357 1
+[16 December 2022 at 10:59:06 CET] - ::heal 
+[16 December 2022 at 10:59:07 CET] - ::item 2444 3
+[17 December 2022 at 01:19:25 CET] - ::item 15486 1
+[17 December 2022 at 01:20:02 CET] - ::item 4151 1
+[17 December 2022 at 01:28:10 CET] - ::empty 
+[17 December 2022 at 01:28:13 CET] - ::item 18357 1
+[17 December 2022 at 01:28:17 CET] - ::give armadyl_chestplate
+[17 December 2022 at 01:28:18 CET] - ::item item 11718 1
+[17 December 2022 at 01:28:21 CET] - ::item 11720
+[17 December 2022 at 01:28:23 CET] - ::item 11722
+[17 December 2022 at 01:28:26 CET] - ::item 11718
+[17 December 2022 at 01:28:33 CET] - ::item 18361 1
+[17 December 2022 at 01:28:35 CET] - ::item 22363 1
+[17 December 2022 at 01:28:40 CET] - ::item 6585 1
+[17 December 2022 at 01:28:47 CET] - ::give ava's_alerter
+[17 December 2022 at 01:28:50 CET] - ::item 21787 1
+[17 December 2022 at 01:28:53 CET] - ::item 21790 1
+[17 December 2022 at 01:29:03 CET] - ::give dragon_bolts#e +100
+[17 December 2022 at 01:29:06 CET] - ::item 15018 1
+[17 December 2022 at 01:29:07 CET] - ::item 15019 1
+[17 December 2022 at 01:29:16 CET] - ::item 2444 3
+[17 December 2022 at 01:29:18 CET] - ::item 11235 1
+[17 December 2022 at 01:29:20 CET] - ::item 111212 100
+[17 December 2022 at 01:29:22 CET] - ::item 11212 1000
+[17 December 2022 at 01:29:27 CET] - ::give hand_cannon
+[17 December 2022 at 01:29:29 CET] - ::item 15243 1000
+[17 December 2022 at 01:29:45 CET] - ::give morrigan's_javelin
+[17 December 2022 at 01:29:49 CET] - ::give morrigan's_javelin 99
+[17 December 2022 at 01:29:54 CET] - ::give morrigan's_javelin +99
+[17 December 2022 at 01:34:14 CET] - ::give rune_platelegs
+[17 December 2022 at 01:39:51 CET] - ::item 15243 1000heal
+[17 December 2022 at 01:39:52 CET] - ::heal 
+[17 December 2022 at 01:40:10 CET] - ::spec 
+[17 December 2022 at 01:40:26 CET] - ::spec 
+[17 December 2022 at 01:40:46 CET] - ::spec 
+[17 December 2022 at 01:40:52 CET] - ::spec 
+[17 December 2022 at 02:17:13 CET] - ::ecomode 1
+[17 December 2022 at 02:17:19 CET] - ::clearchat 
+[17 December 2022 at 02:22:36 CET] - ::give overload#4
+[17 December 2022 at 02:36:16 CET] - ::teletome manager
+[17 December 2022 at 02:37:47 CET] - ::teletome manager
+[17 December 2022 at 02:37:55 CET] - ::give zanik's_crossbow
+[17 December 2022 at 02:37:59 CET] - ::give diamond_bolts#e +100
+[17 December 2022 at 02:38:04 CET] - ::spec 
+[17 December 2022 at 02:38:41 CET] - ::spec 
+[17 December 2022 at 02:38:43 CET] - ::teletome manager
+[17 December 2022 at 02:39:10 CET] - ::teletome manager
+[17 December 2022 at 02:39:13 CET] - ::spec 
+[17 December 2022 at 02:39:36 CET] - ::spec 
+[17 December 2022 at 02:40:13 CET] - ::item 14484 1
+[17 December 2022 at 02:40:14 CET] - ::item 11732 1
+[17 December 2022 at 02:40:15 CET] - ::tele 0,1,1,22,18
+[17 December 2022 at 02:40:16 CET] - ::item 11732 1
+[17 December 2022 at 02:40:18 CET] - ::item 11724 1
+[17 December 2022 at 02:40:19 CET] - ::item 11726 1
+[17 December 2022 at 02:40:20 CET] - ::item 6570 1
+[17 December 2022 at 02:40:21 CET] - ::item 14484 1
+[17 December 2022 at 02:40:22 CET] - ::item 6585 1
+[17 December 2022 at 02:40:26 CET] - ::item 15220 1
+[17 December 2022 at 02:40:30 CET] - ::item 10828 1
+[17 December 2022 at 02:40:31 CET] - ::item 7462 1
+[17 December 2022 at 02:40:36 CET] - ::spec 
+[17 December 2022 at 02:40:38 CET] - ::item 19784 1
+[17 December 2022 at 02:40:41 CET] - ::item 19784 1
+[17 December 2022 at 02:40:48 CET] - ::prayers 
+[17 December 2022 at 02:40:50 CET] - ::curses 
+[17 December 2022 at 02:40:51 CET] - ::tele 0,1,1,21,17
+[17 December 2022 at 02:40:52 CET] - ::curses 
+[17 December 2022 at 02:40:53 CET] - ::tele 0,1,1,13,27
+[17 December 2022 at 02:41:05 CET] - ::give ring_of_vigour
+[17 December 2022 at 02:41:34 CET] - ::spec 
+[17 December 2022 at 02:41:49 CET] - ::spec 
+[17 December 2022 at 02:43:01 CET] - ::master 
+[17 December 2022 at 02:43:06 CET] - ::item 2412 1
+[17 December 2022 at 02:43:09 CET] - ::ecomode 0
+[17 December 2022 at 02:43:10 CET] - ::ecomode 2
+[17 December 2022 at 02:43:37 CET] - ::master 
+[17 December 2022 at 02:45:10 CET] - ::spec 
+[17 December 2022 at 02:47:37 CET] - ::inter 813
+[17 December 2022 at 02:57:10 CET] - ::item 813
+[17 December 2022 at 02:57:12 CET] - ::inter 813
+[17 December 2022 at 02:58:18 CET] - ::inter 813
+[17 December 2022 at 03:01:07 CET] - ::tele 0,43,54,63,10
+[17 December 2022 at 03:01:13 CET] - ::give rake
+[17 December 2022 at 03:01:18 CET] - ::give guam_seed +10
+[17 December 2022 at 03:01:46 CET] - ::give seed_dibber
+[17 December 2022 at 03:06:30 CET] - ::tele 0,43,54,63,10
+[17 December 2022 at 03:06:34 CET] - ::give rake
+[17 December 2022 at 03:06:40 CET] - ::give seed_dibber
+[17 December 2022 at 03:06:45 CET] - ::give onion_seed +100
+[17 December 2022 at 04:50:11 CET] - ::god 
+[17 December 2022 at 04:50:19 CET] - ::tele 0,48,54,1,31
+[17 December 2022 at 04:50:19 CET] - ::tele 0,47,54,51,22
+[17 December 2022 at 04:50:19 CET] - ::tele 0,47,54,51,22
+[17 December 2022 at 04:50:19 CET] - ::tele 0,47,54,51,22
+[17 December 2022 at 04:50:20 CET] - ::tele 0,47,54,38,12
+[17 December 2022 at 04:50:20 CET] - ::tele 0,47,54,25,2
+[17 December 2022 at 04:50:20 CET] - ::tele 0,47,54,25,2
+[17 December 2022 at 04:50:20 CET] - ::tele 0,47,54,25,2
+[17 December 2022 at 04:50:20 CET] - ::tele 0,47,54,26,1
+[17 December 2022 at 04:50:20 CET] - ::tele 0,47,53,16,53
+[17 December 2022 at 04:50:21 CET] - ::tele 0,47,53,16,52
+[17 December 2022 at 04:50:21 CET] - ::tele 0,47,53,19,50
+[17 December 2022 at 04:50:21 CET] - ::tele 0,47,53,21,50
+[17 December 2022 at 04:50:21 CET] - ::tele 0,47,53,17,35
+[17 December 2022 at 04:50:21 CET] - ::tele 0,47,53,18,35
+[17 December 2022 at 04:50:21 CET] - ::tele 0,47,53,18,35
+[17 December 2022 at 04:50:22 CET] - ::tele 0,47,53,18,35
+[17 December 2022 at 04:50:22 CET] - ::tele 0,47,53,15,20
+[17 December 2022 at 04:50:22 CET] - ::tele 0,47,53,15,20
+[17 December 2022 at 04:50:22 CET] - ::tele 0,47,53,15,20
+[17 December 2022 at 04:50:22 CET] - ::tele 0,47,53,12,5
+[17 December 2022 at 04:50:22 CET] - ::tele 0,47,53,12,5
+[17 December 2022 at 04:50:23 CET] - ::tele 0,47,53,12,5
+[17 December 2022 at 04:50:23 CET] - ::tele 0,47,53,12,5
+[17 December 2022 at 04:50:23 CET] - ::tele 0,47,52,9,54
+[17 December 2022 at 04:50:23 CET] - ::tele 0,47,52,9,54
+[17 December 2022 at 04:50:23 CET] - ::tele 0,47,52,9,54
+[17 December 2022 at 04:50:24 CET] - ::tele 0,47,52,6,39
+[17 December 2022 at 04:50:24 CET] - ::tele 0,47,52,7,39
+[17 December 2022 at 04:50:24 CET] - ::tele 0,47,52,8,39
+[17 December 2022 at 04:50:24 CET] - ::tele 0,47,52,7,24
+[17 December 2022 at 04:50:25 CET] - ::tele 0,47,52,9,11
+[17 December 2022 at 04:50:25 CET] - ::tele 0,47,52,10,10
+[17 December 2022 at 04:50:25 CET] - ::tele 0,47,52,10,10
+[17 December 2022 at 04:50:26 CET] - ::tele 0,47,51,14,60
+[17 December 2022 at 04:50:26 CET] - ::tele 0,47,51,15,60
+[17 December 2022 at 04:50:26 CET] - ::tele 0,47,51,16,60
+[17 December 2022 at 04:50:26 CET] - ::tele 0,47,51,23,46
+[17 December 2022 at 04:50:26 CET] - ::tele 0,47,51,26,48
+[17 December 2022 at 04:50:26 CET] - ::tele 0,47,51,28,49
+[17 December 2022 at 04:50:26 CET] - ::tele 0,47,51,28,49
+[17 December 2022 at 04:50:27 CET] - ::tele 0,47,51,41,39
+[17 December 2022 at 04:50:28 CET] - ::tele 0,47,51,44,42
+[17 December 2022 at 04:50:31 CET] - ::give rake
+[17 December 2022 at 08:36:40 CET] - ::bank 
+[17 December 2022 at 08:51:38 CET] - ::tele 2944 4479
+[17 December 2022 at 08:56:42 CET] - ::bank 
+[17 December 2022 at 09:20:02 CET] - ::var 1653 5
+[17 December 2022 at 09:20:04 CET] - ::var 1653 10
+[17 December 2022 at 09:20:11 CET] - ::varbit 1653 10
+[17 December 2022 at 09:20:13 CET] - ::varbit 1653 5000
+[17 December 2022 at 09:20:15 CET] - ::varbit 1653 10000
+[17 December 2022 at 09:20:24 CET] - ::varbit 1654 10
+[17 December 2022 at 09:20:28 CET] - ::var 1654 10
+[17 December 2022 at 09:20:39 CET] - ::var 542 -1
+[17 December 2022 at 09:20:46 CET] - ::varbit 542 -1
+[17 December 2022 at 09:21:02 CET] - ::varbit 542 0
+[17 December 2022 at 09:21:04 CET] - ::varbit 542 1
+[17 December 2022 at 09:21:07 CET] - ::varbit 542 0
+[17 December 2022 at 09:21:25 CET] - ::varbit 542 1
+[17 December 2022 at 09:21:30 CET] - ::varbit 542 0
+[17 December 2022 at 09:29:18 CET] - ::object 175
+[17 December 2022 at 09:29:33 CET] - ::npc 175
+[17 December 2022 at 09:57:28 CET] - ::inter 1252
+[17 December 2022 at 10:28:17 CET] - ::ecomode 2
+[17 December 2022 at 10:28:24 CET] - ::heal 
+[17 December 2022 at 10:31:02 CET] - ::npc 75
+[17 December 2022 at 10:57:48 CET] - ::bank 
+[17 December 2022 at 10:58:21 CET] - ::bank 
+[17 December 2022 at 11:05:00 CET] - ::npc 75
+[17 December 2022 at 11:16:51 CET] - ::bank 
+[17 December 2022 at 11:18:43 CET] - ::setlevel 0 55
+[17 December 2022 at 11:18:54 CET] - ::setlevel 0 50
+[17 December 2022 at 11:19:00 CET] - ::setlevel 0 62
+[17 December 2022 at 11:19:30 CET] - ::setlevel 12 88
+[17 December 2022 at 11:19:36 CET] - ::setlevel 13 15
+[17 December 2022 at 11:19:43 CET] - ::setlevel 13 17
+[17 December 2022 at 11:23:20 CET] - ::ecomode 0
+[17 December 2022 at 11:23:26 CET] - ::ecomode 1
+[17 December 2022 at 11:23:42 CET] - ::ecomode 2
+[17 December 2022 at 11:23:46 CET] - ::ecomode 1
+[17 December 2022 at 11:28:01 CET] - ::tele 0,47,51,49,47
+[17 December 2022 at 11:28:13 CET] - ::give rkae
+[17 December 2022 at 11:28:16 CET] - ::give rake +1
+[17 December 2022 at 11:33:04 CET] - ::bank 
+[17 December 2022 at 11:38:16 CET] - ::item 560 105000
+[17 December 2022 at 11:39:45 CET] - ::item 15502 1
+[18 December 2022 at 12:53:36 CET] - ::players 
+[18 December 2022 at 12:55:59 CET] - ::ecomode 2
+[18 December 2022 at 12:56:10 CET] - ::item 555 600
+[18 December 2022 at 12:56:13 CET] - ::item 565 200
+[18 December 2022 at 12:56:14 CET] - ::item 560 400
+[18 December 2022 at 12:56:17 CET] - ::item 566 1
+[18 December 2022 at 12:56:18 CET] - ::item 566 99
+[18 December 2022 at 12:56:21 CET] - ::item 8013 25
+[18 December 2022 at 12:56:29 CET] - ::item 15332 1
+[18 December 2022 at 12:56:31 CET] - ::item 3024 2
+[18 December 2022 at 12:56:32 CET] - ::item 6685 2
+[18 December 2022 at 12:56:33 CET] - ::item 3144 2
+[18 December 2022 at 12:56:35 CET] - ::item 15272 100
+[18 December 2022 at 12:56:51 CET] - ::prayers 
+[18 December 2022 at 12:56:54 CET] - ::ancients 
+[18 December 2022 at 01:18:16 CET] - ::varbit 6997 1
+[18 December 2022 at 01:18:18 CET] - ::varbit 6997 0
+[18 December 2022 at 01:18:19 CET] - ::varbit 6997 2
+[18 December 2022 at 01:18:20 CET] - ::varbit 6997 1
+[18 December 2022 at 01:18:30 CET] - ::varbit 6997 0
+[18 December 2022 at 10:07:23 CET] - ::tele 0,44,50,21,36
+[18 December 2022 at 10:07:26 CET] - ::tele 0,44,50,20,42
+[18 December 2022 at 10:07:28 CET] - ::tele 0,44,50,11,36
+[18 December 2022 at 10:07:39 CET] - ::give dragon_pickaxe
+[18 December 2022 at 10:07:47 CET] - ::setlevel 16 70
+[18 December 2022 at 10:07:53 CET] - ::master 
+[18 December 2022 at 10:09:22 CET] - ::tele 1,48,54,10,62
+[18 December 2022 at 10:09:24 CET] - ::tele 2,48,54,10,62
+[18 December 2022 at 10:09:27 CET] - ::object 1
+[18 December 2022 at 10:09:31 CET] - ::tele 2,48,54,12,62
+[18 December 2022 at 10:09:33 CET] - ::tele 2,48,54,11,60
+[18 December 2022 at 10:09:35 CET] - ::tele 2,48,54,12,61
+[18 December 2022 at 10:09:36 CET] - ::tele 2,48,54,12,62
+[18 December 2022 at 10:09:36 CET] - ::tele 2,48,54,10,61
+[18 December 2022 at 10:09:39 CET] - ::object 1
+[18 December 2022 at 10:09:41 CET] - ::tele 2,48,54,11,62
+[18 December 2022 at 10:09:42 CET] - ::tele 3,48,54,11,62
+[18 December 2022 at 10:09:43 CET] - ::tele 3,48,54,10,61
+[18 December 2022 at 10:09:44 CET] - ::tele 3,48,54,10,61
+[18 December 2022 at 10:09:45 CET] - ::tele 3,48,54,10,62
+[18 December 2022 at 10:09:47 CET] - ::object 1
+[18 December 2022 at 10:09:49 CET] - ::tele 2,48,54,10,62
+[18 December 2022 at 10:09:49 CET] - ::tele 2,48,54,10,62
+[18 December 2022 at 10:09:49 CET] - ::tele 1,48,54,10,62
+[18 December 2022 at 10:09:50 CET] - ::tele 0,48,54,10,62
+[18 December 2022 at 10:09:50 CET] - ::tele 0,48,54,10,62
+[18 December 2022 at 10:09:57 CET] - ::tele 0,48,54,13,62
+[18 December 2022 at 10:09:57 CET] - ::tele 0,48,54,10,62
+[18 December 2022 at 10:09:58 CET] - ::tele 1,48,54,10,62
+[18 December 2022 at 10:10:00 CET] - ::object 1
+[18 December 2022 at 10:10:01 CET] - ::tele 2,48,54,10,62
+[18 December 2022 at 10:10:03 CET] - ::object 1
+[18 December 2022 at 10:10:04 CET] - ::tele 3,48,54,10,62
+[18 December 2022 at 10:10:05 CET] - ::object 1
+[18 December 2022 at 10:10:06 CET] - ::tele 2,48,54,10,62
+[18 December 2022 at 10:10:06 CET] - ::tele 2,48,54,10,62
+[18 December 2022 at 10:10:07 CET] - ::tele 1,48,54,10,62
+[18 December 2022 at 10:10:07 CET] - ::tele 1,48,54,10,62
+[18 December 2022 at 10:10:09 CET] - ::tele 1,48,54,14,61
+[18 December 2022 at 10:10:10 CET] - ::tele 0,48,54,14,61
+[18 December 2022 at 10:10:10 CET] - ::tele 0,48,54,14,61
+[18 December 2022 at 10:10:10 CET] - ::tele 0,48,54,14,61
+[18 December 2022 at 10:10:11 CET] - ::tele 0,48,54,14,61
+[18 December 2022 at 10:10:11 CET] - ::tele 0,48,54,14,61
+[18 December 2022 at 10:10:12 CET] - ::tele 1,48,54,14,61
+[18 December 2022 at 10:10:13 CET] - ::tele 0,48,54,14,61
+[18 December 2022 at 10:10:14 CET] - ::tele 1,48,54,14,61
+[18 December 2022 at 10:10:16 CET] - ::tele 0,48,54,14,61
+[18 December 2022 at 10:10:17 CET] - ::tele 0,48,54,14,61
+[18 December 2022 at 10:11:06 CET] - ::tele 3072
+[18 December 2022 at 10:11:11 CET] - ::tele 3072 3515
+[18 December 2022 at 10:11:20 CET] - ::tele 3104 3519
+[18 December 2022 at 10:11:49 CET] - ::tele 0,48,54,31,50
+[18 December 2022 at 10:11:50 CET] - ::tele 0,48,54,33,36
+[18 December 2022 at 10:11:51 CET] - ::tele 0,48,54,27,29
+[18 December 2022 at 10:11:57 CET] - ::tele 0,48,54,21,29
+[18 December 2022 at 10:11:58 CET] - ::tele 0,48,54,17,31
+[18 December 2022 at 10:11:58 CET] - ::tele 0,48,54,15,35
+[18 December 2022 at 10:11:59 CET] - ::tele 0,48,54,16,39
+[18 December 2022 at 12:39:42 CET] - ::tele 0,47,51,48,43
+[18 December 2022 at 12:39:47 CET] - ::empty 
+[18 December 2022 at 12:39:48 CET] - ::give rake
+[18 December 2022 at 12:40:15 CET] - ::give potato_seed +10
+[18 December 2022 at 12:40:18 CET] - ::give seed_diiber
+[18 December 2022 at 12:40:20 CET] - ::give seed_dibber
+[18 December 2022 at 01:01:52 CET] - ::give overload4
+[18 December 2022 at 01:01:56 CET] - ::give overload#4
+[18 December 2022 at 01:02:29 CET] - ::give overload#4
+[18 December 2022 at 01:02:31 CET] - ::give overload4
+[18 December 2022 at 01:02:32 CET] - ::item 15332 1
+[18 December 2022 at 01:05:41 CET] - ::heal 
+[18 December 2022 at 01:19:26 CET] - ::heal 
+[18 December 2022 at 01:50:57 CET] - ::item hea
+[18 December 2022 at 01:50:58 CET] - ::heal 
+[18 December 2022 at 01:50:58 CET] - ::master 
+[18 December 2022 at 01:51:00 CET] - ::item 15332 1
+[18 December 2022 at 01:51:01 CET] - ::heal 
+[18 December 2022 at 03:01:52 CET] - ::l 
+[18 December 2022 at 03:01:55 CET] - ::l 
+[18 December 2022 at 03:02:12 CET] - ::l 
+[18 December 2022 at 03:03:19 CET] - ::l 
+[18 December 2022 at 03:04:48 CET] - ::l 
+[18 December 2022 at 03:08:25 CET] - ::l 
+[18 December 2022 at 03:09:59 CET] - ::l 
+[18 December 2022 at 03:15:15 CET] - ::l 
+[18 December 2022 at 03:15:42 CET] - ::l 
+[18 December 2022 at 03:16:10 CET] - ::l 
+[18 December 2022 at 04:14:09 CET] - ::l 

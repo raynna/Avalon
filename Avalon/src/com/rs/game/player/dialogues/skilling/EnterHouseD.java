@@ -17,7 +17,7 @@ public class EnterHouseD extends Dialogue {
 				player.getHouse().setBuildMode(true);
 			player.getHouse().enterMyHouse();
 		} else if (componentId == OPTION_3) {
-			player.getTemporaryAttributtes().put("enterhouse", Boolean.TRUE);
+			player.getTemporaryAttributes().put("enterhouse", Boolean.TRUE);
 			player.getPackets().sendInputNameScript("Enter the name of the house you'd like to enter:");
 		}
 		end();

@@ -107,7 +107,7 @@ public class LividStore {
 			@Override
 			public void process(Player player) {
 				removeProduce(player);
-				player.getTemporaryAttributtes().put("LIVID_WISH_BURN", 1800000 + Utils.currentTimeMillis());
+				player.getTemporaryAttributes().put("LIVID_WISH_BURN", 1800000 + Utils.currentTimeMillis());
 				player.getDialogueManager().startDialogue("SimpleMessage",
 						"Your wish has come true.. <br>You are less likely to burn fish while cooking for 30 minutes.");
 			}
@@ -118,7 +118,7 @@ public class LividStore {
 			@Override
 			public void process(Player player) {
 				removeProduce(player);
-				player.getTemporaryAttributtes().put("LIVID_WISH_PLANK", 1800000 + Utils.currentTimeMillis());
+				player.getTemporaryAttributes().put("LIVID_WISH_PLANK", 1800000 + Utils.currentTimeMillis());
 				player.getDialogueManager().startDialogue("SimpleMessage",
 						"Your wish has come true.. <br>You now have a 1/10 chance to recieve an extra plank while using Plank make spell for 30 minutes.");
 			}

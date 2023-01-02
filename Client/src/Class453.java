@@ -2,6 +2,7 @@
 /* Class453 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -10,6 +11,12 @@ public class Class453 implements Iterable, Collection {
     Class298 aClass298_5644;
 
     public void add(Class298 class298) {
+//		if (class298 instanceof ScriptEnvironment) {
+//			ScriptEnvironment e = (ScriptEnvironment) class298;
+//			if (e.arguements != null && (int) e.arguements[0] == 4731) {
+//				System.out.println("running script: " + Arrays.toString(e.arguements));
+//			}
+//		}
 	try {
 	    if (null != class298.aClass298_3189)
 		class298.method2839(-1460969981);

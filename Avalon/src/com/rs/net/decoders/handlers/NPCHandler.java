@@ -72,8 +72,6 @@ public class NPCHandler {
         } else {
             player.getPackets().sendGameMessage("It's " + player.grammar(npc) + " " + npc.getName() + ".");
         }
-        // player.getPackets().sendNPCMessage(0, npc,
-        // NPCExamines.getExamine(npc.getId()));
         if (player.dropTesting) {
             try {
                 if (NPCSpawns.removeSpawn(npc)) {
@@ -86,15 +84,13 @@ public class NPCHandler {
             player.getPackets().sendGameMessage("Failed removing spawn!");
         }
         if (Settings.DEBUG) {
-            Logger.log("NPCHandler", "examined npc: " + npcIndex + ", " + npc.getId());
-            player.sm("examined npc: " + npcIndex + ", " + npc.getId());
+            player.sm("NpcId: " + npc.getId() + ", Index: " + npcIndex);
             player.sm(npc.getName() + " size:" + npc.getSize());
-            player.sm("Visible on map? " + npc.getDefinitions().isVisibleOnMap);
-            player.sm("Visible? " + npc.getDefinitions().aBoolean849);
+            player.sm("Visible On Map: " + npc.getDefinitions().isVisibleOnMap);
+            player.sm("Visible:" + npc.getDefinitions().aBoolean849);
             for (int id : npc.getDefinitions().modelIds)
                 player.sm("ModelId: " + id);
-        }//NPC npc, int arrowType, int modelId, boolean saveIcon
-        player.getHintIconsManager().addHintIcon(npc, 1, -1, false);
+        }
     }
 
     public static void handleOption1(final Player player, final InputStream stream) {

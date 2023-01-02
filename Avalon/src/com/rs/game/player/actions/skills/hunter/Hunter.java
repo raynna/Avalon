@@ -67,7 +67,6 @@ public class Hunter {
 
         public static FlyingEntities forItemId(int itemId) {
             for (FlyingEntities imp : FlyingEntities.values()) {
-                System.out.println(imp.name());
                 if (imp.getItemId() == itemId)
                     return imp;
             }

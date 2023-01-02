@@ -83,8 +83,8 @@ public class ItemOnServantD extends Dialogue {
 	}
 
 	private void setFetchAttributes(int type, String title) {
-		player.getTemporaryAttributtes().put("SERVANT_REQUEST_TYPE", type);
-		player.getTemporaryAttributtes().put("SERVANT_REQUEST_ITEM", item);
+		player.getTemporaryAttributes().put("SERVANT_REQUEST_TYPE", type);
+		player.getTemporaryAttributes().put("SERVANT_REQUEST_ITEM", item);
 		player.getPackets().sendInputIntegerScript(true, title);
 		end();
 	}

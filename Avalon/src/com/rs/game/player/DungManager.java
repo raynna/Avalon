@@ -379,13 +379,13 @@ public class DungManager implements Serializable {
 			@Override
 			public void run() {
 				player.getPackets().sendInputNameScript("Enter name:");
-				player.getTemporaryAttributtes().put("DUNGEON_INVITE", Boolean.TRUE);
+				player.getTemporaryAttributes().put("DUNGEON_INVITE", Boolean.TRUE);
 			}
 		});
 	}
 
 	public void acceptInvite() {
-		Player invitedBy = (Player) player.getTemporaryAttributtes().remove("DUNGEON_INVITED_BY");
+		Player invitedBy = (Player) player.getTemporaryAttributes().remove("DUNGEON_INVITED_BY");
 		if (invitedBy == null)
 			return;
 		DungeonPartyManager party = invitedBy.getDungManager().getParty();
@@ -429,7 +429,7 @@ public class DungManager implements Serializable {
 			player.getPackets().sendGameMessage("You can't do that right now.");
 			return;
 		}
-		player.getTemporaryAttributtes().put("DUNGEON_INVITED_BY", p2);
+		player.getTemporaryAttributes().put("DUNGEON_INVITED_BY", p2);
 		player.getInterfaceManager().sendInterface(949);
 		for (int i = 0; i < 5; i++) {
 			Player teamMate = i >= party.getTeam().size() ? null : party.getTeam().get(i);
@@ -450,7 +450,7 @@ public class DungManager implements Serializable {
 			@Override
 			public void run() {
 				p2.getDungManager().expireInvitation();
-				p2.getTemporaryAttributtes().remove("DUNGEON_INVITED_BY");
+				p2.getTemporaryAttributes().remove("DUNGEON_INVITED_BY");
 			}
 
 		});
@@ -470,7 +470,7 @@ public class DungManager implements Serializable {
 				player.getPackets().sendGameMessage("You can't do that right now.");
 				return;
 			}
-			player.getTemporaryAttributtes().put("DUNGEON_INVITED_BY", p2);
+			player.getTemporaryAttributes().put("DUNGEON_INVITED_BY", p2);
 			p2.getInterfaceManager().sendInterface(949);
 			for (int i = 0; i < 5; i++) {
 				Player teamMate = i >= party.getTeam().size() ? null : party.getTeam().get(i);
@@ -491,7 +491,7 @@ public class DungManager implements Serializable {
 				@Override
 				public void run() {
 					p2.getDungManager().expireInvitation();
-					player.getTemporaryAttributtes().remove("DUNGEON_INVITED_BY");
+					player.getTemporaryAttributes().remove("DUNGEON_INVITED_BY");
 				}
 
 			});
@@ -519,7 +519,7 @@ public class DungManager implements Serializable {
 			}
 			expireInvitation();
 			invitingPlayer = p2;
-			p2.getTemporaryAttributtes().put("DUNGEON_INVITE_RECIEVED", player);
+			p2.getTemporaryAttributes().put("DUNGEON_INVITE_RECIEVED", player);
 			player.getPackets().sendGameMessage("Sending party invitation to " + p2.getDisplayName() + "...");
 			p2.getPackets().sendDungeonneringRequestMessage(player);
 		}
@@ -583,7 +583,7 @@ public class DungManager implements Serializable {
 		player.setCloseInterfacesEvent(new Runnable() {
 			@Override
 			public void run() {
-				player.getTemporaryAttributtes().remove("DUNG_FLOOR");
+				player.getTemporaryAttributes().remove("DUNG_FLOOR");
 			}
 		});
 	}
@@ -601,11 +601,11 @@ public class DungManager implements Serializable {
 			return;
 		}
 		player.getPackets().sendIComponentText(947, 765, "" + floor);
-		player.getTemporaryAttributtes().put("DUNG_FLOOR", floor);
+		player.getTemporaryAttributes().put("DUNG_FLOOR", floor);
 	}
 
 	public void confirmFloor() {
-		Integer selectedFloor = (Integer) player.getTemporaryAttributtes().remove("DUNG_FLOOR");
+		Integer selectedFloor = (Integer) player.getTemporaryAttributes().remove("DUNG_FLOOR");
 		player.stopAll();
 		if (party == null) {
 			player.getPackets().sendGameMessage("You must be in a party to do that.");
@@ -647,7 +647,7 @@ public class DungManager implements Serializable {
 		player.setCloseInterfacesEvent(new Runnable() {
 			@Override
 			public void run() {
-				player.getTemporaryAttributtes().remove("DUNG_COMPLEXITY");
+				player.getTemporaryAttributes().remove("DUNG_COMPLEXITY");
 			}
 		});
 	}
@@ -661,7 +661,7 @@ public class DungManager implements Serializable {
 			player.getPackets().sendGameMessage("A member in your party can't do this complexity.");
 			return;
 		}
-		Integer selectedComplexity = (Integer) player.getTemporaryAttributtes().remove("DUNG_COMPLEXITY");
+		Integer selectedComplexity = (Integer) player.getTemporaryAttributes().remove("DUNG_COMPLEXITY");
 		if (selectedComplexity != null)
 			markComplexity(selectedComplexity, false);
 		markComplexity(complexity, true);
@@ -669,11 +669,11 @@ public class DungManager implements Serializable {
 		int penalty = complexity == 6 ? 0 : ((6 - complexity) * 5 + 25);
 		player.getPackets().sendIComponentText(938, 42, "" + complexity);
 		player.getPackets().sendIComponentText(938, 119, penalty + "% XP Penalty");
-		player.getTemporaryAttributtes().put("DUNG_COMPLEXITY", complexity);
+		player.getTemporaryAttributes().put("DUNG_COMPLEXITY", complexity);
 	}
 
 	public void confirmComplexity() {
-		Integer selectedComplexity = (Integer) player.getTemporaryAttributtes().remove("DUNG_COMPLEXITY");
+		Integer selectedComplexity = (Integer) player.getTemporaryAttributes().remove("DUNG_COMPLEXITY");
 		player.stopAll();
 		if (selectedComplexity == null)
 			return;

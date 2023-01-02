@@ -155,7 +155,7 @@ public class CarrierTravel {
 	}
 
 	public static boolean sendCarrier(final Player player, final Carrier ship, int shipIndex, boolean returning) {
-		if (player.getTemporaryAttributtes().get("using_carrier") != null)
+		if (player.getTemporaryAttributes().get("using_carrier") != null)
 			return false;
 		int cost = ship.getCosts()[shipIndex];
 		if (cost != -1) {
@@ -192,7 +192,7 @@ public class CarrierTravel {
 		final WorldTile tile = returning ? ship.getOrigon() : ship.getDestination();
 		player.lock();
 		player.getPackets().sendMusicEffect(650);
-		player.getTemporaryAttributtes().put("using_carrier", true);
+		player.getTemporaryAttributes().put("using_carrier", true);
 		FadingScreen.fade(player, new Runnable() {
 
 			@Override
@@ -202,7 +202,7 @@ public class CarrierTravel {
 				player.closeInterfaces();
 				if (isFare)
 					player.getVarsManager().sendVar(75, 0);
-				player.getTemporaryAttributtes().remove("using_carrier");
+				player.getTemporaryAttributes().remove("using_carrier");
 			}
 		});
 		return true;

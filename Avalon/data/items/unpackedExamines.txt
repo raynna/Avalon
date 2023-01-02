@@ -1,4 +1,4 @@
-﻿0 - The body of a Dwarf savaged by Goblins.
+0 - The body of a Dwarf savaged by Goblins.
 1 - Good for repairing a broken cannon.
 2 - Ammo for the Dwarf Cannon.
 3 - Construction notes for Dwarf cannon ammo.

@@ -364,7 +364,7 @@ public class HouseControler extends Controler {
 			else if (packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET)
 				TabletMaking.handleTabletCreation(player, componentId, 10);
 			else if (packetId == WorldPacketsDecoder.ACTION_BUTTON4_PACKET) {
-				player.getTemporaryAttributtes().put("create_tab_X_component", componentId);
+				player.getTemporaryAttributes().put("create_tab_X_component", componentId);
 				player.getPackets().sendRunScript(108, new Object[]
 				{ "Enter Amount:" });
 			} else if (packetId == WorldPacketsDecoder.ACTION_BUTTON5_PACKET)

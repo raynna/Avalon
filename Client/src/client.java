@@ -54,7 +54,10 @@ public final class client extends Class291 {
     static boolean FPS;
     static boolean Godswords;
     static boolean Snow;
+
     static boolean Zoom;
+    static int zoomDelta = -1;
+
     static boolean drag;
     static int dragValue = 20;
     static boolean clientSession;
@@ -1485,14 +1488,33 @@ public final class client extends Class291 {
 				    aClass453_8893.add(class298_sub46);
 				}
 			    }
-			    if (class105.aBoolean1294 && bool_70_ && null != class105.anObjectArray1245) {
-				ScriptEnvironment class298_sub46 = new ScriptEnvironment();
-				class298_sub46.aBoolean7533 = true;
-				class298_sub46.aClass105_7525 = class105;
-				class298_sub46.anInt7526 = (Class165.aClass319_6366.method3894((byte) 71) - i_62_) * 622624491;
-				class298_sub46.anInt7527 = (Class165.aClass319_6366.method3883((byte) -47) - i_63_) * 335112545;
-				class298_sub46.arguements = class105.anObjectArray1245;
-				aClass453_8893.add(class298_sub46);
+			    if (class105.aBoolean1294 && bool_70_ && null != class105.onMouseMoveListener) {
+                    if (class105.onMouseMoveListener != null && (int) class105.onMouseMoveListener[0] == 4731 && Zoom) {
+                        int ifPacked = -440872681 * class105.ihash;
+                        int ifId = ifPacked >> 16;
+                        Interface topLvlInterface = null;
+                        if (ifId == 746) {
+                            topLvlInterface = (Interface) client.aClass437_8841.method5812(ifId << 16 | 28);
+                        } else if (ifId == 548) {
+                            topLvlInterface = (Interface) client.aClass437_8841.method5812(ifId << 16 | 27);
+                        }
+                        if (zoomDelta != -1 && topLvlInterface == null) {
+                            zoomValue += zoomDelta;
+                            int MIN_ZOOM = 125;
+                            int MAX_ZOOM = 600;
+                            zoomValue = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, zoomValue));
+                            Class305.method3752(184, client.zoomValue, 644551429);
+                            zoomDelta = -1;
+                            System.out.println(class105.ihash);
+                        }
+			        }
+                    ScriptEnvironment class298_sub46 = new ScriptEnvironment();
+                    class298_sub46.aBoolean7533 = true;
+                    class298_sub46.aClass105_7525 = class105;
+                    class298_sub46.anInt7526 = (Class165.aClass319_6366.method3894((byte) 71) - i_62_) * 622624491;
+                    class298_sub46.anInt7527 = (Class165.aClass319_6366.method3883((byte) -47) - i_63_) * 335112545;
+                    class298_sub46.arguements = class105.onMouseMoveListener;
+                    aClass453_8893.add(class298_sub46);
 			    }
 			    if (class105.aBoolean1294 && !bool_70_) {
 				class105.aBoolean1294 = false;

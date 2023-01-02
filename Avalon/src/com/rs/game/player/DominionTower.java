@@ -1,8 +1,6 @@
 package com.rs.game.player;
 
 import java.io.Serializable;
-import java.util.HashMap;
-import java.util.Map;
 
 import com.rs.cache.loaders.ClientScriptMap;
 import com.rs.cache.loaders.GeneralRequirementMap;
@@ -693,9 +691,9 @@ public final class DominionTower implements Serializable {
     }
 
     public void addFactor(int value) {
-        if (player.getVarBitList().get(9990) == null)
-            player.getVarBitList().put(9990, 0);
-        int factor = player.getVarBitList().get(9990).intValue();
+        if (player.getSavedVarBits().get(9990) == null)
+            player.getSavedVarBits().put(9990, 0);
+        int factor = player.getSavedVarBits().get(9990).intValue();
         factor += value;
         player.getVarsManager().sendVarBit(9990, factor, true);
     }
@@ -705,9 +703,9 @@ public final class DominionTower implements Serializable {
     }
 
     public int getDominionFactor() {
-        if (player.getVarBitList().get(9990) == null)
-            player.getVarBitList().put(9990, 0);
-        int factor = player.getVarBitList().get(9990).intValue();
+        if (player.getSavedVarBits().get(9990) == null)
+            player.getSavedVarBits().put(9990, 0);
+        int factor = player.getSavedVarBits().get(9990).intValue();
         return factor;
     }
 

@@ -123,6 +123,7 @@ public final class ObjectHandler {
             return;
         }
         final WorldObject object = mapObject;
+        if (option != -1)
         player.stopAll();
         if (forceRun)
             player.setRun(forceRun);
@@ -690,7 +691,7 @@ public final class ObjectHandler {
                     return;
                 }
                 if (object.getId() == 26342) {
-                	if (player.getInventory().contains(new Item(954)) && player.getVarBitList().get(3932) == null) {
+                	if (player.getInventory().contains(new Item(954)) && player.getSavedVarBits().get(3932) == null) {
                 		player.getVarsManager().sendVarBit(3932, 1, true);
                     	player.getInventory().removeItems(new Item(954));
                     	player.sm("You tie the rope to the enterance.");
@@ -748,7 +749,7 @@ public final class ObjectHandler {
                     return;
                 }
                 if (object.getId() == 29736) {// leverhere
-                    if (player.getVarBitList().containsKey(object.getConfigByFile())) {
+                    if (player.getSavedVarBits().containsKey(object.getConfigByFile())) {
                         player.getPackets().sendGameMessage("You have already pulled this lever.");
                         return;
                     }
@@ -757,7 +758,7 @@ public final class ObjectHandler {
                     return;
                 }
                 if (object.getId() == 29624) {
-                    if (!player.getVarBitList().containsKey(object.getConfigByFile())) {
+                    if (!player.getSavedVarBits().containsKey(object.getConfigByFile())) {
                         player.getPackets().sendGameMessage("This gate is locked.");
                         return;
                     }
@@ -773,7 +774,7 @@ public final class ObjectHandler {
                 }
 
                 if (object.getId() == 29734) {
-                    if (player.getVarBitList().containsKey(object.getConfigByFile())) {
+                    if (player.getSavedVarBits().containsKey(object.getConfigByFile())) {
                         player.getPackets().sendGameMessage("You have already opened this chest.");
                         return;
                     }
@@ -2015,7 +2016,6 @@ public final class ObjectHandler {
         if (Settings.DEBUG) {
             int offsetX = object.getX() - player.getX();
             int offsetY = object.getY() - player.getY();
-            System.out.println("Offsets" + offsetX + " , " + offsetY);
         }
         if (object.getId() == 29735) {
             player.useStairs(-1, new WorldTile(3140, 4230, 2), 1, 2);
@@ -2026,8 +2026,7 @@ public final class ObjectHandler {
                 "It's " + player.grammar(object) + " " + object.getDefinitions().name + ".");
 
         if (Settings.DEBUG)
-            Logger.log("ObjectHandler",
-                    "examined object id : " + object.getId() + ", x" + object.getX() + ", y" + object.getY() + ", z"
+           System.out.println("ObjectHandler: examined object id : " + object.getId() + ", x" + object.getX() + ", y" + object.getY() + ", z"
                             + object.getPlane() + ", t" + object.getType() + ", r" + object.getRotation() + ", "
                             + object.getDefinitions().name + ", varbit: " + object.getConfigByFile() + ", var: "
                             + object.getConfig());

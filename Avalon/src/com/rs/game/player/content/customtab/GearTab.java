@@ -12,9 +12,9 @@ public class GearTab extends CustomTab {
 
 	public static void refresh(Player player) {
 		int i = 3;
-		player.getTemporaryAttributtes().put("CUSTOMTAB", 3);
-		player.getTemporaryAttributtes().remove("ACHIEVEMENTTAB");
-		player.getTemporaryAttributtes().remove("SELECTEDGEAR");
+		player.getTemporaryAttributes().put("CUSTOMTAB", 3);
+		player.getTemporaryAttributes().remove("ACHIEVEMENTTAB");
+		player.getTemporaryAttributes().remove("SELECTEDGEAR");
 		player.getPackets().sendIComponentText(3002, 25, "Gear Setups");
 		player.getPackets().sendHideIComponent(3002, PURPLE_STAR_COMP, false);
 		player.getPackets().sendHideIComponent(3002, YELLOW_STAR_COMP, false);
@@ -41,12 +41,12 @@ public class GearTab extends CustomTab {
 			player.getPackets().sendHideIComponent(3002, i, true);
 		}
 		if (p2 == null) {
-			player.getTemporaryAttributtes().remove("OTHERPRESET_NAME");
+			player.getTemporaryAttributes().remove("OTHERPRESET_NAME");
 		}
 		player.getPackets().sendHideIComponent(3002, 24, true);
-		player.getTemporaryAttributtes().put("CUSTOMTAB", 3);
-		player.getTemporaryAttributtes().remove("ACHIEVEMENTTAB");
-		player.getTemporaryAttributtes().remove("SELECTEDGEAR");
+		player.getTemporaryAttributes().put("CUSTOMTAB", 3);
+		player.getTemporaryAttributes().remove("ACHIEVEMENTTAB");
+		player.getTemporaryAttributes().remove("SELECTEDGEAR");
 		player.getPackets().sendHideIComponent(3002, BACK_BUTTON, false);
 		player.getPackets().sendHideIComponent(3002, FORWARD_BUTTON, true);
 		player.getPackets().sendHideIComponent(3002, BLUE_STAR_COMP, false);
@@ -97,7 +97,7 @@ public class GearTab extends CustomTab {
 			return;
 		}
 		if (compId == 60) {
-			Integer selectedGear = (Integer) player.getTemporaryAttributtes().get("SELECTEDGEAR");
+			Integer selectedGear = (Integer) player.getTemporaryAttributes().get("SELECTEDGEAR");
 			if (selectedGear != null) {
 				for (Entry<String, Preset> gear : p2 != null ? p2.getPresetManager().PRESET_SETUPS.entrySet()
 						: player.getPresetManager().PRESET_SETUPS.entrySet()) {
@@ -118,7 +118,7 @@ public class GearTab extends CustomTab {
 			}
 		}
 		if (compId == 59) {
-			Integer selectedGear = (Integer) player.getTemporaryAttributtes().get("SELECTEDGEAR");
+			Integer selectedGear = (Integer) player.getTemporaryAttributes().get("SELECTEDGEAR");
 			if (selectedGear != null) {
 				player.getPackets().sendGameMessage("Overwrite setup?");
 				return;
@@ -129,7 +129,7 @@ public class GearTab extends CustomTab {
 			}
 		}
 		if (compId == 26) {
-			Integer selectedGear = (Integer) player.getTemporaryAttributtes().get("SELECTEDGEAR");
+			Integer selectedGear = (Integer) player.getTemporaryAttributes().get("SELECTEDGEAR");
 			if (selectedGear != null) {
 				for (Entry<String, Preset> gear : player.getPresetManager().PRESET_SETUPS.entrySet()) {
 					if (gear != null) {
@@ -151,18 +151,18 @@ public class GearTab extends CustomTab {
 			if (gear != null) {
 				player.getPackets().sendIComponentText(3002, i, gear.getKey());
 				if (compId == i) {
-					Integer selectedGear = (Integer) player.getTemporaryAttributtes().get("SELECTEDGEAR");
+					Integer selectedGear = (Integer) player.getTemporaryAttributes().get("SELECTEDGEAR");
 					if (selectedGear != null) {
 						if (gear.getValue().getId(p2 != null ? p2 : player) == selectedGear) {
-							player.getTemporaryAttributtes().remove("SELECTEDGEAR");
+							player.getTemporaryAttributes().remove("SELECTEDGEAR");
 							player.getPackets().sendIComponentText(3002, i, gear.getKey());
 						} else {
-							player.getTemporaryAttributtes().put("SELECTEDGEAR",
+							player.getTemporaryAttributes().put("SELECTEDGEAR",
 									gear.getValue().getId(p2 != null ? p2 : player));
 							player.getPackets().sendIComponentText(3002, i, gear.getKey() + "<img=12>");
 						}
 					} else {
-						player.getTemporaryAttributtes().put("SELECTEDGEAR",
+						player.getTemporaryAttributes().put("SELECTEDGEAR",
 								gear.getValue().getId(p2 != null ? p2 : player));
 						player.getPackets().sendIComponentText(3002, i, gear.getKey() + "<img=12>");
 					}

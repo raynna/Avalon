@@ -453,10 +453,10 @@ public class AncientMagicks {
 	public static void castSpell(Player player, int spellId, boolean autocast) {
 		int itemId = -1;
 		int slotId = -1;
-		if (player.getTemporaryAttributtes().get("non_combat_spell_itemid") != null)
-			itemId = (int) player.getTemporaryAttributtes().get("non_combat_spell_itemid");
-		if (player.getTemporaryAttributtes().get("non_combat_spell_slotid") != null)
-			slotId = (int) player.getTemporaryAttributtes().get("non_combat_spell_slotid");
+		if (player.getTemporaryAttributes().get("non_combat_spell_itemid") != null)
+			itemId = (int) player.getTemporaryAttributes().get("non_combat_spell_itemid");
+		if (player.getTemporaryAttributes().get("non_combat_spell_slotid") != null)
+			slotId = (int) player.getTemporaryAttributes().get("non_combat_spell_slotid");
 		RSAncientSpellStore s = RSAncientSpellStore.getSpell(spellId);
 		if (s == null)
 			return;

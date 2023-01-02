@@ -52,6 +52,7 @@ import com.rs.game.player.content.shootingstar.ShootingStar;
 import com.rs.game.player.controlers.EdgevillePvPControler;
 import com.rs.game.player.controlers.WildernessControler;
 import com.rs.game.route.Flags;
+import com.rs.game.timer.TimerRepository;
 import com.rs.utils.AntiFlood;
 import com.rs.utils.IPBanL;
 import com.rs.utils.Logger;
@@ -67,6 +68,8 @@ public final class World {
     public static int exiting_delay;
     public static long exiting_start;
 
+
+    private static TimerRepository timers = new TimerRepository();
     private transient static final EntityList<Player> players = new EntityList<Player>(Settings.PLAYERS_LIMIT);
 
     private static final EntityList<NPC> npcs = new EntityList<NPC>(Settings.NPCS_LIMIT);
@@ -105,7 +108,7 @@ public final class World {
         return result;
     }
 
-    public static final void init() {
+    public static void init() {
         addRandomMessagesTask();
         addRestoreShopItemsTask();
         addDegradeShopItemsTask();
@@ -2741,6 +2744,34 @@ public final class World {
             }
         }
         AntiFlood.remove(player.getSession().getIP());
+    }
+
+    public enum MessageType {
+
+        EVENT("<img=7><col=ff0000>Event: "),
+        NEWS("<img=7><col=ff0000>News: "),
+        SERVER("<img=7><col=ff0000>Server: "),
+        RARE_DROP("<img=7><col=36648b>Drop: ");//TODO ALL TYPES
+
+        private String message;
+
+        MessageType(String message) {
+            this.message = message;
+        }
+
+        public String getMessage() {
+            return message;
+        }
+    }
+
+    public static void sendWorldMessage(MessageType type, String message) {
+        StringBuilder builder = new StringBuilder();
+        builder.append(type.getMessage()).append(message);
+        for (Player p : World.getPlayers()) {
+            if (p == null || !p.isRunning())
+                continue;
+            p.getPackets().sendGameMessage(builder.toString());
+        }
     }
 
     public static void sendWorldMessage(String message, boolean forStaff) {

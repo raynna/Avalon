@@ -21,7 +21,7 @@ public class Dream {
 			player.getPackets().sendGameMessage("You can't dream right now.");
 			return;
 		}
-		if (player.getTemporaryAttributtes().get("Dreaming") == Boolean.TRUE) {
+		if (player.getTemporaryAttributes().get("Dreaming") == Boolean.TRUE) {
 			player.getPackets().sendGameMessage("You are already dreaming!");
 			return;
 		}
@@ -41,7 +41,7 @@ public class Dream {
 		WorldTasksManager.schedule(new WorldTask() {
 			@Override
 			public void run() {
-				if (player.getTemporaryAttributtes().get("Dreaming") == Boolean.TRUE) {
+				if (player.getTemporaryAttributes().get("Dreaming") == Boolean.TRUE) {
 					player.setNextForceTalk(new ForceTalk("Zzzzz..."));
 					player.animate(new Animation(6296));
 					player.gfx(new Graphics(277));

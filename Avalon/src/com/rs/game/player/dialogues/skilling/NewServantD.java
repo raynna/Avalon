@@ -105,8 +105,8 @@ public class NewServantD extends Dialogue {
 			if (componentId == (stageInt == 10 ? OPTION_4 : OPTION_5)) {
 				sendOptionsDialogue("What would you like from the bank?", getPageOptions());
 			} else {
-				player.getTemporaryAttributtes().put("SERVANT_REQUEST_TYPE", 0);
-				player.getTemporaryAttributtes().put("SERVANT_REQUEST_ITEM", HouseConstants.BANKABLE_ITEMS[page][componentId == 11 ? 0 : componentId - 12]);
+				player.getTemporaryAttributes().put("SERVANT_REQUEST_TYPE", 0);
+				player.getTemporaryAttributes().put("SERVANT_REQUEST_ITEM", HouseConstants.BANKABLE_ITEMS[page][componentId == 11 ? 0 : componentId - 12]);
 				player.getPackets().sendInputIntegerScript(false, "How many would you like?");
 				end();
 			}

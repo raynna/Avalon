@@ -653,7 +653,7 @@ public final class Skills implements Serializable {
                     World.sendWorldMessage(
                             HexColours.Colour.GREEN.getHex()+"<img=5>News: " + player.getDisplayName() + " has achieved a total level of " + i + ".",
                             false);
-                player.getTemporaryAttributtes().put("MILESTONE", index);
+                player.getTemporaryAttributes().put("MILESTONE", index);
                 if (index >= 10) {
                     if (Settings.discordEnabled) {
                         // Launcher.getDiscordBot().getChannelByName("public-chat").sendMessage(
@@ -669,7 +669,7 @@ public final class Skills implements Serializable {
         for (int c : combatLevels) {
             if (oldCombat < c && getCombatLevelWithSummoning() >= c) {
                 player.getPackets().sendGameMessage("You've reached the Combat level of  " + c + ".");
-                player.getTemporaryAttributtes().put("COMBATMILESTONE", index);
+                player.getTemporaryAttributes().put("COMBATMILESTONE", index);
                 if (oldCombat - getSummoningCombatLevel() < 126 && getCombatLevel() == 126 || getCombatLevelWithSummoning() == 138)
                     World.sendWorldMessage(HexColours.Colour.ORANGE.getHex()+"<img=5><>News: " + player.getDisplayName() + " has achieved combat level " + c + "!", false);
             }
@@ -696,7 +696,7 @@ public final class Skills implements Serializable {
         int[] slayerCombatLevels = {3, 20, 40, 70, 85, 100 };
         for (int c : slayerCombatLevels) {
             if (oldCombat < c && getCombatLevelWithSummoning() >= c) {
-                player.getTemporaryAttributtes().put("SLAYERCOMBATMILESTONE", index);
+                player.getTemporaryAttributes().put("SLAYERCOMBATMILESTONE", index);
             }
             index++;
         }
@@ -1093,42 +1093,42 @@ public final class Skills implements Serializable {
     }
 
     public static int getMilestone(Player player) {
-        Integer level = (Integer) player.getTemporaryAttributtes().get("MILESTONE");
+        Integer level = (Integer) player.getTemporaryAttributes().get("MILESTONE");
         if (level == null || level < 0)
             return -1;
         return level;
     }
 
     public static int getCombatMilestone(Player player) {
-        Integer level = (Integer) player.getTemporaryAttributtes().get("COMBATMILESTONE");
+        Integer level = (Integer) player.getTemporaryAttributes().get("COMBATMILESTONE");
         if (level == null || level < 0)
             return -1;
         return level;
     }
 
     public static int getSlayerCombatMilestone(Player player) {
-        Integer level = (Integer) player.getTemporaryAttributtes().get("SLAYERCOMBATMILESTONE");
+        Integer level = (Integer) player.getTemporaryAttributes().get("SLAYERCOMBATMILESTONE");
         if (level == null || level < 0)
             return -1;
         return level;
     }
 
     public static int getOldLevel(Player player, int skillId) {
-        Integer level = (Integer) player.getTemporaryAttributtes().get("LEVELUP[" + skillId + "]:OLDLEVEL");
+        Integer level = (Integer) player.getTemporaryAttributes().get("LEVELUP[" + skillId + "]:OLDLEVEL");
         if (level == null || level < 0)
             return -1;
         return level;
     }
 
     public static int getNewLevel(Player player, int skillId) {
-        Integer level = (Integer) player.getTemporaryAttributtes().get("LEVELUP[" + skillId + "]:NEWLEVEL");
+        Integer level = (Integer) player.getTemporaryAttributes().get("LEVELUP[" + skillId + "]:NEWLEVEL");
         if (level == null || level < 0)
             return -1;
         return level;
     }
 
     public static int getGainedLevels(Player player, int skillId) {
-        Integer level = (Integer) player.getTemporaryAttributtes().get("LEVELUP[" + skillId + "]:GAINEDLEVELS");
+        Integer level = (Integer) player.getTemporaryAttributes().get("LEVELUP[" + skillId + "]:GAINEDLEVELS");
         if (level == null)
             return 0;
         return level;
@@ -1141,7 +1141,7 @@ public final class Skills implements Serializable {
         int oldLevel = getOldLevel(player, skillId);
         int newLevel = getNewLevel(player, skillId);
         int gainedLevels = getGainedLevels(player, skillId);
-        int milestone = getMilestone(player);
+        int milestone = getMilestone(player);//all this to handle it good shit nice to see the little details thats what i do the best
         int combatMilestone = getCombatMilestone(player);
         int slayerCombatMilestones = getSlayerCombatMilestone(player);
         player.getPackets().sendGlobalConfig(gainedLevelConfig, gainedLevels + newLevel);

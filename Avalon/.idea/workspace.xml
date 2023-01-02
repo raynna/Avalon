@@ -1,57 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Client:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a08881de-7812-4170-b954-a1fd47c840d7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/libraries/clientlibs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/apache_log4j_2_13_1_bin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/apache_log4j_2_13_1_bin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/libs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="a08881de-7812-4170-b954-a1fd47c840d7" name="Changes" comment="Fixed Examines">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Client_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rs/game/Keys.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rs/game/timer/Indexer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rs/game/timer/Timer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rs/game/timer/TimerKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/rs/game/timer/TimerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Avalon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Avalon.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/main_file_cache.dat2" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/main_file_cache.dat2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cache/main_file_cache.idx255" beforeDir="false" afterPath="$PROJECT_DIR$/data/cache/main_file_cache.idx255" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/characters/Andreas.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/characters/Andreas.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/characters/Andreas.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/iplog/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/iplog/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/logs/chat/andreas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/chat/andreas.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/logs/commands/admin/andreas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/commands/admin/andreas.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/game/cityhandler/CityEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/cityhandler/CityEventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/tools/InterfaceRemover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/tools/InterfaceRemover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/tools/InterfaceReplacer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/tools/InterfaceReplacer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/utils/WeaponTypesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/utils/WeaponTypesLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/libraries/libs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/libraries/libs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/candy_bar_back.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/candy_bar_end.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/candy_bar_middle.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/candy_bar_outline_bottom.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/candy_bar_outline_left.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/candy_bar_outline_right.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/candy_bar_outline_top.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/client_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/forum.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/framespersecond.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/ghostBg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/ghostBg1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/ghostBg2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/hiscore.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/information.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/loadbar_body_fill.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/loadbar_body_left.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/loadbar_body_right.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/settings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/store.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/bin/resources/vote.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/src/Class305.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/Class305.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/logs/kills/andreas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/kills/andreas.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/CreationKiln.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/CreationKiln.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/minigames/clanwars/RequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/minigames/clanwars/RequestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/minigames/lividfarm/LividStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/minigames/lividfarm/LividStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/npc/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/npc/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/npc/combat/impl/dung/GluttonousBehemothCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/npc/combat/impl/dung/GluttonousBehemothCombat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/npc/combat/impl/dung/RammernautCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/npc/combat/impl/dung/RammernautCombat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/npc/combat/impl/dung/ShadowForgerIhlakhizanCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/npc/combat/impl/dung/ShadowForgerIhlakhizanCombat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/npc/combat/impl/dung/UnholyCursebearerCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/npc/combat/impl/dung/UnholyCursebearerCombat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/npc/drops/MobRewardNodeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/npc/drops/MobRewardNodeBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/npc/drops/MobRewardRDT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/npc/drops/MobRewardRDT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/npc/dungeonnering/LuminscentIcefiend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/npc/dungeonnering/LuminscentIcefiend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/npc/dungeonnering/ShadowForgerIhlakhizan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/npc/dungeonnering/ShadowForgerIhlakhizan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/npc/others/TormentedDemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/npc/others/TormentedDemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/objects/impl/CanoeStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/objects/impl/CanoeStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/objects/impl/MillHopper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/objects/impl/MillHopper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/objects/impl/SaradominShortcuts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/objects/impl/SaradominShortcuts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/DominionTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/DominionTower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/DungManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/DungManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/PkPointsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/PkPointsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/PriceCheckManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/PriceCheckManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/Skills.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/Skills.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/VarsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/VarsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/ObjectOption1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/ObjectOption1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/AncientMagicks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/AncientMagicks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/LunarMagicks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/LunarMagicks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/Magic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/Magic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/ModernMagicks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/ModernMagicks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/PlayerCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/PlayerCombat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/lunarspells/Dream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/lunarspells/Dream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/lunarspells/HealOther.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/lunarspells/HealOther.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/lunarspells/Humidify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/lunarspells/Humidify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/lunarspells/MagicImbue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/lunarspells/MagicImbue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/lunarspells/PlankMake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/lunarspells/PlankMake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/modernspells/ChargeOrb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/modernspells/ChargeOrb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/modernspells/RSModernCombatSpells.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/combat/modernspells/RSModernCombatSpells.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/skills/construction/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/skills/construction/House.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/skills/construction/HouseControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/skills/construction/HouseControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/skills/construction/Sawmill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/skills/construction/Sawmill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/skills/construction/TabletMaking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/skills/construction/TabletMaking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/skills/farming/FarmingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/skills/farming/FarmingManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/skills/prayer/Burying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/skills/prayer/Burying.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/skills/runecrafting/CombinationRunes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/skills/runecrafting/CombinationRunes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/actions/skills/smithing/DungeoneeringSmithing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/actions/skills/smithing/DungeoneeringSmithing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/Canoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/Canoes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/CarrierTravel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/CarrierTravel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/Commands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/customshops/CustomStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/customshops/CustomStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/customshops/TradeStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/customshops/TradeStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/customtab/AchievementsTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/customtab/AchievementsTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/customtab/GearTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/customtab/GearTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/customtab/JournalTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/customtab/JournalTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/customtab/QuestTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/customtab/QuestTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/customtab/SettingsTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/customtab/SettingsTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/customtab/TeleportTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/customtab/TeleportTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/dungeoneering/DungeonConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/dungeoneering/DungeonConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/dungeoneering/DungeonManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/dungeoneering/DungeonManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/dungeoneering/DungeonResourceShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/dungeoneering/DungeonResourceShop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/dungeoneering/skills/DungeoneeringFarming.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/dungeoneering/skills/DungeoneeringFarming.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/content/tasksystem/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/content/tasksystem/TaskManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/controlers/DungeonControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/controlers/DungeonControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/controlers/FightKiln.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/controlers/FightKiln.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/controlers/construction/SawmillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/controlers/construction/SawmillController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/dialogues/skilling/EnterHouseD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/dialogues/skilling/EnterHouseD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/dialogues/skilling/ItemOnServantD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/dialogues/skilling/ItemOnServantD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/game/player/dialogues/skilling/NewServantD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/game/player/dialogues/skilling/NewServantD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/net/decoders/WorldPacketsDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/net/decoders/WorldPacketsDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/net/decoders/handlers/ButtonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/net/decoders/handlers/ButtonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/net/decoders/handlers/InventoryOptionsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/net/decoders/handlers/InventoryOptionsHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rs/net/decoders/handlers/ObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/net/decoders/handlers/ObjectHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,21 +116,50 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Iy21Hufnu6YudU6xlWnK90dAEh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
-  }
-}]]></component>
-  <component name="RunManager">
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Users\andre\Desktop\Avalon\Avalon\data\tools\information" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.rs.game.timer" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Launcher">
     <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.rs.Launcher" />
       <module name="Avalon" />
@@ -96,9 +173,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Loader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Loader" />
+      <module name="Client" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Launcher" />
+        <item itemvalue="Application.Loader" />
       </list>
     </recent_temporary>
   </component>
@@ -111,6 +196,65 @@
       <option name="presentableId" value="Default" />
       <updated>1671139288837</updated>
     </task>
+    <task id="LOCAL-00001" summary="Some changes on the health overlay&#10;Some changes to Pvp instance interface">
+      <created>1671282538916</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671282538916</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Some client changes">
+      <created>1671316466681</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671316466681</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fixed Item Examines">
+      <created>1671319310295</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671319310295</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed Examines">
+      <created>1671323019505</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671323019505</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Some changes on the health overlay&#10;Some changes to Pvp instance interface" />
+    <MESSAGE value="Some client changes" />
+    <MESSAGE value="Fixed Item Examines" />
+    <MESSAGE value="Fixed Examines" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Examines" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/rs/game/Hit.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

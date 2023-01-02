@@ -235,7 +235,6 @@ public class StaffOptions extends Dialogue {
 				break;
 			}
 			try {
-				System.out.println("Saving " + targ.toString() + " to " + acc.toPath());
 				SerializableFilesManager.storeSerializableClass(targ, acc);
 			} catch (IOException e) {
 				e.printStackTrace();

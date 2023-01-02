@@ -1057,7 +1057,7 @@ public class Magic {
 				player.getPackets().sendGameMessage("You need a Defence level of 40 for this spell");
 				return;
 			}
-			Long lastVeng = (Long) player.getTemporaryAttributtes().get("LAST_VENG");
+			Long lastVeng = (Long) player.getTemporaryAttributes().get("LAST_VENG");
 			if (lastVeng != null && lastVeng + 30000 > Utils.currentTimeMillis()) {
 				player.getPackets().sendGameMessage("Players may only cast vengeance once every 30 seconds.");
 				return;
@@ -1076,7 +1076,7 @@ public class Magic {
 				player.getPackets().sendGameMessage("Your Magic level is not high enough for this spell.");
 				return;
 			}
-			lastVeng = (Long) player.getTemporaryAttributtes().get("LAST_VENG");
+			lastVeng = (Long) player.getTemporaryAttributes().get("LAST_VENG");
 			if (lastVeng != null && lastVeng + 30000 > Utils.currentTimeMillis()) {
 				player.getPackets().sendGameMessage("Players may only cast vengeance once every 30 seconds.");
 				return;

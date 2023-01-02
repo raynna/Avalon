@@ -519,16 +519,16 @@ public class ModernMagicks {
 		int objectId = -1;
 		FloorItem floorItem = null;
 		Entity target = null;
-		if (player.getTemporaryAttributtes().get("spell_itemid") != null)
-			itemId = (int) player.getTemporaryAttributtes().get("spell_itemid");
-		if (player.getTemporaryAttributtes().get("spell_slotid") != null)
-			slotId = (int) player.getTemporaryAttributtes().get("spell_slotid");
-		if (player.getTemporaryAttributtes().get("spell_objectid") != null)
-			objectId = (int) player.getTemporaryAttributtes().get("spell_objectid");
-		if (player.getTemporaryAttributtes().get("spell_target") != null)
-			target = (Entity) player.getTemporaryAttributtes().get("spell_target");
-		if (player.getTemporaryAttributtes().get("spell_flooritem") != null)
-			floorItem = (FloorItem) player.getTemporaryAttributtes().get("spell_flooritem");
+		if (player.getTemporaryAttributes().get("spell_itemid") != null)
+			itemId = (int) player.getTemporaryAttributes().get("spell_itemid");
+		if (player.getTemporaryAttributes().get("spell_slotid") != null)
+			slotId = (int) player.getTemporaryAttributes().get("spell_slotid");
+		if (player.getTemporaryAttributes().get("spell_objectid") != null)
+			objectId = (int) player.getTemporaryAttributes().get("spell_objectid");
+		if (player.getTemporaryAttributes().get("spell_target") != null)
+			target = (Entity) player.getTemporaryAttributes().get("spell_target");
+		if (player.getTemporaryAttributes().get("spell_flooritem") != null)
+			floorItem = (FloorItem) player.getTemporaryAttributes().get("spell_flooritem");
 
 		RSSpellStore s = RSSpellStore.getSpell(spellId);
 		if (s == null)
@@ -698,8 +698,8 @@ public class ModernMagicks {
 		RSSpellStore s = RSSpellStore.getSpell(spellId);
 		if (s == null)// Check is done here already
 			return;
-		player.getTemporaryAttributtes().put("spell_runes", runesToRemove);
-		player.getTemporaryAttributtes().put("spell_xp", s.getXp());
+		player.getTemporaryAttributes().put("spell_runes", runesToRemove);
+		player.getTemporaryAttributes().put("spell_xp", s.getXp());
 		switch (s) {
 			case AIR_ORB:
 				if (objectId == 2152)
