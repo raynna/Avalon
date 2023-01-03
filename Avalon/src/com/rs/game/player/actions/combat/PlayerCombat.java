@@ -4011,8 +4011,6 @@ public class PlayerCombat extends Action {
 
     @Override
     public void stop(final Player player) {
-        // player.getInterfaceManager().closeTab(player.getInterfaceManager().isResizableScreen(),
-        // getHealthOverlayId(player));
         player.setNextFaceEntity(null);
     }
 
