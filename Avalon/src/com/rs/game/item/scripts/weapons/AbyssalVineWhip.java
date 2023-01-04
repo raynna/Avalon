@@ -4,11 +4,11 @@ import com.rs.game.World;
 import com.rs.game.WorldTile;
 import com.rs.game.item.Item;
 import com.rs.game.item.ItemId;
-import com.rs.game.item.ItemScripts;
+import com.rs.game.item.ItemScript;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
 
-public class AbyssalVineWhip extends ItemScripts {
+public class AbyssalVineWhip extends ItemScript {
     @Override
     public Object[] getKeys() {
         return new Object[]{ItemId.ABYSSAL_VINE_WHIP, ItemId.VINE_WHIP};

@@ -5,14 +5,14 @@ import com.rs.game.Entity;
 import com.rs.game.World;
 import com.rs.game.item.Item;
 import com.rs.game.item.ItemId;
-import com.rs.game.item.ItemScripts;
+import com.rs.game.item.ItemScript;
 import com.rs.game.npc.NPC;
 import com.rs.game.player.Player;
 import com.rs.utils.Utils;
 
 import java.util.concurrent.TimeUnit;
 
-public class OrbOfCounting extends ItemScripts {
+public class OrbOfCounting extends ItemScript {
 
 	@Override
 	public Object[] getKeys() {

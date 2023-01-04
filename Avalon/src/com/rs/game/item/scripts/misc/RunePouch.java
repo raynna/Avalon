@@ -3,12 +3,12 @@ package com.rs.game.item.scripts.misc;
 import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.game.item.Item;
 import com.rs.game.item.ItemId;
-import com.rs.game.item.ItemScripts;
+import com.rs.game.item.ItemScript;
 import com.rs.game.player.Player;
 import com.rs.game.player.actions.combat.Magic;
 import com.rs.net.decoders.handlers.ButtonHandler;
 
-public class RunePouch extends ItemScripts {
+public class RunePouch extends ItemScript {
 
     @Override
     public Object[] getKeys() {

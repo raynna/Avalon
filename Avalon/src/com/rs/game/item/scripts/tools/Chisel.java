@@ -2,12 +2,12 @@ package com.rs.game.item.scripts.tools;
 
 import com.rs.game.item.Item;
 import com.rs.game.item.ItemId;
-import com.rs.game.item.ItemScripts;
+import com.rs.game.item.ItemScript;
 import com.rs.game.player.Player;
 import com.rs.game.player.actions.skills.crafting.*;
 import com.rs.game.player.actions.skills.crafting.GemCutting.*;
 
-public class Chisel extends ItemScripts {
+public class Chisel extends ItemScript {
 
     @Override
     public Object[] getKeys() {

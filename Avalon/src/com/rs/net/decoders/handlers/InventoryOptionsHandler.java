@@ -1,7 +1,6 @@
 package com.rs.net.decoders.handlers;
 
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import com.rs.Settings;
@@ -20,13 +19,14 @@ import com.rs.game.WorldObject;
 import com.rs.game.WorldTile;
 import com.rs.game.item.Item;
 import com.rs.game.item.ItemScriptHandler;
-import com.rs.game.item.ItemScripts;
+import com.rs.game.item.ItemScript;
 import com.rs.game.item.itemdegrading.ArmourRepair;
 import com.rs.game.item.itemdegrading.ChargesManager;
 import com.rs.game.item.itemdegrading.ItemDegrade.ItemStore;
 import com.rs.game.minigames.clanwars.FfaZone;
-import com.rs.game.minigames.lividfarm.LividFarmControler;
 import com.rs.game.npc.NPC;
+import com.rs.game.npc.NpcScript;
+import com.rs.game.npc.NpcScriptHandler;
 import com.rs.game.npc.familiar.Familiar;
 import com.rs.game.npc.pet.Pet;
 import com.rs.game.player.Equipment;
@@ -70,7 +70,6 @@ import com.rs.game.player.content.ArmourSets.Sets;
 import com.rs.game.player.content.BarrowsRewards;
 import com.rs.game.player.content.Bell;
 import com.rs.game.player.content.Dicing;
-import com.rs.game.player.content.DwarfMultiCannon;
 import com.rs.game.player.content.Foods;
 import com.rs.game.player.content.GilesBusiness;
 import com.rs.game.player.content.Lamps;
@@ -104,13 +103,18 @@ public class InventoryOptionsHandler {
             player.sm("This is a members object.");
             return;
         }
-        System.out.println("ItemOption2: slotId: " + slotId + ", itemId: " + itemId + "");
-        ItemScripts script = ItemScriptHandler.getScript(item);
+        ItemScript script = ItemScriptHandler.getScript(item);
         if (script != null) {
-            if (script.processItem2(player, item, slotId))
+            boolean scriptExecuted = script.processItem2(player, item, slotId);
+            if (!scriptExecuted)
+                Logger.log("ItemScript", "Class: " + script.getClass().getSimpleName() + ".java, Script does not have any option 2 for this item.");
+            if (scriptExecuted) {
+                if (Settings.DEBUG)
+                    Logger.log("ItemScript", "Option 2 - Class: " + script.getClass().getSimpleName() + ".java, Script was executed! " + item.getName() + "(" + item.getId() + ")");
                 return;
+            }
         }
-       if (itemId >= 15086 && itemId <= 15100) {
+        if (itemId >= 15086 && itemId <= 15100) {
             if (player.getLockDelay() > Utils.currentTimeMillis())
                 return;
             Dicing.handleRoll(player, itemId, true);
@@ -161,8 +165,6 @@ public class InventoryOptionsHandler {
         long time = Utils.currentTimeMillis();
         if (player.getLockDelay() >= time || player.getEmotesManager().getNextEmoteEnd() >= time)
             return;
-        if (Settings.DEBUG)
-            Logger.log("ItemHandler", "Item Select: " + item.getName() + ", ItemId: " + itemId + ", Slot Id:" + slotId);
         player.stopAll(false);
         if (Settings.FREE_TO_PLAY && item.getDefinitions().isMembersOnly()) {
             player.sm("This is a members object.");
@@ -170,10 +172,16 @@ public class InventoryOptionsHandler {
         }
         if (!player.getControlerManager().processItemClick(slotId, item, player))
             return;
-       ItemScripts script = ItemScriptHandler.getScript(item);
+        ItemScript script = ItemScriptHandler.getScript(item);
         if (script != null) {
-            if (script.processItem(player, item, slotId))
+            boolean scriptExecuted = script.processItem(player, item, slotId);
+            if (!scriptExecuted)
+                Logger.log("ItemScript", "Class: " + script.getClass().getSimpleName() + ".java, Script does not have any option 1 for this item.");
+            if (scriptExecuted) {
+                if (Settings.DEBUG)
+                    Logger.log("ItemScript", "Option 1 - Class: " + script.getClass().getSimpleName() + ".java, Script was executed! " + item.getName() + "(" + item.getId() + ")");
                 return;
+            }
         }
         if (Foods.eat(player, item, slotId))
             return;
@@ -613,7 +621,7 @@ public class InventoryOptionsHandler {
             player.getActionManager().setAction(new BoxAction(HunterEquipment.BRID_SNARE));
         else if (item.getDefinitions().getName().startsWith("Burnt"))
             player.getDialogueManager().startDialogue("SimplePlayerMessage", "Ugh, this is inedible.");
-       }
+    }
 
     /*
      * returns the other
@@ -721,11 +729,17 @@ public class InventoryOptionsHandler {
                 player.sm("alch on " + toSlot);
             if (!player.getControlerManager().canUseItemOnItem(itemUsed, usedWith))
                 return;
-            ItemScripts script = ItemScriptHandler.getScript(itemUsed);
+            Logger.log("ItemHandler", itemUsed.getName() + " on > " + usedWith.getName());
+            ItemScript script = ItemScriptHandler.getScript(itemUsed);
             if (script == null)
                 script = ItemScriptHandler.getScript(usedWith);
             if (script != null) {
-                if (script.processItemOnItem(player, itemUsed, usedWith, fromSlot, toSlot)) {
+                boolean scriptExecuted = script.processItemOnItem(player, itemUsed, usedWith, fromSlot, toSlot);
+                if (!scriptExecuted) {
+                    Logger.log("ItemScript", "[ItemOnItem] Class: " + script.getClass().getSimpleName() + ".java, Script did not meet requirements with " + itemUsed.getName() + " & " + usedWith.getName());
+                }
+                if (scriptExecuted) {
+                    Logger.log("ItemScript", "[ItemOnItem] Class: " + script.getClass().getSimpleName() + ".java, Script was executed! ItemUsed: " + itemUsed.getName() + "(" + itemUsed.getId() + "), usedWith: " + usedWith.getName() + "(" + usedWith.getId() + ")");
                     return;
                 }
             }
@@ -1023,12 +1037,17 @@ public class InventoryOptionsHandler {
         long time = Utils.currentTimeMillis();
         if (player.getLockDelay() >= time || player.getEmotesManager().getNextEmoteEnd() >= time)
             return;
-        System.out.println("ItemOption3: slotId: " + slotId + ", itemId: " + itemId + "");
         player.stopAll(false);
-        ItemScripts script = ItemScriptHandler.getScript(item);
+        ItemScript script = ItemScriptHandler.getScript(item);
         if (script != null) {
-            if (script.processItem3(player, item, slotId))
+            boolean scriptExecuted = script.processItem3(player, item, slotId);
+            if (!scriptExecuted)
+                Logger.log("ItemScript", "Class: " + script.getClass().getSimpleName() + ".java, Script does not have any option 3 for this item.");
+            if (scriptExecuted) {
+                if (Settings.DEBUG)
+                    Logger.log("ItemScript", "Option 3 - Class: " + script.getClass().getSimpleName() + ".java, Script was executed! " + item.getName() + "(" + item.getId() + ")");
                 return;
+            }
         }
         Hunter.FlyingEntities impling = Hunter.FlyingEntities.forItemId(itemId);
         if (impling != null) {
@@ -1197,41 +1216,51 @@ public class InventoryOptionsHandler {
                 return;
             }
         }
-        if (Settings.DEBUG)
-            Logger.log("ItemHandler", "ItemOption3, " + player.getUsername() + " clicked itemId: " + itemId + ".");
-    }
+        }
 
     public static void handleItemOption4(Player player, int slotId, int itemId, Item item) {
-        ItemScripts script = ItemScriptHandler.getScript(item);
+        ItemScript script = ItemScriptHandler.getScript(item);
         if (script != null) {
-            if (script.processItem4(player, item, slotId))
+            boolean scriptExecuted = script.processItem4(player, item, slotId);
+            if (!scriptExecuted)
+                Logger.log("ItemScript", "Class: " + script.getClass().getSimpleName() + ".java, Script does not have any option 4 for this item.");
+            if (scriptExecuted) {
+                if (Settings.DEBUG)
+                    Logger.log("ItemScript", "Option 4 - Class: " + script.getClass().getSimpleName() + ".java, Script was executed! " + item.getName() + "(" + item.getId() + ")");
                 return;
+            }
         }
-        if (Settings.DEBUG)
-            Logger.log("ItemHandler", "ItemOption4, " + player.getUsername() + " clicked itemId: " + itemId + ".");
-    }
+       }
 
     public static void handleItemOption5(Player player, int slotId, int itemId, Item item) {
-        System.out.println("ItemOption5: slotId: " + slotId + ", itemId: " + itemId + "");
-        ItemScripts script = ItemScriptHandler.getScript(item);
+        ItemScript script = ItemScriptHandler.getScript(item);
         if (script != null) {
-            if (script.processItem5(player, item, slotId))
+            boolean scriptExecuted = script.processItem5(player, item, slotId);
+            if (!scriptExecuted)
+                Logger.log("ItemScript", "Class: " + script.getClass().getSimpleName() + ".java, Script does not have any option 5 for this item.");
+            if (scriptExecuted) {
+                if (Settings.DEBUG)
+                    Logger.log("ItemScript", "Option 5 - Class: " + script.getClass().getSimpleName() + ".java, Script was executed! " + item.getName() + "(" + item.getId() + ")");
                 return;
+            }
         }
-        if (Settings.DEBUG)
-            Logger.log("ItemHandler", "ItemOption5, " + player.getUsername() + " clicked itemId: " + itemId + ".");
-    }
+        }
 
     public static void handleItemOption6(Player player, int slotId, int itemId, Item item) {
         long time = Utils.currentTimeMillis();
         if (player.getLockDelay() >= time || player.getEmotesManager().getNextEmoteEnd() >= time)
             return;
-        System.out.println("ItemOption6: slotId: " + slotId + ", itemId: " + itemId + "");
         player.stopAll(false);
-        ItemScripts script = ItemScriptHandler.getScript(item);
+        ItemScript script = ItemScriptHandler.getScript(item);
         if (script != null) {
-            if (script.processItem6(player, item, slotId))
+            boolean scriptExecuted = script.processItem6(player, item, slotId);
+            if (!scriptExecuted)
+                Logger.log("ItemScript", "Class: " + script.getClass().getSimpleName() + ".java, Script does not have any option 6 for this item.");
+            if (scriptExecuted) {
+                if (Settings.DEBUG)
+                    Logger.log("ItemScript", "Option 6 - Class: " + script.getClass().getSimpleName() + ".java, Script was executed! " + item.getName() + "(" + item.getId() + ")");
                 return;
+            }
         }
         Pouch pouch = Pouch.forId(itemId);
         Pot pot = Pots.getPot(item.getId());
@@ -1419,9 +1448,7 @@ public class InventoryOptionsHandler {
         } else if (itemId >= 2552 && itemId <= 2566) {
             player.getDialogueManager().startDialogue("Transportation", "Duel Arena", new WorldTile(3367, 3267, 0), "Castle Wars", new WorldTile(2443, 3088, 0), "Mobilising Armies", new WorldTile(2412, 2849, 0), "Pest Control", new WorldTile(2662, 2653, 0), itemId);
         }
-        if (Settings.DEBUG)
-            Logger.log("ItemHandler", "ItemOption6, " + player.getUsername() + " clicked itemId: " + itemId + ".");
-    }
+        }
 
     public static void handleItemOption7(Player player, int slotId, int itemId, Item item) {
         String name = ItemDefinitions.getItemDefinitions(itemId).getName().toLowerCase();
@@ -1432,10 +1459,16 @@ public class InventoryOptionsHandler {
         if (!player.getControlerManager().canDropItem(item))
             return;
         player.stopAll(false);
-        ItemScripts script = ItemScriptHandler.getScript(item);
+        ItemScript script = ItemScriptHandler.getScript(item);
         if (script != null) {
-            if (script.processDrop(player, item, slotId))
+            boolean scriptExecuted = script.processDrop(player, item, slotId);
+            if (!scriptExecuted)
+                Logger.log("ItemScript", "Class: " + script.getClass().getSimpleName() + ".java, Script does not have any drop for this item.");
+            if (scriptExecuted) {
+                if (Settings.DEBUG)
+                    Logger.log("ItemScript", "Drop/Destroy - Class: " + script.getClass().getSimpleName() + ".java, Script was executed! " + item.getName() + "(" + item.getId() + ")");
                 return;
+            }
         }
         if (player.getPetManager().spawnPet(itemId, true)) {
             return;
@@ -1481,15 +1514,11 @@ public class InventoryOptionsHandler {
         }
         player.getCharges().degrade(item);
         player.getInventory().dropItem(slotId, item, true);
-        if (Settings.DEBUG)
-            Logger.log("ItemHandler", "ItemOption7, " + player.getUsername() + " clicked itemId: " + itemId + ".");
     }
 
     public static void handleItemOption8(Player player, int slotId, int itemId, Item item) {
         player.getInventory().sendExamine(slotId);
-        if (Settings.DEBUG)
-            Logger.log("ItemHandler", "ItemOption8, " + player.getUsername() + " clicked itemId: " + itemId + ".");
-    }
+       }
 
     private static boolean isFarmingItem(Item item) {
         // if (defs.getName().toLowerCase().contains("grimy"))
@@ -1509,6 +1538,26 @@ public class InventoryOptionsHandler {
             return;
         player.stopAll(false);
         player.faceEntity(npc);
+        NpcScript script = NpcScriptHandler.getScript(npc);
+        if (script != null) {
+            player.setRouteEvent(new RouteEvent(npc, new Runnable() {
+                @Override
+                public void run() {
+                    npc.resetWalkSteps();
+                    npc.faceEntity(player);
+                    player.stopAll();
+                    player.faceEntity(npc);
+                    boolean scriptExecuted = script.processNpc4(player, npc);
+                    if (!scriptExecuted)
+                        Logger.log("ItemScript;ItemOnNpc", "Class: " + script.getClass().getSimpleName() + ".java, Option ItemOnNpc method was empty in script.");
+                    if (scriptExecuted) {
+                        if (Settings.DEBUG)
+                            Logger.log("NpcScript;ItemOnNpc", "Class: " + script.getClass().getSimpleName() + ".java, Name of Npc: " + npc.getName() + ", NpcId: " + npc.getId() + ", Name of Item: " + item.getName() + ", ItemId: " + item.getId());
+                        return;
+                    }
+                }
+            }, true));
+        }
         player.setRouteEvent(new RouteEvent(npc, new Runnable() {
             @Override
             public void run() {

@@ -176,19 +176,21 @@ public final class ObjectHandler {
         final int x = object.getX();
         final int y = object.getY();
         player.setNextFaceEntity(null);
-        ObjectScript script = ObjectScriptHandler.cachedObjectScripts.getOrDefault(object.getId(),
-                ObjectScriptHandler.cachedObjectScripts.get(objectDef.name));
+        ObjectScript script = ObjectScriptHandler.getScript(object);
         if (script != null) {
             player.setRouteEvent(new RouteEvent(object, new Runnable() {
                 @Override
                 public void run() {
-                    if (Settings.DEBUG)
-                        Logger.log("ObjectScript", script.getClass().getSimpleName()
-                                + ", ObjectClick 1 - ObjectId: " + object.getId());
                     player.stopAll();
                     player.faceObject(object);
-                    if (script.processObject(player, object))
+                    boolean scriptExecuted = script.processObject(player, object);
+                    if (!scriptExecuted)
+                        Logger.log("ObjectScript;Option 1", "Class: " + script.getClass().getSimpleName() + ".java, Option 1 method was empty in script.");
+                    if (scriptExecuted) {
+                        if (Settings.DEBUG)
+                            Logger.log("ObjectScript;Option 1", "Class: " + script.getClass().getSimpleName() + ".java, Name of Object: " + object.getName() + ", ObjectId: " + object.getId());
                         return;
+                    }
                 }
             }, true));
             return;
@@ -1632,20 +1634,22 @@ public final class ObjectHandler {
         final ObjectDefinitions objectDef = object.getDefinitions();
         final int id = object.getId();
         player.setNextFaceEntity(null);
-        ObjectScript script = ObjectScriptHandler.cachedObjectScripts.getOrDefault(object.getId(),
-                ObjectScriptHandler.cachedObjectScripts.get(objectDef.name));
+        ObjectScript script = ObjectScriptHandler.getScript(object);
         if (script != null) {
             if (script.getDistance() == 0) {
                 player.setRouteEvent(new RouteEvent(object, new Runnable() {
                     @Override
                     public void run() {
-                        if (Settings.DEBUG)
-                            Logger.log("ObjectScript", script.getClass().getSimpleName()
-                                    + ", ObjectClick 2 - ObjectId: " + object.getId());
                         player.stopAll();
                         player.faceObject(object);
-                        if (script.processObject2(player, object))
+                        boolean scriptExecuted = script.processObject2(player, object);
+                        if (!scriptExecuted)
+                            Logger.log("ObjectScript;Option 2", "Class: " + script.getClass().getSimpleName() + ".java, Option 2 method was empty in script.");
+                        if (scriptExecuted) {
+                            if (Settings.DEBUG)
+                                Logger.log("ObjectScript;Option 2", "Class: " + script.getClass().getSimpleName() + ".java, Name of Object: " + object.getName() + ", ObjectId: " + object.getId());
                             return;
+                        }
                     }
                 }, true));
                 return;
@@ -1804,26 +1808,23 @@ public final class ObjectHandler {
         final ObjectDefinitions objectDef = object.getDefinitions();
         final int id = object.getId();
         player.setNextFaceEntity(null);
-        ObjectScript script = ObjectScriptHandler.cachedObjectScripts.getOrDefault(object.getId(),
-                ObjectScriptHandler.cachedObjectScripts.get(objectDef.name));
+        ObjectScript script = ObjectScriptHandler.getScript(object);
         if (script != null) {
-            if (script.getDistance() == 0) {
                 player.setRouteEvent(new RouteEvent(object, new Runnable() {
                     @Override
                     public void run() {
-                        if (Settings.DEBUG)
-                            Logger.log("ObjectScript", script.getClass().getSimpleName()
-                                    + ", ObjectClick 3 - ObjectId: " + object.getId());
                         player.stopAll();
                         player.faceObject(object);
-                        if (script.processObject3(player, object))
+                        boolean scriptExecuted = script.processObject3(player, object);
+                        if (!scriptExecuted)
+                            Logger.log("ObjectScript;Option 3", "Class: " + script.getClass().getSimpleName() + ".java, Option 3 method was empty in script.");
+                        if (scriptExecuted) {
+                            if (Settings.DEBUG)
+                                Logger.log("ObjectScript;Option 3", "Class: " + script.getClass().getSimpleName() + ".java, Name of Object: " + object.getName() + ", ObjectId: " + object.getId());
                             return;
+                        }
                     }
                 }, true));
-                return;
-            } else {
-                // TODO route to script.getDistane()
-            }
         }
         player.setRouteEvent(new RouteEvent(object, new Runnable() {
 
@@ -1899,26 +1900,23 @@ public final class ObjectHandler {
         final ObjectDefinitions objectDef = object.getDefinitions();
         final int id = object.getId();
         player.setNextFaceEntity(null);
-        ObjectScript script = ObjectScriptHandler.cachedObjectScripts.getOrDefault(object.getId(),
-                ObjectScriptHandler.cachedObjectScripts.get(objectDef.name));
+        ObjectScript script = ObjectScriptHandler.getScript(object);
         if (script != null) {
-            if (script.getDistance() == 0) {
                 player.setRouteEvent(new RouteEvent(object, new Runnable() {
                     @Override
                     public void run() {
-                        if (Settings.DEBUG)
-                            Logger.log("ObjectScript", script.getClass().getSimpleName()
-                                    + ", ObjectClick 4 - ObjectId: " + object.getId());
                         player.stopAll();
                         player.faceObject(object);
-                        if (script.processObject4(player, object))
+                        boolean scriptExecuted = script.processObject4(player, object);
+                        if (!scriptExecuted)
+                            Logger.log("ObjectScript;Option 4", "Class: " + script.getClass().getSimpleName() + ".java, Option 4 method was empty in script.");
+                        if (scriptExecuted) {
+                            if (Settings.DEBUG)
+                                Logger.log("ObjectScript;Option 4", "Class: " + script.getClass().getSimpleName() + ".java, Name of Object: " + object.getName() + ", ObjectId: " + object.getId());
                             return;
+                        }
                     }
                 }, true));
-                return;
-            } else {
-                // TODO route to script.getDistane()
-            }
         }
         player.setRouteEvent(new RouteEvent(object, new Runnable() {
 
@@ -1956,26 +1954,23 @@ public final class ObjectHandler {
         final ObjectDefinitions objectDef = object.getDefinitions();
         final int id = object.getId();
         player.setNextFaceEntity(null);
-        ObjectScript script = ObjectScriptHandler.cachedObjectScripts.getOrDefault(object.getId(),
-                ObjectScriptHandler.cachedObjectScripts.get(objectDef.name));
+        ObjectScript script = ObjectScriptHandler.getScript(object);
         if (script != null) {
-            if (script.getDistance() == 0) {
                 player.setRouteEvent(new RouteEvent(object, new Runnable() {
                     @Override
                     public void run() {
-                        if (Settings.DEBUG)
-                            Logger.log("ObjectScript", script.getClass().getSimpleName()
-                                    + ", ObjectClick 5 - ObjectId: " + object.getId());
                         player.stopAll();
                         player.faceObject(object);
-                        if (script.processObject5(player, object))
+                        boolean scriptExecuted = script.processObject5(player, object);
+                        if (!scriptExecuted)
+                            Logger.log("ObjectScript;Option 5", "Class: " + script.getClass().getSimpleName() + ".java, Option 5 method was empty in script.");
+                        if (scriptExecuted) {
+                            if (Settings.DEBUG)
+                                Logger.log("ObjectScript;Option 5", "Class: " + script.getClass().getSimpleName() + ".java, Name of Object: " + object.getName() + ", ObjectId: " + object.getId());
                             return;
+                        }
                     }
                 }, true));
-                return;
-            } else {
-                // TODO route to script.getDistane()
-            }
         }
         if (object.getId() >= HouseConstants.HObject.WOOD_BENCH.getId()
                 && object.getId() <= HouseConstants.HObject.GILDED_BENCH.getId()) {
@@ -2064,26 +2059,23 @@ public final class ObjectHandler {
                                           final Item item) {
         final int itemId = item.getId();
         final ObjectDefinitions objectDef = object.getDefinitions();
-        ObjectScript script = ObjectScriptHandler.cachedObjectScripts.getOrDefault(object.getId(),
-                ObjectScriptHandler.cachedObjectScripts.get(objectDef.name));
+        ObjectScript script = ObjectScriptHandler.getScript(object);
         if (script != null) {
-            if (script.getDistance() == 0) {
                 player.setRouteEvent(new RouteEvent(object, new Runnable() {
                     @Override
                     public void run() {
-                        if (Settings.DEBUG)
-                            Logger.log("ObjectScript", script.getClass().getSimpleName()
-                                    + ", ItemOnObject - ObjectId: " + object.getId());
                         player.stopAll();
                         player.faceObject(object);
-                        if (script.processItemOnObject(player, object, item))
+                        boolean scriptExecuted = script.processItemOnObject(player, object, item);
+                        if (!scriptExecuted)
+                            Logger.log("ObjectScript;ItemOnObject", "Class: " + script.getClass().getSimpleName() + ".java, ItemOnObject method was empty in script.");
+                        if (scriptExecuted) {
+                            if (Settings.DEBUG)
+                                Logger.log("ObjectScript;ItemOnObject", "Class: " + script.getClass().getSimpleName() + ".java, Name of Object: " + object.getName() + ", ObjectId: " + object.getId() + ", Name of Item: " + item.getName() + ", ItemId: " + item.getId());
                             return;
+                        }
                     }
                 }, true));
-                return;
-            } else {
-                // TODO route to script.getDistane()
-            }
         }
         if (item.getId() == 954 && object.getId() == 26342) {
         	player.getVarsManager().sendVarBit(3932, 1, true);

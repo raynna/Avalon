@@ -2,10 +2,10 @@ package com.rs.game.item.scripts.summoning;
 
 import com.rs.game.item.Item;
 import com.rs.game.item.ItemId;
-import com.rs.game.item.ItemScripts;
+import com.rs.game.item.ItemScript;
 import com.rs.game.player.Player;
 
-public class SpiritShardsPack extends ItemScripts {
+public class SpiritShardsPack extends ItemScript {
 
 	@Override
 	public Object[] getKeys() {

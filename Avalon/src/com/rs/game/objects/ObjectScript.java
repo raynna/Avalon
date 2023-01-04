@@ -9,27 +9,27 @@ public abstract class ObjectScript {
 	public abstract Object[] getKeys();
 
 	public boolean processObject(Player player, WorldObject object) {
-		return true;
+		return false;
 	}
 	
 	public boolean processObject2(Player player, WorldObject object) {
-		return true;
+		return false;
 	}
 	
 	public boolean processObject3(Player player, WorldObject object) {
-		return true;
+		return false;
 	}
 	
 	public boolean processObject4(Player player, WorldObject object) {
-		return true;
+		return false;
 	}
 	
 	public boolean processObject5(Player player, WorldObject object) {
-		return true;
+		return false;
 	}
 	
 	public boolean processItemOnObject(Player player, WorldObject object, Item item) {
-		return true;
+		return false;
 	}
 	
 

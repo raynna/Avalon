@@ -1,16 +1,17 @@
 package com.rs.game.item.scripts.weapons;
 
 import com.rs.game.World;
+import com.rs.game.WorldTile;
 import com.rs.game.item.Item;
 import com.rs.game.item.ItemId;
-import com.rs.game.item.ItemScripts;
+import com.rs.game.item.ItemScript;
 import com.rs.game.player.Player;
 import com.rs.game.player.content.GreaterRunicStaff.*;
 import com.rs.net.decoders.handlers.ButtonHandler;
 
 import java.util.Map;
 
-public class GreaterRunicStaff extends ItemScripts {
+public class GreaterRunicStaff extends ItemScript {
 
 	@Override
 	public Object[] getKeys() {
@@ -67,13 +68,16 @@ public class GreaterRunicStaff extends ItemScripts {
 				for (Item staffRunes : charges.getValue()) {
 					if (item == null)
 						continue;
-					World.updateGroundItem(staffRunes, player, player, player.isAtWild() ? 0 : 60, 1);
+					World.updateGroundItem(staffRunes, new WorldTile(player), player, player.isAtWild() ? 0 : 60, 0);
 				}
 			}
 			player.sm("All your runes in your runic staff were dropped.");
 		}
-		player.getRunicStaff().clearSpell(false);
-		player.getStaffCharges().clear();
+		if (player.getRunicStaff().getSpellId() > 0) {
+			player.getRunicStaff().setStaffValues(-1, null);
+			player.getPackets().sendGameMessage("You clear your greater runic staff spell.");
+			player.getStaffCharges().clear();
+		}
 		player.getInventory().dropItem(slotId, item, false);
 		return true;
 	}

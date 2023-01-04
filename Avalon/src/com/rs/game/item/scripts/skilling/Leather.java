@@ -2,12 +2,12 @@ package com.rs.game.item.scripts.skilling;
 
 import com.rs.game.item.Item;
 import com.rs.game.item.ItemId;
-import com.rs.game.item.ItemScripts;
+import com.rs.game.item.ItemScript;
 import com.rs.game.player.Player;
 import com.rs.game.player.actions.skills.crafting.LeatherCrafting;
 import com.rs.game.player.actions.skills.crafting.LeatherCrafting.*;
 
-public class Leather extends ItemScripts {
+public class Leather extends ItemScript {
 
     @Override
     public Object[] getKeys() {
@@ -38,16 +38,6 @@ public class Leather extends ItemScripts {
             player.getDialogueManager().startDialogue("CraftingD", craft);
             return true;
         }
-        return true;
-    }
-
-    @Override
-    public boolean processDrop(Player player, Item item, int slotId) {
-        return true;
-    }
-
-    @Override
-    public boolean processDestroy(Player player, Item item, int slotId) {
         return true;
     }
 }

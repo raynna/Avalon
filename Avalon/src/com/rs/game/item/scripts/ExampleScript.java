@@ -1,13 +1,9 @@
 package com.rs.game.item.scripts;
 
-import com.rs.game.WorldObject;
 import com.rs.game.item.Item;
-import com.rs.game.item.ItemScripts;
-import com.rs.game.npc.NPC;
-import com.rs.game.objects.scripts.DoorsAndGates;
 import com.rs.game.player.Player;
 
-public class ItemScript extends ItemScripts {
+public class ExampleScript extends com.rs.game.item.ItemScript {
 
 	@Override
 	public Object[] getKeys() {

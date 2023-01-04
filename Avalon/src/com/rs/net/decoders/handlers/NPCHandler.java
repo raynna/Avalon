@@ -13,10 +13,14 @@ import com.rs.game.cityhandler.CityEventHandler;
 import com.rs.game.minigames.lividfarm.LividFarmControler;
 import com.rs.game.minigames.pest.CommendationExchange;
 import com.rs.game.npc.NPC;
+import com.rs.game.npc.NpcScript;
+import com.rs.game.npc.NpcScriptHandler;
 import com.rs.game.npc.combat.NPCCombatDefinitions;
 import com.rs.game.npc.familiar.Familiar;
 import com.rs.game.npc.others.LivingRock;
 import com.rs.game.npc.pet.Pet;
+import com.rs.game.objects.ObjectScript;
+import com.rs.game.objects.ObjectScriptHandler;
 import com.rs.game.player.Player;
 import com.rs.game.player.RouteEvent;
 import com.rs.game.player.Skills;
@@ -104,6 +108,26 @@ public class NPCHandler {
         player.setNextFaceEntity(npc);
         if (forceRun)
             player.setRun(forceRun);
+        NpcScript script = NpcScriptHandler.getScript(npc);
+        if (script != null) {
+            player.setRouteEvent(new RouteEvent(npc, new Runnable() {
+                @Override
+                public void run() {
+                    npc.resetWalkSteps();
+                    npc.faceEntity(player);
+                    player.stopAll();
+                    player.faceEntity(npc);
+                    boolean scriptExecuted = script.processNpc(player, npc);
+                    if (!scriptExecuted)
+                        Logger.log("NpcScript;Option 1", "Class: " + script.getClass().getSimpleName() + ".java, Option 1 method was empty in script.");
+                    if (scriptExecuted) {
+                        if (Settings.DEBUG)
+                            Logger.log("NpcScript;Option 1", "Class: " + script.getClass().getSimpleName() + ".java, Name of Npc: " + npc.getName() + ", NpcId: " + npc.getId());
+                        return;
+                    }
+                }
+            }, true));
+        }
         if (SlidingTilesRoom.handleSlidingBlock(player, npc))
             return;
         if (npc.getId() == 4296 || npc.getId() == 6362 || npc.getDefinitions().name.toLowerCase().contains("banker")
@@ -615,6 +639,26 @@ public class NPCHandler {
         player.setNextFaceEntity(npc);
         if (forceRun)
             player.setRun(forceRun);
+        NpcScript script = NpcScriptHandler.getScript(npc);
+        if (script != null) {
+            player.setRouteEvent(new RouteEvent(npc, new Runnable() {
+                @Override
+                public void run() {
+                    npc.resetWalkSteps();
+                    npc.faceEntity(player);
+                    player.stopAll();
+                    player.faceEntity(npc);
+                    boolean scriptExecuted = script.processNpc2(player, npc);
+                    if (!scriptExecuted)
+                        Logger.log("NpcScript;Option 2", "Class: " + script.getClass().getSimpleName() + ".java, Option 2 method was empty in script.");
+                    if (scriptExecuted) {
+                        if (Settings.DEBUG)
+                            Logger.log("NpcScript;Option 2", "Class: " + script.getClass().getSimpleName() + ".java, Name of Npc: " + npc.getName() + ", NpcId: " + npc.getId());
+                        return;
+                    }
+                }
+            }, true));
+        }
         if (npc.getId() == 4296 || npc.getId() == 6362 || npc.getDefinitions().name.toLowerCase().contains("banker")
                 || npc.getDefinitions().name.toLowerCase().contains("gundai")) {
             player.setRouteEvent(new RouteEvent(npc, new Runnable() {
@@ -890,6 +934,26 @@ public class NPCHandler {
         player.setNextFaceEntity(npc);
         if (forceRun)
             player.setRun(forceRun);
+        NpcScript script = NpcScriptHandler.getScript(npc);
+        if (script != null) {
+            player.setRouteEvent(new RouteEvent(npc, new Runnable() {
+                @Override
+                public void run() {
+                    npc.resetWalkSteps();
+                    npc.faceEntity(player);
+                    player.stopAll();
+                    player.faceEntity(npc);
+                    boolean scriptExecuted = script.processNpc3(player, npc);
+                    if (!scriptExecuted)
+                        Logger.log("NpcScript;Option 3", "Class: " + script.getClass().getSimpleName() + ".java, Option 3 method was empty in script.");
+                    if (scriptExecuted) {
+                        if (Settings.DEBUG)
+                            Logger.log("NpcScript;Option 3", "Class: " + script.getClass().getSimpleName() + ".java, Name of Npc: " + npc.getName() + ", NpcId: " + npc.getId());
+                        return;
+                    }
+                }
+            }, true));
+        }
         if (npc.getId() == 6362 || npc.getDefinitions().name.toLowerCase().contains("banker")
                 || npc.getDefinitions().name.toLowerCase().contains("gundai")) {
             player.setRouteEvent(new RouteEvent(npc, new Runnable() {
@@ -996,6 +1060,26 @@ public class NPCHandler {
         player.setNextFaceEntity(npc);
         if (forceRun)
             player.setRun(forceRun);
+        NpcScript script = NpcScriptHandler.getScript(npc);
+        if (script != null) {
+            player.setRouteEvent(new RouteEvent(npc, new Runnable() {
+                @Override
+                public void run() {
+                    npc.resetWalkSteps();
+                    npc.faceEntity(player);
+                    player.stopAll();
+                    player.faceEntity(npc);
+                    boolean scriptExecuted = script.processNpc4(player, npc);
+                    if (!scriptExecuted)
+                        Logger.log("NpcScript;Option 4", "Class: " + script.getClass().getSimpleName() + ".java, Option 4 method was empty in script.");
+                    if (scriptExecuted) {
+                        if (Settings.DEBUG)
+                            Logger.log("NpcScript;Option 4", "Class: " + script.getClass().getSimpleName() + ".java, Name of Npc: " + npc.getName() + ", NpcId: " + npc.getId());
+                        return;
+                    }
+                }
+            }, true));
+        }
         if (npc.getId() == 2593 || npc.getDefinitions().name.toLowerCase().contains("clerk")) {
             player.setRouteEvent(new RouteEvent(npc, new Runnable() {
                 @Override
