@@ -32,7 +32,7 @@ import com.rs.game.minigames.lividfarm.LividFarmControler;
 import com.rs.game.minigames.lividfarm.LividStore.Spell;
 import com.rs.game.minigames.pest.CommendationExchange;
 import com.rs.game.npc.NPC;
-import com.rs.game.objects.ObjectScriptHandler;
+import com.rs.game.objects.ObjectPluginLoader;
 import com.rs.game.player.AccountCreation;
 import com.rs.game.player.Player;
 import com.rs.game.player.Ranks.Rank;
@@ -54,7 +54,6 @@ import com.rs.game.player.controlers.EdgevillePvPControler;
 import com.rs.game.player.dialogues.LevelUp;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
-import com.rs.game.timer.TimerKey;
 import com.rs.net.decoders.handlers.ButtonHandler;
 import com.rs.utils.EconomyPrices;
 import com.rs.utils.Encrypt;
@@ -1147,7 +1146,7 @@ public final class Commands {
                     }
                     return true;
                 case "robjects":
-                    ObjectScriptHandler.init();
+                    ObjectPluginLoader.init();
                     System.out.println("reload object scripts");
                     return true;
                 case "regionid":
@@ -1423,7 +1422,7 @@ public final class Commands {
                             .replace(")", "").replaceAll(",", "'").replaceAll("_", " ").replace("#6", " (6)")
                             .replace("#5", " (5)").replace("#4", " (4)").replace("#3", " (3)").replace("#2", " (2)")
                             .replace("#1", " (1)").replace("#e", " (e)").replace("#i", " (i)").replace("#g", " (g)")
-                            .replace("#or", " (or)").replace("#sp", " (sp)").replace("#t", " (t)");
+                            .replace("#or", " (or)").replace("#sp", " (sp)").replace("#t", " (t)").replace("#u", " (u)").replace("#unf", " (unf)");
                     target = World.getPlayerByDisplayName(name);
                     for (int i = 0; i < Utils.getItemDefinitionsSize(); i++) {
                         ItemDefinitions def = ItemDefinitions.getItemDefinitions(i);

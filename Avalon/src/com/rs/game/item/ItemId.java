@@ -5,12 +5,15 @@ public class ItemId {
     public static final int TINDERBOX = 590;
     public static final int KNIFE = 946;
     public static final int NEEDLE = 1733;
+
     public static final int CHISEL = 1755;
+    public static final int BOW_STRING = 1777;
     public static final int ABYSSAL_WHIP = 4151;
     public static final int SMALL_POUCH = 5509;
     public static final int MEDIUM_POUCH = 5510;
     public static final int LARGE_POUCH = 5512;
     public static final int GIANT_POUCH = 5514;
+    public static final int CROSSBOW_STRING = 9438;
     public static final int SPIRIT_SHARD = 12183;
     public static final int VOTING_HAT_RED = 15069;
     public static final int VOTING_HAT_BLUE = 15071;

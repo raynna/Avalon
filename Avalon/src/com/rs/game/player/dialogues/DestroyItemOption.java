@@ -2,8 +2,8 @@ package com.rs.game.player.dialogues;
 
 import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.game.item.Item;
-import com.rs.game.item.ItemScriptHandler;
-import com.rs.game.item.ItemScript;
+import com.rs.game.item.ItemPluginLoader;
+import com.rs.game.item.ItemPlugin;
 
 public class DestroyItemOption extends Dialogue {
 
@@ -25,7 +25,7 @@ public class DestroyItemOption extends Dialogue {
 	public void run(int interfaceId, int componentId) {
 		if (interfaceId == 1183 && componentId == 9) {
 			ItemDefinitions itemDef = ItemDefinitions.getItemDefinitions(item.getId());
-			ItemScript script = ItemScriptHandler.cachedItemScripts.getOrDefault(item.getId(), ItemScriptHandler.cachedItemScripts.get(itemDef.name));
+			ItemPlugin script = ItemPluginLoader.cachedItemPlugins.getOrDefault(item.getId(), ItemPluginLoader.cachedItemPlugins.get(itemDef.name));
 			if (script != null) {
 				if (script.processDestroy(player, item, slotId)) {
 					end();

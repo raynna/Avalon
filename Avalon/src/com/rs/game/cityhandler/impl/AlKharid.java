@@ -5,7 +5,7 @@ import com.rs.game.cityhandler.CityEvent;
 import com.rs.game.cityhandler.CityEventHandler;
 import com.rs.game.item.Item;
 import com.rs.game.npc.NPC;
-import com.rs.game.objects.scripts.DoorsAndGates;
+import com.rs.game.objects.plugins.DoorsAndGates;
 import com.rs.game.player.Player;
 import com.rs.game.player.content.quest.QuestList.Quests;
 import com.rs.game.player.content.quest.impl.princealirescue.PrinceAliRescue;

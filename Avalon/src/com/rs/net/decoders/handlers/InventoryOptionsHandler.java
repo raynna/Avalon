@@ -18,15 +18,15 @@ import com.rs.game.World;
 import com.rs.game.WorldObject;
 import com.rs.game.WorldTile;
 import com.rs.game.item.Item;
-import com.rs.game.item.ItemScriptHandler;
-import com.rs.game.item.ItemScript;
+import com.rs.game.item.ItemPluginLoader;
+import com.rs.game.item.ItemPlugin;
 import com.rs.game.item.itemdegrading.ArmourRepair;
 import com.rs.game.item.itemdegrading.ChargesManager;
 import com.rs.game.item.itemdegrading.ItemDegrade.ItemStore;
 import com.rs.game.minigames.clanwars.FfaZone;
 import com.rs.game.npc.NPC;
-import com.rs.game.npc.NpcScript;
-import com.rs.game.npc.NpcScriptHandler;
+import com.rs.game.npc.NpcPlugin;
+import com.rs.game.npc.NpcPluginLoader;
 import com.rs.game.npc.familiar.Familiar;
 import com.rs.game.npc.pet.Pet;
 import com.rs.game.player.Equipment;
@@ -103,14 +103,14 @@ public class InventoryOptionsHandler {
             player.sm("This is a members object.");
             return;
         }
-        ItemScript script = ItemScriptHandler.getScript(item);
-        if (script != null) {
-            boolean scriptExecuted = script.processItem2(player, item, slotId);
-            if (!scriptExecuted)
-                Logger.log("ItemScript", "Class: " + script.getClass().getSimpleName() + ".java, Script does not have any option 2 for this item.");
-            if (scriptExecuted) {
-                if (Settings.DEBUG)
-                    Logger.log("ItemScript", "Option 2 - Class: " + script.getClass().getSimpleName() + ".java, Script was executed! " + item.getName() + "(" + item.getId() + ")");
+        ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
+        if (plugin != null) {
+            boolean pluginExecuted = plugin.processItem2(player, item, slotId);
+            if (!pluginExecuted) {
+                Logger.log("ItemPlugin", "Option 2 - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + item.getName() + "(" + item.getId() + ") plugin does not have this option.");
+            }
+            if (pluginExecuted) {
+                Logger.log("ItemPlugin", "Option 2 - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + item.getName() + "(" + item.getId() + ")");
                 return;
             }
         }
@@ -161,6 +161,7 @@ public class InventoryOptionsHandler {
         }, 1);
     }
 
+
     public static void handleItemOption1(Player player, final int slotId, final int itemId, Item item) {
         long time = Utils.currentTimeMillis();
         if (player.getLockDelay() >= time || player.getEmotesManager().getNextEmoteEnd() >= time)
@@ -172,14 +173,14 @@ public class InventoryOptionsHandler {
         }
         if (!player.getControlerManager().processItemClick(slotId, item, player))
             return;
-        ItemScript script = ItemScriptHandler.getScript(item);
-        if (script != null) {
-            boolean scriptExecuted = script.processItem(player, item, slotId);
-            if (!scriptExecuted)
-                Logger.log("ItemScript", "Class: " + script.getClass().getSimpleName() + ".java, Script does not have any option 1 for this item.");
-            if (scriptExecuted) {
-                if (Settings.DEBUG)
-                    Logger.log("ItemScript", "Option 1 - Class: " + script.getClass().getSimpleName() + ".java, Script was executed! " + item.getName() + "(" + item.getId() + ")");
+        ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
+        if (plugin != null) {
+            boolean pluginExecuted = plugin.processItem(player, item, slotId);
+            if (!pluginExecuted) {
+                Logger.log("ItemPlugin", "Option 1 - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + item.getName() + "(" + item.getId() + ") plugin does not have this option.");
+            }
+            if (pluginExecuted) {
+                Logger.log("ItemPlugin", "Option 1 - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + item.getName() + "(" + item.getId() + ")");
                 return;
             }
         }
@@ -729,17 +730,16 @@ public class InventoryOptionsHandler {
                 player.sm("alch on " + toSlot);
             if (!player.getControlerManager().canUseItemOnItem(itemUsed, usedWith))
                 return;
-            Logger.log("ItemHandler", itemUsed.getName() + " on > " + usedWith.getName());
-            ItemScript script = ItemScriptHandler.getScript(itemUsed);
-            if (script == null)
-                script = ItemScriptHandler.getScript(usedWith);
-            if (script != null) {
-                boolean scriptExecuted = script.processItemOnItem(player, itemUsed, usedWith, fromSlot, toSlot);
-                if (!scriptExecuted) {
-                    Logger.log("ItemScript", "[ItemOnItem] Class: " + script.getClass().getSimpleName() + ".java, Script did not meet requirements with " + itemUsed.getName() + " & " + usedWith.getName());
+            ItemPlugin plugin = ItemPluginLoader.getPlugin(itemUsed);
+            if (plugin == null)
+                plugin = ItemPluginLoader.getPlugin(usedWith);
+            if (plugin != null) {
+                boolean pluginExecuted = plugin.processItemOnItem(player, itemUsed, usedWith, fromSlot, toSlot);
+                if (!pluginExecuted) {
+                    Logger.log("ItemPlugin", "ItemOnItem - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + itemUsed.getName() + "(" + itemUsed.getId() + ") > " + usedWith.getName() + "(" + usedWith.getId() + ") does not meet the requirements");
                 }
-                if (scriptExecuted) {
-                    Logger.log("ItemScript", "[ItemOnItem] Class: " + script.getClass().getSimpleName() + ".java, Script was executed! ItemUsed: " + itemUsed.getName() + "(" + itemUsed.getId() + "), usedWith: " + usedWith.getName() + "(" + usedWith.getId() + ")");
+                if (pluginExecuted) {
+                    Logger.log("ItemPlugin", "ItemOnItem - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + itemUsed.getName() + "(" + itemUsed.getId() + ") > " + usedWith.getName() + "(" + usedWith.getId() + ") does meet the requirements");
                     return;
                 }
             }
@@ -1038,14 +1038,14 @@ public class InventoryOptionsHandler {
         if (player.getLockDelay() >= time || player.getEmotesManager().getNextEmoteEnd() >= time)
             return;
         player.stopAll(false);
-        ItemScript script = ItemScriptHandler.getScript(item);
-        if (script != null) {
-            boolean scriptExecuted = script.processItem3(player, item, slotId);
-            if (!scriptExecuted)
-                Logger.log("ItemScript", "Class: " + script.getClass().getSimpleName() + ".java, Script does not have any option 3 for this item.");
-            if (scriptExecuted) {
-                if (Settings.DEBUG)
-                    Logger.log("ItemScript", "Option 3 - Class: " + script.getClass().getSimpleName() + ".java, Script was executed! " + item.getName() + "(" + item.getId() + ")");
+        ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
+        if (plugin != null) {
+            boolean pluginExecuted = plugin.processItem3(player, item, slotId);
+            if (!pluginExecuted) {
+                Logger.log("ItemPlugin", "Option 3 - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + item.getName() + "(" + item.getId() + ") plugin does not have this option.");
+            }
+            if (pluginExecuted) {
+                Logger.log("ItemPlugin", "Option 3 - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + item.getName() + "(" + item.getId() + ")");
                 return;
             }
         }
@@ -1219,28 +1219,28 @@ public class InventoryOptionsHandler {
         }
 
     public static void handleItemOption4(Player player, int slotId, int itemId, Item item) {
-        ItemScript script = ItemScriptHandler.getScript(item);
-        if (script != null) {
-            boolean scriptExecuted = script.processItem4(player, item, slotId);
-            if (!scriptExecuted)
-                Logger.log("ItemScript", "Class: " + script.getClass().getSimpleName() + ".java, Script does not have any option 4 for this item.");
-            if (scriptExecuted) {
-                if (Settings.DEBUG)
-                    Logger.log("ItemScript", "Option 4 - Class: " + script.getClass().getSimpleName() + ".java, Script was executed! " + item.getName() + "(" + item.getId() + ")");
+        ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
+        if (plugin != null) {
+            boolean pluginExecuted = plugin.processItem4(player, item, slotId);
+            if (!pluginExecuted) {
+                Logger.log("ItemPlugin", "Option 4 - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + item.getName() + "(" + item.getId() + ") plugin does not have this option.");
+            }
+            if (pluginExecuted) {
+                Logger.log("ItemPlugin", "Option 4 - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + item.getName() + "(" + item.getId() + ")");
                 return;
             }
         }
        }
 
     public static void handleItemOption5(Player player, int slotId, int itemId, Item item) {
-        ItemScript script = ItemScriptHandler.getScript(item);
-        if (script != null) {
-            boolean scriptExecuted = script.processItem5(player, item, slotId);
-            if (!scriptExecuted)
-                Logger.log("ItemScript", "Class: " + script.getClass().getSimpleName() + ".java, Script does not have any option 5 for this item.");
-            if (scriptExecuted) {
-                if (Settings.DEBUG)
-                    Logger.log("ItemScript", "Option 5 - Class: " + script.getClass().getSimpleName() + ".java, Script was executed! " + item.getName() + "(" + item.getId() + ")");
+        ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
+        if (plugin != null) {
+            boolean pluginExecuted = plugin.processItem5(player, item, slotId);
+            if (!pluginExecuted) {
+                Logger.log("ItemPlugin", "Option 5 - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + item.getName() + "(" + item.getId() + ") plugin does not have this option.");
+            }
+            if (pluginExecuted) {
+                Logger.log("ItemPlugin", "Option 5 - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + item.getName() + "(" + item.getId() + ")");
                 return;
             }
         }
@@ -1251,14 +1251,14 @@ public class InventoryOptionsHandler {
         if (player.getLockDelay() >= time || player.getEmotesManager().getNextEmoteEnd() >= time)
             return;
         player.stopAll(false);
-        ItemScript script = ItemScriptHandler.getScript(item);
-        if (script != null) {
-            boolean scriptExecuted = script.processItem6(player, item, slotId);
-            if (!scriptExecuted)
-                Logger.log("ItemScript", "Class: " + script.getClass().getSimpleName() + ".java, Script does not have any option 6 for this item.");
-            if (scriptExecuted) {
-                if (Settings.DEBUG)
-                    Logger.log("ItemScript", "Option 6 - Class: " + script.getClass().getSimpleName() + ".java, Script was executed! " + item.getName() + "(" + item.getId() + ")");
+        ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
+        if (plugin != null) {
+            boolean pluginExecuted = plugin.processItem6(player, item, slotId);
+            if (!pluginExecuted) {
+                Logger.log("ItemPlugin", "Option 6 - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + item.getName() + "(" + item.getId() + ") plugin does not have this option.");
+            }
+            if (pluginExecuted) {
+                Logger.log("ItemPlugin", "Option 6 - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + item.getName() + "(" + item.getId() + ")");
                 return;
             }
         }
@@ -1459,14 +1459,14 @@ public class InventoryOptionsHandler {
         if (!player.getControlerManager().canDropItem(item))
             return;
         player.stopAll(false);
-        ItemScript script = ItemScriptHandler.getScript(item);
-        if (script != null) {
-            boolean scriptExecuted = script.processDrop(player, item, slotId);
-            if (!scriptExecuted)
-                Logger.log("ItemScript", "Class: " + script.getClass().getSimpleName() + ".java, Script does not have any drop for this item.");
-            if (scriptExecuted) {
-                if (Settings.DEBUG)
-                    Logger.log("ItemScript", "Drop/Destroy - Class: " + script.getClass().getSimpleName() + ".java, Script was executed! " + item.getName() + "(" + item.getId() + ")");
+        ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
+        if (plugin != null) {
+            boolean pluginExecuted = plugin.processDrop(player, item, slotId);
+            if (!pluginExecuted) {
+                Logger.log("ItemPlugin", "Drop - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + item.getName() + "(" + item.getId() + ") plugin does not have this option.");
+            }
+            if (pluginExecuted) {
+                Logger.log("ItemPlugin", "Drop - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + item.getName() + "(" + item.getId() + ")");
                 return;
             }
         }
@@ -1538,8 +1538,8 @@ public class InventoryOptionsHandler {
             return;
         player.stopAll(false);
         player.faceEntity(npc);
-        NpcScript script = NpcScriptHandler.getScript(npc);
-        if (script != null) {
+        NpcPlugin plugin = NpcPluginLoader.getPlugin(npc);
+        if (plugin != null) {
             player.setRouteEvent(new RouteEvent(npc, new Runnable() {
                 @Override
                 public void run() {
@@ -1547,12 +1547,12 @@ public class InventoryOptionsHandler {
                     npc.faceEntity(player);
                     player.stopAll();
                     player.faceEntity(npc);
-                    boolean scriptExecuted = script.processNpc4(player, npc);
-                    if (!scriptExecuted)
-                        Logger.log("ItemScript;ItemOnNpc", "Class: " + script.getClass().getSimpleName() + ".java, Option ItemOnNpc method was empty in script.");
-                    if (scriptExecuted) {
-                        if (Settings.DEBUG)
-                            Logger.log("NpcScript;ItemOnNpc", "Class: " + script.getClass().getSimpleName() + ".java, Name of Npc: " + npc.getName() + ", NpcId: " + npc.getId() + ", Name of Item: " + item.getName() + ", ItemId: " + item.getId());
+                    boolean pluginExecuted = plugin.processNpc4(player, npc);
+                    if (!pluginExecuted) {
+                        Logger.log("ItemPlugin", "ItemOnNpc - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + item.getName() + "(" + item.getId() + ") > " + npc.getName() + "(" + npc.getId() + ") does not meet the requirements");
+                    }
+                    if (pluginExecuted) {
+                        Logger.log("ItemPlugin", "ItemOnNpc - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + item.getName() + "(" + item.getId() + ") > " + npc.getName() + "(" + npc.getId() + ") does meet the requirements");
                         return;
                     }
                 }

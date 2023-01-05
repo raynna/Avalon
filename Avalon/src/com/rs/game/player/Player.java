@@ -53,7 +53,7 @@ import com.rs.game.npc.familiar.Familiar;
 import com.rs.game.npc.pet.Pet;
 import com.rs.game.objects.GlobalObjectAddition;
 import com.rs.game.objects.GlobalObjectDeletion;
-import com.rs.game.objects.ObjectScript;
+import com.rs.game.objects.ObjectPlugin;
 import com.rs.game.player.Ranks.Rank;
 import com.rs.game.player.actions.combat.PlayerCombat;
 import com.rs.game.player.actions.skills.construction.House;
@@ -6098,7 +6098,7 @@ public class Player extends Entity {
 
     public transient Entity combatTarget;
 
-    public transient ObjectScript objectScript;
+    public transient ObjectPlugin objectPlugin;
 
     public Entity setTargetName(Player player) {
         return combatTarget = player;

@@ -4,8 +4,8 @@ import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.game.World;
 import com.rs.game.WorldTile;
 import com.rs.game.item.Item;
-import com.rs.game.item.ItemScriptHandler;
-import com.rs.game.item.ItemScript;
+import com.rs.game.item.ItemPluginLoader;
+import com.rs.game.item.ItemPlugin;
 import com.rs.game.player.content.ItemConstants;
 
 public class HighValueOption extends Dialogue {
@@ -59,9 +59,9 @@ public class HighValueOption extends Dialogue {
 					end();
 					return;		
 				}
-				ItemScript script = ItemScriptHandler.cachedItemScripts.getOrDefault(item.getId(), ItemScriptHandler.cachedItemScripts.get(ItemDefinitions.getItemDefinitions(item.getId()).name));
-				if (script != null) {
-					if (script.processDrop(player, item, slotId))
+				ItemPlugin plugin = ItemPluginLoader.cachedItemPlugins.getOrDefault(item.getId(), ItemPluginLoader.cachedItemPlugins.get(ItemDefinitions.getItemDefinitions(item.getId()).name));
+				if (plugin != null) {
+					if (plugin.processDrop(player, item, slotId))
 						return;
 				}
 				player.getInventory().dropItem(slotId, item, true);
@@ -72,9 +72,9 @@ public class HighValueOption extends Dialogue {
 					end();
 					return;		
 				}
-				script = ItemScriptHandler.cachedItemScripts.getOrDefault(item.getId(), ItemScriptHandler.cachedItemScripts.get(ItemDefinitions.getItemDefinitions(item.getId()).name));
-				if (script != null) {
-					if (script.processDrop(player, item, slotId))
+				plugin = ItemPluginLoader.cachedItemPlugins.getOrDefault(item.getId(), ItemPluginLoader.cachedItemPlugins.get(ItemDefinitions.getItemDefinitions(item.getId()).name));
+				if (plugin != null) {
+					if (plugin.processDrop(player, item, slotId))
 						return;
 				}
 				player.getInventory().dropItem(slotId, item, true);

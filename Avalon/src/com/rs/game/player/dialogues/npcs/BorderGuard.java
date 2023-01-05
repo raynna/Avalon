@@ -1,7 +1,7 @@
 package com.rs.game.player.dialogues.npcs;
 
 import com.rs.game.WorldObject;
-import com.rs.game.objects.scripts.DoorsAndGates;
+import com.rs.game.objects.plugins.DoorsAndGates;
 import com.rs.game.player.dialogues.Dialogue;
 
 public class BorderGuard extends Dialogue {

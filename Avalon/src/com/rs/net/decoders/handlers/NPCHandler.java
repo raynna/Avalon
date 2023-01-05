@@ -10,17 +10,14 @@ import com.rs.game.Graphics;
 import com.rs.game.World;
 import com.rs.game.WorldTile;
 import com.rs.game.cityhandler.CityEventHandler;
-import com.rs.game.minigames.lividfarm.LividFarmControler;
 import com.rs.game.minigames.pest.CommendationExchange;
 import com.rs.game.npc.NPC;
-import com.rs.game.npc.NpcScript;
-import com.rs.game.npc.NpcScriptHandler;
+import com.rs.game.npc.NpcPlugin;
+import com.rs.game.npc.NpcPluginLoader;
 import com.rs.game.npc.combat.NPCCombatDefinitions;
 import com.rs.game.npc.familiar.Familiar;
 import com.rs.game.npc.others.LivingRock;
 import com.rs.game.npc.pet.Pet;
-import com.rs.game.objects.ObjectScript;
-import com.rs.game.objects.ObjectScriptHandler;
 import com.rs.game.player.Player;
 import com.rs.game.player.RouteEvent;
 import com.rs.game.player.Skills;
@@ -108,8 +105,8 @@ public class NPCHandler {
         player.setNextFaceEntity(npc);
         if (forceRun)
             player.setRun(forceRun);
-        NpcScript script = NpcScriptHandler.getScript(npc);
-        if (script != null) {
+        NpcPlugin plugin = NpcPluginLoader.getPlugin(npc);
+        if (plugin != null) {
             player.setRouteEvent(new RouteEvent(npc, new Runnable() {
                 @Override
                 public void run() {
@@ -117,12 +114,12 @@ public class NPCHandler {
                     npc.faceEntity(player);
                     player.stopAll();
                     player.faceEntity(npc);
-                    boolean scriptExecuted = script.processNpc(player, npc);
-                    if (!scriptExecuted)
-                        Logger.log("NpcScript;Option 1", "Class: " + script.getClass().getSimpleName() + ".java, Option 1 method was empty in script.");
-                    if (scriptExecuted) {
-                        if (Settings.DEBUG)
-                            Logger.log("NpcScript;Option 1", "Class: " + script.getClass().getSimpleName() + ".java, Name of Npc: " + npc.getName() + ", NpcId: " + npc.getId());
+                    boolean pluginExecuted = plugin.processNpc(player, npc);
+                    if (!pluginExecuted) {
+                        Logger.log("NpcPlugin", "Option 1 - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + npc.getName() + "(" + npc.getId() + ") plugin does not have this option.");
+                    }
+                    if (pluginExecuted) {
+                        Logger.log("NpcPlugin", "Option 1 - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + npc.getName() + "(" + npc.getId() + ")");
                         return;
                     }
                 }
@@ -639,8 +636,8 @@ public class NPCHandler {
         player.setNextFaceEntity(npc);
         if (forceRun)
             player.setRun(forceRun);
-        NpcScript script = NpcScriptHandler.getScript(npc);
-        if (script != null) {
+        NpcPlugin plugin = NpcPluginLoader.getPlugin(npc);
+        if (plugin != null) {
             player.setRouteEvent(new RouteEvent(npc, new Runnable() {
                 @Override
                 public void run() {
@@ -648,12 +645,12 @@ public class NPCHandler {
                     npc.faceEntity(player);
                     player.stopAll();
                     player.faceEntity(npc);
-                    boolean scriptExecuted = script.processNpc2(player, npc);
-                    if (!scriptExecuted)
-                        Logger.log("NpcScript;Option 2", "Class: " + script.getClass().getSimpleName() + ".java, Option 2 method was empty in script.");
-                    if (scriptExecuted) {
-                        if (Settings.DEBUG)
-                            Logger.log("NpcScript;Option 2", "Class: " + script.getClass().getSimpleName() + ".java, Name of Npc: " + npc.getName() + ", NpcId: " + npc.getId());
+                    boolean pluginExecuted = plugin.processNpc2(player, npc);
+                    if (!pluginExecuted) {
+                        Logger.log("NpcPlugin", "Option 2 - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + npc.getName() + "(" + npc.getId() + ") plugin does not have this option.");
+                    }
+                    if (pluginExecuted) {
+                        Logger.log("NpcPlugin", "Option 2 - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + npc.getName() + "(" + npc.getId() + ")");
                         return;
                     }
                 }
@@ -934,8 +931,8 @@ public class NPCHandler {
         player.setNextFaceEntity(npc);
         if (forceRun)
             player.setRun(forceRun);
-        NpcScript script = NpcScriptHandler.getScript(npc);
-        if (script != null) {
+        NpcPlugin plugin = NpcPluginLoader.getPlugin(npc);
+        if (plugin != null) {
             player.setRouteEvent(new RouteEvent(npc, new Runnable() {
                 @Override
                 public void run() {
@@ -943,12 +940,12 @@ public class NPCHandler {
                     npc.faceEntity(player);
                     player.stopAll();
                     player.faceEntity(npc);
-                    boolean scriptExecuted = script.processNpc3(player, npc);
-                    if (!scriptExecuted)
-                        Logger.log("NpcScript;Option 3", "Class: " + script.getClass().getSimpleName() + ".java, Option 3 method was empty in script.");
-                    if (scriptExecuted) {
-                        if (Settings.DEBUG)
-                            Logger.log("NpcScript;Option 3", "Class: " + script.getClass().getSimpleName() + ".java, Name of Npc: " + npc.getName() + ", NpcId: " + npc.getId());
+                    boolean pluginExecuted = plugin.processNpc3(player, npc);
+                    if (!pluginExecuted) {
+                        Logger.log("NpcPlugin", "Option 3 - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + npc.getName() + "(" + npc.getId() + ") plugin does not have this option.");
+                    }
+                    if (pluginExecuted) {
+                        Logger.log("NpcPlugin", "Option 3 - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + npc.getName() + "(" + npc.getId() + ")");
                         return;
                     }
                 }
@@ -1060,8 +1057,8 @@ public class NPCHandler {
         player.setNextFaceEntity(npc);
         if (forceRun)
             player.setRun(forceRun);
-        NpcScript script = NpcScriptHandler.getScript(npc);
-        if (script != null) {
+        NpcPlugin plugin = NpcPluginLoader.getPlugin(npc);
+        if (plugin != null) {
             player.setRouteEvent(new RouteEvent(npc, new Runnable() {
                 @Override
                 public void run() {
@@ -1069,12 +1066,12 @@ public class NPCHandler {
                     npc.faceEntity(player);
                     player.stopAll();
                     player.faceEntity(npc);
-                    boolean scriptExecuted = script.processNpc4(player, npc);
-                    if (!scriptExecuted)
-                        Logger.log("NpcScript;Option 4", "Class: " + script.getClass().getSimpleName() + ".java, Option 4 method was empty in script.");
-                    if (scriptExecuted) {
-                        if (Settings.DEBUG)
-                            Logger.log("NpcScript;Option 4", "Class: " + script.getClass().getSimpleName() + ".java, Name of Npc: " + npc.getName() + ", NpcId: " + npc.getId());
+                    boolean pluginExecuted = plugin.processNpc4(player, npc);
+                    if (!pluginExecuted) {
+                        Logger.log("NpcPlugin", "Option 4 - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + npc.getName() + "(" + npc.getId() + ") plugin does not have this option.");
+                    }
+                    if (pluginExecuted) {
+                        Logger.log("NpcPlugin", "Option 4 - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + npc.getName() + "(" + npc.getId() + ")");
                         return;
                     }
                 }

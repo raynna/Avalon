@@ -21,10 +21,10 @@ import com.rs.game.minigames.crucible.Crucible;
 import com.rs.game.minigames.fightpits.FightPits;
 import com.rs.game.minigames.pest.Lander;
 import com.rs.game.minigames.warriorguild.WarriorsGuild;
-import com.rs.game.objects.ObjectScript;
-import com.rs.game.objects.ObjectScriptHandler;
-import com.rs.game.objects.scripts.DoorsAndGates;
-import com.rs.game.objects.scripts.GlobalStairs;
+import com.rs.game.objects.ObjectPlugin;
+import com.rs.game.objects.ObjectPluginLoader;
+import com.rs.game.objects.plugins.DoorsAndGates;
+import com.rs.game.objects.plugins.GlobalStairs;
 import com.rs.game.player.CombatDefinitions;
 import com.rs.game.player.Player;
 import com.rs.game.player.RouteEvent;
@@ -176,19 +176,19 @@ public final class ObjectHandler {
         final int x = object.getX();
         final int y = object.getY();
         player.setNextFaceEntity(null);
-        ObjectScript script = ObjectScriptHandler.getScript(object);
-        if (script != null) {
+        ObjectPlugin plugin = ObjectPluginLoader.getPlugin(object);
+        if (plugin != null) {
             player.setRouteEvent(new RouteEvent(object, new Runnable() {
                 @Override
                 public void run() {
                     player.stopAll();
                     player.faceObject(object);
-                    boolean scriptExecuted = script.processObject(player, object);
-                    if (!scriptExecuted)
-                        Logger.log("ObjectScript;Option 1", "Class: " + script.getClass().getSimpleName() + ".java, Option 1 method was empty in script.");
-                    if (scriptExecuted) {
+                    boolean pluginExecuted = plugin.processObject(player, object);
+                    if (!pluginExecuted)
+                        Logger.log("ObjectPlugin;Option 1", "Class: " + plugin.getClass().getSimpleName() + ".java, Option 1 method was empty in plugin.");
+                    if (pluginExecuted) {
                         if (Settings.DEBUG)
-                            Logger.log("ObjectScript;Option 1", "Class: " + script.getClass().getSimpleName() + ".java, Name of Object: " + object.getName() + ", ObjectId: " + object.getId());
+                            Logger.log("ObjectPlugin;Option 1", "Class: " + plugin.getClass().getSimpleName() + ".java, Name of Object: " + object.getName() + ", ObjectId: " + object.getId());
                         return;
                     }
                 }
@@ -1634,27 +1634,27 @@ public final class ObjectHandler {
         final ObjectDefinitions objectDef = object.getDefinitions();
         final int id = object.getId();
         player.setNextFaceEntity(null);
-        ObjectScript script = ObjectScriptHandler.getScript(object);
-        if (script != null) {
-            if (script.getDistance() == 0) {
+        ObjectPlugin plugin = ObjectPluginLoader.getPlugin(object);
+        if (plugin != null) {
+            if (plugin.getDistance() == 0) {
                 player.setRouteEvent(new RouteEvent(object, new Runnable() {
                     @Override
                     public void run() {
                         player.stopAll();
                         player.faceObject(object);
-                        boolean scriptExecuted = script.processObject2(player, object);
-                        if (!scriptExecuted)
-                            Logger.log("ObjectScript;Option 2", "Class: " + script.getClass().getSimpleName() + ".java, Option 2 method was empty in script.");
-                        if (scriptExecuted) {
+                        boolean pluginExecuted = plugin.processObject2(player, object);
+                        if (!pluginExecuted)
+                            Logger.log("ObjectPlugin;Option 2", "Class: " + plugin.getClass().getSimpleName() + ".java, Option 2 method was empty in plugin.");
+                        if (pluginExecuted) {
                             if (Settings.DEBUG)
-                                Logger.log("ObjectScript;Option 2", "Class: " + script.getClass().getSimpleName() + ".java, Name of Object: " + object.getName() + ", ObjectId: " + object.getId());
+                                Logger.log("ObjectPlugin;Option 2", "Class: " + plugin.getClass().getSimpleName() + ".java, Name of Object: " + object.getName() + ", ObjectId: " + object.getId());
                             return;
                         }
                     }
                 }, true));
                 return;
             } else {
-                // TODO route to script.getDistane()
+                // TODO route to plugin.getDistane()
             }
         }
         player.setRouteEvent(new RouteEvent(object, new Runnable() {
@@ -1808,19 +1808,19 @@ public final class ObjectHandler {
         final ObjectDefinitions objectDef = object.getDefinitions();
         final int id = object.getId();
         player.setNextFaceEntity(null);
-        ObjectScript script = ObjectScriptHandler.getScript(object);
-        if (script != null) {
+        ObjectPlugin plugin = ObjectPluginLoader.getPlugin(object);
+        if (plugin != null) {
                 player.setRouteEvent(new RouteEvent(object, new Runnable() {
                     @Override
                     public void run() {
                         player.stopAll();
                         player.faceObject(object);
-                        boolean scriptExecuted = script.processObject3(player, object);
-                        if (!scriptExecuted)
-                            Logger.log("ObjectScript;Option 3", "Class: " + script.getClass().getSimpleName() + ".java, Option 3 method was empty in script.");
-                        if (scriptExecuted) {
+                        boolean pluginExecuted = plugin.processObject3(player, object);
+                        if (!pluginExecuted)
+                            Logger.log("ObjectPlugin;Option 3", "Class: " + plugin.getClass().getSimpleName() + ".java, Option 3 method was empty in plugin.");
+                        if (pluginExecuted) {
                             if (Settings.DEBUG)
-                                Logger.log("ObjectScript;Option 3", "Class: " + script.getClass().getSimpleName() + ".java, Name of Object: " + object.getName() + ", ObjectId: " + object.getId());
+                                Logger.log("ObjectPlugin;Option 3", "Class: " + plugin.getClass().getSimpleName() + ".java, Name of Object: " + object.getName() + ", ObjectId: " + object.getId());
                             return;
                         }
                     }
@@ -1900,19 +1900,19 @@ public final class ObjectHandler {
         final ObjectDefinitions objectDef = object.getDefinitions();
         final int id = object.getId();
         player.setNextFaceEntity(null);
-        ObjectScript script = ObjectScriptHandler.getScript(object);
-        if (script != null) {
+        ObjectPlugin plugin = ObjectPluginLoader.getPlugin(object);
+        if (plugin != null) {
                 player.setRouteEvent(new RouteEvent(object, new Runnable() {
                     @Override
                     public void run() {
                         player.stopAll();
                         player.faceObject(object);
-                        boolean scriptExecuted = script.processObject4(player, object);
-                        if (!scriptExecuted)
-                            Logger.log("ObjectScript;Option 4", "Class: " + script.getClass().getSimpleName() + ".java, Option 4 method was empty in script.");
-                        if (scriptExecuted) {
+                        boolean pluginExecuted = plugin.processObject4(player, object);
+                        if (!pluginExecuted)
+                            Logger.log("ObjectPlugin;Option 4", "Class: " + plugin.getClass().getSimpleName() + ".java, Option 4 method was empty in plugin.");
+                        if (pluginExecuted) {
                             if (Settings.DEBUG)
-                                Logger.log("ObjectScript;Option 4", "Class: " + script.getClass().getSimpleName() + ".java, Name of Object: " + object.getName() + ", ObjectId: " + object.getId());
+                                Logger.log("ObjectPlugin;Option 4", "Class: " + plugin.getClass().getSimpleName() + ".java, Name of Object: " + object.getName() + ", ObjectId: " + object.getId());
                             return;
                         }
                     }
@@ -1954,19 +1954,19 @@ public final class ObjectHandler {
         final ObjectDefinitions objectDef = object.getDefinitions();
         final int id = object.getId();
         player.setNextFaceEntity(null);
-        ObjectScript script = ObjectScriptHandler.getScript(object);
-        if (script != null) {
+        ObjectPlugin plugin = ObjectPluginLoader.getPlugin(object);
+        if (plugin != null) {
                 player.setRouteEvent(new RouteEvent(object, new Runnable() {
                     @Override
                     public void run() {
                         player.stopAll();
                         player.faceObject(object);
-                        boolean scriptExecuted = script.processObject5(player, object);
-                        if (!scriptExecuted)
-                            Logger.log("ObjectScript;Option 5", "Class: " + script.getClass().getSimpleName() + ".java, Option 5 method was empty in script.");
-                        if (scriptExecuted) {
+                        boolean pluginExecuted = plugin.processObject5(player, object);
+                        if (!pluginExecuted)
+                            Logger.log("ObjectPlugin;Option 5", "Class: " + plugin.getClass().getSimpleName() + ".java, Option 5 method was empty in plugin.");
+                        if (pluginExecuted) {
                             if (Settings.DEBUG)
-                                Logger.log("ObjectScript;Option 5", "Class: " + script.getClass().getSimpleName() + ".java, Name of Object: " + object.getName() + ", ObjectId: " + object.getId());
+                                Logger.log("ObjectPlugin;Option 5", "Class: " + plugin.getClass().getSimpleName() + ".java, Name of Object: " + object.getName() + ", ObjectId: " + object.getId());
                             return;
                         }
                     }
@@ -2059,19 +2059,19 @@ public final class ObjectHandler {
                                           final Item item) {
         final int itemId = item.getId();
         final ObjectDefinitions objectDef = object.getDefinitions();
-        ObjectScript script = ObjectScriptHandler.getScript(object);
-        if (script != null) {
+        ObjectPlugin plugin = ObjectPluginLoader.getPlugin(object);
+        if (plugin != null) {
                 player.setRouteEvent(new RouteEvent(object, new Runnable() {
                     @Override
                     public void run() {
                         player.stopAll();
                         player.faceObject(object);
-                        boolean scriptExecuted = script.processItemOnObject(player, object, item);
-                        if (!scriptExecuted)
-                            Logger.log("ObjectScript;ItemOnObject", "Class: " + script.getClass().getSimpleName() + ".java, ItemOnObject method was empty in script.");
-                        if (scriptExecuted) {
+                        boolean pluginExecuted = plugin.processItemOnObject(player, object, item);
+                        if (!pluginExecuted)
+                            Logger.log("ObjectPlugin;ItemOnObject", "Class: " + plugin.getClass().getSimpleName() + ".java, ItemOnObject method was empty in plugin.");
+                        if (pluginExecuted) {
                             if (Settings.DEBUG)
-                                Logger.log("ObjectScript;ItemOnObject", "Class: " + script.getClass().getSimpleName() + ".java, Name of Object: " + object.getName() + ", ObjectId: " + object.getId() + ", Name of Item: " + item.getName() + ", ItemId: " + item.getId());
+                                Logger.log("ObjectPlugin;ItemOnObject", "Class: " + plugin.getClass().getSimpleName() + ".java, Name of Object: " + object.getName() + ", ObjectId: " + object.getId() + ", Name of Item: " + item.getName() + ", ItemId: " + item.getId());
                             return;
                         }
                     }
