@@ -61,9 +61,9 @@ public abstract class ItemPlugin {
         StringBuilder builder = new StringBuilder();
         builder.append("Option " + option + " - Class: " + this.getClass().getSimpleName() + ".java, ");
         if (executed) {
-            builder.append("Executed: " + item.getName() + "(" + item.getId() + ") option '" + optionName + "'");
+            builder.append("Executed: '" + optionName + "' on " + item.getName() + "(" + item.getId() + ")");
         } else {
-            builder.append("Failed: " + item.getName() + "(" + item.getId() + ") plugin does not have option '" + optionName + "'");
+            builder.append("Failed: '" + optionName + "' option is unhandled in plugin " + item.getName() + "(" + item.getId() + ")");
         }
         Logger.log("ItemPlugin", builder);
     }

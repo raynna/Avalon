@@ -25,6 +25,7 @@ import com.rs.game.player.content.grandexchange.LimitedGEReader;
 import com.rs.io.InputStream;
 import com.rs.io.Stream;
 import com.rs.utils.ItemExamines;
+import com.rs.utils.Logger;
 import com.rs.utils.Utils;
 
 @SuppressWarnings("unused")
@@ -297,23 +298,22 @@ public final class ItemDefinitions {
 
     public String getInventoryOption(boolean print, int option) {
         if (getInventoryOptions() == null) {
-            System.out.println("options are null");
             return "";
         }
+        print = false;
 		if (print) {
 			int optionId = 1;
 			StringBuilder builder = new StringBuilder();
-			builder.append("Option Actually clicked[" + option + "], Length=" + getInventoryOptions().length + ", Options: ");
+			builder.append("Clicked option=" + getInventoryOptions()[option - 1] + "("+option+"), Length=" + getInventoryOptions().length + ", Options: ");
 			for (String options : getInventoryOptions()) {
 				if (options == null)
-					builder.append("None(" + optionId + "), ");
+					builder.append("None(" + optionId + ") ");
 				else
 					builder.append(""+options.toLowerCase() + "(" + optionId + ") ");
 				optionId++;
 			}
-			System.out.println(builder);
+			Logger.log("ItemDefinitions", builder);
 		}
-        System.out.println("Correct option is: " + getInventoryOptions()[option - 1].toLowerCase());
         return getInventoryOptions()[option - 1].toLowerCase();
     }
 

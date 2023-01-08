@@ -106,7 +106,6 @@ public class InventoryOptionsHandler {
             player.sm("This is a members object.");
             return;
         }
-        System.out.println("handleItemOption2");
         ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
         String optionName = item.getDefinitions().getInventoryOption(true, option);
         if (plugin != null) {
@@ -116,7 +115,6 @@ public class InventoryOptionsHandler {
             if (pluginExecuted)
                 return;
         }
-        System.out.println("Option 2: Wear item: " + item.getName());
         /**item switching, wear is handled in player process*/
         if (!item.getDefinitions().isWearItem())
             return;
@@ -155,7 +153,6 @@ public class InventoryOptionsHandler {
         if (player.getLockDelay() >= time || player.getEmotesManager().getNextEmoteEnd() >= time)
             return;
         /**item click option 1*/
-        System.out.println("handleItemOption1");
         ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
         String optionName = item.getDefinitions().getInventoryOption(true, option);
         if (plugin != null) {
@@ -1026,7 +1023,6 @@ public class InventoryOptionsHandler {
         int itemId = item.getId();
         if (player.getLockDelay() >= time || player.getEmotesManager().getNextEmoteEnd() >= time)
             return;
-        System.out.println("handleItemOption3");
         player.stopAll(false);
         ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
         ItemDefinitions definitions = item.getDefinitions();
@@ -1204,32 +1200,12 @@ public class InventoryOptionsHandler {
     }
 
     public static void handleItemOption4(Player player, int slotId, Item item, int option) {
-        System.out.println("handleItemOption4");
-        ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
-        ItemDefinitions definitions = item.getDefinitions();
-        String optionName = definitions.getInventoryOption(true, option);
-        if (plugin != null) {
-            boolean pluginExecuted = plugin.processItem(player, item, slotId, optionName);
-            plugin.sendPluginLog(option, item, optionName, pluginExecuted);
-            if (pluginExecuted)
-                return;
-        }
     }
 
     public static void handleItemOption5(Player player, int slotId, Item item, int option) {
-        System.out.println("handleItemOption5");
-        ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
-        String optionName = item.getDefinitions().getInventoryOption(true, option);
-        if (plugin != null) {
-            boolean pluginExecuted = plugin.processItem(player, item, slotId, optionName);
-            plugin.sendPluginLog(option, item, optionName, pluginExecuted);
-            if (pluginExecuted)
-                return;
-        }
     }
 
     public static void handleItemOption6(Player player, int slotId, Item item, int option) {
-        System.out.println("handleItemOption6");
         long time = Utils.currentTimeMillis();
         int itemId = item.getId();
         if (player.getLockDelay() >= time || player.getEmotesManager().getNextEmoteEnd() >= time)
@@ -1422,7 +1398,6 @@ public class InventoryOptionsHandler {
     }
 
     public static void handleItemOption7(Player player, int slotId, Item item, int option) {
-        System.out.println("handleItemOption7");
         int itemId = item.getId();
         String name = ItemDefinitions.getItemDefinitions(itemId).getName().toLowerCase();
         long time = Utils.currentTimeMillis();
@@ -1487,7 +1462,6 @@ public class InventoryOptionsHandler {
     }
 
     public static void handleItemOption8(Player player, int slotId, Item item, int option) {
-        System.out.println("handleItemOption8");
         player.getInventory().sendExamine(slotId);
     }
 
