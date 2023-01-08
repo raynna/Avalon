@@ -7,6 +7,7 @@ import com.rs.game.item.Item;
 import com.rs.game.item.ItemPluginLoader;
 import com.rs.game.item.ItemPlugin;
 import com.rs.game.player.content.ItemConstants;
+import com.rs.utils.Logger;
 
 public class HighValueOption extends Dialogue {
 
@@ -59,10 +60,17 @@ public class HighValueOption extends Dialogue {
 					end();
 					return;		
 				}
-				ItemPlugin plugin = ItemPluginLoader.cachedItemPlugins.getOrDefault(item.getId(), ItemPluginLoader.cachedItemPlugins.get(ItemDefinitions.getItemDefinitions(item.getId()).name));
+				ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
 				if (plugin != null) {
-					if (plugin.processDrop(player, item, slotId))
+					boolean pluginExecuted = plugin.processDrop(player, item, slotId);
+					if (!pluginExecuted) {
+						Logger.log("ItemPlugin", "Drop - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + item.getName() + "(" + item.getId() + ") plugin does not have this option.");
+					}
+					if (pluginExecuted) {
+						Logger.log("ItemPlugin", "Drop - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + item.getName() + "(" + item.getId() + ")");
+						end();
 						return;
+					}
 				}
 				player.getInventory().dropItem(slotId, item, true);
 				end();
@@ -72,10 +80,18 @@ public class HighValueOption extends Dialogue {
 					end();
 					return;		
 				}
-				plugin = ItemPluginLoader.cachedItemPlugins.getOrDefault(item.getId(), ItemPluginLoader.cachedItemPlugins.get(ItemDefinitions.getItemDefinitions(item.getId()).name));
+				player.HighValueOption = true;
+				plugin = ItemPluginLoader.getPlugin(item);
 				if (plugin != null) {
-					if (plugin.processDrop(player, item, slotId))
+					boolean pluginExecuted = plugin.processDrop(player, item, slotId);
+					if (!pluginExecuted) {
+						Logger.log("ItemPlugin", "Drop - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + item.getName() + "(" + item.getId() + ") plugin does not have this option.");
+					}
+					if (pluginExecuted) {
+						Logger.log("ItemPlugin", "Drop - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + item.getName() + "(" + item.getId() + ")");
+						end();
 						return;
+					}
 				}
 				player.getInventory().dropItem(slotId, item, true);
 				player.HighValueOption = true;

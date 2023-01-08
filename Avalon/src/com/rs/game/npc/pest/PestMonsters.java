@@ -41,7 +41,7 @@ public class PestMonsters extends NPC {
 		if (playerIndexes != null) {
 			for (int playerIndex : playerIndexes) {
 				Player player = World.getPlayers().get(playerIndex);
-				if (player == null || player.isDead() || player.hasFinished() || !player.isRunning()
+				if (player == null || player.isDead() || player.hasFinished() || !player.isActive()
 						|| !player.withinDistance(this, 10))
 					continue;
 				possibleTarget.add(player);

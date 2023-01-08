@@ -691,7 +691,7 @@ public class House implements Serializable {
 			return;
 		}
 		Player owner = World.getPlayerByDisplayName(displayname);
-		if (owner != player && (owner == null || !owner.isRunning() || owner.getHouse().locked)) {
+		if (owner != player && (owner == null || !owner.isActive() || owner.getHouse().locked)) {
 			player.getPackets().sendGameMessage("That player is offline, or has privacy mode enabled.");
 			return;
 		}

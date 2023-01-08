@@ -16,31 +16,31 @@ public class RunePouch extends ItemPlugin {
     }
 
     @Override
-    public boolean processItem(Player player, Item item, int slotId) {
-        ButtonHandler.openRunePouch(player);
-        return true;
-    }
-
-
-    @Override
-    public boolean processItem2(Player player, Item item, int slotId) {
-        if (player.getRunePouch().getFreeSlots() == 3) {
-            player.sm("Your rune pouch is empty.");
-            return true;
+    public boolean processItem(Player player, Item item, int slotId, String option) {
+        switch (option) {
+            case "open":
+                ButtonHandler.openRunePouch(player);
+                return true;
+            case "withdraw-all":
+                if (player.getRunePouch().getFreeSlots() == 3) {
+                    player.sm("Your rune pouch is empty.");
+                    return true;
+                }
+                for (Item runes : player.getRunePouch().getContainerItems()) {
+                    if (runes == null)
+                        continue;
+                    if (!player.getInventory().hasFreeSlots() && !player.getInventory().containsOneItem(runes.getId())) {
+                        player.sm("You don't have enough inventory spaces.");
+                        continue;
+                    }
+                    player.getRunePouch().remove(runes);
+                    player.getRunePouch().shift();
+                    player.getInventory().addItem(runes);
+                    player.getInventory().refresh();
+                }
+                return true;
         }
-        for (Item runes : player.getRunePouch().getContainerItems()) {
-            if (runes == null)
-                continue;
-            if (!player.getInventory().hasFreeSlots() && !player.getInventory().containsOneItem(runes.getId())) {
-                player.sm("You don't have enough inventory spaces.");
-                continue;
-            }
-            player.getRunePouch().remove(runes);
-            player.getRunePouch().shift();
-            player.getInventory().addItem(runes);
-            player.getInventory().refresh();
-        }
-        return true;
+        return false;
     }
 
     @Override

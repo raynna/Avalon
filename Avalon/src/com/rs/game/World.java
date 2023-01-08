@@ -291,7 +291,7 @@ public final class World {
             public void run() {
                 try {
                     for (Player player : getPlayers()) {
-                        if (player == null || !player.isRunning())
+                        if (player == null || !player.isActive())
                             continue;
                         int random = Utils.getRandom(5);
                         while (random != lastMessage) {
@@ -2768,7 +2768,7 @@ public final class World {
         StringBuilder builder = new StringBuilder();
         builder.append(type.getMessage()).append(message);
         for (Player p : World.getPlayers()) {
-            if (p == null || !p.isRunning())
+            if (p == null || !p.isActive())
                 continue;
             p.getPackets().sendGameMessage(builder.toString());
         }
@@ -2776,7 +2776,7 @@ public final class World {
 
     public static void sendWorldMessage(String message, boolean forStaff) {
         for (Player p : World.getPlayers()) {
-            if (p == null || !p.isRunning() || p.isYellOff() || (forStaff && !p.isStaff()))
+            if (p == null || !p.isActive() || p.isYellOff() || (forStaff && !p.isStaff()))
                 continue;
             p.getPackets().sendGameMessage(message);
         }

@@ -39,7 +39,7 @@ public class HarAkenTentacle extends NPC {
 		if (playerIndexes != null) {
 			for (int npcIndex : playerIndexes) {
 				Player player = World.getPlayers().get(npcIndex);
-				if (player == null || player.isDead() || player.hasFinished() || !player.isRunning())
+				if (player == null || player.isDead() || player.hasFinished() || !player.isActive())
 					continue;
 				possibleTarget.add(player);
 			}

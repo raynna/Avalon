@@ -1010,7 +1010,7 @@ public final class WorldPacketsDecoder extends Decoder {
 				Item item = player.getInventory().getItem(interfaceSlot);
 				if (item == null)
 					return;
-				InventoryOptionsHandler.handleItemOnNPC(player, npc, item);
+				InventoryOptionsHandler.handleItemOnNPC(player, npc, item, interfaceSlot);
 				break;
 			case 662:
 			case 747:
@@ -1273,7 +1273,7 @@ public final class WorldPacketsDecoder extends Decoder {
 		} else if (packetId == AFK_PACKET) {
 
 		} else if (packetId == CLOSE_INTERFACE_PACKET) {
-			if (player.hasStarted() && !player.hasFinished() && !player.isRunning()) {
+			if (player.hasStarted() && !player.hasFinished() && !player.isActive()) {
 				player.run();
 				return;
 			}
@@ -1355,7 +1355,7 @@ public final class WorldPacketsDecoder extends Decoder {
 			int buttonId = (interfaceHash & 0xFF);
 			if (Utils.getInterfaceDefinitionsSize() <= interfaceId)
 				return;
-			if (!player.isRunning() || !player.getInterfaceManager().containsInterface(interfaceId))
+			if (!player.isActive() || !player.getInterfaceManager().containsInterface(interfaceId))
 				return;
 			if (Settings.DEBUG)
 				Logger.log(this, "Dialogue: " + interfaceId + ", " + buttonId + ", " + junk);
@@ -1382,7 +1382,7 @@ public final class WorldPacketsDecoder extends Decoder {
 				|| packetId == INCOMMING_ASSIST) {
 			ButtonHandler.handleButtons(player, stream, packetId);
 		} else if (packetId == ENTER_NAME_PACKET) {
-			if (!player.isRunning() || player.isDead())
+			if (!player.isActive() || player.isDead())
 				return;
 			String value = stream.readString();
 			if (value.equals(""))
@@ -1541,13 +1541,13 @@ public final class WorldPacketsDecoder extends Decoder {
 				ClansManager.setClanMottoInterface(player, value);
 			}
 		} else if (packetId == ENTER_STRING_PACKET) {
-			if (!player.isRunning() || player.isDead())
+			if (!player.isActive() || player.isDead())
 				return;
 			String value = stream.readString();
 			if (value.equals(""))
 				return;
 		} else if (packetId == ENTER_LONG_TEXT_PACKET) {
-			if (!player.isRunning() || player.isDead())
+			if (!player.isActive() || player.isDead())
 				return;
 			String value = stream.readString();
 			if (value.equals(""))
@@ -1658,7 +1658,7 @@ public final class WorldPacketsDecoder extends Decoder {
 			} else if (player.getInterfaceManager().containsInterface(1103))
 				ClansManager.setClanMottoInterface(player, value);
 		} else if (packetId == ENTER_INTEGER_PACKET) {
-			if (!player.isRunning() || player.isDead())
+			if (!player.isActive() || player.isDead())
 				return;
 			int value = stream.readInt();
 			if (QuestionScript(player, value))
@@ -2206,7 +2206,7 @@ public final class WorldPacketsDecoder extends Decoder {
 			if (Settings.DEBUG)
 				Logger.log(this, "Chat type: " + chatType);
 		} else if (packetId == COMMANDS_PACKET) {
-			if (!player.isRunning())
+			if (!player.isActive())
 				return;
 			boolean clientCommand = stream.readUnsignedByte() == 1;
 			@SuppressWarnings("unused")

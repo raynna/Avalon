@@ -128,7 +128,7 @@ public class InterfaceManager {
 		ClansManager.unlockBanList(player);
 		player.getPackets().sendIComponentText(182, 1,
 				"When you finished playing " + Settings.SERVER_NAME + ", click the log out button to save your progress properly.");
-		if (player.getFamiliar() != null && player.isRunning())
+		if (player.getFamiliar() != null && player.isActive())
 			player.getFamiliar().unlock();
 		player.getControlerManager().sendInterfaces();
 	}

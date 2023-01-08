@@ -15,18 +15,20 @@ public class Leather extends ItemPlugin {
     }
 
     @Override
-    public boolean processItem(Player player, Item item, int slotId) {
-        boolean hasOption = item.getDefinitions().containsOption("craft");
-        if (!hasOption)
-            return true;
-        if (!player.getInventory().containsOneItem(ItemId.NEEDLE) && !player.getToolbelt().contains(ItemId.NEEDLE)) {
-            player.sm("You need a needle to craft this item.");
-            return true;
+    public boolean processItem(Player player, Item item, int slotId, String option) {
+        switch (option) {
+            case "craft":
+                if (!player.getInventory().containsOneItem(ItemId.NEEDLE) && !player.getToolbelt().contains(ItemId.NEEDLE)) {
+                    player.sm("You need a needle to craft this item.");
+                    return true;
+                }
+                Craft craft = Craft.forId(item.getId());
+                if (craft != null) {
+                    player.getDialogueManager().startDialogue("CraftingD", craft, false);
+                    return true;
+                }
         }
-        Craft craft = Craft.forId(item.getId());
-        if (craft != null)
-            player.getDialogueManager().startDialogue("CraftingD", craft, false);
-        return true;
+        return false;
     }
 
     @Override

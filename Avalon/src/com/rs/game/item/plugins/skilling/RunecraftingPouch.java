@@ -27,23 +27,19 @@ public class RunecraftingPouch extends ItemPlugin {
 	}
 
 	@Override
-	public boolean processItem(Player player, Item item, int slotId) {
+	public boolean processItem(Player player, Item item, int slotId, String option) {
 		int pouch = getPouchSize(item);
-		RunecraftingPouches.fillPouch(player, pouch);
-		return true;
-	}
-
-	@Override
-	public boolean processItem2(Player player, Item item, int slotId) {
-		int pouch = getPouchSize(item);
-		RunecraftingPouches.emptyPouch(player, pouch);
-		return true;
-	}
-
-	@Override
-	public boolean processItem3(Player player, Item item, int slotId) {
-		int pouch = getPouchSize(item);
-	 	RunecraftingPouches.checkPouch(player, pouch);
-		return true;
+		switch (option) {
+			case "check":
+				RunecraftingPouches.checkPouch(player, pouch);
+				return true;
+			case "fill":
+				RunecraftingPouches.fillPouch(player, pouch);
+				return true;
+			case "empty":
+				RunecraftingPouches.emptyPouch(player, pouch);
+				return true;
+		}
+		return false;
 	}
 }

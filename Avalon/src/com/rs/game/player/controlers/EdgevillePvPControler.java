@@ -206,7 +206,7 @@ public class EdgevillePvPControler extends Controler {
     @Override
     public boolean sendDeath() {
         final Player instance = player;
-        if (instance.hasFinished() || !instance.isRunning())
+        if (instance.hasFinished() || !instance.isActive())
             return false;
         player.resetWalkSteps();
         player.lock(7);

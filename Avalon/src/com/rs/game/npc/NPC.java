@@ -994,7 +994,7 @@ public class NPC extends Entity implements Serializable {
                 if (playerIndexes != null) {
                     for (int playerIndex : playerIndexes) {
                         Player player = World.getPlayers().get(playerIndex);
-                        if (player == null || player.isDead() || player.hasFinished() || !player.isRunning()
+                        if (player == null || player.isDead() || player.hasFinished() || !player.isActive()
                                 || player.getAppearence().isHidden()
                                 || !Utils.isOnRange(getX(), getY(), size, player.getX(), player.getY(),
                                 player.getSize(),

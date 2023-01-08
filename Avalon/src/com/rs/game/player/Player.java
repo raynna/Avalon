@@ -204,7 +204,7 @@ public class Player extends Entity {
      */
     private String username;
     private transient boolean started;
-    private transient boolean running;
+    private transient boolean active;
     private String password;
     private String displayName;
 
@@ -368,6 +368,7 @@ public class Player extends Entity {
      * @KingBlackDragonLair
      */
     public boolean KBDEntrance;
+
 
     /**
      * @AdventureLog
@@ -696,8 +697,7 @@ public class Player extends Entity {
      * @Stronghold of Security Dungeon
      */
     private int skullSkeptreCharges = 5;
-    public boolean strongHoldSecurityFloor1, strongHoldSecurityFloor2, strongHoldSecurityFloor3,
-            strongHoldSecurityFloor4;
+    public boolean strongHoldSecurityFloor1, strongHoldSecurityFloor2, strongHoldSecurityFloor3, strongHoldSecurityFloor4;
 
     /**
      * @ClanFriendchat
@@ -1188,8 +1188,7 @@ public class Player extends Entity {
     public long getWealth() {
         boolean skulled = hasSkull();
         boolean wilderness = isAtWild();
-        Integer[][] slots = ButtonHandler.getItemSlotsKeptOnDeath(this, wilderness, skulled,
-                getPrayer().usingPrayer(0, 10) || getPrayer().usingPrayer(1, 0));
+        Integer[][] slots = ButtonHandler.getItemSlotsKeptOnDeath(this, wilderness, skulled, getPrayer().usingPrayer(0, 10) || getPrayer().usingPrayer(1, 0));
         Item[][] items = getItemsKeptOnDeath(this, slots);
         long riskedWealth = 0;
         long carriedWealth = 0;
@@ -1232,8 +1231,7 @@ public class Player extends Entity {
     }
 
     public Player(String password) {
-        super(Settings.ECONOMY_MODE > 0 ? TeleportStore.EDGEVILLE_PVP_INSTANCE.getTile()
-                : Settings.START_PLAYER_LOCATION);
+        super(Settings.ECONOMY_MODE > 0 ? TeleportStore.EDGEVILLE_PVP_INSTANCE.getTile() : Settings.START_PLAYER_LOCATION);
         setHitpoints(Settings.START_PLAYER_HITPOINTS);
         this.password = password;
         farmingManager = new FarmingManager();
@@ -1285,8 +1283,7 @@ public class Player extends Entity {
         pouches = new int[4];
         warriorPoints = new double[6];
         resetBarrows();
-        lodestone = new boolean[]{false, false, false, false, false, false, false, false, false, true, false, false,
-                false, false, false};
+        lodestone = new boolean[]{false, false, false, false, false, false, false, false, false, true, false, false, false, false, false};
         SkillCapeCustomizer.resetSkillCapes(this);
         ownedObjectsManagerKeys = new LinkedList<String>();
         passwordList = new ArrayList<String>();
@@ -1326,8 +1323,7 @@ public class Player extends Entity {
         // startLobby();//this wanst here, i added this cus it wasnt called anywhere
         World.addLobbyPlayer(this);// .addLobbyPlayer(this);
         if (Settings.DEBUG) {
-            Logger.log(this, new StringBuilder("Lobby Inited Player: ").append(string).append(", pass: ")
-                    .append(password).toString());
+            Logger.log(this, new StringBuilder("Lobby Inited Player: ").append(string).append(", pass: ").append(password).toString());
         }
     }
 
@@ -1348,8 +1344,7 @@ public class Player extends Entity {
         }
     }
 
-    public void init(Session session, String username, int displayMode, int screenWidth, int screenHeight,
-                     MachineInformation machineInformation, IsaacKeyPair isaacKeyPair) {
+    public void init(Session session, String username, int displayMode, int screenWidth, int screenHeight, MachineInformation machineInformation, IsaacKeyPair isaacKeyPair) {
         if (dominionTower == null)
             dominionTower = new DominionTower();
         if (charges == null)
@@ -1429,8 +1424,7 @@ public class Player extends Entity {
         if (barrowsRewards == null)
             barrowsRewards = new ItemsContainer<Item>(3, false);
         if (lodestone == null || lodestone[9] != true)
-            lodestone = new boolean[]{false, false, false, false, false, false, false, false, false, true, false,
-                    false, false, false, false};
+            lodestone = new boolean[]{false, false, false, false, false, false, false, false, false, true, false, false, false, false, false};
         this.session = session;
         this.username = username;
         this.displayMode = displayMode;
@@ -1537,8 +1531,7 @@ public class Player extends Entity {
 
     public boolean hasWildstalker() {
         for (int itemId = 20801; itemId < 20806; itemId++) {
-            if (getInventory().containsItem(itemId, 1) || getBank().getItem(itemId) != null
-                    || getEquipment().getHatId() == itemId)
+            if (getInventory().containsItem(itemId, 1) || getBank().getItem(itemId) != null || getEquipment().getHatId() == itemId)
                 return true;
         }
         return false;
@@ -1546,8 +1539,7 @@ public class Player extends Entity {
 
     public boolean hasDuellist() {
         for (int itemId = 20795; itemId < 20800; itemId++) {
-            if (getInventory().containsItem(itemId, 1) || getBank().getItem(itemId) != null
-                    || getEquipment().getHatId() == itemId)
+            if (getInventory().containsItem(itemId, 1) || getBank().getItem(itemId) != null || getEquipment().getHatId() == itemId)
                 return true;
         }
         return false;
@@ -1563,7 +1555,7 @@ public class Player extends Entity {
 
     public void setHighestLevel(int skill, int value) {
         if (skill == Skills.ATTACK)
-        set(IntKey.HIGHEST_ATTACK_LEVEL, value);
+            set(IntKey.HIGHEST_ATTACK_LEVEL, value);
         if (skill == Skills.STRENGTH)
             set(IntKey.HIGHEST_STRENGTH_LEVEL, value);
         if (skill == Skills.DEFENCE)
@@ -1871,9 +1863,7 @@ public class Player extends Entity {
             if (floorItems == null)
                 continue;
             for (FloorItem item : floorItems) {
-                if (item.isInvisible() && (item.hasOwner() && !getUsername().equals(item.getOwner()))
-                        || item.getTile().getPlane() != getPlane()
-                        || !getUsername().equals(item.getOwner()) && !ItemConstants.isTradeable(item))
+                if (item.isInvisible() && (item.hasOwner() && !getUsername().equals(item.getOwner())) || item.getTile().getPlane() != getPlane() || !getUsername().equals(item.getOwner()) && !ItemConstants.isTradeable(item))
                     continue;
                 getPackets().sendRemoveGroundItem(item);
             }
@@ -1883,9 +1873,7 @@ public class Player extends Entity {
             if (floorItems == null)
                 continue;
             for (FloorItem item : floorItems) {
-                if ((item.isInvisible()) && (item.hasOwner() && !getUsername().equals(item.getOwner()))
-                        || item.getTile().getPlane() != getPlane()
-                        || !getUsername().equals(item.getOwner()) && !ItemConstants.isTradeable(item))
+                if ((item.isInvisible()) && (item.hasOwner() && !getUsername().equals(item.getOwner())) || item.getTile().getPlane() != getPlane() || !getUsername().equals(item.getOwner()) && !ItemConstants.isTradeable(item))
                     continue;
                 getPackets().sendGroundItem(item);
             }
@@ -2025,10 +2013,7 @@ public class Player extends Entity {
     }
 
     public String checkKillcount(String name) {
-        return name + ": <col=FFFF00>"
-                + (getBossKillcount().get(name) != null
-                ? Utils.getFormattedNumber(getBossKillcount().get(name).intValue(), ',')
-                : "0");
+        return name + ": <col=FFFF00>" + (getBossKillcount().get(name) != null ? Utils.getFormattedNumber(getBossKillcount().get(name).intValue(), ',') : "0");
     }
 
     public int checkKillsInt(String name) {
@@ -2041,9 +2026,7 @@ public class Player extends Entity {
             if (getFriendsIgnores().getFriends().contains(p2.getUsername()) && p2.getFriendsIgnores().isOnline(p2)) {
                 online++;
             }
-            getPackets().sendIComponentText(550, 18, "<col=ffc800>~ " + Settings.SERVER_NAME + " ~</col> "
-                    + (getFriendsIgnores().getFriends().size() == 0 ? ""
-                    : "<br>Friends online: " + online + " / " + getFriendsIgnores().getFriends().size()));
+            getPackets().sendIComponentText(550, 18, "<col=ffc800>~ " + Settings.SERVER_NAME + " ~</col> " + (getFriendsIgnores().getFriends().size() == 0 ? "" : "<br>Friends online: " + online + " / " + getFriendsIgnores().getFriends().size()));
         }
     }
 
@@ -2139,19 +2122,7 @@ public class Player extends Entity {
     }
 
     public boolean hasMaxCapeRequirements() {
-        if (getSkills().getLevelForXp(Skills.ATTACK) >= 99 && getSkills().getLevelForXp(Skills.STRENGTH) >= 99
-                && getSkills().getLevelForXp(Skills.DEFENCE) >= 99 && getSkills().getLevelForXp(Skills.HITPOINTS) >= 99
-                && getSkills().getLevelForXp(Skills.RANGE) >= 99 && getSkills().getLevelForXp(Skills.MAGIC) >= 99
-                && getSkills().getLevelForXp(Skills.RUNECRAFTING) >= 99
-                && getSkills().getLevelForXp(Skills.FISHING) >= 99 && getSkills().getLevelForXp(Skills.AGILITY) >= 99
-                && getSkills().getLevelForXp(Skills.COOKING) >= 99 && getSkills().getLevelForXp(Skills.PRAYER) >= 99
-                && getSkills().getLevelForXp(Skills.THIEVING) >= 99 && getSkills().getLevelForXp(Skills.MINING) >= 99
-                && getSkills().getLevelForXp(Skills.SMITHING) >= 99 && getSkills().getLevelForXp(Skills.SUMMONING) >= 99
-                && getSkills().getLevelForXp(Skills.SLAYER) >= 99 && getSkills().getLevelForXp(Skills.CRAFTING) >= 99
-                && getSkills().getLevelForXp(Skills.WOODCUTTING) >= 99
-                && getSkills().getLevelForXp(Skills.FIREMAKING) >= 99
-                && getSkills().getLevelForXp(Skills.FLETCHING) >= 99
-                && getSkills().getLevelForXp(Skills.HERBLORE) >= 99)
+        if (getSkills().getLevelForXp(Skills.ATTACK) >= 99 && getSkills().getLevelForXp(Skills.STRENGTH) >= 99 && getSkills().getLevelForXp(Skills.DEFENCE) >= 99 && getSkills().getLevelForXp(Skills.HITPOINTS) >= 99 && getSkills().getLevelForXp(Skills.RANGE) >= 99 && getSkills().getLevelForXp(Skills.MAGIC) >= 99 && getSkills().getLevelForXp(Skills.RUNECRAFTING) >= 99 && getSkills().getLevelForXp(Skills.FISHING) >= 99 && getSkills().getLevelForXp(Skills.AGILITY) >= 99 && getSkills().getLevelForXp(Skills.COOKING) >= 99 && getSkills().getLevelForXp(Skills.PRAYER) >= 99 && getSkills().getLevelForXp(Skills.THIEVING) >= 99 && getSkills().getLevelForXp(Skills.MINING) >= 99 && getSkills().getLevelForXp(Skills.SMITHING) >= 99 && getSkills().getLevelForXp(Skills.SUMMONING) >= 99 && getSkills().getLevelForXp(Skills.SLAYER) >= 99 && getSkills().getLevelForXp(Skills.CRAFTING) >= 99 && getSkills().getLevelForXp(Skills.WOODCUTTING) >= 99 && getSkills().getLevelForXp(Skills.FIREMAKING) >= 99 && getSkills().getLevelForXp(Skills.FLETCHING) >= 99 && getSkills().getLevelForXp(Skills.HERBLORE) >= 99)
             return true;
         return false;
     }
@@ -2173,8 +2144,7 @@ public class Player extends Entity {
         int COMP_HOOD = 20772, COMP_CAPE = 20771;
         if (!player.hasTrimCompReqs()) {
             player.lock(1);
-            Dialogue.sendItemDialogueNoContinue(player, COMP_CAPE, 1,
-                    "There are new requirements for this cape. If you wish to equip it again, you must complete the requirements. <br><br>This will close in 10...");
+            Dialogue.sendItemDialogueNoContinue(player, COMP_CAPE, 1, "There are new requirements for this cape. If you wish to equip it again, you must complete the requirements. <br><br>This will close in 10...");
             sm("There are new requirements for this cape. If you wish to equip it again, you must complete the requirements.");
             if (player.getEquipment().getHatId() == COMP_HOOD) {
                 player.getEquipment().deleteItem(COMP_HOOD, 1);
@@ -2193,68 +2163,23 @@ public class Player extends Entity {
         }
         player.getEquipment().refresh();
         player.getAppearence().generateAppearenceData();
-        player.getDialogueManager().startDialogue("SimpleItemMessage", COMP_CAPE,
-                "There are new requirements for this cape. If you wish to equip it again, you must complete the requirements.");
+        player.getDialogueManager().startDialogue("SimpleItemMessage", COMP_CAPE, "There are new requirements for this cape. If you wish to equip it again, you must complete the requirements.");
     }
 
     public boolean hasCompletionistStatRequirements() {
-        if (getSkills().getLevelForXp(Skills.ATTACK) >= 99 && getSkills().getLevelForXp(Skills.STRENGTH) >= 99
-                && getSkills().getLevelForXp(Skills.DEFENCE) >= 99 && getSkills().getLevelForXp(Skills.HITPOINTS) >= 99
-                && getSkills().getLevelForXp(Skills.RANGE) >= 99 && getSkills().getLevelForXp(Skills.MAGIC) >= 99
-                && getSkills().getLevelForXp(Skills.RUNECRAFTING) >= 99
-                && getSkills().getLevelForXp(Skills.FISHING) >= 99 && getSkills().getLevelForXp(Skills.AGILITY) >= 99
-                && getSkills().getLevelForXp(Skills.COOKING) >= 99 && getSkills().getLevelForXp(Skills.PRAYER) >= 99
-                && getSkills().getLevelForXp(Skills.THIEVING) >= 99 && getSkills().getLevelForXp(Skills.MINING) >= 99
-                && getSkills().getLevelForXp(Skills.SMITHING) >= 99 && getSkills().getLevelForXp(Skills.SUMMONING) >= 99
-                && getSkills().getLevelForXp(Skills.SLAYER) >= 99 && getSkills().getLevelForXp(Skills.CRAFTING) >= 99
-                && getSkills().getLevelForXp(Skills.WOODCUTTING) >= 99
-                && getSkills().getLevelForXp(Skills.FIREMAKING) >= 99
-                && getSkills().getLevelForXp(Skills.FLETCHING) >= 99 && getSkills().getLevelForXp(Skills.HERBLORE) >= 99
-                && getSkills().getLevelForXp(Skills.DUNGEONEERING) >= 120)
+        if (getSkills().getLevelForXp(Skills.ATTACK) >= 99 && getSkills().getLevelForXp(Skills.STRENGTH) >= 99 && getSkills().getLevelForXp(Skills.DEFENCE) >= 99 && getSkills().getLevelForXp(Skills.HITPOINTS) >= 99 && getSkills().getLevelForXp(Skills.RANGE) >= 99 && getSkills().getLevelForXp(Skills.MAGIC) >= 99 && getSkills().getLevelForXp(Skills.RUNECRAFTING) >= 99 && getSkills().getLevelForXp(Skills.FISHING) >= 99 && getSkills().getLevelForXp(Skills.AGILITY) >= 99 && getSkills().getLevelForXp(Skills.COOKING) >= 99 && getSkills().getLevelForXp(Skills.PRAYER) >= 99 && getSkills().getLevelForXp(Skills.THIEVING) >= 99 && getSkills().getLevelForXp(Skills.MINING) >= 99 && getSkills().getLevelForXp(Skills.SMITHING) >= 99 && getSkills().getLevelForXp(Skills.SUMMONING) >= 99 && getSkills().getLevelForXp(Skills.SLAYER) >= 99 && getSkills().getLevelForXp(Skills.CRAFTING) >= 99 && getSkills().getLevelForXp(Skills.WOODCUTTING) >= 99 && getSkills().getLevelForXp(Skills.FIREMAKING) >= 99 && getSkills().getLevelForXp(Skills.FLETCHING) >= 99 && getSkills().getLevelForXp(Skills.HERBLORE) >= 99 && getSkills().getLevelForXp(Skills.DUNGEONEERING) >= 120)
             return true;
         return false;
     }
 
     public boolean hasCompletionistRequirements() {
-        if (getSkills().getLevelForXp(Skills.ATTACK) >= 99 && getSkills().getLevelForXp(Skills.STRENGTH) >= 99
-                && getSkills().getLevelForXp(Skills.DEFENCE) >= 99 && getSkills().getLevelForXp(Skills.HITPOINTS) >= 99
-                && getSkills().getLevelForXp(Skills.RANGE) >= 99 && getSkills().getLevelForXp(Skills.MAGIC) >= 99
-                && getSkills().getLevelForXp(Skills.RUNECRAFTING) >= 99
-                && getSkills().getLevelForXp(Skills.FISHING) >= 99 && getSkills().getLevelForXp(Skills.AGILITY) >= 99
-                && getSkills().getLevelForXp(Skills.COOKING) >= 99 && getSkills().getLevelForXp(Skills.PRAYER) >= 99
-                && getSkills().getLevelForXp(Skills.THIEVING) >= 99 && getSkills().getLevelForXp(Skills.MINING) >= 99
-                && getSkills().getLevelForXp(Skills.SMITHING) >= 99 && getSkills().getLevelForXp(Skills.SUMMONING) >= 99
-                && getSkills().getLevelForXp(Skills.SLAYER) >= 99 && getSkills().getLevelForXp(Skills.CRAFTING) >= 99
-                && getSkills().getLevelForXp(Skills.WOODCUTTING) >= 99
-                && getSkills().getLevelForXp(Skills.FIREMAKING) >= 99
-                && getSkills().getLevelForXp(Skills.FLETCHING) >= 99 && getSkills().getLevelForXp(Skills.HERBLORE) >= 99
-                && getSkills().getLevelForXp(Skills.DUNGEONEERING) >= 120 && isCompletedFightKiln()
-                && isCompletedFightCaves() && checkKillsInt("King Black Dragon") >= 50
-                && checkKillsInt("Corporeal Beast") >= 25 && checkKillsInt("General Graardor") >= 25
-                && checkKillsInt("Commander Zilyana") >= 25 && checkKillsInt("K'ril Tsutsaroth") >= 25
-                && checkKillsInt("Kree'arra") >= 25 && checkKillsInt("Dagannoth Rex") >= 25
-                && checkKillsInt("Dagannoth Prime") >= 25 && checkKillsInt("Dagannoth Supreme") >= 25
-                && getTaskManager().hasCompletedAllTasks())
+        if (getSkills().getLevelForXp(Skills.ATTACK) >= 99 && getSkills().getLevelForXp(Skills.STRENGTH) >= 99 && getSkills().getLevelForXp(Skills.DEFENCE) >= 99 && getSkills().getLevelForXp(Skills.HITPOINTS) >= 99 && getSkills().getLevelForXp(Skills.RANGE) >= 99 && getSkills().getLevelForXp(Skills.MAGIC) >= 99 && getSkills().getLevelForXp(Skills.RUNECRAFTING) >= 99 && getSkills().getLevelForXp(Skills.FISHING) >= 99 && getSkills().getLevelForXp(Skills.AGILITY) >= 99 && getSkills().getLevelForXp(Skills.COOKING) >= 99 && getSkills().getLevelForXp(Skills.PRAYER) >= 99 && getSkills().getLevelForXp(Skills.THIEVING) >= 99 && getSkills().getLevelForXp(Skills.MINING) >= 99 && getSkills().getLevelForXp(Skills.SMITHING) >= 99 && getSkills().getLevelForXp(Skills.SUMMONING) >= 99 && getSkills().getLevelForXp(Skills.SLAYER) >= 99 && getSkills().getLevelForXp(Skills.CRAFTING) >= 99 && getSkills().getLevelForXp(Skills.WOODCUTTING) >= 99 && getSkills().getLevelForXp(Skills.FIREMAKING) >= 99 && getSkills().getLevelForXp(Skills.FLETCHING) >= 99 && getSkills().getLevelForXp(Skills.HERBLORE) >= 99 && getSkills().getLevelForXp(Skills.DUNGEONEERING) >= 120 && isCompletedFightKiln() && isCompletedFightCaves() && checkKillsInt("King Black Dragon") >= 50 && checkKillsInt("Corporeal Beast") >= 25 && checkKillsInt("General Graardor") >= 25 && checkKillsInt("Commander Zilyana") >= 25 && checkKillsInt("K'ril Tsutsaroth") >= 25 && checkKillsInt("Kree'arra") >= 25 && checkKillsInt("Dagannoth Rex") >= 25 && checkKillsInt("Dagannoth Prime") >= 25 && checkKillsInt("Dagannoth Supreme") >= 25 && getTaskManager().hasCompletedAllTasks())
             return true;
         return false;
     }
 
     public boolean hasTrimCompReqs() {
-        if (getSkills().getLevelForXp(Skills.ATTACK) >= 99 && getSkills().getLevelForXp(Skills.STRENGTH) >= 99
-                && getSkills().getLevelForXp(Skills.DEFENCE) >= 99 && getSkills().getLevelForXp(Skills.HITPOINTS) >= 99
-                && getSkills().getLevelForXp(Skills.RANGE) >= 99 && getSkills().getLevelForXp(Skills.MAGIC) >= 99
-                && getSkills().getLevelForXp(Skills.RUNECRAFTING) >= 99
-                && getSkills().getLevelForXp(Skills.FISHING) >= 99 && getSkills().getLevelForXp(Skills.AGILITY) >= 99
-                && getSkills().getLevelForXp(Skills.COOKING) >= 99 && getSkills().getLevelForXp(Skills.PRAYER) >= 99
-                && getSkills().getLevelForXp(Skills.THIEVING) >= 99 && getSkills().getLevelForXp(Skills.MINING) >= 99
-                && getSkills().getLevelForXp(Skills.SMITHING) >= 99 && getSkills().getLevelForXp(Skills.SUMMONING) >= 99
-                && getSkills().getLevelForXp(Skills.SLAYER) >= 99 && getSkills().getLevelForXp(Skills.CRAFTING) >= 99
-                && getSkills().getLevelForXp(Skills.WOODCUTTING) >= 99
-                && getSkills().getLevelForXp(Skills.FIREMAKING) >= 99
-                && getSkills().getLevelForXp(Skills.FLETCHING) >= 99 && getSkills().getLevelForXp(Skills.HERBLORE) >= 99
-                && getSkills().getLevelForXp(Skills.DUNGEONEERING) >= 120 && isCompletedFightKiln()
-                && isCompletedFightCaves() && getSlayerManager().getCompletedTasks() >= 50
-                && getTaskManager().hasCompletedAllTasks())
+        if (getSkills().getLevelForXp(Skills.ATTACK) >= 99 && getSkills().getLevelForXp(Skills.STRENGTH) >= 99 && getSkills().getLevelForXp(Skills.DEFENCE) >= 99 && getSkills().getLevelForXp(Skills.HITPOINTS) >= 99 && getSkills().getLevelForXp(Skills.RANGE) >= 99 && getSkills().getLevelForXp(Skills.MAGIC) >= 99 && getSkills().getLevelForXp(Skills.RUNECRAFTING) >= 99 && getSkills().getLevelForXp(Skills.FISHING) >= 99 && getSkills().getLevelForXp(Skills.AGILITY) >= 99 && getSkills().getLevelForXp(Skills.COOKING) >= 99 && getSkills().getLevelForXp(Skills.PRAYER) >= 99 && getSkills().getLevelForXp(Skills.THIEVING) >= 99 && getSkills().getLevelForXp(Skills.MINING) >= 99 && getSkills().getLevelForXp(Skills.SMITHING) >= 99 && getSkills().getLevelForXp(Skills.SUMMONING) >= 99 && getSkills().getLevelForXp(Skills.SLAYER) >= 99 && getSkills().getLevelForXp(Skills.CRAFTING) >= 99 && getSkills().getLevelForXp(Skills.WOODCUTTING) >= 99 && getSkills().getLevelForXp(Skills.FIREMAKING) >= 99 && getSkills().getLevelForXp(Skills.FLETCHING) >= 99 && getSkills().getLevelForXp(Skills.HERBLORE) >= 99 && getSkills().getLevelForXp(Skills.DUNGEONEERING) >= 120 && isCompletedFightKiln() && isCompletedFightCaves() && getSlayerManager().getCompletedTasks() >= 50 && getTaskManager().hasCompletedAllTasks())
             return true;
         return false;
     }
@@ -2263,8 +2188,7 @@ public class Player extends Entity {
         int COMP_HOOD = 20770, COMP_CAPE = 20769;
         if (!player.hasCompletionistRequirements()) {
             player.lock(9);
-            Dialogue.sendItemDialogueNoContinue(player, COMP_CAPE, 1,
-                    "There are new requirements for this cape. If you wish to equip it again, you must complete the requirements. <br><br>This will close in 10...");
+            Dialogue.sendItemDialogueNoContinue(player, COMP_CAPE, 1, "There are new requirements for this cape. If you wish to equip it again, you must complete the requirements. <br><br>This will close in 10...");
             if (player.getEquipment().getHatId() == COMP_HOOD) {
                 player.getEquipment().deleteItem(COMP_HOOD, 1);
                 if (player.getInventory().hasFreeSlots())
@@ -2293,9 +2217,7 @@ public class Player extends Entity {
                     return;
                 }
                 close--;
-                Dialogue.sendItemDialogueNoContinue(player, COMP_CAPE, 1,
-                        "There are new requirements for this cape. If you wish to equip it again, you must complete the requirements. <br>This will close in "
-                                + close + "...");
+                Dialogue.sendItemDialogueNoContinue(player, COMP_CAPE, 1, "There are new requirements for this cape. If you wish to equip it again, you must complete the requirements. <br>This will close in " + close + "...");
             }
         }, 0, 1);
     }
@@ -2436,11 +2358,7 @@ public class Player extends Entity {
     }
 
     private void checkTimers() {
-        if (getFreezeDelay() < Utils.currentTimeMillis() && getTeleBlockDelay() < Utils.currentTimeMillis()
-                && getVengDelay() < Utils.currentTimeMillis() && getOverloadDelay() < Utils.currentTimeMillis()
-                && getDisruptionDelay() < Utils.currentTimeMillis()
-                && getPrayerRenewalDelay() < Utils.currentTimeMillis()
-                && !OwnedObjectManager.containsObjectValue(this, 6)) {
+        if (getFreezeDelay() < Utils.currentTimeMillis() && getTeleBlockDelay() < Utils.currentTimeMillis() && getVengDelay() < Utils.currentTimeMillis() && getOverloadDelay() < Utils.currentTimeMillis() && getDisruptionDelay() < Utils.currentTimeMillis() && getPrayerRenewalDelay() < Utils.currentTimeMillis() && !OwnedObjectManager.containsObjectValue(this, 6)) {
             if (getInterfaceManager().containsInterface(3039))
                 getInterfaceManager().removeInterface(getInterfaceManager().isResizableScreen() ? 26 : 31, 3039);
         } else {
@@ -2450,8 +2368,7 @@ public class Player extends Entity {
         if (OwnedObjectManager.containsObjectValue(this, 6)) {
             getPackets().sendHideIComponent(3039, 16, false);
             getPackets().sendHideIComponent(3039, 17, false);
-            getPackets().sendIComponentText(3039, 17,
-                    (getCannonBalls() == 0 ? "<col=ff5331>" : "") + getCannonBalls() + "");
+            getPackets().sendIComponentText(3039, 17, (getCannonBalls() == 0 ? "<col=ff5331>" : "") + getCannonBalls() + "");
         } else {
             if (getCannonBalls() != 0) {
                 return;
@@ -2525,7 +2442,7 @@ public class Player extends Entity {
 
 
     public String getTitle() {
-           return getPlayerRank().getRankName(getPlayerRank().isStaff() ? 0 : 1);
+        return getPlayerRank().getRankName(getPlayerRank().isStaff() ? 0 : 1);
     }
 
     public void sendPlayersList() {
@@ -2553,8 +2470,7 @@ public class Player extends Entity {
     private void checkLeechPrayers() {
         for (int i = 0; i <= 4; i++) {
             if (getPrayer().leechBonuses[i] == 1 || getPrayer().leechBonuses[i] == -1)
-                getPackets().sendGameMessage("Your " + getLeechName(i) + " is now unaffected by sap and leech curses.",
-                        true);
+                getPackets().sendGameMessage("Your " + getLeechName(i) + " is now unaffected by sap and leech curses.", true);
             if (getPrayer().leechBonuses[i] < 0)
                 getPrayer().increase(i);
             if (getPrayer().leechBonuses[i] > 0) {
@@ -2588,7 +2504,7 @@ public class Player extends Entity {
             member = false;
         }
         farmingManager.process();
-        //handleSwitch();
+        handleSwitch();
         if (getAssist().isAssisting()) {
             getAssist().Check();
         }
@@ -2662,8 +2578,7 @@ public class Player extends Entity {
                 getControlerManager().getControler().forceClose();
             }
         }
-        if (EdgevillePvPControler.isAtPvP(this)
-                && !(getControlerManager().getControler() instanceof EdgevillePvPControler)) {
+        if (EdgevillePvPControler.isAtPvP(this) && !(getControlerManager().getControler() instanceof EdgevillePvPControler)) {
             getControlerManager().startControler("EdgevillePvPControler");
         }
         if (isInClanwarsLobby() && !(getControlerManager().getControler() instanceof RequestController))
@@ -2699,19 +2614,15 @@ public class Player extends Entity {
         }
         if (getInterfaceManager().containsTab(PlayerCombat.getHealthOverlayId(this))) {
             if (isDead()) {
-                getInterfaceManager().closeTab(getInterfaceManager().isResizableScreen(),
-                        PlayerCombat.getHealthOverlayId(this));
+                getInterfaceManager().closeTab(getInterfaceManager().isResizableScreen(), PlayerCombat.getHealthOverlayId(this));
             }
             if (getTemporaryTarget() != null) {
                 if (getTemporaryTarget().isDead() || !getTemporaryTarget().withinDistance(this, 32)) {
-                    getInterfaceManager().closeTab(getInterfaceManager().isResizableScreen(),
-                            PlayerCombat.getHealthOverlayId(this));
+                    getInterfaceManager().closeTab(getInterfaceManager().isResizableScreen(), PlayerCombat.getHealthOverlayId(this));
                 }
             }
-            if (getTemporaryActionDelay() < Utils.currentTimeMillis()
-                    && getAttackedByDelay() < Utils.currentTimeMillis()) {
-                getInterfaceManager().closeTab(getInterfaceManager().isResizableScreen(),
-                        PlayerCombat.getHealthOverlayId(this));
+            if (getTemporaryActionDelay() < Utils.currentTimeMillis() && getAttackedByDelay() < Utils.currentTimeMillis()) {
+                getInterfaceManager().closeTab(getInterfaceManager().isResizableScreen(), PlayerCombat.getHealthOverlayId(this));
             }
         }
         if (getOverloadDelay() > 0) {
@@ -2754,8 +2665,7 @@ public class Player extends Entity {
                 sm("You can now accept.");
             }
         }
-        if (!(getControlerManager().getControler() instanceof WildernessControler) && isAtWild()
-                && !WildernessControler.isAtWildSafe(this) && !isAtPvP()) {
+        if (!(getControlerManager().getControler() instanceof WildernessControler) && isAtWild() && !WildernessControler.isAtWildSafe(this) && !isAtPvP()) {
             getControlerManager().startControler("WildernessControler");
         }
         if (getFrozenBy() != null && this != null) {
@@ -2781,8 +2691,7 @@ public class Player extends Entity {
 
     @Override
     public boolean needMasksUpdate() {
-        return super.needMasksUpdate() || temporaryMovementType != -1 || updateMovementType
-                || nextClanMemberUpdate != null;
+        return super.needMasksUpdate() || temporaryMovementType != -1 || updateMovementType || nextClanMemberUpdate != null;
     }
 
     @Override
@@ -2908,7 +2817,7 @@ public class Player extends Entity {
         geManager.init();
         sendUnlockedObjectConfigs();
         checkRights();
-        running = true;
+        active = true;
         updateMovementType = true;
         appearence.generateAppearenceData();
         OwnedObjectManager.linkKeys(this);
@@ -3038,8 +2947,7 @@ public class Player extends Entity {
 
     public void refreshLodestoneNetwork() { // gfx 3019
         if (lodestone == null || lodestone[9] != true) {
-            lodestone = new boolean[]{false, false, false, false, false, false, false, false, false, true, false,
-                    false, false, false, false};
+            lodestone = new boolean[]{false, false, false, false, false, false, false, false, false, true, false, false, false, false, false};
         }
         getPackets().sendConfigByFile(358, lodestone[0] ? 15 : 14);
         getPackets().sendConfigByFile(2448, lodestone[1] ? 190 : 189);
@@ -3142,7 +3050,7 @@ public class Player extends Entity {
      */
 
     public void logout(boolean lobby) {
-        if (!running)
+        if (!active)
             return;
         long currentTime = Utils.currentTimeMillis();
         if (getAttackedByDelay() + 10000 > currentTime) {
@@ -3179,7 +3087,7 @@ public class Player extends Entity {
         TicketSystem.destroyChatOnLogOut(this);
         AntiBot.getInstance().destroy(this);
         getPackets().sendLogout(lobby);
-        running = false;
+        active = false;
     }
 
     private ItemsContainer<Item> bobItems;
@@ -3187,7 +3095,7 @@ public class Player extends Entity {
 
     public void forceLogout() {
         getPackets().sendLogout(false);
-        running = false;
+        active = false;
         realFinish();
     }
 
@@ -3213,8 +3121,7 @@ public class Player extends Entity {
             stopAll(false, true, !(actionManager.getAction() instanceof PlayerCombat));
         }
         long currentTime = Utils.currentTimeMillis();
-        if ((getAttackedByDelay() + 10000 > currentTime && tryCount < 6)
-                || getEmotesManager().getNextEmoteEnd() >= currentTime || isDead()) {
+        if ((getAttackedByDelay() + 10000 > currentTime && tryCount < 6) || getEmotesManager().getNextEmoteEnd() >= currentTime || isDead()) {
             CoresManager.slowExecutor.schedule(new Runnable() {
                 @Override
                 public void run() {
@@ -3242,7 +3149,7 @@ public class Player extends Entity {
             cutscenesManager.logout();
             controlerManager.logout();
         }
-        running = false;
+        active = false;
         friendsIgnores.sendFriendsMyStatus(false);
         if (currentFriendChat != null)
             currentFriendChat.leaveChat(this, true);
@@ -3316,13 +3223,13 @@ public class Player extends Entity {
 
     /**
      * Simple method that checks if a player owns an item at all
+     *
      * @param item
      * @return
      */
     public boolean ownsItem(int... item) {
         for (int itemId : item) {
-            if (getInventory().containsItem(itemId, 1) || getEquipment().containsOneItem(itemId)
-                    || getBank().containsOneItem(itemId)) {
+            if (getInventory().containsItem(itemId, 1) || getEquipment().containsOneItem(itemId) || getBank().containsOneItem(itemId)) {
                 return true;
             }
         }
@@ -3469,8 +3376,8 @@ public class Player extends Entity {
         return started;
     }
 
-    public boolean isRunning() {
-        return running;
+    public boolean isActive() {
+        return active;
     }
 
     public String getDisplayName() {
@@ -3674,8 +3581,7 @@ public class Player extends Entity {
             }
             if (winnerIndex == players.getIndex()) {
                 World.sendWorldMessage("[Giveaway] Winner is.. " + players.getDisplayName() + ".", false);
-                getFriendsIgnores().sendMessage(players,
-                        "[Giveaway] Congratulations! You won the giveaway hosted by " + getDisplayName() + "");
+                getFriendsIgnores().sendMessage(players, "[Giveaway] Congratulations! You won the giveaway hosted by " + getDisplayName() + "");
                 players.sm("Congratulations! You won the server giveaway hosted by " + getDisplayName() + ".");
             }
         }
@@ -3829,8 +3735,7 @@ public class Player extends Entity {
 
     @Override
     public void handleHit(Hit hit) {
-        if (hit.getLook() != HitLook.MELEE_DAMAGE && hit.getLook() != HitLook.RANGE_DAMAGE
-                && hit.getLook() != HitLook.MAGIC_DAMAGE)
+        if (hit.getLook() != HitLook.MELEE_DAMAGE && hit.getLook() != HitLook.RANGE_DAMAGE && hit.getLook() != HitLook.MAGIC_DAMAGE)
             return;
         Entity source = hit.getSource();
         if (source == null)
@@ -3841,8 +3746,7 @@ public class Player extends Entity {
     public void handleIncommingHit(Hit hit) {
         if (isDead())
             return;
-        if (hit.getLook() != HitLook.MELEE_DAMAGE && hit.getLook() != HitLook.RANGE_DAMAGE
-                && hit.getLook() != HitLook.MAGIC_DAMAGE)
+        if (hit.getLook() != HitLook.MELEE_DAMAGE && hit.getLook() != HitLook.RANGE_DAMAGE && hit.getLook() != HitLook.MAGIC_DAMAGE)
             return;
         setAttackedByDelay(4800);
         Entity source = hit.getSource();
@@ -3862,9 +3766,7 @@ public class Player extends Entity {
                         if (playersIndexes != null) {
                             for (int playerIndex : playersIndexes) {
                                 Player player = World.getPlayers().get(playerIndex);
-                                if (player == null || !player.hasStarted() || player.isDead() || player.hasFinished()
-                                        || !player.withinDistance(this, 1) || !player.isCanPvp()
-                                        || !target.getControlerManager().canHit(player))
+                                if (player == null || !player.hasStarted() || player.isDead() || player.hasFinished() || !player.withinDistance(this, 1) || !player.isCanPvp() || !target.getControlerManager().canHit(player))
                                     continue;
                                 player.applyHit(new Hit(target, Utils.getRandom((int) 180), HitLook.REGULAR_DAMAGE));
                             }
@@ -3873,52 +3775,37 @@ public class Player extends Entity {
                         if (npcsIndexes != null) {
                             for (int npcIndex : npcsIndexes) {
                                 NPC npc = World.getNPCs().get(npcIndex);
-                                if (npc == null || npc.isDead() || npc.hasFinished() || !npc.withinDistance(this, 1)
-                                        || !npc.getDefinitions().hasAttackOption()
-                                        || !target.getControlerManager().canHit(npc))
+                                if (npc == null || npc.isDead() || npc.hasFinished() || !npc.withinDistance(this, 1) || !npc.getDefinitions().hasAttackOption() || !target.getControlerManager().canHit(npc))
                                     continue;
                                 npc.applyHit(new Hit(target, Utils.getRandom((int) 180), HitLook.REGULAR_DAMAGE));
                             }
                         }
                     }
                 } else {
-                    if (source != null && source != this && !source.isDead() && !source.hasFinished()
-                            && source.withinDistance(this, 1))
+                    if (source != null && source != this && !source.isDead() && !source.hasFinished() && source.withinDistance(this, 1))
                         source.applyHit(new Hit(target, Utils.getRandom((int) 180), HitLook.REGULAR_DAMAGE));
                 }
                 WorldTasksManager.schedule(new WorldTask() {
                     @Override
                     public void run() {
-                        World.sendGraphics(target, new Graphics(438),
-                                new WorldTile(target.getX() - 1, target.getY(), target.getPlane()));
-                        World.sendGraphics(target, new Graphics(438),
-                                new WorldTile(target.getX() + 1, target.getY(), target.getPlane()));
-                        World.sendGraphics(target, new Graphics(438),
-                                new WorldTile(target.getX(), target.getY() - 1, target.getPlane()));
-                        World.sendGraphics(target, new Graphics(438),
-                                new WorldTile(target.getX(), target.getY() + 1, target.getPlane()));
-                        World.sendGraphics(target, new Graphics(438),
-                                new WorldTile(target.getX() - 1, target.getY() - 1, target.getPlane()));
-                        World.sendGraphics(target, new Graphics(438),
-                                new WorldTile(target.getX() - 1, target.getY() + 1, target.getPlane()));
-                        World.sendGraphics(target, new Graphics(438),
-                                new WorldTile(target.getX() + 1, target.getY() - 1, target.getPlane()));
-                        World.sendGraphics(target, new Graphics(438),
-                                new WorldTile(target.getX() + 1, target.getY() + 1, target.getPlane()));
+                        World.sendGraphics(target, new Graphics(438), new WorldTile(target.getX() - 1, target.getY(), target.getPlane()));
+                        World.sendGraphics(target, new Graphics(438), new WorldTile(target.getX() + 1, target.getY(), target.getPlane()));
+                        World.sendGraphics(target, new Graphics(438), new WorldTile(target.getX(), target.getY() - 1, target.getPlane()));
+                        World.sendGraphics(target, new Graphics(438), new WorldTile(target.getX(), target.getY() + 1, target.getPlane()));
+                        World.sendGraphics(target, new Graphics(438), new WorldTile(target.getX() - 1, target.getY() - 1, target.getPlane()));
+                        World.sendGraphics(target, new Graphics(438), new WorldTile(target.getX() - 1, target.getY() + 1, target.getPlane()));
+                        World.sendGraphics(target, new Graphics(438), new WorldTile(target.getX() + 1, target.getY() - 1, target.getPlane()));
+                        World.sendGraphics(target, new Graphics(438), new WorldTile(target.getX() + 1, target.getY() + 1, target.getPlane()));
                     }
                 });
             } else if (prayer.usingPrayer(1, 17)) {
-                World.sendProjectile(this, new WorldTile(getX() + 2, getY() + 2, getPlane()), 2260, 24, 0, 41, 35, 30,
-                        0);
+                World.sendProjectile(this, new WorldTile(getX() + 2, getY() + 2, getPlane()), 2260, 24, 0, 41, 35, 30, 0);
                 World.sendProjectile(this, new WorldTile(getX() + 2, getY(), getPlane()), 2260, 41, 0, 41, 35, 30, 0);
-                World.sendProjectile(this, new WorldTile(getX() + 2, getY() - 2, getPlane()), 2260, 41, 0, 41, 35, 30,
-                        0);
+                World.sendProjectile(this, new WorldTile(getX() + 2, getY() - 2, getPlane()), 2260, 41, 0, 41, 35, 30, 0);
 
-                World.sendProjectile(this, new WorldTile(getX() - 2, getY() + 2, getPlane()), 2260, 41, 0, 41, 35, 30,
-                        0);
+                World.sendProjectile(this, new WorldTile(getX() - 2, getY() + 2, getPlane()), 2260, 41, 0, 41, 35, 30, 0);
                 World.sendProjectile(this, new WorldTile(getX() - 2, getY(), getPlane()), 2260, 41, 0, 41, 35, 30, 0);
-                World.sendProjectile(this, new WorldTile(getX() - 2, getY() - 2, getPlane()), 2260, 41, 0, 41, 35, 30,
-                        0);
+                World.sendProjectile(this, new WorldTile(getX() - 2, getY() - 2, getPlane()), 2260, 41, 0, 41, 35, 30, 0);
 
                 World.sendProjectile(this, new WorldTile(getX(), getY() + 2, getPlane()), 2260, 41, 0, 41, 35, 30, 0);
                 World.sendProjectile(this, new WorldTile(getX(), getY() - 2, getPlane()), 2260, 41, 0, 41, 35, 30, 0);
@@ -3935,10 +3822,7 @@ public class Player extends Entity {
                                 if (playersIndexes != null) {
                                     for (int playerIndex : playersIndexes) {
                                         Player player = World.getPlayers().get(playerIndex);
-                                        if (player == null || !player.hasStarted() || player.isDead()
-                                                || player.hasFinished() || !player.isCanPvp()
-                                                || !player.withinDistance(target, 2)
-                                                || !target.getControlerManager().canHit(player))
+                                        if (player == null || !player.hasStarted() || player.isDead() || player.hasFinished() || !player.isCanPvp() || !player.withinDistance(target, 2) || !target.getControlerManager().canHit(player))
                                             continue;
                                         player.applyHit(new Hit(target, Utils.getRandom(250), HitLook.REGULAR_DAMAGE));
                                     }
@@ -3947,44 +3831,32 @@ public class Player extends Entity {
                                 if (npcsIndexes != null) {
                                     for (int npcIndex : npcsIndexes) {
                                         NPC npc = World.getNPCs().get(npcIndex);
-                                        if (npc == null || npc.isDead() || npc.hasFinished()
-                                                || !npc.withinDistance(target, 2)
-                                                || !npc.getDefinitions().hasAttackOption()
-                                                || !target.getControlerManager().canHit(npc))
+                                        if (npc == null || npc.isDead() || npc.hasFinished() || !npc.withinDistance(target, 2) || !npc.getDefinitions().hasAttackOption() || !target.getControlerManager().canHit(npc))
                                             continue;
                                         npc.applyHit(new Hit(target, Utils.getRandom(250), HitLook.REGULAR_DAMAGE));
                                     }
                                 }
                             }
                         } else {
-                            if (source != null && source != target && !source.isDead() && !source.hasFinished()
-                                    && source.withinDistance(target, 2))
+                            if (source != null && source != target && !source.isDead() && !source.hasFinished() && source.withinDistance(target, 2))
                                 source.applyHit(new Hit(target, Utils.getRandom(250), HitLook.REGULAR_DAMAGE));
                         }
 
-                        World.sendGraphics(target, new Graphics(2260),
-                                new WorldTile(getX() + 2, getY() + 2, getPlane()));
+                        World.sendGraphics(target, new Graphics(2260), new WorldTile(getX() + 2, getY() + 2, getPlane()));
                         World.sendGraphics(target, new Graphics(2260), new WorldTile(getX() + 2, getY(), getPlane()));
-                        World.sendGraphics(target, new Graphics(2260),
-                                new WorldTile(getX() + 2, getY() - 2, getPlane()));
+                        World.sendGraphics(target, new Graphics(2260), new WorldTile(getX() + 2, getY() - 2, getPlane()));
 
-                        World.sendGraphics(target, new Graphics(2260),
-                                new WorldTile(getX() - 2, getY() + 2, getPlane()));
+                        World.sendGraphics(target, new Graphics(2260), new WorldTile(getX() - 2, getY() + 2, getPlane()));
                         World.sendGraphics(target, new Graphics(2260), new WorldTile(getX() - 2, getY(), getPlane()));
-                        World.sendGraphics(target, new Graphics(2260),
-                                new WorldTile(getX() - 2, getY() - 2, getPlane()));
+                        World.sendGraphics(target, new Graphics(2260), new WorldTile(getX() - 2, getY() - 2, getPlane()));
 
                         World.sendGraphics(target, new Graphics(2260), new WorldTile(getX(), getY() + 2, getPlane()));
                         World.sendGraphics(target, new Graphics(2260), new WorldTile(getX(), getY() - 2, getPlane()));
 
-                        World.sendGraphics(target, new Graphics(2260),
-                                new WorldTile(getX() + 1, getY() + 1, getPlane()));
-                        World.sendGraphics(target, new Graphics(2260),
-                                new WorldTile(getX() + 1, getY() - 1, getPlane()));
-                        World.sendGraphics(target, new Graphics(2260),
-                                new WorldTile(getX() - 1, getY() + 1, getPlane()));
-                        World.sendGraphics(target, new Graphics(2260),
-                                new WorldTile(getX() - 1, getY() - 1, getPlane()));
+                        World.sendGraphics(target, new Graphics(2260), new WorldTile(getX() + 1, getY() + 1, getPlane()));
+                        World.sendGraphics(target, new Graphics(2260), new WorldTile(getX() + 1, getY() - 1, getPlane()));
+                        World.sendGraphics(target, new Graphics(2260), new WorldTile(getX() - 1, getY() + 1, getPlane()));
+                        World.sendGraphics(target, new Graphics(2260), new WorldTile(getX() - 1, getY() - 1, getPlane()));
                     }
 
                 });
@@ -4011,7 +3883,7 @@ public class Player extends Entity {
 
     @Override
     public void sendDeath(final Entity source) {
-        if (!running || hasFinished())
+        if (!active || hasFinished())
             return;
         final Player instance = this;
         if (getAppearence().isNPC()) {
@@ -4108,22 +3980,19 @@ public class Player extends Entity {
                 continue;
             keptItems.add(item);
         }
-        return new Item[][]{keptItems.toArray(new Item[keptItems.size()]),
-                droppedItems.toArray(new Item[droppedItems.size()])};
+        return new Item[][]{keptItems.toArray(new Item[keptItems.size()]), droppedItems.toArray(new Item[droppedItems.size()])};
 
     }
 
     public void sendItemsOnDeath(Player killer, boolean dropItems) {
 
-        Integer[][] slots = ButtonHandler.getItemSlotsKeptOnDeath(this, isAtWild(), dropItems,
-                getPrayer().usingPrayer(0, 10) || getPrayer().usingPrayer(1, 0));
+        Integer[][] slots = ButtonHandler.getItemSlotsKeptOnDeath(this, isAtWild(), dropItems, getPrayer().usingPrayer(0, 10) || getPrayer().usingPrayer(1, 0));
         sendItemsOnDeath(killer, new WorldTile(this), new WorldTile(this), true, slots);
     }
 
     private transient long totalCurrentDrop;
 
-    public void sendItemsOnDeath(Player killer, WorldTile deathTile, WorldTile respawnTile, boolean wilderness,
-                                 Integer[][] slots) {
+    public void sendItemsOnDeath(Player killer, WorldTile deathTile, WorldTile respawnTile, boolean wilderness, Integer[][] slots) {
         if (killer == null)
             return;
         auraManager.removeAura();
@@ -4139,8 +4008,7 @@ public class Player extends Entity {
                     for (Item runes : getRunePouch().getContainerItems()) {
                         if (runes == null)
                             continue;
-                        World.addGroundItem(new Item(runes.getId(), runes.getAmount()), deathTile,
-                                killer == null ? this : killer, true, 60);
+                        World.addGroundItem(new Item(runes.getId(), runes.getAmount()), deathTile, killer == null ? this : killer, true, 60);
                         getRunePouch().remove(runes);
                     }
                     sm("Your rune pouch and your runes was lost at death.");
@@ -4153,8 +4021,7 @@ public class Player extends Entity {
                         for (Item staffRunes : charges.getValue()) {
                             if (item == null)
                                 continue;
-                            World.updateGroundItem(staffRunes, deathTile, killer == null ? this : killer, 60, 1,
-                                    killer.getPlayerRank().isIronman() ? killer.getDisplayName() : null);
+                            World.updateGroundItem(staffRunes, deathTile, killer == null ? this : killer, 60, 1, killer.getPlayerRank().isIronman() ? killer.getDisplayName() : null);
                         }
                     }
                     sm("All your runes in your runic staff were dropped.");
@@ -4173,16 +4040,13 @@ public class Player extends Entity {
         World.addGroundItem(new Item(526, 1), deathTile, killer == null ? this : killer, true, 60);
         for (int i = 0; i < items[1].length; i++) {
             Item item = items[1][i];
-            if (Settings.ECONOMY_MODE == 1 && !LimitedGEReader.itemIsLimited(item.getId())
-                    && ItemConstants.isTradeable(item) && EconomyPrices.getPrice(item.getId()) == 0)// skip to drop free
+            if (Settings.ECONOMY_MODE == 1 && !LimitedGEReader.itemIsLimited(item.getId()) && ItemConstants.isTradeable(item) && EconomyPrices.getPrice(item.getId()) == 0)// skip to drop free
                 continue;
             if (ItemConstants.degradeOnDrop(item))
                 getCharges().degrade(item);
             if (ItemConstants.removeAttachedId(item) != -1) {
                 if (ItemConstants.removeAttachedId2(item) != -1)
-                    World.updateGroundItem(new Item(ItemConstants.removeAttachedId2(item), 1), deathTile,
-                            killer == null ? this : killer, 60, 1,
-                            killer.getPlayerRank().isIronman() ? killer.getDisplayName() : null);
+                    World.updateGroundItem(new Item(ItemConstants.removeAttachedId2(item), 1), deathTile, killer == null ? this : killer, 60, 1, killer.getPlayerRank().isIronman() ? killer.getDisplayName() : null);
                 items[1][i] = new Item(ItemConstants.removeAttachedId(item));
             }
             if (ItemConstants.turnCoins(item) && (isAtWild() || FfaZone.inRiskArea(this))) {
@@ -4196,25 +4060,18 @@ public class Player extends Entity {
             if (!ItemConstants.keptOnDeath(item))
                 killer.totalCurrentDrop += (item.getDefinitions().getTipitPrice() * item.getAmount());
             item = items[1][i];
-            World.updateGroundItem(item, deathTile, killer == null ? this : killer, 60, 1,
-                    killer.getPlayerRank().isIronman() ? killer.getDisplayName() : null);
+            World.updateGroundItem(item, deathTile, killer == null ? this : killer, 60, 1, killer.getPlayerRank().isIronman() ? killer.getDisplayName() : null);
         }
-        sm("You have lost approximately: "
-                + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(killer.totalCurrentDrop, ','))
-                + " coins!");
+        sm("You have lost approximately: " + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(killer.totalCurrentDrop, ',')) + " coins!");
         if (killer != this)
-            killer.sm("Total loot is worth approximately: " + HexColours.getShortMessage(Colour.RED,
-                    "" + Utils.getFormattedNumber(killer.totalCurrentDrop, ',')) + " coins!");
-        if ((killer.totalCurrentDrop > killer.getHighestValuedKill()) && killer.hasWildstalker() && killer != null
-                && killer != this) {
+            killer.sm("Total loot is worth approximately: " + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(killer.totalCurrentDrop, ',')) + " coins!");
+        if ((killer.totalCurrentDrop > killer.getHighestValuedKill()) && killer.hasWildstalker() && killer != null && killer != this) {
             killer.setHighestValuedKill(killer.totalCurrentDrop);
-            killer.sm("New highest value Wilderness kill: " + HexColours.getShortMessage(Colour.RED,
-                    "" + Utils.getFormattedNumber(killer.getHighestValuedKill(), ',')) + " coins!");
+            killer.sm("New highest value Wilderness kill: " + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(killer.getHighestValuedKill(), ',')) + " coins!");
         }
         if (killer != this) {
             int randomCoins = Utils.random(100000, 150000);
-            World.updateGroundItem(new Item(995, randomCoins), deathTile, killer == null ? this : killer, 60, 1,
-                    killer.getPlayerRank().isIronman() ? killer.getDisplayName() : null);
+            World.updateGroundItem(new Item(995, randomCoins), deathTile, killer == null ? this : killer, 60, 1, killer.getPlayerRank().isIronman() ? killer.getDisplayName() : null);
             if (Utils.random(5) == 0) {
                 Item pkKey = new Item("pk key");
                 if (killer.getInventory().hasFreeSlots()) {
@@ -4222,8 +4079,7 @@ public class Player extends Entity {
                     killer.sm("You recieved a " + HexColours.getShortMessage(Colour.RED, pkKey.getName()) + ".");
                 } else {
                     killer.getBank().addItem(pkKey, true);
-                    killer.sm("You recieved a " + HexColours.getShortMessage(Colour.RED, pkKey.getName())
-                            + ", but it was added to your bank.");
+                    killer.sm("You recieved a " + HexColours.getShortMessage(Colour.RED, pkKey.getName()) + ", but it was added to your bank.");
                 }
             }
             double ep = killer.get(IntKey.EP) * 0.30;
@@ -4234,21 +4090,14 @@ public class Player extends Entity {
             Artefacts rolledItem = Artefacts.values()[Utils.getRandom(Artefacts.values().length - 1)];
             if (c <= rolledItem.getChance()) {
                 killer.set(IntKey.EP, 0);
-                World.addGroundItem(new Item(rolledItem.getId(), 1), deathTile, killer == null ? this : killer, true,
-                        60);
+                World.addGroundItem(new Item(rolledItem.getId(), 1), deathTile, killer == null ? this : killer, true, 60);
                 killer.sm("You recieved a " + rolledItem.getName() + " as a pvp drop.");
             }
         }
     }
 
     public final boolean isAtWild() {
-        return isAtPvP() || (getX() >= 3011 && getX() <= 3132 && getY() >= 10052 && getY() <= 10175)
-                || (getX() >= 2940 && getX() <= 3395 && getY() >= 3525 && getY() <= 4000)
-                || (getX() >= 3264 && getX() <= 3279 && getY() >= 3279 && getY() <= 3672)
-                || (getX() >= 3158 && getX() <= 3181 && getY() >= 3679 && getY() <= 3697)
-                || (getX() >= 3280 && getX() <= 3183 && getY() >= 3885 && getY() <= 3888)
-                || (getX() >= 3012 && getX() <= 3059 && getY() >= 10303 && getY() <= 10351)
-                || (getX() >= 3060 && getX() <= 3072 && getY() >= 10251 && getY() <= 10263);
+        return isAtPvP() || (getX() >= 3011 && getX() <= 3132 && getY() >= 10052 && getY() <= 10175) || (getX() >= 2940 && getX() <= 3395 && getY() >= 3525 && getY() <= 4000) || (getX() >= 3264 && getX() <= 3279 && getY() >= 3279 && getY() <= 3672) || (getX() >= 3158 && getX() <= 3181 && getY() >= 3679 && getY() <= 3697) || (getX() >= 3280 && getX() <= 3183 && getY() >= 3885 && getY() <= 3888) || (getX() >= 3012 && getX() <= 3059 && getY() >= 10303 && getY() <= 10351) || (getX() >= 3060 && getX() <= 3072 && getY() >= 10251 && getY() <= 10263);
     }
 
     public final boolean isAtPvP() {
@@ -4256,9 +4105,7 @@ public class Player extends Entity {
     }
 
     public final boolean isInClanwars() {
-        return (getX() >= 2981 && getX() <= 3006 && getY() >= 9664 && getY() <= 9694)
-                || (getX() >= 2947 && getX() <= 3070 && getY() >= 5506 && getY() <= 5630)
-                || (getX() >= 2755 && getX() <= 2876 && getY() >= 5506 && getY() <= 5630);
+        return (getX() >= 2981 && getX() <= 3006 && getY() >= 9664 && getY() <= 9694) || (getX() >= 2947 && getX() <= 3070 && getY() >= 5506 && getY() <= 5630) || (getX() >= 2755 && getX() <= 2876 && getY() >= 5506 && getY() <= 5630);
     }
 
     public final boolean isInRedPortal() {
@@ -4367,8 +4214,7 @@ public class Player extends Entity {
             String location = "";
             location = "data/logs/kills/" + player.getUsername() + ".txt";
             BufferedWriter writer = new BufferedWriter(new FileWriter(location, true));
-            writer.write("[" + currentTime("dd MMMMM yyyy 'at' hh:mm:ss z") + "] - " + player.getUsername() + " killed "
-                    + p2.getUsername() + "");
+            writer.write("[" + currentTime("dd MMMMM yyyy 'at' hh:mm:ss z") + "] - " + player.getUsername() + " killed " + p2.getUsername() + "");
             writer.newLine();
             writer.flush();
             writer.close();
@@ -4382,8 +4228,7 @@ public class Player extends Entity {
             String location = "";
             location = "data/logs/kills/" + player.getUsername() + ".txt";
             BufferedWriter writer = new BufferedWriter(new FileWriter(location, true));
-            writer.write("[" + currentTime("dd MMMMM yyyy 'at' hh:mm:ss z") + "] - " + player.getUsername()
-                    + " died to " + p2.getUsername() + "");
+            writer.write("[" + currentTime("dd MMMMM yyyy 'at' hh:mm:ss z") + "] - " + player.getUsername() + " died to " + p2.getUsername() + "");
             writer.newLine();
             writer.flush();
             writer.close();
@@ -4410,17 +4255,10 @@ public class Player extends Entity {
             totalPts = Utils.random(9500, 10000);
         add(IntKey.PK_POINTS, totalPts);
         getAdventureLog().addActivity("I have killed " + killed.getDisplayName() + " in a PvP zone.");
-        sm("You now have a killstreak of " + HexColours.getShortMessage(Colour.RED, "" + get(IntKey.KILLSTREAK))
-                + (get(IntKey.KILLSTREAK) > 1 ? " kills." : " kill.")
-                + (get(IntKey.KILLSTREAK) > get(IntKey.KILLSTREAK_RECORD) ? " " + HexColours.getShortMessage(Colour.RED, "New Record!") : ""));
+        sm("You now have a killstreak of " + HexColours.getShortMessage(Colour.RED, "" + get(IntKey.KILLSTREAK)) + (get(IntKey.KILLSTREAK) > 1 ? " kills." : " kill.") + (get(IntKey.KILLSTREAK) > get(IntKey.KILLSTREAK_RECORD) ? " " + HexColours.getShortMessage(Colour.RED, "New Record!") : ""));
         if (killed.get(IntKey.KILLSTREAK) >= 5)
-            World.sendNewsMessage(getDisplayName() + " has ended " + killed.getDisplayName()
-                            + (killed.getDisplayName().endsWith("s") ? "'" : "s") + " killstreak of " + killed.get(IntKey.KILLSTREAK) + "!",
-                    false);
-        sm("You gained " + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(totalPts, ','))
-                + " pk points, you now have "
-                + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(get(IntKey.PK_POINTS), ','))
-                + " pk points.");
+            World.sendNewsMessage(getDisplayName() + " has ended " + killed.getDisplayName() + (killed.getDisplayName().endsWith("s") ? "'" : "s") + " killstreak of " + killed.get(IntKey.KILLSTREAK) + "!", false);
+        sm("You gained " + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(totalPts, ',')) + " pk points, you now have " + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(get(IntKey.PK_POINTS), ',')) + " pk points.");
         if (get(IntKey.KILLSTREAK) > get(IntKey.KILLSTREAK_RECORD))
             set(IntKey.KILLSTREAK_RECORD, 1);
         killed.add(IntKey.DEATHCOUNT, 1);
@@ -4789,6 +4627,10 @@ public class Player extends Entity {
         return lastLoggedIn;
     }
 
+    public void heal(int amount, boolean message, boolean hitmark) {
+        super.heal(amount, message, hitmark);
+        refreshHitPoints();
+    }
     @Override
     public void heal(int ammount, int extra) {
         super.heal(ammount, extra);
@@ -4825,11 +4667,11 @@ public class Player extends Entity {
     }
 
     public void setTeleBlockDelay(int ticks) {
-       set(IntKey.TELEPORT_BLOCK_IMMUNITY, ticks);
+        set(IntKey.TELEPORT_BLOCK_IMMUNITY, ticks);
     }
 
     public void setTeleBlockImmune(int ticks) {
-       set(IntKey.TELEPORT_BLOCK, ticks);
+        set(IntKey.TELEPORT_BLOCK, ticks);
     }
 
     public void setPrayerRenewal(int ticks) {
@@ -5181,8 +5023,7 @@ public class Player extends Entity {
                 continue;
             for (Integer playerIndex : playersIndexes) {
                 Player p = World.getPlayers().get(playerIndex);
-                if (p == null || !p.hasStarted() || p.hasFinished()
-                        || p.getLocalPlayerUpdate().getLocalPlayers()[getIndex()] == null)
+                if (p == null || !p.hasStarted() || p.hasFinished() || p.getLocalPlayerUpdate().getLocalPlayers()[getIndex()] == null)
                     continue;
                 p.getPackets().sendPublicMessage(this, message);
             }
@@ -5387,21 +5228,7 @@ public class Player extends Entity {
     }
 
     public boolean canUseCommand() {
-        if (isAtWild() || getControlerManager().getControler() instanceof FightPitsArena
-                || getControlerManager().getControler() instanceof CorpBeastControler
-                || getControlerManager().getControler() instanceof PestControlLobby
-                || getControlerManager().getControler() instanceof PestControlGame
-                || getControlerManager().getControler() instanceof ZGDControler
-                || getControlerManager().getControler() instanceof GodWars
-                || getControlerManager().getControler() instanceof DTControler
-                || getControlerManager().getControler() instanceof DuelArena
-                || getControlerManager().getControler() instanceof CastleWarsPlaying
-                || getControlerManager().getControler() instanceof CastleWarsWaiting
-                || getControlerManager().getControler() instanceof FightCaves
-                || getControlerManager().getControler() instanceof FightKiln || FfaZone.inPvpArea(this)
-                || getControlerManager().getControler() instanceof NomadsRequiem
-                || getControlerManager().getControler() instanceof QueenBlackDragonController
-                || getControlerManager().getControler() instanceof WarControler) {
+        if (isAtWild() || getControlerManager().getControler() instanceof FightPitsArena || getControlerManager().getControler() instanceof CorpBeastControler || getControlerManager().getControler() instanceof PestControlLobby || getControlerManager().getControler() instanceof PestControlGame || getControlerManager().getControler() instanceof ZGDControler || getControlerManager().getControler() instanceof GodWars || getControlerManager().getControler() instanceof DTControler || getControlerManager().getControler() instanceof DuelArena || getControlerManager().getControler() instanceof CastleWarsPlaying || getControlerManager().getControler() instanceof CastleWarsWaiting || getControlerManager().getControler() instanceof FightCaves || getControlerManager().getControler() instanceof FightKiln || FfaZone.inPvpArea(this) || getControlerManager().getControler() instanceof NomadsRequiem || getControlerManager().getControler() instanceof QueenBlackDragonController || getControlerManager().getControler() instanceof WarControler) {
             return false;
         }
         if (getControlerManager().getControler() instanceof CrucibleControler) {
@@ -5509,8 +5336,7 @@ public class Player extends Entity {
                 combatDefinitions.setInstantAttack(true);
                 Entity target = (Entity) temporaryAttribute().get("last_target");
                 if (target != null && target.temporaryAttribute().get("last_attacker") == this) {
-                    if (!(getActionManager().getAction() instanceof PlayerCombat)
-                            || ((PlayerCombat) getActionManager().getAction()).getTarget() != target) {
+                    if (!(getActionManager().getAction() instanceof PlayerCombat) || ((PlayerCombat) getActionManager().getAction()).getTarget() != target) {
                         getActionManager().setAction(new PlayerCombat(target));
                     }
                 }
@@ -5542,8 +5368,7 @@ public class Player extends Entity {
                 gfx(new Graphics(247));
                 setNextForceTalk(new ForceTalk("For Camelot!"));
                 final boolean enhanced = weaponId == 14632;
-                skills.set(Skills.DEFENCE, enhanced ? (int) (skills.getLevelForXp(Skills.DEFENCE) * 1.15D)
-                        : (skills.getLevel(Skills.DEFENCE) + 8));
+                skills.set(Skills.DEFENCE, enhanced ? (int) (skills.getLevelForXp(Skills.DEFENCE) * 1.15D) : (skills.getLevel(Skills.DEFENCE) + 8));
                 WorldTasksManager.schedule(new WorldTask() {
                     int count = 5;
 
@@ -5982,8 +5807,7 @@ public class Player extends Entity {
             if (achievement.name().replace("_", " ").replace("'", "").equalsIgnoreCase(name)) {
                 totalKills = (getBossKillcount().get(name) != null ? getBossKillcount().get(name).intValue() : 0);
                 if (totalKills < achievement.getKills()) {
-                    sm("You must have killed at least " + achievement.getKills() + " " + name + ", "
-                            + (achievement.getKills() - totalKills) + " left.");
+                    sm("You must have killed at least " + achievement.getKills() + " " + name + ", " + (achievement.getKills() - totalKills) + " left.");
                 }
             }
         }
@@ -6277,8 +6101,7 @@ public class Player extends Entity {
         if (!isMuted())
             return;
         if (!muteFrom.equalsIgnoreCase(moderator.getUsername()) && !moderator.isDeveloper() && muteEnd == -1) {
-            moderator.getPackets()
-                    .sendGameMessage("Only " + muteFrom + " or an Administrator can undo this punishment.");
+            moderator.getPackets().sendGameMessage("Only " + muteFrom + " or an Administrator can undo this punishment.");
             return;
         }
         muteFrom = muteReason = null;
@@ -6577,7 +6400,7 @@ public class Player extends Entity {
         return varBitList;
     }
 
-    public  HashMap<Integer, Integer> getTemporaryVarBits() {
+    public HashMap<Integer, Integer> getTemporaryVarBits() {
         return temporaryVarBits;
     }
 
@@ -6606,6 +6429,7 @@ public class Player extends Entity {
 
     // artisant
     private ArtisanWorkshop artisan;
+
     public ArtisanWorkshop getArtisanWorkshop() {
         return artisan;
     }

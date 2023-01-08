@@ -15,7 +15,7 @@ public class ItemPluginLoader {
     public static ItemPlugin getPlugin(Item item) {
         ItemPlugin plugin = cachedItemPlugins.getOrDefault(item.getId(), cachedItemPlugins.get(item.getName()));
         if (plugin != null) {
-            System.out.println("[ItemPluginManager] "+item.getName()+"("+item.getId()+"): plugin was found by Id.");
+            System.out.println("[ItemPluginLoader] "+item.getName()+"("+item.getId()+"): plugin was found by Id.");
             return plugin;
         }
         if (plugin == null) {
@@ -24,13 +24,13 @@ public class ItemPluginLoader {
                 for (Object key : keys) {
                     if (key instanceof String && item.getName().toLowerCase().contains(((String) key).toLowerCase())) {
                         plugin = entry.getValue();
-                        System.out.println("[ItemPluginManager] "+item.getName()+"("+item.getId()+"): Found plugin name");
+                        System.out.println("[ItemPluginLoader] "+item.getName()+"("+item.getId()+"): Found plugin name");
                         return plugin;
                     }
                 }
             }
         }
-        System.out.println("[ItemPluginManager] "+item.getName()+"("+item.getId()+"): Found no plugin for this item.");
+        System.out.println("[ItemPluginLoader] "+item.getName()+"("+item.getId()+"): Found no plugin for this item.");
         return null;
     }
 

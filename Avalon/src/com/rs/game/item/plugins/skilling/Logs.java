@@ -16,30 +16,25 @@ public class Logs extends ItemPlugin {
     }
 
     @Override
-    public boolean processItem(Player player, Item item, int slotId) {
-       boolean hasOption = item.getDefinitions().containsOption("craft") || item.getDefinitions().containsOption("fletch") ;
-        if (!hasOption)
-            return false;
-        if (!player.getInventory().containsOneItem(ItemId.KNIFE) && !player.getToolbelt().contains(ItemId.KNIFE)) {
-            player.sm("You need a knife to fletch this log.");
-            return true;
+    public boolean processItem(Player player, Item item, int slotId, String option) {
+        switch (option) {
+            case "craft":
+                if (!player.getInventory().containsOneItem(ItemId.KNIFE) && !player.getToolbelt().contains(ItemId.KNIFE)) {
+                    player.sm("You need a knife to fletch this log.");
+                    return true;
+                }
+                Fletch fletch = Fletch.forId(item.getId());
+                player.getDialogueManager().startDialogue("FletchingD", fletch);
+                return true;
+            case "light":
+                if (!player.getInventory().containsOneItem(ItemId.TINDERBOX) && !player.getToolbelt().contains(ItemId.TINDERBOX)) {
+                    player.sm("You need a tinderbox to light this log.");
+                    return true;
+                }
+                Firemaking.isFiremaking(player, item.getId());
+                return true;
         }
-        Fletch fletch = Fletch.forId(item.getId());
-        player.getDialogueManager().startDialogue("FletchingD", fletch);
-        return true;
-    }
-
-    @Override
-    public boolean processItem2(Player player, Item item, int slotId) {
-        boolean hasOption = item.getDefinitions().containsOption("light");
-        if (!hasOption)
-            return false;
-        if (!player.getInventory().containsOneItem(ItemId.TINDERBOX) && !player.getToolbelt().contains(ItemId.TINDERBOX)) {
-            player.sm("You need a tinderbox to light this log.");
-            return true;
-        }
-        Firemaking.isFiremaking(player, item.getId());
-        return true;
+        return false;
     }
 
     @Override

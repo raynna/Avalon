@@ -118,7 +118,7 @@ public class AssistManager {
 	 */
 	public static void giveXP(Player player, int skill, double exp) {
 		Player assister = World.getPlayerByDisplayName(player.getAssist().AssistedBy);
-		if (assister == null || !assister.isRunning()) {
+		if (assister == null || !assister.isActive()) {
 			player.sm(assister + " is offline.");
 			player.getAssist().Reset(assister);
 			player.closeInterfaces();

@@ -1,6 +1,5 @@
 package com.rs.game.player.content;
 
-import com.rs.Launcher;
 import com.rs.Settings;
 import com.rs.game.World;
 import com.rs.game.player.Player;
@@ -64,7 +63,7 @@ public class ServerMessage {
 
 	public static void sendNews(boolean important, String args, boolean staffOnly, boolean autoColor) {
 		for (Player user : World.getPlayers()) {
-			if (user == null || !user.isRunning()
+			if (user == null || !user.isActive()
 			// if the user has yell off and it's not a staff msg
 					|| (user.isYellOff() && important == false)
 					// if the user is not a staff

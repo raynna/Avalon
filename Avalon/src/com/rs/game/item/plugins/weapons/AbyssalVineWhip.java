@@ -15,25 +15,26 @@ public class AbyssalVineWhip extends ItemPlugin {
     }
 
     @Override
-    public boolean processItem3(Player player, Item item, int slotId) {
-        if (!player.getInventory().hasFreeSlots()) {
-            player.getPackets().sendGameMessage("You don't have enough space to split the abyssal vine whip.");
-            return true;
+    public boolean processItem(Player player, Item item, int slotId, String option) {
+        switch (option) {
+            case "split":
+                if (!player.getInventory().hasFreeSlots()) {
+                    player.getPackets().sendGameMessage("You don't have enough space to split the abyssal vine whip.");
+                    return true;
+                }
+                player.getInventory().replaceItem(ItemId.ABYSSAL_WHIP, 1, slotId);
+                player.getInventory().addItem(ItemId.VINE_WHIP, 1);
+                player.sm("You split the whip vine from the abbysal whip.");
+                return true;
+            case "drop":
+                if (item.getId() == ItemId.VINE_WHIP)
+                    return false;//script false, continues to regular drop method
+                player.getInventory().dropItem(slotId, item, false);
+                World.updateGroundItem(new Item(ItemId.VINE_WHIP, 1), new WorldTile(player), player, player.isAtWild() ? 0 : 60, 0);
+                World.updateGroundItem(new Item(ItemId.ABYSSAL_WHIP, 1), new WorldTile(player), player, player.isAtWild() ? 0 : 60, 0);
+                return true;
         }
-        player.getInventory().replaceItem(ItemId.ABYSSAL_WHIP, 1, slotId);
-        player.getInventory().addItem(ItemId.VINE_WHIP, 1);
-        player.sm("You split the whip vine from the abbysal whip.");
-        return true;
-    }
-
-    @Override
-    public boolean processDrop(Player player, Item item, int slotId) {
-        if (item.getId() == ItemId.VINE_WHIP)
-            return false;//script false, continues to regular drop method
-        player.getInventory().dropItem(slotId, item, false);
-        World.updateGroundItem(new Item(ItemId.VINE_WHIP, 1), new WorldTile(player), player, player.isAtWild() ? 0 : 60, 0);
-        World.updateGroundItem(new Item(ItemId.ABYSSAL_WHIP, 1), new WorldTile(player), player, player.isAtWild() ? 0 : 60, 0);
-        return true;
+        return false;
     }
 
     @Override

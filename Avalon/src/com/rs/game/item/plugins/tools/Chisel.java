@@ -16,7 +16,6 @@ public class Chisel extends ItemPlugin {
 
     @Override
     public boolean processItemOnItem(Player player, Item item, Item item2, int fromSlot, int toSlot) {
-        System.out.println("CHISEL");
         if (contains(item.getId(), Gem.OPAL.getUncut(), item, item2)) {
             GemCutting.cut(player, Gem.OPAL);
             return true;

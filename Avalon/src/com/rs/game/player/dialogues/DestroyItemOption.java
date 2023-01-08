@@ -4,6 +4,7 @@ import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.game.item.Item;
 import com.rs.game.item.ItemPluginLoader;
 import com.rs.game.item.ItemPlugin;
+import com.rs.utils.Logger;
 
 public class DestroyItemOption extends Dialogue {
 
@@ -24,10 +25,14 @@ public class DestroyItemOption extends Dialogue {
 	@Override
 	public void run(int interfaceId, int componentId) {
 		if (interfaceId == 1183 && componentId == 9) {
-			ItemDefinitions itemDef = ItemDefinitions.getItemDefinitions(item.getId());
-			ItemPlugin script = ItemPluginLoader.cachedItemPlugins.getOrDefault(item.getId(), ItemPluginLoader.cachedItemPlugins.get(itemDef.name));
-			if (script != null) {
-				if (script.processDestroy(player, item, slotId)) {
+			ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
+			if (plugin != null) {
+				boolean pluginExecuted = plugin.processDestroy(player, item, slotId);
+				if (!pluginExecuted) {
+					Logger.log("ItemPlugin", "Destroy - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + item.getName() + "(" + item.getId() + ") plugin does not have this option.");
+				}
+				if (pluginExecuted) {
+					Logger.log("ItemPlugin", "Destroy - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + item.getName() + "(" + item.getId() + ")");
 					end();
 					return;
 				}

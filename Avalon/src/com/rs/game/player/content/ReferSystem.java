@@ -83,7 +83,7 @@ public class ReferSystem {
 
 	private static void Reset(Player p2, Player player, boolean Successful) {
 		p2 = (Player) AccountCreation.loadPlayer(player.getReferrer());
-		if (player.isRunning()) {
+		if (player.isActive()) {
 			player.getInterfaceManager().sendTaskSystem();
 		} else {
 			player = (Player) AccountCreation.loadPlayer(p2.getReferred());

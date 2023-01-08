@@ -2811,7 +2811,7 @@ public class PlayerCombat extends Action {
             return;
         World.sendSoulsplitProjectile(player, target, 2263);
         if (player.getHitpoints() > 0 && player.getHitpoints() <= player.getMaxHitpoints()) {
-            player.heal(damage / 5);
+            player.heal(damage / 5, true, true);
             if (target instanceof Player) {
                 Player p2 = (Player) target;
                 p2.getPrayer().drainPrayer(damage / 5);
@@ -3177,7 +3177,7 @@ public class PlayerCombat extends Action {
             Player p2 = (Player) target;
             if (p2.getEquipment().getRingId() != 2550 || hit.getDamage() < 10)
                 return;
-            Hit finalHit = new Hit(p2, damage > 60 ? 60 : damage, HitLook.REGULAR_DAMAGE);
+            Hit finalHit = new Hit(p2, damage > 60 ? 60 : damage, HitLook.REFLECTED_DAMAGE);
             player.applyHit(finalHit);
             player.getCharges().processHit(finalHit);
         }
@@ -3190,7 +3190,7 @@ public class PlayerCombat extends Action {
             if (p2.isVengeanceActivated() && damage >= 4) {
                 p2.setVengeance(false);
                 p2.setNextForceTalk(new ForceTalk("Taste vengeance!"));
-                player.applyHit(new Hit(p2, (int) (damage * 0.75), HitLook.REGULAR_DAMAGE));
+                player.applyHit(new Hit(p2, (int) (damage * 0.75), HitLook.REFLECTED_DAMAGE));
             }
         }
     }

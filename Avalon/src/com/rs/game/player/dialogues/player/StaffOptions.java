@@ -205,7 +205,7 @@ public class StaffOptions extends Dialogue {
 	}
 
 	void kickPlayer(Player target) {
-		if (target == null || !target.isRunning()) {
+		if (target == null || !target.isActive()) {
 			player.getPackets().sendGameMessage("The target does not appear to be online.");
 			end();
 			return;

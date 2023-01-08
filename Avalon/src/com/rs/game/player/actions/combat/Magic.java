@@ -101,7 +101,7 @@ public class Magic {
 				while (iterator_0_.hasNext()) {
 					int npcIndex = ((Integer) iterator_0_.next()).intValue();
 					Player e = (Player) World.getPlayers().get(npcIndex);
-					if (e != null && !e.isDead() && !e.hasFinished() && e.isRunning() && e.withinDistance(player, 64))
+					if (e != null && !e.isDead() && !e.hasFinished() && e.isActive() && e.withinDistance(player, 64))
 						closetargets.add(e);
 				}
 			}

@@ -41,7 +41,7 @@ public class ReportAbuse {
 	
 	public static void Report(Player player, String reported, int rule, boolean applyMute) {
 		Player offender = World.getPlayerByDisplayName(reported);
-		if (offender == null || !offender.isRunning() || !offender.hasStarted() || player == offender) {
+		if (offender == null || !offender.isActive() || !offender.hasStarted() || player == offender) {
 			return;
 		}
 		if (offender.isDeveloper()) {

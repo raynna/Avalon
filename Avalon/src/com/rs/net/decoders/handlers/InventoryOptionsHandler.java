@@ -98,44 +98,31 @@ import com.rs.utils.Utils;
 
 public class InventoryOptionsHandler {
 
-    public static void handleItemOption2(final Player player, final int slotId, final int itemId, Item item) {
+    private int OPTION_1 = 0, OPTION_2 = 1, OPTION_3 = 2, OPTION_4 = 3, OPTION_5 = 4, OPTION_6 = 5, OPTION_DROP = 7;
+
+
+    public static void handleItemOption2(final Player player, final int slotId, Item item, int option) {
         if (Settings.FREE_TO_PLAY && item.getDefinitions().isMembersOnly()) {
             player.sm("This is a members object.");
             return;
         }
+        System.out.println("handleItemOption2");
         ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
+        String optionName = item.getDefinitions().getInventoryOption(true, option);
         if (plugin != null) {
-            boolean pluginExecuted = plugin.processItem2(player, item, slotId);
-            if (!pluginExecuted) {
-                Logger.log("ItemPlugin", "Option 2 - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + item.getName() + "(" + item.getId() + ") plugin does not have this option.");
-            }
-            if (pluginExecuted) {
-                Logger.log("ItemPlugin", "Option 2 - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + item.getName() + "(" + item.getId() + ")");
+            boolean pluginExecuted = plugin.processItem(player, item, slotId,
+                    optionName);
+            plugin.sendPluginLog(option, item, optionName, pluginExecuted);
+            if (pluginExecuted)
                 return;
-            }
         }
-        if (itemId >= 15086 && itemId <= 15100) {
-            if (player.getLockDelay() > Utils.currentTimeMillis())
-                return;
-            Dicing.handleRoll(player, itemId, true);
-        } else {
-            long passedTime = Utils.currentTimeMillis() - WorldThread.LAST_CYCLE_CTM;
-            WorldTasksManager.schedule(new WorldTask() {
-
-                @Override
-                public void run() {
-                    List<Integer> slots = player.getSwitchItemCache();
-                    int[] slot = new int[slots.size()];
-                    for (int i = 0; i < slot.length; i++)
-                        slot[i] = slots.get(i);
-                    player.getSwitchItemCache().clear();
-                    ButtonHandler.sendWear(player, slot);
-                }
-            }, passedTime >= 600 ? 0 : 0);
-            if (player.getSwitchItemCache().contains(slotId))
-                return;
-            player.getSwitchItemCache().add(slotId);
-        }
+        System.out.println("Option 2: Wear item: " + item.getName());
+        /**item switching, wear is handled in player process*/
+        if (!item.getDefinitions().isWearItem())
+            return;
+        if (player.getSwitchItemCache().contains(slotId))
+            return;
+        player.getSwitchItemCache().add(slotId);
     }
 
     public static void dig(final Player player) {
@@ -162,10 +149,22 @@ public class InventoryOptionsHandler {
     }
 
 
-    public static void handleItemOption1(Player player, final int slotId, final int itemId, Item item) {
+    public static void handleItemOption1(Player player, final int slotId, Item item, int option) {
         long time = Utils.currentTimeMillis();
+        int itemId = item.getId();
         if (player.getLockDelay() >= time || player.getEmotesManager().getNextEmoteEnd() >= time)
             return;
+        /**item click option 1*/
+        System.out.println("handleItemOption1");
+        ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
+        String optionName = item.getDefinitions().getInventoryOption(true, option);
+        if (plugin != null) {
+            boolean pluginExecuted = plugin.processItem(player, item, slotId,
+                    optionName);
+            plugin.sendPluginLog(option, item, optionName, pluginExecuted);
+            if (pluginExecuted)
+                return;
+        }
         player.stopAll(false);
         if (Settings.FREE_TO_PLAY && item.getDefinitions().isMembersOnly()) {
             player.sm("This is a members object.");
@@ -173,17 +172,6 @@ public class InventoryOptionsHandler {
         }
         if (!player.getControlerManager().processItemClick(slotId, item, player))
             return;
-        ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
-        if (plugin != null) {
-            boolean pluginExecuted = plugin.processItem(player, item, slotId);
-            if (!pluginExecuted) {
-                Logger.log("ItemPlugin", "Option 1 - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + item.getName() + "(" + item.getId() + ") plugin does not have this option.");
-            }
-            if (pluginExecuted) {
-                Logger.log("ItemPlugin", "Option 1 - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + item.getName() + "(" + item.getId() + ")");
-                return;
-            }
-        }
         if (Foods.eat(player, item, slotId))
             return;
         if (Pots.pot(player, item, slotId))
@@ -1033,21 +1021,21 @@ public class InventoryOptionsHandler {
             player.getPackets().sendGameMessage("itemUsedWithId:" + itemUsedWithId + ", toSlot: " + toSlot + ", interfaceId: " + interfaceId + ", interfaceId2 " + interfaceId2 + ", spellId:" + spellId + ", compId: " + compId + ", fromSlot: " + fromSlot + ", itemUsedId: " + itemUsedId);
     }
 
-    public static void handleItemOption3(Player player, int slotId, int itemId, Item item) {
+    public static void handleItemOption3(Player player, int slotId, Item item, int option) {
         long time = Utils.currentTimeMillis();
+        int itemId = item.getId();
         if (player.getLockDelay() >= time || player.getEmotesManager().getNextEmoteEnd() >= time)
             return;
+        System.out.println("handleItemOption3");
         player.stopAll(false);
         ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
+        ItemDefinitions definitions = item.getDefinitions();
+        String optionName = definitions.getInventoryOption(true, option);
         if (plugin != null) {
-            boolean pluginExecuted = plugin.processItem3(player, item, slotId);
-            if (!pluginExecuted) {
-                Logger.log("ItemPlugin", "Option 3 - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + item.getName() + "(" + item.getId() + ") plugin does not have this option.");
-            }
-            if (pluginExecuted) {
-                Logger.log("ItemPlugin", "Option 3 - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + item.getName() + "(" + item.getId() + ")");
+            boolean pluginExecuted = plugin.processItem(player, item, slotId, optionName);
+            plugin.sendPluginLog(option, item, optionName, pluginExecuted);
+            if (pluginExecuted)
                 return;
-            }
         }
         Hunter.FlyingEntities impling = Hunter.FlyingEntities.forItemId(itemId);
         if (impling != null) {
@@ -1096,10 +1084,7 @@ public class InventoryOptionsHandler {
             player.getDialogueManager().startDialogue("DiceBag", itemId);
         else if (itemId == 24437 || itemId == 24439 || itemId == 24440 || itemId == 24441)
             player.getDialogueManager().startDialogue("FlamingSkull", item, slotId);
-        else if (itemId >= 20801 && itemId <= 20806) {
-            player.getDialogueManager().startDialogue("WildStalkerHelmet");
-            return;
-        } else if (itemId >= 13561 && itemId <= 13562 || itemId == 19760) {
+        else if (itemId >= 13561 && itemId <= 13562 || itemId == 19760) {
             player.sm("Run-replenish here.");
         } else if (itemId >= 20795 && itemId <= 20800) {
             player.getDialogueManager().startDialogue("DuellistCap");
@@ -1216,51 +1201,48 @@ public class InventoryOptionsHandler {
                 return;
             }
         }
-        }
+    }
 
-    public static void handleItemOption4(Player player, int slotId, int itemId, Item item) {
+    public static void handleItemOption4(Player player, int slotId, Item item, int option) {
+        System.out.println("handleItemOption4");
         ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
+        ItemDefinitions definitions = item.getDefinitions();
+        String optionName = definitions.getInventoryOption(true, option);
         if (plugin != null) {
-            boolean pluginExecuted = plugin.processItem4(player, item, slotId);
-            if (!pluginExecuted) {
-                Logger.log("ItemPlugin", "Option 4 - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + item.getName() + "(" + item.getId() + ") plugin does not have this option.");
-            }
-            if (pluginExecuted) {
-                Logger.log("ItemPlugin", "Option 4 - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + item.getName() + "(" + item.getId() + ")");
+            boolean pluginExecuted = plugin.processItem(player, item, slotId, optionName);
+            plugin.sendPluginLog(option, item, optionName, pluginExecuted);
+            if (pluginExecuted)
                 return;
-            }
         }
-       }
+    }
 
-    public static void handleItemOption5(Player player, int slotId, int itemId, Item item) {
+    public static void handleItemOption5(Player player, int slotId, Item item, int option) {
+        System.out.println("handleItemOption5");
         ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
+        String optionName = item.getDefinitions().getInventoryOption(true, option);
         if (plugin != null) {
-            boolean pluginExecuted = plugin.processItem5(player, item, slotId);
-            if (!pluginExecuted) {
-                Logger.log("ItemPlugin", "Option 5 - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + item.getName() + "(" + item.getId() + ") plugin does not have this option.");
-            }
-            if (pluginExecuted) {
-                Logger.log("ItemPlugin", "Option 5 - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + item.getName() + "(" + item.getId() + ")");
+            boolean pluginExecuted = plugin.processItem(player, item, slotId, optionName);
+            plugin.sendPluginLog(option, item, optionName, pluginExecuted);
+            if (pluginExecuted)
                 return;
-            }
         }
-        }
+    }
 
-    public static void handleItemOption6(Player player, int slotId, int itemId, Item item) {
+    public static void handleItemOption6(Player player, int slotId, Item item, int option) {
+        System.out.println("handleItemOption6");
         long time = Utils.currentTimeMillis();
+        int itemId = item.getId();
         if (player.getLockDelay() >= time || player.getEmotesManager().getNextEmoteEnd() >= time)
             return;
         player.stopAll(false);
         ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
+        ItemDefinitions definitions = item.getDefinitions();
+        String optionName = definitions.getInventoryOption(true, option);
         if (plugin != null) {
-            boolean pluginExecuted = plugin.processItem6(player, item, slotId);
-            if (!pluginExecuted) {
-                Logger.log("ItemPlugin", "Option 6 - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + item.getName() + "(" + item.getId() + ") plugin does not have this option.");
-            }
-            if (pluginExecuted) {
-                Logger.log("ItemPlugin", "Option 6 - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + item.getName() + "(" + item.getId() + ")");
+            boolean pluginExecuted = plugin.processItem(player, item, slotId, optionName);
+            plugin.sendPluginLog(option, item, optionName, pluginExecuted);
+            if (pluginExecuted)
                 return;
-            }
         }
         Pouch pouch = Pouch.forId(itemId);
         Pot pot = Pots.getPot(item.getId());
@@ -1270,18 +1252,7 @@ public class InventoryOptionsHandler {
             player.getInventory().refresh();
             return;
         }
-        if (itemId == 20801) {
-            if (player.getKillCount() < 10) {
-                player.sm("You can't change the look of your wildstalker helmet until you earned additional tiers.");
-                player.sm("You need at least ten wilderness kills.");
-                return;
-            } else if (player.getKillCount() > 99) {
-                player.getDialogueManager().startDialogue("WildStalkerTier1");
-                return;
-            }
-            player.getInventory().deleteItem(itemId, 1);
-            player.getInventory().addItem(itemId + 1, 1);
-        } else if (itemId == 1921) {
+        if (itemId == 1921) {
             player.getInventory().getItems().set(slotId, new Item(1923));
             player.getInventory().refresh();
             player.sm("You empty the bowl.");
@@ -1448,9 +1419,11 @@ public class InventoryOptionsHandler {
         } else if (itemId >= 2552 && itemId <= 2566) {
             player.getDialogueManager().startDialogue("Transportation", "Duel Arena", new WorldTile(3367, 3267, 0), "Castle Wars", new WorldTile(2443, 3088, 0), "Mobilising Armies", new WorldTile(2412, 2849, 0), "Pest Control", new WorldTile(2662, 2653, 0), itemId);
         }
-        }
+    }
 
-    public static void handleItemOption7(Player player, int slotId, int itemId, Item item) {
+    public static void handleItemOption7(Player player, int slotId, Item item, int option) {
+        System.out.println("handleItemOption7");
+        int itemId = item.getId();
         String name = ItemDefinitions.getItemDefinitions(itemId).getName().toLowerCase();
         long time = Utils.currentTimeMillis();
         int amount = player.getInventory().getNumberOf(item.getId());
@@ -1460,15 +1433,12 @@ public class InventoryOptionsHandler {
             return;
         player.stopAll(false);
         ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
-        if (plugin != null) {
-            boolean pluginExecuted = plugin.processDrop(player, item, slotId);
-            if (!pluginExecuted) {
-                Logger.log("ItemPlugin", "Drop - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + item.getName() + "(" + item.getId() + ") plugin does not have this option.");
-            }
-            if (pluginExecuted) {
-                Logger.log("ItemPlugin", "Drop - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + item.getName() + "(" + item.getId() + ")");
+        String optionName = item.getDefinitions().getInventoryOption(true, option);
+        if (plugin != null && !item.getDefinitions().isDestroyItem()) {
+            boolean pluginExecuted = plugin.processItem(player, item, slotId, optionName);
+            plugin.sendPluginLog(option, item, optionName, pluginExecuted);
+            if (pluginExecuted)
                 return;
-            }
         }
         if (player.getPetManager().spawnPet(itemId, true)) {
             return;
@@ -1516,9 +1486,10 @@ public class InventoryOptionsHandler {
         player.getInventory().dropItem(slotId, item, true);
     }
 
-    public static void handleItemOption8(Player player, int slotId, int itemId, Item item) {
+    public static void handleItemOption8(Player player, int slotId, Item item, int option) {
+        System.out.println("handleItemOption8");
         player.getInventory().sendExamine(slotId);
-       }
+    }
 
     private static boolean isFarmingItem(Item item) {
         // if (defs.getName().toLowerCase().contains("grimy"))
@@ -1533,7 +1504,7 @@ public class InventoryOptionsHandler {
         return false;
     }
 
-    public static void handleItemOnNPC(final Player player, final NPC npc, final Item item) {
+    public static void handleItemOnNPC(final Player player, final NPC npc, final Item item, final int slotId) {
         if (item == null)
             return;
         player.stopAll(false);

@@ -208,7 +208,7 @@ public class ServantNPC extends NPC {
 			public void run() {
 				setNextNPCTransformation(servant.getId());
 				setCantInteract(false);
-				if (!owner.isRunning() || !house.isLoaded() || !house.getPlayers().contains(owner)) {
+				if (!owner.isActive() || !house.isLoaded() || !house.getPlayers().contains(owner)) {
 					if (type == 1 || type == 2) {
 						bank.addItem(finalItem, completeQuantity, false);
 					}

@@ -9,7 +9,6 @@ import com.rs.game.Animation;
 import com.rs.game.Entity;
 import com.rs.game.World;
 import com.rs.game.WorldTile;
-import com.rs.game.minigames.godwars.GodWarsBosses;
 import com.rs.game.npc.NPC;
 import com.rs.game.npc.combat.NPCCombatDefinitions;
 import com.rs.game.player.Player;
@@ -33,7 +32,7 @@ public class GeneralGraardor extends NPC {
 			if (playerIndexes != null) {
 				for (int npcIndex : playerIndexes) {
 					Player player = World.getPlayers().get(npcIndex);
-					if (player == null || player.isDead() || player.hasFinished() || !player.isRunning()
+					if (player == null || player.isDead() || player.hasFinished() || !player.isActive()
 							|| !player.withinDistance(this, 64)
 							|| ((!isAtMultiArea() || !player.isAtMultiArea()) && player.getAttackedBy() != this
 									&& player.getAttackedByDelay() > System.currentTimeMillis())

@@ -2053,28 +2053,22 @@ public class ButtonHandler {
                 final Item item = player.getInventory().getItem(slotId);
                 if (item == null || item.getId() != slotId2)
                     return;
-                if (item.getId() == 5733) {
-                    if (player.isDeveloper()) {
-                        RottenPotato.handlePotato(player, item, packetId);
-                        return;
-                    }
-                }
                 if (packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET) {
-                    InventoryOptionsHandler.handleItemOption1(player, slotId, slotId2, item);
+                    InventoryOptionsHandler.handleItemOption1(player, slotId, item, 1);//correct
                 } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET) {
-                    InventoryOptionsHandler.handleItemOption2(player, slotId, slotId2, item);
+                    InventoryOptionsHandler.handleItemOption2(player, slotId, item, 2);//correct
                 } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET)
-                    InventoryOptionsHandler.handleItemOption3(player, slotId, slotId2, item);
-                else if (packetId == WorldPacketsDecoder.ACTION_BUTTON4_PACKET)
-                    InventoryOptionsHandler.handleItemOption4(player, slotId, slotId2, item);
-                else if (packetId == WorldPacketsDecoder.ACTION_BUTTON5_PACKET)
-                    InventoryOptionsHandler.handleItemOption5(player, slotId, slotId2, item);
+                    InventoryOptionsHandler.handleItemOption3(player, slotId, item, 3);//correct
+                else if (packetId == WorldPacketsDecoder.ACTION_BUTTON4_PACKET)//unknown
+                    InventoryOptionsHandler.handleItemOption4(player, slotId, item, -1);//unknown
+                else if (packetId == WorldPacketsDecoder.ACTION_BUTTON5_PACKET)//unknown
+                    InventoryOptionsHandler.handleItemOption5(player, slotId, item, -1);//unknown
                 else if (packetId == WorldPacketsDecoder.ACTION_BUTTON6_PACKET)
-                    InventoryOptionsHandler.handleItemOption6(player, slotId, slotId2, item);
-                else if (packetId == WorldPacketsDecoder.ACTION_BUTTON7_PACKET) {
-                    InventoryOptionsHandler.handleItemOption7(player, slotId, slotId2, item);
-                } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON8_PACKET)
-                    InventoryOptionsHandler.handleItemOption8(player, slotId, slotId2, item);
+                    InventoryOptionsHandler.handleItemOption6(player, slotId, item, 4);//correct
+                else if (packetId == WorldPacketsDecoder.ACTION_BUTTON7_PACKET) {//drop packet
+                    InventoryOptionsHandler.handleItemOption7(player, slotId, item, 5);//correct
+                } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON8_PACKET)//examine packet
+                    InventoryOptionsHandler.handleItemOption8(player, slotId, item, -1);//unknown
             }
         } else if (interfaceId == 748) {// HP
             if (componentId == 2 && slotId == 65535) {
