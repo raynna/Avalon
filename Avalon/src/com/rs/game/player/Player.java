@@ -578,7 +578,6 @@ public class Player extends Entity {
     /**
      * @SafetyDungeon
      */
-    public boolean completedSafety = false;
     public transient boolean safetyLever = false;
 
     /**

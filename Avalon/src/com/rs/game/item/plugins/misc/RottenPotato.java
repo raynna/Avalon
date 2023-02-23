@@ -23,7 +23,7 @@ public class RottenPotato extends ItemPlugin {
                 player.getDialogueManager().startDialogue("Potato_Op1", item);
                 return true;
             case "heal":
-                player.heal(990, true, true);
+                player.heal(player.getMaxHitpoints(), true, true);
                 return true;
             case "cm-tool":
                 player.getDialogueManager().startDialogue("Potato_CMTool", item);

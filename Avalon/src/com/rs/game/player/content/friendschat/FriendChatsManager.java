@@ -234,14 +234,14 @@ public class FriendChatsManager {
 		synchronized (this) {
 			if (!player.getUsername().equals(owner) && !settings.canTalk(player) && !player.isDeveloper()) {
 				player.getPackets()
-						.sendGameMessage("You do not have a enough rank to talk on this friends chat channel.");
+						.sendGameMessage("You do not have a high enough rank to talk in this friends chat channel.");
 				return;
 			}
 			String fixed = Utils.fixChatMessage(message);
 			String formatedName = Utils.formatPlayerNameForDisplay(player.getUsername());
 			String displayName = player.getDisplayName();
 			Rank[] rank = player.getPlayerRank().getRank();
-			int rights = (rank[0] == Rank.DEVELOPER || rank[0] == Rank.DEVELOPER) ? player.getMessageIcon() + 1
+			int rights = (rank[0] == Rank.DEVELOPER || rank[0] == Rank.MODERATOR) ? player.getMessageIcon() + 1
 					: player.getMessageIcon();
 			for (Player p2 : World.getPlayers()) {
 				if (p2 == null)

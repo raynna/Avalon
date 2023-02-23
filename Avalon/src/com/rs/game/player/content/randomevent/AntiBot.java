@@ -20,11 +20,11 @@ public class AntiBot {
 	public String correctAnswer, hint;
 
 	public static String[][] Questions = {
-			{ "What is the name of this server?", Settings.SERVER_NAME, "Hint: Check the client name" },
-			{ "Spell Rain backwards", "Niar", "Hint: Nia_" },
-			{ "Who's the owner of " + Settings.SERVER_NAME +"?", "Andreas", "Hint: An_re_s" },
+			{ "What is the name of this server?", Settings.SERVER_NAME, "" },
+			{ "Spell Avalon backwards", "nolava", "" },
+			{ "Who's the owner of " + Settings.SERVER_NAME +"?", "Andreas", "Hint: Andr.." },
 			{ "What is the famous last name of RuneScape creators?.", "Gower", "Hint: G_W_ER" },
-			{ "What is the name of the CAPE with FIRE?", "Fire cape", "Hint: Obviously not fire cape." } };
+			{ "What is the name of the CAPE with FIRE?", "Fire cape", "" } };
 
 	public static AntiBot instance;
 

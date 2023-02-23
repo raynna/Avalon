@@ -17,6 +17,7 @@ import com.rs.game.WorldTile;
 import com.rs.game.item.Item;
 import com.rs.game.item.ItemId;
 import com.rs.game.item.itemdegrading.ChargesManager;
+import com.rs.game.item.plugins.misc.RunePouch;
 import com.rs.game.minigames.clanwars.FfaZone;
 import com.rs.game.minigames.crucible.Crucible;
 import com.rs.game.minigames.duel.DuelControler;
@@ -384,16 +385,16 @@ public class ButtonHandler {
                         }
                         switch (packetId) {
                             case 55:
-                                withdrawRunePouch(player, slotId, item, 16000);
+                                RunePouch.withdrawRunePouch(player, slotId, item, 16000);
                                 break;
                             case 5:
-                                withdrawRunePouch(player, slotId, item, 100);
+                                RunePouch.withdrawRunePouch(player, slotId, item, 100);
                                 break;
                             case 67:
-                                withdrawRunePouch(player, slotId, item, 10);
+                                RunePouch.withdrawRunePouch(player, slotId, item, 10);
                                 break;
                             case 14:
-                                withdrawRunePouch(player, slotId, item, 1);
+                                RunePouch.withdrawRunePouch(player, slotId, item, 1);
                                 break;
                         }
                         break;
@@ -414,7 +415,7 @@ public class ButtonHandler {
                                         player.getInventory().refresh();
                                         player.getPackets().sendGameMessage("You withdraw " + items.getAmount() + " x " + items.getName() + "s.");
                                     }
-                                    openRunePouch(player);
+                                    RunePouch.openRunePouch(player);
                                     break;
                                 } else {
                                     player.getPackets().sendGameMessage("Your rune pouch is empty.");
@@ -2005,16 +2006,16 @@ public class ButtonHandler {
                     if (item == null)
                         return;
                     if (packetId == WorldPacketsDecoder.ACTION_BUTTON1_PACKET) {
-                        storeRunePouch(player, item, 1);
+                        RunePouch.storeRunePouch(player, item, 1);
                         return;
                     } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET) {
-                        storeRunePouch(player, item, 10);
+                        RunePouch.storeRunePouch(player, item, 10);
                         return;
                     } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET) {
-                        storeRunePouch(player, item, 100);
+                        RunePouch.storeRunePouch(player, item, 100);
                         return;
                     } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON4_PACKET)
-                        storeRunePouch(player, item, 16000);
+                        RunePouch.storeRunePouch(player, item, 16000);
                     return;
                 }
             } else {
@@ -3312,75 +3313,6 @@ public class ButtonHandler {
         });
     }
 
-    public static void openRunePouch(Player player) {
-        Item[] items = player.getRunePouch().getContainerItems();
-        if (!player.getInterfaceManager().containsInterface(1284))
-            player.getInterfaceManager().sendInterface(1284);
-        player.getInterfaceManager().sendInventoryInterface(670);
-        player.getPackets().sendInterSetItemsOptionsScript(670, 0, 93, 4, 7, "Store 1", "Store 10", "Store 100", "Store-All");
-        player.getPackets().sendUnlockIComponentOptionSlots(670, 0, 0, 27, 0, 1, 2, 3);
-        player.getPackets().sendIComponentText(1284, 28, "Rune Pouch");
-        player.getPackets().sendHideIComponent(1284, 8, true);
-        player.getPackets().sendHideIComponent(1284, 9, true);
-        player.getPackets().sendIComponentText(1284, 46, "Take-All");
-        player.getPackets().sendInterSetItemsOptionsScript(1284, 7, 100, 8, 4, "Withdraw 1", "Withdraw 10", "Withdraw 100", "Withdraw-All");
-        player.getPackets().sendUnlockIComponentOptionSlots(1284, 7, 0, 3, 0, 1, 2, 3);
-        player.getPackets().sendItems(100, items);
-        player.temporaryAttribute().put("runepouch", Boolean.TRUE);
-        player.setCloseInterfacesEvent(new Runnable() {
-            @Override
-            public void run() {
-                player.temporaryAttribute().remove("runepouch");
-            }
-        });
-    }
-
-    public static void storeRunePouch(Player player, Item item, int amount) {
-        Item newItem = item;
-        if (newItem.getAmount() < amount) {
-            amount = newItem.getAmount();
-        }
-        if (!Magic.isRune(newItem.getId())) {
-            player.getPackets().sendGameMessage("You can't store " + newItem.getName() + " in the rune pouch.");
-            return;
-        }
-        if (player.getRunePouch().getNumberOf(newItem) == 16000) {
-            player.getPackets().sendGameMessage("You can't have more than 16,000 of each rune in the rune pouch.");
-            return;
-        }
-        if (player.getRunePouch().getFreeSlots() == 0 && !player.getRunePouch().containsOne(newItem)) {
-            player.getPackets().sendGameMessage("You can't store more than 3 types of runes in the rune pouch.");
-            return;
-        }
-        if (amount + player.getRunePouch().getNumberOf(newItem) > 16000)
-            amount = 16000 - player.getRunePouch().getNumberOf(newItem);
-        player.getInventory().deleteItem(newItem.getId(), amount);
-        player.getRunePouch().add(new Item(newItem.getId(), amount));
-        player.getRunePouch().shift();
-        player.getInventory().refresh();
-        player.getPackets().sendGameMessage("You store " + amount + " x " + item.getName() + "s in the rune pouch.");
-        openRunePouch(player);
-    }
-
-    public static void withdrawRunePouch(Player player, int slotId, Item item, int amount) {
-        if (player.getInventory().getFreeSlots() == 0 && !player.getInventory().containsItem(player.getRunePouch().get(slotId).getId(), 1)) {
-            player.getPackets().sendGameMessage("You don't have enough inventory spaces.");
-            return;
-        }
-        if (amount > player.getRunePouch().get(slotId).getAmount()) {
-            amount = player.getRunePouch().get(slotId).getAmount();
-        }
-        player.getRunePouch().get(slotId).setAmount(player.getRunePouch().get(slotId).getAmount() - amount);
-        player.getInventory().addItem(item.getId(), amount);
-        player.getInventory().refresh();
-        if (player.getRunePouch().get(slotId).getAmount() == 0) {
-            player.getRunePouch().remove(item);
-            player.getRunePouch().shift();
-        }
-        openRunePouch(player);
-        player.getPackets().sendGameMessage("You withdraw " + amount + " x " + item.getName() + "s from the rune pouch.");
-
-    }
 
     public static void openSkillGuide(Player player) {
         player.getInterfaceManager().sendInterface(499);
