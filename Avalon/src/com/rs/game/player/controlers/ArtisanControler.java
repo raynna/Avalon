@@ -39,7 +39,7 @@ public class ArtisanControler extends Controler {
 	public boolean processNPCClick1(NPC npc) {
 		int id = npc.getId();
 		if (id == 6663 || id == 6647 || id == 6642) {
-			player.sm("I should leave this worker alone.");
+			player.message("I should leave this worker alone.");
 			return false;
 		}
 		return true;
@@ -54,7 +54,7 @@ public class ArtisanControler extends Controler {
 			return false;
 		}
 		if (id == 29387 || id == 29386 || id == 29385) {
-			player.sm("I shouldn't wander off into areas i'm not authorized in..");
+			player.message("I shouldn't wander off into areas i'm not authorized in..");
 		}
 		if (object.getId() == 15526 || id == 4047 || id == 20258 || id == 24678 || id == 24677 || id == 24664 || id == 4046) {
 			Ingots bar = Ingots.getBar(player);
@@ -62,7 +62,7 @@ public class ArtisanControler extends Controler {
 				player.getDialogueManager().startDialogue("ArtisanSmithingD", bar);
 				return false;
 			} else {
-				player.sm("You have no bars to use on the anvil.");
+				player.message("You have no bars to use on the anvil.");
 				return false;
 			}
 		}

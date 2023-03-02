@@ -104,7 +104,7 @@ public class Aubury extends Dialogue {
                         stageInt = 3;
                     } else {
                         end();
-                        player.sm("You do not have enough inventory space.");
+                        player.message("You do not have enough inventory space.");
                     }
                 } else {
                     sendPlayerChat(Mood.SAD, "Uh... yeah... about that... I kind of don't have it with me...");

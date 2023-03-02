@@ -53,7 +53,7 @@ public class ArtisanSmithing extends Action {
 		player.getInventory().addItem(bar.getProducts()[index].getId(),1);
 		player.getSkills().addXp(Skills.SMITHING, getExp(bar));
 		player.getArtisanWorkshop().addRespect(player.getArtisanWorkshop().quick_Learner ? Utils.random(0.2, 1.5) : Utils.random(0.1, 0.8));
-		player.sm(player.getArtisanWorkshop().quick_Learner ? "Your quick learning skills allow you to smith much faster" : "You finally finish making the product.");
+		player.message(player.getArtisanWorkshop().quick_Learner ? "Your quick learning skills allow you to smith much faster" : "You finally finish making the product.");
 		if (ticks > 0) {
 			return player.getArtisanWorkshop().quick_Learner ? 2 : 5;
 		}

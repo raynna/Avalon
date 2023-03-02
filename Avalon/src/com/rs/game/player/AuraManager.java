@@ -54,7 +54,7 @@ public class AuraManager implements Serializable {
 	public void desactive() {
 		activation = 0;
 		warned = false;
-		player.sm("Your aura has depleted.");
+		player.message("Your aura has depleted.");
 	}
 
 	public void setCoolDown(HashMap<Integer, Long> cooldown) {

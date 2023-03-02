@@ -159,7 +159,7 @@ public class ArtisanWorkshop implements Serializable {
 				depositOres(ing.ores[1].getId(),ing.ores[1].getAmount()* amount);
 			player.getInventory().deleteItem(ing.getBarId(),amount);
 		}
-		player.sm("You have deposit the ingots.");
+		player.message("You have deposit the ingots.");
 	}
 	/**
 	 * deposit ores
@@ -194,7 +194,7 @@ public class ArtisanWorkshop implements Serializable {
 		 player.getInventory().deleteItem(oreId,amount);
 		 break;
 	 }
-	 player.sm("You have succesfully depost this ores.");
+	 player.message("You have succesfully depost this ores.");
 	 player.getInventory().refresh();
 	}
 	public void depositOres(int oreId, int amount){
@@ -224,11 +224,11 @@ public class ArtisanWorkshop implements Serializable {
 	private void takeBars(Ingots ingots, int amount){
 		Ingots ingot = Ingots.forId(ingots);
 		if(!hasEnoughOres(ingots,amount)){
-			player.sm("You don't have enough ores stored for making "+amount+" bars.");
+			player.message("You don't have enough ores stored for making "+amount+" bars.");
 			return;
 		}
 		if(!player.getInventory().hasFreeSlots()){
-			player.sm("You don't have any empty invetory spaces.");
+			player.message("You don't have any empty invetory spaces.");
 			return;
 		}
 		player.getInventory().addItem(ingot.barId,amount);

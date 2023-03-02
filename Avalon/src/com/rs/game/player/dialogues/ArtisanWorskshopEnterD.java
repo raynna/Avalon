@@ -25,7 +25,7 @@ public class ArtisanWorskshopEnterD extends Dialogue {
 					player.getControlerManager().startControler("ArtisanControler");
 					end();
 				} else {
-					player.sm("You need to be a Avalon Member to access this area.");
+					player.message("You need to be a Avalon Member to access this area.");
 					end();
 				}
 			} else {

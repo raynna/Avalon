@@ -67,7 +67,7 @@ public class AssistManager {
 	 *            the p2
 	 */
 	public void Assist(Player p2) {
-		player.sm("Currently disabled.");
+		player.message("Currently disabled.");
 		return;
 		/*
 		 * if (player.isLocked() || player.getControlerManager().getControler()
@@ -119,7 +119,7 @@ public class AssistManager {
 	public static void giveXP(Player player, int skill, double exp) {
 		Player assister = World.getPlayerByDisplayName(player.getAssist().AssistedBy);
 		if (assister == null || !assister.isActive()) {
-			player.sm(assister + " is offline.");
+			player.message(assister + " is offline.");
 			player.getAssist().Reset(assister);
 			player.closeInterfaces();
 			return;
@@ -151,7 +151,7 @@ public class AssistManager {
 	public boolean CheckROS() {
 		Player p2 = World.getPlayerByDisplayName(AssistedBy);
 		if (!ROS && AssistedBy != null || assisted) {
-			player.sm("Your stats has been restored.");
+			player.message("Your stats has been restored.");
 			Reset(p2);
 			return true;
 		}
@@ -187,8 +187,8 @@ public class AssistManager {
 	 *            the p2
 	 */
 	public void Reset(Player p2) {
-		player.sm("You stopped assisting " + AssistingWho);
-		p2.sm(p2.getAssist().AssistedBy + " has stopped assisting you.");
+		player.message("You stopped assisting " + AssistingWho);
+		p2.message(p2.getAssist().AssistedBy + " has stopped assisting you.");
 		for (int skill : SKILL_ORDER) {
 			p2.getSkills().set(skill, getRealLevels());
 			p2.getSkills().setXp(skill, Skills.getXPForLevel(getRealLevels()));
