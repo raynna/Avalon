@@ -25,7 +25,7 @@ public class AgilityPyramid {
 
 	private static boolean checkLevel(Player player, int objectId) {
 		if (getLevelRequired(objectId) > player.getSkills().getLevel(Skills.AGILITY)) {
-			player.sm("You need atleast " + getLevelRequired(objectId) + " agility to do this.");
+			player.message("You need atleast " + getLevelRequired(objectId) + " agility to do this.");
 			return true;
 		}
 		return false;
@@ -83,17 +83,17 @@ public class AgilityPyramid {
 				}
 			return true;
 		case PYRAMID_EXIT_OBJECT:
-			player.sm("You journey back to the bottom of the pyramid.");
+			player.message("You journey back to the bottom of the pyramid.");
 			player.getSkills().addXp(Skills.AGILITY, 150);
 			player.setNextWorldTile(new WorldTile(3364, 2830, 0));
 			return true;
 		case PYRAMID_REWARD_OBJECT:
 			if (player.getTemporaryAttributtes().get("PENDING_PYRAMID_REWARD") == Boolean.FALSE) {
 				player.getMoneyPouch().addMoney(10000, false);
-				player.sm("You recieve a reward for reaching the top of the pyramid.");
+				player.message("You recieve a reward for reaching the top of the pyramid.");
 				player.getTemporaryAttributtes().put("PENDING_PYRAMID_REWARD", Boolean.TRUE);
 			} else {
-				player.sm("You have already claimed your reward, complete the pyramid again.");
+				player.message("You have already claimed your reward, complete the pyramid again.");
 			}
 			return true;
 		case PYRAMID_LEDGE_OBJECT:
@@ -117,7 +117,7 @@ public class AgilityPyramid {
 							player.setRun(false);
 							player.addWalkSteps(player.getX() + 5, player.getY(), 5, false);
 							player.getAppearence().setRenderEmote(1427);
-							player.sm("You attempt to cross the ledge...");
+							player.message("You attempt to cross the ledge...");
 							loop++;
 						} else {
 							loop++;
@@ -140,7 +140,7 @@ public class AgilityPyramid {
 							player.setRun(false);
 							player.addWalkSteps(player.getX(), player.getY() - 5, 5, false);
 							player.getAppearence().setRenderEmote(1427);
-							player.sm("You attempt to cross the ledge...");
+							player.message("You attempt to cross the ledge...");
 							loop++;
 						} else {
 							loop++;
@@ -163,7 +163,7 @@ public class AgilityPyramid {
 							player.setRun(false);
 							player.addWalkSteps(player.getX(), player.getY() + 5, 5, false);
 							player.getAppearence().setRenderEmote(1427);
-							player.sm("You attempt to cross the ledge...");
+							player.message("You attempt to cross the ledge...");
 							loop++;
 						} else {
 							loop++;
@@ -186,7 +186,7 @@ public class AgilityPyramid {
 							player.setRun(false);
 							player.addWalkSteps(player.getX() - 5, player.getY(), 5, false);
 							player.getAppearence().setRenderEmote(1427);
-							player.sm("You attempt to cross the ledge...");
+							player.message("You attempt to cross the ledge...");
 							loop++;
 						} else {
 							loop++;
@@ -212,7 +212,7 @@ public class AgilityPyramid {
 							stop();
 						} else {
 							player.setNextWorldTile(new WorldTile(player.getX(), player.getY() + 2, player.getPlane()));
-							player.sm("you attempt to climb the wall...");
+							player.message("you attempt to climb the wall...");
 							loop++;
 						}
 					}
@@ -230,7 +230,7 @@ public class AgilityPyramid {
 							stop();
 						} else {
 							player.setNextWorldTile(new WorldTile(player.getX() - 2, player.getY(), player.getPlane()));
-							player.sm("you attempt to climb the wall...");
+							player.message("you attempt to climb the wall...");
 							loop++;
 						}
 					}
@@ -248,7 +248,7 @@ public class AgilityPyramid {
 							stop();
 						} else {
 							player.setNextWorldTile(new WorldTile(player.getX() + 2, player.getY(), player.getPlane()));
-							player.sm("you attempt to climb the wall...");
+							player.message("you attempt to climb the wall...");
 							loop++;
 						}
 					}
@@ -266,7 +266,7 @@ public class AgilityPyramid {
 							stop();
 						} else {
 							player.setNextWorldTile(new WorldTile(player.getX() - 2, player.getY(), player.getPlane()));
-							player.sm("you attempt to climb the wall...");
+							player.message("you attempt to climb the wall...");
 							loop++;
 						}
 					}
@@ -283,7 +283,7 @@ public class AgilityPyramid {
 							stop();
 						} else {
 							player.setNextWorldTile(new WorldTile(player.getX(), player.getY() + 2, player.getPlane()));
-							player.sm("you attempt to climb the wall...");
+							player.message("you attempt to climb the wall...");
 							loop++;
 						}
 					}
@@ -309,7 +309,7 @@ public class AgilityPyramid {
 						if (stage == 1) {
 							player.animate(new Animation(3067));
 							player.setNextWorldTile(toTile);
-							player.sm("You successfully made it to the other side!");
+							player.message("You successfully made it to the other side!");
 							stop();
 						}
 						stage++;
@@ -327,7 +327,7 @@ public class AgilityPyramid {
 					public void run() {
 						if (stage == 1) {
 							player.setNextWorldTile(toTile);
-							player.sm("You successfully made it to the other side!");
+							player.message("You successfully made it to the other side!");
 							stop();
 						}
 						stage++;
@@ -345,7 +345,7 @@ public class AgilityPyramid {
 					public void run() {
 						if (stage == 1) {
 							player.setNextWorldTile(toTile);
-							player.sm("You successfully made it to the other side!");
+							player.message("You successfully made it to the other side!");
 							stop();
 						}
 						stage++;
@@ -363,7 +363,7 @@ public class AgilityPyramid {
 					public void run() {
 						if (stage == 1) {
 							player.setNextWorldTile(toTile);
-							player.sm("You successfully made it to the other side!");
+							player.message("You successfully made it to the other side!");
 							stop();
 						}
 						stage++;
@@ -381,7 +381,7 @@ public class AgilityPyramid {
 					public void run() {
 						if (stage == 1) {
 							player.setNextWorldTile(toTile);
-							player.sm("You successfully made it to the other side!");
+							player.message("You successfully made it to the other side!");
 							stop();
 						}
 						stage++;
@@ -399,7 +399,7 @@ public class AgilityPyramid {
 					public void run() {
 						if (stage == 1) {
 							player.setNextWorldTile(toTile);
-							player.sm("You successfully made it to the other side!");
+							player.message("You successfully made it to the other side!");
 							stop();
 						}
 						stage++;
@@ -417,7 +417,7 @@ public class AgilityPyramid {
 					public void run() {
 						if (stage == 1) {
 							player.setNextWorldTile(toTile);
-							player.sm("You successfully made it to the other side!");
+							player.message("You successfully made it to the other side!");
 							stop();
 						}
 						stage++;
@@ -435,7 +435,7 @@ public class AgilityPyramid {
 					public void run() {
 						if (stage == 1) {
 							player.setNextWorldTile(toTile);
-							player.sm("You successfully made it to the other side!");
+							player.message("You successfully made it to the other side!");
 							stop();
 						}
 						stage++;
@@ -453,7 +453,7 @@ public class AgilityPyramid {
 					public void run() {
 						if (stage == 1) {
 							player.setNextWorldTile(toTile);
-							player.sm("You successfully made it to the other side!");
+							player.message("You successfully made it to the other side!");
 							stop();
 						}
 						stage++;
@@ -471,7 +471,7 @@ public class AgilityPyramid {
 					public void run() {
 						if (stage == 1) {
 							player.setNextWorldTile(toTile);
-							player.sm("You successfully made it to the other side!");
+							player.message("You successfully made it to the other side!");
 							stop();
 						}
 						stage++;
@@ -489,7 +489,7 @@ public class AgilityPyramid {
 					public void run() {
 						if (stage == 1) {
 							player.setNextWorldTile(toTile);
-							player.sm("You successfully made it to the other side!");
+							player.message("You successfully made it to the other side!");
 							stop();
 						}
 						stage++;
@@ -507,7 +507,7 @@ public class AgilityPyramid {
 					public void run() {
 						if (stage == 1) {
 							player.setNextWorldTile(toTile);
-							player.sm("You successfully made it to the other side!");
+							player.message("You successfully made it to the other side!");
 							stop();
 						}
 						stage++;
@@ -525,7 +525,7 @@ public class AgilityPyramid {
 					public void run() {
 						if (stage == 1) {
 							player.setNextWorldTile(toTile);
-							player.sm("You successfully made it to the other side!");
+							player.message("You successfully made it to the other side!");
 							stop();
 						}
 						stage++;
@@ -543,7 +543,7 @@ public class AgilityPyramid {
 					public void run() {
 						if (stage == 1) {
 							player.setNextWorldTile(toTile);
-							player.sm("You successfully made it to the other side!");
+							player.message("You successfully made it to the other side!");
 							stop();
 						}
 						stage++;
@@ -561,7 +561,7 @@ public class AgilityPyramid {
 					public void run() {
 						if (stage == 1) {
 							player.setNextWorldTile(toTile);
-							player.sm("You successfully made it to the other side!");
+							player.message("You successfully made it to the other side!");
 							player.getSkills().addXp(Skills.AGILITY, getXp(object.getId()));
 							stop();
 						}
@@ -580,7 +580,7 @@ public class AgilityPyramid {
 					public void run() {
 						if (stage == 1) {
 							player.setNextWorldTile(toTile);
-							player.sm("You successfully made it to the other side!");
+							player.message("You successfully made it to the other side!");
 							player.getSkills().addXp(Skills.AGILITY, getXp(object.getId()));
 							stop();
 						}
@@ -610,7 +610,7 @@ public class AgilityPyramid {
 							player.setRunHidden(false);
 							player.addWalkSteps(player.getX(), player.getY() - 6, 6, false);
 							player.getAppearence().setRenderEmote(1637);
-							player.sm("You attempt to cross the plank...");
+							player.message("You attempt to cross the plank...");
 							loop++;
 						} else {
 							loop++;
@@ -634,7 +634,7 @@ public class AgilityPyramid {
 							player.setRunHidden(false);
 							player.addWalkSteps(player.getX() - 6, player.getY(), 6, false);
 							player.getAppearence().setRenderEmote(1637);
-							player.sm("You attempt to cross the plank...");
+							player.message("You attempt to cross the plank...");
 							loop++;
 						} else {
 							loop++;
@@ -663,7 +663,7 @@ public class AgilityPyramid {
 						} else if (loop == 0) {
 							player.setRunHidden(false);
 							player.animate(new Animation(3067));
-							player.sm("You jump accross the gap...");
+							player.message("You jump accross the gap...");
 							loop++;
 						} else {
 							loop++;

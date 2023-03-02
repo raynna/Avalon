@@ -56,8 +56,8 @@ public class ArmadylGodsword extends WeaponScript {
 	public void sendSpecialAttack(Player player, int weaponId, int attackStyle) {
 		int damage = player.getPlayerCombat().getRandomMaxHit(player, weaponId, attackStyle, false, true,
 				getDamageMultiplier(), true);
-		player.setNextAnimationNoPriority(new Animation(11989), player);
-		player.gfx(new Graphics(2113));
+		player.animate(11989);
+		player.gfx(2113);
 		player.getPlayerCombat().delayNormalHit(weaponId, attackStyle, PlayerCombat.getMeleeHit(player, damage));
 	}
 }

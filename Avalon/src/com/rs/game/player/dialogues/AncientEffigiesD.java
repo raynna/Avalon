@@ -48,7 +48,7 @@ public class AncientEffigiesD extends Dialogue {
 						.getRequiredLevel(itemId)) {
 					sendDialogue(
 							"The images in your mind fade; the ancient effigy seems to desire knowledge of experiences you have not yet, had.");
-					player.sm("You require atleast a level of " + AncientEffigies.getRequiredLevel(itemId) + " "
+					player.message("You require atleast a level of " + AncientEffigies.getRequiredLevel(itemId) + " "
 							+ Skills.SKILL_NAME[((Integer) player.temporaryAttribute().get("skill1"))]
 							+ " to continue any further.");
 					stage = END;
@@ -64,7 +64,7 @@ public class AncientEffigiesD extends Dialogue {
 						.getRequiredLevel(itemId)) {
 					sendDialogue(
 							"The images in your mind fade; the ancient effigy seems to desire knowledge of experiences you have not yet, had.");
-					player.sm("You require atleast a level of " + AncientEffigies.getRequiredLevel(itemId) + " "
+					player.message("You require atleast a level of " + AncientEffigies.getRequiredLevel(itemId) + " "
 							+ Skills.SKILL_NAME[((Integer) player.temporaryAttribute().get("skill2"))]
 							+ " to continue any further.");
 					stage = END;
@@ -81,7 +81,7 @@ public class AncientEffigiesD extends Dialogue {
 			AncientEffigies.continueEffigy(player, itemId);
 			player.getSkills().addXp((Integer) player.temporaryAttribute().get("skill"),
 					AncientEffigies.getExp(itemId) / 2.5);
-			player.sm("You focus your memory on" + " "
+			player.message("You focus your memory on" + " "
 					+ Skills.SKILL_NAME[(Integer) player.temporaryAttribute().get("skill")] + ".");
 			sendDialogue(
 					"The ancient effigy glows briefly; it seems to be changed, somehow and no longer responds to the same memories as before.");

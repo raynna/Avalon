@@ -39,7 +39,7 @@ public class AntiBot {
 				|| player.getAttackedByDelay() + 10000 > Utils.currentTimeMillis() || player.isLocked()
 				|| player.getInterfaceManager().containsScreenInter()) {
 			setTimer(4800);
-			player.sm("You are busy.");
+			player.message("You are busy.");
 			return;
 		}
 		hasEvent(true);
@@ -55,13 +55,13 @@ public class AntiBot {
 
 	public boolean verify(Player player, String answer) {
 		if (answer == null) {
-			player.sm("There is nothing to answer at the moment.");
+			player.message("There is nothing to answer at the moment.");
 			return false;
 		}
 		if (answer.equalsIgnoreCase(getCorrectAnswer())) {
 			player.unlock();
 			player.getMoneyPouch().addMoney(50000, false);
-			player.sm("Way to go! You can now continue playing." + (player.isDeveloper()
+			player.message("Way to go! You can now continue playing." + (player.isDeveloper()
 					? " Time left to next round: " + Utils.getFormatedTime(appearTime) + "" : ""));
 			player.getInterfaceManager().sendTabInterfaces(false);
 			hasEvent(false);

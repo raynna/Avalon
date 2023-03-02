@@ -88,7 +88,7 @@ public class AgilityFalador {
 		     
 		     public static void FaladorTunnel(final Player player, final WorldObject object) {
 		    	 if (player.getSkills().getLevel(Skills.AGILITY) < 26)  {
-		    		 player.sm("You need a Agility level of 26 in order to use this obstacle.");
+		    		 player.message("You need a Agility level of 26 in order to use this obstacle.");
 		    		 return;
 		    	 }
 		    	 WorldTasksManager.schedule(new WorldTask() {

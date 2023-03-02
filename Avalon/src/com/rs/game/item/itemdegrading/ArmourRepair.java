@@ -178,7 +178,7 @@ public class ArmourRepair {
 			}
 		}
 		if (itemRepairs.isEmpty()) {
-			player.sm("You don't have any items to repair.");
+			player.message("You don't have any items to repair.");
 			return;
 		}
 		if (player.canBuy(totalPrice)) {
@@ -186,10 +186,10 @@ public class ArmourRepair {
 				player.getInventory().deleteItem(repairItems.getKey());
 				player.getInventory().addItem(new Item(repairItems.getValue()));
 			}
-			player.sm("All your items has been repaired.");
+			player.message("All your items has been repaired.");
 		} else {
-			player.sm("You don't have enough coins to repair all items.");
-			player.sm("You need at least " + Utils.getFormattedNumber(totalPrice, ',') + " coins.");
+			player.message("You don't have enough coins to repair all items.");
+			player.message("You need at least " + Utils.getFormattedNumber(totalPrice, ',') + " coins.");
 		}
 	}
 
@@ -203,10 +203,10 @@ public class ArmourRepair {
 					if (player.canBuy(price)) {
 						player.getInventory().deleteItem(item);
 						player.getInventory().addItem(data.getRepairedId(), 1);
-						player.sm(stand ? "You repair your " + item.getName() + " on the armour stand." : "Bob has repaired your " + item.getName() + ".");
+						player.message(stand ? "You repair your " + item.getName() + " on the armour stand." : "Bob has repaired your " + item.getName() + ".");
 					} else {
-						player.sm("You don't have enough coins to repair all items.");
-						player.sm("You need at least " + Utils.getFormattedNumber(price, ',') + " coins.");
+						player.message("You don't have enough coins to repair all items.");
+						player.message("You need at least " + Utils.getFormattedNumber(price, ',') + " coins.");
 					}
 				}
 			}

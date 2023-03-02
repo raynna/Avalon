@@ -9,6 +9,9 @@ import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
 
 public class AbyssalVineWhip extends ItemPlugin {
+
+    private final int ATTACK_LEVEL_REQUIREMENT = 75, SLAYER_LEVEL_REQUIREMENT = 80;
+
     @Override
     public Object[] getKeys() {
         return new Object[]{ItemId.ABYSSAL_VINE_WHIP, ItemId.VINE_WHIP};
@@ -19,12 +22,12 @@ public class AbyssalVineWhip extends ItemPlugin {
         switch (option) {
             case "split":
                 if (!player.getInventory().hasFreeSlots()) {
-                    player.getPackets().sendGameMessage("You don't have enough space to split the abyssal vine whip.");
+                    player.getPackets().sendGameMessage("You don't have enough inventory space to split the abyssal vine whip.");
                     return true;
                 }
                 player.getInventory().replaceItem(ItemId.ABYSSAL_WHIP, 1, slotId);
                 player.getInventory().addItem(ItemId.VINE_WHIP, 1);
-                player.sm("You split the whip vine from the abbysal whip.");
+                player.message("You split your abyssal vine whip.");
                 return true;
             case "drop":
                 if (item.getId() == ItemId.VINE_WHIP)
@@ -38,17 +41,20 @@ public class AbyssalVineWhip extends ItemPlugin {
     }
 
     @Override
-    public boolean processItemOnItem(Player player, Item item, Item item2, int fromSlot, int toSlot) {
-        if (contains(ItemId.ABYSSAL_WHIP, ItemId.VINE_WHIP, item, item2)) {
-            if (!player.getSkills().hasRequirements(Skills.ATTACK, 75, Skills.SLAYER, 80)) {
-                player.sm("You need an attack level of 75 and slayer level of 80 in order to attach the whip vine to the whip.");
-                return true;
-            }
-            player.getInventory().replaceItem(ItemId.ABYSSAL_VINE_WHIP, 1, toSlot);
-            player.getInventory().deleteItem(fromSlot, item);
-            player.sm("You attach the whip vine to the abbysal whip.");
-            return true;
+    public boolean processItemOnItem(Player player, Item itemUsed, Item itemUsedWith, int fromSlot, int toSlot) {
+        if (!usingItems(ItemId.ABYSSAL_WHIP, ItemId.VINE_WHIP, itemUsed, itemUsedWith)) {
+            return false;
         }
-        return false;
+        if (!player.getSkills().hasRequirements(
+                Skills.ATTACK, ATTACK_LEVEL_REQUIREMENT,
+                Skills.SLAYER, SLAYER_LEVEL_REQUIREMENT)) {
+            player.message("You need an attack level of " + ATTACK_LEVEL_REQUIREMENT +
+                    " and a slayer level of " + SLAYER_LEVEL_REQUIREMENT + " in order to create abyssal vine whip.");
+            return false;
+        }
+        player.getInventory().replaceItem(ItemId.ABYSSAL_VINE_WHIP, 1, toSlot);
+        player.getInventory().deleteItem(fromSlot, itemUsed);
+        player.message("You attach vine whip with your abyssal whip to create an abyssal vine whip.");
+        return true;
     }
 }
