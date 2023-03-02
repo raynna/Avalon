@@ -6,7 +6,7 @@ public class HexColours {
 
 		WHITE("ffffff"),
 
-		RED("b50404"),
+		RED("ff0000"),
 
 		DARK_RED("660000"),
 

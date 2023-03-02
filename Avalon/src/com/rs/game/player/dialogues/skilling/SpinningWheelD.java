@@ -4,11 +4,13 @@ import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.game.WorldObject;
 import com.rs.game.item.Item;
 import com.rs.game.player.Skills;
+import com.rs.game.player.actions.skills.crafting.Loom;
 import com.rs.game.player.actions.skills.crafting.SpinningWheel;
 import com.rs.game.player.actions.skills.crafting.SpinningWheel.Products;
 import com.rs.game.player.content.SkillsDialogue;
 import com.rs.game.player.content.SkillsDialogue.ItemNameFilter;
 import com.rs.game.player.dialogues.Dialogue;
+import com.rs.utils.HexColours;
 import com.rs.utils.Utils;
 
 public class SpinningWheelD extends Dialogue {
@@ -30,7 +32,11 @@ public class SpinningWheelD extends Dialogue {
 						Products prod = Products.values()[count++];
 						if (player.getSkills().getLevel(Skills.CRAFTING) < prod.getLevelRequired())
 							name = "<col=ff0000>" + name + "<br><col=ff0000>Level " + prod.getLevelRequired();
-						else
+						else if (!player.getInventory().containsItem(prod.getItemsRequired())) {
+							int amount = prod.getItemsRequired().getAmount();
+							String requiredItemName = prod.getItemsRequired().getName();
+							name = name + "<br>" + HexColours.Colour.RED.getHex() + "(" + (amount > 1 ? amount + " " + requiredItemName : requiredItemName) + ")" ;
+						} else
 							name = itemMessage(prod, new Item(prod.getProducedItem()), name);
 						return name;
 

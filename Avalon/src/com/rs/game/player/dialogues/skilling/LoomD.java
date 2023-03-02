@@ -8,6 +8,7 @@ import com.rs.game.player.actions.skills.crafting.Loom.Products;
 import com.rs.game.player.content.SkillsDialogue;
 import com.rs.game.player.content.SkillsDialogue.ItemNameFilter;
 import com.rs.game.player.dialogues.Dialogue;
+import com.rs.utils.HexColours;
 
 public class LoomD extends Dialogue {
 
@@ -26,14 +27,29 @@ public class LoomD extends Dialogue {
 					@Override
 					public String rename(String name) {
 						Products prod = Products.values()[count++];
-						if (player.getSkills().getLevel(Skills.CRAFTING) < prod.getLevelRequired())
+						if (player.getSkills().getLevel(Skills.CRAFTING) < prod.getLevelRequired()) {
 							name = "<col=ff0000>" + name + "<br><col=ff0000>Level " + prod.getLevelRequired();
-						else
+						} else if (!hasRequiredItems(prod)) {
+							int amount = prod.getItemsRequired()[0].getAmount();
+							String requiredItemName = prod.getItemsRequired()[0].getName();
+							name = name + "<br>" + HexColours.Colour.RED.getHex() + "(" + (amount > 1 ? amount + " " + requiredItemName : requiredItemName) + ")" ;
+						} else
 							name = itemMessage(prod, new Item(prod.getProducedItem()), name);
 						return name;
 
 					}
 				});
+	}
+
+	private boolean hasRequiredItems(Products product) {
+		boolean hasItems = true;
+		for (Item item : product.getItemsRequired()) {
+			if (item == null)
+				continue;
+			if (!player.getInventory().containsItem(item))
+				hasItems = false;
+		}
+		return hasItems;
 	}
 
 	public String itemMessage(Products products, Item item, String itemName) {
@@ -47,7 +63,7 @@ public class LoomD extends Dialogue {
 		if (defs.contains("net"))
 			return itemName.replace("Unfinished", "Seaweed") + "<br>(5 flax)";
 		if (defs.contains("milestone"))
-			return itemName.replace(" (10)", "s") + "<br>(balls of wool)";
+			return itemName.replace(" (10)", "s") + "<br>(ball of wool)";
 		return itemName;
 
 	}

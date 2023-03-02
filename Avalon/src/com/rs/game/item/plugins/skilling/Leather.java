@@ -19,7 +19,7 @@ public class Leather extends ItemPlugin {
         switch (option) {
             case "craft":
                 if (!player.getInventory().containsOneItem(ItemId.NEEDLE) && !player.getToolbelt().contains(ItemId.NEEDLE)) {
-                    player.sm("You need a needle to craft this item.");
+                    player.message("You need a needle to craft this item.");
                     return true;
                 }
                 Craft craft = Craft.forId(item.getId());

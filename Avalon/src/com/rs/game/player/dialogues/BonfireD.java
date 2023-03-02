@@ -1,9 +1,14 @@
 package com.rs.game.player.dialogues;
 
 import com.rs.game.WorldObject;
+import com.rs.game.item.Item;
+import com.rs.game.player.Skills;
+import com.rs.game.player.actions.skills.crafting.SpinningWheel;
 import com.rs.game.player.actions.skills.firemaking.Bonfire;
 import com.rs.game.player.actions.skills.firemaking.Bonfire.Log;
+import com.rs.game.player.actions.skills.firemaking.Firemaking.*;
 import com.rs.game.player.content.SkillsDialogue;
+import com.rs.utils.HexColours;
 
 public class BonfireD extends Dialogue {
 
@@ -18,7 +23,20 @@ public class BonfireD extends Dialogue {
 		for (int i = 0; i < ids.length; i++)
 			ids[i] = logs[i].getLogId();
 		SkillsDialogue.sendSkillsDialogue(player, SkillsDialogue.SELECT,
-				"Which logs do you want to add to the bonfire?", -1, ids, null, false);
+				"Which type of logs do you want to add to the bonfire?", -1, ids, new SkillsDialogue.ItemNameFilter() {
+					int count = 0;
+
+					@Override
+					public String rename(String name) {
+						Fire fire = Fire.getFireById(logs[count].getLogId());
+						if (fire != null) {
+							if (player.getSkills().getLevel(Skills.FIREMAKING) < fire.getLevel())
+								name = "<col=ff0000>" + name + "<br><col=ff0000>Level " + fire.getLevel();
+						}
+						count++;
+						return name;
+					}
+				}, false);
 	}
 
 	@Override

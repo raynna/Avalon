@@ -102,6 +102,16 @@ public class Firemaking extends Action {
 			this.time = time;
 		}
 
+		public static Fire getFireById(int logId) {
+			for (Fire fire : Fire.values()) {
+				if (fire == null)
+					continue;
+				if (fire.getLogId() == logId)
+					return fire;
+			}
+			return null;
+		}
+
 		public int getLogId() {
 			return logId;
 		}

@@ -1,15 +1,17 @@
 package com.rs.game.player.dialogues.skilling;
 
 import com.rs.game.item.Item;
+import com.rs.game.player.Skills;
 import com.rs.game.player.actions.skills.fletching.Fletching;
 import com.rs.game.player.actions.skills.fletching.Fletching.FletchingData;
+import com.rs.game.player.actions.skills.smithing.DungeoneeringSmelting;
 import com.rs.game.player.content.SkillsDialogue;
 import com.rs.game.player.content.SkillsDialogue.ItemNameFilter;
 import com.rs.game.player.dialogues.Dialogue;
 
 public class FletchingD extends Dialogue {
 
-	private Fletching.FletchingData items;
+	private FletchingData items;
 
 	@Override
 	public void start() {
@@ -17,12 +19,25 @@ public class FletchingD extends Dialogue {
 		boolean maxQuantityTen = Fletching.maxMakeQuantityTen(new Item(items.getTool()));
 		SkillsDialogue.sendSkillsDialogue(player, maxQuantityTen ? SkillsDialogue.MAKE_SETS : SkillsDialogue.MAKE,
 				message(items), maxQuantityTen ? 10 : 28,
-				items.getProduct(), new ItemNameFilter() {
+				items.getProduct(),
+
+				new ItemNameFilter() {
+
+			int count = -1;
 					@Override
 					public String rename(String name) {
-						return itemMessage(items, new Item(items.getId()), name).replace(" (u)", "");
+						count++;
+						System.out.println(items.name() + " count: " + count + ", itemReq: " + items.getLevel()[count]);
+						if (player.getSkills().getLevel(Skills.FLETCHING) < items.getLevel()[count])
+							return levelMessage(items, count, name).replace(" (u)", "");
+						else
+						 	return itemMessage(items, new Item(items.getId()), name).replace(" (u)", "");
 					}
 				});
+	}
+
+	public int levelReqMessage(FletchingData item) {
+		return item.getLevel()[0];
 	}
 	
 	public String message(FletchingData item) {
@@ -44,6 +59,10 @@ public class FletchingD extends Dialogue {
 		if (name.contains("dart"))
 			return "Choose how many sets of 10 darts you<br>wish to make, then click on the item to begin.";
 		return "Choose how many you wish to make<br>then click on the item to begin.";
+	}
+
+	public String levelMessage(FletchingData data, int count, String itemName) {
+		return "<col=ff0000>" + itemName + "<br><col=ff0000>Level " + data.getLevel()[count];
 	}
 
 

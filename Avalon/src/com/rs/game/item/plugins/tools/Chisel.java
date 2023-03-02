@@ -18,12 +18,12 @@ public class Chisel extends ItemPlugin {
 
     @Override
     public boolean processItemOnItem(Player player, Item item, Item item2, int fromSlot, int toSlot) {
-        Gem gem = GemCutting.getUncut(item, item2);
+        Gem gem = GemCutting.getUncut(item, item2);//cutting gems in to cut gems
         if (gem != null) {
             GemCutting.cut(player, gem);
             return true;
         }
-        FletchingData fletchingData = Fletching.findFletchingData(item, item2);
+        FletchingData fletchingData = Fletching.findFletchingData(item, item2);//cutting gems to bolt tips
         if (fletchingData != null) {
             player.getDialogueManager().startDialogue("FletchingD", fletchingData);
             return true;
