@@ -12,7 +12,7 @@ public class StatRestoreShare {
 	public static boolean cast(Player player, double xp, int itemId, int slotId) {
 		Item item = new Item(itemId);
 		if (!item.getName().toLowerCase().contains("restore") && !item.getName().toLowerCase().contains("sanfew")) {
-			player.sm("You can only use this spell on restore potions.");
+			player.message("You can only use this spell on restore potions.");
 			return false;
 		}
 		if (player.getPotDelay() > Utils.currentTimeMillis())
@@ -24,7 +24,7 @@ public class StatRestoreShare {
 				continue;
 			if (other.withinDistance(player, 4) && other.isAcceptAid() && other.isAtMultiArea()) {
 				Pots.sharedPot(other, item, slotId);
-				other.sm(player.getDisplayName() + " shared a " + item.getName().replace("(6)", "").replace("(5)", "")
+				other.message(player.getDisplayName() + " shared a " + item.getName().replace("(6)", "").replace("(5)", "")
 						.replace("(4)", "").replace("(3)", "").replace("(2)", "").replace("(1)", "")
 						+ "dose with you.");
 			}

@@ -24,10 +24,10 @@ public class BarrowDrop extends Dialogue {
 	public void run(int interfaceId, int componentId) {
 		if (interfaceId == 1183 && componentId == 9) {
 			if (!player.getInventory().containsItem(item)) {
-				player.sm(item.getName() + " doesn't exist in your inventory anymore.");
+				player.message(item.getName() + " doesn't exist in your inventory anymore.");
 				return;
 			}
-			player.sm("Your " + item.getName() + " breaks as it hits the ground.");
+			player.message("Your " + item.getName() + " breaks as it hits the ground.");
 			player.getInventory().deleteItem(slotId, item);
 			if (player.getCharges().degrade(item))
 				return;

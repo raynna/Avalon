@@ -63,10 +63,10 @@ public class GoblinVillage implements CityEvent {
 					player.getDialogueManager().startDialogue("ItemDialogue", 288, "You take the goblin mail from the crate.");
 					player.getInventory().addItem(288, 1);
 				} else {
-					player.sm("You do not have enough inventory space.");
+					player.message("You do not have enough inventory space.");
 				}
 			} else {
-				player.sm("You already have one of these.");
+				player.message("You already have one of these.");
 			}
 			break;
 		}

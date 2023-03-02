@@ -7,7 +7,6 @@ import com.rs.game.item.Item;
 import com.rs.game.item.ItemId;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
-import com.rs.game.player.actions.combat.modernspells.RSModernCombatSpells;
 
 public class GreaterRunicStaff implements Serializable {
 
@@ -491,7 +490,7 @@ public class GreaterRunicStaff implements Serializable {
                 }
             }
         }
-        player.sm("Your greater runic staff has been charged with one spell.");
+        player.message("Your greater runic staff has been charged with one spell.");
     }
 
     public void setStaffValues(int spellId, Item[] runes) {

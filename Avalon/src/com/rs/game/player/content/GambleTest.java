@@ -33,28 +33,28 @@ public class GambleTest {
 	 */
 	public static void Gamble(Player player, int money) {
 		if (money < 1000000 || money > 100000000) {
-			player.sm("Min: 1m | Max: 100m");
+			player.message("Min: 1m | Max: 100m");
 			return;
 		}
 		if (!player.getInventory().containsItem(995, money) && player.getMoneyPouch().getTotal() < money) {
-			player.sm("You don't have the money to do that.");
+			player.message("You don't have the money to do that.");
 			return;
 		}
 		if (player.getInventory().containsItem(995, (Integer.MAX_VALUE - money))
 				|| player.getInventory().containsItem(995, Integer.MAX_VALUE)) {
-			player.sm("You cannot do that, bank some money first.");
+			player.message("You cannot do that, bank some money first.");
 			return;
 		}
 		if (player.isLocked()) {
-			player.sm("Please finish with what you are doing.");
+			player.message("Please finish with what you are doing.");
 			return;
 		}
 		if (player.isInCombat(10000)) {
-			player.sm("You can't do this while in combat.");
+			player.message("You can't do this while in combat.");
 			return;
 		}
 		if (player.getInventory().getFreeSlots() < 3) {
-			player.sm("Please have at least 3 free inventory spaces.");
+			player.message("Please have at least 3 free inventory spaces.");
 			return;
 		}
 		if (player.getMoneyPouch().getTotal() >= money)
@@ -62,7 +62,7 @@ public class GambleTest {
 		else
 		player.getInventory().deleteItem(995, money);
 		player.lock(4);
-		player.sm("<col=ff0000>Rolling.... Goodluck!");
+		player.message("<col=ff0000>Rolling.... Goodluck!");
 		WorldTasksManager.schedule(new WorldTask() {
 			int loop = 3;
 
@@ -88,14 +88,14 @@ public class GambleTest {
 	 */
 	public static void Check(Player player, int money) {
 		if (!isWinner()) {
-			player.sm("You lost! :( You rolled <col=ff0000>" + getNumberRolled()
+			player.message("You lost! :( You rolled <col=ff0000>" + getNumberRolled()
 					+ "</col>. <br>Had you rolled <col=ff0000>" + (chance - getNumberRolled())
 					+ "</col> more you would have won.");
 			return;
 		}
 		player.gfx(new Graphics(743));
 		player.getMoneyPouch().addMoney(Prize(money), false);
-		player.sm("<col=ff000>You rolled " + getNumberRolled() + ", Congratulations. You have won "
+		player.message("<col=ff000>You rolled " + getNumberRolled() + ", Congratulations. You have won "
 				+ Utils.getFormattedNumber((Prize(money) / 2), ',') + " million GP.");
 		if (money >= 50000000) {
 			World.sendWorldMessage("<img=7><col=ff000>News: " + player.getDisplayName() + " has just won "

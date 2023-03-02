@@ -67,7 +67,7 @@ public class FightCaves extends Controler {
             return;
         }
         player.getControlerManager().startControler("FightCavesControler", (player.isMember() ? 30 : 1)); // start
-        player.sm(player.isMember() ? "Since you are a member, you will start at wave 30." : null);
+        player.message(player.isMember() ? "Since you are a member, you will start at wave 30." : null);
         // at
         // wave
         // 1

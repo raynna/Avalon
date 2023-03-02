@@ -55,7 +55,7 @@ public class LividFarmControler extends Controler {
     public static void enterLividFarm(Player player) {
         player.setNextWorldTile(new WorldTile(2110, 3946, 0));
         player.getControlerManager().startControler("LividFarmHandler");
-        player.sm("The minigame will start soon.");
+        player.message("The minigame will start soon.");
     }
 
     /**
@@ -67,7 +67,7 @@ public class LividFarmControler extends Controler {
 
     public void cureDisease(WorldObject object, Player player, boolean success) {
         if (player.getCombatDefinitions().getSpellBook() != 430) {
-            player.sm("You need to be on Lunar Magicks to do this.");
+            player.message("You need to be on Lunar Magicks to do this.");
             return;
         }
         RSLunarSpellStore spell = RSLunarSpellStore.CURE_PLANT;
@@ -92,7 +92,7 @@ public class LividFarmControler extends Controler {
      */
     public void fertilisePatch(WorldObject object, Player player) {
         if (player.getCombatDefinitions().getSpellBook() != 430) {
-            player.sm("You need to be on Lunar Magicks to do this.");
+            player.message("You need to be on Lunar Magicks to do this.");
             return;
         }
         RSLunarSpellStore spell = RSLunarSpellStore.FERTILE_SOUL;
@@ -112,7 +112,7 @@ public class LividFarmControler extends Controler {
 
     public void takeLog(Player player, int amount) {
         if (!player.getInventory().hasFreeSlots()) {
-            player.sm("You don't have any inventory space.");
+            player.message("You don't have any inventory space.");
             return;
         }
         player.getInventory().addItem(20702, amount);
@@ -125,7 +125,7 @@ public class LividFarmControler extends Controler {
 
     public static void makePlank(int slotId, Item item, Player player) {
         if (player.getCombatDefinitions().getSpellBook() != 430) {
-            player.sm("You need to be on Lunar Magicks to do this.");
+            player.message("You need to be on Lunar Magicks to do this.");
             return;
         }
         RSLunarSpellStore spell = RSLunarSpellStore.PLANK_MAKE;
@@ -142,7 +142,7 @@ public class LividFarmControler extends Controler {
 
     public static void makeBunch(Player player) {
         if (player.getCombatDefinitions().getSpellBook() != 430) {
-            player.sm("You need to be on Lunar Magicks to do this.");
+            player.message("You need to be on Lunar Magicks to do this.");
             return;
         }
         RSLunarSpellStore spell = RSLunarSpellStore.STRING_JEWELLERY;
@@ -160,7 +160,7 @@ public class LividFarmControler extends Controler {
 
     private void depositWagon(Player player) {
         if (!player.getInventory().containsOneItem(20705)) {
-            player.sm("You don't have any plant bunch to trade in.");
+            player.message("You don't have any plant bunch to trade in.");
             return;
         }
         player.getInventory().deleteItem(20705, 1);
@@ -178,7 +178,7 @@ public class LividFarmControler extends Controler {
             player.getPackets().sendGameMessage("You don't have any planks to repair the fence with.");
             return;
         }
-        player.sm("You begin to repair the fence..");
+        player.message("You begin to repair the fence..");
         player.lock(2);
         player.animate(new Animation(11191));
         WorldTasksManager.schedule(new WorldTask() {
@@ -192,7 +192,7 @@ public class LividFarmControler extends Controler {
                     player.getSkills().addXp(Skills.MAGIC, 137.0);
                     player.getSkills().addXp(Skills.CONSTRUCTION, 83.5);
                     player.getLivid().addProduce(20);
-                    player.sm("You've repaired the fence!");
+                    player.message("You've repaired the fence!");
                 }
                 tick++;
             }
@@ -295,11 +295,11 @@ public class LividFarmControler extends Controler {
 
     public void emptyBin(WorldObject object, Player player) {
         if (gathered == 2) {
-            player.sm("You can't empty the bin more than 2 times each round.");
+            player.message("You can't empty the bin more than 2 times each round.");
             return;
         }
         if (player.getInventory().getFreeSlots() < 10) {
-            player.sm("You need at least 10 inventory slots free to empty the bin.");
+            player.message("You need at least 10 inventory slots free to empty the bin.");
             return;
         }
         player.getVarsManager().sendVarBit(object.getConfigByFile(), 0);
@@ -418,7 +418,7 @@ public class LividFarmControler extends Controler {
         sendPointsInterface(player);
         LividFarm.updateProduce(player);
         ticks = 48;
-        player.sm("Livid farm minigame will start in 30 seconds.");
+        player.message("Livid farm minigame will start in 30 seconds.");
     }
 
     @Override
@@ -426,7 +426,7 @@ public class LividFarmControler extends Controler {
         sendPointsInterface(player);
         LividFarm.updateProduce(player);
         ticks = 48;
-        player.sm("Livid farm minigame will start in 30 seconds.");
+        player.message("Livid farm minigame will start in 30 seconds.");
         return false;
     }
 

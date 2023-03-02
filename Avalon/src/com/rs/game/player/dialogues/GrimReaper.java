@@ -25,7 +25,7 @@ public class GrimReaper extends Dialogue {
 			sendNPCDialogue(grim, Plain, "Greetings. What do you want? Make it quick.");
 			stage = 1;
 		} else {
-			player.sm("Death ignores you.");
+			player.message("Death ignores you.");
 		}
 	}
 

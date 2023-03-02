@@ -13,21 +13,21 @@ public class CureOther {
 			Player other = (Player) target;
 			player.faceEntity(target);
 			if (!other.isAcceptAid()) {
-				player.sm(other.getDisplayName() + " doesn't have aid on.");
+				player.message(other.getDisplayName() + " doesn't have aid on.");
 				return false;
 			}
 			if (!other.getPoison().isPoisoned()) {
-				player.sm(other.getDisplayName() + " is not poisoned.");
+				player.message(other.getDisplayName() + " is not poisoned.");
 				return false;
 			}
 			if (!other.isAtMultiArea()) {
-				player.sm("You can only cast this spell in a multi-area.");
+				player.message("You can only cast this spell in a multi-area.");
 				return false;
 			}
 				player.animate(new Animation(4411));
 				other.gfx(new Graphics(744, 0, 100));
 				player.addXp(Skills.MAGIC, xp);
-				other.sm("You have been cured by player " + player.getDisplayName() + ".");
+				other.message("You have been cured by player " + player.getDisplayName() + ".");
 				other.getPoison().reset();
 				return true;
 		}

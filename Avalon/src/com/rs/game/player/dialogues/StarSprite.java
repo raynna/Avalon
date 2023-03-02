@@ -46,7 +46,7 @@ public class StarSprite extends Dialogue {
 				stage = 99;
 			} else if (componentId == OPTION_2) {
 				if (player.getInventory().getAmountOf(13727) >= 1500) {
-					player.sm("TODO");
+					player.message("TODO");
 					// player.getInventory().addItem(new Item(30524,1));
 					// player.getInventory().deleteItem(new Item(13727,1500));
 				} else {

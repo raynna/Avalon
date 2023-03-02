@@ -26,28 +26,28 @@ public class TicketSystem {
 
 	public static void closeTicket(Player player) {
 		if (!player.isInLiveChat) {
-			player.sm("You are currently not in a chat room.");
+			player.message("You are currently not in a chat room.");
 			return;
 		}
 		player.isInLiveChat = false;
 		if (player.isDeveloper() || player.isModerator()) {
 			Player requester = World.getPlayerByDisplayName(player.ticketsender);
 			removeTicket(player, requester);
-			player.sm("<col=ff0000> " + player.getDisplayName() + " has closed their ticket.</col>");
-			requester.sm("<col=ff0000> " + player.getDisplayName() + " has closed your ticket.</col>");
+			player.message("<col=ff0000> " + player.getDisplayName() + " has closed their ticket.</col>");
+			requester.message("<col=ff0000> " + player.getDisplayName() + " has closed your ticket.</col>");
 		} else {
 			Player staff = World.getPlayerByDisplayName(player.ticketstaff);
 			removeTicket(player, staff);
-			player.sm("<col=0000cc>>><col=ff0000> " + player.getDisplayName() + " has closed your ticket.</col>");
-			staff.sm("<col=0000cc>>><col=ff0000> " + player.getDisplayName() + " has closed their ticket.</col>");
+			player.message("<col=0000cc>>><col=ff0000> " + player.getDisplayName() + " has closed your ticket.</col>");
+			staff.message("<col=0000cc>>><col=ff0000> " + player.getDisplayName() + " has closed their ticket.</col>");
 			staff.isInLiveChat = false;
 		}
 	}
 
 	public static void handleChat(Player player, String message) {
 			Player staff = World.getPlayerByDisplayName(player.ticketstaff);
-			player.sm("[You] ->: " + message);
-			staff.sm("[Requester] ->: " + message);
+			player.message("[You] ->: " + message);
+			staff.message("[Requester] ->: " + message);
 	}
 
 	public static void answerTicket(Player requester, Player staff) {
@@ -56,16 +56,16 @@ public class TicketSystem {
 		staff.isInLiveChat = true;
 		staff.ticketsender = staff.getDisplayName();
 		requester.ticketstaff = staff.getDisplayName();
-		staff.sm("<col=0000cc>>> <col=ff0000>" + getIcon(staff) + staff.getDisplayName()
+		staff.message("<col=0000cc>>> <col=ff0000>" + getIcon(staff) + staff.getDisplayName()
 				+ " -></col><col=0000cc> Hello, how may I help you? Start your message with >> to respond.");
-		requester.sm("<col=0000cc>>> <col=ff0000>" + getIcon(staff) + staff.getDisplayName()
+		requester.message("<col=0000cc>>> <col=ff0000>" + getIcon(staff) + staff.getDisplayName()
 				+ " -></col><col=0000cc> Hello, how may I help you? Start your message with >> to respond.");
 	}
 
 	public static void removeTicket(Player p1, Player p2) {
 			for (Player requester : World.getPlayers()) {
 				if (requester.isRequestingChat) {
-					p1.sm("Open {" + p1.getDisplayName() + " }");
+					p1.message("Open {" + p1.getDisplayName() + " }");
 				}
 		}
 		p1.isInLiveChat = false;
@@ -104,7 +104,7 @@ public class TicketSystem {
 			Player staff = World.getPlayerByDisplayName(player.ticketstaff);
 			removeTicket(player, requester);
 			requester.isInLiveChat = false;
-			requester.sm(player.getDisplayName()
+			requester.message(player.getDisplayName()
 					+ " has closed your ticket. This was due to them logging out, if you still require help, you can request a new one.");
 			staff.isInLiveChat = false;
 			removeTicket(player, staff);

@@ -80,7 +80,7 @@ public class PotterOven extends Action {
 	@Override
 	public boolean start(Player player) {
 		if (prod == null || player == null || object == null) {
-			player.sm("null");
+			player.message("null");
 			return false;
 		}
 		if (player.getSkills().getLevel(Skills.CRAFTING) < prod.getLevelRequired()) {

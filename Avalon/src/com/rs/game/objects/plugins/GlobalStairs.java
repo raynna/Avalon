@@ -454,7 +454,7 @@ public class GlobalStairs extends ObjectPlugin {
 			}
 			if (player.getPlane() == 3)
 				return false;
-			player.sm("stairs");
+			player.message("stairs");
 			player.getDialogueManager().startDialogue("ClimbNoEmoteStairs", stairsUp(object, player),
 					stairsDown(object, player), "Go up the stairs.", "Go down the stairs.");
 		} else

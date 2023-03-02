@@ -114,7 +114,7 @@ public class SquealOfFortune implements Serializable {
 		if (interfaceId == 1139) { // squeal tab
 			if (componentId == 18) {
 				if (player.getSquealOfFortune().getEarnedSpins() <= 0) {
-					player.sm("You don't have enough spins to play.");
+					player.message("You don't have enough spins to play.");
 					return;
 				}
 				openSpinInterface();

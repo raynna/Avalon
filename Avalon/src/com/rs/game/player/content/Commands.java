@@ -176,7 +176,7 @@ public final class Commands {
                         return true;
                     }
                     //TODO: check for votepoints >= 10 give box, and else give points per vote
-                    player.sm("Checking your vote statistics..");
+                    player.message("Checking your vote statistics..");
                     final String playerName = player.getUsername();
                     final String idToString = cmd[1];
                     final String rewardAmount = cmd.length == 3 ? cmd[2] : "1";
@@ -217,7 +217,7 @@ public final class Commands {
                                 }
                                 player.getPackets().sendGameMessage("Thank you for donating! ");
                             } catch (Exception e) {
-                                player.sm("Api Services are currently offline. Please check back shortly");
+                                player.message("Api Services are currently offline. Please check back shortly");
                             }
                         }
                     }.start();
@@ -542,7 +542,7 @@ public final class Commands {
                 case "playmusic":
                     int id = Integer.parseInt(cmd[1]);
                     player.getPackets().sendMusicEffect(id);
-                    player.sm("now playing: " + id);
+                    player.message("now playing: " + id);
                     return true;
                 case "tele":
                     cmd = cmd[1].split(",");
@@ -667,12 +667,12 @@ public final class Commands {
                         player.getLivid().getSpellsLearned().add(s);
                         player.getLivid().addSpellAmount();
                     }
-                    player.sm("Unlocked all livid spells.");
+                    player.message("Unlocked all livid spells.");
                     return true;
                 case "resetlivid":
                     player.getLivid().getSpellsLearned().clear();
                     player.getLivid().spellAmount = 0;
-                    player.sm("Reset livid");
+                    player.message("Reset livid");
                     return true;
                 case "sql":
 //			DatabaseUtility.sendTask(player, new sendGEOffer());
@@ -689,11 +689,11 @@ public final class Commands {
                         if (item == null)
                             continue;
                         item.setAmount(amount);
-                        player.sm(item.getName() + " - " + EconomyPrices.getPrice(item.getId()));
+                        player.message(item.getName() + " - " + EconomyPrices.getPrice(item.getId()));
                         if (EconomyPrices.getPrice(item.getId()) > 0)
                             continue;
                         player.getBank().addItem(item, true);
-                        player.sm(item.getName() + " added to your bank.");
+                        player.message(item.getName() + " added to your bank.");
                     }
                     for (Item item : CustomStoreData.melee) {
                         if (item == null)
@@ -702,7 +702,7 @@ public final class Commands {
                         if (EconomyPrices.getPrice(item.getId()) > 0)
                             continue;
                         player.getBank().addItem(item, true);
-                        player.sm(item.getName() + " added to your bank.");
+                        player.message(item.getName() + " added to your bank.");
                     }
                     for (Item item : CustomStoreData.magic) {
                         if (item == null)
@@ -711,7 +711,7 @@ public final class Commands {
                         if (EconomyPrices.getPrice(item.getId()) > 0)
                             continue;
                         player.getBank().addItem(item, true);
-                        player.sm(item.getName() + " added to your bank.");
+                        player.message(item.getName() + " added to your bank.");
                     }
                     for (Item item : CustomStoreData.supplies) {
                         if (item == null)
@@ -720,7 +720,7 @@ public final class Commands {
                         if (EconomyPrices.getPrice(item.getId()) > 0)
                             continue;
                         player.getBank().addItem(item, true);
-                        player.sm(item.getName() + " added to your bank.");
+                        player.message(item.getName() + " added to your bank.");
                     }
                     for (Item item : CustomStoreData.accessories) {
                         if (item == null)
@@ -729,7 +729,7 @@ public final class Commands {
                         if (EconomyPrices.getPrice(item.getId()) > 0)
                             continue;
                         player.getBank().addItem(item, true);
-                        player.sm(item.getName() + " added to your bank.");
+                        player.message(item.getName() + " added to your bank.");
                     }
                     return true;
                 case "antibot":
@@ -739,15 +739,15 @@ public final class Commands {
                     CommendationExchange.openExchangeShop(player);
                     return true;
                 case "val":
-                    player.sm(player.getToggleValue(player.toggles.get("DROPVALUE")));
+                    player.message(player.getToggleValue(player.toggles.get("DROPVALUE")));
                     return true;
                 case "save":
                     AccountCreation.savePlayer(player);
-                    player.sm("Saved your account.");
+                    player.message("Saved your account.");
                     return true;
                 case "player":
                     player.getPlayerRank().addRank(Rank.PLAYER);
-                    player.sm("Changed rank to player.");
+                    player.message("Changed rank to player.");
                     return true;
                 case "bronzedonator":
                     player.getPlayerRank().addRank(Rank.BRONZE_DONATOR);
@@ -766,7 +766,7 @@ public final class Commands {
                     player.getPlayerRank().getRank()[1] = null;
                     player.getPlayerRank().getRank()[2] = null;
                     player.getPlayerRank().setRank(0, Rank.PLAYER);
-                    player.sm("Removed ranks");
+                    player.message("Removed ranks");
                     return true;
                 case "developer":
                     player.getPlayerRank().addRank(Rank.DEVELOPER);
@@ -787,9 +787,9 @@ public final class Commands {
                     player.getPlayerRank().setRank(2, null);
                     return true;
                 case "rank":
-                    player.sm("Your ranks: " + player.getPlayerRank().getRankNames());
+                    player.message("Your ranks: " + player.getPlayerRank().getRankNames());
                     if (player.getMessageIcon() != -1)
-                        player.sm("Your rank icon: <img=" + player.getMessageIcon() + ">");
+                        player.message("Your rank icon: <img=" + player.getMessageIcon() + ">");
                     return true;
                 case "unlock":
                     player.unlock();
@@ -804,7 +804,7 @@ public final class Commands {
                     for (Player partyPlayers : dungeon.getParty().getTeam()) {
                         if (partyPlayers == null)
                             continue;
-                        player.sm(partyPlayers.getDisplayName());
+                        player.message(partyPlayers.getDisplayName());
                         dungeon.voteToMoveOn(partyPlayers);
                     }
                     return true;
@@ -989,7 +989,7 @@ public final class Commands {
                     return true;
                 case "r":
                     player.getDominionTower().addFactor(15000);
-                    player.sm("factor added");
+                    player.message("factor added");
                     player.getDominionTower().openRewardsChest();
                     return true;
                 case "e":
@@ -999,16 +999,16 @@ public final class Commands {
                     player.getDominionTower().nextBossIndex = -1;
                     player.getDominionTower().selectBoss();
                     System.out.println("-----------------------------------------------------");
-                    player.sm(player.getDominionTower().getNextBossIndex() + "");
-                    player.sm("Boss total level: " + player.getDominionTower().getBossesTotalLevel());
-                    player.sm("Boss name: " + player.getDominionTower().getBoss().getName());
+                    player.message(player.getDominionTower().getNextBossIndex() + "");
+                    player.message("Boss total level: " + player.getDominionTower().getBossesTotalLevel());
+                    player.message("Boss name: " + player.getDominionTower().getBoss().getName());
                     System.out.println("-----------------------------------------------------");
                     return true;
                 case "factordebug":
                     player.getDominionTower().nextBossIndex = -1;
                     player.getDominionTower().selectBoss();
                     System.out.println("-----------------------------------------------------");
-                    player.sm("BossIndex: " + player.getDominionTower().getNextBossIndex() + "");
+                    player.message("BossIndex: " + player.getDominionTower().getNextBossIndex() + "");
                     for (Map.Entry<Long, Object> maps : GeneralRequirementMap.getMap(ClientScriptMap.getMap(5213).getIntValue(player.getDominionTower().getNextBossIndex())).getValues().entrySet()) {
                         System.out.print(maps.getKey() + " - " + maps.getValue() + "\n");
                     }
@@ -1021,7 +1021,7 @@ public final class Commands {
                     player.setHitpoints(800000);
                     return true;
                 case "region":
-                    player.sm("regionID: " + player.getRegionId());
+                    player.message("regionID: " + player.getRegionId());
                     return true;
                 case "24":
                     player.getInterfaceManager().sendInterface(25);
@@ -1092,7 +1092,7 @@ public final class Commands {
                     player.getPackets().sendVarBit(2730, 1);
                     player.getPackets().sendVarBit(4729, 1);
                     player.getInterfaceManager().sendInterface(741);
-                    player.sm("total mile");
+                    player.message("total mile");
                     return true;
                 case "reset":
                     for (int i = 0; i < 25; i++) {
@@ -1129,15 +1129,15 @@ public final class Commands {
                     return true;
                 case "script":
                     player.getPackets().sendRunScript(1715, 1043, 4761, 1);
-                    player.sm("script sent");
+                    player.message("script sent");
                     return true;
                 case "loopvoice":
                     int startv = Integer.parseInt(cmd[1]);
                     int endv = Integer.parseInt(cmd[2]);
-                    player.sm("Now looping npc sound ids " + startv + " to " + endv);
+                    player.message("Now looping npc sound ids " + startv + " to " + endv);
                     for (int i = startv; i < endv; i++) {
                         player.getPackets().sendSound(i, 0, 2);
-                        player.sm("npc sound id: " + i);
+                        player.message("npc sound id: " + i);
                         try {
                             Thread.sleep(2500);
                         } catch (InterruptedException e) {
@@ -1153,7 +1153,7 @@ public final class Commands {
                     System.out.println("region id: " + player.getRegionId());
                     return true;
                 case "mypos":
-                    player.sm("x: " + player.getLocation().getX() + " y: " + player.getLocation().getY());
+                    player.message("x: " + player.getLocation().getX() + " y: " + player.getLocation().getY());
                     break;
                 case "testarti":
                     double rollChance = 100 - (Integer.valueOf(cmd[1]) * 0.30);
@@ -1505,7 +1505,7 @@ public final class Commands {
                     if (!isDeveloper(player))
                         return true;
                     player.healMode = player.healMode ? false : true;
-                    player.sm("You have successfully " + (player.healMode ? "enabled" : "disabled") + " immunity to hits.");
+                    player.message("You have successfully " + (player.healMode ? "enabled" : "disabled") + " immunity to hits.");
                     return true;
                 case "droptest":
                     player.dropTesting = player.dropTesting ? false : true;
@@ -1548,10 +1548,10 @@ public final class Commands {
                     int var2 = Integer.valueOf(cmd[2]);
                     int varValue = Integer.valueOf(cmd[3]);
                     for (int i = var1; i < var2; i++) {
-                        player.sm(i + "");
+                        player.message(i + "");
                         player.getVarsManager().sendVar(i, varValue);
                     }
-                    player.sm("sent vars " + var1 + "-" + var2 + ":value:" + varValue);
+                    player.message("sent vars " + var1 + "-" + var2 + ":value:" + varValue);
                     return true;
                 case "varbitloop":
                     var1 = Integer.valueOf(cmd[1]);
@@ -1559,7 +1559,7 @@ public final class Commands {
                     varValue = Integer.valueOf(cmd[3]);
                     for (int i = var1; i < var2; i++)
                         player.getVarsManager().sendVarBit(i, varValue);
-                    player.sm("sent varbit " + var1 + "-" + var2 + ":value:" + varValue);
+                    player.message("sent varbit " + var1 + "-" + var2 + ":value:" + varValue);
                     return true;
                 case "globalloop":
                     var1 = Integer.valueOf(cmd[1]);
@@ -1567,7 +1567,7 @@ public final class Commands {
                     varValue = Integer.valueOf(cmd[3]);
                     for (int i = var1; i < var2; i++)
                         player.getPackets().sendGlobalConfig(i, varValue);
-                    player.sm("sent global config " + var1 + "-" + var2 + ":value:" + varValue);
+                    player.message("sent global config " + var1 + "-" + var2 + ":value:" + varValue);
                     return true;
                 case "sendstring":
                     int stringId = Integer.valueOf(cmd[1]);
@@ -1854,7 +1854,7 @@ public final class Commands {
                 case "tab":
                     player.getInterfaceManager().closeOverlay(true);
                     player.getInterfaceManager().sendTab(Integer.parseInt(cmd[1]), 3043);
-                    player.sm("send interface 3043, tab:" + Integer.parseInt(cmd[1]));
+                    player.message("send interface 3043, tab:" + Integer.parseInt(cmd[1]));
                     return true;
                 case "healother":
                     if (cmd.length == 2 || cmd.length == 3) {
@@ -2461,19 +2461,19 @@ public final class Commands {
 
                 case "sound":
                     int soundId = Integer.valueOf(cmd[1]);
-                    player.sm("play sound " + soundId);
+                    player.message("play sound " + soundId);
                     player.getPackets().sendSound(soundId, 0, 0);
                     return true;
 
                 case "sound2":
                     soundId = Integer.valueOf(cmd[1]);
-                    player.sm("play sound " + soundId);
+                    player.message("play sound " + soundId);
                     player.getPackets().sendSound(soundId, 0, 1);
                     return true;
 
                 case "s":
                     soundId = Integer.valueOf(cmd[1]);
-                    player.sm("play sound " + soundId);
+                    player.message("play sound " + soundId);
                     player.getPackets().sendSound(soundId, 0, 2);
                     return true;
 
@@ -2597,16 +2597,16 @@ public final class Commands {
                     }
                     return true;
                 case "clearchat":
-                    player.sm(" ");
-                    player.sm(" ");
-                    player.sm(" ");
-                    player.sm(" ");
-                    player.sm(" ");
-                    player.sm(" ");
-                    player.sm(" ");
-                    player.sm(" ");
-                    player.sm(" ");
-                    player.sm(" ");
+                    player.message(" ");
+                    player.message(" ");
+                    player.message(" ");
+                    player.message(" ");
+                    player.message(" ");
+                    player.message(" ");
+                    player.message(" ");
+                    player.message(" ");
+                    player.message(" ");
+                    player.message(" ");
                     return true;
                 case "master":
                     for (int i = 0; i < 24; i++) {
@@ -2641,7 +2641,7 @@ public final class Commands {
                                 + player.getPlane());
                         bw.newLine();
                         bw.close();
-                        player.sm("Added NPC: " + NPCDefinitions.getNPCDefinitions(Integer.parseInt(cmd[1])).name + " to X:"
+                        player.message("Added NPC: " + NPCDefinitions.getNPCDefinitions(Integer.parseInt(cmd[1])).name + " to X:"
                                 + player.getX() + ", Y:" + player.getY() + ", H:" + player.getPlane());
                     } catch (Throwable t) {
                         t.printStackTrace();
@@ -2673,7 +2673,7 @@ public final class Commands {
                                 + player.getPlane() + " true");
                         bw.newLine();
                         bw.close();
-                        player.sm("Added Object: " + ObjectDefinitions.getObjectDefinitions(Integer.parseInt(cmd[1])).name
+                        player.message("Added Object: " + ObjectDefinitions.getObjectDefinitions(Integer.parseInt(cmd[1])).name
                                 + " to X:" + player.getX() + ", Y:" + player.getY() + ", H:" + player.getPlane());
                     } catch (Throwable t) {
                         t.printStackTrace();
@@ -2682,7 +2682,7 @@ public final class Commands {
                 case "npc":
                     try {
                         World.spawnNPC(Integer.parseInt(cmd[1]), player, -1, true, true);
-                        player.sm(Integer.valueOf(cmd[1]) + " " + player.getX() + " " + player.getY() + " "
+                        player.message(Integer.valueOf(cmd[1]) + " " + player.getX() + " " + player.getY() + " "
                                 + player.getPlane());
                         Logger.log("NPC", Integer.valueOf(cmd[1]) + " " + player.getX() + " " + player.getY() + " "
                                 + player.getPlane());
@@ -2703,14 +2703,14 @@ public final class Commands {
                         object = World.getStandardFloorDecoration(player);
                     }
                     if (object == null) {
-                        player.sm("Unknown object under you.");
+                        player.message("Unknown object under you.");
                         return false;
                     }
-                    player.sm("Found object " + object.getName() + " - " + object.getId() + ", " + object.getType() + " at " + object.getX() + ", " + object.getY() + ", " + object.getPlane());
+                    player.message("Found object " + object.getName() + " - " + object.getId() + ", " + object.getType() + " at " + object.getX() + ", " + object.getY() + ", " + object.getPlane());
                     return true;
                 case "interactive":
                     player.getPackets().sendRunScript(26, "Debug");
-                    player.sm("Objects interactive.");
+                    player.message("Objects interactive.");
                     return true;
                 case "testloop":
                     for (int z = 0; z <= 3; z++) {
@@ -2721,7 +2721,7 @@ public final class Commands {
                                 for (int i = 0; i <= 22; i++) {
                                     object = World.getObjectWithType(tile, i);
                                     if (object != null)
-                                        player.sm("Found object at " + object.getName() + " - " + object.getId() + ", " + object.getType() + " at: " + object.getX() + "," + object.getY() + "," + object.getPlane());
+                                        player.message("Found object at " + object.getName() + " - " + object.getId() + ", " + object.getType() + " at: " + object.getX() + "," + object.getY() + "," + object.getPlane());
                                 }
                             }
                         }
@@ -2745,15 +2745,15 @@ public final class Commands {
                                         for (int i = 0; i <= 22; i++) {
                                             object = World.getObjectWithType(tile, i);
                                             if (object != null) {
-                                                player.sm("Found object at " + object.getName() + " - " + object.getId() + ", " + object.getType() + " at: " + object.getX() + "," + object.getY() + "," + object.getPlane());
+                                                player.message("Found object at " + object.getName() + " - " + object.getId() + ", " + object.getType() + " at: " + object.getX() + "," + object.getY() + "," + object.getPlane());
                                                 i = 23;
                                             }
                                         }
                                     }
                                     if (object != null)
-                                        player.sm("Found object at " + object.getName() + " - " + object.getId() + ", " + object.getType() + " at: " + object.getX() + "," + object.getY() + "," + object.getPlane());
+                                        player.message("Found object at " + object.getName() + " - " + object.getId() + ", " + object.getType() + " at: " + object.getX() + "," + object.getY() + "," + object.getPlane());
                                     else
-                                        player.sm("Didnt find any object at: " + tile.getX() + ", " + tile.getY() + ", " + tile.getPlane());
+                                        player.message("Didnt find any object at: " + tile.getX() + ", " + tile.getY() + ", " + tile.getPlane());
                                 }
                             }
                         }
@@ -2764,16 +2764,16 @@ public final class Commands {
                     if (object == null)
                         object = World.getStandardWallDecoration(player);
                     if (object == null) {
-                        player.sm("Unknown wall under you.");
+                        player.message("Unknown wall under you.");
                         return false;
                     }
-                    player.sm(object.getName() + " - " + object.getId() + ", " + object.getType());
+                    player.message(object.getName() + " - " + object.getId() + ", " + object.getType());
                     return true;
                 case "clip":
-                    player.sm("tile clipped?: " + World.isClipped(player.getPlane(), player.getX(), player.getY()));
+                    player.message("tile clipped?: " + World.isClipped(player.getPlane(), player.getX(), player.getY()));
                     return true;
                 case "wall":
-                    player.sm("tile wallfree? " + World.isWallsFree(player.getPlane(), player.getX(), player.getY()));
+                    player.message("tile wallfree? " + World.isWallsFree(player.getPlane(), player.getX(), player.getY()));
                     return true;
 
                 case "removeobject":
@@ -2788,7 +2788,7 @@ public final class Commands {
                         object = World.getStandardFloorDecoration(player);
                     }
                     if (object == null) {
-                        player.sm("Unknown object under you.");
+                        player.message("Unknown object under you.");
                         return false;
                     }
                     World.removeObject(object);
@@ -2811,7 +2811,7 @@ public final class Commands {
                         }
                         World.spawnObject(new WorldObject(Integer.valueOf(cmd[1]), type, rotation, player.getX(),
                                 player.getY(), player.getPlane()));
-                        player.sm(Integer.valueOf(cmd[1]) + " " + type + " " + rotation + " - " + player.getX() + " "
+                        player.message(Integer.valueOf(cmd[1]) + " " + type + " " + rotation + " - " + player.getX() + " "
                                 + player.getY() + " " + player.getPlane());
                         Logger.log("Object", Integer.valueOf(cmd[1]) + " 10 0 - " + player.getX() + " " + player.getY()
                                 + " " + player.getPlane());
@@ -2823,7 +2823,7 @@ public final class Commands {
                     name = cmd[1];
                     target = AccountCreation.loadPlayer(name);
                     if (!AccountCreation.exists(name)) {
-                        player.sm(name + " does not exists.");
+                        player.message(name + " does not exists.");
                         return true;
                     }
                     if (target == null) {
@@ -2978,7 +2978,7 @@ public final class Commands {
                 case "forcekick":
                 case "kick":
                     if (!isDeveloper(player)) {
-                        player.sm("cant kick developer");
+                        player.message("cant kick developer");
                         return true;
                     }
                     name = "";
@@ -3033,20 +3033,20 @@ public final class Commands {
                 case "access":
                 case "openticket":
                     if (player.isInLiveChat) {
-                        player.sm("<col=ff000>You cannot handle more than one ticket at a time.");
+                        player.message("<col=ff000>You cannot handle more than one ticket at a time.");
                         return true;
                     }
                     String username2 = cmd[1].substring(cmd[1].indexOf(" ") + 1);
                     Player requester = World.getPlayerByDisplayName(username2);
                     if (requester.isInLiveChat) {
-                        player.sm(
+                        player.message(
                                 "<col=ff000>" + requester.getDisplayName() + " is currently already placed in a chatroom.");
                         return true;
                     }
                     if (requester.isRequestingChat)
                         TicketSystem.answerTicket(requester, player);
                     else
-                        player.sm("<col=ff000>" + requester.getDisplayName() + " has no open tickets.");
+                        player.message("<col=ff000>" + requester.getDisplayName() + " has no open tickets.");
                     return true;
                 case "mute":
                     name = "";
@@ -3240,10 +3240,10 @@ public final class Commands {
                         name += cmd[i] + ((i == cmd.length - 1) ? "" : " ");
                     target = World.getPlayerByDisplayName(name);
                     if (target == null)
-                        player.sm(name + " is not logged in.");
+                        player.message(name + " is not logged in.");
                     else {
                         target.forceLogout();
-                        player.sm("You kicked player: " + name + ".");
+                        player.message("You kicked player: " + name + ".");
                     }
                     return true;
                 case "teleto":

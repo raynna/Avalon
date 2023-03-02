@@ -56,7 +56,7 @@ public class Potato_Commands extends Dialogue {
 				break;
 			case OPTION_5:
 				player.getAppearence().switchHidden();
-				player.sm(player.getAppearence().isHidden() ? "Vis: 1" : "Vis: 0");
+				player.message(player.getAppearence().isHidden() ? "Vis: 1" : "Vis: 0");
 				end();
 				break;
 			}

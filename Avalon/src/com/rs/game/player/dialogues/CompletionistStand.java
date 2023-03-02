@@ -312,7 +312,7 @@ public class CompletionistStand extends Dialogue {
 			}
 		}
 		if (!player.getTaskManager().hasCompletedAllTasks())
-			player.sm("You must have completed all Tasks.");
+			player.message("You must have completed all Tasks.");
 		if (!player.isCompletedFightKiln())
 			player.getPackets().sendGameMessage("You must have completed the Fight kiln.");
 		if (!player.isCompletedFightCaves())

@@ -55,21 +55,21 @@ public class CombinationRunes extends Runecrafting {
 		ItemDefinitions talismanDef = ItemDefinitions.getItemDefinitions(talisman);
 		int actualLevel = player.getSkills().getLevel(Skills.RUNECRAFTING);
 		if (actualLevel < level) {
-			player.sm("You need a runecrafting level of " + level + " to craft this rune.");
+			player.message("You need a runecrafting level of " + level + " to craft this rune.");
 			return;
 		}
 		if (!player.getInventory().containsItem(talisman, 1)) {
-			player.sm(
+			player.message(
 					"You need a " + talismanDef.getName() + " to craft this.");
 			return;
 		}
 		int pureEssence = player.getInventory().getItems().getNumberOf(PURE_ESSENCE);
 		if (pureEssence == 0) {
-			player.sm("You don't have pure essence.");
+			player.message("You don't have pure essence.");
 			return;
 		}
 		if (player.getInventory().getNumberOf(runeId) == 0) {
-			player.sm(
+			player.message(
 					"You don't have any " + runeDef.getName() + "s.");
 			return;
 		}
@@ -86,7 +86,7 @@ public class CombinationRunes extends Runecrafting {
 		player.removeItem(PURE_ESSENCE, amount);
 		boolean hasBinding = player.getEquipment().getAmuletId() == 5521;
 		if (Utils.getRandomDouble(100) <= 50 && !hasBinding) {
-			player.sm("You fail to craft "
+			player.message("You fail to craft "
 							+ runeDef.getName().toLowerCase() + "s into "
 							+ def.getName().toLowerCase() + "s.");
 			return;
@@ -96,7 +96,7 @@ public class CombinationRunes extends Runecrafting {
 		if (hasRcingSuit(player))
 			totalXp *= 1.025;
 		player.addXp(Skills.RUNECRAFTING, totalXp);
-		player.sm("You bind the temple's power into "
+		player.message("You bind the temple's power into "
 				+ def.getName().toLowerCase() + "s.");
 	}
 

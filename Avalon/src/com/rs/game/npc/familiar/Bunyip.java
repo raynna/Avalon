@@ -54,7 +54,7 @@ public class Bunyip extends Familiar {
 		Item item = getOwner().getInventory().getItem((Integer) object);
 		if (item == null)
 			return false;
-		getOwner().sm("item: " + item.getId() + ", " + item.getName());
+		getOwner().message("item: " + item.getId() + ", " + item.getName());
 		boolean canCast = false;
 		Fish fish = null;
 		for (Fish rawFish : fishData) {

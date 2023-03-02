@@ -95,7 +95,7 @@ public class DungeoneeringSmelting extends Action {
 	@Override
 	public boolean start(Player player) {
 		if (bar == null || player == null || object == null) {
-			player.sm("bar is null");
+			player.message("bar is null");
 			return false;
 		}
 		if (player.getSkills().getLevel(Skills.SMITHING) < bar.getLevelRequired()) {

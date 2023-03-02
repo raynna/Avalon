@@ -74,7 +74,7 @@ public class TuneBaneOre {
 
 	public static boolean cast(Player player, double xp, int itemId, int slotId) {
 		if (!hasReqs(player, itemId)) {
-			player.sm("You can't use this spell on that item.");
+			player.message("You can't use this spell on that item.");
 			return false;
 		}
 		for (Ores ores : Ores.values()) {

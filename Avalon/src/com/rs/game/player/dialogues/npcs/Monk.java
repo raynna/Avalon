@@ -49,7 +49,7 @@ public class Monk extends Dialogue {
 				if (!player.getInventory().containsItem(13734, 1) || !player.getInventory().containsItem(13754, 1)) {
 					sendNPCDialogue(NPC, 9827,
 							"It appears you don't have the right material for me to complete this task.");
-					player.sm("You need a normal spirit shield and a holy exilir for " + NAME
+					player.message("You need a normal spirit shield and a holy exilir for " + NAME
 							+ " to complete this task.");
 				} else {
 					sendNPCDialogue(NPC, 9827, "I will require a fee of 1,000,000 gold coins to do this task.");
@@ -59,7 +59,7 @@ public class Monk extends Dialogue {
 				if (!player.getInventory().containsItem(13736, 1) || !player.getInventory().containsItem(13752, 1)) {
 					sendNPCDialogue(NPC, 9827,
 							"It appears you don't have the right material for me to complete this task.");
-					player.sm("You need a blessed spirit shield and a spectral sigil for " + NAME
+					player.message("You need a blessed spirit shield and a spectral sigil for " + NAME
 							+ " to complete this task.");
 				} else {
 					sendNPCDialogue(NPC, 9827, "I will require a fee of 1,500,000 gold coins to do this task.");
@@ -69,7 +69,7 @@ public class Monk extends Dialogue {
 				if (!player.getInventory().containsItem(13736, 1) || !player.getInventory().containsItem(13746, 1)) {
 					sendNPCDialogue(NPC, 9827,
 							"It appears you don't have the right material for me to complete this task.");
-					player.sm("You need a blessed spirit shield and an arcane sigil for " + NAME
+					player.message("You need a blessed spirit shield and an arcane sigil for " + NAME
 							+ " to complete this task.");
 				} else {
 					sendNPCDialogue(NPC, 9827, "I will require a fee of 1,500,000 gold coins to do this task.");
@@ -79,7 +79,7 @@ public class Monk extends Dialogue {
 				if (!player.getInventory().containsItem(13736, 1) || !player.getInventory().containsItem(13750, 1)) {
 					sendNPCDialogue(NPC, 9827,
 							"It appears you don't have the right material for me to complete this task.");
-					player.sm("You need a blessed spirit shield and an elysian sigil for " + NAME
+					player.message("You need a blessed spirit shield and an elysian sigil for " + NAME
 							+ " to complete this task.");
 				} else {
 					sendNPCDialogue(NPC, 9827, "I will require a fee of 1,500,000 gold coins to do this task.");
@@ -89,7 +89,7 @@ public class Monk extends Dialogue {
 				if (!player.getInventory().containsItem(13736, 1) || !player.getInventory().containsItem(13752, 1)) {
 					sendNPCDialogue(NPC, 9827,
 							"It appears you don't have the right material for me to complete this task.");
-					player.sm("You need a blessed spirit shield and a divine sigil for " + NAME
+					player.message("You need a blessed spirit shield and a divine sigil for " + NAME
 							+ " to complete this task.");
 				} else {
 					sendNPCDialogue(NPC, 9827, "I will require a fee of 1,500,000 gold coins to do this task.");

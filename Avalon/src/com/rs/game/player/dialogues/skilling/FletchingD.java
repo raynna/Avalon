@@ -2,19 +2,19 @@ package com.rs.game.player.dialogues.skilling;
 
 import com.rs.game.item.Item;
 import com.rs.game.player.actions.skills.fletching.Fletching;
-import com.rs.game.player.actions.skills.fletching.Fletching.Fletch;
+import com.rs.game.player.actions.skills.fletching.Fletching.FletchingData;
 import com.rs.game.player.content.SkillsDialogue;
 import com.rs.game.player.content.SkillsDialogue.ItemNameFilter;
 import com.rs.game.player.dialogues.Dialogue;
 
 public class FletchingD extends Dialogue {
 
-	private Fletch items;
+	private Fletching.FletchingData items;
 
 	@Override
 	public void start() {
-		items = (Fletch) parameters[0];
-		boolean maxQuantityTen = Fletching.maxMakeQuantityTen(new Item(items.getSelected()));
+		items = (FletchingData) parameters[0];
+		boolean maxQuantityTen = Fletching.maxMakeQuantityTen(new Item(items.getTool()));
 		SkillsDialogue.sendSkillsDialogue(player, maxQuantityTen ? SkillsDialogue.MAKE_SETS : SkillsDialogue.MAKE,
 				message(items), maxQuantityTen ? 10 : 28,
 				items.getProduct(), new ItemNameFilter() {
@@ -25,7 +25,7 @@ public class FletchingD extends Dialogue {
 				});
 	}
 	
-	public String message(Fletch item) {
+	public String message(FletchingData item) {
 		String name = item.name().toLowerCase();
 		if (name.contains("wolf"))
 			return "Choose how many sets of 2 - 6 arrowtips you<br>wish to make, then click on the item to begin.";
@@ -47,11 +47,11 @@ public class FletchingD extends Dialogue {
 	}
 
 
-	public String itemMessage(Fletch fletch, Item item, String itemName) {
+	public String itemMessage(FletchingData fletchingData, Item item, String itemName) {
 		String defs = itemName.toLowerCase();
 		if (item.getId() == 2864)
 			return itemName + "<br>(Set of 4)";
-		if ((fletch.getProduct()[0] == 2864 && !defs.contains("bow")) || fletch.getProduct()[0] == 2861 || fletch.getProduct()[0] == 2866)
+		if ((fletchingData.getProduct()[0] == 2864 && !defs.contains("bow")) || fletchingData.getProduct()[0] == 2861 || fletchingData.getProduct()[0] == 2866)
 			return itemName + "<br>(Set of 2 - 6)";
 		if (defs.contains("brutal"))
 			return itemName + "<br>(Set of 3)";
@@ -76,7 +76,7 @@ public class FletchingD extends Dialogue {
 
 	@Override
 	public void run(int interfaceId, int componentId) {
-		boolean maxQuantityTen = Fletching.maxMakeQuantityTen(new Item(items.getSelected()));
+		boolean maxQuantityTen = Fletching.maxMakeQuantityTen(new Item(items.getTool()));
 		int option = SkillsDialogue.getItemSlot(componentId);
 		if (option > items.getProduct().length) {
 			end();

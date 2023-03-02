@@ -27,10 +27,10 @@ public class CompFeatures extends Dialogue {
 				renewSummoningPoints(player);
 				end();
 			} else if (componentId == OPTION_2) {
-				player.sm("Kandarin Monestary Teleport");
+				player.message("Kandarin Monestary Teleport");
 				end();
 			} else if (componentId == OPTION_3) {
-				player.sm("Ardougne Farm Teleport");
+				player.message("Ardougne Farm Teleport");
 				end();
 			} else if (componentId == OPTION_4) {
 				end();
@@ -55,9 +55,9 @@ public class CompFeatures extends Dialogue {
 			player.getPackets().sendGameMessage("You restored your Summoning points with the Completionist cape!",
 					true);
 		} else if (player.restoreDelay > Utils.currentTimeMillis()) {
-			player.sm("Your cape is still recharging from it's last use.");
+			player.message("Your cape is still recharging from it's last use.");
 		} else {
-			player.sm("Your cape does not respond due to you already having full summoning points.");
+			player.message("Your cape does not respond due to you already having full summoning points.");
 		}
 	}
 

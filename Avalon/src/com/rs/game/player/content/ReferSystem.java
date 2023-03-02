@@ -24,30 +24,30 @@ public class ReferSystem {
 		value = Utils.formatPlayerNameForDisplay(value);
 		player.getInterfaceManager().closeChatBoxInterface();
 		if (!AccountCreation.exists(value)) {
-			player.sm("Unable to refer player - not found in database.");
+			player.message("Unable to refer player - not found in database.");
 			return;
 		}
 		if (p2 == null) {
-			player.sm(value + " is offline.");
+			player.message(value + " is offline.");
 			return;
 		}
 		if (p2.getSession().getIP().equals(player.getSession().getIP())) {
-			player.sm("Unable to refer as it is not allowed to do it to yourself.");
+			player.message("Unable to refer as it is not allowed to do it to yourself.");
 			return;
 		}
 		if (p2.isInCombat(10000) || p2.isLocked() || p2.getInterfaceManager().containsScreenInter()
 				|| p2.getControlerManager().getControler() != null || AntiBot.getInstance().hasEvent) {
-			player.sm(value + " is busy. Please wait for them to be done.");
+			player.message(value + " is busy. Please wait for them to be done.");
 			return;
 		}
-		player.sm("Invite sent to " + value + ".");
+		player.message("Invite sent to " + value + ".");
 		player.putReferred(value);
 		p2.putReferrer(player.getDisplayName());
 		Open(p2);
 	}
 
 	public static void Open(Player p2) {
-		p2.sm("<col=ff0000>Attention: " + p2.getReferrer() + " has sent you an invite.");
+		p2.message("<col=ff0000>Attention: " + p2.getReferrer() + " has sent you an invite.");
 		p2.getInterfaceManager().sendTab(p2.getInterfaceManager().hasRezizableScreen() ? 112 : 172, 1019);
 		p2.getPackets().sendHideIComponent(1019, 11, true);
 		p2.getPackets().sendHideIComponent(1019, 9, true);
@@ -63,7 +63,7 @@ public class ReferSystem {
 	public static void handleButtons(int interId, int cid, Player player) {
 		Player p2 = World.getPlayerByDisplayName(player.getReferrer());
 		if (p2 == null || player == null) {
-			player.sm(player.getReferrer() + " has logged out which led to the invite being cancelled.");
+			player.message(player.getReferrer() + " has logged out which led to the invite being cancelled.");
 			Reset(p2, player, false);
 			return;
 		}

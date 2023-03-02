@@ -5,7 +5,9 @@ import com.rs.game.item.ItemId;
 import com.rs.game.item.ItemPlugin;
 import com.rs.game.player.Player;
 import com.rs.game.player.actions.skills.crafting.*;
+import com.rs.game.player.actions.skills.fletching.*;
 import com.rs.game.player.actions.skills.crafting.GemCutting.*;
+import com.rs.game.player.actions.skills.fletching.Fletching.*;
 
 public class Chisel extends ItemPlugin {
 
@@ -16,33 +18,15 @@ public class Chisel extends ItemPlugin {
 
     @Override
     public boolean processItemOnItem(Player player, Item item, Item item2, int fromSlot, int toSlot) {
-        if (contains(item.getId(), Gem.OPAL.getUncut(), item, item2)) {
-            GemCutting.cut(player, Gem.OPAL);
+        Gem gem = GemCutting.getUncut(item, item2);
+        if (gem != null) {
+            GemCutting.cut(player, gem);
             return true;
         }
-        if (contains(item.getId(), Gem.JADE.getUncut(), item, item2)) {
-            GemCutting.cut(player, Gem.JADE);
-        }
-        if (contains(item.getId(), Gem.RED_TOPAZ.getUncut(), item, item2)) {
-            GemCutting.cut(player, Gem.RED_TOPAZ);
-        }
-        if (contains(item.getId(), Gem.SAPPHIRE.getUncut(), item, item2)) {
-            GemCutting.cut(player, Gem.SAPPHIRE);
-        }
-        if (contains(item.getId(), Gem.EMERALD.getUncut(), item, item2)) {
-            GemCutting.cut(player, Gem.EMERALD);
-        }
-        if (contains(item.getId(), Gem.RUBY.getUncut(), item, item2)) {
-            GemCutting.cut(player, Gem.RUBY);
-        }
-        if (contains(item.getId(), Gem.DIAMOND.getUncut(), item, item2)) {
-            GemCutting.cut(player, Gem.DIAMOND);
-        }
-        if (contains(item.getId(), Gem.DRAGONSTONE.getUncut(), item, item2)) {
-            GemCutting.cut(player, Gem.DRAGONSTONE);
-        }
-        if (contains(item.getId(), Gem.ONYX.getUncut(), item, item2)) {
-            GemCutting.cut(player, Gem.ONYX);
+        FletchingData fletchingData = Fletching.findFletchingData(item, item2);
+        if (fletchingData != null) {
+            player.getDialogueManager().startDialogue("FletchingD", fletchingData);
+            return true;
         }
         return false;
     }

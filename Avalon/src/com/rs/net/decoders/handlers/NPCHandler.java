@@ -85,12 +85,12 @@ public class NPCHandler {
             player.getPackets().sendGameMessage("Failed removing spawn!");
         }
         if (Settings.DEBUG) {
-            player.sm("NpcId: " + npc.getId() + ", Index: " + npcIndex);
-            player.sm(npc.getName() + " size:" + npc.getSize());
-            player.sm("Visible On Map: " + npc.getDefinitions().isVisibleOnMap);
-            player.sm("Visible:" + npc.getDefinitions().aBoolean849);
+            player.message("NpcId: " + npc.getId() + ", Index: " + npcIndex);
+            player.message(npc.getName() + " size:" + npc.getSize());
+            player.message("Visible On Map: " + npc.getDefinitions().isVisibleOnMap);
+            player.message("Visible:" + npc.getDefinitions().aBoolean849);
             for (int id : npc.getDefinitions().modelIds)
-                player.sm("ModelId: " + id);
+                player.message("ModelId: " + id);
         }
     }
 
@@ -156,7 +156,7 @@ public class NPCHandler {
             if (player.getTreasureTrailsManager().useNPC(npc))
                 return;
             else {
-                player.sm(npc.getName() + " is to busy talking to you.");
+                player.message(npc.getName() + " is to busy talking to you.");
                 return;
             }
         }
@@ -165,7 +165,7 @@ public class NPCHandler {
                 @Override
                 public void run() {
                     if (player.getPlayerRank().isIronman()) {
-                        player.sm("You cannot use the Grand Exchange in this game mode.");
+                        player.message("You cannot use the Grand Exchange in this game mode.");
                         return;
                     }
                     if (!player.withinDistance(npc, 3))
@@ -616,7 +616,7 @@ public class NPCHandler {
                                 System.out.println("clicked 1 at npc[" + npc.getIndex() + "] id : " + npc.getId() + ", "
                                         + npc.getX() + ", " + npc.getY() + ", " + npc.getPlane());
                             if (player.isDeveloper())
-                                player.sm("clicked 1 at npc[" + npc.getIndex() + "] id : " + npc.getId() + ", " + npc.getX()
+                                player.message("clicked 1 at npc[" + npc.getIndex() + "] id : " + npc.getId() + ", " + npc.getX()
                                         + ", " + npc.getY() + ", " + npc.getPlane());
                             break;
                     }
@@ -678,7 +678,7 @@ public class NPCHandler {
                     if (!player.withinDistance(npc, 2))
                         return;
                     if (player.getPlayerRank().isIronman()) {
-                        player.sm("You cannot use the Grand Exchange in this game mode.");
+                        player.message("You cannot use the Grand Exchange in this game mode.");
                         return;
                     }
                     npc.resetWalkSteps();
@@ -975,7 +975,7 @@ public class NPCHandler {
                     if (!player.withinDistance(npc, 2))
                         return;
                     if (player.getPlayerRank().isIronman()) {
-                        player.sm("You cannot use the Grand Exchange in this game mode.");
+                        player.message("You cannot use the Grand Exchange in this game mode.");
                         return;
                     }
                     npc.resetWalkSteps();
@@ -1084,7 +1084,7 @@ public class NPCHandler {
                     if (!player.withinDistance(npc, 2))
                         return;
                     if (player.getPlayerRank().isIronman()) {
-                        player.sm("You cannot use the Grand Exchange in this game mode.");
+                        player.message("You cannot use the Grand Exchange in this game mode.");
                         return;
                     }
                     npc.resetWalkSteps();
@@ -1138,7 +1138,7 @@ public class NPCHandler {
             System.out.println("cliked 4 at npc id : " + npc.getId() + ", " + npc.getX() + ", " + npc.getY() + ", "
                     + npc.getPlane());
         if (player.isDeveloper())
-            player.sm("cliked 4 at npc id : " + npc.getId() + ", " + npc.getX() + ", " + npc.getY() + ", "
+            player.message("cliked 4 at npc id : " + npc.getId() + ", " + npc.getX() + ", " + npc.getY() + ", "
                     + npc.getPlane());
     }
 }

@@ -390,7 +390,7 @@ public final class ClanWars implements Serializable {
         final ClanWars c = hasWar ? p.getCurrentFriendChat().getClanWars()
                 : (ClanWars) p.temporaryAttribute().get("ClanWarsViewing");
         if (c == null) {
-        	p.sm("You don't have any war started, invite someone to a war before entering portal.");
+        	p.message("You don't have any war started, invite someone to a war before entering portal.");
             return;
         }
         c.sendVictoryConfiguration(p);

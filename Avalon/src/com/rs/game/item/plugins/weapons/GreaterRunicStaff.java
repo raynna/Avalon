@@ -7,7 +7,6 @@ import com.rs.game.item.ItemId;
 import com.rs.game.item.ItemPlugin;
 import com.rs.game.player.Player;
 import com.rs.game.player.content.GreaterRunicStaff.*;
-import com.rs.net.decoders.handlers.ButtonHandler;
 
 import java.util.Map;
 
@@ -42,7 +41,7 @@ public class GreaterRunicStaff extends ItemPlugin {
                 RunicStaffSpellStore s = RunicStaffSpellStore.getSpell(player.getRunicStaff().getSpellId());
                 if (s == null)
                     return true;
-                player.sm("You currently have " + player.getRunicStaff().getCharges() + " " + s.name().toLowerCase().replace('_', ' ') + " charges left.");
+                player.message("You currently have " + player.getRunicStaff().getCharges() + " " + s.name().toLowerCase().replace('_', ' ') + " charges left.");
                 return true;
             case "clear spell":
                 player.getRunicStaff().clearSpell(false);
@@ -66,7 +65,7 @@ public class GreaterRunicStaff extends ItemPlugin {
                     World.updateGroundItem(staffRunes, new WorldTile(player), player, player.isAtWild() ? 0 : 60, 0);
                 }
             }
-            player.sm("All your runes in your runic staff were dropped.");
+            player.message("All your runes in your runic staff were dropped.");
         }
         if (player.getRunicStaff().getSpellId() > 0) {
             player.getRunicStaff().setStaffValues(-1, null);

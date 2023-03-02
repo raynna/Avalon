@@ -25,7 +25,7 @@ public class EnergyTransfer {
 				return false;
 			}
 			if (!other.isAtMultiArea()) {
-				player.sm("You can only cast this spell in a multi-area.");
+				player.message("You can only cast this spell in a multi-area.");
 				return false;
 			}
 			int amount = (100 - other.getCombatDefinitions().getSpecialAttackPercentage());

@@ -137,8 +137,8 @@ public class DoughCooking extends Action {
 	public int processWithDelay(Player player) {
 		ticks--;
 		player.getInventory().deleteItem(cook.getId(), 1);
-		player.sm("id: " + cook.getId());
-		player.sm("selected: " + cook.getSelected());
+		player.message("id: " + cook.getId());
+		player.message("selected: " + cook.getSelected());
 		player.getInventory().deleteItem(cook.getSelected(), 1);
 		player.getInventory().addItem(cook.getProduct()[option], 1);
 		if (cook.getSecondIngredient() != -1)

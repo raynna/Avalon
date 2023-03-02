@@ -61,13 +61,13 @@ public class BakePie {
 			if (pies == null)
 				continue;
 			if (!hasPie) {
-				player.sm("You don't have any pies to bake.");
+				player.message("You don't have any pies to bake.");
 				return false;
 			}
 			if (hasPie && !player.getInventory().containsItem(pies.getBaseId(), 1))
 				continue;
 			if (player.getSkills().getLevel(Skills.COOKING) < pies.getLevel()) {
-				player.sm("You need a cooking level of " + pies.getLevel() + " to cook this pie.");
+				player.message("You need a cooking level of " + pies.getLevel() + " to cook this pie.");
 				continue;
 			}
 			player.lock(4);
@@ -77,7 +77,7 @@ public class BakePie {
 			player.addXp(Skills.COOKING, pies.getXp());
 			player.removeItem(pies.getBaseId(), 1);
 			player.addItem(pies.getNewId(), 1);
-			player.sm("Your spell bakes the " + ItemDefinitions.getItemDefinitions(pies.getBaseId()).getName() + ".");
+			player.message("Your spell bakes the " + ItemDefinitions.getItemDefinitions(pies.getBaseId()).getName() + ".");
 			return true;
 		}
 		return false;

@@ -20,15 +20,15 @@ public class Logs extends ItemPlugin {
         switch (option) {
             case "craft":
                 if (!player.getInventory().containsOneItem(ItemId.KNIFE) && !player.getToolbelt().contains(ItemId.KNIFE)) {
-                    player.sm("You need a knife to fletch this log.");
+                    player.message("You need a knife to fletch this log.");
                     return true;
                 }
-                Fletch fletch = Fletch.forId(item.getId());
-                player.getDialogueManager().startDialogue("FletchingD", fletch);
+                FletchingData fletchingData = FletchingData.forId(item.getId());
+                player.getDialogueManager().startDialogue("FletchingD", fletchingData);
                 return true;
             case "light":
                 if (!player.getInventory().containsOneItem(ItemId.TINDERBOX) && !player.getToolbelt().contains(ItemId.TINDERBOX)) {
-                    player.sm("You need a tinderbox to light this log.");
+                    player.message("You need a tinderbox to light this log.");
                     return true;
                 }
                 Firemaking.isFiremaking(player, item.getId());
@@ -39,16 +39,16 @@ public class Logs extends ItemPlugin {
 
     @Override
     public boolean processItemOnItem(Player player, Item item, Item item2, int itemUsed, int usedWith) {
-        boolean isTinderbox = isCompatible(item, item2, "Tinderbox");
+        boolean isTinderbox = usingItems(item, item2, "Tinderbox");
         if (isTinderbox) {
             if (Firemaking.isFiremaking(player, item, item2))
                 return true;
         }
-        boolean isKnife = isCompatible(item, item2, "Knife");
+        boolean isKnife = usingItems(item, item2, "Knife");
         if (isKnife) {
-            Fletch fletch = Fletching.isFletching(item, item2);
-            if (fletch != null) {
-                player.getDialogueManager().startDialogue("FletchingD", fletch);
+            FletchingData fletchingData = Fletching.findFletchingData(item, item2);
+            if (fletchingData != null) {
+                player.getDialogueManager().startDialogue("FletchingD", fletchingData);
                 return true;
             }
         }

@@ -130,12 +130,12 @@ public class TreasureTrailsManager implements Serializable {
 					player.getInventory().addItem(SCROLL_BOXES[currentClue.dificulty], 1);
 					player.getDialogueManager().startDialogue("SimpleItemMessage", SCROLL_BOXES[currentClue.dificulty],
 							"You've found a scroll box!");
-					player.sm("You've found a scroll box!");
+					player.message("You've found a scroll box!");
 				} else {
 					player.getInventory().addItem(REWARD_CASKETS[currentClue.dificulty], 1);
 					player.getDialogueManager().startDialogue("SimpleItemMessage", 3600,
 							"You've found a reward casket!");
-					player.sm("You've found a reward casket!");
+					player.message("You've found a reward casket!");
 					// openReward(currentClue.dificulty);
 					currentClue = null;
 				}
@@ -146,7 +146,7 @@ public class TreasureTrailsManager implements Serializable {
 				currentClue.details = generateClueDetails(currentClue.dificulty);
 				player.getDialogueManager().startDialogue("SimpleItemMessage", CLUE_SCROLLS[currentClue.dificulty],
 						NPCDefinitions.getNPCDefinitions(id).getName() + " has given you another clue scroll.");
-				player.sm(NPCDefinitions.getNPCDefinitions(id).getName() + " has given you another clue scroll.");
+				player.message(NPCDefinitions.getNPCDefinitions(id).getName() + " has given you another clue scroll.");
 			} else if (source == SOURCE_EMOTE) {
 				player.getInventory().deleteItem(CLUE_SCROLLS[currentClue.dificulty], 1);
 				player.getInventory().addItem(SCROLL_BOXES[currentClue.dificulty], 1);
@@ -155,7 +155,7 @@ public class TreasureTrailsManager implements Serializable {
 				currentClue.details = generateClueDetails(currentClue.dificulty);
 				player.getDialogueManager().startDialogue("SimpleItemMessage", SCROLL_BOXES[currentClue.dificulty],
 						"You've been given a scroll box!");
-				player.sm("You've been given a scroll box!");
+				player.message("You've been given a scroll box!");
 			} else if (source == SOURCE_OBJECT) {
 				player.getInventory().deleteItem(CLUE_SCROLLS[currentClue.dificulty], 1);
 				if (!currentClue.isLast()) {
@@ -164,12 +164,12 @@ public class TreasureTrailsManager implements Serializable {
 					player.getInventory().addItem(SCROLL_BOXES[currentClue.dificulty], 1);
 					player.getDialogueManager().startDialogue("SimpleItemMessage", CLUE_SCROLLS[currentClue.dificulty],
 							"You've found another clue!");
-					player.sm("You've found another clue!");
+					player.message("You've found another clue!");
 				} else {
 					player.getInventory().addItem(REWARD_CASKETS[currentClue.dificulty], 1);
 					player.getDialogueManager().startDialogue("SimpleItemMessage", 3600,
 							"You've found a reward casket!");
-					player.sm("You've found a reward casket!");
+					player.message("You've found a reward casket!");
 					// openReward(currentClue.dificulty);
 					currentClue = null;
 				}
@@ -325,7 +325,7 @@ public class TreasureTrailsManager implements Serializable {
 		else if (id != ((int[]) currentClue.details.parameters[0])[cluePhase == 3 ? 1 : 0])
 			return;
 		else if (!player.withinDistance(tile, 8)) {
-			player.sm("You are not close enough to your destination.");
+			player.message("You are not close enough to your destination.");
 			locate(player, tile.getX(), tile.getY());
 			return;
 		}
@@ -343,7 +343,7 @@ public class TreasureTrailsManager implements Serializable {
 						return;
 					}
 				} else if (requestedItem.getId() != item.getId()) {
-					player.sm("You're not wearing the correct items for this treasure trail.");
+					player.message("You're not wearing the correct items for this treasure trail.");
 					return;
 				}
 			}
@@ -357,12 +357,12 @@ public class TreasureTrailsManager implements Serializable {
 		if ((currentClue.details.type == SIMPLE || currentClue.details.type == MAP)
 				&& currentClue.details.idType == TILE) {
 			if (!hasCurrentClue()) {
-				player.sm("You dont have a clue.");
+				player.message("You dont have a clue.");
 				return false;
 			}
 			WorldTile tile = new WorldTile(currentClue.details.id);
 			if (!player.withinDistance(tile, currentClue.details.type == MAP ? 6 : 16)) {
-				player.sm(tile.getX() + " - " + tile.getY());
+				player.message(tile.getX() + " - " + tile.getY());
 				return false;
 			}
 			setNextClue(SOURCE_DIG);
@@ -376,18 +376,18 @@ public class TreasureTrailsManager implements Serializable {
 					(Integer) currentClue.details.parameters[3], (Integer) currentClue.details.parameters[4],
 					(Integer) currentClue.details.parameters[5]);
 			if (!player.withinDistance(t, 6)) {
-				player.sm(t.getX() + " - " + t.getY());
+				player.message(t.getX() + " - " + t.getY());
 				return false;
 			}
 			setNextClue(SOURCE_DIG);
 			return true;
 		} else {
 			if (!hasSextant(player))
-				player.sm("You don't have a sextant.");
+				player.message("You don't have a sextant.");
 			if (!hasChart(player))
-				player.sm("You don't have a chart.");
+				player.message("You don't have a chart.");
 			if (!hasWatch(player))
-				player.sm("You don't have a watch.");
+				player.message("You don't have a watch.");
 		}
 		return false;
 	}
@@ -429,7 +429,7 @@ public class TreasureTrailsManager implements Serializable {
 						int puzzle_id = currentClue.dificulty == ELITE ? PUZZLES[3]
 								: PUZZLES[Utils.random(PUZZLES.length - 1)];
 						//sendEntityDialogue(IS_ITEM, puzzle_id, -1, "", npc.getName() + " has given you a puzzle box!");
-						player.sm(npc.getName() + " has given you a puzzle box!");
+						player.message(npc.getName() + " has given you a puzzle box!");
 						player.getInventory().addItem(puzzle_id, 1);
 						stage = 1;
 					}
@@ -511,7 +511,7 @@ public class TreasureTrailsManager implements Serializable {
 
 	public void openPuzzle(int itemId) {
 		if (currentClue == null) {
-			player.sm("clue is null");
+			player.message("clue is null");
 			return;
 		} else if (currentClue.details.type == ANAGRAM) {
 			if (currentClue.dificulty != HARD && currentClue.dificulty != ELITE)
@@ -628,10 +628,10 @@ public class TreasureTrailsManager implements Serializable {
 					.addActivity("I have completed "
 							+ player.getTreasureTrailCompleted().get(LEVEL[level])
 							+ " " + LEVEL[level].toLowerCase() + " treasure trails.");
-		player.sm("You have completed "
+		player.message("You have completed "
 				+ HexColours.getShortMessage(Colour.RED, "" + player.getTreasureTrailCompleted().get(LEVEL[level]))
 				+ " " + LEVEL[level].toLowerCase() + " treasure trails.");
-		player.sm("Your treasure is worth around "
+		player.message("Your treasure is worth around "
 				+ HexColours.getShortMessage(Colour.RED, Utils.getFormattedNumber(totalValue, ',') + "") + " coins!");
 		if (player.getTreasureTrailCompleted().get(LEVEL[level]).intValue() == 100) {
 			player.getPackets().sendGameMessage(

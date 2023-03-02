@@ -405,7 +405,7 @@ public class ChaosTunnels extends ObjectPlugin {
 				if (player.isDeveloper()) {
 					player.getControlerManager().startControler("BorkControler", 0, null);
 				} else {
-					player.sm("Sorry this zone is unavalible for players at the moment.");
+					player.message("Sorry this zone is unavalible for players at the moment.");
 					return false;
 				}
 			}

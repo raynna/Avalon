@@ -5,7 +5,7 @@ public class DTClaimRewards extends Dialogue {
 	@Override
 	public void start() {
 		if (player.getDominionTower().getDominionFactor() == 0) {
-			player.sm("You need a high Dominion Factor to access the rewards chest!");
+			player.message("You need a high Dominion Factor to access the rewards chest!");
 			return;
 		}
 		sendDialogue("You have a Dominion Factor of " + player.getDominionTower().getDominionFactor() + ".");

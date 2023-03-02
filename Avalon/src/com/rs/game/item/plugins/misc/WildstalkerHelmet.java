@@ -18,8 +18,8 @@ public class WildstalkerHelmet extends ItemPlugin {
 				return true;
 			case "change-look":
 				if (player.getKillCount() < 10) {
-					player.sm("You can't change the look of your wildstalker helmet until you earned additional tiers.");
-					player.sm("You need at least ten wilderness kills.");
+					player.message("You can't change the look of your wildstalker helmet until you earned additional tiers.");
+					player.message("You need at least ten wilderness kills.");
 					return true;
 				} else if (player.getKillCount() > 99) {
 					player.getDialogueManager().startDialogue("WildStalkerTier1");

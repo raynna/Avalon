@@ -945,7 +945,7 @@ public class Magic {
 			return;
 		}
 		if (!player.withinDistance(other, 9)) {
-			player.sm(other.getDisplayName() + " is too far away!");
+			player.message(other.getDisplayName() + " is too far away!");
 			return;
 		}
 		if ((Long) player.temporaryAttribute().get("LAST_SPELL") != null
@@ -974,7 +974,7 @@ public class Magic {
 		player.getPackets().sendIComponentText(523, 106, "Hitpoints: " + other.getHitpoints());
 		player.getSkills().addXp(Skills.MAGIC, 76);
 		player.temporaryAttribute().put("LAST_SPELL", Utils.currentTimeMillis());
-		other.sm("Your stats are being spied on by " + player.getDisplayName() + ".");
+		other.message("Your stats are being spied on by " + player.getDisplayName() + ".");
 	}
 
 	/**
@@ -989,7 +989,7 @@ public class Magic {
 			return;
 		}
 		if (!player.withinDistance(npc, 9)) {
-			player.sm(npc.getName() + " is too far away!");
+			player.message(npc.getName() + " is too far away!");
 			return;
 		}
 		if ((Long) player.temporaryAttribute().get("LAST_SPELL") != null

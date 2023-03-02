@@ -13,24 +13,24 @@ public class VengeanceOther {
 		if (target instanceof Player) {
 			Player other = (Player) target;
 			if (player.getVengDelay() >= Utils.currentTimeMillis()) {
-				player.sm("You can only cast vengeance every 30 seconds.");
+				player.message("You can only cast vengeance every 30 seconds.");
 				return false;
 			}
 			if (other.getVengDelay() >= Utils.currentTimeMillis()) {
-				player.sm(other.getDisplayName() + " can only cast vengeance every 30 seconds.");
+				player.message(other.getDisplayName() + " can only cast vengeance every 30 seconds.");
 				return false;
 			}
 			if (!other.isAcceptAid()) {
-				player.sm(other.getDisplayName() + " doesn't have aid on.");
+				player.message(other.getDisplayName() + " doesn't have aid on.");
 				return false;
 			}
 			if (!other.isAtMultiArea()) {
-				player.sm("You can only cast this spell in a multi-area.");
+				player.message("You can only cast this spell in a multi-area.");
 				return false;
 			}
 			player.animate(new Animation(4411));
 			other.gfx(new Graphics(725, 0, 100));
-			other.sm(player.getDisplayName() + " cast an vengeance spell on you.");
+			other.message(player.getDisplayName() + " cast an vengeance spell on you.");
 			other.setVengeance(true);
 			other.setVengeance(30000);
 			player.setVengeance(30000);

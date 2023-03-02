@@ -1,7 +1,6 @@
 package com.rs.game.player.content;
 
 import com.rs.cache.loaders.ItemDefinitions;
-import com.rs.game.Graphics;
 import com.rs.game.item.Item;
 import com.rs.game.minigames.warriorguild.WarriorsGuild;
 import com.rs.game.player.Player;
@@ -311,13 +310,13 @@ public class ItemConstants {
 		}
 		if (item.getId() == 20769) {
 			if (!player.hasCompletionistRequirements()) {
-				player.sm("You must have finished all the requirements.");
+				player.message("You must have finished all the requirements.");
 				return false;
 			}
 		}
 		if (item.getId() == 20771) {
 			if (!player.hasTrimCompReqs()) {
-				player.sm("You must have finished all the requirements.");
+				player.message("You must have finished all the requirements.");
 				return false;
 			}
 		}

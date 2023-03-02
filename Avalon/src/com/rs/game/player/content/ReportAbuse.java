@@ -21,15 +21,15 @@ public class ReportAbuse {
 
 	public static void open(Player player) {
 		if (player.isInCombat(10000)) {
-			player.sm("You can't open report abuse under attack.");
+			player.message("You can't open report abuse under attack.");
 			return;
 		}
 		if (player.isLocked()) {
-			player.sm("You are busy. Please finish with what you are doing.");
+			player.message("You are busy. Please finish with what you are doing.");
 			return;
 		}
 		if (player.getInterfaceManager().containsScreenInter()) {
-			player.sm("Close your interface to open Report Abuse.");
+			player.message("Close your interface to open Report Abuse.");
 			return;
 		}
 		player.getInterfaceManager().sendInterface(594);
@@ -45,7 +45,7 @@ public class ReportAbuse {
 			return;
 		}
 		if (offender.isDeveloper()) {
-			player.sm(
+			player.message(
 					"You can't report this player, since they are an admin (Gold Crown). Submit a staff report on the forums if you think, the offender are abusing their powers.");
 			return;
 		}
@@ -53,7 +53,7 @@ public class ReportAbuse {
 			offender.mute(player.getDisplayName(), " - ", 2);
 		}
 		Logger.log("Report", player.getDisplayName() + " reported " + reported);
-		player.sm("Thank-you, your Report Abuse has been received.");
+		player.message("Thank-you, your Report Abuse has been received.");
 		SaveReport(player, reported, rule);
 	}
 

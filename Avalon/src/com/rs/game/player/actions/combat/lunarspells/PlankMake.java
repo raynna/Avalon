@@ -72,7 +72,7 @@ public class PlankMake {
 		Planks plank = Planks.getPlank(itemId);
 		if (plank == null) {
 			if (!lividFarm)
-				player.sm("You can only convert: plain, oak, teak and mahogany logs into planks.");
+				player.message("You can only convert: plain, oak, teak and mahogany logs into planks.");
 			return false;
 		}
 		if (player.canBuy(plank.getCost())) {
@@ -88,7 +88,7 @@ public class PlankMake {
 			player.getTemporaryAttributtes().put("LAST_SPELL", Utils.currentTimeMillis());
 			return true;
 		} else {
-			player.sm("You need at least " + plank.getCost() + " coins to cast this spell on this log.");
+			player.message("You need at least " + plank.getCost() + " coins to cast this spell on this log.");
 			return false;
 		}
 	}

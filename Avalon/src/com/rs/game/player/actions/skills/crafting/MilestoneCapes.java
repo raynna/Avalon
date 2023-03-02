@@ -89,7 +89,7 @@ public class MilestoneCapes extends Action {
 	@Override
 	public boolean start(Player player) {
 		if (prod == null || player == null) {
-			player.sm("null");
+			player.message("null");
 			return false;
 		}
 		int levelReq = prod.getLevelRequired();

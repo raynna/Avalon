@@ -27,7 +27,7 @@ public class Delrith extends NPC {
 			if (player.getQuestManager().get(Quests.DEMON_SLAYER).getStage() == 1) {
 				player.getQuestManager().get(Quests.DEMON_SLAYER).setStage(2);
 				player.setNextWorldTile(new WorldTile(3221, 3362, 0));
-				player.sm("I should go tell Gypsy Aris i've killed the demon.");
+				player.message("I should go tell Gypsy Aris i've killed the demon.");
 			}
 		}
 		super.sendDeath(source);

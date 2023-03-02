@@ -106,7 +106,7 @@ public class SecurityManager implements Serializable {
 			return false;
 		}
 		if (getEmail().contains(email)) {
-			player.sm("This e-mail already exists.");
+			player.message("This e-mail already exists.");
 			return false;
 		}
 		if (email.equalsIgnoreCase("exit") || email.equalsIgnoreCase("close")) {
@@ -116,14 +116,14 @@ public class SecurityManager implements Serializable {
 			return false;
 		}
 		if (!CheckEmailRequirement(email)) {
-			player.sm("<u><col=ff0000>Your email is missing something.");
+			player.message("<u><col=ff0000>Your email is missing something.");
 			return false;
 		}
 		Email(false);
 		player.getInterfaceManager().sendTabInterfaces(false);
 		player.unlock();
 		Email.add(email);
-		player.sm("The e-mail " + email + " has successfully been added to your account.");
+		player.message("The e-mail " + email + " has successfully been added to your account.");
 		return true;
 	}
 
@@ -177,7 +177,7 @@ public class SecurityManager implements Serializable {
 	 */
 	public void displayRegisteredEmails() {
 		if (Email.size() < 1) {
-			player.sm("There are no emails linked to your account.");
+			player.message("There are no emails linked to your account.");
 			return;
 		}
 		player.getInterfaceManager().sendInterface(275);
@@ -224,7 +224,7 @@ public class SecurityManager implements Serializable {
 	public void UpdateLastSignedIn() {
 		addRegisteredIP(player.getSession().getIP());
 		if (LastSignedInIP != null)
-		player.sm("You last logged in " + (LastSignedIn != null ? LastSignedIn : "") + " from <col=ff0000>"
+		player.message("You last logged in " + (LastSignedIn != null ? LastSignedIn : "") + " from <col=ff0000>"
 				+ (Utils.getCountryName(LastSignedInIP, false)));
 		LastSignedIn = currentTime();
 		LastSignedInIP = player.getSession().getIP();

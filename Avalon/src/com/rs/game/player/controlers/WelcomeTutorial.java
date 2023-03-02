@@ -92,7 +92,7 @@ public class WelcomeTutorial extends Controler {
 	public void updateProgress() {
 		setStage(getStage() + 1);
 		refreshStage();
-		player.sm("updated");
+		player.message("updated");
 	}
 
 	public void quickTutorialOption() {
@@ -103,13 +103,13 @@ public class WelcomeTutorial extends Controler {
 	public void sendFinalStage() {
 		FriendChatsManager.joinChat(Settings.HELP_CC_NAME, player, true);
 		player.getDialogueManager().startDialogue("SimpleMessage", "You recieved a full starter kit!");
-		player.sm("YOU RECIEVE A FULL KIT.");
+		player.message("YOU RECIEVE A FULL KIT.");
 		// starter items
 	}
 
 	public void sendHalfKit() {
 		FriendChatsManager.joinChat(Settings.HELP_CC_NAME, player, true);
-		player.sm("YOU RECIEVE A HALF KIT.");
+		player.message("YOU RECIEVE A HALF KIT.");
 	}
 
 }

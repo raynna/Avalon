@@ -35,7 +35,7 @@ public class GodWarsBoulder extends ObjectPlugin {
 			}
 			if (Utils.random(1, 50) > 40) {
 				player.applyHit(new Hit(player, 70, HitLook.REGULAR_DAMAGE));
-				player.sm("You scrape yourself against the rock while trying to pass!");
+				player.message("You scrape yourself against the rock while trying to pass!");
 				return false;
 			} else {
 				player.getPackets().sendGameMessage("You slide past the rock with great skill.");

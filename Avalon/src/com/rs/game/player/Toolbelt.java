@@ -62,7 +62,7 @@ public class Toolbelt implements Serializable {
 		toolbeltItems = new HashMap<Integer, Boolean>();
 		for (int items : TOOLBELT_ITEMS)
 			toolbeltItems.put(items, false);
-		player.sm("Toolbelt items reset.");
+		player.message("Toolbelt items reset.");
 	}
 
 	/**
@@ -73,23 +73,23 @@ public class Toolbelt implements Serializable {
 	 */
 	public boolean addItem(Item item) {
 		if (toolbeltItems.get(item.getId()) == null) {
-			player.sm("item is null");
+			player.message("item is null");
 			return false;
 		}
 		if (toolbeltItems.get(item.getId())) {
 			refreshItems();
-			player.sm(item.getName() + " is already in your toolbelt.");
+			player.message(item.getName() + " is already in your toolbelt.");
 			return false;
 		}
 		player.getInventory().deleteItem(item);
 		toolbeltItems.put(item.getId(), true);
-		player.sm("The " + item.getName() + " has been added to your toolbelt.");
+		player.message("The " + item.getName() + " has been added to your toolbelt.");
 		refreshItems();
 		return true;
 	}
 
 	public void printToolbelt() {
-		player.sm("" + toolbeltItems.get(946));
+		player.message("" + toolbeltItems.get(946));
 	}
 
 	/**

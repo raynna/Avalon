@@ -22,7 +22,7 @@ public class OrbOfCounting extends ItemPlugin {
     @Override
     public boolean processItem(Player player, Item item, int slotId, String option) {
         if (player.getTemporaryAttributtes().get("ORB_OF_COUNTING") == Boolean.TRUE) {
-            player.sm("You already have one counting.");
+            player.message("You already have one counting.");
             return true;
         }
         switch (option) {
@@ -36,7 +36,7 @@ public class OrbOfCounting extends ItemPlugin {
 
     public void sendCount(Player player, boolean world) {
         player.getTemporaryAttributtes().put("ORB_OF_COUNTING", Boolean.TRUE);
-        player.sm("Counting...");
+        player.message("Counting...");
         CoresManager.slowExecutor.schedule(new Runnable() {
 
             @Override
@@ -64,11 +64,11 @@ public class OrbOfCounting extends ItemPlugin {
                     }
                 }
                 player.getTemporaryAttributtes().remove("ORB_OF_COUNTING");
-                player.sm("Blue hats: " + blueHats + ", Red hats: " + redHats);
+                player.message("Blue hats: " + blueHats + ", Red hats: " + redHats);
                 if (blueHats == redHats) {
-                    player.sm("No winner! It's a tie!");
+                    player.message("No winner! It's a tie!");
                 } else
-                    player.sm("Winner is: " + (blueHats < redHats ? "Red!" : "Blue!"));
+                    player.message("Winner is: " + (blueHats < redHats ? "Red!" : "Blue!"));
             }
         }, 2000, TimeUnit.MILLISECONDS);
     }

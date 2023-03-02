@@ -132,20 +132,20 @@ public class TradeStore {
 				return;
 			}
 			if (item.getId() == 995) {
-				player.sm("You can't trade coins.");
+				player.message("You can't trade coins.");
 				return;
 			}
 			if (getPrice(item, 1) > 10000000) {
-				player.sm("You can't trade items worth over 10,000,000 coins.");
+				player.message("You can't trade items worth over 10,000,000 coins.");
 				return;
 			}
 			Item newItem = new Item(item.getId(), item.getAmount());
 			if (getPrice(newItem) == 0) {
-				player.sm("You can't trade free items to sigmund.");
+				player.message("You can't trade free items to sigmund.");
 				return;
 			}
 			if (getPrice(newItem) + rewardItems.getNumberOf(995) < 0) {
-				player.sm("There is not enough space for this much coins.");
+				player.message("There is not enough space for this much coins.");
 				return;
 			}
 			Item[] itemsBefore = items.getItemsCopy();
@@ -317,7 +317,7 @@ public class TradeStore {
 		}
 		int price = getPrice(item);
 		if (price > 10000000) {
-			player.sm("Merchant won't buy items above 10,000,000 coins.");
+			player.message("Merchant won't buy items above 10,000,000 coins.");
 			return;
 		}
 		player.getPackets().sendGameMessage(item.getDefinitions().getName() + ": Merchant will buy this item for "

@@ -152,11 +152,11 @@ public class FriendChatsManager {
 				return;
 			}
 			if (kicked.isDeveloper()) {
-				player.sm("You cannot kick developers!");
+				player.message("You cannot kick developers!");
 				return;
 			}
 			if (kicked.getUsername() == owner && !player.isDeveloper()) {
-				player.sm("You cannot kick the owner!");
+				player.message("You cannot kick the owner!");
 				return;
 			}
 			if (rank <= getRank(kicked.getRights(), kicked.getUsername()))
@@ -503,7 +503,7 @@ public class FriendChatsManager {
 					return;
 				}
 				if (owner.getFriendsIgnores().getIgnores().contains(player.getUsername())) {
-					player.sm("You are not allowed to join this user's channel.");
+					player.message("You are not allowed to join this user's channel.");
 					return;
 				}
 				chat = new FriendChatsManager(owner);

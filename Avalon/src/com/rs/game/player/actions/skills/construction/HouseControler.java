@@ -98,7 +98,7 @@ public class HouseControler extends Controler {
 
 	@Override
 	public boolean processItemOnNPC(NPC npc, Item item) {
-		player.sm("called");
+		player.message("called");
 		if (npc instanceof ServantNPC) {
 			npc.faceEntity(player);
 			if (!house.isOwner(player)) {

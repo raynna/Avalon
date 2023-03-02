@@ -112,7 +112,7 @@ public class FishingOutfit {
 			return false;
 		Pieces piece = getRandomPiece(player);
 		ItemDefinitions defs = ItemDefinitions.getItemDefinitions(piece.getItemId());
-		player.sm("You have recieved a "
+		player.message("You have recieved a "
 				+ (piece == Pieces.FISH_HAT ? (HexColours.getShortMessage(Colour.RED, "rare") + " item:") : "") + " "
 				+ (HexColours.getShortMessage(Colour.RED, defs.getName())) + "!");
 		if (player.getInventory().hasFreeSlots())

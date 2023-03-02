@@ -35,18 +35,18 @@ public class ItemBanking extends Dialogue {
 				if (bankedItem != null) {
 					if (bankedItem.getDefinitions().isNoted()) {
 						end();
-						player.sm("You can't bank this item.");
+						player.message("You can't bank this item.");
 						return;
 					}
 				}
 				if (!player.getBank().hasBankSpace()) {
-					player.sm("Not enough bank space.");
+					player.message("Not enough bank space.");
 					end();
 					return;
 				}
 				if (bankedItem != null) {
 					if (bankedItem.getAmount() + amount <= 0 || bankedItem.getAmount() + check <= 0) {
-						player.sm("Not enough space for " + bankedItem.getName() + ".");
+						player.message("Not enough space for " + bankedItem.getName() + ".");
 						end();
 						return;
 					}
@@ -59,18 +59,18 @@ public class ItemBanking extends Dialogue {
 				if (bankedItem != null) {
 					if (bankedItem.getDefinitions().isNoted()) {
 						end();
-						player.sm("You can't bank this item.");
+						player.message("You can't bank this item.");
 						return;
 					}
 				}
 				if (!player.getBank().hasBankSpace()) {
-					player.sm("Not enough bank space.");
+					player.message("Not enough bank space.");
 					end();
 					return;
 				}
 				if (bankedItem != null) {
 					if (bankedItem.getAmount() + amount <= 0 || bankedItem.getAmount() + check <= 0) {
-						player.sm("Not enough space for " + bankedItem.getName() + ".");
+						player.message("Not enough space for " + bankedItem.getName() + ".");
 						end();
 						return;
 					}

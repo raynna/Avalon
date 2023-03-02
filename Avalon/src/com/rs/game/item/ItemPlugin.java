@@ -43,7 +43,7 @@ public abstract class ItemPlugin {
         return false;
     }
 
-    public boolean isCompatible(Item item, Item item2, String string) {
+    public boolean usingItems(Item item, Item item2, String string) {
         return item.getName().contains(string) || item2.getName().contains(string);
     }
 
@@ -51,7 +51,7 @@ public abstract class ItemPlugin {
         return false;
     }
 
-    public boolean isCompatible(Item item, Item item2, String string, String exclude) {
+    public boolean itemContains(Item item, Item item2, String string, String exclude) {
         System.out.println(item.getName() + " -  " + item2.getName() + " " + exclude + "");
         return (item.getName().contains(string.toLowerCase()) && !item.getName().toLowerCase().contains(exclude.toLowerCase())) || item2.getName().toLowerCase().contains(string.toLowerCase()) && !item2.getName().toLowerCase().contains(exclude.toLowerCase());
     }
@@ -68,10 +68,10 @@ public abstract class ItemPlugin {
         Logger.log("ItemPlugin", builder);
     }
 
-    public boolean contains(int id1, int id2, Item... items) {
+    public boolean usingItems(int id1, int id2, Item... itemsNeeded) {
         boolean containsId1 = false;
         boolean containsId2 = false;
-        for (Item item : items) {
+        for (Item item : itemsNeeded) {
             if (item.getId() == id1)
                 containsId1 = true;
             else if (item.getId() == id2)
@@ -79,5 +79,4 @@ public abstract class ItemPlugin {
         }
         return containsId1 && containsId2;
     }
-
 }

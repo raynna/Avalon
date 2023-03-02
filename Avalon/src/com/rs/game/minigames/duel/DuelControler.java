@@ -29,23 +29,23 @@ public class DuelControler extends Controler {
 			return;
 		}
 		if (player.getPlayerRank().isIronman()) {
-			player.sm("You cannot duel as a " + (player.getPlayerRank().isHardcore() ? "Hardcore ironman." : "Ironman."));
+			player.message("You cannot duel as a " + (player.getPlayerRank().isHardcore() ? "Hardcore ironman." : "Ironman."));
 			return;
 		}
 		if (target.getPlayerRank().isIronman()) {
-			player.sm("You cannot duel a " + (target.getPlayerRank().isHardcore() ? "Hardcore ironman." : "Ironman."));
+			player.message("You cannot duel a " + (target.getPlayerRank().isHardcore() ? "Hardcore ironman." : "Ironman."));
 			return;
 		}
 		if (player.getAuraManager().isActivated()) {
-			player.sm("You can't chellange somneone while having a aura activated.");
+			player.message("You can't chellange somneone while having a aura activated.");
 			return;
 		}
 		if (player.getFamiliar() != null) {
-			player.sm("You can't chellange someone while having a familiar spawed.");
+			player.message("You can't chellange someone while having a familiar spawed.");
 			return;
 		}
 		if (target.getFamiliar() != null) {
-			player.sm("Your target has a familiar that needs to be dismissed.");
+			player.message("Your target has a familiar that needs to be dismissed.");
 			return;
 		}
 		// if (player.isAdmin()) {
@@ -53,7 +53,7 @@ public class DuelControler extends Controler {
 		// return;
 		// }
 		if (player.getEmotesManager().getNextEmoteEnd() > Utils.currentTimeMillis()) {
-			player.sm("You have to finish your emote before dueling.");
+			player.message("You have to finish your emote before dueling.");
 			return;
 		}
 		player.temporaryAttribute().put("DuelChallenged", target);

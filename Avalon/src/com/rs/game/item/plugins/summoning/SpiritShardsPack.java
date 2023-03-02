@@ -16,7 +16,7 @@ public class SpiritShardsPack extends ItemPlugin {
 		switch (option) {
 			case "open":
 				if (player.getInventory().getNumberOf(item.getId()) > 1 && !player.getInventory().containsOneItem(ItemId.SPIRIT_SHARD) && !player.getInventory().hasFreeSlots()) {
-					player.sm("You don't have enough inventory space to open this pack.");
+					player.message("You don't have enough inventory space to open this pack.");
 					return true;
 				}
 				if (player.getInventory().getNumberOf(ItemId.SPIRIT_SHARD) + 5000 < 0) {

@@ -54,7 +54,7 @@ public class ShootingStarAction extends MiningBase {
 			return false;
 		}
 		if (!hasPickaxe(player)) {
-			player.sm("You need a pickaxe to swing at the crashed star.");
+			player.message("You need a pickaxe to swing at the crashed star.");
 			return false;
 		}
 
@@ -62,7 +62,7 @@ public class ShootingStarAction extends MiningBase {
 			player.getDialogueManager().startDialogue("SimpleMessage","You need a "+World.shootingStar.getReqLevel()+" level of "+ Skills.SKILL_NAME[World.shootingStar.getSkillId()]+ " to create this.");
 			return false;
 		}
-		player.sm("You swing your pickaxe at the crashed star..");
+		player.message("You swing your pickaxe at the crashed star..");
 		return true;
 	}
 

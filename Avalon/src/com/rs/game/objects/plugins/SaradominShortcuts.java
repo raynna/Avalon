@@ -16,7 +16,7 @@ public class SaradominShortcuts extends ObjectPlugin {
 	@Override
 	public boolean processObject(Player player, WorldObject object) {
 		if (!player.getVarBitList().containsKey(3934)) {
-			player.sm("You have to tie a rope around the rock.");
+			player.message("You have to tie a rope around the rock.");
 			return false;
 		}
 		if (object.getId() == 26444) {
@@ -38,7 +38,7 @@ public class SaradominShortcuts extends ObjectPlugin {
 		if (item.getId() != 954)
 			return false;
 		if (player.getVarBitList().containsKey(3934)) {
-			player.sm("There is already a rope tied to this rock.");
+			player.message("There is already a rope tied to this rock.");
 			return false;
 		}
 		player.getInventory().deleteItem(item.getId(), 1);

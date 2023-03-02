@@ -407,7 +407,7 @@ public class FriendsIgnores implements Serializable {
 			return;
 		}
 		if (!AccountCreation.exists(username)) {
-			player.sm("Unable to add friend - unknown player.");
+			player.message("Unable to add friend - unknown player.");
 			return;
 		}
 		if (username.equals(player.getUsername())) {
@@ -449,7 +449,7 @@ public class FriendsIgnores implements Serializable {
 			return;
 		}
 		if (!AccountCreation.exists(username)) {
-			player.sm("Unable to add friend - unknown player.");
+			player.message("Unable to add friend - unknown player.");
 			return;
 		}
 		if (username.equals(player.getUsername())) {

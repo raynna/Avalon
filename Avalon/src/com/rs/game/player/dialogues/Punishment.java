@@ -20,7 +20,7 @@ public class Punishment extends Dialogue {
 			} else if (componentId == OPTION_3) {
 
 			} else if (componentId == OPTION_4) {
-				player.sm("Jail Selection Canceled.");
+				player.message("Jail Selection Canceled.");
 				end();
 			}
 		}

@@ -33,7 +33,7 @@ public class DungeoneeringRunecrafting extends Action {
 		}
 		int essense = player.getInventory().getAmountOf(DungeonConstants.ESSENCE);
 		if (essense == 0) {
-			player.sm("You don't have any rune essence.");
+			player.message("You don't have any rune essence.");
 			return false;
 		}
 		if (cycles < essense)

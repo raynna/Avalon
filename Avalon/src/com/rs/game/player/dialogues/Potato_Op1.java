@@ -50,7 +50,7 @@ public class Potato_Op1 extends Dialogue {
 			case OPTION_4:
 				player.getPoison().makePoisoned(12);
 				end();
-				player.sm("You are now poisoned.");
+				player.message("You are now poisoned.");
 				break;
 			case OPTION_5:
 				for (int runes = 554; runes <= 566; runes++) {

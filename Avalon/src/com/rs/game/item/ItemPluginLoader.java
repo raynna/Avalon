@@ -24,7 +24,7 @@ public class ItemPluginLoader {
                 for (Object key : keys) {
                     if (key instanceof String && item.getName().toLowerCase().contains(((String) key).toLowerCase())) {
                         plugin = entry.getValue();
-                        System.out.println("[ItemPluginLoader] "+item.getName()+"("+item.getId()+"): Found plugin name");
+                        System.out.println("[ItemPluginLoader] "+item.getName()+"("+item.getId()+"): Found plugin by name.");
                         return plugin;
                     }
                 }

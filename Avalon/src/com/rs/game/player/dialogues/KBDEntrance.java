@@ -46,7 +46,7 @@ public class KBDEntrance extends Dialogue {
 			case OPTION_2:
 				player.rememberChoice(true);
 				Teleport(player);
-				player.sm("The warning shall not pop up for you anymore.");
+				player.message("The warning shall not pop up for you anymore.");
 				end();
 				break;
 			case OPTION_3:

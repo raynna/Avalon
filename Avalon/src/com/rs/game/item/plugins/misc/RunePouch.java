@@ -6,7 +6,6 @@ import com.rs.game.item.ItemId;
 import com.rs.game.item.ItemPlugin;
 import com.rs.game.player.Player;
 import com.rs.game.player.actions.combat.Magic;
-import com.rs.net.decoders.handlers.ButtonHandler;
 
 public class RunePouch extends ItemPlugin {
 
@@ -39,7 +38,7 @@ public class RunePouch extends ItemPlugin {
             return true;
         }
         if (player.getRunePouch().getFreeSlots() == 0 && !player.getRunePouch().contains(item)) {
-            player.sm("You can't store more than 3 type of runes in the rune pouch.");
+            player.message("You can't store more than 3 type of runes in the rune pouch.");
             return true;
         }
         int amount = item.getAmount();
@@ -48,7 +47,7 @@ public class RunePouch extends ItemPlugin {
         player.getRunePouch().add(new Item(item.getId(), amount));
         player.getInventory().deleteItem(item.getId(), amount);
         player.getInventory().refresh();
-        player.sm("You stored " + amount + " x " + ItemDefinitions.getItemDefinitions(item.getId()).getName() + " in the rune pouch.");
+        player.message("You stored " + amount + " x " + ItemDefinitions.getItemDefinitions(item.getId()).getName() + " in the rune pouch.");
         return true;
     }
 
@@ -65,14 +64,14 @@ public class RunePouch extends ItemPlugin {
 
     public static void withdrawAll(Player player) {
         if (player.getRunePouch().getFreeSlots() == 3) {
-            player.sm("Your rune pouch is empty.");
+            player.message("Your rune pouch is empty.");
             return;
         }
         for (Item runes : player.getRunePouch().getContainerItems()) {
             if (runes == null)
                 continue;
             if (!player.getInventory().hasFreeSlots() && !player.getInventory().containsOneItem(runes.getId())) {
-                player.sm("You don't have enough inventory spaces.");
+                player.message("You don't have enough inventory spaces.");
                 continue;
             }
             player.getRunePouch().remove(runes);

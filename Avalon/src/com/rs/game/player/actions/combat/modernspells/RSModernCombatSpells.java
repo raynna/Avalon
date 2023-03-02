@@ -5,11 +5,8 @@ import com.rs.game.Graphics;
 import com.rs.game.Hit;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
-import com.rs.game.player.actions.combat.AncientMagicks;
 import com.rs.game.player.actions.combat.PlayerCombat;
 import com.rs.utils.Utils;
-
-import static com.rs.game.player.actions.combat.modernspells.RSModernCombatSpells.ModernCombatSpellsStore.BIND;
 
 public class RSModernCombatSpells {
 
@@ -295,27 +292,27 @@ public class RSModernCombatSpells {
 		String spellName = Utils.formatString(spellStore.name());
 		switch (spellStore) {
 			case CONFUSE:
-					p2.sm("Your attack level was drained by enemies " + spellName + " spell.");
+					p2.message("Your attack level was drained by enemies " + spellName + " spell.");
 					p2.drainLevel(Skills.ATTACK, (int) (p2.getSkills().getLevel(Skills.ATTACK) * 0.05));
 				break;
 			case WEAKEN:
-					p2.sm("Your strength level was drained by enemies " + spellName + " spell.");
+					p2.message("Your strength level was drained by enemies " + spellName + " spell.");
 					p2.drainLevel(Skills.STRENGTH, (int) (p2.getSkills().getLevel(Skills.STRENGTH) * 0.05));
 				break;
 			case CURSE:
-					p2.sm("Your defence level was drained by enemies " + spellName + " spell.");
+					p2.message("Your defence level was drained by enemies " + spellName + " spell.");
 					p2.drainLevel(Skills.DEFENCE, (int) (p2.getSkills().getLevel(Skills.DEFENCE) * 0.05));
 				break;
 			case STUN:
-				p2.sm("Your attack level was drained by enemies " + spellName + " spell.");
+				p2.message("Your attack level was drained by enemies " + spellName + " spell.");
 				p2.drainLevel(Skills.ATTACK, (int) (p2.getSkills().getLevel(Skills.ATTACK) * 0.10));
 				break;
 			case ENFEEBLE:
-				p2.sm("Your strength level was drained by enemies " + spellName + " spell.");
+				p2.message("Your strength level was drained by enemies " + spellName + " spell.");
 				p2.drainLevel(Skills.STRENGTH, (int) (p2.getSkills().getLevel(Skills.STRENGTH) * 0.10));
 				break;
 			case VULNERABILITY:
-				p2.sm("Your defence level was drained by enemies " + spellName + " spell.");
+				p2.message("Your defence level was drained by enemies " + spellName + " spell.");
 				p2.drainLevel(Skills.DEFENCE, (int) (p2.getSkills().getLevel(Skills.DEFENCE) * 0.10));
 				break;
 			case SARADOMIN_STRIKE:

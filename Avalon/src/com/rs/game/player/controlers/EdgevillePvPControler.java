@@ -21,7 +21,7 @@ public class EdgevillePvPControler extends Controler {
     public static void enterPVP(Player player) {
         player.getControlerManager().startControler("EdgevillePvPControler");
         player.setNextWorldTile(TeleportStore.EDGEVILLE_PVP_INSTANCE.getTile());
-        player.sm("You " + HexColours.getShortMessage(Colour.RED, "enter") + " edgeville pvp instance.");
+        player.message("You " + HexColours.getShortMessage(Colour.RED, "enter") + " edgeville pvp instance.");
         player.getAppearence().generateAppearenceData();
     }
 
@@ -29,7 +29,7 @@ public class EdgevillePvPControler extends Controler {
         player.getControlerManager().forceStop();
         player.setNextWorldTile(new WorldTile(Settings.HOME_PLAYER_LOCATION));
         player.getAppearence().generateAppearenceData();
-        player.sm("You " + HexColours.getShortMessage(Colour.RED, "leave") + " edgeville pvp instance.");
+        player.message("You " + HexColours.getShortMessage(Colour.RED, "leave") + " edgeville pvp instance.");
         player.setCanPvp(false);
         player.getPackets().sendGlobalConfig(1000, 0);
         player.getAppearence().generateAppearenceData();
@@ -106,11 +106,11 @@ public class EdgevillePvPControler extends Controler {
         if (target instanceof Player) {
             Player p2 = (Player) target;
             if (player.isCanPvp() && !p2.isCanPvp()) {
-                player.sm("That player is not in the pvp area.");
+                player.message("That player is not in the pvp area.");
                 return false;
             }
             if (Math.abs(player.getSkills().getCombatLevel() - p2.getSkills().getCombatLevel()) > getWildLevel()) {
-                player.sm("You can't attack " + p2.getDisplayName() + " - your level difference is too great.");
+                player.message("You can't attack " + p2.getDisplayName() + " - your level difference is too great.");
                 return false;
             }
             if (canHit(target))

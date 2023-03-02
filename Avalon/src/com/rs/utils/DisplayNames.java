@@ -30,13 +30,13 @@ public final class DisplayNames {
 	public static boolean setDisplayName(Player player, String displayName) {
 		synchronized (cachedNames) {
 			if (Unavailable(player, displayName)) {
-				player.sm("This username is not available.");
+				player.message("This username is not available.");
 				return false;
 			}
 		}
 		for (String blockedNames : Credentials.blocked) {
 			if (displayName.contains(blockedNames)) {
-				player.sm("Name not available.");
+				player.message("Name not available.");
 				return false;
 			}
 		}

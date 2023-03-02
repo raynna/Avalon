@@ -60,7 +60,6 @@ import com.rs.game.player.content.ItemSets;
 import com.rs.game.player.content.PlayerLook;
 import com.rs.game.player.content.Pots;
 import com.rs.game.player.content.Pots.Pot;
-import com.rs.game.player.content.RottenPotato;
 import com.rs.game.player.content.Shop;
 import com.rs.game.player.content.SkillCapeCustomizer;
 import com.rs.game.player.content.SkillsDialogue;
@@ -133,7 +132,7 @@ public class ButtonHandler {
                 player.getPackets().sendRunScript(108, "How many would you like to buy?");
             }
             if (packetId == WorldPacketsDecoder.ACTION_BUTTON9_PACKET)
-                player.sm(ItemExamines.getExamine(new Item(slotId2)));
+                player.message(ItemExamines.getExamine(new Item(slotId2)));
         } else if (interfaceId == 548 || interfaceId == 746) {
             if (componentId == 75 || componentId == 99) {
                 player.getTemporaryAttributtes().put("ACHIEVEMENTTAB", 0);
@@ -1679,7 +1678,7 @@ public class ButtonHandler {
                 } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON3_PACKET) {
                     int capeId = player.getEquipment().getCapeId();
                     if (capeId == 20769 || capeId == 20771) {
-                        player.sm("Ardy Farm Teleport");
+                        player.message("Ardy Farm Teleport");
                     }
 
                 } else if (packetId == WorldPacketsDecoder.ACTION_BUTTON2_PACKET) {
@@ -2950,7 +2949,7 @@ public class ButtonHandler {
             if (itemId == 11284) {
                 if (player.getDfsCharges() < 50)
                     player.setDfsCharges(50);
-                player.sm("The dragonfire shield charged itself upon equipping it.");
+                player.message("The dragonfire shield charged itself upon equipping it.");
                 player.getEquipment().getItems().set(targetSlot, new Item(11283, 1));
                 player.getEquipment().refresh(targetSlot);
             }
@@ -3218,9 +3217,9 @@ public class ButtonHandler {
             player.gfx(new Graphics(1308));
             player.getPackets().sendGameMessage("You restored your Summoning points with the Completionist cape!", true);
         } else if (player.restoreDelay > Utils.currentTimeMillis()) {
-            player.sm("Your cape is still recharging from it's last use.");
+            player.message("Your cape is still recharging from it's last use.");
         } else {
-            player.sm("Your cape does not respond due to you already having full summoning points.");
+            player.message("Your cape does not respond due to you already having full summoning points.");
         }
     }
 

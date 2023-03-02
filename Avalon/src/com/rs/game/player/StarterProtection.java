@@ -74,7 +74,7 @@ public class StarterProtection {
 	public static final void sendStarterPack(Player player) {
 		addStarter(player);
 		player.reset();
-		player.sm("Experience rate: " + Settings.SKILLING_XP_RATE + "x for skilling, 1x in wilderness for combat.");
+		player.message("Experience rate: " + Settings.SKILLING_XP_RATE + "x for skilling, 1x in wilderness for combat.");
 		World.sendWorldMessage(
 				"<img=5><col=b25200>News: " + player.getDisplayName() + " has joined " + Settings.SERVER_NAME + "!",
 				false);

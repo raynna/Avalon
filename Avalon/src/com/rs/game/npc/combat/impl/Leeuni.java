@@ -58,7 +58,7 @@ public class Leeuni extends CombatScript {
 							lvl -= 1 + Utils.getRandom(4);
 							player.getSkills().set(skill, lvl < 0 ? 0 : lvl);
 						}
-						player.sm("Your " + Skills.SKILL_NAME[skill]
+						player.message("Your " + Skills.SKILL_NAME[skill]
 								+ " has been dropped!");
 			
 			delayHit(

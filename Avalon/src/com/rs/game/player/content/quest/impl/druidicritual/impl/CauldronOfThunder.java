@@ -52,7 +52,7 @@ public class CauldronOfThunder {
 					@Override
 					public void run() {
 
-						player.sm("You dip Raw Beef into the cauldron.");
+						player.message("You dip Raw Beef into the cauldron.");
 
 						player.getInventory().addItem(new Item(522, 1));
 
@@ -74,7 +74,7 @@ public class CauldronOfThunder {
 					@Override
 					public void run() {
 
-						player.sm("You dip Raw Rat Meat into the cauldron.");
+						player.message("You dip Raw Rat Meat into the cauldron.");
 
 						player.getInventory().addItem(new Item(523, 1));
 
@@ -97,7 +97,7 @@ public class CauldronOfThunder {
 					@Override
 					public void run() {
 
-						player.sm("You dip Raw Chicken into the cauldron.");
+						player.message("You dip Raw Chicken into the cauldron.");
 
 						player.getInventory().addItem(new Item(525, 1));
 
@@ -110,7 +110,7 @@ public class CauldronOfThunder {
 
 			default:
 
-				player.sm("You can not dip this item.");
+				player.message("You can not dip this item.");
 
 				break;
 

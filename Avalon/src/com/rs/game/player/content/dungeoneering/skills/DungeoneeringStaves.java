@@ -33,7 +33,7 @@ public class DungeoneeringStaves extends Action {
 		}
 		int staves = getUsableStaves(player, index);
 		if (staves == 0) {
-			player.sm("You don't have any staffs to imbue.");
+			player.message("You don't have any staffs to imbue.");
 			return false;
 		}
 		if (cycles < staves)
@@ -54,7 +54,7 @@ public class DungeoneeringStaves extends Action {
 
 		int stave = getNextStave(player, index);
 		if (stave == -1) {
-			player.sm("You don't have any staffs to imbue.");
+			player.message("You don't have any staffs to imbue.");
 			return -1;
 		}
 

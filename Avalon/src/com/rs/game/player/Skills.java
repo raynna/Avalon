@@ -474,8 +474,25 @@ public final class Skills implements Serializable {
             int skillLevel = skills[i + 1];
             if (skillId > 24)
                 continue;
-            if (getLevelForXp(skillId) < skillLevel)
+            if (getLevelForXp(skillId) < skillLevel) {
                 return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean hasRequirements(String finishingMessage, int... skills) {
+        if (finishingMessage == null)
+            finishingMessage = "in order to do this.";
+        for (int i = 0; i < skills.length; i += 2) {
+            int skillId = skills[i];
+            int skillLevel = skills[i + 1];
+            if (skillId > 24)
+                continue;
+            if (getLevelForXp(skillId) < skillLevel) {
+                player.message("You need an " + getSkillName(skillId) + " level of " + skillLevel + " " + finishingMessage);
+                return false;
+            }
         }
         return true;
     }

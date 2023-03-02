@@ -474,26 +474,26 @@ public class PrayerBook implements Serializable {
 			player.healTick = 0;
 		if (getPrayerBook() == 0 && prayerId == 26) {
 			if (!player.hasRenewal) {
-				player.sm("You can buy this prayer from Daemonheim. You also need a Prayer level of 65.");
+				player.message("You can buy this prayer from Daemonheim. You also need a Prayer level of 65.");
 				return false;
 			}
 			player.healTick = 0;
 		}
 		if (getPrayerBook() == 0 && prayerId == 28) {
 			if (!player.hasRigour) {
-				player.sm("You can buy this prayer from Daemonheim. You also need a Prayer level of 74.");
+				player.message("You can buy this prayer from Daemonheim. You also need a Prayer level of 74.");
 				return false;
 			}
 		}
 		if (getPrayerBook() == 0 && prayerId == 29) {
 			if (!player.hasAugury) {
-				player.sm("You can buy this prayer from Daemonheim. You also need a Prayer level of 77.");
+				player.message("You can buy this prayer from Daemonheim. You also need a Prayer level of 77.");
 				return false;
 			}
 		}
 		if (getPrayerBook() == 0 && prayerId >= 17 && prayerId <= 19) {
 			if (player.getPrayerDelay() >= Utils.currentTimeMillis()) {
-				player.sm("You are currently injured and cannot use protection prayers!");
+				player.message("You are currently injured and cannot use protection prayers!");
 				return false;
 			}
 		}

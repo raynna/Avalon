@@ -43,7 +43,7 @@ public class ReferAFriend extends Dialogue {
 					player.getAppearence().setTitle(9001);
 					end();
 				} else {
-					player.sm("Not enough refs yet!");
+					player.message("Not enough refs yet!");
 					end();
 				}
 				break;
@@ -52,7 +52,7 @@ public class ReferAFriend extends Dialogue {
 					player.getAppearence().setTitle(9002);
 					end();
 				} else {
-					player.sm("Not enough refs yet!");
+					player.message("Not enough refs yet!");
 					end();
 				}
 				break;
@@ -61,7 +61,7 @@ public class ReferAFriend extends Dialogue {
 					player.getAppearence().setTitle(9003);
 					end();
 				} else {
-					player.sm("Not enough refs yet!");
+					player.message("Not enough refs yet!");
 					end();
 				}
 			}
@@ -74,7 +74,7 @@ public class ReferAFriend extends Dialogue {
 			switch (componentId) {
 			case OPTION_1:
 				TicketSystem.openTicket(player);
-				player.sm("Your ticket has been sent successfully!.");
+				player.message("Your ticket has been sent successfully!.");
 				end();
 			}
 			break;

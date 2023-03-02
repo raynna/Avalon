@@ -130,7 +130,7 @@ public class CombatDummy extends Action {
 		String weaponName = ItemDefinitions.getItemDefinitions(weaponId).getName();
 		int soundId = script.getSoundId();
 		if (!checkValidAmmo(player.getEquipment().getAmmoId())) {
-			player.sm("You don't have a valid ammo for this weapon.");
+			player.message("You don't have a valid ammo for this weapon.");
 			return -1;
 		}
 		if (player.getCombatDefinitions().isUsingSpecialAttack()) {

@@ -10,7 +10,7 @@ public class Vengeance {
 	
 	public static boolean cast(Player player, double xp) {
 		if (player.getVengDelay() >= Utils.currentTimeMillis()) {
-			player.sm("You can only cast vengeance every 30 seconds.");
+			player.message("You can only cast vengeance every 30 seconds.");
 			return false;
 		}
 		player.addXp(Skills.MAGIC, xp);
@@ -18,7 +18,7 @@ public class Vengeance {
 		player.animate(new Animation(4410));
 		player.setVengeance(true);
 		player.setVengeance(48);
-		player.sm("You cast a vengeance.");
+		player.message("You cast a vengeance.");
 		return true;
 	}
 

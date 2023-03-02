@@ -10,7 +10,7 @@ public class DisruptionShield {
 	
 	public static boolean cast(Player player, double xp) {
 		if (player.getDisruptionDelay() >= Utils.currentTimeMillis()) {
-			player.sm("You can't cast this spell again yet.");
+			player.message("You can't cast this spell again yet.");
 			return false;
 		}
 		player.addXp(Skills.MAGIC, xp);
@@ -18,7 +18,7 @@ public class DisruptionShield {
 		player.animate(new Animation(8770));
 		player.setDisruption(true);
 		player.setDisruption(96);
-		player.sm("You cast a Disruption Shield.");
+		player.message("You cast a Disruption Shield.");
 		return true;
 	}
 }

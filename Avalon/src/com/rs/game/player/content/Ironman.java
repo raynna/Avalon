@@ -2,8 +2,6 @@ package com.rs.game.player.content;
 
 import java.io.Serializable;
 
-import com.rs.Launcher;
-import com.rs.Settings;
 import com.rs.cache.loaders.ObjectDefinitions;
 import com.rs.game.World;
 import com.rs.game.WorldObject;
@@ -82,7 +80,7 @@ public class Ironman implements Serializable {
 		int freeSlots = player.getInventory().getFreeSlots();
 		amount = amount > freeSlots && amount != freeSlots + 1 ? freeSlots : amount;
 		if (!item.getDefinitions().canBeNoted()) {
-			player.sm("<u><col=99000>" + item.getName()
+			player.message("<u><col=99000>" + item.getName()
 					+ " can not be exchanged, this means that it can not be noted or un noted.");
 			return;
 		}
@@ -121,7 +119,7 @@ public class Ironman implements Serializable {
 		if (killer != null) {
 			if (player.getIronman().lifes > 1) {
 				player.getIronman().lifes--;
-				player.sm("<col=990000>You lost one life! You have " + player.getIronman().lifes + " left.");
+				player.message("<col=990000>You lost one life! You have " + player.getIronman().lifes + " left.");
 			} else {
 				World.sendWorldMessage(
 						"<img=24>News: <col=990000>" + player.getDisplayName() + " just died with a total level of "
@@ -137,7 +135,7 @@ public class Ironman implements Serializable {
 		} else {
 			if (player.getIronman().lifes > 1) {
 				player.getIronman().lifes--;
-				player.sm("<col=990000>You lost one life! You have " + player.getIronman().lifes + " left.");
+				player.message("<col=990000>You lost one life! You have " + player.getIronman().lifes + " left.");
 			} else {
 				World.sendWorldMessage("<img=24>News: <col=990000>" + player.getDisplayName()
 						+ "</col> just died with a total level of <col=990000>" + PlayerTotal + "</col> ("
@@ -167,7 +165,7 @@ public class Ironman implements Serializable {
 				PlayerTotalXP = player.getSkills().getTotalXP(player);
 		if (lifes > 0) {
 			lifes--;
-			player.sm("<col=990000>You lost one life! You have " + lifes + " left.");
+			player.message("<col=990000>You lost one life! You have " + lifes + " left.");
 			if (lifes == 0) {
 				finish();
 				World.sendWorldMessage("<img=12><col=990000>News: " + player.getDisplayName()

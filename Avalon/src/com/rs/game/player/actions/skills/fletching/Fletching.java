@@ -25,7 +25,7 @@ public class Fletching extends Action {
 	public static final int BOW_STRING = 1777;
 	public static final int CROSSBOW_STRING = 9438;
 
-	public static enum Fletch {
+	public enum FletchingData {
 
 		/**
 		 * (u)'s and completed bows
@@ -306,26 +306,26 @@ public class Fletching extends Action {
 
 		;
 
-		private static Map<Integer, Fletch> fletching = new HashMap<Integer, Fletch>();
+		private static Map<Integer, FletchingData> fletching = new HashMap<Integer, FletchingData>();
 
-		public static Fletch forId(int id) {
+		public static FletchingData forId(int id) {
 			return fletching.get(id);
 		}
 
 		static {
-			for (Fletch fletch : Fletch.values())
-				fletching.put(fletch.id, fletch);
+			for (FletchingData fletchingData : FletchingData.values())
+				fletching.put(fletchingData.id, fletchingData);
 		}
 
 		private int[] product, level;
-		private int id, selected;
+		private int id, tool;
 		private double[] xp;
 		private Animation anim;
 
-		private Fletch(int id, int selected, int[] product, int level[], double[] xp, Animation anim) {
+		private FletchingData(int id, int tool, int[] product, int level[], double[] xp, Animation anim) {
 			this.id = id;
 			this.product = product;
-			this.selected = selected;
+			this.tool = tool;
 			this.xp = xp;
 			this.anim = anim;
 			this.level = level;
@@ -335,8 +335,8 @@ public class Fletching extends Action {
 			return id;
 		}
 
-		public int getSelected() {
-			return selected;
+		public int getTool() {
+			return tool;
 		}
 
 		public int[] getProduct() {
@@ -356,19 +356,19 @@ public class Fletching extends Action {
 		}
 	}
 
-	private Fletch fletch;
+	private FletchingData fletchingData;
 	private int option;
 	private int ticks;
 
-	public Fletching(Fletch fletch, int option, int ticks) {
-		this.fletch = fletch;
+	public Fletching(FletchingData fletchingData, int option, int ticks) {
+		this.fletchingData = fletchingData;
 		this.option = option;
 		this.ticks = ticks;
 	}
 
 	@Override
 	public boolean start(Player player) {
-		if (option >= fletch.getProduct().length)
+		if (option >= fletchingData.getProduct().length)
 			return false;
 		if (!process(player))
 			return false;
@@ -378,17 +378,17 @@ public class Fletching extends Action {
 
 	@Override
 	public boolean process(Player player) {
-		if (!player.getInventory().containsItem(fletch.getId(), 1)) {
+		if (!player.getInventory().containsItem(fletchingData.getId(), 1)) {
 			player.getPackets().sendGameMessage(
-					"You don't have any " + ItemDefinitions.getItemDefinitions(fletch.getId()).getName() + " left.");
+					"You don't have any " + ItemDefinitions.getItemDefinitions(fletchingData.getId()).getName() + " left.");
 			return false;
 		}
-		if (fletch.getId() == 21359 && !player.getInventory().containsItem(21359, 2)) {
+		if (fletchingData.getId() == 21359 && !player.getInventory().containsItem(21359, 2)) {
 			player.getPackets().sendGameMessage("You need at least 2 "
-					+ ItemDefinitions.getItemDefinitions(fletch.getId()).getName() + " to fletch bolas.");
+					+ ItemDefinitions.getItemDefinitions(fletchingData.getId()).getName() + " to fletch bolas.");
 			return false;
 		}
-		if (fletch.getProduct()[option] == 4825 && !player.getInventory().containsItem(2859, 1)) {
+		if (fletchingData.getProduct()[option] == 4825 && !player.getInventory().containsItem(2859, 1)) {
 			player.getPackets().sendGameMessage("You need wolf bones to fletch this bow.");
 			return false;
 			
@@ -396,25 +396,25 @@ public class Fletching extends Action {
 		if (ticks <= 0) {
 			return false;
 		}
-		if ((!player.getInventory().containsItem(fletch.getSelected(), 1)
-				&& !player.getToolbelt().contains(fletch.getSelected()))) {
-			if (fletch.getSelected() == CHISEL || fletch.getSelected() == KNIFE)
+		if ((!player.getInventory().containsItem(fletchingData.getTool(), 1)
+				&& !player.getToolbelt().contains(fletchingData.getTool()))) {
+			if (fletchingData.getTool() == CHISEL || fletchingData.getTool() == KNIFE)
 				player.getPackets().sendGameMessage("You need a "
-						+ ItemDefinitions.getItemDefinitions(fletch.getSelected()).getName() + " to fletch this.");
+						+ ItemDefinitions.getItemDefinitions(fletchingData.getTool()).getName() + " to fletch this.");
 			else
 				player.getPackets().sendGameMessage("You don't have any "
-						+ ItemDefinitions.getItemDefinitions(fletch.getSelected()).getName() + " left.");
+						+ ItemDefinitions.getItemDefinitions(fletchingData.getTool()).getName() + " left.");
 			return false;
 		}
-		if (player.getSkills().getLevel(Skills.FLETCHING) < fletch.getLevel()[option]) {
+		if (player.getSkills().getLevel(Skills.FLETCHING) < fletchingData.getLevel()[option]) {
 			player.getPackets()
-					.sendGameMessage("You need a level of " + fletch.getLevel()[option] + " to fletch this.");
+					.sendGameMessage("You need a level of " + fletchingData.getLevel()[option] + " to fletch this.");
 			return false;
 		}
-		if (!player.getInventory().hasFreeSlots() && fletch.getSelected() != CHISEL && fletch.getSelected() != KNIFE
-				&& fletch.getSelected() != BOW_STRING && fletch.getSelected() != CROSSBOW_STRING) {
-			if (ItemDefinitions.getItemDefinitions(fletch.getProduct()[option]).isStackable()
-					&& player.getInventory().containsItem(fletch.getProduct()[option], 1)) {
+		if (!player.getInventory().hasFreeSlots() && fletchingData.getTool() != CHISEL && fletchingData.getTool() != KNIFE
+				&& fletchingData.getTool() != BOW_STRING && fletchingData.getTool() != CROSSBOW_STRING) {
+			if (ItemDefinitions.getItemDefinitions(fletchingData.getProduct()[option]).isStackable()
+					&& player.getInventory().containsItem(fletchingData.getProduct()[option], 1)) {
 				return true;
 			}
 			player.getPackets().sendGameMessage("You don't have any inventory space left to fletch this.");
@@ -423,15 +423,15 @@ public class Fletching extends Action {
 		return true;
 	}
 
-	public static int maxMakeQuantity(Fletch fletch, Item item) {
-		String defs = ItemDefinitions.getItemDefinitions(fletch.getId()).getName().toLowerCase();
+	public static int maxMakeQuantity(FletchingData fletchingData, Item item) {
+		String defs = ItemDefinitions.getItemDefinitions(fletchingData.getId()).getName().toLowerCase();
 		String itemDefs = ItemDefinitions.getItemDefinitions(item.getId()).getName().toLowerCase();
-		if (fletch.getSelected() == CHISEL) {
-			if (fletch.getId() == 6573)
+		if (fletchingData.getTool() == CHISEL) {
+			if (fletchingData.getId() == 6573)
 				return 24;
-			if (fletch.getId() == 10105 || fletch.getId() == 10107)
+			if (fletchingData.getId() == 10105 || fletchingData.getId() == 10107)
 				return 6;
-			if (fletch.getId() == 2859)
+			if (fletchingData.getId() == 2859)
 				return Utils.random(2, 6);
 			return 12;
 		}
@@ -459,8 +459,8 @@ public class Fletching extends Action {
 
 	}
 
-	public Fletch getFletch() {
-		return fletch;
+	public FletchingData getFletch() {
+		return fletchingData;
 	}
 
 	public static boolean maxMakeQuantityTen(Item item) {
@@ -474,32 +474,32 @@ public class Fletching extends Action {
 	@Override
 	public int processWithDelay(Player player) {
 		ticks--;
-		player.animate(fletch.getAnim());
-		int amount = maxMakeQuantity(fletch, new Item(fletch.getProduct()[option]));
-		if (!player.getInventory().containsItem(fletch.getSelected(), amount) && fletch.getSelected() != CHISEL && fletch.getSelected() != KNIFE)
-			amount = player.getInventory().getNumberOf(fletch.getSelected());
-		if (!player.getInventory().containsItem(fletch.getId(), amount) && fletch.getSelected() != CHISEL && fletch.getSelected() != KNIFE)
-			amount = player.getInventory().getNumberOf(fletch.getId());
-		if (fletch.getProduct()[option] == 4825)
+		player.animate(fletchingData.getAnim());
+		int amount = maxMakeQuantity(fletchingData, new Item(fletchingData.getProduct()[option]));
+		if (!player.getInventory().containsItem(fletchingData.getTool(), amount) && fletchingData.getTool() != CHISEL && fletchingData.getTool() != KNIFE)
+			amount = player.getInventory().getNumberOf(fletchingData.getTool());
+		if (!player.getInventory().containsItem(fletchingData.getId(), amount) && fletchingData.getTool() != CHISEL && fletchingData.getTool() != KNIFE)
+			amount = player.getInventory().getNumberOf(fletchingData.getId());
+		if (fletchingData.getProduct()[option] == 4825)
 			player.getInventory().deleteItem(2859, 1);
-		if (fletch.getId() == 21359)
-			player.getInventory().deleteItem(fletch.getId(), 2);
+		if (fletchingData.getId() == 21359)
+			player.getInventory().deleteItem(fletchingData.getId(), 2);
 		else
-			player.getInventory().deleteItem(fletch.getId(),
-					(fletch.getProduct()[option] == 52 || fletch.getProduct()[option] == 24122 || fletch.getProduct()[option] == 2864 || fletch.getProduct()[option] == 21581 || fletch.getSelected() == CHISEL) ? 1 : amount);
-		player.getInventory().addItem(fletch.getProduct()[option], amount);
-		if (fletch.getSelected() != KNIFE && fletch.getSelected() != CHISEL)
-			player.getInventory().deleteItem(fletch.getSelected(), amount);
+			player.getInventory().deleteItem(fletchingData.getId(),
+					(fletchingData.getProduct()[option] == 52 || fletchingData.getProduct()[option] == 24122 || fletchingData.getProduct()[option] == 2864 || fletchingData.getProduct()[option] == 21581 || fletchingData.getTool() == CHISEL) ? 1 : amount);
+		player.getInventory().addItem(fletchingData.getProduct()[option], amount);
+		if (fletchingData.getTool() != KNIFE && fletchingData.getTool() != CHISEL)
+			player.getInventory().deleteItem(fletchingData.getTool(), amount);
 		player.getPackets().sendGameMessage(
-				fletchingMessage(new Item(fletch.getProduct()[option]), fletch.getSelected(), fletch.getId(), amount));
-		player.getSkills().addXp(Skills.FLETCHING, fletch.getXp()[option] * amount);
-			if (new Item(fletch.getProduct()[option]).getId() == 50)
+				fletchingMessage(new Item(fletchingData.getProduct()[option]), fletchingData.getTool(), fletchingData.getId(), amount));
+		player.getSkills().addXp(Skills.FLETCHING, fletchingData.getXp()[option] * amount);
+			if (new Item(fletchingData.getProduct()[option]).getId() == 50)
 				player.getTaskManager().checkComplete(Tasks.FLETCH_SHORTBOW);
-			if (new Item(fletch.getProduct()[option]).getId() == 62)
+			if (new Item(fletchingData.getProduct()[option]).getId() == 62)
 				player.getTaskManager().checkComplete(Tasks.FLETCH_MAPLE_LONGBOW);
-			if (new Item(fletch.getProduct()[option]).getId() == 68)
+			if (new Item(fletchingData.getProduct()[option]).getId() == 68)
 				player.getTaskManager().checkComplete(Tasks.FLETCH_YEW_SHORTBOW);
-			if (new Item(fletch.getProduct()[option]).getId() == 70)
+			if (new Item(fletchingData.getProduct()[option]).getId() == 70)
 				player.getTaskManager().checkComplete(Tasks.FLETCH_MAGIC_LONGBOW);
 		return 2;
 	}
@@ -509,16 +509,14 @@ public class Fletching extends Action {
 		setActionDelay(player, 3);
 	}
 
-	public static Fletch isFletching(Item first, Item second) {
-		Fletch fletch = Fletch.forId(first.getId());
-		int selected;
-		if (fletch != null)
-			selected = second.getId();
-		else {
-			fletch = Fletch.forId(second.getId());
-			selected = first.getId();
+	public static FletchingData findFletchingData(Item first, Item second) {
+		FletchingData fletchingData = FletchingData.forId(first.getId());
+		int tool = second.getId();
+		if (fletchingData == null) {
+			fletchingData = FletchingData.forId(second.getId());
+			tool = first.getId();
 		}
-		return fletch != null && selected == fletch.getSelected() ? fletch : null;
+		return fletchingData != null && tool == fletchingData.getTool() ? fletchingData : null;
 	}
 
 	private String fletchingMessage(Item item, int used, int usedWith, int amount) {

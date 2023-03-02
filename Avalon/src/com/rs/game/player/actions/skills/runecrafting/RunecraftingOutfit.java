@@ -74,7 +74,7 @@ public class RunecraftingOutfit {
 			return false;
 		Pieces piece = getRandomPiece(player);
 		ItemDefinitions defs = ItemDefinitions.getItemDefinitions(piece.getItemId());
-		player.sm("<img=5><col=b25200>You have recieved " + (HexColours.getShortMessage(Colour.RED, defs.getName())) + "!");
+		player.message("<img=5><col=b25200>You have recieved " + (HexColours.getShortMessage(Colour.RED, defs.getName())) + "!");
 		if (player.getInventory().hasFreeSlots())
 			player.getInventory().addItem(piece.getItemId(), 1);
 		else

@@ -10,7 +10,6 @@ import com.rs.game.item.ItemId;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
 import com.rs.game.player.actions.Action;
-import com.rs.game.player.content.tasksystem.TaskManager.Tasks;
 import com.rs.utils.Utils;
 
 /**
@@ -115,7 +114,7 @@ public class LeatherCrafting extends Action {
 	@Override
 	public boolean process(Player player) {
 		if (!player.getInventory().containsItem(craft.getId(), craft.getAmount()[option])) {
-			player.sm("You need at least " + craft.getAmount()[option] + " " + ItemDefinitions.getItemDefinitions(craft.getId()).getName() + " to craft this item.");
+			player.message("You need at least " + craft.getAmount()[option] + " " + ItemDefinitions.getItemDefinitions(craft.getId()).getName() + " to craft this item.");
 			return false;
 		}
 		if (ticks <= 0) {

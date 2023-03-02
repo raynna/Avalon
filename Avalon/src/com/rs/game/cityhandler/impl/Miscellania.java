@@ -103,7 +103,7 @@ public class Miscellania implements CityEvent {
 	@Override
 	public boolean handleObjectClick(Player player, WorldObject object) {
 		if(!isInArea(player)) {
-			player.sm("You are not in miscellenia");
+			player.message("You are not in miscellenia");
 			return false;
 		}
 		switch(object.getDefinitions().name.toLowerCase()) {

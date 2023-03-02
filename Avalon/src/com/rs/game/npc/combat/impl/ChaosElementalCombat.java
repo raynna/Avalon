@@ -91,7 +91,7 @@ public class ChaosElementalCombat extends CombatScript {
 
 				if (player.getEquipment().getItem(slot) != null && hasSpace) {
 					ButtonHandler.sendRemoveEquipment(player, slot);
-					player.sm("Npc " + npc.getId() + " has removed slot " + slot);
+					player.message("Npc " + npc.getId() + " has removed slot " + slot);
 				}
 			}
 			npc.gfx(new Graphics(999));

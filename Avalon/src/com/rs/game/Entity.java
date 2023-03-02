@@ -1245,12 +1245,20 @@ public abstract class Entity extends WorldTile {
         animate(new Animation(id));
     }
 
+    public void animate(int animationId) {
+        animate(new Animation(animationId));
+    }
+
     public void setNextAnimationNoPriority(Animation nextAnimation, Entity target) {
         animate(nextAnimation);
     }
 
     public Animation getNextAnimation() {
         return nextAnimation;
+    }
+
+    public void gfx(int gfxId) {
+        gfx(new Graphics(gfxId));
     }
 
     public void gfx(Graphics nextGraphics) {

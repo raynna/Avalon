@@ -15,7 +15,7 @@ public class MonsterExamine {
 			NPC npc = (NPC) target;
 			player.faceEntity(target);
 			if (!player.withinDistance(npc, 9)) {
-				player.sm(npc.getName() + " is too far away!");
+				player.message(npc.getName() + " is too far away!");
 				return false;
 			}
 			if ((Long) player.temporaryAttribute().get("LAST_SPELL") != null

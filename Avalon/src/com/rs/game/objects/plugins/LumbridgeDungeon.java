@@ -41,7 +41,7 @@ public class LumbridgeDungeon extends ObjectPlugin {
 		else if (id == 48683)
 			player.useStairs(-1, new WorldTile(3868, 5524, 0), 0, 1);
 		else if (id == 48682)
-			player.sm("I can hardly read anything on this..");
+			player.message("I can hardly read anything on this..");
 		return true;
 	}
 }

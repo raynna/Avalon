@@ -112,7 +112,7 @@ public class SkillTeleports extends Dialogue {
 		case "thieving":
 			// break;
 		case "woodcutting":
-			player.sm("Skilling Teleports not avalible at this time, check back later.");
+			player.message("Skilling Teleports not avalible at this time, check back later.");
 			break;
 		default:
 			break;

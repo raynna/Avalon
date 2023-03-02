@@ -578,7 +578,7 @@ public abstract class Familiar extends NPC implements Serializable {
 		if (!owner.getInventory().hasFreeSlots()) {
 			owner.getDialogueManager().startDialogue("SimpleMessage", "You do not have enough inventory space.");
 		} else {
-			owner.sm("You take out the stored scrolls inside your: " + getName());
+			owner.message("You take out the stored scrolls inside your: " + getName());
 			owner.getInventory().addItem(scrollId, owner.storedScrolls);
 			owner.animate(new Animation(1649));
 			owner.storedScrolls = 0;

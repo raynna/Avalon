@@ -51,7 +51,7 @@ public class KingBlackDragonCombat extends CombatScript {
 							.sendGameMessage("Your potion fully protects you from the heat of the dragon's breath.");
 				} else if (player.getPrayer().usingPrayer(0, 17) || player.getPrayer().usingPrayer(1, 7)) {
 					damage = 0;
-					player.sm("Your shield and prayer protect you completly from the dragon's breath!");
+					player.message("Your shield and prayer protect you completly from the dragon's breath!");
 					// player.sm("Your shield aborsbs most of the dragon
 					// fire!");
 					// player.sm("Your prayer protects you from the heat of the
@@ -119,7 +119,7 @@ public class KingBlackDragonCombat extends CombatScript {
 							.sendGameMessage("Your potion fully protects you from the heat of the dragon's breath.");
 				} else if (player.getPrayer().usingPrayer(0, 17) || player.getPrayer().usingPrayer(1, 7)) {
 					damage = 0;
-					player.sm("Your shield and prayer protect you completly from the dragon's breath!");
+					player.message("Your shield and prayer protect you completly from the dragon's breath!");
 					// player.sm("Your shield aborsbs most of the dragon
 					// fire!");
 					// player.sm("Your prayer protects you from the heat of the
@@ -188,7 +188,7 @@ public class KingBlackDragonCombat extends CombatScript {
 							.sendGameMessage("Your potion fully protects you from the heat of the dragon's breath.");
 				} else if (player.getPrayer().usingPrayer(0, 17) || player.getPrayer().usingPrayer(1, 7)) {
 					damage = 0;
-					player.sm("Your shield and prayer protect you completly from the dragon's breath!");
+					player.message("Your shield and prayer protect you completly from the dragon's breath!");
 					// player.sm("Your shield aborsbs most of the dragon
 					// fire!");
 					// player.sm("Your prayer protects you from the heat of the
@@ -259,7 +259,7 @@ public class KingBlackDragonCombat extends CombatScript {
 							.sendGameMessage("Your potion fully protects you from the heat of the dragon's breath.");
 				} else if (player.getPrayer().usingPrayer(0, 17) || player.getPrayer().usingPrayer(1, 7)) {
 					damage = 0;
-					player.sm("Your shield and prayer protect you completly from the dragon's breath!");
+					player.message("Your shield and prayer protect you completly from the dragon's breath!");
 					// player.sm("Your shield aborsbs most of the dragon
 					// fire!");
 					// player.sm("Your prayer protects you from the heat of the

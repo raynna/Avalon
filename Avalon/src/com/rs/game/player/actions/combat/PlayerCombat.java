@@ -435,7 +435,7 @@ public class PlayerCombat extends Action {
                         }
                     }
                     if (!undead || (target instanceof Player)) {
-                        player.sm("You can only cast crumble undead on undead monsters.");
+                        player.message("You can only cast crumble undead on undead monsters.");
                         return -1;
                     }
                 }
@@ -443,7 +443,7 @@ public class PlayerCombat extends Action {
             if (spell == ModernCombatSpellsStore.BIND || spell == ModernCombatSpellsStore.SNARE
                     || spell == ModernCombatSpellsStore.ENTANGLE) {
                 if (target.getFreezeDelay() > Utils.currentTimeMillis()) {
-                    player.sm("This " + (target instanceof Player ? "player" : "monster") + " is already effected by this spell.");
+                    player.message("This " + (target instanceof Player ? "player" : "monster") + " is already effected by this spell.");
                     return -1;
                 }
             }
@@ -495,11 +495,11 @@ public class PlayerCombat extends Action {
                 if (wearingRunicStaff(p2) && p2.getRunicStaff().getSpellId() == spell.getId()) {
                     if (Utils.getRandom(4) == 0) {
                         hit.setDamage(-2);
-                        player.sm("Enemies greater runic staff resists your " + spellName + " spell.");
+                        player.message("Enemies greater runic staff resists your " + spellName + " spell.");
                     } else if (Utils.getRandom(15) == 0) {
                         p2.getRunicStaff().chargeCombat(1);
-                        player.sm(p2.getDisplayName() + " absorbs your " + spellName + " spell.");
-                        p2.sm("You absorb the " + spellName + " spell into your greater runic staff.");
+                        player.message(p2.getDisplayName() + " absorbs your " + spellName + " spell.");
+                        p2.message("You absorb the " + spellName + " spell into your greater runic staff.");
                     }
                 }
             }
@@ -648,7 +648,7 @@ public class PlayerCombat extends Action {
                     hit += 20;
                 } else if (n.getId() == 14301 && (spell_type == ICE_SPELL)) {
                     hit = 0;
-                    player.sm("Your spell seems to have no effect on the elementals icy armor.");
+                    player.message("Your spell seems to have no effect on the elementals icy armor.");
                 }
                 if (n.getId() == 9463 && (spell_type == FIRE_SPELL)) {
                     if (hasFireCape(player))
@@ -734,8 +734,8 @@ public class PlayerCombat extends Action {
                     p2.drainLevel(Skills.ATTACK, (int) (p2.getSkills().getLevel(Skills.ATTACK) * 0.9));
                     p2.drainLevel(Skills.DEFENCE, (int) (p2.getSkills().getLevel(Skills.DEFENCE) * 0.9));
                     p2.drainLevel(Skills.STRENGTH, (int) (p2.getSkills().getLevel(Skills.STRENGTH) * 0.9));
-                    p2.sm("Your melee skills have been drained.");
-                    player.sm("Your spell weakened your enemy.");
+                    p2.message("Your melee skills have been drained.");
+                    player.message("Your spell weakened your enemy.");
                 }
                 player.getPackets().sendGameMessage("Your magic surged with extra power.");
             }
@@ -4906,7 +4906,7 @@ public class PlayerCombat extends Action {
             @Override
             public void run() {
                 if (player.getEquipment().getWeaponId() != 21371) {
-                    player.sm("Since you no longer wield a vine whip, the vine ignores your call");
+                    player.message("Since you no longer wield a vine whip, the vine ignores your call");
                     finalTarget.getTemporaryAttributtes().remove("VINEEFFECT");
                     finalTarget.vineHits = 0; stop();
                  return;

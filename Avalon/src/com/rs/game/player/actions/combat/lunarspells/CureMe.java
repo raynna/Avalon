@@ -21,7 +21,7 @@ public class CureMe {
 		player.addXp(Skills.MAGIC, xp);
 		player.gfx(new Graphics(748, 0, 100));
 		player.getPoison().reset();
-		player.sm("You have been cured of poison");
+		player.message("You have been cured of poison");
 		return true;
 	}
 

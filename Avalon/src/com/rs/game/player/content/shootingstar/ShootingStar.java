@@ -57,7 +57,7 @@ public class ShootingStar {
     public void findStar(Player player) {
         int exp = player.getSkills().getLevel(getSkillId()) * getSkillId() / player.getSkills().getLevel(getSkillId());
         player.getSkills().addXp(getSkillId(), exp);
-        player.sm("You discovered the shooting star and received some bonus exp.");
+        player.message("You discovered the shooting star and received some bonus exp.");
         setFound(true);
     }
 
@@ -82,7 +82,7 @@ public class ShootingStar {
                 World.spawnObject(new WorldObject(START_ID + (7 - getStage()), 10, 0, getTile()));
                 player.animate(new Animation(-1));
                 player.setNextForceTalk(new ForceTalk("OW!"));
-                player.sm("The explosion forces you to stop");
+                player.message("The explosion forces you to stop");
                 stage--;
                 lifes = 20 * World.getPlayers().size();
             }

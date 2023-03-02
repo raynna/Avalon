@@ -112,7 +112,7 @@ public final class ObjectHandler {
         final WorldTile tile = new WorldTile(x, y, player.getPlane());
         final int regionId = tile.getRegionId();
         if (!player.getMapRegionsIds().contains(regionId)) {
-            player.sm("map doesnt contains region");
+            player.message("map doesnt contains region");
             return;
         }
         WorldObject mapObject = World.getObjectWithId(tile, id);
@@ -295,7 +295,7 @@ public final class ObjectHandler {
                     }
                 }
                 if (object.getId() == 24720) {
-                	player.sm("This furnace is seriously hot.");
+                	player.message("This furnace is seriously hot.");
                 	return;
                 }
                 if (id >= 15477 && id <= 15482 && House.enterHousePortal(player))
@@ -320,7 +320,7 @@ public final class ObjectHandler {
                     player.setNextWorldTile(new WorldTile(2634, 9049, 0));
                 }
                 if (object.getId() == 31844 || object.getId() == 31841 && object.getY() == 9910) {
-                    player.sm("These doors look like they're better off closed..");
+                    player.message("These doors look like they're better off closed..");
                     return;
                 }
                 if (id == 46307 && x == 3311 && y == 3491) {
@@ -621,13 +621,13 @@ public final class ObjectHandler {
                     if (player.getInventory().containsOneItem(10501)) {
                         player.getInventory().addItem(10501, 10);
                         player.animate(new Animation(7529));
-                        player.sm("You make some snowballs and put them in your inventory");
+                        player.message("You make some snowballs and put them in your inventory");
                     } else if (player.getInventory().hasFreeSlots()) {
                         player.getInventory().addItem(10501, 10);
                         player.animate(new Animation(7529));
-                        player.sm("You make some snowballs and put them in your inventory");
+                        player.message("You make some snowballs and put them in your inventory");
                     } else {
-                        player.sm("Try to free up some inventory space before making snowballs!");
+                        player.message("Try to free up some inventory space before making snowballs!");
                     }
                     return;
                 }
@@ -696,18 +696,18 @@ public final class ObjectHandler {
                 	if (player.getInventory().contains(new Item(954)) && player.getVarBitList().get(3932) == null) {
                 		player.getVarsManager().sendVarBit(3932, 1, true);
                     	player.getInventory().removeItems(new Item(954));
-                    	player.sm("You tie the rope to the enterance.");
+                    	player.message("You tie the rope to the enterance.");
                 	}
                     player.setNextWorldTile(new WorldTile(2882, 5311, 2));
                     player.getControlerManager().startControler("GodWars");
                     return;
                 }
                 if (object.getId() == 35390 && object.getX() == 2907 && object.getY() == 3709) {
-                    player.sm("It's way too heavy to lift, perhaps I can squeeze by that gap...");
+                    player.message("It's way too heavy to lift, perhaps I can squeeze by that gap...");
                     return;
                 }
                 if (object.getId() == 26323 && object.getX() == 2928 && object.getY() == 3758) {
-                    player.sm("That look's too dangerous...");
+                    player.message("That look's too dangerous...");
                     return;
                 }
                 if (object.getId() == 26293 && object.getX() == 2881 && object.getY() == 5311) {
@@ -897,7 +897,7 @@ public final class ObjectHandler {
 
                 if (object.getId() == 47233 && player.getY() == 5294) {
                     if (!Agility.hasLevel(player, 86)) {
-                        player.sm("You must have an Agility level of 86 or higher to use this shortcut.");
+                        player.message("You must have an Agility level of 86 or higher to use this shortcut.");
                         return;
                     }
                     player.getPackets().sendGameMessage("You climb the low wall...", true);
@@ -918,7 +918,7 @@ public final class ObjectHandler {
 
                 if (object.getId() == 47233 && player.getY() == 5292) {
                     if (!Agility.hasLevel(player, 86)) {
-                        player.sm("You must have an Agility level of 86 or higher to use this shortcut.");
+                        player.message("You must have an Agility level of 86 or higher to use this shortcut.");
                         return;
                     }
                     player.getPackets().sendGameMessage("You climb the low wall...", true);
@@ -1374,7 +1374,7 @@ public final class ObjectHandler {
                     player.faceObject(object);
                     player.setNextWorldTile(new WorldTile(3077, 9893, 0));
                 } else if (id == 29362)
-                    player.sm("Eew it's all slimey...");
+                    player.message("Eew it's all slimey...");
                 else if (id == 21600)
                     DoorsAndGates.handleDoor(player, object);
                 else if (id == 26721 || id == 1317) {
@@ -1445,7 +1445,7 @@ public final class ObjectHandler {
                                 World.spawnObjectTemporary(openedHole, 60000);
                                 player.animate(new Animation(536));
                             } else {
-                                player.sm("It won't budge!");
+                                player.message("It won't budge!");
                             }
                             break;
                         case "drawers":
@@ -1613,7 +1613,7 @@ public final class ObjectHandler {
                             break;
 
                         case "locked door":
-                            player.sm("The door appears to be locked!");
+                            player.message("The door appears to be locked!");
                             break;
 
                         default:
@@ -1719,7 +1719,7 @@ public final class ObjectHandler {
                                 World.removeObject(object);
                                 player.animate(new Animation(535));
                             } else {
-                                player.sm("It won't budge!");
+                                player.message("It won't budge!");
                             }
                             break;
                         case "cabbage":
@@ -1852,7 +1852,7 @@ public final class ObjectHandler {
                             World.removeObject(object);
                             player.animate(new Animation(537));
                         } else {
-                            player.sm("It won't budge!");
+                            player.message("It won't budge!");
                         }
                         break;
                     case "drawers":
@@ -1861,7 +1861,7 @@ public final class ObjectHandler {
                             World.removeObject(object);
                             player.animate(new Animation(537));
                         } else {
-                            player.sm("It won't budge!");
+                            player.message("It won't budge!");
                         }
                         break;
                     case "gate":
@@ -2080,14 +2080,14 @@ public final class ObjectHandler {
         if (item.getId() == 954 && object.getId() == 26342) {
         	player.getVarsManager().sendVarBit(3932, 1, true);
         	player.getInventory().removeItems(new Item(954));
-        	player.sm("You tie the rope to the enterance.");
+        	player.message("You tie the rope to the enterance.");
         }
         if (item.getId() == 3695 && object.getId() == 57180) {
         	player.getInventory().removeItems(new Item(3695));
         	player.setNextForceTalk(new ForceTalk("Fuck outa here boi!"));
         	player.gfx(new Graphics(1838));
         	player.animate(new Animation(10504));
-        	player.sm("The rock didn't want to be your friend anyways..");
+        	player.message("The rock didn't want to be your friend anyways..");
         	return;
         }
         if (object.getId() == 36695 && item.getId() == 1704) {
@@ -2148,7 +2148,7 @@ public final class ObjectHandler {
                         ArmourRepair.repairItem(player, item, true);
                         return;
                     } else {
-                        player.sm("You can't repair this item.");
+                        player.message("You can't repair this item.");
                         return;
                     }
                 }
@@ -2298,7 +2298,7 @@ public final class ObjectHandler {
                                     player.getActionManager().setAction(new Smelting(SmeltingBar.CANNONBALL.getButtonId(),
                                             object, player.getInventory().getNumberOf(2353)));
                                 else
-                                    player.sm("You need a cannonball mould.");
+                                    player.message("You need a cannonball mould.");
                                 return;
                             } else if (item.getId() == 4155) {
                                 if (!player.getSlayerManager().hasLearnedRing()) {
@@ -2321,7 +2321,7 @@ public final class ObjectHandler {
                                 player.getInventory().addItem(13281, 1);
                                 return;
                             }
-                            player.sm("Nothing interesting happens.");
+                            player.message("Nothing interesting happens.");
                             break;
                         case "sink":
                         case "fountain":

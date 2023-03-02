@@ -1,12 +1,10 @@
 package com.rs.net.decoders.handlers;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import com.rs.Settings;
 import com.rs.cache.loaders.ItemDefinitions;
 import com.rs.cores.CoresManager;
-import com.rs.cores.WorldThread;
 import com.rs.game.Animation;
 import com.rs.game.Entity;
 import com.rs.game.ForceTalk;
@@ -55,7 +53,7 @@ import com.rs.game.player.actions.skills.firemaking.FireLighter;
 import com.rs.game.player.actions.skills.firemaking.FireLighter.Lighters;
 import com.rs.game.player.actions.skills.firemaking.Firemaking;
 import com.rs.game.player.actions.skills.fletching.Fletching;
-import com.rs.game.player.actions.skills.fletching.Fletching.Fletch;
+import com.rs.game.player.actions.skills.fletching.Fletching.FletchingData;
 import com.rs.game.player.actions.skills.herblore.HerbCleaning;
 import com.rs.game.player.actions.skills.herblore.Herblore;
 import com.rs.game.player.actions.skills.hunter.Hunter;
@@ -103,7 +101,7 @@ public class InventoryOptionsHandler {
 
     public static void handleItemOption2(final Player player, final int slotId, Item item, int option) {
         if (Settings.FREE_TO_PLAY && item.getDefinitions().isMembersOnly()) {
-            player.sm("This is a members object.");
+            player.message("This is a members object.");
             return;
         }
         ItemPlugin plugin = ItemPluginLoader.getPlugin(item);
@@ -141,7 +139,7 @@ public class InventoryOptionsHandler {
                     player.getPackets().sendGameMessage("You seem to have dropped down into a network of mole tunnels.");
                     return;
                 }
-                player.sm("You find nothing.");
+                player.message("You find nothing.");
             }
         }, 1);
     }
@@ -164,7 +162,7 @@ public class InventoryOptionsHandler {
         }
         player.stopAll(false);
         if (Settings.FREE_TO_PLAY && item.getDefinitions().isMembersOnly()) {
-            player.sm("This is a members object.");
+            player.message("This is a members object.");
             return;
         }
         if (!player.getControlerManager().processItemClick(slotId, item, player))
@@ -178,7 +176,7 @@ public class InventoryOptionsHandler {
         if (itemId == 13663) {
             int amount = player.getInventory().getAmountOf(itemId);
             player.removeItem(itemId, amount);
-            player.sm(HexColours.getShortMessage(Colour.RED, amount + "") + " pk points were added to your account.");
+            player.message(HexColours.getShortMessage(Colour.RED, amount + "") + " pk points were added to your account.");
             player.addPKP(amount);
             return;
         }
@@ -188,15 +186,15 @@ public class InventoryOptionsHandler {
             return;
         if ((itemId >= 1601 && itemId <= 1615 || itemId == 6573) || itemId == 10105 || itemId == 10107) {
             if (Settings.FREE_TO_PLAY) {
-                player.sm("You can't fletch items in free to play.");
+                player.message("You can't fletch items in free to play.");
                 return;
             }
             if (!player.getInventory().containsItem(1755, 1) && !player.getToolbelt().contains(1755)) {
-                player.sm("You need a chisel to cut this item.");
+                player.message("You need a chisel to cut this item.");
             } else {
-                Fletch fletch = Fletching.isFletching(new Item(1755), new Item(itemId));
-                if (fletch != null) {
-                    player.getDialogueManager().startDialogue("FletchingD", fletch);
+                FletchingData fletchingData = Fletching.findFletchingData(new Item(1755), new Item(itemId));
+                if (fletchingData != null) {
+                    player.getDialogueManager().startDialogue("FletchingD", fletchingData);
                     return;
                 }
             }
@@ -213,45 +211,45 @@ public class InventoryOptionsHandler {
             return;
         }
         if (itemId == 15048) {
-            player.sm("Turning...");
+            player.message("Turning...");
             String[] responses = new String[]{"Absolutely", "Ask again another time.", "Don't hold your breath.", "I wouldn't have a clue.", "I'd be lying if i said no.", "Not so sure about that", "Seems probable", "Surely not.", "The fortunes are with you", "Without a shadow of a doubt.", "Yes, I'd say so."};
             CoresManager.slowExecutor.schedule(new Runnable() {
 
                 @Override
                 public void run() {
-                    player.sm("Your Magic skullball (Long) says '" + (responses[Utils.getRandom(responses.length - 1)]) + "'");
+                    player.message("Your Magic skullball (Long) says '" + (responses[Utils.getRandom(responses.length - 1)]) + "'");
                 }
             }, 2000, TimeUnit.MILLISECONDS);
         }
         if (itemId == 15050) {
-            player.sm("Turning...");
+            player.message("Turning...");
             CoresManager.slowExecutor.schedule(new Runnable() {
 
                 @Override
                 public void run() {
-                    player.sm("Your Magic skullball (Yes/no) says '" + (Utils.random(2) == 1 ? "Yes" : "No") + "'");
+                    player.message("Your Magic skullball (Yes/no) says '" + (Utils.random(2) == 1 ? "Yes" : "No") + "'");
                 }
             }, 2000, TimeUnit.MILLISECONDS);
         }
         if (itemId == 15052) {
-            player.sm("Turning...");
+            player.message("Turning...");
             String[] responses = new String[]{"Enjoy mass combat in Clan Wars.", "Experienced runecrafters can play the Great Orb Project.", "Fight for glory and rewards in the Duel Arena.", "Match weapons and wits against your foe in Fist of Guthix."};
             CoresManager.slowExecutor.schedule(new Runnable() {
 
                 @Override
                 public void run() {
-                    player.sm("Your Magic skullball (activities) says '" + (responses[Utils.getRandom(responses.length - 1)]) + "'");
+                    player.message("Your Magic skullball (activities) says '" + (responses[Utils.getRandom(responses.length - 1)]) + "'");
                 }
             }, 2000, TimeUnit.MILLISECONDS);
         }
         if (itemId == 15054) {
-            player.sm("Turning...");
+            player.message("Turning...");
             String[] responses = new String[]{"Black.", "Blue.", "Green.", "Orange.", "Red.", "Yellow.", "Purple.", "White."};
             CoresManager.slowExecutor.schedule(new Runnable() {
 
                 @Override
                 public void run() {
-                    player.sm("Your Magic skullball (colours) says '" + (responses[Utils.getRandom(responses.length - 1)]) + "'");
+                    player.message("Your Magic skullball (colours) says '" + (responses[Utils.getRandom(responses.length - 1)]) + "'");
                 }
             }, 2000, TimeUnit.MILLISECONDS);
         }
@@ -261,7 +259,7 @@ public class InventoryOptionsHandler {
                     continue;
                 NPC n = (NPC) e;
                 if (n.getId() >= 9150 && n.getId() <= 9158) {
-                    player.sm("Theres already a plant nearby!");
+                    player.message("Theres already a plant nearby!");
                     return;
                 }
             }
@@ -271,7 +269,7 @@ public class InventoryOptionsHandler {
                 player.addWalkSteps(player.getX(), player.getY() - 1, 1, true);
                 return;
             } else {
-                player.sm("You already have a marker plant.");
+                player.message("You already have a marker plant.");
                 return;
             }
         }
@@ -284,14 +282,14 @@ public class InventoryOptionsHandler {
         }
         if (itemId == 15063) {
             player.animate(new Animation(11908));
-            player.sm("Timer: " + Utils.getTimePiece(player.getTimePiece()));
+            player.message("Timer: " + Utils.getTimePiece(player.getTimePiece()));
             player.getInventory().getItems().set(slotId, new Item(15064));
             player.getInventory().refresh();
             return;
         }
         if (itemId == 15064) {
             player.animate(new Animation(11908));
-            player.sm("Timer: " + Utils.getTimePiece(player.getTimePiece()));
+            player.message("Timer: " + Utils.getTimePiece(player.getTimePiece()));
             player.getInventory().getItems().set(slotId, new Item(15063));
             player.getInventory().refresh();
             return;
@@ -332,7 +330,7 @@ public class InventoryOptionsHandler {
             if (player.getLockDelay() > Utils.currentTimeMillis())
                 return;
             if (!World.isTileFree(player.getPlane(), player.getX(), player.getY(), 1) || World.getObjectWithSlot(player, Region.OBJECT_SLOT_FLOOR) != null || player.getControlerManager().getControler() != null) {
-                player.sm("You can't plant flowers here.");
+                player.message("You can't plant flowers here.");
                 return;
             }
             player.lock(2);
@@ -352,7 +350,7 @@ public class InventoryOptionsHandler {
 
         if (itemId == 11159) {
             if (player.getInventory().getFreeSlots() < 9) {
-                player.sm("You do not have enough inventory slots. You need 8 or more.");
+                player.message("You do not have enough inventory slots. You need 8 or more.");
                 return;
             }
             final int[] hunter_items = {10150, 10010, 10006, 10031, 10029, 596, 10008, 11260};
@@ -374,7 +372,7 @@ public class InventoryOptionsHandler {
         }
         if (itemId >= 1617 && itemId <= 1631 || itemId == 6571) {
             if (!player.getInventory().containsItem(1755, 1) && !player.getToolbelt().contains(1755)) {
-                player.sm("You need a chisel to cut this item.");
+                player.message("You need a chisel to cut this item.");
             } else {
                 if (itemId == 1617)
                     GemCutting.cut(player, Gem.DIAMOND);
@@ -397,7 +395,7 @@ public class InventoryOptionsHandler {
         if (itemId == 8014) {
             int bones = player.getInventory().getNumberOf(526);
             if (bones == 0) {
-                player.sm("You don't have any bones.");
+                player.message("You don't have any bones.");
                 return;
             }
             player.getInventory().deleteItem(526, bones);
@@ -419,41 +417,41 @@ public class InventoryOptionsHandler {
         }
         if (itemId == 18343) {
             if (player.hasRenewal) {
-                player.sm("You already have this prayer unlocked.");
+                player.message("You already have this prayer unlocked.");
                 return;
             }
             player.getInventory().deleteItem(18343, 1);
-            player.sm("You have unlocked prayer: Rapid Renewal.");
+            player.message("You have unlocked prayer: Rapid Renewal.");
             player.hasRenewal = true;
         }
 
         if (itemId == 18839) {
             if (player.hasRigour) {
-                player.sm("You already have this prayer unlocked.");
+                player.message("You already have this prayer unlocked.");
                 return;
             }
             player.getInventory().deleteItem(18839, 1);
-            player.sm("You have unlocked prayer: Rigour.");
+            player.message("You have unlocked prayer: Rigour.");
             player.hasRigour = true;
         }
 
         if (itemId == 19670) {
             if (player.hasEfficiency) {
-                player.sm("You already have this unlocked.");
+                player.message("You already have this unlocked.");
                 return;
             }
             player.getInventory().deleteItem(19670, 1);
-            player.sm("You have unlocked prayer: Effiecency.");
+            player.message("You have unlocked prayer: Effiecency.");
             player.hasEfficiency = true;
         }
 
         if (itemId == 18344) {
             if (player.hasAugury) {
-                player.sm("You already have this prayer unlocked.");
+                player.message("You already have this prayer unlocked.");
                 return;
             }
             player.getInventory().deleteItem(18344, 1);
-            player.sm("You have unlocked prayer: Augury.");
+            player.message("You have unlocked prayer: Augury.");
             player.hasAugury = true;
         }
 
@@ -670,7 +668,7 @@ public class InventoryOptionsHandler {
                     return;
                 }
             } else {
-                player.sm("Nothing interesting happens.");
+                player.message("Nothing interesting happens.");
                 return;
             }
         } else if (interfaceId == 430 && interfaceId2 == Inventory.INVENTORY_INTERFACE) {
@@ -682,7 +680,7 @@ public class InventoryOptionsHandler {
                     return;
                 }
             } else {
-                player.sm("Nothing interesting happens.");
+                player.message("Nothing interesting happens.");
                 return;
             }
         } else if (interfaceId == 747 || interfaceId == 662 && (interfaceId2 == Inventory.INVENTORY_INTERFACE)) {
@@ -693,11 +691,11 @@ public class InventoryOptionsHandler {
             if (player.getFamiliar() == null)
                 return;
             if (!player.getInventory().containsItem(Summoning.getScrollId(player.getFamiliar().getPouch().getRealPouchId()), 1)) {
-                player.sm("You don't have enough scrolls to do that.");
+                player.message("You don't have enough scrolls to do that.");
                 return;
             }
             if (player.getFamiliar().specialEnergy < player.getFamiliar().getSpecialAmount()) {
-                player.sm("You familiar doesn't have enough special energy.");
+                player.message("You familiar doesn't have enough special energy.");
                 return;
             }
             player.getFamiliar().submitSpecial(toSlot);
@@ -712,7 +710,7 @@ public class InventoryOptionsHandler {
                 return;
             player.stopAll();
             if (interfaceId == 192 && interfaceId2 == Inventory.INVENTORY_INTERFACE)
-                player.sm("alch on " + toSlot);
+                player.message("alch on " + toSlot);
             if (!player.getControlerManager().canUseItemOnItem(itemUsed, usedWith))
                 return;
             ItemPlugin plugin = ItemPluginLoader.getPlugin(itemUsed);
@@ -720,13 +718,11 @@ public class InventoryOptionsHandler {
                 plugin = ItemPluginLoader.getPlugin(usedWith);
             if (plugin != null) {
                 boolean pluginExecuted = plugin.processItemOnItem(player, itemUsed, usedWith, fromSlot, toSlot);
-                if (!pluginExecuted) {
-                    Logger.log("ItemPlugin", "ItemOnItem - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + itemUsed.getName() + "(" + itemUsed.getId() + ") > " + usedWith.getName() + "(" + usedWith.getId() + ") does not meet the requirements");
-                }
                 if (pluginExecuted) {
-                    Logger.log("ItemPlugin", "ItemOnItem - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + itemUsed.getName() + "(" + itemUsed.getId() + ") > " + usedWith.getName() + "(" + usedWith.getId() + ") does meet the requirements");
+                    Logger.log("ItemPlugin", "ItemOnItem - Class: " + plugin.getClass().getSimpleName() + ".java, Executed: " + itemUsed.getName() + "(" + itemUsed.getId() + ") -> " + usedWith.getName() + "(" + usedWith.getId() + ") does meet the requirements");
                     return;
                 }
+                Logger.log("ItemPlugin", "ItemOnItem - Class: " + plugin.getClass().getSimpleName() + ".java, Failed: " + itemUsed.getName() + "(" + itemUsed.getId() + ") -> " + usedWith.getName() + "(" + usedWith.getId() + ") does not meet the requirements");
             }
             if (WeaponPoison.poison(player, itemUsed, usedWith, false))
                 return;
@@ -777,7 +773,7 @@ public class InventoryOptionsHandler {
                 player.getInventory().deleteItem(itemUsed.getId(), 1);
                 player.getInventory().deleteItem(usedWith.getId(), 1);
                 player.getInventory().addItem(19335, 1);
-                player.sm("The ornament kit attaches itself to the item.");
+                player.message("The ornament kit attaches itself to the item.");
                 return;
             } else if (contains(11335, 19346, itemUsed, usedWith)) {// dragon
                 // fullhelm
@@ -785,21 +781,21 @@ public class InventoryOptionsHandler {
                 player.getInventory().deleteItem(itemUsed.getId(), 1);
                 player.getInventory().deleteItem(usedWith.getId(), 1);
                 player.getInventory().addItem(19336, 1);
-                player.sm("The ornament kit attaches itself to the item.");
+                player.message("The ornament kit attaches itself to the item.");
                 return;
             } else if (contains(4585, 19348, itemUsed, usedWith)) {// dragon
                 // legs or
                 player.getInventory().deleteItem(itemUsed.getId(), 1);
                 player.getInventory().deleteItem(usedWith.getId(), 1);
                 player.getInventory().addItem(19339, 1);
-                player.sm("The ornament kit attaches itself to the item.");
+                player.message("The ornament kit attaches itself to the item.");
                 return;
             } else if (contains(4087, 19348, itemUsed, usedWith)) {// dragon
                 // skirt or
                 player.getInventory().deleteItem(itemUsed.getId(), 1);
                 player.getInventory().deleteItem(usedWith.getId(), 1);
                 player.getInventory().addItem(19338, 1);
-                player.sm("The ornament kit attaches itself to the item.");
+                player.message("The ornament kit attaches itself to the item.");
                 return;
             } else if (contains(14479, 19350, itemUsed, usedWith)) {// dragon
                 // platebody
@@ -807,14 +803,14 @@ public class InventoryOptionsHandler {
                 player.getInventory().deleteItem(itemUsed.getId(), 1);
                 player.getInventory().deleteItem(usedWith.getId(), 1);
                 player.getInventory().addItem(19337, 1);
-                player.sm("The ornament kit attaches itself to the item.");
+                player.message("The ornament kit attaches itself to the item.");
                 return;
             } else if (contains(1187, 19352, itemUsed, usedWith)) {// dragon sq
                 // or
                 player.getInventory().deleteItem(itemUsed.getId(), 1);
                 player.getInventory().deleteItem(usedWith.getId(), 1);
                 player.getInventory().addItem(19340, 1);
-                player.sm("The ornament kit attaches itself to the item.");
+                player.message("The ornament kit attaches itself to the item.");
                 return;
             } else if (contains(11335, 19354, itemUsed, usedWith)) {// dragon
                 // fullhelm
@@ -822,21 +818,21 @@ public class InventoryOptionsHandler {
                 player.getInventory().deleteItem(itemUsed.getId(), 1);
                 player.getInventory().deleteItem(usedWith.getId(), 1);
                 player.getInventory().addItem(19341, 1);
-                player.sm("The ornament kit attaches itself to the item.");
+                player.message("The ornament kit attaches itself to the item.");
                 return;
             } else if (contains(4585, 19356, itemUsed, usedWith)) {// dragon
                 // legs sp
                 player.getInventory().deleteItem(itemUsed.getId(), 1);
                 player.getInventory().deleteItem(usedWith.getId(), 1);
                 player.getInventory().addItem(19344, 1);
-                player.sm("The ornament kit attaches itself to the item.");
+                player.message("The ornament kit attaches itself to the item.");
                 return;
             } else if (contains(4087, 19356, itemUsed, usedWith)) {// dragon
                 // skirt sp
                 player.getInventory().deleteItem(itemUsed.getId(), 1);
                 player.getInventory().deleteItem(usedWith.getId(), 1);
                 player.getInventory().addItem(19343, 1);
-                player.sm("The ornament kit attaches itself to the item.");
+                player.message("The ornament kit attaches itself to the item.");
                 return;
             } else if (contains(14479, 19358, itemUsed, usedWith)) {// dragon
                 // platebody
@@ -844,14 +840,14 @@ public class InventoryOptionsHandler {
                 player.getInventory().deleteItem(itemUsed.getId(), 1);
                 player.getInventory().deleteItem(usedWith.getId(), 1);
                 player.getInventory().addItem(19342, 1);
-                player.sm("The ornament kit attaches itself to the item.");
+                player.message("The ornament kit attaches itself to the item.");
                 return;
             } else if (contains(1187, 19360, itemUsed, usedWith)) {// dragon sq
                 // sp
                 player.getInventory().deleteItem(itemUsed.getId(), 1);
                 player.getInventory().deleteItem(usedWith.getId(), 1);
                 player.getInventory().addItem(19345, 1);
-                player.sm("The ornament kit attaches itself to the item.");
+                player.message("The ornament kit attaches itself to the item.");
                 return;
             } else if (contains(2366, 2368, itemUsed, usedWith)) {// dragon sq
                 // shield
@@ -882,7 +878,7 @@ public class InventoryOptionsHandler {
                 return;
             } else if (contains(11710, 11712, itemUsed, usedWith) || contains(11710, 11714, itemUsed, usedWith) || contains(11712, 11714, itemUsed, usedWith)) {
                 if (!player.getInventory().containsItem(11710, 1) || !player.getInventory().containsItem(11712, 1) || !player.getInventory().containsItem(11714, 1)) {
-                    player.sm("You need to have all shards to combine them.");
+                    player.message("You need to have all shards to combine them.");
                     return;
                 }
                 player.getInventory().deleteItem(11710, 1);
@@ -892,12 +888,12 @@ public class InventoryOptionsHandler {
                 return;
             } else if (contains(453, 18339, itemUsed, usedWith)) {
                 if (player.getCoalStored() == 27) {
-                    player.sm("Your coal bag can't hold more coal.");
+                    player.message("Your coal bag can't hold more coal.");
                     return;
                 }
                 player.getInventory().deleteItem(fromSlot, itemUsed);
                 player.addCoalStored(1);
-                player.sm("You store coal in your coal bag.");
+                player.message("You store coal in your coal bag.");
                 return;
             } else if (contains(13263, 15488, itemUsed, usedWith) || contains(13263, 15490, itemUsed, usedWith)) {
                 if (player.getInventory().containsItem(13263, 1) && player.getInventory().containsItem(15488, 1) && player.getInventory().containsItem(15490, 1)) {
@@ -907,19 +903,19 @@ public class InventoryOptionsHandler {
                     player.getInventory().addItem(15492, 1);
                     return;
                 } else {
-                    player.sm("Requirements; Slayer helmet, Hexcrest, Focus sight.");
+                    player.message("Requirements; Slayer helmet, Hexcrest, Focus sight.");
                     return;
                 }
             } else if (contains(9007, 9008, itemUsed, usedWith)) {
                 player.getInventory().deleteItem(itemUsed);
                 player.getInventory().deleteItem(usedWith);
                 player.getInventory().addItem(9009, 1);
-                player.sm("The two halves of the skull fit perfectly, they appear to have a fixing point, perhaps they are to be mounted on something?");
+                player.message("The two halves of the skull fit perfectly, they appear to have a fixing point, perhaps they are to be mounted on something?");
             } else if (contains(9010, 9011, itemUsed, usedWith)) {
                 player.getInventory().deleteItem(itemUsed);
                 player.getInventory().deleteItem(usedWith);
                 player.getInventory().addItem(9012, 1);
-                player.sm("The two halves of the Sceptre fit perfectly. The Sceptre appears to be designed to have something on top.");
+                player.message("The two halves of the Sceptre fit perfectly. The Sceptre appears to be designed to have something on top.");
             } else if (contains(9012, 9009, itemUsed, usedWith)) {
                 player.getInventory().deleteItem(itemUsed);
                 player.getInventory().deleteItem(usedWith);
@@ -929,7 +925,7 @@ public class InventoryOptionsHandler {
                 // //
                 // helmet
                 if (!player.getSlayerManager().hasLearnedSlayerHelmet()) {
-                    player.sm("You haven't learned to create slayer helmet.");
+                    player.message("You haven't learned to create slayer helmet.");
                     return;
                 }
                 if (player.getSkills().getLevelForXp(Skills.CRAFTING) < 70) {
@@ -954,7 +950,7 @@ public class InventoryOptionsHandler {
                 player.getInventory().deleteItem(985, 1);
                 player.getInventory().deleteItem(987, 1);
                 player.getInventory().addItem(989, 1);
-                player.sm("You combine the two peices and create a crystal key.");
+                player.message("You combine the two peices and create a crystal key.");
                 return;
 
             } else if (contains(13754, 13734, itemUsed, usedWith)) {
@@ -964,7 +960,7 @@ public class InventoryOptionsHandler {
                 player.getInventory().deleteItem(13754, 1);
                 player.getInventory().deleteItem(13734, 1);
                 player.getInventory().addItem(13736, 1);
-                player.sm("You bless your spirit shield with the power of the holy elixir.");
+                player.message("You bless your spirit shield with the power of the holy elixir.");
                 return;
             } else if (contains(13752, 13736, itemUsed, usedWith)) {
                 if (player.getSkills().getLevel(Skills.PRAYER) < 90) {
@@ -1004,15 +1000,15 @@ public class InventoryOptionsHandler {
                 return;
             } else if (contains(4151, 21369, itemUsed, usedWith)) {
                 if (!player.getSkills().hasRequirements(Skills.ATTACK, 75, Skills.SLAYER, 80)) {
-                    player.sm("You need an attack level of 75 and slayer level of 80 in order to attach the whip vine to the whip.");
+                    player.message("You need an attack level of 75 and slayer level of 80 in order to attach the whip vine to the whip.");
                     return;
                 }
                 player.getInventory().replaceItem(21371, 1, toSlot);
                 player.getInventory().deleteItem(fromSlot, itemUsed);
-                player.sm("You attach the whip vine to the abbysal whip.");
+                player.message("You attach the whip vine to the abbysal whip.");
                 return;
             } else
-                player.sm("Nothing interesting happens.");
+                player.message("Nothing interesting happens.");
         }
         if (Settings.DEBUG)
             player.getPackets().sendGameMessage("itemUsedWithId:" + itemUsedWithId + ", toSlot: " + toSlot + ", interfaceId: " + interfaceId + ", interfaceId2 " + interfaceId2 + ", spellId:" + spellId + ", compId: " + compId + ", fromSlot: " + fromSlot + ", itemUsedId: " + itemUsedId);
@@ -1030,8 +1026,7 @@ public class InventoryOptionsHandler {
         if (plugin != null) {
             boolean pluginExecuted = plugin.processItem(player, item, slotId, optionName);
             plugin.sendPluginLog(option, item, optionName, pluginExecuted);
-            if (pluginExecuted)
-                return;
+            if (pluginExecuted) return;
         }
         Hunter.FlyingEntities impling = Hunter.FlyingEntities.forItemId(itemId);
         if (impling != null) {
@@ -1047,7 +1042,7 @@ public class InventoryOptionsHandler {
                 player.getInventory().deleteItem(slotId, item);
                 player.getAppearence().generateAppearenceData();
                 player.setSkullSkeptreCharges(5);
-                player.sm("You have no more charges, the sceptre crumbled to dust.");
+                player.message("You have no more charges, the sceptre crumbled to dust.");
                 player.animate(new Animation(9601));
                 player.animate(new Animation(9601));
                 player.gfx(new Graphics(94));
@@ -1060,7 +1055,7 @@ public class InventoryOptionsHandler {
                 return;
             }
             player.setSkullSkeptreCharges(player.getSkullSkeptreCharges() - 1);
-            player.sm("You have " + player.getSkullSkeptreCharges() + " charges left.");
+            player.message("You have " + player.getSkullSkeptreCharges() + " charges left.");
             player.animate(new Animation(9601));
             player.gfx(new Graphics(94));
             WorldTasksManager.schedule(new WorldTask() {
@@ -1073,15 +1068,15 @@ public class InventoryOptionsHandler {
             player.getDialogueManager().startDialogue("MagicSkullball", 15046, slotId);
             return;
         } else if (itemId == 11283)
-            player.sm("Your dragonfire shield has " + player.getDfsCharges() + " charges.");
+            player.message("Your dragonfire shield has " + player.getDfsCharges() + " charges.");
         else if (itemId == 11284)
-            player.sm("Your dragonfire shield is not charged.");
+            player.message("Your dragonfire shield is not charged.");
         else if (itemId >= 15084 && itemId <= 15100)
             player.getDialogueManager().startDialogue("DiceBag", itemId);
         else if (itemId == 24437 || itemId == 24439 || itemId == 24440 || itemId == 24441)
             player.getDialogueManager().startDialogue("FlamingSkull", item, slotId);
         else if (itemId >= 13561 && itemId <= 13562 || itemId == 19760) {
-            player.sm("Run-replenish here.");
+            player.message("Run-replenish here.");
         } else if (itemId >= 20795 && itemId <= 20800) {
             player.getDialogueManager().startDialogue("DuellistCap");
             return;
@@ -1097,22 +1092,22 @@ public class InventoryOptionsHandler {
             player.getAuraManager().sendTimeRemaining(itemId);
         else if (itemId == 18339) {
             if (player.getCoalStored() == 0) {
-                player.sm("You don't have any coal ores stored.");
+                player.message("You don't have any coal ores stored.");
                 return;
             }
             if (!player.getInventory().hasFreeSlots()) {
-                player.sm("You don't have enough inventory space.");
+                player.message("You don't have enough inventory space.");
                 return;
             }
             player.removeCoalStored(1);
             player.getInventory().addItem(453, 1);
-            player.sm("You withraw one coal ore.");
+            player.message("You withraw one coal ore.");
         } else if (itemId == 19335) {
             if (player.getInventory().getFreeSlots() > 0) {
                 player.getInventory().replaceItem(6585, 1, slotId);
                 player.getInventory().addItem(19333, 1);
             } else {
-                player.sm("You don't have enough inventory space left.");
+                player.message("You don't have enough inventory space left.");
                 return;
             }
         } else if (itemId == 19336) {
@@ -1120,7 +1115,7 @@ public class InventoryOptionsHandler {
                 player.getInventory().replaceItem(11335, 1, slotId);
                 player.getInventory().addItem(19346, 1);
             } else {
-                player.sm("You don't have enough inventory space left.");
+                player.message("You don't have enough inventory space left.");
                 return;
             }
         } else if (itemId == 19337) {
@@ -1128,7 +1123,7 @@ public class InventoryOptionsHandler {
                 player.getInventory().replaceItem(14479, 1, slotId);
                 player.getInventory().addItem(19350, 1);
             } else {
-                player.sm("You don't have enough inventory space left.");
+                player.message("You don't have enough inventory space left.");
                 return;
             }
         } else if (itemId == 19338) {
@@ -1136,7 +1131,7 @@ public class InventoryOptionsHandler {
                 player.getInventory().replaceItem(4087, 1, slotId);
                 player.getInventory().addItem(19348, 1);
             } else {
-                player.sm("You don't have enough inventory space left.");
+                player.message("You don't have enough inventory space left.");
                 return;
             }
         } else if (itemId == 19339) {
@@ -1144,7 +1139,7 @@ public class InventoryOptionsHandler {
                 player.getInventory().replaceItem(4585, 1, slotId);
                 player.getInventory().addItem(19348, 1);
             } else {
-                player.sm("You don't have enough inventory space left.");
+                player.message("You don't have enough inventory space left.");
                 return;
             }
         } else if (itemId == 19340) {
@@ -1152,7 +1147,7 @@ public class InventoryOptionsHandler {
                 player.getInventory().replaceItem(1187, 1, slotId);
                 player.getInventory().addItem(19352, 1);
             } else {
-                player.sm("You don't have enough inventory space left.");
+                player.message("You don't have enough inventory space left.");
                 return;
             }
 
@@ -1161,7 +1156,7 @@ public class InventoryOptionsHandler {
                 player.getInventory().replaceItem(11335, 1, slotId);
                 player.getInventory().addItem(19354, 1);
             } else {
-                player.sm("You don't have enough inventory space left.");
+                player.message("You don't have enough inventory space left.");
                 return;
             }
         } else if (itemId == 19342) {// sp platebody
@@ -1169,7 +1164,7 @@ public class InventoryOptionsHandler {
                 player.getInventory().replaceItem(14479, 1, slotId);
                 player.getInventory().addItem(19358, 1);
             } else {
-                player.sm("You don't have enough inventory space left.");
+                player.message("You don't have enough inventory space left.");
                 return;
             }
         } else if (itemId == 19343) {// sp legs
@@ -1177,7 +1172,7 @@ public class InventoryOptionsHandler {
                 player.getInventory().replaceItem(4087, 1, slotId);
                 player.getInventory().addItem(19356, 1);
             } else {
-                player.sm("You don't have enough inventory space left.");
+                player.message("You don't have enough inventory space left.");
                 return;
             }
         } else if (itemId == 19344) {// sp legs
@@ -1185,7 +1180,7 @@ public class InventoryOptionsHandler {
                 player.getInventory().replaceItem(4585, 1, slotId);
                 player.getInventory().addItem(19356, 1);
             } else {
-                player.sm("You don't have enough inventory space left.");
+                player.message("You don't have enough inventory space left.");
                 return;
             }
         } else if (itemId == 19345) {// sp shield
@@ -1193,7 +1188,7 @@ public class InventoryOptionsHandler {
                 player.getInventory().replaceItem(1187, 1, slotId);
                 player.getInventory().addItem(19360, 1);
             } else {
-                player.sm("You don't have enough inventory space left.");
+                player.message("You don't have enough inventory space left.");
                 return;
             }
         }
@@ -1223,7 +1218,7 @@ public class InventoryOptionsHandler {
         Pouch pouch = Pouch.forId(itemId);
         Pot pot = Pots.getPot(item.getId());
         if (pot != null) {
-            player.sm("You empty the contents of the " + item.getName().replace(" (4)", "").replace(" (3)", "").replace(" (2)", "").replace(" (1)", "") + " on the floor.");
+            player.message("You empty the contents of the " + item.getName().replace(" (4)", "").replace(" (3)", "").replace(" (2)", "").replace(" (1)", "") + " on the floor.");
             player.getInventory().getItem(slotId).setId(229);
             player.getInventory().refresh();
             return;
@@ -1231,28 +1226,28 @@ public class InventoryOptionsHandler {
         if (itemId == 1921) {
             player.getInventory().getItems().set(slotId, new Item(1923));
             player.getInventory().refresh();
-            player.sm("You empty the bowl.");
+            player.message("You empty the bowl.");
         } else if (itemId == 1937) {
             player.getInventory().getItems().set(slotId, new Item(1935));
             player.getInventory().refresh();
-            player.sm("You empty the jug.");
+            player.message("You empty the jug.");
         } else if (itemId == 227) {
             player.getInventory().getItems().set(slotId, new Item(229));
             player.getInventory().refresh();
-            player.sm("You empty the vial.");
+            player.message("You empty the vial.");
         } else if (itemId == 1929 || itemId == 1927) {
             player.getInventory().getItems().set(slotId, new Item(1925));
             player.getInventory().refresh();
-            player.sm("You empty the bucket.");
+            player.message("You empty the bucket.");
         } else if (itemId == 9013) {
-            player.sm("You have " + player.getSkullSkeptreCharges() + " charges left.");
+            player.message("You have " + player.getSkullSkeptreCharges() + " charges left.");
         } else if (itemId >= 15048 && itemId <= 15054) {
             player.getInventory().getItems().set(slotId, new Item(15046));
             player.getInventory().refresh();
-            player.sm("You reset the magic skullball.");
+            player.message("You reset the magic skullball.");
         } else if (Toolbelt.checkStorage(itemId)) {
             if (Settings.FREE_TO_PLAY && ItemDefinitions.getItemDefinitions(itemId).isMembersOnly()) {
-                player.sm("You can't add members items to toolbelt in free to play.");
+                player.message("You can't add members items to toolbelt in free to play.");
                 return;
             }
             player.getToolbelt().addItem(new Item(itemId));
@@ -1279,8 +1274,8 @@ public class InventoryOptionsHandler {
             return;
         } else if (itemId == 20795) {
             if (player.getDuelkillCount() < 10) {
-                player.sm("You can't change the look of your duellists' cap until you earned additional tiers.");
-                player.sm("You need at least ten duel arena kills.");
+                player.message("You can't change the look of your duellists' cap until you earned additional tiers.");
+                player.message("You need at least ten duel arena kills.");
                 return;
             } else if (player.getDuelkillCount() > 99) {
                 player.getDialogueManager().startDialogue("DuellistTier1");
@@ -1318,11 +1313,11 @@ public class InventoryOptionsHandler {
             return;
         } else if (itemId == 18339) {
             if (player.getCoalStored() == 0) {
-                player.sm("You don't have any coal ores stored.");
+                player.message("You don't have any coal ores stored.");
                 return;
             }
             if (!player.getInventory().hasFreeSlots()) {
-                player.sm("You don't have enough inventory space.");
+                player.message("You don't have enough inventory space.");
                 return;
             }
             if (player.getCoalStored() >= player.getInventory().getFreeSlots()) {
@@ -1333,7 +1328,7 @@ public class InventoryOptionsHandler {
             Talisman.locate(player, 3127, 3405);
         else if (itemId == 11283) {
             player.setDfsCharges(0);
-            player.sm("You empty your dragonfire shield charges.");
+            player.message("You empty your dragonfire shield charges.");
             player.getInventory().deleteItem(slotId, new Item(11283, 1));
             player.getInventory().addItem(11284, 1);
         } else if (itemId == 1440)
@@ -1362,9 +1357,9 @@ public class InventoryOptionsHandler {
                 player.getInventory().addItem(4164, 1);
                 player.getInventory().addItem(4166, 1);
                 player.getInventory().addItem(4168, 1);
-                player.sm("You disassemble your Slayer headgear.");
+                player.message("You disassemble your Slayer headgear.");
             } else {
-                player.sm("You don't have enough inventory space.");
+                player.message("You don't have enough inventory space.");
                 return;
             }
         } else if (itemId == 15492) {
@@ -1373,14 +1368,14 @@ public class InventoryOptionsHandler {
                 player.getInventory().addItem(13263, 1);
                 player.getInventory().addItem(15488, 1);
                 player.getInventory().addItem(15490, 1);
-                player.sm("You disassemble your Slayer headgear.");
+                player.message("You disassemble your Slayer headgear.");
             } else {
-                player.sm("You don't have enough inventory space.");
+                player.message("You don't have enough inventory space.");
                 return;
             }
         } else if (itemId == 995) {
             if (player.isAtWild() || FfaZone.inRiskArea(player)) {
-                player.sm("You can't store money in your money pouch in the " + (player.isAtWild() ? "wilderness." : "risk ffa zone."));
+                player.message("You can't store money in your money pouch in the " + (player.isAtWild() ? "wilderness." : "risk ffa zone."));
                 return;
             }
             player.getMoneyPouch().addMoneyFromInventory(player.getInventory().getItems().getNumberOf(995), true);
@@ -1389,7 +1384,7 @@ public class InventoryOptionsHandler {
         } else if (itemId <= 1712 && itemId >= 1706) {
             player.getDialogueManager().startDialogue("Transportation", "Edgeville", new WorldTile(3087, 3496, 0), "Forinthry Dungeon", new WorldTile(3081, 3648, 0), "Draynor Village", new WorldTile(3105, 3251, 0), "Al Kharid", new WorldTile(3293, 3163, 0), itemId);
         } else if (itemId == 1704)
-            player.sm("The amulet has ran out of charges. You need to recharge it if you wish it use it once more.");
+            player.message("The amulet has ran out of charges. You need to recharge it if you wish it use it once more.");
         else if (itemId >= 3853 && itemId <= 3867) {
             player.getDialogueManager().startDialogue("Transportation", "Burthrope Games Room", new WorldTile(2880, 3559, 0), "Barbarian Outpost", new WorldTile(2519, 3571, 0), "Gamers' Grotto", new WorldTile(2970, 9679, 0), "Corporeal Beast", new WorldTile(2966, 4383, 2), itemId);
         } else if (itemId >= 2552 && itemId <= 2566) {
@@ -1419,7 +1414,7 @@ public class InventoryOptionsHandler {
             return;
         }
         if (item.getDefinitions().isOverSized() || item.getName().contains("null")) {
-            player.sm("The item appears to be oversized.");
+            player.message("The item appears to be oversized.");
             player.getInventory().deleteItem(item);
             return;
         }
@@ -1516,7 +1511,7 @@ public class InventoryOptionsHandler {
                     return;
                 }
                 if (!player.getControlerManager().processItemOnNPC(npc, item)) {
-                    player.sm(item.getName() + " on " + npc.getName());
+                    player.message(item.getName() + " on " + npc.getName());
                     return;
                 }
                 if (npc.getId() == 519) {
@@ -1528,7 +1523,7 @@ public class InventoryOptionsHandler {
                         player.getDialogueManager().startDialogue("SimpleItemDialogue", 617, 1, "Richard likes what you offered him. In return he has given a gift of 1 Month of Avalon Membership!");
                         return;
                     } else {
-                        player.sm("Richard isn't interesting in trading right now.");
+                        player.message("Richard isn't interesting in trading right now.");
                         return;
                     }
                 }
@@ -1542,7 +1537,7 @@ public class InventoryOptionsHandler {
                             return;
                         }
                         if (data.getCurrentItem().getId() == item.getId() && data.getHits() == 30000) {
-                            player.sm("Degraded Item: " + data.getDegradedItem().getName());
+                            player.message("Degraded Item: " + data.getDegradedItem().getName());
                             wrongItem = false;
                             if (player.getCharges().getCharges(item.getId()) == data.getHits()) {
                                 player.getDialogueManager().startDialogue("RewardsTrader", npc.getId(), item.getId(), 3);
@@ -1560,7 +1555,7 @@ public class InventoryOptionsHandler {
                 if (npc instanceof Familiar) {
                     Familiar familiar = (Familiar) npc;
                     if (familiar != player.getFamiliar()) {
-                        player.sm("This isn't your familiar.");
+                        player.message("This isn't your familiar.");
                         return;
                     }
                     if (npc.getId() == 519 && (item.getId() == 4980)) {
@@ -1573,10 +1568,10 @@ public class InventoryOptionsHandler {
                         int amount = player.getInventory().getAmountOf(item.getId());
                         player.getInventory().deleteItem(item.getId(), amount);
                         player.getInventory().addItem(ItemDefinitions.getItemDefinitions(item.getId()).getCertId(), amount);
-                        player.sm("Tool leprechaun noted your " + amount + " " + ItemDefinitions.getItemDefinitions(item.getId()).getName() + ".");
+                        player.message("Tool leprechaun noted your " + amount + " " + ItemDefinitions.getItemDefinitions(item.getId()).getName() + ".");
                         return;
                     } else {
-                        player.sm("You can't note this item.");
+                        player.message("You can't note this item.");
                         return;
                     }
                 }
@@ -1618,7 +1613,7 @@ public class InventoryOptionsHandler {
                     player.getPetManager().eat(item.getId(), (Pet) npc);
                     return;
                 }
-                player.sm("Nothing interesting happens.");
+                player.message("Nothing interesting happens.");
             }
         }));
     }

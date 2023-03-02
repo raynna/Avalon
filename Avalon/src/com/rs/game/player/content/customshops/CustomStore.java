@@ -29,7 +29,7 @@ public class CustomStore extends CustomStoreData {
 		if (type == 3) {
 			SkillcapeStore.generateCapes(player);
 			if (SkillcapeStore.capes.size() == 0) {
-				player.sm("You don't have any level 99s therefor Max won't sell you any.");
+				player.message("You don't have any level 99s therefor Max won't sell you any.");
 				return;
 			}
 		}
@@ -61,7 +61,7 @@ public class CustomStore extends CustomStoreData {
 		if (type == 3) {
 			SkillcapeStore.generateCapes(player);
 			if (SkillcapeStore.capes.size() == 0) {
-				player.sm("You don't have any level 99s therefor Max won't sell you any.");
+				player.message("You don't have any level 99s therefor Max won't sell you any.");
 				return;
 			}
 		}
@@ -315,7 +315,7 @@ public class CustomStore extends CustomStoreData {
 		}
 		if (canBuy) {
 			if (defaultPrice * amount < 0 || defaultPrice * amount > 1000000000) {
-				player.sm("You can't buy that many.");
+				player.message("You can't buy that many.");
 				return;
 			}
 			if (amount * defaultPrice > (points != -1 ? points : player.getTotalCoins())) {
@@ -342,17 +342,17 @@ public class CustomStore extends CustomStoreData {
 			defs = ItemDefinitions.getItemDefinitions(itemId);
 			if (!player.getInventory().hasFreeSlots() && !defs.isStackable() || (!player.getInventory().hasFreeSlots()
 					&& defs.isStackable() && !player.getInventory().containsOneItem(itemId))) {
-				player.sm("You don't have enough inventory space to buy this.");
+				player.message("You don't have enough inventory space to buy this.");
 				return;
 			}
 			if (itemId >= 24201 && itemId <= 24203 && (player.getInventory().containsOneItem(24201, 24202, 24203)
 					|| player.getBank().containsOneItem(24201, 24202, 24203))) {
-				player.sm("You can only have one greater runic staff at once.");
+				player.message("You can only have one greater runic staff at once.");
 				return;
 			}
 			player.addItem(itemId, amount);
 			removeCurrency(player, SHOP, price);
-			player.sm("You bought " + HexColours.getShortMessage(Colour.RED, Utils.getFormattedNumber(amount, ','))
+			player.message("You bought " + HexColours.getShortMessage(Colour.RED, Utils.getFormattedNumber(amount, ','))
 					+ " x " + defs.getName() + " for "
 					+ (price == 0 ? "free!"
 							: HexColours.getShortMessage(Colour.RED, Utils.getFormattedNumber(price, ',')) + " "

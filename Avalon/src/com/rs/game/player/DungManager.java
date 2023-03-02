@@ -417,7 +417,7 @@ public class DungManager implements Serializable {
 	}
 
 	public void acceptInvite(String name) {
-		player.sm(name);
+		player.message(name);
 		final Player p2 = World.getPlayerByDisplayName(name);
 		if (p2 == null) {
 			player.getPackets().sendGameMessage("Unable to find " + name);

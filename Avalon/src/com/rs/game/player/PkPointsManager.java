@@ -218,7 +218,7 @@ public class PkPointsManager {
 	public void refresh() {
 		for (int i = 0; i < pkpItems.getSize(); i++)
 			player.getPackets().sendUpdateItems(90, pkpItems, i);
-		player.sm("Total Pk Points:<br>" + player.getPKP());
+		player.message("Total Pk Points:<br>" + player.getPKP());
 	}
 
 	public void sendOptions() {

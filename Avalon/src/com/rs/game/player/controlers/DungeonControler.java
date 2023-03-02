@@ -476,7 +476,7 @@ public class DungeonControler extends Controler {
 			return false;
 		}
 		if (npc.getId() == DungeonConstants.FISH_SPOT_NPC_ID) {
-			player.sm("start fish");
+			player.message("start fish");
 			player.getActionManager().setAction(new DungeoneeringFishing((DungeonFishSpot) npc));
 			return false;
 		} else if (npc.getId() == 10023) {
@@ -1014,11 +1014,11 @@ public class DungeonControler extends Controler {
 			}
 			return true;
 		case "anvil":
-			player.sm("anvil");
+			player.message("anvil");
 			for (int index = 0; index < DungeoneeringSmithing.BARS[1].length; index++) {
-				player.sm("index: " + index);
+				player.message("index: " + index);
 				if (DungeoneeringSmithing.BARS[1][index] == item.getId()) {
-					player.sm("open forge");
+					player.message("open forge");
 					DungeoneeringSmithing.sendForgingInterface(player, index, true);
 					break;
 				}

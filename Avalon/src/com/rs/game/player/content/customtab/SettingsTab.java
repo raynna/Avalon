@@ -72,7 +72,7 @@ public class SettingsTab extends CustomTab {
             @Override
             public void usage(Player p) {
                 p.switchSlowDrag();
-                p.sm("You have to relog before noticing changes.");
+                p.message("You have to relog before noticing changes.");
             }
 
             @Override

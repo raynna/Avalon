@@ -49,7 +49,7 @@ public class LavaFlowMine extends MiningBase {
 		player.faceObject(object);
 		if (checkAll(player)) {
 			if (Utils.random(250) == 0) {
-				player.sm("The intense heat forces to you take a break.");
+				player.message("The intense heat forces to you take a break.");
 				player.stopAll();
 				player.animate(new Animation(-1));
 			}
@@ -58,7 +58,7 @@ public class LavaFlowMine extends MiningBase {
 			}
 			if (!hasPetRock(player) && Utils.random(10000) == 0) {
 				player.getInventory().addItem(new Item(3695, 1));
-				player.sm("<img=5><col=b25200>You have recieved a " + (HexColours.getShortMessage(Colour.RED, "Pet Rock")) + "!");
+				player.message("<img=5><col=b25200>You have recieved a " + (HexColours.getShortMessage(Colour.RED, "Pet Rock")) + "!");
 			}
 			return true;
 		}
@@ -72,7 +72,7 @@ public class LavaFlowMine extends MiningBase {
 			return false;
 		}
 		if (!player.getInventory().hasFreeSlots()) {
-			player.sm("You need to clear more inventory space before continuing.");
+			player.message("You need to clear more inventory space before continuing.");
 			return false;
 		}
 		return hasMiningLevel(player);

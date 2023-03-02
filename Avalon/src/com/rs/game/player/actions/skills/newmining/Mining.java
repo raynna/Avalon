@@ -277,13 +277,13 @@ public class Mining extends Action {
 					player.addItemDrop(realOre.oreId, 1);
 					totalXp += realOre.xp;
 					player.addXp(Skills.MINING, realOre.xp);
-					player.sm("The Varrock armour allows you to mine an additional ore.");
+					player.message("The Varrock armour allows you to mine an additional ore.");
 				}
 			}
 			if (Utils.getRandomDouble(100) <= 5.0) {
 				Gems gem = calculateGem(false);
 				player.addItemDrop(gem.getItemId(), 1);
-				player.sm("You find a " + ItemDefinitions.getItemDefinitions(gem.getItemId()).getName()
+				player.message("You find a " + ItemDefinitions.getItemDefinitions(gem.getItemId()).getName()
 						+ " inside the rock.");
 			}
 		}

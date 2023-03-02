@@ -205,7 +205,7 @@ public class Thieving {
     }
 
     public static void pickHamHideout(Player player, WorldObject object) {
-        player.sm("You attempt to picklock the trapdoor..");
+        player.message("You attempt to picklock the trapdoor..");
         player.faceObject(object);
         player.lock(3);
         WorldTasksManager.schedule(new WorldTask() {
@@ -216,13 +216,13 @@ public class Thieving {
                 int increasedChance = (int) (thievingLevel * 0.5);
                 double ratio = Utils.getRandom(100) - increasedChance;
                 if (ratio * thievingLevel < 10) {
-                    player.sm("You fail to picklock the trapdoor and your hands begin to numb down.");
+                    player.message("You fail to picklock the trapdoor and your hands begin to numb down.");
                     player.drainLevel(Skills.THIEVING, 1);
                     player.addXp(Skills.THIEVING, 1);
                     stop();
                     return;
                 }
-                player.sm("You successfully picklock the trapdoor.");
+                player.message("You successfully picklock the trapdoor.");
                 player.addXp(Skills.THIEVING, 4);
                 player.sendVarBit(object.getConfigByFile(), 1);
                 stop();

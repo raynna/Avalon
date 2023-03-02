@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.text.DecimalFormat;
 
 import com.rs.game.World;
-import com.rs.game.WorldTile;
-import com.rs.game.item.FloorItem;
 import com.rs.game.item.Item;
 import com.rs.game.player.Player;
 import com.rs.utils.Utils;
@@ -41,7 +39,7 @@ public class MoneyPouch implements Serializable {
 		else
 			builder.append("One coin");
 		builder.append(" have been added to your money pouch.");
-		player.sm(builder.toString());
+		player.message(builder.toString());
 		player.getPackets().sendRunScript(5561, 1, amount);
 		player.getMoneyPouch().setTotal(player.getMoneyPouch().getTotal() + amount);
 		if (delete)

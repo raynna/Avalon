@@ -38,7 +38,7 @@ public class Humidify {
 			}
 			return true;
 		} else {
-			player.sm("You do not have any empty vessels to fill.");
+			player.message("You do not have any empty vessels to fill.");
 			return false;
 		}
 

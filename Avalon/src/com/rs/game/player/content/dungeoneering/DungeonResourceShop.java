@@ -74,7 +74,7 @@ public class DungeonResourceShop {
 			}
 			if (!player.getInventory().hasFreeSlots() && !def.isStackable() || (!player.getInventory().hasFreeSlots()
 					&& def.isStackable() && !player.getInventory().containsOneItem(item))) {
-				player.sm("You don't have enough inventory space to buy this.");
+				player.message("You don't have enough inventory space to buy this.");
 				return;
 			}
 			if (player.getInventory().addItem(item, quantity))

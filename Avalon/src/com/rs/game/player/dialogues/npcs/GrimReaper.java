@@ -26,7 +26,7 @@ public class GrimReaper extends Dialogue {
 			sendNPCDialogue(grim, Plain, "Greetings. What do you want? Make it quick.");
 			stage = 1;
 		} else {
-			player.sm("Death ignores you.");
+			player.message("Death ignores you.");
 		}
 	}
 
@@ -53,7 +53,7 @@ public class GrimReaper extends Dialogue {
 					player.applyHit(new Hit(player, damage, HitLook.DESEASE_DAMAGE));
 					player.gfx(new Graphics(2005, 0, 75));
 					sendNPCDialogue(grim, Angry, "Be gone! You do not have the money for one.");
-					player.sm("Death swings in fury and hits you a total of " + damage + ".");
+					player.message("Death swings in fury and hits you a total of " + damage + ".");
 					stage = END;
 				}
 				break;

@@ -197,7 +197,7 @@ public class DuelArena extends Controler {
 		}, 0, 2);
 		if (player.getCustomDuelRule().get(1).equals(true) && !DDS(player.getEquipment().getWeaponId())) {
 			ButtonHandler.sendRemove(player, Equipment.SLOT_WEAPON);
-			player.sm("<col=990000>Remember to equip your dds!");
+			player.message("<col=990000>Remember to equip your dds!");
 		}
 	}
 
@@ -250,7 +250,7 @@ public class DuelArena extends Controler {
 				return false;
 			}
 			if (player.getCustomDuelRule().get(1).equals(true) && !DDS(itemId)) {
-				player.sm("You can't equip <col=ff0000>"
+				player.message("You can't equip <col=ff0000>"
 						+ Utils.fixChatMessage(ItemDefinitions.getItemDefinitions(itemId).getName())
 						+ "</col> in this Duel mode.");
 				return false;
@@ -669,7 +669,7 @@ public class DuelArena extends Controler {
 			player.setCloseInterfacesEvent(null);
 			player.closeInterfaces();
 			closeDuelInteraction(true, DuelStage.NO_SPACE);
-			player.sm("You do not have enough space in your inventory for the stake!");
+			player.message("You do not have enough space in your inventory for the stake!");
 			return false;
 		}
 		player.temporaryAttribute().put("acceptedDuel", false);
@@ -756,8 +756,8 @@ public class DuelArena extends Controler {
 				Player p2 = (Player) target;
 				if (player.getCustomDuelRule().get(1).equals(true) && p2.getCustomDuelRule().get(1).equals(true)
 						&& componentId != 68 && componentId != 53 && componentId != 86 && componentId != 46 && interfaceId == 631) {
-					player.sm("You must toggle the special mode off to make changes.");
-					p2.sm("You must toggle the special mode off to make changes.");
+					player.message("You must toggle the special mode off to make changes.");
+					p2.message("You must toggle the special mode off to make changes.");
 					return false;
 				}
 				switch (interfaceId) {
@@ -804,9 +804,9 @@ public class DuelArena extends Controler {
 						return false;
 					case 68:
 						if (!DDS(player.getEquipment().getWeaponId()) || !DDS(p2.getEquipment().getWeaponId())) {
-							player.sm(
+							player.message(
 									"<col=990000><u>Both of you must have equipped the Dragon Dagger to toggle this special duel mode.");
-							p2.sm("<col=990000><u>Both of you must have equipped the Dragon Dagger to toggle this special duel mode.");
+							p2.message("<col=990000><u>Both of you must have equipped the Dragon Dagger to toggle this special duel mode.");
 							return false;
 						}
 						player.getCustomDuelRule().put(1,

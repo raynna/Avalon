@@ -208,7 +208,7 @@ public class WildernessControler extends Controler {
 	public void loseEP() {
 		if (player.getEP() >= 10 && player.isInCombat(10000)) {
 			player.removeEP( 10);
-			player.sm("You lose 10% EP for teleporting while being in combat.");
+			player.message("You lose 10% EP for teleporting while being in combat.");
 		}
 	}
 
@@ -227,7 +227,7 @@ public class WildernessControler extends Controler {
 
 	public static void showKDRInter(Player player) {
 		if (player.toggles("KDRINTER", false)) {
-			player.sm("send kdr");
+			player.message("send kdr");
 			double kill = player.getKillCount();
 			double death = player.getDeathCount();
 			double dr = kill / death;

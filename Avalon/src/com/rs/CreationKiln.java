@@ -181,14 +181,14 @@ public class CreationKiln {
 			}
 		} else {
 			if (getCategory() == null) {
-				player.sm("You don't have any category selected.");
+				player.message("You don't have any category selected.");
 				return;
 			}
 			Data data = Data.getData(compId);
 			if (data == null)
 				return;
 			if (getQuality() == -1) {
-				player.sm("You don't have any quality selected.");
+				player.message("You don't have any quality selected.");
 				return;
 			}
 			switch (packetId) {
@@ -215,7 +215,7 @@ public class CreationKiln {
 			amount = player.getInventory().getAmountOf(clayId);
 		ItemDefinitions def = ItemDefinitions.getItemDefinitions(clayId);
 		if (amount < 1) {
-			player.sm("You don't have any " + def.getName() + ".");
+			player.message("You don't have any " + def.getName() + ".");
 			return;
 		}
 		Item item = data.getAmount() > 0 ? new Item(data.getBaseItemId(), (data.getAmount() * getQuality()) * amount)
@@ -223,7 +223,7 @@ public class CreationKiln {
 		player.closeInterfaces();
 		player.getInventory().deleteItem(clayId, amount);
 		player.getInventory().addItem(item);
-		player.sm("Added item: " + (item.getAmount() > 1 ? item.getAmount() + " x " : "") + item.getName() + ".");
+		player.message("Added item: " + (item.getAmount() > 1 ? item.getAmount() + " x " : "") + item.getName() + ".");
 	}
 
 	private Category getCategory() {
@@ -248,7 +248,7 @@ public class CreationKiln {
 	private void selectClayQuality(int compId) {
 		int quality = (compId - QUALITY_COMP[0]) / 2 + 1;
 		if (!player.getInventory().containsOneItem(clayIds[quality - 1])) {
-			player.sm("You don't have any " + ItemDefinitions.getItemDefinitions(clayIds[quality - 1]).getName() + ".");
+			player.message("You don't have any " + ItemDefinitions.getItemDefinitions(clayIds[quality - 1]).getName() + ".");
 			return;
 		}
 		for (int qualitycomp : QUALITY_COMP)

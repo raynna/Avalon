@@ -386,7 +386,7 @@ public class Player extends Entity {
 
     public void resetSetups() {
         gearSetups = null;
-        sm("Reseted gear setups.");
+        message("Reseted gear setups.");
     }
 
     private int getSetupSlots() {
@@ -2130,7 +2130,7 @@ public class Player extends Entity {
         for (int skill = 0; skill < 24; skill++) {
             if (getSkills().getLevelForXp(skill) < 99) {
                 getDialogueManager().startDialogue("You need at least 99 in all skills to wear max cape.");
-                sm("You need at least 99 in all skills to wear max cape.");
+                message("You need at least 99 in all skills to wear max cape.");
                 getEquipment().deleteItem(20767, 1);
                 getEquipment().deleteItem(20768, 1);
                 getEquipment().refresh(1);
@@ -2144,7 +2144,7 @@ public class Player extends Entity {
         if (!player.hasTrimCompReqs()) {
             player.lock(1);
             Dialogue.sendItemDialogueNoContinue(player, COMP_CAPE, 1, "There are new requirements for this cape. If you wish to equip it again, you must complete the requirements. <br><br>This will close in 10...");
-            sm("There are new requirements for this cape. If you wish to equip it again, you must complete the requirements.");
+            message("There are new requirements for this cape. If you wish to equip it again, you must complete the requirements.");
             if (player.getEquipment().getHatId() == COMP_HOOD) {
                 player.getEquipment().deleteItem(COMP_HOOD, 1);
                 if (player.getInventory().hasFreeSlots())
@@ -2498,7 +2498,7 @@ public class Player extends Entity {
         }
         super.processEntity();
         if (memberTill < Utils.currentTimeMillis() && isMember()) {
-            sm("Your membership has expired.");
+            message("Your membership has expired.");
             memberTill = 0;
             member = false;
         }
@@ -2608,7 +2608,7 @@ public class Player extends Entity {
                 appearence.generateAppearenceData();
         }
         if (polDelay != 0 && polDelay <= Utils.currentTimeMillis()) {
-            sm("The power of the light fades. Your resistance to melee attacks return to normal.");
+            message("The power of the light fades. Your resistance to melee attacks return to normal.");
             polDelay = 0;
         }
         if (getInterfaceManager().containsTab(PlayerCombat.getHealthOverlayId(this))) {
@@ -2631,17 +2631,17 @@ public class Player extends Entity {
                 return;
             }
             if (getOverloadDelay() == 48)
-                sm("<col=0000FF>Your overload effect will wear off in 30 seconds.");
+                message("<col=0000FF>Your overload effect will wear off in 30 seconds.");
             if (getOverloadDelay() % 40 == 0)
                 Pots.applyOverLoadEffect(this);
         }
         if (getPrayerRenewalDelay() > 0) {
             if (getPrayerRenewalDelay() == 0 || isDead()) {
-                sm("<col=0000FF>Your prayer renewal has ended.");
+                message("<col=0000FF>Your prayer renewal has ended.");
                 return;
             } else {
                 if (getPrayerRenewalDelay() == 48)
-                    sm("<col=0000FF>Your prayer renewal will wear off in 30 seconds.");
+                    message("<col=0000FF>Your prayer renewal will wear off in 30 seconds.");
                 if (!prayer.hasFullPrayerpoints()) {
                     getPrayer().restorePrayer(1, true);
                     if ((getPrayerRenewalDelay() - 1) % 40 == 0)
@@ -2652,16 +2652,16 @@ public class Player extends Entity {
         if (lastBonfire > 0) {
             lastBonfire--;
             if (lastBonfire == 500)
-                sm("<col=ffff00>The health boost you received from stoking a bonfire will run out in 5 minutes.");
+                message("<col=ffff00>The health boost you received from stoking a bonfire will run out in 5 minutes.");
             else if (lastBonfire == 0) {
-                sm("<col=ff0000>The health boost you received from stoking a bonfire has run out.");
+                message("<col=ff0000>The health boost you received from stoking a bonfire has run out.");
                 equipment.refreshConfigs(false);
             }
         }
         if (ruleCount > 0) {
             ruleCount--;
             if (ruleCount == 0) {
-                sm("You can now accept.");
+                message("You can now accept.");
             }
         }
         if (!(getControlerManager().getControler() instanceof WildernessControler) && isAtWild() && !WildernessControler.isAtWildSafe(this) && !isAtPvP()) {
@@ -2784,11 +2784,11 @@ public class Player extends Entity {
         // Utils.GrabCountryDayTimeMonth(false)
         // + " | Current online: " + World.getPlayers().size());
         if (memberTill < Utils.currentTimeMillis() && isMember()) {
-            sm("Your membership has expired.");
+            message("Your membership has expired.");
             memberTill = 0;
             member = false;
         } else if (memberTill > Utils.currentTimeMillis() && isMember()) {
-            sm("Your membership will expire on " + getMemberTill());
+            message("Your membership will expire on " + getMemberTill());
             member = true;
         }
         TicketSystem.handleTicketOnLogin(this);
@@ -2911,13 +2911,13 @@ public class Player extends Entity {
             }
             World.sendNewsMessage(getDisplayName() + " has received " + NPCDefinitions.getNPCDefinitions(getPet(itemId).getBabyNpcId()).getName() + " as a rare drop.", true);
         }
-        sm(Colour.RED.getHex() + "You have a funny feeling something is following you.");
+        message(Colour.RED.getHex() + "You have a funny feeling something is following you.");
     }
 
     public void activateLodeStone(final WorldObject object, final Player p) {
         int coins = 4000;
         if (!p.canBuy(coins)) {
-            sm("You need at least 4,000 coins to activate this lodestone.");
+            message("You need at least 4,000 coins to activate this lodestone.");
             return;
         }
         WorldTasksManager.schedule(new WorldTask() {
@@ -3053,15 +3053,15 @@ public class Player extends Entity {
             return;
         long currentTime = Utils.currentTimeMillis();
         if (getAttackedByDelay() + 10000 > currentTime) {
-            sm("You can't log out until 10 seconds after the end of combat.");
+            message("You can't log out until 10 seconds after the end of combat.");
             return;
         }
         if (getEmotesManager().getNextEmoteEnd() >= currentTime) {
-            sm("You can't log out while performing an emote.");
+            message("You can't log out while performing an emote.");
             return;
         }
         if (lockDelay >= currentTime) {
-            sm("Please finish with what you are doing.");
+            message("Please finish with what you are doing.");
             return;
         }
         for (int i = 0; i < 25; i++) {
@@ -3574,14 +3574,14 @@ public class Player extends Entity {
             if (players == null)
                 continue;
             if (getIndex() == winnerIndex) {
-                players.sm("Winner was an admin or host, rerolling...");
+                players.message("Winner was an admin or host, rerolling...");
                 sendPublicGiveaway(true, true);
                 return;
             }
             if (winnerIndex == players.getIndex()) {
                 World.sendWorldMessage("[Giveaway] Winner is.. " + players.getDisplayName() + ".", false);
                 getFriendsIgnores().sendMessage(players, "[Giveaway] Congratulations! You won the giveaway hosted by " + getDisplayName() + "");
-                players.sm("Congratulations! You won the server giveaway hosted by " + getDisplayName() + ".");
+                players.message("Congratulations! You won the server giveaway hosted by " + getDisplayName() + ".");
             }
         }
     }
@@ -3930,7 +3930,7 @@ public class Player extends Entity {
                     });
                 }
                 if (loop == 1) {
-                    sm("Oh dear, you have died.");
+                    message("Oh dear, you have died.");
                     if (source instanceof Player) {
                         Player killer = (Player) source;
                         killer.setAttackedByDelay(4);
@@ -4010,7 +4010,7 @@ public class Player extends Entity {
                         World.addGroundItem(new Item(runes.getId(), runes.getAmount()), deathTile, killer == null ? this : killer, true, 60);
                         getRunePouch().remove(runes);
                     }
-                    sm("Your rune pouch and your runes was lost at death.");
+                    message("Your rune pouch and your runes was lost at death.");
                     items[0][i] = new Item(-1);
                     item = items[0][i];
                 } else if ((item.getId() == 24203) && isAtWild()) {
@@ -4023,7 +4023,7 @@ public class Player extends Entity {
                             World.updateGroundItem(staffRunes, deathTile, killer == null ? this : killer, 60, 1, killer.getPlayerRank().isIronman() ? killer.getDisplayName() : null);
                         }
                     }
-                    sm("All your runes in your runic staff were dropped.");
+                    message("All your runes in your runic staff were dropped.");
                     getStaffCharges().clear();
                 } else {
                     item = items[0][i];
@@ -4061,12 +4061,12 @@ public class Player extends Entity {
             item = items[1][i];
             World.updateGroundItem(item, deathTile, killer == null ? this : killer, 60, 1, killer.getPlayerRank().isIronman() ? killer.getDisplayName() : null);
         }
-        sm("You have lost approximately: " + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(killer.totalCurrentDrop, ',')) + " coins!");
+        message("You have lost approximately: " + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(killer.totalCurrentDrop, ',')) + " coins!");
         if (killer != this)
-            killer.sm("Total loot is worth approximately: " + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(killer.totalCurrentDrop, ',')) + " coins!");
+            killer.message("Total loot is worth approximately: " + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(killer.totalCurrentDrop, ',')) + " coins!");
         if ((killer.totalCurrentDrop > killer.getHighestValuedKill()) && killer.hasWildstalker() && killer != null && killer != this) {
             killer.setHighestValuedKill(killer.totalCurrentDrop);
-            killer.sm("New highest value Wilderness kill: " + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(killer.getHighestValuedKill(), ',')) + " coins!");
+            killer.message("New highest value Wilderness kill: " + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(killer.getHighestValuedKill(), ',')) + " coins!");
         }
         if (killer != this) {
             int randomCoins = Utils.random(100000, 150000);
@@ -4075,10 +4075,10 @@ public class Player extends Entity {
                 Item pkKey = new Item("pk key");
                 if (killer.getInventory().hasFreeSlots()) {
                     killer.getInventory().addItem(pkKey);
-                    killer.sm("You recieved a " + HexColours.getShortMessage(Colour.RED, pkKey.getName()) + ".");
+                    killer.message("You recieved a " + HexColours.getShortMessage(Colour.RED, pkKey.getName()) + ".");
                 } else {
                     killer.getBank().addItem(pkKey, true);
-                    killer.sm("You recieved a " + HexColours.getShortMessage(Colour.RED, pkKey.getName()) + ", but it was added to your bank.");
+                    killer.message("You recieved a " + HexColours.getShortMessage(Colour.RED, pkKey.getName()) + ", but it was added to your bank.");
                 }
             }
             double ep = killer.get(IntKey.EP) * 0.30;
@@ -4090,7 +4090,7 @@ public class Player extends Entity {
             if (c <= rolledItem.getChance()) {
                 killer.set(IntKey.EP, 0);
                 World.addGroundItem(new Item(rolledItem.getId(), 1), deathTile, killer == null ? this : killer, true, 60);
-                killer.sm("You recieved a " + rolledItem.getName() + " as a pvp drop.");
+                killer.message("You recieved a " + rolledItem.getName() + " as a pvp drop.");
             }
         }
     }
@@ -4163,7 +4163,7 @@ public class Player extends Entity {
                     getInventory().deleteItem(helm.getOldHelmID(), 1);
                     getInventory().addItem(helm.getHelmID(), 1);
                 }
-                sm("Your wildstalker helmet has been upgraded.");
+                message("Your wildstalker helmet has been upgraded.");
             }
         }
     }
@@ -4254,15 +4254,15 @@ public class Player extends Entity {
             totalPts = Utils.random(9500, 10000);
         add(IntKey.PK_POINTS, totalPts);
         getAdventureLog().addActivity("I have killed " + killed.getDisplayName() + " in a PvP zone.");
-        sm("You now have a killstreak of " + HexColours.getShortMessage(Colour.RED, "" + get(IntKey.KILLSTREAK)) + (get(IntKey.KILLSTREAK) > 1 ? " kills." : " kill.") + (get(IntKey.KILLSTREAK) > get(IntKey.KILLSTREAK_RECORD) ? " " + HexColours.getShortMessage(Colour.RED, "New Record!") : ""));
+        message("You now have a killstreak of " + HexColours.getShortMessage(Colour.RED, "" + get(IntKey.KILLSTREAK)) + (get(IntKey.KILLSTREAK) > 1 ? " kills." : " kill.") + (get(IntKey.KILLSTREAK) > get(IntKey.KILLSTREAK_RECORD) ? " " + HexColours.getShortMessage(Colour.RED, "New Record!") : ""));
         if (killed.get(IntKey.KILLSTREAK) >= 5)
             World.sendNewsMessage(getDisplayName() + " has ended " + killed.getDisplayName() + (killed.getDisplayName().endsWith("s") ? "'" : "s") + " killstreak of " + killed.get(IntKey.KILLSTREAK) + "!", false);
-        sm("You gained " + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(totalPts, ',')) + " pk points, you now have " + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(get(IntKey.PK_POINTS), ',')) + " pk points.");
+        message("You gained " + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(totalPts, ',')) + " pk points, you now have " + HexColours.getShortMessage(Colour.RED, "" + Utils.getFormattedNumber(get(IntKey.PK_POINTS), ',')) + " pk points.");
         if (get(IntKey.KILLSTREAK) > get(IntKey.KILLSTREAK_RECORD))
             set(IntKey.KILLSTREAK_RECORD, 1);
         killed.add(IntKey.DEATHCOUNT, 1);
         killed.set(IntKey.KILLSTREAK, 0);
-        sm("" + randomKillMessage(killed));
+        message("" + randomKillMessage(killed));
     }
 
     public void sendRandomJail(Player p) {
@@ -4390,7 +4390,7 @@ public class Player extends Entity {
                         return;
                     setNextWorldTile(dest);
                     if (message != null)
-                        sm(message);
+                        message(message);
                 }
             }, useDelay - 1);
         }
@@ -4415,7 +4415,7 @@ public class Player extends Entity {
                         return;
                     setNextWorldTile(dest);
                     if (message != null)
-                        sm(message);
+                        message(message);
                 }
             }, useDelay - 1);
         }
@@ -4765,7 +4765,7 @@ public class Player extends Entity {
                 Player p = (Player) this;
                 p.resetWalkSteps();
                 if (!entangle)
-                    p.sm("You have been frozen.");
+                    p.message("You have been frozen.");
             }
         } else {
             if (entangle) {
@@ -5297,7 +5297,7 @@ public class Player extends Entity {
         }
     }
 
-    public void sm(String string) {
+    public void message(String string) {
         if (string == null)
             return;
         getPackets().sendGameMessage(string);
@@ -5324,7 +5324,7 @@ public class Player extends Entity {
         if (combatDefinitions.hasRingOfVigour())
             specAmt *= 0.9;
         if (combatDefinitions.getSpecialAttackPercentage() < specAmt) {
-            sm("You don't have enough power left.");
+            message("You don't have enough power left.");
             combatDefinitions.desecreaseSpecialAttack(0);
             return;
         }
@@ -5785,9 +5785,9 @@ public class Player extends Entity {
             getPackets().sendIComponentText(275, 10, text.toString());
         }
         if (!isCompletedFightKiln())
-            sm("You must have completed the Fight kiln.");
+            message("You must have completed the Fight kiln.");
         if (!isCompletedFightCaves())
-            sm("You must have completed the Fight caves.");
+            message("You must have completed the Fight caves.");
         checkRequirement("Corporeal Beast");
         checkRequirement("Kree'arra");
         checkRequirement("K'ril_Tsutsaroth");
@@ -5806,7 +5806,7 @@ public class Player extends Entity {
             if (achievement.name().replace("_", " ").replace("'", "").equalsIgnoreCase(name)) {
                 totalKills = (getBossKillcount().get(name) != null ? getBossKillcount().get(name).intValue() : 0);
                 if (totalKills < achievement.getKills()) {
-                    sm("You must have killed at least " + achievement.getKills() + " " + name + ", " + (achievement.getKills() - totalKills) + " left.");
+                    message("You must have killed at least " + achievement.getKills() + " " + name + ", " + (achievement.getKills() - totalKills) + " left.");
                 }
             }
         }
@@ -6105,7 +6105,7 @@ public class Player extends Entity {
         }
         muteFrom = muteReason = null;
         muteStart = muteEnd = 0;
-        sm("Your mute has been lifted, please read the rules to avoid future infractions.");
+        message("Your mute has been lifted, please read the rules to avoid future infractions.");
     }
 
     public boolean isMuted() {

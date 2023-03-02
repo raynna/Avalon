@@ -357,7 +357,7 @@ public class Bank implements Serializable {
 			}
 		}
 		if (!player.getBank().hasBankSpace()) {
-			player.sm("Not enough bank space.");
+			player.message("Not enough bank space.");
 			return;
 		}
 		int leftOver = 0;

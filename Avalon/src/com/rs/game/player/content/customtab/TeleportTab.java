@@ -453,7 +453,7 @@ public class TeleportTab extends CustomTab {
 							return;
 						}
 						if (tele == null) {
-							player.sm("This teleport is not handled yet.");
+							player.message("This teleport is not handled yet.");
 							open(player);
 							return;
 						}

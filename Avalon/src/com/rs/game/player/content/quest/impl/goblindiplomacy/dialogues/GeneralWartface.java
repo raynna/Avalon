@@ -26,7 +26,7 @@ public class GeneralWartface extends Dialogue {
 		stageInt = (Integer) parameters[0];
 		int randomStage = Utils.random(0, 3);
 		if (player.getQuestManager().get(Quests.GOBLIN_DIPLOMACY).getState() == QuestState.COMPLETED) {
-			player.sm(NPCDefinitions.getNPCDefinitions(getNPCID()).getName() + " is to busy to talk to you.");
+			player.message(NPCDefinitions.getNPCDefinitions(getNPCID()).getName() + " is to busy to talk to you.");
 			return;
 		}
 		if (player.getInventory().containsOneItem(286)) {

@@ -621,11 +621,11 @@ public class NPC extends Entity implements Serializable {
         CopyOnWriteArrayList<Player> playersWithLs = new CopyOnWriteArrayList<Player>();
         String dropName = ItemDefinitions.getItemDefinitions(drop.getItemId()).getName().toLowerCase();
         if (lootShare) {
-            player.sm(String.format(("<col=216902>Your bonecrusher crushed: %s x %s. </col>"),
+            player.message(String.format(("<col=216902>Your bonecrusher crushed: %s x %s. </col>"),
                     Utils.getFormattedNumber(item.getAmount(), ','), dropName));
             for (Player p : playersWithLs) {
                 if (!p.equals(player)) {
-                    p.sm(String.format("%s bonecrusher crushed: %s x %s.", player.getDisplayName(),
+                    p.message(String.format("%s bonecrusher crushed: %s x %s.", player.getDisplayName(),
                             Utils.getFormattedNumber(item.getAmount(), ','), dropName));
                 }
             }
@@ -641,11 +641,11 @@ public class NPC extends Entity implements Serializable {
         CopyOnWriteArrayList<Player> playersWithLs = new CopyOnWriteArrayList<Player>();
         String dropName = ItemDefinitions.getItemDefinitions(drop.getItemId()).getName();
         if (lootshare) {
-            player.sm(String.format(("<col=216902>Your herbicide burnt: %s x %s. </col>"),
+            player.message(String.format(("<col=216902>Your herbicide burnt: %s x %s. </col>"),
                     Utils.getFormattedNumber(item.getAmount(), ','), dropName.toLowerCase()));
             for (Player p : playersWithLs) {
                 if (!p.equals(player)) {
-                    p.sm(String.format("%s herbicide burnt: %s x %s.", player.getDisplayName(),
+                    p.message(String.format("%s herbicide burnt: %s x %s.", player.getDisplayName(),
                             Utils.getFormattedNumber(item.getAmount(), ','), dropName.toLowerCase()));
                 }
             }
@@ -685,13 +685,13 @@ public class NPC extends Entity implements Serializable {
                 World.updateGroundItem(item, new WorldTile(getCoordFaceX(size), getCoordFaceY(size), getPlane()),
                         luckyPlayer, 60, 0);
                 luckyPlayer
-                        .sm(String.format(
+                        .message(String.format(
                                 (luckyPlayer.getRareItem() == item ? "<col=ff0000>" : "<col=216902>") + "You received: %s x %s. ("
                                         + getName() + ") </col>",
                                 Utils.getFormattedNumber(item.getAmount(), ','), dropName));
                 for (Player p : playersWithLs) {
                     if (!p.equals(luckyPlayer)) {
-                        p.sm(String.format("%s</col> received: %s x %s. (" + getName() + ") ",
+                        p.message(String.format("%s</col> received: %s x %s. (" + getName() + ") ",
                                 HexColours.Colour.RED.getHex() + luckyPlayer.getDisplayName(),
                                 Utils.getFormattedNumber(item.getAmount(), ','), dropName));
                     }
@@ -865,7 +865,7 @@ public class NPC extends Entity implements Serializable {
             return;
         }
         WorldTile tile = new WorldTile(getCoordFaceX(getSize()), getCoordFaceY(getSize()), getPlane());
-        player.sm("<col=b25200>A loot beam appears on your rare drop.");
+        player.message("<col=b25200>A loot beam appears on your rare drop.");
         World.sendPrivateGraphics(player, new Graphics(7, 0, 0), tile);
         player.setBeam(tile);
         player.setBeamItem(item);

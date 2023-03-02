@@ -12,7 +12,7 @@ public class SuperGlassMake {
 			return false;
 		}
 		if (!player.getInventory().containsItem(1783, 1) || !player.getInventory().containsItem(401, 1)) {
-			player.sm("You don't have any "
+			player.message("You don't have any "
 					+ (player.getInventory().containsItem(1783, 1) ? "seaweed." : "bucket of sand."));
 			return false;
 		}
@@ -27,7 +27,7 @@ public class SuperGlassMake {
 		player.removeItem(1783, amount);
 		player.addItem(1775, amount);
 		player.addXp(Skills.MAGIC, xp);
-		player.sm("You create " + amount + " molten glass with your spell.");
+		player.message("You create " + amount + " molten glass with your spell.");
 		player.temporaryAttribute().put("LAST_SPELL", Utils.currentTimeMillis());
 		return true;
 	}

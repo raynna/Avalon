@@ -516,13 +516,13 @@ public final class WorldPacketsDecoder extends Decoder {
 						return;
 					player.stopAll(false);
 					if (player.getPlayerRank().isIronman()) {
-						player.sm("You cannot assist as a " + (player.getPlayerRank().isHardcore()
+						player.message("You cannot assist as a " + (player.getPlayerRank().isHardcore()
 								? "Hardcore Iron " + (player.getAppearence().isMale() ? "Man" : "Woman") + "."
 								: "Iron " + (player.getAppearence().isMale() ? "Man" : "Woman") + "."));
 						return;
 					}
 					if (p2.getPlayerRank().isIronman()) {
-						player.sm("You cannot assist a "
+						player.message("You cannot assist a "
 								+ (p2.getPlayerRank().isHardcore() ? "HC ironman." : "Ironman."));
 						return;
 					}
@@ -540,7 +540,7 @@ public final class WorldPacketsDecoder extends Decoder {
 						return;
 					}
 					player.temporaryAttribute().put("assist", p2);
-					player.sm("Currently Disabled.");
+					player.message("Currently Disabled.");
 					// p2.getPackets().sendAssistMessage(player);
 				}
 			}));
@@ -557,7 +557,7 @@ public final class WorldPacketsDecoder extends Decoder {
 						return;
 					if (player.getLockDelay() > Utils.currentTimeMillis())
 						return;
-					player.sm("Currently out of order.");
+					player.message("Currently out of order.");
 
 				}
 			}));
@@ -576,13 +576,13 @@ public final class WorldPacketsDecoder extends Decoder {
 						return;
 					player.stopAll(false);
 					if (player.getPlayerRank().isIronman()) {
-						player.sm("You cannot trade as a " + (player.getPlayerRank().isHardcore()
+						player.message("You cannot trade as a " + (player.getPlayerRank().isHardcore()
 								? "Hardcore Iron " + (player.getAppearence().isMale() ? "Man" : "Woman") + "."
 								: "Iron " + (player.getAppearence().isMale() ? "Man" : "Woman") + "."));
 						return;
 					}
 					if (p2.getPlayerRank().isIronman()) {
-						player.sm(
+						player.message(
 								"You cannot trade a " + (p2.getPlayerRank().isHardcore() ? "HC ironman." : "Ironman."));
 						return;
 					}
@@ -621,7 +621,7 @@ public final class WorldPacketsDecoder extends Decoder {
 				if (inviteBy != null)
 					player.getDungManager().acceptInvite(inviteBy.getDisplayName());
 				else
-					player.sm("inviteBy is null");
+					player.message("inviteBy is null");
 				return;
 			}
 			if (!player.getControlerManager().canPlayerOption1(p2))
@@ -1234,7 +1234,7 @@ public final class WorldPacketsDecoder extends Decoder {
 					 */
 					if (item.getOwn() != player) {
 						if (player.getPlayerRank().isIronman()) {
-							player.sm("You are not able to pick other players' items.");
+							player.message("You are not able to pick other players' items.");
 							return;
 						}
 					}
@@ -1314,12 +1314,12 @@ public final class WorldPacketsDecoder extends Decoder {
 						return;
 					player.stopAll(false);
 					if (player.getPlayerRank().isIronman()) {
-						player.sm("You cannot assist as a "
+						player.message("You cannot assist as a "
 								+ (player.getPlayerRank().isHardcore() ? "HC ironman." : "Ironman."));
 						return;
 					}
 					if (p2.getPlayerRank().isIronman()) {
-						player.sm("You cannot assist a "
+						player.message("You cannot assist a "
 								+ (p2.getPlayerRank().isHardcore() ? "HC ironman." : "Ironman."));
 						return;
 					}
@@ -1507,7 +1507,7 @@ public final class WorldPacketsDecoder extends Decoder {
 				player.temporaryAttribute().put("AdventureLog", false);
 			} else if (player.temporaryAttribute().get("muting_reason") == Boolean.TRUE) {
 				player.temporaryAttribute().remove("muting_reason");
-				player.sm("Value: " + value);
+				player.message("Value: " + value);
 				/**
 				* 
 				*/
@@ -1585,10 +1585,10 @@ public final class WorldPacketsDecoder extends Decoder {
 			} else if (player.temporaryAttribute().remove("tp_player") == Boolean.TRUE) {
 				Player other = World.getPlayerByDisplayName(value);
 				if (other == null) {
-					player.sm("Target offline, or does not exist.");
+					player.message("Target offline, or does not exist.");
 					return;
 				}
-				player.sm(
+				player.message(
 						other.getControlerManager().getControler() != null ? "Target is in a controler. Vis: 1" : null);
 				if (other.getControlerManager().getControler() != null) {
 					player.getAppearence().switchHidden();
@@ -1598,11 +1598,11 @@ public final class WorldPacketsDecoder extends Decoder {
 			} else if (player.temporaryAttribute().remove("tp_to_me") == Boolean.TRUE) {
 				Player other = World.getPlayerByDisplayName(value);
 				if (other == null) {
-					player.sm("Target offline, or does not exist.");
+					player.message("Target offline, or does not exist.");
 					return;
 				}
 				if (other.getControlerManager().getControler() != null) {
-					player.sm("Target is in a controler, you must teleport to them or they must exit.");
+					player.message("Target is in a controler, you must teleport to them or they must exit.");
 					return;
 				}
 				other.setNextWorldTile(new WorldTile(player.getX(), player.getY(), player.getPlane()));
@@ -1610,10 +1610,10 @@ public final class WorldPacketsDecoder extends Decoder {
 			} else if (player.temporaryAttribute().remove("sendhome") == Boolean.TRUE) {
 				Player other = World.getPlayerByDisplayName(value);
 				if (other == null) {
-					player.sm("Offline, or does not exist.");
+					player.message("Offline, or does not exist.");
 					return;
 				}
-				other.sm(player.getDisplayName() + " has sent you home.");
+				other.message(player.getDisplayName() + " has sent you home.");
 				other.setNextWorldTile(new WorldTile(Settings.HOME_PLAYER_LOCATION));
 				other.getInterfaceManager().sendTabInterfaces(false);
 				if (other.getControlerManager().getControler() != null)
@@ -1627,7 +1627,7 @@ public final class WorldPacketsDecoder extends Decoder {
 				player.temporaryAttribute().put("report_bug", Boolean.TRUE);
 			} else if (player.temporaryAttribute().remove("report_bug") == Boolean.TRUE) {
 				Report.bug = value;
-				player.sm("Thankyou! We will investigate your case further.");
+				player.message("Thankyou! We will investigate your case further.");
 				Report.archiveBug(player);
 				player.temporaryAttribute().put("report_bug", Boolean.FALSE);
 			} else if (player.temporaryAttribute().remove("change_troll_name") == Boolean.TRUE) {
@@ -1733,7 +1733,7 @@ public final class WorldPacketsDecoder extends Decoder {
 				player.temporaryAttribute().put("gambling", Boolean.FALSE);
 				int money = value;
 				if (player.getInventory().getNumberOf(995) < money && player.getMoneyPouch().getTotal() < money) {
-					player.sm("You do not have the money to do that.");
+					player.message("You do not have the money to do that.");
 					return;
 				}
 				GambleTest.Gamble(player, money);
@@ -1741,7 +1741,7 @@ public final class WorldPacketsDecoder extends Decoder {
 				player.temporaryAttribute().put("unlock_item", Boolean.FALSE);
 				int itemId = value;
 				if (itemId <= 0 || itemId > Integer.MAX_VALUE) {
-					player.sm("Invalid itemId");
+					player.message("Invalid itemId");
 					return;
 				}
 				UnlockableManager.unlockItemForPlayer(player, itemId);
@@ -1755,7 +1755,7 @@ public final class WorldPacketsDecoder extends Decoder {
 			} else if (player.temporaryAttribute().get("serverupdate") == Boolean.TRUE) {
 				player.temporaryAttribute().put("serverupdate", Boolean.FALSE);
 				if (value > 30 || value <= 0) {
-					player.sm("Max is 30 minutes.");
+					player.message("Max is 30 minutes.");
 					return;
 				}
 				World.safeRestart(value * 60);
@@ -1765,7 +1765,7 @@ public final class WorldPacketsDecoder extends Decoder {
 				if (DXP == 0)
 					return;
 				if (DXP > 5) {
-					player.sm("Max is 5. You can't go above that.");
+					player.message("Max is 5. You can't go above that.");
 					return;
 				}
 				if (DXP == 1 && Settings.BONUS_EXP_WEEK_MULTIPLIER > 1) {
@@ -1784,18 +1784,18 @@ public final class WorldPacketsDecoder extends Decoder {
 				if (itemId == null)
 					return;
 				if (!player.getBank().hasBankSpace()) {
-					player.sm("Not enough bank space.");
+					player.message("Not enough bank space.");
 					return;
 				}
 				if (bankedItem != null) {
 					if (bankedItem.getDefinitions().isNoted()) {
-						player.sm("You can't bank this item.");
+						player.message("You can't bank this item.");
 						return;
 					}
 				}
 				if (bankedItem != null) {
 					if (bankedItem.getAmount() + amount <= 0 || bankedItem.getAmount() + calculate <= 0) {
-						player.sm("Not enough space for " + bankedItem.getName() + ".");
+						player.message("Not enough space for " + bankedItem.getName() + ".");
 						return;
 					}
 				}
@@ -1883,7 +1883,7 @@ public final class WorldPacketsDecoder extends Decoder {
 					&& player.getTemporaryAttributtes().get("SERVANT_REQUEST_ITEM") != null) {
 				Integer type = (Integer) player.getTemporaryAttributtes().remove("SERVANT_REQUEST_TYPE");
 				Integer item = (Integer) player.getTemporaryAttributtes().remove("SERVANT_REQUEST_ITEM");
-				player.sm("works");
+				player.message("works");
 				if (!player.getHouse().isLoaded() || !player.getHouse().getPlayers().contains(player) || type == null
 						|| item == null)
 					return;
@@ -2178,7 +2178,7 @@ public final class WorldPacketsDecoder extends Decoder {
 				if (player.isInLiveChat) {
 					TicketSystem.handleChat(player, message.replace(">>", ""));
 				} else {
-					player.sm("<col=ff0000>You are currently not in a chatroom.");
+					player.message("<col=ff0000>You are currently not in a chatroom.");
 				}
 				return;
 			}
@@ -2189,7 +2189,7 @@ public final class WorldPacketsDecoder extends Decoder {
 				return;
 			}
 			if (player.isMuted()) {
-				player.sm("You're currently muted. Time left: " + player.getMuteTime());
+				player.message("You're currently muted. Time left: " + player.getMuteTime());
 				return;
 			}
 			int effects = (colorEffect << 8) | (moveEffect & 0xff) & ~0x8000;

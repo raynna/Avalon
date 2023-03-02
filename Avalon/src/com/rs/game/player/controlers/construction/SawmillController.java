@@ -471,7 +471,7 @@ public class SawmillController extends Controler {
 		}
 		if (object.getId() == 46297) {
 			if (!player.getInventory().contains(new Item(1511))) {
-				player.sm("You have no logs to return.");
+				player.message("You have no logs to return.");
 				return false;
 			}
 			player.getDialogueManager().startDialogue("SimpleMessage", "You throw the logs back onto the pile.");

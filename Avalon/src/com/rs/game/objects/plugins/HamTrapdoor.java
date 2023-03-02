@@ -24,7 +24,7 @@ public class HamTrapdoor extends ObjectPlugin {
 			player.getTemporaryVarBits().put(object.getConfigByFile(), 0);
 		int configValue = player.getTemporaryVarBits().get(object.getConfigByFile()).intValue();
 		if (configValue == 0)
-			player.sm("This trapdoor is locked.");
+			player.message("This trapdoor is locked.");
 		else {
 			player.useStairs(-1, new WorldTile(3149, 9652, 0), 0, 0);
 			player.sendVarBit(object.getConfigByFile(), 0);

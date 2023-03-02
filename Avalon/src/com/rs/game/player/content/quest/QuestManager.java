@@ -184,7 +184,7 @@ public class QuestManager implements Serializable {
 				player.getQuestManager().get(Quests.PIRATES_TREASURE).setStage(9);
 				Scroll.initalizeScroll(player);
 			} else {
-				player.sm("Nothing interesting happens.");
+				player.message("Nothing interesting happens.");
 			}
 		}
 		return false;

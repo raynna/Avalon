@@ -72,7 +72,7 @@ public class BlackIbisOutfit {
 			return false;
 		Pieces piece = getRandomPiece(player);
 		ItemDefinitions defs = ItemDefinitions.getItemDefinitions(piece.getItemId());
-		player.sm("You have recieved " + (HexColours.getShortMessage(Colour.RED, defs.getName())) + "!");
+		player.message("You have recieved " + (HexColours.getShortMessage(Colour.RED, defs.getName())) + "!");
 		if (player.getInventory().hasFreeSlots())
 			player.getInventory().addItem(piece.getItemId(), 1);
 		else

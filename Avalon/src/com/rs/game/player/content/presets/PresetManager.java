@@ -9,9 +9,7 @@ import java.util.Map;
 import com.rs.Settings;
 import com.rs.game.item.Item;
 import com.rs.game.player.Player;
-import com.rs.game.player.Skills;
 import com.rs.game.player.controlers.EdgevillePvPControler;
-import com.rs.net.decoders.WorldPacketsDecoder;
 import com.rs.utils.HexColours;
 import com.rs.utils.HexColours.Colour;
 
@@ -135,7 +133,7 @@ public final class PresetManager implements Serializable {
 				for (Item item : pair.getValue()) {
 					if (item == null)
 						continue;
-					player.sm("Added " + item.getName() + " x " + item.getAmount() + " to your bank.");
+					player.message("Added " + item.getName() + " x " + item.getAmount() + " to your bank.");
 					player.getBank().addItem(item, true);
 				}
 			} // to focus more whats not setting

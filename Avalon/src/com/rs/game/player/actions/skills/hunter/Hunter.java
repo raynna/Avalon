@@ -1,9 +1,7 @@
 package com.rs.game.player.actions.skills.hunter;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import com.rs.game.Animation;
 import com.rs.game.ForceTalk;
@@ -218,7 +216,7 @@ public class Hunter {
     public static void openJar(Player player, int slotId, Item jar, FlyingEntities instance) {
         boolean isImpling = instance.toString().toLowerCase().contains("impling");
         if (!player.getInventory().hasFreeSlots()) {
-            player.sm("You need at least 1 inventory space to open the jar.");
+            player.message("You need at least 1 inventory space to open the jar.");
             return;
         }
         Item item = null;

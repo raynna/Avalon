@@ -240,11 +240,11 @@ public class BirdNest {
 		if (reward == null)// shouldn't happen
 			return false;
 		if (!player.getInventory().hasFreeSlots()) {
-			player.sm("You don't have enough inventory space to search this.");
+			player.message("You don't have enough inventory space to search this.");
 			return false;
 		}
 		Item item = reward.getItem();
-		player.sm("You find " + (reward.getItem().getAmount() > 1 ? reward.getItem().getAmount() + " x " : "")
+		player.message("You find " + (reward.getItem().getAmount() > 1 ? reward.getItem().getAmount() + " x " : "")
 				+ reward.getDefinitions().getName() + " inside the bird's nest.");
 		player.getInventory().deleteItem(slot, new Item(itemId));
 		player.getInventory().addItem(EMPTY_NEST_ID, 1);

@@ -387,7 +387,7 @@ public class Sedridor extends Dialogue {
 				stageInt = 36;
 			} else {
 				end();
-				player.sm("You do not have enough inventory space.");
+				player.message("You do not have enough inventory space.");
 			}
 			break;
 
@@ -677,7 +677,7 @@ public class Sedridor extends Dialogue {
 				stageInt = -2;
 			} else {
 				end();
-				player.sm("You do not have enough inventory space.");
+				player.message("You do not have enough inventory space.");
 			}
 			break;
 
